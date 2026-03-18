@@ -26,7 +26,7 @@ export default async function handler(req: Request) {
     // CEO님의 자산: Vector Store ID
     const VECTOR_STORE_ID = "vs_69bab4dc20cc8191bb0585b197d9f7a0";
     // [중요] OpenAI Assistant ID를 여기에 입력하세요!
-    const ASSISTANT_ID = "asst_XXXXX"; 
+    asst_iMbzdAAogiZApGfSUObptW9A
 
     // 2. 차세대 스트리밍 실행 (OpenAI v2)
     const stream = await openai.beta.threads.createAndRunStream({
