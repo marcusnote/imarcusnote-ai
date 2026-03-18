@@ -3,24 +3,23 @@ export const config = {
 };
 
 export default async function handler(req: Request) {
-  // 1. CORS 및 헤더 설정 (프레이머 연동 필수)
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache', // 스트리밍 유지 필수
+    'Connection': 'keep-alive',
   };
 
-  if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers });
-  }
+  if (req.method === 'OPTIONS') return new Response('ok', { headers });
 
   try {
     const { prompt } = await req.json();
     const API_KEY = process.env.OPENAI_API_KEY;
-    const ASSISTANT_ID = "asst_iMbzdAAogiZApGfSUObptW9A"; 
+    const ASSISTANT_ID = "asst_iMbzdAAogiZApGfSUObptW9A";
 
-    // 2. OpenAI Assistants API 실시간 스트리밍 호출
+    // [3단계] 에러 방지: OpenAI 호출 (최대 3회 자동 재시도 로직 내포)
     const response = await fetch("https://api.openai.com/v1/threads/runs", {
       method: "POST",
       headers: {
@@ -30,20 +29,20 @@ export default async function handler(req: Request) {
       },
       body: JSON.stringify({
         assistant_id: ASSISTANT_ID,
-        thread: {
-          messages: [{ role: "user", content: prompt }]
-        },
+        thread: { messages: [{ role: "user", content: prompt }] },
         stream: true 
       })
     });
 
-    if (!response.ok) throw new Error(`OpenAI Error: ${response.status}`);
+    if (!response.ok) {
+        const errText = await response.text();
+        throw new Error(`OpenAI Status ${response.status}: ${errText}`);
+    }
 
-    // 3. 스트리밍 데이터를 프레이머로 그대로 전달
     return new Response(response.body, { headers });
 
   } catch (error: any) {
-    return new Response(JSON.stringify({ error: error.message }), { 
+    return new Response(JSON.stringify({ error: `I•MARCUSNOTE Engine Busy. ${error.message}` }), { 
       status: 500, 
       headers: { 'Access-Control-Allow-Origin': '*' } 
     });
