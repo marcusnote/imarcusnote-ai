@@ -1,17 +1,39 @@
 export const runtime = 'edge';
 
 export default async function handler(req: Request) {
-  const body = await req.json();
+  if (req.method === 'GET') {
+    return new Response(
+      JSON.stringify({
+        ok: true,
+        message: 'API is working',
+      }),
+      {
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
+  }
 
-  const prompt = body.prompt;
+  if (req.method === 'POST') {
+    const body = await req.json();
+    const prompt = body.prompt ?? '';
+
+    return new Response(
+      JSON.stringify({
+        ok: true,
+        message: 'POST received',
+        input: prompt,
+      }),
+      {
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
+  }
 
   return new Response(
-    JSON.stringify({
-      message: "AI 연결 준비 완료",
-      input: prompt,
-    }),
+    JSON.stringify({ error: 'Method not allowed' }),
     {
-      headers: { "Content-Type": "application/json" },
+      status: 405,
+      headers: { 'Content-Type': 'application/json' },
     }
   );
 }
