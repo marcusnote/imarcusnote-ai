@@ -1,11 +1,12 @@
 export const config = { runtime: 'edge' };
 
 export default async function handler(req: Request) {
+  // [수정 포인트 1] CORS 헤더에 x-site-id를 명시적으로 허용합니다.
   const headers = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-site-id', // x-site-id 추가
   };
 
   // 1. CORS Preflight 대응
@@ -20,8 +21,15 @@ export default async function handler(req: Request) {
     });
   }
 
+  // [수정 포인트 2] x-site-id 헤더가 있는지 확인하는 로직 추가 (보안 강화)
+  const xSiteId = req.headers.get('x-site-id');
+  if (!xSiteId) {
+    return new Response(JSON.stringify({ error: 'Missing header x-site-id' }), {
+      status: 401, headers
+    });
+  }
+
   try {
-    // 3. 데이터(JSON) 파싱
     let body;
     try {
       body = await req.json();
@@ -33,7 +41,7 @@ export default async function handler(req: Request) {
 
     const { prompt, memberId } = body;
     const apiKey = process.env.OPENAI_API_KEY;
-    const assistantId = "asst_iMbzdAAogizAPGFSUObptW9A"; // 대표님의 Assistant ID
+    const assistantId = "asst_iMbzdAAogizAPGFSUObptW9A";
 
     if (!prompt) {
       return new Response(JSON.stringify({ error: '명령어가 누락되었습니다.' }), {
@@ -41,7 +49,7 @@ export default async function handler(req: Request) {
       });
     }
 
-    // 4. OpenAI Assistant 실행 (스트리밍)
+    // OpenAI API 호출 부분 (기존과 동일)
     const openAIResponse = await fetch("https://api.openai.com/v1/threads/runs", {
       method: "POST",
       headers: {
@@ -61,7 +69,6 @@ export default async function handler(req: Request) {
       throw new Error(`OpenAI API Error: ${errorMsg}`);
     }
 
-    // 5. 스트림 결과 그대로 반환
     return new Response(openAIResponse.body, { headers });
 
   } catch (error: any) {
