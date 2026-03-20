@@ -21,13 +21,15 @@ export default async function handler(req: Request) {
     });
   }
 
-  // [수정 포인트 2] x-site-id 헤더가 있는지 확인하는 로직 추가 (보안 강화)
-  const xSiteId = req.headers.get('x-site-id');
-  if (!xSiteId) {
-    return new Response(JSON.stringify({ error: 'Missing header x-site-id' }), {
-      status: 401, headers
-    });
-  }
+ // 기존 로직을 잠시 주석 처리하거나 아래처럼 직접 비교로 수정
+const xSiteId = req.headers.get('x-site-id');
+const EXPECTED_ID = "app_cmmm5k2i6007f0ttcejo13pcg"; // 대표님의 실제 ID
+
+if (!xSiteId || xSiteId !== EXPECTED_ID) {
+    return new Response(JSON.stringify({ 
+        error: `Missing or Invalid header x-site-id. Received: ${xSiteId}` 
+    }), { status: 401, headers });
+}
 
   try {
     let body;
