@@ -1,4 +1,4 @@
-// GitHub 파일 경로: /api/generate.js
+// GitHub 파일 경로: /api/index.js
 // MARCUSNOTE Intellectual Output Dashboard - Engine Core v1.0
 
 import OpenAI from 'openai';
