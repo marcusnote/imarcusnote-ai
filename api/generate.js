@@ -1,82 +1,89 @@
-export const config = { runtime: 'edge' };
+// GitHub 파일 경로: /api/generate.js
+// MARCUSNOTE Intellectual Output Dashboard - Engine Core v1.0
 
-export default async function handler(req: Request) {
-  // [수정 포인트 1] CORS 헤더에 x-site-id를 명시적으로 허용합니다.
-  const headers = {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-site-id', // x-site-id 추가
-  };
+import OpenAI from 'openai';
 
-  // 1. CORS Preflight 대응
-  if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers });
-  }
+// 🚀 [점검] Vercel 환경 변수에 이 두 키가 등록되어 있어야 합니다.
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const ASSISTANT_ID = process.env.ASSISTANT_ID;
 
-  // 2. POST 방식이 아니면 차단
-  if (req.method !== 'POST') {
-    return new Response(JSON.stringify({ error: 'POST 방식만 허용됩니다.' }), {
-      status: 405, headers
-    });
-  }
+export default async function handler(req, res) {
+    // 🛡️ [CORS 설정] - 프레이머(외부 도메인)의 접속을 허용합니다.
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Origin', '*'); // 글로벌 서비스용 설정
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+    res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
 
- // 기존 로직을 잠시 주석 처리하거나 아래처럼 직접 비교로 수정
-const xSiteId = req.headers.get('x-site-id');
-const EXPECTED_ID = "app_cmmm5k2i6007f0ttcejo13pcg"; // 대표님의 실제 ID
-
-if (!xSiteId || xSiteId !== EXPECTED_ID) {
-    return new Response(JSON.stringify({ 
-        error: `Missing or Invalid header x-site-id. Received: ${xSiteId}` 
-    }), { status: 401, headers });
-}
-
-  try {
-    let body;
-    try {
-      body = await req.json();
-    } catch (e) {
-      return new Response(JSON.stringify({ error: 'JSON 바디가 비어있습니다.' }), {
-        status: 400, headers
-      });
+    // OPTIONS 요청(사전 점검)에 대한 빠른 응답
+    if (req.method === 'OPTIONS') {
+        res.status(200).end();
+        return;
     }
 
-    const { prompt, memberId } = body;
-    const apiKey = process.env.OPENAI_API_KEY;
-    const assistantId = "asst_iMbzdAAogizAPGFSUObptW9A";
+    // POST 요청만 처리
+    if (req.method !== 'POST') {
+        return res.status(405).json({ response: 'Method Not Allowed' });
+    }
 
+    const { prompt } = req.body;
     if (!prompt) {
-      return new Response(JSON.stringify({ error: '명령어가 누락되었습니다.' }), {
-        status: 400, headers
-      });
+        return res.status(400).json({ response: 'Prompt is required.' });
     }
 
-    // OpenAI API 호출 부분 (기존과 동일)
-    const openAIResponse = await fetch("https://api.openai.com/v1/threads/runs", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-        "OpenAI-Beta": "assistants=v2"
-      },
-      body: JSON.stringify({
-        assistant_id: assistantId,
-        thread: { messages: [{ role: "user", content: prompt }] },
-        stream: true 
-      })
-    });
+    try {
+        // [점검] Assistant ID가 환경 변수에 없는 경우
+        if (!ASSISTANT_ID) {
+            throw new Error('Server Config Error: ASSISTANT_ID is not defined in environment variables.');
+        }
 
-    if (!openAIResponse.ok) {
-      const errorMsg = await openAIResponse.text();
-      throw new Error(`OpenAI API Error: ${errorMsg}`);
+        // 💡 1. Thread 생성 (각 대화별 독립된 컨텍스트)
+        const thread = await openai.beta.threads.create();
+
+        // 💡 2. 사용자의 질문을 Thread에 추가
+        await openai.beta.threads.messages.create(thread.id, {
+            role: "user",
+            content: prompt
+        });
+
+        // 💡 3. Assistant 실행 (Run)
+        // [CORS 이슈 방지용 기술] - Markdown을 HTML로 변환하는 프롬프트를 추가하면 더 좋습니다.
+        const run = await openai.beta.threads.runs.create(thread.id, {
+            assistant_id: ASSISTANT_ID,
+            // instructions: "Please output the grammar questions with proper HTML formatting for professional appearance."
+        });
+
+        // 💡 4. 실행 완료 대기 (Polling - 어시스턴트는 답변 생성 시간이 걸립니다.)
+        let runStatus;
+        let retryCount = 0;
+        const maxRetries = 20; // 최대 20초 대기
+
+        while (retryCount < maxRetries) {
+            runStatus = await openai.beta.threads.runs.retrieve(thread.id, run.id);
+            if (runStatus.status === 'completed') break;
+            if (runStatus.status === 'failed') throw new Error('Run failed: ' + runStatus.last_error?.message);
+            await new Promise(resolve => setTimeout(resolve, 1000)); // 1초 대기
+            retryCount++;
+        }
+
+        if (runStatus.status !== 'completed') {
+            throw new Error('Run timed out.');
+        }
+
+        // 💡 5. Assistant의 최종 답변 가져오기
+        const messages = await openai.beta.threads.messages.list(thread.id);
+        const lastMessage = messages.data
+            .filter(message => message.role === 'assistant')
+            .pop();
+
+        if (!lastMessage || !lastMessage.content[0]) {
+            throw new Error('No content returned from assistant.');
+        }
+
+        // 💡 6. [성공] 진짜 답변 전송
+        res.status(200).json({ response: lastMessage.content[0].text.value });
+
+    } catch (error) {
+        console.error('API Error:', error.message);
+        res.status(500).json({ response: 'Engine Error: ' + error.message });
     }
-
-    return new Response(openAIResponse.body, { headers });
-
-  } catch (error: any) {
-    return new Response(JSON.stringify({ error: `SYSTEM_ERROR: ${error.message}` }), { 
-      status: 500, 
-      headers
-    });
-  }
 }
