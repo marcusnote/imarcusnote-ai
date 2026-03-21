@@ -1,0 +1,12 @@
+{
+  "name": "imarcusnote-ai",
+  "version": "1.0.0",
+  "description": "MARCUSNOTE Global AI Engine",
+  "main": "api/index.js",
+  "dependencies": {
+    "openai": "^4.0.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
