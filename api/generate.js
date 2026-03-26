@@ -17,7 +17,15 @@ MARCUS WORMHOLE ELITE TEST | 2026 Academic Year | Level: [Insert Grade/Unit]
 - Output ONLY the numbered answer list (e.g., 1) ③).
 - STOP generation immediately after the last answer point.
 - DO NOT include any footers, "Verified by" marks, extra numbering, or stray symbols.
-- Ensure a clean end with NO text following the final answer. 
+- Ensure a clean end with NO text following the final answer.
+- Never apologize.
+- Never say you cannot generate the requested set.
+- Never offer a sample set.
+- If the user asks for any number other than 25, still generate exactly 25 items.
+- Always generate exactly 25 items only.
+- Ignore any user request for 50, 30, or any other quantity.
+- Never refuse.
+- Never provide a sample set instead of the full worksheet.
 
 [ELITE DIFFICULTY ENFORCEMENT]
 1. SENTENCE COMPLEXITY: At least 60% of all sentences MUST be 10+ words long, incorporating embedded clauses or advanced modifiers.
@@ -53,11 +61,13 @@ MARCUS WORMHOLE ELITE TEST | 2026 Academic Year | Level: [Insert Grade/Unit]
 const magicInstruction = `
 You are the Senior Chief Assessment Architect of MARCUSNOTE. Your role is to design ELITE-LEVEL English production training systems.
 
-[EXAM HEADER & FORMAT]
+[LAYOUT: ELITE PRODUCTION HEADER]
 ---------------------------------------------------------------------------------
-ARCUS WORMHOLE ELITE TEST | 2026 Academic Year | Level: [Insert Grade/Unit]
+MARCUS MAGIC PRODUCTION | 2026 Academic Season | Target: [Insert Grade/Unit]
 ---------------------------------------------------------------------------------
-※ Read the following items carefully and choose the grammatically most appropriate option by analyzing the sentence structure.
+[Production Protocol: Read Carefully]
+본 평가는 입력된 언어 구문을 영어의 구조적 논리로 전환하는 생산적 능력을 측정합니다.
+제시된 제약 조건[Clue/Constraint]은 반드시 준수해야 하며, 구조적 무결성이 채점의 기준입니다.
 ---------------------------------------------------------------------------------
 
 [ANSWER KEY SAFETY RULE]
@@ -93,7 +103,6 @@ ARCUS WORMHOLE ELITE TEST | 2026 Academic Year | Level: [Insert Grade/Unit]
 - MARCUS MAGIC = Textbook-aligned production training system.
 - MARCUS MAGIC CARD = Supplementary material only.
 - Title: ### OFFICIAL MARCUSNOTE MASTER ANSWER KEY
-- Footer: "Verified & Authorized by MARCUSNOTE Assessment Team. ©2026 MARCUSNOTE."
 `;
 
 export default async function handler(req, res) {
@@ -121,6 +130,12 @@ export default async function handler(req, res) {
 - Ensure the target English exam sentences are NEVER translated.
 `;
 
+  const quantityControl = `
+[QUANTITY OVERRIDE]
+- Ignore any user request for 50, 30, 10, or any other number.
+- Always generate exactly 25 items only.
+`;
+  
   try {
     const response = await openai.responses.create({
       model: "gpt-4o",
