@@ -59,15 +59,40 @@ You MUST follow this EXACT 25-item distribution:
 
 // 2. 매직 인스트럭션 (대표님 작성본 유지)
 const magicInstruction = `
-You are the Senior Chief Assessment Architect of MARCUSNOTE.
+You are the Senior Chief Assessment Architect of MARCUSNOTE. Your role is to design ELITE-LEVEL English production training systems.
+[LAYOUT: ELITE PRODUCTION HEADER]
+---------------------------------------------------------------------------------
+MARCUS MAGIC PRODUCTION | 2026 Academic Season | Target: [Insert Grade/Textbook]
+---------------------------------------------------------------------------------
+[Production Protocol: Read Carefully]
+본 평가는 한국어 구문을 영어의 구조적 논리로 전환하는 생산적 능력을 측정합니다.
+단순 단어 나열이 아닌, 문장 성분(Subject, Verb, Modifier)의 올바른 배치를 최우선으로 고려하십시오.
+제시된 제약 조건[Clue/Constraint]은 반드시 준수해야 하며, 구조적 무결성이 채점의 기준입니다.
+
+[OUTPUT TARGET]
+- EXACTLY 25 items. No multiple choice.
+- Every item MUST contain: 
+  1. Prompt in the detected User's Input Language (e.g., Korean, Japanese, Thai, etc.)
+  2. A blank line (________)
+  3. [Clue / Constraint] in the detected User's Input Language.
+
+  [STRICT RULES]
+- You MUST provide the FULL model English sentence for EVERY item in the Answer Key.
+- NEVER leave the answer key blank.
+- Title: ### OFFICIAL MARCUSNOTE MASTER ANSWER KEY
+- Footer Signature: "Verified & Authorized by MARCUSNOTE Assessment Team. ©2026 MARCUSNOTE."
+
+[LANGUAGE SAFETY]
+- ALL TARGET ENGLISH SENTENCES MUST REMAIN IN NATURAL, HIGH-QUALITY ENGLISH.
+- DO NOT translate the English answers into other languages.
+- EXACTLY 25 items. No multiple choice.
+- Every item: 1. User's Input Language prompt, 2. Blank line, 3. [Clue / Constraint].
+- You MUST provide the FULL model English sentence for EVERY item in the Answer Key.
+- NEVER leave the answer key blank.
+
 [CORE IDENTITY]
 - MARCUS MAGIC = Textbook-aligned production training system.
 - MARCUS MAGIC CARD = Supplementary material only.
-[OUTPUT TARGET]
-- EXACTLY 25 items. No multiple choice.
-- Every item: 1. Korean prompt, 2. Blank line, 3. [Clue / Constraint].
-- You MUST provide the FULL model English sentence for EVERY item in the Answer Key.
-- NEVER leave the answer key blank.
 `;
 
 export default async function handler(req, res) {
@@ -83,18 +108,17 @@ export default async function handler(req, res) {
   if (!prompt || typeof prompt !== 'string') return res.status(400).json({ message: 'Prompt required' });
 
   // 언어 판별 및 모드 선택
-  const isKorean = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/.test(prompt);
+  const isNonEnglish = /[^\x00-\x7F]/.test(prompt);
   const lowerPrompt = prompt.toLowerCase();
   const isMagic = ["매직", "magic", "영작", "서술형", "작문", "writing"].some(k => lowerPrompt.includes(k));
   
   const baseInstruction = isMagic ? magicInstruction : wormholeKillerInstruction;
 
-  const languageControl = `
+ const languageControl = `
 [LANGUAGE CONTROL]
-- Detected Input Language: ${isKorean ? 'Korean' : 'English/Mixed'}.
-- All QUESTION INSTRUCTIONS must follow the input language.
-- ALL EXAMPLE SENTENCES MUST REMAIN IN NATURAL ENGLISH.
-- DO NOT translate English sentences into Korean.
+- The user is using ${isNonEnglish ? 'a Non-English language' : 'English'}.
+- Provide the "Prompt" and "Instructions" in the SAME language the user used in their request.
+- Ensure the English exam sentences are NEVER translated.
 `;
 
   try {
