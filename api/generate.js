@@ -3,6 +3,7 @@ import { OpenAI } from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(req, res) {
+  // CORS 허용 설정
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
@@ -17,7 +18,7 @@ export default async function handler(req, res) {
 
   const { prompt } = req.body;
 
-  // 마커스노트 2.0 핵심 지능 (수정본)
+  // 마커스노트 2.0 핵심 지능 (웜홀 스타일 강화)
   const marcusInstruction = `
 You are the Senior Editor of MARCUSNOTE. Follow these strict rules for high-quality production:
 
