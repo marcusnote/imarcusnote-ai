@@ -189,6 +189,7 @@ Examples:
 - Focus on sentence production, transformation, paraphrasing, and layered structure control.
 - At least 30% of items must involve combined or layered grammar.
 - Difficulty should gradually rise across the set.
+- ELITE PRODUCTION RULE: At least 50% of items must be complex sentences (12+ words). Do not just translate simple S+V+O; include modifiers like relative clauses or adverbs.
 
 [ANSWER KEY RULE]
 - You MUST provide the FULL model English sentence for every item.
