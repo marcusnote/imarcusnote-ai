@@ -16,7 +16,7 @@ MARCUS WORMHOLE ELITE TEST | 2026 Academic Year | Level: [Insert Grade/Unit]
 [ANSWER KEY SAFETY RULE]
 - Output ONLY the numbered answer list (e.g., 1) ③).
 - STOP generation immediately after the last answer point.
-- DO NOT include any footers, "Verified by" marks, extra numbering, or stray symbols.
+- DO NOT include any footers.
 - Ensure a clean end with NO text following the final answer.
 - Never apologize.
 - Never say you cannot generate the requested set.
