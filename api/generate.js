@@ -3,9 +3,9 @@ import { OpenAI } from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(req, res) {
-  // 1. CORS 및 기본 보안 설정
+  // 1. 보안 강화: 허용 도메인을 마커스노트 공식 도메인으로 제한 
   res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,POST');
   res.setHeader('Access-Control-Allow-Headers', '*');
 
@@ -14,67 +14,69 @@ export default async function handler(req, res) {
 
   const { prompt } = req.body;
 
-  // 2. 마커스노트 지능형 지침 (지식 검색 최적화)
+  // 2. 입력 검증: 비정상적인 요청으로 인한 API 비용 낭비 방지 
+  if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
+    return res.status(400).json({ message: 'Prompt is required' });
+  }
+
   const marcusInstruction = `
-You are the Senior Editor of MARCUSNOTE. 
-[CORE DATA] Access Vector Store (vs_69c4e7...) for textbook and brand data.
+You are the Senior Editor of MARCUSNOTE. Use file_search to access the Vector Store for textbook and brand data.
 
-[HEADER DESIGN]
-Generate a formal header for each worksheet:
---------------------------------------------------
-MARCUSNOTE OFFICIAL WORKSHEET | [Grade/Textbook/Unit]
-System: MARCUS Intelligence 2.0 (Structural Training)
---------------------------------------------------
+[CRITICAL: OUTPUT INTEGRITY]
+- QUANTITY: Strictly generate exactly 25 items. 
+- NO LEAK: Never include answers or hints within the question text. 
+- SEPARATION: Questions and Answer Keys must be completely separate sections. 
 
-[GENERATION RULES]
-1. WORMHOLE MODE: Focus on structural traps. No simple items.
-2. NO ANSWER LEAK: Never include the answer in the question text (CRITICAL for Item 26 error).
-3. QUANTITY: Exactly 25 or 30 items as requested.
-4. HIGH DIFFICULTY: Tag <span class="high-difficulty">[High Difficulty]</span> for items with 2+ traps.
+[MODE 1: WORMHOLE - TRAP DISTRIBUTION]
+If requested or default, generate structural traps with this mandatory distribution:
+- 30%: Multi-sentence counting (Counting) 
+- 30%: Structural detection (Detection) 
+- 40%: High-difficulty mixed traps (Mixed Traps) 
 
-[OUTPUT ALIGNMENT]
-- QUESTIONS: Strictly separate from answers.
-- ANSWER KEY: Provide a compact, horizontal table (e.g., 1-5, 6-10 in rows).
-- EXPLANATIONS: Group all explanations at the end. Use 'Trap Type' and 'Structural Logic'.
-- FORMATTING: Ensure no sentence breaks between pages (Use clear spacing).
+[MODE 2: MAGIC - PRODUCTION TRAINING]
+If '매직' or 'Magic' is requested:
+- Format: Korean Prompt + [Clue/Constraint] -> Blank for English. 
+- ANSWER KEY: You MUST provide the FULL model English sentence for each item. Never leave it blank. 
+
+[CORE RULES]
+- TEXTBOOK ALIGNMENT: Use '06_curriculum_mapping.md' and '국내 교과서 문법 목록' to match targets. 
+- BRANDING: Use <span class="high-difficulty">[High Difficulty]</span> for 5pts+ items. 
+- EXPLANATION: Provide Structural Logic for every 5 items. 
+
+[FORMAT RULES]
+- Put each answer on a separate line for PDF readability. 
+- Do not compress the answer key into one paragraph. 
 `;
 
   try {
-    // 3. Responses API 호출 (지식 검색을 위한 정석 구조)
     const response = await openai.responses.create({
-      model: "gpt-4.1", // 최신 Responses API 지원 모델
+      model: "gpt-4o", // 현재 가장 안정적인 모델 선택 
       input: [
-        {
-          role: "system",
-          content: marcusInstruction
-        },
-        {
-          role: "user",
-          content: prompt
-        }
+        { role: "system", content: marcusInstruction },
+        { role: "user", content: prompt }
       ],
-      // 4. 지식 검색 도구와 Vector Store 직접 연결
       tools: [
         {
           type: "file_search",
-          // 환경변수 또는 직접 ID 입력 (vs_69c4e7884720819183adf46ecd85422f)
-          vector_store_ids: ["vs_69c4e7884720819183adf46ecd85422f"]
+          vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
+          // 검색 결과 수를 제한하여 응답의 집중도 향상 
+          max_num_results: 5 
         }
       ],
+      // 어떤 파일을 참고했는지 디버깅하기 위한 옵션 
+      include: ["file_search_call.results"],
       temperature: 0.4
     });
 
-    // 5. 결과 텍스트 추출
-    const resultText = response.output_text;
-
     res.status(200).json({
-      response: resultText
+      // 응답 데이터가 없을 경우를 대비한 안전장치 
+      response: response.output_text || "" 
     });
 
   } catch (error) {
     console.error("MARCUS Engine Error:", error);
     res.status(500).json({
-      error: "Marcus Engine Error",
+      error: "Marcus Intelligence Engine Error",
       detail: error.message
     });
   }
