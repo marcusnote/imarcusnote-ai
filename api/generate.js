@@ -1,26 +1,23 @@
 import { OpenAI } from 'openai';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method Not Allowed' });
+  // 🚨 [핵심 추가] 모든 도메인에서 접속할 수 있도록 허용 (CORS 설정)
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
+
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
   }
 
-  const { prompt } = req.body;
+  if (req.method !== 'POST') return res.status(405).json({ message: 'Method Not Allowed' });
 
-  // [MARCUSNOTE KNOWLEDGE BASE 2.0] - Integrated from 17 Volumes
-  const marcusInstruction = `
-    You are the Senior Editor of MARCUSNOTE. Follow these strict rules:
-    1. DYNAMIC LANGUAGE: Detect user language. Write instructions/clues/explanations in that language.
-    2. MAGIC MODE: If input is English, provide [Paraphrasing] tasks with a [Clue]. If non-English, provide [Translation] tasks.
-    3. WORMHOLE MODE: Focus on high-difficulty MCQs (5-option). Use 'Counting correct sentences' or 'Indirect question word order' traps.
-    4. SCORING: For items 5pts+, prefix with <span class='high-difficulty'>[High Difficulty]</span>.
-    5. OUTPUT: Exactly 25 items. No bolding (**). Answer Key at the end in <div class='answer-key-box'>.
-    Inquiry: marcusnote.official@gmail.com
-  `;
+  const { prompt } = req.body;
+  const marcusInstruction = `You are the Senior Editor of MARCUSNOTE... (기존 지침 내용)`;
 
   try {
     const completion = await openai.chat.completions.create({
@@ -31,10 +28,8 @@ export default async function handler(req, res) {
       ],
       temperature: 0.7,
     });
-
-    const result = completion.choices[0].message.content;
-    res.status(200).json({ response: result });
+    res.status(200).json({ response: completion.choices[0].message.content });
   } catch (error) {
-    res.status(500).json({ error: "Intelligence Engine Error" });
+    res.status(500).json({ error: error.message });
   }
 }
