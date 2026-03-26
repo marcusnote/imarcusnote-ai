@@ -63,7 +63,6 @@ Your role is to design ELITE-LEVEL English production training systems.
 `;
 
 export default async function handler(req, res) {
-  // 보안 및 Method 검증
   res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', '*');
@@ -76,18 +75,27 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: 'Prompt required' });
   }
 
-  // 모드 판별 로직 (매직 키워드 확장)
+  // 3. 언어 및 모드 인지 로직 (코드 레벨 필터링) 
+  const isKorean = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/.test(prompt);
   const lowerPrompt = prompt.toLowerCase();
-  const isMagic = ["매직", "magic", "영작", "서술형", "작문", "writing"].some(k => lowerPrompt.includes(k));
   
-  // 상황에 맞는 인스트럭션 선택
-  const finalInstruction = isMagic ? magicInstruction : wormholeKillerInstruction;
+  const isMagic = ["매직", "magic", "영작", "서술형", "작문", "writing"].some(k => lowerPrompt.includes(k));
+  const baseInstruction = isMagic ? magicInstruction : wormholeKillerInstruction;
+
+  // 4. 언어 제어 지침 추가 
+  const languageControl = `
+[LANGUAGE CONTROL]
+- Detected Input Language: ${isKorean ? 'Korean' : 'English/Mixed'}.
+- All QUESTION INSTRUCTIONS (e.g., "다음 중...", "Choose the...") must follow the input language.
+- ALL EXAMPLE SENTENCES and EXAM CONTENT MUST REMAIN IN NATURAL ENGLISH.
+- DO NOT translate English sentences into Korean.
+`;
 
   try {
     const response = await openai.responses.create({
       model: "gpt-4o",
       input: [
-        { role: "system", content: finalInstruction },
+        { role: "system", content: baseInstruction + languageControl },
         { role: "user", content: prompt }
       ],
       tools: [
@@ -98,12 +106,11 @@ export default async function handler(req, res) {
         }
       ],
       include: ["file_search_call.results"],
-      temperature: 0.3 // 킬러 문항의 정밀도를 위해 낮은 온도 유지
+      temperature: 0.3
     });
 
     res.status(200).json({ response: response.output_text || "" });
   } catch (error) {
-    console.error("MARCUS Engine Error:", error);
     res.status(500).json({ error: error.message });
   }
 }
