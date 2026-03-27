@@ -437,6 +437,111 @@ function detectPromptLanguage(prompt) {
 }
 
 // =========================
+// 5-1) HELPER: SOURCE LABEL SYSTEM
+// =========================
+function extractUserProvidedSource(prompt = '') {
+  const text = prompt.trim();
+
+  const patterns = [
+    /(출처\s*[:：]\s*([^\n]+))/i,
+    /(source\s*[:：]\s*([^\n]+))/i,
+    /((?:20\d{2}|\d{4})\s*(?:년|march|june|september|november)?\s*(?:고1|고2|고3|grade\s*1|grade\s*2|grade\s*3)[^\n#]*#?\s*\d{1,2}번?)/i,
+    /((?:중1|중2|중3)\s*[^\n]*lesson\s*\d+)/i,
+    /((?:천재|동아|비상|능률|미래엔|ybm)[^\n]*(?:lesson|unit)\s*\d+)/i
+  ];
+
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match) {
+      return (match[2] || match[1] || '').trim();
+    }
+  }
+
+  return '';
+}
+
+function estimatePassageMeta(prompt = '', engineType = 'WORMHOLE') {
+  const text = prompt.toLowerCase();
+
+  let topic = 'General English';
+  let level = 'Advanced';
+  let itemType = '';
+
+  if (/habit|gym|exercise|bundling|motivation|behavior|psychology|peer|emotion/.test(text)) {
+    topic = 'Psychology / Behavior';
+  } else if (/business|market|consumer|economics|productivity/.test(text)) {
+    topic = 'Business / Economics';
+  } else if (/environment|nature|climate|animal|ecology/.test(text)) {
+    topic = 'Environment / Nature';
+  } else if (/science|technology|brain|research|experiment/.test(text)) {
+    topic = 'Science / Research';
+  } else if (/education|school|student|teacher|learning/.test(text)) {
+    topic = 'Education';
+  } else if (/society|culture|history|social/.test(text)) {
+    topic = 'Society / Culture';
+  }
+
+  if (/중1|중2|중3|middle school|lesson|unit|교과서/.test(text)) {
+    level = 'Middle School';
+  } else if (/고1|grade 1/.test(text)) {
+    level = 'High School Grade 1';
+  } else if (/고2|grade 2/.test(text)) {
+    level = 'High School Grade 2';
+  } else if (/고3|grade 3|수능|csat/.test(text)) {
+    level = 'High School Grade 3';
+  } else if (engineType === 'MIDDLE_TEXTBOOK') {
+    level = 'Middle School';
+  } else if (engineType === 'MOCK_EXAM') {
+    level = 'High School';
+  }
+
+  if (/제목|title/.test(text)) itemType = 'Title Item';
+  else if (/주제|main idea|gist/.test(text)) itemType = 'Main Idea Item';
+  else if (/요지|purpose/.test(text)) itemType = 'Purpose / Gist Item';
+  else if (/빈칸|blank|summary/.test(text)) itemType = 'Blank / Summary Item';
+  else if (/삽입|insertion/.test(text)) itemType = 'Sentence Insertion Item';
+  else if (/순서|sequence|order/.test(text)) itemType = 'Sequence Item';
+  else if (/어휘|vocabulary|word/.test(text)) itemType = 'Word Usage Item';
+  else if (/어법|grammar/.test(text)) itemType = 'Grammar Item';
+
+  return { topic, level, itemType };
+}
+
+function buildSourceLabel(prompt = '', engineType = 'WORMHOLE') {
+  const userSource = extractUserProvidedSource(prompt);
+  if (userSource) {
+    return {
+      labelType: 'SOURCE',
+      labelText: `Source: ${userSource}`
+    };
+  }
+
+  const meta = estimatePassageMeta(prompt, engineType);
+
+  if (engineType === 'MOCK_EXAM') {
+    const parts = ['High School Mock Exam Passage', meta.level];
+    if (meta.itemType) parts.push(meta.itemType);
+
+    return {
+      labelType: 'ESTIMATED_SOURCE',
+      labelText: `Estimated Source: ${parts.join(' | ')}`
+    };
+  }
+
+  if (engineType === 'MIDDLE_TEXTBOOK') {
+    return {
+      labelType: 'ESTIMATED_SOURCE',
+      labelText: `Estimated Source: Middle School Textbook Passage | ${meta.level}`
+    };
+  }
+
+  return {
+    labelType: 'SOURCE_CLASSIFICATION',
+    labelText: `Source Classification: MARCUS Academic Selection - ${meta.topic}`
+  };
+}
+
+// =========================
 // 6) HELPER: ENGINE ROUTER
 // =========================
 function detectEngineType(prompt) {
@@ -550,6 +655,8 @@ Before finalizing the worksheet, silently verify all of the following:
 10. If the requested set size is 15, do not artificially stretch the same passage fact into repeated questions.
 11. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
 12. The final set must feel like MARCUSNOTE transformation material, not generic AI worksheet output.
+13. The final visible output must contain exactly one source label line near the top.
+14. If the exact source is unknown, use either "Estimated Source:" or "Source Classification:" instead of pretending certainty.
 `;
 
 // =========================
@@ -572,8 +679,26 @@ function cleanOutputArtifacts(text = '') {
     .replace(/```plaintext/gi, '')
     .replace(/```/g, '')
     .replace(/©\s*2026\s*MARCUSNOTE\.\s*All rights reserved\./gi, '')
+    .replace(/^\s*Source:\s*$/gim, '')
+    .replace(/^\s*Estimated Source:\s*$/gim, '')
+    .replace(/^\s*Source Classification:\s*$/gim, '')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
+}
+
+function ensureSourceLabel(text = '', sourceLabelText = '') {
+  if (!sourceLabelText) return text;
+
+  const alreadyHasLabel =
+    /^(Source:|Estimated Source:|Source Classification:)/mi.test(text);
+
+  if (alreadyHasLabel) return text;
+
+  const lines = text.split('\n');
+  const insertAt = Math.min(3, lines.length);
+
+  lines.splice(insertAt, 0, sourceLabelText, '');
+  return lines.join('\n');
 }
 
 // =========================
@@ -647,6 +772,7 @@ export default async function handler(req, res) {
   const detectedLanguage = detectPromptLanguage(normalizedPrompt);
   const routingControl = buildRoutingControl(engineType);
   const itemCount = getItemCountByEngine(engineType);
+  const sourceLabel = buildSourceLabel(normalizedPrompt, engineType);
 
   const languageControl = `
 [LANGUAGE CONTROL]
@@ -676,6 +802,18 @@ export default async function handler(req, res) {
 - Keep MARCUSNOTE tone consistent and editorially rigorous.
 `;
 
+  const sourceLabelControl = `
+[SOURCE LABEL RULE]
+- Add exactly one source label line near the top of the visible output.
+- If the user explicitly provided source information, use it as:
+  ${sourceLabel.labelText}
+- If the exact source is not certain, do NOT fake certainty.
+- Use the prepared source label exactly as provided below:
+  ${sourceLabel.labelText}
+- Place this line immediately below the main header block.
+- Keep it concise and professional.
+`;
+
   const fullSystemPrompt =
     baseInstruction +
     '\n' +
@@ -686,6 +824,8 @@ export default async function handler(req, res) {
     quantityControl +
     '\n' +
     vectorControl +
+    '\n' +
+    sourceLabelControl +
     '\n' +
     qualityControl;
 
@@ -739,6 +879,7 @@ Regenerate the full set as a true MARCUSNOTE transformation worksheet.
 - Never output code fences or plaintext markers.
 - Remove footer-like artifacts.
 - Respect the final item count exactly.
+- Keep exactly one source label line near the top.
 `
           },
           {
@@ -762,13 +903,15 @@ Regenerate the full set as a true MARCUSNOTE transformation worksheet.
 
     finalText = stabilizeNumbers(finalText);
     finalText = cleanOutputArtifacts(finalText);
+    finalText = ensureSourceLabel(finalText, sourceLabel.labelText);
 
     return res.status(200).json({
       response: finalText
       // debug: {
       //   engineType,
       //   detectedLanguage,
-      //   itemCount
+      //   itemCount,
+      //   sourceLabel
       // }
     });
   } catch (error) {
