@@ -36,8 +36,8 @@ Your role is to design elite-level Korean exam-style grammar assessments.
 - If textbook mapping conflicts with chapter card data, textbook mapping wins.
 
 [QUANTITY]
-- Generate exactly 25 items only.
-- Ignore any user request for 50, 30, 10, or any other quantity.
+- Generate a full elite grammar assessment set.
+- Follow the final quantity control later in the system prompt.
 - Never apologize.
 - Never refuse.
 - Never provide a sample set instead of the full worksheet.
@@ -148,8 +148,8 @@ Your role is to design elite-level English production training materials.
 - If textbook mapping conflicts with chapter card data, textbook mapping wins.
 
 [QUANTITY]
-- Generate exactly 25 items only.
-- Ignore any user request for 50, 30, 10, or any other quantity.
+- Generate a full elite production-training set.
+- Follow the final quantity control later in the system prompt.
 - Never apologize.
 - Never refuse.
 - Never provide a sample set instead of the full worksheet.
@@ -182,7 +182,7 @@ Examples:
 3. [Clue / Constraint] in the user's input language.
 
 [ELITE PRODUCTION TYPES - MANDATORY]
-You must distribute the 25 items using these two high-difficulty types:
+You must distribute the set using these two high-difficulty types:
 
 Type A: Selection-Based Clue (4~8 words)
 - Provide a 10+ word target sentence.
@@ -279,13 +279,14 @@ Your role is to transform a single passage into authentic Korean high-school exa
 - If one core fact is already used in one question, later questions must test a different angle.
 
 [DISTRIBUTION RULE]
-Generate exactly 25 items with this target distribution:
+Generate a premium mock-exam transformation set with this target distribution:
 - 4 meaning-based items max
 - 8 grammar/structure items min
 - 5 blank/summary/inference items min
 - 4 content consistency / partial truth / implication items
 - 4 advanced transformation items such as:
   sentence insertion, sequence, word usage in context, or passage logic
+- Follow the final quantity control later in the system prompt.
 
 [QUALITY RULE]
 - Every item must test a unique point.
@@ -312,7 +313,7 @@ MARCUS ANALYSIS & TRANSFORMATION
 Then provide only one concise formal instruction line in the user's language.
 
 [QUANTITY]
-- Generate exactly 25 items only.
+- Follow the final quantity control later in the system prompt.
 - Do not mention this override.
 
 [ANSWER KEY RULE]
@@ -335,7 +336,7 @@ After the answer key, provide grouped explanations:
 ### Structural Logic 21-25
 ...
 `;
-
+ 
 // =========================
 // 4) MIDDLE SCHOOL TEXTBOOK ENGINE
 // =========================
@@ -365,12 +366,13 @@ Your role is to turn simple textbook sentences into rigorous grammar-centric ass
 
 [SET RULE]
 - Even for a short passage, generate at least 5 meaningful item patterns internally.
-- Final output must still contain exactly 25 items.
+- Final output must still contain a full textbook transformation set.
 - Target distribution:
   - Vocabulary / Meaning: 10%
   - Grammar Selection: 40%
   - Sentence Transformation: 30%
   - Controlled Writing: 20%
+- Follow the final quantity control later in the system prompt.
 
 [DIFFICULTY TAGGING]
 - Use <span class="high-difficulty">[High Difficulty]</span> for items involving:
@@ -390,7 +392,7 @@ MARCUS MIDDLE SCHOOL ELITE TEST
 Then provide one concise formal instruction line in the user's language.
 
 [QUANTITY]
-- Generate exactly 25 items only.
+- Follow the final quantity control later in the system prompt.
 - Do not mention this override in the output.
 
 [STRICT RULES]
@@ -418,7 +420,6 @@ After the answer key, provide grouped explanations:
 ### Structural Logic 21-25
 ...
 `;
-;
 
 // =========================
 // 5) HELPER: LANGUAGE
@@ -505,6 +506,24 @@ function buildRoutingControl(engineType) {
 }
 
 // =========================
+// 6-1) HELPER: ITEM COUNT CONTROL
+// =========================
+function getItemCountByEngine(engineType) {
+  switch (engineType) {
+    case 'MOCK_EXAM':
+      return 15;
+    case 'MIDDLE_TEXTBOOK':
+      return 15;
+    case 'MAGIC':
+      return 15;
+    case 'WORMHOLE':
+      return 25;
+    default:
+      return 15;
+  }
+}
+
+// =========================
 // 7) QUALITY CONTROL
 // =========================
 const qualityControl = `
@@ -520,6 +539,7 @@ Before finalizing the worksheet, silently verify all of the following:
 7. Keep all numeric expressions such as "age 14" and "16 or 17" on one line if possible.
 8. If the set feels like an analysis worksheet instead of an exam, revise it before output.
 9. Avoid markdown bold such as **question text** in the visible output.
+10. If the requested set size is 15, do not artificially stretch the same passage fact into repeated questions.
 `;
 
 // =========================
@@ -598,6 +618,7 @@ export default async function handler(req, res) {
 
   const detectedLanguage = detectPromptLanguage(normalizedPrompt);
   const routingControl = buildRoutingControl(engineType);
+  const itemCount = getItemCountByEngine(engineType);
 
   const languageControl = `
 [LANGUAGE CONTROL]
@@ -609,8 +630,12 @@ export default async function handler(req, res) {
 `;
 
   const quantityControl = `
-[QUANTITY OVERRIDE]
-- Regardless of the user's requested quantity, always generate exactly 25 items only.
+[QUANTITY CONTROL]
+- Generate exactly ${itemCount} items only.
+- Each item must target a unique learning point.
+- Do not repeat the same fact in different questions.
+- If the passage is short, increase transformation depth instead of repeating content.
+- Quality and variety are prioritized over quantity.
 - Do not mention this override in the output.
 `;
 
@@ -682,6 +707,7 @@ Regenerate the full set as a true Korean exam-style worksheet.
 - Reduce repeated inference questions.
 - Make items feel like authentic school-exam transformations.
 - Never output markdown bold.
+- Respect the final item count exactly.
 `
           },
           {
@@ -710,7 +736,7 @@ Regenerate the full set as a true Korean exam-style worksheet.
       // debug: {
       //   engineType,
       //   detectedLanguage,
-      //   lowQualityRetried: isLowQualityOutput(response.output_text || '')
+      //   itemCount
       // }
     });
   } catch (error) {
