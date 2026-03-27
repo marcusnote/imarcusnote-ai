@@ -804,7 +804,6 @@ function isLowQualityOutput(text = '') {
 
   return badCount >= 2 || repeatedInference || tooGeneric || weakTransformation || repeatedTemplates;
   
-  return badCount >= 2 || repeatedInference || tooGeneric || weakTransformation;
 }
 
 // =========================
