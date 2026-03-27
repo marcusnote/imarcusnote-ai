@@ -274,10 +274,31 @@ Your role is to transform a single passage into authentic Korean high-school exa
 [MANDATORY TRANSFORMATION DISTRIBUTION]
 For a 15-item mock-exam set:
 - 3 items: title / gist / purpose / partial-truth meaning
-- 4 items: grammar / bracket / structure
-- 3 items: blank / summary / inference
+- 3 items: grammar / bracket / structure
+- 3 items: blank / summary / implication
 - 3 items: sentence insertion / order / flow / relation
-- 2 items: vocabulary-in-context / content consistency / implication
+- 3 items: hybrid killer items using structure + meaning or vocabulary + logic
+
+[STEP-BY-STEP ITEM ROUTING]
+For a 15-item mock-exam set, assign item roles strictly by number:
+
+Items 1-3 = Meaning Layer
+- title / gist / purpose / partial-truth meaning
+
+Items 4-6 = Structure Layer
+- bracket grammar / error detection / word usage in context
+
+Items 7-9 = Deep Inference Layer
+- blank inference / summary completion / implication
+
+Items 10-12 = Flow Logic Layer
+- sentence insertion / order / relation / logic flow
+
+Items 13-15 = Marcus Killer Layer
+- hybrid transformation items combining meaning + structure,
+  or vocabulary + logic, or structure + inference
+
+Do not repeat the same item type in adjacent layers unless the passage absolutely requires it.
 
 [QUALITY RULE]
 - Every item must test a unique point.
@@ -685,6 +706,10 @@ Before finalizing the worksheet, silently verify all of the following:
 14. The final visible output must contain exactly one source label line near the top.
 15. If the exact source is unknown, use either "Estimated Source:" or "Source Classification:" instead of pretending certainty.
 16. Each Structural Logic explanation must be at least 2 sentences in substance, not a one-line memo.
+17. In mock-exam mode, items 1-3 / 4-6 / 7-9 / 10-12 / 13-15 must clearly belong to different testing layers.
+18. In mock-exam mode, items 7-9 must include at least one implication item.
+19. Do not recycle the same sentence insertion, same blank logic, same implication trap, or same irrelevant-detail trap more than once.
+20. If items 10-15 resemble repeated variants of items 1-9, revise the set before output.
 `;
 
 // =========================
@@ -771,6 +796,14 @@ function isLowQualityOutput(text = '') {
     (lower.match(/summary/gi) || []).length === 0 &&
     (lower.match(/blank/gi) || []).length === 0;
 
+  const repeatedTemplates =
+    (lower.match(/which sentence is most awkward/gi) || []).length >= 2 ||
+    (lower.match(/where does the sentence best fit/gi) || []).length >= 2 ||
+    (lower.match(/what is implied by the passage/gi) || []).length >= 2 ||
+    (lower.match(/what can be inferred from the passage/gi) || []).length >= 2;
+
+  return badCount >= 2 || repeatedInference || tooGeneric || weakTransformation || repeatedTemplates;
+  
   return badCount >= 2 || repeatedInference || tooGeneric || weakTransformation;
 }
 
@@ -914,6 +947,9 @@ Mandatory corrections:
 - Respect the final item count exactly.
 - Keep exactly one source label line near the top.
 - Each explanation must state why the correct answer works and why at least one distractor fails.
+- Enforce layer-by-layer routing:
+  1-3 meaning, 4-6 structure, 7-9 blank/summary/implication, 10-12 flow, 13-15 hybrid killer.
+- Do not repeat the same transformation template across multiple number bands.
 `
           },
           {
