@@ -23,11 +23,19 @@ module.exports = async function handler(req, res) {
   let browser;
 
   try {
+    const executablePath = await chromium.executablePath();
+
     browser = await puppeteer.launch({
-      args: chromium.args,
+      args: [
+        ...chromium.args,
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--single-process'
+      ],
       defaultViewport: chromium.defaultViewport,
-      executablePath: await chromium.executablePath(),
-      headless: chromium.headless,
+      executablePath,
+      headless: true,
       ignoreHTTPSErrors: true
     });
 
@@ -56,9 +64,7 @@ module.exports = async function handler(req, res) {
             margin: 18mm 14mm 22mm 14mm;
           }
 
-          * {
-            box-sizing: border-box;
-          }
+          * { box-sizing: border-box; }
 
           html, body {
             margin: 0;
@@ -148,10 +154,6 @@ module.exports = async function handler(req, res) {
           h1, h2, h3, h4, p, div {
             page-break-inside: avoid;
             break-inside: avoid;
-          }
-
-          br {
-            line-height: 1.7;
           }
         </style>
       </head>
