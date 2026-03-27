@@ -240,58 +240,44 @@ Required answer key format:
 `;
 
 // =========================
-// 3) MOCK EXAM ENGINE (High School) - MARCUSNOTE ENHANCED
+// 3) MOCK EXAM ENGINE (High School) - STRONG MARCUS PATCH
 // =========================
 const mockExamInstruction = `
 You are the I•MARCUSNOTE Mock Exam Transformation Engine.
 Your role is to transform a single passage into authentic Korean high-school exam-style transformation items.
 
 [IDENTITY]
-- This engine is for high-school mock exams, school exams, and CSAT-style transformation.
+- This engine is ONLY for high-school mock exams, school exams, and CSAT-style transformation.
 - Use the vector store as the primary reference for MARCUSNOTE transformation logic.
-- Output must feel like an actual Korean exam sheet, not an analysis worksheet or reading-comprehension workbook.
+- Output must feel like a real Korean exam-style transformation worksheet, not a reading-comprehension workbook.
 
-[CORE LOGIC: THE MARCUS PATH]
-1. Meaning Layer
-   - Title / Main Idea / Purpose / Gist / Content Consistency
-2. Structure Layer
-   - Bracket grammar / word choice / error detection / sentence insertion / order / flow
-3. Deep Layer
-   - Blank inference / summary completion / implication / logic sequence
+[CORE PRINCIPLE]
+- A Marcus transformation set must NOT merely ask what the passage says.
+- It must decompose the passage into:
+  1) meaning traps
+  2) structure traps
+  3) inference / blank logic
+  4) flow / insertion / sequence logic
+  5) partial-truth distractor logic
 
 [ORIGINAL ITEM PRESERVATION]
 - If the source resembles a title / main idea / purpose / gist item, preserve that original category in at least 2 transformed items.
 - If the source resembles a blank / summary / grammar item, preserve that category in at least 2 transformed items.
 - Do not ignore the original exam identity of the source passage.
 
-[CRITICAL EXAM RULE]
-- Never expose internal labels such as:
-  - Phase 1
-  - Phase 2
-  - Phase 3
-  - Meaning Layer
-  - Structure Layer
-  - Deep Dive
-- These are internal reasoning steps only. They must NEVER appear in the output.
+[ANTI-COMPREHENSION-WORKSHEET RULE]
+- Do not generate more than 3 direct content-retrieval questions.
+- Do not ask multiple questions that can be answered by the same single sentence in the passage.
+- If an item only checks surface recall, replace it with a transformed logic, grammar, summary, or partial-truth item.
+- Never let the set feel like a simple reading worksheet.
 
-[ANTI-GENERIC RULE]
-- Do NOT generate repetitive content-check questions.
-- Do NOT overuse broad question stems such as:
-  - What is the main idea of the passage?
-  - What does the passage suggest?
-  - What can be inferred?
-- Do not ask the same core fact more than once in slightly different wording.
-- If one core fact is already used in one item, later items must test a different point.
-
-[DISTRIBUTION RULE]
-Generate a premium mock-exam transformation set with this target distribution:
-- 3~4 meaning-based items max
-- 4~5 grammar/structure items min
-- 2~3 blank/summary/inference items min
-- 2~3 content consistency / partial truth / implication items
-- 2~3 advanced transformation items:
-  sentence insertion, sequence, word usage in context, logic flow, or sentence relation
-- Follow the final quantity control later in the system prompt.
+[MANDATORY TRANSFORMATION DISTRIBUTION]
+For a 15-item mock-exam set:
+- 3 items: title / gist / purpose / partial-truth meaning
+- 4 items: grammar / bracket / structure
+- 3 items: blank / summary / inference
+- 3 items: sentence insertion / order / flow / relation
+- 2 items: vocabulary-in-context / content consistency / implication
 
 [QUALITY RULE]
 - Every item must test a unique point.
@@ -303,13 +289,36 @@ Generate a premium mock-exam transformation set with this target distribution:
 
 [PARTIAL TRUTH DISTRACTOR RULE]
 - Meaning-based distractors must include partial-truth traps.
-- Wrong options must sound plausible but fail due to scope, degree, causality, implication, or logical focus.
+- Wrong options must sound plausible but fail due to scope, degree, causality, implication, logical focus, or distorted emphasis.
 
-[OUTPUT STYLE]
-- Formal exam style only.
+[STRUCTURE ITEM RULE]
+- At least 4 items must require structural judgment.
+- Acceptable structure item types:
+  - bracket grammar
+  - error detection
+  - transformed sentence judgment
+  - word usage in context
+  - connector / logic flow judgment
+
+[DEEP ITEM RULE]
+- At least 3 items must require inference beyond sentence-level recall.
+- Acceptable deep item types:
+  - blank inference
+  - summary completion
+  - sentence insertion
+  - sequence / flow
+  - implication
+
+[VISIBLE OUTPUT RULE]
+- Never expose internal labels such as:
+  - Phase 1
+  - Phase 2
+  - Phase 3
+  - Meaning Layer
+  - Structure Layer
+  - Deep Dive
+- No teacher-facing notes.
 - No markdown emphasis like **question text**.
-- No teacher-facing meta commentary.
-- No internal methodology headings.
 - No code fences.
 
 [HEADER RULE]
@@ -329,6 +338,12 @@ Required answer key format:
 2) ①
 3) ⑤
 
+[EXPLANATION DEPTH RULE]
+- Each Structural Logic explanation must contain:
+  1) why the correct answer is correct
+  2) why at least one major distractor fails
+- Avoid one-line memo style explanations.
+
 [EXPLANATION RULE]
 After the answer key, provide grouped explanations:
 ### Structural Logic 1-5
@@ -336,10 +351,6 @@ After the answer key, provide grouped explanations:
 ### Structural Logic 6-10
 ...
 ### Structural Logic 11-15
-...
-### Structural Logic 16-20
-...
-### Structural Logic 21-25
 ...
 `;
 
@@ -507,12 +518,27 @@ function estimatePassageMeta(prompt = '', engineType = 'WORMHOLE') {
   return { topic, level, itemType };
 }
 
+function shortenSourceLabel(label = '') {
+  return label
+    .replace('High School Mock Exam Passage', 'G1 Mock Passage')
+    .replace('High School Grade 1', 'G1')
+    .replace('High School Grade 2', 'G2')
+    .replace('High School Grade 3', 'G3')
+    .replace('Purpose / Gist Item', 'Purpose/Gist')
+    .replace('Main Idea Item', 'Main Idea')
+    .replace('Title Item', 'Title')
+    .replace('Blank / Summary Item', 'Blank/Summary')
+    .replace('Sentence Insertion Item', 'Insertion')
+    .replace('Word Usage Item', 'Word Usage')
+    .replace('Middle School Textbook Passage', 'Middle School Textbook');
+}
+
 function buildSourceLabel(prompt = '', engineType = 'WORMHOLE') {
   const userSource = extractUserProvidedSource(prompt);
   if (userSource) {
     return {
       labelType: 'SOURCE',
-      labelText: `Source: ${userSource}`
+      labelText: shortenSourceLabel(`Source: ${userSource}`)
     };
   }
 
@@ -524,14 +550,14 @@ function buildSourceLabel(prompt = '', engineType = 'WORMHOLE') {
 
     return {
       labelType: 'ESTIMATED_SOURCE',
-      labelText: `Estimated Source: ${parts.join(' | ')}`
+      labelText: shortenSourceLabel(`Estimated Source: ${parts.join(' | ')}`)
     };
   }
 
   if (engineType === 'MIDDLE_TEXTBOOK') {
     return {
       labelType: 'ESTIMATED_SOURCE',
-      labelText: `Estimated Source: Middle School Textbook Passage | ${meta.level}`
+      labelText: shortenSourceLabel(`Estimated Source: Middle School Textbook Passage | ${meta.level}`)
     };
   }
 
@@ -598,6 +624,7 @@ function buildRoutingControl(engineType) {
 - Preserve the original source item identity where relevant.
 - Never expose internal phase labels in the visible output.
 - Avoid turning the passage into a simple reading-comprehension worksheet.
+- Enforce Marcus-style transformation density over content-retrieval density.
 `;
   }
 
@@ -644,19 +671,20 @@ const qualityControl = `
 Before finalizing the worksheet, silently verify all of the following:
 1. No internal headings such as "Phase 1", "Phase 2", "Phase 3", "Meaning Layer", or "Structure Layer".
 2. No repeated question stems testing the same fact with only wording changes.
-3. No more than 4 broad meaning questions in the whole set for mock-exam mode.
-4. At least 4~5 items must be genuine grammar/structure items in mock-exam mode.
-5. At least 2~3 items must involve deeper transformation logic:
-   sentence insertion, order, contextual word usage, logic flow, sentence relation, or summary logic.
-6. Never create an error-detection question unless there is a real defensible error.
-7. Keep all numeric expressions such as "age 14" and "16 or 17" on one line if possible.
-8. If the set feels like an analysis worksheet or simple reading workbook instead of an exam, revise it before output.
-9. Avoid markdown bold such as **question text** in the visible output.
-10. If the requested set size is 15, do not artificially stretch the same passage fact into repeated questions.
-11. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
-12. The final set must feel like MARCUSNOTE transformation material, not generic AI worksheet output.
-13. The final visible output must contain exactly one source label line near the top.
-14. If the exact source is unknown, use either "Estimated Source:" or "Source Classification:" instead of pretending certainty.
+3. In mock-exam mode, no more than 3 direct content-retrieval questions.
+4. In mock-exam mode, at least 4 items must be genuine grammar/structure items.
+5. In mock-exam mode, at least 3 items must involve blank / summary / inference / flow logic.
+6. In mock-exam mode, at least 3 items must involve sentence insertion, order, relation, connector, or logic flow.
+7. Never create an error-detection question unless there is a real defensible error.
+8. Keep all numeric expressions such as "age 14" and "16 or 17" on one line if possible.
+9. If the set feels like an analysis worksheet or simple reading workbook instead of an exam, revise it before output.
+10. Avoid markdown bold such as **question text** in the visible output.
+11. If the requested set size is 15, do not artificially stretch the same passage fact into repeated questions.
+12. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
+13. The final set must feel like MARCUSNOTE transformation material, not generic AI worksheet output.
+14. The final visible output must contain exactly one source label line near the top.
+15. If the exact source is unknown, use either "Estimated Source:" or "Source Classification:" instead of pretending certainty.
+16. Each Structural Logic explanation must be at least 2 sentences in substance, not a one-line memo.
 `;
 
 // =========================
@@ -733,10 +761,17 @@ function isLowQualityOutput(text = '') {
     (lower.match(/what is the main idea of the passage/gi) || []).length >= 2;
 
   const tooGeneric =
-    (lower.match(/according to the passage/gi) || []).length >= 4 ||
-    (lower.match(/what is the main idea/gi) || []).length >= 2;
+    (lower.match(/according to the passage/gi) || []).length >= 3 ||
+    (lower.match(/which of the following is mentioned/gi) || []).length >= 2 ||
+    (lower.match(/what is the purpose of the passage/gi) || []).length >= 2 ||
+    (lower.match(/what is the main idea of the passage/gi) || []).length >= 2;
 
-  return badCount >= 2 || repeatedInference || tooGeneric;
+  const weakTransformation =
+    (lower.match(/sentence insertion/gi) || []).length === 0 &&
+    (lower.match(/summary/gi) || []).length === 0 &&
+    (lower.match(/blank/gi) || []).length === 0;
+
+  return badCount >= 2 || repeatedInference || tooGeneric || weakTransformation;
 }
 
 // =========================
@@ -763,9 +798,6 @@ export default async function handler(req, res) {
 
   const normalizedPrompt = prompt.trim();
 
-  // =========================
-  // ENGINE AUTO ROUTING
-  // =========================
   const engineType = detectEngineType(normalizedPrompt);
   const baseInstruction = getBaseInstructionByEngine(engineType);
 
@@ -830,7 +862,6 @@ export default async function handler(req, res) {
     qualityControl;
 
   try {
-    // 1st attempt
     let response = await openai.responses.create({
       model: 'gpt-4o',
       input: [
@@ -856,7 +887,6 @@ export default async function handler(req, res) {
 
     let finalText = response.output_text || '';
 
-    // 2nd attempt if low quality
     if (isLowQualityOutput(finalText)) {
       response = await openai.responses.create({
         model: 'gpt-4o',
@@ -868,18 +898,22 @@ export default async function handler(req, res) {
               '\n' +
               `
 [RETRY OVERRIDE]
-The previous draft was too generic, too workbook-like, or exposed internal labels.
-Regenerate the full set as a true MARCUSNOTE transformation worksheet.
-- Remove all internal headings.
+The previous draft was too generic, too workbook-like, or insufficiently transformed.
+Regenerate the full set as a true MARCUSNOTE mock-exam transformation worksheet.
+
+Mandatory corrections:
+- Reduce direct content-retrieval questions.
 - Increase structure-based discrimination.
-- Reduce repeated inference or content-check questions.
+- Increase blank / summary / inference logic.
+- Increase insertion / order / relation / flow items.
 - Preserve the original source item identity when relevant.
-- Make items feel like authentic school-exam transformations.
+- Make items feel like authentic Korean school-exam transformations.
 - Never output markdown bold.
 - Never output code fences or plaintext markers.
 - Remove footer-like artifacts.
 - Respect the final item count exactly.
 - Keep exactly one source label line near the top.
+- Each explanation must state why the correct answer works and why at least one distractor fails.
 `
           },
           {
