@@ -1,6 +1,8 @@
-import { OpenAI } from 'openai';
+const OpenAI = require('openai');
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
 
 // =========================
 // 1) WORMHOLE FINAL
@@ -541,7 +543,9 @@ function estimatePassageMeta(prompt = '', engineType = 'WORMHOLE') {
 
 function shortenSourceLabel(label = '') {
   return label
-    .replace('High School Mock Exam Passage', 'G1 Mock Passage')
+    .replace('High School Mock Exam Passage | High School Grade 1', 'G1 Mock Passage')
+    .replace('High School Mock Exam Passage | High School Grade 2', 'G2 Mock Passage')
+    .replace('High School Mock Exam Passage | High School Grade 3', 'G3 Mock Passage')
     .replace('High School Grade 1', 'G1')
     .replace('High School Grade 2', 'G2')
     .replace('High School Grade 3', 'G3')
@@ -739,18 +743,30 @@ function cleanOutputArtifacts(text = '') {
     .trim();
 }
 
-function shortenSourceLabel(label = '') {
-  return label
-    .replace('High School Mock Exam Passage | High School Grade 1', 'G1 Mock Passage')
-    .replace('High School Mock Exam Passage | High School Grade 2', 'G2 Mock Passage')
-    .replace('High School Mock Exam Passage | High School Grade 3', 'G3 Mock Passage')
-    .replace('Purpose / Gist Item', 'Purpose/Gist')
-    .replace('Main Idea Item', 'Main Idea')
-    .replace('Title Item', 'Title')
-    .replace('Blank / Summary Item', 'Blank/Summary')
-    .replace('Sentence Insertion Item', 'Insertion')
-    .replace('Word Usage Item', 'Word Usage')
-    .replace('Middle School Textbook Passage', 'Middle School Textbook');
+// =========================
+// 8-2) HELPER: SOURCE LABEL ENFORCER
+// =========================
+function escapeRegex(text = '') {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function ensureSourceLabel(text = '', labelText = '') {
+  const cleaned = (text || '').trim();
+  const label = (labelText || '').trim();
+
+  if (!label) return cleaned;
+  if (!cleaned) return label;
+
+  const alreadyExists = new RegExp(`^${escapeRegex(label)}$`, 'm').test(cleaned);
+  if (alreadyExists) return cleaned;
+
+  const lines = cleaned.split('\n').map(line => line.trimEnd());
+
+  if (lines.length >= 2) {
+    return `${lines[0]}\n${label}\n${lines.slice(1).join('\n')}`.trim();
+  }
+
+  return `${label}\n${cleaned}`.trim();
 }
 
 // =========================
@@ -796,22 +812,19 @@ function isLowQualityOutput(text = '') {
     (lower.match(/what is implied by the passage/gi) || []).length >= 2 ||
     (lower.match(/what can be inferred from the passage/gi) || []).length >= 2;
 
-  // 한국어 출력까지 고려해서 완화
   const weakTransformation =
     !/빈칸|요약|함축|삽입|순서|흐름|blank|summary|implication|insertion|sequence|flow/gi.test(lower);
 
   return badCount >= 2 || repeatedInference || tooGeneric || repeatedTemplates || weakTransformation;
 }
-  
-}
 
 // =========================
 // 10) API HANDLER (FINAL)
 // =========================
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -821,10 +834,18 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
-  const { prompt } = req.body;
+  const { prompt } = req.body || {};
 
   if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
     return res.status(400).json({ message: 'Prompt required' });
+  }
+
+  if (!process.env.OPENAI_API_KEY) {
+    return res.status(500).json({ message: 'Missing OPENAI_API_KEY' });
+  }
+
+  if (!process.env.OPENAI_VECTOR_STORE_ID) {
+    return res.status(500).json({ message: 'Missing OPENAI_VECTOR_STORE_ID' });
   }
 
   const normalizedPrompt = prompt.trim();
@@ -877,20 +898,15 @@ export default async function handler(req, res) {
 - Keep it concise and professional.
 `;
 
-  const fullSystemPrompt =
-    baseInstruction +
-    '\n' +
-    routingControl +
-    '\n' +
-    languageControl +
-    '\n' +
-    quantityControl +
-    '\n' +
-    vectorControl +
-    '\n' +
-    sourceLabelControl +
-    '\n' +
-    qualityControl;
+  const fullSystemPrompt = [
+    baseInstruction,
+    routingControl,
+    languageControl,
+    quantityControl,
+    vectorControl,
+    sourceLabelControl,
+    qualityControl
+  ].join('\n');
 
   try {
     let response = await openai.responses.create({
@@ -911,9 +927,7 @@ export default async function handler(req, res) {
           vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
           max_num_results: 10
         }
-      ],
-      include: ['file_search_call.results'],
-      temperature: 0.3
+      ]
     });
 
     let finalText = response.output_text || '';
@@ -961,9 +975,7 @@ Mandatory corrections:
             vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
             max_num_results: 10
           }
-        ],
-        include: ['file_search_call.results'],
-        temperature: 0.25
+        ]
       });
 
       finalText = response.output_text || '';
@@ -975,18 +987,12 @@ Mandatory corrections:
 
     return res.status(200).json({
       response: finalText
-      // debug: {
-      //   engineType,
-      //   detectedLanguage,
-      //   itemCount,
-      //   sourceLabel
-      // }
     });
   } catch (error) {
     console.error('MARCUS Engine Error:', error);
     return res.status(500).json({
       error: 'API Execution Failed',
-      detail: error.message
+      detail: error?.message || 'Unknown error'
     });
   }
-}
+};
