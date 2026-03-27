@@ -240,52 +240,80 @@ Required answer key format:
 `;
 
 // =========================
-// 3) MOCK EXAM ENGINE (High School)
+// 3) MOCK EXAM ENGINE (High School) - QUALITY ENHANCED
 // =========================
 const mockExamInstruction = `
 You are the I•MARCUSNOTE Mock Exam Transformation Engine.
-Your role is to decompose a single passage into multiple high-quality assessment items.
+Your role is to transform a single passage into authentic Korean high-school exam-style items.
 
 [IDENTITY]
-- This engine is for high-school mock exams, CSAT-style reading passages, and advanced passage transformation.
-- Use the vector store as the primary reference for passage decomposition logic.
-- Maintain the tone of MARCUSNOTE's senior chief editor.
+- This engine is for high-school mock exams, school exams, and CSAT-style transformation.
+- Use the vector store as the primary reference for MARCUSNOTE transformation logic.
+- Output must feel like an actual Korean exam sheet, not an analysis worksheet.
 
 [CORE LOGIC: THE MARCUS PATH]
-1. Phase 1 (Meaning)
-   - Generate items for Mood/Tone, Purpose, Main Idea, Title, and Gist.
-2. Phase 2 (Structure)
-   - Generate WORMHOLE-style grammar items.
-   - Prioritize bracket-choice, error-detection, and structure-sensitive traps.
-3. Phase 3 (Deep Dive)
-   - Generate Summary completion, Blank-fill inference, and content consistency items.
+1. Meaning Layer
+   - Main Idea / Purpose / Title / Gist / Content Consistency
+2. Structure Layer
+   - Bracket grammar / word choice / error detection / sentence insertion / order
+3. Deep Layer
+   - Blank inference / summary completion / implication / sequence logic
 
-[RULES]
-- Decompose one passage into at least 3-5 different item types.
-- Reuse the same passage across multiple item types without making them feel repetitive.
-- Ensure "Partial Truth" distractors for meaning-based items.
-- Grammar items must require both structure judgment and contextual meaning judgment.
-- Summary / Blank items must reflect logical compression of the passage, not isolated sentence trivia.
+[CRITICAL EXAM RULE]
+- Never expose internal labels such as:
+  - Phase 1
+  - Phase 2
+  - Phase 3
+  - Meaning Layer
+  - Structure Layer
+  - Deep Dive
+- These are internal reasoning steps only. They must NEVER appear in the output.
 
-[FORMAT]
-- Default to 5-option multiple choice unless the user explicitly requests another format.
-- Keep MARCUSNOTE exam tone formal, sharp, and high-selectivity.
+[ANTI-GENERIC RULE]
+- Do NOT generate repetitive meta-questions such as:
+  - What is the main idea of the passage?
+  - What does the passage suggest?
+  - What can be inferred?
+  unless they are clearly distinct in logic and difficulty.
+- Do not ask the same core fact more than once in slightly different wording.
+- If one core fact is already used in one question, later questions must test a different angle.
+
+[DISTRIBUTION RULE]
+Generate exactly 25 items with this target distribution:
+- 4 meaning-based items max
+- 8 grammar/structure items min
+- 5 blank/summary/inference items min
+- 4 content consistency / partial truth / implication items
+- 4 advanced transformation items such as:
+  sentence insertion, sequence, word usage in context, or passage logic
+
+[QUALITY RULE]
+- Every item must test a unique point.
+- No duplicate-answering path.
+- No trivial tone question for a purely informational passage unless tone is genuinely discriminative.
+- Grammar items must be based on actual passage language or valid transformed sentences derived from it.
+- Error-detection items must contain a real and defensible structural issue.
+- Never ask to identify a grammatical error in a fully correct sentence.
+
+[PARTIAL TRUTH DISTRACTOR RULE]
+- Meaning-based distractors must include partial-truth traps.
+- Wrong options must sound plausible but fail due to scope, degree, causality, or implication.
+
+[OUTPUT STYLE]
+- Formal exam style only.
+- No markdown emphasis like **question text**.
+- No teacher-facing meta commentary.
+- No internal methodology headings.
 
 [HEADER RULE]
 Required header:
 MARCUS ANALYSIS & TRANSFORMATION
 
-Then provide one concise formal instruction line in the user's language.
+Then provide only one concise formal instruction line in the user's language.
 
 [QUANTITY]
 - Generate exactly 25 items only.
-- Do not mention this override in the output.
-
-[STRICT RULES]
-- Never provide shallow or duplicate items.
-- Never produce obvious distractors.
-- Do not insert explanations inside the question section.
-- Put answers only in the official answer key section.
+- Do not mention this override.
 
 [ANSWER KEY RULE]
 Required answer key format:
@@ -390,6 +418,7 @@ After the answer key, provide grouped explanations:
 ### Structural Logic 21-25
 ...
 `;
+;
 
 // =========================
 // 5) HELPER: LANGUAGE
@@ -451,11 +480,10 @@ function buildRoutingControl(engineType) {
 [ENGINE ROUTING]
 - Selected Engine: MOCK_EXAM
 - Prioritize high-school mock-exam transformation logic from the vector store.
-- Follow the Marcus Path:
-  Phase 1 = Meaning
-  Phase 2 = Structure
-  Phase 3 = Summary / Blank / Inference
+- Follow the Marcus Path internally:
+  Meaning -> Structure -> Summary / Blank / Inference
 - Decompose one passage into multiple related item types.
+- Never expose internal phase labels in the visible output.
 `;
   }
 
@@ -477,7 +505,69 @@ function buildRoutingControl(engineType) {
 }
 
 // =========================
-// 7) API HANDLER (Updated)
+// 7) QUALITY CONTROL
+// =========================
+const qualityControl = `
+[FINAL QUALITY GATE]
+Before finalizing the worksheet, silently verify all of the following:
+1. No internal headings such as "Phase 1", "Phase 2", "Phase 3", "Meaning Layer", or "Structure Layer".
+2. No repeated question stems testing the same fact with only wording changes.
+3. No more than 4 broad meaning questions in the whole set for mock-exam mode.
+4. At least 8 items must be genuine grammar/structure items in mock-exam mode.
+5. At least 4 items must involve deeper transformation logic:
+   sentence insertion, order, contextual word usage, or logic flow.
+6. Never create an error-detection question unless there is a real defensible error.
+7. Keep all numeric expressions such as "age 14" and "16 or 17" on one line if possible.
+8. If the set feels like an analysis worksheet instead of an exam, revise it before output.
+9. Avoid markdown bold such as **question text** in the visible output.
+`;
+
+// =========================
+// 8) HELPER: NUMBER STABILIZER
+// =========================
+function stabilizeNumbers(text = '') {
+  return text
+    .replace(/age\s+(\d{1,2})/g, 'age&nbsp;$1')
+    .replace(/(\d{1,2})\s+or\s+(\d{1,2})/g, '$1&nbsp;or&nbsp;$2')
+    .replace(/(\d{4})\s+Academic\s+Year/g, '$1&nbsp;Academic&nbsp;Year')
+    .replace(/(\d{4})\s*\|\s*Level:/g, '$1&nbsp;| Level:')
+    .replace(/No\.\s+(\d+)/g, 'No.&nbsp;$1');
+}
+
+// =========================
+// 9) HELPER: LOW QUALITY DETECTION
+// =========================
+function isLowQualityOutput(text = '') {
+  const lower = text.toLowerCase();
+
+  const badSignals = [
+    '### phase 1',
+    '### phase 2',
+    '### phase 3',
+    'phase 1:',
+    'phase 2:',
+    'phase 3:',
+    'meaning layer',
+    'structure layer',
+    'deep dive',
+    '**what',
+    '**'
+  ];
+
+  const badCount = badSignals.reduce((acc, signal) => {
+    return acc + (lower.split(signal).length - 1);
+  }, 0);
+
+  const repeatedInference =
+    (lower.match(/what does the passage suggest/gi) || []).length >= 3 ||
+    (lower.match(/what can be inferred/gi) || []).length >= 3 ||
+    (lower.match(/what is the main idea of the passage/gi) || []).length >= 2;
+
+  return badCount >= 3 || repeatedInference;
+}
+
+// =========================
+// 10) API HANDLER (FINAL)
 // =========================
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
@@ -533,22 +623,27 @@ export default async function handler(req, res) {
 - Keep MARCUSNOTE tone consistent and editorially rigorous.
 `;
 
+  const fullSystemPrompt =
+    baseInstruction +
+    '\n' +
+    routingControl +
+    '\n' +
+    languageControl +
+    '\n' +
+    quantityControl +
+    '\n' +
+    vectorControl +
+    '\n' +
+    qualityControl;
+
   try {
-    const response = await openai.responses.create({
+    // 1st attempt
+    let response = await openai.responses.create({
       model: 'gpt-4o',
       input: [
         {
           role: 'system',
-          content:
-            baseInstruction +
-            '\n' +
-            routingControl +
-            '\n' +
-            languageControl +
-            '\n' +
-            quantityControl +
-            '\n' +
-            vectorControl
+          content: fullSystemPrompt
         },
         {
           role: 'user',
@@ -566,11 +661,56 @@ export default async function handler(req, res) {
       temperature: 0.3
     });
 
+    let finalText = response.output_text || '';
+
+    // 2nd attempt if low quality
+    if (isLowQualityOutput(finalText)) {
+      response = await openai.responses.create({
+        model: 'gpt-4o',
+        input: [
+          {
+            role: 'system',
+            content:
+              fullSystemPrompt +
+              '\n' +
+              `
+[RETRY OVERRIDE]
+The previous draft was too generic or exposed internal labels.
+Regenerate the full set as a true Korean exam-style worksheet.
+- Remove all internal headings.
+- Increase structure-based discrimination.
+- Reduce repeated inference questions.
+- Make items feel like authentic school-exam transformations.
+- Never output markdown bold.
+`
+          },
+          {
+            role: 'user',
+            content: normalizedPrompt
+          }
+        ],
+        tools: [
+          {
+            type: 'file_search',
+            vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
+            max_num_results: 10
+          }
+        ],
+        include: ['file_search_call.results'],
+        temperature: 0.25
+      });
+
+      finalText = response.output_text || '';
+    }
+
+    finalText = stabilizeNumbers(finalText);
+
     return res.status(200).json({
-      response: response.output_text || ''
+      response: finalText
       // debug: {
       //   engineType,
-      //   detectedLanguage
+      //   detectedLanguage,
+      //   lowQualityRetried: isLowQualityOutput(response.output_text || '')
       // }
     });
   } catch (error) {
