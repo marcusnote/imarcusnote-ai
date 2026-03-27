@@ -739,19 +739,18 @@ function cleanOutputArtifacts(text = '') {
     .trim();
 }
 
-function ensureSourceLabel(text = '', sourceLabelText = '') {
-  if (!sourceLabelText) return text;
-
-  const alreadyHasLabel =
-    /^(Source:|Estimated Source:|Source Classification:)/mi.test(text);
-
-  if (alreadyHasLabel) return text;
-
-  const lines = text.split('\n');
-  const insertAt = Math.min(3, lines.length);
-
-  lines.splice(insertAt, 0, sourceLabelText, '');
-  return lines.join('\n');
+function shortenSourceLabel(label = '') {
+  return label
+    .replace('High School Mock Exam Passage | High School Grade 1', 'G1 Mock Passage')
+    .replace('High School Mock Exam Passage | High School Grade 2', 'G2 Mock Passage')
+    .replace('High School Mock Exam Passage | High School Grade 3', 'G3 Mock Passage')
+    .replace('Purpose / Gist Item', 'Purpose/Gist')
+    .replace('Main Idea Item', 'Main Idea')
+    .replace('Title Item', 'Title')
+    .replace('Blank / Summary Item', 'Blank/Summary')
+    .replace('Sentence Insertion Item', 'Insertion')
+    .replace('Word Usage Item', 'Word Usage')
+    .replace('Middle School Textbook Passage', 'Middle School Textbook');
 }
 
 // =========================
@@ -791,18 +790,18 @@ function isLowQualityOutput(text = '') {
     (lower.match(/what is the purpose of the passage/gi) || []).length >= 2 ||
     (lower.match(/what is the main idea of the passage/gi) || []).length >= 2;
 
-  const weakTransformation =
-    (lower.match(/sentence insertion/gi) || []).length === 0 &&
-    (lower.match(/summary/gi) || []).length === 0 &&
-    (lower.match(/blank/gi) || []).length === 0;
-
   const repeatedTemplates =
     (lower.match(/which sentence is most awkward/gi) || []).length >= 2 ||
     (lower.match(/where does the sentence best fit/gi) || []).length >= 2 ||
     (lower.match(/what is implied by the passage/gi) || []).length >= 2 ||
     (lower.match(/what can be inferred from the passage/gi) || []).length >= 2;
 
-  return badCount >= 2 || repeatedInference || tooGeneric || weakTransformation || repeatedTemplates;
+  // 한국어 출력까지 고려해서 완화
+  const weakTransformation =
+    !/빈칸|요약|함축|삽입|순서|흐름|blank|summary|implication|insertion|sequence|flow/gi.test(lower);
+
+  return badCount >= 2 || repeatedInference || tooGeneric || repeatedTemplates || weakTransformation;
+}
   
 }
 
