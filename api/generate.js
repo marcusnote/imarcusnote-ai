@@ -363,6 +363,26 @@ Your role is to turn simple textbook sentences into rigorous grammar-centric ass
 [DIFFICULTY TAGGING]
 - Use <span class="high-difficulty">[High Difficulty]</span> for items involving layered grammar judgment.
 
+[QUESTION FORMAT - MANDATORY]
+- Every item must be 5-option multiple choice only.
+- Use only this option format:
+① ...
+② ...
+③ ...
+④ ...
+⑤ ...
+
+- Never output:
+  - essay-style questions
+  - descriptive prompts
+  - open-ended questions
+  - "설명하시오"
+  - "분석하시오"
+  - "제시하시오"
+  - "만들어 보시오"
+  - direct short-answer tasks
+  - sentence-writing tasks in the visible question section
+
 [HEADER RULE]
 Required header:
 MARCUS MIDDLE SCHOOL ELITE TEST
@@ -669,9 +689,13 @@ module.exports = async function handler(req, res) {
 - All target English sentences must remain in natural English.
 `;
 
-  const quantityControl = `
+const quantityControl = `
 [QUANTITY CONTROL]
 - Generate exactly ${itemCount} items only.
+- Complete all ${itemCount} questions, the full official answer key, and all required Structural Logic sections in one response.
+- Do not stop early.
+- Do not omit the answer key.
+- Do not omit any Structural Logic section required by the selected engine.
 - Each item must target a unique learning point.
 - Do not repeat the same fact in different questions.
 - If the passage is short, increase transformation depth instead of repeating content.
@@ -703,7 +727,7 @@ module.exports = async function handler(req, res) {
   try {
     let response = await openai.responses.create({
       model: 'gpt-4o-mini',
-      max_output_tokens: 2600,
+      max_output_tokens: 5200,
       input: [
         {
           role: 'system',
@@ -730,7 +754,7 @@ module.exports = async function handler(req, res) {
     if (shouldRetry) {
       response = await openai.responses.create({
         model: 'gpt-4o-mini',
-        max_output_tokens: 2200,
+        max_output_tokens: 5200,
         input: [
           {
             role: 'system',
