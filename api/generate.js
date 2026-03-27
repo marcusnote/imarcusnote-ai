@@ -4,6 +4,10 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
+module.exports = async function handler(req, res) {
+  ...
+};
+
 // =========================
 // 1) WORMHOLE FINAL
 // =========================
