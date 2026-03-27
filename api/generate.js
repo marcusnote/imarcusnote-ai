@@ -5,153 +5,180 @@ const openai = new OpenAI({
 });
 
 // =========================
-// 1) ABC STARTER (초등)
+// 🔥 안정화 핵심 1: OUTPUT 파싱 함수
 // =========================
-const abcStarterInstruction = `
-You are the Senior Chief Elementary Architect of MARCUSNOTE.
+function extractText(response) {
+  if (!response) return '';
 
-[IDENTITY]
-- Abcstarter56 = MARCUSNOTE elementary foundation system
+  if (response.output_text) return response.output_text;
 
-[LEVEL]
-- CEFR A1
-- Sentence max 6 words
-- Very simple vocabulary
-
-[QUESTION RULE]
-- ALWAYS 5-option multiple choice
-①②③④⑤ only
-- No subjective questions
-
-[STYLE]
-- Very clear
-- Short sentences
-- Easy but structured
-
-[ANSWER KEY]
-### OFFICIAL MARCUSNOTE ANSWER KEY
-1) ①
-2) ②
-3) ③
-`;
-
-// =========================
-// 기존 엔진들 (생략 없이 그대로 유지)
-// =========================
-
-// 👉 기존 wormholeInstruction 그대로
-// 👉 mockExamInstruction 그대로
-// 👉 middleTextbookInstruction 그대로
-// 👉 magicInstruction 그대로
-
-// =========================
-// 엔진 선택 (🔥 핵심)
-// =========================
-function getInstruction(engineType) {
-  switch (engineType) {
-    case 'ABC_STARTER': return abcStarterInstruction;
-    case 'MOCK_EXAM': return mockExamInstruction;
-    case 'MIDDLE_TEXTBOOK': return middleTextbookInstruction;
-    case 'MAGIC': return magicInstruction;
-    default: return wormholeInstruction;
+  if (response.output?.length) {
+    return response.output
+      .map(o =>
+        (o.content || [])
+          .map(c => c.text || '')
+          .join('')
+      )
+      .join('');
   }
+
+  return '';
 }
 
 // =========================
-// 문항 수
+// 🔥 기존 Instruction (원본 유지)
 // =========================
-function getItemCount(engineType) {
-  if (engineType === 'ABC_STARTER') return 10;
-  if (engineType === 'WORMHOLE') return 25;
-  return 15;
-}
+// 👉 대표님 기존 wormholeInstruction / magicInstruction / mockExamInstruction / middleTextbookInstruction
+// 👉 여기에 있는 코드 그대로 유지 (생략 없이 그대로 두세요)
 
 // =========================
-// 품질 체크
+// 🔥 기존 Helper (원본 유지)
 // =========================
-function isBad(text = '') {
-  if (!text.includes('### OFFICIAL MARCUSNOTE ANSWER KEY')) return true;
-  if (text.length < 1000) return true;
-  return false;
-}
+// detectEngineType, buildSourceLabel 등 전부 그대로 유지
 
 // =========================
-// API
+// API HANDLER
 // =========================
 module.exports = async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
 
-  try {
-    const { prompt, mode } = req.body;
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method Not Allowed' });
+  }
 
-    if (!prompt) {
-      return res.status(400).json({ error: 'Prompt required' });
-    }
+  // =========================
+  // 🔥 핵심 수정: mode 추가
+  // =========================
+  const { prompt, mode } = req.body || {};
 
-    // ⭐ 핵심: 버튼 기반 엔진
-    const engineType = mode || 'MOCK_EXAM';
+  if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
+    return res.status(400).json({ message: 'Prompt required' });
+  }
 
-    const instruction = getInstruction(engineType);
-    const itemCount = getItemCount(engineType);
+  if (!process.env.OPENAI_API_KEY) {
+    return res.status(500).json({ message: 'Missing OPENAI_API_KEY' });
+  }
 
-    const systemPrompt = `
-${instruction}
+  if (!process.env.OPENAI_VECTOR_STORE_ID) {
+    return res.status(500).json({ message: 'Missing OPENAI_VECTOR_STORE_ID' });
+  }
 
-[ENGINE LOCK]
-- Selected engine: ${engineType}
-- NEVER change engine
+  const normalizedPrompt = prompt.trim();
 
-[QUANTITY]
-- Generate exactly ${itemCount} questions
+  // 🔥 핵심: 버튼 우선
+  const engineType = mode || detectEngineType(normalizedPrompt);
 
-[STRICT RULE]
-- Do NOT stop early
-- Do NOT omit answer key
+  const baseInstruction = getBaseInstructionByEngine(engineType);
+  const detectedLanguage = detectPromptLanguage(normalizedPrompt);
+  const routingControl = buildRoutingControl(engineType);
+  const itemCount = getItemCountByEngine(engineType);
+  const sourceLabel = buildSourceLabel(normalizedPrompt, engineType);
+
+  const languageControl = `
+[LANGUAGE CONTROL]
+- Detected user language: ${detectedLanguage}.
+- Follow this language for instructions.
 `;
 
+  const quantityControl = `
+[QUANTITY CONTROL]
+- Generate exactly ${itemCount} items.
+- Complete full answer key.
+`;
+
+  const fullSystemPrompt = [
+    baseInstruction,
+    routingControl,
+    languageControl,
+    quantityControl
+  ].join('\n');
+
+  try {
+
+    // =========================
+    // 1차 생성
+    // =========================
     let response = await openai.responses.create({
       model: 'gpt-4o-mini',
-      max_output_tokens: 5200,
+      max_output_tokens: 6500, // 🔥 증가
       input: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: prompt }
+        { role: 'system', content: fullSystemPrompt },
+        { role: 'user', content: normalizedPrompt }
+      ],
+      tools: [
+        {
+          type: 'file_search',
+          vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
+          max_num_results: 6
+        }
       ]
     });
 
-    let text = response.output_text || '';
+    // 🔥 디버그 로그
+    console.log('RAW RESPONSE:', JSON.stringify(response, null, 2));
 
-    // 재시도
-    if (isBad(text)) {
+    // 🔥 핵심 수정
+    let finalText = extractText(response);
+
+    // =========================
+    // 🔥 재시도 안정화
+    // =========================
+    if (!finalText || finalText.length < 500) {
+
+      console.log('⚠️ RETRY TRIGGERED');
+
       response = await openai.responses.create({
         model: 'gpt-4o-mini',
-        max_output_tokens: 5200,
+        max_output_tokens: 6500,
         input: [
           {
             role: 'system',
-            content: systemPrompt + `
+            content:
+              fullSystemPrompt +
+              `
 [RETRY]
-- Previous output was incomplete
-- regenerate full exam
+Generate full complete exam.
+Do NOT stop early.
 `
           },
-          { role: 'user', content: prompt }
+          { role: 'user', content: normalizedPrompt }
+        ],
+        tools: [
+          {
+            type: 'file_search',
+            vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
+            max_num_results: 6
+          }
         ]
       });
 
-      text = response.output_text || '';
+      finalText = extractText(response);
     }
 
+    // =========================
+    // 후처리 (원본 유지)
+    // =========================
+    finalText = stabilizeNumbers(finalText);
+    finalText = cleanOutputArtifacts(finalText);
+    finalText = ensureSourceLabel(finalText, sourceLabel.labelText);
+
     return res.status(200).json({
-      response: text
+      response: finalText
     });
 
-  } catch (e) {
+  } catch (error) {
+    console.error('MARCUS Engine Error:', error);
+
     return res.status(500).json({
-      error: e.message
+      error: 'API Execution Failed',
+      detail: error?.message || 'Unknown error'
     });
   }
 };
