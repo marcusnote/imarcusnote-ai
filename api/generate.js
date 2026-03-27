@@ -4,10 +4,6 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
-module.exports = async function handler(req, res) {
-  ...
-};
-
 // =========================
 // 1) WORMHOLE FINAL
 // =========================
@@ -246,7 +242,7 @@ Required answer key format:
 `;
 
 // =========================
-// 3) MOCK EXAM ENGINE (High School) - STRONG MARCUS PATCH
+// 3) MOCK EXAM ENGINE
 // =========================
 const mockExamInstruction = `
 You are the I•MARCUSNOTE Mock Exam Transformation Engine.
@@ -289,22 +285,10 @@ For a 15-item mock-exam set:
 For a 15-item mock-exam set, assign item roles strictly by number:
 
 Items 1-3 = Meaning Layer
-- title / gist / purpose / partial-truth meaning
-
 Items 4-6 = Structure Layer
-- bracket grammar / error detection / word usage in context
-
 Items 7-9 = Deep Inference Layer
-- blank inference / summary completion / implication
-
 Items 10-12 = Flow Logic Layer
-- sentence insertion / order / relation / logic flow
-
 Items 13-15 = Marcus Killer Layer
-- hybrid transformation items combining meaning + structure,
-  or vocabulary + logic, or structure + inference
-
-Do not repeat the same item type in adjacent layers unless the passage absolutely requires it.
 
 [QUALITY RULE]
 - Every item must test a unique point.
@@ -316,34 +300,15 @@ Do not repeat the same item type in adjacent layers unless the passage absolutel
 
 [PARTIAL TRUTH DISTRACTOR RULE]
 - Meaning-based distractors must include partial-truth traps.
-- Wrong options must sound plausible but fail due to scope, degree, causality, implication, logical focus, or distorted emphasis.
 
 [STRUCTURE ITEM RULE]
 - At least 4 items must require structural judgment.
-- Acceptable structure item types:
-  - bracket grammar
-  - error detection
-  - transformed sentence judgment
-  - word usage in context
-  - connector / logic flow judgment
 
 [DEEP ITEM RULE]
 - At least 3 items must require inference beyond sentence-level recall.
-- Acceptable deep item types:
-  - blank inference
-  - summary completion
-  - sentence insertion
-  - sequence / flow
-  - implication
 
 [VISIBLE OUTPUT RULE]
-- Never expose internal labels such as:
-  - Phase 1
-  - Phase 2
-  - Phase 3
-  - Meaning Layer
-  - Structure Layer
-  - Deep Dive
+- Never expose internal labels such as Phase 1, Phase 2, Phase 3, Meaning Layer, Structure Layer, Deep Dive.
 - No teacher-facing notes.
 - No markdown emphasis like **question text**.
 - No code fences.
@@ -354,22 +319,12 @@ MARCUS ANALYSIS & TRANSFORMATION
 
 Then provide only one concise formal instruction line in the user's language.
 
-[QUANTITY]
-- Follow the final quantity control later in the system prompt.
-- Do not mention this override.
-
 [ANSWER KEY RULE]
 Required answer key format:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
 1) ③
 2) ①
 3) ⑤
-
-[EXPLANATION DEPTH RULE]
-- Each Structural Logic explanation must contain:
-  1) why the correct answer is correct
-  2) why at least one major distractor fails
-- Avoid one-line memo style explanations.
 
 [EXPLANATION RULE]
 After the answer key, provide grouped explanations:
@@ -400,49 +355,21 @@ Your role is to turn simple textbook sentences into rigorous grammar-centric ass
 
 [CORE ALGORITHM]
 1. Grammar-Centric
-   - Prioritize Tense, Subject-Verb Agreement, Gerund/Infinitive, Conjunctions, Word Order, and basic relative clauses.
 2. Sentence Transformation (Mandatory)
-   - Include Active ↔ Passive
-   - Include Direct ↔ Indirect Speech
-   - Include Simple ↔ Complex Sentence transformation
 3. Magic Training Link
-   - Allocate at least 30% of items to controlled English production or conditional writing prompts.
 
 [SET RULE]
-- Even for a short passage, generate at least 5 meaningful item patterns internally.
 - Final output must still contain a full textbook transformation set.
-- Target distribution:
-  - Vocabulary / Meaning: 10%
-  - Grammar Selection: 40%
-  - Sentence Transformation: 30%
-  - Controlled Writing: 20%
 - Follow the final quantity control later in the system prompt.
 
 [DIFFICULTY TAGGING]
-- Use <span class="high-difficulty">[High Difficulty]</span> for items involving:
-  - advanced relative clauses
-  - subjunctive mood
-  - mixed transformation logic
-  - layered grammar judgment
-
-[FORMAT]
-- You may mix multiple-choice and production items only if the user's request clearly permits it.
-- Otherwise, prioritize school-exam-friendly grammar multiple choice plus sentence transformation.
+- Use <span class="high-difficulty">[High Difficulty]</span> for items involving layered grammar judgment.
 
 [HEADER RULE]
 Required header:
 MARCUS MIDDLE SCHOOL ELITE TEST
 
 Then provide one concise formal instruction line in the user's language.
-
-[QUANTITY]
-- Follow the final quantity control later in the system prompt.
-- Do not mention this override in the output.
-
-[STRICT RULES]
-- Never generate trivial textbook-level items without transformation pressure.
-- Never rely only on title/main idea if the passage is short.
-- Always create grammar value and school-exam discrimination.
 
 [ANSWER KEY RULE]
 Required answer key format:
@@ -466,7 +393,7 @@ After the answer key, provide grouped explanations:
 `;
 
 // =========================
-// 5) HELPER: LANGUAGE
+// HELPERS
 // =========================
 function detectPromptLanguage(prompt) {
   if (/[가-힣]/.test(prompt)) return 'Korean';
@@ -474,12 +401,8 @@ function detectPromptLanguage(prompt) {
   return 'English';
 }
 
-// =========================
-// 5-1) HELPER: SOURCE LABEL SYSTEM
-// =========================
 function extractUserProvidedSource(prompt = '') {
   const text = prompt.trim();
-
   const patterns = [
     /(출처\s*[:：]\s*([^\n]+))/i,
     /(source\s*[:：]\s*([^\n]+))/i,
@@ -490,48 +413,28 @@ function extractUserProvidedSource(prompt = '') {
 
   for (const pattern of patterns) {
     const match = text.match(pattern);
-    if (match) {
-      return (match[2] || match[1] || '').trim();
-    }
+    if (match) return (match[2] || match[1] || '').trim();
   }
-
   return '';
 }
 
 function estimatePassageMeta(prompt = '', engineType = 'WORMHOLE') {
   const text = prompt.toLowerCase();
-
   let topic = 'General English';
   let level = 'Advanced';
   let itemType = '';
 
-  if (/habit|gym|exercise|bundling|motivation|behavior|psychology|peer|emotion/.test(text)) {
-    topic = 'Psychology / Behavior';
-  } else if (/business|market|consumer|economics|productivity/.test(text)) {
-    topic = 'Business / Economics';
-  } else if (/environment|nature|climate|animal|ecology/.test(text)) {
-    topic = 'Environment / Nature';
-  } else if (/science|technology|brain|research|experiment/.test(text)) {
-    topic = 'Science / Research';
-  } else if (/education|school|student|teacher|learning/.test(text)) {
-    topic = 'Education';
-  } else if (/society|culture|history|social/.test(text)) {
-    topic = 'Society / Culture';
-  }
+  if (/education|school|student|teacher|learning/.test(text)) topic = 'Education';
+  else if (/science|technology|brain|research|experiment/.test(text)) topic = 'Science / Research';
+  else if (/environment|nature|climate|animal|ecology/.test(text)) topic = 'Environment / Nature';
+  else if (/society|culture|history|social/.test(text)) topic = 'Society / Culture';
 
-  if (/중1|중2|중3|middle school|lesson|unit|교과서/.test(text)) {
-    level = 'Middle School';
-  } else if (/고1|grade 1/.test(text)) {
-    level = 'High School Grade 1';
-  } else if (/고2|grade 2/.test(text)) {
-    level = 'High School Grade 2';
-  } else if (/고3|grade 3|수능|csat/.test(text)) {
-    level = 'High School Grade 3';
-  } else if (engineType === 'MIDDLE_TEXTBOOK') {
-    level = 'Middle School';
-  } else if (engineType === 'MOCK_EXAM') {
-    level = 'High School';
-  }
+  if (/중1|중2|중3|middle school|lesson|unit|교과서/.test(text)) level = 'Middle School';
+  else if (/고1|grade 1/.test(text)) level = 'High School Grade 1';
+  else if (/고2|grade 2/.test(text)) level = 'High School Grade 2';
+  else if (/고3|grade 3|수능|csat/.test(text)) level = 'High School Grade 3';
+  else if (engineType === 'MIDDLE_TEXTBOOK') level = 'Middle School';
+  else if (engineType === 'MOCK_EXAM') level = 'High School';
 
   if (/제목|title/.test(text)) itemType = 'Title Item';
   else if (/주제|main idea|gist/.test(text)) itemType = 'Main Idea Item';
@@ -565,10 +468,7 @@ function shortenSourceLabel(label = '') {
 function buildSourceLabel(prompt = '', engineType = 'WORMHOLE') {
   const userSource = extractUserProvidedSource(prompt);
   if (userSource) {
-    return {
-      labelType: 'SOURCE',
-      labelText: shortenSourceLabel(`Source: ${userSource}`)
-    };
+    return { labelType: 'SOURCE', labelText: shortenSourceLabel(`Source: ${userSource}`) };
   }
 
   const meta = estimatePassageMeta(prompt, engineType);
@@ -576,7 +476,6 @@ function buildSourceLabel(prompt = '', engineType = 'WORMHOLE') {
   if (engineType === 'MOCK_EXAM') {
     const parts = ['High School Mock Exam Passage', meta.level];
     if (meta.itemType) parts.push(meta.itemType);
-
     return {
       labelType: 'ESTIMATED_SOURCE',
       labelText: shortenSourceLabel(`Estimated Source: ${parts.join(' | ')}`)
@@ -596,20 +495,11 @@ function buildSourceLabel(prompt = '', engineType = 'WORMHOLE') {
   };
 }
 
-// =========================
-// 6) HELPER: ENGINE ROUTER
-// =========================
 function detectEngineType(prompt) {
   const text = prompt.toLowerCase();
-
-  const isMagic =
-    /매직|magic|영작|서술형|작문|writing|composition/.test(text);
-
-  const isMiddleTextbook =
-    /교과서|중학교|중등|중1|중2|중3|내신|textbook|middle|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text);
-
-  const isMockExam =
-    /모의고사|학평|수능|고1|고2|고3|평가원|ebs|mock|passage|analysis|csat|변형|주제|제목|요지|빈칸|어휘|삽입|순서|24번|23번|30번|31번/.test(text);
+  const isMagic = /매직|magic|영작|서술형|작문|writing|composition/.test(text);
+  const isMiddleTextbook = /교과서|중학교|중등|중1|중2|중3|내신|textbook|middle|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text);
+  const isMockExam = /모의고사|학평|수능|고1|고2|고3|평가원|ebs|mock|passage|analysis|csat|변형|주제|제목|요지|빈칸|어휘|삽입|순서|24번|23번|30번|31번/.test(text);
 
   if (isMiddleTextbook) return 'MIDDLE_TEXTBOOK';
   if (isMockExam) return 'MOCK_EXAM';
@@ -619,14 +509,10 @@ function detectEngineType(prompt) {
 
 function getBaseInstructionByEngine(engineType) {
   switch (engineType) {
-    case 'MIDDLE_TEXTBOOK':
-      return middleTextbookInstruction;
-    case 'MOCK_EXAM':
-      return mockExamInstruction;
-    case 'MAGIC':
-      return magicInstruction;
-    default:
-      return wormholeInstruction;
+    case 'MIDDLE_TEXTBOOK': return middleTextbookInstruction;
+    case 'MOCK_EXAM': return mockExamInstruction;
+    case 'MAGIC': return magicInstruction;
+    default: return wormholeInstruction;
   }
 }
 
@@ -636,9 +522,7 @@ function buildRoutingControl(engineType) {
 [ENGINE ROUTING]
 - Selected Engine: MIDDLE_TEXTBOOK
 - Prioritize textbook transformation logic from the vector store.
-- Apply Short-to-Rich expansion when the source passage is short or structurally simple.
 - Focus on grammar-centric and sentence-transformation output.
-- Ensure at least 30% production / controlled writing pressure.
 `;
   }
 
@@ -647,13 +531,8 @@ function buildRoutingControl(engineType) {
 [ENGINE ROUTING]
 - Selected Engine: MOCK_EXAM
 - Prioritize high-school mock-exam transformation logic from the vector store.
-- Follow the Marcus Path internally:
-  Meaning -> Structure -> Summary / Blank / Inference
 - Decompose one passage into multiple related item types.
-- Preserve the original source item identity where relevant.
-- Never expose internal phase labels in the visible output.
 - Avoid turning the passage into a simple reading-comprehension worksheet.
-- Enforce Marcus-style transformation density over content-retrieval density.
 `;
   }
 
@@ -662,7 +541,6 @@ function buildRoutingControl(engineType) {
 [ENGINE ROUTING]
 - Selected Engine: MAGIC
 - Prioritize production training.
-- If textbook / lesson mapping is detected in retrieved files, textbook-aligned production logic overrides card-style drills.
 `;
   }
 
@@ -670,31 +548,19 @@ function buildRoutingControl(engineType) {
 [ENGINE ROUTING]
 - Selected Engine: WORMHOLE
 - Prioritize elite grammar assessment logic.
-- Keep 5-option multiple-choice structure and subtle structural traps.
 `;
 }
 
-// =========================
-// 6-1) HELPER: ITEM COUNT CONTROL
-// =========================
 function getItemCountByEngine(engineType) {
   switch (engineType) {
-    case 'MOCK_EXAM':
-      return 15;
-    case 'MIDDLE_TEXTBOOK':
-      return 15;
-    case 'MAGIC':
-      return 15;
-    case 'WORMHOLE':
-      return 25;
-    default:
-      return 15;
+    case 'MOCK_EXAM': return 15;
+    case 'MIDDLE_TEXTBOOK': return 15;
+    case 'MAGIC': return 15;
+    case 'WORMHOLE': return 25;
+    default: return 15;
   }
 }
 
-// =========================
-// 7) QUALITY CONTROL
-// =========================
 const qualityControl = `
 [FINAL QUALITY GATE]
 Before finalizing the worksheet, silently verify all of the following:
@@ -703,26 +569,9 @@ Before finalizing the worksheet, silently verify all of the following:
 3. In mock-exam mode, no more than 3 direct content-retrieval questions.
 4. In mock-exam mode, at least 4 items must be genuine grammar/structure items.
 5. In mock-exam mode, at least 3 items must involve blank / summary / inference / flow logic.
-6. In mock-exam mode, at least 3 items must involve sentence insertion, order, relation, connector, or logic flow.
-7. Never create an error-detection question unless there is a real defensible error.
-8. Keep all numeric expressions such as "age 14" and "16 or 17" on one line if possible.
-9. If the set feels like an analysis worksheet or simple reading workbook instead of an exam, revise it before output.
-10. Avoid markdown bold such as **question text** in the visible output.
-11. If the requested set size is 15, do not artificially stretch the same passage fact into repeated questions.
-12. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
-13. The final set must feel like MARCUSNOTE transformation material, not generic AI worksheet output.
-14. The final visible output must contain exactly one source label line near the top.
-15. If the exact source is unknown, use either "Estimated Source:" or "Source Classification:" instead of pretending certainty.
-16. Each Structural Logic explanation must be at least 2 sentences in substance, not a one-line memo.
-17. In mock-exam mode, items 1-3 / 4-6 / 7-9 / 10-12 / 13-15 must clearly belong to different testing layers.
-18. In mock-exam mode, items 7-9 must include at least one implication item.
-19. Do not recycle the same sentence insertion, same blank logic, same implication trap, or same irrelevant-detail trap more than once.
-20. If items 10-15 resemble repeated variants of items 1-9, revise the set before output.
+6. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
 `;
 
-// =========================
-// 8) HELPER: NUMBER STABILIZER
-// =========================
 function stabilizeNumbers(text = '') {
   return text
     .replace(/age\s+(\d{1,2})/g, 'age&nbsp;$1')
@@ -732,9 +581,6 @@ function stabilizeNumbers(text = '') {
     .replace(/No\.\s+(\d+)/g, 'No.&nbsp;$1');
 }
 
-// =========================
-// 8-1) HELPER: CLEAN OUTPUT ARTIFACTS
-// =========================
 function cleanOutputArtifacts(text = '') {
   return text
     .replace(/```plaintext/gi, '')
@@ -747,9 +593,6 @@ function cleanOutputArtifacts(text = '') {
     .trim();
 }
 
-// =========================
-// 8-2) HELPER: SOURCE LABEL ENFORCER
-// =========================
 function escapeRegex(text = '') {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -757,7 +600,6 @@ function escapeRegex(text = '') {
 function ensureSourceLabel(text = '', labelText = '') {
   const cleaned = (text || '').trim();
   const label = (labelText || '').trim();
-
   if (!label) return cleaned;
   if (!cleaned) return label;
 
@@ -765,65 +607,27 @@ function ensureSourceLabel(text = '', labelText = '') {
   if (alreadyExists) return cleaned;
 
   const lines = cleaned.split('\n').map(line => line.trimEnd());
-
-  if (lines.length >= 2) {
-    return `${lines[0]}\n${label}\n${lines.slice(1).join('\n')}`.trim();
-  }
-
+  if (lines.length >= 2) return `${lines[0]}\n${label}\n${lines.slice(1).join('\n')}`.trim();
   return `${label}\n${cleaned}`.trim();
 }
 
-// =========================
-// 9) HELPER: LOW QUALITY DETECTION
-// =========================
 function isLowQualityOutput(text = '') {
   const lower = text.toLowerCase();
-
-  const badSignals = [
-    '### phase 1',
-    '### phase 2',
-    '### phase 3',
-    'phase 1:',
-    'phase 2:',
-    'phase 3:',
-    'meaning layer',
-    'structure layer',
-    'deep dive',
-    '**what',
-    '```plaintext',
-    '```',
-    'all rights reserved'
-  ];
-
-  const badCount = badSignals.reduce((acc, signal) => {
-    return acc + (lower.split(signal).length - 1);
-  }, 0);
+  const badSignals = ['### phase 1', '### phase 2', '### phase 3', 'meaning layer', 'structure layer', 'deep dive', '```plaintext', '```'];
+  const badCount = badSignals.reduce((acc, signal) => acc + (lower.split(signal).length - 1), 0);
 
   const repeatedInference =
     (lower.match(/what does the passage suggest/gi) || []).length >= 3 ||
-    (lower.match(/what can be inferred/gi) || []).length >= 3 ||
-    (lower.match(/what is the main idea of the passage/gi) || []).length >= 2;
-
-  const tooGeneric =
-    (lower.match(/according to the passage/gi) || []).length >= 3 ||
-    (lower.match(/which of the following is mentioned/gi) || []).length >= 2 ||
-    (lower.match(/what is the purpose of the passage/gi) || []).length >= 2 ||
-    (lower.match(/what is the main idea of the passage/gi) || []).length >= 2;
-
-  const repeatedTemplates =
-    (lower.match(/which sentence is most awkward/gi) || []).length >= 2 ||
-    (lower.match(/where does the sentence best fit/gi) || []).length >= 2 ||
-    (lower.match(/what is implied by the passage/gi) || []).length >= 2 ||
-    (lower.match(/what can be inferred from the passage/gi) || []).length >= 2;
+    (lower.match(/what can be inferred/gi) || []).length >= 3;
 
   const weakTransformation =
     !/빈칸|요약|함축|삽입|순서|흐름|blank|summary|implication|insertion|sequence|flow/gi.test(lower);
 
-  return badCount >= 2 || repeatedInference || tooGeneric || repeatedTemplates || weakTransformation;
+  return badCount >= 2 || repeatedInference || weakTransformation;
 }
 
 // =========================
-// 10) API HANDLER (FINAL)
+// API HANDLER (TIMEOUT FIXED)
 // =========================
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
@@ -853,10 +657,8 @@ module.exports = async function handler(req, res) {
   }
 
   const normalizedPrompt = prompt.trim();
-
   const engineType = detectEngineType(normalizedPrompt);
   const baseInstruction = getBaseInstructionByEngine(engineType);
-
   const detectedLanguage = detectPromptLanguage(normalizedPrompt);
   const routingControl = buildRoutingControl(engineType);
   const itemCount = getItemCountByEngine(engineType);
@@ -867,8 +669,6 @@ module.exports = async function handler(req, res) {
 - Detected user language: ${detectedLanguage}.
 - All instruction lines and prompts must follow the detected user language.
 - All target English sentences must remain in natural English.
-- Never mix multiple languages in one instruction block unless the user explicitly requests it.
-- Instruction: "지문은 하나지만, 학생이 느끼는 학습 효과는 5배가 되어야 합니다."
 `;
 
   const quantityControl = `
@@ -877,29 +677,19 @@ module.exports = async function handler(req, res) {
 - Each item must target a unique learning point.
 - Do not repeat the same fact in different questions.
 - If the passage is short, increase transformation depth instead of repeating content.
-- Quality and variety are prioritized over quantity.
-- Do not mention this override in the output.
 `;
 
   const vectorControl = `
 [VECTOR STORE PRIORITY]
 - Use the retrieved vector store files as the primary transformation policy.
-- If textbook logic is retrieved, follow textbook transformation rules.
-- If mock-exam logic is retrieved, follow passage decomposition rules.
-- Do not blend textbook logic and mock-exam logic carelessly.
 - Keep MARCUSNOTE tone consistent and editorially rigorous.
 `;
 
   const sourceLabelControl = `
 [SOURCE LABEL RULE]
 - Add exactly one source label line near the top of the visible output.
-- If the user explicitly provided source information, use it as:
-  ${sourceLabel.labelText}
-- If the exact source is not certain, do NOT fake certainty.
 - Use the prepared source label exactly as provided below:
   ${sourceLabel.labelText}
-- Place this line immediately below the main header block.
-- Keep it concise and professional.
 `;
 
   const fullSystemPrompt = [
@@ -914,7 +704,8 @@ module.exports = async function handler(req, res) {
 
   try {
     let response = await openai.responses.create({
-      model: 'gpt-4o',
+      model: 'gpt-4o-mini',
+      max_output_tokens: 2600,
       input: [
         {
           role: 'system',
@@ -929,16 +720,19 @@ module.exports = async function handler(req, res) {
         {
           type: 'file_search',
           vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-          max_num_results: 10
+          max_num_results: 4
         }
       ]
     });
 
     let finalText = response.output_text || '';
 
-    if (isLowQualityOutput(finalText)) {
+    const shouldRetry = engineType === 'MOCK_EXAM' && isLowQualityOutput(finalText);
+
+    if (shouldRetry) {
       response = await openai.responses.create({
-        model: 'gpt-4o',
+        model: 'gpt-4o-mini',
+        max_output_tokens: 2200,
         input: [
           {
             role: 'system',
@@ -947,7 +741,7 @@ module.exports = async function handler(req, res) {
               '\n' +
               `
 [RETRY OVERRIDE]
-The previous draft was too generic, too workbook-like, or insufficiently transformed.
+The previous draft was too generic or insufficiently transformed.
 Regenerate the full set as a true MARCUSNOTE mock-exam transformation worksheet.
 
 Mandatory corrections:
@@ -955,17 +749,8 @@ Mandatory corrections:
 - Increase structure-based discrimination.
 - Increase blank / summary / inference logic.
 - Increase insertion / order / relation / flow items.
-- Preserve the original source item identity when relevant.
-- Make items feel like authentic Korean school-exam transformations.
-- Never output markdown bold.
-- Never output code fences or plaintext markers.
-- Remove footer-like artifacts.
-- Respect the final item count exactly.
 - Keep exactly one source label line near the top.
-- Each explanation must state why the correct answer works and why at least one distractor fails.
-- Enforce layer-by-layer routing:
-  1-3 meaning, 4-6 structure, 7-9 blank/summary/implication, 10-12 flow, 13-15 hybrid killer.
-- Do not repeat the same transformation template across multiple number bands.
+- Respect the final item count exactly.
 `
           },
           {
@@ -977,7 +762,7 @@ Mandatory corrections:
           {
             type: 'file_search',
             vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-            max_num_results: 10
+            max_num_results: 4
           }
         ]
       });
