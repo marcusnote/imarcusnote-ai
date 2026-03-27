@@ -27,7 +27,8 @@ module.exports = async function handler(req, res) {
       args: chromium.args,
       defaultViewport: chromium.defaultViewport,
       executablePath: await chromium.executablePath(),
-      headless: chromium.headless
+      headless: chromium.headless,
+      ignoreHTTPSErrors: true
     });
 
     const page = await browser.newPage();
@@ -59,9 +60,12 @@ module.exports = async function handler(req, res) {
             box-sizing: border-box;
           }
 
-          body {
+          html, body {
             margin: 0;
             padding: 0;
+          }
+
+          body {
             font-family: Arial, Helvetica, sans-serif;
             color: #111;
             background: #fff;
@@ -103,6 +107,10 @@ module.exports = async function handler(req, res) {
             margin-bottom: 25px;
           }
 
+          .exam-body {
+            width: 100%;
+          }
+
           .question-block {
             margin-bottom: 24px;
             page-break-inside: avoid;
@@ -140,6 +148,10 @@ module.exports = async function handler(req, res) {
           h1, h2, h3, h4, p, div {
             page-break-inside: avoid;
             break-inside: avoid;
+          }
+
+          br {
+            line-height: 1.7;
           }
         </style>
       </head>
@@ -180,7 +192,6 @@ module.exports = async function handler(req, res) {
     return res.status(200).send(pdfBuffer);
   } catch (error) {
     console.error('PDF API Error:', error);
-
     return res.status(500).json({
       error: 'PDF Generation Failed',
       detail: error?.message || 'Unknown PDF error'
