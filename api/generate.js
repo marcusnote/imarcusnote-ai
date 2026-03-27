@@ -394,7 +394,7 @@ Required answer key format:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
 1) ②
 2) ④
-3) [model answer]
+3) ①
 
 [EXPLANATION RULE]
 After the answer key, provide grouped explanations:
@@ -404,12 +404,8 @@ After the answer key, provide grouped explanations:
 ...
 ### Structural Logic 11-15
 ...
-### Structural Logic 16-20
-...
-### Structural Logic 21-25
-...
 `;
-
+  
 // =========================
 // HELPERS
 // =========================
@@ -519,8 +515,8 @@ function detectEngineType(prompt) {
   const isMiddleTextbook = /교과서|중학교|중등|중1|중2|중3|내신|textbook|middle|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text);
   const isMockExam = /모의고사|학평|수능|고1|고2|고3|평가원|ebs|mock|passage|analysis|csat|변형|주제|제목|요지|빈칸|어휘|삽입|순서|24번|23번|30번|31번/.test(text);
 
-  if (isMiddleTextbook) return 'MIDDLE_TEXTBOOK';
   if (isMockExam) return 'MOCK_EXAM';
+  if (isMiddleTextbook) return 'MIDDLE_TEXTBOOK';
   if (isMagic) return 'MAGIC';
   return 'WORMHOLE';
 }
@@ -588,6 +584,8 @@ Before finalizing the worksheet, silently verify all of the following:
 4. In mock-exam mode, at least 4 items must be genuine grammar/structure items.
 5. In mock-exam mode, at least 3 items must involve blank / summary / inference / flow logic.
 6. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
+7. Never leave the answer key incomplete.
+8. Never stop before finishing all required Structural Logic sections.
 `;
 
 function stabilizeNumbers(text = '') {
@@ -629,9 +627,34 @@ function ensureSourceLabel(text = '', labelText = '') {
   return `${label}\n${cleaned}`.trim();
 }
 
-function isLowQualityOutput(text = '') {
+function countQuestionItems(text = '') {
+  const matches = text.match(/(?:^|\n)\s*(?:\d+[\)\.]|①|1\))/g);
+  return matches ? matches.length : 0;
+}
+
+function countAnswerKeyItems(text = '') {
+  const answerKeySection = text.split('### OFFICIAL MARCUSNOTE ANSWER KEY')[1] || '';
+  const matches = answerKeySection.match(/\b\d+\)\s*[①②③④⑤1-5]/g);
+  return matches ? matches.length : 0;
+}
+
+function hasMarkdownHeaderArtifacts(text = '') {
+  return /(^|\n)###\s+/m.test(text);
+}
+
+function isLowQualityOutput(text = '', engineType = '') {
   const lower = text.toLowerCase();
-  const badSignals = ['### phase 1', '### phase 2', '### phase 3', 'meaning layer', 'structure layer', 'deep dive', '```plaintext', '```'];
+  const badSignals = [
+    '### phase 1',
+    '### phase 2',
+    '### phase 3',
+    'meaning layer',
+    'structure layer',
+    'deep dive',
+    '```plaintext',
+    '```'
+  ];
+
   const badCount = badSignals.reduce((acc, signal) => acc + (lower.split(signal).length - 1), 0);
 
   const repeatedInference =
@@ -639,13 +662,26 @@ function isLowQualityOutput(text = '') {
     (lower.match(/what can be inferred/gi) || []).length >= 3;
 
   const weakTransformation =
+    engineType === 'MOCK_EXAM' &&
     !/빈칸|요약|함축|삽입|순서|흐름|blank|summary|implication|insertion|sequence|flow/gi.test(lower);
 
-  return badCount >= 2 || repeatedInference || weakTransformation;
+  const expectedCount = engineType === 'WORMHOLE' ? 25 : 15;
+  const questionCount = countQuestionItems(text);
+  const answerKeyCount = countAnswerKeyItems(text);
+
+  const incompleteSet =
+    questionCount < Math.max(10, expectedCount - 2) ||
+    answerKeyCount < Math.max(5, expectedCount - 3);
+
+  const brokenFormat =
+    hasMarkdownHeaderArtifacts(text) ||
+    !text.includes('### OFFICIAL MARCUSNOTE ANSWER KEY');
+
+  return badCount >= 2 || repeatedInference || weakTransformation || incompleteSet || brokenFormat;
 }
 
 // =========================
-// API HANDLER (TIMEOUT FIXED)
+// API HANDLER
 // =========================
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
@@ -689,7 +725,7 @@ module.exports = async function handler(req, res) {
 - All target English sentences must remain in natural English.
 `;
 
-const quantityControl = `
+  const quantityControl = `
 [QUANTITY CONTROL]
 - Generate exactly ${itemCount} items only.
 - Complete all ${itemCount} questions, the full official answer key, and all required Structural Logic sections in one response.
@@ -742,14 +778,16 @@ const quantityControl = `
         {
           type: 'file_search',
           vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-          max_num_results: 4
+          max_num_results: 6
         }
       ]
     });
 
     let finalText = response.output_text || '';
 
-    const shouldRetry = engineType === 'MOCK_EXAM' && isLowQualityOutput(finalText);
+    const shouldRetry =
+      (engineType === 'MOCK_EXAM' || engineType === 'MIDDLE_TEXTBOOK' || engineType === 'WORMHOLE') &&
+      isLowQualityOutput(finalText, engineType);
 
     if (shouldRetry) {
       response = await openai.responses.create({
@@ -763,16 +801,17 @@ const quantityControl = `
               '\n' +
               `
 [RETRY OVERRIDE]
-The previous draft was too generic or insufficiently transformed.
-Regenerate the full set as a true MARCUSNOTE mock-exam transformation worksheet.
+The previous draft was incomplete, weakly formatted, or insufficiently transformed.
+Regenerate the full set as a complete MARCUSNOTE exam worksheet.
 
 Mandatory corrections:
-- Reduce direct content-retrieval questions.
-- Increase structure-based discrimination.
-- Increase blank / summary / inference logic.
-- Increase insertion / order / relation / flow items.
+- Finish all required questions.
+- Finish the full official answer key.
+- Finish all required Structural Logic sections.
 - Keep exactly one source label line near the top.
 - Respect the final item count exactly.
+- Keep 5-option multiple-choice format where required.
+- Remove markdown header artifacts in the visible output.
 `
           },
           {
@@ -784,7 +823,7 @@ Mandatory corrections:
           {
             type: 'file_search',
             vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-            max_num_results: 4
+            max_num_results: 6
           }
         ]
       });
