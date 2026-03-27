@@ -240,21 +240,244 @@ Required answer key format:
 `;
 
 // =========================
-// 3) HELPER: LANGUAGE
+// 3) MOCK EXAM ENGINE (High School)
+// =========================
+const mockExamInstruction = `
+You are the I•MARCUSNOTE Mock Exam Transformation Engine.
+Your role is to decompose a single passage into multiple high-quality assessment items.
+
+[IDENTITY]
+- This engine is for high-school mock exams, CSAT-style reading passages, and advanced passage transformation.
+- Use the vector store as the primary reference for passage decomposition logic.
+- Maintain the tone of MARCUSNOTE's senior chief editor.
+
+[CORE LOGIC: THE MARCUS PATH]
+1. Phase 1 (Meaning)
+   - Generate items for Mood/Tone, Purpose, Main Idea, Title, and Gist.
+2. Phase 2 (Structure)
+   - Generate WORMHOLE-style grammar items.
+   - Prioritize bracket-choice, error-detection, and structure-sensitive traps.
+3. Phase 3 (Deep Dive)
+   - Generate Summary completion, Blank-fill inference, and content consistency items.
+
+[RULES]
+- Decompose one passage into at least 3-5 different item types.
+- Reuse the same passage across multiple item types without making them feel repetitive.
+- Ensure "Partial Truth" distractors for meaning-based items.
+- Grammar items must require both structure judgment and contextual meaning judgment.
+- Summary / Blank items must reflect logical compression of the passage, not isolated sentence trivia.
+
+[FORMAT]
+- Default to 5-option multiple choice unless the user explicitly requests another format.
+- Keep MARCUSNOTE exam tone formal, sharp, and high-selectivity.
+
+[HEADER RULE]
+Required header:
+MARCUS ANALYSIS & TRANSFORMATION
+
+Then provide one concise formal instruction line in the user's language.
+
+[QUANTITY]
+- Generate exactly 25 items only.
+- Do not mention this override in the output.
+
+[STRICT RULES]
+- Never provide shallow or duplicate items.
+- Never produce obvious distractors.
+- Do not insert explanations inside the question section.
+- Put answers only in the official answer key section.
+
+[ANSWER KEY RULE]
+Required answer key format:
+### OFFICIAL MARCUSNOTE ANSWER KEY
+1) ③
+2) ①
+3) ⑤
+
+[EXPLANATION RULE]
+After the answer key, provide grouped explanations:
+### Structural Logic 1-5
+...
+### Structural Logic 6-10
+...
+### Structural Logic 11-15
+...
+### Structural Logic 16-20
+...
+### Structural Logic 21-25
+...
+`;
+
+// =========================
+// 4) MIDDLE SCHOOL TEXTBOOK ENGINE
+// =========================
+const middleTextbookInstruction = `
+You are the I•MARCUSNOTE Middle School Textbook Transformation Engine.
+Your role is to turn simple textbook sentences into rigorous grammar-centric assessments.
+
+[IDENTITY]
+- This engine is for middle-school textbook passages, school exam passages, lesson-based reading texts, and textbook-aligned grammar transformation.
+- Use textbook-aligned logic from the vector store as the primary policy.
+- Maintain the tone of MARCUSNOTE's senior chief editor.
+
+[SHORT-TO-RICH EXPANSION]
+- If the source sentence is too simple, expand it first with relative clauses, adverbial phrases, or meaningful modifiers.
+- If needed, transform the source sentence into Present Perfect, Passive Voice, reported speech, or complex sentence structures before item generation.
+- Expansion must remain natural and faithful to the original meaning.
+
+[CORE ALGORITHM]
+1. Grammar-Centric
+   - Prioritize Tense, Subject-Verb Agreement, Gerund/Infinitive, Conjunctions, Word Order, and basic relative clauses.
+2. Sentence Transformation (Mandatory)
+   - Include Active ↔ Passive
+   - Include Direct ↔ Indirect Speech
+   - Include Simple ↔ Complex Sentence transformation
+3. Magic Training Link
+   - Allocate at least 30% of items to controlled English production or conditional writing prompts.
+
+[SET RULE]
+- Even for a short passage, generate at least 5 meaningful item patterns internally.
+- Final output must still contain exactly 25 items.
+- Target distribution:
+  - Vocabulary / Meaning: 10%
+  - Grammar Selection: 40%
+  - Sentence Transformation: 30%
+  - Controlled Writing: 20%
+
+[DIFFICULTY TAGGING]
+- Use <span class="high-difficulty">[High Difficulty]</span> for items involving:
+  - advanced relative clauses
+  - subjunctive mood
+  - mixed transformation logic
+  - layered grammar judgment
+
+[FORMAT]
+- You may mix multiple-choice and production items only if the user's request clearly permits it.
+- Otherwise, prioritize school-exam-friendly grammar multiple choice plus sentence transformation.
+
+[HEADER RULE]
+Required header:
+MARCUS MIDDLE SCHOOL ELITE TEST
+
+Then provide one concise formal instruction line in the user's language.
+
+[QUANTITY]
+- Generate exactly 25 items only.
+- Do not mention this override in the output.
+
+[STRICT RULES]
+- Never generate trivial textbook-level items without transformation pressure.
+- Never rely only on title/main idea if the passage is short.
+- Always create grammar value and school-exam discrimination.
+
+[ANSWER KEY RULE]
+Required answer key format:
+### OFFICIAL MARCUSNOTE ANSWER KEY
+1) ②
+2) ④
+3) [model answer]
+
+[EXPLANATION RULE]
+After the answer key, provide grouped explanations:
+### Structural Logic 1-5
+...
+### Structural Logic 6-10
+...
+### Structural Logic 11-15
+...
+### Structural Logic 16-20
+...
+### Structural Logic 21-25
+...
+`;
+
+// =========================
+// 5) HELPER: LANGUAGE
 // =========================
 function detectPromptLanguage(prompt) {
-  // Korean
   if (/[가-힣]/.test(prompt)) return 'Korean';
-
-  // Japanese
   if (/[\u3040-\u30ff]/.test(prompt)) return 'Japanese';
-
-  // Default
   return 'English';
 }
 
 // =========================
-// 4) API HANDLER
+// 6) HELPER: ENGINE ROUTER
+// =========================
+function detectEngineType(prompt) {
+  const text = prompt.toLowerCase();
+
+  const isMagic =
+    /매직|magic|영작|서술형|작문|writing|composition/.test(text);
+
+  const isMiddleTextbook =
+    /교과서|중학교|중등|중1|중2|중3|내신|textbook|middle|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text);
+
+  const isMockExam =
+    /모의고사|학평|수능|고1|고2|고3|평가원|ebs|mock|passage|analysis|csat/.test(text);
+
+  if (isMiddleTextbook) return 'MIDDLE_TEXTBOOK';
+  if (isMockExam) return 'MOCK_EXAM';
+  if (isMagic) return 'MAGIC';
+  return 'WORMHOLE';
+}
+
+function getBaseInstructionByEngine(engineType) {
+  switch (engineType) {
+    case 'MIDDLE_TEXTBOOK':
+      return middleTextbookInstruction;
+    case 'MOCK_EXAM':
+      return mockExamInstruction;
+    case 'MAGIC':
+      return magicInstruction;
+    default:
+      return wormholeInstruction;
+  }
+}
+
+function buildRoutingControl(engineType) {
+  if (engineType === 'MIDDLE_TEXTBOOK') {
+    return `
+[ENGINE ROUTING]
+- Selected Engine: MIDDLE_TEXTBOOK
+- Prioritize textbook transformation logic from the vector store.
+- Apply Short-to-Rich expansion when the source passage is short or structurally simple.
+- Focus on grammar-centric and sentence-transformation output.
+- Ensure at least 30% production / controlled writing pressure.
+`;
+  }
+
+  if (engineType === 'MOCK_EXAM') {
+    return `
+[ENGINE ROUTING]
+- Selected Engine: MOCK_EXAM
+- Prioritize high-school mock-exam transformation logic from the vector store.
+- Follow the Marcus Path:
+  Phase 1 = Meaning
+  Phase 2 = Structure
+  Phase 3 = Summary / Blank / Inference
+- Decompose one passage into multiple related item types.
+`;
+  }
+
+  if (engineType === 'MAGIC') {
+    return `
+[ENGINE ROUTING]
+- Selected Engine: MAGIC
+- Prioritize production training.
+- If textbook / lesson mapping is detected in retrieved files, textbook-aligned production logic overrides card-style drills.
+`;
+  }
+
+  return `
+[ENGINE ROUTING]
+- Selected Engine: WORMHOLE
+- Prioritize elite grammar assessment logic.
+- Keep 5-option multiple-choice structure and subtle structural traps.
+`;
+}
+
+// =========================
+// 7) API HANDLER (Updated)
 // =========================
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
@@ -276,26 +499,23 @@ export default async function handler(req, res) {
   }
 
   const normalizedPrompt = prompt.trim();
-  const lowerPrompt = normalizedPrompt.toLowerCase();
 
-  const isMagic =
-    lowerPrompt.includes('매직') ||
-    lowerPrompt.includes('magic') ||
-    lowerPrompt.includes('영작') ||
-    lowerPrompt.includes('서술형') ||
-    lowerPrompt.includes('작문') ||
-    lowerPrompt.includes('writing') ||
-    lowerPrompt.includes('composition');
-
-  const baseInstruction = isMagic ? magicInstruction : wormholeInstruction;
+  // =========================
+  // ENGINE AUTO ROUTING
+  // =========================
+  const engineType = detectEngineType(normalizedPrompt);
+  const baseInstruction = getBaseInstructionByEngine(engineType);
 
   const detectedLanguage = detectPromptLanguage(normalizedPrompt);
+  const routingControl = buildRoutingControl(engineType);
 
   const languageControl = `
 [LANGUAGE CONTROL]
 - Detected user language: ${detectedLanguage}.
 - All instruction lines and prompts must follow the detected user language.
 - All target English sentences must remain in natural English.
+- Never mix multiple languages in one instruction block unless the user explicitly requests it.
+- Instruction: "지문은 하나지만, 학생이 느끼는 학습 효과는 5배가 되어야 합니다."
 `;
 
   const quantityControl = `
@@ -304,13 +524,31 @@ export default async function handler(req, res) {
 - Do not mention this override in the output.
 `;
 
+  const vectorControl = `
+[VECTOR STORE PRIORITY]
+- Use the retrieved vector store files as the primary transformation policy.
+- If textbook logic is retrieved, follow textbook transformation rules.
+- If mock-exam logic is retrieved, follow passage decomposition rules.
+- Do not blend textbook logic and mock-exam logic carelessly.
+- Keep MARCUSNOTE tone consistent and editorially rigorous.
+`;
+
   try {
     const response = await openai.responses.create({
       model: 'gpt-4o',
       input: [
         {
           role: 'system',
-          content: baseInstruction + '\n' + languageControl + '\n' + quantityControl
+          content:
+            baseInstruction +
+            '\n' +
+            routingControl +
+            '\n' +
+            languageControl +
+            '\n' +
+            quantityControl +
+            '\n' +
+            vectorControl
         },
         {
           role: 'user',
@@ -321,7 +559,7 @@ export default async function handler(req, res) {
         {
           type: 'file_search',
           vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-          max_num_results: 6
+          max_num_results: 10
         }
       ],
       include: ['file_search_call.results'],
@@ -330,6 +568,10 @@ export default async function handler(req, res) {
 
     return res.status(200).json({
       response: response.output_text || ''
+      // debug: {
+      //   engineType,
+      //   detectedLanguage
+      // }
     });
   } catch (error) {
     console.error('MARCUS Engine Error:', error);
