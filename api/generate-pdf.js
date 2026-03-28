@@ -10,43 +10,70 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
 
   return `
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    @page { size: A4; margin: 15mm; }
-    * { box-sizing: border-box; }
-    body {
-      font-family: 'Inter', 'Arial', sans-serif;
-      line-height: 1.6;
-      color: #111;
-      font-size: 13px;
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
       padding: 0;
+      font-family: Inter, Arial, sans-serif;
+      color: #111;
+      background: #fff;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
+
+    body {
+      font-size: 13px;
+      line-height: 1.62;
+    }
+
     .pdf-exam-header {
       display: flex;
       justify-content: space-between;
+      gap: 8px;
       border-bottom: 1.5px solid #000;
-      padding-bottom: 5px;
+      padding-bottom: 6px;
+      margin-bottom: 18px;
       font-size: 11px;
       font-weight: 700;
     }
+
     .pdf-main-title {
       font-size: 24px;
       font-weight: 900;
       text-align: center;
-      margin: 15px 0;
+      margin: 15px 0 18px;
       text-transform: uppercase;
     }
+
+    .pdf-instruction {
+      font-size: 13px;
+      font-style: italic;
+      color: #444;
+      border-left: 3px solid #111;
+      padding-left: 10px;
+      margin-bottom: 24px;
+    }
+
     .answer-key-box {
       page-break-before: always;
       margin-top: 30px;
       border-top: 2px solid #000;
       padding-top: 20px;
     }
+
     .high-difficulty {
       color: #d92d20;
       font-weight: 800;
@@ -54,24 +81,27 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       padding: 2px 8px;
       border-radius: 6px;
       font-size: 0.8em;
+      display: inline-block;
     }
+
     .footer {
       text-align: center;
       font-size: 10px;
       color: #888;
       margin-top: 30px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    p, div, li {
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
   </style>
 </head>
 <body>
-  <div class="pdf-exam-header">
-    <span>MARCUS Intelligence Professional Set</span>
-    <span>Brand: ${safeBrand}</span>
-    <span>Date: ${new Date().toLocaleDateString()}</span>
-  </div>
-  <div class="pdf-main-title">MARCUSNOTE ASSESSMENT</div>
   ${content}
-  <div class="footer">© 2026 MARCUSNOTE. All rights reserved.</div>
+  <div class="footer">${safeBrand} × MARCUSNOTE ELITE</div>
 </body>
 </html>`;
 }
@@ -81,15 +111,24 @@ module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
-    return res.status(405).json({ ok: false, message: 'Method Not Allowed' });
+    return res.status(405).json({
+      ok: false,
+      message: 'Method Not Allowed'
+    });
   }
 
   const { content, academyName } = req.body || {};
 
   if (!content || typeof content !== 'string') {
-    return res.status(400).json({ ok: false, message: 'HTML content required' });
+    return res.status(400).json({
+      ok: false,
+      message: 'HTML content required'
+    });
   }
 
   let browser = null;
@@ -108,6 +147,8 @@ module.exports = async function handler(req, res) {
     await page.setContent(buildPdfHtml(content, academyName), {
       waitUntil: ['domcontentloaded', 'networkidle0']
     });
+
+    await page.emulateMediaType('screen');
 
     const pdfBuffer = await page.pdf({
       format: 'A4',
@@ -128,12 +169,15 @@ module.exports = async function handler(req, res) {
     return res.status(200).send(pdfBuffer);
   } catch (error) {
     console.error('PDF Engine Error:', error);
+
     return res.status(500).json({
       ok: false,
       message: 'PDF generation failed',
-      detail: error.message
+      detail: error?.message || 'Unknown error'
     });
   } finally {
-    if (browser) await browser.close();
+    if (browser) {
+      await browser.close();
+    }
   }
 };
