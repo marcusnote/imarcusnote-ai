@@ -51,7 +51,7 @@ function buildHtml(content = "", academyName = "MARCUSNOTE") {
 
   <body>
     <div class="brand">${safeBrand}</div>
-    ${content}
+    <div>${content}</div>
     <div class="footer">${safeBrand} x MARCUSNOTE</div>
   </body>
   </html>
@@ -59,11 +59,21 @@ function buildHtml(content = "", academyName = "MARCUSNOTE") {
 }
 
 export default async function handler(req, res) {
+
+  // ✅ CORS (반드시 여기 위치)
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).send("Method not allowed");
   }
 
-  let browser = null;
+  let browser;
 
   try {
     const { content, academyName } = req.body;
@@ -80,28 +90,30 @@ export default async function handler(req, res) {
     browser = await puppeteer.launch({
       args: chromium.args,
       executablePath: await chromium.executablePath(),
-      headless: chromium.headless,
+      headless: true,
     });
 
     const page = await browser.newPage();
 
-    const html = buildHtml(content, academyName);
+    await page.setContent(
+      buildHtml(content, academyName),
+      {
+        waitUntil: "networkidle0",
+        timeout: 30000,
+      }
+    );
 
-    await page.setContent(html, {
-      waitUntil: "networkidle0",
-    });
-
-    const pdf = await page.pdf({
+    const pdfBuffer = await page.pdf({
       format: "A4",
       printBackground: true,
     });
 
-    console.log("PDF created");
+    await browser.close();
 
     res.setHeader("Content-Type", "application/pdf");
     res.setHeader("Content-Disposition", "attachment; filename=marcusnote.pdf");
 
-    return res.send(pdf);
+    return res.send(pdfBuffer);
 
   } catch (error) {
     console.error("PDF ERROR:", error);
@@ -111,8 +123,5 @@ export default async function handler(req, res) {
       message: "PDF generation failed",
       detail: error.message,
     });
-
-  } finally {
-    if (browser) await browser.close();
   }
 }
