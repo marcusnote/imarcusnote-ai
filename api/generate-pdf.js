@@ -1,44 +1,28 @@
-const chromiumBin = require('@sparticuz/chromium');
-const { chromium } = require('playwright-core');
+const chromium = require('@sparticuz/chromium');
+const { chromium: playwright } = require('playwright-core');
 
-function sanitizeText(value = '') {
+function escapeHtml(value = '') {
   return String(value)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-function stripDangerousMarkup(html = '') {
-  return String(html)
-    .replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, '')
-    .replace(/<style[\s\S]*?>[\s\S]*?<\/style>/gi, (match) => match) // keep internal styles if present
-    .replace(/\son\w+="[^"]*"/gi, '')
-    .replace(/\son\w+='[^']*'/gi, '')
-    .replace(/javascript:/gi, '');
-}
-
-function normalizePdfHtml(html = '') {
-  return String(html)
-    .replace(/<div class="iaw-empty-state">[\s\S]*?<\/div>/gi, '')
-    .replace(/<button[\s\S]*?<\/button>/gi, '')
-    .replace(/\n{3,}/g, '\n\n')
-    .trim();
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
-  const safeBrand = sanitizeText(academyName);
-  const safeContent = normalizePdfHtml(stripDangerousMarkup(content));
+  const safeBrand = escapeHtml(academyName || 'MARCUSNOTE ELITE');
 
   return `<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcusnote PDF</title>
   <style>
     @page {
       size: A4;
-      margin: 15mm;
+      margin: 14mm 12mm 16mm 12mm;
     }
 
     * {
@@ -48,69 +32,126 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
     html, body {
       margin: 0;
       padding: 0;
-      background: #fff;
-      color: #111;
-      font-family: Inter, Arial, sans-serif;
+      background: #ffffff;
+      color: #111111;
+      font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
 
     body {
-      font-size: 13px;
-      line-height: 1.62;
+      font-size: 12.2px;
+      line-height: 1.68;
       word-break: keep-all;
-      overflow-wrap: break-word;
     }
 
-    .pdf-page {
+    .pdf-wrap {
       width: 100%;
     }
 
-    .pdf-page .high-difficulty {
-      color: #d92d20;
-      font-weight: 800;
-      background: #fef3f2;
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 0.8em;
+    .pdf-topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      border-bottom: 1.6px solid #111;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      font-size: 10.5px;
+      font-weight: 700;
+    }
+
+    .pdf-topbar span {
       display: inline-block;
     }
 
-    .pdf-page h1,
-    .pdf-page h2,
-    .pdf-page h3,
-    .pdf-page h4,
-    .pdf-page p,
-    .pdf-page div,
-    .pdf-page li {
+    .pdf-body {
+      width: 100%;
+    }
+
+    .pdf-body h1,
+    .pdf-body h2,
+    .pdf-body h3,
+    .pdf-body h4,
+    .pdf-body h5 {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    .pdf-body p,
+    .pdf-body li,
+    .pdf-body div,
+    .pdf-body table,
+    .pdf-body blockquote {
       break-inside: avoid;
       page-break-inside: avoid;
     }
 
-    .pdf-page img {
-      max-width: 100%;
-      height: auto;
+    .pdf-body .pdf-main-title {
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      margin: 10px 0 18px;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
     }
 
-    .pdf-page .answer-key-box {
+    .pdf-body .pdf-instruction {
+      font-size: 12px;
+      color: #333;
+      margin: 0 0 18px;
+      padding-left: 10px;
+      border-left: 3px solid #111;
+    }
+
+    .pdf-body .answer-key-box {
       page-break-before: always;
-      break-before: page;
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 2px solid #111;
     }
 
-    .footer {
+    .pdf-body .high-difficulty {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #fef2f2;
+      color: #b42318;
+      font-size: 10px;
+      font-weight: 800;
+      border: 1px solid #fecdca;
+    }
+
+    .pdf-footer {
+      margin-top: 28px;
+      padding-top: 10px;
+      border-top: 1px solid #e5e7eb;
       text-align: center;
       font-size: 10px;
-      color: #888;
-      margin-top: 30px;
-      padding-top: 14px;
-      border-top: 1px solid #e5e7eb;
+      color: #8a8a8a;
+    }
+
+    .pdf-muted {
+      color: #666;
+    }
+
+    br {
+      line-height: 1.65;
     }
   </style>
 </head>
 <body>
-  <div class="pdf-page">
-    ${safeContent}
-    <div class="footer">${safeBrand} × MARCUSNOTE ELITE</div>
+  <div class="pdf-wrap">
+    <div class="pdf-topbar">
+      <span>MARCUS Intelligence Professional Set</span>
+      <span>Brand: ${safeBrand}</span>
+      <span>Date: ${new Date().toLocaleDateString('ko-KR')}</span>
+    </div>
+
+    <div class="pdf-body">
+      ${content}
+    </div>
+
+    <div class="pdf-footer">${safeBrand} × MARCUSNOTE ELITE</div>
   </div>
 </body>
 </html>`;
@@ -118,7 +159,7 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
 
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
-  res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
@@ -142,53 +183,61 @@ module.exports = async function handler(req, res) {
   }
 
   let browser;
+  let context;
+  let page;
 
   try {
-    const executablePath = await chromiumBin.executablePath();
+    const executablePath = await chromium.executablePath();
 
-    browser = await chromium.launch({
+    browser = await playwright.launch({
       executablePath,
       args: [
-        ...chromiumBin.args,
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
+        ...chromium.args,
         '--disable-dev-shm-usage',
-        '--font-render-hinting=none'
+        '--no-sandbox',
+        '--disable-setuid-sandbox'
       ],
       headless: true
     });
 
-    const page = await browser.newPage();
+    context = await browser.newContext({
+      viewport: { width: 1240, height: 1754 },
+      deviceScaleFactor: 1
+    });
 
-    await page.setContent(buildPdfHtml(content, academyName), {
-      waitUntil: 'domcontentloaded'
+    page = await context.newPage();
+
+    const finalHtml = buildPdfHtml(content, academyName);
+
+    await page.setContent(finalHtml, {
+      waitUntil: 'domcontentloaded',
+      timeout: 30000
     });
 
     await page.emulateMedia({ media: 'screen' });
+
+    await page.waitForTimeout(700);
 
     const pdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
       preferCSSPageSize: true,
       margin: {
-        top: '15mm',
-        right: '15mm',
-        bottom: '15mm',
-        left: '15mm'
+        top: '14mm',
+        right: '12mm',
+        bottom: '16mm',
+        left: '12mm'
       }
     });
-
-    if (!pdfBuffer || pdfBuffer.length < 1000) {
-      throw new Error('Invalid PDF buffer generated');
-    }
 
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', 'attachment; filename="Marcusnote_Elite_Exam.pdf"');
     res.setHeader('Content-Length', String(pdfBuffer.length));
+    res.setHeader('Cache-Control', 'no-store');
 
-    return res.status(200).send(Buffer.from(pdfBuffer));
+    return res.status(200).end(pdfBuffer);
   } catch (error) {
-    console.error('PLAYWRIGHT PDF ENGINE ERROR:', error);
+    console.error('PDF Engine Error:', error);
 
     return res.status(500).json({
       ok: false,
@@ -196,8 +245,16 @@ module.exports = async function handler(req, res) {
       detail: error?.message || 'Unknown error'
     });
   } finally {
-    if (browser) {
-      await browser.close();
-    }
+    try {
+      if (page) await page.close();
+    } catch (_) {}
+
+    try {
+      if (context) await context.close();
+    } catch (_) {}
+
+    try {
+      if (browser) await browser.close();
+    } catch (_) {}
   }
 };
