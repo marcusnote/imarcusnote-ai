@@ -5,10 +5,10 @@
   "main": "api/index.js",
   "dependencies": {
     "openai": "^4.0.0",
-    "puppeteer-core": "^22.0.0",
+    "puppeteer-core": "^22.15.0",
     "@sparticuz/chromium": "123.0.1"
   },
   "engines": {
-    "node": "22.x"
+    "node": "20.x"
   }
 }
