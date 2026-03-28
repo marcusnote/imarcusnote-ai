@@ -5,8 +5,16 @@ function sanitizeText(value = '') {
   return String(value).replace(/[<>]/g, '');
 }
 
+function stripDangerousMarkup(html = '') {
+  return String(html)
+    .replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, '')
+    .replace(/on\w+="[^"]*"/gi, '')
+    .replace(/on\w+='[^']*'/gi, '');
+}
+
 function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
   const safeBrand = sanitizeText(academyName);
+  const safeContent = stripDangerousMarkup(content);
 
   return `
 <!DOCTYPE html>
@@ -27,9 +35,9 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
     html, body {
       margin: 0;
       padding: 0;
-      font-family: Inter, Arial, sans-serif;
-      color: #111;
       background: #fff;
+      color: #111;
+      font-family: Inter, Arial, sans-serif;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -37,6 +45,11 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
     body {
       font-size: 13px;
       line-height: 1.62;
+      word-break: keep-all;
+    }
+
+    .pdf-page {
+      width: 100%;
     }
 
     .pdf-exam-header {
@@ -69,6 +82,7 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
 
     .answer-key-box {
       page-break-before: always;
+      break-before: page;
       margin-top: 30px;
       border-top: 2px solid #000;
       padding-top: 20px;
@@ -93,15 +107,21 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       border-top: 1px solid #e5e7eb;
     }
 
-    p, div, li {
+    p, div, li, h1, h2, h3, h4 {
       break-inside: avoid;
       page-break-inside: avoid;
+    }
+
+    img {
+      max-width: 100%;
     }
   </style>
 </head>
 <body>
-  ${content}
-  <div class="footer">${safeBrand} × MARCUSNOTE ELITE</div>
+  <div class="pdf-page">
+    ${safeContent}
+    <div class="footer">${safeBrand} × MARCUSNOTE ELITE</div>
+  </div>
 </body>
 </html>`;
 }
@@ -134,8 +154,15 @@ module.exports = async function handler(req, res) {
   let browser = null;
 
   try {
+    // Sparticuz chromium settings for Vercel serverless
     browser = await puppeteer.launch({
-      args: chromium.args,
+      args: [
+        ...chromium.args,
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--single-process'
+      ],
       defaultViewport: chromium.defaultViewport,
       executablePath: await chromium.executablePath(),
       headless: true,
@@ -153,6 +180,7 @@ module.exports = async function handler(req, res) {
     const pdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
+      preferCSSPageSize: true,
       displayHeaderFooter: false,
       margin: {
         top: '15mm',
@@ -161,6 +189,10 @@ module.exports = async function handler(req, res) {
         right: '15mm'
       }
     });
+
+    if (!pdfBuffer || pdfBuffer.length < 1000) {
+      throw new Error('Invalid PDF buffer generated');
+    }
 
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', 'attachment; filename="Marcusnote_Elite_Exam.pdf"');
