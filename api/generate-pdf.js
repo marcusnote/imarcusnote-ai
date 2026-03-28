@@ -1,3 +1,6 @@
+res.setHeader("Access-Control-Allow-Origin", "*");
+res.setHeader("Access-Control-Allow-Methods", "POST");
+res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 const chromium = require("@sparticuz/chromium");
 const puppeteer = require("puppeteer-core");
 
