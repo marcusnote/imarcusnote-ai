@@ -1,5 +1,5 @@
 const chromium = require("@sparticuz/chromium");
-const { chromium: playwright } = require("playwright-core");
+const puppeteer = require("puppeteer-core");
 
 export const config = {
   runtime: "nodejs",
@@ -13,14 +13,14 @@ function escapeHtml(value = "") {
     .replace(/>/g, "&gt;");
 }
 
-function buildPdfHtml(content = "", academyName = "MARCUSNOTE ELITE") {
+function buildHtml(content = "", academyName = "MARCUSNOTE") {
   const safeBrand = escapeHtml(academyName);
 
   return `
   <!DOCTYPE html>
   <html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <style>
       @page {
         size: A4;
@@ -34,9 +34,9 @@ function buildPdfHtml(content = "", academyName = "MARCUSNOTE ELITE") {
         color: #111;
       }
 
-      h1 {
-        font-size: 18px;
-        margin-bottom: 10px;
+      .brand {
+        font-weight: bold;
+        margin-bottom: 12px;
       }
 
       .footer {
@@ -46,17 +46,12 @@ function buildPdfHtml(content = "", academyName = "MARCUSNOTE ELITE") {
         font-size: 10px;
         color: #999;
       }
-
-      .brand {
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
     </style>
   </head>
 
   <body>
     <div class="brand">${safeBrand}</div>
-    <div>${content}</div>
+    ${content}
     <div class="footer">${safeBrand} x MARCUSNOTE</div>
   </body>
   </html>
@@ -76,42 +71,32 @@ export default async function handler(req, res) {
     if (!content) {
       return res.status(400).json({
         ok: false,
-        message: "No content provided",
+        message: "No content",
       });
     }
 
-    console.log("Launching browser...");
+    console.log("Launching Puppeteer...");
 
-    browser = await playwright.launch({
+    browser = await puppeteer.launch({
       args: chromium.args,
       executablePath: await chromium.executablePath(),
-      headless: true,
-
-      // 🔥 핵심 안정화 옵션
-      chromiumSandbox: false,
+      headless: chromium.headless,
     });
 
-    const context = await browser.newContext({
-      viewport: { width: 1200, height: 1600 },
-    });
+    const page = await browser.newPage();
 
-    const page = await context.newPage();
-
-    const html = buildPdfHtml(content, academyName);
+    const html = buildHtml(content, academyName);
 
     await page.setContent(html, {
-      waitUntil: "networkidle",
-      timeout: 30000,
+      waitUntil: "networkidle0",
     });
-
-    console.log("Generating PDF...");
 
     const pdf = await page.pdf({
       format: "A4",
       printBackground: true,
     });
 
-    console.log("PDF success");
+    console.log("PDF created");
 
     res.setHeader("Content-Type", "application/pdf");
     res.setHeader("Content-Disposition", "attachment; filename=marcusnote.pdf");
@@ -128,12 +113,6 @@ export default async function handler(req, res) {
     });
 
   } finally {
-    if (browser) {
-      try {
-        await browser.close();
-      } catch (e) {
-        console.log("browser close error ignored");
-      }
-    }
+    if (browser) await browser.close();
   }
 }
