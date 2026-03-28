@@ -19,11 +19,7 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       size: A4;
       margin: 16mm 14mm 18mm 14mm;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     html, body {
       margin: 0;
       padding: 0;
@@ -31,18 +27,13 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       color: #111;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
+      background: #fff;
     }
-
     body {
       font-size: 13px;
       line-height: 1.62;
-      background: #fff;
     }
-
-    .pdf-root {
-      width: 100%;
-    }
-
+    .pdf-root { width: 100%; }
     .pdf-exam-header {
       display: flex;
       justify-content: space-between;
@@ -52,18 +43,14 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       border-bottom: 1.5px solid #000;
       padding-bottom: 8px;
       margin-bottom: 18px;
-      color: #000;
     }
-
     .pdf-main-title {
       font-size: 24px;
       font-weight: 900;
       text-align: center;
       margin: 8px 0 12px;
       text-transform: uppercase;
-      color: #000;
     }
-
     .pdf-instruction {
       font-size: 13px;
       font-style: italic;
@@ -72,24 +59,12 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       padding-left: 10px;
       margin-bottom: 24px;
     }
-
-    .exam-body,
-    .question-block,
-    li,
-    p,
-    div {
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-
     .answer-key-box {
       page-break-before: always;
-      break-before: page;
       margin-top: 28px;
       border-top: 2px solid #000;
       padding-top: 18px;
     }
-
     .high-difficulty {
       color: #d92d20;
       font-weight: 800;
@@ -99,7 +74,6 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       font-size: 0.75em;
       display: inline-block;
     }
-
     .footer-watermark {
       margin-top: 32px;
       padding-top: 14px;
@@ -107,10 +81,6 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       text-align: center;
       font-size: 10px;
       color: #777;
-    }
-
-    br {
-      line-height: 1.6;
     }
   </style>
 </head>
