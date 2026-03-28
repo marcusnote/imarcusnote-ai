@@ -1,20 +1,27 @@
-const chromium = require('@sparticuz/chromium');
-const puppeteer = require('puppeteer-core');
+const chromiumBin = require('@sparticuz/chromium');
+const { chromium } = require('playwright-core');
 
 function sanitizeText(value = '') {
-  return String(value).replace(/[<>]/g, '');
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
 function stripDangerousMarkup(html = '') {
   return String(html)
     .replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, '')
-    .replace(/on\w+="[^"]*"/gi, '')
-    .replace(/on\w+='[^']*'/gi, '');
+    .replace(/<style[\s\S]*?>[\s\S]*?<\/style>/gi, (match) => match) // keep internal styles if present
+    .replace(/\son\w+="[^"]*"/gi, '')
+    .replace(/\son\w+='[^']*'/gi, '')
+    .replace(/javascript:/gi, '');
 }
 
 function normalizePdfHtml(html = '') {
   return String(html)
     .replace(/<div class="iaw-empty-state">[\s\S]*?<\/div>/gi, '')
+    .replace(/<button[\s\S]*?<\/button>/gi, '')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 }
@@ -23,16 +30,20 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
   const safeBrand = sanitizeText(academyName);
   const safeContent = normalizePdfHtml(stripDangerousMarkup(content));
 
-  return `
-<!DOCTYPE html>
-<html lang="en">
+  return `<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    @page { size: A4; margin: 15mm; }
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html, body {
       margin: 0;
@@ -48,16 +59,14 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       font-size: 13px;
       line-height: 1.62;
       word-break: keep-all;
+      overflow-wrap: break-word;
     }
 
-    .pdf-page { width: 100%; }
-
-    .answer-key-box {
-      page-break-before: always;
-      break-before: page;
+    .pdf-page {
+      width: 100%;
     }
 
-    .high-difficulty {
+    .pdf-page .high-difficulty {
       color: #d92d20;
       font-weight: 800;
       background: #fef3f2;
@@ -65,6 +74,27 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       border-radius: 6px;
       font-size: 0.8em;
       display: inline-block;
+    }
+
+    .pdf-page h1,
+    .pdf-page h2,
+    .pdf-page h3,
+    .pdf-page h4,
+    .pdf-page p,
+    .pdf-page div,
+    .pdf-page li {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .pdf-page img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .pdf-page .answer-key-box {
+      page-break-before: always;
+      break-before: page;
     }
 
     .footer {
@@ -75,13 +105,6 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       padding-top: 14px;
       border-top: 1px solid #e5e7eb;
     }
-
-    p, div, li, h1, h2, h3, h4 {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-
-    img { max-width: 100%; }
   </style>
 </head>
 <body>
@@ -98,7 +121,9 @@ module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
 
   if (req.method !== 'POST') {
     return res.status(405).json({
@@ -116,41 +141,40 @@ module.exports = async function handler(req, res) {
     });
   }
 
-  let browser = null;
+  let browser;
 
   try {
-    browser = await puppeteer.launch({
+    const executablePath = await chromiumBin.executablePath();
+
+    browser = await chromium.launch({
+      executablePath,
       args: [
-        ...chromium.args,
+        ...chromiumBin.args,
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
-        '--single-process'
+        '--font-render-hinting=none'
       ],
-      defaultViewport: chromium.defaultViewport,
-      executablePath: await chromium.executablePath(),
-      headless: true,
-      ignoreHTTPSErrors: true
+      headless: true
     });
 
     const page = await browser.newPage();
 
     await page.setContent(buildPdfHtml(content, academyName), {
-      waitUntil: ['domcontentloaded', 'networkidle0']
+      waitUntil: 'domcontentloaded'
     });
 
-    await page.emulateMediaType('screen');
+    await page.emulateMedia({ media: 'screen' });
 
     const pdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
       preferCSSPageSize: true,
-      displayHeaderFooter: false,
       margin: {
         top: '15mm',
+        right: '15mm',
         bottom: '15mm',
-        left: '15mm',
-        right: '15mm'
+        left: '15mm'
       }
     });
 
@@ -162,15 +186,18 @@ module.exports = async function handler(req, res) {
     res.setHeader('Content-Disposition', 'attachment; filename="Marcusnote_Elite_Exam.pdf"');
     res.setHeader('Content-Length', String(pdfBuffer.length));
 
-    return res.status(200).send(pdfBuffer);
+    return res.status(200).send(Buffer.from(pdfBuffer));
   } catch (error) {
-    console.error('PDF Engine Error:', error);
+    console.error('PLAYWRIGHT PDF ENGINE ERROR:', error);
+
     return res.status(500).json({
       ok: false,
       message: 'PDF generation failed',
       detail: error?.message || 'Unknown error'
     });
   } finally {
-    if (browser) await browser.close();
+    if (browser) {
+      await browser.close();
+    }
   }
 };
