@@ -28,11 +28,11 @@ Your role is to design elite-level Korean exam-style grammar assessments.
 
 [SCORING & TAGGING RULE - V3]
 - Assign points to evaluate difficulty:
-  1) Multi-layered/Mixed Grammar (e.g., Present Perfect + Passive): +3 pts
+  1) Multi-layered / Mixed Grammar: +3 pts
   2) Counting Trap format: +2 pts
-  3) Complex structural traps (Inversion, subtle tense shifts): +2 pts
+  3) Complex structural traps: +2 pts
   4) Long sentences (15+ words): +1 pt
-- If total score ≥ 5, you MUST:
+- If total score >= 5, you MUST:
   A) Start the question with '<span class="high-difficulty">[High Difficulty]</span>'.
   B) Explain the score in Structural Logic.
 
@@ -41,8 +41,6 @@ Your role is to design elite-level Korean exam-style grammar assessments.
 - If textbook mapping conflicts with chapter card data, textbook mapping wins.
 
 [HEADER RULE]
-- Do NOT generate numbered instructions.
-- Do NOT generate long explanatory paragraphs before the test.
 - Start with a clean exam-style header only.
 Required header format:
 MARCUS WORMHOLE ELITE TEST
@@ -61,17 +59,13 @@ Then provide ONLY one concise formal instruction line in the user's language.
 ③ ...
 ④ ...
 ⑤ ...
-- Never output:
-  - simple fill-in-the-blank
-  - direct sentence transformation drills
-  - descriptive tasks
-  - answer hints inside the question section
+- Never output simple fill-in-the-blank only tasks.
 
 [MANDATORY DISTRIBUTION]
 - Generate exactly 25 items.
-- Counting Trap (minimum 8 items)
-- Error Detection (minimum 8 items)
-- Mixed Killer Trap (minimum 9 items)
+- Counting Trap: minimum 8 items
+- Error Detection: minimum 8 items
+- Mixed Killer Trap: minimum 9 items
 
 [DIFFICULTY ENFORCEMENT]
 - All distractors must be plausible.
@@ -79,8 +73,7 @@ Then provide ONLY one concise formal instruction line in the user's language.
 - At least 2 options in each item should be confusing even for strong students.
 
 [ANSWER KEY RULE]
-- Put all answers ONLY in the final answer section.
-- Required answer key format:
+Required answer key format:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
 1) ③
 2) ①
@@ -117,7 +110,6 @@ Your role is to design elite-level English production training materials.
 - If textbook mapping conflicts with chapter card data, textbook mapping wins.
 
 [HEADER RULE]
-- Start with a clean production-training header only.
 Required header format:
 MARCUS MAGIC PRODUCTION TRAINING
 2026 Academic Year | Level: [Detected Grade/Unit]
@@ -163,31 +155,31 @@ Type B: Exclusion-Based Clue (11 words, 1 extra)
 // =========================
 const abcStarterInstruction = `
 [ROLE]
-You are a specialized elementary English content creator for "Abcstarter56".
+You are a specialized elementary English content creator for Abcstarter56.
 Your goal is to create fun, intuitive, and foundational English problems for young learners.
 
 [LEVEL GUIDELINES]
-- Vocabulary: Use words from the CEFR A1 level.
-- Sentence Length: Maximum 5-7 words per sentence.
-- Tone: Encouraging, clear, and professional as a MARCUSNOTE senior editor.
+- Vocabulary: CEFR A1 only.
+- Sentence length: maximum 5-7 words.
+- Tone: clear, simple, encouraging.
 
 [QUESTION TYPES]
 1. Sentence Builder (Scramble)
 2. Image-to-Word (Text-based)
-3. Grammar Starter: basic be-verbs, plural -s, present continuous
-4. Translation (Magic Junior): very simple Korean to English
+3. Grammar Starter: be-verbs, plural -s, present continuous
+4. Very simple Korean-to-English translation
 
 [FORMATTING]
 - Use larger spacing between lines.
-- Do not use [High Difficulty] unless it involves complex sentence combining.
-- Always provide a clear, step-by-step solution for parents and teachers.
+- Do not use [High Difficulty] unless it truly involves sentence combining.
+- Always provide simple guidance for parents and teachers.
 
 [QUANTITY]
 - Generate exactly 10 items.
 
 [ANSWER KEY RULE]
 - Include a clear answer key.
-- Include short solution guidance for parents/teachers.
+- Include short solution guidance for parents / teachers.
 `;
 
 // =========================
@@ -211,7 +203,7 @@ Your role is to transform a single passage into authentic Korean high-school exa
   4) flow / insertion / sequence logic
   5) partial-truth distractor logic
 
-[QUESTION FORMAT - MANDATORY]
+[QUESTION FORMAT]
 - Every item must be 5-option multiple choice only.
 - Use only this option format:
 ① ...
@@ -219,15 +211,7 @@ Your role is to transform a single passage into authentic Korean high-school exa
 ③ ...
 ④ ...
 ⑤ ...
-- Never output:
-  - essay-style questions
-  - descriptive prompts
-  - open-ended questions
-  - "설명하시오"
-  - "분석하시오"
-  - "제시하시오"
-  - "만들어 보시오"
-  - direct short-answer tasks
+- Never output essay-style questions, descriptive prompts, or short-answer tasks.
 
 [MANDATORY TRANSFORMATION DISTRIBUTION]
 For a 15-item mock-exam set:
@@ -243,13 +227,11 @@ For a 15-item mock-exam set:
 - Wrong answers must be plausible.
 - Meaning items must use partial-truth distractors.
 - Grammar items must be exam-style and defensible.
-- Blank and inference items must not be solved by one superficial sentence.
-- Output must feel like a Korean school exam, not a workbook.
+- Blank and inference items must not be solvable from one superficial sentence.
 
 [VISIBLE OUTPUT RULE]
 - Never expose internal labels such as Phase 1, Phase 2, Meaning Layer, Structure Layer, Deep Dive.
 - No teacher-facing notes.
-- No markdown bold.
 - No code fences.
 
 [HEADER RULE]
@@ -265,7 +247,6 @@ Required answer key format:
 3) ⑤
 
 [EXPLANATION RULE]
-After the answer key, provide grouped explanations:
 ### Structural Logic 1-5
 ...
 ### Structural Logic 6-10
@@ -293,14 +274,14 @@ Your role is to turn simple textbook sentences into rigorous grammar-centric ass
 
 [CORE ALGORITHM]
 1. Grammar-Centric
-2. Sentence Transformation (Mandatory)
+2. Sentence Transformation
 3. Magic Training Link
 
 [SET RULE]
-- Final output must still contain a full textbook transformation set.
+- Final output must contain a full textbook transformation set.
 
 [DIFFICULTY TAGGING]
-- Use <span class="high-difficulty">[High Difficulty]</span> for items involving layered grammar judgment.
+- Use <span class="high-difficulty">[High Difficulty]</span> for layered grammar judgment.
 
 [HEADER RULE]
 Required header:
@@ -321,7 +302,6 @@ Required answer key format:
 3) ①
 
 [EXPLANATION RULE]
-After the answer key, provide grouped explanations:
 ### Structural Logic 1-5
 ...
 ### Structural Logic 6-10
@@ -554,7 +534,7 @@ Before finalizing the worksheet, silently verify all of the following:
 1. No internal headings such as Phase 1, Phase 2, Phase 3, Meaning Layer, or Structure Layer.
 2. No repeated question stems testing the same fact with only wording changes.
 3. In mock-exam mode, no more than 3 direct content-retrieval questions.
-4. In mock-exam mode, at least 4 items must be genuine grammar/structure items.
+4. In mock-exam mode, at least 4 items must be genuine grammar / structure items.
 5. In mock-exam mode, at least 3 items must involve blank / summary / inference / flow logic.
 6. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
 7. Respect the selected engine mode even if prompt keywords overlap.
@@ -569,16 +549,24 @@ function stabilizeNumbers(text = '') {
     .replace(/No\.\s+(\d+)/g, 'No.&nbsp;$1');
 }
 
-function cleanOutputArtifacts(text = '') {
+function stripMarkdownArtifacts(text = '') {
   return text
+    .replace(/^###\s*/gm, '')
+    .replace(/\*\*/g, '')
     .replace(/```plaintext/gi, '')
     .replace(/```/g, '')
-    .replace(/©\s*2026\s*MARCUSNOTE\.\s*All rights reserved\./gi, '')
-    .replace(/^\s*Source:\s*$/gim, '')
-    .replace(/^\s*Estimated Source:\s*$/gim, '')
-    .replace(/^\s*Source Classification:\s*$/gim, '')
-    .replace(/\n{3,}/g, '\n\n')
     .trim();
+}
+
+function cleanOutputArtifacts(text = '') {
+  return stripMarkdownArtifacts(
+    text
+      .replace(/©\s*2026\s*MARCUSNOTE\.\s*All rights reserved\./gi, '')
+      .replace(/^\s*Source:\s*$/gim, '')
+      .replace(/^\s*Estimated Source:\s*$/gim, '')
+      .replace(/^\s*Source Classification:\s*$/gim, '')
+      .replace(/\n{3,}/g, '\n\n')
+  ).trim();
 }
 
 function escapeRegex(text = '') {
@@ -592,24 +580,37 @@ function ensureSourceLabel(text = '', labelText = '') {
   if (!label) return cleaned;
   if (!cleaned) return label;
 
-  const alreadyExists = new RegExp(`^${escapeRegex(label)}$`, 'm').test(cleaned);
-  if (alreadyExists) return cleaned;
-
   const lines = cleaned.split('\n').map(line => line.trimEnd());
-  if (lines.length >= 2) {
-    return `${lines[0]}\n${label}\n${lines.slice(1).join('\n')}`.trim();
+
+  const labelRegex = new RegExp(`^${escapeRegex(label)}$`, 'm');
+  if (labelRegex.test(cleaned)) {
+    return cleaned;
   }
 
-  return `${label}\n${cleaned}`.trim();
+  const duplicateSourceLinesRemoved = lines.filter((line, index) => {
+    const trimmed = line.trim();
+    if (!/^Source:|^Estimated Source:|^Source Classification:/i.test(trimmed)) {
+      return true;
+    }
+
+    const nextLinesJoined = lines.slice(index + 1).join('\n');
+    return !new RegExp(`^${escapeRegex(trimmed)}$`, 'm').test(nextLinesJoined);
+  });
+
+  if (duplicateSourceLinesRemoved.length >= 2) {
+    return `${duplicateSourceLinesRemoved[0]}\n${label}\n${duplicateSourceLinesRemoved.slice(1).join('\n')}`.trim();
+  }
+
+  return `${label}\n${duplicateSourceLinesRemoved.join('\n')}`.trim();
 }
 
 function isLowQualityOutput(text = '', engineType = ENGINE_MODE.WORMHOLE) {
   const lower = text.toLowerCase();
 
   const badSignals = [
-    '### phase 1',
-    '### phase 2',
-    '### phase 3',
+    'phase 1',
+    'phase 2',
+    'phase 3',
     'meaning layer',
     'structure layer',
     'deep dive',
@@ -643,21 +644,33 @@ module.exports = async function handler(req, res) {
   }
 
   if (req.method !== 'POST') {
-    return res.status(405).json({ ok: false, message: 'Method Not Allowed' });
+    return res.status(405).json({
+      ok: false,
+      message: 'Method Not Allowed'
+    });
   }
 
   const { prompt, mode } = req.body || {};
 
   if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
-    return res.status(400).json({ ok: false, message: 'Prompt required' });
+    return res.status(400).json({
+      ok: false,
+      message: 'Prompt required'
+    });
   }
 
   if (!process.env.OPENAI_API_KEY) {
-    return res.status(500).json({ ok: false, message: 'Missing OPENAI_API_KEY' });
+    return res.status(500).json({
+      ok: false,
+      message: 'Missing OPENAI_API_KEY'
+    });
   }
 
   if (!process.env.OPENAI_VECTOR_STORE_ID) {
-    return res.status(500).json({ ok: false, message: 'Missing OPENAI_VECTOR_STORE_ID' });
+    return res.status(500).json({
+      ok: false,
+      message: 'Missing OPENAI_VECTOR_STORE_ID'
+    });
   }
 
   const normalizedPrompt = prompt.trim();
@@ -709,7 +722,7 @@ ${sourceLabel.labelText}
   try {
     let response = await openai.responses.create({
       model: 'gpt-4o-mini',
-      max_output_tokens: engineType === ENGINE_MODE.ABC_STARTER ? 1800 : 5200,
+      max_output_tokens: engineType === ENGINE_MODE.ABC_STARTER ? 1200 : 3200,
       input: [
         {
           role: 'system',
@@ -724,19 +737,22 @@ ${sourceLabel.labelText}
         {
           type: 'file_search',
           vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-          max_num_results: 4
+          max_num_results: 2
         }
       ]
     });
 
     let finalText = response.output_text || '';
 
-    const shouldRetry = engineType === ENGINE_MODE.MOCK_EXAM && isLowQualityOutput(finalText, engineType);
+    const shouldRetry =
+      engineType === ENGINE_MODE.MOCK_EXAM &&
+      normalizedPrompt.length < 3500 &&
+      isLowQualityOutput(finalText, engineType);
 
     if (shouldRetry) {
       response = await openai.responses.create({
         model: 'gpt-4o-mini',
-        max_output_tokens: 7000,
+        max_output_tokens: 3600,
         input: [
           {
             role: 'system',
@@ -763,7 +779,7 @@ Mandatory corrections:
           {
             type: 'file_search',
             vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-            max_num_results: 4
+            max_num_results: 2
           }
         ]
       });
