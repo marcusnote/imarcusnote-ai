@@ -12,9 +12,16 @@ function stripDangerousMarkup(html = '') {
     .replace(/on\w+='[^']*'/gi, '');
 }
 
+function normalizePdfHtml(html = '') {
+  return String(html)
+    .replace(/<div class="iaw-empty-state">[\s\S]*?<\/div>/gi, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
 function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
   const safeBrand = sanitizeText(academyName);
-  const safeContent = stripDangerousMarkup(content);
+  const safeContent = normalizePdfHtml(stripDangerousMarkup(content));
 
   return `
 <!DOCTYPE html>
@@ -154,7 +161,6 @@ module.exports = async function handler(req, res) {
   let browser = null;
 
   try {
-    // Sparticuz chromium settings for Vercel serverless
     browser = await puppeteer.launch({
       args: [
         ...chromium.args,
