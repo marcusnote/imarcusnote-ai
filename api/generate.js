@@ -9,7 +9,8 @@ const ENGINE_MODE = {
   MOCK_EXAM: 'MOCK_EXAM',
   MIDDLE_TEXTBOOK: 'MIDDLE_TEXTBOOK',
   WORMHOLE: 'WORMHOLE',
-  MAGIC: 'MAGIC'
+  MAGIC: 'MAGIC',
+  VOCAB_BUILDER: 'VOCAB_BUILDER'
 };
 
 // =========================
@@ -82,15 +83,10 @@ Required answer key format:
 [STRUCTURAL LOGIC RULE]
 - After the answer key, provide grouped structural logic:
 ### Structural Logic 1-5
-...
 ### Structural Logic 6-10
-...
 ### Structural Logic 11-15
-...
 ### Structural Logic 16-20
-...
 ### Structural Logic 21-25
-...
 `;
 
 // =========================
@@ -139,15 +135,10 @@ Type B: Exclusion-Based Clue (11 words, 1 extra)
 
 [EXPLANATION RULE]
 ### Explanation 1-5
-...
 ### Explanation 6-10
-...
 ### Explanation 11-15
-...
 ### Explanation 16-20
-...
 ### Explanation 21-25
-...
 `;
 
 // =========================
@@ -248,11 +239,8 @@ Required answer key format:
 
 [EXPLANATION RULE]
 ### Structural Logic 1-5
-...
 ### Structural Logic 6-10
-...
 ### Structural Logic 11-15
-...
 `;
 
 // =========================
@@ -303,15 +291,82 @@ Required answer key format:
 
 [EXPLANATION RULE]
 ### Structural Logic 1-5
-...
 ### Structural Logic 6-10
-...
 ### Structural Logic 11-15
-...
 ### Structural Logic 16-20
-...
 ### Structural Logic 21-25
-...
+`;
+
+// =========================
+// 6) VOCAB BUILDER ENGINE
+// =========================
+const vocabBuilderInstruction = `
+You are the MARCUSNOTE Vocabulary Assessment Builder.
+Your role is to extract important vocabulary from an input passage and create a professional vocabulary study set plus vocabulary test.
+
+[IDENTITY]
+- This engine is only for vocabulary extraction, vocabulary list building, and vocabulary test generation.
+- Prioritize academic, test-relevant, and context-essential vocabulary.
+- Avoid trivial words, function words, and overly easy words unless the level is very low.
+
+[OUTPUT GOAL]
+You must produce TWO sections in this order:
+
+SECTION 1:
+MARCUS VOCABULARY LIST
+- Extract the most important vocabulary from the passage.
+- Default quantity: exactly 20 words.
+- If the passage is short, still try to produce up to 15 meaningful words.
+- For each word, provide:
+  1. word
+  2. part of speech
+  3. Korean meaning
+  4. short original-context hint in Korean or English
+
+SECTION 2:
+MARCUS VOCABULARY TEST
+- Generate exactly 20 vocabulary questions by default.
+- Use a balanced mix of:
+  1) meaning match
+  2) context usage
+  3) synonym / closest meaning
+  4) antonym / opposite meaning when suitable
+  5) fill-in-the-blank vocabulary choice
+- Every item must be 5-option multiple choice only.
+- Use only this option format:
+① ...
+② ...
+③ ...
+④ ...
+⑤ ...
+
+[HEADER RULE]
+Required header:
+MARCUS VOCABULARY BUILDER
+Then provide one concise formal instruction line in the user's language.
+
+[LANGUAGE RULE]
+- Explanation labels may follow the user's language.
+- English words must remain in English.
+- Korean meanings must be natural Korean.
+
+[QUALITY RULE]
+- Prefer passage-essential vocabulary.
+- Prefer moderately difficult, exam-relevant items.
+- Distractors must be plausible.
+- Avoid obviously wrong choices.
+
+[ANSWER KEY RULE]
+Required answer key format:
+### OFFICIAL MARCUSNOTE ANSWER KEY
+1) ②
+2) ④
+3) ①
+
+[EXPLANATION RULE]
+After the answer key, provide:
+### Vocabulary Notes 1-10
+### Vocabulary Notes 11-20
 `;
 
 // =========================
@@ -365,7 +420,7 @@ function estimatePassageMeta(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
   else if (/빈칸|blank|summary/.test(text)) itemType = 'Blank / Summary Item';
   else if (/삽입|insertion/.test(text)) itemType = 'Sentence Insertion Item';
   else if (/순서|sequence|order/.test(text)) itemType = 'Sequence Item';
-  else if (/어휘|vocabulary|word/.test(text)) itemType = 'Word Usage Item';
+  else if (/어휘|vocabulary|word|단어|어휘시험|어휘목록/.test(text)) itemType = 'Vocabulary Item';
   else if (/어법|grammar/.test(text)) itemType = 'Grammar Item';
 
   return { topic, level, itemType };
@@ -385,6 +440,7 @@ function shortenSourceLabel(label = '') {
     .replace('Blank / Summary Item', 'Blank/Summary')
     .replace('Sentence Insertion Item', 'Insertion')
     .replace('Word Usage Item', 'Word Usage')
+    .replace('Vocabulary Item', 'Vocabulary')
     .replace('Middle School Textbook Passage', 'Middle School Textbook');
 }
 
@@ -417,6 +473,13 @@ function buildSourceLabel(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
     };
   }
 
+  if (engineType === ENGINE_MODE.VOCAB_BUILDER) {
+    return {
+      labelType: 'SOURCE_CLASSIFICATION',
+      labelText: `Source Classification: MARCUS Vocabulary Selection - ${meta.topic}`
+    };
+  }
+
   return {
     labelType: 'SOURCE_CLASSIFICATION',
     labelText: `Source Classification: MARCUS Academic Selection - ${meta.topic}`
@@ -425,10 +488,12 @@ function buildSourceLabel(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
 
 function detectEngineTypeFromPrompt(prompt = '') {
   const text = prompt.toLowerCase();
+  const isVocab = /vocab|vocabulary|단어|어휘|어휘시험|어휘목록|단어시험/.test(text);
   const isMagic = /매직|magic|영작|서술형|작문|writing|composition/.test(text);
   const isMiddleTextbook = /교과서|중학교|중등|중1|중2|중3|내신|textbook|middle|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text);
   const isMockExam = /모의고사|학평|수능|고1|고2|고3|평가원|ebs|mock|passage|analysis|csat|변형|주제|제목|요지|빈칸|어휘|삽입|순서/.test(text);
 
+  if (isVocab) return ENGINE_MODE.VOCAB_BUILDER;
   if (isMiddleTextbook) return ENGINE_MODE.MIDDLE_TEXTBOOK;
   if (isMockExam) return ENGINE_MODE.MOCK_EXAM;
   if (isMagic) return ENGINE_MODE.MAGIC;
@@ -443,6 +508,7 @@ function normalizeMode(mode, prompt = '') {
   if (requested === ENGINE_MODE.MIDDLE_TEXTBOOK) return ENGINE_MODE.MIDDLE_TEXTBOOK;
   if (requested === ENGINE_MODE.WORMHOLE) return ENGINE_MODE.WORMHOLE;
   if (requested === ENGINE_MODE.MAGIC) return ENGINE_MODE.MAGIC;
+  if (requested === ENGINE_MODE.VOCAB_BUILDER) return ENGINE_MODE.VOCAB_BUILDER;
 
   return detectEngineTypeFromPrompt(prompt);
 }
@@ -457,6 +523,8 @@ function getBaseInstructionByEngine(engineType) {
       return mockExamInstruction;
     case ENGINE_MODE.MAGIC:
       return magicInstruction;
+    case ENGINE_MODE.VOCAB_BUILDER:
+      return vocabBuilderInstruction;
     case ENGINE_MODE.WORMHOLE:
     default:
       return wormholeInstruction;
@@ -503,6 +571,16 @@ function buildRoutingControl(engineType) {
 `;
   }
 
+  if (engineType === ENGINE_MODE.VOCAB_BUILDER) {
+    return `
+[ENGINE ROUTING]
+- Selected Engine: VOCAB_BUILDER
+- Extract important vocabulary from the passage first.
+- Build both a vocabulary list and a vocabulary test.
+- Prioritize exam-relevant and context-essential vocabulary.
+`;
+  }
+
   return `
 [ENGINE ROUTING]
 - Selected Engine: WORMHOLE
@@ -523,6 +601,8 @@ function getItemCountByEngine(engineType) {
       return 25;
     case ENGINE_MODE.WORMHOLE:
       return 25;
+    case ENGINE_MODE.VOCAB_BUILDER:
+      return 20;
     default:
       return 15;
   }
@@ -536,8 +616,9 @@ Before finalizing the worksheet, silently verify all of the following:
 3. In mock-exam mode, no more than 3 direct content-retrieval questions.
 4. In mock-exam mode, at least 4 items must be genuine grammar / structure items.
 5. In mock-exam mode, at least 3 items must involve blank / summary / inference / flow logic.
-6. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
-7. Respect the selected engine mode even if prompt keywords overlap.
+6. In vocabulary mode, the extracted vocabulary must be passage-essential and non-trivial.
+7. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
+8. Respect the selected engine mode even if prompt keywords overlap.
 `;
 
 function stabilizeNumbers(text = '') {
@@ -690,7 +771,7 @@ module.exports = async function handler(req, res) {
 
   const quantityControl = `
 [QUANTITY CONTROL]
-- Generate exactly ${itemCount} items only.
+- Generate exactly ${itemCount} items only when the selected engine requires a fixed test size.
 - Each item must target a unique learning point.
 - Do not repeat the same fact in different questions.
 - If the passage is short, increase transformation depth instead of repeating content.
@@ -722,7 +803,10 @@ ${sourceLabel.labelText}
   try {
     let response = await openai.responses.create({
       model: 'gpt-4o-mini',
-      max_output_tokens: engineType === ENGINE_MODE.ABC_STARTER ? 1200 : 3200,
+      max_output_tokens:
+        engineType === ENGINE_MODE.ABC_STARTER ? 1200 :
+        engineType === ENGINE_MODE.VOCAB_BUILDER ? 2600 :
+        3200,
       input: [
         {
           role: 'system',
