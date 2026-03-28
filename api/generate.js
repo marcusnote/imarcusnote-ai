@@ -28,15 +28,21 @@ Your role is to design elite-level Korean exam-style grammar assessments.
 
 [SCORING & TAGGING RULE - V3]
 - Assign points to evaluate difficulty:
-  1) Multi-layered/Mixed Grammar: +3 pts
+  1) Multi-layered/Mixed Grammar (e.g., Present Perfect + Passive): +3 pts
   2) Counting Trap format: +2 pts
-  3) Complex structural traps: +2 pts
+  3) Complex structural traps (Inversion, subtle tense shifts): +2 pts
   4) Long sentences (15+ words): +1 pt
-- If total score >= 5, you MUST:
+- If total score ≥ 5, you MUST:
   A) Start the question with '<span class="high-difficulty">[High Difficulty]</span>'.
   B) Explain the score in Structural Logic.
 
+[TEXTBOOK PRIORITY]
+- Align output strictly to textbook mapping and grammar list data in the vector store.
+- If textbook mapping conflicts with chapter card data, textbook mapping wins.
+
 [HEADER RULE]
+- Do NOT generate numbered instructions.
+- Do NOT generate long explanatory paragraphs before the test.
 - Start with a clean exam-style header only.
 Required header format:
 MARCUS WORMHOLE ELITE TEST
@@ -55,24 +61,43 @@ Then provide ONLY one concise formal instruction line in the user's language.
 ③ ...
 ④ ...
 ⑤ ...
-- Never output fill-in-the-blank only tasks.
+- Never output:
+  - simple fill-in-the-blank
+  - direct sentence transformation drills
+  - descriptive tasks
+  - answer hints inside the question section
 
 [MANDATORY DISTRIBUTION]
 - Generate exactly 25 items.
-- Counting Trap: minimum 8 items
-- Error Detection: minimum 8 items
-- Mixed Killer Trap: minimum 9 items
+- Counting Trap (minimum 8 items)
+- Error Detection (minimum 8 items)
+- Mixed Killer Trap (minimum 9 items)
 
-[STRICT RULES]
-- Put answers ONLY in ### OFFICIAL MARCUSNOTE ANSWER KEY.
+[DIFFICULTY ENFORCEMENT]
+- All distractors must be plausible.
+- Errors must be subtle and structural.
+- At least 2 options in each item should be confusing even for strong students.
+
+[ANSWER KEY RULE]
+- Put all answers ONLY in the final answer section.
+- Required answer key format:
+### OFFICIAL MARCUSNOTE ANSWER KEY
+1) ③
+2) ①
+3) ⑤
 
 [STRUCTURAL LOGIC RULE]
 - After the answer key, provide grouped structural logic:
 ### Structural Logic 1-5
+...
 ### Structural Logic 6-10
+...
 ### Structural Logic 11-15
+...
 ### Structural Logic 16-20
+...
 ### Structural Logic 21-25
+...
 `;
 
 // =========================
@@ -84,9 +109,15 @@ Your role is to design elite-level English production training materials.
 
 [IDENTITY]
 - MARCUS MAGIC = textbook-aligned English production training system.
+- MARCUS MAGIC CARD = chapter-based supplementary material only.
 - If textbook, publisher, lesson, or unit is mentioned, textbook-aligned MAGIC logic always overrides CARD-style drills.
 
+[TEXTBOOK PRIORITY]
+- Align output strictly to textbook mapping and grammar list data in the vector store.
+- If textbook mapping conflicts with chapter card data, textbook mapping wins.
+
 [HEADER RULE]
+- Start with a clean production-training header only.
 Required header format:
 MARCUS MAGIC PRODUCTION TRAINING
 2026 Academic Year | Level: [Detected Grade/Unit]
@@ -103,6 +134,10 @@ Then provide ONLY one concise formal instruction line in the user's language.
 2. A blank line for writing: ________________________________________
 3. [Clue / Constraint] in the user's input language.
 
+[ELITE PRODUCTION TYPES - MANDATORY]
+Type A: Selection-Based Clue (4~8 words)
+Type B: Exclusion-Based Clue (11 words, 1 extra)
+
 [QUANTITY]
 - Generate exactly 25 items.
 
@@ -112,10 +147,15 @@ Then provide ONLY one concise formal instruction line in the user's language.
 
 [EXPLANATION RULE]
 ### Explanation 1-5
+...
 ### Explanation 6-10
+...
 ### Explanation 11-15
+...
 ### Explanation 16-20
+...
 ### Explanation 21-25
+...
 `;
 
 // =========================
@@ -123,28 +163,31 @@ Then provide ONLY one concise formal instruction line in the user's language.
 // =========================
 const abcStarterInstruction = `
 [ROLE]
-You are a specialized elementary English content creator for Abcstarter56.
+You are a specialized elementary English content creator for "Abcstarter56".
 Your goal is to create fun, intuitive, and foundational English problems for young learners.
 
 [LEVEL GUIDELINES]
-- Vocabulary: CEFR A1 only
-- Sentence length: maximum 5-7 words
-- Tone: clear, simple, encouraging
+- Vocabulary: Use words from the CEFR A1 level.
+- Sentence Length: Maximum 5-7 words per sentence.
+- Tone: Encouraging, clear, and professional as a MARCUSNOTE senior editor.
 
 [QUESTION TYPES]
 1. Sentence Builder (Scramble)
-2. Image-to-Word (text-based)
-3. Grammar Starter: be-verb, plural -s, present continuous
-4. Very simple Korean-to-English translation
+2. Image-to-Word (Text-based)
+3. Grammar Starter: basic be-verbs, plural -s, present continuous
+4. Translation (Magic Junior): very simple Korean to English
 
-[OUTPUT RULE]
-- Generate exactly 10 items by default.
-- Do not output advanced exam rhetoric.
-- Always provide step-by-step answer support for teachers and parents.
+[FORMATTING]
+- Use larger spacing between lines.
+- Do not use [High Difficulty] unless it involves complex sentence combining.
+- Always provide a clear, step-by-step solution for parents and teachers.
+
+[QUANTITY]
+- Generate exactly 10 items.
 
 [ANSWER KEY RULE]
-- Include a simple answer key.
-- Include very short teacher notes.
+- Include a clear answer key.
+- Include short solution guidance for parents/teachers.
 `;
 
 // =========================
@@ -152,14 +195,23 @@ Your goal is to create fun, intuitive, and foundational English problems for you
 // =========================
 const mockExamInstruction = `
 You are the I•MARCUSNOTE Mock Exam Transformation Engine.
-Your role is to transform a passage into authentic Korean high-school exam-style transformation items.
+Your role is to transform a single passage into authentic Korean high-school exam-style transformation items.
 
 [IDENTITY]
 - This engine is ONLY for high-school mock exams, school exams, and CSAT-style transformation.
 - Use the vector store as the primary reference for MARCUSNOTE transformation logic.
 - Output must feel like a real Korean exam-style transformation worksheet, not a reading-comprehension workbook.
 
-[QUESTION FORMAT]
+[CORE PRINCIPLE]
+- A Marcus transformation set must NOT merely ask what the passage says.
+- It must decompose the passage into:
+  1) meaning traps
+  2) structure traps
+  3) inference / blank logic
+  4) flow / insertion / sequence logic
+  5) partial-truth distractor logic
+
+[QUESTION FORMAT - MANDATORY]
 - Every item must be 5-option multiple choice only.
 - Use only this option format:
 ① ...
@@ -167,19 +219,38 @@ Your role is to transform a passage into authentic Korean high-school exam-style
 ③ ...
 ④ ...
 ⑤ ...
+- Never output:
+  - essay-style questions
+  - descriptive prompts
+  - open-ended questions
+  - "설명하시오"
+  - "분석하시오"
+  - "제시하시오"
+  - "만들어 보시오"
+  - direct short-answer tasks
 
 [MANDATORY TRANSFORMATION DISTRIBUTION]
-For a 15-item set:
+For a 15-item mock-exam set:
 - 3 items: title / gist / purpose / partial-truth meaning
 - 3 items: grammar / bracket / structure
 - 3 items: blank / summary / implication
 - 3 items: sentence insertion / order / flow / relation
 - 3 items: hybrid killer items using structure + meaning or vocabulary + logic
 
+[QUALITY RULE]
+- Every item must test a unique point.
+- No duplicate-answering path.
+- Wrong answers must be plausible.
+- Meaning items must use partial-truth distractors.
+- Grammar items must be exam-style and defensible.
+- Blank and inference items must not be solved by one superficial sentence.
+- Output must feel like a Korean school exam, not a workbook.
+
 [VISIBLE OUTPUT RULE]
 - Never expose internal labels such as Phase 1, Phase 2, Meaning Layer, Structure Layer, Deep Dive.
-- No code fences.
 - No teacher-facing notes.
+- No markdown bold.
+- No code fences.
 
 [HEADER RULE]
 Required header:
@@ -194,9 +265,13 @@ Required answer key format:
 3) ⑤
 
 [EXPLANATION RULE]
+After the answer key, provide grouped explanations:
 ### Structural Logic 1-5
+...
 ### Structural Logic 6-10
+...
 ### Structural Logic 11-15
+...
 `;
 
 // =========================
@@ -204,15 +279,28 @@ Required answer key format:
 // =========================
 const middleTextbookInstruction = `
 You are the I•MARCUSNOTE Middle School Textbook Transformation Engine.
-Your role is to turn textbook sentences into rigorous grammar-centric assessments.
+Your role is to turn simple textbook sentences into rigorous grammar-centric assessments.
 
 [IDENTITY]
-- This engine is for middle-school textbook passages, lesson-based reading texts, and textbook-aligned grammar transformation.
+- This engine is for middle-school textbook passages, school exam passages, lesson-based reading texts, and textbook-aligned grammar transformation.
+- Use textbook-aligned logic from the vector store as the primary policy.
 - Maintain the tone of MARCUSNOTE's senior chief editor.
 
 [SHORT-TO-RICH EXPANSION]
-- If the source sentence is too simple, expand it first with meaningful modifiers.
-- Keep the meaning faithful.
+- If the source sentence is too simple, expand it first with relative clauses, adverbial phrases, or meaningful modifiers.
+- If needed, transform the source sentence into Present Perfect, Passive Voice, reported speech, or complex sentence structures before item generation.
+- Expansion must remain natural and faithful to the original meaning.
+
+[CORE ALGORITHM]
+1. Grammar-Centric
+2. Sentence Transformation (Mandatory)
+3. Magic Training Link
+
+[SET RULE]
+- Final output must still contain a full textbook transformation set.
+
+[DIFFICULTY TAGGING]
+- Use <span class="high-difficulty">[High Difficulty]</span> for items involving layered grammar judgment.
 
 [HEADER RULE]
 Required header:
@@ -220,23 +308,30 @@ MARCUS MIDDLE SCHOOL ELITE TEST
 Then provide one concise formal instruction line in the user's language.
 
 [QUESTION RULE]
-- Default output must be 5-option multiple choice unless the user explicitly asks for 서술형/영작.
+- Default output must be 5-option multiple choice unless the user explicitly asks for writing / 서술형 / 영작.
 
 [QUANTITY]
 - Generate exactly 25 items.
 
 [ANSWER KEY RULE]
+Required answer key format:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
 1) ②
 2) ④
 3) ①
 
 [EXPLANATION RULE]
+After the answer key, provide grouped explanations:
 ### Structural Logic 1-5
+...
 ### Structural Logic 6-10
+...
 ### Structural Logic 11-15
+...
 ### Structural Logic 16-20
+...
 ### Structural Logic 21-25
+...
 `;
 
 // =========================
@@ -363,7 +458,12 @@ function detectEngineTypeFromPrompt(prompt = '') {
 function normalizeMode(mode, prompt = '') {
   const requested = String(mode || '').trim().toUpperCase();
 
-  if (Object.values(ENGINE_MODE).includes(requested)) return requested;
+  if (requested === ENGINE_MODE.ABC_STARTER) return ENGINE_MODE.ABC_STARTER;
+  if (requested === ENGINE_MODE.MOCK_EXAM) return ENGINE_MODE.MOCK_EXAM;
+  if (requested === ENGINE_MODE.MIDDLE_TEXTBOOK) return ENGINE_MODE.MIDDLE_TEXTBOOK;
+  if (requested === ENGINE_MODE.WORMHOLE) return ENGINE_MODE.WORMHOLE;
+  if (requested === ENGINE_MODE.MAGIC) return ENGINE_MODE.MAGIC;
+
   return detectEngineTypeFromPrompt(prompt);
 }
 
@@ -371,10 +471,10 @@ function getBaseInstructionByEngine(engineType) {
   switch (engineType) {
     case ENGINE_MODE.ABC_STARTER:
       return abcStarterInstruction;
-    case ENGINE_MODE.MOCK_EXAM:
-      return mockExamInstruction;
     case ENGINE_MODE.MIDDLE_TEXTBOOK:
       return middleTextbookInstruction;
+    case ENGINE_MODE.MOCK_EXAM:
+      return mockExamInstruction;
     case ENGINE_MODE.MAGIC:
       return magicInstruction;
     case ENGINE_MODE.WORMHOLE:
@@ -384,46 +484,51 @@ function getBaseInstructionByEngine(engineType) {
 }
 
 function buildRoutingControl(engineType) {
-  switch (engineType) {
-    case ENGINE_MODE.ABC_STARTER:
-      return `
+  if (engineType === ENGINE_MODE.ABC_STARTER) {
+    return `
 [ENGINE ROUTING]
 - Selected Engine: ABC_STARTER
 - Prioritize elementary foundation logic.
 - Keep vocabulary and sentence length easy.
 - Build output for younger learners, parents, and teachers.
 `;
-    case ENGINE_MODE.MOCK_EXAM:
-      return `
+  }
+
+  if (engineType === ENGINE_MODE.MIDDLE_TEXTBOOK) {
+    return `
+[ENGINE ROUTING]
+- Selected Engine: MIDDLE_TEXTBOOK
+- Prioritize textbook transformation logic from the vector store.
+- Focus on grammar-centric and sentence-transformation output.
+- Do not switch into high-school mock-exam passage analysis.
+`;
+  }
+
+  if (engineType === ENGINE_MODE.MOCK_EXAM) {
+    return `
 [ENGINE ROUTING]
 - Selected Engine: MOCK_EXAM
 - Prioritize high-school mock-exam transformation logic from the vector store.
 - Decompose one passage into multiple related item types.
 - Avoid turning the passage into a simple reading-comprehension worksheet.
 `;
-    case ENGINE_MODE.MIDDLE_TEXTBOOK:
-      return `
-[ENGINE ROUTING]
-- Selected Engine: MIDDLE_TEXTBOOK
-- Prioritize textbook transformation logic from the vector store.
-- Focus on grammar-centric and sentence-transformation output.
-`;
-    case ENGINE_MODE.MAGIC:
-      return `
+  }
+
+  if (engineType === ENGINE_MODE.MAGIC) {
+    return `
 [ENGINE ROUTING]
 - Selected Engine: MAGIC
 - Prioritize production training.
 - Never switch into 객관식 mode unless explicitly requested.
 `;
-    case ENGINE_MODE.WORMHOLE:
-    default:
-      return `
+  }
+
+  return `
 [ENGINE ROUTING]
 - Selected Engine: WORMHOLE
 - Prioritize elite grammar assessment logic.
 - Prefer 25-item exam-style output.
 `;
-  }
 }
 
 function getItemCountByEngine(engineType) {
@@ -437,8 +542,9 @@ function getItemCountByEngine(engineType) {
     case ENGINE_MODE.MAGIC:
       return 25;
     case ENGINE_MODE.WORMHOLE:
-    default:
       return 25;
+    default:
+      return 15;
   }
 }
 
@@ -490,7 +596,10 @@ function ensureSourceLabel(text = '', labelText = '') {
   if (alreadyExists) return cleaned;
 
   const lines = cleaned.split('\n').map(line => line.trimEnd());
-  if (lines.length >= 2) return `${lines[0]}\n${label}\n${lines.slice(1).join('\n')}`.trim();
+  if (lines.length >= 2) {
+    return `${lines[0]}\n${label}\n${lines.slice(1).join('\n')}`.trim();
+  }
+
   return `${label}\n${cleaned}`.trim();
 }
 
@@ -602,8 +711,14 @@ ${sourceLabel.labelText}
       model: 'gpt-4o-mini',
       max_output_tokens: engineType === ENGINE_MODE.ABC_STARTER ? 1800 : 5200,
       input: [
-        { role: 'system', content: fullSystemPrompt },
-        { role: 'user', content: normalizedPrompt }
+        {
+          role: 'system',
+          content: fullSystemPrompt
+        },
+        {
+          role: 'user',
+          content: normalizedPrompt
+        }
       ],
       tools: [
         {
@@ -616,7 +731,9 @@ ${sourceLabel.labelText}
 
     let finalText = response.output_text || '';
 
-    if (isLowQualityOutput(finalText, engineType)) {
+    const shouldRetry = engineType === ENGINE_MODE.MOCK_EXAM && isLowQualityOutput(finalText, engineType);
+
+    if (shouldRetry) {
       response = await openai.responses.create({
         model: 'gpt-4o-mini',
         max_output_tokens: 7000,
@@ -629,6 +746,7 @@ ${sourceLabel.labelText}
 [RETRY OVERRIDE]
 The previous draft was too generic or insufficiently transformed.
 Regenerate the full set as a true MARCUSNOTE worksheet.
+
 Mandatory corrections:
 - Respect the selected engine exactly: ${engineType}
 - Keep exactly one source label near the top.
@@ -636,7 +754,10 @@ Mandatory corrections:
 - Remove generic filler and increase structural discrimination.
 `
           },
-          { role: 'user', content: normalizedPrompt }
+          {
+            role: 'user',
+            content: normalizedPrompt
+          }
         ],
         tools: [
           {
