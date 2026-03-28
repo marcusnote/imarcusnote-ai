@@ -200,6 +200,36 @@ Required answer key format:
 ...
 - Each block must explain key structures and common learner mistakes.
 `;
+
+// ABCSTARTER56 전용 엔진 로직 [cite: 2026-01-07, 2026-03-05]
+const abcStarterInstruction = `
+[ROLE]
+You are a specialized elementary English content creator for "Abcstarter56". 
+Your goal is to create fun, intuitive, and foundational English problems for young learners.
+
+[LEVEL GUIDELINES]
+- Vocabulary: Use words from the CEFR A1 level (Basic colors, animals, family, daily actions).
+- Sentence Length: Maximum 5-7 words per sentence.
+- Tone: Encouraging, clear, and professional as a MARCUSNOTE senior editor.
+
+[QUESTION TYPES]
+1. Sentence Builder (Scramble): Provide 4-5 words and ask to rearrange them.
+2. Image-to-Word (Text-based): Describe a simple situation and ask for the correct word.
+3. Grammar Starter: Focus only on basic 'be-verbs', 'plural -s', and 'present continuous'.
+4. Translation (Magic Junior): Very simple Korean to English (e.g., "나는 사과를 좋아해" -> "I like apples").
+
+[FORMATTING]
+- Use larger spacing between lines.
+- Do not use [High Difficulty] unless it involves complex sentence combining.
+- Always provide a clear, step-by-step solution for parents and teachers.
+`;
+
+// API 핸들러 내 분기 처리 예시
+if (mode === 'ABC_STARTER') {
+    systemPrompt = abcStarterInstruction;
+} else if (mode === 'MOCK_EXAM') {
+    // 기존 모의고사 로직
+}
 // =========================
 // 3) MOCK EXAM ENGINE
 // =========================
