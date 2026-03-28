@@ -30,14 +30,9 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    @page {
-      size: A4;
-      margin: 15mm;
-    }
+    @page { size: A4; margin: 15mm; }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
@@ -55,44 +50,11 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       word-break: keep-all;
     }
 
-    .pdf-page {
-      width: 100%;
-    }
-
-    .pdf-exam-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      border-bottom: 1.5px solid #000;
-      padding-bottom: 6px;
-      margin-bottom: 18px;
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    .pdf-main-title {
-      font-size: 24px;
-      font-weight: 900;
-      text-align: center;
-      margin: 15px 0 18px;
-      text-transform: uppercase;
-    }
-
-    .pdf-instruction {
-      font-size: 13px;
-      font-style: italic;
-      color: #444;
-      border-left: 3px solid #111;
-      padding-left: 10px;
-      margin-bottom: 24px;
-    }
+    .pdf-page { width: 100%; }
 
     .answer-key-box {
       page-break-before: always;
       break-before: page;
-      margin-top: 30px;
-      border-top: 2px solid #000;
-      padding-top: 20px;
     }
 
     .high-difficulty {
@@ -119,9 +81,7 @@ function buildPdfHtml(content = '', academyName = 'MARCUSNOTE ELITE') {
       page-break-inside: avoid;
     }
 
-    img {
-      max-width: 100%;
-    }
+    img { max-width: 100%; }
   </style>
 </head>
 <body>
@@ -138,9 +98,7 @@ module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
+  if (req.method === 'OPTIONS') return res.status(200).end();
 
   if (req.method !== 'POST') {
     return res.status(405).json({
@@ -207,15 +165,12 @@ module.exports = async function handler(req, res) {
     return res.status(200).send(pdfBuffer);
   } catch (error) {
     console.error('PDF Engine Error:', error);
-
     return res.status(500).json({
       ok: false,
       message: 'PDF generation failed',
       detail: error?.message || 'Unknown error'
     });
   } finally {
-    if (browser) {
-      await browser.close();
-    }
+    if (browser) await browser.close();
   }
 };
