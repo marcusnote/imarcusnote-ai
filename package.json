@@ -7,6 +7,8 @@
     "start": "node api/generate.js"
   },
   "dependencies": {
-    "openai": "^4.86.1"
+    "@sparticuz/chromium": "^123.0.1",
+    "openai": "^4.86.1",
+    "puppeteer-core": "^23.10.4"
   }
 }
