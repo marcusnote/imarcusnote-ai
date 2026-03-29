@@ -10,16 +10,9 @@ function escapeHtml(str = '') {
     .replace(/'/g, '&#039;');
 }
 
-function normalizeIncomingContent(content = '') {
+function normalizeContent(content = '') {
   const raw = String(content || '').trim();
-
   if (!raw) return '';
-
-  // If HTML already came in, keep it usable.
-  const looksLikeHtml = /<\/?[a-z][\s\S]*>/i.test(raw);
-  if (looksLikeHtml) {
-    return raw;
-  }
 
   const escaped = escapeHtml(raw);
 
@@ -50,11 +43,7 @@ module.exports = async function handler(req, res) {
   let browser;
 
   try {
-    const {
-      content,
-      academyName = 'Imarcusnote',
-      title = 'Marcusnote_Worksheet'
-    } = req.body || {};
+    const { content, academyName = 'Imarcusnote', title = 'Marcusnote_Worksheet' } = req.body || {};
 
     if (!content || typeof content !== 'string' || !content.trim()) {
       return res.status(400).json({
@@ -63,16 +52,13 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    const printableContent = normalizeIncomingContent(content);
+    const executablePath = await chromium.executablePath();
 
     browser = await puppeteer.launch({
-      args: chromium.args,
-      executablePath: await chromium.executablePath(),
-      headless: chromium.headless,
-      defaultViewport: {
-        width: 1400,
-        height: 2000
-      }
+      args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
+      defaultViewport: chromium.defaultViewport || { width: 1400, height: 2000 },
+      executablePath,
+      headless: true
     });
 
     const page = await browser.newPage();
@@ -82,7 +68,6 @@ module.exports = async function handler(req, res) {
       <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <title>${escapeHtml(title)}</title>
         <style>
           @page {
@@ -105,7 +90,7 @@ module.exports = async function handler(req, res) {
           }
 
           .top-rule {
-            border-top: 4px solid #1f2b46;
+            border-top: 4px solid #162032;
             border-bottom: 2px solid #22c55e;
             margin-bottom: 14px;
             padding-top: 10px;
@@ -135,14 +120,12 @@ module.exports = async function handler(req, res) {
             font-size: 22px;
             margin: 18px 0 10px;
             line-height: 1.25;
-            letter-spacing: -0.02em;
           }
 
           .content h2 {
             font-size: 18px;
             margin: 18px 0 10px;
             line-height: 1.3;
-            letter-spacing: -0.01em;
           }
 
           .content h3 {
@@ -151,10 +134,6 @@ module.exports = async function handler(req, res) {
             padding-top: 8px;
             border-top: 1px solid #d1d5db;
             line-height: 1.35;
-          }
-
-          .content p {
-            margin: 0 0 10px;
           }
 
           .content div,
@@ -193,7 +172,7 @@ module.exports = async function handler(req, res) {
           </div>
 
           <div class="content">
-            ${printableContent}
+            ${normalizeContent(content)}
           </div>
 
           <div class="footer">
@@ -204,9 +183,7 @@ module.exports = async function handler(req, res) {
       </html>
     `;
 
-    await page.setContent(html, {
-      waitUntil: 'networkidle0'
-    });
+    await page.setContent(html, { waitUntil: 'networkidle0' });
 
     const pdfBuffer = await page.pdf({
       format: 'A4',
@@ -215,7 +192,6 @@ module.exports = async function handler(req, res) {
     });
 
     await browser.close();
-    browser = null;
 
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader(
