@@ -1,127 +1,203 @@
-const chromium = require("@sparticuz/chromium");
-const puppeteer = require("puppeteer-core");
+const chromium = require('@sparticuz/chromium');
+const puppeteer = require('puppeteer-core');
 
-export const config = {
-  runtime: "nodejs",
-  maxDuration: 60,
-};
-
-function escapeHtml(value = "") {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+function escapeHtml(str = '') {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
-function buildHtml(content = "", academyName = "MARCUSNOTE") {
-  const safeBrand = escapeHtml(academyName);
+function formatWorksheetToHtml(content = '') {
+  const escaped = escapeHtml(content);
 
-  return `
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="UTF-8">
-    <style>
-      @page {
-        size: A4;
-        margin: 16mm;
-      }
+  const html = escaped
+    .replace(/\n/g, '<br>')
+    .replace(/###\s*(.+?)<br>/g, '<h3>$1</h3>')
+    .replace(/#\s*(.+?)<br>/g, '<h1>$1</h1>')
+    .replace(/<br><br>/g, '</p><p>');
 
-      body {
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.7;
-        color: #111;
-      }
-
-      .brand {
-        font-weight: bold;
-        margin-bottom: 12px;
-      }
-
-      .footer {
-        position: fixed;
-        bottom: 10px;
-        right: 20px;
-        font-size: 10px;
-        color: #999;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="brand">${safeBrand}</div>
-    <div>${content}</div>
-    <div class="footer">${safeBrand} x MARCUSNOTE</div>
-  </body>
-  </html>
-  `;
+  return `<p>${html}</p>`;
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
+  res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-  // ✅ CORS (반드시 여기 위치)
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-
-  if (req.method === "OPTIONS") {
+  if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
 
-  if (req.method !== "POST") {
-    return res.status(405).send("Method not allowed");
+  if (req.method !== 'POST') {
+    return res.status(405).json({
+      ok: false,
+      message: 'Method Not Allowed'
+    });
   }
 
-  let browser;
-
   try {
-    const { content, academyName } = req.body;
+    const { content, academyName = 'Imarcusnote', title = 'Marcusnote Worksheet' } = req.body || {};
 
-    if (!content) {
+    if (!content || typeof content !== 'string' || !content.trim()) {
       return res.status(400).json({
         ok: false,
-        message: "No content",
+        message: 'content is required'
       });
     }
 
-    console.log("Launching Puppeteer...");
-
-    browser = await puppeteer.launch({
+    const browser = await puppeteer.launch({
       args: chromium.args,
+      defaultViewport: {
+        width: 1400,
+        height: 2000
+      },
       executablePath: await chromium.executablePath(),
-      headless: true,
+      headless: chromium.headless
     });
 
     const page = await browser.newPage();
 
-    await page.setContent(
-      buildHtml(content, academyName),
-      {
-        waitUntil: "networkidle0",
-        timeout: 30000,
-      }
-    );
+    const printableHtml = `
+      <!doctype html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>${escapeHtml(title)}</title>
+        <style>
+          @page {
+            size: A4;
+            margin: 22mm 16mm 20mm 16mm;
+          }
 
-    const pdfBuffer = await page.pdf({
-      format: "A4",
+          body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            line-height: 1.72;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+          }
+
+          .sheet {
+            width: 100%;
+          }
+
+          .topbar {
+            border-top: 4px solid #1c2b4a;
+            border-bottom: 2px solid #34d17a;
+            padding-top: 10px;
+            margin-bottom: 18px;
+          }
+
+          .title {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 0 0 6px 0;
+          }
+
+          .sub {
+            font-size: 12px;
+            color: #555;
+            margin: 0 0 12px 0;
+          }
+
+          h1 {
+            font-size: 22px;
+            margin: 18px 0 10px;
+            line-height: 1.3;
+          }
+
+          h3 {
+            font-size: 17px;
+            margin: 20px 0 10px;
+            padding-top: 8px;
+            border-top: 1px solid #ddd;
+          }
+
+          p {
+            margin: 0 0 12px 0;
+          }
+
+          .content {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+          }
+
+          .content p,
+          .content div,
+          .content h1,
+          .content h2,
+          .content h3 {
+            break-inside: avoid;
+          }
+
+          .footer-note {
+            margin-top: 28px;
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+          }
+
+          .high-difficulty {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #0b7a3d;
+            border: 1px solid #8fd9b0;
+            padding: 2px 6px;
+            border-radius: 999px;
+            margin-right: 6px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="sheet">
+          <div class="topbar">
+            <div class="title">${escapeHtml(title)}</div>
+            <div class="sub">${escapeHtml(academyName)} × MARCUSNOTE</div>
+          </div>
+
+          <div class="content">
+            ${formatWorksheetToHtml(content)}
+          </div>
+
+          <div class="footer-note">
+            ${escapeHtml(academyName)} × MARCUSNOTE
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+
+    await page.setContent(printableHtml, {
+      waitUntil: 'networkidle0'
+    });
+
+    const pdf = await page.pdf({
+      format: 'A4',
       printBackground: true,
+      preferCSSPageSize: true
     });
 
     await browser.close();
 
-    res.setHeader("Content-Type", "application/pdf");
-    res.setHeader("Content-Disposition", "attachment; filename=marcusnote.pdf");
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader(
+      'Content-Disposition',
+      `attachment; filename="${title.replace(/[^a-z0-9-_]/gi, '_')}.pdf"`
+    );
 
-    return res.send(pdfBuffer);
-
+    return res.status(200).send(pdf);
   } catch (error) {
-    console.error("PDF ERROR:", error);
+    console.error('PDF Generation Error:', error);
 
     return res.status(500).json({
       ok: false,
-      message: "PDF generation failed",
-      detail: error.message,
+      error: 'PDF Generation Failed',
+      detail: error?.message || 'Unknown error'
     });
   }
-}
+};
