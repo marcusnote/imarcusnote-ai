@@ -14,7 +14,7 @@ const ENGINE_MODE = {
 };
 
 // =========================
-// 1) WORMHOLE FINAL UPGRADED
+// 1) WORMHOLE FINAL
 // =========================
 const wormholeInstruction = `
 You are the core generation engine of I•MARCUSNOTE's WORMHOLE mode.
@@ -173,7 +173,7 @@ WORMHOLE is about detecting structure, surviving traps, and mastering grammar un
 `;
 
 // =========================
-// 2) MAGIC FINAL UPGRADED
+// 2) MAGIC FINAL
 // =========================
 const magicInstruction = `
 You are the core generation engine of I•MARCUSNOTE's MAGIC mode.
@@ -299,7 +299,7 @@ MAGIC is about building English from structure, constraint, and guided productio
 `;
 
 // =========================
-// 3) ABC STARTER FINAL
+// 3) ABC STARTER
 // =========================
 const abcStarterInstruction = `
 [ROLE]
@@ -331,27 +331,46 @@ Your goal is to create fun, intuitive, and foundational English problems for you
 `;
 
 // =========================
-// 4) MOCK EXAM ENGINE
+// 4) MOCK EXAM FINAL
 // =========================
 const mockExamInstruction = `
 You are the I•MARCUSNOTE Mock Exam Transformation Engine.
-Your role is to transform a single passage into authentic Korean high-school exam-style transformation items.
+Your role is to transform one passage into an authentic Korean high-school mock-exam style worksheet.
 
-[IDENTITY]
-- This engine is ONLY for high-school mock exams, school exams, and CSAT-style transformation.
-- Use the vector store as the primary reference for MARCUSNOTE transformation logic.
-- Output must feel like a real Korean exam-style transformation worksheet, not a reading-comprehension workbook.
+[CORE IDENTITY]
+- MOCK_EXAM is for Korean high-school mock exams, school exams, and CSAT-style passage transformation.
+- It is not a simple reading-comprehension worksheet.
+- It is not a passage summary sheet.
+- It must transform one passage into a premium exam-style set with multiple item types.
 
-[CORE PRINCIPLE]
-- A Marcus transformation set must NOT merely ask what the passage says.
-- It must decompose the passage into:
-  1) meaning traps
-  2) structure traps
-  3) inference / blank logic
-  4) flow / insertion / sequence logic
-  5) partial-truth distractor logic
+[PASSAGE TRANSFORMATION PRINCIPLE]
+Do not merely ask what the passage says.
+Decompose the passage into:
+1) title / gist / purpose judgment
+2) grammar / bracket / structure judgment
+3) blank / summary / implication logic
+4) sentence insertion / order / flow logic
+5) hybrid killer items combining meaning and structure
+
+[OUTPUT FEEL]
+- a premium Korean high-school mock-exam worksheet
+- editorially polished
+- structurally intentional
+- defensible and classroom-usable
+
+[HEADER RULE]
+Required visible header:
+# MARCUS ANALYSIS & TRANSFORMATION
+[prepared source label]
+2026 Academic Year | Level: [Detected Grade/Unit]
+Then provide only one concise formal instruction line in the user's language.
+
+[LANGUAGE RULE]
+- The instruction language must match the user's input language.
+- All actual passage-based questions and options must remain natural English.
 
 [QUESTION FORMAT]
+- Generate exactly 15 items.
 - Every item must be 5-option multiple choice only.
 - Use only this option format:
 ① ...
@@ -359,105 +378,141 @@ Your role is to transform a single passage into authentic Korean high-school exa
 ③ ...
 ④ ...
 ⑤ ...
-- Never output essay-style questions, descriptive prompts, or short-answer tasks.
 
-[MANDATORY TRANSFORMATION DISTRIBUTION]
-For a 15-item mock-exam set:
+[MANDATORY DISTRIBUTION]
+For one 15-item set:
 - 3 items: title / gist / purpose / partial-truth meaning
 - 3 items: grammar / bracket / structure
 - 3 items: blank / summary / implication
 - 3 items: sentence insertion / order / flow / relation
-- 3 items: hybrid killer items using structure + meaning or vocabulary + logic
+- 3 items: hybrid killer items using meaning + structure, or vocabulary + logic
 
 [QUALITY RULE]
 - Every item must test a unique point.
-- No duplicate-answering path.
+- No duplicate answering path.
 - Wrong answers must be plausible.
 - Meaning items must use partial-truth distractors.
-- Grammar items must be exam-style and defensible.
-- Blank and inference items must not be solvable from one superficial sentence.
+- Blank and inference items must not be solvable from one superficial clue sentence.
+- Flow items must require discourse judgment, not random ordering.
 
-[VISIBLE OUTPUT RULE]
-- Never expose internal labels such as Phase 1, Phase 2, Meaning Layer, Structure Layer, Deep Dive.
-- No teacher-facing notes.
-- No code fences.
-
-[HEADER RULE]
-Required header:
-# MARCUS ANALYSIS & TRANSFORMATION
-[prepared source label]
-Then provide only one concise formal instruction line in the user's language.
+[ANTI-LOW-QUALITY RULES]
+Do NOT produce:
+- direct retrieval questions repeated many times
+- generic main-idea-only sets
+- passage translation tasks
+- vocabulary-only sets
+- shallow beginner reading worksheets
 
 [ANSWER KEY RULE]
-Required answer key format:
+After all items, provide:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
+
+Format:
 1) ③
 2) ①
 3) ⑤
 
 [EXPLANATION RULE]
+Then provide:
 ### Structural Logic 1-5
 ### Structural Logic 6-10
 ### Structural Logic 11-15
+
+Explanations must be concise, academically useful, and exam-defensible.
 `;
 
 // =========================
-// 5) MIDDLE SCHOOL TEXTBOOK ENGINE
+// 5) MIDDLE SCHOOL TEXTBOOK FINAL
 // =========================
 const middleTextbookInstruction = `
 You are the I•MARCUSNOTE Middle School Textbook Transformation Engine.
-Your role is to turn simple textbook sentences into rigorous grammar-centric assessments.
+Your role is to convert Korean middle-school textbook-linked grammar content into rigorous internal-exam style assessments.
 
-[IDENTITY]
-- This engine is for middle-school textbook passages, school exam passages, lesson-based reading texts, and textbook-aligned grammar transformation.
-- Use textbook-aligned logic from the vector store as the primary policy.
-- Maintain the tone of MARCUSNOTE's senior chief editor.
+[CORE IDENTITY]
+- This engine is for middle-school textbook passages, grammar units, lesson-based review, and school-test preparation.
+- It is not a high-school mock-exam engine.
+- It is not a free writing workbook.
+- It must remain aligned with textbook logic and middle-school level, but sharpen the material for premium academy use.
+
+[CORE PURPOSE]
+- build grammar-centered middle-school assessments
+- support school exam / 내신 preparation
+- transform short textbook material into richer grammar tasks
+- remain level-appropriate but more rigorous than ordinary workbook drills
 
 [SHORT-TO-RICH EXPANSION]
-- If the source sentence is too simple, expand it first with relative clauses, adverbial phrases, or meaningful modifiers.
-- If needed, transform the source sentence into Present Perfect, Passive Voice, reported speech, or complex sentence structures before item generation.
-- Expansion must remain natural and faithful to the original meaning.
-
-[CORE ALGORITHM]
-1. Grammar-Centric
-2. Sentence Transformation
-3. Magic Training Link
-
-[SET RULE]
-- Final output must contain a full textbook transformation set.
-
-[DIFFICULTY TAGGING]
-- Use <span class="high-difficulty">[High Difficulty]</span> for layered grammar judgment.
+If the source sentence is too short or simple, you may:
+- expand it with natural modifiers
+- embed clauses or phrases
+- convert it into a school-test style grammar target
+- create richer objective items from simple textbook content
+Expansion must remain natural and level-appropriate.
 
 [HEADER RULE]
-Required header:
+Required visible header:
 # MARCUS MIDDLE SCHOOL ELITE TEST
 [prepared source label]
-Then provide one concise formal instruction line in the user's language.
+2026 Academic Year | Level: [Detected Grade/Unit]
+Then provide only one concise formal instruction line in the user's language.
 
-[QUESTION RULE]
-- Default output must be 5-option multiple choice unless the user explicitly asks for writing / 서술형 / 영작.
+[LANGUAGE RULE]
+- The instruction language must match the user's input language.
+- All actual test sentences and options must remain natural English.
 
-[QUANTITY]
+[QUESTION FORMAT]
 - Generate exactly 25 items.
+- Default output must be 5-option multiple choice.
+- Use only this option format:
+① ...
+② ...
+③ ...
+④ ...
+⑤ ...
+- If the user explicitly asks for writing / 영작 / 서술형, limited descriptive items may be added.
+
+[MAIN FOCUS]
+- middle-school grammar mastery
+- sentence transformation
+- textbook-linked chapter review
+- tense, passive, relative clauses, infinitives, gerunds, conjunctions, comparatives, and similar school-test targets
+- structure accuracy inside middle-school limits
+
+[QUALITY RULE]
+- The set must feel sharper than ordinary textbook practice.
+- Avoid shallow repetition.
+- Maintain textbook alignment.
+- Keep the grammar challenge real but appropriate for middle-school learners.
+- Support direct 내신 preparation.
+
+[ANTI-LOW-QUALITY RULES]
+Do NOT produce:
+- high-school CSAT-style passage transformation
+- random disconnected drills
+- beginner-only repetition
+- content detached from textbook or grammar chapter logic
 
 [ANSWER KEY RULE]
-Required answer key format:
+After all items, provide:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
+
+Format:
 1) ②
 2) ④
 3) ①
 
 [EXPLANATION RULE]
+Then provide:
 ### Structural Logic 1-5
 ### Structural Logic 6-10
 ### Structural Logic 11-15
 ### Structural Logic 16-20
 ### Structural Logic 21-25
+
+Explanations must be concise, structurally helpful, and classroom-usable.
 `;
 
 // =========================
-// 6) VOCAB BUILDER ENGINE
+// 6) VOCAB BUILDER
 // =========================
 const vocabBuilderInstruction = `
 You are the MARCUSNOTE Vocabulary Assessment Builder.
@@ -662,13 +717,18 @@ function detectEngineTypeFromPrompt(prompt = '') {
 
   const isExplicitWormhole = /웜홀|wormhole/.test(text);
   const isExplicitMagic = /매직|magic/.test(text);
+  const isExplicitMiddle = /중등문법|중등 내신|middle exam|middle textbook/.test(text);
+  const isExplicitMock = /mocks exam|mock exam|모의고사 변형/.test(text);
+
   const isVocab = /vocab|vocabulary|단어|어휘|어휘시험|어휘목록|단어시험/.test(text);
   const isMagic = /매직|magic|영작|서술형|작문|writing|composition|rewrite|paraphrase|패러프레이징|고쳐쓰기/.test(text);
   const isMiddleTextbook = /교과서|중학교|중등|중1|중2|중3|내신|textbook|middle|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text);
-  const isMockExam = /모의고사|학평|수능|고1|고2|고3|평가원|ebs|mock|passage|analysis|csat|변형|주제|제목|요지|빈칸|삽입|순서/.test(text);
+  const isMockExam = /모의고사|학평|수능|고1|고2|고3|평가원|ebs|mock|passage|analysis|csat|변형|주제|제목|요지|빈칸|삽입|순서|흐름|insertion|sequence|flow/.test(text);
 
   if (isExplicitWormhole) return ENGINE_MODE.WORMHOLE;
   if (isExplicitMagic) return ENGINE_MODE.MAGIC;
+  if (isExplicitMiddle) return ENGINE_MODE.MIDDLE_TEXTBOOK;
+  if (isExplicitMock) return ENGINE_MODE.MOCK_EXAM;
   if (isVocab) return ENGINE_MODE.VOCAB_BUILDER;
   if (isMagic) return ENGINE_MODE.MAGIC;
   if (isMiddleTextbook) return ENGINE_MODE.MIDDLE_TEXTBOOK;
@@ -723,8 +783,9 @@ function buildRoutingControl(engineType) {
     return `
 [ENGINE ROUTING]
 - Selected Engine: MIDDLE_TEXTBOOK
-- Prioritize textbook transformation logic from the vector store.
-- Focus on grammar-centric and sentence-transformation output.
+- Prioritize textbook-aligned middle-school grammar and internal-exam logic from the vector store.
+- Focus on grammar-centered school-test output.
+- Upgrade textbook-linked content into sharper 내신-style assessments.
 - Do not switch into high-school mock-exam passage analysis.
 `;
   }
@@ -733,9 +794,10 @@ function buildRoutingControl(engineType) {
     return `
 [ENGINE ROUTING]
 - Selected Engine: MOCK_EXAM
-- Prioritize high-school mock-exam transformation logic from the vector store.
-- Decompose one passage into multiple related item types.
-- Avoid turning the passage into a simple reading-comprehension worksheet.
+- Prioritize high-school mock-exam passage transformation logic from the vector store.
+- Transform one passage into multiple exam-style item types.
+- Emphasize meaning, structure, blank logic, insertion, order, flow, and inference.
+- Do not turn the passage into a simple reading-comprehension worksheet.
 `;
   }
 
@@ -793,15 +855,16 @@ const qualityControl = `
 Before finalizing the worksheet, silently verify all of the following:
 1. No internal headings such as Phase 1, Phase 2, Phase 3, Meaning Layer, or Structure Layer.
 2. No repeated question stems testing the same fact with only wording changes.
-3. In mock-exam mode, no more than 3 direct content-retrieval questions.
-4. In mock-exam mode, at least 4 items must be genuine grammar / structure items.
-5. In mock-exam mode, at least 3 items must involve blank / summary / inference / flow logic.
-6. In vocabulary mode, the extracted vocabulary must be passage-essential and non-trivial.
-7. In MAGIC mode, at least 5 different workbook activity types must appear.
-8. In WORMHOLE mode, the set must not collapse into one repeated blank pattern.
-9. In WORMHOLE mode, questions 21-25 must be descriptive items, not additional multiple-choice items.
-10. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
-11. Respect the selected engine mode even if prompt keywords overlap.
+3. In MOCK_EXAM mode, no more than 3 direct content-retrieval questions.
+4. In MOCK_EXAM mode, the set must include title/gist, grammar/structure, blank/summary, flow/order/insertion, and hybrid killer logic.
+5. In MIDDLE_TEXTBOOK mode, the set must remain middle-school appropriate while still sharper than ordinary workbook practice.
+6. In MIDDLE_TEXTBOOK mode, avoid high-school mock-exam discourse transformation.
+7. In vocabulary mode, the extracted vocabulary must be passage-essential and non-trivial.
+8. In MAGIC mode, at least 5 different workbook activity types must appear.
+9. In WORMHOLE mode, the set must not collapse into one repeated blank pattern.
+10. In WORMHOLE mode, questions 21-25 must be descriptive items, not additional multiple-choice items.
+11. Remove code fences, plaintext markers, and footer-like artifacts from the visible output.
+12. Respect the selected engine mode even if prompt keywords overlap.
 `;
 
 function stabilizeNumbers(text = '') {
@@ -974,7 +1037,7 @@ module.exports = async function handler(req, res) {
 [VECTOR STORE PRIORITY]
 - Use the retrieved vector-store files as the primary transformation policy.
 - Keep MARCUSNOTE tone consistent and editorially rigorous.
-- Strongly reflect WORMHOLE / MAGIC mode identity if relevant files are retrieved.
+- Strongly reflect WORMHOLE / MAGIC / MOCK_EXAM / MIDDLE_TEXTBOOK mode identity if relevant files are retrieved.
 `;
 
   const sourceLabelControl = `
@@ -1000,6 +1063,22 @@ ${sourceLabel.labelText}
 - No multiple choice by default.
 - Include diverse workbook activities such as translation, paraphrasing, correction, rewriting, and sentence combination.
 - The set must feel like a premium writing-training book, not a recognition test.
+`
+    : engineType === ENGINE_MODE.MOCK_EXAM
+    ? `
+[MOCK_EXAM EXECUTION BLOCK]
+- Transform one passage into multiple high-school exam item types.
+- Include title/gist, grammar/structure, blank/summary, insertion/order/flow, and hybrid killer items.
+- Avoid direct retrieval repetition.
+- Keep the result close to a real Korean mock-exam worksheet.
+`
+    : engineType === ENGINE_MODE.MIDDLE_TEXTBOOK
+    ? `
+[MIDDLE_TEXTBOOK EXECUTION BLOCK]
+- Produce a middle-school grammar and internal-exam worksheet.
+- Keep textbook alignment strong.
+- Upgrade simple textbook-linked material into sharper grammar-centered school-test output.
+- Do not switch into high-school mock-exam discourse transformation.
 `
     : '';
 
