@@ -5,19 +5,30 @@ function escapeHtml(str = '') {
   return String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
-function formatWorksheetToHtml(content = '') {
-  const escaped = escapeHtml(content);
+function normalizeIncomingContent(content = '') {
+  const raw = String(content || '').trim();
 
-  const html = escaped
-    .replace(/\n/g, '<br>')
-    .replace(/###\s*(.+?)<br>/g, '<h3>$1</h3>')
-    .replace(/#\s*(.+?)<br>/g, '<h1>$1</h1>')
-    .replace(/<br><br>/g, '</p><p>');
+  if (!raw) return '';
 
-  return `<p>${html}</p>`;
+  // If HTML already came in, keep it usable.
+  const looksLikeHtml = /<\/?[a-z][\s\S]*>/i.test(raw);
+  if (looksLikeHtml) {
+    return raw;
+  }
+
+  const escaped = escapeHtml(raw);
+
+  return escaped
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/\[High Difficulty\]/g, '<span class="high-difficulty">[High Difficulty]</span>')
+    .replace(/\n/g, '<br>');
 }
 
 module.exports = async function handler(req, res) {
@@ -36,8 +47,14 @@ module.exports = async function handler(req, res) {
     });
   }
 
+  let browser;
+
   try {
-    const { content, academyName = 'Imarcusnote', title = 'Marcusnote Worksheet' } = req.body || {};
+    const {
+      content,
+      academyName = 'Imarcusnote',
+      title = 'Marcusnote_Worksheet'
+    } = req.body || {};
 
     if (!content || typeof content !== 'string' || !content.trim()) {
       return res.status(400).json({
@@ -46,125 +63,140 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    const browser = await puppeteer.launch({
+    const printableContent = normalizeIncomingContent(content);
+
+    browser = await puppeteer.launch({
       args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
       defaultViewport: {
         width: 1400,
         height: 2000
-      },
-      executablePath: await chromium.executablePath(),
-      headless: chromium.headless
+      }
     });
 
     const page = await browser.newPage();
 
-    const printableHtml = `
+    const html = `
       <!doctype html>
       <html lang="en">
       <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <title>${escapeHtml(title)}</title>
         <style>
           @page {
             size: A4;
-            margin: 22mm 16mm 20mm 16mm;
+            margin: 18mm 15mm 18mm 15mm;
           }
 
           body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #111;
-            line-height: 1.72;
-            font-size: 14px;
             margin: 0;
             padding: 0;
-            background: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111827;
+            background: #ffffff;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
           }
 
           .sheet {
             width: 100%;
           }
 
-          .topbar {
-            border-top: 4px solid #1c2b4a;
-            border-bottom: 2px solid #34d17a;
+          .top-rule {
+            border-top: 4px solid #1f2b46;
+            border-bottom: 2px solid #22c55e;
+            margin-bottom: 14px;
             padding-top: 10px;
-            margin-bottom: 18px;
           }
 
-          .title {
-            font-size: 24px;
+          .brand-title {
+            font-size: 23px;
             font-weight: 800;
             letter-spacing: -0.02em;
-            margin: 0 0 6px 0;
+            margin: 0 0 4px;
           }
 
-          .sub {
+          .brand-sub {
             font-size: 12px;
-            color: #555;
-            margin: 0 0 12px 0;
-          }
-
-          h1 {
-            font-size: 22px;
-            margin: 18px 0 10px;
-            line-height: 1.3;
-          }
-
-          h3 {
-            font-size: 17px;
-            margin: 20px 0 10px;
-            padding-top: 8px;
-            border-top: 1px solid #ddd;
-          }
-
-          p {
-            margin: 0 0 12px 0;
+            color: #4b5563;
+            margin: 0 0 8px;
           }
 
           .content {
+            font-size: 14px;
+            line-height: 1.72;
             word-break: keep-all;
             overflow-wrap: break-word;
           }
 
-          .content p,
+          .content h1 {
+            font-size: 22px;
+            margin: 18px 0 10px;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+          }
+
+          .content h2 {
+            font-size: 18px;
+            margin: 18px 0 10px;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+          }
+
+          .content h3 {
+            font-size: 16px;
+            margin: 20px 0 10px;
+            padding-top: 8px;
+            border-top: 1px solid #d1d5db;
+            line-height: 1.35;
+          }
+
+          .content p {
+            margin: 0 0 10px;
+          }
+
           .content div,
+          .content p,
           .content h1,
           .content h2,
           .content h3 {
             break-inside: avoid;
           }
 
-          .footer-note {
-            margin-top: 28px;
-            font-size: 11px;
-            color: #666;
-            text-align: center;
-          }
-
           .high-difficulty {
             display: inline-block;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
-            color: #0b7a3d;
-            border: 1px solid #8fd9b0;
-            padding: 2px 6px;
+            color: #166534;
+            border: 1px solid #a7f3d0;
+            background: #ecfdf5;
             border-radius: 999px;
-            margin-right: 6px;
+            padding: 2px 6px;
+            vertical-align: middle;
+          }
+
+          .footer {
+            margin-top: 26px;
+            text-align: center;
+            font-size: 11px;
+            color: #6b7280;
           }
         </style>
       </head>
       <body>
         <div class="sheet">
-          <div class="topbar">
-            <div class="title">${escapeHtml(title)}</div>
-            <div class="sub">${escapeHtml(academyName)} × MARCUSNOTE</div>
+          <div class="top-rule">
+            <div class="brand-title">${escapeHtml(title)}</div>
+            <div class="brand-sub">${escapeHtml(academyName)} × MARCUSNOTE</div>
           </div>
 
           <div class="content">
-            ${formatWorksheetToHtml(content)}
+            ${printableContent}
           </div>
 
-          <div class="footer-note">
+          <div class="footer">
             ${escapeHtml(academyName)} × MARCUSNOTE
           </div>
         </div>
@@ -172,27 +204,34 @@ module.exports = async function handler(req, res) {
       </html>
     `;
 
-    await page.setContent(printableHtml, {
+    await page.setContent(html, {
       waitUntil: 'networkidle0'
     });
 
-    const pdf = await page.pdf({
+    const pdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
       preferCSSPageSize: true
     });
 
     await browser.close();
+    browser = null;
 
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader(
       'Content-Disposition',
-      `attachment; filename="${title.replace(/[^a-z0-9-_]/gi, '_')}.pdf"`
+      `attachment; filename="${String(title).replace(/[^a-z0-9_-]/gi, '_')}.pdf"`
     );
 
-    return res.status(200).send(pdf);
+    return res.status(200).send(pdfBuffer);
   } catch (error) {
     console.error('PDF Generation Error:', error);
+
+    if (browser) {
+      try {
+        await browser.close();
+      } catch (_) {}
+    }
 
     return res.status(500).json({
       ok: false,
