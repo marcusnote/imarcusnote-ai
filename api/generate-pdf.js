@@ -1,218 +1,311 @@
-const chromium = require('@sparticuz/chromium');
-const puppeteer = require('puppeteer-core');
+import chromium from "@sparticuz/chromium";
+import puppeteer from "puppeteer-core";
 
-function escapeHtml(str = '') {
+const ALLOWED_ORIGINS = [
+  "https://imarcusnote.com",
+  "https://www.imarcusnote.com",
+  "https://imarcusnote-ai.vercel.app",
+  "http://localhost:3000",
+  "http://localhost:3001",
+];
+
+function getCorsHeaders(origin = "") {
+  const allowedOrigin = ALLOWED_ORIGINS.includes(origin)
+    ? origin
+    : "https://imarcusnote.com";
+
+  return {
+    "Access-Control-Allow-Origin": allowedOrigin,
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Access-Control-Max-Age": "86400",
+    Vary: "Origin",
+  };
+}
+
+function setCors(res, origin = "") {
+  const headers = getCorsHeaders(origin);
+  Object.entries(headers).forEach(([key, value]) => {
+    res.setHeader(key, value);
+  });
+}
+
+function escapeHtml(str = "") {
   return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
-function normalizeContent(content = '') {
-  const raw = String(content || '').trim();
-  if (!raw) return '';
-
-  const escaped = escapeHtml(raw);
-
-  return escaped
-    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-    .replace(/\[High Difficulty\]/g, '<span class="high-difficulty">[High Difficulty]</span>')
-    .replace(/\n/g, '<br>');
+function nlToBr(str = "") {
+  return escapeHtml(str).replace(/\n/g, "<br/>");
 }
 
-module.exports = async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
-  res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+function sanitizeText(value) {
+  return String(value || "").replace(/\r\n/g, "\n").trim();
+}
 
-  if (req.method === 'OPTIONS') {
+function buildHtml({ title, content, academyName, mode }) {
+  const safeTitle = sanitizeText(title) || "Marcusnote Worksheet";
+  const safeContent = sanitizeText(content);
+  const safeAcademy = sanitizeText(academyName) || "Imarcusnote";
+  const safeMode = sanitizeText(mode) || "AI Workspace";
+
+  return `
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>${escapeHtml(safeTitle)}</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 14mm 18mm 14mm;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      color: #111;
+      line-height: 1.75;
+      font-size: 12.5px;
+      margin: 0;
+      padding: 0;
+      word-break: keep-all;
+    }
+
+    .top-accent {
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, #0f172a, #1d4ed8, #84cc16);
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .sheet {
+      width: 100%;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .brand {
+      font-size: 11px;
+      font-weight: 700;
+      color: #16a34a;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.3;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .badge {
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+      white-space: nowrap;
+    }
+
+    .content-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 22px 22px 26px 22px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-card::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: 0;
+      width: 7px;
+      height: calc(100% - 48px);
+      border-radius: 999px 0 0 999px;
+      background: linear-gradient(180deg, #1d4ed8, #84cc16);
+      opacity: 0.9;
+    }
+
+    .content {
+      white-space: normal;
+      font-size: 12.5px;
+      color: #111827;
+      padding-right: 16px;
+    }
+
+    .content h1, .content h2, .content h3 {
+      color: #0f172a;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      line-height: 1.35;
+      page-break-after: avoid;
+    }
+
+    .content h1 { font-size: 22px; }
+    .content h2 { font-size: 18px; }
+    .content h3 { font-size: 15px; }
+
+    .content p {
+      margin: 0 0 10px 0;
+    }
+
+    .content .line {
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      width: 100%;
+      font-size: 10px;
+      color: #64748b;
+      padding: 0 8mm;
+    }
+
+    .footer-inner {
+      width: 100%;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .small {
+      font-size: 10px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="top-accent"></div>
+
+    <div class="meta">
+      <div>
+        <div class="brand">Premium Engine for Educators</div>
+        <h1 class="title">${escapeHtml(safeTitle)}</h1>
+        <p class="subtitle">Generated by I•marcusnote AI Workspace</p>
+      </div>
+      <div class="badge">${escapeHtml(safeMode)}</div>
+    </div>
+
+    <div class="content-card">
+      <div class="content">
+        ${nlToBr(safeContent)}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+`;
+}
+
+export default async function handler(req, res) {
+  const origin = req.headers.origin || "";
+  setCors(res, origin);
+
+  if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
 
-  if (req.method !== 'POST') {
+  if (req.method !== "POST") {
     return res.status(405).json({
       ok: false,
-      message: 'Method Not Allowed'
+      error: "Method not allowed. Use POST.",
     });
   }
 
   let browser;
 
   try {
-    const { content, academyName = 'Imarcusnote', title = 'Marcusnote_Worksheet' } = req.body || {};
+    const body = req.body || {};
+    const title = sanitizeText(body.title || body.worksheetTitle || "Marcusnote Worksheet");
+    const content = sanitizeText(body.content || body.response || "");
+    const academyName = sanitizeText(body.academyName || "Imarcusnote");
+    const mode = sanitizeText(body.mode || "AI Workspace");
 
-    if (!content || typeof content !== 'string' || !content.trim()) {
+    if (!content) {
       return res.status(400).json({
         ok: false,
-        message: 'content is required'
+        error: "PDF content is required.",
       });
     }
 
-    const executablePath = await chromium.executablePath();
+    const html = buildHtml({ title, content, academyName, mode });
 
     browser = await puppeteer.launch({
-      args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
-      defaultViewport: chromium.defaultViewport || { width: 1400, height: 2000 },
-      executablePath,
-      headless: true
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
     });
 
     const page = await browser.newPage();
-
-    const html = `
-      <!doctype html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <title>${escapeHtml(title)}</title>
-        <style>
-          @page {
-            size: A4;
-            margin: 18mm 15mm 18mm 15mm;
-          }
-
-          body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #111827;
-            background: #ffffff;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-          }
-
-          .sheet {
-            width: 100%;
-          }
-
-          .top-rule {
-            border-top: 4px solid #162032;
-            border-bottom: 2px solid #22c55e;
-            margin-bottom: 14px;
-            padding-top: 10px;
-          }
-
-          .brand-title {
-            font-size: 23px;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin: 0 0 4px;
-          }
-
-          .brand-sub {
-            font-size: 12px;
-            color: #4b5563;
-            margin: 0 0 8px;
-          }
-
-          .content {
-            font-size: 14px;
-            line-height: 1.72;
-            word-break: keep-all;
-            overflow-wrap: break-word;
-          }
-
-          .content h1 {
-            font-size: 22px;
-            margin: 18px 0 10px;
-            line-height: 1.25;
-          }
-
-          .content h2 {
-            font-size: 18px;
-            margin: 18px 0 10px;
-            line-height: 1.3;
-          }
-
-          .content h3 {
-            font-size: 16px;
-            margin: 20px 0 10px;
-            padding-top: 8px;
-            border-top: 1px solid #d1d5db;
-            line-height: 1.35;
-          }
-
-          .content div,
-          .content p,
-          .content h1,
-          .content h2,
-          .content h3 {
-            break-inside: avoid;
-          }
-
-          .high-difficulty {
-            display: inline-block;
-            font-size: 10px;
-            font-weight: 700;
-            color: #166534;
-            border: 1px solid #a7f3d0;
-            background: #ecfdf5;
-            border-radius: 999px;
-            padding: 2px 6px;
-            vertical-align: middle;
-          }
-
-          .footer {
-            margin-top: 26px;
-            text-align: center;
-            font-size: 11px;
-            color: #6b7280;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="sheet">
-          <div class="top-rule">
-            <div class="brand-title">${escapeHtml(title)}</div>
-            <div class="brand-sub">${escapeHtml(academyName)} × MARCUSNOTE</div>
-          </div>
-
-          <div class="content">
-            ${normalizeContent(content)}
-          </div>
-
-          <div class="footer">
-            ${escapeHtml(academyName)} × MARCUSNOTE
-          </div>
-        </div>
-      </body>
-      </html>
-    `;
-
-    await page.setContent(html, { waitUntil: 'networkidle0' });
-
-    const pdfBuffer = await page.pdf({
-      format: 'A4',
-      printBackground: true,
-      preferCSSPageSize: true
+    await page.setContent(html, {
+      waitUntil: ["domcontentloaded", "networkidle0"],
     });
 
-    await browser.close();
+    const pdfBuffer = await page.pdf({
+      format: "A4",
+      printBackground: true,
+      displayHeaderFooter: true,
+      headerTemplate: `<div></div>`,
+      footerTemplate: `
+        <div class="footer" style="width:100%; font-size:10px; color:#64748b; padding:0 12mm;">
+          <div style="width:100%; border-top:1px solid #e5e7eb; padding-top:6px; display:flex; justify-content:space-between;">
+            <span>${escapeHtml(academyName)} × MARCUSNOTE</span>
+            <span><span class="pageNumber"></span> / <span class="totalPages"></span></span>
+          </div>
+        </div>
+      `,
+      margin: {
+        top: "18mm",
+        right: "14mm",
+        bottom: "20mm",
+        left: "14mm",
+      },
+    });
 
-    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader("Content-Type", "application/pdf");
     res.setHeader(
-      'Content-Disposition',
-      `attachment; filename="${String(title).replace(/[^a-z0-9_-]/gi, '_')}.pdf"`
+      "Content-Disposition",
+      `attachment; filename="${encodeURIComponent(title)}.pdf"`
     );
 
     return res.status(200).send(pdfBuffer);
   } catch (error) {
-    console.error('PDF Generation Error:', error);
+    console.error("api/generate-pdf error:", error);
 
+    return res.status(500).json({
+      ok: false,
+      error: error?.message || "Failed to generate PDF.",
+    });
+  } finally {
     if (browser) {
       try {
         await browser.close();
       } catch (_) {}
     }
-
-    return res.status(500).json({
-      ok: false,
-      error: 'PDF Generation Failed',
-      detail: error?.message || 'Unknown error'
-    });
   }
-};
+}
