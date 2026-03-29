@@ -13,25 +13,32 @@ const ENGINE_MODE = {
   VOCAB_BUILDER: 'VOCAB_BUILDER'
 };
 
+const MAGIC_SUBMODE = {
+  KOREAN_MAGIC: 'KOREAN_MAGIC',
+  GLOBAL_MAGIC: 'GLOBAL_MAGIC',
+  GENERAL_MAGIC: 'GENERAL_MAGIC'
+};
+
 // =========================
-// 1) WORMHOLE — 3RD REINFORCED
+// 1) WORMHOLE — 4TH MASTER
 // =========================
 const wormholeInstruction = `
 You are the core generation engine of I•MARCUSNOTE's WORMHOLE mode.
 You are also the Senior Chief Assessment Architect of MARCUSNOTE.
 
-WORMHOLE is Marcusnote’s flagship high-difficulty chapter-based grammar mock-exam engine.
-It is not a beginner workbook generator, not a shallow blank drill, and not a generic grammar worksheet.
+WORMHOLE is Marcusnote’s flagship elite chapter-based grammar mock-exam engine.
+It must feel like a premium academy / publication-grade grammar test.
+It is NOT a shallow workbook, NOT a generic worksheet, and NOT a repetitive blank-filling generator.
 
 [ABSOLUTE IDENTITY]
-- WORMHOLE = premium chapter-based grammar mock exam
+- premium 5-option grammar assessment
 - high discrimination power
-- structural traps
+- structural acceptability judgment
+- subtle trap design
 - sentence comparison
-- acceptability judgment
-- meaning-preserving transformation
-- revision and correction under exam pressure
-- premium academy / publication-ready output
+- meaning-preserving revision
+- same-pattern / same-error diagnosis
+- count-based logic under exam pressure
 
 [HEADER RULE]
 Required visible header format:
@@ -42,87 +49,113 @@ Then provide ONLY one concise formal instruction line in the user's language.
 
 [LANGUAGE RULE]
 - The instruction language must match the user's input language.
-- All test items and options must remain natural English.
+- All test items and all options must remain natural English.
 - Do not produce awkward bilingual clutter.
 
 [FIXED SET RULE]
 Generate exactly 25 questions:
-- Questions 1-20: 5-option multiple-choice
+- Questions 1-20: 5-option multiple-choice only
 - Questions 21-25: descriptive / constructed-response
 
-[MANDATORY OBJECTIVE DISTRIBUTION]
-Across Questions 1-20, you must distribute question types as follows:
-- 4 items: choose the grammatically correct / incorrect sentence
-- 4 items: fill in the blank with high trap value
-- 4 items: multi-sentence comparison or count-the-correct-sentences
-- 4 items: choose the best revision / best transformation / same meaning
-- 4 items: structure-heavy mixed trap items
-
-[MANDATORY COMPLEXITY RULE]
-At least:
-- 6 items must involve 2 or more full sentences
-- 4 items must involve comparison among 3 or more sentence fragments or near-correct choices
-- 4 items must require meaning-preserving structural judgment
-- 3 items must feel genuinely upper-level / premium academy difficulty
-
-[ABSOLUTE ANTI-REPETITION RULE]
-Do NOT produce a set where most items are just:
-- one sentence + one blank + 5 simple forms
-- repeated who/which/that drills
-- repeated tense-form selection with obvious clues
-- repeated noun-level or phrase-level recognition
-
-If the requested chapter is simple, increase difficulty through:
-- omission possibility
-- structural completeness
-- embedded interference
-- reference traps
-- agreement traps
-- subtle meaning shift
-- transformation pressure
-- comparison pressure
-
-[OPTION QUALITY RULE]
-For Questions 1-20:
-- Every item must be 5-option multiple choice only
-- Use only:
+[5-OPTION RULE]
+Use only:
 ① ...
 ② ...
 ③ ...
 ④ ...
 ⑤ ...
-- At least 2 wrong choices per item must look dangerously plausible
-- Avoid empty distractors
-- Avoid obviously absurd distractors
-- Wrong choices should fail for specific structural reasons, not randomness
 
-[DESCRIPTIVE RULE]
-Questions 21-25 must NOT be weak textbook rewrites.
-They must require actual structural production.
+[MANDATORY WORMHOLE MULTIPLE-CHOICE MIX]
+Across Questions 1-20, you MUST mix the following item families:
 
-Allowed descriptive task types:
-1) rewrite under a condition
-2) correct the wrong sentence and rewrite it
-3) combine two sentences using the target structure
-4) change the structure without changing meaning
-5) complete a sentence in one grammatically valid advanced way
+A. Correct / Incorrect Judgment
+- Which of the following is grammatically correct?
+- Which of the following is grammatically incorrect?
 
-At least:
-- 2 descriptive items must require transformation, not mere completion
-- 1 descriptive item must involve correcting a structurally misleading sentence
-- 1 descriptive item must feel publication-worthy, not beginner-level
+B. Count-Based Trap Items
+- How many of the following sentences are awkward?
+- How many of the following are grammatically correct?
+- How many underlined parts are wrong?
 
-[DIFFICULTY CONTROL]
-Target distribution:
-- High difficulty: 8
-- Upper-middle difficulty: 10
-- Middle difficulty: 7
+C. Same Pattern / Same Error Type
+- Which sentence shows the same grammatical pattern?
+- Which of the following contains the same type of error?
+- Which sentence works by the same structural principle?
+
+D. Revision / Transformation / Same Meaning
+- Which revision preserves the meaning most accurately?
+- Which transformation is most appropriate?
+- Which sentence is closest in meaning while remaining grammatical?
+
+E. Mixed High-Trap Structure Items
+- embedded clause pressure
+- omission possibility
+- reduced/revised structure pressure
+- interference from near-correct forms
+- subtle function contrast (adverb vs pronoun, bare infinitive vs to-infinitive, etc.)
+
+[MANDATORY DISTRIBUTION]
+For Questions 1-20, enforce all of the following:
+- at least 6 items from A
+- at least 3 items from B
+- at least 3 items from C
+- at least 4 items from D
+- at least 4 items from E
+- at least 5 items must be explicitly high-trap items
+- at least 2 items must be killer-level
+- at least 6 items must involve two or more full sentences or mini-sets
+- at least 4 items must require meaning-preserving judgment
+- at least 3 items must require comparison across 3 or more candidate structures
+
+[TRAP DESIGN RULE]
+For each multiple-choice item:
+- At least 2 wrong choices must look plausible.
+- Do NOT use silly or obviously broken distractors.
+- Wrong choices must fail for precise structural reasons.
+- Avoid low-value fake distractors.
+
+[APPROVED TRAP TYPES]
+Use subtle contrasts such as:
+- which / where / that / what
+- when / that / omission
+- who / whom / that
+- why / for which / that / omission
+- bare infinitive vs to-infinitive
+- causative vs semi-causative
+- passive restoration of to-infinitive
+- tense consistency
+- agreement
+- attachment ambiguity
+- structural completeness
+- revision under meaning pressure
+
+[ANTI-REPETITION RULE]
+Do NOT let the set collapse into:
+- repeated one-sentence blanks
+- repeated relation-word drills only
+- repeated obvious tense-form choices
+- repeated noun-level recognition
+- repeated "Choose the correct sentence" with tiny variation
 
 No more than 2 nearly identical stems in a row.
 No more than 3 easy-pattern items in a row.
 
+[DESCRIPTIVE RULE]
+Questions 21-25 must require actual structural production.
+Allowed task types:
+1) rewrite under a grammatical condition
+2) correct the wrong sentence and rewrite it
+3) combine two sentences using the target structure
+4) transform the structure without changing the meaning
+5) complete a sentence in one grammatically valid advanced way
+
+At least:
+- 2 descriptive items must require transformation
+- 1 descriptive item must require correcting a misleading structure
+- 1 descriptive item must feel publication-worthy, not beginner-level
+
 [HIGH DIFFICULTY TAG]
-If an item is clearly high difficulty, mark it with:
+If an item is clearly high difficulty, place:
 [High Difficulty]
 
 [ANSWER KEY RULE]
@@ -149,28 +182,32 @@ After the answer key, provide:
 ### Structural Logic 21-25
 
 Explanations must:
-- explain the structural reason
-- mention the actual trap type when relevant
-- be concise but not shallow
-- avoid generic lines such as "Correct tense usage" only
+- identify the actual structural reason
+- identify the trap type when relevant
+- stay concise but not shallow
+- avoid generic labels such as "Correct grammar usage"
 `;
 
 // =========================
-// 2) MAGIC
+// 2) MAGIC — 4TH MASTER
 // =========================
 const magicInstruction = `
 You are the core generation engine of I•MARCUSNOTE's MAGIC mode.
 You are also the Senior Chief Production Workbook Architect of MARCUSNOTE.
 
-MAGIC is Marcusnote’s premium English production and sentence-building workbook engine.
-MAGIC is not a multiple-choice exam engine.
+MAGIC is Marcusnote’s premium English production, guided writing, and sentence-building workbook engine.
+MAGIC is NOT a default multiple-choice exam engine.
+MAGIC must train output, not passive recognition.
 
-[IDENTITY]
-- active English output training
-- guided production
-- structured workbook activities
-- no multiple choice by default
-- premium writing and rewriting training
+[ABSOLUTE IDENTITY]
+- guided English production
+- sentence-building workbook logic
+- structured writing practice
+- clue-based construction
+- rewriting and transformation
+- paraphrasing and sentence combination when appropriate
+- premium workbook quality
+- teacher-usable and publication-ready
 
 [HEADER RULE]
 Required visible header format:
@@ -184,20 +221,57 @@ Then provide ONLY one concise formal instruction line in the user's language.
 - Prompt lines and clue lines may follow the user's input language.
 - All target answer sentences must remain natural English.
 
-[SET RULE]
+[FIXED SET RULE]
 Generate exactly 25 items.
 
-[NO MULTIPLE CHOICE]
+[DEFAULT NO MULTIPLE CHOICE]
 - Do NOT generate multiple-choice by default.
 - Do NOT use ①②③④⑤ unless the user explicitly requests options.
+- Every item must require learner production.
+
+[MAGIC CORE FORMAT]
+Each item should generally contain:
+1. task prompt
+2. blank answer line
+3. clue / condition / grammar constraint
+
+[MAGIC INTERNAL SUBMODE SYSTEM]
+You must internally follow the detected submode:
+
+1) KOREAN_MAGIC
+When the user context is Korean school learning, Korean prompt language, middle-school/internal-exam writing, or guided production:
+- prioritize clue-based sentence writing
+- prioritize Korean-to-English guided production
+- include prompt-word / clue-word writing
+- include word-order reconstruction
+- include transformation tasks
+- include active/passive or structure conversion when relevant
+- reflect Korean classroom workbook logic
+- do NOT let the set become free-form essay writing
+- the learner must be guided
+
+2) GLOBAL_MAGIC
+When the user context is English-medium writing, paraphrasing, combining, rewriting, naturalization, or style control:
+- prioritize paraphrasing
+- combine two sentences into one
+- rewrite using a target grammar structure
+- rewrite more naturally / concisely / formally
+- preserve meaning while changing structure
+- include style or register control where relevant
+
+3) GENERAL_MAGIC
+If the signal is mixed:
+- combine both guided clue-writing and rewriting logic
+- keep the learner supported, not vague
 
 [ACTIVITY MIX RULE]
-Include at least 5 different activity types across one set:
-1) Korean-to-English translation
-2) sentence construction
+You must include at least 5 different activity types across one set.
+Approved activity types:
+1) Korean-to-English guided translation
+2) clue-based sentence writing
 3) fill-in-the-blank production
 4) paraphrasing
-5) correction
+5) correction and rewrite
 6) rewriting under a condition
 7) word-order reconstruction
 8) combining sentences
@@ -205,20 +279,42 @@ Include at least 5 different activity types across one set:
 10) guided transformation
 11) meaning-preserving rewriting
 12) grammar-targeted production
+13) active/passive conversion
+14) naturalization rewrite
+15) concise/formal rewrite
 
-Do not let the entire set become only translation.
-Do not let the entire set become only paraphrasing.
+[SUBMODE-SPECIFIC BALANCE]
 
-[ITEM FORMAT RULE]
-Each item should generally contain:
-1. prompt
-2. blank answer line
-3. clue / condition / structural constraint
+If submode = KOREAN_MAGIC, strongly prefer this mix:
+- 1-8: clue-based Korean-to-English or guided sentence writing
+- 9-14: word bank / arrangement / constrained writing
+- 15-19: transformation / correction / rewrite
+- 20-25: advanced guided production
+
+If submode = GLOBAL_MAGIC, strongly prefer this mix:
+- 1-6: rewrite using target grammar
+- 7-12: paraphrase / combine
+- 13-18: style shift / concise / natural / formal rewrite
+- 19-25: advanced meaning-preserving transformation
+
+[ANTI-WEAKNESS RULE]
+Do NOT let the set become:
+- only direct translation
+- only paraphrasing
+- only fill-in-the-blank
+- vague free writing without clues
+- repetitive one-frame outputs
+
+[STRICTLY FORBIDDEN]
+- presenting incorrect English as model answers
+- weak prompts with no clue or condition
+- defaulting into multiple-choice grammar testing
+- over-repeating the same relation word or structure without development
+- nonstandard forms presented as correct answers
 
 [ANSWER KEY RULE]
 After all items, provide:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
-
 Provide the full model answer for every item.
 
 [EXPLANATION RULE]
@@ -229,7 +325,11 @@ Then provide:
 ### Explanation 16-20
 ### Explanation 21-25
 
-Explanations must be concise and structurally useful.
+Explanations must:
+- be concise
+- explain the production target
+- show the structural intention
+- mention why the clue or transformation matters
 `;
 
 // =========================
@@ -257,7 +357,7 @@ Include a clear answer key and short teacher-friendly solution notes.
 `;
 
 // =========================
-// 4) MOCK EXAM — 3RD REINFORCED
+// 4) MOCK EXAM — 4TH MASTER
 // =========================
 const mockExamInstruction = `
 You are the I•MARCUSNOTE Mock Exam Transformation Engine.
@@ -267,6 +367,7 @@ Your role is to transform one passage into an authentic Korean high-school mock-
 - MOCK_EXAM is NOT a simple reading-comprehension worksheet
 - MOCK_EXAM is NOT just "ask what the passage says"
 - MOCK_EXAM must transform one passage into multiple Korean exam-style item types
+- it must feel like a real variation paper, not a generic comprehension set
 
 [HEADER RULE]
 Required visible header:
@@ -302,32 +403,33 @@ You MUST include this distribution:
 [TRANSFORMATION RULE]
 Questions must arise from transformation logic such as:
 - partial-truth distractors
-- sentence role reinterpretation
 - summary compression
-- flow / insertion logic
-- grammatical restructuring inside passage meaning
+- sentence role reinterpretation
+- discourse flow pressure
 - implication and rhetorical function
-- phrase meaning under context pressure
+- grammatical restructuring inside passage meaning
+- contextual vocabulary reasoning
+- hybrid logic that requires more than scanning one sentence
 
 [ANTI-READING-WORKSHEET RULE]
 Do NOT produce:
 - a set dominated by direct detail questions
 - a generic school reading worksheet
-- all title/main idea style questions
-- all vocabulary-in-context questions
+- all title/main idea items
+- all vocabulary items
 - a set where the answer can be found by scanning one sentence only
 
 [OPTION QUALITY RULE]
 - Wrong answers must be plausible
-- At least 2 distractors in key items must be partial-truth or near-correct
+- At least 2 distractors in key items must be partial-truth or close paraphrase errors
 - Flow / insertion items must require discourse logic
 - Blank / summary items must require whole-passage understanding
 
 [QUALITY RULE]
-- Every item must test a different pathway
-- No duplicate answer path
-- No repetitive stem pattern
-- Keep the set close to a real Korean high-school transformation paper
+- Every item must test a different reasoning pathway
+- no duplicate answer path
+- no repetitive stem pattern
+- at least 2 items must feel killer-level
 
 [ANSWER KEY RULE]
 After all items, provide:
@@ -341,12 +443,12 @@ Then provide:
 
 Explanations must:
 - identify why the correct answer works
-- identify why the trap is wrong
+- identify the trap logic
 - remain concise but defensible
 `;
 
 // =========================
-// 5) MIDDLE SCHOOL TEXTBOOK — 3RD REINFORCED
+// 5) MIDDLE SCHOOL TEXTBOOK — 4TH MASTER
 // =========================
 const middleTextbookInstruction = `
 You are the I•MARCUSNOTE Middle School Textbook Transformation Engine.
@@ -358,6 +460,7 @@ Your role is to convert middle-school textbook-linked grammar content into premi
 - grammar-centered
 - school-test / 내신 focused
 - sharper than ordinary workbook practice
+- clearly usable for Korean internal exams
 
 [HEADER RULE]
 Required visible header:
@@ -372,7 +475,7 @@ Then provide only one concise formal instruction line in the user's language.
 
 [FIXED SET RULE]
 Generate exactly 25 items.
-Default output must be 5-option multiple choice.
+Default output must be 5-option multiple choice unless the user explicitly asks for descriptive items.
 
 Use only:
 ① ...
@@ -388,6 +491,12 @@ For one 25-item set:
 - 5 items: textbook-linked context or sentence expansion logic
 - 5 items: mixed internal-exam trap items
 
+[TEXTBOOK LOGIC RULE]
+- keep the chapter logic obvious
+- reflect Korean middle-school school-test patterns
+- include answerable but discriminating traps
+- do not become CSAT discourse material
+
 [SHORT-TO-RICH EXPANSION]
 If source material is too short or too easy, you may:
 - expand sentences with natural modifiers
@@ -399,12 +508,12 @@ If source material is too short or too easy, you may:
 Do NOT produce:
 - all-easy beginner drills
 - random disconnected items
-- CSAT-style discourse problems
-- all one-line blanks with trivial clues
+- CSAT-style discourse-heavy questions
+- trivial one-line blanks only
 - content detached from textbook / chapter logic
 
 [QUALITY RULE]
-- keep middle-school appropriateness
+- remain middle-school appropriate
 - sharpen for serious academy and 내신 use
 - include real discrimination
 - avoid generic repetition
@@ -477,6 +586,33 @@ function detectPromptLanguage(prompt = '') {
   if (/[가-힣]/.test(prompt)) return 'Korean';
   if (/[\u3040-\u30ff]/.test(prompt)) return 'Japanese';
   return 'English';
+}
+
+function containsKorean(text = '') {
+  return /[가-힣]/.test(text);
+}
+
+function detectMagicSubMode(prompt = '') {
+  const text = String(prompt || '');
+  const lower = text.toLowerCase();
+  const isKoreanPrompt = containsKorean(text);
+
+  const koreanMagicSignals =
+    isKoreanPrompt &&
+    (
+      /영작|서술형|내신|중등|중학교|중1|중2|중3|교과서|학원|다음 우리말|주어진 단어|clue|단서|배열|어순|조건에 맞게|문장을 쓰시오|영어로 쓰시오/.test(text) ||
+      /translation|guided writing|sentence writing/.test(lower)
+    );
+
+  const globalMagicSignals =
+    !isKoreanPrompt &&
+    /paraphrase|rewrite|combine|combine the sentences|rewrite using|meaning-preserving|naturalize|natural expression|formal|concise|style|register|transform the sentence|production training/.test(lower);
+
+  if (koreanMagicSignals) return MAGIC_SUBMODE.KOREAN_MAGIC;
+  if (globalMagicSignals) return MAGIC_SUBMODE.GLOBAL_MAGIC;
+
+  if (isKoreanPrompt) return MAGIC_SUBMODE.KOREAN_MAGIC;
+  return MAGIC_SUBMODE.GENERAL_MAGIC;
 }
 
 function extractUserProvidedSource(prompt = '') {
@@ -564,7 +700,7 @@ function buildSourceLabel(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
   }
 
   if (engineType === ENGINE_MODE.MIDDLE_TEXTBOOK) {
-    return { labelText: shortenSourceLabel(`Estimated Source: Middle School Textbook Passage | ${meta.level}`) };
+    return { labelText: shortenSourceLabel(`Estimated Source: Middle School Textbook | ${meta.level}`) };
   }
 
   if (engineType === ENGINE_MODE.MAGIC) {
@@ -579,13 +715,14 @@ function buildSourceLabel(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
 }
 
 function detectEngineTypeFromPrompt(prompt = '') {
-  const text = prompt.toLowerCase();
+  const text = String(prompt || '');
+  const lower = text.toLowerCase();
 
   const explicit = {
-    wormhole: /웜홀|wormhole|마커스웜홀/.test(text),
-    magic: /매직|magic|영작|rewrite|paraphrase|작문|서술형/.test(text),
+    wormhole: /웜홀|wormhole|마커스웜홀|어색한 것|옳지 않은 것|옳은 것|어법상|개수는|유형이 같은|same error|same pattern|grammatically incorrect|grammatically correct/.test(text),
+    magic: /매직|magic|영작|rewrite|paraphrase|작문|서술형|문장을 쓰시오|영어로 쓰시오|combine|rewrite using|production training/.test(lower) || /매직|영작|서술형|문장을 쓰시오|영어로 쓰시오/.test(text),
     vocab: /어휘|단어|vocab|vocabulary|어휘시험|단어시험/.test(text),
-    mock: /모의고사 변형|mocks exam|mock exam|21번 변형|22번 변형|빈칸|삽입|순서|흐름|summary|blank|insertion|sequence|flow|주제|요지|제목/.test(text),
+    mock: /모의고사 변형|mocks exam|mock exam|21번 변형|22번 변형|빈칸|삽입|순서|흐름|summary|blank|insertion|sequence|flow|주제|요지|제목|purpose|gist|title/.test(lower) || /모의고사 변형|빈칸|삽입|순서|흐름|주제|요지|제목/.test(text),
     middle: /교과서|중등|중학교|중1|중2|중3|내신|middle exam|middle textbook|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text)
   };
 
@@ -677,7 +814,7 @@ function getBaseInstructionByEngine(engineType) {
   }
 }
 
-function buildRoutingControl(engineType) {
+function buildRoutingControl(engineType, magicSubMode = MAGIC_SUBMODE.GENERAL_MAGIC) {
   if (engineType === ENGINE_MODE.ABC_STARTER) {
     return `
 [ENGINE ROUTING]
@@ -711,8 +848,10 @@ function buildRoutingControl(engineType) {
     return `
 [ENGINE ROUTING]
 - Selected Engine: MAGIC
+- Selected MAGIC Submode: ${magicSubMode}
 - Prioritize guided English production workbook logic.
-- Avoid defaulting to multiple choice.
+- Never default to multiple choice unless explicitly requested.
+- Keep submode identity obvious in the output pattern.
 `;
   }
 
@@ -729,6 +868,7 @@ function buildRoutingControl(engineType) {
 - Selected Engine: WORMHOLE
 - Prioritize high-difficulty grammar mock exam logic.
 - Increase discrimination and trap design.
+- Force question-type variety.
 - Avoid simple one-line repetitive blanks.
 `;
 }
@@ -752,21 +892,54 @@ function getItemCountByEngine(engineType) {
   }
 }
 
+function buildMagicSubmodeControl(submode = MAGIC_SUBMODE.GENERAL_MAGIC) {
+  if (submode === MAGIC_SUBMODE.KOREAN_MAGIC) {
+    return `
+[MAGIC SUBMODE ENFORCEMENT]
+- Final MAGIC submode: KOREAN_MAGIC
+- The set must clearly reflect Korean school writing-workbook logic.
+- Prioritize clue-based writing, guided translation, prompt-word writing, transformation, word-order reconstruction, and constrained sentence production.
+- The learner must be guided with clue words, target words, or grammatical conditions.
+- Do not let the set become free paraphrase only.
+`;
+  }
+
+  if (submode === MAGIC_SUBMODE.GLOBAL_MAGIC) {
+    return `
+[MAGIC SUBMODE ENFORCEMENT]
+- Final MAGIC submode: GLOBAL_MAGIC
+- The set must clearly reflect English-medium writing training logic.
+- Prioritize paraphrasing, combining, rewriting with target grammar, style-control rewriting, concise/natural/formal revision, and meaning-preserving transformation.
+- Do not let the set become Korean translation practice.
+`;
+  }
+
+  return `
+[MAGIC SUBMODE ENFORCEMENT]
+- Final MAGIC submode: GENERAL_MAGIC
+- Blend guided writing and rewriting.
+- Keep clues visible and maintain structured support.
+`;
+}
+
 const qualityControl = `
 [FINAL QUALITY GATE]
 Before finalizing the worksheet, silently verify all of the following:
 1. No internal headings such as Phase 1, Phase 2, Meaning Layer, Structure Layer, or Deep Dive.
 2. No repeated question stems testing the same point with small wording changes.
 3. In WORMHOLE mode, do not let the set collapse into mostly single-sentence blanks.
-4. In WORMHOLE mode, include comparison, revision, and transformation pressure.
-5. In MOCK_EXAM mode, force the required distribution across meaning, structure, blank, flow, vocabulary, and hybrid items.
-6. In MOCK_EXAM mode, no more than 3 direct detail questions.
-7. In MIDDLE_TEXTBOOK mode, remain middle-school appropriate but sharper than ordinary workbook output.
-8. In MAGIC mode, include at least 5 activity types.
-9. In VOCAB mode, extracted vocabulary must be passage-essential.
-10. Explanation lines must be specific enough to show the structural reason, not empty generic labels.
-11. Remove code fences and visible meta artifacts.
-12. Respect the selected mode even if keywords overlap.
+4. In WORMHOLE mode, include correct/incorrect, count-based, same-pattern, revision, and mixed-trap pressure.
+5. In WORMHOLE mode, ensure at least 3 count-type or same-pattern items are visibly present.
+6. In MOCK_EXAM mode, force the required distribution across meaning, structure, blank, flow, vocabulary, and hybrid items.
+7. In MOCK_EXAM mode, no more than 3 direct detail questions.
+8. In MIDDLE_TEXTBOOK mode, remain middle-school appropriate but sharper than ordinary workbook output.
+9. In MAGIC mode, include at least 5 activity types.
+10. In KOREAN_MAGIC, the set must visibly contain clue-based guided writing.
+11. In GLOBAL_MAGIC, the set must visibly contain paraphrase/combine/rewrite tasks.
+12. In VOCAB mode, extracted vocabulary must be passage-essential.
+13. Explanation lines must be specific enough to show the structural reason, not empty generic labels.
+14. Remove code fences and visible meta artifacts.
+15. Respect the selected final mode even if keywords overlap.
 `;
 
 function cleanOutputArtifacts(text = '') {
@@ -821,28 +994,57 @@ function ensureSingleSourceLabel(text = '', labelText = '') {
   return `${label}\n${cleaned}`.trim();
 }
 
-function isLowQualityOutput(text = '', engineType = ENGINE_MODE.WORMHOLE) {
+function countMatches(text = '', regex) {
+  return (String(text || '').match(regex) || []).length;
+}
+
+function isLowQualityOutput(text = '', engineType = ENGINE_MODE.WORMHOLE, magicSubMode = MAGIC_SUBMODE.GENERAL_MAGIC) {
   const lower = String(text || '').toLowerCase();
 
   const weakWormhole =
     engineType === ENGINE_MODE.WORMHOLE &&
-    ((lower.match(/fill in the blank/gi) || []).length >= 8) &&
-    !/how many|best revision|same meaning|preserves the meaning|compare|revision|transformation/gi.test(lower);
+    (
+      countMatches(lower, /fill in the blank/gi) >= 8 ||
+      !/how many|same pattern|same type of error|best revision|preserves the meaning|grammatically incorrect|grammatically correct/gi.test(lower)
+    );
 
   const weakMock =
     engineType === ENGINE_MODE.MOCK_EXAM &&
-    (!/blank|summary|insertion|sequence|flow|purpose|gist|vocabulary|hybrid/gi.test(lower) ||
-      (lower.match(/which of the following/gi) || []).length >= 12);
+    (
+      !/blank|summary|insertion|sequence|flow|purpose|gist|vocabulary|hybrid/gi.test(lower) ||
+      countMatches(lower, /which of the following/gi) >= 12
+    );
 
   const weakMiddle =
     engineType === ENGINE_MODE.MIDDLE_TEXTBOOK &&
-    ((lower.match(/fill in the blank/gi) || []).length >= 10) &&
+    countMatches(lower, /fill in the blank/gi) >= 10 &&
     !/revision|rewrite|transformation|structure|expand/gi.test(lower);
+
+  const weakMagicGeneral =
+    engineType === ENGINE_MODE.MAGIC &&
+    (
+      countMatches(lower, /paraphrase/gi) + countMatches(lower, /combine/gi) + countMatches(lower, /rewrite/gi) + countMatches(lower, /translate/gi) < 4
+    );
+
+  const weakKoreanMagic =
+    engineType === ENGINE_MODE.MAGIC &&
+    magicSubMode === MAGIC_SUBMODE.KOREAN_MAGIC &&
+    (
+      !/[가-힣]/.test(text) ||
+      (!/clue|단서|주어진|조건|활용하여|영어로 쓰시오|문장을 쓰시오/gi.test(text))
+    );
+
+  const weakGlobalMagic =
+    engineType === ENGINE_MODE.MAGIC &&
+    magicSubMode === MAGIC_SUBMODE.GLOBAL_MAGIC &&
+    (
+      !/paraphrase|combine|rewrite|natural|concise|formal/gi.test(lower)
+    );
 
   const weakExplanation =
     /correct tense usage|proper grammar usage|correct form only|identify verb form only/gi.test(lower);
 
-  return weakWormhole || weakMock || weakMiddle || weakExplanation;
+  return weakWormhole || weakMock || weakMiddle || weakMagicGeneral || weakKoreanMagic || weakGlobalMagic || weakExplanation;
 }
 
 // =========================
@@ -890,9 +1092,13 @@ module.exports = async function handler(req, res) {
   const normalizedPrompt = prompt.trim();
   const modeResolution = resolveFinalMode(mode, normalizedPrompt);
   const engineType = modeResolution.finalMode;
+  const magicSubMode = engineType === ENGINE_MODE.MAGIC
+    ? detectMagicSubMode(normalizedPrompt)
+    : null;
+
   const baseInstruction = getBaseInstructionByEngine(engineType);
   const detectedLanguage = detectPromptLanguage(normalizedPrompt);
-  const routingControl = buildRoutingControl(engineType);
+  const routingControl = buildRoutingControl(engineType, magicSubMode || MAGIC_SUBMODE.GENERAL_MAGIC);
   const itemCount = getItemCountByEngine(engineType);
   const sourceLabel = buildSourceLabel(normalizedPrompt, engineType);
 
@@ -934,6 +1140,11 @@ ${sourceLabel.labelText}
 `
     : '';
 
+  const magicSubmodeControl =
+    engineType === ENGINE_MODE.MAGIC
+      ? buildMagicSubmodeControl(magicSubMode)
+      : '';
+
   const fullSystemPrompt = [
     baseInstruction,
     routingControl,
@@ -942,6 +1153,7 @@ ${sourceLabel.labelText}
     vectorControl,
     sourceLabelControl,
     modeAlignmentControl,
+    magicSubmodeControl,
     qualityControl
   ].join('\n');
 
@@ -951,10 +1163,10 @@ ${sourceLabel.labelText}
       max_output_tokens:
         engineType === ENGINE_MODE.ABC_STARTER ? 1400 :
         engineType === ENGINE_MODE.VOCAB_BUILDER ? 2800 :
-        engineType === ENGINE_MODE.MAGIC ? 3800 :
-        engineType === ENGINE_MODE.WORMHOLE ? 5000 :
-        engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4400 :
-        engineType === ENGINE_MODE.MOCK_EXAM ? 3900 :
+        engineType === ENGINE_MODE.MAGIC ? 4200 :
+        engineType === ENGINE_MODE.WORMHOLE ? 5600 :
+        engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4700 :
+        engineType === ENGINE_MODE.MOCK_EXAM ? 4100 :
         3400,
       input: [
         {
@@ -970,21 +1182,21 @@ ${sourceLabel.labelText}
         {
           type: 'file_search',
           vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-          max_num_results: 4
+          max_num_results: 5
         }
       ]
     });
 
     let finalText = response.output_text || '';
 
-    if (normalizedPrompt.length < 5000 && isLowQualityOutput(finalText, engineType)) {
+    if (normalizedPrompt.length < 5000 && isLowQualityOutput(finalText, engineType, magicSubMode || MAGIC_SUBMODE.GENERAL_MAGIC)) {
       response = await openai.responses.create({
         model: 'gpt-4o-mini',
         max_output_tokens:
-          engineType === ENGINE_MODE.WORMHOLE ? 5200 :
-          engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4600 :
-          engineType === ENGINE_MODE.MOCK_EXAM ? 4100 :
-          engineType === ENGINE_MODE.MAGIC ? 4300 :
+          engineType === ENGINE_MODE.WORMHOLE ? 5900 :
+          engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4900 :
+          engineType === ENGINE_MODE.MOCK_EXAM ? 4300 :
+          engineType === ENGINE_MODE.MAGIC ? 4600 :
           3600,
         input: [
           {
@@ -993,15 +1205,17 @@ ${sourceLabel.labelText}
               fullSystemPrompt +
               `
 [RETRY OVERRIDE]
-The previous draft was too generic or insufficiently aligned.
+The previous draft was too generic, repetitive, or insufficiently aligned.
 
 Mandatory corrections:
 - Respect final mode exactly: ${engineType}
-- Increase discrimination power
+${engineType === ENGINE_MODE.MAGIC ? `- Respect final MAGIC submode exactly: ${magicSubMode}` : ''}
+- Increase discrimination power or production depth
 - Remove repetitive patterns
 - Maintain exactly one source label
 - Improve explanation specificity
 - Keep premium academy / publication usability
+- Do not submit a draft that could be mistaken for a generic worksheet
 `
           },
           {
@@ -1013,7 +1227,7 @@ Mandatory corrections:
           {
             type: 'file_search',
             vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-            max_num_results: 4
+            max_num_results: 5
           }
         ]
       });
@@ -1029,6 +1243,7 @@ Mandatory corrections:
       requestedMode: modeResolution.requestedMode,
       detectedMode: modeResolution.detectedMode,
       finalMode: modeResolution.finalMode,
+      magicSubMode,
       modeAdjusted: modeResolution.modeAdjusted,
       modeNotice: modeResolution.modeNotice,
       itemCount,
