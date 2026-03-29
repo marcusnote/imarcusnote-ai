@@ -1,4 +1,12 @@
-"dependencies": {
-  "@sparticuz/chromium": "^123.0.1",
-  "puppeteer-core": "^21.6.0"
+{
+  "name": "imarcusnote-ai",
+  "version": "1.0.0",
+  "private": true,
+  "main": "api/generate.js",
+  "scripts": {
+    "start": "node api/generate.js"
+  },
+  "dependencies": {
+    "openai": "^4.86.1"
+  }
 }
