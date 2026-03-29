@@ -14,7 +14,7 @@ const ENGINE_MODE = {
 };
 
 // =========================
-// 1) WORMHOLE — 2ND REINFORCED
+// 1) WORMHOLE — 3RD REINFORCED
 // =========================
 const wormholeInstruction = `
 You are the core generation engine of I•MARCUSNOTE's WORMHOLE mode.
@@ -61,7 +61,7 @@ Across Questions 1-20, you must distribute question types as follows:
 [MANDATORY COMPLEXITY RULE]
 At least:
 - 6 items must involve 2 or more full sentences
-- 4 items must involve comparison among 3 or more sentence fragments or choices with near-correct distractors
+- 4 items must involve comparison among 3 or more sentence fragments or near-correct choices
 - 4 items must require meaning-preserving structural judgment
 - 3 items must feel genuinely upper-level / premium academy difficulty
 
@@ -153,17 +153,6 @@ Explanations must:
 - mention the actual trap type when relevant
 - be concise but not shallow
 - avoid generic lines such as "Correct tense usage" only
-
-[ANTI-LOW-QUALITY RULE]
-Do NOT produce:
-- simplistic workbook drills
-- all-easy internal-test items
-- weak explanation stubs
-- teacher notes or meta commentary
-- repetitive sentence shells
-
-[KEY PRINCIPLE]
-WORMHOLE is about detecting structure, surviving traps, and mastering grammar under exam conditions.
 `;
 
 // =========================
@@ -268,7 +257,7 @@ Include a clear answer key and short teacher-friendly solution notes.
 `;
 
 // =========================
-// 4) MOCK EXAM — 2ND REINFORCED
+// 4) MOCK EXAM — 3RD REINFORCED
 // =========================
 const mockExamInstruction = `
 You are the I•MARCUSNOTE Mock Exam Transformation Engine.
@@ -344,11 +333,6 @@ Do NOT produce:
 After all items, provide:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
 
-Format:
-1) ③
-2) ①
-3) ⑤
-
 [EXPLANATION RULE]
 Then provide:
 ### Structural Logic 1-5
@@ -360,9 +344,9 @@ Explanations must:
 - identify why the trap is wrong
 - remain concise but defensible
 `;
- 
+
 // =========================
-// 5) MIDDLE SCHOOL TEXTBOOK — 2ND REINFORCED
+// 5) MIDDLE SCHOOL TEXTBOOK — 3RD REINFORCED
 // =========================
 const middleTextbookInstruction = `
 You are the I•MARCUSNOTE Middle School Textbook Transformation Engine.
@@ -568,9 +552,7 @@ function buildSourceLabel(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
   const userSource = extractUserProvidedSource(prompt);
 
   if (userSource) {
-    return {
-      labelText: shortenSourceLabel(`Source: ${userSource}`)
-    };
+    return { labelText: shortenSourceLabel(`Source: ${userSource}`) };
   }
 
   const meta = estimatePassageMeta(prompt, engineType);
@@ -578,55 +560,40 @@ function buildSourceLabel(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
   if (engineType === ENGINE_MODE.MOCK_EXAM) {
     const parts = ['High School Mock Exam Passage', meta.level];
     if (meta.itemType) parts.push(meta.itemType);
-    return {
-      labelText: shortenSourceLabel(`Estimated Source: ${parts.join(' | ')}`)
-    };
+    return { labelText: shortenSourceLabel(`Estimated Source: ${parts.join(' | ')}`) };
   }
 
   if (engineType === ENGINE_MODE.MIDDLE_TEXTBOOK) {
-    return {
-      labelText: shortenSourceLabel(`Estimated Source: Middle School Textbook Passage | ${meta.level}`)
-    };
+    return { labelText: shortenSourceLabel(`Estimated Source: Middle School Textbook Passage | ${meta.level}`) };
   }
 
   if (engineType === ENGINE_MODE.MAGIC) {
-    return {
-      labelText: `Source Classification: MARCUS Production Selection - ${meta.topic}`
-    };
+    return { labelText: `Source Classification: MARCUS Production Selection - ${meta.topic}` };
   }
 
   if (engineType === ENGINE_MODE.VOCAB_BUILDER) {
-    return {
-      labelText: `Source Classification: MARCUS Vocabulary Selection - ${meta.topic}`
-    };
+    return { labelText: `Source Classification: MARCUS Vocabulary Selection - ${meta.topic}` };
   }
 
-  return {
-    labelText: `Source Classification: MARCUS Academic Selection - ${meta.topic}`
-  };
+  return { labelText: `Source Classification: MARCUS Academic Selection - ${meta.topic}` };
 }
 
 function detectEngineTypeFromPrompt(prompt = '') {
   const text = prompt.toLowerCase();
 
-  const isExplicitWormhole = /웜홀|wormhole/.test(text);
-  const isExplicitMagic = /매직|magic/.test(text);
-  const isExplicitMiddle = /중등문법|중등 내신|middle exam|middle textbook/.test(text);
-  const isExplicitMock = /mocks exam|mock exam|모의고사 변형/.test(text);
+  const explicit = {
+    wormhole: /웜홀|wormhole|마커스웜홀/.test(text),
+    magic: /매직|magic|영작|rewrite|paraphrase|작문|서술형/.test(text),
+    vocab: /어휘|단어|vocab|vocabulary|어휘시험|단어시험/.test(text),
+    mock: /모의고사 변형|mocks exam|mock exam|21번 변형|22번 변형|빈칸|삽입|순서|흐름|summary|blank|insertion|sequence|flow|주제|요지|제목/.test(text),
+    middle: /교과서|중등|중학교|중1|중2|중3|내신|middle exam|middle textbook|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text)
+  };
 
-  const isVocab = /vocab|vocabulary|단어|어휘|어휘시험|어휘목록|단어시험/.test(text);
-  const isMagic = /매직|magic|영작|서술형|작문|writing|composition|rewrite|paraphrase|패러프레이징|고쳐쓰기/.test(text);
-  const isMiddleTextbook = /교과서|중학교|중등|중1|중2|중3|내신|textbook|middle|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text);
-  const isMockExam = /모의고사|학평|수능|고1|고2|고3|평가원|ebs|mock|passage|analysis|csat|변형|주제|제목|요지|빈칸|삽입|순서|흐름|insertion|sequence|flow/.test(text);
-
-  if (isExplicitWormhole) return ENGINE_MODE.WORMHOLE;
-  if (isExplicitMagic) return ENGINE_MODE.MAGIC;
-  if (isExplicitMiddle) return ENGINE_MODE.MIDDLE_TEXTBOOK;
-  if (isExplicitMock) return ENGINE_MODE.MOCK_EXAM;
-  if (isVocab) return ENGINE_MODE.VOCAB_BUILDER;
-  if (isMagic) return ENGINE_MODE.MAGIC;
-  if (isMiddleTextbook) return ENGINE_MODE.MIDDLE_TEXTBOOK;
-  if (isMockExam) return ENGINE_MODE.MOCK_EXAM;
+  if (explicit.wormhole) return ENGINE_MODE.WORMHOLE;
+  if (explicit.magic) return ENGINE_MODE.MAGIC;
+  if (explicit.vocab) return ENGINE_MODE.VOCAB_BUILDER;
+  if (explicit.mock) return ENGINE_MODE.MOCK_EXAM;
+  if (explicit.middle) return ENGINE_MODE.MIDDLE_TEXTBOOK;
 
   return ENGINE_MODE.WORMHOLE;
 }
@@ -642,6 +609,54 @@ function normalizeMode(mode, prompt = '') {
   if (requested === ENGINE_MODE.VOCAB_BUILDER) return ENGINE_MODE.VOCAB_BUILDER;
 
   return detectEngineTypeFromPrompt(prompt);
+}
+
+function resolveFinalMode(requestedMode, prompt = '') {
+  const detectedMode = detectEngineTypeFromPrompt(prompt);
+  const requested = normalizeMode(requestedMode || '', '');
+  const hasRequested = !!String(requestedMode || '').trim();
+
+  if (!hasRequested) {
+    return {
+      requestedMode: null,
+      detectedMode,
+      finalMode: detectedMode,
+      modeAdjusted: false,
+      modeNotice: ''
+    };
+  }
+
+  if (requested === detectedMode) {
+    return {
+      requestedMode: requested,
+      detectedMode,
+      finalMode: requested,
+      modeAdjusted: false,
+      modeNotice: ''
+    };
+  }
+
+  const explicitPriority = [
+    ENGINE_MODE.WORMHOLE,
+    ENGINE_MODE.MAGIC,
+    ENGINE_MODE.VOCAB_BUILDER,
+    ENGINE_MODE.MOCK_EXAM,
+    ENGINE_MODE.MIDDLE_TEXTBOOK,
+    ENGINE_MODE.ABC_STARTER
+  ];
+
+  const finalMode = explicitPriority.includes(detectedMode) ? detectedMode : requested;
+
+  return {
+    requestedMode: requested,
+    detectedMode,
+    finalMode,
+    modeAdjusted: finalMode !== requested,
+    modeNotice:
+      finalMode !== requested
+        ? `Input content matched ${finalMode} more strongly than ${requested}, so the engine was adjusted automatically.`
+        : ''
+  };
 }
 
 function getBaseInstructionByEngine(engineType) {
@@ -759,6 +774,7 @@ function cleanOutputArtifacts(text = '') {
     .replace(/```plaintext/gi, '')
     .replace(/```/g, '')
     .replace(/&nbsp;/g, ' ')
+    .replace(/\u00a0/g, ' ')
     .replace(/©\s*2026\s*MARCUSNOTE\.\s*All rights reserved\./gi, '')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
@@ -808,36 +824,25 @@ function ensureSingleSourceLabel(text = '', labelText = '') {
 function isLowQualityOutput(text = '', engineType = ENGINE_MODE.WORMHOLE) {
   const lower = String(text || '').toLowerCase();
 
-  const badSignals = [
-    'phase 1',
-    'phase 2',
-    'meaning layer',
-    'structure layer',
-    'deep dive',
-    '```'
-  ];
-
-  const badSignalCount = badSignals.reduce((acc, s) => acc + (lower.includes(s) ? 1 : 0), 0);
-
   const weakWormhole =
     engineType === ENGINE_MODE.WORMHOLE &&
-    ((lower.match(/①/g) || []).length >= 15) &&
-    (lower.match(/choose the correct|fill in the blank/gi) || []).length >= 10 &&
-    !/count|how many|best revision|preserves the meaning|same meaning|rewrite/gi.test(lower);
+    ((lower.match(/fill in the blank/gi) || []).length >= 8) &&
+    !/how many|best revision|same meaning|preserves the meaning|compare|revision|transformation/gi.test(lower);
 
   const weakMock =
     engineType === ENGINE_MODE.MOCK_EXAM &&
-    !/insertion|sequence|flow|blank|summary|implication|purpose|gist|hybrid/gi.test(lower);
+    (!/blank|summary|insertion|sequence|flow|purpose|gist|vocabulary|hybrid/gi.test(lower) ||
+      (lower.match(/which of the following/gi) || []).length >= 12);
 
   const weakMiddle =
     engineType === ENGINE_MODE.MIDDLE_TEXTBOOK &&
     ((lower.match(/fill in the blank/gi) || []).length >= 10) &&
-    !/revision|rewrite|transformation|structure/gi.test(lower);
+    !/revision|rewrite|transformation|structure|expand/gi.test(lower);
 
   const weakExplanation =
-    /correct tense usage|proper grammar usage|correct form only/gi.test(lower);
+    /correct tense usage|proper grammar usage|correct form only|identify verb form only/gi.test(lower);
 
-  return badSignalCount >= 1 || weakWormhole || weakMock || weakMiddle || weakExplanation;
+  return weakWormhole || weakMock || weakMiddle || weakExplanation;
 }
 
 // =========================
@@ -883,7 +888,8 @@ module.exports = async function handler(req, res) {
   }
 
   const normalizedPrompt = prompt.trim();
-  const engineType = normalizeMode(mode, normalizedPrompt);
+  const modeResolution = resolveFinalMode(mode, normalizedPrompt);
+  const engineType = modeResolution.finalMode;
   const baseInstruction = getBaseInstructionByEngine(engineType);
   const detectedLanguage = detectPromptLanguage(normalizedPrompt);
   const routingControl = buildRoutingControl(engineType);
@@ -917,6 +923,17 @@ ${sourceLabel.labelText}
 - Do not fall back to generic worksheet behavior.
 `;
 
+  const modeAlignmentControl = modeResolution.modeAdjusted
+    ? `
+[MODE AUTO-CORRECTION]
+- The user's selected button mode and prompt content did not match.
+- Requested mode: ${modeResolution.requestedMode}
+- Detected mode from prompt: ${modeResolution.detectedMode}
+- Final enforced mode: ${modeResolution.finalMode}
+- Generate output strictly in the final enforced mode.
+`
+    : '';
+
   const fullSystemPrompt = [
     baseInstruction,
     routingControl,
@@ -924,6 +941,7 @@ ${sourceLabel.labelText}
     quantityControl,
     vectorControl,
     sourceLabelControl,
+    modeAlignmentControl,
     qualityControl
   ].join('\n');
 
@@ -934,9 +952,9 @@ ${sourceLabel.labelText}
         engineType === ENGINE_MODE.ABC_STARTER ? 1400 :
         engineType === ENGINE_MODE.VOCAB_BUILDER ? 2800 :
         engineType === ENGINE_MODE.MAGIC ? 3800 :
-        engineType === ENGINE_MODE.WORMHOLE ? 4700 :
-        engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4200 :
-        engineType === ENGINE_MODE.MOCK_EXAM ? 3600 :
+        engineType === ENGINE_MODE.WORMHOLE ? 5000 :
+        engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4400 :
+        engineType === ENGINE_MODE.MOCK_EXAM ? 3900 :
         3400,
       input: [
         {
@@ -963,10 +981,10 @@ ${sourceLabel.labelText}
       response = await openai.responses.create({
         model: 'gpt-4o-mini',
         max_output_tokens:
-          engineType === ENGINE_MODE.WORMHOLE ? 5000 :
-          engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4400 :
-          engineType === ENGINE_MODE.MOCK_EXAM ? 3900 :
-          engineType === ENGINE_MODE.MAGIC ? 4200 :
+          engineType === ENGINE_MODE.WORMHOLE ? 5200 :
+          engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4600 :
+          engineType === ENGINE_MODE.MOCK_EXAM ? 4100 :
+          engineType === ENGINE_MODE.MAGIC ? 4300 :
           3600,
         input: [
           {
@@ -975,10 +993,10 @@ ${sourceLabel.labelText}
               fullSystemPrompt +
               `
 [RETRY OVERRIDE]
-The previous draft was too generic or insufficiently aligned to the selected MARCUSNOTE mode.
+The previous draft was too generic or insufficiently aligned.
 
 Mandatory corrections:
-- Respect the selected mode exactly: ${engineType}
+- Respect final mode exactly: ${engineType}
 - Increase discrimination power
 - Remove repetitive patterns
 - Maintain exactly one source label
@@ -1008,7 +1026,11 @@ Mandatory corrections:
 
     return res.status(200).json({
       ok: true,
-      mode: engineType,
+      requestedMode: modeResolution.requestedMode,
+      detectedMode: modeResolution.detectedMode,
+      finalMode: modeResolution.finalMode,
+      modeAdjusted: modeResolution.modeAdjusted,
+      modeNotice: modeResolution.modeNotice,
       itemCount,
       response: finalText
     });
