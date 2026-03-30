@@ -48,6 +48,39 @@ function isKorean(text = "") {
   return /[가-힣]/.test(text);
 }
 
+function safeJsonParse(text) {
+  try {
+    return JSON.parse(text);
+  } catch (_) {
+    return null;
+  }
+}
+
+function getOptionMark(index) {
+  return ["①", "②", "③", "④", "⑤"][index] || `${index + 1}.`;
+}
+
+function normalizeAnswerValue(answer) {
+  const raw = ensureString(answer);
+
+  if (!raw) return "";
+
+  const circledMap = {
+    "1": "①",
+    "2": "②",
+    "3": "③",
+    "4": "④",
+    "5": "⑤",
+    "①": "①",
+    "②": "②",
+    "③": "③",
+    "④": "④",
+    "⑤": "⑤",
+  };
+
+  return circledMap[raw] || raw;
+}
+
 /* ================= 요청 정규화 ================= */
 
 function normalizeBody(body = {}) {
@@ -76,7 +109,7 @@ function inferEngine(prompt = "") {
 
 /* ================= 프롬프트 ================= */
 
-function buildPrompt({ engine, title, prompt, locale }) {
+function buildBasePrompt({ engine, title, prompt, locale }) {
   return `
 You are a professional worksheet generator for teachers and academies.
 
@@ -99,9 +132,11 @@ JSON SCHEMA:
   "questions": [
     {
       "number": 1,
+      "type": "string",
       "stem": "string",
       "options": ["string", "string", "string", "string", "string"],
-      "answer": "string"
+      "answer": "string",
+      "explanation": "string"
     }
   ]
 }
@@ -124,6 +159,100 @@ ${prompt}
 `;
 }
 
+function buildWormholePrompt({ title, prompt, locale }) {
+  return `
+You are the premium assessment engine for I•marcusnote.
+
+ENGINE ID: WORMHOLE
+ENGINE PURPOSE: High-difficulty grammar discrimination, transformation, trap-choice design, and exam-style mastery testing.
+LOCALE: ${locale}
+
+CORE IDENTITY:
+- This is NOT a beginner worksheet.
+- This is NOT a generic grammar quiz.
+- This is a premium, teacher-ready, high-difficulty worksheet for Korean school-exam and academy use.
+- The worksheet must feel sharper, trickier, and more refined than ordinary workbook questions.
+
+NON-NEGOTIABLE RULES:
+1. Generate exactly 25 questions.
+2. All questions must be multiple choice with exactly 5 options.
+3. Include answers and concise explanations for every item.
+4. Vary question types.
+5. Avoid repetitive patterns.
+6. Avoid overly easy definition-only questions except sparingly.
+7. Use plausible trap choices.
+8. Output ONLY valid JSON.
+9. No markdown fences.
+10. No extra commentary outside JSON.
+
+MANDATORY DIFFICULTY FEATURES:
+- Include a balanced mix of:
+  - correct vs incorrect sentence discrimination
+  - error identification
+  - fill-in-the-blank with close distractors
+  - sentence transformation
+  - context-based grammar choice
+  - mixed grammar environment
+- At least some items must require contextual reasoning, not simple form spotting.
+- At least some items must include plausible Korean learner traps.
+- The worksheet should feel suitable for advanced middle-school / lower high-school academy difficulty.
+
+QUALITY RULES:
+- All English must sound natural.
+- Korean instructions should be polished and teacher-facing when the user prompt is Korean.
+- No childish wording.
+- No duplicated questions.
+- No mismatch between instruction and options.
+- No ambiguous multiple-correct items.
+
+EXPLANATION RULE:
+For each item, explain briefly:
+- why the correct answer is correct
+- what the main trap is
+
+JSON SCHEMA:
+{
+  "mainTitle": "string",
+  "difficultyLabel": "High Difficulty",
+  "targetGrammar": "string",
+  "questions": [
+    {
+      "number": 1,
+      "type": "grammar_discrimination",
+      "stem": "string",
+      "options": ["string", "string", "string", "string", "string"],
+      "answer": "①",
+      "explanation": "string"
+    }
+  ]
+}
+
+FINAL SELF-CHECK:
+- exactly 25 questions?
+- all items have 5 options?
+- answer included for every item?
+- explanation included for every item?
+- difficulty truly high enough for WORMHOLE?
+- no duplicated stems?
+- no broken English?
+- JSON only?
+
+TITLE:
+${title}
+
+USER REQUEST:
+${prompt}
+`;
+}
+
+function buildPrompt({ engine, title, prompt, locale }) {
+  if (engine === ENGINE_MODE.WORMHOLE) {
+    return buildWormholePrompt({ title, prompt, locale });
+  }
+
+  return buildBasePrompt({ engine, title, prompt, locale });
+}
+
 /* ================= 모델 호출 ================= */
 
 async function callModel(prompt) {
@@ -141,43 +270,164 @@ async function callModel(prompt) {
     throw new Error("JSON parse failed: model did not return a valid JSON object");
   }
 
-  let parsed;
-  try {
-    parsed = JSON.parse(text.slice(start, end + 1));
-  } catch (err) {
-    throw new Error("JSON parse failed: " + err.message);
-  }
+  const jsonText = text.slice(start, end + 1);
+  const parsed = safeJsonParse(jsonText);
 
   if (!parsed || typeof parsed !== "object") {
-    throw new Error("Invalid packet: parsed result is not an object");
-  }
-
-  if (!parsed.mainTitle) {
-    parsed.mainTitle = "MARCUSNOTE WORKSHEET";
-  }
-
-  parsed.questions = ensureArray(parsed.questions)
-    .map((q, index) => ({
-      number: Number(q?.number) || index + 1,
-      stem: ensureString(q?.stem, `Question ${index + 1}`),
-      options: ensureArray(q?.options).map((o) => ensureString(o)).filter(Boolean),
-      answer: ensureString(q?.answer, ""),
-    }))
-    .filter((q) => q.stem);
-
-  if (!parsed.questions.length) {
-    throw new Error("Invalid packet: no questions returned");
+    throw new Error("JSON parse failed: invalid JSON object");
   }
 
   return parsed;
 }
 
+/* ================= 패킷 정리 ================= */
+
+function normalizePacket(packet, engine, fallbackTitle) {
+  const normalized = {
+    mainTitle: ensureString(packet?.mainTitle, fallbackTitle || "MARCUSNOTE WORKSHEET"),
+    difficultyLabel: ensureString(packet?.difficultyLabel),
+    targetGrammar: ensureString(packet?.targetGrammar),
+    questions: ensureArray(packet?.questions).map((q, index) => {
+      const options = ensureArray(q?.options)
+        .map((o) => ensureString(o))
+        .filter(Boolean)
+        .slice(0, 5);
+
+      return {
+        number: Number(q?.number) || index + 1,
+        type: ensureString(q?.type, engine === ENGINE_MODE.WORMHOLE ? "grammar_question" : "general"),
+        stem: ensureString(q?.stem, `Question ${index + 1}`),
+        options,
+        answer: normalizeAnswerValue(q?.answer),
+        explanation: ensureString(q?.explanation),
+      };
+    }),
+  };
+
+  normalized.questions = normalized.questions.filter((q) => q.stem);
+
+  return normalized;
+}
+
+/* ================= 검수 ================= */
+
+function validateCommonPacket(packet, engine) {
+  const errors = [];
+  const questions = ensureArray(packet?.questions);
+
+  const requiredCount = engine === ENGINE_MODE.VOCAB_BUILDER ? null : 25;
+  if (requiredCount && questions.length !== requiredCount) {
+    errors.push(`Question count must be exactly ${requiredCount}.`);
+  }
+
+  questions.forEach((q, index) => {
+    if (!q.stem || q.stem.length < 5) {
+      errors.push(`Question ${index + 1} stem is too short.`);
+    }
+
+    if (!q.answer) {
+      errors.push(`Question ${index + 1} is missing answer.`);
+    }
+  });
+
+  return {
+    ok: errors.length === 0,
+    errors,
+  };
+}
+
+function validateWormholePacket(packet) {
+  const errors = [];
+  const warnings = [];
+  const questions = ensureArray(packet?.questions);
+
+  if (questions.length !== 25) {
+    errors.push("WORMHOLE requires exactly 25 questions.");
+  }
+
+  const seenStems = new Set();
+  const typeCount = {};
+  const answerCount = { "①": 0, "②": 0, "③": 0, "④": 0, "⑤": 0 };
+
+  let explanationMissingCount = 0;
+  let weakTypeCount = 0;
+
+  questions.forEach((q, index) => {
+    const n = index + 1;
+
+    if (!q.stem || q.stem.length < 8) {
+      errors.push(`Question ${n} stem is too short.`);
+    }
+
+    if (!Array.isArray(q.options) || q.options.length !== 5) {
+      errors.push(`Question ${n} must have exactly 5 options.`);
+    }
+
+    if (!q.answer) {
+      errors.push(`Question ${n} is missing answer.`);
+    }
+
+    if (!q.explanation || q.explanation.length < 8) {
+      explanationMissingCount += 1;
+    }
+
+    const stemKey = ensureString(q.stem).toLowerCase();
+    if (stemKey) {
+      if (seenStems.has(stemKey)) {
+        errors.push(`Question ${n} is duplicated.`);
+      }
+      seenStems.add(stemKey);
+    }
+
+    const type = ensureString(q.type, "unknown");
+    typeCount[type] = (typeCount[type] || 0) + 1;
+
+    if (!/discrimination|error|blank|transformation|context|comparison|judgment/i.test(type)) {
+      weakTypeCount += 1;
+    }
+
+    if (answerCount[q.answer] != null) {
+      answerCount[q.answer] += 1;
+    }
+  });
+
+  if (explanationMissingCount > 0) {
+    errors.push(`WORMHOLE explanation missing or too short in ${explanationMissingCount} item(s).`);
+  }
+
+  const dominantTypeTooHigh = Object.values(typeCount).some((count) => count >= 12);
+  if (dominantTypeTooHigh) {
+    warnings.push("Too many questions share the same type pattern.");
+  }
+
+  if (weakTypeCount >= 15) {
+    warnings.push("Too many questions are labeled in a weak/general way.");
+  }
+
+  const maxAnswerSpread = Math.max(...Object.values(answerCount));
+  if (maxAnswerSpread >= 10) {
+    warnings.push("Answer distribution looks too concentrated.");
+  }
+
+  return {
+    ok: errors.length === 0,
+    errors,
+    warnings,
+  };
+}
+
 /* ================= 포맷 ================= */
 
-function format(packet) {
+function format(packet, engine) {
   const lines = [];
 
   lines.push(packet.mainTitle || "MARCUSNOTE WORKSHEET");
+  if (engine === ENGINE_MODE.WORMHOLE && packet.difficultyLabel) {
+    lines.push(`[${packet.difficultyLabel}]`);
+  }
+  if (packet.targetGrammar) {
+    lines.push(`Target Grammar: ${packet.targetGrammar}`);
+  }
   lines.push("");
 
   packet.questions.forEach((q) => {
@@ -185,8 +435,7 @@ function format(packet) {
 
     if (q.options?.length) {
       q.options.forEach((o, i) => {
-        const mark = ["①", "②", "③", "④", "⑤"][i] || `${i + 1}.`;
-        lines.push(`${mark} ${o}`);
+        lines.push(`${getOptionMark(i)} ${o}`);
       });
     }
 
@@ -197,7 +446,11 @@ function format(packet) {
   lines.push("");
 
   packet.questions.forEach((q) => {
-    lines.push(`${q.number}) ${q.answer}`);
+    if (q.explanation) {
+      lines.push(`${q.number}) ${q.answer} — ${q.explanation}`);
+    } else {
+      lines.push(`${q.number}) ${q.answer}`);
+    }
   });
 
   return lines.join("\n");
@@ -271,19 +524,40 @@ module.exports = async function handler(req, res) {
       locale,
     });
 
-    const packet = await callModel(prompt);
-    const text = format(packet);
+    const rawPacket = await callModel(prompt);
+    const packet = normalizePacket(rawPacket, engine, body.worksheetTitle);
+
+    const commonValidation = validateCommonPacket(packet, engine);
+    if (!commonValidation.ok) {
+      throw new Error("Common validation failed: " + commonValidation.errors.join(" | "));
+    }
+
+    let validationWarnings = [];
+    if (engine === ENGINE_MODE.WORMHOLE) {
+      const wormholeValidation = validateWormholePacket(packet);
+
+      if (!wormholeValidation.ok) {
+        throw new Error("WORMHOLE validation failed: " + wormholeValidation.errors.join(" | "));
+      }
+
+      validationWarnings = wormholeValidation.warnings || [];
+    }
+
+    const text = format(packet, engine);
 
     return res.status(200).json({
       ok: true,
       output: text,
       questions: packet.questions,
       mainTitle: packet.mainTitle,
+      difficultyLabel: packet.difficultyLabel,
+      targetGrammar: packet.targetGrammar,
       worksheetTitle: body.worksheetTitle,
       academyName: body.academyName,
       engine,
       engineLabel: ENGINE_LABELS[engine] || engine,
       model: OPENAI_MODEL,
+      warnings: validationWarnings,
     });
   } catch (e) {
     console.error("[generate.js] error:", e);
