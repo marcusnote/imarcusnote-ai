@@ -30,10 +30,6 @@ const MAGIC_SUBMODE = {
   GENERAL_MAGIC: "GENERAL_MAGIC",
 };
 
-/* =========================
- * 기본 유틸
- * ========================= */
-
 function ensureString(v, fallback = "") {
   if (typeof v === "string") return v.trim();
   if (v == null) return fallback;
@@ -66,10 +62,6 @@ function detectLocale(text = "") {
   return "en";
 }
 
-/* =========================
- * 요청 정규화
- * ========================= */
-
 function normalizeBody(body = {}) {
   return {
     selectedEngine: pickFirst(body.selectedEngine, body.mode),
@@ -79,10 +71,6 @@ function normalizeBody(body = {}) {
   };
 }
 
-/* =========================
- * 엔진 추론 / 보정
- * ========================= */
-
 function inferEngine(prompt = "") {
   const text = String(prompt || "");
   const lower = text.toLowerCase();
@@ -90,23 +78,18 @@ function inferEngine(prompt = "") {
   if (/웜홀|wormhole|마커스웜홀|고난도|어법상|same error|same pattern|grammatically incorrect|grammatically correct/.test(lower)) {
     return ENGINE_MODE.WORMHOLE;
   }
-
   if (/매직|magic|영작|서술형|rewrite|paraphrase|combine|production training/.test(lower)) {
     return ENGINE_MODE.MAGIC;
   }
-
   if (/어휘|단어|vocab|vocabulary/.test(lower)) {
     return ENGINE_MODE.VOCAB_BUILDER;
   }
-
   if (/모의|mock|빈칸|삽입|순서|흐름|summary|blank|insertion|sequence|title|gist|purpose/.test(lower)) {
     return ENGINE_MODE.MOCK_EXAM;
   }
-
   if (/내신|교과서|중1|중2|중3|middle textbook|lesson|unit|천재|동아|비상|능률|ybm|미래엔/.test(lower)) {
     return ENGINE_MODE.MIDDLE_TEXTBOOK;
   }
-
   if (/초등|starter|기초|abc/.test(lower)) {
     return ENGINE_MODE.ABC_STARTER;
   }
@@ -117,7 +100,6 @@ function inferEngine(prompt = "") {
 function resolveEngine(selectedEngine, prompt = "") {
   const requested = ensureString(selectedEngine).toUpperCase();
   const detected = inferEngine(prompt);
-
   const validModes = new Set(Object.values(ENGINE_MODE));
 
   if (!requested || !validModes.has(requested)) {
@@ -140,25 +122,14 @@ function resolveEngine(selectedEngine, prompt = "") {
     };
   }
 
-  const strongKeywordModes = new Set([
-    ENGINE_MODE.WORMHOLE,
-    ENGINE_MODE.MAGIC,
-    ENGINE_MODE.VOCAB_BUILDER,
-    ENGINE_MODE.MOCK_EXAM,
-    ENGINE_MODE.MIDDLE_TEXTBOOK,
-    ENGINE_MODE.ABC_STARTER,
-  ]);
-
-  const finalMode = strongKeywordModes.has(detected) ? detected : requested;
-
   return {
     requestedMode: requested,
     detectedMode: detected,
-    finalMode,
-    adjusted: finalMode !== requested,
+    finalMode: detected,
+    adjusted: detected !== requested,
     notice:
-      finalMode !== requested
-        ? `Input content matched ${finalMode} more strongly than ${requested}, so the engine was adjusted automatically.`
+      detected !== requested
+        ? `Input content matched ${detected} more strongly than ${requested}, so the engine was adjusted automatically.`
         : "",
   };
 }
@@ -182,10 +153,6 @@ function detectMagicSubMode(prompt = "") {
   return MAGIC_SUBMODE.GENERAL_MAGIC;
 }
 
-/* =========================
- * 수량 / 토큰
- * ========================= */
-
 function getItemCountByEngine(engine) {
   switch (engine) {
     case ENGINE_MODE.ABC_STARTER:
@@ -194,9 +161,6 @@ function getItemCountByEngine(engine) {
       return 15;
     case ENGINE_MODE.VOCAB_BUILDER:
       return 20;
-    case ENGINE_MODE.MIDDLE_TEXTBOOK:
-    case ENGINE_MODE.WORMHOLE:
-    case ENGINE_MODE.MAGIC:
     default:
       return 25;
   }
@@ -205,24 +169,20 @@ function getItemCountByEngine(engine) {
 function getMaxOutputTokens(engine) {
   switch (engine) {
     case ENGINE_MODE.ABC_STARTER:
-      return 1600;
+      return 1400;
     case ENGINE_MODE.VOCAB_BUILDER:
-      return 2400;
+      return 2200;
     case ENGINE_MODE.MOCK_EXAM:
-      return 3000;
+      return 2600;
     case ENGINE_MODE.MAGIC:
-      return 3400;
+      return 3000;
     case ENGINE_MODE.MIDDLE_TEXTBOOK:
-      return 3400;
+      return 3000;
     case ENGINE_MODE.WORMHOLE:
     default:
-      return 3600;
+      return 3200;
   }
 }
-
-/* =========================
- * 엔진별 경량 지시문
- * ========================= */
 
 function buildEngineInstruction(engine, locale, itemCount, magicSubMode) {
   const instructionLineRule =
@@ -239,18 +199,42 @@ ENGINE IDENTITY:
 - Premium grammar assessment
 - High discrimination
 - Not a generic worksheet
-- Questions 1-20 should usually be 5-option multiple-choice
-- Questions 21-25 may be descriptive when appropriate
-- Mix these styles across the set:
-  1) grammatically correct / incorrect judgment
-  2) same pattern / same error
-  3) revision / transformation / same meaning
-  4) count-based trap items
-  5) high-trap structure comparison
-- Avoid repetitive one-line blanks only
+- Prefer 5-option multiple-choice for most items
+- Mix judgment, same-pattern, revision, meaning-preserving, and high-trap items
 - Keep distractors plausible
+- Avoid shallow beginner drills
+- This is a HIGH-DISCRIMINATION EXAM, not a basic worksheet
+- Designed to make even top students think deeply
+- Focus on traps, ambiguity, precision, and meaning-sensitive grammar judgment
+
+QUESTION DESIGN DISTRIBUTION (MANDATORY):
+- 1~5: Gist / Purpose / Main Idea
+- 6~10: Grammar Trap / Correct vs Incorrect Usage
+- 11~15: Sentence Transformation / Rewrite / Structure Change
+- 16~20: Same Pattern / Error Detection / Meaning Preservation
+- 21~25: Short Answer / Explanation / Reasoning
+
+DISTRACTOR DESIGN:
+- All incorrect options must be plausible
+- Avoid obvious wrong answers
+- Distractors should be grammatically close to the correct answer
+- Distractors should share similar structure or vocabulary
+- At least 2 distractors should be almost correct when possible
+
+DIFFICULTY CONTROL:
+- At least 30% should be high-difficulty items
+- Label items worth 5+ points as [High Difficulty]
+- High-difficulty items should require multi-step reasoning or grammar-meaning interaction
+- Include trap structures for high-difficulty items
+
+CONTENT REQUIREMENTS:
+- Use the given passage deeply, not superficially
+- Transform source material into new testable material
+- Do not rely on direct sentence copying unless necessary
+- Maintain academic exam tone
+
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user explicitly requests otherwise.
+Generate the number of items requested by the user (Default: ${itemCount})
 `;
     case ENGINE_MODE.MAGIC:
       return `
@@ -258,47 +242,40 @@ ENGINE IDENTITY:
 - Premium guided production workbook
 - Not a default multiple-choice exam
 - Focus on writing, rewriting, transformation, guided production
-- Each item should require learner production
-- Avoid vague free writing
-- Use clues, constraints, or target structures when helpful
 - MAGIC SUBMODE: ${magicSubMode}
-- If KOREAN_MAGIC: prefer Korean-to-English guided production, clue-based writing, word order, transformation
-- If GLOBAL_MAGIC: prefer paraphrase, combine, rewrite, formal/concise/natural revision
+- If KOREAN_MAGIC: prefer clue-based Korean-to-English guided production
+- If GLOBAL_MAGIC: prefer paraphrase, combine, rewrite, concise/formal revision
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user explicitly requests otherwise.
+Generate the number of items requested by the user (Default: ${itemCount})
 `;
     case ENGINE_MODE.MOCK_EXAM:
       return `
 ENGINE IDENTITY:
 - Korean mock-exam transformation worksheet
-- Not a generic reading worksheet
 - Use 5-option multiple-choice
-- Mix title/gist, blank/summary, grammar-in-context, insertion/sequence/flow, vocabulary, hybrid items
+- Mix gist, blank, grammar-in-context, sequence, insertion, vocabulary, hybrid items
 - Avoid direct-detail-only questions
-- Keep distractors plausible
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user explicitly requests otherwise.
+Generate the number of items requested by the user (Default: ${itemCount})
 `;
     case ENGINE_MODE.MIDDLE_TEXTBOOK:
       return `
 ENGINE IDENTITY:
 - Middle school textbook-linked internal-exam worksheet
 - Grammar-centered and school-test focused
-- Default to 5-option multiple-choice unless descriptive is explicitly requested
-- Mix grammar recognition, revision, transformation, textbook-linked expansion, and trap items
+- Default to 5-option multiple-choice
 - Stay middle-school appropriate
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user explicitly requests otherwise.
+Generate the number of items requested by the user (Default: ${itemCount})
 `;
     case ENGINE_MODE.VOCAB_BUILDER:
       return `
 ENGINE IDENTITY:
-- Vocabulary extractor and vocabulary test builder
-- First identify important vocabulary if relevant
-- Then build a vocabulary test
+- Vocabulary extractor and test builder
+- Build useful school-ready vocabulary questions
 - Default to 5-option multiple-choice
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user explicitly requests otherwise.
+Generate the number of items requested by the user (Default: ${itemCount})
 `;
     case ENGINE_MODE.ABC_STARTER:
     default:
@@ -306,17 +283,11 @@ Generate exactly ${itemCount} items unless the user explicitly requests otherwis
 ENGINE IDENTITY:
 - Elementary starter worksheet
 - Very clear, short, easy, encouraging
-- Suitable for beginner English learners
-- Prefer simple sentence work, easy grammar, easy vocabulary
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user explicitly requests otherwise.
+Generate the number of items requested by the user (Default: ${itemCount})
 `;
   }
 }
-
-/* =========================
- * JSON 프롬프트
- * ========================= */
 
 function buildPrompt({ engine, title, prompt, locale, magicSubMode, modeNotice }) {
   const itemCount = getItemCountByEngine(engine);
@@ -334,12 +305,12 @@ ${modeNotice ? `MODE NOTICE:\n${modeNotice}\n` : ""}
 STRICT RULES:
 - Output ONLY valid JSON.
 - Do not wrap JSON in markdown code fences.
-- Do not add commentary before or after the JSON.
+- Do not add explanation outside JSON.
 - Create a teacher-ready worksheet.
 - Keep numbering sequential.
 - Include answers.
-- The result must be complete and usable as-is.
 - Keep the schema exactly as requested.
+- Generate the number of items requested by the user (Default: ${itemCount})
 
 ${engineInstruction}
 
@@ -352,21 +323,22 @@ JSON SCHEMA:
       "number": 1,
       "stem": "string",
       "options": ["string", "string", "string", "string", "string"],
-      "answer": "string"
+      "answer": "string",
+      "difficulty": "normal | high"
     }
   ]
 }
 
 SCHEMA RULES:
 - "questions" must be an array.
-- Each question must include:
-  - number
-  - stem
-  - answer
+- Each question must include: number, stem, answer.
 - "instruction" is optional but recommended.
 - "options" may be omitted only if the task clearly should not be multiple choice.
-- If options exist, prefer exactly 5 options.
-- Do not return null fields unnecessarily.
+- If options exist, prefer exactly 5.
+- If an item is worth 5+ points or clearly high-level, set "difficulty" to "high".
+- Label items worth 5+ points as [High Difficulty].
+- If difficulty is "high", include "[High Difficulty]" in the stem.
+- If difficulty is not provided, default to "normal".
 
 TITLE:
 ${title}
@@ -376,19 +348,27 @@ ${prompt}
 `;
 }
 
-/* =========================
- * 모델 호출
- * ========================= */
+async function withTimeout(promise, ms) {
+  let timer;
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      timer = setTimeout(() => reject(new Error("Model timeout before server completion")), ms);
+    }),
+  ]).finally(() => clearTimeout(timer));
+}
 
 async function callModel(prompt, engine) {
-  const res = await client.responses.create({
-    model: OPENAI_MODEL,
-    input: prompt,
-    max_output_tokens: getMaxOutputTokens(engine),
-  });
+  const res = await withTimeout(
+    client.responses.create({
+      model: OPENAI_MODEL,
+      input: prompt,
+      max_output_tokens: getMaxOutputTokens(engine),
+    }),
+    48000
+  );
 
   const text = ensureString(res.output_text);
-
   const start = text.indexOf("{");
   const end = text.lastIndexOf("}");
 
@@ -415,16 +395,19 @@ async function callModel(prompt, engine) {
 
   parsed.questions = ensureArray(parsed.questions)
     .map((q, index) => {
-      const options = ensureArray(q?.options)
-        .map((o) => ensureString(o))
-        .filter(Boolean)
-        .slice(0, 5);
+      const difficulty = ensureString(q?.difficulty, "normal").toLowerCase() === "high" ? "high" : "normal";
+      let stem = ensureString(q?.stem, `Question ${index + 1}`);
+
+      if (difficulty === "high" && !stem.includes("[High Difficulty]")) {
+        stem = `[High Difficulty] ${stem}`;
+      }
 
       return {
         number: Number(q?.number) || index + 1,
-        stem: ensureString(q?.stem, `Question ${index + 1}`),
-        options,
+        stem,
+        options: ensureArray(q?.options).map((o) => ensureString(o)).filter(Boolean).slice(0, 5),
         answer: ensureString(q?.answer, ""),
+        difficulty,
       };
     })
     .filter((q) => q.stem);
@@ -435,10 +418,6 @@ async function callModel(prompt, engine) {
 
   return parsed;
 }
-
-/* =========================
- * 출력 포맷
- * ========================= */
 
 function format(packet) {
   const lines = [];
@@ -468,15 +447,12 @@ function format(packet) {
   lines.push("");
 
   packet.questions.forEach((q) => {
-    lines.push(`${q.number}) ${q.answer}`);
+    const difficultyTag = q.difficulty === "high" ? " [High Difficulty]" : "";
+    lines.push(`${q.number}) ${q.answer}${difficultyTag}`);
   });
 
   return lines.join("\n");
 }
-
-/* =========================
- * CORS
- * ========================= */
 
 function applyCors(req, res) {
   const allowedOrigins = [
@@ -499,10 +475,6 @@ function applyCors(req, res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.setHeader("Access-Control-Max-Age", "86400");
 }
-
-/* =========================
- * 핸들러
- * ========================= */
 
 module.exports = async function handler(req, res) {
   applyCors(req, res);
@@ -535,7 +507,6 @@ module.exports = async function handler(req, res) {
     }
 
     const body = normalizeBody(req.body || {});
-
     if (!body.prompt) {
       return res.status(400).json({
         ok: false,
