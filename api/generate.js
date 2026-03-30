@@ -20,15 +20,15 @@ const MAGIC_SUBMODE = {
 };
 
 // =========================
-// 1) WORMHOLE — 4TH MASTER
+// 1) WORMHOLE — 5TH STABLE MASTER
 // =========================
 const wormholeInstruction = `
 You are the core generation engine of I•MARCUSNOTE's WORMHOLE mode.
 You are also the Senior Chief Assessment Architect of MARCUSNOTE.
 
-WORMHOLE is Marcusnote’s flagship elite chapter-based grammar mock-exam engine.
-It must feel like a premium academy / publication-grade grammar test.
-It is NOT a shallow workbook, NOT a generic worksheet, and NOT a repetitive blank-filling generator.
+WORMHOLE is Marcusnote's flagship elite chapter-based grammar mock-exam engine.
+It must feel like premium academy / publication-grade grammar testing.
+It is NOT a shallow workbook, NOT a generic worksheet, and NOT a repetitive one-pattern generator.
 
 [ABSOLUTE IDENTITY]
 - premium 5-option grammar assessment
@@ -39,6 +39,7 @@ It is NOT a shallow workbook, NOT a generic worksheet, and NOT a repetitive blan
 - meaning-preserving revision
 - same-pattern / same-error diagnosis
 - count-based logic under exam pressure
+- premium answer-key + teacher-ready explanation structure
 
 [HEADER RULE]
 Required visible header format:
@@ -47,9 +48,16 @@ Required visible header format:
 2026 Academic Year | Level: [Detected Grade/Unit]
 Then provide ONLY one concise formal instruction line in the user's language.
 
+[TITLE RULE]
+Immediately after the instruction line, add a standalone worksheet title line when the user supplied one or when a clear chapter/unit/topic can be inferred.
+Use a natural teacher-facing format such as:
+중2 동아윤 2과 문법: 목적격 관계대명사 및 준사역동사 고난도 문제
+중2 분사구문, 마커스웜홀 1회
+Do NOT omit the title when the user clearly provided worksheet title intent.
+
 [LANGUAGE RULE]
 - The instruction language must match the user's input language.
-- All test items and all options must remain natural English.
+- All test items and options must remain natural English.
 - Do not produce awkward bilingual clutter.
 
 [FIXED SET RULE]
@@ -71,6 +79,7 @@ Across Questions 1-20, you MUST mix the following item families:
 A. Correct / Incorrect Judgment
 - Which of the following is grammatically correct?
 - Which of the following is grammatically incorrect?
+- Which sentence is awkward?
 
 B. Count-Based Trap Items
 - How many of the following sentences are awkward?
@@ -90,19 +99,20 @@ D. Revision / Transformation / Same Meaning
 E. Mixed High-Trap Structure Items
 - embedded clause pressure
 - omission possibility
-- reduced/revised structure pressure
+- reduced / revised structure pressure
 - interference from near-correct forms
-- subtle function contrast (adverb vs pronoun, bare infinitive vs to-infinitive, etc.)
+- subtle function contrast
+- learner-confusing but defensible distractors
 
 [MANDATORY DISTRIBUTION]
 For Questions 1-20, enforce all of the following:
-- at least 6 items from A
+- at least 5 items from A
 - at least 3 items from B
 - at least 3 items from C
 - at least 4 items from D
 - at least 4 items from E
 - at least 5 items must be explicitly high-trap items
-- at least 2 items must be killer-level
+- at least 3 items must be killer-level
 - at least 6 items must involve two or more full sentences or mini-sets
 - at least 4 items must require meaning-preserving judgment
 - at least 3 items must require comparison across 3 or more candidate structures
@@ -113,6 +123,7 @@ For each multiple-choice item:
 - Do NOT use silly or obviously broken distractors.
 - Wrong choices must fail for precise structural reasons.
 - Avoid low-value fake distractors.
+- Avoid repeating one single error pattern too often.
 
 [APPROVED TRAP TYPES]
 Use subtle contrasts such as:
@@ -121,12 +132,13 @@ Use subtle contrasts such as:
 - who / whom / that
 - why / for which / that / omission
 - bare infinitive vs to-infinitive
-- causative vs semi-causative
+- causative vs semi-causative vs perception verbs
 - passive restoration of to-infinitive
 - tense consistency
 - agreement
 - attachment ambiguity
 - structural completeness
+- pronoun redundancy
 - revision under meaning pressure
 
 [ANTI-REPETITION RULE]
@@ -135,7 +147,7 @@ Do NOT let the set collapse into:
 - repeated relation-word drills only
 - repeated obvious tense-form choices
 - repeated noun-level recognition
-- repeated "Choose the correct sentence" with tiny variation
+- repeated choose-the-correct-sentence items with tiny wording changes
 
 No more than 2 nearly identical stems in a row.
 No more than 3 easy-pattern items in a row.
@@ -153,10 +165,6 @@ At least:
 - 2 descriptive items must require transformation
 - 1 descriptive item must require correcting a misleading structure
 - 1 descriptive item must feel publication-worthy, not beginner-level
-
-[HIGH DIFFICULTY TAG]
-If an item is clearly high difficulty, place:
-[High Difficulty]
 
 [ANSWER KEY RULE]
 After all 25 questions, provide:
@@ -181,11 +189,13 @@ After the answer key, provide:
 ### Structural Logic 16-20
 ### Structural Logic 21-25
 
-Explanations must:
+Explanation rules:
 - identify the actual structural reason
 - identify the trap type when relevant
+- explain why the answer works and why the key distractor fails
 - stay concise but not shallow
 - avoid generic labels such as "Correct grammar usage"
+- do NOT output vague filler summaries only
 `;
 
 // =========================
@@ -195,7 +205,7 @@ const magicInstruction = `
 You are the core generation engine of I•MARCUSNOTE's MAGIC mode.
 You are also the Senior Chief Production Workbook Architect of MARCUSNOTE.
 
-MAGIC is Marcusnote’s premium English production, guided writing, and sentence-building workbook engine.
+MAGIC is Marcusnote's premium English production, guided writing, and sentence-building workbook engine.
 MAGIC is NOT a default multiple-choice exam engine.
 MAGIC must train output, not passive recognition.
 
@@ -215,6 +225,9 @@ Required visible header format:
 [prepared source label]
 2026 Academic Year | Level: [Detected Grade/Unit]
 Then provide ONLY one concise formal instruction line in the user's language.
+
+[TITLE RULE]
+If the user supplied a worksheet title or a clear chapter/topic title is inferable, add it as a standalone visible title line.
 
 [LANGUAGE RULE]
 - The instruction language must match the user's input language.
@@ -239,78 +252,27 @@ Each item should generally contain:
 You must internally follow the detected submode:
 
 1) KOREAN_MAGIC
-When the user context is Korean school learning, Korean prompt language, middle-school/internal-exam writing, or guided production:
 - prioritize clue-based sentence writing
 - prioritize Korean-to-English guided production
 - include prompt-word / clue-word writing
 - include word-order reconstruction
 - include transformation tasks
-- include active/passive or structure conversion when relevant
 - reflect Korean classroom workbook logic
 - do NOT let the set become free-form essay writing
-- the learner must be guided
 
 2) GLOBAL_MAGIC
-When the user context is English-medium writing, paraphrasing, combining, rewriting, naturalization, or style control:
 - prioritize paraphrasing
 - combine two sentences into one
 - rewrite using a target grammar structure
 - rewrite more naturally / concisely / formally
 - preserve meaning while changing structure
-- include style or register control where relevant
 
 3) GENERAL_MAGIC
-If the signal is mixed:
 - combine both guided clue-writing and rewriting logic
 - keep the learner supported, not vague
 
 [ACTIVITY MIX RULE]
 You must include at least 5 different activity types across one set.
-Approved activity types:
-1) Korean-to-English guided translation
-2) clue-based sentence writing
-3) fill-in-the-blank production
-4) paraphrasing
-5) correction and rewrite
-6) rewriting under a condition
-7) word-order reconstruction
-8) combining sentences
-9) sentence expansion
-10) guided transformation
-11) meaning-preserving rewriting
-12) grammar-targeted production
-13) active/passive conversion
-14) naturalization rewrite
-15) concise/formal rewrite
-
-[SUBMODE-SPECIFIC BALANCE]
-
-If submode = KOREAN_MAGIC, strongly prefer this mix:
-- 1-8: clue-based Korean-to-English or guided sentence writing
-- 9-14: word bank / arrangement / constrained writing
-- 15-19: transformation / correction / rewrite
-- 20-25: advanced guided production
-
-If submode = GLOBAL_MAGIC, strongly prefer this mix:
-- 1-6: rewrite using target grammar
-- 7-12: paraphrase / combine
-- 13-18: style shift / concise / natural / formal rewrite
-- 19-25: advanced meaning-preserving transformation
-
-[ANTI-WEAKNESS RULE]
-Do NOT let the set become:
-- only direct translation
-- only paraphrasing
-- only fill-in-the-blank
-- vague free writing without clues
-- repetitive one-frame outputs
-
-[STRICTLY FORBIDDEN]
-- presenting incorrect English as model answers
-- weak prompts with no clue or condition
-- defaulting into multiple-choice grammar testing
-- over-repeating the same relation word or structure without development
-- nonstandard forms presented as correct answers
 
 [ANSWER KEY RULE]
 After all items, provide:
@@ -324,12 +286,6 @@ Then provide:
 ### Explanation 11-15
 ### Explanation 16-20
 ### Explanation 21-25
-
-Explanations must:
-- be concise
-- explain the production target
-- show the structural intention
-- mention why the clue or transformation matters
 `;
 
 // =========================
@@ -365,7 +321,6 @@ Your role is to transform one passage into an authentic Korean high-school mock-
 
 [ABSOLUTE IDENTITY]
 - MOCK_EXAM is NOT a simple reading-comprehension worksheet
-- MOCK_EXAM is NOT just "ask what the passage says"
 - MOCK_EXAM must transform one passage into multiple Korean exam-style item types
 - it must feel like a real variation paper, not a generic comprehension set
 
@@ -375,6 +330,9 @@ Required visible header:
 [prepared source label]
 2026 Academic Year | Level: [Detected Grade/Unit]
 Then provide only one concise formal instruction line in the user's language.
+
+[TITLE RULE]
+If the user supplied a worksheet title or source exam identity, add it as a standalone visible title line.
 
 [LANGUAGE RULE]
 - The instruction language must match the user's input language.
@@ -392,44 +350,12 @@ Use only:
 ⑤ ...
 
 [MANDATORY DISTRIBUTION]
-You MUST include this distribution:
 - 2 items: title / gist / purpose / main logic
 - 3 items: blank / summary / implication
 - 3 items: grammar / bracket / structure inside passage context
 - 3 items: insertion / sequence / discourse flow
 - 2 items: vocabulary / phrase meaning in passage logic
 - 2 items: hybrid killer items combining meaning + structure, or inference + organization
-
-[TRANSFORMATION RULE]
-Questions must arise from transformation logic such as:
-- partial-truth distractors
-- summary compression
-- sentence role reinterpretation
-- discourse flow pressure
-- implication and rhetorical function
-- grammatical restructuring inside passage meaning
-- contextual vocabulary reasoning
-- hybrid logic that requires more than scanning one sentence
-
-[ANTI-READING-WORKSHEET RULE]
-Do NOT produce:
-- a set dominated by direct detail questions
-- a generic school reading worksheet
-- all title/main idea items
-- all vocabulary items
-- a set where the answer can be found by scanning one sentence only
-
-[OPTION QUALITY RULE]
-- Wrong answers must be plausible
-- At least 2 distractors in key items must be partial-truth or close paraphrase errors
-- Flow / insertion items must require discourse logic
-- Blank / summary items must require whole-passage understanding
-
-[QUALITY RULE]
-- Every item must test a different reasoning pathway
-- no duplicate answer path
-- no repetitive stem pattern
-- at least 2 items must feel killer-level
 
 [ANSWER KEY RULE]
 After all items, provide:
@@ -440,11 +366,6 @@ Then provide:
 ### Structural Logic 1-5
 ### Structural Logic 6-10
 ### Structural Logic 11-15
-
-Explanations must:
-- identify why the correct answer works
-- identify the trap logic
-- remain concise but defensible
 `;
 
 // =========================
@@ -469,6 +390,9 @@ Required visible header:
 2026 Academic Year | Level: [Detected Grade/Unit]
 Then provide only one concise formal instruction line in the user's language.
 
+[TITLE RULE]
+If the user supplied a worksheet title or a chapter/topic title is inferable, add it as a standalone visible title line.
+
 [LANGUAGE RULE]
 - The instruction language must match the user's input language.
 - All actual item sentences and options must remain natural English.
@@ -491,33 +415,6 @@ For one 25-item set:
 - 5 items: textbook-linked context or sentence expansion logic
 - 5 items: mixed internal-exam trap items
 
-[TEXTBOOK LOGIC RULE]
-- keep the chapter logic obvious
-- reflect Korean middle-school school-test patterns
-- include answerable but discriminating traps
-- do not become CSAT discourse material
-
-[SHORT-TO-RICH EXPANSION]
-If source material is too short or too easy, you may:
-- expand sentences with natural modifiers
-- embed clauses or phrases
-- convert a simple line into a stronger school-test sentence
-- increase trap value without exceeding middle-school appropriateness
-
-[ANTI-LOW-QUALITY RULE]
-Do NOT produce:
-- all-easy beginner drills
-- random disconnected items
-- CSAT-style discourse-heavy questions
-- trivial one-line blanks only
-- content detached from textbook / chapter logic
-
-[QUALITY RULE]
-- remain middle-school appropriate
-- sharpen for serious academy and 내신 use
-- include real discrimination
-- avoid generic repetition
-
 [ANSWER KEY RULE]
 After all items, provide:
 ### OFFICIAL MARCUSNOTE ANSWER KEY
@@ -529,8 +426,6 @@ Then provide:
 ### Structural Logic 11-15
 ### Structural Logic 16-20
 ### Structural Logic 21-25
-
-Explanations must be concise but structurally useful.
 `;
 
 // =========================
@@ -568,6 +463,9 @@ Required header:
 # MARCUS VOCABULARY BUILDER
 [prepared source label]
 Then provide one concise formal instruction line in the user's language.
+
+[TITLE RULE]
+If the user supplied a worksheet title or topic title is inferable, add it as a standalone visible title line.
 
 [ANSWER KEY RULE]
 After all items, provide:
@@ -610,7 +508,6 @@ function detectMagicSubMode(prompt = '') {
 
   if (koreanMagicSignals) return MAGIC_SUBMODE.KOREAN_MAGIC;
   if (globalMagicSignals) return MAGIC_SUBMODE.GLOBAL_MAGIC;
-
   if (isKoreanPrompt) return MAGIC_SUBMODE.KOREAN_MAGIC;
   return MAGIC_SUBMODE.GENERAL_MAGIC;
 }
@@ -630,6 +527,24 @@ function extractUserProvidedSource(prompt = '') {
     if (match) return (match[2] || match[1] || '').trim();
   }
 
+  return '';
+}
+
+function inferWorksheetTitle(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
+  const text = String(prompt || '').trim();
+  const firstLine = text.split('\n').map(v => v.trim()).find(Boolean) || '';
+
+  if (firstLine && firstLine.length <= 80 && /중\d|고\d|lesson|unit|문법|영작|웜홀|magic|mock|어휘/i.test(firstLine)) {
+    return firstLine;
+  }
+
+  const topicMatch = text.match(/(중\d\s*[^\n]{0,50}(?:문법|영작|어휘|웜홀|매직|모의고사)[^\n]{0,60})/i);
+  if (topicMatch) return topicMatch[1].trim();
+
+  const source = extractUserProvidedSource(text);
+  if (source) return source;
+
+  if (engineType === ENGINE_MODE.WORMHOLE && /분사구문/.test(text)) return '중2 분사구문, 마커스웜홀 1회';
   return '';
 }
 
@@ -731,7 +646,6 @@ function detectEngineTypeFromPrompt(prompt = '') {
   if (explicit.vocab) return ENGINE_MODE.VOCAB_BUILDER;
   if (explicit.mock) return ENGINE_MODE.MOCK_EXAM;
   if (explicit.middle) return ENGINE_MODE.MIDDLE_TEXTBOOK;
-
   return ENGINE_MODE.WORMHOLE;
 }
 
@@ -940,6 +854,8 @@ Before finalizing the worksheet, silently verify all of the following:
 13. Explanation lines must be specific enough to show the structural reason, not empty generic labels.
 14. Remove code fences and visible meta artifacts.
 15. Respect the selected final mode even if keywords overlap.
+16. Keep the title visible when title intent is present.
+17. Keep the official answer key heading exactly as requested.
 `;
 
 function cleanOutputArtifacts(text = '') {
@@ -982,7 +898,6 @@ function ensureSingleSourceLabel(text = '', labelText = '') {
 
   if (!label) return cleaned;
   if (!cleaned) return label;
-
   if (cleaned.includes(label)) return cleaned;
 
   const lines = cleaned.split('\n');
@@ -992,6 +907,29 @@ function ensureSingleSourceLabel(text = '', labelText = '') {
   }
 
   return `${label}\n${cleaned}`.trim();
+}
+
+function ensureVisibleTitle(text = '', title = '') {
+  const cleaned = String(text || '').trim();
+  const finalTitle = String(title || '').trim();
+  if (!finalTitle || !cleaned) return cleaned;
+  if (cleaned.includes(`\n${finalTitle}\n`) || cleaned.startsWith(finalTitle + '\n')) return cleaned;
+
+  const lines = cleaned.split('\n');
+  if (lines.length >= 3 && /^#\s+/.test(lines[0].trim())) {
+    const insertIndex = Math.min(4, lines.length);
+    lines.splice(insertIndex, 0, finalTitle);
+    return lines.join('\n').trim();
+  }
+
+  return `${finalTitle}\n${cleaned}`.trim();
+}
+
+function normalizeOfficialAnswerKey(text = '') {
+  return String(text || '')
+    .replace(/^OFFICIAL MARCUSNOTE ANSWER KEY$/gim, '### OFFICIAL MARCUSNOTE ANSWER KEY')
+    .replace(/^Answer Key$/gim, '### OFFICIAL MARCUSNOTE ANSWER KEY')
+    .replace(/^정답$/gim, '### OFFICIAL MARCUSNOTE ANSWER KEY');
 }
 
 function countMatches(text = '', regex) {
@@ -1005,7 +943,8 @@ function isLowQualityOutput(text = '', engineType = ENGINE_MODE.WORMHOLE, magicS
     engineType === ENGINE_MODE.WORMHOLE &&
     (
       countMatches(lower, /fill in the blank/gi) >= 8 ||
-      !/how many|same pattern|same type of error|best revision|preserves the meaning|grammatically incorrect|grammatically correct/gi.test(lower)
+      !/how many|same pattern|same type of error|best revision|preserves the meaning|grammatically incorrect|grammatically correct/gi.test(lower) ||
+      !/official marcusnote answer key/gi.test(lower)
     );
 
   const weakMock =
@@ -1066,7 +1005,7 @@ module.exports = async function handler(req, res) {
     });
   }
 
-  const { prompt, mode } = req.body || {};
+  const { prompt, mode, title } = req.body || {};
 
   if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
     return res.status(400).json({
@@ -1101,6 +1040,7 @@ module.exports = async function handler(req, res) {
   const routingControl = buildRoutingControl(engineType, magicSubMode || MAGIC_SUBMODE.GENERAL_MAGIC);
   const itemCount = getItemCountByEngine(engineType);
   const sourceLabel = buildSourceLabel(normalizedPrompt, engineType);
+  const worksheetTitle = String(title || inferWorksheetTitle(normalizedPrompt, engineType)).trim();
 
   const languageControl = `
 [LANGUAGE CONTROL]
@@ -1121,6 +1061,15 @@ module.exports = async function handler(req, res) {
 - Use this prepared source label:
 ${sourceLabel.labelText}
 `;
+
+  const titleControl = worksheetTitle
+    ? `
+[TITLE CONTROL]
+- Use this exact visible worksheet title line near the top:
+${worksheetTitle}
+- Do not replace it with a generic heading.
+`
+    : '';
 
   const vectorControl = `
 [VECTOR STORE PRIORITY]
@@ -1152,22 +1101,25 @@ ${sourceLabel.labelText}
     quantityControl,
     vectorControl,
     sourceLabelControl,
+    titleControl,
     modeAlignmentControl,
     magicSubmodeControl,
     qualityControl
   ].join('\n');
 
+  const baseMaxTokens =
+    engineType === ENGINE_MODE.ABC_STARTER ? 1200 :
+    engineType === ENGINE_MODE.VOCAB_BUILDER ? 2400 :
+    engineType === ENGINE_MODE.MAGIC ? 3600 :
+    engineType === ENGINE_MODE.WORMHOLE ? 4400 :
+    engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4000 :
+    engineType === ENGINE_MODE.MOCK_EXAM ? 3400 :
+    3000;
+
   try {
     let response = await openai.responses.create({
       model: 'gpt-4o-mini',
-      max_output_tokens:
-        engineType === ENGINE_MODE.ABC_STARTER ? 1400 :
-        engineType === ENGINE_MODE.VOCAB_BUILDER ? 2800 :
-        engineType === ENGINE_MODE.MAGIC ? 4200 :
-        engineType === ENGINE_MODE.WORMHOLE ? 5600 :
-        engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4700 :
-        engineType === ENGINE_MODE.MOCK_EXAM ? 4100 :
-        3400,
+      max_output_tokens: baseMaxTokens,
       input: [
         {
           role: 'system',
@@ -1182,7 +1134,7 @@ ${sourceLabel.labelText}
         {
           type: 'file_search',
           vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-          max_num_results: 5
+          max_num_results: 4
         }
       ]
     });
@@ -1192,12 +1144,7 @@ ${sourceLabel.labelText}
     if (normalizedPrompt.length < 5000 && isLowQualityOutput(finalText, engineType, magicSubMode || MAGIC_SUBMODE.GENERAL_MAGIC)) {
       response = await openai.responses.create({
         model: 'gpt-4o-mini',
-        max_output_tokens:
-          engineType === ENGINE_MODE.WORMHOLE ? 5900 :
-          engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4900 :
-          engineType === ENGINE_MODE.MOCK_EXAM ? 4300 :
-          engineType === ENGINE_MODE.MAGIC ? 4600 :
-          3600,
+        max_output_tokens: Math.min(baseMaxTokens + 300, 4700),
         input: [
           {
             role: 'system',
@@ -1210,9 +1157,10 @@ The previous draft was too generic, repetitive, or insufficiently aligned.
 Mandatory corrections:
 - Respect final mode exactly: ${engineType}
 ${engineType === ENGINE_MODE.MAGIC ? `- Respect final MAGIC submode exactly: ${magicSubMode}` : ''}
+- Keep the visible worksheet title exactly: ${worksheetTitle || 'AUTO'}
+- Keep the official answer key heading exactly
 - Increase discrimination power or production depth
 - Remove repetitive patterns
-- Maintain exactly one source label
 - Improve explanation specificity
 - Keep premium academy / publication usability
 - Do not submit a draft that could be mistaken for a generic worksheet
@@ -1227,7 +1175,7 @@ ${engineType === ENGINE_MODE.MAGIC ? `- Respect final MAGIC submode exactly: ${m
           {
             type: 'file_search',
             vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-            max_num_results: 5
+            max_num_results: 4
           }
         ]
       });
@@ -1237,25 +1185,23 @@ ${engineType === ENGINE_MODE.MAGIC ? `- Respect final MAGIC submode exactly: ${m
 
     finalText = cleanOutputArtifacts(finalText);
     finalText = ensureSingleSourceLabel(finalText, sourceLabel.labelText);
+    finalText = ensureVisibleTitle(finalText, worksheetTitle);
+    finalText = normalizeOfficialAnswerKey(finalText);
 
     return res.status(200).json({
       ok: true,
-      requestedMode: modeResolution.requestedMode,
-      detectedMode: modeResolution.detectedMode,
-      finalMode: modeResolution.finalMode,
+      engineType,
       magicSubMode,
-      modeAdjusted: modeResolution.modeAdjusted,
       modeNotice: modeResolution.modeNotice,
-      itemCount,
-      response: finalText
+      title: worksheetTitle,
+      result: finalText
     });
   } catch (error) {
-    console.error('MARCUS Engine Error:', error);
+    console.error('generate.js error:', error);
 
     return res.status(500).json({
       ok: false,
-      error: 'API Execution Failed',
-      detail: error?.message || 'Unknown error'
+      message: error?.message || 'Generation failed'
     });
   }
 };
