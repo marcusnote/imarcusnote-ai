@@ -1,1207 +1,903 @@
-const OpenAI = require('openai');
+const OpenAI = require("openai");
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
+const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.2";
+
 const ENGINE_MODE = {
-  ABC_STARTER: 'ABC_STARTER',
-  MOCK_EXAM: 'MOCK_EXAM',
-  MIDDLE_TEXTBOOK: 'MIDDLE_TEXTBOOK',
-  WORMHOLE: 'WORMHOLE',
-  MAGIC: 'MAGIC',
-  VOCAB_BUILDER: 'VOCAB_BUILDER'
+  ABC_STARTER: "ABC_STARTER",
+  MOCK_EXAM: "MOCK_EXAM",
+  MIDDLE_TEXTBOOK: "MIDDLE_TEXTBOOK",
+  WORMHOLE: "WORMHOLE",
+  MAGIC: "MAGIC",
+  VOCAB_BUILDER: "VOCAB_BUILDER",
 };
 
-const MAGIC_SUBMODE = {
-  KOREAN_MAGIC: 'KOREAN_MAGIC',
-  GLOBAL_MAGIC: 'GLOBAL_MAGIC',
-  GENERAL_MAGIC: 'GENERAL_MAGIC'
+const ENGINE_LABELS = {
+  [ENGINE_MODE.ABC_STARTER]: "Junior Starter",
+  [ENGINE_MODE.MOCK_EXAM]: "Mocks Exam",
+  [ENGINE_MODE.MIDDLE_TEXTBOOK]: "Middle Exam",
+  [ENGINE_MODE.WORMHOLE]: "Wormhole",
+  [ENGINE_MODE.MAGIC]: "Magic Lab",
+  [ENGINE_MODE.VOCAB_BUILDER]: "Vocab Builder",
 };
 
-// =========================
-// 1) WORMHOLE — 5TH STABLE MASTER
-// =========================
-const wormholeInstruction = `
-You are the core generation engine of I•MARCUSNOTE's WORMHOLE mode.
-You are also the Senior Chief Assessment Architect of MARCUSNOTE.
-
-WORMHOLE is Marcusnote's flagship elite chapter-based grammar mock-exam engine.
-It must feel like premium academy / publication-grade grammar testing.
-It is NOT a shallow workbook, NOT a generic worksheet, and NOT a repetitive one-pattern generator.
-
-[ABSOLUTE IDENTITY]
-- premium 5-option grammar assessment
-- high discrimination power
-- structural acceptability judgment
-- subtle trap design
-- sentence comparison
-- meaning-preserving revision
-- same-pattern / same-error diagnosis
-- count-based logic under exam pressure
-- premium answer-key + teacher-ready explanation structure
-
-[HEADER RULE]
-Required visible header format:
-# MARCUS WORMHOLE ELITE TEST
-[prepared source label]
-2026 Academic Year | Level: [Detected Grade/Unit]
-Then provide ONLY one concise formal instruction line in the user's language.
-
-[TITLE RULE]
-Immediately after the instruction line, add a standalone worksheet title line when the user supplied one or when a clear chapter/unit/topic can be inferred.
-Use a natural teacher-facing format such as:
-중2 동아윤 2과 문법: 목적격 관계대명사 및 준사역동사 고난도 문제
-중2 분사구문, 마커스웜홀 1회
-Do NOT omit the title when the user clearly provided worksheet title intent.
-
-[LANGUAGE RULE]
-- The instruction language must match the user's input language.
-- All test items and options must remain natural English.
-- Do not produce awkward bilingual clutter.
-
-[FIXED SET RULE]
-Generate exactly 25 questions:
-- Questions 1-20: 5-option multiple-choice only
-- Questions 21-25: descriptive / constructed-response
-
-[5-OPTION RULE]
-Use only:
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-[MANDATORY WORMHOLE MULTIPLE-CHOICE MIX]
-Across Questions 1-20, you MUST mix the following item families:
-
-A. Correct / Incorrect Judgment
-- Which of the following is grammatically correct?
-- Which of the following is grammatically incorrect?
-- Which sentence is awkward?
-
-B. Count-Based Trap Items
-- How many of the following sentences are awkward?
-- How many of the following are grammatically correct?
-- How many underlined parts are wrong?
-
-C. Same Pattern / Same Error Type
-- Which sentence shows the same grammatical pattern?
-- Which of the following contains the same type of error?
-- Which sentence works by the same structural principle?
-
-D. Revision / Transformation / Same Meaning
-- Which revision preserves the meaning most accurately?
-- Which transformation is most appropriate?
-- Which sentence is closest in meaning while remaining grammatical?
-
-E. Mixed High-Trap Structure Items
-- embedded clause pressure
-- omission possibility
-- reduced / revised structure pressure
-- interference from near-correct forms
-- subtle function contrast
-- learner-confusing but defensible distractors
-
-[MANDATORY DISTRIBUTION]
-For Questions 1-20, enforce all of the following:
-- at least 5 items from A
-- at least 3 items from B
-- at least 3 items from C
-- at least 4 items from D
-- at least 4 items from E
-- at least 5 items must be explicitly high-trap items
-- at least 3 items must be killer-level
-- at least 6 items must involve two or more full sentences or mini-sets
-- at least 4 items must require meaning-preserving judgment
-- at least 3 items must require comparison across 3 or more candidate structures
-
-[TRAP DESIGN RULE]
-For each multiple-choice item:
-- At least 2 wrong choices must look plausible.
-- Do NOT use silly or obviously broken distractors.
-- Wrong choices must fail for precise structural reasons.
-- Avoid low-value fake distractors.
-- Avoid repeating one single error pattern too often.
-
-[APPROVED TRAP TYPES]
-Use subtle contrasts such as:
-- which / where / that / what
-- when / that / omission
-- who / whom / that
-- why / for which / that / omission
-- bare infinitive vs to-infinitive
-- causative vs semi-causative vs perception verbs
-- passive restoration of to-infinitive
-- tense consistency
-- agreement
-- attachment ambiguity
-- structural completeness
-- pronoun redundancy
-- revision under meaning pressure
-
-[ANTI-REPETITION RULE]
-Do NOT let the set collapse into:
-- repeated one-sentence blanks
-- repeated relation-word drills only
-- repeated obvious tense-form choices
-- repeated noun-level recognition
-- repeated choose-the-correct-sentence items with tiny wording changes
-
-No more than 2 nearly identical stems in a row.
-No more than 3 easy-pattern items in a row.
-
-[DESCRIPTIVE RULE]
-Questions 21-25 must require actual structural production.
-Allowed task types:
-1) rewrite under a grammatical condition
-2) correct the wrong sentence and rewrite it
-3) combine two sentences using the target structure
-4) transform the structure without changing the meaning
-5) complete a sentence in one grammatically valid advanced way
-
-At least:
-- 2 descriptive items must require transformation
-- 1 descriptive item must require correcting a misleading structure
-- 1 descriptive item must feel publication-worthy, not beginner-level
-
-[ANSWER KEY RULE]
-After all 25 questions, provide:
-### OFFICIAL MARCUSNOTE ANSWER KEY
-
-Format:
-1) ③
-2) ①
-...
-20) ⑤
-21) [model answer]
-22) [model answer]
-23) [model answer]
-24) [model answer]
-25) [model answer]
-
-[EXPLANATION RULE]
-After the answer key, provide:
-### Structural Logic 1-5
-### Structural Logic 6-10
-### Structural Logic 11-15
-### Structural Logic 16-20
-### Structural Logic 21-25
-
-Explanation rules:
-- identify the actual structural reason
-- identify the trap type when relevant
-- explain why the answer works and why the key distractor fails
-- stay concise but not shallow
-- avoid generic labels such as "Correct grammar usage"
-- do NOT output vague filler summaries only
-`;
-
-// =========================
-// 2) MAGIC — 4TH MASTER
-// =========================
-const magicInstruction = `
-You are the core generation engine of I•MARCUSNOTE's MAGIC mode.
-You are also the Senior Chief Production Workbook Architect of MARCUSNOTE.
-
-MAGIC is Marcusnote's premium English production, guided writing, and sentence-building workbook engine.
-MAGIC is NOT a default multiple-choice exam engine.
-MAGIC must train output, not passive recognition.
-
-[ABSOLUTE IDENTITY]
-- guided English production
-- sentence-building workbook logic
-- structured writing practice
-- clue-based construction
-- rewriting and transformation
-- paraphrasing and sentence combination when appropriate
-- premium workbook quality
-- teacher-usable and publication-ready
-
-[HEADER RULE]
-Required visible header format:
-# MARCUS MAGIC PRODUCTION TRAINING
-[prepared source label]
-2026 Academic Year | Level: [Detected Grade/Unit]
-Then provide ONLY one concise formal instruction line in the user's language.
-
-[TITLE RULE]
-If the user supplied a worksheet title or a clear chapter/topic title is inferable, add it as a standalone visible title line.
-
-[LANGUAGE RULE]
-- The instruction language must match the user's input language.
-- Prompt lines and clue lines may follow the user's input language.
-- All target answer sentences must remain natural English.
-
-[FIXED SET RULE]
-Generate exactly 25 items.
-
-[DEFAULT NO MULTIPLE CHOICE]
-- Do NOT generate multiple-choice by default.
-- Do NOT use ①②③④⑤ unless the user explicitly requests options.
-- Every item must require learner production.
-
-[MAGIC CORE FORMAT]
-Each item should generally contain:
-1. task prompt
-2. blank answer line
-3. clue / condition / grammar constraint
-
-[MAGIC INTERNAL SUBMODE SYSTEM]
-You must internally follow the detected submode:
-
-1) KOREAN_MAGIC
-- prioritize clue-based sentence writing
-- prioritize Korean-to-English guided production
-- include prompt-word / clue-word writing
-- include word-order reconstruction
-- include transformation tasks
-- reflect Korean classroom workbook logic
-- do NOT let the set become free-form essay writing
-
-2) GLOBAL_MAGIC
-- prioritize paraphrasing
-- combine two sentences into one
-- rewrite using a target grammar structure
-- rewrite more naturally / concisely / formally
-- preserve meaning while changing structure
-
-3) GENERAL_MAGIC
-- combine both guided clue-writing and rewriting logic
-- keep the learner supported, not vague
-
-[ACTIVITY MIX RULE]
-You must include at least 5 different activity types across one set.
-
-[ANSWER KEY RULE]
-After all items, provide:
-### OFFICIAL MARCUSNOTE ANSWER KEY
-Provide the full model answer for every item.
-
-[EXPLANATION RULE]
-Then provide:
-### Explanation 1-5
-### Explanation 6-10
-### Explanation 11-15
-### Explanation 16-20
-### Explanation 21-25
-`;
-
-// =========================
-// 3) ABC STARTER
-// =========================
-const abcStarterInstruction = `
-You are a specialized elementary English content creator for Abcstarter56.
-
-[LEVEL]
-- CEFR A1
-- short and easy
-- clear and encouraging
-
-[QUESTION TYPES]
-1) scramble
-2) image-to-word text simulation
-3) be-verb / plural / present continuous starter
-4) simple Korean-to-English
-
-[SET RULE]
-Generate exactly 10 items.
-
-[ANSWER KEY RULE]
-Include a clear answer key and short teacher-friendly solution notes.
-`;
-
-// =========================
-// 4) MOCK EXAM — 4TH MASTER
-// =========================
-const mockExamInstruction = `
-You are the I•MARCUSNOTE Mock Exam Transformation Engine.
-Your role is to transform one passage into an authentic Korean high-school mock-exam style transformation worksheet.
-
-[ABSOLUTE IDENTITY]
-- MOCK_EXAM is NOT a simple reading-comprehension worksheet
-- MOCK_EXAM must transform one passage into multiple Korean exam-style item types
-- it must feel like a real variation paper, not a generic comprehension set
-
-[HEADER RULE]
-Required visible header:
-# MARCUS ANALYSIS & TRANSFORMATION
-[prepared source label]
-2026 Academic Year | Level: [Detected Grade/Unit]
-Then provide only one concise formal instruction line in the user's language.
-
-[TITLE RULE]
-If the user supplied a worksheet title or source exam identity, add it as a standalone visible title line.
-
-[LANGUAGE RULE]
-- The instruction language must match the user's input language.
-- All actual passage-based questions and options must remain natural English.
-
-[FIXED SET RULE]
-Generate exactly 15 items.
-Every item must be 5-option multiple choice only.
-
-Use only:
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-[MANDATORY DISTRIBUTION]
-- 2 items: title / gist / purpose / main logic
-- 3 items: blank / summary / implication
-- 3 items: grammar / bracket / structure inside passage context
-- 3 items: insertion / sequence / discourse flow
-- 2 items: vocabulary / phrase meaning in passage logic
-- 2 items: hybrid killer items combining meaning + structure, or inference + organization
-
-[ANSWER KEY RULE]
-After all items, provide:
-### OFFICIAL MARCUSNOTE ANSWER KEY
-
-[EXPLANATION RULE]
-Then provide:
-### Structural Logic 1-5
-### Structural Logic 6-10
-### Structural Logic 11-15
-`;
-
-// =========================
-// 5) MIDDLE SCHOOL TEXTBOOK — 4TH MASTER
-// =========================
-const middleTextbookInstruction = `
-You are the I•MARCUSNOTE Middle School Textbook Transformation Engine.
-Your role is to convert middle-school textbook-linked grammar content into premium internal-exam style assessments.
-
-[ABSOLUTE IDENTITY]
-- textbook-linked
-- middle-school level
-- grammar-centered
-- school-test / 내신 focused
-- sharper than ordinary workbook practice
-- clearly usable for Korean internal exams
-
-[HEADER RULE]
-Required visible header:
-# MARCUS MIDDLE SCHOOL ELITE TEST
-[prepared source label]
-2026 Academic Year | Level: [Detected Grade/Unit]
-Then provide only one concise formal instruction line in the user's language.
-
-[TITLE RULE]
-If the user supplied a worksheet title or a chapter/topic title is inferable, add it as a standalone visible title line.
-
-[LANGUAGE RULE]
-- The instruction language must match the user's input language.
-- All actual item sentences and options must remain natural English.
-
-[FIXED SET RULE]
-Generate exactly 25 items.
-Default output must be 5-option multiple choice unless the user explicitly asks for descriptive items.
-
-Use only:
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-[MANDATORY DISTRIBUTION]
-For one 25-item set:
-- 8 items: grammar recognition with school-test discrimination
-- 7 items: sentence transformation or revision logic
-- 5 items: textbook-linked context or sentence expansion logic
-- 5 items: mixed internal-exam trap items
-
-[ANSWER KEY RULE]
-After all items, provide:
-### OFFICIAL MARCUSNOTE ANSWER KEY
-
-[EXPLANATION RULE]
-Then provide:
-### Structural Logic 1-5
-### Structural Logic 6-10
-### Structural Logic 11-15
-### Structural Logic 16-20
-### Structural Logic 21-25
-`;
-
-// =========================
-// 6) VOCAB BUILDER
-// =========================
-const vocabBuilderInstruction = `
-You are the MARCUSNOTE Vocabulary Assessment Builder.
-
-[OUTPUT GOAL]
-Produce two sections:
-
-SECTION 1:
-MARCUS VOCABULARY LIST
-- extract 20 important words if possible
-- for each word provide:
-  1. word
-  2. part of speech
-  3. Korean meaning
-  4. short context hint
-
-SECTION 2:
-MARCUS VOCABULARY TEST
-- generate exactly 20 vocabulary questions
-- 5-option multiple choice only
-
-Use only:
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-[HEADER RULE]
-Required header:
-# MARCUS VOCABULARY BUILDER
-[prepared source label]
-Then provide one concise formal instruction line in the user's language.
-
-[TITLE RULE]
-If the user supplied a worksheet title or topic title is inferable, add it as a standalone visible title line.
-
-[ANSWER KEY RULE]
-After all items, provide:
-### OFFICIAL MARCUSNOTE ANSWER KEY
-
-[EXPLANATION RULE]
-Then provide:
-### Vocabulary Notes 1-10
-### Vocabulary Notes 11-20
-`;
-
-// =========================
-// HELPERS
-// =========================
-function detectPromptLanguage(prompt = '') {
-  if (/[가-힣]/.test(prompt)) return 'Korean';
-  if (/[\u3040-\u30ff]/.test(prompt)) return 'Japanese';
-  return 'English';
+const MAX_MODEL_ATTEMPTS = 2;
+
+/* -----------------------------------------------------------
+ * Utility
+ * --------------------------------------------------------- */
+
+function safeJsonParse(value, fallback = null) {
+  try {
+    return JSON.parse(value);
+  } catch {
+    return fallback;
+  }
 }
 
-function containsKorean(text = '') {
+function isKoreanText(text = "") {
   return /[가-힣]/.test(text);
 }
 
-function detectMagicSubMode(prompt = '') {
-  const text = String(prompt || '');
-  const lower = text.toLowerCase();
-  const isKoreanPrompt = containsKorean(text);
-
-  const koreanMagicSignals =
-    isKoreanPrompt &&
-    (
-      /영작|서술형|내신|중등|중학교|중1|중2|중3|교과서|학원|다음 우리말|주어진 단어|clue|단서|배열|어순|조건에 맞게|문장을 쓰시오|영어로 쓰시오/.test(text) ||
-      /translation|guided writing|sentence writing/.test(lower)
-    );
-
-  const globalMagicSignals =
-    !isKoreanPrompt &&
-    /paraphrase|rewrite|combine|combine the sentences|rewrite using|meaning-preserving|naturalize|natural expression|formal|concise|style|register|transform the sentence|production training/.test(lower);
-
-  if (koreanMagicSignals) return MAGIC_SUBMODE.KOREAN_MAGIC;
-  if (globalMagicSignals) return MAGIC_SUBMODE.GLOBAL_MAGIC;
-  if (isKoreanPrompt) return MAGIC_SUBMODE.KOREAN_MAGIC;
-  return MAGIC_SUBMODE.GENERAL_MAGIC;
-}
-
-function extractUserProvidedSource(prompt = '') {
-  const text = prompt.trim();
-  const patterns = [
-    /(출처\s*[:：]\s*([^\n]+))/i,
-    /(source\s*[:：]\s*([^\n]+))/i,
-    /((?:20\d{2}|\d{4})\s*(?:년|march|june|september|november)?\s*(?:고1|고2|고3|grade\s*1|grade\s*2|grade\s*3)[^\n#]*#?\s*\d{1,2}번?)/i,
-    /((?:중1|중2|중3)\s*[^\n]*lesson\s*\d+)/i,
-    /((?:천재|동아|비상|능률|미래엔|ybm)[^\n]*(?:lesson|unit)\s*\d+)/i
-  ];
-
-  for (const pattern of patterns) {
-    const match = text.match(pattern);
-    if (match) return (match[2] || match[1] || '').trim();
-  }
-
-  return '';
-}
-
-function inferWorksheetTitle(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
-  const text = String(prompt || '').trim();
-  const firstLine = text.split('\n').map(v => v.trim()).find(Boolean) || '';
-
-  if (firstLine && firstLine.length <= 80 && /중\d|고\d|lesson|unit|문법|영작|웜홀|magic|mock|어휘/i.test(firstLine)) {
-    return firstLine;
-  }
-
-  const topicMatch = text.match(/(중\d\s*[^\n]{0,50}(?:문법|영작|어휘|웜홀|매직|모의고사)[^\n]{0,60})/i);
-  if (topicMatch) return topicMatch[1].trim();
-
-  const source = extractUserProvidedSource(text);
-  if (source) return source;
-
-  if (engineType === ENGINE_MODE.WORMHOLE && /분사구문/.test(text)) return '중2 분사구문, 마커스웜홀 1회';
-  return '';
-}
-
-function estimatePassageMeta(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
-  const text = prompt.toLowerCase();
-  let topic = 'General English';
-  let level = 'Advanced';
-  let itemType = '';
-
-  if (/education|school|student|teacher|learning/.test(text)) topic = 'Education';
-  else if (/science|technology|brain|research|experiment/.test(text)) topic = 'Science / Research';
-  else if (/environment|nature|climate|animal|ecology/.test(text)) topic = 'Environment / Nature';
-  else if (/society|culture|history|social/.test(text)) topic = 'Society / Culture';
-
-  if (/중1|중2|중3|middle school|lesson|unit|교과서/.test(text)) level = 'Middle School';
-  else if (/고1|grade 1/.test(text)) level = 'High School Grade 1';
-  else if (/고2|grade 2/.test(text)) level = 'High School Grade 2';
-  else if (/고3|grade 3|수능|csat/.test(text)) level = 'High School Grade 3';
-  else if (engineType === ENGINE_MODE.MIDDLE_TEXTBOOK) level = 'Middle School';
-  else if (engineType === ENGINE_MODE.MOCK_EXAM) level = 'High School';
-  else if (engineType === ENGINE_MODE.MAGIC) level = 'Middle / High School';
-  else if (engineType === ENGINE_MODE.WORMHOLE) level = 'Middle / High School';
-
-  if (/제목|title/.test(text)) itemType = 'Title Item';
-  else if (/주제|main idea|gist/.test(text)) itemType = 'Main Idea Item';
-  else if (/요지|purpose/.test(text)) itemType = 'Purpose / Gist Item';
-  else if (/빈칸|blank|summary/.test(text)) itemType = 'Blank / Summary Item';
-  else if (/삽입|insertion/.test(text)) itemType = 'Sentence Insertion Item';
-  else if (/순서|sequence|order/.test(text)) itemType = 'Sequence Item';
-  else if (/어휘|vocabulary|word|단어|어휘시험|어휘목록/.test(text)) itemType = 'Vocabulary Item';
-  else if (/어법|grammar/.test(text)) itemType = 'Grammar Item';
-  else if (/영작|writing|composition|rewrite|paraphrase|서술형/.test(text)) itemType = 'Production Training';
-
-  return { topic, level, itemType };
-}
-
-function shortenSourceLabel(label = '') {
-  return label
-    .replace('High School Mock Exam Passage | High School Grade 1', 'G1 Mock Passage')
-    .replace('High School Mock Exam Passage | High School Grade 2', 'G2 Mock Passage')
-    .replace('High School Mock Exam Passage | High School Grade 3', 'G3 Mock Passage')
-    .replace('High School Grade 1', 'G1')
-    .replace('High School Grade 2', 'G2')
-    .replace('High School Grade 3', 'G3')
-    .replace('Purpose / Gist Item', 'Purpose/Gist')
-    .replace('Main Idea Item', 'Main Idea')
-    .replace('Title Item', 'Title')
-    .replace('Blank / Summary Item', 'Blank/Summary')
-    .replace('Sentence Insertion Item', 'Insertion')
-    .replace('Vocabulary Item', 'Vocabulary')
-    .replace('Middle School Textbook Passage', 'Middle School Textbook')
-    .replace('Production Training', 'Production');
-}
-
-function buildSourceLabel(prompt = '', engineType = ENGINE_MODE.WORMHOLE) {
-  const userSource = extractUserProvidedSource(prompt);
-
-  if (userSource) {
-    return { labelText: shortenSourceLabel(`Source: ${userSource}`) };
-  }
-
-  const meta = estimatePassageMeta(prompt, engineType);
-
-  if (engineType === ENGINE_MODE.MOCK_EXAM) {
-    const parts = ['High School Mock Exam Passage', meta.level];
-    if (meta.itemType) parts.push(meta.itemType);
-    return { labelText: shortenSourceLabel(`Estimated Source: ${parts.join(' | ')}`) };
-  }
-
-  if (engineType === ENGINE_MODE.MIDDLE_TEXTBOOK) {
-    return { labelText: shortenSourceLabel(`Estimated Source: Middle School Textbook | ${meta.level}`) };
-  }
-
-  if (engineType === ENGINE_MODE.MAGIC) {
-    return { labelText: `Source Classification: MARCUS Production Selection - ${meta.topic}` };
-  }
-
-  if (engineType === ENGINE_MODE.VOCAB_BUILDER) {
-    return { labelText: `Source Classification: MARCUS Vocabulary Selection - ${meta.topic}` };
-  }
-
-  return { labelText: `Source Classification: MARCUS Academic Selection - ${meta.topic}` };
-}
-
-function detectEngineTypeFromPrompt(prompt = '') {
-  const text = String(prompt || '');
-  const lower = text.toLowerCase();
-
-  const explicit = {
-    wormhole: /웜홀|wormhole|마커스웜홀|어색한 것|옳지 않은 것|옳은 것|어법상|개수는|유형이 같은|same error|same pattern|grammatically incorrect|grammatically correct/.test(text),
-    magic: /매직|magic|영작|rewrite|paraphrase|작문|서술형|문장을 쓰시오|영어로 쓰시오|combine|rewrite using|production training/.test(lower) || /매직|영작|서술형|문장을 쓰시오|영어로 쓰시오/.test(text),
-    vocab: /어휘|단어|vocab|vocabulary|어휘시험|단어시험/.test(text),
-    mock: /모의고사 변형|mocks exam|mock exam|21번 변형|22번 변형|빈칸|삽입|순서|흐름|summary|blank|insertion|sequence|flow|주제|요지|제목|purpose|gist|title/.test(lower) || /모의고사 변형|빈칸|삽입|순서|흐름|주제|요지|제목/.test(text),
-    middle: /교과서|중등|중학교|중1|중2|중3|내신|middle exam|middle textbook|lesson|unit|천재|동아|비상|능률|미래엔|ybm/.test(text)
-  };
-
-  if (explicit.wormhole) return ENGINE_MODE.WORMHOLE;
-  if (explicit.magic) return ENGINE_MODE.MAGIC;
-  if (explicit.vocab) return ENGINE_MODE.VOCAB_BUILDER;
-  if (explicit.mock) return ENGINE_MODE.MOCK_EXAM;
-  if (explicit.middle) return ENGINE_MODE.MIDDLE_TEXTBOOK;
-  return ENGINE_MODE.WORMHOLE;
-}
-
-function normalizeMode(mode, prompt = '') {
-  const requested = String(mode || '').trim().toUpperCase();
-
-  if (requested === ENGINE_MODE.ABC_STARTER) return ENGINE_MODE.ABC_STARTER;
-  if (requested === ENGINE_MODE.MOCK_EXAM) return ENGINE_MODE.MOCK_EXAM;
-  if (requested === ENGINE_MODE.MIDDLE_TEXTBOOK) return ENGINE_MODE.MIDDLE_TEXTBOOK;
-  if (requested === ENGINE_MODE.WORMHOLE) return ENGINE_MODE.WORMHOLE;
-  if (requested === ENGINE_MODE.MAGIC) return ENGINE_MODE.MAGIC;
-  if (requested === ENGINE_MODE.VOCAB_BUILDER) return ENGINE_MODE.VOCAB_BUILDER;
-
-  return detectEngineTypeFromPrompt(prompt);
-}
-
-function resolveFinalMode(requestedMode, prompt = '') {
-  const detectedMode = detectEngineTypeFromPrompt(prompt);
-  const requested = normalizeMode(requestedMode || '', '');
-  const hasRequested = !!String(requestedMode || '').trim();
-
-  if (!hasRequested) {
-    return {
-      requestedMode: null,
-      detectedMode,
-      finalMode: detectedMode,
-      modeAdjusted: false,
-      modeNotice: ''
-    };
-  }
-
-  if (requested === detectedMode) {
-    return {
-      requestedMode: requested,
-      detectedMode,
-      finalMode: requested,
-      modeAdjusted: false,
-      modeNotice: ''
-    };
-  }
-
-  const explicitPriority = [
-    ENGINE_MODE.WORMHOLE,
-    ENGINE_MODE.MAGIC,
-    ENGINE_MODE.VOCAB_BUILDER,
-    ENGINE_MODE.MOCK_EXAM,
-    ENGINE_MODE.MIDDLE_TEXTBOOK,
-    ENGINE_MODE.ABC_STARTER
-  ];
-
-  const finalMode = explicitPriority.includes(detectedMode) ? detectedMode : requested;
-
-  return {
-    requestedMode: requested,
-    detectedMode,
-    finalMode,
-    modeAdjusted: finalMode !== requested,
-    modeNotice:
-      finalMode !== requested
-        ? `Input content matched ${finalMode} more strongly than ${requested}, so the engine was adjusted automatically.`
-        : ''
-  };
-}
-
-function getBaseInstructionByEngine(engineType) {
-  switch (engineType) {
-    case ENGINE_MODE.ABC_STARTER:
-      return abcStarterInstruction;
-    case ENGINE_MODE.MOCK_EXAM:
-      return mockExamInstruction;
-    case ENGINE_MODE.MIDDLE_TEXTBOOK:
-      return middleTextbookInstruction;
-    case ENGINE_MODE.MAGIC:
-      return magicInstruction;
-    case ENGINE_MODE.VOCAB_BUILDER:
-      return vocabBuilderInstruction;
-    case ENGINE_MODE.WORMHOLE:
-    default:
-      return wormholeInstruction;
-  }
-}
-
-function buildRoutingControl(engineType, magicSubMode = MAGIC_SUBMODE.GENERAL_MAGIC) {
-  if (engineType === ENGINE_MODE.ABC_STARTER) {
-    return `
-[ENGINE ROUTING]
-- Selected Engine: ABC_STARTER
-- Prioritize elementary foundation logic.
-- Keep vocabulary and sentence length easy.
-`;
-  }
-
-  if (engineType === ENGINE_MODE.MOCK_EXAM) {
-    return `
-[ENGINE ROUTING]
-- Selected Engine: MOCK_EXAM
-- Prioritize Korean high-school passage transformation logic.
-- Force balanced item distribution.
-- Avoid generic reading worksheet output.
-`;
-  }
-
-  if (engineType === ENGINE_MODE.MIDDLE_TEXTBOOK) {
-    return `
-[ENGINE ROUTING]
-- Selected Engine: MIDDLE_TEXTBOOK
-- Prioritize middle-school grammar and internal-exam logic.
-- Strengthen textbook-linked school-test output.
-- Avoid high-school discourse transformation.
-`;
-  }
-
-  if (engineType === ENGINE_MODE.MAGIC) {
-    return `
-[ENGINE ROUTING]
-- Selected Engine: MAGIC
-- Selected MAGIC Submode: ${magicSubMode}
-- Prioritize guided English production workbook logic.
-- Never default to multiple choice unless explicitly requested.
-- Keep submode identity obvious in the output pattern.
-`;
-  }
-
-  if (engineType === ENGINE_MODE.VOCAB_BUILDER) {
-    return `
-[ENGINE ROUTING]
-- Selected Engine: VOCAB_BUILDER
-- Extract important vocabulary first, then build the test.
-`;
-  }
-
-  return `
-[ENGINE ROUTING]
-- Selected Engine: WORMHOLE
-- Prioritize high-difficulty grammar mock exam logic.
-- Increase discrimination and trap design.
-- Force question-type variety.
-- Avoid simple one-line repetitive blanks.
-`;
-}
-
-function getItemCountByEngine(engineType) {
-  switch (engineType) {
-    case ENGINE_MODE.ABC_STARTER:
-      return 10;
-    case ENGINE_MODE.MOCK_EXAM:
-      return 15;
-    case ENGINE_MODE.MIDDLE_TEXTBOOK:
-      return 25;
-    case ENGINE_MODE.WORMHOLE:
-      return 25;
-    case ENGINE_MODE.MAGIC:
-      return 25;
-    case ENGINE_MODE.VOCAB_BUILDER:
-      return 20;
-    default:
-      return 15;
-  }
-}
-
-function buildMagicSubmodeControl(submode = MAGIC_SUBMODE.GENERAL_MAGIC) {
-  if (submode === MAGIC_SUBMODE.KOREAN_MAGIC) {
-    return `
-[MAGIC SUBMODE ENFORCEMENT]
-- Final MAGIC submode: KOREAN_MAGIC
-- The set must clearly reflect Korean school writing-workbook logic.
-- Prioritize clue-based writing, guided translation, prompt-word writing, transformation, word-order reconstruction, and constrained sentence production.
-- The learner must be guided with clue words, target words, or grammatical conditions.
-- Do not let the set become free paraphrase only.
-`;
-  }
-
-  if (submode === MAGIC_SUBMODE.GLOBAL_MAGIC) {
-    return `
-[MAGIC SUBMODE ENFORCEMENT]
-- Final MAGIC submode: GLOBAL_MAGIC
-- The set must clearly reflect English-medium writing training logic.
-- Prioritize paraphrasing, combining, rewriting with target grammar, style-control rewriting, concise/natural/formal revision, and meaning-preserving transformation.
-- Do not let the set become Korean translation practice.
-`;
-  }
-
-  return `
-[MAGIC SUBMODE ENFORCEMENT]
-- Final MAGIC submode: GENERAL_MAGIC
-- Blend guided writing and rewriting.
-- Keep clues visible and maintain structured support.
-`;
-}
-
-const qualityControl = `
-[FINAL QUALITY GATE]
-Before finalizing the worksheet, silently verify all of the following:
-1. No internal headings such as Phase 1, Phase 2, Meaning Layer, Structure Layer, or Deep Dive.
-2. No repeated question stems testing the same point with small wording changes.
-3. In WORMHOLE mode, do not let the set collapse into mostly single-sentence blanks.
-4. In WORMHOLE mode, include correct/incorrect, count-based, same-pattern, revision, and mixed-trap pressure.
-5. In WORMHOLE mode, ensure at least 3 count-type or same-pattern items are visibly present.
-6. In MOCK_EXAM mode, force the required distribution across meaning, structure, blank, flow, vocabulary, and hybrid items.
-7. In MOCK_EXAM mode, no more than 3 direct detail questions.
-8. In MIDDLE_TEXTBOOK mode, remain middle-school appropriate but sharper than ordinary workbook output.
-9. In MAGIC mode, include at least 5 activity types.
-10. In KOREAN_MAGIC, the set must visibly contain clue-based guided writing.
-11. In GLOBAL_MAGIC, the set must visibly contain paraphrase/combine/rewrite tasks.
-12. In VOCAB mode, extracted vocabulary must be passage-essential.
-13. Explanation lines must be specific enough to show the structural reason, not empty generic labels.
-14. Remove code fences and visible meta artifacts.
-15. Respect the selected final mode even if keywords overlap.
-16. Keep the title visible when title intent is present.
-17. Keep the official answer key heading exactly as requested.
-`;
-
-function cleanOutputArtifacts(text = '') {
-  return String(text || '')
-    .replace(/```plaintext/gi, '')
-    .replace(/```/g, '')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/\u00a0/g, ' ')
-    .replace(/©\s*2026\s*MARCUSNOTE\.\s*All rights reserved\./gi, '')
-    .replace(/\n{3,}/g, '\n\n')
+function normalizeWhitespace(text = "") {
+  return String(text)
+    .replace(/\r/g, "")
+    .replace(/\t/g, " ")
+    .replace(/[ ]{2,}/g, " ")
     .trim();
 }
 
-function stripDuplicateSourceLabels(text = '') {
-  const lines = String(text || '').split('\n');
-  const seen = new Set();
-  const result = [];
+function ensureString(value, fallback = "") {
+  if (typeof value === "string") return value.trim();
+  if (value == null) return fallback;
+  return String(value).trim();
+}
 
-  for (const line of lines) {
-    const trimmed = line.trim();
-    const isSource =
-      /^Source:/i.test(trimmed) ||
-      /^Estimated Source:/i.test(trimmed) ||
-      /^Source Classification:/i.test(trimmed);
+function ensureArray(value) {
+  return Array.isArray(value) ? value : [];
+}
 
-    if (isSource) {
-      if (seen.has(trimmed)) continue;
-      seen.add(trimmed);
+function dedupeStrings(arr = []) {
+  return [...new Set(arr.map((x) => ensureString(x)).filter(Boolean))];
+}
+
+function pickFirstNonEmpty(...values) {
+  for (const v of values) {
+    const s = ensureString(v);
+    if (s) return s;
+  }
+  return "";
+}
+
+function extractJsonObject(rawText = "") {
+  const text = ensureString(rawText);
+
+  if (!text) {
+    throw new Error("Empty model output.");
+  }
+
+  const fenced = text.match(/```json\s*([\s\S]*?)```/i);
+  if (fenced?.[1]) {
+    const parsed = safeJsonParse(fenced[1]);
+    if (parsed) return parsed;
+  }
+
+  const firstBrace = text.indexOf("{");
+  const lastBrace = text.lastIndexOf("}");
+
+  if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+    const candidate = text.slice(firstBrace, lastBrace + 1);
+    const parsed = safeJsonParse(candidate);
+    if (parsed) return parsed;
+  }
+
+  throw new Error("Failed to extract JSON object from model output.");
+}
+
+function makeErrorResponse(res, status, message, extra = {}) {
+  return res.status(status).json({
+    ok: false,
+    error: message,
+    ...extra,
+  });
+}
+
+/* -----------------------------------------------------------
+ * Input normalization
+ * --------------------------------------------------------- */
+
+function normalizeRequestBody(body = {}) {
+  const selectedEngine = pickFirstNonEmpty(
+    body.selectedEngine,
+    body.engine,
+    body.engineMode,
+    body.mode
+  );
+
+  const worksheetTitle = pickFirstNonEmpty(
+    body.worksheetTitle,
+    body.title,
+    body.filename,
+    "Marcusnote Worksheet"
+  );
+
+  const prompt = pickFirstNonEmpty(
+    body.prompt,
+    body.userInput,
+    body.input,
+    body.sourceContent,
+    body.content
+  );
+
+  const publishingBrand = pickFirstNonEmpty(
+    body.publishingBrand,
+    body.brand,
+    "I•MARCUSNOTE"
+  );
+
+  const academyName = pickFirstNonEmpty(
+    body.academyName,
+    body.instituteName,
+    publishingBrand
+  );
+
+  return {
+    selectedEngine,
+    worksheetTitle,
+    prompt,
+    publishingBrand,
+    academyName,
+    raw: body,
+  };
+}
+
+/* -----------------------------------------------------------
+ * Engine resolution
+ * --------------------------------------------------------- */
+
+function normalizeEngineName(value = "") {
+  const v = ensureString(value).toUpperCase();
+
+  if (!v) return "";
+
+  if (
+    v.includes("ABC") ||
+    v.includes("STARTER") ||
+    v.includes("JUNIOR")
+  ) {
+    return ENGINE_MODE.ABC_STARTER;
+  }
+
+  if (
+    v.includes("MOCK") ||
+    v.includes("수능") ||
+    v.includes("모의")
+  ) {
+    return ENGINE_MODE.MOCK_EXAM;
+  }
+
+  if (
+    v.includes("MIDDLE") ||
+    v.includes("TEXTBOOK") ||
+    v.includes("내신") ||
+    v.includes("교과서")
+  ) {
+    return ENGINE_MODE.MIDDLE_TEXTBOOK;
+  }
+
+  if (v.includes("WORMHOLE") || v.includes("웜홀")) {
+    return ENGINE_MODE.WORMHOLE;
+  }
+
+  if (v.includes("MAGIC") || v.includes("매직")) {
+    return ENGINE_MODE.MAGIC;
+  }
+
+  if (v.includes("VOCAB") || v.includes("단어")) {
+    return ENGINE_MODE.VOCAB_BUILDER;
+  }
+
+  return "";
+}
+
+function inferEngineFromPrompt(prompt = "") {
+  const text = ensureString(prompt).toLowerCase();
+
+  if (!text) return "";
+
+  const hasWormholeSignal =
+    /웜홀|wormhole|고난도|어법|grammar judgment|elite distractor|변형문제|최고난도/.test(text);
+
+  const hasMagicSignal =
+    /매직|magic|영작|rewrite|paraphrase|combine|translate into english|composition|서술형|영어로 쓰기/.test(text);
+
+  const hasVocabSignal =
+    /단어장|어휘|vocab|vocabulary|뜻 쓰기|synonym|antonym/.test(text);
+
+  const hasMockSignal =
+    /모의고사|mock|수능|킬러|빈칸|순서|삽입/.test(text);
+
+  const hasMiddleSignal =
+    /교과서|중간고사|기말고사|내신|출판사|중\d|고\d/.test(text);
+
+  if (hasWormholeSignal) return ENGINE_MODE.WORMHOLE;
+  if (hasMagicSignal) return ENGINE_MODE.MAGIC;
+  if (hasVocabSignal) return ENGINE_MODE.VOCAB_BUILDER;
+  if (hasMockSignal) return ENGINE_MODE.MOCK_EXAM;
+  if (hasMiddleSignal) return ENGINE_MODE.MIDDLE_TEXTBOOK;
+
+  return "";
+}
+
+function resolveEngineMode(selectedEngine, prompt = "") {
+  const normalizedSelected = normalizeEngineName(selectedEngine);
+  const inferred = inferEngineFromPrompt(prompt);
+
+  if (!normalizedSelected && inferred) return inferred;
+  if (normalizedSelected && !inferred) return normalizedSelected;
+  if (!normalizedSelected && !inferred) return ENGINE_MODE.WORMHOLE;
+
+  const hardConflictPairs = [
+    [ENGINE_MODE.MOCK_EXAM, ENGINE_MODE.WORMHOLE],
+    [ENGINE_MODE.WORMHOLE, ENGINE_MODE.MAGIC],
+    [ENGINE_MODE.MAGIC, ENGINE_MODE.VOCAB_BUILDER],
+  ];
+
+  const conflict = hardConflictPairs.some(
+    ([a, b]) =>
+      (normalizedSelected === a && inferred === b) ||
+      (normalizedSelected === b && inferred === a)
+  );
+
+  return conflict ? inferred : normalizedSelected;
+}
+
+/* -----------------------------------------------------------
+ * Prompt policy
+ * --------------------------------------------------------- */
+
+function buildGlobalSystemPolicy({ locale, selectedEngine, resolvedEngine }) {
+  const isKo = locale === "ko";
+
+  return `
+You are the core generation engine for I•MARCUSNOTE.
+You create teacher-ready educational worksheets, never generic chat output.
+
+CRITICAL BRAND DEFINITIONS:
+- "마커스매직" = "마커스매직카드"
+- "마커스웜홀" = "마커스웜홀카드"
+- The grammar basis is chapter-based grammar.
+- In practice, the two textbook lines share about 90% of the same content.
+- Preserve this internal alignment when generating materials.
+
+ENGINE RESOLUTION RULE:
+- The user's selected engine is: ${selectedEngine || "UNKNOWN"}
+- The resolved engine you MUST follow is: ${resolvedEngine}
+- If the user input and selected button conflict, obey the RESOLVED engine.
+
+GLOBAL QUALITY RULES:
+1. Output must feel like a premium teacher worksheet.
+2. Do not produce vague or generic practice.
+3. Keep all questions internally consistent.
+4. Make only one best answer for each multiple-choice item.
+5. Avoid answer-key contradictions.
+6. Avoid tense-time collisions such as "have/has + p.p. + yesterday/last year/ago".
+7. Avoid malformed verb chains such as:
+   - has wrote
+   - have saw
+   - has went
+   - have did
+   - has ate
+   unless they are intentionally wrong distractors and NOT the correct answer.
+8. Distractors must be plausible but clearly inferior to the correct answer.
+9. Preserve academic polish and print-ready formatting.
+10. Never include meta-apologies or model commentary.
+
+JSON OUTPUT RULE:
+Return ONLY valid JSON.
+Do not wrap it in markdown unless absolutely necessary.
+No extra commentary before or after JSON.
+
+JSON SCHEMA:
+{
+  "worksheetTitle": "string",
+  "mainTitle": "string",
+  "subtitle": "string",
+  "direction": "string",
+  "teacherNote": "string",
+  "questions": [
+    {
+      "number": 1,
+      "type": "multiple_choice|short_answer|rewrite|transform|combine|completion|vocab",
+      "stem": "string",
+      "options": ["string"],
+      "answer": "string",
+      "explanation": "string"
+    }
+  ],
+  "structuralLogic": [
+    {
+      "range": "1-5",
+      "points": ["string", "string"]
+    }
+  ]
+}
+
+LOCALE RULE:
+- Primary locale: ${locale}
+- If locale is ko, directions and teacher-facing framing should naturally fit Korean school contexts.
+- Core item stems may remain in English where academically appropriate.
+- Avoid over-translating formal question stems if English stems are more test-authentic.
+
+${
+  isKo
+    ? "Tone target: premium Korean academy / school exam support."
+    : "Tone target: premium international classroom / assessment support."
+}
+`.trim();
+}
+
+function buildEngineSpecificInstruction({
+  resolvedEngine,
+  worksheetTitle,
+  prompt,
+  locale,
+}) {
+  const commonFooter = `
+Use the user's title exactly if it is already meaningful.
+Requested worksheet title: ${worksheetTitle}
+User request:
+${prompt}
+`.trim();
+
+  switch (resolvedEngine) {
+    case ENGINE_MODE.WORMHOLE:
+      return `
+ENGINE: WORMHOLE
+
+WORMHOLE CORE:
+- High-difficulty grammar judgment
+- Elite distractors
+- Premium sentence transformation
+- Teacher-ready academic worksheet
+- 25 items fixed
+
+WORMHOLE FORMAT:
+- Items 1-20: mainly 5-choice high-difficulty items
+- Items 21-25: short answer / correction / transformation / combination / completion
+- Provide a complete answer key
+- Provide a concise explanation for each item
+- Provide 5 structural-logic groups: 1-5, 6-10, 11-15, 16-20, 21-25
+
+QUALITY FILTERS:
+- Make exactly one best answer per multiple-choice item
+- Wrong options should be plausible but not ambiguous
+- Avoid accidental duplicate-correct options
+- If a tense unit is present, ensure answer key is logically valid
+- If the topic is present perfect, never allow time-adverb clashes in the correct answer
+- If the topic is relative pronouns / infinitives / grammar structures, enforce real grammar distinctions
+- Keep the difficulty premium, not random
+
+DIRECTION STYLE:
+${locale === "ko" ? "Use a polished Korean teacher-facing intro, but test stems may stay in English." : "Use a polished teacher-facing intro in English."}
+
+${commonFooter}
+`.trim();
+
+    case ENGINE_MODE.MAGIC:
+      return `
+ENGINE: MAGIC
+
+MAGIC CORE:
+- Marcus Magic = Marcus Magic Card
+- Textbook grammar and chapter-based grammar are closely aligned
+- About 90% of the core content overlaps across the lines
+- English composition / rewrite / combine / guided transformation focus
+- NO multiple-choice questions
+
+MAGIC FORMAT:
+- 25 items fixed
+- Every item must be productive output:
+  rewrite / combine / translate / paraphrase / guided composition / error correction
+- No options like ①②③④⑤
+- Each item should provide space-compatible, workbook-style prompts
+- Provide answer key / model answers
+- Provide concise teacher explanation
+
+If the user's input is Korean and school-context writing practice, produce Korean Magic style.
+If the user's input is English and asks for paraphrase/combine/rewrite, produce Global Magic style.
+
+${commonFooter}
+`.trim();
+
+    case ENGINE_MODE.VOCAB_BUILDER:
+      return `
+ENGINE: VOCAB_BUILDER
+
+VOCAB FORMAT:
+- Up to 30 items
+- Focus on level-appropriate vocabulary training
+- Can include meaning match, fill-in, collocation, synonym, antonym, context usage
+- Keep answer key clear
+- Avoid generic low-value vocabulary
+
+${commonFooter}
+`.trim();
+
+    case ENGINE_MODE.MOCK_EXAM:
+      return `
+ENGINE: MOCK_EXAM
+
+MOCK EXAM FORMAT:
+- 25 exam-style items
+- Test-authentic style
+- Emphasize inferencing, grammar, transformation, or passage-based assessment depending on prompt
+- Maintain premium academic rigor
+- Provide answer key and concise rationale
+
+${commonFooter}
+`.trim();
+
+    case ENGINE_MODE.MIDDLE_TEXTBOOK:
+      return `
+ENGINE: MIDDLE_TEXTBOOK
+
+MIDDLE TEXTBOOK FORMAT:
+- School-test-aligned internal exam practice
+- Reflect Korean middle school textbook / exam style when relevant
+- Mix grammar, sentence judgment, rewrite, and application items as appropriate
+- 25 items fixed
+- Provide answer key and concise rationale
+
+${commonFooter}
+`.trim();
+
+    case ENGINE_MODE.ABC_STARTER:
+      return `
+ENGINE: ABC_STARTER
+
+ABC STARTER FORMAT:
+- Beginner-friendly but still teacher-ready
+- Simpler vocabulary and sentence structures
+- 20 to 25 items allowed
+- Clear correct answer logic
+- Provide concise answer key
+
+${commonFooter}
+`.trim();
+
+    default:
+      return `
+ENGINE: DEFAULT
+Produce a premium worksheet matching the user's request.
+
+${commonFooter}
+`.trim();
+  }
+}
+
+/* -----------------------------------------------------------
+ * OpenAI call
+ * --------------------------------------------------------- */
+
+async function callModelForJson({ systemPolicy, engineInstruction }) {
+  const response = await client.responses.create({
+    model: OPENAI_MODEL,
+    instructions: systemPolicy,
+    input: engineInstruction,
+  });
+
+  const text = ensureString(response.output_text);
+
+  if (!text) {
+    throw new Error("Model returned empty output_text.");
+  }
+
+  return extractJsonObject(text);
+}
+
+/* -----------------------------------------------------------
+ * Validation / repair
+ * --------------------------------------------------------- */
+
+function normalizeQuestion(q, index) {
+  const number = Number(q?.number) || index + 1;
+  const type = pickFirstNonEmpty(q?.type, "multiple_choice");
+  const stem = ensureString(q?.stem);
+  const options = ensureArray(q?.options).map((x) => ensureString(x)).filter(Boolean);
+  const answer = ensureString(q?.answer);
+  const explanation = ensureString(q?.explanation);
+
+  return { number, type, stem, options, answer, explanation };
+}
+
+function normalizePacket(packet, fallbackTitle = "Marcusnote Worksheet") {
+  const questions = ensureArray(packet?.questions).map(normalizeQuestion);
+
+  const structuralLogic = ensureArray(packet?.structuralLogic).map((group) => ({
+    range: ensureString(group?.range),
+    points: ensureArray(group?.points).map((x) => ensureString(x)).filter(Boolean),
+  }));
+
+  return {
+    worksheetTitle: pickFirstNonEmpty(packet?.worksheetTitle, fallbackTitle),
+    mainTitle: pickFirstNonEmpty(packet?.mainTitle, "MARCUSNOTE WORKSHEET"),
+    subtitle: ensureString(packet?.subtitle),
+    direction: ensureString(packet?.direction),
+    teacherNote: ensureString(packet?.teacherNote),
+    questions,
+    structuralLogic,
+  };
+}
+
+function containsSuspiciousPresentPerfectCollision(text = "") {
+  const t = text.toLowerCase();
+
+  const timeMarkers = [
+    "yesterday",
+    "last year",
+    "last night",
+    "last weekend",
+    "two days ago",
+    "ago",
+    "in 2023",
+    "in 2024",
+    "this morning",
+  ];
+
+  const hasPerfect = /\b(has|have)\s+\w+/.test(t);
+  const hasTimeMarker = timeMarkers.some((marker) => t.includes(marker));
+
+  return hasPerfect && hasTimeMarker;
+}
+
+function containsMalformedPerfectAsCorrect(text = "") {
+  const t = text.toLowerCase();
+
+  return [
+    /\bhas wrote\b/,
+    /\bhave wrote\b/,
+    /\bhas went\b/,
+    /\bhave went\b/,
+    /\bhas saw\b/,
+    /\bhave saw\b/,
+    /\bhas did\b/,
+    /\bhave did\b/,
+    /\bhas ate\b/,
+    /\bhave ate\b/,
+    /\bhas seen yesterday\b/,
+    /\bhave seen yesterday\b/,
+  ].some((re) => re.test(t));
+}
+
+function validatePacket(packet, resolvedEngine) {
+  const issues = [];
+  const questions = packet.questions || [];
+
+  if (!packet.worksheetTitle) issues.push("worksheetTitle is missing.");
+  if (!packet.mainTitle) issues.push("mainTitle is missing.");
+  if (!packet.direction) issues.push("direction is missing.");
+  if (questions.length < 20) issues.push("Too few questions.");
+  if (
+    resolvedEngine === ENGINE_MODE.WORMHOLE ||
+    resolvedEngine === ENGINE_MODE.MAGIC ||
+    resolvedEngine === ENGINE_MODE.MIDDLE_TEXTBOOK ||
+    resolvedEngine === ENGINE_MODE.MOCK_EXAM
+  ) {
+    if (questions.length !== 25) {
+      issues.push(`Question count must be exactly 25, got ${questions.length}.`);
+    }
+  }
+
+  for (const q of questions) {
+    if (!q.stem) {
+      issues.push(`Question ${q.number} has empty stem.`);
     }
 
-    result.push(line);
+    const isMultipleChoice =
+      q.type === "multiple_choice" ||
+      (Array.isArray(q.options) && q.options.length > 0);
+
+    if (isMultipleChoice) {
+      if (q.options.length !== 5) {
+        issues.push(`Question ${q.number} must have exactly 5 options.`);
+      }
+      if (!q.answer) {
+        issues.push(`Question ${q.number} missing answer.`);
+      }
+    } else if (!q.answer) {
+      issues.push(`Question ${q.number} missing answer.`);
+    }
+
+    const correctText = `${q.stem}\n${q.answer}\n${q.explanation}`;
+
+    if (containsSuspiciousPresentPerfectCollision(correctText)) {
+      issues.push(`Question ${q.number} contains suspicious tense-time collision.`);
+    }
+
+    if (containsMalformedPerfectAsCorrect(correctText)) {
+      issues.push(`Question ${q.number} contains malformed present perfect in answer/explanation.`);
+    }
   }
 
-  return result.join('\n').trim();
+  if (resolvedEngine === ENGINE_MODE.WORMHOLE) {
+    const first20 = questions.slice(0, 20);
+    const shortTail = questions.slice(20, 25);
+
+    if (first20.some((q) => q.options.length !== 5)) {
+      issues.push("WORMHOLE items 1-20 must be 5-choice format.");
+    }
+
+    if (shortTail.some((q) => q.options.length > 0 && q.type !== "multiple_choice")) {
+      issues.push("WORMHOLE items 21-25 should be short-answer style without unnecessary options.");
+    }
+
+    if (packet.structuralLogic.length < 5) {
+      issues.push("WORMHOLE requires 5 structural logic groups.");
+    }
+  }
+
+  if (resolvedEngine === ENGINE_MODE.MAGIC) {
+    const hasMC = questions.some((q) => q.options.length > 0);
+    if (hasMC) {
+      issues.push("MAGIC must not include multiple-choice options.");
+    }
+  }
+
+  return {
+    ok: issues.length === 0,
+    issues,
+  };
 }
 
-function ensureSingleSourceLabel(text = '', labelText = '') {
-  let cleaned = stripDuplicateSourceLabels(text).trim();
-  const label = String(labelText || '').trim();
+async function repairPacket({
+  originalPacket,
+  validationIssues,
+  systemPolicy,
+  resolvedEngine,
+  worksheetTitle,
+  prompt,
+}) {
+  const repairInstruction = `
+Repair the worksheet JSON.
+Keep the same resolved engine: ${resolvedEngine}
+Keep question count valid.
+Fix ALL issues below.
 
-  if (!label) return cleaned;
-  if (!cleaned) return label;
-  if (cleaned.includes(label)) return cleaned;
+VALIDATION ISSUES:
+${validationIssues.map((x, i) => `${i + 1}. ${x}`).join("\n")}
 
-  const lines = cleaned.split('\n');
-  if (lines.length > 0 && /^#\s+/.test(lines[0].trim())) {
-    lines.splice(1, 0, label);
-    return lines.join('\n').trim();
-  }
+ORIGINAL USER REQUEST:
+${prompt}
 
-  return `${label}\n${cleaned}`.trim();
+CURRENT JSON TO REPAIR:
+${JSON.stringify(originalPacket, null, 2)}
+
+Return ONLY valid JSON in the original schema.
+Use worksheetTitle: ${worksheetTitle}
+`.trim();
+
+  const repaired = await callModelForJson({
+    systemPolicy,
+    engineInstruction: repairInstruction,
+  });
+
+  return repaired;
 }
 
-function ensureVisibleTitle(text = '', title = '') {
-  const cleaned = String(text || '').trim();
-  const finalTitle = String(title || '').trim();
-  if (!finalTitle || !cleaned) return cleaned;
-  if (cleaned.includes(`\n${finalTitle}\n`) || cleaned.startsWith(finalTitle + '\n')) return cleaned;
+/* -----------------------------------------------------------
+ * Output formatter
+ * --------------------------------------------------------- */
 
-  const lines = cleaned.split('\n');
-  if (lines.length >= 3 && /^#\s+/.test(lines[0].trim())) {
-    const insertIndex = Math.min(4, lines.length);
-    lines.splice(insertIndex, 0, finalTitle);
-    return lines.join('\n').trim();
+function formatWorksheetText(packet) {
+  const lines = [];
+
+  lines.push(packet.mainTitle || "MARCUSNOTE WORKSHEET");
+
+  if (packet.subtitle) lines.push(packet.subtitle);
+  lines.push("");
+
+  if (packet.worksheetTitle) {
+    lines.push(packet.worksheetTitle);
+    lines.push("");
   }
 
-  return `${finalTitle}\n${cleaned}`.trim();
-}
-
-function normalizeOfficialAnswerKey(text = '') {
-  return String(text || '')
-    .replace(/^OFFICIAL MARCUSNOTE ANSWER KEY$/gim, '### OFFICIAL MARCUSNOTE ANSWER KEY')
-    .replace(/^Answer Key$/gim, '### OFFICIAL MARCUSNOTE ANSWER KEY')
-    .replace(/^정답$/gim, '### OFFICIAL MARCUSNOTE ANSWER KEY');
-}
-
-function countMatches(text = '', regex) {
-  return (String(text || '').match(regex) || []).length;
-}
-
-function isLowQualityOutput(text = '', engineType = ENGINE_MODE.WORMHOLE, magicSubMode = MAGIC_SUBMODE.GENERAL_MAGIC) {
-  const lower = String(text || '').toLowerCase();
-
-  const weakWormhole =
-    engineType === ENGINE_MODE.WORMHOLE &&
-    (
-      countMatches(lower, /fill in the blank/gi) >= 8 ||
-      !/how many|same pattern|same type of error|best revision|preserves the meaning|grammatically incorrect|grammatically correct/gi.test(lower) ||
-      !/official marcusnote answer key/gi.test(lower)
-    );
-
-  const weakMock =
-    engineType === ENGINE_MODE.MOCK_EXAM &&
-    (
-      !/blank|summary|insertion|sequence|flow|purpose|gist|vocabulary|hybrid/gi.test(lower) ||
-      countMatches(lower, /which of the following/gi) >= 12
-    );
-
-  const weakMiddle =
-    engineType === ENGINE_MODE.MIDDLE_TEXTBOOK &&
-    countMatches(lower, /fill in the blank/gi) >= 10 &&
-    !/revision|rewrite|transformation|structure|expand/gi.test(lower);
-
-  const weakMagicGeneral =
-    engineType === ENGINE_MODE.MAGIC &&
-    (
-      countMatches(lower, /paraphrase/gi) + countMatches(lower, /combine/gi) + countMatches(lower, /rewrite/gi) + countMatches(lower, /translate/gi) < 4
-    );
-
-  const weakKoreanMagic =
-    engineType === ENGINE_MODE.MAGIC &&
-    magicSubMode === MAGIC_SUBMODE.KOREAN_MAGIC &&
-    (
-      !/[가-힣]/.test(text) ||
-      (!/clue|단서|주어진|조건|활용하여|영어로 쓰시오|문장을 쓰시오/gi.test(text))
-    );
-
-  const weakGlobalMagic =
-    engineType === ENGINE_MODE.MAGIC &&
-    magicSubMode === MAGIC_SUBMODE.GLOBAL_MAGIC &&
-    (
-      !/paraphrase|combine|rewrite|natural|concise|formal/gi.test(lower)
-    );
-
-  const weakExplanation =
-    /correct tense usage|proper grammar usage|correct form only|identify verb form only/gi.test(lower);
-
-  return weakWormhole || weakMock || weakMiddle || weakMagicGeneral || weakKoreanMagic || weakGlobalMagic || weakExplanation;
-}
-
-// =========================
-// API HANDLER
-// =========================
-module.exports = async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://imarcusnote.com');
-  res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
+  if (packet.direction) {
+    lines.push(packet.direction);
+    lines.push("");
   }
 
-  if (req.method !== 'POST') {
-    return res.status(405).json({
-      ok: false,
-      message: 'Method Not Allowed'
-    });
+  if (packet.teacherNote) {
+    lines.push(packet.teacherNote);
+    lines.push("");
   }
 
-  const { prompt, mode, title } = req.body || {};
+  for (const q of packet.questions) {
+    lines.push(`${q.number}. ${q.stem}`);
 
-  if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
-    return res.status(400).json({
-      ok: false,
-      message: 'Prompt required'
-    });
-  }
-
-  if (!process.env.OPENAI_API_KEY) {
-    return res.status(500).json({
-      ok: false,
-      message: 'Missing OPENAI_API_KEY'
-    });
-  }
-
-  if (!process.env.OPENAI_VECTOR_STORE_ID) {
-    return res.status(500).json({
-      ok: false,
-      message: 'Missing OPENAI_VECTOR_STORE_ID'
-    });
-  }
-
-  const normalizedPrompt = prompt.trim();
-  const modeResolution = resolveFinalMode(mode, normalizedPrompt);
-  const engineType = modeResolution.finalMode;
-  const magicSubMode = engineType === ENGINE_MODE.MAGIC
-    ? detectMagicSubMode(normalizedPrompt)
-    : null;
-
-  const baseInstruction = getBaseInstructionByEngine(engineType);
-  const detectedLanguage = detectPromptLanguage(normalizedPrompt);
-  const routingControl = buildRoutingControl(engineType, magicSubMode || MAGIC_SUBMODE.GENERAL_MAGIC);
-  const itemCount = getItemCountByEngine(engineType);
-  const sourceLabel = buildSourceLabel(normalizedPrompt, engineType);
-  const worksheetTitle = String(title || inferWorksheetTitle(normalizedPrompt, engineType)).trim();
-
-  const languageControl = `
-[LANGUAGE CONTROL]
-- Detected user language: ${detectedLanguage}
-- The instruction line must follow the detected user language.
-- All test sentences and options must remain natural English unless the task explicitly requires otherwise.
-`;
-
-  const quantityControl = `
-[QUANTITY CONTROL]
-- Generate exactly ${itemCount} items when the selected engine uses a fixed set size.
-- Every item must test a different learning point or answering pathway.
-`;
-
-  const sourceLabelControl = `
-[SOURCE LABEL RULE]
-- Add exactly one source label line near the top.
-- Use this prepared source label:
-${sourceLabel.labelText}
-`;
-
-  const titleControl = worksheetTitle
-    ? `
-[TITLE CONTROL]
-- Use this exact visible worksheet title line near the top:
-${worksheetTitle}
-- Do not replace it with a generic heading.
-`
-    : '';
-
-  const vectorControl = `
-[VECTOR STORE PRIORITY]
-- Use retrieved vector-store knowledge as the primary policy layer.
-- Strongly reflect the selected MARCUSNOTE mode.
-- Do not fall back to generic worksheet behavior.
-`;
-
-  const modeAlignmentControl = modeResolution.modeAdjusted
-    ? `
-[MODE AUTO-CORRECTION]
-- The user's selected button mode and prompt content did not match.
-- Requested mode: ${modeResolution.requestedMode}
-- Detected mode from prompt: ${modeResolution.detectedMode}
-- Final enforced mode: ${modeResolution.finalMode}
-- Generate output strictly in the final enforced mode.
-`
-    : '';
-
-  const magicSubmodeControl =
-    engineType === ENGINE_MODE.MAGIC
-      ? buildMagicSubmodeControl(magicSubMode)
-      : '';
-
-  const fullSystemPrompt = [
-    baseInstruction,
-    routingControl,
-    languageControl,
-    quantityControl,
-    vectorControl,
-    sourceLabelControl,
-    titleControl,
-    modeAlignmentControl,
-    magicSubmodeControl,
-    qualityControl
-  ].join('\n');
-
-  const baseMaxTokens =
-    engineType === ENGINE_MODE.ABC_STARTER ? 1200 :
-    engineType === ENGINE_MODE.VOCAB_BUILDER ? 2400 :
-    engineType === ENGINE_MODE.MAGIC ? 3600 :
-    engineType === ENGINE_MODE.WORMHOLE ? 4400 :
-    engineType === ENGINE_MODE.MIDDLE_TEXTBOOK ? 4000 :
-    engineType === ENGINE_MODE.MOCK_EXAM ? 3400 :
-    3000;
-
-  try {
-    let response = await openai.responses.create({
-      model: 'gpt-4o-mini',
-      max_output_tokens: baseMaxTokens,
-      input: [
-        {
-          role: 'system',
-          content: fullSystemPrompt
-        },
-        {
-          role: 'user',
-          content: normalizedPrompt
-        }
-      ],
-      tools: [
-        {
-          type: 'file_search',
-          vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-          max_num_results: 4
-        }
-      ]
-    });
-
-    let finalText = response.output_text || '';
-
-    if (normalizedPrompt.length < 5000 && isLowQualityOutput(finalText, engineType, magicSubMode || MAGIC_SUBMODE.GENERAL_MAGIC)) {
-      response = await openai.responses.create({
-        model: 'gpt-4o-mini',
-        max_output_tokens: Math.min(baseMaxTokens + 300, 4700),
-        input: [
-          {
-            role: 'system',
-            content:
-              fullSystemPrompt +
-              `
-[RETRY OVERRIDE]
-The previous draft was too generic, repetitive, or insufficiently aligned.
-
-Mandatory corrections:
-- Respect final mode exactly: ${engineType}
-${engineType === ENGINE_MODE.MAGIC ? `- Respect final MAGIC submode exactly: ${magicSubMode}` : ''}
-- Keep the visible worksheet title exactly: ${worksheetTitle || 'AUTO'}
-- Keep the official answer key heading exactly
-- Increase discrimination power or production depth
-- Remove repetitive patterns
-- Improve explanation specificity
-- Keep premium academy / publication usability
-- Do not submit a draft that could be mistaken for a generic worksheet
-`
-          },
-          {
-            role: 'user',
-            content: normalizedPrompt
-          }
-        ],
-        tools: [
-          {
-            type: 'file_search',
-            vector_store_ids: [process.env.OPENAI_VECTOR_STORE_ID],
-            max_num_results: 4
-          }
-        ]
+    if (q.options?.length) {
+      q.options.forEach((opt, idx) => {
+        const marks = ["①", "②", "③", "④", "⑤"];
+        lines.push(`${marks[idx] || `${idx + 1}.`} ${opt}`);
       });
-
-      finalText = response.output_text || '';
     }
 
-    finalText = cleanOutputArtifacts(finalText);
-    finalText = ensureSingleSourceLabel(finalText, sourceLabel.labelText);
-    finalText = ensureVisibleTitle(finalText, worksheetTitle);
-    finalText = normalizeOfficialAnswerKey(finalText);
+    lines.push("");
+  }
 
+  lines.push("OFFICIAL MARCUSNOTE ANSWER KEY");
+  lines.push("");
+
+  for (const q of packet.questions) {
+    lines.push(`${q.number}) ${q.answer}`);
+    if (q.explanation) {
+      lines.push(`- ${q.explanation}`);
+    }
+  }
+
+  if (packet.structuralLogic?.length) {
+    lines.push("");
+    lines.push("Structural Logic");
+    lines.push("");
+
+    for (const group of packet.structuralLogic) {
+      lines.push(`Structural Logic ${group.range}`);
+      for (const point of group.points) {
+        lines.push(`- ${point}`);
+      }
+      lines.push("");
+    }
+  }
+
+  return lines.join("\n").trim();
+}
+
+function buildFrontResponse({
+  packet,
+  resolvedEngine,
+  selectedEngine,
+  prompt,
+}) {
+  const outputText = formatWorksheetText(packet);
+
+  return {
+    ok: true,
+
+    output: outputText,
+    result: outputText,
+    content: outputText,
+    worksheet: outputText,
+    text: outputText,
+
+    worksheetTitle: packet.worksheetTitle,
+    title: packet.worksheetTitle,
+    mainTitle: packet.mainTitle,
+    subtitle: packet.subtitle,
+    direction: packet.direction,
+
+    selectedEngine: selectedEngine || "",
+    resolvedEngine,
+    selectedEngineLabel: ENGINE_LABELS[normalizeEngineName(selectedEngine)] || selectedEngine || "",
+    resolvedEngineLabel: ENGINE_LABELS[resolvedEngine] || resolvedEngine,
+
+    questions: packet.questions,
+    structuralLogic: packet.structuralLogic,
+
+    meta: {
+      prompt,
+      model: OPENAI_MODEL,
+      questionCount: packet.questions.length,
+      generatedAt: new Date().toISOString(),
+    },
+  };
+}
+
+/* -----------------------------------------------------------
+ * Main handler
+ * --------------------------------------------------------- */
+
+module.exports = async function handler(req, res) {
+  if (req.method === "GET") {
     return res.status(200).json({
       ok: true,
-      engineType,
-      magicSubMode,
-      modeNotice: modeResolution.modeNotice,
-      title: worksheetTitle,
-      result: finalText
+      message: "I•MARCUSNOTE generate endpoint is working. Use POST.",
+      model: OPENAI_MODEL,
     });
-  } catch (error) {
-    console.error('generate.js error:', error);
+  }
 
-    return res.status(500).json({
-      ok: false,
-      message: error?.message || 'Generation failed'
+  if (req.method !== "POST") {
+    return makeErrorResponse(res, 405, "Method not allowed.");
+  }
+
+  try {
+    const body = normalizeRequestBody(req.body || {});
+    const locale = isKoreanText(`${body.worksheetTitle}\n${body.prompt}`) ? "ko" : "en";
+    const resolvedEngine = resolveEngineMode(body.selectedEngine, body.prompt);
+
+    if (!body.prompt) {
+      return makeErrorResponse(res, 400, "Prompt is required.");
+    }
+
+    const systemPolicy = buildGlobalSystemPolicy({
+      locale,
+      selectedEngine: body.selectedEngine,
+      resolvedEngine,
+    });
+
+    const engineInstruction = buildEngineSpecificInstruction({
+      resolvedEngine,
+      worksheetTitle: body.worksheetTitle,
+      prompt: body.prompt,
+      locale,
+    });
+
+    let packet = null;
+    let lastValidation = null;
+    let attempt = 0;
+
+    while (attempt < MAX_MODEL_ATTEMPTS) {
+      attempt += 1;
+
+      const rawPacket = await callModelForJson({
+        systemPolicy,
+        engineInstruction,
+      });
+
+      packet = normalizePacket(rawPacket, body.worksheetTitle);
+      lastValidation = validatePacket(packet, resolvedEngine);
+
+      if (lastValidation.ok) break;
+
+      if (attempt < MAX_MODEL_ATTEMPTS) {
+        const repaired = await repairPacket({
+          originalPacket: packet,
+          validationIssues: lastValidation.issues,
+          systemPolicy,
+          resolvedEngine,
+          worksheetTitle: body.worksheetTitle,
+          prompt: body.prompt,
+        });
+
+        packet = normalizePacket(repaired, body.worksheetTitle);
+        lastValidation = validatePacket(packet, resolvedEngine);
+
+        if (lastValidation.ok) break;
+      }
+    }
+
+    if (!packet) {
+      return makeErrorResponse(res, 500, "Worksheet generation failed.");
+    }
+
+    if (!lastValidation?.ok) {
+      return makeErrorResponse(
+        res,
+        500,
+        "Worksheet generated but failed validation.",
+        {
+          validationIssues: lastValidation?.issues || [],
+          selectedEngine: body.selectedEngine,
+          resolvedEngine,
+        }
+      );
+    }
+
+    const responsePayload = buildFrontResponse({
+      packet,
+      resolvedEngine,
+      selectedEngine: body.selectedEngine,
+      prompt: body.prompt,
+    });
+
+    return res.status(200).json(responsePayload);
+  } catch (error) {
+    console.error("[generate.js] error:", error);
+
+    return makeErrorResponse(res, 500, "Internal server error.", {
+      detail: error?.message || "Unknown error",
     });
   }
 };
