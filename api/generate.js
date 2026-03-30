@@ -169,18 +169,18 @@ function getItemCountByEngine(engine) {
 function getMaxOutputTokens(engine) {
   switch (engine) {
     case ENGINE_MODE.ABC_STARTER:
-      return 1400;
+      return 1200;
     case ENGINE_MODE.VOCAB_BUILDER:
-      return 2200;
+      return 1800;
     case ENGINE_MODE.MOCK_EXAM:
-      return 2600;
+      return 2200;
     case ENGINE_MODE.MAGIC:
-      return 3000;
+      return 2400;
     case ENGINE_MODE.MIDDLE_TEXTBOOK:
-      return 3000;
+      return 2400;
     case ENGINE_MODE.WORMHOLE:
     default:
-      return 3200;
+      return 2600;
   }
 }
 
@@ -194,47 +194,25 @@ function buildEngineInstruction(engine, locale, itemCount, magicSubMode) {
 
   switch (engine) {
     case ENGINE_MODE.WORMHOLE:
-      return `
+  return `
 ENGINE IDENTITY:
-- Premium grammar assessment
-- High discrimination
+- Premium high-difficulty grammar and transformation exam
 - Not a generic worksheet
 - Prefer 5-option multiple-choice for most items
-- Mix judgment, same-pattern, revision, meaning-preserving, and high-trap items
-- Keep distractors plausible
+- Use plausible distractors
 - Avoid shallow beginner drills
-- This is a HIGH-DISCRIMINATION EXAM, not a basic worksheet
-- Designed to make even top students think deeply
-- Focus on traps, ambiguity, precision, and meaning-sensitive grammar judgment
+- Maintain high discrimination
 
-QUESTION DESIGN DISTRIBUTION (MANDATORY):
-- 1~5: Gist / Purpose / Main Idea
-- 6~10: Grammar Trap / Correct vs Incorrect Usage
-- 11~15: Sentence Transformation / Rewrite / Structure Change
-- 16~20: Same Pattern / Error Detection / Meaning Preservation
-- 21~25: Short Answer / Explanation / Reasoning
-
-DISTRACTOR DESIGN:
-- All incorrect options must be plausible
-- Avoid obvious wrong answers
-- Distractors should be grammatically close to the correct answer
-- Distractors should share similar structure or vocabulary
-- At least 2 distractors should be almost correct when possible
-
-DIFFICULTY CONTROL:
+WORMHOLE RULES:
+- Generate the number of items requested by the user (Default: ${itemCount})
+- Use a balanced mix of gist, grammar trap, sentence transformation, same-pattern, and short-answer items
 - At least 30% should be high-difficulty items
 - Label items worth 5+ points as [High Difficulty]
-- High-difficulty items should require multi-step reasoning or grammar-meaning interaction
-- Include trap structures for high-difficulty items
-
-CONTENT REQUIREMENTS:
-- Use the given passage deeply, not superficially
-- Transform source material into new testable material
-- Do not rely on direct sentence copying unless necessary
+- High-difficulty items should require grammar-meaning interaction or multi-step reasoning
+- Use the given passage deeply and transform it into testable material
 - Maintain academic exam tone
 
 ${instructionLineRule}
-Generate the number of items requested by the user (Default: ${itemCount})
 `;
     case ENGINE_MODE.MAGIC:
       return `
@@ -365,7 +343,7 @@ async function callModel(prompt, engine) {
       input: prompt,
       max_output_tokens: getMaxOutputTokens(engine),
     }),
-    48000
+    60000
   );
 
   const text = ensureString(res.output_text);
