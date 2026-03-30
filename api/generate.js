@@ -194,7 +194,7 @@ function buildEngineInstruction(engine, locale, itemCount, magicSubMode) {
 
   switch (engine) {
     case ENGINE_MODE.WORMHOLE:
-  return `
+      return `
 ENGINE IDENTITY:
 - Premium high-difficulty grammar and transformation exam
 - Not a generic worksheet
@@ -336,6 +336,234 @@ async function withTimeout(promise, ms) {
   ]).finally(() => clearTimeout(timer));
 }
 
+function normalizeTextForCompare(text = "") {
+  return ensureString(text)
+    .toLowerCase()
+    .replace(/\[high difficulty\]/gi, "")
+    .replace(/[“”"'`]/g, "")
+    .replace(/[.,!?;:()]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function countMatchesInOptions(answer = "", options = []) {
+  const normalizedAnswer = normalizeTextForCompare(answer);
+  if (!normalizedAnswer) return 0;
+
+  return ensureArray(options).filter((opt) => {
+    return normalizeTextForCompare(opt) === normalizedAnswer;
+  }).length;
+}
+
+function looksLikeErrorFindingQuestion(stem = "") {
+  const s = ensureString(stem).toLowerCase();
+  return (
+    s.includes("find the error") ||
+    s.includes("incorrect") ||
+    s.includes("어법상") ||
+    s.includes("틀린") ||
+    s.includes("옳지 않은")
+  );
+}
+
+function looksLikeSentenceCombinationQuestion(stem = "") {
+  const s = ensureString(stem).toLowerCase();
+  return (
+    s.includes("combine these sentences") ||
+    s.includes("combine the sentences") ||
+    s.includes("rewrite") ||
+    s.includes("transform") ||
+    s.includes("rewrite the following") ||
+    s.includes("문장을 결합") ||
+    s.includes("다음 문장을 합치")
+  );
+}
+
+function looksLikeObjectRelativePronounTopic(title = "", prompt = "", stem = "") {
+  const joined = `${title} ${prompt} ${stem}`.toLowerCase();
+  return (
+    /목적격 관계대명사/.test(joined) ||
+    joined.includes("object relative pronoun") ||
+    joined.includes("objective relative pronoun")
+  );
+}
+
+function hasObjectRelativePronounSignal(text = "") {
+  const t = ensureString(text).toLowerCase();
+  return (
+    t.includes("whom") ||
+    t.includes("which") ||
+    t.includes("that") ||
+    t.includes("목적격") ||
+    t.includes("relative pronoun")
+  );
+}
+
+function hasOnlyFiveOptionsWhenMultipleChoice(q) {
+  if (!q.options || !q.options.length) return true;
+  return q.options.length === 5;
+}
+
+function validateSingleAnswerMatch(q) {
+  if (!q.options || !q.options.length) return { ok: true };
+
+  const matches = countMatchesInOptions(q.answer, q.options);
+
+  return {
+    ok: matches === 1,
+    reason:
+      matches === 0
+        ? "Answer does not match any option exactly"
+        : "Answer matches multiple options",
+  };
+}
+
+function validateErrorFindingQuestion(q) {
+  if (!looksLikeErrorFindingQuestion(q.stem)) {
+    return { ok: true };
+  }
+
+  const normalizedAnswer = normalizeTextForCompare(q.answer);
+  const matches = countMatchesInOptions(q.answer, q.options);
+
+  if (matches !== 1) {
+    return {
+      ok: false,
+      reason: "Error-finding item has unclear answer-option mapping",
+    };
+  }
+
+  const suspiciousSafeWords = ["who", "whom", "which", "that"];
+  if (suspiciousSafeWords.includes(normalizedAnswer)) {
+    return {
+      ok: false,
+      reason: "Error-finding item flagged a relative pronoun token only; likely unsafe",
+    };
+  }
+
+  return { ok: true };
+}
+
+function validateCombinationQuestion(q) {
+  if (!looksLikeSentenceCombinationQuestion(q.stem)) {
+    return { ok: true };
+  }
+
+  const matches = countMatchesInOptions(q.answer, q.options);
+  if (q.options?.length && matches !== 1) {
+    return {
+      ok: false,
+      reason: "Combination/rewriting item has unclear single correct answer",
+    };
+  }
+
+  return { ok: true };
+}
+
+function validateObjectRelativePronounAlignment(q, context = {}) {
+  const { worksheetTitle = "", originalPrompt = "" } = context;
+
+  const isTargetTopic = looksLikeObjectRelativePronounTopic(
+    worksheetTitle,
+    originalPrompt,
+    q.stem
+  );
+
+  if (!isTargetTopic) {
+    return { ok: true };
+  }
+
+  const joined = `${q.stem} ${ensureArray(q.options).join(" ")} ${q.answer}`.toLowerCase();
+
+  if (!hasObjectRelativePronounSignal(joined)) {
+    return {
+      ok: false,
+      reason: "Item does not align strongly with object relative pronoun topic",
+    };
+  }
+
+  if (joined.includes("whose") && !joined.includes("whom")) {
+    return {
+      ok: false,
+      reason: "Possessive relative pronoun item drifted away from object-relative focus",
+    };
+  }
+
+  return { ok: true };
+}
+
+function validateQuestionBasic(q) {
+  if (!q || typeof q !== "object") {
+    return { ok: false, reason: "Question is not an object" };
+  }
+
+  if (!ensureString(q.stem)) {
+    return { ok: false, reason: "Missing stem" };
+  }
+
+  if (!ensureString(q.answer)) {
+    return { ok: false, reason: "Missing answer" };
+  }
+
+  if (!hasOnlyFiveOptionsWhenMultipleChoice(q)) {
+    return { ok: false, reason: "Multiple-choice item does not have exactly 5 options" };
+  }
+
+  if (q.options?.length && q.options.length < 4) {
+    return { ok: false, reason: "Too few options" };
+  }
+
+  return { ok: true };
+}
+
+function renumberQuestions(questions = []) {
+  return ensureArray(questions).map((q, index) => ({
+    ...q,
+    number: index + 1,
+  }));
+}
+
+function applyWormholeValidation(packet, context = {}) {
+  if (!packet || !Array.isArray(packet.questions)) {
+    return packet;
+  }
+
+  const rejected = [];
+  const accepted = [];
+
+  for (const q of packet.questions) {
+    const checks = [
+      validateQuestionBasic(q),
+      validateSingleAnswerMatch(q),
+      validateErrorFindingQuestion(q),
+      validateCombinationQuestion(q),
+      validateObjectRelativePronounAlignment(q, context),
+    ];
+
+    const failed = checks.find((c) => !c.ok);
+
+    if (failed) {
+      rejected.push({
+        number: q.number,
+        stem: q.stem,
+        reason: failed.reason || "Rejected by wormhole validation",
+      });
+      continue;
+    }
+
+    accepted.push(q);
+  }
+
+  packet.questions = renumberQuestions(accepted);
+  packet.validation = {
+    acceptedCount: packet.questions.length,
+    rejectedCount: rejected.length,
+    rejected,
+  };
+
+  return packet;
+}
+
 async function callModel(prompt, engine) {
   const res = await withTimeout(
     client.responses.create({
@@ -373,7 +601,8 @@ async function callModel(prompt, engine) {
 
   parsed.questions = ensureArray(parsed.questions)
     .map((q, index) => {
-      const difficulty = ensureString(q?.difficulty, "normal").toLowerCase() === "high" ? "high" : "normal";
+      const difficulty =
+        ensureString(q?.difficulty, "normal").toLowerCase() === "high" ? "high" : "normal";
       let stem = ensureString(q?.stem, `Question ${index + 1}`);
 
       if (difficulty === "high" && !stem.includes("[High Difficulty]")) {
@@ -383,7 +612,10 @@ async function callModel(prompt, engine) {
       return {
         number: Number(q?.number) || index + 1,
         stem,
-        options: ensureArray(q?.options).map((o) => ensureString(o)).filter(Boolean).slice(0, 5),
+        options: ensureArray(q?.options)
+          .map((o) => ensureString(o))
+          .filter(Boolean)
+          .slice(0, 5),
         answer: ensureString(q?.answer, ""),
         difficulty,
       };
@@ -392,6 +624,17 @@ async function callModel(prompt, engine) {
 
   if (!parsed.questions.length) {
     throw new Error("Invalid packet: no questions returned");
+  }
+
+  if (engine === ENGINE_MODE.WORMHOLE) {
+    parsed = applyWormholeValidation(parsed, {
+      worksheetTitle: parsed.mainTitle,
+      originalPrompt: prompt,
+    });
+
+    if (!parsed.questions.length) {
+      throw new Error("Wormhole validation rejected all questions");
+    }
   }
 
   return parsed;
@@ -525,6 +768,7 @@ module.exports = async function handler(req, res) {
       modeAdjusted: engineResolution.adjusted,
       detectedMode: engineResolution.detectedMode,
       model: OPENAI_MODEL,
+      validation: packet.validation || null,
     });
   } catch (e) {
     console.error("[generate.js] error:", e);
