@@ -101,37 +101,36 @@ function inferEngine(prompt = "") {
   return ENGINE_MODE.WORMHOLE;
 }
 
+/**
+ * 7차 핵심:
+ * - selectedEngine이 유효하면 무조건 그 엔진 유지
+ * - detected는 보조 참고용만 사용
+ * - 자동 엔진 교체 금지
+ */
 function resolveEngine(selectedEngine, prompt = "") {
   const requested = ensureString(selectedEngine).toUpperCase();
   const detected = inferEngine(prompt);
   const validModes = new Set(Object.values(ENGINE_MODE));
 
-  if (!requested || !validModes.has(requested)) {
-    return {
-      requestedMode: "",
-      detectedMode: detected,
-      finalMode: detected,
-      adjusted: false,
-      notice: "",
-    };
-  }
-
-  if (requested === detected) {
+  if (requested && validModes.has(requested)) {
     return {
       requestedMode: requested,
       detectedMode: detected,
       finalMode: requested,
       adjusted: false,
-      notice: "",
+      notice:
+        requested !== detected
+          ? `Selected engine "${requested}" was preserved. Input text also contains signals related to "${detected}", but automatic engine switching is disabled.`
+          : "",
     };
   }
 
   return {
-    requestedMode: requested,
+    requestedMode: "",
     detectedMode: detected,
     finalMode: detected,
-    adjusted: true,
-    notice: `Input content matched ${detected} more strongly than ${requested}, so the engine was adjusted automatically.`,
+    adjusted: false,
+    notice: "No valid engine was selected, so the engine was inferred from the input.",
   };
 }
 
@@ -235,6 +234,7 @@ function buildEngineInstruction(engine, locale, itemCount, magicSubMode) {
       return `
 ENGINE IDENTITY:
 - Premium high-difficulty grammar and transformation exam
+- Strongly exam-oriented
 - Prefer 5-option multiple-choice for most items
 - Use plausible distractors
 - Maintain academic exam tone
@@ -245,9 +245,9 @@ WORMHOLE RULES:
 - Use a balanced mix of grammar, transformation, inference, same-pattern, and passage-based items
 - At least 25% should be high-difficulty items
 - Label high-difficulty items with [High Difficulty]
-- For passage-based transformation tasks, short-answer items are allowed when necessary
+- Multiple-choice is the default format
 - Avoid malformed answer keys
-- Each answer must be a FULL option text or a full short answer, never a single broken fragment
+- Each answer must be a FULL option text or a full short answer, never a broken fragment
 - If the item is multiple-choice, exactly one option should be the best answer
 - Avoid obviously broken grammar in correct answers
 
@@ -259,23 +259,38 @@ ENGINE IDENTITY:
 - Premium guided production workbook
 - Focus on writing, rewriting, transformation, guided production
 - MAGIC SUBMODE: ${magicSubMode}
-- If KOREAN_MAGIC: prefer clue-based Korean-to-English guided production
+- If KOREAN_MAGIC: prefer Korean-to-English production
 - If GLOBAL_MAGIC: prefer paraphrase, combine, rewrite, concise/formal revision
 - Answers must be complete, teacher-usable outputs
 
+MAGIC ABSOLUTE RULES:
+- Generate exactly ${itemCount} items unless the user's task clearly requires fewer
+- DO NOT generate multiple-choice options
+- DO NOT generate 5-choice answers
+- Each item should be a production task, sentence writing task, rewrite task, or guided completion task
+- "options" should be omitted
+- "answer" should be a complete model answer
+- Never turn Magic into Wormhole-style grammar multiple-choice
+- Never turn Magic into Mock-style test questions
+
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
     case ENGINE_MODE.MOCK_EXAM:
       return `
 ENGINE IDENTITY:
 - Korean mock-exam transformation worksheet
 - Use 5-option multiple-choice
-- Mix gist, blank, grammar-in-context, sequence, insertion, vocabulary, hybrid items
+- Mix gist, blank, grammar-in-context, sequence, insertion, vocabulary, and passage-based items
 - Answers must map cleanly to the choices
 
+MOCK EXAM RULES:
+- Generate exactly ${itemCount} items unless the user's task clearly requires fewer
+- Default to 5-option multiple-choice
+- Keep strong test-book / exam-book tone
+- Do not turn this into Magic-style sentence production
+- Do not turn this into pure Wormhole grammar-only mode unless the user's source itself is grammar-transformation based
+
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
     case ENGINE_MODE.MIDDLE_TEXTBOOK:
       return `
@@ -286,8 +301,13 @@ ENGINE IDENTITY:
 - Stay middle-school appropriate
 - Avoid malformed answer keys
 
+MIDDLE_TEXTBOOK RULES:
+- Generate exactly ${itemCount} items unless the user's task clearly requires fewer
+- Keep textbook-linked school-exam style
+- Default to 5-option multiple-choice
+- Do not convert into Magic production workbook format
+
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
     case ENGINE_MODE.VOCAB_BUILDER:
       return `
@@ -297,8 +317,11 @@ ENGINE IDENTITY:
 - Default to 5-option multiple-choice
 - Answers must be complete and clear
 
+VOCAB RULES:
+- Generate exactly ${itemCount} items unless the user's task clearly requires fewer
+- Prioritize vocabulary meaning, usage, synonym/antonym, context completion
+
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
     case ENGINE_MODE.ABC_STARTER:
     default:
@@ -308,8 +331,11 @@ ENGINE IDENTITY:
 - Very clear, short, easy, encouraging
 - Answers must be complete and readable
 
+ABC RULES:
+- Generate exactly ${itemCount} items unless the user's task clearly requires fewer
+- Keep difficulty low and stable
+
 ${instructionLineRule}
-Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
   }
 }
@@ -337,6 +363,8 @@ STRICT RULES:
 - Generate exactly ${itemCount} items unless the user's task clearly requires fewer.
 - The answer must never be an orphaned single token like "have", "experience", or "last week" unless the question explicitly asks for a single word.
 - If the question has options, the answer should match the full best option text whenever possible.
+- Respect the selected ENGINE strictly.
+- Never switch worksheet style to another engine family.
 
 ${engineInstruction}
 
@@ -359,8 +387,8 @@ SCHEMA RULES:
 - "questions" must be an array.
 - Each question must include: number, stem, answer.
 - "instruction" is recommended.
-- "options" may be omitted only if the task clearly should not be multiple choice.
-- If options exist, prefer exactly 5.
+- For MAGIC, omit "options".
+- For non-MAGIC modes, prefer exactly 5 options when multiple-choice is used.
 - If difficulty is "high", include "[High Difficulty]" in the stem.
 - Do not place "[High Difficulty]" inside the answer string.
 - Do not return null fields.
@@ -589,57 +617,75 @@ function renumberQuestions(questions = []) {
   }));
 }
 
-function createFallbackPacket(title = "MARCUSNOTE WORKSHEET", locale = "ko") {
-  const instruction =
-    locale === "ko"
-      ? "다음 문제를 풀고 정답을 고르세요."
-      : locale === "ja"
-      ? "次の問題を解き、正解を選びなさい。"
-      : "Solve the following questions and choose the best answer.";
+function createFallbackInstruction(locale = "ko", engine = ENGINE_MODE.WORMHOLE) {
+  if (engine === ENGINE_MODE.MAGIC) {
+    if (locale === "ko") return "다음 문장을 영어로 완성하세요.";
+    if (locale === "ja") return "次の文を英語で完成させなさい。";
+    return "Complete the following sentences in English.";
+  }
+
+  if (locale === "ko") return "다음 문제를 풀고 정답을 고르세요.";
+  if (locale === "ja") return "次の問題を解き、正解を選びなさい。";
+  return "Solve the following questions and choose the best answer.";
+}
+
+function createEngineFallbackPacket(title = "MARCUSNOTE WORKSHEET", locale = "ko", engine = ENGINE_MODE.WORMHOLE, requestedCount = 5) {
+  const instruction = createFallbackInstruction(locale, engine);
+
+  if (engine === ENGINE_MODE.MAGIC) {
+    const questions = [];
+    const count = Math.max(5, Math.min(requestedCount || 5, 25));
+
+    for (let i = 1; i <= count; i += 1) {
+      questions.push({
+        number: i,
+        stem:
+          locale === "ko"
+            ? `보정 영작 문항 ${i}: 다음 문장을 영어로 쓰세요.`
+            : locale === "ja"
+            ? `補正英作文 ${i}: 次の文を英語で書きなさい。`
+            : `Recovery writing item ${i}: Write the sentence in English.`,
+        answer:
+          locale === "ko"
+            ? `Sample answer ${i}`
+            : locale === "ja"
+            ? `Sample answer ${i}`
+            : `Sample answer ${i}`,
+        difficulty: "normal",
+      });
+    }
+
+    return {
+      mainTitle: title,
+      instruction,
+      questions,
+      validation: {
+        fallback: true,
+        message: "Engine-specific Magic fallback packet used",
+      },
+    };
+  }
+
+  const questions = [];
+  const count = Math.max(5, Math.min(requestedCount || 5, 25));
+
+  for (let i = 1; i <= count; i += 1) {
+    questions.push({
+      number: i,
+      stem: `Sample recovery item ${i}`,
+      options: ["A", "B", "C", "D", "E"],
+      answer: ["A", "B", "C", "D", "E"][(i - 1) % 5],
+      difficulty: "normal",
+    });
+  }
 
   return {
     mainTitle: title,
     instruction,
-    questions: [
-      {
-        number: 1,
-        stem: "Sample recovery item 1",
-        options: ["A", "B", "C", "D", "E"],
-        answer: "A",
-        difficulty: "normal",
-      },
-      {
-        number: 2,
-        stem: "Sample recovery item 2",
-        options: ["A", "B", "C", "D", "E"],
-        answer: "B",
-        difficulty: "normal",
-      },
-      {
-        number: 3,
-        stem: "Sample recovery item 3",
-        options: ["A", "B", "C", "D", "E"],
-        answer: "C",
-        difficulty: "normal",
-      },
-      {
-        number: 4,
-        stem: "Sample recovery item 4",
-        options: ["A", "B", "C", "D", "E"],
-        answer: "D",
-        difficulty: "normal",
-      },
-      {
-        number: 5,
-        stem: "Sample recovery item 5",
-        options: ["A", "B", "C", "D", "E"],
-        answer: "E",
-        difficulty: "normal",
-      },
-    ],
+    questions,
     validation: {
       fallback: true,
-      message: "Fallback packet used",
+      message: "Engine-specific multiple-choice fallback packet used",
     },
   };
 }
@@ -710,7 +756,7 @@ function repairAnswer(q, locale = "en") {
   return repaired;
 }
 
-function sanitizeQuestionShape(q, index, locale = "en") {
+function sanitizeQuestionShape(q, index, locale = "en", engine = ENGINE_MODE.WORMHOLE) {
   const difficulty =
     ensureString(q?.difficulty, "normal").toLowerCase() === "high" ? "high" : "normal";
 
@@ -719,19 +765,28 @@ function sanitizeQuestionShape(q, index, locale = "en") {
     stem = `[High Difficulty] ${stem}`;
   }
 
-  const hasOptions = Array.isArray(q?.options) && q.options.length > 0;
-  const options = hasOptions ? fixOptions(q.options, locale) : [];
+  let options = [];
+
+  if (engine !== ENGINE_MODE.MAGIC) {
+    const hasOptions = Array.isArray(q?.options) && q.options.length > 0;
+    options = hasOptions ? fixOptions(q.options, locale) : [];
+  }
 
   let answer = ensureString(q?.answer, "");
   answer = trimDifficultyTagFromAnswer(answer);
 
-  return {
+  const result = {
     number: Number(q?.number) || index + 1,
     stem,
-    options,
     answer,
     difficulty,
   };
+
+  if (engine !== ENGINE_MODE.MAGIC && options.length) {
+    result.options = options;
+  }
+
+  return result;
 }
 
 function applyWormholeValidation(packet, context = {}) {
@@ -796,7 +851,53 @@ function applyWormholeValidation(packet, context = {}) {
   return packet;
 }
 
-function padQuestionsToRequestedCount(packet, requestedCount, locale = "en") {
+function applyMagicValidation(packet) {
+  if (!packet || !Array.isArray(packet.questions)) {
+    return packet;
+  }
+
+  const cleaned = packet.questions
+    .map((q, index) => {
+      const item = { ...q, number: index + 1 };
+
+      delete item.options;
+
+      item.stem = ensureString(item.stem, `Writing item ${index + 1}`);
+      item.answer = ensureString(item.answer, `Sample answer ${index + 1}`);
+
+      if (!item.answer) {
+        item.answer = `Sample answer ${index + 1}`;
+      }
+
+      return item;
+    })
+    .filter((q) => ensureString(q.stem) && ensureString(q.answer));
+
+  packet.questions = renumberQuestions(cleaned);
+  packet.validation = {
+    ...(packet.validation || {}),
+    magicValidated: true,
+    multipleChoiceRemoved: true,
+  };
+
+  return packet;
+}
+
+function applyEngineValidation(packet, engine, context = {}) {
+  if (!packet || !Array.isArray(packet.questions)) return packet;
+
+  if (engine === ENGINE_MODE.WORMHOLE) {
+    return applyWormholeValidation(packet, context);
+  }
+
+  if (engine === ENGINE_MODE.MAGIC) {
+    return applyMagicValidation(packet);
+  }
+
+  return packet;
+}
+
+function padQuestionsToRequestedCount(packet, requestedCount, locale = "en", engine = ENGINE_MODE.WORMHOLE) {
   const current = ensureArray(packet.questions);
   if (!requestedCount || current.length >= requestedCount) {
     packet.questions = current.slice(0, requestedCount || current.length);
@@ -806,18 +907,33 @@ function padQuestionsToRequestedCount(packet, requestedCount, locale = "en") {
   const padded = [...current];
   while (padded.length < requestedCount) {
     const n = padded.length + 1;
-    padded.push({
-      number: n,
-      stem:
-        locale === "ko"
-          ? `보정 문항 ${n}`
-          : locale === "ja"
-          ? `補正問題 ${n}`
-          : `Recovery item ${n}`,
-      options: ["A", "B", "C", "D", "E"],
-      answer: "A",
-      difficulty: "normal",
-    });
+
+    if (engine === ENGINE_MODE.MAGIC) {
+      padded.push({
+        number: n,
+        stem:
+          locale === "ko"
+            ? `보정 영작 문항 ${n}: 다음 문장을 영어로 쓰세요.`
+            : locale === "ja"
+            ? `補正文 ${n}: 次の文を英語で書きなさい。`
+            : `Recovery writing item ${n}: Write the sentence in English.`,
+        answer: `Sample answer ${n}`,
+        difficulty: "normal",
+      });
+    } else {
+      padded.push({
+        number: n,
+        stem:
+          locale === "ko"
+            ? `보정 문항 ${n}`
+            : locale === "ja"
+            ? `補正問題 ${n}`
+            : `Recovery item ${n}`,
+        options: ["A", "B", "C", "D", "E"],
+        answer: "A",
+        difficulty: "normal",
+      });
+    }
   }
 
   packet.questions = padded;
@@ -866,26 +982,29 @@ async function callModel(prompt, engine, context = {}) {
   parsed.instruction = ensureString(parsed.instruction);
 
   parsed.questions = ensureArray(parsed.questions)
-    .map((q, index) => sanitizeQuestionShape(q, index, context.locale || "en"))
-    .map((q) => repairAnswer(q, context.locale || "en"))
+    .map((q, index) => sanitizeQuestionShape(q, index, context.locale || "en", engine))
+    .map((q) => (engine === ENGINE_MODE.MAGIC ? q : repairAnswer(q, context.locale || "en")))
     .filter((q) => q.stem);
 
   if (!parsed.questions.length) {
     throw new Error("Invalid packet: no questions returned");
   }
 
-  if (engine === ENGINE_MODE.WORMHOLE) {
-    parsed = applyWormholeValidation(parsed, {
-      worksheetTitle: context.worksheetTitle || parsed.mainTitle,
-      originalPrompt: context.originalUserPrompt || "",
-    });
+  parsed = applyEngineValidation(parsed, engine, {
+    worksheetTitle: context.worksheetTitle || parsed.mainTitle,
+    originalPrompt: context.originalUserPrompt || "",
+  });
 
-    if (!parsed.questions.length) {
-      parsed = createFallbackPacket(context.worksheetTitle || parsed.mainTitle, context.locale || "ko");
-    }
+  if (!parsed.questions.length) {
+    parsed = createEngineFallbackPacket(
+      context.worksheetTitle || parsed.mainTitle,
+      context.locale || "ko",
+      engine,
+      requestedCount
+    );
   }
 
-  parsed = padQuestionsToRequestedCount(parsed, requestedCount, context.locale || "en");
+  parsed = padQuestionsToRequestedCount(parsed, requestedCount, context.locale || "en", engine);
   parsed.questions = renumberQuestions(parsed.questions);
 
   return parsed;
@@ -1016,8 +1135,13 @@ module.exports = async function handler(req, res) {
       });
     } catch (modelError) {
       console.error("[generate.js] model/fallback error:", modelError);
-      packet = createFallbackPacket(body.worksheetTitle || "MARCUSNOTE WORKSHEET", locale);
-      packet = padQuestionsToRequestedCount(packet, requestedItemCount, locale);
+      packet = createEngineFallbackPacket(
+        body.worksheetTitle || "MARCUSNOTE WORKSHEET",
+        locale,
+        engine,
+        requestedItemCount
+      );
+      packet = padQuestionsToRequestedCount(packet, requestedItemCount, locale, engine);
       packet.questions = renumberQuestions(packet.questions);
     }
 
@@ -1035,6 +1159,7 @@ module.exports = async function handler(req, res) {
       engineLabel: ENGINE_LABELS[engine] || engine,
       modeAdjusted: engineResolution.adjusted,
       detectedMode: engineResolution.detectedMode,
+      requestedMode: engineResolution.requestedMode,
       model: OPENAI_MODEL,
       validation: packet.validation || null,
       requestedItemCount,
