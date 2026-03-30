@@ -75,7 +75,11 @@ function inferEngine(prompt = "") {
   const text = String(prompt || "");
   const lower = text.toLowerCase();
 
-  if (/웜홀|wormhole|마커스웜홀|고난도|어법상|same error|same pattern|grammatically incorrect|grammatically correct|변형문제/.test(lower)) {
+  if (
+    /웜홀|wormhole|마커스웜홀|고난도|어법상|same error|same pattern|grammatically incorrect|grammatically correct|변형문제/.test(
+      lower
+    )
+  ) {
     return ENGINE_MODE.WORMHOLE;
   }
   if (/매직|magic|영작|서술형|rewrite|paraphrase|combine|production training/.test(lower)) {
@@ -138,11 +142,15 @@ function detectMagicSubMode(prompt = "") {
 
   const koreanSignals =
     korean &&
-    /영작|서술형|내신|중등|중학교|중1|중2|중3|교과서|학원|단서|어순|조건에 맞게|문장을 쓰시오|영어로 쓰시오|주어진 단어/.test(text);
+    /영작|서술형|내신|중등|중학교|중1|중2|중3|교과서|학원|단서|어순|조건에 맞게|문장을 쓰시오|영어로 쓰시오|주어진 단어/.test(
+      text
+    );
 
   const globalSignals =
     !korean &&
-    /paraphrase|rewrite|combine|meaning-preserving|naturalize|formal|concise|style|register|transform/.test(lower);
+    /paraphrase|rewrite|combine|meaning-preserving|naturalize|formal|concise|style|register|transform/.test(
+      lower
+    );
 
   if (koreanSignals) return MAGIC_SUBMODE.KOREAN_MAGIC;
   if (globalSignals) return MAGIC_SUBMODE.GLOBAL_MAGIC;
@@ -150,7 +158,38 @@ function detectMagicSubMode(prompt = "") {
   return MAGIC_SUBMODE.GENERAL_MAGIC;
 }
 
-function getItemCountByEngine(engine) {
+function clampItemCount(n, min, max, fallback) {
+  const num = Number(n);
+  if (!Number.isFinite(num)) return fallback;
+  return Math.max(min, Math.min(max, Math.floor(num)));
+}
+
+function extractRequestedItemCount(prompt = "", engine) {
+  const text = ensureString(prompt);
+
+  const patterns = [
+    /(\d{1,2})\s*문항/,
+    /(\d{1,2})\s*문제/,
+    /(\d{1,2})\s*개/,
+    /(\d{1,2})\s*items?/i,
+    /(\d{1,2})\s*questions?/i,
+  ];
+
+  for (const regex of patterns) {
+    const match = text.match(regex);
+    if (match) {
+      const raw = Number(match[1]);
+      switch (engine) {
+        case ENGINE_MODE.ABC_STARTER:
+          return clampItemCount(raw, 5, 20, 10);
+        case ENGINE_MODE.VOCAB_BUILDER:
+          return clampItemCount(raw, 5, 30, 20);
+        default:
+          return clampItemCount(raw, 5, 25, 25);
+      }
+    }
+  }
+
   switch (engine) {
     case ENGINE_MODE.ABC_STARTER:
       return 10;
@@ -163,21 +202,23 @@ function getItemCountByEngine(engine) {
   }
 }
 
-function getMaxOutputTokens(engine) {
+function getMaxOutputTokens(engine, itemCount) {
+  const bonus = itemCount >= 20 ? 250 : itemCount >= 15 ? 150 : 0;
+
   switch (engine) {
     case ENGINE_MODE.ABC_STARTER:
-      return 1100;
+      return 1100 + bonus;
     case ENGINE_MODE.VOCAB_BUILDER:
-      return 1600;
+      return 1600 + bonus;
     case ENGINE_MODE.MOCK_EXAM:
-      return 1900;
+      return 1900 + bonus;
     case ENGINE_MODE.MAGIC:
-      return 2100;
+      return 2100 + bonus;
     case ENGINE_MODE.MIDDLE_TEXTBOOK:
-      return 2100;
+      return 2100 + bonus;
     case ENGINE_MODE.WORMHOLE:
     default:
-      return 2200;
+      return 2200 + bonus;
   }
 }
 
@@ -200,12 +241,15 @@ ENGINE IDENTITY:
 - When the user provides a passage with original answer choices, create NEW transformed items instead of copying the original choices blindly
 
 WORMHOLE RULES:
-- Generate the number of items requested by the user (Default: ${itemCount})
+- Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 - Use a balanced mix of grammar, transformation, inference, same-pattern, and passage-based items
 - At least 25% should be high-difficulty items
 - Label high-difficulty items with [High Difficulty]
 - For passage-based transformation tasks, short-answer items are allowed when necessary
 - Avoid malformed answer keys
+- Each answer must be a FULL option text or a full short answer, never a single broken fragment
+- If the item is multiple-choice, exactly one option should be the best answer
+- Avoid obviously broken grammar in correct answers
 
 ${instructionLineRule}
 `;
@@ -217,9 +261,10 @@ ENGINE IDENTITY:
 - MAGIC SUBMODE: ${magicSubMode}
 - If KOREAN_MAGIC: prefer clue-based Korean-to-English guided production
 - If GLOBAL_MAGIC: prefer paraphrase, combine, rewrite, concise/formal revision
+- Answers must be complete, teacher-usable outputs
 
 ${instructionLineRule}
-Generate the number of items requested by the user (Default: ${itemCount})
+Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
     case ENGINE_MODE.MOCK_EXAM:
       return `
@@ -227,9 +272,10 @@ ENGINE IDENTITY:
 - Korean mock-exam transformation worksheet
 - Use 5-option multiple-choice
 - Mix gist, blank, grammar-in-context, sequence, insertion, vocabulary, hybrid items
+- Answers must map cleanly to the choices
 
 ${instructionLineRule}
-Generate the number of items requested by the user (Default: ${itemCount})
+Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
     case ENGINE_MODE.MIDDLE_TEXTBOOK:
       return `
@@ -238,9 +284,10 @@ ENGINE IDENTITY:
 - Grammar-centered and school-test focused
 - Default to 5-option multiple-choice
 - Stay middle-school appropriate
+- Avoid malformed answer keys
 
 ${instructionLineRule}
-Generate the number of items requested by the user (Default: ${itemCount})
+Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
     case ENGINE_MODE.VOCAB_BUILDER:
       return `
@@ -248,9 +295,10 @@ ENGINE IDENTITY:
 - Vocabulary extractor and test builder
 - Build useful school-ready vocabulary questions
 - Default to 5-option multiple-choice
+- Answers must be complete and clear
 
 ${instructionLineRule}
-Generate the number of items requested by the user (Default: ${itemCount})
+Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
     case ENGINE_MODE.ABC_STARTER:
     default:
@@ -258,15 +306,15 @@ Generate the number of items requested by the user (Default: ${itemCount})
 ENGINE IDENTITY:
 - Elementary starter worksheet
 - Very clear, short, easy, encouraging
+- Answers must be complete and readable
 
 ${instructionLineRule}
-Generate the number of items requested by the user (Default: ${itemCount})
+Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 `;
   }
 }
 
-function buildPrompt({ engine, title, prompt, locale, magicSubMode, modeNotice }) {
-  const itemCount = getItemCountByEngine(engine);
+function buildPrompt({ engine, title, prompt, locale, magicSubMode, modeNotice, itemCount }) {
   const engineInstruction = buildEngineInstruction(engine, locale, itemCount, magicSubMode);
 
   return `
@@ -286,7 +334,9 @@ STRICT RULES:
 - Keep numbering sequential.
 - Include answers.
 - Keep the schema exactly as requested.
-- Generate the number of items requested by the user (Default: ${itemCount})
+- Generate exactly ${itemCount} items unless the user's task clearly requires fewer.
+- The answer must never be an orphaned single token like "have", "experience", or "last week" unless the question explicitly asks for a single word.
+- If the question has options, the answer should match the full best option text whenever possible.
 
 ${engineInstruction}
 
@@ -312,6 +362,8 @@ SCHEMA RULES:
 - "options" may be omitted only if the task clearly should not be multiple choice.
 - If options exist, prefer exactly 5.
 - If difficulty is "high", include "[High Difficulty]" in the stem.
+- Do not place "[High Difficulty]" inside the answer string.
+- Do not return null fields.
 
 TITLE:
 ${title}
@@ -336,7 +388,7 @@ function normalizeTextForCompare(text = "") {
     .toLowerCase()
     .replace(/\[high difficulty\]/gi, "")
     .replace(/[“”"'`]/g, "")
-    .replace(/[.,!?;:()]/g, "")
+    .replace(/[.,!?;:()[\]{}]/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -348,6 +400,26 @@ function countMatchesInOptions(answer = "", options = []) {
   return ensureArray(options).filter((opt) => {
     return normalizeTextForCompare(opt) === normalizedAnswer;
   }).length;
+}
+
+function findBestMatchingOption(answer = "", options = []) {
+  const normalizedAnswer = normalizeTextForCompare(answer);
+  if (!normalizedAnswer || !options.length) return "";
+
+  for (const option of options) {
+    const normalizedOption = normalizeTextForCompare(option);
+    if (!normalizedOption) continue;
+
+    if (
+      normalizedOption === normalizedAnswer ||
+      normalizedOption.includes(normalizedAnswer) ||
+      normalizedAnswer.includes(normalizedOption)
+    ) {
+      return option;
+    }
+  }
+
+  return "";
 }
 
 function looksLikeErrorFindingQuestion(stem = "") {
@@ -371,6 +443,17 @@ function looksLikeSentenceCombinationQuestion(stem = "") {
     s.includes("rewrite the following") ||
     s.includes("문장을 결합") ||
     s.includes("다음 문장을 합치")
+  );
+}
+
+function looksLikeSingleWordQuestion(stem = "") {
+  const s = ensureString(stem).toLowerCase();
+  return (
+    s.includes("한 단어") ||
+    s.includes("한 단어로") ||
+    s.includes("빈칸에 알맞은 말") ||
+    s.includes("fill in the blank") ||
+    s.includes("one word")
   );
 }
 
@@ -561,6 +644,96 @@ function createFallbackPacket(title = "MARCUSNOTE WORKSHEET", locale = "ko") {
   };
 }
 
+function trimDifficultyTagFromAnswer(answer = "") {
+  return ensureString(answer).replace(/\s*\[high difficulty\]\s*/gi, "").trim();
+}
+
+function fixOptions(options = [], fallbackLocale = "en") {
+  const cleaned = ensureArray(options)
+    .map((o) => ensureString(o))
+    .filter(Boolean)
+    .slice(0, 5);
+
+  if (!cleaned.length) return [];
+
+  while (cleaned.length < 5) {
+    const nextIndex = cleaned.length + 1;
+    cleaned.push(
+      fallbackLocale === "ko"
+        ? `보기 ${nextIndex}`
+        : fallbackLocale === "ja"
+        ? `選択肢 ${nextIndex}`
+        : `Option ${nextIndex}`
+    );
+  }
+
+  return cleaned.slice(0, 5);
+}
+
+function repairAnswer(q, locale = "en") {
+  const repaired = { ...q };
+  repaired.answer = trimDifficultyTagFromAnswer(repaired.answer);
+
+  if (!repaired.answer && repaired.options?.length) {
+    repaired.answer = repaired.options[0];
+    return repaired;
+  }
+
+  if (!repaired.options?.length) {
+    return repaired;
+  }
+
+  const exactMatches = countMatchesInOptions(repaired.answer, repaired.options);
+  if (exactMatches === 1) {
+    repaired.answer = findBestMatchingOption(repaired.answer, repaired.options) || repaired.answer;
+    return repaired;
+  }
+
+  const bestOption = findBestMatchingOption(repaired.answer, repaired.options);
+  if (bestOption) {
+    repaired.answer = bestOption;
+    return repaired;
+  }
+
+  const singleWordAllowed = looksLikeSingleWordQuestion(repaired.stem);
+  const normalized = normalizeTextForCompare(repaired.answer);
+
+  if (!singleWordAllowed && normalized && normalized.split(" ").length <= 2) {
+    repaired.answer = repaired.options[0];
+    return repaired;
+  }
+
+  if (!repaired.answer) {
+    repaired.answer = repaired.options[0];
+  }
+
+  return repaired;
+}
+
+function sanitizeQuestionShape(q, index, locale = "en") {
+  const difficulty =
+    ensureString(q?.difficulty, "normal").toLowerCase() === "high" ? "high" : "normal";
+
+  let stem = ensureString(q?.stem, `Question ${index + 1}`);
+  if (difficulty === "high" && !stem.includes("[High Difficulty]")) {
+    stem = `[High Difficulty] ${stem}`;
+  }
+
+  const hasOptions = Array.isArray(q?.options) && q.options.length > 0;
+  const options = hasOptions ? fixOptions(q.options, locale) : [];
+
+  let answer = ensureString(q?.answer, "");
+  answer = trimDifficultyTagFromAnswer(answer);
+
+  return {
+    number: Number(q?.number) || index + 1,
+    stem,
+    options,
+    answer,
+    difficulty,
+  };
+}
+
 function applyWormholeValidation(packet, context = {}) {
   if (!packet || !Array.isArray(packet.questions)) {
     return packet;
@@ -623,12 +796,46 @@ function applyWormholeValidation(packet, context = {}) {
   return packet;
 }
 
+function padQuestionsToRequestedCount(packet, requestedCount, locale = "en") {
+  const current = ensureArray(packet.questions);
+  if (!requestedCount || current.length >= requestedCount) {
+    packet.questions = current.slice(0, requestedCount || current.length);
+    return packet;
+  }
+
+  const padded = [...current];
+  while (padded.length < requestedCount) {
+    const n = padded.length + 1;
+    padded.push({
+      number: n,
+      stem:
+        locale === "ko"
+          ? `보정 문항 ${n}`
+          : locale === "ja"
+          ? `補正問題 ${n}`
+          : `Recovery item ${n}`,
+      options: ["A", "B", "C", "D", "E"],
+      answer: "A",
+      difficulty: "normal",
+    });
+  }
+
+  packet.questions = padded;
+  packet.validation = {
+    ...(packet.validation || {}),
+    paddedToRequestedCount: true,
+  };
+  return packet;
+}
+
 async function callModel(prompt, engine, context = {}) {
+  const requestedCount = context.requestedItemCount || 25;
+
   const res = await withTimeout(
     client.responses.create({
       model: OPENAI_MODEL,
       input: prompt,
-      max_output_tokens: getMaxOutputTokens(engine),
+      max_output_tokens: getMaxOutputTokens(engine, requestedCount),
     }),
     45000
   );
@@ -659,28 +866,8 @@ async function callModel(prompt, engine, context = {}) {
   parsed.instruction = ensureString(parsed.instruction);
 
   parsed.questions = ensureArray(parsed.questions)
-    .map((q, index) => {
-      const difficulty =
-        ensureString(q?.difficulty, "normal").toLowerCase() === "high" ? "high" : "normal";
-      let stem = ensureString(q?.stem, `Question ${index + 1}`);
-
-      if (difficulty === "high" && !stem.includes("[High Difficulty]")) {
-        stem = `[High Difficulty] ${stem}`;
-      }
-
-      const options = ensureArray(q?.options)
-        .map((o) => ensureString(o))
-        .filter(Boolean)
-        .slice(0, 5);
-
-      return {
-        number: Number(q?.number) || index + 1,
-        stem,
-        options,
-        answer: ensureString(q?.answer, ""),
-        difficulty,
-      };
-    })
+    .map((q, index) => sanitizeQuestionShape(q, index, context.locale || "en"))
+    .map((q) => repairAnswer(q, context.locale || "en"))
     .filter((q) => q.stem);
 
   if (!parsed.questions.length) {
@@ -697,6 +884,9 @@ async function callModel(prompt, engine, context = {}) {
       parsed = createFallbackPacket(context.worksheetTitle || parsed.mainTitle, context.locale || "ko");
     }
   }
+
+  parsed = padQuestionsToRequestedCount(parsed, requestedCount, context.locale || "en");
+  parsed.questions = renumberQuestions(parsed.questions);
 
   return parsed;
 }
@@ -729,8 +919,7 @@ function format(packet) {
   lines.push("");
 
   packet.questions.forEach((q) => {
-    const difficultyTag = q.difficulty === "high" ? " [High Difficulty]" : "";
-    lines.push(`${q.number}) ${q.answer}${difficultyTag}`);
+    lines.push(`${q.number}) ${trimDifficultyTagFromAnswer(q.answer)}`);
   });
 
   return lines.join("\n");
@@ -805,6 +994,8 @@ module.exports = async function handler(req, res) {
         ? detectMagicSubMode(body.prompt)
         : MAGIC_SUBMODE.GENERAL_MAGIC;
 
+    const requestedItemCount = extractRequestedItemCount(body.prompt, engine);
+
     const modelPrompt = buildPrompt({
       engine,
       title: body.worksheetTitle,
@@ -812,6 +1003,7 @@ module.exports = async function handler(req, res) {
       locale,
       magicSubMode,
       modeNotice: engineResolution.notice,
+      itemCount: requestedItemCount,
     });
 
     let packet;
@@ -820,10 +1012,13 @@ module.exports = async function handler(req, res) {
         worksheetTitle: body.worksheetTitle,
         originalUserPrompt: body.prompt,
         locale,
+        requestedItemCount,
       });
     } catch (modelError) {
       console.error("[generate.js] model/fallback error:", modelError);
       packet = createFallbackPacket(body.worksheetTitle || "MARCUSNOTE WORKSHEET", locale);
+      packet = padQuestionsToRequestedCount(packet, requestedItemCount, locale);
+      packet.questions = renumberQuestions(packet.questions);
     }
 
     const text = format(packet);
@@ -842,6 +1037,7 @@ module.exports = async function handler(req, res) {
       detectedMode: engineResolution.detectedMode,
       model: OPENAI_MODEL,
       validation: packet.validation || null,
+      requestedItemCount,
     });
   } catch (e) {
     console.error("[generate.js] error:", e);
