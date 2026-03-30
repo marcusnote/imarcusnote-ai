@@ -26,10 +26,6 @@ const ENGINE_LABELS = {
 
 const MAX_MODEL_ATTEMPTS = 2;
 
-/* -----------------------------------------------------------
- * Utility
- * --------------------------------------------------------- */
-
 function safeJsonParse(value, fallback = null) {
   try {
     return JSON.parse(value);
@@ -42,14 +38,6 @@ function isKoreanText(text = "") {
   return /[가-힣]/.test(text);
 }
 
-function normalizeWhitespace(text = "") {
-  return String(text)
-    .replace(/\r/g, "")
-    .replace(/\t/g, " ")
-    .replace(/[ ]{2,}/g, " ")
-    .trim();
-}
-
 function ensureString(value, fallback = "") {
   if (typeof value === "string") return value.trim();
   if (value == null) return fallback;
@@ -58,10 +46,6 @@ function ensureString(value, fallback = "") {
 
 function ensureArray(value) {
   return Array.isArray(value) ? value : [];
-}
-
-function dedupeStrings(arr = []) {
-  return [...new Set(arr.map((x) => ensureString(x)).filter(Boolean))];
 }
 
 function pickFirstNonEmpty(...values) {
@@ -104,10 +88,6 @@ function makeErrorResponse(res, status, message, extra = {}) {
     ...extra,
   });
 }
-
-/* -----------------------------------------------------------
- * Input normalization
- * --------------------------------------------------------- */
 
 function normalizeRequestBody(body = {}) {
   const selectedEngine = pickFirstNonEmpty(
@@ -154,51 +134,17 @@ function normalizeRequestBody(body = {}) {
   };
 }
 
-/* -----------------------------------------------------------
- * Engine resolution
- * --------------------------------------------------------- */
-
 function normalizeEngineName(value = "") {
   const v = ensureString(value).toUpperCase();
 
   if (!v) return "";
 
-  if (
-    v.includes("ABC") ||
-    v.includes("STARTER") ||
-    v.includes("JUNIOR")
-  ) {
-    return ENGINE_MODE.ABC_STARTER;
-  }
-
-  if (
-    v.includes("MOCK") ||
-    v.includes("수능") ||
-    v.includes("모의")
-  ) {
-    return ENGINE_MODE.MOCK_EXAM;
-  }
-
-  if (
-    v.includes("MIDDLE") ||
-    v.includes("TEXTBOOK") ||
-    v.includes("내신") ||
-    v.includes("교과서")
-  ) {
-    return ENGINE_MODE.MIDDLE_TEXTBOOK;
-  }
-
-  if (v.includes("WORMHOLE") || v.includes("웜홀")) {
-    return ENGINE_MODE.WORMHOLE;
-  }
-
-  if (v.includes("MAGIC") || v.includes("매직")) {
-    return ENGINE_MODE.MAGIC;
-  }
-
-  if (v.includes("VOCAB") || v.includes("단어")) {
-    return ENGINE_MODE.VOCAB_BUILDER;
-  }
+  if (v.includes("ABC") || v.includes("STARTER") || v.includes("JUNIOR")) return ENGINE_MODE.ABC_STARTER;
+  if (v.includes("MOCK") || v.includes("수능") || v.includes("모의")) return ENGINE_MODE.MOCK_EXAM;
+  if (v.includes("MIDDLE") || v.includes("TEXTBOOK") || v.includes("내신") || v.includes("교과서")) return ENGINE_MODE.MIDDLE_TEXTBOOK;
+  if (v.includes("WORMHOLE") || v.includes("웜홀")) return ENGINE_MODE.WORMHOLE;
+  if (v.includes("MAGIC") || v.includes("매직")) return ENGINE_MODE.MAGIC;
+  if (v.includes("VOCAB") || v.includes("단어")) return ENGINE_MODE.VOCAB_BUILDER;
 
   return "";
 }
@@ -210,16 +156,12 @@ function inferEngineFromPrompt(prompt = "") {
 
   const hasWormholeSignal =
     /웜홀|wormhole|고난도|어법|grammar judgment|elite distractor|변형문제|최고난도/.test(text);
-
   const hasMagicSignal =
     /매직|magic|영작|rewrite|paraphrase|combine|translate into english|composition|서술형|영어로 쓰기/.test(text);
-
   const hasVocabSignal =
     /단어장|어휘|vocab|vocabulary|뜻 쓰기|synonym|antonym/.test(text);
-
   const hasMockSignal =
     /모의고사|mock|수능|킬러|빈칸|순서|삽입/.test(text);
-
   const hasMiddleSignal =
     /교과서|중간고사|기말고사|내신|출판사|중\d|고\d/.test(text);
 
@@ -254,10 +196,6 @@ function resolveEngineMode(selectedEngine, prompt = "") {
 
   return conflict ? inferred : normalizedSelected;
 }
-
-/* -----------------------------------------------------------
- * Prompt policy
- * --------------------------------------------------------- */
 
 function buildGlobalSystemPolicy({ locale, selectedEngine, resolvedEngine }) {
   const isKo = locale === "ko";
@@ -340,12 +278,7 @@ ${
 `.trim();
 }
 
-function buildEngineSpecificInstruction({
-  resolvedEngine,
-  worksheetTitle,
-  prompt,
-  locale,
-}) {
+function buildEngineSpecificInstruction({ resolvedEngine, worksheetTitle, prompt, locale }) {
   const commonFooter = `
 Use the user's title exactly if it is already meaningful.
 Requested worksheet title: ${worksheetTitle}
@@ -479,10 +412,6 @@ ${commonFooter}
   }
 }
 
-/* -----------------------------------------------------------
- * OpenAI call
- * --------------------------------------------------------- */
-
 async function callModelForJson({ systemPolicy, engineInstruction }) {
   const response = await client.responses.create({
     model: OPENAI_MODEL,
@@ -498,10 +427,6 @@ async function callModelForJson({ systemPolicy, engineInstruction }) {
 
   return extractJsonObject(text);
 }
-
-/* -----------------------------------------------------------
- * Validation / repair
- * --------------------------------------------------------- */
 
 function normalizeQuestion(q, index) {
   const number = Number(q?.number) || index + 1;
@@ -581,6 +506,7 @@ function validatePacket(packet, resolvedEngine) {
   if (!packet.mainTitle) issues.push("mainTitle is missing.");
   if (!packet.direction) issues.push("direction is missing.");
   if (questions.length < 20) issues.push("Too few questions.");
+
   if (
     resolvedEngine === ENGINE_MODE.WORMHOLE ||
     resolvedEngine === ENGINE_MODE.MAGIC ||
@@ -688,10 +614,6 @@ Use worksheetTitle: ${worksheetTitle}
   return repaired;
 }
 
-/* -----------------------------------------------------------
- * Output formatter
- * --------------------------------------------------------- */
-
 function formatWorksheetText(packet) {
   const lines = [];
 
@@ -794,10 +716,6 @@ function buildFrontResponse({
     },
   };
 }
-
-/* -----------------------------------------------------------
- * Main handler
- * --------------------------------------------------------- */
 
 module.exports = async function handler(req, res) {
   if (req.method === "GET") {
