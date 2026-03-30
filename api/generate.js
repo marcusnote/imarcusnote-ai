@@ -102,7 +102,7 @@ function inferEngine(prompt = "") {
 }
 
 /**
- * 7차 핵심:
+ * 7차 핵심 유지:
  * - selectedEngine이 유효하면 무조건 그 엔진 유지
  * - detected는 보조 참고용만 사용
  * - 자동 엔진 교체 금지
@@ -201,27 +201,49 @@ function extractRequestedItemCount(prompt = "", engine) {
   }
 }
 
+function shouldUseCompactExplanation(engine, itemCount) {
+  if (engine === ENGINE_MODE.MAGIC) return true;
+  if (itemCount >= 20) return true;
+  return false;
+}
+
 function getMaxOutputTokens(engine, itemCount) {
-  const bonus = itemCount >= 20 ? 250 : itemCount >= 15 ? 150 : 0;
+  // 8차: explanation 추가로 아주 조금만 보강.
+  // 과도하게 올리지 않아 Vercel 부담을 줄임.
+  const compact = shouldUseCompactExplanation(engine, itemCount);
+  const compactBonus = compact ? 120 : 220;
+  const sizeBonus = itemCount >= 20 ? 180 : itemCount >= 15 ? 100 : 0;
 
   switch (engine) {
     case ENGINE_MODE.ABC_STARTER:
-      return 1100 + bonus;
+      return 1100 + compactBonus + sizeBonus;
     case ENGINE_MODE.VOCAB_BUILDER:
-      return 1600 + bonus;
+      return 1500 + compactBonus + sizeBonus;
     case ENGINE_MODE.MOCK_EXAM:
-      return 1900 + bonus;
+      return 1800 + compactBonus + sizeBonus;
     case ENGINE_MODE.MAGIC:
-      return 2100 + bonus;
+      return 1900 + compactBonus + sizeBonus;
     case ENGINE_MODE.MIDDLE_TEXTBOOK:
-      return 2100 + bonus;
+      return 1900 + compactBonus + sizeBonus;
     case ENGINE_MODE.WORMHOLE:
     default:
-      return 2200 + bonus;
+      return 2000 + compactBonus + sizeBonus;
   }
 }
 
-function buildEngineInstruction(engine, locale, itemCount, magicSubMode) {
+function extractGrammarLockHint(title = "", prompt = "") {
+  const joined = `${title} ${prompt}`;
+
+  if (/관계부사/.test(joined)) return "RELATIVE_ADVERB_ONLY";
+  if (/목적격\s*관계대명사/.test(joined)) return "OBJECT_RELATIVE_PRONOUN_ONLY";
+  if (/현재완료/.test(joined)) return "PRESENT_PERFECT_ONLY";
+  if (/수동태/.test(joined)) return "PASSIVE_ONLY";
+  if (/가정법/.test(joined)) return "SUBJUNCTIVE_ONLY";
+
+  return "";
+}
+
+function buildEngineInstruction(engine, locale, itemCount, magicSubMode, grammarLockHint = "") {
   const instructionLineRule =
     locale === "ko"
       ? "The visible instruction line should be concise Korean."
@@ -229,26 +251,40 @@ function buildEngineInstruction(engine, locale, itemCount, magicSubMode) {
       ? "The visible instruction line should be concise Japanese."
       : "The visible instruction line should be concise English.";
 
+  const compactExplanationRule = shouldUseCompactExplanation(engine, itemCount)
+    ? "Keep each explanation to ONE short line only."
+    : "Keep each explanation brief and teacher-usable.";
+
   switch (engine) {
     case ENGINE_MODE.WORMHOLE:
       return `
 ENGINE IDENTITY:
 - Premium high-difficulty grammar and transformation exam
 - Strongly exam-oriented
-- Prefer 5-option multiple-choice for most items
+- Prefer 5-option multiple-choice for most items, but 6 options are allowed when the question naturally benefits from an extra distractor
 - Use plausible distractors
 - Maintain academic exam tone
 - When the user provides a passage with original answer choices, create NEW transformed items instead of copying the original choices blindly
 
 WORMHOLE RULES:
 - Generate exactly ${itemCount} items unless the user's task clearly requires fewer
-- Use a balanced mix of grammar, transformation, inference, same-pattern, and passage-based items
+- Use a balanced mix of grammar, transformation, inference, same-pattern, error-finding, sentence-count, and passage-based items
 - At least 25% should be high-difficulty items
 - Label high-difficulty items with [High Difficulty]
 - Multiple-choice is the default format
+- Exactly one option should be the single best answer
 - Avoid malformed answer keys
 - Each answer must be a FULL option text or a full short answer, never a broken fragment
-- If the item is multiple-choice, exactly one option should be the best answer
+- Include a short explanation for every item
+- ${compactExplanationRule}
+- For some items, you may use these high-value formats:
+  1) "How many sentences are grammatically correct?"
+  2) "How many sentences are awkward?"
+  3) "Choose the awkward sentence."
+  4) "Choose the grammatically correct sentence."
+  5) "Choose the pair/set that shares the same error pattern."
+- Use 6 options sparingly, not excessively
+- Do not let every item become the same pattern
 - Avoid obviously broken grammar in correct answers
 
 ${instructionLineRule}
@@ -268,10 +304,23 @@ MAGIC ABSOLUTE RULES:
 - DO NOT generate multiple-choice options
 - DO NOT generate 5-choice answers
 - Each item should be a production task, sentence writing task, rewrite task, or guided completion task
+- Include a short explanation for every item
+- ${compactExplanationRule}
 - "options" should be omitted
 - "answer" should be a complete model answer
 - Never turn Magic into Wormhole-style grammar multiple-choice
 - Never turn Magic into Mock-style test questions
+- If grammar lock exists, obey it strictly
+
+MAGIC GRAMMAR LOCK:
+- Grammar lock hint: ${grammarLockHint || "NONE"}
+- If RELATIVE_ADVERB_ONLY:
+  * Focus on where / when / why structures
+  * Avoid drifting into who / which / that-focused relative pronoun items unless absolutely necessary
+- If OBJECT_RELATIVE_PRONOUN_ONLY:
+  * Focus on whom / that / which as object relatives
+  * Avoid drifting into possessive relative pronoun whose unless clearly required
+- Keep the target grammar centered and visible
 
 ${instructionLineRule}
 `;
@@ -279,7 +328,8 @@ ${instructionLineRule}
       return `
 ENGINE IDENTITY:
 - Korean mock-exam transformation worksheet
-- Use 5-option multiple-choice
+- Use 5-option multiple-choice as default
+- 6 options are allowed only for selected high-difficulty items
 - Mix gist, blank, grammar-in-context, sequence, insertion, vocabulary, and passage-based items
 - Answers must map cleanly to the choices
 
@@ -287,6 +337,8 @@ MOCK EXAM RULES:
 - Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 - Default to 5-option multiple-choice
 - Keep strong test-book / exam-book tone
+- Include a short explanation for every item
+- ${compactExplanationRule}
 - Do not turn this into Magic-style sentence production
 - Do not turn this into pure Wormhole grammar-only mode unless the user's source itself is grammar-transformation based
 
@@ -298,6 +350,7 @@ ENGINE IDENTITY:
 - Middle school textbook-linked internal-exam worksheet
 - Grammar-centered and school-test focused
 - Default to 5-option multiple-choice
+- 6 options allowed for a limited number of high-difficulty items
 - Stay middle-school appropriate
 - Avoid malformed answer keys
 
@@ -305,6 +358,8 @@ MIDDLE_TEXTBOOK RULES:
 - Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 - Keep textbook-linked school-exam style
 - Default to 5-option multiple-choice
+- Include a short explanation for every item
+- ${compactExplanationRule}
 - Do not convert into Magic production workbook format
 
 ${instructionLineRule}
@@ -320,6 +375,8 @@ ENGINE IDENTITY:
 VOCAB RULES:
 - Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 - Prioritize vocabulary meaning, usage, synonym/antonym, context completion
+- Include a short explanation for every item
+- ${compactExplanationRule}
 
 ${instructionLineRule}
 `;
@@ -334,6 +391,9 @@ ENGINE IDENTITY:
 ABC RULES:
 - Generate exactly ${itemCount} items unless the user's task clearly requires fewer
 - Keep difficulty low and stable
+- Use simple, short stems
+- Include a short explanation for every item
+- ${compactExplanationRule}
 
 ${instructionLineRule}
 `;
@@ -341,7 +401,15 @@ ${instructionLineRule}
 }
 
 function buildPrompt({ engine, title, prompt, locale, magicSubMode, modeNotice, itemCount }) {
-  const engineInstruction = buildEngineInstruction(engine, locale, itemCount, magicSubMode);
+  const grammarLockHint = extractGrammarLockHint(title, prompt);
+  const engineInstruction = buildEngineInstruction(
+    engine,
+    locale,
+    itemCount,
+    magicSubMode,
+    grammarLockHint
+  );
+  const compactExplanation = shouldUseCompactExplanation(engine, itemCount);
 
   return `
 You are a professional worksheet generator for teachers and academies.
@@ -349,6 +417,7 @@ You are a professional worksheet generator for teachers and academies.
 ENGINE: ${engine}
 ENGINE LABEL: ${ENGINE_LABELS[engine] || engine}
 LOCALE: ${locale}
+GRAMMAR LOCK HINT: ${grammarLockHint || "NONE"}
 
 ${modeNotice ? `MODE NOTICE:\n${modeNotice}\n` : ""}
 
@@ -359,12 +428,16 @@ STRICT RULES:
 - Create a teacher-ready worksheet.
 - Keep numbering sequential.
 - Include answers.
+- Include explanations.
 - Keep the schema exactly as requested.
 - Generate exactly ${itemCount} items unless the user's task clearly requires fewer.
 - The answer must never be an orphaned single token like "have", "experience", or "last week" unless the question explicitly asks for a single word.
 - If the question has options, the answer should match the full best option text whenever possible.
 - Respect the selected ENGINE strictly.
 - Never switch worksheet style to another engine family.
+- Keep explanations very short.
+- ${compactExplanation ? "Explanations must be one short line only." : "Explanations must stay brief."}
+- Avoid long passages inside explanations.
 
 ${engineInstruction}
 
@@ -378,6 +451,7 @@ JSON SCHEMA:
       "stem": "string",
       "options": ["string", "string", "string", "string", "string"],
       "answer": "string",
+      "explanation": "string",
       "difficulty": "normal | high"
     }
   ]
@@ -385,10 +459,10 @@ JSON SCHEMA:
 
 SCHEMA RULES:
 - "questions" must be an array.
-- Each question must include: number, stem, answer.
+- Each question must include: number, stem, answer, explanation.
 - "instruction" is recommended.
 - For MAGIC, omit "options".
-- For non-MAGIC modes, prefer exactly 5 options when multiple-choice is used.
+- For non-MAGIC modes, prefer 5 options. 6 options are allowed for selected items.
 - If difficulty is "high", include "[High Difficulty]" in the stem.
 - Do not place "[High Difficulty]" inside the answer string.
 - Do not return null fields.
@@ -457,7 +531,8 @@ function looksLikeErrorFindingQuestion(stem = "") {
     s.includes("incorrect") ||
     s.includes("어법상") ||
     s.includes("틀린") ||
-    s.includes("옳지 않은")
+    s.includes("옳지 않은") ||
+    s.includes("awkward")
   );
 }
 
@@ -494,6 +569,11 @@ function looksLikeObjectRelativePronounTopic(title = "", prompt = "", stem = "")
   );
 }
 
+function looksLikeRelativeAdverbTopic(title = "", prompt = "", stem = "") {
+  const joined = `${title} ${prompt} ${stem}`.toLowerCase();
+  return /관계부사/.test(joined) || joined.includes("relative adverb");
+}
+
 function hasObjectRelativePronounSignal(text = "") {
   const t = ensureString(text).toLowerCase();
   return (
@@ -505,9 +585,20 @@ function hasObjectRelativePronounSignal(text = "") {
   );
 }
 
-function hasOnlyFiveOptionsWhenMultipleChoice(q) {
+function hasRelativeAdverbSignal(text = "") {
+  const t = ensureString(text).toLowerCase();
+  return (
+    t.includes("where") ||
+    t.includes("when") ||
+    t.includes("why") ||
+    t.includes("관계부사") ||
+    t.includes("relative adverb")
+  );
+}
+
+function hasAllowedOptionCount(q) {
   if (!q.options || !q.options.length) return true;
-  return q.options.length === 5;
+  return q.options.length >= 4 && q.options.length <= 6;
 }
 
 function validateQuestionBasic(q) {
@@ -523,8 +614,12 @@ function validateQuestionBasic(q) {
     return { ok: false, reason: "Missing answer" };
   }
 
-  if (!hasOnlyFiveOptionsWhenMultipleChoice(q)) {
-    return { ok: false, reason: "Multiple-choice item does not have exactly 5 options" };
+  if (!ensureString(q.explanation)) {
+    return { ok: false, reason: "Missing explanation" };
+  }
+
+  if (!hasAllowedOptionCount(q)) {
+    return { ok: false, reason: "Multiple-choice item does not have 4-6 options" };
   }
 
   if (q.options?.length && q.options.length < 4) {
@@ -561,12 +656,6 @@ function validateErrorFindingQuestion(q) {
     return { ok: true };
   }
 
-  const matches = countMatchesInOptions(q.answer, q.options);
-
-  if (matches === 0) {
-    return { ok: true, warning: "Error-finding mismatch tolerated" };
-  }
-
   return { ok: true };
 }
 
@@ -591,7 +680,7 @@ function validateObjectRelativePronounAlignment(q, context = {}) {
     return { ok: true };
   }
 
-  const joined = `${q.stem} ${ensureArray(q.options).join(" ")} ${q.answer}`.toLowerCase();
+  const joined = `${q.stem} ${ensureArray(q.options).join(" ")} ${q.answer} ${q.explanation}`.toLowerCase();
 
   if (!hasObjectRelativePronounSignal(joined)) {
     return {
@@ -604,6 +693,24 @@ function validateObjectRelativePronounAlignment(q, context = {}) {
     return {
       ok: false,
       reason: "Possessive relative pronoun item drifted away from object-relative focus",
+    };
+  }
+
+  return { ok: true };
+}
+
+function validateRelativeAdverbAlignment(q, context = {}) {
+  const { worksheetTitle = "", originalPrompt = "" } = context;
+  const isTargetTopic = looksLikeRelativeAdverbTopic(worksheetTitle, originalPrompt, q.stem);
+
+  if (!isTargetTopic) return { ok: true };
+
+  const joined = `${q.stem} ${ensureArray(q.options).join(" ")} ${q.answer} ${q.explanation}`.toLowerCase();
+
+  if (!hasRelativeAdverbSignal(joined)) {
+    return {
+      ok: false,
+      reason: "Item does not align strongly with relative adverb topic",
     };
   }
 
@@ -629,7 +736,30 @@ function createFallbackInstruction(locale = "ko", engine = ENGINE_MODE.WORMHOLE)
   return "Solve the following questions and choose the best answer.";
 }
 
-function createEngineFallbackPacket(title = "MARCUSNOTE WORKSHEET", locale = "ko", engine = ENGINE_MODE.WORMHOLE, requestedCount = 5) {
+function buildAutoExplanation(locale = "ko", engine = ENGINE_MODE.WORMHOLE, q = {}, index = 1) {
+  if (engine === ENGINE_MODE.MAGIC) {
+    if (locale === "ko") return "핵심 구조를 반영한 모범 답안입니다.";
+    if (locale === "ja") return "主要構文を反映した模範解答です。";
+    return "This model answer reflects the target structure.";
+  }
+
+  if (looksLikeErrorFindingQuestion(q.stem)) {
+    if (locale === "ko") return "문법적으로 맞거나 틀린 핵심 지점을 확인해야 합니다.";
+    if (locale === "ja") return "文法上の適否を判断する必要があります。";
+    return "Check the key grammatical point carefully.";
+  }
+
+  if (locale === "ko") return "정답이 문맥과 문법에 가장 적절합니다.";
+  if (locale === "ja") return "正答が文脈と文法に最も適切です。";
+  return "The answer is the best fit for grammar and context.";
+}
+
+function createEngineFallbackPacket(
+  title = "MARCUSNOTE WORKSHEET",
+  locale = "ko",
+  engine = ENGINE_MODE.WORMHOLE,
+  requestedCount = 5
+) {
   const instruction = createFallbackInstruction(locale, engine);
 
   if (engine === ENGINE_MODE.MAGIC) {
@@ -645,12 +775,8 @@ function createEngineFallbackPacket(title = "MARCUSNOTE WORKSHEET", locale = "ko
             : locale === "ja"
             ? `補正英作文 ${i}: 次の文を英語で書きなさい。`
             : `Recovery writing item ${i}: Write the sentence in English.`,
-        answer:
-          locale === "ko"
-            ? `Sample answer ${i}`
-            : locale === "ja"
-            ? `Sample answer ${i}`
-            : `Sample answer ${i}`,
+        answer: `Sample answer ${i}`,
+        explanation: buildAutoExplanation(locale, engine, {}, i),
         difficulty: "normal",
       });
     }
@@ -672,9 +798,15 @@ function createEngineFallbackPacket(title = "MARCUSNOTE WORKSHEET", locale = "ko
   for (let i = 1; i <= count; i += 1) {
     questions.push({
       number: i,
-      stem: `Sample recovery item ${i}`,
+      stem:
+        locale === "ko"
+          ? `보정 문항 ${i}`
+          : locale === "ja"
+          ? `補正問題 ${i}`
+          : `Recovery item ${i}`,
       options: ["A", "B", "C", "D", "E"],
-      answer: ["A", "B", "C", "D", "E"][(i - 1) % 5],
+      answer: "A",
+      explanation: buildAutoExplanation(locale, engine, {}, i),
       difficulty: "normal",
     });
   }
@@ -694,11 +826,29 @@ function trimDifficultyTagFromAnswer(answer = "") {
   return ensureString(answer).replace(/\s*\[high difficulty\]\s*/gi, "").trim();
 }
 
+function trimExplanation(explanation = "", locale = "ko") {
+  const text = ensureString(explanation);
+  if (!text) return "";
+
+  let cleaned = text
+    .replace(/\s+/g, " ")
+    .replace(/^[-•]\s*/, "")
+    .trim();
+
+  const limit = locale === "en" ? 140 : 90;
+  if (cleaned.length > limit) {
+    cleaned = cleaned.slice(0, limit).trim();
+    if (!/[.!?。]$/.test(cleaned)) cleaned += "...";
+  }
+
+  return cleaned;
+}
+
 function fixOptions(options = [], fallbackLocale = "en") {
   const cleaned = ensureArray(options)
     .map((o) => ensureString(o))
     .filter(Boolean)
-    .slice(0, 5);
+    .slice(0, 6);
 
   if (!cleaned.length) return [];
 
@@ -713,7 +863,7 @@ function fixOptions(options = [], fallbackLocale = "en") {
     );
   }
 
-  return cleaned.slice(0, 5);
+  return cleaned.slice(0, 6);
 }
 
 function repairAnswer(q, locale = "en") {
@@ -775,10 +925,13 @@ function sanitizeQuestionShape(q, index, locale = "en", engine = ENGINE_MODE.WOR
   let answer = ensureString(q?.answer, "");
   answer = trimDifficultyTagFromAnswer(answer);
 
+  let explanation = trimExplanation(q?.explanation, locale);
+
   const result = {
     number: Number(q?.number) || index + 1,
     stem,
     answer,
+    explanation,
     difficulty,
   };
 
@@ -787,6 +940,20 @@ function sanitizeQuestionShape(q, index, locale = "en", engine = ENGINE_MODE.WOR
   }
 
   return result;
+}
+
+function ensureExplanation(packet, locale = "ko", engine = ENGINE_MODE.WORMHOLE) {
+  if (!packet || !Array.isArray(packet.questions)) return packet;
+
+  packet.questions = packet.questions.map((q, index) => {
+    if (ensureString(q.explanation)) return q;
+    return {
+      ...q,
+      explanation: buildAutoExplanation(locale, engine, q, index + 1),
+    };
+  });
+
+  return packet;
 }
 
 function applyWormholeValidation(packet, context = {}) {
@@ -814,6 +981,7 @@ function applyWormholeValidation(packet, context = {}) {
       validateErrorFindingQuestion(q),
       validateCombinationQuestion(q),
       validateObjectRelativePronounAlignment(q, context),
+      validateRelativeAdverbAlignment(q, context),
     ];
 
     const failedHard = checks.find((c) => !c.ok);
@@ -851,7 +1019,7 @@ function applyWormholeValidation(packet, context = {}) {
   return packet;
 }
 
-function applyMagicValidation(packet) {
+function applyMagicValidation(packet, locale = "ko") {
   if (!packet || !Array.isArray(packet.questions)) {
     return packet;
   }
@@ -864,10 +1032,10 @@ function applyMagicValidation(packet) {
 
       item.stem = ensureString(item.stem, `Writing item ${index + 1}`);
       item.answer = ensureString(item.answer, `Sample answer ${index + 1}`);
-
-      if (!item.answer) {
-        item.answer = `Sample answer ${index + 1}`;
-      }
+      item.explanation = trimExplanation(
+        ensureString(item.explanation, buildAutoExplanation(locale, ENGINE_MODE.MAGIC, item, index + 1)),
+        locale
+      );
 
       return item;
     })
@@ -883,6 +1051,22 @@ function applyMagicValidation(packet) {
   return packet;
 }
 
+function applyGenericValidation(packet, locale = "ko", engine = ENGINE_MODE.WORMHOLE) {
+  if (!packet || !Array.isArray(packet.questions)) return packet;
+
+  packet.questions = packet.questions.map((q, index) => {
+    const explanation =
+      trimExplanation(q.explanation, locale) || buildAutoExplanation(locale, engine, q, index + 1);
+
+    return {
+      ...q,
+      explanation,
+    };
+  });
+
+  return packet;
+}
+
 function applyEngineValidation(packet, engine, context = {}) {
   if (!packet || !Array.isArray(packet.questions)) return packet;
 
@@ -891,10 +1075,10 @@ function applyEngineValidation(packet, engine, context = {}) {
   }
 
   if (engine === ENGINE_MODE.MAGIC) {
-    return applyMagicValidation(packet);
+    return applyMagicValidation(packet, context.locale || "ko");
   }
 
-  return packet;
+  return applyGenericValidation(packet, context.locale || "ko", engine);
 }
 
 function padQuestionsToRequestedCount(packet, requestedCount, locale = "en", engine = ENGINE_MODE.WORMHOLE) {
@@ -918,6 +1102,7 @@ function padQuestionsToRequestedCount(packet, requestedCount, locale = "en", eng
             ? `補正文 ${n}: 次の文を英語で書きなさい。`
             : `Recovery writing item ${n}: Write the sentence in English.`,
         answer: `Sample answer ${n}`,
+        explanation: buildAutoExplanation(locale, engine, {}, n),
         difficulty: "normal",
       });
     } else {
@@ -931,6 +1116,7 @@ function padQuestionsToRequestedCount(packet, requestedCount, locale = "en", eng
             : `Recovery item ${n}`,
         options: ["A", "B", "C", "D", "E"],
         answer: "A",
+        explanation: buildAutoExplanation(locale, engine, {}, n),
         difficulty: "normal",
       });
     }
@@ -990,9 +1176,12 @@ async function callModel(prompt, engine, context = {}) {
     throw new Error("Invalid packet: no questions returned");
   }
 
+  parsed = ensureExplanation(parsed, context.locale || "ko", engine);
+
   parsed = applyEngineValidation(parsed, engine, {
     worksheetTitle: context.worksheetTitle || parsed.mainTitle,
     originalPrompt: context.originalUserPrompt || "",
+    locale: context.locale || "ko",
   });
 
   if (!parsed.questions.length) {
@@ -1005,9 +1194,15 @@ async function callModel(prompt, engine, context = {}) {
   }
 
   parsed = padQuestionsToRequestedCount(parsed, requestedCount, context.locale || "en", engine);
+  parsed = ensureExplanation(parsed, context.locale || "ko", engine);
   parsed.questions = renumberQuestions(parsed.questions);
 
   return parsed;
+}
+
+function getOptionMarks(length = 5) {
+  const marks = ["①", "②", "③", "④", "⑤", "⑥"];
+  return marks.slice(0, Math.max(0, Math.min(length, 6)));
 }
 
 function format(packet) {
@@ -1025,8 +1220,9 @@ function format(packet) {
     lines.push(`${q.number}. ${q.stem}`);
 
     if (q.options?.length) {
+      const marks = getOptionMarks(q.options.length);
       q.options.forEach((o, i) => {
-        const mark = ["①", "②", "③", "④", "⑤"][i] || `${i + 1}.`;
+        const mark = marks[i] || `${i + 1}.`;
         lines.push(`${mark} ${o}`);
       });
     }
@@ -1039,6 +1235,9 @@ function format(packet) {
 
   packet.questions.forEach((q) => {
     lines.push(`${q.number}) ${trimDifficultyTagFromAnswer(q.answer)}`);
+    if (q.explanation) {
+      lines.push(`→ ${q.explanation}`);
+    }
   });
 
   return lines.join("\n");
@@ -1142,6 +1341,7 @@ module.exports = async function handler(req, res) {
         requestedItemCount
       );
       packet = padQuestionsToRequestedCount(packet, requestedItemCount, locale, engine);
+      packet = ensureExplanation(packet, locale, engine);
       packet.questions = renumberQuestions(packet.questions);
     }
 
@@ -1163,6 +1363,7 @@ module.exports = async function handler(req, res) {
       model: OPENAI_MODEL,
       validation: packet.validation || null,
       requestedItemCount,
+      compactExplanation: shouldUseCompactExplanation(engine, requestedItemCount),
     });
   } catch (e) {
     console.error("[generate.js] error:", e);
