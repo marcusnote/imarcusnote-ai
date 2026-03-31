@@ -1,8 +1,23 @@
 export default async function handler(req, res) {
+  // CORS
+  res.setHeader("Access-Control-Allow-Origin", "https://imarcusnote.com");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
+  // Preflight
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
+  // Method guard
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
   try {
     const { engine, prompt, rawOutput, difficulty } = req.body || {};
 
-    if (!rawOutput) {
+    if (!rawOutput || !String(rawOutput).trim()) {
       return res.status(400).json({ error: "No output to review" });
     }
 
@@ -13,9 +28,9 @@ Your role is NOT to rewrite everything.
 Your role is to FIX and STANDARDIZE the given content.
 
 [INPUT]
-Engine: ${engine}
-Difficulty: ${difficulty}
-User Prompt: ${prompt}
+Engine: ${engine || "unknown"}
+Difficulty: ${difficulty || "standard"}
+User Prompt: ${prompt || ""}
 
 [CONTENT]
 ${rawOutput}
@@ -23,8 +38,8 @@ ${rawOutput}
 [STRICT RULES]
 
 1. MUST have exactly 25 questions.
-- If less, create similar ones.
-- If more, remove extras.
+- If less → create similar ones.
+- If more → remove extras.
 
 2. NO multiple choice for magic/wormhole.
 - Remove (A), (B), ①②③ etc.
@@ -60,7 +75,7 @@ No explanations.
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
@@ -73,22 +88,19 @@ No explanations.
 
     if (!response.ok) {
       return res.status(response.status).json({
-        error: data?.error?.message || data?.message || "OpenAI review request failed"
+        error: data?.error?.message || "OpenAI review request failed"
       });
     }
 
     const finalText =
       data?.output?.[0]?.content?.[0]?.text ||
       data?.output_text ||
-      "";
-
-    if (!finalText) {
-      return res.status(500).json({ error: "Reviewed output is empty" });
-    }
+      "No reviewed output";
 
     return res.status(200).json({ result: finalText });
-
   } catch (err) {
-    return res.status(500).json({ error: err?.message || "Unknown server error" });
+    return res.status(500).json({
+      error: err?.message || "Internal server error"
+    });
   }
 }
