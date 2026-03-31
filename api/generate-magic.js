@@ -55,13 +55,19 @@ function inferLevel(text = "") {
   return "middle";
 }
 
+// [A. inferMode() 전체 교체]
 function inferMode(text = "") {
   const t = String(text || "").toLowerCase();
+
+  if (/vocab|vocabulary|어휘|단어|단어장|단어시험|어휘시험|어휘테스트|뜻쓰기|유의어|반의어/.test(t)) {
+    return "vocab-builder";
+  }
   if (/abc\s*starter|starter|phonics|파닉스|기초영어|알파벳/.test(t)) return "abcstarter";
   if (/영작|writing|composition|rewrite|재배열|문장 재구성/.test(t)) return "writing";
   if (/card|카드|magic\s*card|매직카드/.test(t)) return "magic-card";
   if (/교과서|textbook/.test(t)) return "textbook-grammar";
   if (/chapter|챕터/.test(t)) return "chapter-grammar";
+
   return "magic";
 }
 
@@ -126,9 +132,11 @@ function normalizeInput(body = {}) {
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || ""),
   ].filter(Boolean).join(" ");
-
   const level = ["elementary", "middle", "high"].includes(body.level) ? body.level : inferLevel(mergedText);
-  const modeCandidates = ["magic", "magic-card", "writing", "abcstarter", "textbook-grammar", "chapter-grammar"];
+  
+  // [B. normalizeInput() 안의 modeCandidates 교체]
+  const modeCandidates = ["magic", "magic-card", "writing", "abcstarter", "textbook-grammar", "chapter-grammar", "vocab-builder"];
+  
   const mode = modeCandidates.includes(body.mode) ? body.mode : inferMode(mergedText);
   const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty) ? body.difficulty : inferDifficulty(mergedText);
   const language = ["ko", "en"].includes(body.language) ? body.language : inferLanguage(mergedText);
@@ -159,22 +167,104 @@ function getDifficultyLabel(difficulty, language = "ko") {
   return "기초난도";
 }
 
+// [C. getModeLabel() 전체 교체]
 function getModeLabel(mode, language = "ko") {
-  const koMap = { magic: "매직형", "magic-card": "매직카드형", writing: "영작훈련형", abcstarter: "ABC Starter형", "textbook-grammar": "교과서 문법형", "chapter-grammar": "챕터 문법형" };
-  const enMap = { magic: "Magic", "magic-card": "Magic Card", writing: "Writing Training", abcstarter: "ABC Starter", "textbook-grammar": "Textbook Grammar", "chapter-grammar": "Chapter Grammar" };
+  const koMap = {
+    magic: "매직형",
+    "magic-card": "매직카드형",
+    writing: "영작훈련형",
+    abcstarter: "ABC Starter형",
+    "textbook-grammar": "교과서 문법형",
+    "chapter-grammar": "챕터 문법형",
+    "vocab-builder": "어휘 빌더형"
+  };
+
+  const enMap = {
+    magic: "Magic",
+    "magic-card": "Magic Card",
+    writing: "Writing Training",
+    abcstarter: "ABC Starter",
+    "textbook-grammar": "Textbook Grammar",
+    "chapter-grammar": "Chapter Grammar",
+    "vocab-builder": "Vocab Builder"
+  };
+
   return language === "en" ? enMap[mode] || "Magic" : koMap[mode] || "매직형";
 }
 
+// [D. buildMagicTitle() 전체 교체]
 function buildMagicTitle(input) {
   if (input.worksheetTitle) return input.worksheetTitle;
+
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
-  if (input.language === "en") return `${input.gradeLabel} ${input.topic} Magic ${difficultyLabel} ${input.count} Items`;
-  if (input.mode === "abcstarter") return `${input.gradeLabel} ${input.topic} ABC Starter ${difficultyLabel} ${input.count}문항`;
+
+  if (input.language === "en") {
+    if (input.mode === "vocab-builder") {
+      return `${input.gradeLabel} ${input.topic} Vocab Builder ${difficultyLabel} ${input.count} Items`;
+    }
+    return `${input.gradeLabel} ${input.topic} Magic ${difficultyLabel} ${input.count} Items`;
+  }
+
+  if (input.mode === "abcstarter") {
+    return `${input.gradeLabel} ${input.topic} ABC Starter ${difficultyLabel} ${input.count}문항`;
+  }
+
+  if (input.mode === "vocab-builder") {
+    return `${input.gradeLabel} ${input.topic} 어휘 빌더 ${difficultyLabel} ${input.count}문항`;
+  }
+
   return `${input.gradeLabel} ${input.topic} 마커스매직 ${difficultyLabel} ${input.count}문항`;
 }
 
+// [E. buildSystemPrompt() 전체 교체]
 function buildSystemPrompt(input) {
   const isKo = input.language === "ko";
+
+  if (input.mode === "vocab-builder") {
+    return isKo ? `
+당신은 MARCUS VOCA BUILDER 전용 생성 엔진이다.
+
+핵심 목표:
+- 어휘 중심의 프리미엄 학습 자료를 생성한다.
+- 문법 문제가 아니라 어휘 학습지, 어휘 테스트지, 문맥 기반 어휘 훈련지여야 한다.
+- 출력물은 교사와 학원이 바로 사용할 수 있을 정도로 깔끔해야 한다.
+
+중요 원칙:
+1. 반드시 어휘 중심이어야 한다.
+2. 문법 문제지처럼 변질되면 안 된다.
+3. 사용자가 지문을 제공하면 지문 기반 어휘 자료로 작성한다.
+4. 사용자가 지문을 제공하지 않으면 주제 기반 어휘 훈련지로 작성한다.
+5. 뜻, 문맥, 용법, 유의어, 반의어, 빈칸 속 어휘 선택 등 어휘 학습 요소를 활용한다.
+6. 정답 섹션을 반드시 제공한다.
+7. 객관식이 꼭 필요한 경우에만 제한적으로 사용하고, 무분별한 문법형 객관식은 금지한다.
+
+출력 형식:
+[[TITLE]]
+[[INSTRUCTIONS]]
+[[QUESTIONS]]
+[[ANSWERS]]`.trim() : `
+You are the dedicated MARCUS VOCA BUILDER engine.
+
+Core goals:
+- Generate premium vocabulary-centered worksheets.
+- Keep the output focused on vocabulary learning, not grammar drilling.
+- Make the worksheet teacher-ready and classroom-usable.
+
+Important rules:
+1. The worksheet must stay vocabulary-centered.
+2. If the user provides a passage, build a passage-based vocabulary worksheet.
+3. If no passage is provided, build a topic-based vocabulary worksheet.
+4. Use meaning, context, usage, synonym, antonym, and lexical review.
+5. Do not turn the output into a grammar worksheet.
+6. Always provide an answer section.
+
+Output format:
+[[TITLE]]
+[[INSTRUCTIONS]]
+[[QUESTIONS]]
+[[ANSWERS]]`.trim();
+  }
+
   return isKo ? `
 당신은 마커스매직 전용 워크북 생성 엔진이다.
 핵심 목표:
@@ -201,20 +291,82 @@ Output format:
 [[ANSWERS]]`.trim();
 }
 
+// [F. buildTaskGuide() 전체 교체]
 function buildTaskGuide(input) {
   const isEn = input.language === "en";
+
   switch (input.mode) {
-    case "abcstarter": return isEn ? "Create beginner-friendly foundational English tasks." : "초등 입문 친화형 과제로 구성할 것.";
-    case "writing": return isEn ? "Focus on English writing training." : "영작훈련 중심으로 구성할 것.";
-    default: return isEn ? "Create premium workbook-style English training material." : "프리미엄 워크북형 영어 훈련 자료로 구성할 것.";
+    case "vocab-builder":
+      return isEn
+        ? "Create a vocabulary-centered worksheet. If a passage is provided, use passage-based vocabulary tasks. If not, create a topic-based vocabulary practice set. Do not turn it into a grammar worksheet."
+        : "어휘 중심 자료로 구성할 것. 지문이 있으면 지문 기반 어휘 문제로, 지문이 없으면 주제 기반 어휘 훈련지로 작성할 것. 문법 문제지처럼 만들지 말 것.";
+
+    case "abcstarter":
+      return isEn
+        ? "Create beginner-friendly foundational English tasks."
+        : "초등 입문 친화형 과제로 구성할 것.";
+
+    case "writing":
+      return isEn
+        ? "Focus on English writing training."
+        : "영작훈련 중심으로 구성할 것.";
+
+    default:
+      return isEn
+        ? "Create premium workbook-style English training material."
+        : "프리미엄 워크북형 영어 훈련 자료로 구성할 것.";
   }
 }
 
+// [G. buildUserPrompt() 전체 교체]
 function buildUserPrompt(input) {
   const title = buildMagicTitle(input);
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
   const modeLabel = getModeLabel(input.mode, input.language);
   const taskGuide = buildTaskGuide(input);
+
+  if (input.mode === "vocab-builder") {
+    return input.language === "en" ? `
+Generate a Vocab Builder worksheet.
+
+Title: ${title}
+Mode: ${input.mode} (${modeLabel})
+Topic: ${input.topic}
+Difficulty: ${input.difficulty} (${difficultyLabel})
+Item count: ${input.count}
+Requirement: ${taskGuide}
+
+Additional rules:
+- Keep vocabulary as the true center.
+- If the user included a passage, extract or anchor the vocabulary from that passage.
+- If no passage is included, create a topic-based vocabulary practice worksheet.
+- Allowed task types: meaning check, contextual vocabulary use, synonym, antonym, lexical gap-fill, usage review.
+- Forbidden: grammar-dominant worksheet, relative pronoun drill, tense drill, generic grammar quiz.
+
+Original request:
+${input.userPrompt || "(No additional user prompt provided.)"}
+`.trim() : `
+마커스 VOCA BUILDER 스타일 어휘 학습지를 생성하시오.
+
+제목: ${title}
+모드: ${input.mode} (${modeLabel})
+주제: ${input.topic}
+난이도: ${input.difficulty} (${difficultyLabel})
+문항 수: ${input.count}
+요구사항: ${taskGuide}
+
+추가 규칙:
+- 반드시 어휘 중심으로 작성할 것.
+- 사용자가 지문을 제공하면 그 지문에 근거한 어휘 문제를 만들 것.
+- 지문이 없으면 주제 기반 어휘 훈련지로 만들 것.
+- 허용 유형: 뜻 확인, 문맥상 어휘 사용, 유의어, 반의어, 어휘 빈칸, 용법 점검.
+- 금지 유형: 문법 중심 문제지, 관계대명사 문제지, 시제 문제지, 일반 문법 퀴즈.
+
+사용자 원문:
+${input.userPrompt || "(추가 요청 없음)"}
+`.trim();
+  }
+
   return input.language === "en" ? `
 Generate a Magic-style English workbook.
 Title: ${title}
@@ -255,7 +407,8 @@ function extractSection(rawText, startMarker, endMarker) {
   if (start === -1) return "";
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
+  return end === -1 ?
+    rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function formatMagicResponse(rawText, input) {
@@ -263,12 +416,10 @@ function formatMagicResponse(rawText, input) {
   const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
   const questions = extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]");
   const answers = extractSection(rawText, "[[ANSWERS]]", null);
-
   const finalTitle = title.trim() || buildMagicTitle(input);
   const contentParts = [finalTitle, instructions.trim(), questions.trim()].filter(Boolean);
   const fullParts = [...contentParts];
   if (answers.trim()) fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + answers.trim());
-
   return { title: finalTitle, instructions: instructions.trim(), content: contentParts.join("\n\n"), answerSheet: answers.trim(), fullText: fullParts.join("\n\n"), actualCount: (questions.match(/^\s*\d+\./gm) || []).length };
 }
 
@@ -344,7 +495,8 @@ function readMpFromMember(member) {
 async function updateMemberMp(member, nextMp) {
   const memberId = member?.id;
   if (!memberId) throw new Error("Missing member id for MP update");
-  const currentCustomFields = member?.customFields && typeof member.customFields === "object" ? member.customFields : {};
+  const currentCustomFields = member?.customFields && typeof member.customFields === "object" ?
+    member.customFields : {};
   const currentMetaData = member?.metaData && typeof member.metaData === "object" ? member.metaData : {};
   const safeMp = Math.max(0, Math.floor(Number(nextMp) || 0));
   const patchBody = {
@@ -419,11 +571,9 @@ export default async function handler(req, res) {
 
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
-
   try {
     const input = normalizeInput(req.body || {});
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
-
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
       return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
@@ -432,7 +582,6 @@ export default async function handler(req, res) {
     const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
     const formatted = formatMagicResponse(rawText, input);
     const finalMpState = await deductMpAfterSuccess(mpState);
-
     return json(res, 200, {
       success: true,
       ...formatted,
