@@ -1,6 +1,3 @@
-generate-wormhole.js 코드
-
-
 // api/generate-wormhole.js
 
 export const config = {
