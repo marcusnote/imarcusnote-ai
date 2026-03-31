@@ -7,6 +7,12 @@ export const config = {
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
 
+const MEMBERSTACK_SECRET_KEY = process.env.MEMBERSTACK_SECRET_KEY || "";
+const MEMBERSTACK_APP_ID = process.env.MEMBERSTACK_APP_ID || "";
+const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
+const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
+const DEFAULT_TRIAL_MP = Number(process.env.MEMBERSTACK_TRIAL_MP || 15);
+
 function json(res, status, payload) {
   return res.status(status).json(payload);
 }
@@ -24,6 +30,12 @@ function sanitizeCount(value) {
   const num = Number(value);
   if (!Number.isFinite(num)) return 25;
   return clamp(Math.round(num), 5, 30);
+}
+
+function sanitizeMp(value, fallback = 5) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return fallback;
+  return clamp(Math.round(num), 0, 999999);
 }
 
 function inferLanguage(text = "") {
@@ -515,8 +527,282 @@ function buildMeta(input, actualCount) {
 function addCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
 }
+
+/* =========================
+   MP deduction helpers only
+   ========================= */
+
+function getMemberstackHeaders() {
+  if (!MEMBERSTACK_SECRET_KEY) {
+    return null;
+  }
+
+  return {
+    "x-api-key": MEMBERSTACK_SECRET_KEY,
+    "Content-Type": "application/json",
+  };
+}
+
+function getRequiredMp(reqBody = {}) {
+  return sanitizeMp(reqBody.mpCost, 5);
+}
+
+function getInitialTrialMp() {
+  return sanitizeMp(DEFAULT_TRIAL_MP, 15);
+}
+
+function extractBearerToken(req) {
+  const raw =
+    req?.headers?.authorization ||
+    req?.headers?.Authorization ||
+    "";
+
+  const match = String(raw).match(/^Bearer\s+(.+)$/i);
+  return match ? match[1].trim() : "";
+}
+
+function extractMemberId(req) {
+  return sanitizeString(
+    req?.body?.memberId ||
+    req?.headers?.["x-member-id"] ||
+    req?.headers?.["X-Member-Id"] ||
+    ""
+  );
+}
+
+async function memberstackRequest(path, options = {}) {
+  const headers = getMemberstackHeaders();
+  if (!headers) {
+    throw new Error("Missing MEMBERSTACK_SECRET_KEY");
+  }
+
+  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
+    ...options,
+    headers: {
+      ...headers,
+      ...(options.headers || {}),
+    },
+  });
+
+  const text = await response.text();
+  let data = null;
+
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    data = text;
+  }
+
+  if (!response.ok) {
+    throw new Error(
+      `Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`
+    );
+  }
+
+  return data;
+}
+
+async function verifyMemberToken(token) {
+  if (!token) return null;
+
+  const payload = { token };
+  if (MEMBERSTACK_APP_ID) {
+    payload.audience = MEMBERSTACK_APP_ID;
+  }
+
+  const data = await memberstackRequest("/verify-token", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+
+  return data?.data || null;
+}
+
+async function getMemberById(memberId) {
+  if (!memberId) return null;
+
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  return data?.data || null;
+}
+
+function readMpFromMember(member) {
+  if (!member) return null;
+
+  const candidates = [
+    member?.customFields?.[MEMBERSTACK_MP_FIELD],
+    member?.metaData?.[MEMBERSTACK_MP_FIELD],
+    member?.customFields?.mp,
+    member?.metaData?.mp,
+    member?.customFields?.MP,
+    member?.metaData?.MP,
+  ];
+
+  for (const value of candidates) {
+    const num = Number(value);
+    if (Number.isFinite(num)) {
+      return Math.max(0, Math.floor(num));
+    }
+  }
+
+  return null;
+}
+
+async function updateMemberMp(member, nextMp) {
+  const memberId = member?.id;
+  if (!memberId) {
+    throw new Error("Missing member id for MP update");
+  }
+
+  const currentCustomFields =
+    member?.customFields && typeof member.customFields === "object"
+      ? member.customFields
+      : {};
+
+  const currentMetaData =
+    member?.metaData && typeof member.metaData === "object"
+      ? member.metaData
+      : {};
+
+  const safeMp = Math.max(0, Math.floor(nextMp));
+
+  const patchBody = {
+    customFields: {
+      ...currentCustomFields,
+      [MEMBERSTACK_MP_FIELD]: safeMp,
+    },
+    metaData: {
+      ...currentMetaData,
+      [MEMBERSTACK_MP_FIELD]: safeMp,
+    },
+  };
+
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
+    method: "PATCH",
+    body: JSON.stringify(patchBody),
+  });
+
+  return data?.data || null;
+}
+
+async function resolveMemberForMp(req) {
+  if (!MEMBERSTACK_SECRET_KEY) {
+    return {
+      enabled: false,
+      reason: "missing_secret_key",
+      member: null,
+    };
+  }
+
+  try {
+    const bearerToken = extractBearerToken(req);
+
+    if (bearerToken) {
+      const verified = await verifyMemberToken(bearerToken);
+      if (verified?.id) {
+        const member = await getMemberById(verified.id);
+        return {
+          enabled: true,
+          reason: "token_verified",
+          member,
+        };
+      }
+    }
+
+    const explicitMemberId = extractMemberId(req);
+    if (explicitMemberId) {
+      const member = await getMemberById(explicitMemberId);
+      return {
+        enabled: true,
+        reason: "member_id",
+        member,
+      };
+    }
+
+    return {
+      enabled: false,
+      reason: "member_not_provided",
+      member: null,
+    };
+  } catch (error) {
+    console.error("resolveMemberForMp error:", error);
+    return {
+      enabled: false,
+      reason: "member_lookup_failed",
+      member: null,
+    };
+  }
+}
+
+async function prepareMpState(req) {
+  const requiredMp = getRequiredMp(req.body || {});
+  const memberContext = await resolveMemberForMp(req);
+
+  if (!memberContext.enabled || !memberContext.member) {
+    return {
+      enabled: false,
+      reason: memberContext.reason,
+      requiredMp,
+      member: null,
+      currentMp: null,
+      remainingMp: null,
+      trialGranted: false,
+    };
+  }
+
+  const member = memberContext.member;
+  let currentMp = readMpFromMember(member);
+  let updatedMember = member;
+  let trialGranted = false;
+
+  if (!Number.isFinite(currentMp)) {
+    currentMp = getInitialTrialMp();
+    updatedMember = (await updateMemberMp(member, currentMp)) || member;
+    currentMp = readMpFromMember(updatedMember);
+    trialGranted = true;
+  }
+
+  if (!Number.isFinite(currentMp)) {
+    currentMp = 0;
+  }
+
+  return {
+    enabled: true,
+    reason: memberContext.reason,
+    requiredMp,
+    member: updatedMember,
+    currentMp,
+    remainingMp: currentMp,
+    trialGranted,
+  };
+}
+
+async function deductMpAfterSuccess(mpState) {
+  if (!mpState?.enabled || !mpState?.member) {
+    return mpState;
+  }
+
+  const nextMp = Math.max(0, (mpState.currentMp || 0) - (mpState.requiredMp || 0));
+  const updatedMember = (await updateMemberMp(mpState.member, nextMp)) || mpState.member;
+  const storedMp = readMpFromMember(updatedMember);
+
+  return {
+    ...mpState,
+    member: updatedMember,
+    remainingMp: Number.isFinite(storedMp) ? storedMp : nextMp,
+  };
+}
+
+/* =========================
+   handler
+   ========================= */
 
 export default async function handler(req, res) {
   addCors(res);
@@ -544,12 +830,28 @@ export default async function handler(req, res) {
       });
     }
 
+    const mpState = await prepareMpState(req);
+
+    if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
+      return json(res, 403, {
+        success: false,
+        error: "INSUFFICIENT_MP",
+        message: "MP가 부족합니다. 업그레이드 후 계속 이용해주세요.",
+        needsUpgrade: true,
+        requiredMp: mpState.requiredMp,
+        remainingMp: mpState.currentMp,
+        trialGranted: mpState.trialGranted,
+      });
+    }
+
     const systemPrompt = buildSystemPrompt(input);
     const userPrompt = buildUserPrompt(input);
 
     const rawText = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatWormholeResponse(rawText, input);
     const meta = buildMeta(input, formatted.actualCount);
+
+    const finalMpState = await deductMpAfterSuccess(mpState);
 
     return json(res, 200, {
       success: true,
@@ -566,6 +868,13 @@ export default async function handler(req, res) {
       answerSheet: formatted.answerSheet,
       fullText: formatted.fullText,
       meta,
+
+      requiredMp: mpState.requiredMp,
+      remainingMp: finalMpState?.remainingMp ?? null,
+      needsUpgrade: false,
+      trialGranted: Boolean(mpState.trialGranted),
+      mpSyncEnabled: Boolean(mpState.enabled),
+      mpSyncReason: mpState.reason || "unknown",
     });
   } catch (error) {
     console.error("generate-wormhole error:", error);
