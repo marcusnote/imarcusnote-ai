@@ -1,5 +1,7 @@
 export default async function handler(req, res) {
+  // =========================
   // CORS
+  // =========================
   res.setHeader("Access-Control-Allow-Origin", "https://imarcusnote.com");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
@@ -36,42 +38,23 @@ User Prompt: ${prompt || ""}
 ${rawOutput}
 
 [STRICT RULES]
+1. MUST preserve the original topic and educational intention.
+2. MUST improve formatting consistency, clarity, and worksheet quality.
+3. For Wormhole and Magic-style outputs:
+   - remove multiple-choice options such as (A)(B)(C), ①②③④⑤, a/b/c/d/e
+   - convert them into premium subjective worksheet style whenever needed
+4. MUST remove obvious duplication, broken numbering, malformed spacing, and noisy symbols.
+5. If the content is already strong, do only light correction.
+6. DO NOT add explanations, commentary, or notes.
+7. Output CLEAN final worksheet text only.
 
-1. MUST have exactly 25 questions.
-- If less → create similar ones.
-- If more → remove extras.
-
-2. NO multiple choice for magic/wormhole.
-- Remove (A), (B), ①②③ etc.
-- Convert to subjective format.
-
-3. Enforce structure:
-
-Instruction
-
-1.
-____________________
-[Hint]
-
-...
-
-[Answers]
-1.
-2.
-...
-
-4. Keep original difficulty and style.
-
-5. Remove duplicates.
-
-6. DO NOT rewrite everything.
-Only fix necessary parts.
-
-7. Output CLEAN final version only.
-No explanations.
+[OUTPUT STYLE]
+Return only the polished final worksheet.
+No markdown fences.
+No extra explanation.
 `;
 
-    const response = await fetch("https://api.openai.com/v1/responses", {
+    const openaiRes = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,23 +67,29 @@ No explanations.
       })
     });
 
-    const data = await response.json().catch(() => ({}));
+    const data = await openaiRes.json().catch(() => ({}));
 
-    if (!response.ok) {
-      return res.status(response.status).json({
+    if (!openaiRes.ok) {
+      return res.status(openaiRes.status).json({
         error: data?.error?.message || "OpenAI review request failed"
       });
     }
 
-    const finalText =
-      data?.output?.[0]?.content?.[0]?.text ||
+    const reviewedText =
       data?.output_text ||
-      "No reviewed output";
+      data?.output?.[0]?.content?.[0]?.text ||
+      "";
 
-    return res.status(200).json({ result: finalText });
-  } catch (err) {
+    if (!reviewedText || !String(reviewedText).trim()) {
+      return res.status(500).json({ error: "Empty review output" });
+    }
+
+    return res.status(200).json({
+      result: reviewedText.trim()
+    });
+  } catch (error) {
     return res.status(500).json({
-      error: err?.message || "Internal server error"
+      error: error?.message || "Internal server error"
     });
   }
 }
