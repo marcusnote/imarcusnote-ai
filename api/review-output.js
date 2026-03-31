@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   try {
-    const { engine, prompt, rawOutput, difficulty } = req.body;
+    const { engine, prompt, rawOutput, difficulty } = req.body || {};
 
     if (!rawOutput) {
       return res.status(400).json({ error: "No output to review" });
@@ -23,8 +23,8 @@ ${rawOutput}
 [STRICT RULES]
 
 1. MUST have exactly 25 questions.
-- If less → create similar ones.
-- If more → remove extras.
+- If less, create similar ones.
+- If more, remove extras.
 
 2. NO multiple choice for magic/wormhole.
 - Remove (A), (B), ①②③ etc.
@@ -69,14 +69,26 @@ No explanations.
       })
     });
 
-    const data = await response.json();
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      return res.status(response.status).json({
+        error: data?.error?.message || data?.message || "OpenAI review request failed"
+      });
+    }
 
     const finalText =
-      data.output?.[0]?.content?.[0]?.text || "No reviewed output";
+      data?.output?.[0]?.content?.[0]?.text ||
+      data?.output_text ||
+      "";
 
-    res.status(200).json({ result: finalText });
+    if (!finalText) {
+      return res.status(500).json({ error: "Reviewed output is empty" });
+    }
+
+    return res.status(200).json({ result: finalText });
 
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    return res.status(500).json({ error: err?.message || "Unknown server error" });
   }
 }
