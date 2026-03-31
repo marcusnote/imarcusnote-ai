@@ -6,12 +6,15 @@ export const config = {
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
-
 const MEMBERSTACK_SECRET_KEY = process.env.MEMBERSTACK_SECRET_KEY || "";
 const MEMBERSTACK_APP_ID = process.env.MEMBERSTACK_APP_ID || "";
 const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
 const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
 const DEFAULT_TRIAL_MP = Number(process.env.MEMBERSTACK_TRIAL_MP || 15);
+
+/* =========================
+   Utility Helpers
+   ========================= */
 
 function json(res, status, payload) {
   return res.status(status).json(payload);
@@ -46,89 +49,53 @@ function inferLanguage(text = "") {
 
 function inferLevel(text = "") {
   const t = String(text || "").toLowerCase();
-
   if (/고1|고2|고3|고등|수능|모의고사|high|csat/.test(t)) return "high";
   if (/중1|중2|중3|중등|middle/.test(t)) return "middle";
   if (/초등|초[1-6]|elementary/.test(t)) return "elementary";
-
   return "high";
 }
 
 function inferMode(text = "") {
   const t = String(text || "").toLowerCase();
-
   if (/수능|csat/.test(t)) return "csat";
   if (/모의고사|mock/.test(t)) return "mock-exam";
   if (/변형|transform|재구성|adapted/.test(t)) return "exam-transform";
   if (/지문|passage|reading/.test(t)) return "passage-based";
   if (/문법|어법|grammar/.test(t)) return "grammar-high";
-
   return "mock-exam";
 }
 
 function inferDifficulty(text = "") {
   const t = String(text || "").toLowerCase();
-
   if (/extreme|최고난도|극상/.test(t)) return "extreme";
   if (/high|고난도|상/.test(t)) return "high";
   if (/basic|기초|하/.test(t)) return "basic";
   if (/standard|중|보통/.test(t)) return "standard";
-
   return "high";
 }
 
 function inferExamType(text = "") {
   const t = String(text || "").toLowerCase();
-
   if (/수능|csat/.test(t)) return "csat";
   if (/모의고사|mock/.test(t)) return "mock";
   if (/내신|school/.test(t)) return "school";
   if (/변형|transform/.test(t)) return "transform";
   if (/문법|어법|grammar/.test(t)) return "grammar";
-
   return "mock";
 }
 
 function inferTopic(text = "") {
   const t = String(text || "");
-
   const topicPatterns = [
-    "어법 종합",
-    "문법 종합",
-    "수일치",
-    "시제",
-    "조동사",
-    "수동태",
-    "관계대명사",
-    "관계부사",
-    "동명사",
-    "to부정사",
-    "가정법",
-    "분사",
-    "분사구문",
-    "접속사",
-    "전치사",
-    "비교급",
-    "최상급",
-    "대명사",
-    "명사절",
-    "형용사절",
-    "부사절",
-    "도치",
-    "강조구문",
-    "어휘",
-    "빈칸추론",
-    "순서배열",
-    "문장삽입",
-    "장문독해",
+    "어법 종합", "문법 종합", "수일치", "시제", "조동사", "수동태", "관계대명사",
+    "관계부사", "동명사", "to부정사", "가정법", "분사", "분사구문", "접속사",
+    "전치사", "비교급", "최상급", "대명사", "명사절", "형용사절", "부사절", "도치",
+    "강조구문", "어휘", "빈칸추론", "순서배열", "문장삽입", "장문독해",
   ];
-
   for (const topic of topicPatterns) {
     if (t.includes(topic)) return topic;
   }
-
   const lower = t.toLowerCase();
-
   if (/grammar/.test(lower)) return "어법 종합";
   if (/relative pronoun/.test(lower)) return "관계대명사";
   if (/infinitive|to-infinitive/.test(lower)) return "to부정사";
@@ -137,28 +104,23 @@ function inferTopic(text = "") {
   if (/subjunctive/.test(lower)) return "가정법";
   if (/passage/.test(lower)) return "지문 독해";
   if (/blank/.test(lower)) return "빈칸추론";
-
   return "어법 종합";
 }
 
 function inferGradeLabel(text = "", level = "high") {
   const t = String(text || "");
-
   if (/고1/.test(t)) return "고1";
   if (/고2/.test(t)) return "고2";
   if (/고3/.test(t)) return "고3";
-
   if (/중1/.test(t)) return "중1";
   if (/중2/.test(t)) return "중2";
   if (/중3/.test(t)) return "중3";
-
   if (/초1/.test(t)) return "초1";
   if (/초2/.test(t)) return "초2";
   if (/초3/.test(t)) return "초3";
   if (/초4/.test(t)) return "초4";
   if (/초5/.test(t)) return "초5";
   if (/초6/.test(t)) return "초6";
-
   if (level === "middle") return "중등";
   if (level === "elementary") return "초등";
   return "고등";
@@ -174,57 +136,26 @@ function normalizeInput(body = {}) {
     sanitizeString(body.difficulty || ""),
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || ""),
-  ]
-    .filter(Boolean)
-    .join(" ");
+  ].filter(Boolean).join(" ");
 
-  const level = ["elementary", "middle", "high"].includes(body.level)
-    ? body.level
-    : inferLevel(mergedText);
-
-  const modeCandidates = [
-    "csat",
-    "mock-exam",
-    "grammar-high",
-    "exam-transform",
-    "passage-based",
-  ];
-
-  const mode = modeCandidates.includes(body.mode)
-    ? body.mode
-    : inferMode(mergedText);
-
-  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
-    ? body.difficulty
-    : inferDifficulty(mergedText);
-
-  const language = ["ko", "en"].includes(body.language)
-    ? body.language
-    : inferLanguage(mergedText);
-
+  const level = ["elementary", "middle", "high"].includes(body.level) ? body.level : inferLevel(mergedText);
+  const modeCandidates = ["csat", "mock-exam", "grammar-high", "exam-transform", "passage-based"];
+  const mode = modeCandidates.includes(body.mode) ? body.mode : inferMode(mergedText);
+  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty) ? body.difficulty : inferDifficulty(mergedText);
+  const language = ["ko", "en"].includes(body.language) ? body.language : inferLanguage(mergedText);
   const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
   const examType = sanitizeString(body.examType || "") || inferExamType(mergedText);
   const worksheetTitle = sanitizeString(body.worksheetTitle || "");
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
   const count = sanitizeCount(body.count);
-  const engine = "mocks";
   const gradeLabel = inferGradeLabel(mergedText, level);
 
-  return {
-    engine,
-    level,
-    mode,
-    topic,
-    examType,
-    difficulty,
-    count,
-    language,
-    worksheetTitle,
-    academyName,
-    userPrompt,
-    gradeLabel,
-  };
+  return { engine: "mocks", level, mode, topic, examType, difficulty, count, language, worksheetTitle, academyName, userPrompt, gradeLabel };
 }
+
+/* =========================
+   Mocks Output Builders
+   ========================= */
 
 function getDifficultyLabel(difficulty, language = "ko") {
   if (language === "en") {
@@ -233,7 +164,6 @@ function getDifficultyLabel(difficulty, language = "ko") {
     if (difficulty === "standard") return "Standard Difficulty";
     return "Basic Difficulty";
   }
-
   if (difficulty === "extreme") return "최고난도";
   if (difficulty === "high") return "고난도";
   if (difficulty === "standard") return "표준난도";
@@ -241,148 +171,50 @@ function getDifficultyLabel(difficulty, language = "ko") {
 }
 
 function getModeLabel(mode, language = "ko") {
-  const koMap = {
-    csat: "수능형",
-    "mock-exam": "모의고사형",
-    "grammar-high": "고등문법형",
-    "exam-transform": "변형형",
-    "passage-based": "지문형",
-  };
-
-  const enMap = {
-    csat: "CSAT",
-    "mock-exam": "Mock Exam",
-    "grammar-high": "High School Grammar",
-    "exam-transform": "Exam Transformation",
-    "passage-based": "Passage Based",
-  };
-
+  const koMap = { csat: "수능형", "mock-exam": "모의고사형", "grammar-high": "고등문법형", "exam-transform": "변형형", "passage-based": "지문형" };
+  const enMap = { csat: "CSAT", "mock-exam": "Mock Exam", "grammar-high": "High School Grammar", "exam-transform": "Exam Transformation", "passage-based": "Passage Based" };
   return language === "en" ? enMap[mode] || "Mock Exam" : koMap[mode] || "모의고사형";
 }
 
 function buildMocksTitle(input) {
   if (input.worksheetTitle) return input.worksheetTitle;
-
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
-
-  if (input.language === "en") {
-    return `${input.gradeLabel} ${input.topic} Mocks ${difficultyLabel} ${input.count} Questions`;
-  }
-
+  if (input.language === "en") return `${input.gradeLabel} ${input.topic} Mocks ${difficultyLabel} ${input.count} Questions`;
   return `${input.gradeLabel} ${input.topic} 모의고사 ${difficultyLabel} ${input.count}문항`;
 }
 
 function buildSystemPrompt(input) {
   const isKo = input.language === "ko";
-
-  return isKo
-    ? `
+  return isKo ? `
 당신은 고등 영어 평가용 MARCUS Mocks 전용 생성 엔진이다.
-
 핵심 목표:
 - 고등부 문법, 수능형 문제, 모의고사, 변형 문제를 실제 시험지처럼 생성한다.
-- 출력물은 교사, 학원, 시험 대비용으로 바로 사용 가능한 수준이어야 한다.
-- 단순한 AI 텍스트가 아니라, 평가 의도와 선지 설계가 살아 있는 시험형 결과물을 만든다.
-- 정답은 명확해야 하며, 선지는 그럴듯하고 시험 친화적이어야 한다.
-
 핵심 원칙:
 1. 고등 실전형 톤을 유지한다.
-2. 수능/모의고사 느낌의 문항 밀도와 어조를 살린다.
-3. 문제 간 난이도 편차를 줄인다.
-4. 지나치게 유치하거나 쉬운 문항은 피한다.
-5. 문항 수를 정확히 맞춘다.
-6. 문제 본문과 정답/해설을 반드시 분리한다.
-7. 한국어 요청이면 제목/지시문/해설은 한국어로 작성한다.
-8. 영어 문장과 지문은 자연스럽고 시험지에 어울려야 한다.
-9. 객관식 평가 자료가 기본이며, 선택지는 일관성 있게 설계한다.
-
+2. 5지선다형 객관식 평가 자료를 기본으로 한다.
+3. 문제 본문과 정답/해설을 반드시 분리한다.
 출력 형식:
 [[TITLE]]
-(제목 한 줄)
-
 [[INSTRUCTIONS]]
-(시험 안내문 한 단락)
-
 [[QUESTIONS]]
-1. ...
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-[[ANSWERS]]
-1. 정답 번호 - 해설
-2. 정답 번호 - 해설
-3. 정답 번호 - 해설
-...
-`.trim()
-    : `
+[[ANSWERS]]`.trim() : `
 You are the dedicated MARCUS Mocks engine for high-school English assessment.
-
 Core goals:
 - Generate real exam-style English materials for grammar, CSAT, mock exams, and exam transformations.
-- The output must feel like an actual assessment set, not generic AI text.
-- Maintain exam-appropriate tone, plausible choices, and clear answer logic.
-- Match the requested number of questions exactly.
-
-Rules:
-1. Keep a high-school exam tone throughout.
-2. Make the set coherent and consistent in difficulty.
-3. Avoid childish or overly easy items.
-4. Separate the question set from the answer/explanation section.
-5. Use clear and plausible multiple-choice options.
-6. Ensure natural exam-appropriate English.
-
 Output format:
 [[TITLE]]
-(one-line title)
-
 [[INSTRUCTIONS]]
-(one paragraph)
-
 [[QUESTIONS]]
-1. ...
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-[[ANSWERS]]
-1. correct option - explanation
-2. correct option - explanation
-...
-`.trim();
+[[ANSWERS]]`.trim();
 }
 
 function buildTaskGuide(input) {
+  const isEn = input.language === "en";
   switch (input.mode) {
-    case "csat":
-      return input.language === "en"
-        ? "Use a CSAT-oriented tone with high-school level grammar judgment, reading pressure, and plausible distractors."
-        : "수능형 톤으로 작성할 것. 고등 수준의 어법 판단, 지문 압박감, 그럴듯한 오답 선지를 반영할 것.";
-
-    case "grammar-high":
-      return input.language === "en"
-        ? "Focus on high-school grammar judgment and realistic error-detection style items."
-        : "고등 문법과 어법 판단 중심으로 구성할 것. 실제 내신/실전의 어법 문제 느낌을 살릴 것.";
-
-    case "exam-transform":
-      return input.language === "en"
-        ? "Create transformed exam-style items with adapted wording, structure shifts, and assessment realism."
-        : "시험 변형 문제처럼 구성할 것. 문장 구조 전환, 표현 변형, 출제의도 유지가 드러나야 한다.";
-
-    case "passage-based":
-      return input.language === "en"
-        ? "Use passage-based items with coherent context and high-school reading quality."
-        : "지문형 문제로 구성할 것. 문맥 흐름과 고등 독해 수준을 반영할 것.";
-
-    case "mock-exam":
-    default:
-      return input.language === "en"
-        ? "Create a realistic mock-exam set suitable for high-school students and premium academy use."
-        : "고등학생 대상의 실전 모의고사 세트처럼 작성할 것.";
+    case "csat": return isEn ? "Use a CSAT-oriented tone with high-school level grammar judgment." : "수능형 톤으로 작성할 것. 고등 수준의 어법 판단과 오답 선지를 반영할 것.";
+    case "grammar-high": return isEn ? "Focus on high-school grammar judgment and realistic error-detection." : "고등 문법과 어법 판단 중심으로 구성할 것.";
+    case "exam-transform": return isEn ? "Create transformed exam-style items with adapted wording." : "시험 변형 문제처럼 구성할 것. 문맥 유지와 표현 변형이 핵심.";
+    default: return isEn ? "Create a realistic mock-exam set for high-school students." : "고등학생 대상의 실전 모의고사 세트처럼 작성할 것.";
   }
 }
 
@@ -391,224 +223,68 @@ function buildUserPrompt(input) {
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
   const modeLabel = getModeLabel(input.mode, input.language);
   const taskGuide = buildTaskGuide(input);
-
-  if (input.language === "en") {
-    return `
-Generate a Mocks-style English assessment set with the following conditions.
-
+  return input.language === "en" ? `
+Generate a Mocks-style English assessment set.
 Title: ${title}
-Engine: mocks
-Level: ${input.level}
-Grade label: ${input.gradeLabel}
 Mode: ${input.mode} (${modeLabel})
-Topic: ${input.topic}
-Exam type: ${input.examType}
 Difficulty: ${input.difficulty} (${difficultyLabel})
 Question count: ${input.count}
-Academy name: ${input.academyName}
-
-Requirements:
-- The output must feel like a premium high-school assessment sheet.
-- Keep the overall difficulty stable across the set.
-- Use 5 multiple-choice options for each question.
-- Provide concise but meaningful explanations in the answer section.
-- ${taskGuide}
-
-Original user request:
-${input.userPrompt || "(No additional user prompt provided.)"}
-`.trim();
-  }
-
-  return `
-다음 조건에 맞는 MARCUS Mocks 스타일 영어 평가 세트를 생성하시오.
-
+Requirement: ${taskGuide}
+Original request: ${input.userPrompt || "(No additional user prompt provided.)"}`.trim() : `
+MARCUS Mocks 스타일 영어 평가 세트를 생성하시오.
 제목: ${title}
-엔진: mocks
-학년 수준: ${input.level}
-학년 표기: ${input.gradeLabel}
 모드: ${input.mode} (${modeLabel})
-주제: ${input.topic}
-시험 유형: ${input.examType}
 난이도: ${input.difficulty} (${difficultyLabel})
 문항 수: ${input.count}
-학원명: ${input.academyName}
-
-필수 요구사항:
-- 출력물은 프리미엄 고등 영어 평가 자료처럼 보여야 한다.
-- 세트 전체의 난이도를 일정하게 유지할 것.
-- 모든 문항은 5지선다형으로 작성할 것.
-- 정답 섹션에는 짧지만 핵심적인 해설을 제시할 것.
-- ${taskGuide}
-
-사용자 원문 요청:
-${input.userPrompt || "(추가 요청 없음)"}
-`.trim();
+요구사항: ${taskGuide}
+사용자 원문: ${input.userPrompt || "(추가 요청 없음)"}`.trim();
 }
 
-async function callOpenAI(systemPrompt, userPrompt) {
-  if (!OPENAI_API_KEY) {
-    throw new Error("Missing OPENAI_API_KEY");
-  }
+/* =========================
+   External API Call & Parsing
+   ========================= */
 
+async function callOpenAI(systemPrompt, userPrompt) {
+  if (!OPENAI_API_KEY) throw new Error("Missing OPENAI_API_KEY");
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: OPENAI_MODEL,
-      temperature: 0.5,
-      max_tokens: 8000,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
-      ],
-    }),
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${OPENAI_API_KEY}` },
+    body: JSON.stringify({ model: OPENAI_MODEL, temperature: 0.5, max_tokens: 8000, messages: [{ role: "system", content: systemPrompt }, { role: "user", content: userPrompt }] }),
   });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
-  }
-
+  if (!response.ok) throw new Error(`OpenAI request failed: ${response.status}`);
   const data = await response.json();
-  const text = data?.choices?.[0]?.message?.content;
-
-  if (!text || typeof text !== "string") {
-    throw new Error("Empty model response");
-  }
-
-  return text.trim();
+  return data?.choices?.[0]?.message?.content?.trim() || "";
 }
 
 function extractSection(rawText, startMarker, endMarker) {
   const start = rawText.indexOf(startMarker);
   if (start === -1) return "";
-
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-
-  if (end === -1) {
-    return rawText.slice(from).trim();
-  }
-
-  return rawText.slice(from, end).trim();
-}
-
-function countQuestions(text = "") {
-  const matches = text.match(/^\s*\d+\./gm) || [];
-  return matches.length;
-}
-
-function cleanupText(text = "") {
-  return String(text || "")
-    .replace(/\r\n/g, "\n")
-    .replace(/\n{3,}/g, "\n\n")
-    .trim();
-}
-
-function buildFallbackSplit(rawText) {
-  const cleaned = cleanupText(rawText);
-  const answerMatch = cleaned.search(/\n\s*(정답|해설|answers?)\s*[:\-]?\s*\n?/i);
-
-  if (answerMatch === -1) {
-    return {
-      title: "",
-      instructions: "",
-      questions: cleaned,
-      answers: "",
-    };
-  }
-
-  return {
-    title: "",
-    instructions: "",
-    questions: cleaned.slice(0, answerMatch).trim(),
-    answers: cleaned.slice(answerMatch).trim(),
-  };
+  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function formatMocksResponse(rawText, input) {
-  const title = cleanupText(
-    extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]")
-  );
-  const instructions = cleanupText(
-    extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]")
-  );
-  const questions = cleanupText(
-    extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]")
-  );
-  const answers = cleanupText(
-    extractSection(rawText, "[[ANSWERS]]", null)
-  );
+  const title = extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]");
+  const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
+  const questions = extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]");
+  const answers = extractSection(rawText, "[[ANSWERS]]", null);
 
-  let finalTitle = title || buildMocksTitle(input);
-  let finalInstructions = instructions;
-  let finalQuestions = questions;
-  let finalAnswers = answers;
-
-  if (!finalQuestions) {
-    const fallback = buildFallbackSplit(rawText);
-    finalTitle = finalTitle || buildMocksTitle(input);
-    finalInstructions = fallback.instructions;
-    finalQuestions = fallback.questions;
-    finalAnswers = fallback.answers;
-  }
-
-  const actualCount = countQuestions(finalQuestions);
-  const contentParts = [];
-
-  if (finalTitle) contentParts.push(finalTitle);
-  if (finalInstructions) contentParts.push(finalInstructions);
-  if (finalQuestions) contentParts.push(finalQuestions);
-
+  const finalTitle = title.trim() || buildMocksTitle(input);
+  const contentParts = [finalTitle, instructions.trim(), questions.trim()].filter(Boolean);
   const fullParts = [...contentParts];
-  if (finalAnswers) {
-    fullParts.push(
-      input.language === "en" ? "Answers / Explanations\n" + finalAnswers : "정답 및 해설\n" + finalAnswers
-    );
-  }
+  if (answers.trim()) fullParts.push((input.language === "en" ? "Answers / Explanations\n" : "정답 및 해설\n") + answers.trim());
 
-  return {
-    title: finalTitle,
-    instructions: finalInstructions,
-    content: cleanupText(contentParts.join("\n\n")),
-    answerSheet: cleanupText(finalAnswers),
-    fullText: cleanupText(fullParts.join("\n\n")),
-    actualCount,
-  };
-}
-
-function buildMeta(input, actualCount) {
-  return {
-    language: input.language,
-    examType: input.examType,
-    requestedCount: input.count,
-    actualCount,
-    generatedAt: new Date().toISOString(),
-  };
-}
-
-function addCors(res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
+  return { title: finalTitle, instructions: instructions.trim(), content: contentParts.join("\n\n"), answerSheet: answers.trim(), fullText: fullParts.join("\n\n"), actualCount: (questions.match(/^\s*\d+\./gm) || []).length };
 }
 
 /* =========================
-   MP deduction helpers only
+   MP deduction helpers only (Updated)
    ========================= */
 
 function getMemberstackHeaders() {
-  if (!MEMBERSTACK_SECRET_KEY) {
-    return null;
-  }
-
-  return {
-    "x-api-key": MEMBERSTACK_SECRET_KEY,
-    "Content-Type": "application/json",
-  };
+  if (!MEMBERSTACK_SECRET_KEY) return null;
+  return { "x-api-key": MEMBERSTACK_SECRET_KEY, "Content-Type": "application/json" };
 }
 
 function getRequiredMp(reqBody = {}) {
@@ -620,88 +296,42 @@ function getInitialTrialMp() {
 }
 
 function extractBearerToken(req) {
-  const raw =
-    req?.headers?.authorization ||
-    req?.headers?.Authorization ||
-    "";
-
+  const raw = req?.headers?.authorization || req?.headers?.Authorization || "";
   const match = String(raw).match(/^Bearer\s+(.+)$/i);
   return match ? match[1].trim() : "";
 }
 
 function extractMemberId(req) {
-  return sanitizeString(
-    req?.body?.memberId ||
-    req?.headers?.["x-member-id"] ||
-    req?.headers?.["X-Member-Id"] ||
-    ""
-  );
+  return sanitizeString(req?.body?.memberId || req?.headers?.["x-member-id"] || req?.headers?.["X-Member-Id"] || "");
 }
 
 async function memberstackRequest(path, options = {}) {
   const headers = getMemberstackHeaders();
-  if (!headers) {
-    throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-  }
-
-  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
-    ...options,
-    headers: {
-      ...headers,
-      ...(options.headers || {}),
-    },
-  });
-
+  if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
+  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, { ...options, headers: { ...headers, ...(options.headers || {}) } });
   const text = await response.text();
   let data = null;
-
-  try {
-    data = text ? JSON.parse(text) : null;
-  } catch {
-    data = text;
-  }
-
-  if (!response.ok) {
-    throw new Error(
-      `Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`
-    );
-  }
-
+  try { data = text ? JSON.parse(text) : null; } catch { data = text; }
+  if (!response.ok) throw new Error(`Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`);
   return data;
 }
 
 async function verifyMemberToken(token) {
   if (!token) return null;
-
   const payload = { token };
-  if (MEMBERSTACK_APP_ID) {
-    payload.audience = MEMBERSTACK_APP_ID;
-  }
-
-  const data = await memberstackRequest("/verify-token", {
-    method: "POST",
-    body: JSON.stringify(payload),
-  });
-
+  if (MEMBERSTACK_APP_ID) payload.audience = MEMBERSTACK_APP_ID;
+  const data = await memberstackRequest("/verify-token", { method: "POST", body: JSON.stringify(payload) });
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "GET", headers: { "Content-Type": "application/json" } });
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
-
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
@@ -710,241 +340,114 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
-
   for (const value of candidates) {
     const num = Number(value);
-    if (Number.isFinite(num)) {
-      return Math.max(0, Math.floor(num));
-    }
+    if (Number.isFinite(num)) return Math.max(0, Math.floor(num));
   }
-
   return null;
 }
 
 async function updateMemberMp(member, nextMp) {
   const memberId = member?.id;
-  if (!memberId) {
-    throw new Error("Missing member id for MP update");
-  }
-
-  const currentCustomFields =
-    member?.customFields && typeof member.customFields === "object"
-      ? member.customFields
-      : {};
-
-  const currentMetaData =
-    member?.metaData && typeof member.metaData === "object"
-      ? member.metaData
-      : {};
-
-  const safeMp = Math.max(0, Math.floor(nextMp));
-
+  if (!memberId) throw new Error("Missing member id for MP update");
+  const currentCustomFields = member?.customFields && typeof member.customFields === "object" ? member.customFields : {};
+  const currentMetaData = member?.metaData && typeof member.metaData === "object" ? member.metaData : {};
+  const safeMp = Math.max(0, Math.floor(Number(nextMp) || 0));
   const patchBody = {
-    customFields: {
-      ...currentCustomFields,
-      [MEMBERSTACK_MP_FIELD]: safeMp,
-    },
-    metaData: {
-      ...currentMetaData,
-      [MEMBERSTACK_MP_FIELD]: safeMp,
-    },
+    customFields: { ...currentCustomFields, [MEMBERSTACK_MP_FIELD]: safeMp },
+    metaData: { ...currentMetaData, [MEMBERSTACK_MP_FIELD]: safeMp },
   };
-
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
-    method: "PATCH",
-    body: JSON.stringify(patchBody),
-  });
-
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "PATCH", body: JSON.stringify(patchBody) });
   return data?.data || null;
 }
 
 async function resolveMemberForMp(req) {
-  if (!MEMBERSTACK_SECRET_KEY) {
-    return {
-      enabled: false,
-      reason: "missing_secret_key",
-      member: null,
-    };
-  }
-
+  if (!MEMBERSTACK_SECRET_KEY) return { enabled: false, reason: "missing_secret_key", member: null };
   try {
     const bearerToken = extractBearerToken(req);
-
     if (bearerToken) {
       const verified = await verifyMemberToken(bearerToken);
       if (verified?.id) {
         const member = await getMemberById(verified.id);
-        return {
-          enabled: true,
-          reason: "token_verified",
-          member,
-        };
+        return { enabled: true, reason: "token_verified", member };
       }
     }
-
     const explicitMemberId = extractMemberId(req);
     if (explicitMemberId) {
       const member = await getMemberById(explicitMemberId);
-      return {
-        enabled: true,
-        reason: "member_id",
-        member,
-      };
+      return { enabled: true, reason: "member_id", member };
     }
-
-    return {
-      enabled: false,
-      reason: "member_not_provided",
-      member: null,
-    };
+    return { enabled: false, reason: "member_not_provided", member: null };
   } catch (error) {
     console.error("resolveMemberForMp error:", error);
-    return {
-      enabled: false,
-      reason: "member_lookup_failed",
-      member: null,
-    };
+    return { enabled: false, reason: "member_lookup_failed", member: null };
   }
 }
 
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
   const memberContext = await resolveMemberForMp(req);
-
   if (!memberContext.enabled || !memberContext.member) {
-    return {
-      enabled: false,
-      reason: memberContext.reason,
-      requiredMp,
-      member: null,
-      currentMp: null,
-      remainingMp: null,
-      trialGranted: false,
-    };
+    return { enabled: false, reason: memberContext.reason, requiredMp, member: null, currentMp: null, remainingMp: null, trialGranted: false, deducted: false };
   }
-
   const member = memberContext.member;
   let currentMp = readMpFromMember(member);
   let updatedMember = member;
   let trialGranted = false;
-
   if (!Number.isFinite(currentMp)) {
     currentMp = getInitialTrialMp();
     updatedMember = (await updateMemberMp(member, currentMp)) || member;
     currentMp = readMpFromMember(updatedMember);
     trialGranted = true;
   }
-
-  if (!Number.isFinite(currentMp)) {
-    currentMp = 0;
-  }
-
-  return {
-    enabled: true,
-    reason: memberContext.reason,
-    requiredMp,
-    member: updatedMember,
-    currentMp,
-    remainingMp: currentMp,
-    trialGranted,
-  };
+  if (!Number.isFinite(currentMp)) currentMp = 0;
+  return { enabled: true, reason: memberContext.reason, requiredMp, member: updatedMember, currentMp, remainingMp: currentMp, trialGranted, deducted: false };
 }
 
 async function deductMpAfterSuccess(mpState) {
-  if (!mpState?.enabled || !mpState?.member) {
-    return mpState;
-  }
-
-  const nextMp = Math.max(0, (mpState.currentMp || 0) - (mpState.requiredMp || 0));
-  const updatedMember = (await updateMemberMp(mpState.member, nextMp)) || mpState.member;
-  const storedMp = readMpFromMember(updatedMember);
-
-  return {
-    ...mpState,
-    member: updatedMember,
-    remainingMp: Number.isFinite(storedMp) ? storedMp : nextMp,
-  };
+  if (!mpState || !mpState.enabled) return mpState;
+  const currentMp = Number(mpState.currentMp);
+  const requiredMp = Number(mpState.requiredMp);
+  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) return { ...mpState, deducted: false };
+  const nextMp = Math.max(0, currentMp - requiredMp);
+  const updatedMember = await updateMemberMp(mpState.member, nextMp);
+  return { ...mpState, member: updatedMember || mpState.member, currentMp: nextMp, remainingMp: nextMp, deducted: true };
 }
 
+/* =========================
+   Main Handler
+   ========================= */
+
 export default async function handler(req, res) {
-  addCors(res);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
 
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
-
-  if (req.method !== "POST") {
-    return json(res, 405, {
-      success: false,
-      error: "METHOD_NOT_ALLOWED",
-      message: "POST 요청만 허용됩니다.",
-    });
-  }
+  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
 
   try {
     const input = normalizeInput(req.body || {});
-
-    if (!input.userPrompt && !input.topic) {
-      return json(res, 400, {
-        success: false,
-        error: "INVALID_REQUEST",
-        message: "userPrompt 또는 topic이 필요합니다.",
-      });
-    }
+    if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
 
     const mpState = await prepareMpState(req);
-
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
-      return json(res, 403, {
-        success: false,
-        error: "INSUFFICIENT_MP",
-        message: "MP가 부족합니다. 업그레이드 후 계속 이용해주세요.",
-        needsUpgrade: true,
-        requiredMp: mpState.requiredMp,
-        remainingMp: mpState.currentMp,
-        trialGranted: mpState.trialGranted,
-      });
+      return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
     }
 
-    const systemPrompt = buildSystemPrompt(input);
-    const userPrompt = buildUserPrompt(input);
-    const rawText = await callOpenAI(systemPrompt, userPrompt);
+    const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
     const formatted = formatMocksResponse(rawText, input);
-    const meta = buildMeta(input, formatted.actualCount);
-
     const finalMpState = await deductMpAfterSuccess(mpState);
 
     return json(res, 200, {
       success: true,
-      engine: input.engine,
-      title: formatted.title,
-      level: input.level,
-      mode: input.mode,
-      topic: input.topic,
-      difficulty: input.difficulty,
-      count: input.count,
-      academyName: input.academyName,
-      instructions: formatted.instructions,
-      content: formatted.content,
-      answerSheet: formatted.answerSheet,
-      fullText: formatted.fullText,
-      meta,
-
-      requiredMp: mpState.requiredMp,
+      ...formatted,
+      meta: { language: input.language, requestedCount: input.count, actualCount: formatted.actualCount, generatedAt: new Date().toISOString() },
       remainingMp: finalMpState?.remainingMp ?? null,
-      needsUpgrade: false,
-      trialGranted: Boolean(mpState.trialGranted),
-      mpSyncEnabled: Boolean(mpState.enabled),
-      mpSyncReason: mpState.reason || "unknown",
+      mpSyncEnabled: Boolean(mpState.enabled)
     });
   } catch (error) {
-    console.error("generate-mocks error:", error);
-
-    return json(res, 500, {
-      success: false,
-      error: "GENERATION_FAILED",
-      message: "Mocks 평가 세트 생성에 실패했습니다.",
-      detail: error?.message || "Unknown error",
-    });
+    console.error("Handler error:", error);
+    return json(res, 500, { success: false, message: "Mocks 평가 세트 생성에 실패했습니다.", detail: error.message });
   }
 }
