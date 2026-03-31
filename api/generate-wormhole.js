@@ -597,7 +597,9 @@ async function memberstackRequest(path, options = {}) {
 
   if (!response.ok) {
     throw new Error(
-      `Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`
+      `Memberstack request failed: ${response.status} ${
+        typeof data === "string" ? data : JSON.stringify(data)
+      }`
     );
   }
 
@@ -671,7 +673,7 @@ async function updateMemberMp(member, nextMp) {
       ? member.metaData
       : {};
 
-  const safeMp = Math.max(0, Math.floor(nextMp));
+  const safeMp = Math.max(0, Math.floor(Number(nextMp) || 0));
 
   const patchBody = {
     customFields: {
@@ -754,6 +756,7 @@ async function prepareMpState(req) {
       currentMp: null,
       remainingMp: null,
       trialGranted: false,
+      deducted: false,
     };
   }
 
@@ -781,22 +784,34 @@ async function prepareMpState(req) {
     currentMp,
     remainingMp: currentMp,
     trialGranted,
+    deducted: false,
   };
 }
 
 async function deductMpAfterSuccess(mpState) {
-  if (!mpState?.enabled || !mpState?.member) {
+  if (!mpState || !mpState.enabled) {
     return mpState;
   }
 
-  const nextMp = Math.max(0, (mpState.currentMp || 0) - (mpState.requiredMp || 0));
-  const updatedMember = (await updateMemberMp(mpState.member, nextMp)) || mpState.member;
-  const storedMp = readMpFromMember(updatedMember);
+  const currentMp = Number(mpState.currentMp);
+  const requiredMp = Number(mpState.requiredMp);
+
+  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
+    return {
+      ...mpState,
+      deducted: false,
+    };
+  }
+
+  const nextMp = Math.max(0, currentMp - requiredMp);
+  const updatedMember = await updateMemberMp(mpState.member, nextMp);
 
   return {
     ...mpState,
-    member: updatedMember,
-    remainingMp: Number.isFinite(storedMp) ? storedMp : nextMp,
+    member: updatedMember || mpState.member,
+    currentMp: nextMp,
+    remainingMp: nextMp,
+    deducted: true,
   };
 }
 
