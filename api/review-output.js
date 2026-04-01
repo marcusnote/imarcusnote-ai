@@ -27,7 +27,9 @@ function sanitizeString(value, fallback = "") {
 
 function sanitizeEngine(value) {
   const v = sanitizeString(value).toLowerCase();
-  if (["wormhole", "magic", "mocks", "vocab"].includes(v)) return v;
+  if (["wormhole", "magic", "mocks", "mock_exam", "vocab"].includes(v)) {
+    return v === "mock_exam" ? "mocks" : v;
+  }
   return "wormhole";
 }
 
@@ -59,10 +61,8 @@ function cleanupText(text = "") {
 function extractSection(rawText, startMarker, endMarker) {
   const start = rawText.indexOf(startMarker);
   if (start === -1) return "";
-
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-
   if (end === -1) return rawText.slice(from).trim();
   return rawText.slice(from, end).trim();
 }
@@ -121,19 +121,37 @@ function buildFallbackSplit(rawText) {
   };
 }
 
-function formatReviewedOutput(rawText, fallbackTitle = "") {
-  const title = cleanupText(
-    extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]")
-  );
-  const instructions = cleanupText(
-    extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]")
-  );
-  const questions = cleanupText(
-    extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]")
-  );
-  const answers = cleanupText(
-    extractSection(rawText, "[[ANSWERS]]", null)
-  );
+function enforceHighDifficultyLabels(questionsText = "") {
+  const blocks = cleanupText(questionsText)
+    .split(/(?=^\s*\d+\.\s+)/gm)
+    .map((v) => v.trim())
+    .filter(Boolean);
+
+  if (!blocks.length) return cleanupText(questionsText);
+
+  const upgraded = blocks.map((block) => {
+    const lines = block.split("\n");
+    if (!lines.length) return block;
+
+    const firstLine = lines[0];
+    const hasFivePoint = /\((?:5|6|7|8|9|10)\s*(?:점|points?)\)/i.test(firstLine);
+    const hasLabel = /\[High Difficulty\]/i.test(firstLine);
+
+    if (hasFivePoint && !hasLabel) {
+      lines[0] = firstLine.replace(/\s*\((?:5|6|7|8|9|10)\s*(?:점|points?)\)/i, (m) => ` [High Difficulty] ${m}`);
+    }
+
+    return lines.join("\n");
+  });
+
+  return upgraded.join("\n\n").trim();
+}
+
+function formatReviewedOutput(rawText, fallbackTitle = "", engine = "wormhole") {
+  const title = cleanupText(extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]"));
+  const instructions = cleanupText(extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
+  const questions = cleanupText(extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]"));
+  const answers = cleanupText(extractSection(rawText, "[[ANSWERS]]", null));
 
   let finalTitle = title || fallbackTitle;
   let finalInstructions = instructions;
@@ -149,6 +167,9 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
   }
 
   finalQuestions = normalizeQuestionNumbering(finalQuestions);
+  if (engine === "mocks") {
+    finalQuestions = enforceHighDifficultyLabels(finalQuestions);
+  }
   finalAnswers = normalizeAnswerNumbering(finalAnswers);
 
   const contentParts = [];
@@ -171,7 +192,6 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
 
 function needsWormholeReview(rawOutput = "") {
   const text = String(rawOutput || "");
-
   const reviewSignals = [
     /how many of the following/i,
     /select all/i,
@@ -187,7 +207,6 @@ function needsWormholeReview(rawOutput = "") {
     /A\)\s.+\nB\)\s.+/s,
     /a\.\s.+\nb\.\s.+/s,
   ];
-
   return reviewSignals.some((pattern) => pattern.test(text));
 }
 
@@ -199,11 +218,114 @@ function looksStructuredEnough(rawOutput = "") {
   return hasTitle && hasQuestions && hasAnswers;
 }
 
+function buildMocksReviewSystemPrompt(language = "ko") {
+  if (language === "en") {
+    return `
+You are the MOCKS PREMIUM review engine of I•marcusnote.
+Your task is to validate and refine an already generated high-school transformed exam set.
+
+[MOCKS PREMIUM VALIDATION RULES]
+1. Confirm that the set matches a premium high-school transformed exam style.
+2. Confirm that the following core types are meaningfully represented:
+   - main idea
+   - gist / key point
+   - author’s claim
+   - author’s attitude
+   - title
+3. Confirm that gist is clearly distinct from main idea and claim.
+4. Confirm that synonym / equivalent / antonym items are context-based, not memorization-based.
+5. Confirm that implication and inference items require genuine reasoning.
+6. Confirm that distractors are plausible and not obviously weak.
+7. If a question is worth 5 points or more, ensure [High Difficulty] is present.
+8. If [High Difficulty] exists on an easy item, raise the item quality.
+9. Preserve [High Difficulty] in the final visible output.
+10. Upgrade shallow items into premium transformed items when necessary.
+11. Preserve numbering and overall structure unless a correction is necessary.
+12. Keep the requested count as closely as possible.
+
+You must output only:
+[[TITLE]]
+[[INSTRUCTIONS]]
+[[QUESTIONS]]
+[[ANSWERS]]
+`.trim();
+  }
+
+  return `
+당신은 I•marcusnote의 MOCKS PREMIUM 전용 검수 엔진이다.
+역할: 이미 생성된 Mocks 변형 문제 결과물이 프리미엄 고등 시험 수준에 부합하는지 검수하고 보정한다.
+
+[MOCKS PREMIUM VALIDATION RULES]
+1. 결과물이 상위권 고등 변형 문제 스타일인지 확인하라.
+2. 다음 핵심 유형들이 의미 있게 포함되었는지 확인하라:
+   - 주제
+   - 요지
+   - 주장
+   - 글쓴이의 태도
+   - 제목
+3. 요지가 주제 및 주장과 명확히 구분되는지 확인하라.
+4. 유의어/동의어/반의어 문항이 단순 암기식이 아닌 문맥 기반인지 확인하라.
+5. 의미함축 및 추론 문항이 실제적인 논리 추론을 요구하는지 확인하라.
+6. 선택지가 그럴듯하며 명백히 쉬운 오답이 아닌지 확인하라.
+7. 5점 이상 문항에는 반드시 [High Difficulty] 표기가 있는지 확인하라.
+8. 쉬운 문항에 [High Difficulty]가 붙어 있다면 문항 질을 상향하라.
+9. [High Difficulty] 표기를 최종 출력에 반드시 유지하라.
+10. 피상적인 문항은 필요시 프리미엄 변형 문항으로 업그레이드하라.
+11. 번호와 전체 구조는 꼭 유지하되 필요한 부분만 정교하게 수정하라.
+12. 요청 문항 수와 실제 문항 수가 크게 어긋나지 않게 보정하라.
+
+[[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 마커를 반드시 사용하라.
+`.trim();
+}
+
+function buildMocksReviewUserPrompt({
+  prompt,
+  rawOutput,
+  requestedCount,
+  difficulty,
+  worksheetTitle,
+  language,
+}) {
+  if (language === "en") {
+    return `
+Target engine: mocks
+Requested count: ${requestedCount}
+Difficulty: ${difficulty}
+Worksheet title: ${worksheetTitle || "(none)"}
+
+Original user request:
+${prompt || "(none)"}
+
+Original output to review:
+${rawOutput}
+
+Apply the MOCKS PREMIUM VALIDATION RULES.
+Return only the final reviewed worksheet in the required marker structure.
+`.trim();
+  }
+
+  return `
+검수 대상 엔진: mocks
+요청 문항 수: ${requestedCount}
+난이도: ${difficulty}
+워크시트 제목: ${worksheetTitle || "(없음)"}
+
+원본 사용자 요청:
+${prompt || "(없음)"}
+
+검수할 원본 결과물:
+${rawOutput}
+
+위의 MOCKS PREMIUM VALIDATION RULES를 적용하여 최종 시험지를 완성하라.
+구조는 유지하되 문제의 질, 논리, 선택지, 표기를 프리미엄 수준으로 보정하라.
+반드시 최종 출력물만 작성하라.
+`.trim();
+}
+
 function buildWormholeReviewSystemPrompt(language = "ko") {
   if (language === "ko") {
     return `
 당신은 I•marcusnote의 WORMHOLE 전용 검수 필터 v2이다.
-
 역할:
 - 이미 생성된 웜홀 결과물을 전체 재작성하지 말고, 필요한 부분만 정교하게 수정한다.
 - 특히 문항 개수, 번호, 정답, 개수형 판단 논리를 엄격하게 검수한다.
@@ -227,23 +349,15 @@ function buildWormholeReviewSystemPrompt(language = "ko") {
 - 부족하면 기존 문항을 근거로 최소 보정하되, 가능하면 구조 파손 없이 맞춰라.
 
 출력 형식:
-반드시 아래 구조만 출력
 [[TITLE]]
-...
 [[INSTRUCTIONS]]
-...
 [[QUESTIONS]]
-1. ...
-2. ...
 [[ANSWERS]]
-1. ...
-2. ...
 `.trim();
   }
 
   return `
 You are the WORMHOLE review filter v2 for I•marcusnote.
-
 Role:
 - Do not fully rewrite the worksheet.
 - Repair only what is necessary.
@@ -267,17 +381,11 @@ Behavior rules:
 - Trim overflow items if there are too many.
 - If there are too few, repair conservatively.
 
-Output only this structure:
+Output only:
 [[TITLE]]
-...
 [[INSTRUCTIONS]]
-...
 [[QUESTIONS]]
-1. ...
-2. ...
 [[ANSWERS]]
-1. ...
-2. ...
 `.trim();
 }
 
@@ -350,16 +458,10 @@ async function callOpenAI(systemPrompt, userPrompt) {
     body: JSON.stringify({
       model: OPENAI_MODEL,
       temperature: 0.2,
-      max_tokens: 3200,
+      max_tokens: 5000,
       messages: [
-        {
-          role: "system",
-          content: systemPrompt,
-        },
-        {
-          role: "user",
-          content: userPrompt,
-        },
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
       ],
     }),
   });
@@ -410,17 +512,52 @@ export default async function handler(req, res) {
       });
     }
 
-    if (engine !== "wormhole") {
-      return json(res, 400, {
-        success: false,
-        error: "UNSUPPORTED_ENGINE",
-        message: "이 리뷰 필터는 wormhole 전용입니다.",
+    let systemPrompt;
+    let userPrompt;
+    let reviewMode = "unknown";
+
+    if (engine === "mocks") {
+      systemPrompt = buildMocksReviewSystemPrompt(language);
+      userPrompt = buildMocksReviewUserPrompt({
+        prompt,
+        rawOutput,
+        requestedCount,
+        difficulty,
+        worksheetTitle,
+        language,
       });
-    }
+      reviewMode = "mocks-premium-validation-v2";
+    } else if (engine === "wormhole") {
+      if (!needsWormholeReview(rawOutput) && looksStructuredEnough(rawOutput)) {
+        const passthrough = formatReviewedOutput(rawOutput, worksheetTitle, engine);
+        return json(res, 200, {
+          success: true,
+          engine,
+          title: passthrough.title,
+          difficulty,
+          requestedCount,
+          actualCount: passthrough.actualCount,
+          instructions: passthrough.instructions,
+          content: passthrough.content,
+          answerSheet: passthrough.answerSheet,
+          fullText: passthrough.fullText,
+          reviewed: false,
+          reviewMode: "wormhole-skip-light-pass-v2",
+        });
+      }
 
-    if (!needsWormholeReview(rawOutput) && looksStructuredEnough(rawOutput)) {
-      const passthrough = formatReviewedOutput(rawOutput, worksheetTitle);
-
+      systemPrompt = buildWormholeReviewSystemPrompt(language);
+      userPrompt = buildWormholeReviewUserPrompt({
+        prompt,
+        rawOutput,
+        difficulty,
+        requestedCount,
+        worksheetTitle,
+        language,
+      });
+      reviewMode = "wormhole-count-answer-review-v2";
+    } else {
+      const passthrough = formatReviewedOutput(rawOutput, worksheetTitle, engine);
       return json(res, 200, {
         success: true,
         engine,
@@ -433,22 +570,12 @@ export default async function handler(req, res) {
         answerSheet: passthrough.answerSheet,
         fullText: passthrough.fullText,
         reviewed: false,
-        reviewMode: "wormhole-skip-light-pass-v2",
+        reviewMode: "engine-passthrough",
       });
     }
 
-    const systemPrompt = buildWormholeReviewSystemPrompt(language);
-    const userPrompt = buildWormholeReviewUserPrompt({
-      prompt,
-      rawOutput,
-      difficulty,
-      requestedCount,
-      worksheetTitle,
-      language,
-    });
-
     const reviewedRaw = await callOpenAI(systemPrompt, userPrompt);
-    const formatted = formatReviewedOutput(reviewedRaw, worksheetTitle);
+    const formatted = formatReviewedOutput(reviewedRaw, worksheetTitle, engine);
 
     return json(res, 200, {
       success: true,
@@ -462,15 +589,14 @@ export default async function handler(req, res) {
       answerSheet: formatted.answerSheet,
       fullText: formatted.fullText,
       reviewed: true,
-      reviewMode: "wormhole-count-answer-review-v2",
+      reviewMode,
     });
   } catch (error) {
     console.error("review-output error:", error);
-
     return json(res, 500, {
       success: false,
       error: "REVIEW_FAILED",
-      message: "웜홀 출력 검수에 실패했습니다.",
+      message: "출력 검수에 실패했습니다.",
       detail: error?.message || "Unknown error",
     });
   }
