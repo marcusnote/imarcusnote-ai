@@ -73,6 +73,11 @@ function inferMockMode(text = "") {
   return "hybrid";
 }
 
+function inferPremium(text = "") {
+  const t = String(text || "").toLowerCase();
+  return /premium|프리미엄|상위권|최상위|고퀄|high-end/.test(t);
+}
+
 function inferTopic(text = "") {
   const source = String(text || "");
   const topicPatterns = [
@@ -157,21 +162,27 @@ function normalizeInput(body = {}) {
     sanitizeString(body.difficulty || ""),
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || ""),
+    sanitizeString(body.qualityMode || ""),
   ]
     .filter(Boolean)
     .join(" ");
+
   const level = ["elementary", "middle", "high"].includes(body.level)
     ? body.level
     : inferLevel(mergedText);
+
   const mode = ["school", "csat", "transform", "hybrid"].includes(body.mode)
     ? body.mode
     : inferMockMode(mergedText);
+
   const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
     ? body.difficulty
     : inferDifficulty(mergedText);
+
   const language = ["ko", "en"].includes(body.language)
     ? body.language
     : inferLanguage(mergedText);
+
   const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
   const worksheetTitle = sanitizeString(body.worksheetTitle || "");
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
@@ -179,6 +190,7 @@ function normalizeInput(body = {}) {
   const engine = "mock_exam";
   const examType = sanitizeString(body.examType || "") || mode;
   const gradeLabel = inferGradeLabel(mergedText, level);
+  const premium = body.premium === true || inferPremium(mergedText);
 
   return {
     engine,
@@ -193,6 +205,7 @@ function normalizeInput(body = {}) {
     academyName,
     userPrompt,
     gradeLabel,
+    premium,
   };
 }
 
@@ -236,8 +249,37 @@ function buildMocksTitle(input) {
   return `${input.gradeLabel} ${input.topic} 마커스모의고사 ${modeLabel} ${input.count}문항`;
 }
 
+function buildPremiumBlock(language = "ko") {
+  if (language === "en") {
+    return `
+[MOCKS PREMIUM MODE]
+This is a premium upper-tier transformation mode.
+
+Rules:
+- Raise distractor quality significantly.
+- Increase implication and inference density.
+- Make all answer choices partially plausible.
+- Keep the transformed passage fully independent from the source.
+- The final worksheet must feel like a premium advanced assessment set.
+`.trim();
+  }
+
+  return `
+[MOCKS PREMIUM MODE]
+이 모드는 상위권용 프리미엄 변형 모드이다.
+
+규칙:
+- 선택지의 부분 타당성을 높일 것.
+- 함축과 추론 밀도를 높일 것.
+- 모든 선택지를 그럴듯하게 설계할 것.
+- 변형 지문은 원문과 독립적인 신규 지문처럼 보여야 한다.
+- 결과물은 상위권용 프리미엄 시험지처럼 보여야 한다.
+`.trim();
+}
+
 function buildSystemPrompt(input) {
   const isKo = input.language === "ko";
+  const premiumBlock = input.premium ? "\n\n" + buildPremiumBlock(input.language) + "\n\n" : "\n\n";
 
   if (isKo) {
     return `
@@ -259,14 +301,14 @@ function buildSystemPrompt(input) {
 - 입력된 지문의 문장, 문단, 전개를 그대로 다시 사용하지 말 것.
 - 연속된 두 문장 이상을 그대로 재현하지 말 것.
 - 문단 단위 재현, 직접 복사처럼 보이는 출력, 약한 패러프레이즈를 금지한다.
+- 단순 어휘 치환, 어순만 조금 바꾼 약한 패러프레이즈를 금지한다.
+- 원문의 문장 골격이 그대로 보이면 실패로 간주한다.
 - 결과물은 원문 기반 복사형 시험지가 아니라 새롭게 설계된 시험지여야 한다.
 
 2. 고난도 내용변형 우선
-- 입력 지문의 핵심 개념, 정보 관계, 논리 구조, 함의를 바탕으로
-  새로운 문장과 새로운 문제 구조를 설계할 것.
+- 입력 지문의 핵심 개념, 정보 관계, 논리 구조, 함의를 바탕으로 새로운 문장과 새로운 문제 구조를 설계할 것.
 - 단순한 어휘 치환형 변형은 금지한다.
-- 내용 초점, 정보 배열, 관점, 질문 포인트를 바꾸어
-  학생이 원문 암기가 아니라 해석과 추론으로 풀게 만들어야 한다.
+- 내용 초점, 정보 배열, 관점, 질문 포인트를 바꾸어 학생이 원문 암기가 아니라 해석과 추론으로 풀게 만들어야 한다.
 
 3. 우선 출제 유형
 반드시 아래 유형을 중심으로 출제할 것.
@@ -279,6 +321,16 @@ function buildSystemPrompt(input) {
 [G] 진술의 일치 / 불일치 판단
 [H] 관점 전환, 논리 전환, 정보 재배열 기반 문항
 
+3-1. 문항 배당 규칙
+- 25문항 기준으로 다음 비율을 기본으로 한다.
+  1~6번: 유의어 / 동의어 / 반의어 / 대조 의미 변형
+  7~11번: 내용변형 지문의 주제 / 제목
+  12~17번: 함축 의미 / 추론
+  18~21번: 진술 일치 / 불일치
+  22~25번: 관점 전환 / 논리 전환 / 정보 재배열 판단
+- 특정 유형 하나만 과도하게 반복하지 말 것.
+- 전체 세트는 교사용 시험지처럼 균형 있게 구성할 것.
+
 4. 지문 재구성 규칙
 - 입력 지문에서 핵심 개념만 추출한 뒤, 새로운 흐름으로 재구성할 것.
 - 정보 순서를 바꾸고, 관점을 바꾸고, 표현을 바꾸고, 논리 연결을 재설계할 것.
@@ -290,6 +342,16 @@ function buildSystemPrompt(input) {
 - 선택지는 모두 그럴듯해야 하며, 정답은 분명해야 한다.
 - 오답은 피상적 차이가 아니라 의미 차이, 논리 차이, 관점 차이를 반영해야 한다.
 - 전체 난도는 일관되게 유지하되, 일부 문항은 상위권 변별용으로 더 촘촘하게 설계할 수 있다.
+
+5-1. 오답 설계 규칙
+- 오답은 모두 부분적으로 그럴듯해야 한다.
+- 오답은 다음 방식으로 설계할 수 있다:
+  ① 핵심 개념은 맞지만 결론이 틀린 진술
+  ② 범위를 지나치게 일반화한 진술
+  ③ 초점이 살짝 어긋난 진술
+  ④ 논리 흐름은 비슷하지만 함의가 다른 진술
+  ⑤ 원문과 반대는 아니나 정확히 일치하지 않는 진술
+- 정답만 유독 눈에 띄게 만들지 말 것.
 
 6. 실전성 규칙
 - 문제는 실제 시험지처럼 보여야 한다.
@@ -307,7 +369,7 @@ function buildSystemPrompt(input) {
 - 번호는 1번부터 순서대로 이어진다.
 - 정답 및 해설 수는 문항 수와 정확히 일치해야 한다.
 - 제목 / 지시문 / 문항 / 정답 구조를 정확히 지킨다.
-
+${premiumBlock}
 [강제 안전 규칙]
 중요:
 입력 지문은 소재일 뿐이다.
@@ -357,6 +419,8 @@ It must redesign meaning, logic, viewpoint, and information structure into a new
 - Do not reproduce the source passage sentence-by-sentence.
 - Do not output long consecutive portions of the source text.
 - Do not rely on weak paraphrasing.
+- Do not use shallow word substitution or slight reordering as transformation.
+- If the sentence skeleton still resembles the source too closely, treat it as failure.
 - The result must look like a newly designed test, not a copied worksheet.
 
 2. High-difficulty transformation first
@@ -375,6 +439,16 @@ Focus mainly on:
 - statement consistency / inconsistency
 - viewpoint shift / logic shift / information rearrangement
 
+3-1. Item distribution
+- For a 25-item set, use this as the default distribution:
+  1-6: synonym / paraphrase / antonym / contrast transformation
+  7-11: transformed topic / title
+  12-17: implication / inference
+  18-21: statement consistency / inconsistency
+  22-25: viewpoint shift / logic shift / information rearrangement
+- Do not over-repeat a single item type.
+- Keep the whole set balanced like a premium teacher-ready exam sheet.
+
 4. Passage reconstruction
 - Change information order, perspective, wording, and logical emphasis.
 - Keep the core concept, but ensure the transformed passage does not read like the source.
@@ -383,6 +457,16 @@ Focus mainly on:
 - Items must require interpretation, comparison, implication tracking, or inference.
 - Distractors must be plausible and meaning-based.
 - Avoid shallow or obvious answer choices.
+
+5-1. Distractor rules
+- All wrong choices should be partially plausible.
+- Wrong choices may be designed as:
+  1) conceptually related but conclusionally wrong
+  2) overly generalized claims
+  3) slightly misfocused statements
+  4) similar logic but different implication
+  5) not opposite to the source, but still not accurate
+- Do not make the correct answer too visibly superior.
 
 6. Explanation rules
 - Keep explanations concise but logically grounded.
@@ -393,7 +477,7 @@ Focus mainly on:
 - Number items cleanly from 1 onward.
 - Match answer lines to item count exactly.
 - Follow the section marker format exactly.
-
+${premiumBlock}
 Critical:
 The source passage is material, not output.
 The final result must be a newly designed, high-difficulty transformed exam set.
@@ -426,6 +510,22 @@ function buildUserPrompt(input) {
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
   const modeLabel = getModeLabel(input.mode, input.language);
 
+  const premiumNote = input.premium
+    ? (input.language === "en"
+        ? `
+Premium mode is ON.
+- Raise distractor quality.
+- Increase implication and inference density.
+- Make the worksheet feel premium and upper-tier.
+`
+        : `
+프리미엄 모드 활성화:
+- 선택지의 밀도와 부분 타당성을 높일 것.
+- 함축과 추론 비중을 높일 것.
+- 결과물을 상위권용 프리미엄 시험지처럼 설계할 것.
+`)
+    : "";
+
   if (input.language === "en") {
     return `
 Generate a high-difficulty transformed Mock Exam worksheet with the following conditions.
@@ -440,7 +540,7 @@ Exam type: ${input.examType}
 Difficulty: ${input.difficulty} (${difficultyLabel})
 Question count: ${input.count}
 Academy name: ${input.academyName}
-
+${premiumNote}
 Additional mandatory requirements:
 - Do NOT reuse the source passage directly.
 - Do NOT reproduce long consecutive wording from the input.
@@ -470,7 +570,7 @@ ${input.userPrompt || "(No additional request provided.)"}
 난이도: ${input.difficulty} (${difficultyLabel})
 문항 수: ${input.count}
 브랜드명: ${input.academyName}
-
+${premiumNote}
 추가 필수 요구사항:
 - 입력 지문을 그대로 다시 사용하지 말 것.
 - 입력 지문의 연속 문장이나 문단을 그대로 재현하지 말 것.
