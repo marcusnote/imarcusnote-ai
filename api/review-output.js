@@ -121,22 +121,19 @@ function buildFallbackSplit(rawText) {
   };
 }
 
-function hasFiveChoicePattern(text = "") {
-  const source = String(text || "");
-  return /①[\s\S]*②[\s\S]*③[\s\S]*④[\s\S]*⑤/.test(source);
-}
-
-function looksNonWormholeType(text = "") {
-  return /변형하세요|빈칸|채우세요|수정하세요|rewrite|fill in the blank|correct the sentence/i.test(
-    String(text || "")
-  );
-}
-
 function formatReviewedOutput(rawText, fallbackTitle = "") {
-  const title = cleanupText(extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]"));
-  const instructions = cleanupText(extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
-  const questions = cleanupText(extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]"));
-  const answers = cleanupText(extractSection(rawText, "[[ANSWERS]]", null));
+  const title = cleanupText(
+    extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]")
+  );
+  const instructions = cleanupText(
+    extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]")
+  );
+  const questions = cleanupText(
+    extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]")
+  );
+  const answers = cleanupText(
+    extractSection(rawText, "[[ANSWERS]]", null)
+  );
 
   let finalTitle = title || fallbackTitle;
   let finalInstructions = instructions;
@@ -169,150 +166,118 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
     answerSheet: cleanupText(finalAnswers),
     fullText: cleanupText(fullParts.join("\n\n")),
     actualCount: countQuestions(finalQuestions),
-    wormholeFormatOk: hasFiveChoicePattern(finalQuestions),
   };
 }
 
 function needsWormholeReview(rawOutput = "") {
   const text = String(rawOutput || "");
 
-  if (!hasFiveChoicePattern(text)) return true;
-  if (looksNonWormholeType(text)) return true;
-
   const reviewSignals = [
     /how many of the following/i,
     /select all/i,
     /all the sentences/i,
-    /which choice includes only/i,
+    /which of the following are correct/i,
     /옳은 것의 개수/,
     /옳지 않은 것의 개수/,
     /어색한 것의 개수/,
     /오류가 있는 문장의 개수/,
+    /개수형/,
     /모두 고른 것은/,
     /복수판단/,
-    /①[\s\S]*②[\s\S]*③[\s\S]*④[\s\S]*⑤/,
+    /A\)\s.+\nB\)\s.+/s,
+    /a\.\s.+\nb\.\s.+/s,
   ];
 
   return reviewSignals.some((pattern) => pattern.test(text));
 }
 
+function looksStructuredEnough(rawOutput = "") {
+  const text = String(rawOutput || "");
+  const hasTitle = text.includes("[[TITLE]]");
+  const hasQuestions = text.includes("[[QUESTIONS]]");
+  const hasAnswers = text.includes("[[ANSWERS]]");
+  return hasTitle && hasQuestions && hasAnswers;
+}
+
 function buildWormholeReviewSystemPrompt(language = "ko") {
   if (language === "ko") {
     return `
-당신은 I•marcusnote의 WORMHOLE 전용 검수 필터 v3이다.
+당신은 I•marcusnote의 WORMHOLE 전용 검수 필터 v2이다.
 
 역할:
-- 이미 생성된 웜홀 결과물을 웜홀 정체성에 맞게 교정한다.
-- 특히 형식이 잘못되었으면 반드시 5지선다형 판별 문제로 재구성한다.
-- 개수, 정답, 번호, 선택지 구조를 엄격하게 검수한다.
+- 이미 생성된 웜홀 결과물을 전체 재작성하지 말고, 필요한 부분만 정교하게 수정한다.
+- 특히 문항 개수, 번호, 정답, 개수형 판단 논리를 엄격하게 검수한다.
 
-웜홀 형식 절대 규칙:
-1. 모든 문항은 반드시 5지선다형이다.
-2. 모든 문항은 반드시 아래 구조를 가진다:
-   1. 문제문
-   ① ...
-   ② ...
-   ③ ...
-   ④ ...
-   ⑤ ...
-3. 웜홀은 반드시 판별형/선택형/개수형이어야 한다.
-4. 금지:
-   - 문장을 변형하세요
-   - 빈칸을 채우세요
-   - 오류를 직접 고쳐 쓰세요
-   - 서술형 주관식
-5. 개수형 문항은 실제 개수를 다시 계산한다.
-6. 정답은 문항별로 하나씩 존재해야 한다.
-7. 답 형식은 반드시:
-   1. ③ - 짧은 근거
-   2. ① - 짧은 근거
-8. 구조가 약하면 전체를 웜홀형 객관식으로 재작성해도 된다.
+최우선 검수 포인트:
+1. 문항 수가 요청 개수와 정확히 일치하는가
+2. 문항 번호가 1번부터 순서대로 이어지는가
+3. 정답/해설 줄 수가 문항 수와 정확히 일치하는가
+4. 개수형 문제의 실제 개수가 정답과 일치하는가
+5. 문항 본문과 정답이 서로 모순되지 않는가
+6. 제목/지시문/문항/정답 구조가 깨지지 않았는가
+
+행동 원칙:
+- 구조를 최대한 유지한다.
+- 문항 자체가 좋으면 최소 수정만 한다.
+- 개수형/정답 불일치/번호 꼬임은 반드시 수정한다.
+- 필요시 영어 문장 자체의 명백한 오류만 최소 수정한다.
+- 불필요한 해설 확장 금지.
+- 새 문항 대량 생성 금지.
+- 요청 개수보다 많으면 뒤를 잘라라.
+- 부족하면 기존 문항을 근거로 최소 보정하되, 가능하면 구조 파손 없이 맞춰라.
 
 출력 형식:
+반드시 아래 구조만 출력
 [[TITLE]]
 ...
-
 [[INSTRUCTIONS]]
 ...
-
 [[QUESTIONS]]
-1. 문제문
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-2. 문제문
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
+1. ...
+2. ...
 [[ANSWERS]]
-1. ③ - 근거
-2. ① - 근거
-...
+1. ...
+2. ...
 `.trim();
   }
 
   return `
-You are the WORMHOLE review filter v3 for I•marcusnote.
+You are the WORMHOLE review filter v2 for I•marcusnote.
 
 Role:
-- Repair the generated wormhole output so it fully matches wormhole identity.
-- If the format is wrong, convert it into 5-choice judgment-based multiple-choice.
-- Strictly verify count, answers, numbering, and options.
+- Do not fully rewrite the worksheet.
+- Repair only what is necessary.
+- Strictly verify item count, numbering, answers, and count-based logic.
 
-Absolute wormhole rules:
-1. Every item must be 5-choice multiple-choice.
-2. Every item must follow:
-   1. Question
-   ① ...
-   ② ...
-   ③ ...
-   ④ ...
-   ⑤ ...
-3. Wormhole must be judgment-based, choice-based, or count-based.
-4. Forbidden:
-   - Rewrite the sentence
-   - Fill in the blank
-   - Correct it in writing
-   - Subjective/open-ended items
-5. Recalculate count-based questions.
-6. Exactly one answer line per item.
-7. Answer format must be:
-   1. ③ - brief reason
-   2. ① - brief reason
-8. If needed, rewrite the whole set into wormhole-style multiple-choice.
+Top review priorities:
+1. Question count matches the requested count exactly.
+2. Question numbering runs cleanly from 1 onward.
+3. Answer lines match the question count exactly.
+4. Count-based items are recalculated and corrected.
+5. No contradiction between question body and answer sheet.
+6. Title / instruction / questions / answers structure stays intact.
 
-Output format:
+Behavior rules:
+- Preserve structure whenever possible.
+- Minimal edits if the worksheet is already strong.
+- Fix count-logic, answer mismatch, and numbering errors.
+- Only minimally fix obvious English issues if needed.
+- Do not over-expand explanations.
+- Do not generate large amounts of new content.
+- Trim overflow items if there are too many.
+- If there are too few, repair conservatively.
+
+Output only this structure:
 [[TITLE]]
 ...
-
 [[INSTRUCTIONS]]
 ...
-
 [[QUESTIONS]]
-1. Question
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-2. Question
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
+1. ...
+2. ...
 [[ANSWERS]]
-1. ③ - brief reason
-2. ① - brief reason
-...
+1. ...
+2. ...
 `.trim();
 }
 
@@ -338,12 +303,11 @@ ${prompt || "(없음)"}
 ${rawOutput}
 
 검수 초점:
-- 웜홀은 반드시 5지선다형으로 교정
-- 비객관식이면 객관식으로 재구성
-- 개수형 문제는 실제 개수 재검산
-- 정답/번호/선택지 수 정렬
-- 선택지는 학생이 실제로 헷갈릴 만한 문법 포인트 반영
-- 최종적으로 모든 문항에 ① ② ③ ④ ⑤가 있어야 함
+- 정답 번호 오류 수정
+- 개수형 문제의 실제 개수 재검산
+- 정답/해설과 문항 본문 불일치 수정
+- 문제 수와 정답 수를 정확히 맞추기
+- 구조는 유지하고 필요한 부분만 최소 수정
 
 반드시 최종 출력만 작성하라.
 `.trim();
@@ -355,25 +319,27 @@ Difficulty: ${difficulty}
 Requested item count: ${requestedCount}
 Worksheet title: ${worksheetTitle || "(none)"}
 
-Original request:
+Original user request:
 ${prompt || "(none)"}
 
 Original output:
 ${rawOutput}
 
 Review focus:
-- convert wormhole into strict 5-choice multiple-choice if needed
-- rebuild non-multiple-choice items into wormhole style
+- fix answer numbering errors
 - recalculate count-based questions
-- align numbering, answer count, and option structure
-- every item must contain ① ② ③ ④ ⑤
+- fix contradictions between questions and answers
+- align question count and answer count exactly
+- preserve structure and edit minimally
 
 Return only the final reviewed worksheet.
 `.trim();
 }
 
 async function callOpenAI(systemPrompt, userPrompt) {
-  if (!OPENAI_API_KEY) throw new Error("Missing OPENAI_API_KEY");
+  if (!OPENAI_API_KEY) {
+    throw new Error("Missing OPENAI_API_KEY");
+  }
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
@@ -384,10 +350,16 @@ async function callOpenAI(systemPrompt, userPrompt) {
     body: JSON.stringify({
       model: OPENAI_MODEL,
       temperature: 0.2,
-      max_tokens: 3600,
+      max_tokens: 3200,
       messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
+        {
+          role: "system",
+          content: systemPrompt,
+        },
+        {
+          role: "user",
+          content: userPrompt,
+        },
       ],
     }),
   });
@@ -404,7 +376,9 @@ async function callOpenAI(systemPrompt, userPrompt) {
 export default async function handler(req, res) {
   addCors(res);
 
-  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
 
   if (req.method !== "POST") {
     return json(res, 405, {
@@ -444,9 +418,7 @@ export default async function handler(req, res) {
       });
     }
 
-    const mustReview = needsWormholeReview(rawOutput);
-
-    if (!mustReview) {
+    if (!needsWormholeReview(rawOutput) && looksStructuredEnough(rawOutput)) {
       const passthrough = formatReviewedOutput(rawOutput, worksheetTitle);
 
       return json(res, 200, {
@@ -461,8 +433,7 @@ export default async function handler(req, res) {
         answerSheet: passthrough.answerSheet,
         fullText: passthrough.fullText,
         reviewed: false,
-        reviewMode: "wormhole-pass-v3",
-        wormholeFormatOk: passthrough.wormholeFormatOk,
+        reviewMode: "wormhole-skip-light-pass-v2",
       });
     }
 
@@ -491,8 +462,7 @@ export default async function handler(req, res) {
       answerSheet: formatted.answerSheet,
       fullText: formatted.fullText,
       reviewed: true,
-      reviewMode: "wormhole-format-enforced-v3",
-      wormholeFormatOk: formatted.wormholeFormatOk,
+      reviewMode: "wormhole-count-answer-review-v2",
     });
   } catch (error) {
     console.error("review-output error:", error);
