@@ -11,6 +11,15 @@ function json(res, status, payload) {
   return res.status(status).json(payload);
 }
 
+function addCors(res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization, X-Member-Id"
+  );
+}
+
 function sanitizeString(value, fallback = "") {
   if (typeof value !== "string") return fallback;
   return value.trim();
@@ -34,24 +43,15 @@ function sanitizeCount(value, fallback = 25) {
   return Math.max(1, Math.min(50, Math.round(n)));
 }
 
-function addCors(res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization, X-Member-Id"
-  );
-}
-
 function inferLanguage(text = "") {
-  const t = String(text || "");
-  const koreanMatches = t.match(/[가-힣]/g) || [];
-  return koreanMatches.length > 0 ? "ko" : "en";
+  return /[가-힣]/.test(String(text || "")) ? "ko" : "en";
 }
 
 function cleanupText(text = "") {
   return String(text || "")
     .replace(/\r\n/g, "\n")
+    .replace(/\u00A0/g, " ")
+    .replace(/[ \t]+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
 }
@@ -59,15 +59,50 @@ function cleanupText(text = "") {
 function extractSection(rawText, startMarker, endMarker) {
   const start = rawText.indexOf(startMarker);
   if (start === -1) return "";
+
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
+
   if (end === -1) return rawText.slice(from).trim();
   return rawText.slice(from, end).trim();
 }
 
+function countQuestions(text = "") {
+  return (String(text || "").match(/^\s*\d+\.\s+/gm) || []).length;
+}
+
+function normalizeQuestionNumbering(text = "") {
+  const blocks = cleanupText(text)
+    .split(/(?=^\s*\d+\.\s+)/gm)
+    .map((v) => v.trim())
+    .filter(Boolean);
+
+  if (!blocks.length) return cleanupText(text);
+
+  return blocks
+    .map((block, idx) => block.replace(/^\s*\d+\.\s*/, `${idx + 1}. `))
+    .join("\n\n")
+    .trim();
+}
+
+function normalizeAnswerNumbering(text = "") {
+  const lines = cleanupText(text)
+    .split("\n")
+    .map((v) => v.trim())
+    .filter(Boolean);
+
+  const numbered = lines.filter((line) => /^\d+\.\s+/.test(line));
+  if (!numbered.length) return cleanupText(text);
+
+  return numbered
+    .map((line, idx) => line.replace(/^\d+\.\s*/, `${idx + 1}. `))
+    .join("\n")
+    .trim();
+}
+
 function buildFallbackSplit(rawText) {
   const cleaned = cleanupText(rawText);
-  const answerMatch = cleaned.search(/\n\s*(정답|해설|answers?)\s*[:\-]?\s*\n?/i);
+  const answerMatch = cleaned.search(/\n\s*(정답\s*및\s*해설|정답과\s*해설|정답|해설|answers?)\s*[:\-]?\s*\n?/i);
 
   if (answerMatch === -1) {
     return {
@@ -84,11 +119,6 @@ function buildFallbackSplit(rawText) {
     questions: cleaned.slice(0, answerMatch).trim(),
     answers: cleaned.slice(answerMatch).trim(),
   };
-}
-
-function countQuestions(text = "") {
-  const matches = text.match(/^\s*\d+\./gm) || [];
-  return matches.length;
 }
 
 function formatReviewedOutput(rawText, fallbackTitle = "") {
@@ -109,6 +139,7 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
   let finalInstructions = instructions;
   let finalQuestions = questions;
   let finalAnswers = answers;
+
   if (!finalQuestions) {
     const fallback = buildFallbackSplit(rawText);
     finalTitle = finalTitle || fallbackTitle;
@@ -117,6 +148,9 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
     finalAnswers = fallback.answers;
   }
 
+  finalQuestions = normalizeQuestionNumbering(finalQuestions);
+  finalAnswers = normalizeAnswerNumbering(finalAnswers);
+
   const contentParts = [];
   if (finalTitle) contentParts.push(finalTitle);
   if (finalInstructions) contentParts.push(finalInstructions);
@@ -124,6 +158,7 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
 
   const fullParts = [...contentParts];
   if (finalAnswers) fullParts.push("정답 및 해설\n" + finalAnswers);
+
   return {
     title: finalTitle,
     instructions: finalInstructions,
@@ -134,9 +169,6 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
   };
 }
 
-// ------------------------------
-// UPDATED REVIEW SIGNALS ( 보수적 감지 패턴 적용 )
-// ------------------------------
 function needsWormholeReview(rawOutput = "") {
   const text = String(rawOutput || "");
 
@@ -144,14 +176,16 @@ function needsWormholeReview(rawOutput = "") {
     /how many of the following/i,
     /select all/i,
     /all the sentences/i,
-    /which choice includes only/i,
+    /which of the following are correct/i,
     /옳은 것의 개수/,
+    /옳지 않은 것의 개수/,
     /어색한 것의 개수/,
     /오류가 있는 문장의 개수/,
+    /개수형/,
     /모두 고른 것은/,
     /복수판단/,
-    /A\)\s.+\nB\)\s.+\nC\)\s.+/s,
-    /a\.\s.+\nb\.\s.+\nc\.\s.+/s,
+    /A\)\s.+\nB\)\s.+/s,
+    /a\.\s.+\nb\.\s.+/s,
   ];
 
   return reviewSignals.some((pattern) => pattern.test(text));
@@ -163,6 +197,143 @@ function looksStructuredEnough(rawOutput = "") {
   const hasQuestions = text.includes("[[QUESTIONS]]");
   const hasAnswers = text.includes("[[ANSWERS]]");
   return hasTitle && hasQuestions && hasAnswers;
+}
+
+function buildWormholeReviewSystemPrompt(language = "ko") {
+  if (language === "ko") {
+    return `
+당신은 I•marcusnote의 WORMHOLE 전용 검수 필터 v2이다.
+
+역할:
+- 이미 생성된 웜홀 결과물을 전체 재작성하지 말고, 필요한 부분만 정교하게 수정한다.
+- 특히 문항 개수, 번호, 정답, 개수형 판단 논리를 엄격하게 검수한다.
+
+최우선 검수 포인트:
+1. 문항 수가 요청 개수와 정확히 일치하는가
+2. 문항 번호가 1번부터 순서대로 이어지는가
+3. 정답/해설 줄 수가 문항 수와 정확히 일치하는가
+4. 개수형 문제의 실제 개수가 정답과 일치하는가
+5. 문항 본문과 정답이 서로 모순되지 않는가
+6. 제목/지시문/문항/정답 구조가 깨지지 않았는가
+
+행동 원칙:
+- 구조를 최대한 유지한다.
+- 문항 자체가 좋으면 최소 수정만 한다.
+- 개수형/정답 불일치/번호 꼬임은 반드시 수정한다.
+- 필요시 영어 문장 자체의 명백한 오류만 최소 수정한다.
+- 불필요한 해설 확장 금지.
+- 새 문항 대량 생성 금지.
+- 요청 개수보다 많으면 뒤를 잘라라.
+- 부족하면 기존 문항을 근거로 최소 보정하되, 가능하면 구조 파손 없이 맞춰라.
+
+출력 형식:
+반드시 아래 구조만 출력
+[[TITLE]]
+...
+[[INSTRUCTIONS]]
+...
+[[QUESTIONS]]
+1. ...
+2. ...
+[[ANSWERS]]
+1. ...
+2. ...
+`.trim();
+  }
+
+  return `
+You are the WORMHOLE review filter v2 for I•marcusnote.
+
+Role:
+- Do not fully rewrite the worksheet.
+- Repair only what is necessary.
+- Strictly verify item count, numbering, answers, and count-based logic.
+
+Top review priorities:
+1. Question count matches the requested count exactly.
+2. Question numbering runs cleanly from 1 onward.
+3. Answer lines match the question count exactly.
+4. Count-based items are recalculated and corrected.
+5. No contradiction between question body and answer sheet.
+6. Title / instruction / questions / answers structure stays intact.
+
+Behavior rules:
+- Preserve structure whenever possible.
+- Minimal edits if the worksheet is already strong.
+- Fix count-logic, answer mismatch, and numbering errors.
+- Only minimally fix obvious English issues if needed.
+- Do not over-expand explanations.
+- Do not generate large amounts of new content.
+- Trim overflow items if there are too many.
+- If there are too few, repair conservatively.
+
+Output only this structure:
+[[TITLE]]
+...
+[[INSTRUCTIONS]]
+...
+[[QUESTIONS]]
+1. ...
+2. ...
+[[ANSWERS]]
+1. ...
+2. ...
+`.trim();
+}
+
+function buildWormholeReviewUserPrompt({
+  prompt,
+  rawOutput,
+  difficulty,
+  requestedCount,
+  worksheetTitle,
+  language,
+}) {
+  if (language === "ko") {
+    return `
+검수 대상 엔진: wormhole
+난이도: ${difficulty}
+요청 문항 수: ${requestedCount}
+워크시트 제목: ${worksheetTitle || "(없음)"}
+
+원래 사용자 요청:
+${prompt || "(없음)"}
+
+원본 결과물:
+${rawOutput}
+
+검수 초점:
+- 정답 번호 오류 수정
+- 개수형 문제의 실제 개수 재검산
+- 정답/해설과 문항 본문 불일치 수정
+- 문제 수와 정답 수를 정확히 맞추기
+- 구조는 유지하고 필요한 부분만 최소 수정
+
+반드시 최종 출력만 작성하라.
+`.trim();
+  }
+
+  return `
+Target engine: wormhole
+Difficulty: ${difficulty}
+Requested item count: ${requestedCount}
+Worksheet title: ${worksheetTitle || "(none)"}
+
+Original user request:
+${prompt || "(none)"}
+
+Original output:
+${rawOutput}
+
+Review focus:
+- fix answer numbering errors
+- recalculate count-based questions
+- fix contradictions between questions and answers
+- align question count and answer count exactly
+- preserve structure and edit minimally
+
+Return only the final reviewed worksheet.
+`.trim();
 }
 
 async function callOpenAI(systemPrompt, userPrompt) {
@@ -178,180 +349,28 @@ async function callOpenAI(systemPrompt, userPrompt) {
     },
     body: JSON.stringify({
       model: OPENAI_MODEL,
-      temperature: 0.1,
-      max_tokens: 4500,
+      temperature: 0.2,
+      max_tokens: 3200,
       messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
+        {
+          role: "system",
+          content: systemPrompt,
+        },
+        {
+          role: "user",
+          content: userPrompt,
+        },
       ],
     }),
   });
 
+  const data = await response.json().catch(() => ({}));
+
   if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
+    throw new Error(data?.error?.message || "OpenAI review request failed");
   }
 
-  const data = await response.json();
-  const text = data?.choices?.[0]?.message?.content;
-  if (!text || typeof text !== "string") {
-    throw new Error("Empty model response");
-  }
-
-  return text.trim();
-}
-
-function buildWormholeReviewSystemPrompt(language = "ko") {
-  const isKo = language === "ko";
-
-  return isKo
-    ? `
-당신은 MARCUSNOTE의 Wormhole 전용 초경량 검수 필터이다.
-
-당신의 임무는 전체 결과물을 다시 쓰는 것이 아니다.
-오직 아래 4가지만 점검하고, 필요한 최소 수정만 수행하라.
-
-[검수 우선순위]
-1. 정답 번호가 실제 문항과 일치하는가
-2. 개수형 문제의 실제 개수가 맞는가
-3. 복수판단형 문제의 조합 정답이 맞는가
-4. 해설이 정답과 정확히 일치하는가
-
-[반드시 지킬 규칙]
-- 전체 재작성 금지
-- 이미 정상인 문항 수정 금지
-- 문항 수 변경 금지
-- 문항 번호 변경 금지
-- 섹션 마커 유지
-- 5지선다 유지
-- 제목/안내문/전체 흐름 최대한 유지
-- 영어 문장은 꼭 필요한 경우에만 최소 수정
-
-[특별 규칙]
-- 개수형 문제는 각 항목을 하나씩 검토해 실제 개수를 다시 계산하라.
-- 복수판단형 문제는 각 보기 문장을 따로 판단한 뒤 정답 조합을 맞춰라.
-- 해설은 길게 쓰지 말고 핵심만 유지하라.
-- 너무 쉬운 문항을 새로 만드는 것은 금지한다.
-- 오직 오류와 불일치만 고쳐라.
-
-[출력 형식 - 반드시 유지]
-[[TITLE]]
-(제목 한 줄)
-
-[[INSTRUCTIONS]]
-(안내문 한 단락)
-
-[[QUESTIONS]]
-1. ...
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-[[ANSWERS]]
-1. 정답 번호 - 해설
-2. 정답 번호 - 해설
-...
-`.trim()
-    : `
-You are the ultra-lightweight Wormhole review filter for MARCUSNOTE.
-Your job is NOT to rewrite the worksheet.
-Only check and minimally fix these four things:
-
-1. whether the keyed answer is correct
-2. whether count-type questions have the correct count
-3. whether multi-judgment combination answers are correct
-4. whether the explanation matches the answer key
-
-[Strict rules]
-- no full rewrite
-- do not change good questions
-- do not change question count
-- do not change numbering
-- preserve section markers
-- preserve 5-option multiple choice
-- preserve title, instructions, and overall structure
-- only make minimal edits when absolutely necessary
-
-[Special rules]
-- Recalculate every count-type question carefully.
-- Validate every sentence in multi-judgment questions before confirming the combination.
-- Keep explanations short.
-- Do not invent a new worksheet.
-- Fix only real errors or inconsistencies.
-
-[Required output format]
-[[TITLE]]
-(one-line title)
-
-[[INSTRUCTIONS]]
-(one paragraph)
-
-[[QUESTIONS]]
-1. ...
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
-
-[[ANSWERS]]
-1. correct option - explanation
-2. correct option - explanation
-...
-`.trim();
-}
-
-function buildWormholeReviewUserPrompt({
-  prompt,
-  rawOutput,
-  difficulty,
-  requestedCount,
-  worksheetTitle,
-  language,
-}) {
-  if (language === "en") {
-    return `
-Review this Wormhole worksheet only if correction is truly necessary.
-Focus only on:
-- answer-key mismatch
-- wrong counts
-- wrong combination answers
-- explanation mismatch
-
-Keep everything else unchanged.
-Requested question count: ${requestedCount}
-Difficulty: ${difficulty}
-Worksheet title: ${worksheetTitle || "(none)"}
-
-Original user prompt:
-${prompt || "(none)"}
-
-Original worksheet output:
-${rawOutput}
-`.trim();
-  }
-
-  return `
-다음 Wormhole 결과물을 정말 필요한 경우에만 최소 수정 검수하시오.
-오직 아래만 점검하라:
-- 정답 번호 불일치
-- 개수형 실제 개수 오류
-- 복수판단형 조합 정답 오류
-- 해설과 정답 불일치
-
-그 외는 유지하라.
-요청 문항 수: ${requestedCount}
-난이도: ${difficulty}
-워크시트 제목: ${worksheetTitle || "(없음)"}
-
-원래 사용자 요청:
-${prompt || "(없음)"}
-
-원본 결과물:
-${rawOutput}
-`.trim();
+  return String(data?.choices?.[0]?.message?.content || "").trim();
 }
 
 export default async function handler(req, res) {
@@ -401,6 +420,7 @@ export default async function handler(req, res) {
 
     if (!needsWormholeReview(rawOutput) && looksStructuredEnough(rawOutput)) {
       const passthrough = formatReviewedOutput(rawOutput, worksheetTitle);
+
       return json(res, 200, {
         success: true,
         engine,
@@ -413,7 +433,7 @@ export default async function handler(req, res) {
         answerSheet: passthrough.answerSheet,
         fullText: passthrough.fullText,
         reviewed: false,
-        reviewMode: "wormhole-skip-light-pass",
+        reviewMode: "wormhole-skip-light-pass-v2",
       });
     }
 
@@ -426,8 +446,10 @@ export default async function handler(req, res) {
       worksheetTitle,
       language,
     });
+
     const reviewedRaw = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatReviewedOutput(reviewedRaw, worksheetTitle);
+
     return json(res, 200, {
       success: true,
       engine,
@@ -440,10 +462,11 @@ export default async function handler(req, res) {
       answerSheet: formatted.answerSheet,
       fullText: formatted.fullText,
       reviewed: true,
-      reviewMode: "wormhole-ultra-light-filter-v2",
+      reviewMode: "wormhole-count-answer-review-v2",
     });
   } catch (error) {
     console.error("review-output error:", error);
+
     return json(res, 500, {
       success: false,
       error: "REVIEW_FAILED",
