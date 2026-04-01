@@ -55,16 +55,12 @@ function inferLevel(text = "") {
 
 function inferMode(text = "") {
   const t = String(text || "").toLowerCase();
-
-  if (/vocab|vocabulary|어휘|단어|단어장|단어시험|어휘시험|어휘테스트|뜻쓰기|유의어|반의어/.test(t)) {
-    return "vocab-builder";
-  }
+  if (/vocab|vocabulary|어휘|단어|단어장|단어시험|어휘시험|어휘테스트|뜻쓰기|유의어|반의어/.test(t)) return "vocab-builder";
   if (/abc\s*starter|starter|phonics|파닉스|기초영어|알파벳/.test(t)) return "abcstarter";
   if (/영작|writing|composition|rewrite|재배열|문장 재구성/.test(t)) return "writing";
   if (/card|카드|magic\s*card|매직카드/.test(t)) return "magic-card";
   if (/교과서|textbook/.test(t)) return "textbook-grammar";
   if (/chapter|챕터/.test(t)) return "chapter-grammar";
-
   return "magic";
 }
 
@@ -88,7 +84,6 @@ function inferTopic(text = "") {
   for (const topic of topicPatterns) {
     if (t.includes(topic)) return topic;
   }
-
   const lower = t.toLowerCase();
   if (/alphabet/.test(lower)) return "알파벳";
   if (/phonics/.test(lower)) return "파닉스";
@@ -97,7 +92,6 @@ function inferTopic(text = "") {
   if (/infinitive|to-infinitive/.test(lower)) return "to부정사";
   if (/gerund/.test(lower)) return "동명사";
   if (/passive/.test(lower)) return "수동태";
-
   return "문법 학습";
 }
 
@@ -131,26 +125,10 @@ function normalizeInput(body = {}) {
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || ""),
   ].filter(Boolean).join(" ");
-
-  const level = ["elementary", "middle", "high"].includes(body.level)
-    ? body.level
-    : inferLevel(mergedText);
-
-  const modeCandidates = [
-    "magic",
-    "magic-card",
-    "writing",
-    "abcstarter",
-    "textbook-grammar",
-    "chapter-grammar",
-    "vocab-builder"
-  ];
-
+  const level = ["elementary", "middle", "high"].includes(body.level) ? body.level : inferLevel(mergedText);
+  const modeCandidates = ["magic", "magic-card", "writing", "abcstarter", "textbook-grammar", "chapter-grammar", "vocab-builder"];
   const mode = modeCandidates.includes(body.mode) ? body.mode : inferMode(mergedText);
-  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
-    ? body.difficulty
-    : inferDifficulty(mergedText);
-
+  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty) ? body.difficulty : inferDifficulty(mergedText);
   const language = ["ko", "en"].includes(body.language) ? body.language : inferLanguage(mergedText);
   const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
   const examType = sanitizeString(body.examType || "") || "workbook";
@@ -186,7 +164,6 @@ function getDifficultyLabel(difficulty, language = "ko") {
     if (difficulty === "standard") return "Standard Difficulty";
     return "Basic Difficulty";
   }
-
   if (difficulty === "extreme") return "최고난도";
   if (difficulty === "high") return "고난도";
   if (difficulty === "standard") return "표준난도";
@@ -203,7 +180,6 @@ function getModeLabel(mode, language = "ko") {
     "chapter-grammar": "챕터 문법형",
     "vocab-builder": "어휘 빌더형"
   };
-
   const enMap = {
     magic: "Magic",
     "magic-card": "Magic Card",
@@ -213,33 +189,22 @@ function getModeLabel(mode, language = "ko") {
     "chapter-grammar": "Chapter Grammar",
     "vocab-builder": "Vocab Builder"
   };
-
   return language === "en" ? (enMap[mode] || "Magic") : (koMap[mode] || "매직형");
 }
 
 function buildMagicTitle(input) {
   if (input.worksheetTitle) return input.worksheetTitle;
-
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
-
   if (input.language === "en") {
-    if (input.mode === "vocab-builder") {
-      return `${input.gradeLabel} ${input.topic} Vocab Builder ${difficultyLabel} ${input.count} Items`;
-    }
+    if (input.mode === "vocab-builder") return `${input.gradeLabel} ${input.topic} Vocab Builder ${difficultyLabel} ${input.count} Items`;
     return `${input.gradeLabel} ${input.topic} Magic ${difficultyLabel} ${input.count} Items`;
   }
-
-  if (input.mode === "abcstarter") {
-    return `${input.gradeLabel} ${input.topic} ABC Starter ${difficultyLabel} ${input.count}문항`;
-  }
-
-  if (input.mode === "vocab-builder") {
-    return `${input.gradeLabel} ${input.topic} 어휘 빌더 ${difficultyLabel} ${input.count}문항`;
-  }
-
+  if (input.mode === "abcstarter") return `${input.gradeLabel} ${input.topic} ABC Starter ${difficultyLabel} ${input.count}문항`;
+  if (input.mode === "vocab-builder") return `${input.gradeLabel} ${input.topic} 어휘 빌더 ${difficultyLabel} ${input.count}문항`;
   return `${input.gradeLabel} ${input.topic} 마커스매직 ${difficultyLabel} ${input.count}문항`;
 }
 
+// 수정 및 교체된 buildModeSpecificGuide 함수
 function buildModeSpecificGuide(input) {
   const isEn = input.language === "en";
 
@@ -251,12 +216,14 @@ Mode Identity:
 - Do not turn it into a grammar worksheet.
 - If a passage is provided, anchor vocabulary tasks to the passage.
 - If no passage is provided, build topic-based vocabulary training.
+
 Allowed item styles:
 - meaning check
 - contextual vocabulary use
 - synonym / antonym
 - lexical gap-fill
 - usage review
+
 Forbidden drift:
 - grammar-dominant exam sheet
 - unrelated transformation drill
@@ -267,12 +234,14 @@ Forbidden drift:
 - 문법 문제지로 변질시키지 말 것.
 - 지문이 있으면 지문 기반 어휘 문제로 만들 것.
 - 지문이 없으면 주제 기반 어휘 훈련지로 만들 것.
+
 허용 유형:
 - 뜻 확인
 - 문맥상 어휘 사용
 - 유의어 / 반의어
 - 어휘 빈칸
 - 용법 점검
+
 금지 변질:
 - 문법 중심 시험지
 - 무관한 변형 영작 문제
@@ -283,15 +252,29 @@ Forbidden drift:
     return isEn
       ? `
 Mode Identity:
-- This is a beginner-friendly foundational English workbook.
-- Keep sentence length simple and cognitively light.
-- Provide very clear clues and friendly scaffolding.
+- This is a beginner-friendly starter workbook.
+- Keep sentence length short and cognitively light.
+- Use very clear clues and gentle scaffolding.
+- Prefer highly guided production over open-ended difficulty.
+- Keep vocabulary basic and school-friendly.
+
+Preferred item tendencies:
+- fragment-clue writing
+- simple rearrangement
+- partial completion
 `.trim()
       : `
 모드 정체성:
-- 초등 입문 친화형 기초 영어 워크북이다.
+- 초등 입문 친화형 스타터 워크북이다.
 - 문장 길이는 짧고 부담이 적어야 한다.
-- clue와 안내는 매우 친절하게 제공할 것.
+- clue와 안내는 매우 친절하고 분명해야 한다.
+- 자유 영작보다 안내형 생산 훈련을 우선할 것.
+- 어휘는 기초적이고 학교 친화적이어야 한다.
+
+선호 유형:
+- 조각형 clue 영작
+- 쉬운 재배열형
+- 부분완성형
 `.trim();
   }
 
@@ -301,13 +284,27 @@ Mode Identity:
 Mode Identity:
 - This is an explicit writing-training workbook.
 - Strongly prioritize learner sentence production.
-- Use guided composition, transformation, rearrangement, and completion tasks.
+- The worksheet should feel like guided composition training, not grammar explanation.
+- Mix fragment-clue writing, rearrangement with one extra word, partial completion, and sentence transformation aggressively.
+
+Priority:
+- productivity
+- sentence construction
+- guided composition
+- structural control
 `.trim()
       : `
 모드 정체성:
 - 명시적 영작훈련 워크북이다.
 - 학습자의 문장 산출을 강하게 우선할 것.
-- guided composition, transformation, rearrangement, completion 유형을 적극 활용할 것.
+- 문법 설명지처럼 보이지 말고, guided composition 훈련지처럼 보여야 한다.
+- 조각형 clue 영작, 초과단어 재배열형, 부분완성형, 문장변환형을 적극적으로 혼합할 것.
+
+우선순위:
+- 생산성
+- 문장 구성
+- guided composition
+- 구조 통제
 `.trim();
   }
 
@@ -316,14 +313,26 @@ Mode Identity:
       ? `
 Mode Identity:
 - This is a Magic Card style workbook.
-- Keep chapter-based grammar focus, but output must still be production-oriented.
-- The worksheet should feel compact, clear, and highly trainable.
+- Keep the output compact, sharp, and highly trainable.
+- Focus tightly on the chapter grammar while preserving production-oriented writing identity.
+- Items should feel concise but structurally rich.
+
+Preferred item tendencies:
+- short fragment clues
+- compact rearrangement
+- fast-cycle writing drills
 `.trim()
       : `
 모드 정체성:
 - 매직카드형 워크북이다.
-- 챕터 기반 문법 초점을 유지하되, 출력은 반드시 생산형 훈련 자료여야 한다.
-- 전체 구성은 압축적이되 훈련 효과가 높아야 한다.
+- 출력은 압축적이고 선명하며 훈련성이 높아야 한다.
+- 챕터 문법 초점을 유지하되, 생산형 영작 정체성을 잃지 말 것.
+- 문항은 짧지만 구조적으로 밀도 있게 설계할 것.
+
+선호 유형:
+- 짧은 조각형 clue
+- 압축 재배열형
+- 빠른 회전형 영작 훈련
 `.trim();
   }
 
@@ -332,13 +341,26 @@ Mode Identity:
       ? `
 Mode Identity:
 - This is a textbook-grammar based writing workbook.
-- Anchor the grammar to school-textbook style learning goals.
-- Still keep the output as guided production practice, not a trap-based exam sheet.
+- Anchor the worksheet to school-textbook grammar goals and classroom expectations.
+- Keep the output as guided writing practice, not as a trap-based test.
+- Use school-friendly sentence topics and familiar academic contexts.
+
+Priority:
+- textbook alignment
+- classroom usability
+- guided production
 `.trim()
       : `
 모드 정체성:
 - 교과서 문법 기반 영작 워크북이다.
-- 학교 교과서형 학습목표에 맞추되, 시험 함정형이 아니라 안내형 생산 훈련지로 만들 것.
+- 학교 교과서형 문법 목표와 수업 기대치에 맞추어 설계할 것.
+- 함정형 시험지가 아니라 안내형 영작 훈련지로 유지할 것.
+- 학교 친화적 소재와 익숙한 학습 맥락을 사용할 것.
+
+우선순위:
+- 교과서 정렬
+- 수업 활용성
+- 안내형 생산 훈련
 `.trim();
   }
 
@@ -346,42 +368,54 @@ Mode Identity:
     return isEn
       ? `
 Mode Identity:
-- This is a chapter-grammar based writing workbook.
-- Focus tightly on the designated chapter grammar.
-- Maintain guided production identity across all items.
+- This is a chapter-grammar focused writing workbook.
+- Focus tightly on the designated grammar chapter.
+- Make the target structure repeatedly visible through mixed productive item types.
+- The worksheet should feel systematic and chapter-driven.
+
+Priority:
+- chapter focus
+- repeated structural exposure
+- guided production
 `.trim()
       : `
 모드 정체성:
-- 챕터 문법 기반 영작 워크북이다.
-- 지정된 챕터 문법에 집중하되, 모든 문항에서 안내형 생산 훈련 정체성을 유지할 것.
+- 챕터 문법 집중형 영작 워크북이다.
+- 지정된 문법 챕터에 강하게 초점을 맞출 것.
+- 혼합 생산형 문항을 통해 목표 구조가 반복적으로 드러나게 할 것.
+- 전체 워크북은 체계적이고 챕터 중심적으로 느껴져야 한다.
+
+우선순위:
+- 챕터 집중
+- 구조 반복 노출
+- 안내형 생산 훈련
 `.trim();
   }
 
   return isEn
     ? `
 Mode Identity:
-- This is a premium Magic workbook.
+- This is a premium MARCUS Magic workbook.
 - The output must remain workbook-style, production-oriented, and teacher-ready.
+- Preserve guided writing identity with fragment-based clues and mixed item types.
 `.trim()
     : `
 모드 정체성:
-- 프리미엄 매직 워크북이다.
+- 프리미엄 마커스매직 워크북이다.
 - 출력은 반드시 워크북형, 생산형, 교사용 완성형이어야 한다.
+- 조각형 clue와 혼합 생산형 문항을 갖춘 guided writing 정체성을 유지할 것.
 `.trim();
 }
 
 function buildSystemPrompt(input) {
   const isKo = input.language === "ko";
-
   if (input.mode === "vocab-builder") {
     return isKo ? `
 당신은 MARCUS VOCA BUILDER 전용 생성 엔진이다.
-
 핵심 목표:
 - 어휘 중심의 프리미엄 학습 자료를 생성한다.
 - 문법 문제가 아니라 어휘 학습지, 어휘 테스트지, 문맥 기반 어휘 훈련지여야 한다.
 - 출력물은 교사와 학원이 바로 사용할 수 있을 정도로 깔끔해야 한다.
-
 중요 원칙:
 1. 반드시 어휘 중심이어야 한다.
 2. 문법 문제지처럼 변질되면 안 된다.
@@ -390,19 +424,16 @@ function buildSystemPrompt(input) {
 5. 뜻, 문맥, 용법, 유의어, 반의어, 빈칸 속 어휘 선택 등 어휘 학습 요소를 활용한다.
 6. 정답 섹션을 반드시 제공한다.
 7. 객관식이 꼭 필요한 경우에만 제한적으로 사용하고, 무분별한 문법형 객관식은 금지한다.
-
 출력 형식:
 [[TITLE]]
 [[INSTRUCTIONS]]
 [[QUESTIONS]]
 [[ANSWERS]]`.trim() : `
 You are the dedicated MARCUS VOCA BUILDER engine.
-
 Core goals:
 - Generate premium vocabulary-centered worksheets.
 - Keep the output focused on vocabulary learning, not grammar drilling.
 - Make the worksheet teacher-ready and classroom-usable.
-
 Important rules:
 1. The worksheet must stay vocabulary-centered.
 2. If the user provides a passage, build a passage-based vocabulary worksheet.
@@ -410,7 +441,6 @@ Important rules:
 4. Use meaning, context, usage, synonym, antonym, and lexical review.
 5. Do not turn the output into a grammar worksheet.
 6. Always provide an answer section.
-
 Output format:
 [[TITLE]]
 [[INSTRUCTIONS]]
@@ -419,41 +449,89 @@ Output format:
   }
 
   return isKo ? `
-당신은 마커스매직 전용 워크북 생성 엔진이다.
+당신은 마커스매직 전용 영작훈련 워크북 생성 엔진이다.
 
-핵심 목표:
-- 학습자 친화적이면서도 교육적으로 정교한 영어 학습 워크북을 만든다.
-- 출력물은 교사와 학원이 바로 사용할 수 있을 정도로 깔끔해야 한다.
-- 매직은 시험 함정형 엔진이 아니라, 영어 문장 생산을 훈련시키는 영작훈련 워크북 엔진이다.
+핵심 정체성:
+- 매직은 단순 문제 생성기가 아니다.
+- 매직은 학습자가 영어 문장을 직접 만들어내도록 훈련시키는 프리미엄 영작훈련 워크북 엔진이다.
+- 매직은 시험 함정형이 아니라, 구조 유도형·생산형·훈련형 엔진이다.
+- 출력물은 학원, 학교, 과제, 자습에 바로 사용할 수 있어야 한다.
 
 최상위 공통 규칙:
-1. 매직은 반드시 영작훈련 중심 워크북이어야 한다.
+1. 반드시 영작훈련 중심 워크북으로 작성할 것.
 2. 각 문항은 먼저 학습자의 입력 언어로 제시할 것.
 3. 학습자는 제시된 의미를 바탕으로 영어 문장을 직접 생산해야 한다.
-4. clue는 가능한 충분히 제공할 것.
-5. clue에는 핵심 어휘, 구조 힌트, 문법 앵커, 시간/장소/대상 단서를 적극 포함할 것.
-6. 워크북 전체에는 clue 기반 영작형과 재배열 영작형을 함께 포함할 것.
-7. 일부 재배열형 문항은 실제 정답에 필요하지 않은 초과단어 1개를 포함할 것.
-8. 이 원칙은 특정 예문이 아니라 전체 영어문법 챕터에 공통 적용할 것.
-9. 객관식 시험지처럼 작성하지 말 것.
-10. 웜홀식 함정 문제지나 모의고사식 시험지로 변질되지 말 것.
-11. 문항은 학습자가 직접 쓰고, 고치고, 배열하고, 완성하게 만드는 방향으로 설계할 것.
-12. 안내문은 짧고 명확하게 작성할 것.
+4. clue는 반드시 제공하되, 정답 완성문장을 그대로 제공하지 말 것.
+5. clue는 조각형으로 제공할 것. 핵심 어휘, 구조 힌트, 문법 앵커를 분절해서 줄 것.
+6. clue는 충분히 풍부해야 하지만, 베껴쓰기용 완성 답안처럼 보이면 안 된다.
+7. 일부 문항은 실제 정답에 필요하지 않은 초과단어 1개를 포함한 재배열형으로 만들 것.
+8. 워크북 전체에는 최소 3가지 이상의 생산형 문항 유형을 섞을 것.
+9. 특정 예문이 아니라 전체 영어문법 챕터에 이 원칙을 공통 적용할 것.
+10. 객관식 시험지처럼 작성하지 말 것.
+11. 웜홀식 함정형 문제지나 모의고사식 독해 시험지로 변질되지 말 것.
+12. 학습자가 직접 쓰고, 배열하고, 변환하고, 완성하게 만드는 방향으로 설계할 것.
 13. 제목, 안내, 문제, 정답 구조를 반드시 유지할 것.
 14. 정답 섹션을 반드시 제공할 것.
 15. 문항 수를 가능한 한 정확히 맞출 것.
-16. 각 문항은 실제 수업과 과제에 바로 사용할 수 있도록 자연스럽고 교육적으로 설계할 것.
+16. 각 문항은 실제 수업에서 자연스럽고 교육적으로 사용 가능해야 한다.
 
-문항 설계 규칙:
-- 최소 2가지 이상의 생산형 문항 유형을 섞을 것.
-- 대표 유형:
-  a) 입력 언어 제시 + 풍부한 clue 기반 영작
-  b) 초과단어 1개 포함 재배열 영작
-  c) 문장 변환 영작
-  d) 부분 완성 후 완전 영작
-- clue는 빈약하게 주지 말고, 학습자가 구조를 유추할 수 있을 정도로 충분히 줄 것.
-- 단, 정답 전체를 그대로 노출하지는 말 것.
-- 문법 챕터의 핵심 구조가 자연스럽게 드러나야 한다.
+문항 유형 설계 규칙:
+- 반드시 최소 3가지 유형을 혼합할 것.
+- 권장 비율:
+  ① 조각형 clue 기반 영작 40%
+  ② 초과단어 1개 포함 재배열 영작 30%
+  ③ 부분완성 후 전체 영작 20%
+  ④ 문장변환 영작 10%
+
+유형별 상세 규칙:
+[A. 조각형 clue 기반 영작]
+- 입력 언어 문장을 먼저 제시할 것.
+- clue는 반드시 조각형이어야 한다.
+- 완성문장 전체를 clue로 주지 말 것.
+- 예:
+  나에게 있어서 방과 후에 영화를 보는 것은 흥미롭다.
+  (interesting, it-to, watch, for, a movie, after school)
+
+[B. 초과단어 1개 포함 재배열 영작]
+- 정답에 필요한 단어들 + 불필요 단어 1개를 함께 제시할 것.
+- 학습자가 구조를 판단해서 불필요 단어를 제외하고 영작하게 만들 것.
+- 예:
+  (what, I, like, this book, is, very)
+
+[C. 부분완성 후 전체 영작]
+- 핵심 구조의 일부만 제시하고 나머지를 완성하게 할 것.
+- 예:
+  It is ______ for me to ______.
+
+[D. 문장변환 영작]
+- 원문 의미는 유지하되 지정 문법 구조로 바꾸어 영작하게 할 것.
+- 예:
+  “나는 영어를 배우고 싶다.” → to부정사를 사용하여 영작하시오.
+
+clue 설계 규칙:
+1. clue는 풍부해야 한다.
+2. 하지만 완성 정답을 그대로 주면 안 된다.
+3. 핵심 단어, 구, 문형 힌트, 문법 구조 힌트를 포함할 것.
+4. 학생이 문장 구조를 스스로 복원할 수 있도록 설계할 것.
+5. 같은 세트 안에서 clue 길이와 밀도를 약간씩 조절할 것.
+6. 고난도일수록 clue를 약간 압축하되, 훈련이 불가능할 정도로 빈약하게 만들지 말 것.
+
+문법 정확성 필수 규칙:
+1. 정답 문장은 문법적으로 정확해야 한다.
+2. 시제와 시간표현이 충돌하면 안 된다.
+   - 예: present perfect + last week 금지
+3. 주어-동사 수일치를 반드시 맞출 것.
+4. 관사, 전치사, 어순, 의문문 구조를 자연스럽게 맞출 것.
+5. 관계대명사, to부정사, 동명사, 현재완료 등 목표 문법의 핵심이 분명히 드러나야 한다.
+6. 한국어 원문이 어색하면 자연스러운 학습용 문장으로 다듬되, 문법 목표는 유지할 것.
+
+금지 규칙:
+- 정답 완성문장을 clue로 그대로 제시하지 말 것.
+- 모든 문항을 한 가지 유형으로만 만들지 말 것.
+- 단순 암기형, 베껴쓰기형 결과물로 만들지 말 것.
+- 설명문 위주의 문법 해설지로 만들지 말 것.
+- 시험용 함정 객관식으로 만들지 말 것.
+- 사용자 요청과 무관한 독해 지문형 시험지로 만들지 말 것.
 
 ${buildModeSpecificGuide(input)}
 
@@ -462,40 +540,86 @@ ${buildModeSpecificGuide(input)}
 [[INSTRUCTIONS]]
 [[QUESTIONS]]
 [[ANSWERS]]`.trim() : `
-You are the dedicated MARCUS Magic workbook generation engine.
+You are the dedicated MARCUS Magic English writing-training workbook engine.
 
-Core goals:
-- Generate clean, teacher-ready, workbook-style English practice materials.
-- Magic is not a trap-based exam engine. It is a guided English writing-training workbook engine.
+Core identity:
+- Magic is not a generic worksheet generator.
+- Magic is a premium guided production engine that trains learners to build English sentences by themselves.
+- Magic is not trap-based. It is structure-guided, production-oriented, and workbook-centered.
+- The output must be ready for real classroom and academy use.
 
 Top-level universal rules:
-1. Magic must remain a writing-training workbook.
+1. The worksheet must remain writing-training centered.
 2. Present each item first in the learner's input language.
 3. The learner must produce the English sentence.
-4. Provide rich clues generously.
-5. Clues should include key vocabulary, structural hints, grammar anchors, and time/place/target cues when useful.
-6. Across the worksheet, include both clue-based composition items and rearrangement-based writing items.
+4. Clues are mandatory, but you must NOT provide the full final answer sentence as a clue.
+5. Clues must be fragment-based, not full-sentence based.
+6. Clues should be generous and helpful, but should not reduce the task to simple copying.
 7. Some rearrangement items must include one extra unnecessary word beyond the correct answer.
-8. This rule applies across all grammar chapters, not just one topic.
-9. Do not turn the worksheet into a multiple-choice exam sheet.
-10. Do not drift into Wormhole-style trap-based grammar identity.
-11. Do not drift into Mocks-style exam-passage identity.
-12. Make learners write, rebuild, rearrange, transform, and complete sentences.
-13. Keep instructions concise and clear.
+8. Mix at least 3 productive item types across the worksheet.
+9. Apply this rule across all grammar chapters, not just one topic.
+10. Do not turn the worksheet into a multiple-choice exam sheet.
+11. Do not drift into Wormhole-style trap-based grammar identity.
+12. Do not drift into Mocks-style exam-passage identity.
+13. Make learners write, rearrange, transform, and complete sentences.
 14. Maintain TITLE / INSTRUCTIONS / QUESTIONS / ANSWERS structure.
 15. Always provide an answer section.
 16. Match the requested item count as accurately as possible.
+17. Keep every item classroom-usable and educationally natural.
 
 Item design rules:
-- Mix at least two productive item types.
-- Recommended item types:
-  a) input-language prompt + rich-clue guided composition
-  b) rearrangement writing with one extra unused word
-  c) sentence transformation writing
-  d) partial-completion to full-sentence writing
-- Clues must be generous enough to support guided production.
-- But do not reveal the full answer sentence directly.
-- The core target grammar should naturally appear in the task design.
+- Mix at least 3 item types.
+- Recommended ratio:
+  A) fragment-clue guided composition: 40%
+  B) rearrangement writing with one extra unused word: 30%
+  C) partial-completion to full-sentence writing: 20%
+  D) sentence-transformation writing: 10%
+
+Detailed item rules:
+[A. Fragment-clue guided composition]
+- Present the prompt in the learner's input language first.
+- The clue must be fragment-based.
+- Never provide the complete final sentence as the clue.
+- Example:
+  It is interesting for me to watch a movie after school.
+  → (interesting, it-to, watch, for, a movie, after school)
+
+[B. Rearrangement writing with one extra word]
+- Provide all necessary chunks plus one unnecessary extra word.
+- The learner must identify the structure and exclude the extra word.
+
+[C. Partial-completion to full-sentence writing]
+- Provide part of the structure and make the learner complete the rest.
+- Example:
+  It is ______ for me to ______.
+
+[D. Sentence-transformation writing]
+- Keep the meaning, but require the target grammar structure.
+
+Clue design rules:
+1. Clues must be generous.
+2. But do NOT reveal the full answer sentence directly.
+3. Include key vocabulary, phrase hints, structural hints, and grammar anchors.
+4. Make learners reconstruct sentence structure by themselves.
+5. Vary clue density slightly across the set.
+6. In higher difficulty levels, compress the clues slightly, but never make them too thin to train with.
+
+Grammar accuracy rules:
+1. Final answers must be grammatically correct.
+2. Do not create tense-time conflicts.
+   - Example: present perfect + last week is forbidden.
+3. Maintain subject-verb agreement.
+4. Keep articles, prepositions, word order, and question structure natural.
+5. Make the target grammar clearly visible in the final answer.
+6. If the source prompt is awkward, smooth it into a natural learning sentence while preserving the target grammar.
+
+Forbidden:
+- Do not provide the exact final sentence as the clue.
+- Do not make all items the same type.
+- Do not reduce the worksheet to copying practice.
+- Do not turn it into a grammar explanation sheet.
+- Do not turn it into a multiple-choice trap test.
+- Do not drift into unrelated passage-based exam content.
 
 ${buildModeSpecificGuide(input)}
 
@@ -508,42 +632,31 @@ Output format:
 
 function buildTaskGuide(input) {
   const isEn = input.language === "en";
-
   switch (input.mode) {
     case "vocab-builder":
       return isEn
         ? "Create a vocabulary-centered worksheet. If a passage is provided, use passage-based vocabulary tasks. If not, create a topic-based vocabulary practice set. Do not turn it into a grammar worksheet."
         : "어휘 중심 자료로 구성할 것. 지문이 있으면 지문 기반 어휘 문제로, 지문이 없으면 주제 기반 어휘 훈련지로 작성할 것. 문법 문제지처럼 만들지 말 것.";
-
     case "abcstarter":
       return isEn
         ? "Create beginner-friendly foundational English tasks with very clear scaffolding and generous clues."
         : "초등 입문 친화형 과제로 구성하되, clue와 안내를 매우 친절하게 제공할 것.";
-
     case "writing":
       return isEn
-        ? "Focus strongly on English writing training through guided composition, rearrangement, and productive sentence building."
-        : "영작훈련 중심으로 구성하되, guided composition, 재배열, 문장 생산 훈련을 강하게 반영할 것.";
-
-    case "magic-card":
-      return isEn
-        ? "Use a compact but highly trainable Magic Card style while preserving guided writing production."
-        : "매직카드형의 압축감을 유지하되, 안내형 영작 생산 훈련 중심으로 구성할 것.";
-
+        ? "Focus strongly on English writing training through fragment-clue composition, rearrangement with one extra word, partial completion, and sentence transformation."
+        : "조각형 clue 영작, 초과단어 재배열형, 부분완성형, 문장변환형을 포함한 영작훈련 중심으로 구성할 것.";
     case "textbook-grammar":
       return isEn
-        ? "Anchor the worksheet to textbook-style grammar goals, but keep it as a guided writing workbook."
-        : "교과서 문법 학습목표에 맞추되, 결과물은 안내형 영작 워크북으로 유지할 것.";
-
+        ? "Anchor the worksheet to textbook-style grammar goals, but keep it as a guided writing workbook with mixed productive item types."
+        : "교과서 문법 학습목표에 맞추되, 복수의 생산형 문항 유형이 섞인 안내형 영작 워크북으로 구성할 것.";
     case "chapter-grammar":
       return isEn
-        ? "Focus tightly on the chapter grammar and make learners produce sentences with generous clues."
-        : "챕터 문법에 집중하되, 충분한 clue와 함께 문장 생산 훈련이 일어나도록 구성할 것.";
-
+        ? "Focus tightly on the chapter grammar and make learners produce sentences with fragment-based clues and mixed writing task types."
+        : "챕터 문법에 집중하되, 조각형 clue와 혼합 영작 유형을 통해 문장을 직접 생산하게 만들 것.";
     default:
       return isEn
-        ? "Create premium workbook-style English writing training material with generous clues and multiple productive task types."
-        : "풍부한 clue와 복수의 생산형 문항 유형을 갖춘 프리미엄 영작훈련 워크북으로 구성할 것.";
+        ? "Create a premium guided English writing-training workbook with fragment-based clues, mixed item types, and one-extra-word rearrangement tasks."
+        : "조각형 clue, 혼합 생산형 문항, 초과단어 재배열형이 포함된 프리미엄 영작훈련 워크북으로 구성할 것.";
   }
 }
 
@@ -554,7 +667,8 @@ function buildUserPrompt(input) {
   const taskGuide = buildTaskGuide(input);
 
   if (input.mode === "vocab-builder") {
-    return input.language === "en" ? `
+    return input.language === "en" ?
+`
 Generate a Vocab Builder worksheet.
 
 Title: ${title}
@@ -575,7 +689,6 @@ Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
 `.trim() : `
 마커스 VOCA BUILDER 스타일 어휘 학습지를 생성하시오.
-
 제목: ${title}
 모드: ${input.mode} (${modeLabel})
 주제: ${input.topic}
@@ -596,7 +709,7 @@ ${input.userPrompt || "(추가 요청 없음)"}
   }
 
   return input.language === "en" ? `
-Generate a Magic-style English writing workbook.
+Generate a MARCUS Magic English writing-training workbook.
 
 Title: ${title}
 Mode: ${input.mode} (${modeLabel})
@@ -605,14 +718,23 @@ Difficulty: ${input.difficulty} (${difficultyLabel})
 Item count: ${input.count}
 Requirement: ${taskGuide}
 
-Universal Magic rules:
+Mandatory Magic rules:
 - Present prompts in the learner's input language first.
-- Make learners produce English sentences.
-- Provide rich clues generously.
-- Include key words, phrase hints, grammar anchors, and structural hints.
-- Mix at least two productive item types across the set.
-- Include some rearrangement-based writing items with one extra unnecessary word.
-- Keep the worksheet production-oriented, not trap-based.
+- Make learners produce English sentences by themselves.
+- Never use the full final answer sentence as the clue.
+- Use fragment-based clues instead of full-sentence clues.
+- Mix at least 3 productive item types across the set.
+- Include rearrangement items with one extra unnecessary word.
+- Include some partial-completion writing items.
+- Include some sentence-transformation writing items.
+- Keep the worksheet production-oriented, not copy-based.
+- Keep the grammar accurate and classroom-usable.
+
+Quality control:
+- Do not create present perfect + finished past-time conflicts.
+- Do not generate weak copy-the-answer style items.
+- Do not make all 25 items the same pattern.
+- Make the output feel like premium guided training.
 
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
@@ -626,14 +748,23 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 문항 수: ${input.count}
 요구사항: ${taskGuide}
 
-매직 공통 규칙:
-- 문제 제시는 먼저 학습자의 입력 언어로 할 것.
+매직 필수 규칙:
+- 문제는 먼저 학습자의 입력 언어로 제시할 것.
 - 학습자가 영어 문장을 직접 생산하게 만들 것.
-- clue는 가능한 충분히 제공할 것.
-- clue에는 핵심 단어, 구 힌트, 문법 앵커, 구조 힌트를 포함할 것.
-- 세트 전체에 최소 2가지 이상의 생산형 문항 유형을 섞을 것.
-- 일부 문항은 초과단어 1개가 포함된 재배열 영작형으로 만들 것.
-- 시험 함정형이 아니라 영작훈련형 워크북 정체성을 유지할 것.
+- 정답 완성문장을 clue로 그대로 주지 말 것.
+- clue는 반드시 조각형 clue 중심으로 설계할 것.
+- 세트 전체에 최소 3가지 이상의 생산형 문항 유형을 섞을 것.
+- 일부 문항은 초과단어 1개가 포함된 재배열형으로 만들 것.
+- 일부 문항은 부분완성 후 전체 영작형으로 만들 것.
+- 일부 문항은 문장변환 영작형으로 만들 것.
+- 베껴쓰기형이 아니라 생산형 훈련 워크북처럼 보이게 할 것.
+- 문법은 정확하고 실제 수업에서 사용할 수 있어야 한다.
+
+품질 통제:
+- present perfect와 finished past-time 표현을 충돌시키지 말 것.
+- 25문항이 전부 같은 패턴이 되지 않게 할 것.
+- 단순한 답안 복사형 문제가 되지 않게 할 것.
+- 결과물 전체가 프리미엄 guided training처럼 느껴지게 할 것.
 
 사용자 원문:
 ${input.userPrompt || "(추가 요청 없음)"}
@@ -646,7 +777,6 @@ ${input.userPrompt || "(추가 요청 없음)"}
 
 async function callOpenAI(systemPrompt, userPrompt) {
   if (!OPENAI_API_KEY) throw new Error("Missing OPENAI_API_KEY");
-
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -664,10 +794,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
     }),
   });
 
-  if (!response.ok) {
-    throw new Error(`OpenAI request failed: ${response.status}`);
-  }
-
+  if (!response.ok) throw new Error(`OpenAI request failed: ${response.status}`);
   const data = await response.json();
   return data?.choices?.[0]?.message?.content?.trim() || "";
 }
@@ -675,13 +802,9 @@ async function callOpenAI(systemPrompt, userPrompt) {
 function extractSection(rawText, startMarker, endMarker) {
   const start = rawText.indexOf(startMarker);
   if (start === -1) return "";
-
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-
-  return end === -1
-    ? rawText.slice(from).trim()
-    : rawText.slice(from, end).trim();
+  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function formatMagicResponse(rawText, input) {
@@ -693,7 +816,6 @@ function formatMagicResponse(rawText, input) {
   const finalTitle = title.trim() || buildMagicTitle(input);
   const contentParts = [finalTitle, instructions.trim(), questions.trim()].filter(Boolean);
   const fullParts = [...contentParts];
-
   if (answers.trim()) {
     fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + answers.trim());
   }
@@ -709,15 +831,12 @@ function formatMagicResponse(rawText, input) {
 }
 
 /* =========================
-   MP deduction helpers only
+   MP deduction helpers
    ========================= */
 
 function getMemberstackHeaders() {
   if (!MEMBERSTACK_SECRET_KEY) return null;
-  return {
-    "x-api-key": MEMBERSTACK_SECRET_KEY,
-    "Content-Type": "application/json"
-  };
+  return { "x-api-key": MEMBERSTACK_SECRET_KEY, "Content-Type": "application/json" };
 }
 
 function getRequiredMp(reqBody = {}) {
@@ -735,40 +854,20 @@ function extractBearerToken(req) {
 }
 
 function extractMemberId(req) {
-  return sanitizeString(
-    req?.body?.memberId ||
-    req?.headers?.["x-member-id"] ||
-    req?.headers?.["X-Member-Id"] ||
-    ""
-  );
+  return sanitizeString(req?.body?.memberId || req?.headers?.["x-member-id"] || req?.headers?.["X-Member-Id"] || "");
 }
 
 async function memberstackRequest(path, options = {}) {
   const headers = getMemberstackHeaders();
   if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-
   const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
     ...options,
     headers: { ...headers, ...(options.headers || {}) }
   });
-
   const text = await response.text();
   let data = null;
-
-  try {
-    data = text ? JSON.parse(text) : null;
-  } catch {
-    data = text;
-  }
-
-  if (!response.ok) {
-    throw new Error(
-      `Memberstack request failed: ${response.status} ${
-        typeof data === "string" ? data : JSON.stringify(data)
-      }`
-    );
-  }
-
+  try { data = text ? JSON.parse(text) : null; } catch { data = text; }
+  if (!response.ok) throw new Error(`Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`);
   return data;
 }
 
@@ -776,29 +875,18 @@ async function verifyMemberToken(token) {
   if (!token) return null;
   const payload = { token };
   if (MEMBERSTACK_APP_ID) payload.audience = MEMBERSTACK_APP_ID;
-
-  const data = await memberstackRequest("/verify-token", {
-    method: "POST",
-    body: JSON.stringify(payload)
-  });
-
+  const data = await memberstackRequest("/verify-token", { method: "POST", body: JSON.stringify(payload) });
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
-    method: "GET",
-    headers: { "Content-Type": "application/json" }
-  });
-
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "GET", headers: { "Content-Type": "application/json" } });
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
-
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
@@ -807,52 +895,31 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
-
   for (const value of candidates) {
     const num = Number(value);
     if (Number.isFinite(num)) return Math.max(0, Math.floor(num));
   }
-
   return null;
 }
 
 async function updateMemberMp(member, nextMp) {
   const memberId = member?.id;
   if (!memberId) throw new Error("Missing member id for MP update");
-
-  const currentCustomFields =
-    member?.customFields && typeof member.customFields === "object"
-      ? member.customFields
-      : {};
-
-  const currentMetaData =
-    member?.metaData && typeof member.metaData === "object"
-      ? member.metaData
-      : {};
-
+  const currentCustomFields = member?.customFields && typeof member.customFields === "object" ? member.customFields : {};
+  const currentMetaData = member?.metaData && typeof member.metaData === "object" ? member.metaData : {};
   const safeMp = Math.max(0, Math.floor(Number(nextMp) || 0));
-
   const patchBody = {
     customFields: { ...currentCustomFields, [MEMBERSTACK_MP_FIELD]: safeMp },
     metaData: { ...currentMetaData, [MEMBERSTACK_MP_FIELD]: safeMp },
   };
-
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
-    method: "PATCH",
-    body: JSON.stringify(patchBody)
-  });
-
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "PATCH", body: JSON.stringify(patchBody) });
   return data?.data || null;
 }
 
 async function resolveMemberForMp(req) {
-  if (!MEMBERSTACK_SECRET_KEY) {
-    return { enabled: false, reason: "missing_secret_key", member: null };
-  }
-
+  if (!MEMBERSTACK_SECRET_KEY) return { enabled: false, reason: "missing_secret_key", member: null };
   try {
     const bearerToken = extractBearerToken(req);
-
     if (bearerToken) {
       const verified = await verifyMemberToken(bearerToken);
       if (verified?.id) {
@@ -860,13 +927,11 @@ async function resolveMemberForMp(req) {
         return { enabled: true, reason: "token_verified", member };
       }
     }
-
     const explicitMemberId = extractMemberId(req);
     if (explicitMemberId) {
       const member = await getMemberById(explicitMemberId);
       return { enabled: true, reason: "member_id", member };
     }
-
     return { enabled: false, reason: "member_not_provided", member: null };
   } catch (error) {
     console.error("resolveMemberForMp error:", error);
@@ -877,66 +942,31 @@ async function resolveMemberForMp(req) {
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
   const memberContext = await resolveMemberForMp(req);
-
   if (!memberContext.enabled || !memberContext.member) {
-    return {
-      enabled: false,
-      reason: memberContext.reason,
-      requiredMp,
-      member: null,
-      currentMp: null,
-      remainingMp: null,
-      trialGranted: false,
-      deducted: false
-    };
+    return { enabled: false, reason: memberContext.reason, requiredMp, member: null, currentMp: null, remainingMp: null, trialGranted: false, deducted: false };
   }
-
   const member = memberContext.member;
   let currentMp = readMpFromMember(member);
   let updatedMember = member;
   let trialGranted = false;
-
   if (!Number.isFinite(currentMp)) {
     currentMp = getInitialTrialMp();
     updatedMember = (await updateMemberMp(member, currentMp)) || member;
     currentMp = readMpFromMember(updatedMember);
     trialGranted = true;
   }
-
   if (!Number.isFinite(currentMp)) currentMp = 0;
-
-  return {
-    enabled: true,
-    reason: memberContext.reason,
-    requiredMp,
-    member: updatedMember,
-    currentMp,
-    remainingMp: currentMp,
-    trialGranted,
-    deducted: false
-  };
+  return { enabled: true, reason: memberContext.reason, requiredMp, member: updatedMember, currentMp, remainingMp: currentMp, trialGranted, deducted: false };
 }
 
 async function deductMpAfterSuccess(mpState) {
   if (!mpState || !mpState.enabled) return mpState;
-
   const currentMp = Number(mpState.currentMp);
   const requiredMp = Number(mpState.requiredMp);
-
-  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
-    return { ...mpState, deducted: false };
-  }
-
+  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) return { ...mpState, deducted: false };
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-
-  return {
-    ...mpState,
-    member: updatedMember || mpState.member,
-    currentMp: nextMp,
-    remainingMp: nextMp,
-    deducted: true
-  };
+  return { ...mpState, member: updatedMember || mpState.member, currentMp: nextMp, remainingMp: nextMp, deducted: true };
 }
 
 /* =========================
@@ -949,41 +979,18 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
 
   if (req.method === "OPTIONS") return res.status(200).end();
-
-  if (req.method !== "POST") {
-    return json(res, 405, {
-      success: false,
-      message: "POST 요청만 허용됩니다."
-    });
-  }
+  if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
 
   try {
     const input = normalizeInput(req.body || {});
-
-    if (!input.userPrompt && !input.topic) {
-      return json(res, 400, {
-        success: false,
-        message: "userPrompt 또는 topic이 필요합니다."
-      });
-    }
+    if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
 
     const mpState = await prepareMpState(req);
-
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
-      return json(res, 403, {
-        success: false,
-        error: "INSUFFICIENT_MP",
-        message: "MP가 부족합니다.",
-        requiredMp: mpState.requiredMp,
-        remainingMp: mpState.currentMp
-      });
+      return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
     }
 
-    const rawText = await callOpenAI(
-      buildSystemPrompt(input),
-      buildUserPrompt(input)
-    );
-
+    const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
     const formatted = formatMagicResponse(rawText, input);
     const finalMpState = await deductMpAfterSuccess(mpState);
 
@@ -1001,10 +1008,6 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("Handler error:", error);
-    return json(res, 500, {
-      success: false,
-      message: "매직 워크북 생성에 실패했습니다.",
-      detail: error.message
-    });
+    return json(res, 500, { success: false, message: "매직 워크북 생성에 실패했습니다.", detail: error.message });
   }
 }
