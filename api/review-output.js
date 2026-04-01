@@ -49,59 +49,20 @@ function inferLanguage(text = "") {
   return koreanMatches.length > 0 ? "ko" : "en";
 }
 
-async function callOpenAI(systemPrompt, userPrompt) {
-  if (!OPENAI_API_KEY) {
-    throw new Error("Missing OPENAI_API_KEY");
-  }
-
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: OPENAI_MODEL,
-      temperature: 0.2,
-      max_tokens: 7000,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
-      ],
-    }),
-  });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
-  }
-
-  const data = await response.json();
-  const text = data?.choices?.[0]?.message?.content;
-
-  if (!text || typeof text !== "string") {
-    throw new Error("Empty model response");
-  }
-
-  return text.trim();
-}
-
-function extractSection(rawText, startMarker, endMarker) {
-  const start = rawText.indexOf(startMarker);
-  if (start === -1) return "";
-
-  const from = start + startMarker.length;
-  const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-
-  if (end === -1) return rawText.slice(from).trim();
-  return rawText.slice(from, end).trim();
-}
-
 function cleanupText(text = "") {
   return String(text || "")
     .replace(/\r\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+}
+
+function extractSection(rawText, startMarker, endMarker) {
+  const start = rawText.indexOf(startMarker);
+  if (start === -1) return "";
+  const from = start + startMarker.length;
+  const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
+  if (end === -1) return rawText.slice(from).trim();
+  return rawText.slice(from, end).trim();
 }
 
 function buildFallbackSplit(rawText) {
@@ -148,7 +109,6 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
   let finalInstructions = instructions;
   let finalQuestions = questions;
   let finalAnswers = answers;
-
   if (!finalQuestions) {
     const fallback = buildFallbackSplit(rawText);
     finalTitle = finalTitle || fallbackTitle;
@@ -164,7 +124,6 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
 
   const fullParts = [...contentParts];
   if (finalAnswers) fullParts.push("정답 및 해설\n" + finalAnswers);
-
   return {
     title: finalTitle,
     instructions: finalInstructions,
@@ -175,55 +134,107 @@ function formatReviewedOutput(rawText, fallbackTitle = "") {
   };
 }
 
+// ------------------------------
+// UPDATED REVIEW SIGNALS ( 보수적 감지 패턴 적용 )
+// ------------------------------
+function needsWormholeReview(rawOutput = "") {
+  const text = String(rawOutput || "");
+
+  const reviewSignals = [
+    /how many of the following/i,
+    /select all/i,
+    /all the sentences/i,
+    /which choice includes only/i,
+    /옳은 것의 개수/,
+    /어색한 것의 개수/,
+    /오류가 있는 문장의 개수/,
+    /모두 고른 것은/,
+    /복수판단/,
+    /A\)\s.+\nB\)\s.+\nC\)\s.+/s,
+    /a\.\s.+\nb\.\s.+\nc\.\s.+/s,
+  ];
+
+  return reviewSignals.some((pattern) => pattern.test(text));
+}
+
+function looksStructuredEnough(rawOutput = "") {
+  const text = String(rawOutput || "");
+  const hasTitle = text.includes("[[TITLE]]");
+  const hasQuestions = text.includes("[[QUESTIONS]]");
+  const hasAnswers = text.includes("[[ANSWERS]]");
+  return hasTitle && hasQuestions && hasAnswers;
+}
+
+async function callOpenAI(systemPrompt, userPrompt) {
+  if (!OPENAI_API_KEY) {
+    throw new Error("Missing OPENAI_API_KEY");
+  }
+
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: OPENAI_MODEL,
+      temperature: 0.1,
+      max_tokens: 4500,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
+      ],
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
+  }
+
+  const data = await response.json();
+  const text = data?.choices?.[0]?.message?.content;
+  if (!text || typeof text !== "string") {
+    throw new Error("Empty model response");
+  }
+
+  return text.trim();
+}
+
 function buildWormholeReviewSystemPrompt(language = "ko") {
   const isKo = language === "ko";
 
   return isKo
     ? `
-당신은 MARCUSNOTE의 Wormhole 전용 검수 필터이다.
+당신은 MARCUSNOTE의 Wormhole 전용 초경량 검수 필터이다.
 
-당신의 역할은 "전체를 새로 쓰는 것"이 아니다.
-당신의 역할은 기존 결과물을 유지하면서,
-오류, 불일치, 저품질 요소만 정밀하게 수정하는 것이다.
+당신의 임무는 전체 결과물을 다시 쓰는 것이 아니다.
+오직 아래 4가지만 점검하고, 필요한 최소 수정만 수행하라.
 
-[핵심 목표]
-- 문제 수 유지
+[검수 우선순위]
+1. 정답 번호가 실제 문항과 일치하는가
+2. 개수형 문제의 실제 개수가 맞는가
+3. 복수판단형 문제의 조합 정답이 맞는가
+4. 해설이 정답과 정확히 일치하는가
+
+[반드시 지킬 규칙]
+- 전체 재작성 금지
+- 이미 정상인 문항 수정 금지
+- 문항 수 변경 금지
+- 문항 번호 변경 금지
+- 섹션 마커 유지
 - 5지선다 유지
-- 문제/정답 섹션 유지
-- 기존 자료의 구조와 흐름 최대한 유지
-- 개수형 문제와 복수판단형 문제의 정답 정확도 보정
-- 해설과 정답의 불일치 제거
-- 너무 쉬운 문항 또는 허술한 오답만 최소한으로 수정
+- 제목/안내문/전체 흐름 최대한 유지
+- 영어 문장은 꼭 필요한 경우에만 최소 수정
 
-[절대 원칙]
-1. 전체를 새로 다시 만들지 마라.
-2. 이미 괜찮은 문항은 손대지 마라.
-3. 오직 틀린 문항, 애매한 문항, 어색한 해설만 수정하라.
-4. 반드시 기존 문항 번호를 유지하라.
-5. 반드시 기존 문항 수를 유지하라.
-6. 반드시 출력 섹션 형식을 유지하라.
+[특별 규칙]
+- 개수형 문제는 각 항목을 하나씩 검토해 실제 개수를 다시 계산하라.
+- 복수판단형 문제는 각 보기 문장을 따로 판단한 뒤 정답 조합을 맞춰라.
+- 해설은 길게 쓰지 말고 핵심만 유지하라.
+- 너무 쉬운 문항을 새로 만드는 것은 금지한다.
+- 오직 오류와 불일치만 고쳐라.
 
-[특별 검수 규칙: Wormhole]
-1. 모든 문항은 5지선다인지 확인하라.
-2. 정답 번호가 실제 문항과 일치하는지 확인하라.
-3. 해설이 정답 근거와 정확히 맞는지 확인하라.
-4. 개수형 문제는 반드시 각 문장을 하나씩 검토한 후 실제 개수를 다시 계산하라.
-5. 복수판단형 문제는 각 보기 문장을 개별 검토하고 조합 정답이 맞는지 확인하라.
-6. "옳은 것의 개수", "어색한 것의 개수", "오류가 있는 문장의 개수" 유형은 특히 엄격하게 검수하라.
-7. 너무 쉬운 문항이 있으면, 문항 구조를 완전히 갈아엎지 않는 선에서 보기나 문장을 조금만 조정하라.
-8. 문항과 해설 사이에 불일치가 있으면 반드시 바로잡아라.
-9. 밑줄형/구조판단형/복수판단형/개수형 문제의 판단 논리가 명확해야 한다.
-10. 어색한 영어 문장이 있으면 최소 수정으로 자연스럽게 고쳐라.
-
-[특히 금지]
-- 전체 재작성
-- 문항 수 변경
-- 문제 유형 대량 변경
-- 해설 삭제
-- 제목/구조 무시
-- 섹션 마커 누락
-
-[출력 형식 - 반드시 그대로]
+[출력 형식 - 반드시 유지]
 [[TITLE]]
 (제목 한 줄)
 
@@ -244,51 +255,31 @@ function buildWormholeReviewSystemPrompt(language = "ko") {
 ...
 `.trim()
     : `
-You are the dedicated MARCUSNOTE Wormhole review filter.
+You are the ultra-lightweight Wormhole review filter for MARCUSNOTE.
+Your job is NOT to rewrite the worksheet.
+Only check and minimally fix these four things:
 
-Your role is NOT to rewrite the whole worksheet.
-Your role is to preserve the original structure while fixing only:
-- wrong answer keys
-- mismatched explanations
-- weak or ambiguous logic
-- count-type and multi-judgment inconsistencies
-- obviously weak distractors
-
-[Core goals]
-- preserve question count
-- preserve 5-option multiple choice
-- preserve section structure
-- preserve numbering
-- correct only what is actually weak or wrong
+1. whether the keyed answer is correct
+2. whether count-type questions have the correct count
+3. whether multi-judgment combination answers are correct
+4. whether the explanation matches the answer key
 
 [Strict rules]
-1. Do NOT rewrite the entire worksheet.
-2. Keep all good questions unchanged.
-3. Fix only incorrect, ambiguous, awkward, or weak parts.
-4. Keep the original question numbering.
-5. Keep the original number of questions.
-6. Keep the exact section-marker structure.
+- no full rewrite
+- do not change good questions
+- do not change question count
+- do not change numbering
+- preserve section markers
+- preserve 5-option multiple choice
+- preserve title, instructions, and overall structure
+- only make minimal edits when absolutely necessary
 
-[Wormhole review checks]
-1. Every question must still have exactly 5 answer choices.
-2. Every answer key must match the actual correct answer.
-3. Every explanation must match the keyed answer.
-4. For count-type questions, check each sentence one by one and recalculate the actual count.
-5. For multi-judgment questions, validate every sentence and the final combination choice.
-6. Be especially strict with:
-- how many are correct
-- how many are awkward
-- how many contain an error
-7. If a question is too easy, improve it only minimally.
-8. Fix awkward English only with minimal edits.
-9. Preserve the overall worksheet identity and structure.
-
-[Strictly forbidden]
-- full rewrite
-- changing question count
-- removing explanations
-- removing section markers
-- changing the worksheet into a different style
+[Special rules]
+- Recalculate every count-type question carefully.
+- Validate every sentence in multi-judgment questions before confirming the combination.
+- Keep explanations short.
+- Do not invent a new worksheet.
+- Fix only real errors or inconsistencies.
 
 [Required output format]
 [[TITLE]]
@@ -322,15 +313,14 @@ function buildWormholeReviewUserPrompt({
 }) {
   if (language === "en") {
     return `
-Review the following Wormhole worksheet output.
+Review this Wormhole worksheet only if correction is truly necessary.
+Focus only on:
+- answer-key mismatch
+- wrong counts
+- wrong combination answers
+- explanation mismatch
 
-Review focus:
-- Fix wrong answer keys
-- Fix wrong counts in count-type questions
-- Fix mismatched explanations
-- Fix ambiguous or grammatically awkward items only when necessary
-- Preserve the original structure as much as possible
-
+Keep everything else unchanged.
 Requested question count: ${requestedCount}
 Difficulty: ${difficulty}
 Worksheet title: ${worksheetTitle || "(none)"}
@@ -344,15 +334,14 @@ ${rawOutput}
   }
 
   return `
-다음 Wormhole 결과물을 검수하시오.
+다음 Wormhole 결과물을 정말 필요한 경우에만 최소 수정 검수하시오.
+오직 아래만 점검하라:
+- 정답 번호 불일치
+- 개수형 실제 개수 오류
+- 복수판단형 조합 정답 오류
+- 해설과 정답 불일치
 
-검수 초점:
-- 정답 번호 오류 수정
-- 개수형 문제의 실제 개수 재검산
-- 해설과 정답 불일치 수정
-- 필요한 경우에만 영어 문장 또는 보기의 어색함 최소 수정
-- 전체 구조와 문항 흐름은 최대한 유지
-
+그 외는 유지하라.
 요청 문항 수: ${requestedCount}
 난이도: ${difficulty}
 워크시트 제목: ${worksheetTitle || "(없음)"}
@@ -385,7 +374,10 @@ export default async function handler(req, res) {
     const prompt = sanitizeString(req.body?.prompt || req.body?.userPrompt || "");
     const rawOutput = sanitizeString(req.body?.rawOutput || "");
     const difficulty = sanitizeDifficulty(req.body?.difficulty || "high");
-    const requestedCount = sanitizeCount(req.body?.count || req.body?.requestedCount || 25, 25);
+    const requestedCount = sanitizeCount(
+      req.body?.count || req.body?.requestedCount || 25,
+      25
+    );
     const worksheetTitle = sanitizeString(req.body?.worksheetTitle || "");
     const language = ["ko", "en"].includes(req.body?.language)
       ? req.body.language
@@ -407,6 +399,24 @@ export default async function handler(req, res) {
       });
     }
 
+    if (!needsWormholeReview(rawOutput) && looksStructuredEnough(rawOutput)) {
+      const passthrough = formatReviewedOutput(rawOutput, worksheetTitle);
+      return json(res, 200, {
+        success: true,
+        engine,
+        title: passthrough.title,
+        difficulty,
+        requestedCount,
+        actualCount: passthrough.actualCount,
+        instructions: passthrough.instructions,
+        content: passthrough.content,
+        answerSheet: passthrough.answerSheet,
+        fullText: passthrough.fullText,
+        reviewed: false,
+        reviewMode: "wormhole-skip-light-pass",
+      });
+    }
+
     const systemPrompt = buildWormholeReviewSystemPrompt(language);
     const userPrompt = buildWormholeReviewUserPrompt({
       prompt,
@@ -416,10 +426,8 @@ export default async function handler(req, res) {
       worksheetTitle,
       language,
     });
-
     const reviewedRaw = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatReviewedOutput(reviewedRaw, worksheetTitle);
-
     return json(res, 200, {
       success: true,
       engine,
@@ -432,11 +440,10 @@ export default async function handler(req, res) {
       answerSheet: formatted.answerSheet,
       fullText: formatted.fullText,
       reviewed: true,
-      reviewMode: "wormhole-lightweight-filter",
+      reviewMode: "wormhole-ultra-light-filter-v2",
     });
   } catch (error) {
     console.error("review-output error:", error);
-
     return json(res, 500, {
       success: false,
       error: "REVIEW_FAILED",
