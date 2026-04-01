@@ -6,7 +6,6 @@ export const config = {
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
-
 const MEMBERSTACK_SECRET_KEY = process.env.MEMBERSTACK_SECRET_KEY || "";
 const MEMBERSTACK_APP_ID = process.env.MEMBERSTACK_APP_ID || "";
 const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
@@ -46,7 +45,6 @@ function inferLanguage(text = "") {
 
 function inferLevel(text = "") {
   const t = String(text || "").toLowerCase();
-
   if (/초등|초[1-6]|abc\s*starter|elementary/.test(t)) return "elementary";
   if (/고1|고2|고3|고등|수능|모의고사|high/.test(t)) return "high";
   if (/중1|중2|중3|중등|middle/.test(t)) return "middle";
@@ -66,7 +64,6 @@ function inferMode(text = "") {
 
 function inferDifficulty(text = "") {
   const t = String(text || "").toLowerCase();
-
   if (/extreme|최고난도|극상/.test(t)) return "extreme";
   if (/high|고난도|상/.test(t)) return "high";
   if (/basic|기초|하/.test(t)) return "basic";
@@ -77,7 +74,6 @@ function inferDifficulty(text = "") {
 
 function inferTopic(text = "") {
   const t = String(text || "");
-
   const topicPatterns = [
     "현재완료",
     "현재진행형",
@@ -132,7 +128,6 @@ function inferGradeLabel(text = "", level = "middle") {
   if (/초4/.test(t)) return "초4";
   if (/초5/.test(t)) return "초5";
   if (/초6/.test(t)) return "초6";
-
   if (/중1/.test(t)) return "중1";
   if (/중2/.test(t)) return "중2";
   if (/중3/.test(t)) return "중3";
@@ -159,23 +154,18 @@ function normalizeInput(body = {}) {
   ]
     .filter(Boolean)
     .join(" ");
-
   const level = ["elementary", "middle", "high"].includes(body.level)
     ? body.level
     : inferLevel(mergedText);
-
   const mode = ["grammar", "transform", "school-exam", "advanced"].includes(body.mode)
     ? body.mode
     : inferMode(mergedText);
-
   const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
     ? body.difficulty
     : inferDifficulty(mergedText);
-
   const language = ["ko", "en"].includes(body.language)
     ? body.language
     : inferLanguage(mergedText);
-
   const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
   const examType = sanitizeString(body.examType || "") || "school";
   const worksheetTitle = sanitizeString(body.worksheetTitle || "");
@@ -241,12 +231,10 @@ function buildWormholeTitle(input) {
 
 function buildSystemPrompt(input) {
   const isKo = input.language === "ko";
-
   return isKo
     ? `
 당신은 단순 문제 생성기가 아니라,
 실제 중등/고등 영어 시험을 설계하는 상위권 출제자이다.
-
 이 엔진의 목표는 "쉽게 맞히는 문제"가 아니라,
 학생이 문장 구조와 문법 포인트를 끝까지 분석해야만 풀 수 있는
 고난도 영어 문법 시험지를 만드는 것이다.
@@ -280,19 +268,15 @@ function buildSystemPrompt(input) {
 
 5. 웜홀 전용 문제 유형 규칙
 다음 유형을 반드시 혼합하여 출제한다.
-
 [A] 단일 판단형
 - 다음 중 어법상 옳은 것은?
 - 다음 중 어법상 어색한 것은?
-
 [B] 복수 판단형
 - 다음 중 어법상 옳은 문장만을 모두 고른 것은?
 - 다음 중 어법상 어색한 문장만을 모두 고른 것은?
-
 [C] 개수 판단형 (웜홀 핵심)
 - 다음 중 어법상 옳은 문장의 개수는?
 - 다음 중 어법상 어색한 문장의 개수는?
-
 [D] 구조 판단형
 - 다음 중 밑줄 친 부분이 어법상 옳은 것은?
 - 다음 중 문장 구조가 올바른 것은?
@@ -308,6 +292,8 @@ function buildSystemPrompt(input) {
 - 특정 유형 하나만 반복하지 않는다.
 
 7. 개수 판단형 설계 규칙 (매우 중요)
+- 개수형 문제는 반드시 각 문장을 하나씩 검토한 뒤 실제 개수를 계산하여 정답을 설정하라.
+- 정답을 먼저 정하지 말고, 각 문장을 문법적으로 판정한 뒤 최종 정답 번호를 결정하라.
 - 한 문항에 최소 5개의 판단 대상 문장을 제시한다.
 - 각 문장은 서로 다른 문법 포인트를 포함하도록 설계한다.
 - 정답 개수는 1개~5개 사이에서 고르게 분산되도록 한다.
@@ -322,25 +308,27 @@ function buildSystemPrompt(input) {
   ⑤ 5개
 
 8. 복수 판단형 설계 규칙
+- 복수판단형 문제는 각 보기 문장을 개별 판정한 뒤 정답 조합을 설정하라.
 - 보기 문장들은 서로 다른 오류 포인트를 가져야 한다.
 - "모두 고른 것" 문제는 정답 조합이 너무 쉽게 드러나면 안 된다.
 - 조합형 선택지는 깔끔하고 일관된 형식으로 제시한다.
-  예: ① A, B  ② A, C  ③ B, D  ④ C, E  ⑤ B, C, E
+예: ① A, B  ② A, C  ③ B, D  ④ C, E  ⑤ B, C, E
 
 9. 해설 규칙
+- 개수형과 복수판단형에서는 해설에 맞는 문장과 틀린 문장을 짧게라도 분명히 반영하라.
+- 개수형 문제의 정답 개수는 문제 본문과 해설이 반드시 일치해야 한다.
+- 복수판단형 문제의 정답 조합은 선택지와 해설이 반드시 일치해야 한다.
 - 해설은 길게 늘이지 않는다.
 - 각 문항의 핵심 오류 포인트 또는 정답 판단 근거를 한두 문장으로 정확히 제시한다.
 - 개수형 문제는 어떤 문장이 맞고 어떤 문장이 틀렸는지 핵심만 분명히 설명한다.
 - 사용자가 한국어로 요청한 경우, 제목/안내문/해설은 한국어로 작성한다.
 
-[절대 금지]
-- 너무 짧고 단순한 문장
-- 정답이 지나치게 눈에 띄는 문제
-- 애매한 정답
-- 문항 간 구조 반복
-- 허술한 오답
-- 개수형인데 실제 정답 개수와 해설이 불일치하는 경우
-- 복수 판단형인데 조합이 애매하거나 중복되는 경우
+[특별 규칙 및 금지 사항]
+- '헷갈리게' 만들되, 애매하게 만들지는 마라.
+- 단순 암기형보다 구조 판단형, 오류 판정형, 개수 계산형을 우선하라.
+- 가능하면 한 세트 안에 킬러형 개수문항을 2문항 이상 포함하라.
+- 지나치게 짧고 단순한 문장은 절대 금지한다.
+- 정답이 지나치게 눈에 띄는 문제나 허술한 오답을 피하라.
 
 [출력 규칙 - 반드시 준수]
 1. 아래 구분자를 정확히 사용할 것
@@ -372,7 +360,6 @@ function buildSystemPrompt(input) {
     : `
 You are not a simple worksheet generator.
 You are an elite test designer creating high-difficulty English grammar exams for advanced learners.
-
 Your goal is not to produce easy recognition questions,
 but to create a premium worksheet that forces students to analyze sentence structure,
 grammar logic, and subtle correctness at exam level.
@@ -403,64 +390,45 @@ grammar logic, and subtle correctness at exam level.
 
 5. Wormhole question-type rules
 Mix the following types throughout the worksheet:
-
 [A] Single judgment
-- Which of the following is grammatically correct?
-- Which of the following is grammatically awkward?
-
+- Which of the following is grammatically correct/awkward?
 [B] Multiple judgment
-- Which choice includes only the grammatically correct sentences?
-- Which choice includes only the grammatically awkward sentences?
-
+- Which choice includes only the grammatically correct/awkward sentences?
 [C] Count-type judgment (core Wormhole type)
-- How many of the following sentences are grammatically correct?
-- How many of the following sentences are grammatically awkward?
-
+- How many of the following sentences are grammatically correct/awkward?
 [D] Structure judgment
-- Which underlined part is grammatically correct?
-- Which sentence structure is correct?
-- Which sentence is both grammatically correct and natural in flow?
+- Which underlined part or structure is correct and natural in flow?
 
 6. Type distribution
-For a 25-question worksheet, aim for:
-- 6 to 8 single-judgment questions
-- 5 to 7 multiple-judgment questions
-- 8 to 10 count-type questions
-- 3 to 5 structure-judgment questions
+Aim for a balanced mix (6-8 single, 5-7 multiple, 8-10 count-type, 3-5 structure).
 Count-type questions must be included with meaningful weight.
 
 7. Count-type rules (critical)
+- For count-type questions, examine each sentence one by one and calculate the actual count before setting the answer key.
+- Do not decide the answer first; judge each sentence first, then determine the final answer choice.
 - Each count-type question must present at least 5 target sentences.
 - Each target sentence should reflect a different grammar point or trap.
 - The correct count should vary across the set from 1 to 5.
 - At least 2 of the sentences should be deliberately tricky for high-performing students.
-- The final answer count must still be unambiguous.
-- Count-type answer choices must use this exact form:
-  ① 1
-  ② 2
-  ③ 3
-  ④ 4
-  ⑤ 5
+- The keyed answer, the actual logic, and the explanation must match exactly.
+- Count-type answer choices must use this form: ① 1 ② 2 ③ 3 ④ 4 ⑤ 5
 
 8. Multiple-judgment rules
-- The sentences should contain different grammar traps.
+- Evaluate each sentence individually before deciding the final combination answer.
 - The correct combination should not be obvious.
 - Combination choices must be clean and consistent.
-  Example: ① A, B  ② A, C  ③ B, D  ④ C, E  ⑤ B, C, E
 
 9. Explanation rules
-- Keep explanations concise.
+- In count-type and multi-judgment questions, the explanation must briefly indicate which items are correct or incorrect.
+- Keep explanations concise but sharp.
 - State the exact grammar reason briefly.
-- For count-type questions, clearly identify which items are correct or incorrect.
 
 [STRICTLY FORBIDDEN]
-- short and simplistic sentences
-- obvious answers
-- ambiguous answer keys
-- repetitive patterns
-- weak distractors
-- mismatch between count-type answer and actual count
-- ambiguous combination choices
+- Do not decide the answer first; judge sentences first.
+- Make the questions tricky, but never ambiguous.
+- Prefer structural judgment and count-based reasoning over shallow recall.
+- Include at least two killer-level count-type items when possible.
+- Avoid simplistic sentences and obvious answer keys.
 
 [OUTPUT RULES]
 1. Use the exact section markers below.
@@ -494,11 +462,9 @@ function buildUserPrompt(input) {
   const title = buildWormholeTitle(input);
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
   const modeLabel = getModeLabel(input.mode, input.language);
-
   if (input.language === "en") {
     return `
 Generate a Wormhole-style English grammar worksheet with the following conditions.
-
 Title: ${title}
 Engine: wormhole
 Level: ${input.level}
@@ -531,7 +497,6 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 
   return `
 다음 조건에 맞는 마커스웜홀 스타일 영어 문법 문제 세트를 생성하시오.
-
 제목: ${title}
 엔진: wormhole
 학년 수준: ${input.level}
@@ -590,7 +555,6 @@ async function callOpenAI(systemPrompt, userPrompt) {
 
   const data = await response.json();
   const text = data?.choices?.[0]?.message?.content;
-
   if (!text || typeof text !== "string") {
     throw new Error("Empty model response");
   }
@@ -601,10 +565,8 @@ async function callOpenAI(systemPrompt, userPrompt) {
 function extractSection(rawText, startMarker, endMarker) {
   const start = rawText.indexOf(startMarker);
   if (start === -1) return "";
-
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-
   if (end === -1) {
     return rawText.slice(from).trim();
   }
@@ -627,7 +589,6 @@ function cleanupText(text = "") {
 function buildFallbackSplit(rawText) {
   const cleaned = cleanupText(rawText);
   const answerMatch = cleaned.search(/\n\s*(정답|해설|answers?)\s*[:\-]?\s*\n?/i);
-
   if (answerMatch === -1) {
     return {
       title: "",
@@ -663,7 +624,6 @@ function formatWormholeResponse(rawText, input) {
   let finalInstructions = instructions;
   let finalQuestions = questions;
   let finalAnswers = answers;
-
   if (!finalQuestions) {
     const fallback = buildFallbackSplit(rawText);
     finalTitle = finalTitle || buildWormholeTitle(input);
@@ -681,7 +641,6 @@ function formatWormholeResponse(rawText, input) {
 
   const fullParts = [...contentParts];
   if (finalAnswers) fullParts.push("정답 및 해설\n" + finalAnswers);
-
   return {
     title: finalTitle,
     instructions: finalInstructions,
@@ -707,10 +666,6 @@ function addCors(res) {
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
 }
-
-/* =========================
-   MP deduction helpers only
-   ========================= */
 
 function getMemberstackHeaders() {
   if (!MEMBERSTACK_SECRET_KEY) {
@@ -763,7 +718,6 @@ async function memberstackRequest(path, options = {}) {
       ...(options.headers || {}),
     },
   });
-
   const text = await response.text();
   let data = null;
 
@@ -796,26 +750,22 @@ async function verifyMemberToken(token) {
     method: "POST",
     body: JSON.stringify(payload),
   });
-
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-
   const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
   });
-
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
-
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
@@ -824,7 +774,6 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
-
   for (const value of candidates) {
     const num = Number(value);
     if (Number.isFinite(num)) {
@@ -852,7 +801,6 @@ async function updateMemberMp(member, nextMp) {
       : {};
 
   const safeMp = Math.max(0, Math.floor(Number(nextMp) || 0));
-
   const patchBody = {
     customFields: {
       ...currentCustomFields,
@@ -863,12 +811,10 @@ async function updateMemberMp(member, nextMp) {
       [MEMBERSTACK_MP_FIELD]: safeMp,
     },
   };
-
   const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
     method: "PATCH",
     body: JSON.stringify(patchBody),
   });
-
   return data?.data || null;
 }
 
@@ -883,7 +829,6 @@ async function resolveMemberForMp(req) {
 
   try {
     const bearerToken = extractBearerToken(req);
-
     if (bearerToken) {
       const verified = await verifyMemberToken(bearerToken);
       if (verified?.id) {
@@ -924,7 +869,6 @@ async function resolveMemberForMp(req) {
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
   const memberContext = await resolveMemberForMp(req);
-
   if (!memberContext.enabled || !memberContext.member) {
     return {
       enabled: false,
@@ -942,7 +886,6 @@ async function prepareMpState(req) {
   let currentMp = readMpFromMember(member);
   let updatedMember = member;
   let trialGranted = false;
-
   if (!Number.isFinite(currentMp)) {
     currentMp = getInitialTrialMp();
     updatedMember = (await updateMemberMp(member, currentMp)) || member;
@@ -973,7 +916,6 @@ async function deductMpAfterSuccess(mpState) {
 
   const currentMp = Number(mpState.currentMp);
   const requiredMp = Number(mpState.requiredMp);
-
   if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
     return {
       ...mpState,
@@ -983,7 +925,6 @@ async function deductMpAfterSuccess(mpState) {
 
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-
   return {
     ...mpState,
     member: updatedMember || mpState.member,
@@ -993,13 +934,8 @@ async function deductMpAfterSuccess(mpState) {
   };
 }
 
-/* =========================
-   handler
-   ========================= */
-
 export default async function handler(req, res) {
   addCors(res);
-
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -1014,7 +950,6 @@ export default async function handler(req, res) {
 
   try {
     const input = normalizeInput(req.body || {});
-
     if (!input.userPrompt && !input.topic) {
       return json(res, 400, {
         success: false,
@@ -1045,7 +980,6 @@ export default async function handler(req, res) {
     const meta = buildMeta(input, formatted.actualCount);
 
     const finalMpState = await deductMpAfterSuccess(mpState);
-
     return json(res, 200, {
       success: true,
       engine: input.engine,
@@ -1061,7 +995,6 @@ export default async function handler(req, res) {
       answerSheet: formatted.answerSheet,
       fullText: formatted.fullText,
       meta,
-
       requiredMp: mpState.requiredMp,
       remainingMp: finalMpState?.remainingMp ?? null,
       needsUpgrade: false,
@@ -1071,7 +1004,6 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("generate-wormhole error:", error);
-
     return json(res, 500, {
       success: false,
       error: "GENERATION_FAILED",
