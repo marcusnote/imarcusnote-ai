@@ -1,5 +1,3 @@
-// api/generate-magic.js
-
 export const config = {
   runtime: "nodejs",
 };
@@ -55,7 +53,6 @@ function inferLevel(text = "") {
   return "middle";
 }
 
-// [A. inferMode() 전체 교체]
 function inferMode(text = "") {
   const t = String(text || "").toLowerCase();
 
@@ -91,6 +88,7 @@ function inferTopic(text = "") {
   for (const topic of topicPatterns) {
     if (t.includes(topic)) return topic;
   }
+
   const lower = t.toLowerCase();
   if (/alphabet/.test(lower)) return "알파벳";
   if (/phonics/.test(lower)) return "파닉스";
@@ -99,6 +97,7 @@ function inferTopic(text = "") {
   if (/infinitive|to-infinitive/.test(lower)) return "to부정사";
   if (/gerund/.test(lower)) return "동명사";
   if (/passive/.test(lower)) return "수동태";
+
   return "문법 학습";
 }
 
@@ -132,13 +131,26 @@ function normalizeInput(body = {}) {
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || ""),
   ].filter(Boolean).join(" ");
-  const level = ["elementary", "middle", "high"].includes(body.level) ? body.level : inferLevel(mergedText);
-  
-  // [B. normalizeInput() 안의 modeCandidates 교체]
-  const modeCandidates = ["magic", "magic-card", "writing", "abcstarter", "textbook-grammar", "chapter-grammar", "vocab-builder"];
-  
+
+  const level = ["elementary", "middle", "high"].includes(body.level)
+    ? body.level
+    : inferLevel(mergedText);
+
+  const modeCandidates = [
+    "magic",
+    "magic-card",
+    "writing",
+    "abcstarter",
+    "textbook-grammar",
+    "chapter-grammar",
+    "vocab-builder"
+  ];
+
   const mode = modeCandidates.includes(body.mode) ? body.mode : inferMode(mergedText);
-  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty) ? body.difficulty : inferDifficulty(mergedText);
+  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
+    ? body.difficulty
+    : inferDifficulty(mergedText);
+
   const language = ["ko", "en"].includes(body.language) ? body.language : inferLanguage(mergedText);
   const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
   const examType = sanitizeString(body.examType || "") || "workbook";
@@ -147,7 +159,20 @@ function normalizeInput(body = {}) {
   const count = sanitizeCount(body.count);
   const gradeLabel = inferGradeLabel(mergedText, level);
 
-  return { engine: "magic", level, mode, topic, examType, difficulty, count, language, worksheetTitle, academyName, userPrompt, gradeLabel };
+  return {
+    engine: "magic",
+    level,
+    mode,
+    topic,
+    examType,
+    difficulty,
+    count,
+    language,
+    worksheetTitle,
+    academyName,
+    userPrompt,
+    gradeLabel
+  };
 }
 
 /* =========================
@@ -161,13 +186,13 @@ function getDifficultyLabel(difficulty, language = "ko") {
     if (difficulty === "standard") return "Standard Difficulty";
     return "Basic Difficulty";
   }
+
   if (difficulty === "extreme") return "최고난도";
   if (difficulty === "high") return "고난도";
   if (difficulty === "standard") return "표준난도";
   return "기초난도";
 }
 
-// [C. getModeLabel() 전체 교체]
 function getModeLabel(mode, language = "ko") {
   const koMap = {
     magic: "매직형",
@@ -189,10 +214,9 @@ function getModeLabel(mode, language = "ko") {
     "vocab-builder": "Vocab Builder"
   };
 
-  return language === "en" ? enMap[mode] || "Magic" : koMap[mode] || "매직형";
+  return language === "en" ? (enMap[mode] || "Magic") : (koMap[mode] || "매직형");
 }
 
-// [D. buildMagicTitle() 전체 교체]
 function buildMagicTitle(input) {
   if (input.worksheetTitle) return input.worksheetTitle;
 
@@ -216,7 +240,136 @@ function buildMagicTitle(input) {
   return `${input.gradeLabel} ${input.topic} 마커스매직 ${difficultyLabel} ${input.count}문항`;
 }
 
-// [E. buildSystemPrompt() 전체 교체]
+function buildModeSpecificGuide(input) {
+  const isEn = input.language === "en";
+
+  if (input.mode === "vocab-builder") {
+    return isEn
+      ? `
+Mode Identity:
+- This is a vocabulary-centered worksheet.
+- Do not turn it into a grammar worksheet.
+- If a passage is provided, anchor vocabulary tasks to the passage.
+- If no passage is provided, build topic-based vocabulary training.
+Allowed item styles:
+- meaning check
+- contextual vocabulary use
+- synonym / antonym
+- lexical gap-fill
+- usage review
+Forbidden drift:
+- grammar-dominant exam sheet
+- unrelated transformation drill
+`.trim()
+      : `
+모드 정체성:
+- 이것은 어휘 중심 학습지이다.
+- 문법 문제지로 변질시키지 말 것.
+- 지문이 있으면 지문 기반 어휘 문제로 만들 것.
+- 지문이 없으면 주제 기반 어휘 훈련지로 만들 것.
+허용 유형:
+- 뜻 확인
+- 문맥상 어휘 사용
+- 유의어 / 반의어
+- 어휘 빈칸
+- 용법 점검
+금지 변질:
+- 문법 중심 시험지
+- 무관한 변형 영작 문제
+`.trim();
+  }
+
+  if (input.mode === "abcstarter") {
+    return isEn
+      ? `
+Mode Identity:
+- This is a beginner-friendly foundational English workbook.
+- Keep sentence length simple and cognitively light.
+- Provide very clear clues and friendly scaffolding.
+`.trim()
+      : `
+모드 정체성:
+- 초등 입문 친화형 기초 영어 워크북이다.
+- 문장 길이는 짧고 부담이 적어야 한다.
+- clue와 안내는 매우 친절하게 제공할 것.
+`.trim();
+  }
+
+  if (input.mode === "writing") {
+    return isEn
+      ? `
+Mode Identity:
+- This is an explicit writing-training workbook.
+- Strongly prioritize learner sentence production.
+- Use guided composition, transformation, rearrangement, and completion tasks.
+`.trim()
+      : `
+모드 정체성:
+- 명시적 영작훈련 워크북이다.
+- 학습자의 문장 산출을 강하게 우선할 것.
+- guided composition, transformation, rearrangement, completion 유형을 적극 활용할 것.
+`.trim();
+  }
+
+  if (input.mode === "magic-card") {
+    return isEn
+      ? `
+Mode Identity:
+- This is a Magic Card style workbook.
+- Keep chapter-based grammar focus, but output must still be production-oriented.
+- The worksheet should feel compact, clear, and highly trainable.
+`.trim()
+      : `
+모드 정체성:
+- 매직카드형 워크북이다.
+- 챕터 기반 문법 초점을 유지하되, 출력은 반드시 생산형 훈련 자료여야 한다.
+- 전체 구성은 압축적이되 훈련 효과가 높아야 한다.
+`.trim();
+  }
+
+  if (input.mode === "textbook-grammar") {
+    return isEn
+      ? `
+Mode Identity:
+- This is a textbook-grammar based writing workbook.
+- Anchor the grammar to school-textbook style learning goals.
+- Still keep the output as guided production practice, not a trap-based exam sheet.
+`.trim()
+      : `
+모드 정체성:
+- 교과서 문법 기반 영작 워크북이다.
+- 학교 교과서형 학습목표에 맞추되, 시험 함정형이 아니라 안내형 생산 훈련지로 만들 것.
+`.trim();
+  }
+
+  if (input.mode === "chapter-grammar") {
+    return isEn
+      ? `
+Mode Identity:
+- This is a chapter-grammar based writing workbook.
+- Focus tightly on the designated chapter grammar.
+- Maintain guided production identity across all items.
+`.trim()
+      : `
+모드 정체성:
+- 챕터 문법 기반 영작 워크북이다.
+- 지정된 챕터 문법에 집중하되, 모든 문항에서 안내형 생산 훈련 정체성을 유지할 것.
+`.trim();
+  }
+
+  return isEn
+    ? `
+Mode Identity:
+- This is a premium Magic workbook.
+- The output must remain workbook-style, production-oriented, and teacher-ready.
+`.trim()
+    : `
+모드 정체성:
+- 프리미엄 매직 워크북이다.
+- 출력은 반드시 워크북형, 생산형, 교사용 완성형이어야 한다.
+`.trim();
+}
+
 function buildSystemPrompt(input) {
   const isKo = input.language === "ko";
 
@@ -253,7 +406,7 @@ Core goals:
 Important rules:
 1. The worksheet must stay vocabulary-centered.
 2. If the user provides a passage, build a passage-based vocabulary worksheet.
-3. If no passage is provided, build a topic-based vocabulary worksheet.
+3. If no passage is provided, build a topic-based vocabulary practice set.
 4. Use meaning, context, usage, synonym, antonym, and lexical review.
 5. Do not turn the output into a grammar worksheet.
 6. Always provide an answer section.
@@ -267,23 +420,85 @@ Output format:
 
   return isKo ? `
 당신은 마커스매직 전용 워크북 생성 엔진이다.
+
 핵심 목표:
 - 학습자 친화적이면서도 교육적으로 정교한 영어 학습 워크북을 만든다.
 - 출력물은 교사와 학원이 바로 사용할 수 있을 정도로 깔끔해야 한다.
-중요 원칙:
-1. 매직은 학습·훈련 중심이다.
-2. 영작 요청이면 쓰기·재구성·배열·완성형 문항을 우선한다.
-3. ABC Starter는 초등 입문자를 고려하여 작성한다.
-4. 정답 섹션을 반드시 제공한다.
+- 매직은 시험 함정형 엔진이 아니라, 영어 문장 생산을 훈련시키는 영작훈련 워크북 엔진이다.
+
+최상위 공통 규칙:
+1. 매직은 반드시 영작훈련 중심 워크북이어야 한다.
+2. 각 문항은 먼저 학습자의 입력 언어로 제시할 것.
+3. 학습자는 제시된 의미를 바탕으로 영어 문장을 직접 생산해야 한다.
+4. clue는 가능한 충분히 제공할 것.
+5. clue에는 핵심 어휘, 구조 힌트, 문법 앵커, 시간/장소/대상 단서를 적극 포함할 것.
+6. 워크북 전체에는 clue 기반 영작형과 재배열 영작형을 함께 포함할 것.
+7. 일부 재배열형 문항은 실제 정답에 필요하지 않은 초과단어 1개를 포함할 것.
+8. 이 원칙은 특정 예문이 아니라 전체 영어문법 챕터에 공통 적용할 것.
+9. 객관식 시험지처럼 작성하지 말 것.
+10. 웜홀식 함정 문제지나 모의고사식 시험지로 변질되지 말 것.
+11. 문항은 학습자가 직접 쓰고, 고치고, 배열하고, 완성하게 만드는 방향으로 설계할 것.
+12. 안내문은 짧고 명확하게 작성할 것.
+13. 제목, 안내, 문제, 정답 구조를 반드시 유지할 것.
+14. 정답 섹션을 반드시 제공할 것.
+15. 문항 수를 가능한 한 정확히 맞출 것.
+16. 각 문항은 실제 수업과 과제에 바로 사용할 수 있도록 자연스럽고 교육적으로 설계할 것.
+
+문항 설계 규칙:
+- 최소 2가지 이상의 생산형 문항 유형을 섞을 것.
+- 대표 유형:
+  a) 입력 언어 제시 + 풍부한 clue 기반 영작
+  b) 초과단어 1개 포함 재배열 영작
+  c) 문장 변환 영작
+  d) 부분 완성 후 완전 영작
+- clue는 빈약하게 주지 말고, 학습자가 구조를 유추할 수 있을 정도로 충분히 줄 것.
+- 단, 정답 전체를 그대로 노출하지는 말 것.
+- 문법 챕터의 핵심 구조가 자연스럽게 드러나야 한다.
+
+${buildModeSpecificGuide(input)}
+
 출력 형식:
 [[TITLE]]
 [[INSTRUCTIONS]]
 [[QUESTIONS]]
 [[ANSWERS]]`.trim() : `
 You are the dedicated MARCUS Magic workbook generation engine.
+
 Core goals:
-- Generate clean, educational, workbook-style English practice materials.
-- Prioritize training value and learning effectiveness.
+- Generate clean, teacher-ready, workbook-style English practice materials.
+- Magic is not a trap-based exam engine. It is a guided English writing-training workbook engine.
+
+Top-level universal rules:
+1. Magic must remain a writing-training workbook.
+2. Present each item first in the learner's input language.
+3. The learner must produce the English sentence.
+4. Provide rich clues generously.
+5. Clues should include key vocabulary, structural hints, grammar anchors, and time/place/target cues when useful.
+6. Across the worksheet, include both clue-based composition items and rearrangement-based writing items.
+7. Some rearrangement items must include one extra unnecessary word beyond the correct answer.
+8. This rule applies across all grammar chapters, not just one topic.
+9. Do not turn the worksheet into a multiple-choice exam sheet.
+10. Do not drift into Wormhole-style trap-based grammar identity.
+11. Do not drift into Mocks-style exam-passage identity.
+12. Make learners write, rebuild, rearrange, transform, and complete sentences.
+13. Keep instructions concise and clear.
+14. Maintain TITLE / INSTRUCTIONS / QUESTIONS / ANSWERS structure.
+15. Always provide an answer section.
+16. Match the requested item count as accurately as possible.
+
+Item design rules:
+- Mix at least two productive item types.
+- Recommended item types:
+  a) input-language prompt + rich-clue guided composition
+  b) rearrangement writing with one extra unused word
+  c) sentence transformation writing
+  d) partial-completion to full-sentence writing
+- Clues must be generous enough to support guided production.
+- But do not reveal the full answer sentence directly.
+- The core target grammar should naturally appear in the task design.
+
+${buildModeSpecificGuide(input)}
+
 Output format:
 [[TITLE]]
 [[INSTRUCTIONS]]
@@ -291,7 +506,6 @@ Output format:
 [[ANSWERS]]`.trim();
 }
 
-// [F. buildTaskGuide() 전체 교체]
 function buildTaskGuide(input) {
   const isEn = input.language === "en";
 
@@ -303,22 +517,36 @@ function buildTaskGuide(input) {
 
     case "abcstarter":
       return isEn
-        ? "Create beginner-friendly foundational English tasks."
-        : "초등 입문 친화형 과제로 구성할 것.";
+        ? "Create beginner-friendly foundational English tasks with very clear scaffolding and generous clues."
+        : "초등 입문 친화형 과제로 구성하되, clue와 안내를 매우 친절하게 제공할 것.";
 
     case "writing":
       return isEn
-        ? "Focus on English writing training."
-        : "영작훈련 중심으로 구성할 것.";
+        ? "Focus strongly on English writing training through guided composition, rearrangement, and productive sentence building."
+        : "영작훈련 중심으로 구성하되, guided composition, 재배열, 문장 생산 훈련을 강하게 반영할 것.";
+
+    case "magic-card":
+      return isEn
+        ? "Use a compact but highly trainable Magic Card style while preserving guided writing production."
+        : "매직카드형의 압축감을 유지하되, 안내형 영작 생산 훈련 중심으로 구성할 것.";
+
+    case "textbook-grammar":
+      return isEn
+        ? "Anchor the worksheet to textbook-style grammar goals, but keep it as a guided writing workbook."
+        : "교과서 문법 학습목표에 맞추되, 결과물은 안내형 영작 워크북으로 유지할 것.";
+
+    case "chapter-grammar":
+      return isEn
+        ? "Focus tightly on the chapter grammar and make learners produce sentences with generous clues."
+        : "챕터 문법에 집중하되, 충분한 clue와 함께 문장 생산 훈련이 일어나도록 구성할 것.";
 
     default:
       return isEn
-        ? "Create premium workbook-style English training material."
-        : "프리미엄 워크북형 영어 훈련 자료로 구성할 것.";
+        ? "Create premium workbook-style English writing training material with generous clues and multiple productive task types."
+        : "풍부한 clue와 복수의 생산형 문항 유형을 갖춘 프리미엄 영작훈련 워크북으로 구성할 것.";
   }
 }
 
-// [G. buildUserPrompt() 전체 교체]
 function buildUserPrompt(input) {
   const title = buildMagicTitle(input);
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
@@ -368,22 +596,48 @@ ${input.userPrompt || "(추가 요청 없음)"}
   }
 
   return input.language === "en" ? `
-Generate a Magic-style English workbook.
+Generate a Magic-style English writing workbook.
+
 Title: ${title}
 Mode: ${input.mode} (${modeLabel})
 Topic: ${input.topic}
 Difficulty: ${input.difficulty} (${difficultyLabel})
 Item count: ${input.count}
 Requirement: ${taskGuide}
-Original request: ${input.userPrompt || "(No additional user prompt provided.)"}`.trim() : `
-마커스매직 스타일 영어 워크북 세트를 생성하시오.
+
+Universal Magic rules:
+- Present prompts in the learner's input language first.
+- Make learners produce English sentences.
+- Provide rich clues generously.
+- Include key words, phrase hints, grammar anchors, and structural hints.
+- Mix at least two productive item types across the set.
+- Include some rearrangement-based writing items with one extra unnecessary word.
+- Keep the worksheet production-oriented, not trap-based.
+
+Original request:
+${input.userPrompt || "(No additional user prompt provided.)"}
+`.trim() : `
+마커스매직 스타일 영어 영작훈련 워크북 세트를 생성하시오.
+
 제목: ${title}
 모드: ${input.mode} (${modeLabel})
 주제: ${input.topic}
 난이도: ${input.difficulty} (${difficultyLabel})
 문항 수: ${input.count}
 요구사항: ${taskGuide}
-사용자 원문: ${input.userPrompt || "(추가 요청 없음)"}`.trim();
+
+매직 공통 규칙:
+- 문제 제시는 먼저 학습자의 입력 언어로 할 것.
+- 학습자가 영어 문장을 직접 생산하게 만들 것.
+- clue는 가능한 충분히 제공할 것.
+- clue에는 핵심 단어, 구 힌트, 문법 앵커, 구조 힌트를 포함할 것.
+- 세트 전체에 최소 2가지 이상의 생산형 문항 유형을 섞을 것.
+- 일부 문항은 초과단어 1개가 포함된 재배열 영작형으로 만들 것.
+- 시험 함정형이 아니라 영작훈련형 워크북 정체성을 유지할 것.
+
+사용자 원문:
+${input.userPrompt || "(추가 요청 없음)"}
+`.trim();
 }
 
 /* =========================
@@ -392,12 +646,28 @@ Original request: ${input.userPrompt || "(No additional user prompt provided.)"}
 
 async function callOpenAI(systemPrompt, userPrompt) {
   if (!OPENAI_API_KEY) throw new Error("Missing OPENAI_API_KEY");
+
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${OPENAI_API_KEY}` },
-    body: JSON.stringify({ model: OPENAI_MODEL, temperature: 0.55, max_tokens: 8000, messages: [{ role: "system", content: systemPrompt }, { role: "user", content: userPrompt }] }),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${OPENAI_API_KEY}`
+    },
+    body: JSON.stringify({
+      model: OPENAI_MODEL,
+      temperature: 0.55,
+      max_tokens: 8000,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt }
+      ]
+    }),
   });
-  if (!response.ok) throw new Error(`OpenAI request failed: ${response.status}`);
+
+  if (!response.ok) {
+    throw new Error(`OpenAI request failed: ${response.status}`);
+  }
+
   const data = await response.json();
   return data?.choices?.[0]?.message?.content?.trim() || "";
 }
@@ -405,10 +675,13 @@ async function callOpenAI(systemPrompt, userPrompt) {
 function extractSection(rawText, startMarker, endMarker) {
   const start = rawText.indexOf(startMarker);
   if (start === -1) return "";
+
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-  return end === -1 ?
-    rawText.slice(from).trim() : rawText.slice(from, end).trim();
+
+  return end === -1
+    ? rawText.slice(from).trim()
+    : rawText.slice(from, end).trim();
 }
 
 function formatMagicResponse(rawText, input) {
@@ -416,20 +689,35 @@ function formatMagicResponse(rawText, input) {
   const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
   const questions = extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]");
   const answers = extractSection(rawText, "[[ANSWERS]]", null);
+
   const finalTitle = title.trim() || buildMagicTitle(input);
   const contentParts = [finalTitle, instructions.trim(), questions.trim()].filter(Boolean);
   const fullParts = [...contentParts];
-  if (answers.trim()) fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + answers.trim());
-  return { title: finalTitle, instructions: instructions.trim(), content: contentParts.join("\n\n"), answerSheet: answers.trim(), fullText: fullParts.join("\n\n"), actualCount: (questions.match(/^\s*\d+\./gm) || []).length };
+
+  if (answers.trim()) {
+    fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + answers.trim());
+  }
+
+  return {
+    title: finalTitle,
+    instructions: instructions.trim(),
+    content: contentParts.join("\n\n"),
+    answerSheet: answers.trim(),
+    fullText: fullParts.join("\n\n"),
+    actualCount: (questions.match(/^\s*\d+\./gm) || []).length
+  };
 }
 
 /* =========================
-   MP deduction helpers only (Updated)
+   MP deduction helpers only
    ========================= */
 
 function getMemberstackHeaders() {
   if (!MEMBERSTACK_SECRET_KEY) return null;
-  return { "x-api-key": MEMBERSTACK_SECRET_KEY, "Content-Type": "application/json" };
+  return {
+    "x-api-key": MEMBERSTACK_SECRET_KEY,
+    "Content-Type": "application/json"
+  };
 }
 
 function getRequiredMp(reqBody = {}) {
@@ -447,17 +735,40 @@ function extractBearerToken(req) {
 }
 
 function extractMemberId(req) {
-  return sanitizeString(req?.body?.memberId || req?.headers?.["x-member-id"] || req?.headers?.["X-Member-Id"] || "");
+  return sanitizeString(
+    req?.body?.memberId ||
+    req?.headers?.["x-member-id"] ||
+    req?.headers?.["X-Member-Id"] ||
+    ""
+  );
 }
 
 async function memberstackRequest(path, options = {}) {
   const headers = getMemberstackHeaders();
   if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, { ...options, headers: { ...headers, ...(options.headers || {}) } });
+
+  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
+    ...options,
+    headers: { ...headers, ...(options.headers || {}) }
+  });
+
   const text = await response.text();
   let data = null;
-  try { data = text ? JSON.parse(text) : null; } catch { data = text; }
-  if (!response.ok) throw new Error(`Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`);
+
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    data = text;
+  }
+
+  if (!response.ok) {
+    throw new Error(
+      `Memberstack request failed: ${response.status} ${
+        typeof data === "string" ? data : JSON.stringify(data)
+      }`
+    );
+  }
+
   return data;
 }
 
@@ -465,18 +776,29 @@ async function verifyMemberToken(token) {
   if (!token) return null;
   const payload = { token };
   if (MEMBERSTACK_APP_ID) payload.audience = MEMBERSTACK_APP_ID;
-  const data = await memberstackRequest("/verify-token", { method: "POST", body: JSON.stringify(payload) });
+
+  const data = await memberstackRequest("/verify-token", {
+    method: "POST",
+    body: JSON.stringify(payload)
+  });
+
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "GET", headers: { "Content-Type": "application/json" } });
+
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" }
+  });
+
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
+
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
@@ -485,32 +807,52 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
+
   for (const value of candidates) {
     const num = Number(value);
     if (Number.isFinite(num)) return Math.max(0, Math.floor(num));
   }
+
   return null;
 }
 
 async function updateMemberMp(member, nextMp) {
   const memberId = member?.id;
   if (!memberId) throw new Error("Missing member id for MP update");
-  const currentCustomFields = member?.customFields && typeof member.customFields === "object" ?
-    member.customFields : {};
-  const currentMetaData = member?.metaData && typeof member.metaData === "object" ? member.metaData : {};
+
+  const currentCustomFields =
+    member?.customFields && typeof member.customFields === "object"
+      ? member.customFields
+      : {};
+
+  const currentMetaData =
+    member?.metaData && typeof member.metaData === "object"
+      ? member.metaData
+      : {};
+
   const safeMp = Math.max(0, Math.floor(Number(nextMp) || 0));
+
   const patchBody = {
     customFields: { ...currentCustomFields, [MEMBERSTACK_MP_FIELD]: safeMp },
     metaData: { ...currentMetaData, [MEMBERSTACK_MP_FIELD]: safeMp },
   };
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "PATCH", body: JSON.stringify(patchBody) });
+
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
+    method: "PATCH",
+    body: JSON.stringify(patchBody)
+  });
+
   return data?.data || null;
 }
 
 async function resolveMemberForMp(req) {
-  if (!MEMBERSTACK_SECRET_KEY) return { enabled: false, reason: "missing_secret_key", member: null };
+  if (!MEMBERSTACK_SECRET_KEY) {
+    return { enabled: false, reason: "missing_secret_key", member: null };
+  }
+
   try {
     const bearerToken = extractBearerToken(req);
+
     if (bearerToken) {
       const verified = await verifyMemberToken(bearerToken);
       if (verified?.id) {
@@ -518,11 +860,13 @@ async function resolveMemberForMp(req) {
         return { enabled: true, reason: "token_verified", member };
       }
     }
+
     const explicitMemberId = extractMemberId(req);
     if (explicitMemberId) {
       const member = await getMemberById(explicitMemberId);
       return { enabled: true, reason: "member_id", member };
     }
+
     return { enabled: false, reason: "member_not_provided", member: null };
   } catch (error) {
     console.error("resolveMemberForMp error:", error);
@@ -533,31 +877,66 @@ async function resolveMemberForMp(req) {
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
   const memberContext = await resolveMemberForMp(req);
+
   if (!memberContext.enabled || !memberContext.member) {
-    return { enabled: false, reason: memberContext.reason, requiredMp, member: null, currentMp: null, remainingMp: null, trialGranted: false, deducted: false };
+    return {
+      enabled: false,
+      reason: memberContext.reason,
+      requiredMp,
+      member: null,
+      currentMp: null,
+      remainingMp: null,
+      trialGranted: false,
+      deducted: false
+    };
   }
+
   const member = memberContext.member;
   let currentMp = readMpFromMember(member);
   let updatedMember = member;
   let trialGranted = false;
+
   if (!Number.isFinite(currentMp)) {
     currentMp = getInitialTrialMp();
     updatedMember = (await updateMemberMp(member, currentMp)) || member;
     currentMp = readMpFromMember(updatedMember);
     trialGranted = true;
   }
+
   if (!Number.isFinite(currentMp)) currentMp = 0;
-  return { enabled: true, reason: memberContext.reason, requiredMp, member: updatedMember, currentMp, remainingMp: currentMp, trialGranted, deducted: false };
+
+  return {
+    enabled: true,
+    reason: memberContext.reason,
+    requiredMp,
+    member: updatedMember,
+    currentMp,
+    remainingMp: currentMp,
+    trialGranted,
+    deducted: false
+  };
 }
 
 async function deductMpAfterSuccess(mpState) {
   if (!mpState || !mpState.enabled) return mpState;
+
   const currentMp = Number(mpState.currentMp);
   const requiredMp = Number(mpState.requiredMp);
-  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) return { ...mpState, deducted: false };
+
+  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
+    return { ...mpState, deducted: false };
+  }
+
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-  return { ...mpState, member: updatedMember || mpState.member, currentMp: nextMp, remainingMp: nextMp, deducted: true };
+
+  return {
+    ...mpState,
+    member: updatedMember || mpState.member,
+    currentMp: nextMp,
+    remainingMp: nextMp,
+    deducted: true
+  };
 }
 
 /* =========================
@@ -570,27 +949,62 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
 
   if (req.method === "OPTIONS") return res.status(200).end();
-  if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
+
+  if (req.method !== "POST") {
+    return json(res, 405, {
+      success: false,
+      message: "POST 요청만 허용됩니다."
+    });
+  }
+
   try {
     const input = normalizeInput(req.body || {});
-    if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
-    const mpState = await prepareMpState(req);
-    if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
-      return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
+
+    if (!input.userPrompt && !input.topic) {
+      return json(res, 400, {
+        success: false,
+        message: "userPrompt 또는 topic이 필요합니다."
+      });
     }
 
-    const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
+    const mpState = await prepareMpState(req);
+
+    if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
+      return json(res, 403, {
+        success: false,
+        error: "INSUFFICIENT_MP",
+        message: "MP가 부족합니다.",
+        requiredMp: mpState.requiredMp,
+        remainingMp: mpState.currentMp
+      });
+    }
+
+    const rawText = await callOpenAI(
+      buildSystemPrompt(input),
+      buildUserPrompt(input)
+    );
+
     const formatted = formatMagicResponse(rawText, input);
     const finalMpState = await deductMpAfterSuccess(mpState);
+
     return json(res, 200, {
       success: true,
       ...formatted,
-      meta: { language: input.language, requestedCount: input.count, actualCount: formatted.actualCount, generatedAt: new Date().toISOString() },
+      meta: {
+        language: input.language,
+        requestedCount: input.count,
+        actualCount: formatted.actualCount,
+        generatedAt: new Date().toISOString()
+      },
       remainingMp: finalMpState?.remainingMp ?? null,
       mpSyncEnabled: Boolean(mpState.enabled)
     });
   } catch (error) {
     console.error("Handler error:", error);
-    return json(res, 500, { success: false, message: "매직 워크북 생성에 실패했습니다.", detail: error.message });
+    return json(res, 500, {
+      success: false,
+      message: "매직 워크북 생성에 실패했습니다.",
+      detail: error.message
+    });
   }
 }
