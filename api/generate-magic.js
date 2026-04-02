@@ -137,6 +137,11 @@ function normalizeInput(body = {}) {
   const count = sanitizeCount(body.count);
   const gradeLabel = inferGradeLabel(mergedText, level);
 
+  // 7-1. normalizeInput에 추가 (회차 정보 추출)
+  const vocabSeriesStart = clamp(Number(body.vocabSeriesStart || 1), 1, 200);
+  const vocabSeriesEnd = clamp(Number(body.vocabSeriesEnd || 1), 1, 200);
+  const vocabItemsPerRound = clamp(Number(body.vocabItemsPerRound || count), 5, 30);
+
   return {
     engine: "magic",
     level,
@@ -149,7 +154,11 @@ function normalizeInput(body = {}) {
     worksheetTitle,
     academyName,
     userPrompt,
-    gradeLabel
+    gradeLabel,
+    // return에 추가
+    vocabSeriesStart,
+    vocabSeriesEnd: Math.max(vocabSeriesStart, vocabSeriesEnd),
+    vocabItemsPerRound,
   };
 }
 
@@ -194,14 +203,54 @@ function getModeLabel(mode, language = "ko") {
 
 function buildMagicTitle(input) {
   if (input.worksheetTitle) return input.worksheetTitle;
+
+  // 8. 제목 자동 생성 (vocab-builder 분기 교체)
+  if (input.mode === "vocab-builder") {
+    const start = Number(input.vocabSeriesStart || 1);
+    const end = Number(input.vocabSeriesEnd || 1);
+
+    if (input.language === "en") {
+      if (start === end) return `Vocabulary Round ${start}`;
+      return `Vocabulary Rounds ${start}-${end}`;
+    }
+
+    if (start === end) {
+      return `${input.gradeLabel} 필수어휘 ${start}회`;
+    }
+    return `${input.gradeLabel} 필수어휘 ${start}~${end}회`;
+  }
+
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
   if (input.language === "en") {
-    if (input.mode === "vocab-builder") return `${input.gradeLabel} ${input.topic} Vocab Builder ${difficultyLabel} ${input.count} Items`;
     return `${input.gradeLabel} ${input.topic} Magic ${difficultyLabel} ${input.count} Items`;
   }
   if (input.mode === "abcstarter") return `${input.gradeLabel} ${input.topic} ABC Starter ${difficultyLabel} ${input.count}문항`;
-  if (input.mode === "vocab-builder") return `${input.gradeLabel} ${input.topic} 어휘 빌더 ${difficultyLabel} ${input.count}문항`;
   return `${input.gradeLabel} ${input.topic} 마커스매직 ${difficultyLabel} ${input.count}문항`;
+}
+
+// 9. 회차 블록 생성 함수 추가
+function buildVocabSeriesBlock(input) {
+  const start = Number(input.vocabSeriesStart || 1);
+  const end = Number(input.vocabSeriesEnd || 1);
+  const perRound = Number(input.vocabItemsPerRound || input.count || 20);
+
+  const rounds = [];
+  for (let r = start; r <= end; r += 1) {
+    rounds.push(`- Round ${r}: ${perRound} vocabulary items`);
+  }
+
+  return `
+[VOCAB ROUND SERIES]
+${rounds.join("\n")}
+
+Rules:
+- Separate each round clearly.
+- Each round must include:
+  1. Vocabulary List
+  2. Vocabulary Test
+- Avoid overlap between rounds as much as possible.
+- Keep each round independently usable.
+`.trim();
 }
 
 function buildModeSpecificGuide(input) {
@@ -214,7 +263,7 @@ Mode Identity:
 - Do not turn it into a grammar worksheet.
 - If a passage is provided, anchor vocabulary tasks to the passage.
 - If no passage is provided, build topic-based vocabulary training.
-Allowed item styles:
+- Allowed item styles:
 - meaning check
 - contextual vocabulary use
 - synonym / antonym
@@ -417,10 +466,17 @@ function buildSystemPrompt(input) {
 5. 뜻, 문맥, 용법, 유의어, 반의어, 빈칸 속 어휘 선택 등 어휘 학습 요소를 활용한다.
 6. 정답 섹션을 반드시 제공한다.
 7. 객관식이 꼭 필요한 경우에만 제한적으로 사용하고, 무분별한 문법형 객관식은 금지한다.
+8. 회차별 출력이 요청된 경우 섹션을 명확히 분리한다.
+
 출력 형식:
 [[TITLE]]
 [[INSTRUCTIONS]]
 [[QUESTIONS]]
+### n회 (요청 시 적용)
+[A. Vocabulary List]
+...
+[B. Vocabulary Test]
+...
 [[ANSWERS]]`.trim() : `
 You are the dedicated MARCUS VOCA BUILDER engine.
 Core goals:
@@ -434,10 +490,17 @@ Important rules:
 4. Use meaning, context, usage, synonym, antonym, and lexical review.
 5. Do not turn the output into a grammar worksheet.
 6. Always provide an answer section.
+7. If rounds are requested, separate each round clearly.
+
 Output format:
 [[TITLE]]
 [[INSTRUCTIONS]]
 [[QUESTIONS]]
+### Round n (if requested)
+[A. Vocabulary List]
+...
+[B. Vocabulary Test]
+...
 [[ANSWERS]]`.trim();
   }
 
@@ -481,7 +544,7 @@ Output format:
 - 완성문장 전체를 clue로 주지 말 것.
 - 예:
   나에게 있어서 방과 후에 영화를 보는 것은 흥미롭다.
-  (interesting, it-to, watch, for, a movie, after school)
+(interesting, it-to, watch, for, a movie, after school)
 
 [B. 초과단어 1개 포함 재배열 영작]
 - 정답에 필요한 단어들 + 불필요 단어 1개를 함께 제시할 것.
@@ -498,7 +561,7 @@ Output format:
 - 원문 의미는 유지하되 지정 문법 구조로 바꾸어 영작하게 할 것.
 - 예:
   “나는 영어를 배우고 싶다.”
-  → to부정사를 사용하여 영작하시오.
+→ to부정사를 사용하여 영작하시오.
 
 clue 설계 규칙:
 1. clue는 풍부해야 한다.
@@ -568,7 +631,7 @@ Detailed item rules:
 - Never provide the complete final sentence as the clue.
 - Example:
   It is interesting for me to watch a movie after school.
-  → (interesting, it-to, watch, for, a movie, after school)
+→ (interesting, it-to, watch, for, a movie, after school)
 
 [B. Rearrangement writing with one extra word]
 - Provide all necessary chunks plus one unnecessary extra word.
@@ -649,10 +712,13 @@ function buildUserPrompt(input) {
   const modeLabel = getModeLabel(input.mode, input.language);
   const taskGuide = buildTaskGuide(input);
 
+  // 9. vocab-builder prompt 확장 (vocabSeriesBlock 적용)
   if (input.mode === "vocab-builder") {
+    const vocabSeriesBlock = "\n\n" + buildVocabSeriesBlock(input) + "\n\n";
+
     return input.language === "en" ?
-      `
-Generate a Vocab Builder worksheet.
+`
+Generate a Vocab Builder worksheet. ${vocabSeriesBlock}
 
 Title: ${title}
 Mode: ${input.mode} (${modeLabel})
@@ -671,7 +737,8 @@ Additional rules:
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
 `.trim() : `
-마커스 VOCA BUILDER 스타일 어휘 학습지를 생성하시오.
+마커스 VOCA BUILDER 스타일 어휘 학습지를 생성하시오. ${vocabSeriesBlock}
+
 제목: ${title}
 모드: ${input.mode} (${modeLabel})
 주제: ${input.topic}
@@ -783,8 +850,7 @@ function extractSection(rawText, startMarker, endMarker) {
   if (start === -1) return "";
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-  return end === -1 ?
-    rawText.slice(from).trim() : rawText.slice(from, end).trim();
+  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function formatMagicResponse(rawText, input) {
@@ -834,7 +900,6 @@ async function memberstackRequest(path, options = {}) {
       ...(options.headers || {}),
     },
   });
-
   const text = await response.text();
   let data = null;
 
@@ -902,7 +967,6 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
-
   for (const value of candidates) {
     const num = Number(value);
     if (Number.isFinite(num)) {
@@ -929,7 +993,6 @@ async function updateMemberMp(member, nextMp) {
       : {};
 
   const safeMp = sanitizeMp(nextMp, 0);
-
   const patchBody = {
     customFields: {
       ...currentCustomFields,
@@ -944,12 +1007,10 @@ async function updateMemberMp(member, nextMp) {
       MP: safeMp,
     },
   };
-
   const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
     method: "PATCH",
     body: JSON.stringify(patchBody),
   });
-
   return data?.data || null;
 }
 
@@ -984,7 +1045,6 @@ async function resolveMemberForMp(req) {
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
   const memberContext = await resolveMemberForMp(req);
-
   if (!memberContext.enabled || !memberContext.member) {
     return {
       enabled: false,
@@ -1001,7 +1061,6 @@ async function prepareMpState(req) {
   let member = memberContext.member;
   let currentMp = readMpFromMember(member);
   let trialGranted = false;
-
   if (!Number.isFinite(currentMp)) {
     currentMp = getInitialTrialMp();
     member = (await updateMemberMp(member, currentMp)) || member;
@@ -1030,14 +1089,12 @@ async function deductMpAfterSuccess(mpState) {
 
   const currentMp = Number(mpState.currentMp);
   const requiredMp = Number(mpState.requiredMp);
-
   if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
     return { ...mpState, deducted: false };
   }
 
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-
   return {
     ...mpState,
     member: updatedMember || mpState.member,
@@ -1058,11 +1115,9 @@ export default async function handler(req, res) {
 
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
-
   try {
     const input = normalizeInput(req.body || {});
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
-
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
       return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
@@ -1071,7 +1126,6 @@ export default async function handler(req, res) {
     const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
     const formatted = formatMagicResponse(rawText, input);
     const finalMpState = await deductMpAfterSuccess(mpState);
-
     return json(res, 200, {
       success: true,
       ...formatted,
