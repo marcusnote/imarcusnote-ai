@@ -76,7 +76,6 @@ function normalizeQuestionNumbering(text = "") {
     .split(/(?=^\s*\d+\.\s+)/gm)
     .map((v) => v.trim())
     .filter(Boolean);
-
   if (!blocks.length) return cleanupText(text);
 
   return blocks
@@ -90,20 +89,16 @@ function normalizeAnswerNumbering(text = "") {
     .split("\n")
     .map((v) => v.trim())
     .filter(Boolean);
-
   const numbered = lines.filter((line) => /^\d+\.\s+/.test(line));
   if (!numbered.length) return cleanupText(text);
-
   return numbered
     .map((line, idx) => line.replace(/^\d+\.\s*/, `${idx + 1}. `))
-    .join("\n")
-    .trim();
+    .join("\n");
 }
 
 function buildFallbackSplit(rawText) {
   const cleaned = cleanupText(rawText);
-  const answerMatch = cleaned.search(/\n\s*(정답\s*및\s*해설|정답과\s*해설|정답|해설|answers?)\s*[:\-]?\s*\n?/i);
-
+  const answerMatch = cleaned.search(/\n\s*(정답|해설|answers?)\s*[:\-]?\s*\n?/i);
   if (answerMatch === -1) {
     return {
       title: "",
@@ -121,327 +116,59 @@ function buildFallbackSplit(rawText) {
   };
 }
 
-function enforceHighDifficultyLabels(questionsText = "") {
-  const blocks = cleanupText(questionsText)
-    .split(/(?=^\s*\d+\.\s+)/gm)
-    .map((v) => v.trim())
-    .filter(Boolean);
-
-  if (!blocks.length) return cleanupText(questionsText);
-
-  const upgraded = blocks.map((block) => {
-    const lines = block.split("\n");
-    if (!lines.length) return block;
-
-    const firstLine = lines[0];
-    const hasFivePoint = /\((?:5|6|7|8|9|10)\s*(?:점|points?)\)/i.test(firstLine);
-    const hasLabel = /\[High Difficulty\]/i.test(firstLine);
-
-    if (hasFivePoint && !hasLabel) {
-      lines[0] = firstLine.replace(/\s*\((?:5|6|7|8|9|10)\s*(?:점|points?)\)/i, (m) => ` [High Difficulty] ${m}`);
-    }
-
-    return lines.join("\n");
-  });
-
-  return upgraded.join("\n\n").trim();
-}
-
-function formatReviewedOutput(rawText, fallbackTitle = "", engine = "wormhole") {
-  const title = cleanupText(extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]"));
-  const instructions = cleanupText(extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
-  const questions = cleanupText(extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]"));
-  const answers = cleanupText(extractSection(rawText, "[[ANSWERS]]", null));
-
-  let finalTitle = title || fallbackTitle;
-  let finalInstructions = instructions;
-  let finalQuestions = questions;
-  let finalAnswers = answers;
-
-  if (!finalQuestions) {
+function formatReviewedOutput(rawText, fallbackTitle = "") {
+  const title = cleanupText(
+    extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]")
+  );
+  const instructions = cleanupText(
+    extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]")
+  );
+  const questions = cleanupText(
+    extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]")
+  );
+  const answers = cleanupText(
+    extractSection(rawText, "[[ANSWERS]]", "")
+  );
+  if (!title && !instructions && !questions && !answers) {
     const fallback = buildFallbackSplit(rawText);
-    finalTitle = finalTitle || fallbackTitle;
-    finalInstructions = fallback.instructions;
-    finalQuestions = fallback.questions;
-    finalAnswers = fallback.answers;
+    return [
+      fallbackTitle || "",
+      fallback.instructions,
+      normalizeQuestionNumbering(fallback.questions),
+      fallback.answers ? normalizeAnswerNumbering(fallback.answers) : "",
+    ]
+      .filter(Boolean)
+      .join("\n\n")
+      .trim();
   }
 
-  finalQuestions = normalizeQuestionNumbering(finalQuestions);
-  if (engine === "mocks") {
-    finalQuestions = enforceHighDifficultyLabels(finalQuestions);
-  }
-  finalAnswers = normalizeAnswerNumbering(finalAnswers);
-
-  const contentParts = [];
-  if (finalTitle) contentParts.push(finalTitle);
-  if (finalInstructions) contentParts.push(finalInstructions);
-  if (finalQuestions) contentParts.push(finalQuestions);
-
-  const fullParts = [...contentParts];
-  if (finalAnswers) fullParts.push("정답 및 해설\n" + finalAnswers);
-
-  return {
-    title: finalTitle,
-    instructions: finalInstructions,
-    content: cleanupText(contentParts.join("\n\n")),
-    answerSheet: cleanupText(finalAnswers),
-    fullText: cleanupText(fullParts.join("\n\n")),
-    actualCount: countQuestions(finalQuestions),
-  };
+  return [
+    title || fallbackTitle || "",
+    instructions,
+    questions ? normalizeQuestionNumbering(questions) : "",
+    answers ? normalizeAnswerNumbering(answers) : "",
+  ]
+    .filter(Boolean)
+    .join("\n\n")
+    .trim();
 }
 
-function needsWormholeReview(rawOutput = "") {
-  const text = String(rawOutput || "");
-  const reviewSignals = [
-    /how many of the following/i,
-    /select all/i,
-    /all the sentences/i,
-    /which of the following are correct/i,
-    /옳은 것의 개수/,
-    /옳지 않은 것의 개수/,
-    /어색한 것의 개수/,
-    /오류가 있는 문장의 개수/,
-    /개수형/,
-    /모두 고른 것은/,
-    /복수판단/,
-    /A\)\s.+\nB\)\s.+/s,
-    /a\.\s.+\nb\.\s.+/s,
+function detectMagicIntent(text = "") {
+  const t = String(text || "").toLowerCase();
+  const conceptKeywords = [
+    "개념", "개념설명", "설명", "정리", "예문", "문법 설명",
+    "grammar explanation", "concept", "examples", "example sentences",
   ];
-  return reviewSignals.some((pattern) => pattern.test(text));
-}
+  const trainingKeywords = [
+    "영작", "영작훈련", "쓰기", "writing", "composition", "rearrange",
+    "재배열", "문장 완성", "워크북",
+  ];
+  const isConcept = conceptKeywords.some((k) => t.includes(k));
+  const isTraining = trainingKeywords.some((k) => t.includes(k));
 
-function looksStructuredEnough(rawOutput = "") {
-  const text = String(rawOutput || "");
-  const hasTitle = text.includes("[[TITLE]]");
-  const hasQuestions = text.includes("[[QUESTIONS]]");
-  const hasAnswers = text.includes("[[ANSWERS]]");
-  return hasTitle && hasQuestions && hasAnswers;
-}
-
-function buildMocksReviewSystemPrompt(language = "ko") {
-  if (language === "en") {
-    return `
-You are the MOCKS PREMIUM review engine of I•marcusnote.
-Your task is to validate and refine an already generated high-school transformed exam set.
-
-[MOCKS PREMIUM VALIDATION RULES]
-1. Confirm that the set matches a premium high-school transformed exam style.
-2. Confirm that the following core types are meaningfully represented:
-   - main idea
-   - gist / key point
-   - author’s claim
-   - author’s attitude
-   - title
-3. Confirm that gist is clearly distinct from main idea and claim.
-4. Confirm that synonym / equivalent / antonym items are context-based, not memorization-based.
-5. Confirm that implication and inference items require genuine reasoning.
-6. Confirm that distractors are plausible and not obviously weak.
-7. If a question is worth 5 points or more, ensure [High Difficulty] is present.
-8. If [High Difficulty] exists on an easy item, raise the item quality.
-9. Preserve [High Difficulty] in the final visible output.
-10. Upgrade shallow items into premium transformed items when necessary.
-11. Preserve numbering and overall structure unless a correction is necessary.
-12. Keep the requested count as closely as possible.
-
-You must output only:
-[[TITLE]]
-[[INSTRUCTIONS]]
-[[QUESTIONS]]
-[[ANSWERS]]
-`.trim();
-  }
-
-  return `
-당신은 I•marcusnote의 MOCKS PREMIUM 전용 검수 엔진이다.
-역할: 이미 생성된 Mocks 변형 문제 결과물이 프리미엄 고등 시험 수준에 부합하는지 검수하고 보정한다.
-
-[MOCKS PREMIUM VALIDATION RULES]
-1. 결과물이 상위권 고등 변형 문제 스타일인지 확인하라.
-2. 다음 핵심 유형들이 의미 있게 포함되었는지 확인하라:
-   - 주제
-   - 요지
-   - 주장
-   - 글쓴이의 태도
-   - 제목
-3. 요지가 주제 및 주장과 명확히 구분되는지 확인하라.
-4. 유의어/동의어/반의어 문항이 단순 암기식이 아닌 문맥 기반인지 확인하라.
-5. 의미함축 및 추론 문항이 실제적인 논리 추론을 요구하는지 확인하라.
-6. 선택지가 그럴듯하며 명백히 쉬운 오답이 아닌지 확인하라.
-7. 5점 이상 문항에는 반드시 [High Difficulty] 표기가 있는지 확인하라.
-8. 쉬운 문항에 [High Difficulty]가 붙어 있다면 문항 질을 상향하라.
-9. [High Difficulty] 표기를 최종 출력에 반드시 유지하라.
-10. 피상적인 문항은 필요시 프리미엄 변형 문항으로 업그레이드하라.
-11. 번호와 전체 구조는 꼭 유지하되 필요한 부분만 정교하게 수정하라.
-12. 요청 문항 수와 실제 문항 수가 크게 어긋나지 않게 보정하라.
-
-[[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 마커를 반드시 사용하라.
-`.trim();
-}
-
-function buildMocksReviewUserPrompt({
-  prompt,
-  rawOutput,
-  requestedCount,
-  difficulty,
-  worksheetTitle,
-  language,
-}) {
-  if (language === "en") {
-    return `
-Target engine: mocks
-Requested count: ${requestedCount}
-Difficulty: ${difficulty}
-Worksheet title: ${worksheetTitle || "(none)"}
-
-Original user request:
-${prompt || "(none)"}
-
-Original output to review:
-${rawOutput}
-
-Apply the MOCKS PREMIUM VALIDATION RULES.
-Return only the final reviewed worksheet in the required marker structure.
-`.trim();
-  }
-
-  return `
-검수 대상 엔진: mocks
-요청 문항 수: ${requestedCount}
-난이도: ${difficulty}
-워크시트 제목: ${worksheetTitle || "(없음)"}
-
-원본 사용자 요청:
-${prompt || "(없음)"}
-
-검수할 원본 결과물:
-${rawOutput}
-
-위의 MOCKS PREMIUM VALIDATION RULES를 적용하여 최종 시험지를 완성하라.
-구조는 유지하되 문제의 질, 논리, 선택지, 표기를 프리미엄 수준으로 보정하라.
-반드시 최종 출력물만 작성하라.
-`.trim();
-}
-
-function buildWormholeReviewSystemPrompt(language = "ko") {
-  if (language === "ko") {
-    return `
-당신은 I•marcusnote의 WORMHOLE 전용 검수 필터 v2이다.
-역할:
-- 이미 생성된 웜홀 결과물을 전체 재작성하지 말고, 필요한 부분만 정교하게 수정한다.
-- 특히 문항 개수, 번호, 정답, 개수형 판단 논리를 엄격하게 검수한다.
-
-최우선 검수 포인트:
-1. 문항 수가 요청 개수와 정확히 일치하는가
-2. 문항 번호가 1번부터 순서대로 이어지는가
-3. 정답/해설 줄 수가 문항 수와 정확히 일치하는가
-4. 개수형 문제의 실제 개수가 정답과 일치하는가
-5. 문항 본문과 정답이 서로 모순되지 않는가
-6. 제목/지시문/문항/정답 구조가 깨지지 않았는가
-
-행동 원칙:
-- 구조를 최대한 유지한다.
-- 문항 자체가 좋으면 최소 수정만 한다.
-- 개수형/정답 불일치/번호 꼬임은 반드시 수정한다.
-- 필요시 영어 문장 자체의 명백한 오류만 최소 수정한다.
-- 불필요한 해설 확장 금지.
-- 새 문항 대량 생성 금지.
-- 요청 개수보다 많으면 뒤를 잘라라.
-- 부족하면 기존 문항을 근거로 최소 보정하되, 가능하면 구조 파손 없이 맞춰라.
-
-출력 형식:
-[[TITLE]]
-[[INSTRUCTIONS]]
-[[QUESTIONS]]
-[[ANSWERS]]
-`.trim();
-  }
-
-  return `
-You are the WORMHOLE review filter v2 for I•marcusnote.
-Role:
-- Do not fully rewrite the worksheet.
-- Repair only what is necessary.
-- Strictly verify item count, numbering, answers, and count-based logic.
-
-Top review priorities:
-1. Question count matches the requested count exactly.
-2. Question numbering runs cleanly from 1 onward.
-3. Answer lines match the question count exactly.
-4. Count-based items are recalculated and corrected.
-5. No contradiction between question body and answer sheet.
-6. Title / instruction / questions / answers structure stays intact.
-
-Behavior rules:
-- Preserve structure whenever possible.
-- Minimal edits if the worksheet is already strong.
-- Fix count-logic, answer mismatch, and numbering errors.
-- Only minimally fix obvious English issues if needed.
-- Do not over-expand explanations.
-- Do not generate large amounts of new content.
-- Trim overflow items if there are too many.
-- If there are too few, repair conservatively.
-
-Output only:
-[[TITLE]]
-[[INSTRUCTIONS]]
-[[QUESTIONS]]
-[[ANSWERS]]
-`.trim();
-}
-
-function buildWormholeReviewUserPrompt({
-  prompt,
-  rawOutput,
-  difficulty,
-  requestedCount,
-  worksheetTitle,
-  language,
-}) {
-  if (language === "ko") {
-    return `
-검수 대상 엔진: wormhole
-난이도: ${difficulty}
-요청 문항 수: ${requestedCount}
-워크시트 제목: ${worksheetTitle || "(없음)"}
-
-원래 사용자 요청:
-${prompt || "(없음)"}
-
-원본 결과물:
-${rawOutput}
-
-검수 초점:
-- 정답 번호 오류 수정
-- 개수형 문제의 실제 개수 재검산
-- 정답/해설과 문항 본문 불일치 수정
-- 문제 수와 정답 수를 정확히 맞추기
-- 구조는 유지하고 필요한 부분만 최소 수정
-
-반드시 최종 출력만 작성하라.
-`.trim();
-  }
-
-  return `
-Target engine: wormhole
-Difficulty: ${difficulty}
-Requested item count: ${requestedCount}
-Worksheet title: ${worksheetTitle || "(none)"}
-
-Original user request:
-${prompt || "(none)"}
-
-Original output:
-${rawOutput}
-
-Review focus:
-- fix answer numbering errors
-- recalculate count-based questions
-- fix contradictions between questions and answers
-- align question count and answer count exactly
-- preserve structure and edit minimally
-
-Return only the final reviewed worksheet.
-`.trim();
+  if (isConcept && isTraining) return "concept+training";
+  if (isConcept) return "concept";
+  return "training";
 }
 
 async function callOpenAI(systemPrompt, userPrompt) {
@@ -458,7 +185,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
     body: JSON.stringify({
       model: OPENAI_MODEL,
       temperature: 0.2,
-      max_tokens: 5000,
+      max_tokens: 7000,
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
@@ -466,13 +193,253 @@ async function callOpenAI(systemPrompt, userPrompt) {
     }),
   });
 
-  const data = await response.json().catch(() => ({}));
-
   if (!response.ok) {
-    throw new Error(data?.error?.message || "OpenAI review request failed");
+    const errorText = await response.text();
+    throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
   }
 
-  return String(data?.choices?.[0]?.message?.content || "").trim();
+  const data = await response.json();
+  const text = data?.choices?.[0]?.message?.content;
+  if (!text || typeof text !== "string") {
+    throw new Error("Empty model response");
+  }
+
+  return text.trim();
+}
+
+function buildSystemPrompt({ engine, language, difficulty, intentMode }) {
+  const isKo = language === "ko";
+  if (engine === "magic" && (intentMode === "concept" || intentMode === "concept+training")) {
+    return isKo
+      ? `
+당신은 MARCUSNOTE Magic 개념설명 자료를 검수하는 엄격한 교육 편집자이다.
+
+핵심 원칙:
+- 이것은 영작훈련지만이 아니라, 개념 설명 + 예문 + 간단 확인문항 자료이다.
+- 절대로 개념설명 자료를 영작훈련 워크북으로 바꾸지 말 것.
+- 반드시 "개념 설명 -> 핵심 구조 정리 -> 예문 -> Mini Check -> 정답" 흐름을 유지할 것.
+- 만약 워크북 문항이 너무 많다면, 이를 Mini Check 섹션으로 압축하여 3~5문항으로 줄일 것.
+- "짧은 설명 1문단 + 많은 문제" 형태의 구조가 되는 것을 절대 허용하지 말 것.
+
+반드시 지킬 규칙:
+1. 원래 문법 주제와 학습 의도를 유지할 것.
+2. 개념 설명이 있으면 보존하고 최소 4~6개 bullet 수준으로 상세히 다듬을 것.
+3. 핵심 구조 정리를 반드시 별도 섹션으로 보존할 것.
+4. 예문은 6~10개 사이로 유지하며, 문제형이 아닌 완전한 문장으로 고칠 것.
+5. Mini Check는 3~5문항 수준으로만 유지할 것.
+6. 정답은 완전한 문장으로 고칠 것.
+7. 미완성 문장, 끊긴 문장, 어색한 정답을 반드시 수정할 것.
+8. 형식, 번호, 줄바꿈, 간격만 정돈하고 과도한 재창작은 하지 말 것.
+9. 출력은 반드시 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 구조를 유지할 것.
+10. 마크다운 설명문, 부가 코멘트, 편집자 메모를 넣지 말 것.
+`.trim()
+      : `
+You are a strict educational editor reviewing a MARCUSNOTE Magic concept sheet.
+
+Core rules:
+- This is a concept explanation + examples + mini check sheet.
+- Do NOT convert a concept sheet into a writing-only workbook.
+- If the worksheet contains too many practice items, compress them into a small mini check section (3-5 items).
+- Never allow the structure to become "one short explanation + many workbook items".
+- Ensure the output contains: 1. concept explanation, 2. pattern summary, 3. example sentences, 4. mini check, 5. answers.
+
+Must do:
+1. Preserve the original grammar target and learning intention.
+2. Keep concept explanation and refine it (at least 4-6 bullet points).
+3. Keep pattern summary section if present.
+4. Fix example sentences into complete natural sentences (6-10 examples).
+5. Keep mini check within 3-5 items.
+6. Fix answer lines into complete natural sentences.
+7. Repair incomplete or broken sentences.
+8. Clean formatting, numbering, spacing only.
+9. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
+10. Output worksheet only with no commentary.
+`.trim();
+  }
+
+  if (engine === "magic") {
+    return isKo
+      ? `
+당신은 MARCUSNOTE Magic 영작훈련 워크북을 검수하는 엄격한 교육 편집자이다.
+
+핵심 원칙:
+- 영작훈련 정체성을 반드시 유지할 것.
+- 시험지나 개념설명지로 바꾸지 말 것.
+
+반드시 지킬 규칙:
+1. 원래 문법 주제와 영작훈련 의도를 유지할 것.
+2. 각 문항이 실제 문장 작성을 요구하도록 유지할 것.
+3. clue 구조를 불필요하게 삭제하지 말 것.
+4. 정답은 모두 완전한 문장으로 고칠 것.
+5. 미완성 답안이나 문법 목표에서 벗어난 답안을 수정할 것.
+6. 형식, 번호, 줄바꿈, 간격을 정돈할 것.
+7. 과도한 재창작은 하지 말 것.
+8. 출력은 반드시 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 구조를 유지할 것.
+9. 설명문 추가, 코멘트 추가, 시험형 변환을 하지 말 것.
+`.trim()
+      : `
+You are a strict educational editor reviewing a MARCUSNOTE Magic writing workbook.
+
+Core rules:
+- Preserve writing-training identity.
+- Do NOT convert it into a test sheet or concept sheet.
+
+Must do:
+1. Preserve the original grammar target and writing-training intention.
+2. Keep each item as real sentence-construction practice.
+3. Preserve useful clue structure.
+4. Fix all answers into complete natural sentences.
+5. Repair incomplete or off-target answers.
+6. Clean numbering, spacing, and formatting.
+7. Avoid excessive rewriting.
+8. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
+9. Do not add commentary or concept explanation.
+`.trim();
+  }
+
+  if (engine === "wormhole") {
+    return isKo
+      ? `
+당신은 MARCUSNOTE Wormhole 고난도 문법/시험형 자료를 검수하는 엄격한 교육 편집자이다.
+
+핵심 원칙:
+- 시험형 정체성과 고난도 성격을 유지할 것.
+- 매직형 영작훈련지로 바꾸지 말 것.
+
+반드시 지킬 규칙:
+1. 원래 시험 의도와 문법 포인트를 유지할 것.
+2. 문제-정답 논리 충돌을 바로잡을 것.
+3. 번호, 형식, 보기 배열, 정답 영역을 정돈할 것.
+4. 어색하거나 자기모순적인 해설은 최소 수정할 것.
+5. 과도한 재창작은 하지 말 것.
+6. 출력은 반드시 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 구조를 유지할 것.
+`.trim()
+      : `
+You are a strict educational editor reviewing a MARCUSNOTE Wormhole high-difficulty exam sheet.
+
+Core rules:
+- Preserve exam identity and high-difficulty character.
+- Do NOT convert it into a writing workbook.
+
+Must do:
+1. Preserve the original exam intention and grammar focus.
+2. Repair logic conflicts between items and answers.
+3. Clean numbering, options, answer section, and spacing.
+4. Fix awkward or self-contradictory explanations minimally.
+5. Avoid excessive rewriting.
+6. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
+`.trim();
+  }
+
+  if (engine === "mocks") {
+    return isKo
+      ? `
+당신은 MARCUSNOTE Reading Mocks 자료를 검수하는 엄격한 교육 편집자이다.
+
+핵심 원칙:
+- 모의고사/독해형 정체성을 유지할 것.
+- 워크북형으로 바꾸지 말 것.
+
+반드시 지킬 규칙:
+1. 문제 구조와 독해 의도를 유지할 것.
+2. 형식과 번호를 정돈할 것.
+3. 정답과 해설이 있으면 최소 수정으로 정리할 것.
+4. 출력은 반드시 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 구조를 유지할 것.
+`.trim()
+      : `
+You are a strict educational editor reviewing a MARCUSNOTE Reading Mocks sheet.
+
+Core rules:
+- Preserve mock-exam / reading identity.
+- Do NOT convert it into a workbook.
+
+Must do:
+1. Preserve problem structure and reading intention.
+2. Clean numbering and formatting.
+3. Lightly repair answers/explanations if present.
+4. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
+`.trim();
+  }
+
+  return isKo
+    ? `
+당신은 엄격한 교육 자료 편집자이다.
+반드시 지킬 규칙:
+1. 원래 의도를 유지할 것.
+2. 형식, 번호, 간격만 정리할 것.
+3. 출력은 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 구조를 유지할 것.
+`.trim()
+    : `
+You are a strict educational worksheet editor.
+Must do:
+1. Preserve original intent.
+2. Clean formatting, numbering, and spacing only.
+3. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
+`.trim();
+}
+
+function buildUserPrompt({
+  engine,
+  difficulty,
+  count,
+  worksheetTitle,
+  prompt,
+  rawOutput,
+  intentMode,
+  language,
+}) {
+  const isKo = language === "ko";
+  return isKo
+    ? `
+[입력 정보]
+엔진: ${engine}
+난이도: ${difficulty}
+문항 수 목표: ${count}
+매직 의도 모드: ${intentMode}
+제목: ${worksheetTitle || ""}
+사용자 요청:
+${prompt || ""}
+
+[원본 생성 결과]
+${rawOutput || ""}
+
+[검수 작업]
+- 구조를 유지하면서 다듬으시오.
+- 반드시 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 4개 섹션으로 반환하시오.
+- 제목은 자연스럽게 정리하되 주제를 바꾸지 마시오.
+- instructions는 1개 단락으로 정리하시오.
+- questions에는 본문/문항만 넣으시오.
+- answers에는 정답/해설만 넣으시오.
+- 매직 concept 모드면 개념설명과 예문 흐름을 보존하시오. (문제 수를 늘리지 마시오)
+- 매직 training 모드면 영작훈련 구조를 보존하시오.
+- 미완성 문장을 반드시 완성하시오.
+- 불필요한 잡문, 마크다운, 코드펜스는 넣지 마시오.
+`.trim()
+    : `
+[Input]
+Engine: ${engine}
+Difficulty: ${difficulty}
+Target item count: ${count}
+Magic intent mode: ${intentMode}
+Title: ${worksheetTitle || ""}
+User prompt:
+${prompt || ""}
+
+[Raw generated output]
+${rawOutput || ""}
+
+[Review task]
+- Refine while preserving structure.
+- Return exactly 4 sections: [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
+- Keep the title natural without changing the topic.
+- Keep instructions as one paragraph.
+- Put only body/items in questions.
+- Put only answer/explanation content in answers.
+- If magic concept mode, preserve explanation + examples flow and do NOT increase question count.
+- If magic training mode, preserve writing-training flow.
+- Repair incomplete sentences.
+- Do not add markdown or commentary.
+`.trim();
 }
 
 export default async function handler(req, res) {
@@ -483,121 +450,74 @@ export default async function handler(req, res) {
   }
 
   if (req.method !== "POST") {
-    return json(res, 405, {
-      success: false,
-      error: "METHOD_NOT_ALLOWED",
-      message: "POST 요청만 허용됩니다.",
-    });
+    return json(res, 405, { error: "Method not allowed" });
   }
 
   try {
-    const engine = sanitizeEngine(req.body?.engine || "wormhole");
-    const prompt = sanitizeString(req.body?.prompt || req.body?.userPrompt || "");
-    const rawOutput = sanitizeString(req.body?.rawOutput || "");
-    const difficulty = sanitizeDifficulty(req.body?.difficulty || "high");
-    const requestedCount = sanitizeCount(
-      req.body?.count || req.body?.requestedCount || 25,
-      25
-    );
-    const worksheetTitle = sanitizeString(req.body?.worksheetTitle || "");
-    const language = ["ko", "en"].includes(req.body?.language)
-      ? req.body.language
-      : inferLanguage(`${prompt}\n${rawOutput}\n${worksheetTitle}`);
+    const engine = sanitizeEngine(req.body?.engine);
+    const difficulty = sanitizeDifficulty(req.body?.difficulty);
+    const rawCount = sanitizeCount(req.body?.count, 25);
+    const worksheetTitle = sanitizeString(req.body?.worksheetTitle);
+    const prompt = sanitizeString(req.body?.prompt);
+    const rawOutput = sanitizeString(req.body?.rawOutput);
+
+    const language =
+      sanitizeString(req.body?.language) || inferLanguage(`${worksheetTitle}\n${prompt}\n${rawOutput}`);
 
     if (!rawOutput) {
-      return json(res, 400, {
-        success: false,
-        error: "INVALID_REQUEST",
-        message: "rawOutput이 필요합니다.",
-      });
+      return json(res, 400, { error: "No output to review" });
     }
 
-    let systemPrompt;
-    let userPrompt;
-    let reviewMode = "unknown";
+    const intentMode =
+      engine === "magic"
+        ? detectMagicIntent(`${worksheetTitle}\n${prompt}\n${rawOutput}`)
+        : "default";
 
-    if (engine === "mocks") {
-      systemPrompt = buildMocksReviewSystemPrompt(language);
-      userPrompt = buildMocksReviewUserPrompt({
-        prompt,
-        rawOutput,
-        requestedCount,
-        difficulty,
-        worksheetTitle,
-        language,
-      });
-      reviewMode = "mocks-premium-validation-v2";
-    } else if (engine === "wormhole") {
-      if (!needsWormholeReview(rawOutput) && looksStructuredEnough(rawOutput)) {
-        const passthrough = formatReviewedOutput(rawOutput, worksheetTitle, engine);
-        return json(res, 200, {
-          success: true,
-          engine,
-          title: passthrough.title,
-          difficulty,
-          requestedCount,
-          actualCount: passthrough.actualCount,
-          instructions: passthrough.instructions,
-          content: passthrough.content,
-          answerSheet: passthrough.answerSheet,
-          fullText: passthrough.fullText,
-          reviewed: false,
-          reviewMode: "wormhole-skip-light-pass-v2",
-        });
-      }
+    // Concept 모드일 때 count 강제 축소
+    const count = (intentMode === "concept" || intentMode === "concept+training")
+      ? 5
+      : rawCount;
 
-      systemPrompt = buildWormholeReviewSystemPrompt(language);
-      userPrompt = buildWormholeReviewUserPrompt({
-        prompt,
-        rawOutput,
-        difficulty,
-        requestedCount,
-        worksheetTitle,
-        language,
-      });
-      reviewMode = "wormhole-count-answer-review-v2";
-    } else {
-      const passthrough = formatReviewedOutput(rawOutput, worksheetTitle, engine);
-      return json(res, 200, {
-        success: true,
-        engine,
-        title: passthrough.title,
-        difficulty,
-        requestedCount,
-        actualCount: passthrough.actualCount,
-        instructions: passthrough.instructions,
-        content: passthrough.content,
-        answerSheet: passthrough.answerSheet,
-        fullText: passthrough.fullText,
-        reviewed: false,
-        reviewMode: "engine-passthrough",
-      });
-    }
+    const systemPrompt = buildSystemPrompt({
+      engine,
+      language,
+      difficulty,
+      intentMode,
+    });
+
+    const userPrompt = buildUserPrompt({
+      engine,
+      difficulty,
+      count,
+      worksheetTitle,
+      prompt,
+      rawOutput,
+      intentMode,
+      language,
+    });
 
     const reviewedRaw = await callOpenAI(systemPrompt, userPrompt);
-    const formatted = formatReviewedOutput(reviewedRaw, worksheetTitle, engine);
+    const formatted = formatReviewedOutput(reviewedRaw, worksheetTitle);
+
+    if (!formatted) {
+      return json(res, 500, { error: "Empty review output" });
+    }
 
     return json(res, 200, {
-      success: true,
-      engine,
-      title: formatted.title,
-      difficulty,
-      requestedCount,
-      actualCount: formatted.actualCount,
-      instructions: formatted.instructions,
-      content: formatted.content,
-      answerSheet: formatted.answerSheet,
-      fullText: formatted.fullText,
-      reviewed: true,
-      reviewMode,
+      result: formatted,
+      fullText: formatted,
+      content: formatted,
+      meta: {
+        engine,
+        difficulty,
+        count,
+        language,
+        intentMode,
+      },
     });
   } catch (error) {
-    console.error("review-output error:", error);
     return json(res, 500, {
-      success: false,
-      error: "REVIEW_FAILED",
-      message: "출력 검수에 실패했습니다.",
-      detail: error?.message || "Unknown error",
+      error: error?.message || "Internal server error",
     });
   }
 }
