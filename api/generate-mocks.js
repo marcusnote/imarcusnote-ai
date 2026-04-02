@@ -246,7 +246,6 @@ function buildSystemPrompt(input) {
   const premiumBlock = input.premium ? "\n\n" + buildPremiumBlock(input.language) + "\n\n" : "\n\n";
   return `
 You are the premium transformed reading-exam engine of I•marcusnote.
-
 [ENGINE IDENTITY]
 Engine Name: Mocks
 Purpose: premium transformed reading worksheet generator
@@ -257,12 +256,9 @@ This is a premium transformed exam generator.
 [CORE GOAL]
 Generate a premium transformed reading worksheet based on the user's source material.
 The output must feel like a real school-exam / CSAT-style transformation set.
-
 [CONTROLLED TRANSFORMATION RULE]
 The worksheet must be clearly based on the source passage.
-
 However, it must NOT become a completely unrelated new passage.
-
 Strict rules:
 - Preserve the core topic, main logic, and central message of the source.
 - Maintain recognizable conceptual overlap with the original.
@@ -272,7 +268,6 @@ Strict rules:
 - Replace wording meaningfully.
 - Reorder or regroup supporting details when helpful.
 - Change the testing angle while preserving the original intellectual base.
-
 The final result must feel like:
 "a professionally transformed version of the original passage"
 
@@ -347,10 +342,8 @@ Use distractors such as:
 - unsupported inference
 
 Do NOT make silly or obviously wrong distractors.
-
 [HIGH DIFFICULTY RULE]
 If any question is worth 5 points or more, you MUST mark it with [High Difficulty].
-
 High-difficulty items should usually involve:
 - inference
 - implication
@@ -369,7 +362,6 @@ Avoid repeating:
 - the same cognitive skill too many times
 
 Each item should feel independently designed.
-
 [EXAM FEEL RULE]
 The final worksheet must feel like:
 - a premium academy material
@@ -381,7 +373,6 @@ ${premiumBlock}
 
 출력 형식:
 반드시 아래 마커 구조만 출력한다.
-
 [[TITLE]]
 (한 줄 제목)
 
@@ -412,11 +403,9 @@ function buildUserPrompt(input) {
         ? `\nPremium mode is ON.\n- Raise distractor quality.\n- Increase inference and implication density.\n- Make answer choices more competitive.\n`
         : `\n프리미엄 모드 활성화:\n- 선택지의 부분 타당성과 경쟁력을 높일 것.\n- 함축과 추론 밀도를 높일 것.\n- 정답이 키워드만으로 보이지 않게 설계할 것.\n`)
     : "";
-
   if (input.language === "en") {
     return `
 Generate a premium transformed Mock Exam worksheet with the following conditions.
-
 Title: ${title}
 Engine: mock_exam
 Level: ${input.level}
@@ -438,7 +427,6 @@ Mandatory rules:
 - Every question must have exactly 5 options.
 - Mark 5pt+ questions with [High Difficulty].
 - Ensure meaningful type variety.
-
 Original user request:
 ${input.userPrompt || "(No additional request provided.)"}
 `.trim();
@@ -446,7 +434,6 @@ ${input.userPrompt || "(No additional request provided.)"}
 
   return `
 다음 조건에 맞는 상품형 마커스 모의고사 변형문제를 생성하시오.
-
 제목: ${title}
 엔진: mock_exam
 레벨: ${input.level}
@@ -606,12 +593,46 @@ function addCors(res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
 }
 
+/* =========================
+   MP deduction helpers
+   ========================= */
+
 function getMemberstackHeaders() {
   if (!MEMBERSTACK_SECRET_KEY) return null;
   return {
     "x-api-key": MEMBERSTACK_SECRET_KEY,
     "Content-Type": "application/json",
   };
+}
+
+async function memberstackRequest(path, options = {}) {
+  const headers = getMemberstackHeaders();
+  if (!headers) {
+    throw new Error("Missing MEMBERSTACK_SECRET_KEY");
+  }
+
+  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
+    ...options,
+    headers: {
+      ...headers,
+      ...(options.headers || {}),
+    },
+  });
+
+  const text = await response.text();
+  let data = null;
+
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    data = text;
+  }
+
+  if (!response.ok) {
+    throw new Error(`Memberstack request failed: ${response.status}`);
+  }
+
+  return data;
 }
 
 function getRequiredMp(reqBody = {}) {
@@ -625,7 +646,7 @@ function getInitialTrialMp() {
 function extractBearerToken(req) {
   const raw = req?.headers?.authorization || req?.headers?.Authorization || "";
   const match = String(raw).match(/^Bearer\s+(.+)$/i);
-  return match ? match[1].trim() : "";
+  return match ? match[1] : "";
 }
 
 function extractMemberId(req) {
@@ -637,47 +658,11 @@ function extractMemberId(req) {
   );
 }
 
-async function memberstackRequest(path, options = {}) {
-  const headers = getMemberstackHeaders();
-  if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
-    ...options,
-    headers: {
-      ...headers,
-      ...(options.headers || {}),
-    },
-  });
-  const text = await response.text();
-  let data = null;
-
-  try {
-    data = text ? JSON.parse(text) : null;
-  } catch {
-    data = text;
-  }
-
-  if (!response.ok) {
-    throw new Error(
-      `Memberstack request failed: ${response.status} ${
-        typeof data === "string" ? data : JSON.stringify(data)
-      }`
-    );
-  }
-
-  return data;
-}
-
 async function verifyMemberToken(token) {
   if (!token) return null;
-
-  const payload = { token };
-  if (MEMBERSTACK_APP_ID) {
-    payload.audience = MEMBERSTACK_APP_ID;
-  }
-
   const data = await memberstackRequest("/verify-token", {
     method: "POST",
-    body: JSON.stringify(payload),
+    body: JSON.stringify({ token }),
   });
   return data?.data || null;
 }
@@ -686,13 +671,13 @@ async function getMemberById(memberId) {
   if (!memberId) return null;
   const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
     method: "GET",
-    headers: { "Content-Type": "application/json" },
   });
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
+
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
@@ -701,6 +686,7 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
+
   for (const value of candidates) {
     const parsed = Number(value);
     if (Number.isFinite(parsed)) {
@@ -740,10 +726,12 @@ async function updateMemberMp(member, nextMp) {
       MP: safeNextMp,
     },
   };
+
   const data = await memberstackRequest(`/${encodeURIComponent(member.id)}`, {
     method: "PATCH",
     body: JSON.stringify(body),
   });
+
   return data?.data || null;
 }
 
@@ -769,6 +757,7 @@ async function ensureTrialMp(member) {
 
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
+
   if (!MEMBERSTACK_SECRET_KEY) {
     return {
       enabled: false,
@@ -810,7 +799,7 @@ async function prepareMpState(req) {
   if (!member?.id) {
     return {
       enabled: false,
-      reason: "member-not-resolved",
+      reason: "member-not-provided",
       requiredMp,
       currentMp: null,
       remainingMp: null,
@@ -820,17 +809,17 @@ async function prepareMpState(req) {
     };
   }
 
-  const trialState = await ensureTrialMp(member);
+  const ensured = await ensureTrialMp(member);
 
   return {
     enabled: true,
     reason: "memberstack-synced",
     requiredMp,
-    currentMp: trialState.currentMp,
-    remainingMp: trialState.currentMp,
-    member: trialState.member,
+    currentMp: ensured.currentMp,
+    remainingMp: ensured.currentMp,
+    member: ensured.member,
     deducted: false,
-    trialGranted: trialState.trialGranted,
+    trialGranted: ensured.trialGranted,
   };
 }
 
@@ -844,6 +833,7 @@ async function deductMpAfterSuccess(mpState) {
 
   const currentMp = sanitizeMp(mpState.currentMp, 0);
   const requiredMp = sanitizeMp(mpState.requiredMp, 0);
+
   if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
     return {
       ...mpState,
@@ -853,6 +843,7 @@ async function deductMpAfterSuccess(mpState) {
 
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
+
   return {
     ...mpState,
     member: updatedMember || mpState.member,
