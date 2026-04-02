@@ -564,13 +564,11 @@ function resolveTextbookGrammar(textbookInfo) {
   const gradeMap = publisherMap?.[textbookInfo.gradeLabel];
   const rawGrammarList = gradeMap?.[textbookInfo.lesson];
   if (!rawGrammarList || !rawGrammarList.length) return null;
-
   const grammarList = rawGrammarList
     .map(normalizeGrammarLabel)
     .filter(Boolean);
 
   if (!grammarList.length) return null;
-
   return {
     ...textbookInfo,
     grammarList,
@@ -590,7 +588,6 @@ function normalizeInput(body = {}) {
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || "")
   ].filter(Boolean).join(" ");
-
   const textbookRequest = detectTextbookRequest(mergedText);
   const textbookResolved = resolveTextbookGrammar(textbookRequest);
 
@@ -692,10 +689,8 @@ function buildGrammarSystemPrompt(input) {
 - 전체 문항이 실제 중등 내신형 문법 시험처럼 보이게 할 것.
 `
     : "";
-
   return `당신은 영어 교육자이자 전문 문항 출제 위원입니다.
 학생들의 변별력을 높이기 위한 정교한 영어 문법 문제를 제작합니다.
-
 ${textbookBlock}
 
 [문항 설계 기준]
@@ -746,7 +741,6 @@ function buildGrammarUserPrompt(input) {
 - 이 단원은 결합형 문항을 포함한 교과서 단원형으로 출제할 것
 `
     : "";
-
   return `마커스웜홀 스타일 영어 문법 문제 세트를 생성하시오.
 
 제목: ${title}
@@ -829,6 +823,8 @@ function formatWormholeResponse(rawText, input) {
   };
 }
 
+// --- 교체된 Memberstack 블록 시작 ---
+
 function addCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -836,62 +832,146 @@ function addCors(res) {
 }
 
 async function memberstackRequest(path, options = {}) {
-  if (!MEMBERSTACK_SECRET_KEY) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
+  if (!MEMBERSTACK_SECRET_KEY) {
+    throw new Error("Missing MEMBERSTACK_SECRET_KEY");
+  }
+
   const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
     ...options,
-    headers: { "x-api-key": MEMBERSTACK_SECRET_KEY, "Content-Type": "application/json", ...(options.headers || {}) },
+    headers: {
+      "x-api-key": MEMBERSTACK_SECRET_KEY,
+      "Content-Type": "application/json",
+      ...(options.headers || {}),
+    },
   });
+
   const text = await response.text();
   let data = null;
-  try { data = text ? JSON.parse(text) : null; } catch { data = text; }
-  if (!response.ok) throw new Error(`Memberstack failed: ${response.status}`);
+
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    data = text;
+  }
+
+  if (!response.ok) {
+    throw new Error(`Memberstack failed: ${response.status}`);
+  }
+
   return data;
 }
 
 async function updateMemberMp(member, nextMp) {
   if (!member?.id) return null;
+
   const safeNextMp = sanitizeMp(nextMp, 0);
   const currentCustomFields = member?.customFields || {};
   const currentMetaData = member?.metaData || {};
+
   const body = {
-    customFields: { ...currentCustomFields, [MEMBERSTACK_MP_FIELD]: safeNextMp, mp: safeNextMp },
-    metaData: { ...currentMetaData, [MEMBERSTACK_MP_FIELD]: safeNextMp, mp: safeNextMp },
+    customFields: {
+      ...currentCustomFields,
+      [MEMBERSTACK_MP_FIELD]: safeNextMp,
+      mp: safeNextMp,
+    },
+    metaData: {
+      ...currentMetaData,
+      [MEMBERSTACK_MP_FIELD]: safeNextMp,
+      mp: safeNextMp,
+    },
   };
+
   const data = await memberstackRequest(`/${encodeURIComponent(member.id)}`, {
     method: "PATCH",
     body: JSON.stringify(body),
   });
+
   return data?.data || null;
 }
 
 async function deductMpAfterSuccess(mpState) {
-  if (!mpState?.enabled || !mpState?.member) return { ...mpState, deducted: false };
+  if (!mpState?.enabled || !mpState?.member) {
+    return { ...mpState, deducted: false };
+  }
+
   const currentMp = sanitizeMp(mpState.currentMp, 0);
   const requiredMp = sanitizeMp(mpState.requiredMp, 0);
-  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) return { ...mpState, deducted: false };
+
+  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
+    return { ...mpState, deducted: false };
+  }
+
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-  return { ...mpState, member: updatedMember || mpState.member, currentMp: nextMp, remainingMp: nextMp, deducted: true };
+
+  return {
+    ...mpState,
+    member: updatedMember || mpState.member,
+    currentMp: nextMp,
+    remainingMp: nextMp,
+    deducted: true,
+  };
 }
 
 async function prepareMpState(req) {
   const requiredMp = sanitizeMp(req.body?.mpCost, 5);
   const memberId = sanitizeString(req.body?.memberId || req.headers?.["x-member-id"] || "");
-  if (!MEMBERSTACK_SECRET_KEY || !memberId) return { enabled: false, reason: "member_not_provided", requiredMp };
+
+  if (!MEMBERSTACK_SECRET_KEY || !memberId) {
+    return {
+      enabled: false,
+      reason: "member_not_provided",
+      requiredMp,
+    };
+  }
+
   try {
-    const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "GET" });
+    const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
+      method: "GET",
+    });
+
     const member = data?.data;
-    if (!member) return { enabled: false, reason: "member_not_found", requiredMp };
-    let currentMp = Number(member.customFields?.[MEMBERSTACK_MP_FIELD] || member.metaData?.[MEMBERSTACK_MP_FIELD] || 0);
-    if (!Number.isFinite(currentMp)) {
+    if (!member) {
+      return {
+        enabled: false,
+        reason: "member_not_found",
+        requiredMp,
+      };
+    }
+
+    const rawMp =
+      member.customFields?.[MEMBERSTACK_MP_FIELD] ??
+      member.metaData?.[MEMBERSTACK_MP_FIELD] ??
+      member.customFields?.mp ??
+      member.metaData?.mp ??
+      null;
+
+    let currentMp = Number(rawMp);
+
+    if (rawMp == null || rawMp === "" || !Number.isFinite(currentMp)) {
       currentMp = DEFAULT_TRIAL_MP;
       await updateMemberMp(member, currentMp);
     }
-    return { enabled: true, reason: "memberstack-synced", requiredMp, currentMp, remainingMp: currentMp, member, deducted: false };
+
+    return {
+      enabled: true,
+      reason: "memberstack-synced",
+      requiredMp,
+      currentMp,
+      remainingMp: currentMp,
+      member,
+      deducted: false,
+    };
   } catch (e) {
-    return { enabled: false, reason: "lookup_failed", requiredMp };
+    return {
+      enabled: false,
+      reason: "lookup_failed",
+      requiredMp,
+    };
   }
 }
+
+// --- 교체된 Memberstack 블록 끝 ---
 
 export default async function handler(req, res) {
   addCors(res);
@@ -901,7 +981,6 @@ export default async function handler(req, res) {
   try {
     const input = normalizeInput(req.body || {});
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "Prompt or topic required" });
-
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
       return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
@@ -912,7 +991,8 @@ export default async function handler(req, res) {
       systemPrompt = buildGrammarSystemPrompt(input);
       userPrompt = buildGrammarUserPrompt(input);
     } else {
-      systemPrompt = `당신은 상위권 변별력을 위한 고난도 영어 문법 문제 생성기입니다. 웜홀 원칙에 따라 출제하세요.`;
+      systemPrompt = `당신은 상위권 변별력을 위한 고난도 영어 문법 문제 생성기입니다.
+웜홀 원칙에 따라 출제하세요.`;
       userPrompt = buildGrammarUserPrompt(input);
     }
 
