@@ -114,41 +114,17 @@ function inferGradeLabel(text = "", level = "middle") {
   return "중등";
 }
 
-// 교체 수정된 detectMagicIntent
 function detectMagicIntent(text = "") {
   const t = String(text || "").toLowerCase();
-
   const conceptKeywords = [
-    "개념",
-    "개념설명",
-    "개념 설명",
-    "설명",
-    "정리",
-    "예문",
-    "문법 설명",
-    "문법개념",
-    "문법 개념",
-    "문법 정리",
-    "grammar explanation",
-    "grammar concept",
-    "concept",
-    "examples",
-    "example sentences"
+    "개념", "개념설명", "개념 설명", "설명", "정리", "예문", "문법 설명",
+    "문법개념", "문법 개념", "문법 정리", "grammar explanation",
+    "grammar concept", "concept", "examples", "example sentences"
   ];
-
   const trainingKeywords = [
-    "영작",
-    "영작훈련",
-    "쓰기",
-    "writing",
-    "composition",
-    "rearrange",
-    "재배열",
-    "문장 완성",
-    "워크북",
-    "훈련"
+    "영작", "영작훈련", "쓰기", "writing", "composition", "rearrange",
+    "재배열", "문장 완성", "워크북", "훈련"
   ];
-
   const isConcept = conceptKeywords.some((k) => t.includes(k));
   const isTraining = trainingKeywords.some((k) => t.includes(k));
 
@@ -177,14 +153,22 @@ function normalizeInput(body = {}) {
   const examType = sanitizeString(body.examType || "") || "workbook";
   const worksheetTitle = sanitizeString(body.worksheetTitle || "");
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
+  
+  // 교체된 부분: Concept 강제 축소 로직 적용
   const count = sanitizeCount(body.count);
+  const intentMode = detectMagicIntent(mergedText);
+const effectiveCount =
+  intentMode === "concept"
+    ? 4
+    : intentMode === "concept+training"
+    ? 5
+    : count;
+ 
   const gradeLabel = inferGradeLabel(mergedText, level);
 
   const vocabSeriesStart = clamp(Number(body.vocabSeriesStart || 1), 1, 200);
   const vocabSeriesEnd = clamp(Number(body.vocabSeriesEnd || 1), 1, 200);
   const vocabItemsPerRound = clamp(Number(body.vocabItemsPerRound || count), 5, 30);
-  
-  const intentMode = detectMagicIntent(mergedText);
   
   return {
     engine: "magic",
@@ -193,7 +177,7 @@ function normalizeInput(body = {}) {
     topic,
     examType,
     difficulty,
-    count,
+    count: effectiveCount,
     language,
     worksheetTitle,
     academyName,
@@ -245,28 +229,22 @@ function getModeLabel(mode, language = "ko") {
   return language === "en" ? (enMap[mode] || "Magic") : (koMap[mode] || "매직형");
 }
 
-// 교체 수정된 buildMagicTitle
 function buildMagicTitle(input) {
   if (input.worksheetTitle) return input.worksheetTitle;
-
   if (input.mode === "vocab-builder") {
     const start = Number(input.vocabSeriesStart || 1);
     const end = Number(input.vocabSeriesEnd || 1);
-
     if (input.language === "en") {
       if (start === end) return `Vocabulary Round ${start}`;
       return `Vocabulary Rounds ${start}-${end}`;
     }
-
     if (start === end) {
       return `${input.gradeLabel} 필수어휘 ${start}회`;
     }
     return `${input.gradeLabel} 필수어휘 ${start}~${end}회`;
   }
 
-  const isConcept =
-    input.intentMode === "concept" || input.intentMode === "concept+training";
-
+  const isConcept = input.intentMode === "concept" || input.intentMode === "concept+training";
   if (isConcept) {
     if (input.language === "en") {
       return `${input.gradeLabel} ${input.topic} Concept Explanation and Examples`;
@@ -275,15 +253,12 @@ function buildMagicTitle(input) {
   }
 
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
-
   if (input.language === "en") {
     return `${input.gradeLabel} ${input.topic} Magic ${difficultyLabel} ${input.count} Items`;
   }
-
   if (input.mode === "abcstarter") {
     return `${input.gradeLabel} ${input.topic} ABC Starter ${difficultyLabel} ${input.count}문항`;
   }
-
   return `${input.gradeLabel} ${input.topic} 마커스매직 ${difficultyLabel} ${input.count}문항`;
 }
 
@@ -291,12 +266,10 @@ function buildVocabSeriesBlock(input) {
   const start = Number(input.vocabSeriesStart || 1);
   const end = Number(input.vocabSeriesEnd || 1);
   const perRound = Number(input.vocabItemsPerRound || input.count || 20);
-
   const rounds = [];
   for (let r = start; r <= end; r += 1) {
     rounds.push(`- Round ${r}: ${perRound} vocabulary items`);
   }
-
   return `
 [VOCAB ROUND SERIES]
 ${rounds.join("\n")}
@@ -336,7 +309,6 @@ Rules:
 - 이것은 문법 개념설명 + 예문 학습지이다.
 - 영작훈련지로만 변질시키지 말 것.
 - 먼저 가르치고, 그 다음 가볍게 확인하게 할 것.
-
 필수 구조:
 1. 개념 설명
 2. 핵심 구조 정리
@@ -355,8 +327,7 @@ Rules:
 function buildModeSpecificGuide(input) {
   const isEn = input.language === "en";
   if (input.mode === "vocab-builder") {
-    return isEn
-      ? `
+    return isEn ? `
 Mode Identity:
 - This is a vocabulary-centered worksheet.
 - Do not turn it into a grammar worksheet.
@@ -372,8 +343,7 @@ Mode Identity:
 Forbidden drift:
 - grammar-dominant exam sheet
 - unrelated transformation drill
-`.trim()
-      : `
+`.trim() : `
 모드 정체성:
 - 이것은 어휘 중심 학습지이다.
 - 문법 문제지로 변질시키지 말 것.
@@ -394,8 +364,7 @@ Forbidden drift:
   }
 
   if (input.mode === "abcstarter") {
-    return isEn
-      ? `
+    return isEn ? `
 Mode Identity:
 - This is a beginner-friendly starter workbook.
 - Keep sentence length short and cognitively light.
@@ -407,15 +376,13 @@ Preferred item tendencies:
 - fragment-clue writing
 - simple rearrangement
 - partial completion
-`.trim()
-      : `
+`.trim() : `
 모드 정체성:
 - 초등 입문 친화형 스타터 워크북이다.
 - 문장 길이는 짧고 부담이 적어야 한다.
 - clue와 안내는 매우 친절하고 분명해야 한다.
 - 자유 영작보다 안내형 생산 훈련을 우선할 것.
 - 어휘는 기초적이고 학교 친화적이어야 한다.
-
 선호 유형:
 - 조각형 clue 영작
 - 쉬운 재배열형
@@ -424,21 +391,18 @@ Preferred item tendencies:
   }
 
   if (input.mode === "writing") {
-    return isEn
-      ? `
+    return isEn ? `
 Mode Identity:
 - This is an explicit writing-training workbook.
 - Strongly prioritize learner sentence production.
 - The worksheet should feel like guided composition training, not grammar explanation.
 - Mix fragment-clue writing, rearrangement with one extra word, partial completion, and sentence transformation aggressively.
-
 Priority:
 - productivity
 - sentence construction
 - guided composition
 - structural control
-`.trim()
-      : `
+`.trim() : `
 모드 정체성:
 - 명시적 영작훈련 워크북이다.
 - 학습자의 문장 산출을 강하게 우선할 것.
@@ -454,20 +418,17 @@ Priority:
   }
 
   if (input.mode === "magic-card") {
-    return isEn
-      ? `
+    return isEn ? `
 Mode Identity:
 - This is a Magic Card style workbook.
 - Keep the output compact, sharp, and highly trainable.
 - Focus tightly on the chapter grammar while preserving production-oriented writing identity.
 - Items should feel concise but structurally rich.
-
 Preferred item tendencies:
 - short fragment clues
 - compact rearrangement
 - fast-cycle writing drills
-`.trim()
-      : `
+`.trim() : `
 모드 정체성:
 - 매직카드형 워크북이다.
 - 출력은 압축적이고 선명하며 훈련성이 높아야 한다.
@@ -482,8 +443,7 @@ Preferred item tendencies:
   }
 
   if (input.mode === "textbook-grammar") {
-    return isEn
-      ? `
+    return isEn ? `
 Mode Identity:
 - This is a textbook-grammar based writing workbook.
 - Anchor the worksheet to school-textbook grammar goals and classroom expectations.
@@ -494,8 +454,7 @@ Priority:
 - textbook alignment
 - classroom usability
 - guided production
-`.trim()
-      : `
+`.trim() : `
 모드 정체성:
 - 교과서 문법 기반 영작 워크북이다.
 - 학교 교과서형 문법 목표와 수업 기대치에 맞추어 설계할 것.
@@ -510,20 +469,17 @@ Priority:
   }
 
   if (input.mode === "chapter-grammar") {
-    return isEn
-      ? `
+    return isEn ? `
 Mode Identity:
 - This is a chapter-grammar focused writing workbook.
 - Focus tightly on the designated grammar chapter.
 - Make the target structure repeatedly visible through mixed productive item types.
 - The worksheet should feel systematical and chapter-driven.
-
 Priority:
 - chapter focus
 - repeated structural exposure
 - guided production
-`.trim()
-      : `
+`.trim() : `
 모드 정체성:
 - 챕터 문법 집중형 영작 워크북이다.
 - 지정된 문법 챕터에 강하게 초점을 맞출 것.
@@ -537,14 +493,12 @@ Priority:
 `.trim();
   }
 
-  return isEn
-    ? `
+  return isEn ? `
 Mode Identity:
 - This is a premium MARCUS Magic workbook.
 - The output must remain workbook-style, production-oriented, and teacher-ready.
 - Preserve guided writing identity with fragment-based clues and mixed item types.
-`.trim()
-    : `
+`.trim() : `
 모드 정체성:
 - 프리미엄 마커스매직 워크북이다.
 - 출력은 반드시 워크북형, 생산형, 교사용 완성형이어야 한다.
@@ -554,7 +508,6 @@ Mode Identity:
 
 function buildSystemPrompt(input) {
   const isConcept = input.intentMode === "concept" || input.intentMode === "concept+training";
-
   if (isConcept) {
     return input.language === "en" ? `
 You are the MARCUSNOTE Magic concept engine.
@@ -573,7 +526,6 @@ Universal rules:
 7. Do not drift into Wormhole-style testing.
 8. Do not output incomplete example answers.
 9. Maintain [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
-
 ${buildConceptGuide(input)}
 
 Output format:
@@ -583,29 +535,49 @@ Output format:
 [[ANSWERS]]
 `.trim() : `
 당신은 MARCUSNOTE Magic 개념설명 엔진이다.
+
 핵심 정체성:
-- Magic은 개념을 설명하고 예문을 제공할 수 있다.
-- 이번 요청은 영작훈련 전용 워크북이 아니다.
-- 출력은 출판용 문법 개념 학습지처럼 보여야 한다.
+- 이것은 문제풀이 워크북이 아니라, 개념 학습을 먼저 하는 문법 개념 학습지이다.
+- 반드시 "개념 설명 → 핵심 구조 정리 → 예문 → Mini Check → 정답" 순서를 지킬 것.
+- 연습문항 수를 많이 늘리는 것보다, 개념 정리의 완성도를 우선할 것.
 
-보편 규칙:
-1. 먼저 개념 설명으로 시작할 것.
-2. 그다음 핵심 구조를 정리할 것.
-3. 그다음 예문 6~10개를 제시할 것.
-4. 그다음 Mini Check 3~5문항을 제시할 것.
-5. 반드시 정답을 제공할 것.
-6. 예문과 정답은 모두 완전한 문장으로 작성할 것.
-7. 웜홀식 시험지로 변질시키지 말 것.
-8. 미완성 예문이나 미완성 정답을 출력하지 말 것.
-9. [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 형식을 유지할 것.
-
-${buildConceptGuide(input)}
+절대 규칙:
+1. 개념 설명은 최소 4~6개 bullet 수준의 내용으로 충분히 설명할 것.
+2. 핵심 구조 정리를 반드시 별도 섹션으로 만들 것.
+3. 예문은 최소 6개, 최대 10개 제시할 것.
+4. 예문은 문제형이 아니라 완전한 예문이어야 한다.
+5. Mini Check는 3~5문항만 만들 것.
+6. 전체 문항형 문제를 20개 이상 만들지 말 것.
+7. "설명 1문단 + 문제 20개 이상" 형태를 절대 금지할 것.
+8. 출력은 반드시 아래 구조를 따를 것.
 
 출력 형식:
 [[TITLE]]
 [[INSTRUCTIONS]]
 [[QUESTIONS]]
+1. 개념 설명
+- ...
+- ...
+- ...
+
+2. 핵심 구조 정리
+- ...
+- ...
+
+3. 예문
+1) ...
+2) ...
+3) ...
+
+4. Mini Check
+1) ...
+2) ...
+3) ...
+
 [[ANSWERS]]
+1) ...
+2) ...
+3) ...
 `.trim();
   }
 
@@ -627,7 +599,6 @@ ${buildConceptGuide(input)}
 6. 정답 섹션을 반드시 제공한다.
 7. 객관식이 꼭 필요한 경우에만 제한적으로 사용하고, 무분별한 문법형 객관식은 금지한다.
 8. 회차별 출력이 요청된 경우 섹션을 명확히 분리한다.
-
 출력 형식:
 [[TITLE]]
 [[INSTRUCTIONS]]
@@ -652,7 +623,6 @@ Important rules:
 5. Do not turn the output into a grammar worksheet.
 6. Always provide an answer section.
 7. If rounds are requested, separate each round clearly.
-
 Output format:
 [[TITLE]]
 [[INSTRUCTIONS]]
@@ -678,7 +648,8 @@ Output format:
 2. 각 문항은 먼저 학습자의 입력 언어로 제시할 것.
 3. 학습자는 제시된 의미를 바탕으로 영어 문장을 직접 생산해야 한다.
 4. clue는 반드시 제공하되, 정답 완성문장을 그대로 제공하지 말 것.
-5. clue는 조각형으로 제공할 것. 핵심 어휘, 구조 힌트, 문법 앵커를 분절해서 줄 것.
+5. clue는 조각형으로 제공할 것.
+6. 핵심 어휘, 구조 힌트, 문법 앵커를 분절해서 줄 것.
 6. clue는 충분히 풍부해야 하지만, 베껴쓰기용 완성 답안처럼 보이면 안 된다.
 7. 일부 문항은 실제 정답에 필요하지 않은 초과단어 1개를 포함한 재배열형으로 만들 것.
 8. 워크북 전체에는 최소 3가지 이상의 생산형 문항 유형을 섞을 것.
@@ -704,7 +675,8 @@ Output format:
 - 입력 언어 문장을 먼저 제시할 것.
 - clue는 반드시 조각형이어야 한다.
 - 완성문장 전체를 clue로 주지 말 것.
-- 예: 나에게 있어서 방과 후에 영화를 보는 것은 흥미롭다. (interesting, it-to, watch, for, a movie, after school)
+- 예: 나에게 있어서 방과 후에 영화를 보는 것은 흥미롭다.
+(interesting, it-to, watch, for, a movie, after school)
 
 [B. 초과단어 1개 포함 재배열 영작]
 - 정답에 필요한 단어들 + 불필요 단어 1개를 함께 제시할 것.
@@ -717,7 +689,8 @@ Output format:
 
 [D. 문장변환 영작]
 - 원문 의미는 유지하되 지정 문법 구조로 바꾸어 영작하게 할 것.
-- 예: “나는 영어를 배우고 싶다.” → to부정사를 사용하여 영작하시오.
+- 예: “나는 영어를 배우고 싶다.”
+- → to부정사를 사용하여 영작하시오.
 
 clue 설계 규칙:
 1. clue는 풍부해야 한다.
@@ -726,15 +699,14 @@ clue 설계 규칙:
 4. 학생이 문장 구조를 스스로 복원할 수 있도록 설계할 것.
 5. 같은 세트 안에서 clue 길이와 밀도를 약간씩 조절할 것.
 6. 고난도일수록 clue를 약간 압축하되, 훈련이 불가능할 정도로 빈약하게 만들지 말 것.
-
 문법 정확성 필수 규칙:
 1. 정답 문장은 문법적으로 정확해야 한다.
-2. 시제와 시간표현이 충돌하면 안 된다. (예: present perfect + last week 금지)
+2. 시제와 시간표현이 충돌하면 안 된다.
+(예: present perfect + last week 금지)
 3. 주어-동사 수일치를 반드시 맞출 것.
 4. 관사, 전치사, 어순, 의문문 구조를 자연스럽게 맞출 것.
 5. 관계대명사, to부정사, 동명사, 현재완료 등 목표 문법의 핵심이 분명히 드러나야 한다.
 6. 한국어 원문이 어색하면 자연스러운 학습용 문장으로 다듬되, 문법 목표는 유지할 것.
-
 금지 규칙:
 - 정답 완성문장을 clue로 그대로 제시하지 말 것.
 - 모든 문항을 한 가지 유형으로만 만들지 말 것.
@@ -742,7 +714,6 @@ clue 설계 규칙:
 - 설명문 위주의 문법 해설지로 만들지 말 것.
 - 시험용 함정 객관식으로 만들지 말 것.
 - 사용자 요청과 무관한 독해 지문형 시험지로 만들지 말 것.
-
 ${buildModeSpecificGuide(input)}
 
 출력 형식:
@@ -756,7 +727,6 @@ Core identity:
 - Magic is a premium guided production engine that trains learners to build English sentences by themselves.
 - Magic is not trap-based. It is structure-guided, production-oriented, and workbook-centered.
 - The output must be ready for real classroom and academy use.
-
 Top-level universal rules:
 1. The worksheet must remain writing-training centered.
 2. Present each item first in the learner's input language.
@@ -775,7 +745,6 @@ Top-level universal rules:
 15. Always provide an answer section.
 16. Match the requested item count as accurately as possible.
 17. Keep every item classroom-usable and educationally natural.
-
 Item design rules:
 - Mix at least 3 item types.
 - Recommended ratio:
@@ -789,7 +758,8 @@ Detailed item rules:
 - Present the prompt in the learner's input language first.
 - The clue must be fragment-based.
 - Never provide the complete final sentence as the clue.
-- Example: It is interesting for me to watch a movie after school. → (interesting, it-to, watch, for, a movie, after school)
+- Example: It is interesting for me to watch a movie after school.
+→ (interesting, it-to, watch, for, a movie, after school)
 
 [B. Rearrangement writing with one extra word]
 - Provide all necessary chunks plus one unnecessary extra word.
@@ -809,15 +779,14 @@ Clue design rules:
 4. Make learners reconstruct sentence structure by themselves.
 5. Vary clue density slightly across the set.
 6. In higher difficulty levels, compress the clues slightly, but never make them too thin to train with.
-
 Grammar accuracy rules:
 1. Final answers must be grammatically correct.
-2. Do not create tense-time conflicts. (Example: present perfect + last week is forbidden.)
+2. Do not create tense-time conflicts.
+(Example: present perfect + last week is forbidden.)
 3. Maintain subject-verb agreement.
 4. Keep articles, prepositions, word order, and question structure natural.
 5. Make the target grammar clearly visible in the final answer.
 6. If the source prompt is awkward, smooth it into a natural learning sentence while preserving the target grammar.
-
 Forbidden:
 - Do not provide the exact final sentence as the clue.
 - Do not make all items the same type.
@@ -825,7 +794,6 @@ Forbidden:
 - Do not turn it into a grammar explanation sheet.
 - Do not turn it into a multiple-choice trap test.
 - Do not drift into unrelated passage-based exam content.
-
 ${buildModeSpecificGuide(input)}
 
 Output format:
@@ -937,13 +905,11 @@ Mandatory Magic rules:
 - Include some sentence-transformation writing items.
 - Keep the worksheet production-oriented, not copy-based.
 - Keep the grammar accurate and classroom-usable.
-
 Quality control:
 - Do not create present perfect + finished past-time conflicts.
 - Do not generate weak copy-the-answer style items.
 - Do not make all 25 items the same pattern.
 - Make the output feel like premium guided training.
-
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
 `.trim() : `
@@ -1011,7 +977,8 @@ function extractSection(rawText, startMarker, endMarker) {
   if (start === -1) return "";
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
+  return end === -1 ?
+rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function formatMagicResponse(rawText, input) {
@@ -1065,7 +1032,8 @@ async function memberstackRequest(path, options = {}) {
   let data = null;
 
   try {
-    data = text ? JSON.parse(text) : null;
+    data = text ?
+JSON.parse(text) : null;
   } catch {
     data = text;
   }
@@ -1088,7 +1056,8 @@ function getInitialTrialMp() {
 function extractBearerToken(req) {
   const raw = req?.headers?.authorization || req?.headers?.Authorization || "";
   const match = String(raw).match(/^Bearer\s+(.+)$/i);
-  return match ? match[1] : "";
+  return match ?
+match[1] : "";
 }
 
 function extractMemberId(req) {
@@ -1146,11 +1115,13 @@ async function updateMemberMp(member, nextMp) {
 
   const currentCustomFields =
     member?.customFields && typeof member.customFields === "object"
-      ? member.customFields
+      ?
+member.customFields
       : {};
   const currentMetaData =
     member?.metaData && typeof member.metaData === "object"
-      ? member.metaData
+      ?
+member.metaData
       : {};
 
   const safeMp = sanitizeMp(nextMp, 0);
@@ -1258,7 +1229,8 @@ async function deductMpAfterSuccess(mpState) {
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
   return {
     ...mpState,
-    member: updatedMember || mpState.member,
+    member: updatedMember ||
+mpState.member,
     currentMp: nextMp,
     remainingMp: nextMp,
     deducted: true,
@@ -1276,11 +1248,9 @@ export default async function handler(req, res) {
 
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
-
   try {
     const input = normalizeInput(req.body || {});
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
-
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
       return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
@@ -1289,7 +1259,6 @@ export default async function handler(req, res) {
     const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
     const formatted = formatMagicResponse(rawText, input);
     const finalMpState = await deductMpAfterSuccess(mpState);
-
     return json(res, 200, {
       success: true,
       ...formatted,
