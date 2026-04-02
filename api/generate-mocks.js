@@ -138,23 +138,18 @@ function normalizeInput(body = {}) {
   ]
     .filter(Boolean)
     .join(" ");
-
   const level = ["elementary", "middle", "high"].includes(body.level)
     ? body.level
     : inferLevel(mergedText);
-
   const mode = ["school", "csat", "transform", "hybrid"].includes(body.mode)
     ? body.mode
     : inferMockMode(mergedText);
-
   const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
     ? body.difficulty
     : inferDifficulty(mergedText);
-
   const language = ["ko", "en"].includes(body.language)
     ? body.language
     : inferLanguage(mergedText);
-
   const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
   const worksheetTitle = sanitizeString(body.worksheetTitle || "");
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
@@ -163,7 +158,6 @@ function normalizeInput(body = {}) {
   const examType = sanitizeString(body.examType || "") || mode;
   const gradeLabel = inferGradeLabel(mergedText, level);
   const premium = body.premium === true || inferPremium(mergedText);
-
   return {
     engine,
     level,
@@ -230,7 +224,7 @@ Rules:
 - Raise distractor quality significantly.
 - Increase implication and inference density.
 - Make all answer choices partially plausible.
-- Keep the transformed passage fully independent from the source.
+- Keep clear conceptual linkage to the source while transforming wording and structure strongly.
 - The final worksheet must feel like a premium advanced assessment set.
 `.trim();
   }
@@ -243,162 +237,146 @@ Rules:
 - 선택지의 부분 타당성을 높일 것.
 - 함축과 추론 밀도를 높일 것.
 - 모든 선택지를 그럴듯하게 설계할 것.
-- 변형 지문은 원문과 독립적인 신규 지문처럼 보여야 한다.
+- 원문과의 개념적 연결감은 유지하되, 표현과 구조는 강하게 변형할 것.
 - 결과물은 상위권용 프리미엄 시험지처럼 보여야 한다.
 `.trim();
 }
 
 function buildSystemPrompt(input) {
   const premiumBlock = input.premium ? "\n\n" + buildPremiumBlock(input.language) + "\n\n" : "\n\n";
-
   return `
-You are the premium high-school transformed exam generator of I•marcusnote.
+You are the premium transformed reading-exam engine of I•marcusnote.
 
 [ENGINE IDENTITY]
 Engine Name: Mocks
-Primary Source Level: Marcus Crown Level 4
-Target Students: Korean high school students, especially upper-intermediate to advanced learners (roughly high school grade 2–3 level)
+Purpose: premium transformed reading worksheet generator
+Target: Korean middle/high school exams, CSAT-style mock tests, advanced academy materials
+This is NOT a basic workbook generator.
+This is a premium transformed exam generator.
 
-This engine is NOT a basic worksheet generator.
-This engine is a PREMIUM transformed exam generator for high-level mock-test-style English questions.
+[CORE GOAL]
+Generate a premium transformed reading worksheet based on the user's source material.
+The output must feel like a real school-exam / CSAT-style transformation set.
 
-[CORE PURPOSE]
-Generate high-quality transformed English exam questions based on high-school-level source material.
-The output must feel like a premium Korean mock-exam transformation set, not a simple workbook.
+[CONTROLLED TRANSFORMATION RULE]
+The worksheet must be clearly based on the source passage.
 
-[PRIMARY SOURCE RULE]
-- The main source base is Marcus Crown Level 4.
-- Marcus Crown Level 4 consists of 4 high-school-level books.
-- Use the source as intellectual material only.
-- DO NOT directly copy passages or sentences.
-- You MUST transform, reconstruct, and redesign the material into premium exam questions.
+However, it must NOT become a completely unrelated new passage.
 
-[ABSOLUTE IDENTITY RULES]
-1. This engine is for HIGH SCHOOL transformed exam questions.
-2. The overall tone must be premium, difficult, and test-like.
-3. The test must feel appropriate for strong high school students.
-4. The output must reflect transformed-question logic, not direct reproduction.
-5. Difficulty may be adjusted, but the baseline must remain advanced.
+Strict rules:
+- Preserve the core topic, main logic, and central message of the source.
+- Maintain recognizable conceptual overlap with the original.
+- Students should feel that the worksheet is transformed from the original passage.
+- Do NOT copy original sentences directly.
+- Rewrite sentence structures substantially.
+- Replace wording meaningfully.
+- Reorder or regroup supporting details when helpful.
+- Change the testing angle while preserving the original intellectual base.
 
-[MANDATORY QUESTION PHILOSOPHY]
-This is a transformed exam.
+The final result must feel like:
+"a professionally transformed version of the original passage"
+
+It must NOT feel like:
+- a copied worksheet
+- a completely different passage
+
+[QUESTION PHILOSOPHY]
+This engine must create exam-quality transformed items.
 Therefore:
-- do not merely rewrite sentences superficially
-- do not make shallow vocabulary matching questions
-- do not create easy pattern-based questions
-- do not rely on direct sentence lifting
-- do not make predictable distractors
+- do not merely paraphrase superficially
+- do not create trivial keyword questions
+- do not create predictable distractors
+- do not overuse the same stem pattern
+- do not simplify into middle-school workbook style unless the user clearly requests a lower level
 
 Instead:
-- reconstruct sentence logic
-- alter wording meaningfully
 - redesign the testing point
-- require interpretation, comparison, inference, or evaluation
-- create questions that feel like true transformed mock-exam items
+- test interpretation, comparison, implication, inference, attitude, and transformed understanding
+- create items that feel written by a real exam writer
 
-[CORE REQUIRED QUESTION TYPES]
-The following types are NOT optional.
-They must form the central structure of the test:
-
+[MANDATORY CORE TYPES]
+These are central and must be meaningfully included when the passage supports them:
 1. Main Idea / 주제
-2. Key Point / Gist / 요지
-3. Author’s Claim / 주장
-4. Author’s Attitude / 글쓴이의 생각, 태도
-5. Title / 제목
+2. Gist / 요지
+3. Title / 제목
+4. Author's Claim / 주장
+5. Author's Attitude / 태도
 
-These five types must be clearly distinguished from each other.
-Do NOT collapse them into one vague reading type.
+These must remain distinct.
+Do NOT collapse them into one vague type.
 
-[IMPORTANT DISTINCTION RULE]
-- Main Idea = the broad overall topic or central area of discussion
-- Key Point (Gist) = the writer’s main takeaway or core message
-- Author’s Claim = the writer’s assertive position or argument
-- Author’s Attitude = the writer’s tone, stance, or viewpoint
-- Title = the most suitable heading representing the text
-
-The distinction between Main Idea, Gist, and Claim must remain clear.
-
-[CORE DISTRIBUTION RULE]
-For a full set, the exam must include multiple items from the core reading group.
-Gist / Key Point (요지) is especially important and must appear meaningfully.
-Core reading question types should form the backbone of the test.
-
-[ADDITIONAL PREMIUM QUESTION TYPES]
-In addition to the core reading types, include premium transformed types such as:
-- synonym in context
-- equivalent expression
-- antonym in context
+[REQUIRED TYPE POOL]
+Also include, when appropriate:
+- purpose
+- implication
+- inference
+- content agreement / disagreement
+- blank inference
+- summary completion
 - paraphrase
-- implication / 의미 함축
-- inference / 추론
-- transformed theme/title
-- vocabulary in context
+- equivalent expression
+- synonym / antonym in context
 - sentence insertion
 - order arrangement
-- grammar traps
-- advanced grammar judgment
+- flow disruption / awkward sentence
+- transformed detail questions
 
-[CONTEXT-BASED VOCABULARY RULE]
-All synonym / equivalent expression / antonym items must be context-based.
-Do NOT create isolated vocabulary memorization questions.
-These items must require reading comprehension and meaning judgment.
+[STRUCTURED EXAM RULE]
+For a 25-item full set, follow this structure as closely as possible:
 
-[INFERENCE AND IMPLICATION RULE]
-Inference and implication questions must require actual reasoning.
-The answer must not be found by matching one obvious sentence.
-Students should need to understand the text as a whole.
+1–3: main idea / gist / title
+4–6: claim / purpose / attitude
+7–10: implication / inference / meaning interpretation
+11–14: detail agreement / disagreement / key detail
+15–18: blank / summary / paraphrase
+19–21: sentence insertion / order arrangement / flow
+22–25: high-difficulty integrated reasoning
 
-[TRANSFORMATION RULE]
-Every item must show meaningful transformation.
-At least one or more of the following must happen:
-- sentence restructuring
-- logic flow adjustment
-- focus shift
-- paraphrased meaning reconstruction
-- altered expression with preserved intent
-- changed question angle
-- reconstructed distractor logic
+If the item count is smaller, compress proportionally while preserving variety.
 
-[DIFFICULTY CONTROL]
-The engine may adjust difficulty internally, but the default baseline is advanced.
-Regardless of level, the output must still feel like a premium high-school transformed exam.
+[DISTRACTOR RULE]
+Wrong answers must be plausible.
+Use distractors such as:
+- partially true but incomplete
+- reversed logic
+- exaggerated claim
+- wrong scope
+- tone mismatch
+- related but not central
+- detail misuse
+- unsupported inference
 
-[HIGH DIFFICULTY LABEL RULE]
+Do NOT make silly or obviously wrong distractors.
+
+[HIGH DIFFICULTY RULE]
 If any question is worth 5 points or more, you MUST mark it with [High Difficulty].
-Correct format example:
-21. What is the best title for the passage? [High Difficulty] (5 points)
 
-[HIGH DIFFICULTY DESIGN RULE]
-Questions marked [High Difficulty] should usually come from premium reasoning-heavy types such as:
-- gist, implication, inference, title, main idea, paraphrase, claim, advanced grammar traps.
+High-difficulty items should usually involve:
+- inference
+- implication
+- title
+- gist
+- attitude
+- paraphrase
+- summary
+- integrated reasoning
 
-[DISTRACTOR RULES]
-Distractors must be:
-- plausible, tempting, partially believable, clearly wrong only after careful reasoning.
+[ANTI-REPETITION RULE]
+Avoid repeating:
+- the same question stem pattern
+- the same answer logic
+- the same distractor style
+- the same cognitive skill too many times
+
+Each item should feel independently designed.
 
 [EXAM FEEL RULE]
-The final exam should feel like a Korean high-school mock-test transformation set.
-Students should feel:
-- “This is harder than a basic school worksheet.”
-- “I need to think carefully.”
-- “The item tests real understanding.”
+The final worksheet must feel like:
+- a premium academy material
+- a real transformed school exam
+- a CSAT-aware mock set
+- not an AI-generated repetitive worksheet
 
-[ANSWER KEY RULE]
-Provide:
-- answer key
-- brief explanation for each answer clarifying why it's right.
-
-[OUTPUT QUALITY RULE]
-The final set must be coherent, balanced, high-level, and premium in tone.
-
-[STRICTLY FORBIDDEN]
-- direct passage copying
-- shallow rewriting
-- random easy items
-- middle-school style simplification
-
-[FINAL GOAL]
-Generate a premium, transformed, high-school-level English exam set based on Marcus Crown Level 4. Ensure that all 5-point-or-higher questions are visibly marked with [High Difficulty].
 ${premiumBlock}
 
 출력 형식:
@@ -431,13 +409,14 @@ function buildUserPrompt(input) {
   const modeLabel = getModeLabel(input.mode, input.language);
   const premiumNote = input.premium
     ? (input.language === "en"
-        ? `\nPremium mode is ON.\n- Raise distractor quality.\n- Increase implication and inference density.\n`
-        : `\n프리미엄 모드 활성화:\n- 선택지의 밀도와 부분 타당성을 높일 것.\n- 함축과 추론 비중을 높일 것.\n`)
+        ? `\nPremium mode is ON.\n- Raise distractor quality.\n- Increase inference and implication density.\n- Make answer choices more competitive.\n`
+        : `\n프리미엄 모드 활성화:\n- 선택지의 부분 타당성과 경쟁력을 높일 것.\n- 함축과 추론 밀도를 높일 것.\n- 정답이 키워드만으로 보이지 않게 설계할 것.\n`)
     : "";
 
   if (input.language === "en") {
     return `
-Generate a high-difficulty transformed Mock Exam worksheet with the following conditions.
+Generate a premium transformed Mock Exam worksheet with the following conditions.
+
 Title: ${title}
 Engine: mock_exam
 Level: ${input.level}
@@ -449,11 +428,16 @@ Difficulty: ${input.difficulty} (${difficultyLabel})
 Question count: ${input.count}
 Academy name: ${input.academyName}
 ${premiumNote}
-Additional mandatory requirements:
-- Do NOT reuse the source passage directly.
-- Use the source only as reference material.
-- Every question must use exactly 5 options.
-- Mark 5pt+ questions as [High Difficulty].
+
+Mandatory rules:
+- The worksheet must clearly feel based on the original source.
+- However, do NOT copy the source passage directly.
+- Preserve the core topic and message.
+- Rewrite wording and structure meaningfully.
+- Keep recognizable overlap with the original passage.
+- Every question must have exactly 5 options.
+- Mark 5pt+ questions with [High Difficulty].
+- Ensure meaningful type variety.
 
 Original user request:
 ${input.userPrompt || "(No additional request provided.)"}
@@ -461,7 +445,8 @@ ${input.userPrompt || "(No additional request provided.)"}
   }
 
   return `
-다음 조건에 맞는 고난도 마커스 모의고사 변형문제를 생성하시오.
+다음 조건에 맞는 상품형 마커스 모의고사 변형문제를 생성하시오.
+
 제목: ${title}
 엔진: mock_exam
 레벨: ${input.level}
@@ -473,10 +458,16 @@ ${input.userPrompt || "(No additional request provided.)"}
 문항 수: ${input.count}
 브랜드명: ${input.academyName}
 ${premiumNote}
+
 추가 필수 요구사항:
-- 입력 지문을 그대로 다시 사용하지 말 것.
-- 5점 이상 문항은 반드시 [High Difficulty]라고 표기할 것.
+- 결과물은 반드시 원문 기반 변형이라는 느낌이 나야 한다.
+- 그러나 입력 지문을 그대로 다시 사용해서는 안 된다.
+- 원문의 핵심 주제와 중심 메시지는 유지할 것.
+- 문장 구조와 표현은 충분히 새롭게 바꿀 것.
+- 학생이 보기에 '원문을 바탕으로 전문적으로 변형했다'는 느낌이 나야 한다.
 - 모든 문항은 5지선다형으로 작성할 것.
+- 5점 이상 문항은 반드시 [High Difficulty]라고 표기할 것.
+- 주제, 요지, 제목, 주장, 태도, 추론, 함축, 요약, 문장삽입, 순서배열 등 유형 다양성을 확보할 것.
 
 사용자 원문 요청:
 ${input.userPrompt || "(추가 요청 없음)"}
@@ -485,7 +476,6 @@ ${input.userPrompt || "(추가 요청 없음)"}
 
 async function callOpenAI(systemPrompt, userPrompt) {
   if (!OPENAI_API_KEY) throw new Error("Missing OPENAI_API_KEY");
-
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -520,7 +510,8 @@ function extractSection(rawText, startMarker, endMarker) {
   if (start === -1) return "";
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
+  return end === -1 ?
+    rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function countQuestions(text = "") {
@@ -571,7 +562,6 @@ function formatMocksResponse(rawText, input) {
   let finalInstructions = instructions;
   let finalQuestions = questions;
   let finalAnswers = answers;
-
   if (!finalQuestions) {
     const fallback = buildFallbackSplit(rawText);
     finalTitle = finalTitle || buildMocksTitle(input);
@@ -586,7 +576,6 @@ function formatMocksResponse(rawText, input) {
   const contentParts = [finalTitle, finalInstructions, finalQuestions].filter(Boolean);
   const fullParts = [...contentParts];
   if (finalAnswers) fullParts.push("정답 및 해설\n" + finalAnswers);
-
   return {
     title: finalTitle,
     instructions: finalInstructions,
@@ -610,8 +599,6 @@ function buildMeta(input, actualCount) {
     generatedAt: new Date().toISOString(),
   };
 }
-
-// --- Memberstack 안전 교체 블록 ---
 
 function addCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -653,7 +640,6 @@ function extractMemberId(req) {
 async function memberstackRequest(path, options = {}) {
   const headers = getMemberstackHeaders();
   if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-
   const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
     ...options,
     headers: {
@@ -661,7 +647,6 @@ async function memberstackRequest(path, options = {}) {
       ...(options.headers || {}),
     },
   });
-
   const text = await response.text();
   let data = null;
 
@@ -694,24 +679,20 @@ async function verifyMemberToken(token) {
     method: "POST",
     body: JSON.stringify(payload),
   });
-
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-
   const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
     method: "GET",
     headers: { "Content-Type": "application/json" },
   });
-
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
-
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
@@ -720,7 +701,6 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
-
   for (const value of candidates) {
     const parsed = Number(value);
     if (Number.isFinite(parsed)) {
@@ -760,18 +740,15 @@ async function updateMemberMp(member, nextMp) {
       MP: safeNextMp,
     },
   };
-
   const data = await memberstackRequest(`/${encodeURIComponent(member.id)}`, {
     method: "PATCH",
     body: JSON.stringify(body),
   });
-
   return data?.data || null;
 }
 
 async function ensureTrialMp(member) {
   const current = readMpFromMember(member);
-
   if (current !== null) {
     return {
       member,
@@ -792,7 +769,6 @@ async function ensureTrialMp(member) {
 
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
-
   if (!MEMBERSTACK_SECRET_KEY) {
     return {
       enabled: false,
@@ -868,7 +844,6 @@ async function deductMpAfterSuccess(mpState) {
 
   const currentMp = sanitizeMp(mpState.currentMp, 0);
   const requiredMp = sanitizeMp(mpState.requiredMp, 0);
-
   if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
     return {
       ...mpState,
@@ -878,7 +853,6 @@ async function deductMpAfterSuccess(mpState) {
 
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-
   return {
     ...mpState,
     member: updatedMember || mpState.member,
@@ -888,17 +862,13 @@ async function deductMpAfterSuccess(mpState) {
   };
 }
 
-// --- Handler ---
-
 export default async function handler(req, res) {
   addCors(res);
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return json(res, 405, { success: false, error: "METHOD_NOT_ALLOWED", message: "POST 요청만 허용됩니다." });
-
   try {
     const input = normalizeInput(req.body || {});
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, error: "INVALID_REQUEST", message: "prompt 또는 topic이 필요합니다." });
-
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
       return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다. 업그레이드 후 계속 이용해주세요.", needsUpgrade: true, requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp, trialGranted: mpState.trialGranted });
@@ -910,7 +880,6 @@ export default async function handler(req, res) {
     const formatted = formatMocksResponse(rawText, input);
     const meta = buildMeta(input, formatted.actualCount);
     const finalMpState = await deductMpAfterSuccess(mpState);
-
     return json(res, 200, {
       success: true,
       engine: input.engine,
