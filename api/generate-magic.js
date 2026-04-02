@@ -204,10 +204,8 @@ function buildMagicTitle(input) {
   return `${input.gradeLabel} ${input.topic} 마커스매직 ${difficultyLabel} ${input.count}문항`;
 }
 
-// 수정 및 교체된 buildModeSpecificGuide 함수
 function buildModeSpecificGuide(input) {
   const isEn = input.language === "en";
-
   if (input.mode === "vocab-builder") {
     return isEn
       ? `
@@ -216,7 +214,6 @@ Mode Identity:
 - Do not turn it into a grammar worksheet.
 - If a passage is provided, anchor vocabulary tasks to the passage.
 - If no passage is provided, build topic-based vocabulary training.
-
 Allowed item styles:
 - meaning check
 - contextual vocabulary use
@@ -270,7 +267,6 @@ Preferred item tendencies:
 - clue와 안내는 매우 친절하고 분명해야 한다.
 - 자유 영작보다 안내형 생산 훈련을 우선할 것.
 - 어휘는 기초적이고 학교 친화적이어야 한다.
-
 선호 유형:
 - 조각형 clue 영작
 - 쉬운 재배열형
@@ -286,7 +282,6 @@ Mode Identity:
 - Strongly prioritize learner sentence production.
 - The worksheet should feel like guided composition training, not grammar explanation.
 - Mix fragment-clue writing, rearrangement with one extra word, partial completion, and sentence transformation aggressively.
-
 Priority:
 - productivity
 - sentence construction
@@ -316,7 +311,6 @@ Mode Identity:
 - Keep the output compact, sharp, and highly trainable.
 - Focus tightly on the chapter grammar while preserving production-oriented writing identity.
 - Items should feel concise but structurally rich.
-
 Preferred item tendencies:
 - short fragment clues
 - compact rearrangement
@@ -371,8 +365,7 @@ Mode Identity:
 - This is a chapter-grammar focused writing workbook.
 - Focus tightly on the designated grammar chapter.
 - Make the target structure repeatedly visible through mixed productive item types.
-- The worksheet should feel systematic and chapter-driven.
-
+- The worksheet should feel systematical and chapter-driven.
 Priority:
 - chapter focus
 - repeated structural exposure
@@ -450,13 +443,11 @@ Output format:
 
   return isKo ? `
 당신은 마커스매직 전용 영작훈련 워크북 생성 엔진이다.
-
 핵심 정체성:
 - 매직은 단순 문제 생성기가 아니다.
 - 매직은 학습자가 영어 문장을 직접 만들어내도록 훈련시키는 프리미엄 영작훈련 워크북 엔진이다.
 - 매직은 시험 함정형이 아니라, 구조 유도형·생산형·훈련형 엔진이다.
 - 출력물은 학원, 학교, 과제, 자습에 바로 사용할 수 있어야 한다.
-
 최상위 공통 규칙:
 1. 반드시 영작훈련 중심 워크북으로 작성할 것.
 2. 각 문항은 먼저 학습자의 입력 언어로 제시할 것.
@@ -506,7 +497,8 @@ Output format:
 [D. 문장변환 영작]
 - 원문 의미는 유지하되 지정 문법 구조로 바꾸어 영작하게 할 것.
 - 예:
-  “나는 영어를 배우고 싶다.” → to부정사를 사용하여 영작하시오.
+  “나는 영어를 배우고 싶다.”
+  → to부정사를 사용하여 영작하시오.
 
 clue 설계 규칙:
 1. clue는 풍부해야 한다.
@@ -515,16 +507,14 @@ clue 설계 규칙:
 4. 학생이 문장 구조를 스스로 복원할 수 있도록 설계할 것.
 5. 같은 세트 안에서 clue 길이와 밀도를 약간씩 조절할 것.
 6. 고난도일수록 clue를 약간 압축하되, 훈련이 불가능할 정도로 빈약하게 만들지 말 것.
-
 문법 정확성 필수 규칙:
 1. 정답 문장은 문법적으로 정확해야 한다.
 2. 시제와 시간표현이 충돌하면 안 된다.
-   - 예: present perfect + last week 금지
+- 예: present perfect + last week 금지
 3. 주어-동사 수일치를 반드시 맞출 것.
 4. 관사, 전치사, 어순, 의문문 구조를 자연스럽게 맞출 것.
 5. 관계대명사, to부정사, 동명사, 현재완료 등 목표 문법의 핵심이 분명히 드러나야 한다.
 6. 한국어 원문이 어색하면 자연스러운 학습용 문장으로 다듬되, 문법 목표는 유지할 것.
-
 금지 규칙:
 - 정답 완성문장을 clue로 그대로 제시하지 말 것.
 - 모든 문항을 한 가지 유형으로만 만들지 말 것.
@@ -532,7 +522,6 @@ clue 설계 규칙:
 - 설명문 위주의 문법 해설지로 만들지 말 것.
 - 시험용 함정 객관식으로 만들지 말 것.
 - 사용자 요청과 무관한 독해 지문형 시험지로 만들지 말 것.
-
 ${buildModeSpecificGuide(input)}
 
 출력 형식:
@@ -541,13 +530,11 @@ ${buildModeSpecificGuide(input)}
 [[QUESTIONS]]
 [[ANSWERS]]`.trim() : `
 You are the dedicated MARCUS Magic English writing-training workbook engine.
-
 Core identity:
 - Magic is not a generic worksheet generator.
 - Magic is a premium guided production engine that trains learners to build English sentences by themselves.
 - Magic is not trap-based. It is structure-guided, production-oriented, and workbook-centered.
 - The output must be ready for real classroom and academy use.
-
 Top-level universal rules:
 1. The worksheet must remain writing-training centered.
 2. Present each item first in the learner's input language.
@@ -566,7 +553,6 @@ Top-level universal rules:
 15. Always provide an answer section.
 16. Match the requested item count as accurately as possible.
 17. Keep every item classroom-usable and educationally natural.
-
 Item design rules:
 - Mix at least 3 item types.
 - Recommended ratio:
@@ -603,16 +589,14 @@ Clue design rules:
 4. Make learners reconstruct sentence structure by themselves.
 5. Vary clue density slightly across the set.
 6. In higher difficulty levels, compress the clues slightly, but never make them too thin to train with.
-
 Grammar accuracy rules:
 1. Final answers must be grammatically correct.
 2. Do not create tense-time conflicts.
-   - Example: present perfect + last week is forbidden.
+- Example: present perfect + last week is forbidden.
 3. Maintain subject-verb agreement.
 4. Keep articles, prepositions, word order, and question structure natural.
 5. Make the target grammar clearly visible in the final answer.
 6. If the source prompt is awkward, smooth it into a natural learning sentence while preserving the target grammar.
-
 Forbidden:
 - Do not provide the exact final sentence as the clue.
 - Do not make all items the same type.
@@ -620,7 +604,6 @@ Forbidden:
 - Do not turn it into a grammar explanation sheet.
 - Do not turn it into a multiple-choice trap test.
 - Do not drift into unrelated passage-based exam content.
-
 ${buildModeSpecificGuide(input)}
 
 Output format:
@@ -668,7 +651,7 @@ function buildUserPrompt(input) {
 
   if (input.mode === "vocab-builder") {
     return input.language === "en" ?
-`
+      `
 Generate a Vocab Builder worksheet.
 
 Title: ${title}
@@ -710,7 +693,6 @@ ${input.userPrompt || "(추가 요청 없음)"}
 
   return input.language === "en" ? `
 Generate a MARCUS Magic English writing-training workbook.
-
 Title: ${title}
 Mode: ${input.mode} (${modeLabel})
 Topic: ${input.topic}
@@ -729,18 +711,15 @@ Mandatory Magic rules:
 - Include some sentence-transformation writing items.
 - Keep the worksheet production-oriented, not copy-based.
 - Keep the grammar accurate and classroom-usable.
-
 Quality control:
 - Do not create present perfect + finished past-time conflicts.
 - Do not generate weak copy-the-answer style items.
 - Do not make all 25 items the same pattern.
 - Make the output feel like premium guided training.
-
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
 `.trim() : `
 마커스매직 스타일 영어 영작훈련 워크북 세트를 생성하시오.
-
 제목: ${title}
 모드: ${input.mode} (${modeLabel})
 주제: ${input.topic}
@@ -804,7 +783,8 @@ function extractSection(rawText, startMarker, endMarker) {
   if (start === -1) return "";
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
+  return end === -1 ?
+    rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function formatMagicResponse(rawText, input) {
@@ -812,7 +792,6 @@ function formatMagicResponse(rawText, input) {
   const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
   const questions = extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]");
   const answers = extractSection(rawText, "[[ANSWERS]]", null);
-
   const finalTitle = title.trim() || buildMagicTitle(input);
   const contentParts = [finalTitle, instructions.trim(), questions.trim()].filter(Boolean);
   const fullParts = [...contentParts];
@@ -836,7 +815,40 @@ function formatMagicResponse(rawText, input) {
 
 function getMemberstackHeaders() {
   if (!MEMBERSTACK_SECRET_KEY) return null;
-  return { "x-api-key": MEMBERSTACK_SECRET_KEY, "Content-Type": "application/json" };
+  return {
+    "x-api-key": MEMBERSTACK_SECRET_KEY,
+    "Content-Type": "application/json",
+  };
+}
+
+async function memberstackRequest(path, options = {}) {
+  const headers = getMemberstackHeaders();
+  if (!headers) {
+    throw new Error("Missing MEMBERSTACK_SECRET_KEY");
+  }
+
+  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
+    ...options,
+    headers: {
+      ...headers,
+      ...(options.headers || {}),
+    },
+  });
+
+  const text = await response.text();
+  let data = null;
+
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    data = text;
+  }
+
+  if (!response.ok) {
+    throw new Error(`Memberstack request failed: ${response.status}`);
+  }
+
+  return data;
 }
 
 function getRequiredMp(reqBody = {}) {
@@ -850,43 +862,38 @@ function getInitialTrialMp() {
 function extractBearerToken(req) {
   const raw = req?.headers?.authorization || req?.headers?.Authorization || "";
   const match = String(raw).match(/^Bearer\s+(.+)$/i);
-  return match ? match[1].trim() : "";
+  return match ? match[1] : "";
 }
 
 function extractMemberId(req) {
-  return sanitizeString(req?.body?.memberId || req?.headers?.["x-member-id"] || req?.headers?.["X-Member-Id"] || "");
-}
-
-async function memberstackRequest(path, options = {}) {
-  const headers = getMemberstackHeaders();
-  if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
-    ...options,
-    headers: { ...headers, ...(options.headers || {}) }
-  });
-  const text = await response.text();
-  let data = null;
-  try { data = text ? JSON.parse(text) : null; } catch { data = text; }
-  if (!response.ok) throw new Error(`Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`);
-  return data;
+  return sanitizeString(
+    req?.body?.memberId ||
+    req?.headers?.["x-member-id"] ||
+    req?.headers?.["X-Member-Id"] ||
+    ""
+  );
 }
 
 async function verifyMemberToken(token) {
   if (!token) return null;
-  const payload = { token };
-  if (MEMBERSTACK_APP_ID) payload.audience = MEMBERSTACK_APP_ID;
-  const data = await memberstackRequest("/verify-token", { method: "POST", body: JSON.stringify(payload) });
+  const data = await memberstackRequest("/verify-token", {
+    method: "POST",
+    body: JSON.stringify({ token }),
+  });
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "GET", headers: { "Content-Type": "application/json" } });
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
+    method: "GET",
+  });
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
+
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
@@ -895,29 +902,62 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
+
   for (const value of candidates) {
     const num = Number(value);
-    if (Number.isFinite(num)) return Math.max(0, Math.floor(num));
+    if (Number.isFinite(num)) {
+      return sanitizeMp(num, 0);
+    }
   }
+
   return null;
 }
 
 async function updateMemberMp(member, nextMp) {
   const memberId = member?.id;
-  if (!memberId) throw new Error("Missing member id for MP update");
-  const currentCustomFields = member?.customFields && typeof member.customFields === "object" ? member.customFields : {};
-  const currentMetaData = member?.metaData && typeof member.metaData === "object" ? member.metaData : {};
-  const safeMp = Math.max(0, Math.floor(Number(nextMp) || 0));
+  if (!memberId) {
+    throw new Error("Missing member id for MP update");
+  }
+
+  const currentCustomFields =
+    member?.customFields && typeof member.customFields === "object"
+      ? member.customFields
+      : {};
+  const currentMetaData =
+    member?.metaData && typeof member.metaData === "object"
+      ? member.metaData
+      : {};
+
+  const safeMp = sanitizeMp(nextMp, 0);
+
   const patchBody = {
-    customFields: { ...currentCustomFields, [MEMBERSTACK_MP_FIELD]: safeMp },
-    metaData: { ...currentMetaData, [MEMBERSTACK_MP_FIELD]: safeMp },
+    customFields: {
+      ...currentCustomFields,
+      [MEMBERSTACK_MP_FIELD]: safeMp,
+      mp: safeMp,
+      MP: safeMp,
+    },
+    metaData: {
+      ...currentMetaData,
+      [MEMBERSTACK_MP_FIELD]: safeMp,
+      mp: safeMp,
+      MP: safeMp,
+    },
   };
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "PATCH", body: JSON.stringify(patchBody) });
+
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
+    method: "PATCH",
+    body: JSON.stringify(patchBody),
+  });
+
   return data?.data || null;
 }
 
 async function resolveMemberForMp(req) {
-  if (!MEMBERSTACK_SECRET_KEY) return { enabled: false, reason: "missing_secret_key", member: null };
+  if (!MEMBERSTACK_SECRET_KEY) {
+    return { enabled: false, reason: "missing_secret_key", member: null };
+  }
+
   try {
     const bearerToken = extractBearerToken(req);
     if (bearerToken) {
@@ -927,11 +967,13 @@ async function resolveMemberForMp(req) {
         return { enabled: true, reason: "token_verified", member };
       }
     }
+
     const explicitMemberId = extractMemberId(req);
     if (explicitMemberId) {
       const member = await getMemberById(explicitMemberId);
       return { enabled: true, reason: "member_id", member };
     }
+
     return { enabled: false, reason: "member_not_provided", member: null };
   } catch (error) {
     console.error("resolveMemberForMp error:", error);
@@ -942,31 +984,67 @@ async function resolveMemberForMp(req) {
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
   const memberContext = await resolveMemberForMp(req);
+
   if (!memberContext.enabled || !memberContext.member) {
-    return { enabled: false, reason: memberContext.reason, requiredMp, member: null, currentMp: null, remainingMp: null, trialGranted: false, deducted: false };
+    return {
+      enabled: false,
+      reason: memberContext.reason,
+      requiredMp,
+      member: null,
+      currentMp: null,
+      remainingMp: null,
+      trialGranted: false,
+      deducted: false,
+    };
   }
-  const member = memberContext.member;
+
+  let member = memberContext.member;
   let currentMp = readMpFromMember(member);
-  let updatedMember = member;
   let trialGranted = false;
+
   if (!Number.isFinite(currentMp)) {
     currentMp = getInitialTrialMp();
-    updatedMember = (await updateMemberMp(member, currentMp)) || member;
-    currentMp = readMpFromMember(updatedMember);
+    member = (await updateMemberMp(member, currentMp)) || member;
+    currentMp = readMpFromMember(member);
     trialGranted = true;
   }
-  if (!Number.isFinite(currentMp)) currentMp = 0;
-  return { enabled: true, reason: memberContext.reason, requiredMp, member: updatedMember, currentMp, remainingMp: currentMp, trialGranted, deducted: false };
+
+  if (!Number.isFinite(currentMp)) {
+    currentMp = 0;
+  }
+
+  return {
+    enabled: true,
+    reason: memberContext.reason,
+    requiredMp,
+    member,
+    currentMp,
+    remainingMp: currentMp,
+    trialGranted,
+    deducted: false,
+  };
 }
 
 async function deductMpAfterSuccess(mpState) {
   if (!mpState || !mpState.enabled) return mpState;
+
   const currentMp = Number(mpState.currentMp);
   const requiredMp = Number(mpState.requiredMp);
-  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) return { ...mpState, deducted: false };
+
+  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
+    return { ...mpState, deducted: false };
+  }
+
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-  return { ...mpState, member: updatedMember || mpState.member, currentMp: nextMp, remainingMp: nextMp, deducted: true };
+
+  return {
+    ...mpState,
+    member: updatedMember || mpState.member,
+    currentMp: nextMp,
+    remainingMp: nextMp,
+    deducted: true,
+  };
 }
 
 /* =========================
