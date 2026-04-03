@@ -12,6 +12,30 @@ const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
 const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
 const DEFAULT_TRIAL_MP = Number(process.env.MEMBERSTACK_TRIAL_MP || 15);
 
+const MP_COST_TABLE = {
+  wormhole: 5,
+  magic: 4,
+  mocks: 5,
+  vocab: 4,
+  abcstarter: 3,
+  writing: 4,
+  "magic-card": 4,
+  "vocab-builder": 4,
+  "vocab-csat": 5,
+  "textbook-grammar": 5,
+  "chapter-grammar": 5,
+  school: 5,
+  csat: 5,
+  transform: 5,
+  hybrid: 5,
+  junior_starter: 3,
+  writing_lab: 4,
+  grammar_intensive: 5,
+  reading_mocks: 5,
+  vocab_workbook: 4,
+  vocab_csat: 5,
+};
+
 function json(res, status, payload) {
   return res.status(status).json(payload);
 }
@@ -629,14 +653,37 @@ async function memberstackRequest(path, options = {}) {
   }
 
   if (!response.ok) {
-    throw new Error(`Memberstack request failed: ${response.status}`);
+    throw new Error(`Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`);
   }
 
   return data;
 }
 
+function normalizeCostKey(value = "") {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_");
+}
+
 function getRequiredMp(reqBody = {}) {
-  return sanitizeMp(reqBody.mpCost, 5);
+  const explicit = Number(reqBody.mpCost);
+  if (Number.isFinite(explicit)) {
+    return sanitizeMp(explicit, 5);
+  }
+
+  const modeKey = normalizeCostKey(reqBody.mode);
+  const engineKey = normalizeCostKey(reqBody.engine);
+
+  if (modeKey && Number.isFinite(MP_COST_TABLE[modeKey])) {
+    return MP_COST_TABLE[modeKey];
+  }
+
+  if (engineKey && Number.isFinite(MP_COST_TABLE[engineKey])) {
+    return MP_COST_TABLE[engineKey];
+  }
+
+  return 5;
 }
 
 function getInitialTrialMp() {
@@ -660,9 +707,15 @@ function extractMemberId(req) {
 
 async function verifyMemberToken(token) {
   if (!token) return null;
+
+  const payload = { token };
+  if (MEMBERSTACK_APP_ID) {
+    payload.audience = MEMBERSTACK_APP_ID;
+  }
+
   const data = await memberstackRequest("/verify-token", {
     method: "POST",
-    body: JSON.stringify({ token }),
+    body: JSON.stringify(payload),
   });
   return data?.data || null;
 }
@@ -862,7 +915,25 @@ export default async function handler(req, res) {
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, error: "INVALID_REQUEST", message: "prompt 또는 topic이 필요합니다." });
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
-      return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다. 업그레이드 후 계속 이용해주세요.", needsUpgrade: true, requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp, trialGranted: mpState.trialGranted });
+      return json(res, 403, {
+        success: false,
+        error: "INSUFFICIENT_MP",
+        message: "MP가 부족합니다. 업그레이드 후 계속 이용해주세요.",
+        needsUpgrade: true,
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: mpState.currentMp,
+        trialGranted: mpState.trialGranted,
+        mpSyncEnabled: Boolean(mpState.enabled),
+        mpSyncReason: mpState.reason || "unknown",
+        mp: {
+          requiredMp: mpState.requiredMp,
+          currentMp: mpState.currentMp,
+          remainingMp: mpState.currentMp,
+          deducted: false,
+          trialGranted: Boolean(mpState.trialGranted),
+        },
+      });
     }
 
     const systemPrompt = buildSystemPrompt(input);
@@ -888,11 +959,19 @@ export default async function handler(req, res) {
       fullText: formatted.fullText,
       meta,
       requiredMp: mpState.requiredMp,
+      currentMp: mpState.currentMp,
       remainingMp: finalMpState?.remainingMp ?? null,
       needsUpgrade: false,
       trialGranted: Boolean(mpState.trialGranted),
       mpSyncEnabled: Boolean(mpState.enabled),
       mpSyncReason: mpState.reason || "unknown",
+      mp: {
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: finalMpState?.remainingMp ?? null,
+        deducted: Boolean(finalMpState?.deducted),
+        trialGranted: Boolean(mpState.trialGranted),
+      },
     });
   } catch (error) {
     console.error("generate-mocks error:", error);
