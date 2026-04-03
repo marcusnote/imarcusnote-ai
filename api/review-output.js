@@ -27,7 +27,8 @@ function sanitizeString(value, fallback = "") {
 
 function sanitizeEngine(value) {
   const v = sanitizeString(value).toLowerCase();
-  if (["wormhole", "magic", "mocks", "mock_exam", "vocab"].includes(v)) {
+  if (v === "vocab_workbook" || v === "vocab_csat") return "vocab";
+  if (["wormhole", "magic", "mocks", "mock_exam", "vocab", "vocab_workbook", "vocab_csat"].includes(v)) {
     return v === "mock_exam" ? "mocks" : v;
   }
   return "wormhole";
@@ -209,17 +210,20 @@ async function callOpenAI(systemPrompt, userPrompt) {
 
 function buildSystemPrompt({ engine, language, difficulty, intentMode }) {
   const isKo = language === "ko";
+  
   if (engine === "magic" && (intentMode === "concept" || intentMode === "concept+training")) {
     return isKo
       ? `
 당신은 MARCUSNOTE Magic 개념설명 자료를 검수하는 엄격한 교육 편집자이다.
 
 핵심 원칙:
-- 이것은 영작훈련지만이 아니라, 개념 설명 + 예문 + 간단 확인문항 자료이다.
+- 이것은 영작훈련지가 아니라, 개념 설명 + 예문 + 간단 확인문항 자료이다.
 - 절대로 개념설명 자료를 영작훈련 워크북으로 바꾸지 말 것.
 - 반드시 "개념 설명 -> 핵심 구조 정리 -> 예문 -> Mini Check -> 정답" 흐름을 유지할 것.
 - 만약 워크북 문항이 너무 많다면, 이를 Mini Check 섹션으로 압축하여 3~5문항으로 줄일 것.
 - "짧은 설명 1문단 + 많은 문제" 형태의 구조가 되는 것을 절대 허용하지 말 것.
+- NEVER convert concept explanation into writing exercises
+- Do not add unnecessary problem sets
 
 반드시 지킬 규칙:
 1. 원래 문법 주제와 학습 의도를 유지할 것.
@@ -242,6 +246,8 @@ Core rules:
 - If the worksheet contains too many practice items, compress them into a small mini check section (3-5 items).
 - Never allow the structure to become "one short explanation + many workbook items".
 - Ensure the output contains: 1. concept explanation, 2. pattern summary, 3. example sentences, 4. mini check, 5. answers.
+- NEVER convert concept explanation into writing exercises
+- Do not add unnecessary problem sets
 
 Must do:
 1. Preserve the original grammar target and learning intention.
@@ -279,11 +285,9 @@ Must do:
 `.trim()
       : `
 You are a strict educational editor reviewing a MARCUSNOTE Magic writing workbook.
-
 Core rules:
 - Preserve writing-training identity.
 - Do NOT convert it into a test sheet or concept sheet.
-
 Must do:
 1. Preserve the original grammar target and writing-training intention.
 2. Keep each item as real sentence-construction practice.
@@ -316,11 +320,9 @@ Must do:
 `.trim()
       : `
 You are a strict educational editor reviewing a MARCUSNOTE Wormhole high-difficulty exam sheet.
-
 Core rules:
 - Preserve exam identity and high-difficulty character.
 - Do NOT convert it into a writing workbook.
-
 Must do:
 1. Preserve the original exam intention and grammar focus.
 2. Repair logic conflicts between items and answers.
@@ -339,7 +341,6 @@ Must do:
 핵심 원칙:
 - 모의고사/독해형 정체성을 유지할 것.
 - 워크북형으로 바꾸지 말 것.
-
 반드시 지킬 규칙:
 1. 문제 구조와 독해 의도를 유지할 것.
 2. 형식과 번호를 정돈할 것.
@@ -348,15 +349,52 @@ Must do:
 `.trim()
       : `
 You are a strict educational editor reviewing a MARCUSNOTE Reading Mocks sheet.
-
 Core rules:
 - Preserve mock-exam / reading identity.
 - Do NOT convert it into a workbook.
-
 Must do:
 1. Preserve problem structure and reading intention.
 2. Clean numbering and formatting.
 3. Lightly repair answers/explanations if present.
+4. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
+`.trim();
+  }
+
+  if (engine === "vocab") {
+    return isKo
+      ? `
+당신은 MARCUSNOTE Vocab 어휘 학습 자료를 검수하는 엄격한 교육 편집자이다.
+
+핵심 원칙 (반드시 준수):
+For vocabulary worksheets:
+- Preserve round structure (Round 1, Round 2, etc.)
+- Each round must restart numbering from 1
+- Ensure each vocabulary item includes English + Korean meaning
+- Do not collapse multiple rounds into one
+
+반드시 지킬 규칙:
+1. 어휘 학습지의 라운드(Round) 기반 구조를 보존할 것.
+2. 각 라운드는 반드시 번호를 1번부터 시작할 것.
+3. 번호 누락 없이 연속적으로 작성할 것.
+4. "Vocabulary List -> Vocabulary Test -> Answers" 구조를 유지할 것.
+5. Vocabulary List에서는 반드시 영어 + 한국어 뜻 쌍을 보존할 것.
+6. 형식, 번호, 간격만 정돈하고 원문 어휘 리스트를 보존할 것.
+7. 출력은 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 구조를 유지할 것.
+`.trim()
+      : `
+You are a strict educational editor reviewing a MARCUSNOTE Vocab worksheet.
+
+Core rules:
+For vocabulary worksheets:
+- Preserve round structure (Round 1, Round 2, etc.)
+- Each round must restart numbering from 1
+- Ensure each vocabulary item includes English + Korean meaning
+- Do not collapse multiple rounds into one
+
+Must do:
+1. Keep "Vocabulary List -> Vocabulary Test -> Answers" structure.
+2. Preserve English + Korean meaning pairs in vocabulary list.
+3. Clean formatting, numbering, and spacing only.
 4. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
 `.trim();
   }
@@ -412,6 +450,7 @@ ${rawOutput || ""}
 - answers에는 정답/해설만 넣으시오.
 - 매직 concept 모드면 개념설명과 예문 흐름을 보존하시오. (문제 수를 늘리지 마시오)
 - 매직 training 모드면 영작훈련 구조를 보존하시오.
+- 어휘 자료면 라운드 구조와 1번부터 시작하는 번호 체계를 보존하시오.
 - 미완성 문장을 반드시 완성하시오.
 - 불필요한 잡문, 마크다운, 코드펜스는 넣지 마시오.
 `.trim()
@@ -437,6 +476,7 @@ ${rawOutput || ""}
 - Put only answer/explanation content in answers.
 - If magic concept mode, preserve explanation + examples flow and do NOT increase question count.
 - If magic training mode, preserve writing-training flow.
+- If vocab mode, preserve round structure and numbering starting from 1.
 - Repair incomplete sentences.
 - Do not add markdown or commentary.
 `.trim();
@@ -460,7 +500,6 @@ export default async function handler(req, res) {
     const worksheetTitle = sanitizeString(req.body?.worksheetTitle);
     const prompt = sanitizeString(req.body?.prompt);
     const rawOutput = sanitizeString(req.body?.rawOutput);
-
     const language =
       sanitizeString(req.body?.language) || inferLanguage(`${worksheetTitle}\n${prompt}\n${rawOutput}`);
 
