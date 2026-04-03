@@ -8,6 +8,26 @@ const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
 const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
 const DEFAULT_TRIAL_MP = Number(process.env.MEMBERSTACK_TRIAL_MP || 15);
 
+const MP_COST_TABLE = {
+  wormhole: 5,
+  magic: 4,
+  mocks: 5,
+  vocab: 4,
+  abcstarter: 3,
+  writing: 4,
+  "magic-card": 4,
+  "vocab-builder": 4,
+  "vocab-csat": 5,
+  "textbook-grammar": 5,
+  "chapter-grammar": 5,
+  junior_starter: 3,
+  writing_lab: 4,
+  grammar_intensive: 5,
+  reading_mocks: 5,
+  vocab_workbook: 4,
+  vocab_csat: 5,
+};
+
 /* =========================
    Utility Helpers
    ========================= */
@@ -174,6 +194,7 @@ function normalizeInput(body = {}) {
     "textbook-grammar",
     "chapter-grammar",
     "vocab-builder",
+    "vocab-csat",
   ];
   const mode = modeCandidates.includes(body.mode)
     ? body.mode
@@ -1209,14 +1230,37 @@ JSON.parse(text) : null;
   }
 
   if (!response.ok) {
-    throw new Error(`Memberstack request failed: ${response.status}`);
+    throw new Error(`Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`);
   }
 
   return data;
 }
 
+function normalizeCostKey(value = "") {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_");
+}
+
 function getRequiredMp(reqBody = {}) {
-  return sanitizeMp(reqBody.mpCost, 5);
+  const explicit = Number(reqBody.mpCost);
+  if (Number.isFinite(explicit)) {
+    return sanitizeMp(explicit, 5);
+  }
+
+  const modeKey = normalizeCostKey(reqBody.mode);
+  const engineKey = normalizeCostKey(reqBody.engine);
+
+  if (modeKey && Number.isFinite(MP_COST_TABLE[modeKey])) {
+    return MP_COST_TABLE[modeKey];
+  }
+
+  if (engineKey && Number.isFinite(MP_COST_TABLE[engineKey])) {
+    return MP_COST_TABLE[engineKey];
+  }
+
+  return 5;
 }
 
 function getInitialTrialMp() {
@@ -1241,9 +1285,15 @@ function extractMemberId(req) {
 
 async function verifyMemberToken(token) {
   if (!token) return null;
+
+  const payload = { token };
+  if (MEMBERSTACK_APP_ID) {
+    payload.audience = MEMBERSTACK_APP_ID;
+  }
+
   const data = await memberstackRequest("/verify-token", {
     method: "POST",
-    body: JSON.stringify({ token }),
+    body: JSON.stringify(payload),
   });
   return data?.data || null;
 }
@@ -1450,6 +1500,7 @@ function normalizeInput(body = {}) {
     "textbook-grammar",
     "chapter-grammar",
     "vocab-builder",
+    "vocab-csat",
   ];
   const mode = modeCandidates.includes(body.mode)
     ? body.mode
@@ -1525,7 +1576,24 @@ module.exports = async function handler(req, res) {
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
-      return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
+      return json(res, 403, {
+        success: false,
+        error: "INSUFFICIENT_MP",
+        message: "MP가 부족합니다.",
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: mpState.currentMp,
+        trialGranted: Boolean(mpState.trialGranted),
+        mpSyncEnabled: Boolean(mpState.enabled),
+        mpSyncReason: mpState.reason || "unknown",
+        mp: {
+          requiredMp: mpState.requiredMp,
+          currentMp: mpState.currentMp,
+          remainingMp: mpState.currentMp,
+          deducted: false,
+          trialGranted: Boolean(mpState.trialGranted),
+        },
+      });
     }
 
     const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
@@ -1540,8 +1608,19 @@ module.exports = async function handler(req, res) {
         actualCount: formatted.actualCount,
         generatedAt: new Date().toISOString()
       },
+      requiredMp: mpState.requiredMp,
+      currentMp: mpState.currentMp,
       remainingMp: finalMpState?.remainingMp ?? null,
-      mpSyncEnabled: Boolean(mpState.enabled)
+      trialGranted: Boolean(mpState.trialGranted),
+      mpSyncEnabled: Boolean(mpState.enabled),
+      mpSyncReason: mpState.reason || "unknown",
+      mp: {
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: finalMpState?.remainingMp ?? null,
+        deducted: Boolean(finalMpState?.deducted),
+        trialGranted: Boolean(mpState.trialGranted),
+      }
     });
   } catch (error) {
     console.error("Handler error:", error);
