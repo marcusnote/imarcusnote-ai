@@ -831,16 +831,24 @@ function addCors(res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
 }
 
+function getMemberstackHeaders() {
+  if (!MEMBERSTACK_SECRET_KEY) return null;
+  return {
+    "x-api-key": MEMBERSTACK_SECRET_KEY,
+    "Content-Type": "application/json",
+  };
+}
+
 async function memberstackRequest(path, options = {}) {
-  if (!MEMBERSTACK_SECRET_KEY) {
+  const headers = getMemberstackHeaders();
+  if (!headers) {
     throw new Error("Missing MEMBERSTACK_SECRET_KEY");
   }
 
   const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
     ...options,
     headers: {
-      "x-api-key": MEMBERSTACK_SECRET_KEY,
-      "Content-Type": "application/json",
+      ...headers,
       ...(options.headers || {}),
     },
   });
@@ -855,29 +863,112 @@ async function memberstackRequest(path, options = {}) {
   }
 
   if (!response.ok) {
-    throw new Error(`Memberstack failed: ${response.status}`);
+    throw new Error(
+      `Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`
+    );
   }
 
   return data;
 }
 
+function getRequiredMp(reqBody = {}) {
+  return sanitizeMp(reqBody?.mpCost, 5);
+}
+
+function getInitialTrialMp() {
+  return sanitizeMp(DEFAULT_TRIAL_MP, 15);
+}
+
+function extractBearerToken(req) {
+  const raw = req?.headers?.authorization || req?.headers?.Authorization || "";
+  const match = String(raw).match(/^Bearer\s+(.+)$/i);
+  return match ? match[1].trim() : "";
+}
+
+function extractMemberId(req) {
+  return sanitizeString(
+    req?.body?.memberId ||
+    req?.headers?.["x-member-id"] ||
+    req?.headers?.["X-Member-Id"] ||
+    ""
+  );
+}
+
+async function verifyMemberToken(token) {
+  if (!token) return null;
+
+  const payload = { token };
+  if (MEMBERSTACK_APP_ID) {
+    payload.audience = MEMBERSTACK_APP_ID;
+  }
+
+  const data = await memberstackRequest("/verify-token", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+
+  return data?.data || null;
+}
+
+async function getMemberById(memberId) {
+  if (!memberId) return null;
+
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
+    method: "GET",
+  });
+
+  return data?.data || null;
+}
+
+function readMpFromMember(member) {
+  if (!member) return null;
+
+  const candidates = [
+    member?.customFields?.[MEMBERSTACK_MP_FIELD],
+    member?.metaData?.[MEMBERSTACK_MP_FIELD],
+    member?.customFields?.mp,
+    member?.metaData?.mp,
+    member?.customFields?.MP,
+    member?.metaData?.MP,
+  ];
+
+  for (const value of candidates) {
+    const parsed = Number(value);
+    if (Number.isFinite(parsed)) {
+      return sanitizeMp(parsed, 0);
+    }
+  }
+
+  return null;
+}
+
 async function updateMemberMp(member, nextMp) {
-  if (!member?.id) return null;
+  if (!member?.id) {
+    throw new Error("Missing member id for MP update");
+  }
 
   const safeNextMp = sanitizeMp(nextMp, 0);
-  const currentCustomFields = member?.customFields || {};
-  const currentMetaData = member?.metaData || {};
+  const currentCustomFields =
+    member?.customFields && typeof member.customFields === "object"
+      ? member.customFields
+      : {};
+  const currentMetaData =
+    member?.metaData && typeof member.metaData === "object"
+      ? member.metaData
+      : {};
 
   const body = {
     customFields: {
       ...currentCustomFields,
       [MEMBERSTACK_MP_FIELD]: safeNextMp,
       mp: safeNextMp,
+      MP: safeNextMp,
     },
     metaData: {
       ...currentMetaData,
       [MEMBERSTACK_MP_FIELD]: safeNextMp,
       mp: safeNextMp,
+      MP: safeNextMp,
     },
   };
 
@@ -889,16 +980,94 @@ async function updateMemberMp(member, nextMp) {
   return data?.data || null;
 }
 
+async function resolveMemberForMp(req) {
+  if (!MEMBERSTACK_SECRET_KEY) {
+    return { enabled: false, reason: "missing_secret_key", member: null };
+  }
+
+  try {
+    const bearerToken = extractBearerToken(req);
+    if (bearerToken) {
+      const verified = await verifyMemberToken(bearerToken);
+      if (verified?.id) {
+        const member = await getMemberById(verified.id);
+        return { enabled: true, reason: "token_verified", member };
+      }
+    }
+
+    const explicitMemberId = extractMemberId(req);
+    if (explicitMemberId) {
+      const member = await getMemberById(explicitMemberId);
+      return { enabled: true, reason: "member_id", member };
+    }
+
+    return { enabled: false, reason: "member_not_provided", member: null };
+  } catch (error) {
+    console.error("resolveMemberForMp error:", error);
+    return { enabled: false, reason: "member_lookup_failed", member: null };
+  }
+}
+
+async function prepareMpState(req) {
+  const requiredMp = getRequiredMp(req.body || {});
+  const memberContext = await resolveMemberForMp(req);
+
+  if (!memberContext.enabled || !memberContext.member) {
+    return {
+      enabled: false,
+      reason: memberContext.reason,
+      requiredMp,
+      member: null,
+      currentMp: null,
+      remainingMp: null,
+      trialGranted: false,
+      deducted: false,
+    };
+  }
+
+  let member = memberContext.member;
+  let currentMp = readMpFromMember(member);
+  let trialGranted = false;
+
+  if (!Number.isFinite(currentMp)) {
+    currentMp = getInitialTrialMp();
+    member = (await updateMemberMp(member, currentMp)) || member;
+    currentMp = readMpFromMember(member);
+    trialGranted = true;
+  }
+
+  if (!Number.isFinite(currentMp)) {
+    currentMp = 0;
+  }
+
+  return {
+    enabled: true,
+    reason: memberContext.reason,
+    requiredMp,
+    member,
+    currentMp,
+    remainingMp: currentMp,
+    trialGranted,
+    deducted: false,
+  };
+}
+
 async function deductMpAfterSuccess(mpState) {
   if (!mpState?.enabled || !mpState?.member) {
-    return { ...mpState, deducted: false };
+    return {
+      ...mpState,
+      deducted: false,
+    };
   }
 
   const currentMp = sanitizeMp(mpState.currentMp, 0);
   const requiredMp = sanitizeMp(mpState.requiredMp, 0);
 
   if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
-    return { ...mpState, deducted: false };
+    return {
+      ...mpState,
+      deducted: false,
+    };
   }
 
   const nextMp = Math.max(0, currentMp - requiredMp);
@@ -911,64 +1080,6 @@ async function deductMpAfterSuccess(mpState) {
     remainingMp: nextMp,
     deducted: true,
   };
-}
-
-async function prepareMpState(req) {
-  const requiredMp = sanitizeMp(req.body?.mpCost, 5);
-  const memberId = sanitizeString(req.body?.memberId || req.headers?.["x-member-id"] || "");
-
-  if (!MEMBERSTACK_SECRET_KEY || !memberId) {
-    return {
-      enabled: false,
-      reason: "member_not_provided",
-      requiredMp,
-    };
-  }
-
-  try {
-    const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
-      method: "GET",
-    });
-
-    const member = data?.data;
-    if (!member) {
-      return {
-        enabled: false,
-        reason: "member_not_found",
-        requiredMp,
-      };
-    }
-
-    const rawMp =
-      member.customFields?.[MEMBERSTACK_MP_FIELD] ??
-      member.metaData?.[MEMBERSTACK_MP_FIELD] ??
-      member.customFields?.mp ??
-      member.metaData?.mp ??
-      null;
-
-    let currentMp = Number(rawMp);
-
-    if (rawMp == null || rawMp === "" || !Number.isFinite(currentMp)) {
-      currentMp = DEFAULT_TRIAL_MP;
-      await updateMemberMp(member, currentMp);
-    }
-
-    return {
-      enabled: true,
-      reason: "memberstack-synced",
-      requiredMp,
-      currentMp,
-      remainingMp: currentMp,
-      member,
-      deducted: false,
-    };
-  } catch (e) {
-    return {
-      enabled: false,
-      reason: "lookup_failed",
-      requiredMp,
-    };
-  }
 }
 
 // --- 교체된 Memberstack 블록 끝 ---
@@ -1012,8 +1123,18 @@ export default async function handler(req, res) {
       success: true,
       ...formatted,
       textbook: input.textbook,
+      requiredMp: mpState.requiredMp,
       remainingMp: finalMpState?.remainingMp ?? null,
-      mpSyncEnabled: Boolean(mpState.enabled)
+      trialGranted: Boolean(mpState.trialGranted),
+      mpSyncEnabled: Boolean(mpState.enabled),
+      mpSyncReason: mpState.reason || "unknown",
+      mp: {
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: finalMpState?.remainingMp ?? null,
+        deducted: Boolean(finalMpState?.deducted),
+        trialGranted: Boolean(mpState.trialGranted),
+      }
     });
   } catch (error) {
     console.error("Handler Error:", error);
