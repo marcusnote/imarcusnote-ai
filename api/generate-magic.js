@@ -133,6 +133,19 @@ function detectMagicIntent(text = "") {
   return "training";
 }
 
+function sanitizeEngine(value) {
+  const v = sanitizeString(value).toLowerCase();
+
+  if (v === "mock_exam") return "mocks";
+  if (v === "vocab_workbook" || v === "vocab_csat") return "vocab";
+
+  if (["wormhole", "magic", "mocks", "vocab"].includes(v)) {
+    return v;
+  }
+
+  return "magic";
+}
+
 function normalizeInput(body = {}) {
   const userPrompt = sanitizeString(body.userPrompt || body.prompt || "");
   const mergedText = [
@@ -143,35 +156,67 @@ function normalizeInput(body = {}) {
     sanitizeString(body.difficulty || ""),
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || ""),
-  ].filter(Boolean).join(" ");
-  const level = ["elementary", "middle", "high"].includes(body.level) ? body.level : inferLevel(mergedText);
-  const modeCandidates = ["magic", "magic-card", "writing", "abcstarter", "textbook-grammar", "chapter-grammar", "vocab-builder"];
-  const mode = modeCandidates.includes(body.mode) ? body.mode : inferMode(mergedText);
-  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty) ? body.difficulty : inferDifficulty(mergedText);
-  const language = ["ko", "en"].includes(body.language) ? body.language : inferLanguage(mergedText);
+    sanitizeString(body.engine || ""),
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const engine = sanitizeEngine(body.engine);
+
+  const level =
+    ["elementary", "middle", "high"].includes(body.level)
+      ? body.level
+      : inferLevel(mergedText);
+
+  const modeCandidates = [
+    "magic",
+    "magic-card",
+    "writing",
+    "abcstarter",
+    "textbook-grammar",
+    "chapter-grammar",
+    "vocab-builder",
+  ];
+  const mode = modeCandidates.includes(body.mode)
+    ? body.mode
+    : inferMode(mergedText);
+
+  const difficulty =
+    ["basic", "standard", "high", "extreme"].includes(body.difficulty)
+      ? body.difficulty
+      : inferDifficulty(mergedText);
+
+  const language =
+    ["ko", "en"].includes(body.language)
+      ? body.language
+      : inferLanguage(mergedText);
+
   const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
   const examType = sanitizeString(body.examType || "") || "workbook";
   const worksheetTitle = sanitizeString(body.worksheetTitle || "");
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
-  
-  // 교체된 부분: Concept 강제 축소 로직 적용
   const count = sanitizeCount(body.count);
   const intentMode = detectMagicIntent(mergedText);
-const effectiveCount =
-  intentMode === "concept"
-    ? 4
-    : intentMode === "concept+training"
-    ? 5
-    : count;
- 
+
+  const effectiveCount =
+    intentMode === "concept"
+      ? 3
+      : intentMode === "concept+training"
+      ? 5
+      : count;
+
   const gradeLabel = inferGradeLabel(mergedText, level);
 
   const vocabSeriesStart = clamp(Number(body.vocabSeriesStart || 1), 1, 200);
   const vocabSeriesEnd = clamp(Number(body.vocabSeriesEnd || 1), 1, 200);
-  const vocabItemsPerRound = clamp(Number(body.vocabItemsPerRound || count), 5, 30);
-  
+  const vocabItemsPerRound = clamp(
+    Number(body.vocabItemsPerRound || 20),
+    10,
+    30
+  );
+
   return {
-    engine: "magic",
+    engine,
     level,
     mode,
     topic,
@@ -272,7 +317,14 @@ function buildVocabSeriesBlock(input) {
   }
   return `
 [VOCAB ROUND SERIES]
-${rounds.join("\n")}
+
+STRICT OUTPUT RULE (CRITICAL):
+- MUST include "### Round 1", "### Round 2"
+- MUST restart numbering from 1 in each round
+- MUST include Korean meanings
+- NEVER skip numbering
+
+${rounds.join("\n\n")}
 
 Rules:
 - Separate each round clearly.
@@ -286,7 +338,8 @@ Rules:
 
 function buildConceptGuide(input) {
   const isEn = input.language === "en";
-  return isEn ? `
+  return isEn ?
+  `
 Mode Identity:
 - This is a grammar concept-and-example sheet.
 - Do NOT turn it into a writing-only workbook.
@@ -364,7 +417,8 @@ Forbidden drift:
   }
 
   if (input.mode === "abcstarter") {
-    return isEn ? `
+    return isEn ?
+    `
 Mode Identity:
 - This is a beginner-friendly starter workbook.
 - Keep sentence length short and cognitively light.
@@ -391,7 +445,8 @@ Preferred item tendencies:
   }
 
   if (input.mode === "writing") {
-    return isEn ? `
+    return isEn ?
+    `
 Mode Identity:
 - This is an explicit writing-training workbook.
 - Strongly prioritize learner sentence production.
@@ -418,7 +473,8 @@ Priority:
   }
 
   if (input.mode === "magic-card") {
-    return isEn ? `
+    return isEn ?
+    `
 Mode Identity:
 - This is a Magic Card style workbook.
 - Keep the output compact, sharp, and highly trainable.
@@ -443,7 +499,8 @@ Preferred item tendencies:
   }
 
   if (input.mode === "textbook-grammar") {
-    return isEn ? `
+    return isEn ?
+    `
 Mode Identity:
 - This is a textbook-grammar based writing workbook.
 - Anchor the worksheet to school-textbook grammar goals and classroom expectations.
@@ -465,11 +522,12 @@ Priority:
 - 교과서 정렬
 - 수업 활용성
 - 안내형 생산 훈련
-`.trim();
+`;
   }
 
   if (input.mode === "chapter-grammar") {
-    return isEn ? `
+    return isEn ?
+    `
 Mode Identity:
 - This is a chapter-grammar focused writing workbook.
 - Focus tightly on the designated grammar chapter.
@@ -539,17 +597,22 @@ Output format:
 핵심 정체성:
 - 이것은 문제풀이 워크북이 아니라, 개념 학습을 먼저 하는 문법 개념 학습지이다.
 - 반드시 "개념 설명 → 핵심 구조 정리 → 예문 → Mini Check → 정답" 순서를 지킬 것.
-- 연습문항 수를 많이 늘리는 것보다, 개념 정리의 완성도를 우선할 것.
+- 연습문항 수를 늘리는 것보다, 개념 설명의 교육적 밀도와 교재 완성도를 우선할 것.
 
 절대 규칙:
-1. 개념 설명은 최소 4~6개 bullet 수준의 내용으로 충분히 설명할 것.
-2. 핵심 구조 정리를 반드시 별도 섹션으로 만들 것.
-3. 예문은 최소 6개, 최대 10개 제시할 것.
-4. 예문은 문제형이 아니라 완전한 예문이어야 한다.
-5. Mini Check는 3~5문항만 만들 것.
-6. 전체 문항형 문제를 20개 이상 만들지 말 것.
-7. "설명 1문단 + 문제 20개 이상" 형태를 절대 금지할 것.
-8. 출력은 반드시 아래 구조를 따를 것.
+1. 개념 설명은 반드시 5~6개의 bullet로 작성할 것.
+2. 각 bullet은 한 줄 요약이 아니라, 실제 수업 설명처럼 충분한 정보를 담을 것.
+3. 핵심 구조 정리는 반드시 아래 3개를 포함할 것:
+   - 기본형
+   - 부정형
+   - 의문형
+4. 예문은 6~8개 제시할 것.
+5. 예문은 문제형이 아니라 완전한 예문이어야 한다.
+6. 예문은 너무 짧은 단문만 반복하지 말고, 학교 수업용으로 자연스럽고 교육적인 문장을 사용할 것.
+7. Mini Check는 정확히 3문항 또는 4문항으로 제한할 것.
+8. 전체 문항형 문제를 길게 나열하지 말 것.
+9. "설명 1문단 + 문제 다수" 구조를 절대 금지할 것.
+10. 출력은 반드시 아래 형식을 따를 것.
 
 출력 형식:
 [[TITLE]]
@@ -559,15 +622,22 @@ Output format:
 - ...
 - ...
 - ...
+- ...
+- ...
 
 2. 핵심 구조 정리
-- ...
-- ...
+- 기본형: ...
+- 부정형: ...
+- 의문형: ...
+- 예시: ...
 
 3. 예문
 1) ...
 2) ...
 3) ...
+4) ...
+5) ...
+6) ...
 
 4. Mini Check
 1) ...
@@ -583,59 +653,123 @@ Output format:
 
   const isKo = input.language === "ko";
   if (input.mode === "vocab-builder") {
-    return isKo ? `
+    return isKo ?
+`
 당신은 MARCUS VOCA BUILDER 전용 생성 엔진이다.
+
 핵심 목표:
 - 어휘 중심의 프리미엄 학습 자료를 생성한다.
-- 문법 문제가 아니라 어휘 학습지, 어휘 테스트지, 문맥 기반 어휘 훈련지여야 한다.
-- 출력물은 교사와 학원이 바로 사용할 수 있을 정도로 깔끔해야 한다.
+- 출력은 반드시 회차형(Round형) 구조여야 한다.
+- 각 회차는 "어휘 목록 + 테스트 + 정답" 구조를 유지해야 한다.
 
 중요 원칙:
-1. 반드시 어휘 중심이어야 한다.
-2. 문법 문제지처럼 변질되면 안 된다.
-3. 사용자가 지문을 제공하면 지문 기반 어휘 자료로 작성한다.
-4. 사용자가 지문을 제공하지 않으면 주제 기반 어휘 훈련지로 작성한다.
-5. 뜻, 문맥, 용법, 유의어, 반의어, 빈칸 속 어휘 선택 등 어휘 학습 요소를 활용한다.
-6. 정답 섹션을 반드시 제공한다.
-7. 객관식이 꼭 필요한 경우에만 제한적으로 사용하고, 무분별한 문법형 객관식은 금지한다.
-8. 회차별 출력이 요청된 경우 섹션을 명확히 분리한다.
+1. Round 1, Round 2, Round 3 형식으로 명확히 구분할 것.
+2. 각 Round에는 반드시 아래 3개 섹션이 있어야 한다.
+   - A. Vocabulary List
+   - B. Vocabulary Test
+   - Answers
+3. Vocabulary List는 영어 + 한국어 뜻을 함께 제시할 것.
+4. 어휘 번호는 반드시 1번부터 시작할 것.
+5. 번호 누락 없이 연속적으로 작성할 것.
+6. 테스트는 5문항 내외로 제한할 것.
+7. 테스트 유형은 뜻 확인, 유의어, 반의어, 문맥 빈칸 중 2~3개를 혼합할 것.
+8. 출력 형식은 회차별로 독립적으로 사용 가능해야 한다.
+9. 문법 문제지처럼 변질시키지 말 것.
+
 출력 형식:
 [[TITLE]]
 [[INSTRUCTIONS]]
 [[QUESTIONS]]
-### n회 (요청 시 적용)
-[A. Vocabulary List]
-...
-[B. Vocabulary Test]
-...
-[[ANSWERS]]`.trim() : `
-You are the dedicated MARCUS VOCA BUILDER engine.
-Core goals:
-- Generate premium vocabulary-centered worksheets.
-- Keep the output focused on vocabulary learning, not grammar drilling.
-- Make the worksheet teacher-ready and classroom-usable.
 
-Important rules:
-1. The worksheet must stay vocabulary-centered.
-2. If the user provides a passage, build a passage-based vocabulary worksheet.
-3. If no passage is provided, build a topic-based vocabulary practice set.
-4. Use meaning, context, usage, synonym, antonym, and lexical review.
-5. Do not turn the output into a grammar worksheet.
-6. Always provide an answer section.
-7. If rounds are requested, separate each round clearly.
+### Round 1
+[A. Vocabulary List]
+1. adapt (적응하다)
+2. analyze (분석하다)
+...
+
+[B. Vocabulary Test]
+1. ...
+2. ...
+3. ...
+4. ...
+5. ...
+
+### Round 2
+[A. Vocabulary List]
+1. ...
+2. ...
+...
+
+[B. Vocabulary Test]
+1. ...
+2. ...
+3. ...
+4. ...
+5. ...
+
+[[ANSWERS]]
+### Round 1
+1. ...
+2. ...
+3. ...
+4. ...
+5. ...
+
+### Round 2
+1. ...
+2. ...
+3. ...
+4. ...
+5. ...
+`.trim() : `
+You are the dedicated MARCUS VOCA BUILDER engine.
+
+Core goals:
+- Generate premium round-based vocabulary worksheets.
+- Each round must contain vocabulary list + test + answers.
+- Keep the worksheet vocabulary-centered and classroom-ready.
+
+Rules:
+1. Use clear round structure such as Round 1, Round 2, Round 3.
+2. Each round must include:
+   - A. Vocabulary List
+   - B. Vocabulary Test
+   - Answers
+3. Vocabulary List must show English + meaning together.
+4. Numbering must always start from 1 in each round.
+5. Never skip numbering.
+6. Each round should remain independently usable.
+7. Keep tests short and varied.
+8. Do not turn the worksheet into a grammar sheet.
+
 Output format:
 [[TITLE]]
 [[INSTRUCTIONS]]
 [[QUESTIONS]]
-### Round n (if requested)
+### Round 1
 [A. Vocabulary List]
-...
+1. ...
+2. ...
+
 [B. Vocabulary Test]
-...
-[[ANSWERS]]`.trim();
+1. ...
+2. ...
+3. ...
+4. ...
+5. ...
+
+[[ANSWERS]]
+### Round 1
+1. ...
+2. ...
+3. ...
+4. ...
+5. ...
+`.trim();
   }
 
-  return isKo ? `
+  return isKo ?
+`
 당신은 마커스매직 전용 영작훈련 워크북 생성 엔진이다.
 핵심 정체성:
 - 매직은 단순 문제 생성기가 아니다.
@@ -792,7 +926,7 @@ Forbidden:
 - Do not make all items the same type.
 - Do not reduce the worksheet to copying practice.
 - Do not turn it into a grammar explanation sheet.
-- Do not turn it into a multiple-choice trap test.
+- Do not turn it into a multiple-choice_trap test.
 - Do not drift into unrelated passage-based exam content.
 ${buildModeSpecificGuide(input)}
 
@@ -808,28 +942,34 @@ function buildTaskGuide(input) {
   switch (input.mode) {
     case "vocab-builder":
       return isEn
-        ? "Create a vocabulary-centered worksheet. If a passage is provided, use passage-based vocabulary tasks. If not, create a topic-based vocabulary practice set. Do not turn it into a grammar worksheet."
-        : "어휘 중심 자료로 구성할 것. 지문이 있으면 지문 기반 어휘 문제로, 지문이 없으면 주제 기반 어휘 훈련지로 작성할 것. 문법 문제지처럼 만들지 말 것.";
+        ?
+"Create a vocabulary-centered worksheet. If a passage is provided, use passage-based vocabulary tasks. If not, create a topic-based vocabulary practice set. Do not turn it into a grammar worksheet."
+: "어휘 중심 자료로 구성할 것. 지문이 있으면 지문 기반 어휘 문제로, 지문이 없으면 주제 기반 어휘 훈련지로 작성할 것. 문법 문제지처럼 만들지 말 것.";
     case "abcstarter":
       return isEn
-        ? "Create beginner-friendly foundational English tasks with very clear scaffolding and generous clues."
-        : "초등 입문 친화형 과제로 구성하되, clue와 안내를 매우 친절하게 제공할 것.";
+        ?
+"Create beginner-friendly foundational English tasks with very clear scaffolding and generous clues."
+: "초등 입문 친화형 과제로 구성하되, clue와 안내를 매우 친절하게 제공할 것.";
     case "writing":
       return isEn
-        ? "Focus strongly on English writing training through fragment-clue composition, rearrangement with one extra word, partial completion, and sentence transformation."
-        : "조각형 clue 영작, 초과단어 재배열형, 부분완성형, 문장변환형을 포함한 영작훈련 중심으로 구성할 것.";
+        ?
+"Focus strongly on English writing training through fragment-clue composition, rearrangement with one extra word, partial completion, and sentence transformation."
+: "조각형 clue 영작, 초과단어 재배열형, 부분완성형, 문장변환형을 포함한 영작훈련 중심으로 구성할 것.";
     case "textbook-grammar":
       return isEn
-        ? "Anchor the worksheet to textbook-style grammar goals, but keep it as a guided writing workbook with mixed productive item types."
-        : "교과서 문법 학습목표에 맞추되, 복수의 생산형 문항 유형이 섞인 안내형 영작 워크북으로 구성할 것.";
+        ?
+"Anchor the worksheet to textbook-style grammar goals, but keep it as a guided writing workbook with mixed productive item types."
+: "교과서 문법 학습목표에 맞추되, 복수의 생산형 문항 유형이 섞인 안내형 영작 워크북으로 구성할 것.";
     case "chapter-grammar":
       return isEn
-        ? "Focus tightly on the chapter grammar and make learners produce sentences with fragment-based clues and mixed writing task types."
-        : "챕터 문법에 집중하되, 조각형 clue와 혼합 영작 유형을 통해 문장을 직접 생산하게 만들 것.";
+        ?
+"Focus tightly on the chapter grammar and make learners produce sentences with fragment-based clues and mixed writing task types."
+: "챕터 문법에 집중하되, 조각형 clue와 혼합 영작 유형을 통해 문장을 직접 생산하게 만들 것.";
     default:
       return isEn
-        ? "Create a premium guided English writing-training workbook with fragment-based clues, mixed item types, and one-extra-word rearrangement tasks."
-        : "조각형 clue, 혼합 생산형 문항, 초과단어 재배열형이 포함된 프리미엄 영작훈련 워크북으로 구성할 것.";
+        ?
+"Create a premium guided English writing-training workbook with fragment-based clues, mixed item types, and one-extra-word rearrangement tasks."
+: "조각형 clue, 혼합 생산형 문항, 초과단어 재배열형이 포함된 프리미엄 영작훈련 워크북으로 구성할 것.";
   }
 }
 
@@ -840,11 +980,13 @@ function buildUserPrompt(input) {
   const taskGuide = buildTaskGuide(input);
 
   if (input.mode === "vocab-builder") {
-    const vocabSeriesBlock = "\n\n" + buildVocabSeriesBlock(input) + "\n\n";
-    return input.language === "en" ?
-`
-Generate a Vocab Builder worksheet.
+    const vocabSeriesBlock = buildVocabSeriesBlock(input);
+
+    return input.language === "en"
+      ? `
 ${vocabSeriesBlock}
+
+Generate a Vocab Builder worksheet.
 
 Title: ${title}
 Mode: ${input.mode} (${modeLabel})
@@ -862,9 +1004,11 @@ Additional rules:
 
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
-`.trim() : `
-마커스 VOCA BUILDER 스타일 어휘 학습지를 생성하시오.
+`.trim()
+      : `
 ${vocabSeriesBlock}
+
+마커스 VOCA BUILDER 스타일 어휘 학습지를 생성하시오.
 
 제목: ${title}
 모드: ${input.mode} (${modeLabel})
@@ -885,7 +1029,8 @@ ${input.userPrompt || "(추가 요청 없음)"}
 `.trim();
   }
 
-  return input.language === "en" ? `
+  return input.language === "en"
+    ? `
 Generate a MARCUS Magic English writing-training workbook.
 Title: ${title}
 Mode: ${input.mode} (${modeLabel})
@@ -905,15 +1050,19 @@ Mandatory Magic rules:
 - Include some sentence-transformation writing items.
 - Keep the worksheet production-oriented, not copy-based.
 - Keep the grammar accurate and classroom-usable.
+
 Quality control:
 - Do not create present perfect + finished past-time conflicts.
 - Do not generate weak copy-the-answer style items.
-- Do not make all 25 items the same pattern.
+- Do not make all ${input.count} items the same pattern.
 - Make the output feel like premium guided training.
+
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
-`.trim() : `
+`.trim()
+    : `
 마커스매직 스타일 영어 영작훈련 워크북 세트를 생성하시오.
+
 제목: ${title}
 모드: ${input.mode} (${modeLabel})
 주제: ${input.topic}
@@ -934,14 +1083,36 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 - 문법은 정확하고 실제 수업에서 사용할 수 있어야 한다.
 
 품질 통제:
-- present perfect와 finished past-time 표현을 충돌시키지 말 것.
-- 25문항이 전부 같은 패턴이 되지 않게 할 것.
-- 단순한 답안 복사형 문제가 되지 않게 할 것.
-- 결과물 전체가 프리미엄 guided training처럼 느껴지게 할 것.
+- 현재완료 + last week 같은 시제 충돌을 만들지 말 것.
+- 답을 거의 그대로 베끼는 약한 문제를 만들지 말 것.
+- ${input.count}문항이 모두 같은 패턴이 되지 않게 할 것.
+- 결과물은 프리미엄 guided training 워크북처럼 느껴져야 한다.
 
 사용자 원문:
 ${input.userPrompt || "(추가 요청 없음)"}
 `.trim();
+}
+
+function buildMagicResponse(rawText, input) {
+  const title = extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]");
+  const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
+  const questions = extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]");
+  const answers = extractSection(rawText, "[[ANSWERS]]", null);
+  const finalTitle = title.trim() || buildMagicTitle(input);
+  const contentParts = [finalTitle, instructions.trim(), questions.trim()].filter(Boolean);
+  const fullParts = [...contentParts];
+  if (answers.trim()) {
+    fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + answers.trim());
+  }
+
+  return {
+    title: finalTitle,
+    instructions: instructions.trim(),
+    content: contentParts.join("\n\n"),
+    answerSheet: answers.trim(),
+    fullText: fullParts.join("\n\n"),
+    actualCount: (questions.match(/^\s*\d+\./gm) || []).length
+  };
 }
 
 /* =========================
@@ -964,6 +1135,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt }
       ]
+ 
     }),
   });
 
@@ -1234,6 +1406,108 @@ mpState.member,
     currentMp: nextMp,
     remainingMp: nextMp,
     deducted: true,
+  };
+}
+
+function sanitizeEngine(value) {
+  const v = sanitizeString(value).toLowerCase();
+
+  if (v === "mock_exam") return "mocks";
+  if (v === "vocab_workbook" || v === "vocab_csat") return "vocab";
+
+  if (["wormhole", "magic", "mocks", "vocab"].includes(v)) {
+    return v;
+  }
+
+  return "magic";
+}
+
+function normalizeInput(body = {}) {
+  const userPrompt = sanitizeString(body.userPrompt || body.prompt || "");
+  const mergedText = [
+    userPrompt,
+    sanitizeString(body.topic || ""),
+    sanitizeString(body.mode || ""),
+    sanitizeString(body.level || ""),
+    sanitizeString(body.difficulty || ""),
+    sanitizeString(body.examType || ""),
+    sanitizeString(body.worksheetTitle || ""),
+    sanitizeString(body.engine || ""),
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const engine = sanitizeEngine(body.engine);
+
+  const level =
+    ["elementary", "middle", "high"].includes(body.level)
+      ? body.level
+      : inferLevel(mergedText);
+
+  const modeCandidates = [
+    "magic",
+    "magic-card",
+    "writing",
+    "abcstarter",
+    "textbook-grammar",
+    "chapter-grammar",
+    "vocab-builder",
+  ];
+  const mode = modeCandidates.includes(body.mode)
+    ? body.mode
+    : inferMode(mergedText);
+
+  const difficulty =
+    ["basic", "standard", "high", "extreme"].includes(body.difficulty)
+      ? body.difficulty
+      : inferDifficulty(mergedText);
+
+  const language =
+    ["ko", "en"].includes(body.language)
+      ? body.language
+      : inferLanguage(mergedText);
+
+  const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
+  const examType = sanitizeString(body.examType || "") || "workbook";
+  const worksheetTitle = sanitizeString(body.worksheetTitle || "");
+  const academyName = sanitizeString(body.academyName || "Imarcusnote");
+  const count = sanitizeCount(body.count);
+  const intentMode = detectMagicIntent(mergedText);
+
+  const effectiveCount =
+    intentMode === "concept"
+      ? 3
+      : intentMode === "concept+training"
+      ? 5
+      : count;
+
+  const gradeLabel = inferGradeLabel(mergedText, level);
+
+  const vocabSeriesStart = clamp(Number(body.vocabSeriesStart || 1), 1, 200);
+  const vocabSeriesEnd = clamp(Number(body.vocabSeriesEnd || 1), 1, 200);
+  const vocabItemsPerRound = clamp(
+    Number(body.vocabItemsPerRound || 20),
+    10,
+    30
+  );
+
+  return {
+    engine,
+    level,
+    mode,
+    topic,
+    examType,
+    difficulty,
+    count: effectiveCount,
+    language,
+    worksheetTitle,
+    academyName,
+    userPrompt,
+    gradeLabel,
+    vocabSeriesStart,
+    vocabSeriesEnd: Math.max(vocabSeriesStart, vocabSeriesEnd),
+    vocabItemsPerRound,
+    intentMode,
   };
 }
 
