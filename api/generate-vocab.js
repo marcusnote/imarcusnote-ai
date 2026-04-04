@@ -6,17 +6,6 @@ import path from "path";
  * - Uses fixed vocabulary DB (NOT random generation)
  * - Middle 3: 20 units × 20 words = 400 words
  * - Returns workbook/test output using ONLY the supplied vocabulary list
- *
- * Recommended file path:
- * /api/generate-vocab.js
- *
- * Required env:
- * OPENAI_API_KEY
- *
- * IMPORTANT:
- * 1) Put the JSON file at /data/vocab/middle3_core_vocab_400.json
- * 2) If you already have an OpenAI call pattern in another API file,
- *    you may replace only the "callOpenAI" function section below.
  */
 
 function readJson(relativePath) {
@@ -239,7 +228,6 @@ async function callOpenAI(prompt) {
 
   const data = await response.json();
 
-  // Responses API output extraction
   const text =
     data.output_text ||
     data.output?.map((item) => {
@@ -256,6 +244,15 @@ async function callOpenAI(prompt) {
 }
 
 export default async function handler(req, res) {
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Allow-Origin", "https://imarcusnote.com");
+  res.setHeader("Access-Control-Allow-Methods", "POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -265,7 +262,7 @@ export default async function handler(req, res) {
       level = "middle3",
       unit = 1,
       range = "",
-      mode = "list+test", // list+test | list-only | test-only | review
+      mode = "list+test",
       userNote = "",
     } = req.body || {};
 
