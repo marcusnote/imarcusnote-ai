@@ -1,2 +1,7 @@
 {
+  "functions": {
+    "api/generate-vocab.js": {
+      "includeFiles": "data/vocab/**/*.json"
+    }
+  }
 }
