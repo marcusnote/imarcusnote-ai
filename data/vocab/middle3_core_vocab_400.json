@@ -1,2047 +1,446 @@
 {
+  "title": "Marcusnote Middle 3 Core Vocabulary 400",
   "level": "middle3",
-  "title": "Marcusnote Middle 3 Core Vocabulary",
-  "description": "20 units × 20 words = 400 curated advanced middle-school vocabulary items",
   "units": {
     "1": [
-      {
-        "word": "analyze",
-        "pos": "v.",
-        "meaning_ko": "분석하다"
-      },
-      {
-        "word": "interpret",
-        "pos": "v.",
-        "meaning_ko": "해석하다"
-      },
-      {
-        "word": "identify",
-        "pos": "v.",
-        "meaning_ko": "확인하다"
-      },
-      {
-        "word": "define",
-        "pos": "v.",
-        "meaning_ko": "정의하다"
-      },
-      {
-        "word": "recognize",
-        "pos": "v.",
-        "meaning_ko": "알아보다"
-      },
-      {
-        "word": "distinguish",
-        "pos": "v.",
-        "meaning_ko": "구별하다"
-      },
-      {
-        "word": "assume",
-        "pos": "v.",
-        "meaning_ko": "가정하다"
-      },
-      {
-        "word": "require",
-        "pos": "v.",
-        "meaning_ko": "요구하다"
-      },
-      {
-        "word": "involve",
-        "pos": "v.",
-        "meaning_ko": "포함하다"
-      },
-      {
-        "word": "affect",
-        "pos": "v.",
-        "meaning_ko": "영향을 미치다"
-      },
-      {
-        "word": "influence",
-        "pos": "v.",
-        "meaning_ko": "영향을 주다"
-      },
-      {
-        "word": "determine",
-        "pos": "v.",
-        "meaning_ko": "결정하다"
-      },
-      {
-        "word": "suggest",
-        "pos": "v.",
-        "meaning_ko": "시사하다"
-      },
-      {
-        "word": "indicate",
-        "pos": "v.",
-        "meaning_ko": "나타내다"
-      },
-      {
-        "word": "reveal",
-        "pos": "v.",
-        "meaning_ko": "드러내다"
-      },
-      {
-        "word": "demonstrate",
-        "pos": "v.",
-        "meaning_ko": "입증하다"
-      },
-      {
-        "word": "support",
-        "pos": "v.",
-        "meaning_ko": "지지하다"
-      },
-      {
-        "word": "oppose",
-        "pos": "v.",
-        "meaning_ko": "반대하다"
-      },
-      {
-        "word": "represent",
-        "pos": "v.",
-        "meaning_ko": "나타내다, 대표하다"
-      },
-      {
-        "word": "include",
-        "pos": "v.",
-        "meaning_ko": "포함하다"
-      }
+      { "word": "abstract", "pos": "adj.", "meaning_ko": "추상적인" },
+      { "word": "concrete", "pos": "adj.", "meaning_ko": "구체적인" },
+      { "word": "interpret", "pos": "v.", "meaning_ko": "해석하다" },
+      { "word": "infer", "pos": "v.", "meaning_ko": "추론하다" },
+      { "word": "justify", "pos": "v.", "meaning_ko": "정당화하다" },
+      { "word": "distinguish", "pos": "v.", "meaning_ko": "구별하다" },
+      { "word": "perspective", "pos": "n.", "meaning_ko": "관점" },
+      { "word": "principle", "pos": "n.", "meaning_ko": "원칙" },
+      { "word": "concept", "pos": "n.", "meaning_ko": "개념" },
+      { "word": "context", "pos": "n.", "meaning_ko": "맥락, 문맥" },
+      { "word": "factor", "pos": "n.", "meaning_ko": "요인" },
+      { "word": "consequence", "pos": "n.", "meaning_ko": "결과, 영향" },
+      { "word": "relevant", "pos": "adj.", "meaning_ko": "관련 있는" },
+      { "word": "significant", "pos": "adj.", "meaning_ko": "중요한, 의미 있는" },
+      { "word": "rational", "pos": "adj.", "meaning_ko": "합리적인" },
+      { "word": "sufficient", "pos": "adj.", "meaning_ko": "충분한" },
+      { "word": "insufficient", "pos": "adj.", "meaning_ko": "불충분한" },
+      { "word": "consequently", "pos": "adv.", "meaning_ko": "결과적으로" },
+      { "word": "nevertheless", "pos": "adv.", "meaning_ko": "그럼에도 불구하고" },
+      { "word": "accordingly", "pos": "adv.", "meaning_ko": "그에 따라" }
     ],
     "2": [
-      {
-        "word": "derive",
-        "pos": "v.",
-        "meaning_ko": "이끌어내다"
-      },
-      {
-        "word": "establish",
-        "pos": "v.",
-        "meaning_ko": "확립하다"
-      },
-      {
-        "word": "maintain",
-        "pos": "v.",
-        "meaning_ko": "유지하다"
-      },
-      {
-        "word": "achieve",
-        "pos": "v.",
-        "meaning_ko": "성취하다"
-      },
-      {
-        "word": "conduct",
-        "pos": "v.",
-        "meaning_ko": "수행하다"
-      },
-      {
-        "word": "generate",
-        "pos": "v.",
-        "meaning_ko": "생성하다"
-      },
-      {
-        "word": "produce",
-        "pos": "v.",
-        "meaning_ko": "생산하다"
-      },
-      {
-        "word": "contribute",
-        "pos": "v.",
-        "meaning_ko": "기여하다"
-      },
-      {
-        "word": "apply",
-        "pos": "v.",
-        "meaning_ko": "적용하다"
-      },
-      {
-        "word": "adapt",
-        "pos": "v.",
-        "meaning_ko": "적응시키다, 적응하다"
-      },
-      {
-        "word": "improve",
-        "pos": "v.",
-        "meaning_ko": "향상시키다"
-      },
-      {
-        "word": "enhance",
-        "pos": "v.",
-        "meaning_ko": "강화하다"
-      },
-      {
-        "word": "expand",
-        "pos": "v.",
-        "meaning_ko": "확대하다"
-      },
-      {
-        "word": "reduce",
-        "pos": "v.",
-        "meaning_ko": "줄이다"
-      },
-      {
-        "word": "limit",
-        "pos": "v.",
-        "meaning_ko": "제한하다"
-      },
-      {
-        "word": "prevent",
-        "pos": "v.",
-        "meaning_ko": "막다"
-      },
-      {
-        "word": "avoid",
-        "pos": "v.",
-        "meaning_ko": "피하다"
-      },
-      {
-        "word": "control",
-        "pos": "v.",
-        "meaning_ko": "통제하다"
-      },
-      {
-        "word": "manage",
-        "pos": "v.",
-        "meaning_ko": "관리하다"
-      },
-      {
-        "word": "handle",
-        "pos": "v.",
-        "meaning_ko": "다루다"
-      }
+      { "word": "analyze", "pos": "v.", "meaning_ko": "분석하다" },
+      { "word": "evaluate", "pos": "v.", "meaning_ko": "평가하다" },
+      { "word": "assess", "pos": "v.", "meaning_ko": "평가하다" },
+      { "word": "examine", "pos": "v.", "meaning_ko": "검토하다, 조사하다" },
+      { "word": "investigate", "pos": "v.", "meaning_ko": "조사하다" },
+      { "word": "observe", "pos": "v.", "meaning_ko": "관찰하다" },
+      { "word": "detect", "pos": "v.", "meaning_ko": "감지하다, 발견하다" },
+      { "word": "recognize", "pos": "v.", "meaning_ko": "인식하다, 알아보다" },
+      { "word": "identify", "pos": "v.", "meaning_ko": "식별하다, 확인하다" },
+      { "word": "classify", "pos": "v.", "meaning_ko": "분류하다" },
+      { "word": "categorize", "pos": "v.", "meaning_ko": "분류하다" },
+      { "word": "compare", "pos": "v.", "meaning_ko": "비교하다" },
+      { "word": "contrast", "pos": "v.", "meaning_ko": "대조하다" },
+      { "word": "summarize", "pos": "v.", "meaning_ko": "요약하다" },
+      { "word": "conclude", "pos": "v.", "meaning_ko": "결론짓다" },
+      { "word": "derive", "pos": "v.", "meaning_ko": "이끌어 내다" },
+      { "word": "verify", "pos": "v.", "meaning_ko": "검증하다" },
+      { "word": "confirm", "pos": "v.", "meaning_ko": "확인하다" },
+      { "word": "specify", "pos": "v.", "meaning_ko": "명시하다" },
+      { "word": "clarify", "pos": "v.", "meaning_ko": "분명히 하다" }
     ],
     "3": [
-      {
-        "word": "infer",
-        "pos": "v.",
-        "meaning_ko": "추론하다"
-      },
-      {
-        "word": "conclude",
-        "pos": "v.",
-        "meaning_ko": "결론내리다"
-      },
-      {
-        "word": "predict",
-        "pos": "v.",
-        "meaning_ko": "예측하다"
-      },
-      {
-        "word": "estimate",
-        "pos": "v.",
-        "meaning_ko": "추정하다"
-      },
-      {
-        "word": "evaluate",
-        "pos": "v.",
-        "meaning_ko": "평가하다"
-      },
-      {
-        "word": "assess",
-        "pos": "v.",
-        "meaning_ko": "평가하다"
-      },
-      {
-        "word": "judge",
-        "pos": "v.",
-        "meaning_ko": "판단하다"
-      },
-      {
-        "word": "compare",
-        "pos": "v.",
-        "meaning_ko": "비교하다"
-      },
-      {
-        "word": "contrast",
-        "pos": "v.",
-        "meaning_ko": "대조하다"
-      },
-      {
-        "word": "relate",
-        "pos": "v.",
-        "meaning_ko": "관련시키다"
-      },
-      {
-        "word": "connect",
-        "pos": "v.",
-        "meaning_ko": "연결하다"
-      },
-      {
-        "word": "associate",
-        "pos": "v.",
-        "meaning_ko": "연관 짓다"
-      },
-      {
-        "word": "link",
-        "pos": "v.",
-        "meaning_ko": "연결하다"
-      },
-      {
-        "word": "attribute",
-        "pos": "v.",
-        "meaning_ko": "~의 탓으로 돌리다"
-      },
-      {
-        "word": "assign",
-        "pos": "v.",
-        "meaning_ko": "배정하다"
-      },
-      {
-        "word": "classify",
-        "pos": "v.",
-        "meaning_ko": "분류하다"
-      },
-      {
-        "word": "categorize",
-        "pos": "v.",
-        "meaning_ko": "범주화하다"
-      },
-      {
-        "word": "organize",
-        "pos": "v.",
-        "meaning_ko": "정리하다"
-      },
-      {
-        "word": "structure",
-        "pos": "v.",
-        "meaning_ko": "구성하다"
-      },
-      {
-        "word": "arrange",
-        "pos": "v.",
-        "meaning_ko": "배열하다"
-      }
+      { "word": "assume", "pos": "v.", "meaning_ko": "가정하다" },
+      { "word": "presume", "pos": "v.", "meaning_ko": "추정하다" },
+      { "word": "suppose", "pos": "v.", "meaning_ko": "가정하다" },
+      { "word": "claim", "pos": "v.", "meaning_ko": "주장하다" },
+      { "word": "argue", "pos": "v.", "meaning_ko": "주장하다, 논쟁하다" },
+      { "word": "maintain", "pos": "v.", "meaning_ko": "주장하다, 유지하다" },
+      { "word": "insist", "pos": "v.", "meaning_ko": "주장하다, 고집하다" },
+      { "word": "deny", "pos": "v.", "meaning_ko": "부인하다" },
+      { "word": "admit", "pos": "v.", "meaning_ko": "인정하다" },
+      { "word": "acknowledge", "pos": "v.", "meaning_ko": "인정하다" },
+      { "word": "assert", "pos": "v.", "meaning_ko": "단언하다" },
+      { "word": "state", "pos": "v.", "meaning_ko": "진술하다" },
+      { "word": "mention", "pos": "v.", "meaning_ko": "언급하다" },
+      { "word": "emphasize", "pos": "v.", "meaning_ko": "강조하다" },
+      { "word": "stress", "pos": "v.", "meaning_ko": "강조하다" },
+      { "word": "highlight", "pos": "v.", "meaning_ko": "강조하다, 부각하다" },
+      { "word": "illustrate", "pos": "v.", "meaning_ko": "설명하다, 예증하다" },
+      { "word": "demonstrate", "pos": "v.", "meaning_ko": "증명하다, 보여주다" },
+      { "word": "indicate", "pos": "v.", "meaning_ko": "나타내다, 시사하다" },
+      { "word": "reveal", "pos": "v.", "meaning_ko": "드러내다" }
     ],
     "4": [
-      {
-        "word": "factor",
-        "pos": "n.",
-        "meaning_ko": "요인"
-      },
-      {
-        "word": "issue",
-        "pos": "n.",
-        "meaning_ko": "문제"
-      },
-      {
-        "word": "aspect",
-        "pos": "n.",
-        "meaning_ko": "측면"
-      },
-      {
-        "word": "element",
-        "pos": "n.",
-        "meaning_ko": "요소"
-      },
-      {
-        "word": "feature",
-        "pos": "n.",
-        "meaning_ko": "특징"
-      },
-      {
-        "word": "principle",
-        "pos": "n.",
-        "meaning_ko": "원리"
-      },
-      {
-        "word": "theory",
-        "pos": "n.",
-        "meaning_ko": "이론"
-      },
-      {
-        "word": "concept",
-        "pos": "n.",
-        "meaning_ko": "개념"
-      },
-      {
-        "word": "approach",
-        "pos": "n.",
-        "meaning_ko": "접근법"
-      },
-      {
-        "word": "method",
-        "pos": "n.",
-        "meaning_ko": "방법"
-      },
-      {
-        "word": "process",
-        "pos": "n.",
-        "meaning_ko": "과정"
-      },
-      {
-        "word": "result",
-        "pos": "n.",
-        "meaning_ko": "결과"
-      },
-      {
-        "word": "outcome",
-        "pos": "n.",
-        "meaning_ko": "결과"
-      },
-      {
-        "word": "effect",
-        "pos": "n.",
-        "meaning_ko": "효과"
-      },
-      {
-        "word": "impact",
-        "pos": "n.",
-        "meaning_ko": "영향"
-      },
-      {
-        "word": "role",
-        "pos": "n.",
-        "meaning_ko": "역할"
-      },
-      {
-        "word": "function",
-        "pos": "n.",
-        "meaning_ko": "기능"
-      },
-      {
-        "word": "purpose",
-        "pos": "n.",
-        "meaning_ko": "목적"
-      },
-      {
-        "word": "goal",
-        "pos": "n.",
-        "meaning_ko": "목표"
-      },
-      {
-        "word": "standard",
-        "pos": "n.",
-        "meaning_ko": "기준"
-      }
+      { "word": "hypothesis", "pos": "n.", "meaning_ko": "가설" },
+      { "word": "theory", "pos": "n.", "meaning_ko": "이론" },
+      { "word": "evidence", "pos": "n.", "meaning_ko": "증거" },
+      { "word": "proof", "pos": "n.", "meaning_ko": "증거, 증명" },
+      { "word": "assumption", "pos": "n.", "meaning_ko": "가정" },
+      { "word": "implication", "pos": "n.", "meaning_ko": "함축, 영향" },
+      { "word": "inference", "pos": "n.", "meaning_ko": "추론" },
+      { "word": "conclusion", "pos": "n.", "meaning_ko": "결론" },
+      { "word": "premise", "pos": "n.", "meaning_ko": "전제" },
+      { "word": "criterion", "pos": "n.", "meaning_ko": "기준" },
+      { "word": "standard", "pos": "n.", "meaning_ko": "기준, 표준" },
+      { "word": "norm", "pos": "n.", "meaning_ko": "규범, 기준" },
+      { "word": "reference", "pos": "n.", "meaning_ko": "언급, 참고" },
+      { "word": "framework", "pos": "n.", "meaning_ko": "체계, 틀" },
+      { "word": "dimension", "pos": "n.", "meaning_ko": "차원, 규모" },
+      { "word": "aspect", "pos": "n.", "meaning_ko": "측면" },
+      { "word": "element", "pos": "n.", "meaning_ko": "요소" },
+      { "word": "component", "pos": "n.", "meaning_ko": "구성 요소" },
+      { "word": "mechanism", "pos": "n.", "meaning_ko": "작용 원리, 메커니즘" },
+      { "word": "phenomenon", "pos": "n.", "meaning_ko": "현상" }
     ],
     "5": [
-      {
-        "word": "significant",
-        "pos": "adj.",
-        "meaning_ko": "중요한"
-      },
-      {
-        "word": "essential",
-        "pos": "adj.",
-        "meaning_ko": "필수적인"
-      },
-      {
-        "word": "crucial",
-        "pos": "adj.",
-        "meaning_ko": "중대한"
-      },
-      {
-        "word": "important",
-        "pos": "adj.",
-        "meaning_ko": "중요한"
-      },
-      {
-        "word": "relevant",
-        "pos": "adj.",
-        "meaning_ko": "관련 있는"
-      },
-      {
-        "word": "appropriate",
-        "pos": "adj.",
-        "meaning_ko": "적절한"
-      },
-      {
-        "word": "suitable",
-        "pos": "adj.",
-        "meaning_ko": "적합한"
-      },
-      {
-        "word": "effective",
-        "pos": "adj.",
-        "meaning_ko": "효과적인"
-      },
-      {
-        "word": "efficient",
-        "pos": "adj.",
-        "meaning_ko": "효율적인"
-      },
-      {
-        "word": "available",
-        "pos": "adj.",
-        "meaning_ko": "이용 가능한"
-      },
-      {
-        "word": "possible",
-        "pos": "adj.",
-        "meaning_ko": "가능한"
-      },
-      {
-        "word": "likely",
-        "pos": "adj.",
-        "meaning_ko": "그럴듯한"
-      },
-      {
-        "word": "unlikely",
-        "pos": "adj.",
-        "meaning_ko": "가능성이 적은"
-      },
-      {
-        "word": "certain",
-        "pos": "adj.",
-        "meaning_ko": "확실한"
-      },
-      {
-        "word": "uncertain",
-        "pos": "adj.",
-        "meaning_ko": "불확실한"
-      },
-      {
-        "word": "similar",
-        "pos": "adj.",
-        "meaning_ko": "비슷한"
-      },
-      {
-        "word": "different",
-        "pos": "adj.",
-        "meaning_ko": "다른"
-      },
-      {
-        "word": "various",
-        "pos": "adj.",
-        "meaning_ko": "다양한"
-      },
-      {
-        "word": "complex",
-        "pos": "adj.",
-        "meaning_ko": "복잡한"
-      },
-      {
-        "word": "simple",
-        "pos": "adj.",
-        "meaning_ko": "단순한"
-      }
+      { "word": "complex", "pos": "adj.", "meaning_ko": "복잡한" },
+      { "word": "subtle", "pos": "adj.", "meaning_ko": "미묘한" },
+      { "word": "apparent", "pos": "adj.", "meaning_ko": "분명한, 겉으로 드러난" },
+      { "word": "evident", "pos": "adj.", "meaning_ko": "분명한" },
+      { "word": "obscure", "pos": "adj.", "meaning_ko": "모호한, 잘 알려지지 않은" },
+      { "word": "explicit", "pos": "adj.", "meaning_ko": "명백한, 명시적인" },
+      { "word": "implicit", "pos": "adj.", "meaning_ko": "암묵적인" },
+      { "word": "accurate", "pos": "adj.", "meaning_ko": "정확한" },
+      { "word": "precise", "pos": "adj.", "meaning_ko": "정확한, 정밀한" },
+      { "word": "approximate", "pos": "adj.", "meaning_ko": "대략의" },
+      { "word": "valid", "pos": "adj.", "meaning_ko": "타당한, 유효한" },
+      { "word": "invalid", "pos": "adj.", "meaning_ko": "타당하지 않은, 무효의" },
+      { "word": "logical", "pos": "adj.", "meaning_ko": "논리적인" },
+      { "word": "illogical", "pos": "adj.", "meaning_ko": "비논리적인" },
+      { "word": "objective", "pos": "adj.", "meaning_ko": "객관적인" },
+      { "word": "subjective", "pos": "adj.", "meaning_ko": "주관적인" },
+      { "word": "consistent", "pos": "adj.", "meaning_ko": "일관된" },
+      { "word": "inconsistent", "pos": "adj.", "meaning_ko": "일관되지 않은" },
+      { "word": "reasonable", "pos": "adj.", "meaning_ko": "합리적인" },
+      { "word": "unreasonable", "pos": "adj.", "meaning_ko": "불합리한" }
     ],
     "6": [
-      {
-        "word": "academic",
-        "pos": "adj.",
-        "meaning_ko": "학문적인"
-      },
-      {
-        "word": "logical",
-        "pos": "adj.",
-        "meaning_ko": "논리적인"
-      },
-      {
-        "word": "practical",
-        "pos": "adj.",
-        "meaning_ko": "실용적인"
-      },
-      {
-        "word": "theoretical",
-        "pos": "adj.",
-        "meaning_ko": "이론적인"
-      },
-      {
-        "word": "specific",
-        "pos": "adj.",
-        "meaning_ko": "구체적인"
-      },
-      {
-        "word": "general",
-        "pos": "adj.",
-        "meaning_ko": "일반적인"
-      },
-      {
-        "word": "direct",
-        "pos": "adj.",
-        "meaning_ko": "직접적인"
-      },
-      {
-        "word": "indirect",
-        "pos": "adj.",
-        "meaning_ko": "간접적인"
-      },
-      {
-        "word": "positive",
-        "pos": "adj.",
-        "meaning_ko": "긍정적인"
-      },
-      {
-        "word": "negative",
-        "pos": "adj.",
-        "meaning_ko": "부정적인"
-      },
-      {
-        "word": "accurate",
-        "pos": "adj.",
-        "meaning_ko": "정확한"
-      },
-      {
-        "word": "precise",
-        "pos": "adj.",
-        "meaning_ko": "정밀한"
-      },
-      {
-        "word": "obvious",
-        "pos": "adj.",
-        "meaning_ko": "분명한"
-      },
-      {
-        "word": "apparent",
-        "pos": "adj.",
-        "meaning_ko": "분명해 보이는"
-      },
-      {
-        "word": "reasonable",
-        "pos": "adj.",
-        "meaning_ko": "합리적인"
-      },
-      {
-        "word": "proper",
-        "pos": "adj.",
-        "meaning_ko": "적절한"
-      },
-      {
-        "word": "incorrect",
-        "pos": "adj.",
-        "meaning_ko": "틀린"
-      },
-      {
-        "word": "consistent",
-        "pos": "adj.",
-        "meaning_ko": "일관된"
-      },
-      {
-        "word": "essentially",
-        "pos": "adv.",
-        "meaning_ko": "본질적으로"
-      },
-      {
-        "word": "approximately",
-        "pos": "adv.",
-        "meaning_ko": "대략"
-      }
+      { "word": "construct", "pos": "v.", "meaning_ko": "구성하다, 건설하다" },
+      { "word": "establish", "pos": "v.", "meaning_ko": "설립하다, 확립하다" },
+      { "word": "organize", "pos": "v.", "meaning_ko": "조직하다" },
+      { "word": "arrange", "pos": "v.", "meaning_ko": "배열하다, 정리하다" },
+      { "word": "adjust", "pos": "v.", "meaning_ko": "조정하다" },
+      { "word": "modify", "pos": "v.", "meaning_ko": "수정하다" },
+      { "word": "revise", "pos": "v.", "meaning_ko": "수정하다, 개정하다" },
+      { "word": "edit", "pos": "v.", "meaning_ko": "편집하다" },
+      { "word": "transform", "pos": "v.", "meaning_ko": "변형시키다" },
+      { "word": "convert", "pos": "v.", "meaning_ko": "전환하다" },
+      { "word": "replace", "pos": "v.", "meaning_ko": "대체하다" },
+      { "word": "substitute", "pos": "v.", "meaning_ko": "대체하다" },
+      { "word": "expand", "pos": "v.", "meaning_ko": "확장하다" },
+      { "word": "restrict", "pos": "v.", "meaning_ko": "제한하다" },
+      { "word": "limit", "pos": "v.", "meaning_ko": "제한하다" },
+      { "word": "eliminate", "pos": "v.", "meaning_ko": "제거하다" },
+      { "word": "preserve", "pos": "v.", "meaning_ko": "보존하다" },
+      { "word": "maintain", "pos": "v.", "meaning_ko": "유지하다" },
+      { "word": "restore", "pos": "v.", "meaning_ko": "회복하다, 복원하다" },
+      { "word": "stabilize", "pos": "v.", "meaning_ko": "안정시키다" }
     ],
     "7": [
-      {
-        "word": "consume",
-        "pos": "v.",
-        "meaning_ko": "소비하다"
-      },
-      {
-        "word": "preserve",
-        "pos": "v.",
-        "meaning_ko": "보존하다"
-      },
-      {
-        "word": "replace",
-        "pos": "v.",
-        "meaning_ko": "대체하다"
-      },
-      {
-        "word": "remove",
-        "pos": "v.",
-        "meaning_ko": "제거하다"
-      },
-      {
-        "word": "transfer",
-        "pos": "v.",
-        "meaning_ko": "옮기다"
-      },
-      {
-        "word": "transform",
-        "pos": "v.",
-        "meaning_ko": "변형시키다"
-      },
-      {
-        "word": "combine",
-        "pos": "v.",
-        "meaning_ko": "결합하다"
-      },
-      {
-        "word": "separate",
-        "pos": "v.",
-        "meaning_ko": "분리하다"
-      },
-      {
-        "word": "obtain",
-        "pos": "v.",
-        "meaning_ko": "얻다"
-      },
-      {
-        "word": "acquire",
-        "pos": "v.",
-        "meaning_ko": "습득하다"
-      },
-      {
-        "word": "select",
-        "pos": "v.",
-        "meaning_ko": "선택하다"
-      },
-      {
-        "word": "adopt",
-        "pos": "v.",
-        "meaning_ko": "채택하다"
-      },
-      {
-        "word": "reject",
-        "pos": "v.",
-        "meaning_ko": "거부하다"
-      },
-      {
-        "word": "supply",
-        "pos": "v.",
-        "meaning_ko": "공급하다"
-      },
-      {
-        "word": "demand",
-        "pos": "v.",
-        "meaning_ko": "요구하다"
-      },
-      {
-        "word": "deliver",
-        "pos": "v.",
-        "meaning_ko": "전달하다"
-      },
-      {
-        "word": "admit",
-        "pos": "v.",
-        "meaning_ko": "인정하다"
-      },
-      {
-        "word": "deny",
-        "pos": "v.",
-        "meaning_ko": "부인하다"
-      },
-      {
-        "word": "occupy",
-        "pos": "v.",
-        "meaning_ko": "차지하다"
-      },
-      {
-        "word": "contain",
-        "pos": "v.",
-        "meaning_ko": "포함하다"
-      }
+      { "word": "occur", "pos": "v.", "meaning_ko": "발생하다" },
+      { "word": "emerge", "pos": "v.", "meaning_ko": "나타나다, 부상하다" },
+      { "word": "arise", "pos": "v.", "meaning_ko": "발생하다" },
+      { "word": "derive", "pos": "v.", "meaning_ko": "유래하다, 이끌어 내다" },
+      { "word": "originate", "pos": "v.", "meaning_ko": "유래하다, 시작되다" },
+      { "word": "trigger", "pos": "v.", "meaning_ko": "유발하다" },
+      { "word": "provoke", "pos": "v.", "meaning_ko": "유발하다, 자극하다" },
+      { "word": "generate", "pos": "v.", "meaning_ko": "발생시키다" },
+      { "word": "produce", "pos": "v.", "meaning_ko": "생산하다, 산출하다" },
+      { "word": "yield", "pos": "v.", "meaning_ko": "산출하다, 낳다" },
+      { "word": "result in", "pos": "phr.", "meaning_ko": "~을 초래하다" },
+      { "word": "stem from", "pos": "phr.", "meaning_ko": "~에서 비롯되다" },
+      { "word": "lead to", "pos": "phr.", "meaning_ko": "~로 이어지다" },
+      { "word": "give rise to", "pos": "phr.", "meaning_ko": "~을 일으키다" },
+      { "word": "contribute to", "pos": "phr.", "meaning_ko": "~에 기여하다" },
+      { "word": "account for", "pos": "phr.", "meaning_ko": "~을 설명하다, 차지하다" },
+      { "word": "depend on", "pos": "phr.", "meaning_ko": "~에 달려 있다" },
+      { "word": "consist of", "pos": "phr.", "meaning_ko": "~으로 구성되다" },
+      { "word": "correlate with", "pos": "phr.", "meaning_ko": "~와 상관관계가 있다" },
+      { "word": "associate with", "pos": "phr.", "meaning_ko": "~와 관련짓다" }
     ],
     "8": [
-      {
-        "word": "observe",
-        "pos": "v.",
-        "meaning_ko": "관찰하다"
-      },
-      {
-        "word": "notice",
-        "pos": "v.",
-        "meaning_ko": "알아차리다"
-      },
-      {
-        "word": "detect",
-        "pos": "v.",
-        "meaning_ko": "감지하다"
-      },
-      {
-        "word": "examine",
-        "pos": "v.",
-        "meaning_ko": "조사하다"
-      },
-      {
-        "word": "explore",
-        "pos": "v.",
-        "meaning_ko": "탐구하다"
-      },
-      {
-        "word": "investigate",
-        "pos": "v.",
-        "meaning_ko": "조사하다"
-      },
-      {
-        "word": "review",
-        "pos": "v.",
-        "meaning_ko": "검토하다"
-      },
-      {
-        "word": "revise",
-        "pos": "v.",
-        "meaning_ko": "수정하다"
-      },
-      {
-        "word": "edit",
-        "pos": "v.",
-        "meaning_ko": "편집하다"
-      },
-      {
-        "word": "summarize",
-        "pos": "v.",
-        "meaning_ko": "요약하다"
-      },
-      {
-        "word": "describe",
-        "pos": "v.",
-        "meaning_ko": "묘사하다"
-      },
-      {
-        "word": "explain",
-        "pos": "v.",
-        "meaning_ko": "설명하다"
-      },
-      {
-        "word": "illustrate",
-        "pos": "v.",
-        "meaning_ko": "설명하다, 예시를 들다"
-      },
-      {
-        "word": "clarify",
-        "pos": "v.",
-        "meaning_ko": "분명히 하다"
-      },
-      {
-        "word": "emphasize",
-        "pos": "v.",
-        "meaning_ko": "강조하다"
-      },
-      {
-        "word": "highlight",
-        "pos": "v.",
-        "meaning_ko": "강조하다"
-      },
-      {
-        "word": "mention",
-        "pos": "v.",
-        "meaning_ko": "언급하다"
-      },
-      {
-        "word": "state",
-        "pos": "v.",
-        "meaning_ko": "진술하다"
-      },
-      {
-        "word": "argue",
-        "pos": "v.",
-        "meaning_ko": "주장하다"
-      },
-      {
-        "word": "claim",
-        "pos": "v.",
-        "meaning_ko": "주장하다"
-      }
+      { "word": "ethical", "pos": "adj.", "meaning_ko": "윤리적인" },
+      { "word": "moral", "pos": "adj.", "meaning_ko": "도덕적인" },
+      { "word": "immoral", "pos": "adj.", "meaning_ko": "비도덕적인" },
+      { "word": "legal", "pos": "adj.", "meaning_ko": "법적인" },
+      { "word": "illegal", "pos": "adj.", "meaning_ko": "불법적인" },
+      { "word": "legitimate", "pos": "adj.", "meaning_ko": "정당한, 합법적인" },
+      { "word": "fair", "pos": "adj.", "meaning_ko": "공정한" },
+      { "word": "unfair", "pos": "adj.", "meaning_ko": "불공정한" },
+      { "word": "equal", "pos": "adj.", "meaning_ko": "평등한" },
+      { "word": "unequal", "pos": "adj.", "meaning_ko": "불평등한" },
+      { "word": "responsible", "pos": "adj.", "meaning_ko": "책임이 있는" },
+      { "word": "irresponsible", "pos": "adj.", "meaning_ko": "무책임한" },
+      { "word": "obligation", "pos": "n.", "meaning_ko": "의무" },
+      { "word": "duty", "pos": "n.", "meaning_ko": "의무" },
+      { "word": "justice", "pos": "n.", "meaning_ko": "정의" },
+      { "word": "equality", "pos": "n.", "meaning_ko": "평등" },
+      { "word": "bias", "pos": "n.", "meaning_ko": "편견, 편향" },
+      { "word": "prejudice", "pos": "n.", "meaning_ko": "편견" },
+      { "word": "discrimination", "pos": "n.", "meaning_ko": "차별" },
+      { "word": "integrity", "pos": "n.", "meaning_ko": "정직성, 진실성" }
     ],
     "9": [
-      {
-        "word": "respond",
-        "pos": "v.",
-        "meaning_ko": "반응하다"
-      },
-      {
-        "word": "react",
-        "pos": "v.",
-        "meaning_ko": "반응하다"
-      },
-      {
-        "word": "participate",
-        "pos": "v.",
-        "meaning_ko": "참여하다"
-      },
-      {
-        "word": "engage",
-        "pos": "v.",
-        "meaning_ko": "관여하다"
-      },
-      {
-        "word": "encourage",
-        "pos": "v.",
-        "meaning_ko": "격려하다"
-      },
-      {
-        "word": "discourage",
-        "pos": "v.",
-        "meaning_ko": "막다, 의욕을 꺾다"
-      },
-      {
-        "word": "persuade",
-        "pos": "v.",
-        "meaning_ko": "설득하다"
-      },
-      {
-        "word": "convince",
-        "pos": "v.",
-        "meaning_ko": "납득시키다"
-      },
-      {
-        "word": "recommend",
-        "pos": "v.",
-        "meaning_ko": "추천하다"
-      },
-      {
-        "word": "advise",
-        "pos": "v.",
-        "meaning_ko": "조언하다"
-      },
-      {
-        "word": "remind",
-        "pos": "v.",
-        "meaning_ko": "상기시키다"
-      },
-      {
-        "word": "warn",
-        "pos": "v.",
-        "meaning_ko": "경고하다"
-      },
-      {
-        "word": "request",
-        "pos": "v.",
-        "meaning_ko": "요청하다"
-      },
-      {
-        "word": "propose",
-        "pos": "v.",
-        "meaning_ko": "제안하다"
-      },
-      {
-        "word": "intend",
-        "pos": "v.",
-        "meaning_ko": "의도하다"
-      },
-      {
-        "word": "prefer",
-        "pos": "v.",
-        "meaning_ko": "선호하다"
-      },
-      {
-        "word": "hesitate",
-        "pos": "v.",
-        "meaning_ko": "주저하다"
-      },
-      {
-        "word": "attempt",
-        "pos": "v.",
-        "meaning_ko": "시도하다"
-      },
-      {
-        "word": "refuse",
-        "pos": "v.",
-        "meaning_ko": "거절하다"
-      },
-      {
-        "word": "accept",
-        "pos": "v.",
-        "meaning_ko": "받아들이다"
-      }
+      { "word": "economic", "pos": "adj.", "meaning_ko": "경제의" },
+      { "word": "financial", "pos": "adj.", "meaning_ko": "재정의, 금융의" },
+      { "word": "industrial", "pos": "adj.", "meaning_ko": "산업의" },
+      { "word": "commercial", "pos": "adj.", "meaning_ko": "상업의" },
+      { "word": "efficient", "pos": "adj.", "meaning_ko": "효율적인" },
+      { "word": "inefficient", "pos": "adj.", "meaning_ko": "비효율적인" },
+      { "word": "productive", "pos": "adj.", "meaning_ko": "생산적인" },
+      { "word": "scarce", "pos": "adj.", "meaning_ko": "부족한, 희귀한" },
+      { "word": "abundant", "pos": "adj.", "meaning_ko": "풍부한" },
+      { "word": "available", "pos": "adj.", "meaning_ko": "이용 가능한" },
+      { "word": "resource", "pos": "n.", "meaning_ko": "자원" },
+      { "word": "income", "pos": "n.", "meaning_ko": "소득" },
+      { "word": "expense", "pos": "n.", "meaning_ko": "지출" },
+      { "word": "budget", "pos": "n.", "meaning_ko": "예산" },
+      { "word": "profit", "pos": "n.", "meaning_ko": "이익" },
+      { "word": "revenue", "pos": "n.", "meaning_ko": "수익" },
+      { "word": "investment", "pos": "n.", "meaning_ko": "투자" },
+      { "word": "consumption", "pos": "n.", "meaning_ko": "소비" },
+      { "word": "distribution", "pos": "n.", "meaning_ko": "분배, 유통" },
+      { "word": "demand", "pos": "n.", "meaning_ko": "수요" }
     ],
     "10": [
-      {
-        "word": "increase",
-        "pos": "v.",
-        "meaning_ko": "증가하다, 증가시키다"
-      },
-      {
-        "word": "decrease",
-        "pos": "v.",
-        "meaning_ko": "감소하다, 감소시키다"
-      },
-      {
-        "word": "rise",
-        "pos": "v.",
-        "meaning_ko": "오르다"
-      },
-      {
-        "word": "decline",
-        "pos": "v.",
-        "meaning_ko": "감소하다"
-      },
-      {
-        "word": "remain",
-        "pos": "v.",
-        "meaning_ko": "남아 있다"
-      },
-      {
-        "word": "continue",
-        "pos": "v.",
-        "meaning_ko": "계속하다"
-      },
-      {
-        "word": "occur",
-        "pos": "v.",
-        "meaning_ko": "발생하다"
-      },
-      {
-        "word": "appear",
-        "pos": "v.",
-        "meaning_ko": "나타나다"
-      },
-      {
-        "word": "disappear",
-        "pos": "v.",
-        "meaning_ko": "사라지다"
-      },
-      {
-        "word": "exist",
-        "pos": "v.",
-        "meaning_ko": "존재하다"
-      },
-      {
-        "word": "survive",
-        "pos": "v.",
-        "meaning_ko": "생존하다"
-      },
-      {
-        "word": "suffer",
-        "pos": "v.",
-        "meaning_ko": "겪다"
-      },
-      {
-        "word": "benefit",
-        "pos": "v.",
-        "meaning_ko": "이익을 얻다"
-      },
-      {
-        "word": "damage",
-        "pos": "v.",
-        "meaning_ko": "손상시키다"
-      },
-      {
-        "word": "destroy",
-        "pos": "v.",
-        "meaning_ko": "파괴하다"
-      },
-      {
-        "word": "recover",
-        "pos": "v.",
-        "meaning_ko": "회복하다"
-      },
-      {
-        "word": "progress",
-        "pos": "v.",
-        "meaning_ko": "진보하다"
-      },
-      {
-        "word": "advance",
-        "pos": "v.",
-        "meaning_ko": "진전시키다"
-      },
-      {
-        "word": "delay",
-        "pos": "v.",
-        "meaning_ko": "지연시키다"
-      },
-      {
-        "word": "maintainable",
-        "pos": "adj.",
-        "meaning_ko": "유지 가능한"
-      }
+      { "word": "environmental", "pos": "adj.", "meaning_ko": "환경의" },
+      { "word": "ecological", "pos": "adj.", "meaning_ko": "생태학의" },
+      { "word": "sustainable", "pos": "adj.", "meaning_ko": "지속 가능한" },
+      { "word": "renewable", "pos": "adj.", "meaning_ko": "재생 가능한" },
+      { "word": "harmful", "pos": "adj.", "meaning_ko": "해로운" },
+      { "word": "beneficial", "pos": "adj.", "meaning_ko": "유익한" },
+      { "word": "contaminate", "pos": "v.", "meaning_ko": "오염시키다" },
+      { "word": "pollute", "pos": "v.", "meaning_ko": "오염시키다" },
+      { "word": "preserve", "pos": "v.", "meaning_ko": "보존하다" },
+      { "word": "conserve", "pos": "v.", "meaning_ko": "보존하다, 아끼다" },
+      { "word": "dispose", "pos": "v.", "meaning_ko": "처리하다, 배치하다" },
+      { "word": "decompose", "pos": "v.", "meaning_ko": "분해되다" },
+      { "word": "biodiversity", "pos": "n.", "meaning_ko": "생물 다양성" },
+      { "word": "ecosystem", "pos": "n.", "meaning_ko": "생태계" },
+      { "word": "habitat", "pos": "n.", "meaning_ko": "서식지" },
+      { "word": "emission", "pos": "n.", "meaning_ko": "배출" },
+      { "word": "waste", "pos": "n.", "meaning_ko": "폐기물, 낭비" },
+      { "word": "resource depletion", "pos": "phr.", "meaning_ko": "자원 고갈" },
+      { "word": "climate crisis", "pos": "phr.", "meaning_ko": "기후 위기" },
+      { "word": "carbon footprint", "pos": "phr.", "meaning_ko": "탄소 발자국" }
     ],
     "11": [
-      {
-        "word": "resource",
-        "pos": "n.",
-        "meaning_ko": "자원"
-      },
-      {
-        "word": "evidence",
-        "pos": "n.",
-        "meaning_ko": "증거"
-      },
-      {
-        "word": "material",
-        "pos": "n.",
-        "meaning_ko": "재료"
-      },
-      {
-        "word": "data",
-        "pos": "n.",
-        "meaning_ko": "자료"
-      },
-      {
-        "word": "information",
-        "pos": "n.",
-        "meaning_ko": "정보"
-      },
-      {
-        "word": "knowledge",
-        "pos": "n.",
-        "meaning_ko": "지식"
-      },
-      {
-        "word": "wisdom",
-        "pos": "n.",
-        "meaning_ko": "지혜"
-      },
-      {
-        "word": "memory",
-        "pos": "n.",
-        "meaning_ko": "기억"
-      },
-      {
-        "word": "attention",
-        "pos": "n.",
-        "meaning_ko": "주의"
-      },
-      {
-        "word": "focus",
-        "pos": "n.",
-        "meaning_ko": "집중"
-      },
-      {
-        "word": "effort",
-        "pos": "n.",
-        "meaning_ko": "노력"
-      },
-      {
-        "word": "ability",
-        "pos": "n.",
-        "meaning_ko": "능력"
-      },
-      {
-        "word": "skill",
-        "pos": "n.",
-        "meaning_ko": "기술"
-      },
-      {
-        "word": "capacity",
-        "pos": "n.",
-        "meaning_ko": "수용 능력"
-      },
-      {
-        "word": "opportunity",
-        "pos": "n.",
-        "meaning_ko": "기회"
-      },
-      {
-        "word": "challenge",
-        "pos": "n.",
-        "meaning_ko": "도전"
-      },
-      {
-        "word": "advantage",
-        "pos": "n.",
-        "meaning_ko": "이점"
-      },
-      {
-        "word": "disadvantage",
-        "pos": "n.",
-        "meaning_ko": "단점"
-      },
-      {
-        "word": "responsibility",
-        "pos": "n.",
-        "meaning_ko": "책임"
-      },
-      {
-        "word": "duty",
-        "pos": "n.",
-        "meaning_ko": "의무"
-      }
+      { "word": "psychological", "pos": "adj.", "meaning_ko": "심리적인" },
+      { "word": "cognitive", "pos": "adj.", "meaning_ko": "인지의" },
+      { "word": "emotional", "pos": "adj.", "meaning_ko": "감정의" },
+      { "word": "mental", "pos": "adj.", "meaning_ko": "정신의" },
+      { "word": "conscious", "pos": "adj.", "meaning_ko": "의식하는" },
+      { "word": "unconscious", "pos": "adj.", "meaning_ko": "무의식의" },
+      { "word": "aware", "pos": "adj.", "meaning_ko": "알고 있는" },
+      { "word": "perceive", "pos": "v.", "meaning_ko": "인식하다" },
+      { "word": "memorize", "pos": "v.", "meaning_ko": "암기하다" },
+      { "word": "concentrate", "pos": "v.", "meaning_ko": "집중하다" },
+      { "word": "motivate", "pos": "v.", "meaning_ko": "동기를 부여하다" },
+      { "word": "discourage", "pos": "v.", "meaning_ko": "의욕을 꺾다" },
+      { "word": "motivation", "pos": "n.", "meaning_ko": "동기" },
+      { "word": "attention", "pos": "n.", "meaning_ko": "주의, 집중" },
+      { "word": "awareness", "pos": "n.", "meaning_ko": "인식" },
+      { "word": "perception", "pos": "n.", "meaning_ko": "지각, 인식" },
+      { "word": "memory", "pos": "n.", "meaning_ko": "기억" },
+      { "word": "emotion", "pos": "n.", "meaning_ko": "감정" },
+      { "word": "anxiety", "pos": "n.", "meaning_ko": "불안" },
+      { "word": "confidence", "pos": "n.", "meaning_ko": "자신감" }
     ],
     "12": [
-      {
-        "word": "society",
-        "pos": "n.",
-        "meaning_ko": "사회"
-      },
-      {
-        "word": "community",
-        "pos": "n.",
-        "meaning_ko": "공동체"
-      },
-      {
-        "word": "individual",
-        "pos": "n.",
-        "meaning_ko": "개인"
-      },
-      {
-        "word": "citizen",
-        "pos": "n.",
-        "meaning_ko": "시민"
-      },
-      {
-        "word": "authority",
-        "pos": "n.",
-        "meaning_ko": "권위, 당국"
-      },
-      {
-        "word": "policy",
-        "pos": "n.",
-        "meaning_ko": "정책"
-      },
-      {
-        "word": "institution",
-        "pos": "n.",
-        "meaning_ko": "기관"
-      },
-      {
-        "word": "government",
-        "pos": "n.",
-        "meaning_ko": "정부"
-      },
-      {
-        "word": "economy",
-        "pos": "n.",
-        "meaning_ko": "경제"
-      },
-      {
-        "word": "industry",
-        "pos": "n.",
-        "meaning_ko": "산업"
-      },
-      {
-        "word": "environment",
-        "pos": "n.",
-        "meaning_ko": "환경"
-      },
-      {
-        "word": "culture",
-        "pos": "n.",
-        "meaning_ko": "문화"
-      },
-      {
-        "word": "tradition",
-        "pos": "n.",
-        "meaning_ko": "전통"
-      },
-      {
-        "word": "trend",
-        "pos": "n.",
-        "meaning_ko": "추세"
-      },
-      {
-        "word": "generation",
-        "pos": "n.",
-        "meaning_ko": "세대"
-      },
-      {
-        "word": "population",
-        "pos": "n.",
-        "meaning_ko": "인구"
-      },
-      {
-        "word": "region",
-        "pos": "n.",
-        "meaning_ko": "지역"
-      },
-      {
-        "word": "nation",
-        "pos": "n.",
-        "meaning_ko": "국가"
-      },
-      {
-        "word": "globalization",
-        "pos": "n.",
-        "meaning_ko": "세계화"
-      },
-      {
-        "word": "education",
-        "pos": "n.",
-        "meaning_ko": "교육"
-      }
+      { "word": "cultural", "pos": "adj.", "meaning_ko": "문화의" },
+      { "word": "traditional", "pos": "adj.", "meaning_ko": "전통적인" },
+      { "word": "conventional", "pos": "adj.", "meaning_ko": "관습적인" },
+      { "word": "innovative", "pos": "adj.", "meaning_ko": "혁신적인" },
+      { "word": "creative", "pos": "adj.", "meaning_ko": "창의적인" },
+      { "word": "collective", "pos": "adj.", "meaning_ko": "집단의" },
+      { "word": "individual", "pos": "adj.", "meaning_ko": "개인의" },
+      { "word": "diverse", "pos": "adj.", "meaning_ko": "다양한" },
+      { "word": "diversity", "pos": "n.", "meaning_ko": "다양성" },
+      { "word": "identity", "pos": "n.", "meaning_ko": "정체성" },
+      { "word": "heritage", "pos": "n.", "meaning_ko": "유산, 전통" },
+      { "word": "tradition", "pos": "n.", "meaning_ko": "전통" },
+      { "word": "custom", "pos": "n.", "meaning_ko": "관습" },
+      { "word": "civilization", "pos": "n.", "meaning_ko": "문명" },
+      { "word": "institution", "pos": "n.", "meaning_ko": "기관, 제도" },
+      { "word": "community", "pos": "n.", "meaning_ko": "공동체" },
+      { "word": "interaction", "pos": "n.", "meaning_ko": "상호 작용" },
+      { "word": "cooperation", "pos": "n.", "meaning_ko": "협력" },
+      { "word": "conflict", "pos": "n.", "meaning_ko": "갈등" },
+      { "word": "integration", "pos": "n.", "meaning_ko": "통합" }
     ],
     "13": [
-      {
-        "word": "solve",
-        "pos": "v.",
-        "meaning_ko": "해결하다"
-      },
-      {
-        "word": "address",
-        "pos": "v.",
-        "meaning_ko": "다루다, 해결하다"
-      },
-      {
-        "word": "overcome",
-        "pos": "v.",
-        "meaning_ko": "극복하다"
-      },
-      {
-        "word": "cope",
-        "pos": "v.",
-        "meaning_ko": "대처하다"
-      },
-      {
-        "word": "adjust",
-        "pos": "v.",
-        "meaning_ko": "조정하다"
-      },
-      {
-        "word": "modify",
-        "pos": "v.",
-        "meaning_ko": "수정하다"
-      },
-      {
-        "word": "imply",
-        "pos": "v.",
-        "meaning_ko": "암시하다"
-      },
-      {
-        "word": "mean",
-        "pos": "v.",
-        "meaning_ko": "의미하다"
-      },
-      {
-        "word": "reflect",
-        "pos": "v.",
-        "meaning_ko": "반영하다"
-      },
-      {
-        "word": "express",
-        "pos": "v.",
-        "meaning_ko": "표현하다"
-      },
-      {
-        "word": "expose",
-        "pos": "v.",
-        "meaning_ko": "드러내다"
-      },
-      {
-        "word": "promote",
-        "pos": "v.",
-        "meaning_ko": "촉진하다"
-      },
-      {
-        "word": "restrict",
-        "pos": "v.",
-        "meaning_ko": "제한하다"
-      },
-      {
-        "word": "permit",
-        "pos": "v.",
-        "meaning_ko": "허용하다"
-      },
-      {
-        "word": "forbid",
-        "pos": "v.",
-        "meaning_ko": "금지하다"
-      },
-      {
-        "word": "enable",
-        "pos": "v.",
-        "meaning_ko": "가능하게 하다"
-      },
-      {
-        "word": "ensure",
-        "pos": "v.",
-        "meaning_ko": "보장하다"
-      },
-      {
-        "word": "guarantee",
-        "pos": "v.",
-        "meaning_ko": "보장하다"
-      },
-      {
-        "word": "justify",
-        "pos": "v.",
-        "meaning_ko": "정당화하다"
-      },
-      {
-        "word": "criticize",
-        "pos": "v.",
-        "meaning_ko": "비판하다"
-      }
+      { "word": "technological", "pos": "adj.", "meaning_ko": "기술의" },
+      { "word": "digital", "pos": "adj.", "meaning_ko": "디지털의" },
+      { "word": "artificial", "pos": "adj.", "meaning_ko": "인공의" },
+      { "word": "automated", "pos": "adj.", "meaning_ko": "자동화된" },
+      { "word": "efficient", "pos": "adj.", "meaning_ko": "효율적인" },
+      { "word": "accessible", "pos": "adj.", "meaning_ko": "접근 가능한" },
+      { "word": "advance", "pos": "v.", "meaning_ko": "진보하다, 진전시키다" },
+      { "word": "innovate", "pos": "v.", "meaning_ko": "혁신하다" },
+      { "word": "adopt", "pos": "v.", "meaning_ko": "채택하다" },
+      { "word": "implement", "pos": "v.", "meaning_ko": "실행하다, 시행하다" },
+      { "word": "device", "pos": "n.", "meaning_ko": "장치" },
+      { "word": "platform", "pos": "n.", "meaning_ko": "플랫폼" },
+      { "word": "network", "pos": "n.", "meaning_ko": "네트워크" },
+      { "word": "database", "pos": "n.", "meaning_ko": "데이터베이스" },
+      { "word": "algorithm", "pos": "n.", "meaning_ko": "알고리즘" },
+      { "word": "automation", "pos": "n.", "meaning_ko": "자동화" },
+      { "word": "innovation", "pos": "n.", "meaning_ko": "혁신" },
+      { "word": "access", "pos": "n.", "meaning_ko": "접근" },
+      { "word": "efficiency", "pos": "n.", "meaning_ko": "효율성" },
+      { "word": "security", "pos": "n.", "meaning_ko": "보안" }
     ],
     "14": [
-      {
-        "word": "abstract",
-        "pos": "adj.",
-        "meaning_ko": "추상적인"
-      },
-      {
-        "word": "concrete",
-        "pos": "adj.",
-        "meaning_ko": "구체적인"
-      },
-      {
-        "word": "artificial",
-        "pos": "adj.",
-        "meaning_ko": "인공적인"
-      },
-      {
-        "word": "natural",
-        "pos": "adj.",
-        "meaning_ko": "자연의"
-      },
-      {
-        "word": "flexible",
-        "pos": "adj.",
-        "meaning_ko": "유연한"
-      },
-      {
-        "word": "rigid",
-        "pos": "adj.",
-        "meaning_ko": "엄격한, 경직된"
-      },
-      {
-        "word": "stable",
-        "pos": "adj.",
-        "meaning_ko": "안정된"
-      },
-      {
-        "word": "temporary",
-        "pos": "adj.",
-        "meaning_ko": "일시적인"
-      },
-      {
-        "word": "permanent",
-        "pos": "adj.",
-        "meaning_ko": "영구적인"
-      },
-      {
-        "word": "primary",
-        "pos": "adj.",
-        "meaning_ko": "주된"
-      },
-      {
-        "word": "secondary",
-        "pos": "adj.",
-        "meaning_ko": "부차적인"
-      },
-      {
-        "word": "modern",
-        "pos": "adj.",
-        "meaning_ko": "현대의"
-      },
-      {
-        "word": "ancient",
-        "pos": "adj.",
-        "meaning_ko": "고대의"
-      },
-      {
-        "word": "familiar",
-        "pos": "adj.",
-        "meaning_ko": "익숙한"
-      },
-      {
-        "word": "unfamiliar",
-        "pos": "adj.",
-        "meaning_ko": "익숙하지 않은"
-      },
-      {
-        "word": "visible",
-        "pos": "adj.",
-        "meaning_ko": "보이는"
-      },
-      {
-        "word": "invisible",
-        "pos": "adj.",
-        "meaning_ko": "보이지 않는"
-      },
-      {
-        "word": "legal",
-        "pos": "adj.",
-        "meaning_ko": "합법적인"
-      },
-      {
-        "word": "illegal",
-        "pos": "adj.",
-        "meaning_ko": "불법의"
-      },
-      {
-        "word": "moral",
-        "pos": "adj.",
-        "meaning_ko": "도덕적인"
-      }
+      { "word": "academic", "pos": "adj.", "meaning_ko": "학문적인" },
+      { "word": "intellectual", "pos": "adj.", "meaning_ko": "지적인" },
+      { "word": "educational", "pos": "adj.", "meaning_ko": "교육의" },
+      { "word": "comprehensive", "pos": "adj.", "meaning_ko": "포괄적인" },
+      { "word": "fundamental", "pos": "adj.", "meaning_ko": "근본적인" },
+      { "word": "advanced", "pos": "adj.", "meaning_ko": "고급의, 진보한" },
+      { "word": "acquire", "pos": "v.", "meaning_ko": "습득하다" },
+      { "word": "attain", "pos": "v.", "meaning_ko": "얻다, 달성하다" },
+      { "word": "pursue", "pos": "v.", "meaning_ko": "추구하다" },
+      { "word": "master", "pos": "v.", "meaning_ko": "숙달하다" },
+      { "word": "curriculum", "pos": "n.", "meaning_ko": "교육과정" },
+      { "word": "discipline", "pos": "n.", "meaning_ko": "학문 분야, 규율" },
+      { "word": "scholar", "pos": "n.", "meaning_ko": "학자" },
+      { "word": "lecture", "pos": "n.", "meaning_ko": "강의" },
+      { "word": "assignment", "pos": "n.", "meaning_ko": "과제" },
+      { "word": "achievement", "pos": "n.", "meaning_ko": "성취" },
+      { "word": "competence", "pos": "n.", "meaning_ko": "능력" },
+      { "word": "qualification", "pos": "n.", "meaning_ko": "자격" },
+      { "word": "knowledge", "pos": "n.", "meaning_ko": "지식" },
+      { "word": "expertise", "pos": "n.", "meaning_ko": "전문 지식" }
     ],
     "15": [
-      {
-        "word": "curious",
-        "pos": "adj.",
-        "meaning_ko": "호기심 많은"
-      },
-      {
-        "word": "eager",
-        "pos": "adj.",
-        "meaning_ko": "열망하는"
-      },
-      {
-        "word": "aware",
-        "pos": "adj.",
-        "meaning_ko": "알고 있는"
-      },
-      {
-        "word": "conscious",
-        "pos": "adj.",
-        "meaning_ko": "의식하는"
-      },
-      {
-        "word": "confident",
-        "pos": "adj.",
-        "meaning_ko": "자신 있는"
-      },
-      {
-        "word": "anxious",
-        "pos": "adj.",
-        "meaning_ko": "불안한"
-      },
-      {
-        "word": "sensitive",
-        "pos": "adj.",
-        "meaning_ko": "민감한"
-      },
-      {
-        "word": "indifferent",
-        "pos": "adj.",
-        "meaning_ko": "무관심한"
-      },
-      {
-        "word": "generous",
-        "pos": "adj.",
-        "meaning_ko": "관대한"
-      },
-      {
-        "word": "selfish",
-        "pos": "adj.",
-        "meaning_ko": "이기적인"
-      },
-      {
-        "word": "honest",
-        "pos": "adj.",
-        "meaning_ko": "정직한"
-      },
-      {
-        "word": "sincere",
-        "pos": "adj.",
-        "meaning_ko": "진심 어린"
-      },
-      {
-        "word": "polite",
-        "pos": "adj.",
-        "meaning_ko": "공손한"
-      },
-      {
-        "word": "rude",
-        "pos": "adj.",
-        "meaning_ko": "무례한"
-      },
-      {
-        "word": "calm",
-        "pos": "adj.",
-        "meaning_ko": "차분한"
-      },
-      {
-        "word": "nervous",
-        "pos": "adj.",
-        "meaning_ko": "긴장한"
-      },
-      {
-        "word": "patient",
-        "pos": "adj.",
-        "meaning_ko": "참을성 있는"
-      },
-      {
-        "word": "responsible",
-        "pos": "adj.",
-        "meaning_ko": "책임감 있는"
-      },
-      {
-        "word": "ambitious",
-        "pos": "adj.",
-        "meaning_ko": "야심 있는"
-      },
-      {
-        "word": "creative",
-        "pos": "adj.",
-        "meaning_ko": "창의적인"
-      }
+      { "word": "vital", "pos": "adj.", "meaning_ko": "매우 중요한" },
+      { "word": "crucial", "pos": "adj.", "meaning_ko": "중대한" },
+      { "word": "essential", "pos": "adj.", "meaning_ko": "필수적인" },
+      { "word": "indispensable", "pos": "adj.", "meaning_ko": "없어서는 안 될" },
+      { "word": "marginal", "pos": "adj.", "meaning_ko": "주변의, 미미한" },
+      { "word": "primary", "pos": "adj.", "meaning_ko": "주된, 1차의" },
+      { "word": "secondary", "pos": "adj.", "meaning_ko": "부차적인, 2차의" },
+      { "word": "minor", "pos": "adj.", "meaning_ko": "사소한, 소수의" },
+      { "word": "severe", "pos": "adj.", "meaning_ko": "심각한" },
+      { "word": "intense", "pos": "adj.", "meaning_ko": "강렬한" },
+      { "word": "moderate", "pos": "adj.", "meaning_ko": "보통의, 적당한" },
+      { "word": "extreme", "pos": "adj.", "meaning_ko": "극단적인" },
+      { "word": "substantial", "pos": "adj.", "meaning_ko": "상당한" },
+      { "word": "considerable", "pos": "adj.", "meaning_ko": "상당한" },
+      { "word": "minimal", "pos": "adj.", "meaning_ko": "최소의" },
+      { "word": "maximum", "pos": "adj.", "meaning_ko": "최대의" },
+      { "word": "gradual", "pos": "adj.", "meaning_ko": "점진적인" },
+      { "word": "rapid", "pos": "adj.", "meaning_ko": "빠른" },
+      { "word": "sudden", "pos": "adj.", "meaning_ko": "갑작스러운" },
+      { "word": "immediate", "pos": "adj.", "meaning_ko": "즉각적인" }
     ],
     "16": [
-      {
-        "word": "rarely",
-        "pos": "adv.",
-        "meaning_ko": "드물게"
-      },
-      {
-        "word": "frequently",
-        "pos": "adv.",
-        "meaning_ko": "자주"
-      },
-      {
-        "word": "gradually",
-        "pos": "adv.",
-        "meaning_ko": "점차"
-      },
-      {
-        "word": "suddenly",
-        "pos": "adv.",
-        "meaning_ko": "갑자기"
-      },
-      {
-        "word": "eventually",
-        "pos": "adv.",
-        "meaning_ko": "결국"
-      },
-      {
-        "word": "initially",
-        "pos": "adv.",
-        "meaning_ko": "처음에"
-      },
-      {
-        "word": "previously",
-        "pos": "adv.",
-        "meaning_ko": "이전에"
-      },
-      {
-        "word": "therefore",
-        "pos": "adv.",
-        "meaning_ko": "그러므로"
-      },
-      {
-        "word": "however",
-        "pos": "adv.",
-        "meaning_ko": "그러나"
-      },
-      {
-        "word": "moreover",
-        "pos": "adv.",
-        "meaning_ko": "게다가"
-      },
-      {
-        "word": "otherwise",
-        "pos": "adv.",
-        "meaning_ko": "그렇지 않으면"
-      },
-      {
-        "word": "indeed",
-        "pos": "adv.",
-        "meaning_ko": "실제로"
-      },
-      {
-        "word": "especially",
-        "pos": "adv.",
-        "meaning_ko": "특히"
-      },
-      {
-        "word": "merely",
-        "pos": "adv.",
-        "meaning_ko": "단지"
-      },
-      {
-        "word": "simply",
-        "pos": "adv.",
-        "meaning_ko": "그저"
-      },
-      {
-        "word": "widely",
-        "pos": "adv.",
-        "meaning_ko": "널리"
-      },
-      {
-        "word": "closely",
-        "pos": "adv.",
-        "meaning_ko": "면밀히"
-      },
-      {
-        "word": "partly",
-        "pos": "adv.",
-        "meaning_ko": "부분적으로"
-      },
-      {
-        "word": "entirely",
-        "pos": "adv.",
-        "meaning_ko": "완전히"
-      },
-      {
-        "word": "necessarily",
-        "pos": "adv.",
-        "meaning_ko": "반드시"
-      }
+      { "word": "ultimately", "pos": "adv.", "meaning_ko": "궁극적으로" },
+      { "word": "initially", "pos": "adv.", "meaning_ko": "처음에" },
+      { "word": "temporarily", "pos": "adv.", "meaning_ko": "일시적으로" },
+      { "word": "permanently", "pos": "adv.", "meaning_ko": "영구적으로" },
+      { "word": "relatively", "pos": "adv.", "meaning_ko": "상대적으로" },
+      { "word": "significantly", "pos": "adv.", "meaning_ko": "상당히, 의미 있게" },
+      { "word": "notably", "pos": "adv.", "meaning_ko": "주목할 만하게" },
+      { "word": "particularly", "pos": "adv.", "meaning_ko": "특히" },
+      { "word": "subsequently", "pos": "adv.", "meaning_ko": "그 후에" },
+      { "word": "simultaneously", "pos": "adv.", "meaning_ko": "동시에" },
+      { "word": "deliberately", "pos": "adv.", "meaning_ko": "의도적으로" },
+      { "word": "intentionally", "pos": "adv.", "meaning_ko": "의도적으로" },
+      { "word": "inevitably", "pos": "adv.", "meaning_ko": "필연적으로" },
+      { "word": "presumably", "pos": "adv.", "meaning_ko": "아마도, 짐작하건대" },
+      { "word": "arguably", "pos": "adv.", "meaning_ko": "아마도, 논란의 여지는 있지만" },
+      { "word": "roughly", "pos": "adv.", "meaning_ko": "대략" },
+      { "word": "virtually", "pos": "adv.", "meaning_ko": "사실상" },
+      { "word": "merely", "pos": "adv.", "meaning_ko": "단지" },
+      { "word": "likewise", "pos": "adv.", "meaning_ko": "마찬가지로" },
+      { "word": "otherwise", "pos": "adv.", "meaning_ko": "그렇지 않으면, 달리" }
     ],
     "17": [
-      {
-        "word": "beyond",
-        "pos": "prep.",
-        "meaning_ko": "~을 넘어"
-      },
-      {
-        "word": "within",
-        "pos": "prep.",
-        "meaning_ko": "~이내에"
-      },
-      {
-        "word": "throughout",
-        "pos": "prep.",
-        "meaning_ko": "~동안 내내, ~전체에 걸쳐"
-      },
-      {
-        "word": "despite",
-        "pos": "prep.",
-        "meaning_ko": "~에도 불구하고"
-      },
-      {
-        "word": "regarding",
-        "pos": "prep.",
-        "meaning_ko": "~에 관하여"
-      },
-      {
-        "word": "concerning",
-        "pos": "prep.",
-        "meaning_ko": "~에 관한"
-      },
-      {
-        "word": "according to",
-        "pos": "prep.",
-        "meaning_ko": "~에 따르면"
-      },
-      {
-        "word": "in terms of",
-        "pos": "prep.",
-        "meaning_ko": "~의 관점에서"
-      },
-      {
-        "word": "in addition to",
-        "pos": "prep.",
-        "meaning_ko": "~뿐만 아니라"
-      },
-      {
-        "word": "instead of",
-        "pos": "prep.",
-        "meaning_ko": "~대신에"
-      },
-      {
-        "word": "due to",
-        "pos": "prep.",
-        "meaning_ko": "~때문에"
-      },
-      {
-        "word": "because of",
-        "pos": "prep.",
-        "meaning_ko": "~때문에"
-      },
-      {
-        "word": "as a result of",
-        "pos": "prep.",
-        "meaning_ko": "~의 결과로"
-      },
-      {
-        "word": "in spite of",
-        "pos": "prep.",
-        "meaning_ko": "~에도 불구하고"
-      },
-      {
-        "word": "with regard to",
-        "pos": "prep.",
-        "meaning_ko": "~에 관하여"
-      },
-      {
-        "word": "prior to",
-        "pos": "prep.",
-        "meaning_ko": "~에 앞서"
-      },
-      {
-        "word": "apart from",
-        "pos": "prep.",
-        "meaning_ko": "~을 제외하고"
-      },
-      {
-        "word": "along with",
-        "pos": "prep.",
-        "meaning_ko": "~와 함께"
-      },
-      {
-        "word": "regardless of",
-        "pos": "prep.",
-        "meaning_ko": "~와 상관없이"
-      },
-      {
-        "word": "in contrast to",
-        "pos": "prep.",
-        "meaning_ko": "~와 대조적으로"
-      }
+      { "word": "although", "pos": "conj.", "meaning_ko": "비록 ~일지라도" },
+      { "word": "whereas", "pos": "conj.", "meaning_ko": "반면에" },
+      { "word": "unless", "pos": "conj.", "meaning_ko": "~하지 않으면" },
+      { "word": "provided that", "pos": "conj.", "meaning_ko": "~라는 조건으로" },
+      { "word": "in order that", "pos": "conj.", "meaning_ko": "~하기 위하여" },
+      { "word": "so that", "pos": "conj.", "meaning_ko": "~하도록" },
+      { "word": "therefore", "pos": "adv.", "meaning_ko": "그러므로" },
+      { "word": "thus", "pos": "adv.", "meaning_ko": "따라서" },
+      { "word": "hence", "pos": "adv.", "meaning_ko": "그러므로" },
+      { "word": "furthermore", "pos": "adv.", "meaning_ko": "더욱이" },
+      { "word": "moreover", "pos": "adv.", "meaning_ko": "게다가" },
+      { "word": "nonetheless", "pos": "adv.", "meaning_ko": "그럼에도 불구하고" },
+      { "word": "in contrast", "pos": "phr.", "meaning_ko": "대조적으로" },
+      { "word": "for instance", "pos": "phr.", "meaning_ko": "예를 들어" },
+      { "word": "as a result", "pos": "phr.", "meaning_ko": "그 결과" },
+      { "word": "on the contrary", "pos": "phr.", "meaning_ko": "그와 반대로" },
+      { "word": "in addition", "pos": "phr.", "meaning_ko": "게다가" },
+      { "word": "by contrast", "pos": "phr.", "meaning_ko": "대조적으로" },
+      { "word": "in other words", "pos": "phr.", "meaning_ko": "다시 말해" },
+      { "word": "as a consequence", "pos": "phr.", "meaning_ko": "그 결과" }
     ],
     "18": [
-      {
-        "word": "beneficial",
-        "pos": "adj.",
-        "meaning_ko": "유익한"
-      },
-      {
-        "word": "harmful",
-        "pos": "adj.",
-        "meaning_ko": "해로운"
-      },
-      {
-        "word": "valuable",
-        "pos": "adj.",
-        "meaning_ko": "가치 있는"
-      },
-      {
-        "word": "worthless",
-        "pos": "adj.",
-        "meaning_ko": "가치 없는"
-      },
-      {
-        "word": "accurately",
-        "pos": "adv.",
-        "meaning_ko": "정확하게"
-      },
-      {
-        "word": "efficiently",
-        "pos": "adv.",
-        "meaning_ko": "효율적으로"
-      },
-      {
-        "word": "effectively",
-        "pos": "adv.",
-        "meaning_ko": "효과적으로"
-      },
-      {
-        "word": "appropriately",
-        "pos": "adv.",
-        "meaning_ko": "적절하게"
-      },
-      {
-        "word": "significantly",
-        "pos": "adv.",
-        "meaning_ko": "상당히"
-      },
-      {
-        "word": "relatively",
-        "pos": "adv.",
-        "meaning_ko": "상대적으로"
-      },
-      {
-        "word": "ultimately",
-        "pos": "adv.",
-        "meaning_ko": "궁극적으로"
-      },
-      {
-        "word": "particular",
-        "pos": "adj.",
-        "meaning_ko": "특정한"
-      },
-      {
-        "word": "critical",
-        "pos": "adj.",
-        "meaning_ko": "비판적인, 중대한"
-      },
-      {
-        "word": "subtle",
-        "pos": "adj.",
-        "meaning_ko": "미묘한"
-      },
-      {
-        "word": "obviousness",
-        "pos": "n.",
-        "meaning_ko": "명백함"
-      },
-      {
-        "word": "possibility",
-        "pos": "n.",
-        "meaning_ko": "가능성"
-      },
-      {
-        "word": "necessity",
-        "pos": "n.",
-        "meaning_ko": "필요성"
-      },
-      {
-        "word": "tendency",
-        "pos": "n.",
-        "meaning_ko": "경향"
-      },
-      {
-        "word": "option",
-        "pos": "n.",
-        "meaning_ko": "선택권"
-      },
-      {
-        "word": "alternative",
-        "pos": "n.",
-        "meaning_ko": "대안"
-      }
+      { "word": "throughout", "pos": "prep.", "meaning_ko": "~동안 내내, 도처에" },
+      { "word": "beyond", "pos": "prep.", "meaning_ko": "~을 넘어서" },
+      { "word": "beneath", "pos": "prep.", "meaning_ko": "~의 아래에" },
+      { "word": "underlying", "pos": "adj.", "meaning_ko": "기저의, 근본적인" },
+      { "word": "regarding", "pos": "prep.", "meaning_ko": "~에 관하여" },
+      { "word": "concerning", "pos": "prep.", "meaning_ko": "~에 관하여" },
+      { "word": "despite", "pos": "prep.", "meaning_ko": "~에도 불구하고" },
+      { "word": "instead of", "pos": "prep.", "meaning_ko": "~ 대신에" },
+      { "word": "according to", "pos": "prep.", "meaning_ko": "~에 따르면" },
+      { "word": "in terms of", "pos": "prep.", "meaning_ko": "~의 측면에서" },
+      { "word": "with regard to", "pos": "prep.", "meaning_ko": "~에 관하여" },
+      { "word": "in relation to", "pos": "prep.", "meaning_ko": "~와 관련하여" },
+      { "word": "regardless of", "pos": "prep.", "meaning_ko": "~와 상관없이" },
+      { "word": "in the face of", "pos": "prep.", "meaning_ko": "~에 직면하여" },
+      { "word": "on behalf of", "pos": "prep.", "meaning_ko": "~을 대신하여" },
+      { "word": "by means of", "pos": "prep.", "meaning_ko": "~을 이용하여" },
+      { "word": "prior to", "pos": "prep.", "meaning_ko": "~에 앞서" },
+      { "word": "subsequent to", "pos": "prep.", "meaning_ko": "~후에" },
+      { "word": "in accordance with", "pos": "prep.", "meaning_ko": "~에 따라" },
+      { "word": "in spite of", "pos": "prep.", "meaning_ko": "~에도 불구하고" }
     ],
     "19": [
-      {
-        "word": "interpretation",
-        "pos": "n.",
-        "meaning_ko": "해석"
-      },
-      {
-        "word": "analysis",
-        "pos": "n.",
-        "meaning_ko": "분석"
-      },
-      {
-        "word": "comparison",
-        "pos": "n.",
-        "meaning_ko": "비교"
-      },
-      {
-        "word": "development",
-        "pos": "n.",
-        "meaning_ko": "발달"
-      },
-      {
-        "word": "improvement",
-        "pos": "n.",
-        "meaning_ko": "향상"
-      },
-      {
-        "word": "performance",
-        "pos": "n.",
-        "meaning_ko": "수행, 성과"
-      },
-      {
-        "word": "achievement",
-        "pos": "n.",
-        "meaning_ko": "성취"
-      },
-      {
-        "word": "failure",
-        "pos": "n.",
-        "meaning_ko": "실패"
-      },
-      {
-        "word": "success",
-        "pos": "n.",
-        "meaning_ko": "성공"
-      },
-      {
-        "word": "solution",
-        "pos": "n.",
-        "meaning_ko": "해결책"
-      },
-      {
-        "word": "decision",
-        "pos": "n.",
-        "meaning_ko": "결정"
-      },
-      {
-        "word": "discussion",
-        "pos": "n.",
-        "meaning_ko": "논의"
-      },
-      {
-        "word": "argument",
-        "pos": "n.",
-        "meaning_ko": "논쟁, 주장"
-      },
-      {
-        "word": "opinion",
-        "pos": "n.",
-        "meaning_ko": "의견"
-      },
-      {
-        "word": "attitude",
-        "pos": "n.",
-        "meaning_ko": "태도"
-      },
-      {
-        "word": "behavior",
-        "pos": "n.",
-        "meaning_ko": "행동"
-      },
-      {
-        "word": "relationship",
-        "pos": "n.",
-        "meaning_ko": "관계"
-      },
-      {
-        "word": "communication",
-        "pos": "n.",
-        "meaning_ko": "의사소통"
-      },
-      {
-        "word": "interaction",
-        "pos": "n.",
-        "meaning_ko": "상호작용"
-      },
-      {
-        "word": "participation",
-        "pos": "n.",
-        "meaning_ko": "참여"
-      }
+      { "word": "challenge", "pos": "n.", "meaning_ko": "도전, 난제" },
+      { "word": "obstacle", "pos": "n.", "meaning_ko": "장애물" },
+      { "word": "barrier", "pos": "n.", "meaning_ko": "장벽" },
+      { "word": "limitation", "pos": "n.", "meaning_ko": "한계" },
+      { "word": "restriction", "pos": "n.", "meaning_ko": "제한" },
+      { "word": "solution", "pos": "n.", "meaning_ko": "해결책" },
+      { "word": "alternative", "pos": "n.", "meaning_ko": "대안" },
+      { "word": "strategy", "pos": "n.", "meaning_ko": "전략" },
+      { "word": "approach", "pos": "n.", "meaning_ko": "접근법" },
+      { "word": "method", "pos": "n.", "meaning_ko": "방법" },
+      { "word": "procedure", "pos": "n.", "meaning_ko": "절차" },
+      { "word": "option", "pos": "n.", "meaning_ko": "선택지" },
+      { "word": "circumstance", "pos": "n.", "meaning_ko": "상황, 환경" },
+      { "word": "condition", "pos": "n.", "meaning_ko": "조건, 상태" },
+      { "word": "trend", "pos": "n.", "meaning_ko": "경향" },
+      { "word": "pattern", "pos": "n.", "meaning_ko": "양식, 패턴" },
+      { "word": "tendency", "pos": "n.", "meaning_ko": "경향" },
+      { "word": "probability", "pos": "n.", "meaning_ko": "가능성, 확률" },
+      { "word": "possibility", "pos": "n.", "meaning_ko": "가능성" },
+      { "word": "potential", "pos": "n.", "meaning_ko": "잠재력, 가능성" }
     ],
     "20": [
-      {
-        "word": "principally",
-        "pos": "adv.",
-        "meaning_ko": "주로"
-      },
-      {
-        "word": "roughly",
-        "pos": "adv.",
-        "meaning_ko": "대략"
-      },
-      {
-        "word": "precisely",
-        "pos": "adv.",
-        "meaning_ko": "정확히"
-      },
-      {
-        "word": "virtually",
-        "pos": "adv.",
-        "meaning_ko": "사실상"
-      },
-      {
-        "word": "apparently",
-        "pos": "adv.",
-        "meaning_ko": "보기에"
-      },
-      {
-        "word": "consequently",
-        "pos": "adv.",
-        "meaning_ko": "결과적으로"
-      },
-      {
-        "word": "nevertheless",
-        "pos": "adv.",
-        "meaning_ko": "그럼에도 불구하고"
-      },
-      {
-        "word": "furthermore",
-        "pos": "adv.",
-        "meaning_ko": "더욱이"
-      },
-      {
-        "word": "specifically",
-        "pos": "adv.",
-        "meaning_ko": "구체적으로"
-      },
-      {
-        "word": "respectively",
-        "pos": "adv.",
-        "meaning_ko": "각각"
-      },
-      {
-        "word": "minimum",
-        "pos": "n./adj.",
-        "meaning_ko": "최소(의)"
-      },
-      {
-        "word": "maximum",
-        "pos": "n./adj.",
-        "meaning_ko": "최대(의)"
-      },
-      {
-        "word": "sufficient",
-        "pos": "adj.",
-        "meaning_ko": "충분한"
-      },
-      {
-        "word": "insufficient",
-        "pos": "adj.",
-        "meaning_ko": "불충분한"
-      },
-      {
-        "word": "moderate",
-        "pos": "adj.",
-        "meaning_ko": "보통의, 적당한"
-      },
-      {
-        "word": "extreme",
-        "pos": "adj.",
-        "meaning_ko": "극단적인"
-      },
-      {
-        "word": "dense",
-        "pos": "adj.",
-        "meaning_ko": "밀집한"
-      },
-      {
-        "word": "vast",
-        "pos": "adj.",
-        "meaning_ko": "거대한"
-      },
-      {
-        "word": "dominant",
-        "pos": "adj.",
-        "meaning_ko": "지배적인"
-      },
-      {
-        "word": "minor",
-        "pos": "adj.",
-        "meaning_ko": "사소한, 소수의"
-      }
+      { "word": "coherent", "pos": "adj.", "meaning_ko": "일관성 있는" },
+      { "word": "comprehensive", "pos": "adj.", "meaning_ko": "포괄적인" },
+      { "word": "critical", "pos": "adj.", "meaning_ko": "비판적인, 중대한" },
+      { "word": "constructive", "pos": "adj.", "meaning_ko": "건설적인" },
+      { "word": "controversial", "pos": "adj.", "meaning_ko": "논란의 여지가 있는" },
+      { "word": "contradictory", "pos": "adj.", "meaning_ko": "모순되는" },
+      { "word": "neutral", "pos": "adj.", "meaning_ko": "중립적인" },
+      { "word": "favorable", "pos": "adj.", "meaning_ko": "호의적인" },
+      { "word": "adverse", "pos": "adj.", "meaning_ko": "불리한, 부정적인" },
+      { "word": "stable", "pos": "adj.", "meaning_ko": "안정적인" },
+      { "word": "unstable", "pos": "adj.", "meaning_ko": "불안정한" },
+      { "word": "persistent", "pos": "adj.", "meaning_ko": "지속적인, 끈질긴" },
+      { "word": "temporary", "pos": "adj.", "meaning_ko": "일시적인" },
+      { "word": "permanent", "pos": "adj.", "meaning_ko": "영구적인" },
+      { "word": "frequent", "pos": "adj.", "meaning_ko": "빈번한" },
+      { "word": "rare", "pos": "adj.", "meaning_ko": "드문" },
+      { "word": "widespread", "pos": "adj.", "meaning_ko": "널리 퍼진" },
+      { "word": "notion", "pos": "n.", "meaning_ko": "개념, 생각" },
+      { "word": "persuasion", "pos": "n.", "meaning_ko": "설득" },
+      { "word": "validity", "pos": "n.", "meaning_ko": "타당성, 유효성" }
     ]
   }
 }
