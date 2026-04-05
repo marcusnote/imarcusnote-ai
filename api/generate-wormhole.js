@@ -471,7 +471,6 @@ function inferGradeLabel(text = "", level = "middle") {
   return "중등";
 }
 
-// --- 보정 추가: normalizeGrammarLabel ---
 function normalizeGrammarLabel(label = "") {
   const t = String(label || "").trim();
   const replacements = {
@@ -503,7 +502,6 @@ function normalizeGrammarLabel(label = "") {
   return replacements[t] || t;
 }
 
-// --- 보정 추가: normalizePublisherName (별칭 감지 강화) ---
 function normalizePublisherName(text = "") {
   const t = String(text || "").replace(/\s+/g, "");
   const aliasMap = {
@@ -535,7 +533,6 @@ function normalizePublisherName(text = "") {
   return "";
 }
 
-// --- 보정 추가: detectTextbookRequest (입력 감지 강화) ---
 function detectTextbookRequest(text = "") {
   const source = String(text || "").replace(/\s+/g, "");
   const gradeMatch = source.match(/중([123])/);
@@ -556,7 +553,6 @@ function detectTextbookRequest(text = "") {
   };
 }
 
-// --- 보정 추가: resolveTextbookGrammar (표준화 반영) ---
 function resolveTextbookGrammar(textbookInfo) {
   if (!textbookInfo) return null;
   const levelMap = TEXTBOOK_GRAMMAR_MAP[textbookInfo.level];
@@ -598,24 +594,19 @@ function normalizeInput(body = {}) {
   const mode = ["grammar", "transform", "school-exam", "advanced", "textbook-chapter"].includes(body.mode)
     ? body.mode
     : (textbookResolved ? "textbook-chapter" : inferMode(mergedText));
-
   const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
     ? body.difficulty
     : inferDifficulty(mergedText);
-
   const language = ["ko", "en"].includes(body.language)
     ? body.language
     : inferLanguage(mergedText);
-
   const topic =
     sanitizeString(body.topic || "") ||
     textbookResolved?.combinedTopic ||
     inferTopic(mergedText);
-
   const examType =
     sanitizeString(body.examType || "") ||
     (textbookResolved ? "textbook-school" : "school");
-
   const worksheetTitle = sanitizeString(body.worksheetTitle || "");
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
   const count = sanitizeCount(body.count);
@@ -652,7 +643,6 @@ function getDifficultyLabel(difficulty, language = "ko") {
   return "기본난도";
 }
 
-// --- 보정 추가: 제목 축약 로직 ---
 function shortenTopicForTitle(topic = "") {
   const parts = String(topic).split("+").map(v => v.trim()).filter(Boolean);
   if (parts.length <= 2) return topic;
@@ -676,22 +666,22 @@ function buildWormholeTitle(input) {
   return `${input.gradeLabel} ${displayTopic} 마커스웜홀 ${difficultyLabel} ${input.count}문항`;
 }
 
-// --- 보정 추가: buildGrammarSystemPrompt (결합형 강화) ---
+// 1) buildGrammarSystemPrompt 교체
 function buildGrammarSystemPrompt(input) {
-  const textbookBlock = input.textbook
-    ? `
-[교과서 단원형 규칙]
-- 이 문제 세트는 ${input.textbook.gradeLabel} ${input.textbook.publisher} ${input.textbook.lesson}과 기반이다.
-- 해당 단원의 문법 요소는 다음과 같다: ${input.textbook.grammarList.join(", ")}
-- 반드시 위 문법 요소들을 고르게 반영할 것.
-- 전체 문항의 최소 30%는 두 문법 요소를 동시에 판단하게 하는 결합형 문제로 만들 것.
-- 나머지 문항은 각 문법 요소를 균형 있게 단독 평가하되, 어느 한쪽 문법만 과도하게 반복하지 말 것.
-- 전체 문항이 실제 중등 내신형 문법 시험처럼 보이게 할 것.
-`
-    : "";
-  return `당신은 영어 교육자이자 전문 문항 출제 위원입니다.
-학생들의 변별력을 높이기 위한 정교한 영어 문법 문제를 제작합니다.
-${textbookBlock}
+  const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
+
+  return `
+당신은 마커스웜홀 스타일의 상위권 변별용 영어 문법 문제 출제기입니다.
+
+반드시 아래 형식을 정확히 지키세요.
+
+[출제 원칙]
+- 학교 시험형 고난도 문항으로 출제할 것
+- 단순 암기형이 아니라 구조 판단형, 문맥 판단형, 변형형 중심으로 구성할 것
+- 최소 25%는 고난도 문항으로 구성할 것
+- 고난도 문항 앞에는 반드시 [High Difficulty]를 표기할 것
+- 결합 문법이면 각 문법 요소가 균형 있게 반영될 것
+- 선지는 실제 학교 시험처럼 변별력 있게 구성할 것
 
 [문항 설계 기준]
 반드시 아래 유형을 골고루 포함할 것:
@@ -704,31 +694,48 @@ ${textbookBlock}
 - 문장 재구성
 - 빈칸 어법
 
-[중요 사항]
-- 전체 문항 중 최소 2문항은 개수형 문제를 포함할 것.
-- 전체 문항의 최소 25%는 고난도 문항으로 구성할 것.
-- 고난도 문항 앞에는 반드시 [High Difficulty]라고 표기할 것.
-- 결합 문법이 주어졌다면, 각 문법 요소가 한쪽으로 치우치지 않게 반영될 것.
-- 문제는 단순 암기형이 아니라 문맥 판단형, 구조 판단형, 변형형 중심으로 구성할 것.
-- 선지는 지나치게 쉬운 obvious distractor를 피하고, 실제 학교 시험처럼 변별력이 있게 만들 것.
+[STRICT OUTPUT FORMAT]
+반드시 아래 4개 마커를 정확히 포함할 것:
+[[TITLE]]
+[[INSTRUCTIONS]]
+[[QUESTIONS]]
+[[ANSWERS]]
 
-[금지 사항]
-- 단순 암기로 풀 수 있는 단답형 문제 금지
-- obvious distractors 금지
-- 한눈에 답이 보이는 쉬운 문제 금지
+[STRICT NUMBERING RULE]
+- [[QUESTIONS]] 안의 모든 문항은 반드시 "1." "2." "3." 형식으로만 시작할 것
+- "1)" 또는 "①" 또는 "-" 형식 금지
+- 번호 누락 금지
+- [[ANSWERS]]도 반드시 같은 번호 형식 "1." "2." "3." 으로 작성할 것
+- [[QUESTIONS]]의 문항 수는 사용자가 요청한 문항 수와 반드시 정확히 일치해야 함
 
-응답 형식:
+[응답 예시]
 [[TITLE]]
 {제목}
+
 [[INSTRUCTIONS]]
 {지시문}
+
 [[QUESTIONS]]
 1. {문제}
+2. {문제}
+3. {문제}
+
 [[ANSWERS]]
-1. {정답 및 해설}`.trim();
+1. {정답 및 해설}
+2. {정답 및 해설}
+3. {정답 및 해설}
+
+[금지 사항]
+- 마커 생략 금지
+- 번호 형식 변경 금지
+- 질문 개수 부족 금지
+- 코드블록 금지
+- 설명문만 길게 쓰고 문제를 생략하는 것 금지
+
+현재 난이도: ${difficultyLabel}
+`.trim();
 }
 
-// --- 보정 추가: buildGrammarUserPrompt (결합형 강화) ---
 function buildGrammarUserPrompt(input) {
   const title = buildWormholeTitle(input);
   const textbookBlock = input.textbook
@@ -799,31 +806,69 @@ function extractSection(rawText, startMarker, endMarker) {
   return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
+// 2) countQuestions 교체
 function countQuestions(text = "") {
-  return (text.match(/^\s*\d+\./gm) || []).length;
+  const source = String(text || "").replace(/\r\n/g, "\n");
+
+  const matches =
+    source.match(/^\s*(\d+\.\s+|\d+\)\s+|[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*)/gm) || [];
+
+  return matches.length;
 }
 
 function cleanupText(text = "") {
   return String(text || "").replace(/\r\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
+// 3) formatWormholeResponse 교체
 function formatWormholeResponse(rawText, input) {
-  const title = cleanupText(extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]"));
-  const instructions = cleanupText(extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
-  const questions = cleanupText(extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]"));
-  const answers = cleanupText(extractSection(rawText, "[[ANSWERS]]", null));
+  const normalizedRaw = String(rawText || "").replace(/\r\n/g, "\n");
+
+  const title = cleanupText(extractSection(normalizedRaw, "[[TITLE]]", "[[INSTRUCTIONS]]"));
+  const instructions = cleanupText(extractSection(normalizedRaw, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
+  let questions = cleanupText(extractSection(normalizedRaw, "[[QUESTIONS]]", "[[ANSWERS]]"));
+  let answers = cleanupText(extractSection(normalizedRaw, "[[ANSWERS]]", null));
+
+  // 1) 마커 파싱 실패 시 전체 응답에서 QUESTIONS / ANSWERS 유사 복구
+  if (!questions) {
+    const fallbackMatch = normalizedRaw.match(/\[\[QUESTIONS\]\]([\s\S]*)/i);
+    if (fallbackMatch) {
+      questions = cleanupText(fallbackMatch[1]);
+    }
+  }
+
+  // 2) ANSWERS가 QUESTIONS 안에 섞여 있으면 분리
+  if (questions && !answers) {
+    const splitMatch = questions.match(/([\s\S]*?)\n\s*\[\[ANSWERS\]\]\s*([\s\S]*)/i);
+    if (splitMatch) {
+      questions = cleanupText(splitMatch[1]);
+      answers = cleanupText(splitMatch[2]);
+    }
+  }
+
+  // 3) 번호 형식 보정: "1)" -> "1."
+  questions = questions.replace(/^\s*(\d+)\)\s+/gm, "$1. ");
+  answers = answers.replace(/^\s*(\d+)\)\s+/gm, "$1. ");
+
   let finalTitle = title || buildWormholeTitle(input);
+  const actualCount = countQuestions(questions);
+
   return {
     title: finalTitle,
     instructions,
     content: cleanupText([finalTitle, instructions, questions].filter(Boolean).join("\n\n")),
     answerSheet: cleanupText(answers),
-    fullText: cleanupText([finalTitle, instructions, questions, "정답 및 해설\n" + answers].filter(Boolean).join("\n\n")),
-    actualCount: countQuestions(questions),
+    fullText: cleanupText(
+      [finalTitle, instructions, questions, answers ? "정답 및 해설\n" + answers : ""]
+        .filter(Boolean)
+        .join("\n\n")
+    ),
+    actualCount,
+    rawPreview: normalizedRaw.slice(0, 2000),
   };
 }
 
-// --- 교체된 Memberstack 블록 시작 ---
+// --- Memberstack 블록 시작 ---
 
 function addCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -852,7 +897,6 @@ async function memberstackRequest(path, options = {}) {
       ...(options.headers || {}),
     },
   });
-
   const text = await response.text();
   let data = null;
 
@@ -906,13 +950,11 @@ async function verifyMemberToken(token) {
     method: "POST",
     body: JSON.stringify(payload),
   });
-
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-
   const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
     method: "GET",
   });
@@ -931,7 +973,6 @@ function readMpFromMember(member) {
     member?.customFields?.MP,
     member?.metaData?.MP,
   ];
-
   for (const value of candidates) {
     const parsed = Number(value);
     if (Number.isFinite(parsed)) {
@@ -971,12 +1012,10 @@ async function updateMemberMp(member, nextMp) {
       MP: safeNextMp,
     },
   };
-
   const data = await memberstackRequest(`/${encodeURIComponent(member.id)}`, {
     method: "PATCH",
     body: JSON.stringify(body),
   });
-
   return data?.data || null;
 }
 
@@ -1011,7 +1050,6 @@ async function resolveMemberForMp(req) {
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
   const memberContext = await resolveMemberForMp(req);
-
   if (!memberContext.enabled || !memberContext.member) {
     return {
       enabled: false,
@@ -1028,7 +1066,6 @@ async function prepareMpState(req) {
   let member = memberContext.member;
   let currentMp = readMpFromMember(member);
   let trialGranted = false;
-
   if (!Number.isFinite(currentMp)) {
     currentMp = getInitialTrialMp();
     member = (await updateMemberMp(member, currentMp)) || member;
@@ -1062,7 +1099,6 @@ async function deductMpAfterSuccess(mpState) {
 
   const currentMp = sanitizeMp(mpState.currentMp, 0);
   const requiredMp = sanitizeMp(mpState.requiredMp, 0);
-
   if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
     return {
       ...mpState,
@@ -1072,7 +1108,6 @@ async function deductMpAfterSuccess(mpState) {
 
   const nextMp = Math.max(0, currentMp - requiredMp);
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-
   return {
     ...mpState,
     member: updatedMember || mpState.member,
@@ -1082,13 +1117,12 @@ async function deductMpAfterSuccess(mpState) {
   };
 }
 
-// --- 교체된 Memberstack 블록 끝 ---
+// --- Memberstack 블록 끝 ---
 
 export default async function handler(req, res) {
   addCors(res);
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return json(res, 405, { success: false, message: "POST only" });
-
   try {
     const input = normalizeInput(req.body || {});
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "Prompt or topic required" });
@@ -1110,12 +1144,21 @@ export default async function handler(req, res) {
     const rawText = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatWormholeResponse(rawText, input);
 
-    // --- 보정 추가: 문항 수 검수 로직 ---
-    if (formatted.actualCount < input.count) {
+    // 4) handler 안 mismatch 검사 블록 교체
+    if (formatted.actualCount === 0) {
+      console.error("WORMHOLE PARSE FAILED - RAW PREVIEW:", formatted.rawPreview);
+
       return json(res, 500, {
         success: false,
-        message: `Question count mismatch: expected ${input.count}, got ${formatted.actualCount}`
+        message: `Question parsing failed: expected ${input.count}, got 0`,
+        rawPreview: formatted.rawPreview
       });
+    }
+
+    if (formatted.actualCount > 0 && formatted.actualCount < input.count) {
+      console.warn(
+        `WORMHOLE QUESTION SHORTAGE: expected ${input.count}, got ${formatted.actualCount}`
+      );
     }
 
     const finalMpState = await deductMpAfterSuccess(mpState);
