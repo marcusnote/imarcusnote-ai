@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/generate-vocab.js": {
+    "api/*.js": {
       "includeFiles": "data/vocab/**/*.json"
     }
   }
