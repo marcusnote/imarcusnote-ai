@@ -16,7 +16,6 @@ import {
 } from "../lib/mp.js";
 import { PLAN_CONFIG } from "../lib/plans.js";
 
-// 2️⃣ addCors 함수 추가
 function addCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -27,7 +26,6 @@ function addCors(res) {
 }
 
 export default async function handler(req, res) {
-  // 3️⃣ handler 안에 CORS 로직 추가
   addCors(res);
 
   if (req.method === "OPTIONS") {
@@ -35,7 +33,10 @@ export default async function handler(req, res) {
   }
 
   if (req.method !== "POST") {
-    return res.status(405).json({ success: false, error: "Method not allowed" });
+    return res.status(405).json({
+      success: false,
+      error: "Method not allowed",
+    });
   }
 
   try {
@@ -49,29 +50,49 @@ export default async function handler(req, res) {
       req.body?.memberId ||
       "";
 
-    if (!token) {
-      return res.status(401).json({ success: false, error: "Missing token" });
+    let verifiedMemberId = "";
+
+    // 1) 토큰이 있으면 정상 검증
+    if (token) {
+      const verified = await verifyMemberToken(token);
+      const verifiedMember = normalizeMember(verified);
+      verifiedMemberId = verifiedMember?.id || verifiedMember?.memberId || "";
+
+      if (!verifiedMemberId) {
+        return res.status(401).json({
+          success: false,
+          error: "Invalid token",
+        });
+      }
+
+      if (requestedMemberId && requestedMemberId !== verifiedMemberId) {
+        return res.status(403).json({
+          success: false,
+          error: "Member mismatch",
+        });
+      }
     }
 
-    const verified = await verifyMemberToken(token);
-    const verifiedMember = normalizeMember(verified);
-    const verifiedMemberId = verifiedMember?.id || verifiedMember?.memberId || "";
+    // 2) 토큰이 없으면 memberId fallback 허용
+    const resolvedMemberId = verifiedMemberId || requestedMemberId;
 
-    // 1) member mismatch 체크 복구
-    if (requestedMemberId && requestedMemberId !== verifiedMemberId) {
-      return res.status(403).json({ success: false, error: "Member mismatch" });
+    if (!resolvedMemberId) {
+      return res.status(401).json({
+        success: false,
+        error: "Missing token and memberId",
+      });
     }
 
-    if (!verifiedMemberId) {
-      return res.status(401).json({ success: false, error: "Invalid token" });
-    }
+    let member = await getMemberById(resolvedMemberId);
+    member = normalizeMember(member);
 
-    let member = await getMemberById(verifiedMemberId);
     if (!member) {
-      return res.status(404).json({ success: false, error: "Member not found" });
+      return res.status(404).json({
+        success: false,
+        error: "Member not found",
+      });
     }
 
-    // 2) currentPlan 읽기 보강
     const currentPlan =
       member?.customFields?.current_plan ||
       member?.metaData?.current_plan ||
@@ -83,11 +104,12 @@ export default async function handler(req, res) {
       member?.customFields?.mp != null ||
       member?.metaData?.mp != null;
 
+    // 신규 associate면 15 MP 지급
     if (!hasAnyMpField && currentPlan === "associate") {
-      const trialMp = PLAN_CONFIG.associate.monthlyMp || 15;
+      const trialMp = PLAN_CONFIG.associate?.monthlyMp || 15;
       const mpResetAt = computeNextMpResetAt();
 
-      await updateMember(verifiedMemberId, {
+      await updateMember(resolvedMemberId, {
         customFields: {
           current_plan: "associate",
           monthly_mp: trialMp,
@@ -106,27 +128,36 @@ export default async function handler(req, res) {
 
       return res.status(200).json({
         success: true,
-        memberId: verifiedMemberId,
+        memberId: resolvedMemberId,
         plan: "associate",
         mp: trialMp,
         trialGranted: true,
+        authMode: token ? "token" : "memberId-fallback",
       });
     }
 
     if (isMpExpired(member)) {
-      member = await zeroOutExpiredMp(verifiedMemberId, member);
+      member = await zeroOutExpiredMp(resolvedMemberId, member);
     }
 
     const remainingMp = readRemainingMp(member);
 
     return res.status(200).json({
       success: true,
-      memberId: verifiedMemberId,
-      plan: currentPlan,
+      memberId: resolvedMemberId,
+      plan:
+        member?.customFields?.current_plan ||
+        member?.metaData?.current_plan ||
+        "associate",
       mp: remainingMp,
+      authMode: token ? "token" : "memberId-fallback",
     });
   } catch (error) {
     console.error("Bootstrap Error:", error);
-    return res.status(500).json({ success: false, error: error.message });
+
+    return res.status(500).json({
+      success: false,
+      error: error?.message || "Bootstrap failed",
+    });
   }
 }
