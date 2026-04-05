@@ -4,7 +4,7 @@ import path from "path";
 /**
  * MARCUSNOTE VOCAB API
  * - Uses fixed vocabulary DB (NOT random generation)
- * - Middle 3: 20 units × 20 words = 400 words
+ * - Supports Middle 1, 2, 3: 20 units × 20 words = 400 words each
  * - Returns workbook/test output using ONLY the supplied vocabulary list
  */
 
@@ -42,12 +42,22 @@ function uniqueWords(items) {
   return result;
 }
 
+/**
+ * 교체된 멀티레벨 지원 getVocabularyPayload 함수
+ */
 function getVocabularyPayload({ level = "middle3", unit, range }) {
-  if (level !== "middle3") {
-    throw new Error("Currently only 'middle3' is supported in this version.");
+  const levelMap = {
+    middle1: "data/vocab/middle1_core_vocab_400.json",
+    middle2: "data/vocab/middle2_core_vocab_400.json",
+    middle3: "data/vocab/middle3_core_vocab_400.json",
+  };
+
+  const selectedPath = levelMap[level];
+  if (!selectedPath) {
+    throw new Error("Invalid level. Use middle1, middle2, or middle3.");
   }
 
-  const db = readJson("data/vocab/middle3_core_vocab_400.json");
+  const db = readJson(selectedPath);
   const units = db.units || {};
 
   if (range) {
@@ -59,7 +69,7 @@ function getVocabularyPayload({ level = "middle3", unit, range }) {
     const collected = [];
     for (const u of rangeUnits) {
       if (!units[String(u)]) {
-        throw new Error(`Unit ${u} does not exist.`);
+        throw new Error(`Unit ${u} does not exist in ${level}.`);
       }
       collected.push(...units[String(u)]);
     }
@@ -79,7 +89,7 @@ function getVocabularyPayload({ level = "middle3", unit, range }) {
 
   const selected = units[String(unitNumber)];
   if (!selected) {
-    throw new Error(`Unit ${unitNumber} does not exist.`);
+    throw new Error(`Unit ${unitNumber} does not exist in ${level}.`);
   }
 
   return {
@@ -145,7 +155,6 @@ The worksheet must look like a premium school workbook.
 [MODE RULES]
 A) If mode is "list+test":
 - Include all sections below.
-
 B) If mode is "list-only":
 - Include:
   1. Title / Unit Information
@@ -196,7 +205,8 @@ E. Answer Key
 - concise and clean
 
 [IMPORTANT]
-- The workbook must feel structured, premium, and teacher-ready.
+- The workbook must feel structured, premium, 
+- and teacher-ready.
 - Maintain consistent formatting.
 - No random numbering mistakes.
 - No missing numbers.
