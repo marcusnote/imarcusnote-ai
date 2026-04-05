@@ -666,123 +666,224 @@ function buildWormholeTitle(input) {
   return `${input.gradeLabel} ${displayTopic} 마커스웜홀 ${difficultyLabel} ${input.count}문항`;
 }
 
-// 1) buildGrammarSystemPrompt 교체
+// 1) buildGrammarSystemPrompt 전체 교체
 function buildGrammarSystemPrompt(input) {
-  const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
+  const isKo = input.language !== "en";
+  const isHigh = input.difficulty === "high" || input.difficulty === "extreme";
+  const difficultyLine = isHigh
+    ? "모든 문항은 실제 내신 5점형 변별 문항처럼 출제한다."
+    : "문항 난이도는 요청 수준에 맞춘다.";
+
+  if (!isKo) {
+    return `
+You are the MARCUS Wormhole high-difficulty grammar exam generator.
+
+STRICT RULES:
+1. ALL questions must be 5-option multiple choice.
+2. Every question must have exactly five choices:
+   ① ...
+   ② ...
+   ③ ...
+   ④ ...
+   ⑤ ...
+3. Do NOT create 4-choice items.
+4. Do NOT create subjective items, sentence arrangement items, rewrite items, or free-response items.
+5. Do NOT place answers or explanations directly under the questions.
+6. Put all answers only in the [[ANSWERS]] section.
+7. Keep the worksheet exam-like, polished, and school-test appropriate.
+8. Match the requested number of questions exactly.
+
+DIFFICULTY:
+- ${isHigh ? "All questions must feel like real 5-point killer questions for top students." : "Keep the requested level."}
+- Use grammar traps, structure judgment, tense contrast, relative clauses, participles, infinitives, gerunds, subject-verb agreement, and high-discrimination distractors.
+- Wrong choices must be plausible, not silly.
+
+QUESTION TYPE MIX:
+Mix these question types across the whole set:
+- find the awkward sentence
+- count the correct sentences
+- count the awkward sentences
+- choose the grammatically correct sentence
+- choose the grammatically incorrect sentence
+- choose the sentence with the same grammar structure
+- identify the underlined grammar point
+- choose the best word/form for grammar usage
+- high-difficulty discrimination item
+
+Do not repeat the same pattern too many times in a row.
+
+OUTPUT FORMAT:
+[[TITLE]]
+(one line only)
+
+[[INSTRUCTIONS]]
+(one short paragraph)
+
+[[QUESTIONS]]
+1. ...
+① ...
+② ...
+③ ...
+④ ...
+⑤ ...
+
+2. ...
+① ...
+② ...
+③ ...
+④ ...
+⑤ ...
+
+[[ANSWERS]]
+1. ③ - explanation
+2. ① - explanation
+...
+`.trim();
+  }
+
   return `
-당신은 마커스웜홀 스타일의 상위권 변별용 영어 문법 문제 출제기입니다.
+당신은 마커스웜홀 전용 고난도 영어 문법 실전모의고사 생성 엔진이다.
 
-반드시 아래 형식을 정확히 지키세요.
+[절대 규칙]
+1. 모든 문항은 반드시 객관식 5지선다형으로 작성한다.
+2. 모든 문항의 선택지는 반드시 다음 형식을 따른다.
+   ① ...
+   ② ...
+   ③ ...
+   ④ ...
+   ⑤ ...
+3. 4지선다(a,b,c,d) 금지.
+4. 주관식, 서술형, 문장 배열, 재구성, 영작형 금지.
+5. 문제 바로 아래에 정답/해설을 쓰지 말 것.
+6. 정답과 해설은 반드시 [[ANSWERS]] 섹션에만 모아 쓸 것.
+7. 실제 학교시험/내신/고난도 실전모의고사처럼 보이게 작성할 것.
+8. 요청된 문항 수를 정확히 맞출 것.
 
-[출제 원칙]
-- 학교 시험형 고난도 문항으로 출제할 것
-- 단순 암기형이 아니라 구조 판단형, 문맥 판단형, 변형형 중심으로 구성할 것
-- 최소 25%는 고난도 문항으로 구성할 것
-- 고난도 문항 앞에는 반드시 [High Difficulty]를 표기할 것
-- 결합 문법이면 각 문법 요소가 균형 있게 반영될 것
-- 선지는 실제 학교 시험처럼 변별력 있게 구성할 것
+[난이도 규칙]
+- ${difficultyLine}
+- 단순 암기형이 아니라 문장 구조와 어법 판단 중심으로 출제할 것.
+- 오답 선지도 매우 그럴듯하게 만들 것.
+- 변별력 있는 함정 선지를 포함할 것.
 
-[문항 설계 기준]
-반드시 아래 유형을 골고루 포함할 것:
+[유형 분배 규칙]
+전체 세트에 아래 유형을 섞어서 출제한다.
 - 어색한 문장 찾기
 - 올바른 문장의 개수
 - 어색한 문장의 개수
+- 올바른 문장 고르기
+- 틀린 문장 고르기
 - 같은 문법 구조 찾기
-- 밑줄 어법 판단
-- 문장 배열
-- 문장 재구성
-- 빈칸 어법
+- 밑줄 친 어법 판단
+- 알맞은 어형/어휘 선택
+- 고난도 변별 문항
 
-[STRICT OUTPUT FORMAT]
-반드시 아래 4개 마커를 정확히 포함할 것:
+같은 유형만 연속 반복하지 말 것.
+
+[High Difficulty 규칙]
+- 최소 25% 이상 문항은 고난도 변별 문항으로 설계한다.
+- 해당 문항 제목 또는 문항 지시문에 [High Difficulty] 표기를 붙여도 된다.
+- 단, 전체 세트의 기본 수준 자체가 고난도여야 한다.
+
+[출력 형식]
 [[TITLE]]
-[[INSTRUCTIONS]]
-[[QUESTIONS]]
-[[ANSWERS]]
-
-[STRICT NUMBERING RULE]
-- [[QUESTIONS]] 안의 모든 문항은 반드시 "1." "2." "3." 형식으로만 시작할 것
-- "1)" 또는 "①" 또는 "-" 형식 금지
-- 번호 누락 금지
-- [[ANSWERS]]도 반드시 같은 번호 형식 "1." "2." "3." 으로 작성할 것
-- [[QUESTIONS]]의 문항 수는 사용자가 요청한 문항 수와 반드시 정확히 일치해야 함
-
-[응답 예시]
-[[TITLE]]
-{제목}
+(제목 한 줄)
 
 [[INSTRUCTIONS]]
-{지시문}
+(수험생 안내문 한 단락)
 
 [[QUESTIONS]]
-1. {문제}
-2. {문제}
-3. {문제}
+1. ...
+① ...
+② ...
+③ ...
+④ ...
+⑤ ...
+
+2. ...
+① ...
+② ...
+③ ...
+④ ...
+⑤ ...
 
 [[ANSWERS]]
-1. {정답 및 해설}
-2. {정답 및 해설}
-3. {정답 및 해설}
-
-[금지 사항]
-- 마커 생략 금지
-- 번호 형식 변경 금지
-- 질문 개수 부족 금지
-- 코드블록 금지
-- 설명문만 길게 쓰고 문제를 생략하는 것 금지
-
-현재 난이도: ${difficultyLabel}
+1. ③ - 해설
+2. ① - 해설
+...
 `.trim();
 }
 
+// 2) buildGrammarUserPrompt 전체 교체
 function buildGrammarUserPrompt(input) {
   const title = buildWormholeTitle(input);
-  const textbookBlock = input.textbook
-    ? `
-[교과서 정보]
-- 학년: ${input.textbook.gradeLabel}
-- 교과서: ${input.textbook.publisher}
-- 단원: ${input.textbook.lesson}과
-- 결합 문법: ${input.textbook.grammarList.join(", ")}
-- 이 단원은 결합형 문항을 포함한 교과서 단원형으로 출제할 것
-`
-    : "";
-  return `마커스웜홀 스타일 영어 문법 문제 세트를 생성하시오.
+  const textbookInfo = input.textbook ? `교과서: ${input.textbook.publisher}` : "교과서: 없음";
+  const chapterInfo = input.textbook ? `단원: ${input.textbook.lesson}과` : "단원: 없음";
+  const grammarList =
+    input.textbook && input.textbook.grammarList && input.textbook.grammarList.length
+      ? input.textbook.grammarList.join(", ")
+      : input.topic || "문법 종합";
+
+  const isHigh = input.difficulty === "high" || input.difficulty === "extreme";
+
+  if (input.language === "en") {
+    return `
+Generate a Wormhole-style grammar worksheet with these conditions.
+
+Title: ${title}
+Engine: wormhole
+Level: ${input.level}
+Grade label: ${input.gradeLabel}
+Mode: ${input.mode}
+Topic: ${input.topic}
+Difficulty: ${input.difficulty}
+Question count: ${input.count}
+${textbookInfo}
+${chapterInfo}
+Grammar points: ${grammarList}
+
+CORE REQUIREMENTS:
+- Make EVERY item a 5-option multiple-choice question.
+- Every item must use exactly:
+  ① ② ③ ④ ⑤
+- Do not use a/b/c/d.
+- Do not create sentence arrangement, rewrite, or subjective questions.
+- Separate questions and answers completely.
+- Use a balanced mix of real exam-style grammar discrimination types.
+- ${isHigh ? "Make the set feel like a top-tier high school / top middle-school 5-point discrimination test." : "Keep the requested level."}
+
+Original request:
+${input.userPrompt || ""}
+`.trim();
+  }
+
+  return `
+다음 조건에 맞는 마커스웜홀 영어 문법 실전모의고사를 생성하시오.
 
 제목: ${title}
+엔진: wormhole
+학년 수준: ${input.level}
+학년 표기: ${input.gradeLabel}
+모드: ${input.mode}
 주제: ${input.topic}
-대상: ${input.gradeLabel}
+난이도: ${input.difficulty}
 문항 수: ${input.count}
-언어: ${input.language === "ko" ? "한국어 해설" : "English Explanation"}
+${textbookInfo}
+${chapterInfo}
+문법 포인트: ${grammarList}
 
-${textbookBlock}
+반드시 지킬 조건:
+- 모든 문항은 5지선다 객관식으로 작성할 것
+- 모든 문항의 선택지는 반드시 ① ② ③ ④ ⑤ 형식으로 작성할 것
+- a) b) c) d) 형식 사용 금지
+- 배열형, 재구성형, 서술형, 영작형 금지
+- 문제와 정답/해설은 완전히 분리할 것
+- 실제 내신형/실전형 문법 판단 문제처럼 만들 것
+- 어색한 문장 찾기, 올바른 문장 개수, 어색한 문장 개수, 문법 구조 비교, 밑줄 어법 판단, 알맞은 어형 선택 등을 적절히 섞을 것
+- ${isHigh ? "전체 세트가 고난도 5점형 변별 문제처럼 느껴지게 만들 것" : "요청 난이도에 맞출 것"}
 
-[문항 설계]
-반드시 아래 유형을 포함할 것:
-- 어색한 문장 찾기
-- 올바른 문장의 개수
-- 어색한 문장의 개수
-- 같은 문법 구조 찾기
-- 밑줄 어법 판단
-- 문장 배열
-- 문장 재구성
-- 빈칸 어법
-
-[중요]
-- 최소 2문항은 개수형 문제 포함
-- 최소 25%는 고난도
-- 고난도는 [High Difficulty] 표시
-- 교과서 결합 문법이 주어졌다면 각 문법 요소를 고르게 반영할 것
-- 전체 문항의 최소 30%는 두 문법 요소를 동시에 묻는 결합형 문제로 만들 것
-- 나머지 문항도 실제 내신 시험처럼 선지형/개수형/배열형/재구성형을 고르게 섞을 것
-
-[금지]
-- 단순 암기 문제 금지
-- obvious 문제 금지
-- 한눈에 답 보이는 문제 금지
-
-사용자 요청:
-${input.userPrompt || ""}`.trim();
+사용자 원문:
+${input.userPrompt || ""}
+`.trim();
 }
 
 async function callOpenAI(systemPrompt, userPrompt) {
@@ -805,23 +906,91 @@ function extractSection(rawText, startMarker, endMarker) {
   return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
-// 2) countQuestions 교체 (Markdown 및 "문제 1:" 형식 대응)
+// 4) countQuestions 전체 교체
 function countQuestions(text = "") {
   const source = String(text || "").replace(/\r\n/g, "\n");
-
   const matches =
     source.match(
       /^\s*(\d+\.\s+|\d+\)\s+|[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*|#{1,3}\s*문제\s*\d+\s*[:.\-]?\s*|문제\s*\d+\s*[:.\-]?\s*)/gm
     ) || [];
-
-  return matches.length;
+  return matches.filter((m) => /^\s*(\d+\.\s+|\d+\)\s+|#{1,3}\s*문제\s*\d+|문제\s*\d+)/.test(m)).length;
 }
 
 function cleanupText(text = "") {
   return String(text || "").replace(/\r\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-// 3) formatWormholeResponse 교체 (Markdown 복구 로직 강화)
+// 3) 보조 함수들 추가 (cleanupText 아래)
+function normalizeChoiceLabels(text = "") {
+  return String(text || "")
+    .replace(/^\s*[aA][\)\.\:]\s+/gm, "① ")
+    .replace(/^\s*[bB][\)\.\:]\s+/gm, "② ")
+    .replace(/^\s*[cC][\)\.\:]\s+/gm, "③ ")
+    .replace(/^\s*[dD][\)\.\:]\s+/gm, "④ ")
+    .replace(/^\s*[eE][\)\.\:]\s+/gm, "⑤ ")
+    .replace(/^\s*1[\)\.\:]\s+/gm, "① ")
+    .replace(/^\s*2[\)\.\:]\s+/gm, "② ")
+    .replace(/^\s*3[\)\.\:]\s+/gm, "③ ")
+    .replace(/^\s*4[\)\.\:]\s+/gm, "④ ")
+    .replace(/^\s*5[\)\.\:]\s+/gm, "⑤ ");
+}
+
+function stripInlineAnswersFromQuestions(text = "") {
+  let source = String(text || "");
+
+  source = source.replace(
+    /\n?\s*(정답|해설|정답 및 해설|answers?)\s*[:：].*$/gim,
+    ""
+  );
+
+  source = source.replace(
+    /\n?\s*\*+\s*해설\s*\*+\s*[:：][\s\S]*?(?=\n\s*\d+\.\s|\n\s*문제\s*\d+|$)/gim,
+    "\n"
+  );
+
+  source = source.replace(
+    /\n?\s*\*+\s*정답\s*\*+\s*[:：][\s\S]*?(?=\n\s*\d+\.\s|\n\s*문제\s*\d+|$)/gim,
+    "\n"
+  );
+
+  return cleanupText(source);
+}
+
+function ensureFiveChoicesPerQuestion(questions = "") {
+  const source = String(questions || "").replace(/\r\n/g, "\n");
+  const blocks = source
+    .split(/\n(?=\d+\.\s)/g)
+    .map(s => s.trim())
+    .filter(Boolean);
+
+  const fixed = blocks.map((block) => {
+    const lines = block.split("\n");
+    const stem = [];
+    const choices = [];
+
+    for (const line of lines) {
+      if (/^\s*[①②③④⑤]\s+/.test(line)) {
+        choices.push(line.trim());
+      } else {
+        stem.push(line);
+      }
+    }
+
+    if (choices.length === 4) {
+      choices.push("⑤ 위의 보기 중 어느 것도 아니다.");
+    }
+
+    if (choices.length > 5) {
+      return [...stem, ...choices.slice(0, 5)].join("\n");
+    }
+
+    return [...stem, ...choices].join("\n");
+  });
+
+  return cleanupText(fixed.join("\n\n"));
+}
+
+// 5) formatWormholeResponse 전체 교체
 function formatWormholeResponse(rawText, input) {
   const normalizedRaw = String(rawText || "").replace(/\r\n/g, "\n").trim();
 
@@ -830,15 +999,11 @@ function formatWormholeResponse(rawText, input) {
   let questions = cleanupText(extractSection(normalizedRaw, "[[QUESTIONS]]", "[[ANSWERS]]"));
   let answers = cleanupText(extractSection(normalizedRaw, "[[ANSWERS]]", null));
 
-  // 1) [[QUESTIONS]] 마커는 있으나 [[ANSWERS]]가 없을 때
   if (!questions) {
     const qMarker = normalizedRaw.match(/\[\[QUESTIONS\]\]([\s\S]*)/i);
-    if (qMarker) {
-      questions = cleanupText(qMarker[1]);
-    }
+    if (qMarker) questions = cleanupText(qMarker[1]);
   }
 
-  // 2) [[ANSWERS]]가 questions 안에 섞여 있으면 분리
   if (questions && !answers) {
     const splitMatch = questions.match(/([\s\S]*?)\n\s*\[\[ANSWERS\]\]\s*([\s\S]*)/i);
     if (splitMatch) {
@@ -847,67 +1012,15 @@ function formatWormholeResponse(rawText, input) {
     }
   }
 
-  // 3) 마커 자체가 없고 markdown 제목/문제 형식으로 나온 경우 fallback
   if (!questions) {
     const firstQuestionIndex = normalizedRaw.search(
-      /^\s*(#{1,3}\s*)?문제\s*1\s*[:.\-]*/m
+      /^\s*(#{1,3}\s*)?문제\s*1\s*[:.\-]*|^\s*1\.\s+/m
     );
 
     if (firstQuestionIndex >= 0) {
       const beforeQuestions = normalizedRaw.slice(0, firstQuestionIndex).trim();
       const afterQuestions = normalizedRaw.slice(firstQuestionIndex).trim();
 
-      // title 추출
-      if (!title) {
-        const titleLine =
-          beforeQuestions
-            .split("\n")
-            .map(s => s.trim())
-            .find(s => /^#\s+/.test(s)) ||
-          beforeQuestions
-            .split("\n")
-            .map(s => s.trim())
-            .find(Boolean) ||
-          "";
-
-        title = cleanupText(titleLine.replace(/^#+\s*/, "")) || buildWormholeTitle(input);
-      }
-
-      // instructions 추출
-      if (!instructions) {
-        const bodyLines = beforeQuestions
-          .split("\n")
-          .map(s => s.trim())
-          .filter(Boolean)
-          .filter(s => !/^#\s+/.test(s));
-
-        instructions = cleanupText(bodyLines.join("\n"));
-      }
-
-      // answers 시작점 탐지
-      const answerStart = afterQuestions.search(
-        /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b/i
-      );
-
-      if (answerStart >= 0) {
-        questions = cleanupText(afterQuestions.slice(0, answerStart));
-        answers = cleanupText(afterQuestions.slice(answerStart));
-      } else {
-        questions = cleanupText(afterQuestions);
-      }
-    }
-  }
-
-  // 4) 그래도 questions가 없으면 전체 본문에서 번호형 문항 시작점 재탐색
-  if (!questions) {
-    const numericStart = normalizedRaw.search(
-      /^\s*(\d+\.\s+|\d+\)\s+|[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*)/m
-    );
-
-    if (numericStart >= 0) {
-      const beforeQuestions = normalizedRaw.slice(0, numericStart).trim();
-      const afterQuestions = normalizedRaw.slice(numericStart).trim();
-
       if (!title) {
         const titleLine =
           beforeQuestions
@@ -946,7 +1059,6 @@ function formatWormholeResponse(rawText, input) {
     }
   }
 
-  // 5) 번호 형식 보정
   questions = (questions || "")
     .replace(/^\s*(\d+)\)\s+/gm, "$1. ")
     .replace(/^\s*#{1,3}\s*문제\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
@@ -957,34 +1069,51 @@ function formatWormholeResponse(rawText, input) {
     .replace(/^\s*#{1,3}\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
     .replace(/^\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ");
 
-  // 6) answers 안에 질문이 다시 섞인 경우 약식 정리
-  if (!answers) {
-    const possibleAnswerBlock = normalizedRaw.match(
-      /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b[\s\S]*$/i
-    );
-    if (possibleAnswerBlock) {
-      answers = cleanupText(possibleAnswerBlock[0]);
-    }
+  questions = normalizeChoiceLabels(questions);
+  answers = normalizeChoiceLabels(answers);
+
+  questions = stripInlineAnswersFromQuestions(questions);
+  questions = ensureFiveChoicesPerQuestion(questions);
+
+  if (!title) title = buildWormholeTitle(input);
+
+  if (!instructions) {
+    instructions =
+      input.language === "en"
+        ? "Answer all questions. Choose the best answer for each item."
+        : "다음 문항에 답하세요. 각 문항에서 가장 알맞은 답을 고르세요.";
   }
 
-  const finalTitle = title || buildWormholeTitle(input);
+  if (!answers) {
+    answers =
+      input.language === "en"
+        ? "Answer section was not generated."
+        : "정답 및 해설이 생성되지 않았습니다.";
+  }
+
   const actualCount = countQuestions(questions);
 
-  return {
-    title: finalTitle,
+  const fullText = [
+    title,
+    "",
     instructions,
-    content: cleanupText([finalTitle, instructions, questions].filter(Boolean).join("\n\n")),
-    answerSheet: cleanupText(answers),
-    fullText: cleanupText(
-      [
-        finalTitle,
-        instructions,
-        questions,
-        answers ? "정답 및 해설\n" + answers : ""
-      ].filter(Boolean).join("\n\n")
-    ),
+    "",
+    questions,
+    "",
+    "정답 및 해설",
+    answers
+  ]
+    .filter(Boolean)
+    .join("\n\n");
+
+  return {
+    title,
+    instructions,
+    content: questions,
+    answerSheet: answers,
+    fullText,
     actualCount,
-    rawPreview: normalizedRaw.slice(0, 2000)
+    rawPreview: normalizedRaw.slice(0, 1200),
   };
 }
 
@@ -1251,18 +1380,17 @@ export default async function handler(req, res) {
       return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
     }
 
-    let systemPrompt, userPrompt;
-    if (input.mode === "grammar" || input.mode === "textbook-chapter" || input.mode === "school-exam") {
-      systemPrompt = buildGrammarSystemPrompt(input);
-      userPrompt = buildGrammarUserPrompt(input);
-    } else {
-      systemPrompt = `당신은 상위권 변별력을 위한 고난도 영어 문법 문제 생성기입니다.
-웜홀 원칙에 따라 출제하세요.`;
-      userPrompt = buildGrammarUserPrompt(input);
-    }
+    // 6) handler 안 프롬프트 선택 블록 교체
+    const systemPrompt = buildGrammarSystemPrompt(input);
+    const userPrompt = buildGrammarUserPrompt(input);
 
     const rawText = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatWormholeResponse(rawText, input);
+
+    // 7) handler 안 파싱 직후 검증 1줄 추가
+    if (!formatted.content.includes("⑤ ")) {
+      console.warn("WORMHOLE WARNING: 5th choice was missing in at least some items; fallback normalization applied.");
+    }
 
     // 4) handler 안 mismatch 검사 블록
     if (formatted.actualCount === 0) {
