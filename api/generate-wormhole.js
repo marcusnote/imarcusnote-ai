@@ -669,7 +669,6 @@ function buildWormholeTitle(input) {
 // 1) buildGrammarSystemPrompt 교체
 function buildGrammarSystemPrompt(input) {
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
-
   return `
 당신은 마커스웜홀 스타일의 상위권 변별용 영어 문법 문제 출제기입니다.
 
@@ -806,12 +805,14 @@ function extractSection(rawText, startMarker, endMarker) {
   return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
-// 2) countQuestions 교체
+// 2) countQuestions 교체 (Markdown 및 "문제 1:" 형식 대응)
 function countQuestions(text = "") {
   const source = String(text || "").replace(/\r\n/g, "\n");
 
   const matches =
-    source.match(/^\s*(\d+\.\s+|\d+\)\s+|[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*)/gm) || [];
+    source.match(
+      /^\s*(\d+\.\s+|\d+\)\s+|[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*|#{1,3}\s*문제\s*\d+\s*[:.\-]?\s*|문제\s*\d+\s*[:.\-]?\s*)/gm
+    ) || [];
 
   return matches.length;
 }
@@ -820,24 +821,24 @@ function cleanupText(text = "") {
   return String(text || "").replace(/\r\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-// 3) formatWormholeResponse 교체
+// 3) formatWormholeResponse 교체 (Markdown 복구 로직 강화)
 function formatWormholeResponse(rawText, input) {
-  const normalizedRaw = String(rawText || "").replace(/\r\n/g, "\n");
+  const normalizedRaw = String(rawText || "").replace(/\r\n/g, "\n").trim();
 
-  const title = cleanupText(extractSection(normalizedRaw, "[[TITLE]]", "[[INSTRUCTIONS]]"));
-  const instructions = cleanupText(extractSection(normalizedRaw, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
+  let title = cleanupText(extractSection(normalizedRaw, "[[TITLE]]", "[[INSTRUCTIONS]]"));
+  let instructions = cleanupText(extractSection(normalizedRaw, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
   let questions = cleanupText(extractSection(normalizedRaw, "[[QUESTIONS]]", "[[ANSWERS]]"));
   let answers = cleanupText(extractSection(normalizedRaw, "[[ANSWERS]]", null));
 
-  // 1) 마커 파싱 실패 시 전체 응답에서 QUESTIONS / ANSWERS 유사 복구
+  // 1) [[QUESTIONS]] 마커는 있으나 [[ANSWERS]]가 없을 때
   if (!questions) {
-    const fallbackMatch = normalizedRaw.match(/\[\[QUESTIONS\]\]([\s\S]*)/i);
-    if (fallbackMatch) {
-      questions = cleanupText(fallbackMatch[1]);
+    const qMarker = normalizedRaw.match(/\[\[QUESTIONS\]\]([\s\S]*)/i);
+    if (qMarker) {
+      questions = cleanupText(qMarker[1]);
     }
   }
 
-  // 2) ANSWERS가 QUESTIONS 안에 섞여 있으면 분리
+  // 2) [[ANSWERS]]가 questions 안에 섞여 있으면 분리
   if (questions && !answers) {
     const splitMatch = questions.match(/([\s\S]*?)\n\s*\[\[ANSWERS\]\]\s*([\s\S]*)/i);
     if (splitMatch) {
@@ -846,11 +847,127 @@ function formatWormholeResponse(rawText, input) {
     }
   }
 
-  // 3) 번호 형식 보정: "1)" -> "1."
-  questions = questions.replace(/^\s*(\d+)\)\s+/gm, "$1. ");
-  answers = answers.replace(/^\s*(\d+)\)\s+/gm, "$1. ");
+  // 3) 마커 자체가 없고 markdown 제목/문제 형식으로 나온 경우 fallback
+  if (!questions) {
+    const firstQuestionIndex = normalizedRaw.search(
+      /^\s*(#{1,3}\s*)?문제\s*1\s*[:.\-]*/m
+    );
 
-  let finalTitle = title || buildWormholeTitle(input);
+    if (firstQuestionIndex >= 0) {
+      const beforeQuestions = normalizedRaw.slice(0, firstQuestionIndex).trim();
+      const afterQuestions = normalizedRaw.slice(firstQuestionIndex).trim();
+
+      // title 추출
+      if (!title) {
+        const titleLine =
+          beforeQuestions
+            .split("\n")
+            .map(s => s.trim())
+            .find(s => /^#\s+/.test(s)) ||
+          beforeQuestions
+            .split("\n")
+            .map(s => s.trim())
+            .find(Boolean) ||
+          "";
+
+        title = cleanupText(titleLine.replace(/^#+\s*/, "")) || buildWormholeTitle(input);
+      }
+
+      // instructions 추출
+      if (!instructions) {
+        const bodyLines = beforeQuestions
+          .split("\n")
+          .map(s => s.trim())
+          .filter(Boolean)
+          .filter(s => !/^#\s+/.test(s));
+
+        instructions = cleanupText(bodyLines.join("\n"));
+      }
+
+      // answers 시작점 탐지
+      const answerStart = afterQuestions.search(
+        /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b/i
+      );
+
+      if (answerStart >= 0) {
+        questions = cleanupText(afterQuestions.slice(0, answerStart));
+        answers = cleanupText(afterQuestions.slice(answerStart));
+      } else {
+        questions = cleanupText(afterQuestions);
+      }
+    }
+  }
+
+  // 4) 그래도 questions가 없으면 전체 본문에서 번호형 문항 시작점 재탐색
+  if (!questions) {
+    const numericStart = normalizedRaw.search(
+      /^\s*(\d+\.\s+|\d+\)\s+|[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*)/m
+    );
+
+    if (numericStart >= 0) {
+      const beforeQuestions = normalizedRaw.slice(0, numericStart).trim();
+      const afterQuestions = normalizedRaw.slice(numericStart).trim();
+
+      if (!title) {
+        const titleLine =
+          beforeQuestions
+            .split("\n")
+            .map(s => s.trim())
+            .find(s => /^#\s+/.test(s)) ||
+          beforeQuestions
+            .split("\n")
+            .map(s => s.trim())
+            .find(Boolean) ||
+          "";
+
+        title = cleanupText(titleLine.replace(/^#+\s*/, "")) || buildWormholeTitle(input);
+      }
+
+      if (!instructions) {
+        const bodyLines = beforeQuestions
+          .split("\n")
+          .map(s => s.trim())
+          .filter(Boolean)
+          .filter(s => !/^#\s+/.test(s));
+
+        instructions = cleanupText(bodyLines.join("\n"));
+      }
+
+      const answerStart = afterQuestions.search(
+        /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b/i
+      );
+
+      if (answerStart >= 0) {
+        questions = cleanupText(afterQuestions.slice(0, answerStart));
+        answers = cleanupText(afterQuestions.slice(answerStart));
+      } else {
+        questions = cleanupText(afterQuestions);
+      }
+    }
+  }
+
+  // 5) 번호 형식 보정
+  questions = (questions || "")
+    .replace(/^\s*(\d+)\)\s+/gm, "$1. ")
+    .replace(/^\s*#{1,3}\s*문제\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
+    .replace(/^\s*문제\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ");
+
+  answers = (answers || "")
+    .replace(/^\s*(\d+)\)\s+/gm, "$1. ")
+    .replace(/^\s*#{1,3}\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
+    .replace(/^\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ");
+
+  // 6) answers 안에 질문이 다시 섞인 경우 약식 정리
+  if (!answers) {
+    const possibleAnswerBlock = normalizedRaw.match(
+      /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b[\s\S]*$/i
+    );
+    if (possibleAnswerBlock) {
+      answers = cleanupText(possibleAnswerBlock[0]);
+    }
+  }
+
+  const finalTitle = title || buildWormholeTitle(input);
   const actualCount = countQuestions(questions);
 
   return {
@@ -859,12 +976,15 @@ function formatWormholeResponse(rawText, input) {
     content: cleanupText([finalTitle, instructions, questions].filter(Boolean).join("\n\n")),
     answerSheet: cleanupText(answers),
     fullText: cleanupText(
-      [finalTitle, instructions, questions, answers ? "정답 및 해설\n" + answers : ""]
-        .filter(Boolean)
-        .join("\n\n")
+      [
+        finalTitle,
+        instructions,
+        questions,
+        answers ? "정답 및 해설\n" + answers : ""
+      ].filter(Boolean).join("\n\n")
     ),
     actualCount,
-    rawPreview: normalizedRaw.slice(0, 2000),
+    rawPreview: normalizedRaw.slice(0, 2000)
   };
 }
 
@@ -1144,7 +1264,7 @@ export default async function handler(req, res) {
     const rawText = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatWormholeResponse(rawText, input);
 
-    // 4) handler 안 mismatch 검사 블록 교체
+    // 4) handler 안 mismatch 검사 블록
     if (formatted.actualCount === 0) {
       console.error("WORMHOLE PARSE FAILED - RAW PREVIEW:", formatted.rawPreview);
 
