@@ -12,7 +12,7 @@ const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
 const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
 const DEFAULT_TRIAL_MP = Number(process.env.MEMBERSTACK_TRIAL_MP || 15);
 
-// --- 핵심 데이터: TEXTBOOK_GRAMMAR_MAP (중1~중3 전체 확장 및 Special 제외) ---
+// --- 핵심 데이터: TEXTBOOK_GRAMMAR_MAP ---
 const TEXTBOOK_GRAMMAR_MAP = {
   middle: {
     "천재소영순": {
@@ -672,11 +672,9 @@ function buildGrammarSystemPrompt(input) {
   const difficultyLine = isHigh
     ? "모든 문항은 실제 내신 5점형 변별 문항처럼 출제한다."
     : "문항 난이도는 요청 수준에 맞춘다.";
-
   if (!isKo) {
     return `
 You are the MARCUS Wormhole high-difficulty grammar exam generator.
-
 STRICT RULES:
 1. ALL questions must be 5-option multiple choice.
 2. Every question must have exactly five choices:
@@ -691,6 +689,11 @@ STRICT RULES:
 6. Put all answers only in the [[ANSWERS]] section.
 7. Keep the worksheet exam-like, polished, and school-test appropriate.
 8. Match the requested number of questions exactly.
+- 반드시 정확히 ${input.count}문항을 작성할 것
+- 1번부터 ${input.count}번까지 연속 번호를 유지할 것
+- 누락 번호, 중복 번호 절대 금지
+- [[QUESTIONS]]와 [[ANSWERS]]의 문항 수는 반드시 동일해야 함
+- 문항 수가 부족하면 제출하지 말고 끝까지 채울 것
 
 DIFFICULTY:
 - ${isHigh ? "All questions must feel like real 5-point killer questions for top students." : "Keep the requested level."}
@@ -710,7 +713,6 @@ Mix these question types across the whole set:
 - high-difficulty discrimination item
 
 Do not repeat the same pattern too many times in a row.
-
 OUTPUT FORMAT:
 [[TITLE]]
 (one line only)
@@ -757,13 +759,17 @@ OUTPUT FORMAT:
 6. 정답과 해설은 반드시 [[ANSWERS]] 섹션에만 모아 쓸 것.
 7. 실제 학교시험/내신/고난도 실전모의고사처럼 보이게 작성할 것.
 8. 요청된 문항 수를 정확히 맞출 것.
+- 반드시 정확히 ${input.count}문항을 작성할 것
+- 1번부터 ${input.count}번까지 연속 번호를 유지할 것
+- 누락 번호, 중복 번호 절대 금지
+- [[QUESTIONS]]와 [[ANSWERS]]의 문항 수는 반드시 동일해야 함
+- 문항 수가 부족하면 제출하지 말고 끝까지 채울 것
 
 [난이도 규칙]
 - ${difficultyLine}
 - 단순 암기형이 아니라 문장 구조와 어법 판단 중심으로 출제할 것.
 - 오답 선지도 매우 그럴듯하게 만들 것.
 - 변별력 있는 함정 선지를 포함할 것.
-
 [유형 분배 규칙]
 전체 세트에 아래 유형을 섞어서 출제한다.
 - 어색한 문장 찾기
@@ -777,7 +783,6 @@ OUTPUT FORMAT:
 - 고난도 변별 문항
 
 같은 유형만 연속 반복하지 말 것.
-
 [High Difficulty 규칙]
 - 최소 25% 이상 문항은 고난도 변별 문항으로 설계한다.
 - 해당 문항 제목 또는 문항 지시문에 [High Difficulty] 표기를 붙여도 된다.
@@ -826,7 +831,6 @@ function buildGrammarUserPrompt(input) {
   if (input.language === "en") {
     return `
 Generate a Wormhole-style grammar worksheet with these conditions.
-
 Title: ${title}
 Engine: wormhole
 Level: ${input.level}
@@ -856,7 +860,6 @@ ${input.userPrompt || ""}
 
   return `
 다음 조건에 맞는 마커스웜홀 영어 문법 실전모의고사를 생성하시오.
-
 제목: ${title}
 엔진: wormhole
 학년 수준: ${input.level}
@@ -933,17 +936,14 @@ function normalizeChoiceLabels(text = "") {
 
 function stripInlineAnswersFromQuestions(text = "") {
   let source = String(text || "");
-
   source = source.replace(
     /\n?\s*(정답|해설|정답 및 해설|answers?)\s*[:：].*$/gim,
     ""
   );
-
   source = source.replace(
     /\n?\s*\*+\s*해설\s*\*+\s*[:：][\s\S]*?(?=\n\s*\d+\.\s|\n\s*문제\s*\d+|$)/gim,
     "\n"
   );
-
   source = source.replace(
     /\n?\s*\*+\s*정답\s*\*+\s*[:：][\s\S]*?(?=\n\s*\d+\.\s|\n\s*문제\s*\d+|$)/gim,
     "\n"
@@ -958,7 +958,6 @@ function ensureFiveChoicesPerQuestion(questions = "") {
     .split(/\n(?=\d+\.\s)/g)
     .map(s => s.trim())
     .filter(Boolean);
-
   const fixed = blocks.map((block) => {
     const lines = block.split("\n");
     const stem = [];
@@ -982,7 +981,6 @@ function ensureFiveChoicesPerQuestion(questions = "") {
 
     return [...stem, ...choices].join("\n");
   });
-
   return cleanupText(fixed.join("\n\n"));
 }
 
@@ -993,17 +991,13 @@ function formatWormholeResponse(rawText, input) {
   let instructions = cleanupText(extractSection(normalizedRaw, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
   let questions = cleanupText(extractSection(normalizedRaw, "[[QUESTIONS]]", "[[ANSWERS]]"));
   let answers = cleanupText(extractSection(normalizedRaw, "[[ANSWERS]]", null));
-
-  // 1) QUESTIONS 섹션이 없으면, 첫 문제 위치를 더 강하게 탐지
   if (!questions) {
     const firstQuestionIndex = normalizedRaw.search(
       /^\s*(?:문제\s*1\s*[:.\-]?\s*|1\.\s+|1\)\s+|①\s+)/m
     );
-
     if (firstQuestionIndex >= 0) {
       const beforeQuestions = normalizedRaw.slice(0, firstQuestionIndex).trim();
       const afterQuestions = normalizedRaw.slice(firstQuestionIndex).trim();
-
       if (!title) {
         const titleLine =
           beforeQuestions
@@ -1025,14 +1019,12 @@ function formatWormholeResponse(rawText, input) {
           .map(s => s.trim())
           .filter(Boolean)
           .filter(s => !/^#\s+/.test(s));
-
         instructions = cleanupText(bodyLines.join("\n"));
       }
 
       const answerStart = afterQuestions.search(
         /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b/i
       );
-
       if (answerStart >= 0) {
         questions = cleanupText(afterQuestions.slice(0, answerStart));
         answers = cleanupText(afterQuestions.slice(answerStart));
@@ -1042,18 +1034,14 @@ function formatWormholeResponse(rawText, input) {
     }
   }
 
-  // 2) 문제 번호 형식 보정
   questions = (questions || "")
     .replace(/^\s*(\d+)\)\s+/gm, "$1. ")
     .replace(/^\s*#{1,3}\s*문제\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
     .replace(/^\s*문제\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ");
-
   answers = (answers || "")
     .replace(/^\s*(\d+)\)\s+/gm, "$1. ")
     .replace(/^\s*#{1,3}\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
     .replace(/^\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ");
-
-  // 3) 첫 문제 번호가 날아가고 선지만 남은 경우 복구
   if (questions && !/^\s*1\.\s+/m.test(questions)) {
     const lines = questions.split("\n");
     const firstChoiceIndex = lines.findIndex(line => /^\s*[①②③④⑤]\s+/.test(line));
@@ -1067,24 +1055,17 @@ function formatWormholeResponse(rawText, input) {
         : (input.language === "en"
             ? "1. Choose the best answer."
             : "1. 다음 문항에 답하세요.");
-
       questions = cleanupText(
         ["1. " + inferredStem.replace(/^1\.\s*/, ""), ...choiceLines].join("\n")
       );
     }
   }
 
-  // 4) 선지 라벨 통일
   questions = normalizeChoiceLabels(questions);
   answers = normalizeChoiceLabels(answers);
-
-  // 5) inline 해설 제거
   questions = stripInlineAnswersFromQuestions(questions);
 
-  // 6) 5지선다 보정
   questions = ensureFiveChoicesPerQuestion(questions);
-
-  // 7) answers가 비어 있으면 raw에서 다시 추출
   if (!answers) {
     const possibleAnswerBlock = normalizedRaw.match(
       /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b[\s\S]*$/i
@@ -1100,7 +1081,6 @@ function formatWormholeResponse(rawText, input) {
     (input.language === "en"
       ? "Answer all questions. Choose the best answer for each item."
       : "다음 문항에 답하세요. 각 문항에서 가장 알맞은 답을 고르세요.");
-
   const actualCount = countQuestions(questions);
 
   return {
@@ -1119,6 +1099,46 @@ function formatWormholeResponse(rawText, input) {
     actualCount,
     rawPreview: normalizedRaw.slice(0, 2000)
   };
+}
+
+function extractQuestionBlocks(text = "") {
+  const source = cleanupText(text);
+  const matches = [...source.matchAll(/(^|\n)(\d+)\.\s([\s\S]*?)(?=\n\d+\.\s|$)/g)];
+  return matches.map((m) => ({
+    number: Number(m[2]),
+    body: `${m[2]}. ${m[3].trim()}`
+  }));
+}
+
+function renumberBlocks(blocks = [], start = 1) {
+  return blocks.map((block, index) => {
+    const nextNo = start + index;
+    return String(block.body).replace(/^\d+\.\s*/, `${nextNo}. `).trim();
+  });
+}
+
+async function generateWormholeSupplement(input, missingCount, existingQuestionsText = "") {
+  const supplementSystemPrompt = buildGrammarSystemPrompt({
+    ...input,
+    count: missingCount,
+  });
+
+  const supplementUserPrompt = `
+기존 웜홀 문항이 일부 부족합니다.
+이미 생성된 문항과 겹치지 않도록, 아래 기존 문항과 다른 신규 문항만 정확히 ${missingCount}문항 추가 생성하세요.
+
+[기존 문항 일부]
+${existingQuestionsText}
+
+[중요]
+- 반드시 ${missingCount}문항만 추가
+- 번호는 1번부터 다시 써도 됨 (서버에서 재번호 부여함)
+- 기존 문항과 유형/보기/정답이 겹치지 않게 작성
+- 난도와 주제는 기존 세트와 동일하게 유지
+`.trim();
+
+  const raw = await callOpenAI(supplementSystemPrompt, supplementUserPrompt);
+  return formatWormholeResponse(raw, { ...input, count: missingCount });
 }
 
 // --- Memberstack 블록 시작 ---
@@ -1387,28 +1407,93 @@ export default async function handler(req, res) {
     const systemPrompt = buildGrammarSystemPrompt(input);
     const userPrompt = buildGrammarUserPrompt(input);
 
-    const rawText = await callOpenAI(systemPrompt, userPrompt);
-    const formatted = formatWormholeResponse(rawText, input);
+    const raw = await callOpenAI(systemPrompt, userPrompt);
+    let formatted = formatWormholeResponse(raw, input);
+
+    if (formatted.actualCount < input.count) {
+      console.warn(
+        `WORMHOLE QUESTION SHORTAGE: expected ${input.count}, got ${formatted.actualCount}`
+      );
+
+      const missingCount = input.count - formatted.actualCount;
+
+      if (missingCount > 0) {
+        const supplement = await generateWormholeSupplement(
+          input,
+          missingCount,
+          formatted.content
+        );
+
+        const originalQuestionBlocks = extractQuestionBlocks(
+          extractSection(formatted.content, formatted.title, null)
+            .replace(formatted.instructions || "", "")
+            .trim()
+        );
+
+        const supplementQuestionBlocks = extractQuestionBlocks(
+          supplement.content
+            .replace(supplement.title || "", "")
+            .replace(supplement.instructions || "", "")
+            .trim()
+        );
+
+        const originalAnswerBlocks = extractQuestionBlocks(formatted.answerSheet);
+        const supplementAnswerBlocks = extractQuestionBlocks(supplement.answerSheet);
+
+        const mergedQuestionBlocks = [
+          ...renumberBlocks(originalQuestionBlocks, 1),
+          ...renumberBlocks(supplementQuestionBlocks, originalQuestionBlocks.length + 1),
+        ];
+
+        const mergedAnswerBlocks = [
+          ...renumberBlocks(originalAnswerBlocks, 1),
+          ...renumberBlocks(supplementAnswerBlocks, originalAnswerBlocks.length + 1),
+        ];
+
+        const mergedQuestionsText = mergedQuestionBlocks.join("\n\n");
+        const mergedAnswersText = mergedAnswerBlocks.join("\n\n");
+
+        formatted = {
+          ...formatted,
+          content: cleanupText(
+            [formatted.title, formatted.instructions, mergedQuestionsText]
+              .filter(Boolean)
+              .join("\n\n")
+          ),
+          answerSheet: cleanupText(mergedAnswersText),
+          fullText: cleanupText(
+            [
+              formatted.title,
+              formatted.instructions,
+              mergedQuestionsText,
+              "정답 및 해설",
+              mergedAnswersText,
+            ]
+              .filter(Boolean)
+              .join("\n\n")
+          ),
+          actualCount: countQuestions(mergedQuestionsText),
+        };
+      }
+    }
+
+    if (formatted.actualCount !== input.count) {
+      console.warn(
+        `WORMHOLE FINAL COUNT MISMATCH: expected ${input.count}, got ${formatted.actualCount}`
+      );
+    }
 
     if (!formatted.content.includes("⑤ ")) {
       console.warn("WORMHOLE WARNING: 5th choice was missing in at least some items; fallback normalization applied.");
     }
 
-    // 4) handler 안 mismatch 검사 블록
     if (formatted.actualCount === 0) {
       console.error("WORMHOLE PARSE FAILED - RAW PREVIEW:", formatted.rawPreview);
-
       return json(res, 500, {
         success: false,
         message: `Question parsing failed: expected ${input.count}, got 0`,
         rawPreview: formatted.rawPreview
       });
-    }
-
-    if (formatted.actualCount > 0 && formatted.actualCount < input.count) {
-      console.warn(
-        `WORMHOLE QUESTION SHORTAGE: expected ${input.count}, got ${formatted.actualCount}`
-      );
     }
 
     const finalMpState = await deductMpAfterSuccess(mpState);
