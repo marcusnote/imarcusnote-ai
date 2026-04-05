@@ -666,7 +666,6 @@ function buildWormholeTitle(input) {
   return `${input.gradeLabel} ${displayTopic} 마커스웜홀 ${difficultyLabel} ${input.count}문항`;
 }
 
-// 1) buildGrammarSystemPrompt 전체 교체
 function buildGrammarSystemPrompt(input) {
   const isKo = input.language !== "en";
   const isHigh = input.difficulty === "high" || input.difficulty === "extreme";
@@ -813,7 +812,6 @@ OUTPUT FORMAT:
 `.trim();
 }
 
-// 2) buildGrammarUserPrompt 전체 교체
 function buildGrammarUserPrompt(input) {
   const title = buildWormholeTitle(input);
   const textbookInfo = input.textbook ? `교과서: ${input.textbook.publisher}` : "교과서: 없음";
@@ -906,7 +904,6 @@ function extractSection(rawText, startMarker, endMarker) {
   return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
-// 4) countQuestions 전체 교체
 function countQuestions(text = "") {
   const source = String(text || "").replace(/\r\n/g, "\n");
   const matches =
@@ -920,7 +917,6 @@ function cleanupText(text = "") {
   return String(text || "").replace(/\r\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-// 3) 보조 함수들 추가 (cleanupText 아래)
 function normalizeChoiceLabels(text = "") {
   return String(text || "")
     .replace(/^\s*[aA][\)\.\:]\s+/gm, "① ")
@@ -990,7 +986,6 @@ function ensureFiveChoicesPerQuestion(questions = "") {
   return cleanupText(fixed.join("\n\n"));
 }
 
-// 5) formatWormholeResponse 전체 교체
 function formatWormholeResponse(rawText, input) {
   const normalizedRaw = String(rawText || "").replace(/\r\n/g, "\n").trim();
 
@@ -999,22 +994,10 @@ function formatWormholeResponse(rawText, input) {
   let questions = cleanupText(extractSection(normalizedRaw, "[[QUESTIONS]]", "[[ANSWERS]]"));
   let answers = cleanupText(extractSection(normalizedRaw, "[[ANSWERS]]", null));
 
-  if (!questions) {
-    const qMarker = normalizedRaw.match(/\[\[QUESTIONS\]\]([\s\S]*)/i);
-    if (qMarker) questions = cleanupText(qMarker[1]);
-  }
-
-  if (questions && !answers) {
-    const splitMatch = questions.match(/([\s\S]*?)\n\s*\[\[ANSWERS\]\]\s*([\s\S]*)/i);
-    if (splitMatch) {
-      questions = cleanupText(splitMatch[1]);
-      answers = cleanupText(splitMatch[2]);
-    }
-  }
-
+  // 1) QUESTIONS 섹션이 없으면, 첫 문제 위치를 더 강하게 탐지
   if (!questions) {
     const firstQuestionIndex = normalizedRaw.search(
-      /^\s*(#{1,3}\s*)?문제\s*1\s*[:.\-]*|^\s*1\.\s+/m
+      /^\s*(?:문제\s*1\s*[:.\-]?\s*|1\.\s+|1\)\s+|①\s+)/m
     );
 
     if (firstQuestionIndex >= 0) {
@@ -1059,6 +1042,7 @@ function formatWormholeResponse(rawText, input) {
     }
   }
 
+  // 2) 문제 번호 형식 보정
   questions = (questions || "")
     .replace(/^\s*(\d+)\)\s+/gm, "$1. ")
     .replace(/^\s*#{1,3}\s*문제\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
@@ -1069,51 +1053,71 @@ function formatWormholeResponse(rawText, input) {
     .replace(/^\s*#{1,3}\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
     .replace(/^\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ");
 
+  // 3) 첫 문제 번호가 날아가고 선지만 남은 경우 복구
+  if (questions && !/^\s*1\.\s+/m.test(questions)) {
+    const lines = questions.split("\n");
+    const firstChoiceIndex = lines.findIndex(line => /^\s*[①②③④⑤]\s+/.test(line));
+
+    if (firstChoiceIndex >= 0) {
+      const introLines = lines.slice(0, firstChoiceIndex).map(s => s.trim()).filter(Boolean);
+      const choiceLines = lines.slice(firstChoiceIndex);
+
+      const inferredStem = introLines.length
+        ? introLines.join(" ")
+        : (input.language === "en"
+            ? "1. Choose the best answer."
+            : "1. 다음 문항에 답하세요.");
+
+      questions = cleanupText(
+        ["1. " + inferredStem.replace(/^1\.\s*/, ""), ...choiceLines].join("\n")
+      );
+    }
+  }
+
+  // 4) 선지 라벨 통일
   questions = normalizeChoiceLabels(questions);
   answers = normalizeChoiceLabels(answers);
 
+  // 5) inline 해설 제거
   questions = stripInlineAnswersFromQuestions(questions);
+
+  // 6) 5지선다 보정
   questions = ensureFiveChoicesPerQuestion(questions);
 
-  if (!title) title = buildWormholeTitle(input);
-
-  if (!instructions) {
-    instructions =
-      input.language === "en"
-        ? "Answer all questions. Choose the best answer for each item."
-        : "다음 문항에 답하세요. 각 문항에서 가장 알맞은 답을 고르세요.";
-  }
-
+  // 7) answers가 비어 있으면 raw에서 다시 추출
   if (!answers) {
-    answers =
-      input.language === "en"
-        ? "Answer section was not generated."
-        : "정답 및 해설이 생성되지 않았습니다.";
+    const possibleAnswerBlock = normalizedRaw.match(
+      /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b[\s\S]*$/i
+    );
+    if (possibleAnswerBlock) {
+      answers = cleanupText(possibleAnswerBlock[0]);
+    }
   }
+
+  const finalTitle = title || buildWormholeTitle(input);
+  const finalInstructions =
+    instructions ||
+    (input.language === "en"
+      ? "Answer all questions. Choose the best answer for each item."
+      : "다음 문항에 답하세요. 각 문항에서 가장 알맞은 답을 고르세요.");
 
   const actualCount = countQuestions(questions);
 
-  const fullText = [
-    title,
-    "",
-    instructions,
-    "",
-    questions,
-    "",
-    "정답 및 해설",
-    answers
-  ]
-    .filter(Boolean)
-    .join("\n\n");
-
   return {
-    title,
-    instructions,
-    content: questions,
-    answerSheet: answers,
-    fullText,
+    title: finalTitle,
+    instructions: finalInstructions,
+    content: cleanupText([finalTitle, finalInstructions, questions].filter(Boolean).join("\n\n")),
+    answerSheet: cleanupText(answers),
+    fullText: cleanupText(
+      [
+        finalTitle,
+        finalInstructions,
+        questions,
+        answers ? "정답 및 해설\n" + answers : ""
+      ].filter(Boolean).join("\n\n")
+    ),
     actualCount,
-    rawPreview: normalizedRaw.slice(0, 1200),
+    rawPreview: normalizedRaw.slice(0, 2000)
   };
 }
 
@@ -1380,14 +1384,12 @@ export default async function handler(req, res) {
       return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
     }
 
-    // 6) handler 안 프롬프트 선택 블록 교체
     const systemPrompt = buildGrammarSystemPrompt(input);
     const userPrompt = buildGrammarUserPrompt(input);
 
     const rawText = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatWormholeResponse(rawText, input);
 
-    // 7) handler 안 파싱 직후 검증 1줄 추가
     if (!formatted.content.includes("⑤ ")) {
       console.warn("WORMHOLE WARNING: 5th choice was missing in at least some items; fallback normalization applied.");
     }
