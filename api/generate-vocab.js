@@ -64,6 +64,7 @@ function uniqueWords(items) {
 
   for (const item of items) {
     const key = `${item.word}__${item.pos}__${item.meaning_ko}`;
+
     if (!seen.has(key)) {
       seen.add(key);
       result.push(item);
@@ -90,6 +91,7 @@ function getVocabularyPayload({ level = "middle3", unit, range }) {
 
   if (range) {
     const rangeUnits = parseRange(range);
+
     if (!rangeUnits || rangeUnits.length === 0) {
       throw new Error("Invalid range. Example: 1-5");
     }
@@ -440,6 +442,30 @@ async function chargeMemberMp(memberId, requiredMp) {
   };
 }
 
+function splitVocabAnswerSheet(fullText = "") {
+  const source = String(fullText || "").replace(/\r\n/g, "\n").trim();
+
+  const match = source.match(
+    /([\s\S]*?)\n\s*(E\.\s*Answer Key|Answer Key|정답\s*및\s*해설|정답)\s*\n([\s\S]*)$/i
+  );
+
+  if (!match) {
+    return {
+      contentOnly: source,
+      answerOnly: ""
+    };
+  }
+
+  const body = match[1].trim();
+  const answerTitle = match[2].trim();
+  const answerBody = match[3].trim();
+
+  return {
+    contentOnly: body,
+    answerOnly: `${answerTitle}\n${answerBody}`.trim()
+  };
+}
+
 export default async function handler(req, res) {
   addCors(res);
 
@@ -464,6 +490,8 @@ export default async function handler(req, res) {
       range = "",
       mode = "list+test",
       userNote = "",
+      worksheetTitle = "Marcusnote Core Vocabulary System",
+      academyName = "Imarcusnote"
     } = req.body || {};
 
     const normalizedMode = String(mode).trim().toLowerCase();
@@ -477,6 +505,7 @@ export default async function handler(req, res) {
     }
 
     memberId = await resolveMemberId(req, req.body || {});
+
     if (!memberId) {
       return json(res, 401, {
         success: false,
@@ -515,6 +544,7 @@ export default async function handler(req, res) {
     });
 
     const output = await callOpenAI(prompt);
+    const splitResult = splitVocabAnswerSheet(output);
 
     return json(res, 200, {
       success: true,
@@ -525,7 +555,15 @@ export default async function handler(req, res) {
       unitLabel: vocabPack.unitLabel,
       wordCount: vocabPack.words.length,
       vocabWords: vocabPack.words,
-      output,
+      title: worksheetTitle,
+      instructions: "Use the Marcusnote core vocabulary system to complete the worksheet.",
+      content: splitResult.contentOnly,
+      answerSheet: splitResult.answerOnly,
+      fullText: [
+        worksheetTitle,
+        splitResult.contentOnly,
+        splitResult.answerOnly
+      ].filter(Boolean).join("\n\n"),
       remainingMp: chargeResult.remainingMp,
       mp: {
         remainingMp: chargeResult.remainingMp,
