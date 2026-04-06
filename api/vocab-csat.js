@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       return res.status(405).json({ error: "Method Not Allowed" });
     }
 
-    // 1) 요청값 파싱 블록 교체
+    // 1) 요청값 파싱 블록
     const {
       round = 1,
       size = 20,
@@ -43,68 +43,78 @@ export default async function handler(req, res) {
       });
     }
 
-    // 2) 출력 타입 분기 규칙 추가
+    // 2) 출력 타입 분기 규칙
     const normalizedOutputType = String(outputType || 'list+test').trim().toLowerCase();
     const includeList = normalizedOutputType === 'list+test' || normalizedOutputType === 'list-only';
     const includeTest = normalizedOutputType === 'list+test' || normalizedOutputType === 'test-only';
 
-    // 4) 문제 데이터 조립 규칙 (내부 빌더)
+    // 4) 문제 데이터 조립 규칙 (내부 빌더) - 요청사항 2번 교체 적용
     const testItems = selectedEntries.map((item, idx) => {
-      // 퀴즈 유형 결정 로직 (기존 api.vocab-csat.js의 로직 유지 및 구조화)
-      const type = (idx % 4); 
+      const type = idx % 4;
       let question = "";
       let typeLabel = "";
       let prompt = "";
       let choices = [];
       let answerNumber = 1;
-      let answerWord = item.word;
-      let answerNote = item.meaning;
+      let answerWord = String(item.word || "").trim();
+      let answerNote = String(item.meaning || "").trim();
+
+      const primarySynonym = getPrimarySynonym(item);
+      const primaryAntonym = getPrimaryAntonym(item);
 
       if (type === 0) {
         question = "다음 의미에 해당하는 단어로 가장 적절한 것은?";
         typeLabel = "[의미 파악]";
-        prompt = item.meaning;
-        const distractors = getDistractors(vocabDB, item.word, 4);
-        const all = shuffleArray([item.word, ...distractors]);
+        prompt = item.meaning || "";
+        const distractors = buildMeaningDistractors(vocabDB, item, item.word);
+        const all = shuffleArray(uniqueTrimmed([item.word, ...distractors])).slice(0, 4);
         choices = all.map((c, i) => {
-          if (c === item.word) answerNumber = i + 1;
+          if (normalize(c) === normalize(item.word)) answerNumber = i + 1;
           return `(${i + 1}) ${c}`;
         });
-      } else if (type === 1) {
+        answerWord = item.word;
+        answerNote = `${item.meaning || ""} → ${item.word || ""}`;
+      } else if (type === 1 && primarySynonym) {
         question = "다음 단어의 유의어로 가장 적절한 것은?";
         typeLabel = "[유의어 찾기]";
-        prompt = item.word;
-        const distractors = getDistractors(vocabDB, item.synonym || "important", 4);
-        const correct = item.synonym || distractors[0];
-        const all = shuffleArray([correct, ...distractors.slice(1)]);
+        prompt = item.word || "";
+        const distractors = buildSynonymDistractors(vocabDB, item, primarySynonym);
+        const all = shuffleArray(uniqueTrimmed([primarySynonym, ...distractors])).slice(0, 4);
         choices = all.map((c, i) => {
-          if (c === correct) answerNumber = i + 1;
+          if (normalize(c) === normalize(primarySynonym)) answerNumber = i + 1;
           return `(${i + 1}) ${c}`;
         });
-        answerWord = correct;
-      } else if (type === 2) {
+        answerWord = primarySynonym;
+        answerNote = `${item.word || ""} → synonym: ${primarySynonym}`;
+      } else if (type === 2 && primaryAntonym) {
         question = "다음 단어의 반의어로 가장 적절한 것은?";
         typeLabel = "[반의어 찾기]";
-        prompt = item.word;
-        const distractors = getDistractors(vocabDB, item.antonym || "increase", 4);
-        const correct = item.antonym || distractors[0];
-        const all = shuffleArray([correct, ...distractors.slice(1)]);
+        prompt = item.word || "";
+        const distractors = buildAntonymDistractors(vocabDB, item, primaryAntonym);
+        const all = shuffleArray(uniqueTrimmed([primaryAntonym, ...distractors])).slice(0, 4);
         choices = all.map((c, i) => {
-          if (c === correct) answerNumber = i + 1;
+          if (normalize(c) === normalize(primaryAntonym)) answerNumber = i + 1;
           return `(${i + 1}) ${c}`;
         });
-        answerWord = correct;
+        answerWord = primaryAntonym;
+        answerNote = `${item.word || ""} → antonym: ${primaryAntonym}`;
       } else {
         question = "다음 표현의 빈칸에 들어갈 말로 가장 적절한 것은?";
         typeLabel = "[문맥 추론]";
-        const blanked = (item.example || "").replace(new RegExp(item.word, 'gi'), "__________");
-        prompt = blanked || `Expression: ${item.word}`;
-        const distractors = getDistractors(vocabDB, item.word, 4);
-        const all = shuffleArray([item.word, ...distractors]);
+        const sourceExample = String(item.example || item.phrase || "").trim();
+        const escapedWord = String(item.word || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const blanked = sourceExample
+          ? sourceExample.replace(new RegExp(escapedWord, "gi"), "__________")
+          : "";
+        prompt = blanked || `Expression: ${item.word || ""}`;
+        const distractors = buildPhraseDistractors(vocabDB, item, item.word);
+        const all = shuffleArray(uniqueTrimmed([item.word, ...distractors])).slice(0, 4);
         choices = all.map((c, i) => {
-          if (c === item.word) answerNumber = i + 1;
+          if (normalize(c) === normalize(item.word)) answerNumber = i + 1;
           return `(${i + 1}) ${c}`;
         });
+        answerWord = item.word;
+        answerNote = `${sourceExample || item.meaning || ""} → ${item.word || ""}`;
       }
 
       return buildTestItem({
@@ -119,9 +129,7 @@ export default async function handler(req, res) {
     });
 
     // 5) 최종 응답 반환 블록
-    const finalTitle =
-      String(worksheetTitle || '').trim() ||
-      `수능핵심 단어 & 테스트 ${r}`;
+    const finalTitle = String(worksheetTitle || '').trim() || `수능핵심 단어 & 테스트 ${r}`;
 
     const listItems = selectedEntries.map(entry => ({
       word: entry.word,
@@ -139,15 +147,17 @@ export default async function handler(req, res) {
       testItems
     });
 
-    const answerHtml = renderAnswerHtml({
-      title: finalTitle,
-      round: r,
-      answerItems: testItems.map(item => ({
-        answerNumber: item.answerNumber,
-        answerWord: item.answerWord,
-        answerNote: item.answerNote
-      }))
-    });
+    const answerHtml = includeTest
+      ? renderAnswerHtml({
+          title: finalTitle,
+          round: r,
+          answerItems: testItems.map(item => ({
+            answerNumber: item.answerNumber,
+            answerWord: item.answerWord,
+            answerNote: item.answerNote
+          }))
+        })
+      : "";
 
     return res.status(200).json({
       ok: true,
@@ -158,14 +168,13 @@ export default async function handler(req, res) {
       worksheetHtml,
       answerHtml
     });
-
   } catch (error) {
     console.error("API ERROR:", error);
     return res.status(500).json({ error: "Internal Server Error", detail: error.message });
   }
 }
 
-// 3) 구조형 HTML 렌더 유틸 추가
+// 3) 구조형 HTML 렌더 유틸
 function escapeHtml(value = '') {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -274,6 +283,7 @@ function renderAnswerHtml({ title, round, answerItems }) {
   `;
 }
 
+// 1) 헬퍼 블록 추가/교체 - 요청사항 1번 적용
 function buildTestItem(entry) {
   return {
     question: entry.question || '다음 의미에 해당하는 단어로 가장 적절한 것은?',
@@ -289,19 +299,170 @@ function buildTestItem(entry) {
   };
 }
 
-// 헬퍼 함수들
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[array[j]]] = [array[array[j]], array[i]];
-  }
-  return array;
+function normalize(text = "") {
+  return String(text).trim().toLowerCase();
 }
 
-function getDistractors(db, correctWord, count) {
-  return db
-    .filter(item => item.word !== correctWord)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, count)
-    .map(item => item.word);
+function splitField(text = "") {
+  return String(text)
+    .split(";")
+    .map(s => s.trim())
+    .filter(Boolean);
+}
+
+function uniqueTrimmed(arr = []) {
+  const seen = new Set();
+  const out = [];
+  for (const item of arr) {
+    const v = String(item || "").trim();
+    const key = normalize(v);
+    if (!v || seen.has(key)) continue;
+    seen.add(key);
+    out.push(v);
+  }
+  return out;
+}
+
+function getPrimarySynonym(item = {}) {
+  if (item.synonym) return String(item.synonym).trim();
+  const arr = splitField(item.synonyms || "");
+  return arr[0] || "";
+}
+
+function getPrimaryAntonym(item = {}) {
+  if (item.antonym) return String(item.antonym).trim();
+  const arr = splitField(item.antonyms || "");
+  return arr[0] || "";
+}
+
+function getPosBucket(word = "") {
+  const w = String(word || "").trim().toLowerCase();
+  if (/ly$/.test(w)) return "adverb";
+  if (/(tion|sion|ment|ness|ity|ance|ence|ism|ship)$/.test(w)) return "noun";
+  if (/(able|ible|al|ous|ful|less|ive|ic|ary|ish)$/.test(w)) return "adjective";
+  if (/(ate|fy|ise|ize|ing|ed)$/.test(w)) return "verb";
+  return "general";
+}
+
+function getLengthBucket(word = "") {
+  const len = String(word || "").trim().length;
+  if (len <= 4) return "short";
+  if (len <= 7) return "mid";
+  return "long";
+}
+
+function getSemanticBucket(item = {}) {
+  const meaning = normalize(item.meaning || "");
+  const example = normalize(item.example || "");
+  const phrase = normalize(item.phrase || "");
+  const source = `${meaning} ${example} ${phrase}`;
+
+  if (/(increase|grow|rise|expand|boost)/.test(source)) return "increase";
+  if (/(decrease|reduce|decline|drop|lower)/.test(source)) return "decrease";
+  if (/(important|essential|significant|major|critical)/.test(source)) return "importance";
+  if (/(difficult|hard|complex|challenging)/.test(source)) return "difficulty";
+  if (/(happy|pleased|glad|delighted)/.test(source)) return "positive-emotion";
+  if (/(sad|upset|depressed|sorrow)/.test(source)) return "negative-emotion";
+  if (/(law|rule|policy|standard)/.test(source)) return "rule";
+  if (/(money|cost|price|finance|economic)/.test(source)) return "money";
+  if (/(think|know|understand|recognize|consider)/.test(source)) return "cognition";
+  if (/(say|tell|speak|argue|claim)/.test(source)) return "communication";
+  return "general";
+}
+
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function pickDistractorWords(pool = [], answerWord = "", count = 3) {
+  const out = [];
+  const seen = new Set([normalize(answerWord)]);
+  for (const item of shuffleArray(pool)) {
+    const w = String(item.word || item || "").trim();
+    const key = normalize(w);
+    if (!w || seen.has(key)) continue;
+    seen.add(key);
+    out.push(w);
+    if (out.length >= count) break;
+  }
+  return out;
+}
+
+function buildMeaningDistractors(db, item, answerWord) {
+  const answerPos = getPosBucket(answerWord);
+  const answerLen = getLengthBucket(answerWord);
+  const answerSem = getSemanticBucket(item);
+
+  let pool = db.filter(x =>
+    normalize(x.word) !== normalize(answerWord) &&
+    getPosBucket(x.word) === answerPos &&
+    getLengthBucket(x.word) === answerLen &&
+    getSemanticBucket(x) !== answerSem
+  );
+
+  if (pool.length < 3) {
+    pool = db.filter(x =>
+      normalize(x.word) !== normalize(answerWord) &&
+      getPosBucket(x.word) === answerPos
+    );
+  }
+
+  if (pool.length < 3) {
+    pool = db.filter(x => normalize(x.word) !== normalize(answerWord));
+  }
+
+  return pickDistractorWords(pool, answerWord, 3);
+}
+
+function buildSynonymDistractors(db, item, targetSyn) {
+  const answerSem = getSemanticBucket(item);
+  const pool = uniqueTrimmed(
+    db.flatMap(x => splitField(x.synonyms || x.synonym || ""))
+  ).filter(x =>
+    normalize(x) !== normalize(targetSyn) &&
+    getLengthBucket(x) === getLengthBucket(targetSyn) &&
+    getSemanticBucket({ meaning: x, phrase: "" }) !== answerSem
+  );
+
+  return shuffleArray(pool).slice(0, 3);
+}
+
+function buildAntonymDistractors(db, item, targetAnt) {
+  const answerSem = getSemanticBucket(item);
+  const pool = uniqueTrimmed(
+    db.flatMap(x => splitField(x.antonyms || x.antonym || ""))
+  ).filter(x =>
+    normalize(x) !== normalize(targetAnt) &&
+    getLengthBucket(x) === getLengthBucket(targetAnt) &&
+    getSemanticBucket({ meaning: x, phrase: "" }) !== answerSem
+  );
+
+  return shuffleArray(pool).slice(0, 3);
+}
+
+function buildPhraseDistractors(db, item, answerWord) {
+  const answerPos = getPosBucket(answerWord);
+  let pool = db.filter(x =>
+    normalize(x.word) !== normalize(answerWord) &&
+    getPosBucket(x.word) === answerPos
+  );
+
+  if (pool.length < 3) {
+    pool = db.filter(x => normalize(x.word) !== normalize(answerWord));
+  }
+
+  return pickDistractorWords(pool, answerWord, 3);
+}
+
+function getDistractors(db, correctWord, count = 4) {
+  return pickDistractorWords(
+    db.filter(item => normalize(item.word) !== normalize(correctWord)),
+    correctWord,
+    count
+  );
 }
