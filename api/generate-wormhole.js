@@ -649,23 +649,6 @@ function shortenTopicForTitle(topic = "") {
   return `${parts[0]} + ${parts[1]} 외`;
 }
 
-function buildWormholeTitle(input) {
-  if (input.worksheetTitle) return input.worksheetTitle;
-  const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
-  const displayTopic = shortenTopicForTitle(input.topic);
-  
-  if (input.textbook) {
-    if (input.language === "en") {
-      return `${input.textbook.gradeLabel} ${input.textbook.publisher} Lesson ${input.textbook.lesson} ${displayTopic} Wormhole ${difficultyLabel} ${input.count} Questions`;
-    }
-    return `${input.textbook.gradeLabel} ${input.textbook.publisher} ${input.textbook.lesson}과 ${displayTopic} 마커스웜홀 ${difficultyLabel} ${input.count}문항`;
-  }
-  if (input.language === "en") {
-    return `${input.gradeLabel} ${displayTopic} Wormhole ${difficultyLabel} ${input.count} Questions`;
-  }
-  return `${input.gradeLabel} ${displayTopic} 마커스웜홀 ${difficultyLabel} ${input.count}문항`;
-}
-
 function buildGrammarSystemPrompt(input) {
   const isKo = input.language !== "en";
   const isHigh = input.difficulty === "high" || input.difficulty === "extreme";
@@ -818,7 +801,19 @@ OUTPUT FORMAT:
 }
 
 function buildGrammarUserPrompt(input) {
-  const title = buildWormholeTitle(input);
+  const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
+  const displayTopic = shortenTopicForTitle(input.topic);
+  let title = "";
+  if (input.textbook) {
+    title = input.language === "en" 
+      ? `${input.textbook.gradeLabel} ${input.textbook.publisher} Lesson ${input.textbook.lesson} ${displayTopic} Wormhole ${difficultyLabel}` 
+      : `${input.textbook.gradeLabel} ${input.textbook.publisher} ${input.textbook.lesson}과 ${displayTopic} 마커스웜홀 ${difficultyLabel}`;
+  } else {
+    title = input.language === "en"
+      ? `${input.gradeLabel} ${displayTopic} Wormhole ${difficultyLabel}`
+      : `${input.gradeLabel} ${displayTopic} 마커스웜홀 ${difficultyLabel}`;
+  }
+
   const textbookInfo = input.textbook ? `교과서: ${input.textbook.publisher}` : "교과서: 없음";
   const chapterInfo = input.textbook ? `단원: ${input.textbook.lesson}과` : "단원: 없음";
   const grammarList =
@@ -899,65 +894,89 @@ async function callOpenAI(systemPrompt, userPrompt) {
   return data?.choices?.[0]?.message?.content?.trim() || "";
 }
 
-function extractSection(rawText, startMarker, endMarker) {
-  const start = rawText.indexOf(startMarker);
-  if (start === -1) return "";
-  const from = start + startMarker.length;
-  const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
+/* =========================
+   Wormhole Output Stabilizer (수정 반영 부분)
+   ========================= */
+
+function cleanupText(text = "") {
+  return String(text || "")
+    .replace(/\r\n/g, "\n")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function extractSection(text = "", startMarker = "", endMarker = null) {
+  const source = String(text || "");
+  const start = startMarker ? source.indexOf(startMarker) : 0;
+  if (start < 0) return "";
+
+  const from = startMarker ? start + startMarker.length : 0;
+  const sliced = source.slice(from);
+
+  if (!endMarker) return cleanupText(sliced);
+
+  const end = sliced.indexOf(endMarker);
+  if (end < 0) return cleanupText(sliced);
+
+  return cleanupText(sliced.slice(0, end));
 }
 
 function countQuestions(text = "") {
-  const source = String(text || "").replace(/\r\n/g, "\n");
-  const matches =
-    source.match(
-      /^\s*(\d+\.\s+|\d+\)\s+|[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*|#{1,3}\s*문제\s*\d+\s*[:.\-]?\s*|문제\s*\d+\s*[:.\-]?\s*)/gm
-    ) || [];
-  return matches.filter((m) => /^\s*(\d+\.\s+|\d+\)\s+|#{1,3}\s*문제\s*\d+|문제\s*\d+)/.test(m)).length;
-}
-
-function cleanupText(text = "") {
-  return String(text || "").replace(/\r\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
-}
-
-function normalizeChoiceLabels(text = "") {
   return String(text || "")
-    .replace(/^\s*[aA][\)\.\:]\s+/gm, "① ")
-    .replace(/^\s*[bB][\)\.\:]\s+/gm, "② ")
-    .replace(/^\s*[cC][\)\.\:]\s+/gm, "③ ")
-    .replace(/^\s*[dD][\)\.\:]\s+/gm, "④ ")
-    .replace(/^\s*[eE][\)\.\:]\s+/gm, "⑤ ")
-    .replace(/^\s*1[\)\.\:]\s+/gm, "① ")
-    .replace(/^\s*2[\)\.\:]\s+/gm, "② ")
-    .replace(/^\s*3[\)\.\:]\s+/gm, "③ ")
-    .replace(/^\s*4[\)\.\:]\s+/gm, "④ ")
-    .replace(/^\s*5[\)\.\:]\s+/gm, "⑤ ");
+    .split(/\n(?=\d+\.\s)/g)
+    .map(s => s.trim())
+    .filter(s => /^\d+\.\s/.test(s)).length;
 }
 
-function stripInlineAnswersFromQuestions(text = "") {
-  let source = String(text || "");
-  source = source.replace(
-    /\n?\s*(정답|해설|정답 및 해설|answers?)\s*[:：].*$/gim,
-    ""
-  );
-  source = source.replace(
-    /\n?\s*\*+\s*해설\s*\*+\s*[:：][\s\S]*?(?=\n\s*\d+\.\s|\n\s*문제\s*\d+|$)/gim,
-    "\n"
-  );
-  source = source.replace(
-    /\n?\s*\*+\s*정답\s*\*+\s*[:：][\s\S]*?(?=\n\s*\d+\.\s|\n\s*문제\s*\d+|$)/gim,
-    "\n"
-  );
-
-  return cleanupText(source);
+function extractQuestionBlocks(text = "") {
+  const source = cleanupText(text);
+  if (!source) return [];
+  return source
+    .split(/\n(?=\d+\.\s)/g)
+    .map(block => cleanupText(block))
+    .filter(block => /^\d+\.\s/.test(block));
 }
 
+function renumberBlocks(blocks = [], startNumber = 1) {
+  return blocks.map((block, index) => {
+    const newNo = startNumber + index;
+    return cleanupText(String(block).replace(/^\d+\.\s*/, `${newNo}. `));
+  });
+}
+
+function extractAnswerBlocks(answerText = "") {
+  const source = cleanupText(answerText);
+  if (!source) return [];
+  return source
+    .split(/\n(?=\d+\)\s)/g)
+    .map(block => cleanupText(block))
+    .filter(block => /^\d+\)\s/.test(block));
+}
+
+function renumberAnswerBlocks(blocks = [], startNumber = 1) {
+  return blocks.map((block, index) => {
+    const newNo = startNumber + index;
+    return cleanupText(String(block).replace(/^\d+\)\s*/, `${newNo}) `));
+  });
+}
+
+function normalizeQuestionLine(line = "") {
+  return String(line || "")
+    .replace(/^\s*문제\s*\d+\s*[:.)-]?\s*/i, "")
+    .replace(/^\s*(\d+)\)\s*/, "$1. ")
+    .replace(/^\s*(\d+)\s*-\s*/, "$1. ")
+    .trim();
+}
+
+// ✅ ensureFiveChoicesPerQuestion 전체 교체 반영
 function ensureFiveChoicesPerQuestion(questions = "") {
   const source = String(questions || "").replace(/\r\n/g, "\n");
   const blocks = source
     .split(/\n(?=\d+\.\s)/g)
     .map(s => s.trim())
     .filter(Boolean);
+
   const fixed = blocks.map((block) => {
     const lines = block.split("\n");
     const stem = [];
@@ -971,150 +990,184 @@ function ensureFiveChoicesPerQuestion(questions = "") {
       }
     }
 
-    if (choices.length === 4) {
-      choices.push("⑤ 위의 보기 중 어느 것도 아니다.");
-    }
+    const normalizedChoices = choices
+      .map((choice, idx) => choice.replace(/^\s*[①②③④⑤]\s+/, `${["①","②","③","④","⑤"][idx]} `))
+      .slice(0, 5);
 
-    if (choices.length > 5) {
-      return [...stem, ...choices.slice(0, 5)].join("\n");
-    }
-
-    return [...stem, ...choices].join("\n");
+    // ✅ 4개 이하인 경우 억지 선지 삽입 대신 그대로 두고,
+    // 이후 supplement 생성 단계에서 재생성 대상으로 잡히게 함
+    return [...stem, ...normalizedChoices].join("\n");
   });
+
   return cleanupText(fixed.join("\n\n"));
 }
 
+function buildWormholeTitle(input) {
+  if (input.worksheetTitle) return input.worksheetTitle;
+  const gradeLabel = input.gradeLabel || "중등";
+  const topic = input.topic || "문법";
+  const difficultyLabel =
+    input.difficulty === "extreme" ? "최고난도" :
+    input.difficulty === "high" ? "고난도" :
+    input.difficulty === "basic" ? "기초난도" : "표준난도";
+
+  return `${gradeLabel} ${topic} -${difficultyLabel} 실전모의고사 1회`;
+}
+
+function buildWormholeInstructions(input) {
+  if (input.language === "en") {
+    return `Choose the best answer for each question.`;
+  }
+  return `다음 각 문항에서 가장 알맞은 답을 고르시오.`;
+}
+
+function normalizeWormholeAnswers(answerText = "") {
+  const source = cleanupText(answerText);
+  if (!source) return "";
+
+  const lines = source.split("\n").map(s => s.trim()).filter(Boolean);
+  const normalized = lines.map((line) => {
+    let v = line
+      .replace(/^문제\s*(\d+)\s*[:.)-]?\s*/i, "$1) ")
+      .replace(/^(\d+)\.\s*/, "$1) ")
+      .trim();
+    if (/^\d+\)\s*[①②③④⑤]/.test(v)) return v;
+    if (/^\d+\)\s*\d/.test(v)) {
+      return v.replace(/^(\d+\))\s*([1-5])/, (_, a, b) => {
+        const map = { "1": "①", "2": "②", "3": "③", "4": "④", "5": "⑤" };
+        return `${a} ${map[b]}`;
+      });
+    }
+
+    return v;
+  });
+
+  return cleanupText(normalized.join("\n"));
+}
+
 function formatWormholeResponse(rawText, input) {
-  const normalizedRaw = String(rawText || "").replace(/\r\n/g, "\n").trim();
+  const normalizedRaw = cleanupText(rawText);
 
-  let title = cleanupText(extractSection(normalizedRaw, "[[TITLE]]", "[[INSTRUCTIONS]]"));
-  let instructions = cleanupText(extractSection(normalizedRaw, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
-  let questions = cleanupText(extractSection(normalizedRaw, "[[QUESTIONS]]", "[[ANSWERS]]"));
-  let answers = cleanupText(extractSection(normalizedRaw, "[[ANSWERS]]", null));
+  let title = extractSection(normalizedRaw, "[[TITLE]]", "[[INSTRUCTIONS]]");
+  let instructions = extractSection(normalizedRaw, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
+  let questions = extractSection(normalizedRaw, "[[QUESTIONS]]", "[[ANSWERS]]");
+  let answers = extractSection(normalizedRaw, "[[ANSWERS]]", null);
   if (!questions) {
-    const firstQuestionIndex = normalizedRaw.search(
-      /^\s*(?:문제\s*1\s*[:.\-]?\s*|1\.\s+|1\)\s+|①\s+)/m
-    );
+    const firstQuestionIndex = normalizedRaw.search(/^\s*(?:문제\s*1|1\.|1\))/m);
     if (firstQuestionIndex >= 0) {
-      const beforeQuestions = normalizedRaw.slice(0, firstQuestionIndex).trim();
-      const afterQuestions = normalizedRaw.slice(firstQuestionIndex).trim();
+      const beforeQuestions = cleanupText(normalizedRaw.slice(0, firstQuestionIndex));
+      const afterQuestions = cleanupText(normalizedRaw.slice(firstQuestionIndex));
       if (!title) {
-        const titleLine =
-          beforeQuestions
-            .split("\n")
-            .map(s => s.trim())
-            .find(s => /^#\s+/.test(s)) ||
-          beforeQuestions
-            .split("\n")
-            .map(s => s.trim())
-            .find(Boolean) ||
-          "";
-
-        title = cleanupText(titleLine.replace(/^#+\s*/, "")) || buildWormholeTitle(input);
+        const firstLine = beforeQuestions.split("\n").map(s => s.trim()).find(Boolean) || "";
+        title = firstLine.replace(/^#+\s*/, "") || buildWormholeTitle(input);
       }
 
       if (!instructions) {
-        const bodyLines = beforeQuestions
+        const beforeLines = beforeQuestions
           .split("\n")
           .map(s => s.trim())
           .filter(Boolean)
-          .filter(s => !/^#\s+/.test(s));
-        instructions = cleanupText(bodyLines.join("\n"));
+          .filter(s => s !== title);
+        instructions = cleanupText(beforeLines.join("\n")) || buildWormholeInstructions(input);
       }
 
-      const answerStart = afterQuestions.search(
-        /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b/i
-      );
+      const answerStart = afterQuestions.search(/\n\s*(?:#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)/i);
       if (answerStart >= 0) {
         questions = cleanupText(afterQuestions.slice(0, answerStart));
         answers = cleanupText(afterQuestions.slice(answerStart));
       } else {
-        questions = cleanupText(afterQuestions);
+        questions = afterQuestions;
       }
     }
   }
 
-  questions = (questions || "")
-    .replace(/^\s*(\d+)\)\s+/gm, "$1. ")
-    .replace(/^\s*#{1,3}\s*문제\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
-    .replace(/^\s*문제\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ");
-  answers = (answers || "")
-    .replace(/^\s*(\d+)\)\s+/gm, "$1. ")
-    .replace(/^\s*#{1,3}\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ")
-    .replace(/^\s*정답\s*(\d+)\s*[:.\-]?\s*/gm, "$1. ");
-  if (questions && !/^\s*1\.\s+/m.test(questions)) {
-    const lines = questions.split("\n");
-    const firstChoiceIndex = lines.findIndex(line => /^\s*[①②③④⑤]\s+/.test(line));
-
-    if (firstChoiceIndex >= 0) {
-      const introLines = lines.slice(0, firstChoiceIndex).map(s => s.trim()).filter(Boolean);
-      const choiceLines = lines.slice(firstChoiceIndex);
-
-      const inferredStem = introLines.length
-        ? introLines.join(" ")
-        : (input.language === "en"
-            ? "1. Choose the best answer."
-            : "1. 다음 문항에 답하세요.");
-      questions = cleanupText(
-        ["1. " + inferredStem.replace(/^1\.\s*/, ""), ...choiceLines].join("\n")
-      );
-    }
-  }
-
-  questions = normalizeChoiceLabels(questions);
-  answers = normalizeChoiceLabels(answers);
-  questions = stripInlineAnswersFromQuestions(questions);
-
+  title = cleanupText(title) || buildWormholeTitle(input);
+  instructions = cleanupText(instructions) || buildWormholeInstructions(input);
   questions = ensureFiveChoicesPerQuestion(questions);
-  if (!answers) {
-    const possibleAnswerBlock = normalizedRaw.match(
-      /\n\s*(#{1,3}\s*)?(정답|해설|정답\s*및\s*해설|answers?)\b[\s\S]*$/i
-    );
-    if (possibleAnswerBlock) {
-      answers = cleanupText(possibleAnswerBlock[0]);
-    }
-  }
-
-  const finalTitle = title || buildWormholeTitle(input);
-  const finalInstructions =
-    instructions ||
-    (input.language === "en"
-      ? "Answer all questions. Choose the best answer for each item."
-      : "다음 문항에 답하세요. 각 문항에서 가장 알맞은 답을 고르세요.");
+  answers = normalizeWormholeAnswers(
+    cleanupText(
+      String(answers || "")
+        .replace(/^(정답\s*및\s*해설|정답|해설|answers?)\s*:?/i, "")
+        .trim()
+    )
+  );
   const actualCount = countQuestions(questions);
 
+  const content = cleanupText([title, instructions, questions].filter(Boolean).join("\n\n"));
+  const answerSheet = cleanupText(answers);
+  const fullText = cleanupText(
+    [title, instructions, questions, "정답 및 해설", answerSheet]
+      .filter(Boolean)
+      .join("\n\n")
+  );
   return {
-    title: finalTitle,
-    instructions: finalInstructions,
-    content: cleanupText([finalTitle, finalInstructions, questions].filter(Boolean).join("\n\n")),
-    answerSheet: cleanupText(answers),
-    fullText: cleanupText(
-      [
-        finalTitle,
-        finalInstructions,
-        questions,
-        answers ? "정답 및 해설\n" + answers : ""
-      ].filter(Boolean).join("\n\n")
-    ),
+    title,
+    instructions,
+    content,
+    answerSheet,
+    fullText,
     actualCount,
-    rawPreview: normalizedRaw.slice(0, 2000)
   };
 }
 
-function extractQuestionBlocks(text = "") {
-  const source = cleanupText(text);
-  const matches = [...source.matchAll(/(^|\n)(\d+)\.\s([\s\S]*?)(?=\n\d+\.\s|$)/g)];
-  return matches.map((m) => ({
-    number: Number(m[2]),
-    body: `${m[2]}. ${m[3].trim()}`
-  }));
-}
+async function mergeWormholeSupplement(formatted, supplement, input) {
+  const originalQuestionText = cleanupText(
+    String(formatted.content || "")
+      .replace(formatted.title || "", "")
+      .replace(formatted.instructions || "", "")
+  );
+  const supplementQuestionText = cleanupText(
+    String(supplement.content || "")
+      .replace(supplement.title || "", "")
+      .replace(supplement.instructions || "", "")
+  );
+  const originalQuestionBlocks = extractQuestionBlocks(originalQuestionText);
+  const supplementQuestionBlocks = extractQuestionBlocks(supplementQuestionText);
 
-function renumberBlocks(blocks = [], start = 1) {
-  return blocks.map((block, index) => {
-    const nextNo = start + index;
-    return String(block.body).replace(/^\d+\.\s*/, `${nextNo}. `).trim();
-  });
+  const originalAnswerBlocks = extractAnswerBlocks(formatted.answerSheet || "");
+  const supplementAnswerBlocks = extractAnswerBlocks(supplement.answerSheet || "");
+  const mergedQuestionBlocks = [
+    ...renumberBlocks(originalQuestionBlocks, 1),
+    ...renumberBlocks(
+      supplementQuestionBlocks,
+      originalQuestionBlocks.length + 1
+    ),
+  ];
+  const mergedAnswerBlocks = [
+    ...renumberAnswerBlocks(originalAnswerBlocks, 1),
+    ...renumberAnswerBlocks(
+      supplementAnswerBlocks,
+      originalAnswerBlocks.length + 1
+    ),
+  ];
+  const mergedQuestionsText = ensureFiveChoicesPerQuestion(
+    mergedQuestionBlocks.join("\n\n")
+  );
+
+  const mergedAnswersText = normalizeWormholeAnswers(
+    mergedAnswerBlocks.join("\n")
+  );
+  return {
+    ...formatted,
+    content: cleanupText(
+      [formatted.title, formatted.instructions, mergedQuestionsText]
+        .filter(Boolean)
+        .join("\n\n")
+    ),
+    answerSheet: cleanupText(mergedAnswersText),
+    fullText: cleanupText(
+      [
+        formatted.title,
+        formatted.instructions,
+        mergedQuestionsText,
+        "정답 및 해설",
+        mergedAnswersText,
+      ]
+        .filter(Boolean)
+        .join("\n\n")
+    ),
+    actualCount: countQuestions(mergedQuestionsText),
+  };
 }
 
 async function generateWormholeSupplement(input, missingCount, existingQuestionsText = "") {
@@ -1122,11 +1175,9 @@ async function generateWormholeSupplement(input, missingCount, existingQuestions
     ...input,
     count: missingCount,
   });
-
   const supplementUserPrompt = `
 기존 웜홀 문항이 일부 부족합니다.
 이미 생성된 문항과 겹치지 않도록, 아래 기존 문항과 다른 신규 문항만 정확히 ${missingCount}문항 추가 생성하세요.
-
 [기존 문항 일부]
 ${existingQuestionsText}
 
@@ -1136,12 +1187,11 @@ ${existingQuestionsText}
 - 기존 문항과 유형/보기/정답이 겹치지 않게 작성
 - 난도와 주제는 기존 세트와 동일하게 유지
 `.trim();
-
   const raw = await callOpenAI(supplementSystemPrompt, supplementUserPrompt);
   return formatWormholeResponse(raw, { ...input, count: missingCount });
 }
 
-// --- Memberstack 블록 시작 ---
+// --- Memberstack 블록 ---
 
 function addCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -1159,32 +1209,16 @@ function getMemberstackHeaders() {
 
 async function memberstackRequest(path, options = {}) {
   const headers = getMemberstackHeaders();
-  if (!headers) {
-    throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-  }
-
+  if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
   const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
     ...options,
-    headers: {
-      ...headers,
-      ...(options.headers || {}),
-    },
+    headers: { ...headers, ...(options.headers || {}) },
   });
   const text = await response.text();
   let data = null;
-
-  try {
-    data = text ? JSON.parse(text) : null;
-  } catch {
-    data = text;
-  }
-
-  if (!response.ok) {
-    throw new Error(
-      `Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`
-    );
-  }
-
+  try { data = text ? JSON.parse(text) : null;
+  } catch { data = text; }
+  if (!response.ok) throw new Error(`Memberstack request failed: ${response.status}`);
   return data;
 }
 
@@ -1203,100 +1237,51 @@ function extractBearerToken(req) {
 }
 
 function extractMemberId(req) {
-  return sanitizeString(
-    req?.body?.memberId ||
-    req?.headers?.["x-member-id"] ||
-    req?.headers?.["X-Member-Id"] ||
-    ""
-  );
+  return sanitizeString(req?.body?.memberId || req?.headers?.["x-member-id"] || req?.headers?.["X-Member-Id"] || "");
 }
 
 async function verifyMemberToken(token) {
   if (!token) return null;
-
   const payload = { token };
-  if (MEMBERSTACK_APP_ID) {
-    payload.audience = MEMBERSTACK_APP_ID;
-  }
-
-  const data = await memberstackRequest("/verify-token", {
-    method: "POST",
-    body: JSON.stringify(payload),
-  });
+  if (MEMBERSTACK_APP_ID) payload.audience = MEMBERSTACK_APP_ID;
+  const data = await memberstackRequest("/verify-token", { method: "POST", body: JSON.stringify(payload) });
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
-    method: "GET",
-  });
-
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "GET" });
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
-
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
     member?.customFields?.mp,
-    member?.metaData?.mp,
-    member?.customFields?.MP,
-    member?.metaData?.MP,
+    member?.metaData?.mp
   ];
   for (const value of candidates) {
     const parsed = Number(value);
-    if (Number.isFinite(parsed)) {
-      return sanitizeMp(parsed, 0);
-    }
+    if (Number.isFinite(parsed)) return sanitizeMp(parsed, 0);
   }
-
   return null;
 }
 
 async function updateMemberMp(member, nextMp) {
-  if (!member?.id) {
-    throw new Error("Missing member id for MP update");
-  }
-
+  if (!member?.id) throw new Error("Missing member id");
   const safeNextMp = sanitizeMp(nextMp, 0);
-  const currentCustomFields =
-    member?.customFields && typeof member.customFields === "object"
-      ? member.customFields
-      : {};
-  const currentMetaData =
-    member?.metaData && typeof member.metaData === "object"
-      ? member.metaData
-      : {};
-
   const body = {
-    customFields: {
-      ...currentCustomFields,
-      [MEMBERSTACK_MP_FIELD]: safeNextMp,
-      mp: safeNextMp,
-      MP: safeNextMp,
-    },
-    metaData: {
-      ...currentMetaData,
-      [MEMBERSTACK_MP_FIELD]: safeNextMp,
-      mp: safeNextMp,
-      MP: safeNextMp,
-    },
+    customFields: { ...member?.customFields, [MEMBERSTACK_MP_FIELD]: safeNextMp, mp: safeNextMp },
+    metaData: { ...member?.metaData, [MEMBERSTACK_MP_FIELD]: safeNextMp, mp: safeNextMp }
   };
-  const data = await memberstackRequest(`/${encodeURIComponent(member.id)}`, {
-    method: "PATCH",
-    body: JSON.stringify(body),
-  });
+  const data = await memberstackRequest(`/${encodeURIComponent(member.id)}`, { method: "PATCH", body: JSON.stringify(body) });
   return data?.data || null;
 }
 
 async function resolveMemberForMp(req) {
-  if (!MEMBERSTACK_SECRET_KEY) {
-    return { enabled: false, reason: "missing_secret_key", member: null };
-  }
-
+  if (!MEMBERSTACK_SECRET_KEY) return { enabled: false, reason: "missing_secret_key", member: null };
   try {
     const bearerToken = extractBearerToken(req);
     if (bearerToken) {
@@ -1306,16 +1291,13 @@ async function resolveMemberForMp(req) {
         return { enabled: true, reason: "token_verified", member };
       }
     }
-
     const explicitMemberId = extractMemberId(req);
     if (explicitMemberId) {
       const member = await getMemberById(explicitMemberId);
       return { enabled: true, reason: "member_id", member };
     }
-
     return { enabled: false, reason: "member_not_provided", member: null };
   } catch (error) {
-    console.error("resolveMemberForMp error:", error);
     return { enabled: false, reason: "member_lookup_failed", member: null };
   }
 }
@@ -1324,18 +1306,8 @@ async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
   const memberContext = await resolveMemberForMp(req);
   if (!memberContext.enabled || !memberContext.member) {
-    return {
-      enabled: false,
-      reason: memberContext.reason,
-      requiredMp,
-      member: null,
-      currentMp: null,
-      remainingMp: null,
-      trialGranted: false,
-      deducted: false,
-    };
+    return { enabled: false, reason: memberContext.reason, requiredMp, member: null, currentMp: null, trialGranted: false, deducted: false };
   }
-
   let member = memberContext.member;
   let currentMp = readMpFromMember(member);
   let trialGranted = false;
@@ -1345,52 +1317,17 @@ async function prepareMpState(req) {
     currentMp = readMpFromMember(member);
     trialGranted = true;
   }
-
-  if (!Number.isFinite(currentMp)) {
-    currentMp = 0;
-  }
-
-  return {
-    enabled: true,
-    reason: memberContext.reason,
-    requiredMp,
-    member,
-    currentMp,
-    remainingMp: currentMp,
-    trialGranted,
-    deducted: false,
-  };
+  return { enabled: true, reason: memberContext.reason, requiredMp, member, currentMp, remainingMp: currentMp, trialGranted, deducted: false };
 }
 
 async function deductMpAfterSuccess(mpState) {
-  if (!mpState?.enabled || !mpState?.member) {
-    return {
-      ...mpState,
-      deducted: false,
-    };
-  }
-
-  const currentMp = sanitizeMp(mpState.currentMp, 0);
-  const requiredMp = sanitizeMp(mpState.requiredMp, 0);
-  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
-    return {
-      ...mpState,
-      deducted: false,
-    };
-  }
-
-  const nextMp = Math.max(0, currentMp - requiredMp);
+  if (!mpState?.enabled || !mpState?.member) return { ...mpState, deducted: false };
+  const nextMp = Math.max(0, sanitizeMp(mpState.currentMp, 0) - sanitizeMp(mpState.requiredMp, 0));
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-  return {
-    ...mpState,
-    member: updatedMember || mpState.member,
-    currentMp: nextMp,
-    remainingMp: nextMp,
-    deducted: true,
-  };
+  return { ...mpState, member: updatedMember || mpState.member, currentMp: nextMp, remainingMp: nextMp, deducted: true };
 }
 
-// --- Memberstack 블록 끝 ---
+// --- Main Handler ---
 
 export default async function handler(req, res) {
   addCors(res);
@@ -1410,90 +1347,61 @@ export default async function handler(req, res) {
     const raw = await callOpenAI(systemPrompt, userPrompt);
     let formatted = formatWormholeResponse(raw, input);
 
+    // --- 핸들러 내 보정 구간 (수정 반영 부분) ---
     if (formatted.actualCount < input.count) {
-      console.warn(
-        `WORMHOLE QUESTION SHORTAGE: expected ${input.count}, got ${formatted.actualCount}`
-      );
-
+      console.warn(`WORMHOLE QUESTION SHORTAGE: expected ${input.count}, got ${formatted.actualCount}`);
       const missingCount = input.count - formatted.actualCount;
-
       if (missingCount > 0) {
-        const supplement = await generateWormholeSupplement(
-          input,
-          missingCount,
-          formatted.content
-        );
-
-        const originalQuestionBlocks = extractQuestionBlocks(
-          extractSection(formatted.content, formatted.title, null)
-            .replace(formatted.instructions || "", "")
-            .trim()
-        );
-
-        const supplementQuestionBlocks = extractQuestionBlocks(
-          supplement.content
-            .replace(supplement.title || "", "")
-            .replace(supplement.instructions || "", "")
-            .trim()
-        );
-
-        const originalAnswerBlocks = extractQuestionBlocks(formatted.answerSheet);
-        const supplementAnswerBlocks = extractQuestionBlocks(supplement.answerSheet);
-
-        const mergedQuestionBlocks = [
-          ...renumberBlocks(originalQuestionBlocks, 1),
-          ...renumberBlocks(supplementQuestionBlocks, originalQuestionBlocks.length + 1),
-        ];
-
-        const mergedAnswerBlocks = [
-          ...renumberBlocks(originalAnswerBlocks, 1),
-          ...renumberBlocks(supplementAnswerBlocks, originalAnswerBlocks.length + 1),
-        ];
-
-        const mergedQuestionsText = mergedQuestionBlocks.join("\n\n");
-        const mergedAnswersText = mergedAnswerBlocks.join("\n\n");
-
-        formatted = {
-          ...formatted,
-          content: cleanupText(
-            [formatted.title, formatted.instructions, mergedQuestionsText]
-              .filter(Boolean)
-              .join("\n\n")
-          ),
-          answerSheet: cleanupText(mergedAnswersText),
-          fullText: cleanupText(
-            [
-              formatted.title,
-              formatted.instructions,
-              mergedQuestionsText,
-              "정답 및 해설",
-              mergedAnswersText,
-            ]
-              .filter(Boolean)
-              .join("\n\n")
-          ),
-          actualCount: countQuestions(mergedQuestionsText),
-        };
+        const supplement = await generateWormholeSupplement(input, missingCount, formatted.content);
+        formatted = await mergeWormholeSupplement(formatted, supplement, input);
       }
     }
 
-    if (formatted.actualCount !== input.count) {
-      console.warn(
-        `WORMHOLE FINAL COUNT MISMATCH: expected ${input.count}, got ${formatted.actualCount}`
+    if (formatted.actualCount > input.count) {
+      const trimmedQuestionBlocks = extractQuestionBlocks(
+        cleanupText(
+          String(formatted.content || "")
+            .replace(formatted.title || "", "")
+            .replace(formatted.instructions || "", "")
+        )
+      ).slice(0, input.count);
+      const trimmedAnswerBlocks = extractAnswerBlocks(formatted.answerSheet || "").slice(0, input.count);
+
+      const trimmedQuestionsText = ensureFiveChoicesPerQuestion(
+        renumberBlocks(trimmedQuestionBlocks, 1).join("\n\n")
       );
+      const trimmedAnswersText = normalizeWormholeAnswers(
+        renumberAnswerBlocks(trimmedAnswerBlocks, 1).join("\n")
+      );
+      formatted = {
+        ...formatted,
+        content: cleanupText(
+          [formatted.title, formatted.instructions, trimmedQuestionsText]
+            .filter(Boolean)
+            .join("\n\n")
+        ),
+        answerSheet: cleanupText(trimmedAnswersText),
+        fullText: cleanupText(
+          [
+            formatted.title,
+            formatted.instructions,
+            trimmedQuestionsText,
+            "정답 및 해설",
+            trimmedAnswersText,
+          ]
+            .filter(Boolean)
+            .join("\n\n")
+        ),
+        actualCount: countQuestions(trimmedQuestionsText),
+      };
     }
 
-    if (!formatted.content.includes("⑤ ")) {
-      console.warn("WORMHOLE WARNING: 5th choice was missing in at least some items; fallback normalization applied.");
+    if (formatted.actualCount !== input.count) {
+      console.warn(`WORMHOLE FINAL COUNT MISMATCH: expected ${input.count}, got ${formatted.actualCount}`);
     }
 
     if (formatted.actualCount === 0) {
-      console.error("WORMHOLE PARSE FAILED - RAW PREVIEW:", formatted.rawPreview);
-      return json(res, 500, {
-        success: false,
-        message: `Question parsing failed: expected ${input.count}, got 0`,
-        rawPreview: formatted.rawPreview
-      });
+      return json(res, 500, { success: false, message: `Question parsing failed: expected ${input.count}, got 0` });
     }
 
     const finalMpState = await deductMpAfterSuccess(mpState);
@@ -1501,11 +1409,6 @@ export default async function handler(req, res) {
       success: true,
       ...formatted,
       textbook: input.textbook,
-      requiredMp: mpState.requiredMp,
-      remainingMp: finalMpState?.remainingMp ?? null,
-      trialGranted: Boolean(mpState.trialGranted),
-      mpSyncEnabled: Boolean(mpState.enabled),
-      mpSyncReason: mpState.reason || "unknown",
       mp: {
         requiredMp: mpState.requiredMp,
         currentMp: mpState.currentMp,
