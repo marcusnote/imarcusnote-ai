@@ -1,6 +1,14 @@
 export default async function handler(req, res) {
   try {
-    addCors(res);
+    // CORS 처리
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+    res.setHeader(
+      'Access-Control-Allow-Headers',
+      'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization, X-Member-Id'
+    );
+
     if (req.method === "OPTIONS") {
       return res.status(200).end();
     }
@@ -9,11 +17,16 @@ export default async function handler(req, res) {
       return res.status(405).json({ error: "Method Not Allowed" });
     }
 
+    // 1) 요청값 파싱 블록
     const {
       round = 1,
       size = 20,
-      worksheetTitle = "",
-      academyName = "Imarcusnote"
+      outputType = 'list+test',
+      userNote = '',
+      worksheetTitle = '',
+      academyName = 'Imarcusnote',
+      memberId = '',
+      mpCost = 3
     } = req.body || {};
 
     const vocabDB = require("../data/vocab/vocab_csat_db_800.json");
@@ -22,65 +35,294 @@ export default async function handler(req, res) {
     const s = Math.max(5, Math.min(50, parseInt(size, 10) || 20));
 
     const startIndex = (r - 1) * s;
-    const selected = vocabDB.slice(startIndex, startIndex + s);
+    const selectedEntries = vocabDB.slice(startIndex, startIndex + s);
 
-    if (!selected.length) {
+    if (!selectedEntries.length) {
       return res.status(400).json({
         error: "No data available for this round"
       });
     }
 
-    const usedWords = new Set(selected.map(item => normalize(item.word)));
-    const questions = selected.map((item, idx) => {
-      const type = chooseQuestionType(idx);
-      return buildQuestion({
-        item,
-        idx,
-        db: vocabDB,
-        usedWords,
-        type
+    // 2) 출력 타입 분기 규칙
+    const normalizedOutputType = String(outputType || 'list+test').trim().toLowerCase();
+    const includeList = normalizedOutputType === 'list+test' || normalizedOutputType === 'list-only';
+    const includeTest = normalizedOutputType === 'list+test' || normalizedOutputType === 'test-only';
+
+    // 2) testItems 조립 블록 교체
+    const testItems = selectedEntries.map((item, idx) => {
+      const type = idx % 4;
+      let question = "";
+      let typeLabel = "";
+      let prompt = "";
+      let choices = [];
+      let answerNumber = 1;
+      let answerWord = String(item.word || "").trim();
+      let answerNote = String(item.meaning || "").trim();
+
+      const primarySynonym = getPrimarySynonym(item);
+      const primaryAntonym = getPrimaryAntonym(item);
+
+      if (type === 0) {
+        question = "다음 의미에 해당하는 단어로 가장 적절한 것은?";
+        typeLabel = "[의미 파악]";
+        prompt = item.meaning || "";
+        const distractors = buildMeaningDistractors(vocabDB, item, item.word);
+        const all = shuffleArray(uniqueTrimmed([item.word, ...distractors])).slice(0, 4);
+        choices = all.map((c, i) => {
+          if (normalize(c) === normalize(item.word)) answerNumber = i + 1;
+          return `(${i + 1}) ${c}`;
+        });
+        answerWord = item.word;
+        answerNote = `${item.meaning || ""} → ${item.word || ""}`;
+      } else if (type === 1 && primarySynonym) {
+        question = "다음 단어의 유의어로 가장 적절한 것은?";
+        typeLabel = "[유의어 찾기]";
+        prompt = item.word || "";
+        const distractors = uniqueTrimmed([
+          ...getDistractors(vocabDB, primarySynonym, 6),
+          ...splitField(
+            vocabDB
+              .filter(x => normalize(x.word) !== normalize(item.word))
+              .map(x => getPrimarySynonym(x))
+              .filter(Boolean)
+              .join(";")
+          )
+        ]).filter(x => normalize(x) !== normalize(primarySynonym)).slice(0, 3);
+
+        const all = shuffleArray(uniqueTrimmed([primarySynonym, ...distractors])).slice(0, 4);
+        choices = all.map((c, i) => {
+          if (normalize(c) === normalize(primarySynonym)) answerNumber = i + 1;
+          return `(${i + 1}) ${c}`;
+        });
+        answerWord = primarySynonym;
+        answerNote = `${item.word || ""} → synonym: ${primarySynonym}`;
+      } else if (type === 2 && primaryAntonym) {
+        question = "다음 단어의 반의어로 가장 적절한 것은?";
+        typeLabel = "[반의어 찾기]";
+        prompt = item.word || "";
+        const distractors = uniqueTrimmed([
+          ...getDistractors(vocabDB, primaryAntonym, 6),
+          ...splitField(
+            vocabDB
+              .filter(x => normalize(x.word) !== normalize(item.word))
+              .map(x => getPrimaryAntonym(x))
+              .filter(Boolean)
+              .join(";")
+          )
+        ]).filter(x => normalize(x) !== normalize(primaryAntonym)).slice(0, 3);
+
+        const all = shuffleArray(uniqueTrimmed([primaryAntonym, ...distractors])).slice(0, 4);
+        choices = all.map((c, i) => {
+          if (normalize(c) === normalize(primaryAntonym)) answerNumber = i + 1;
+          return `(${i + 1}) ${c}`;
+        });
+        answerWord = primaryAntonym;
+        answerNote = `${item.word || ""} → antonym: ${primaryAntonym}`;
+      } else {
+        question = "다음 표현의 빈칸에 들어갈 말로 가장 적절한 것은?";
+        typeLabel = "[문맥 추론]";
+        const sourceExample = String(item.example || item.phrase || "").trim();
+        const escapedWord = String(item.word || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const blanked = sourceExample
+          ? sourceExample.replace(new RegExp(escapedWord, "gi"), "__________")
+          : "";
+        prompt = blanked || `Expression: ${item.word || ""}`;
+        const distractors = getDistractors(vocabDB, item.word, 3);
+        const all = shuffleArray(uniqueTrimmed([item.word, ...distractors])).slice(0, 4);
+        choices = all.map((c, i) => {
+          if (normalize(c) === normalize(item.word)) answerNumber = i + 1;
+          return `(${i + 1}) ${c}`;
+        });
+        answerWord = item.word;
+        answerNote = `${sourceExample || item.meaning || ""} → ${item.word || ""}`;
+      }
+
+      return buildTestItem({
+        question,
+        typeLabel,
+        prompt,
+        choices,
+        answerNumber,
+        answerWord,
+        answerNote
       });
     });
 
     const finalTitle =
-      worksheetTitle?.trim() || `CSAT Vocabulary Test Round ${r}`;
+      String(worksheetTitle || '').trim() ||
+      `수능핵심 단어 & 테스트 ${r}`;
+
+    const listItems = selectedEntries.map(entry => ({
+      word: entry.word,
+      meaning: entry.meaning,
+      example: entry.example || ''
+    }));
+
     const worksheetHtml = renderWorksheetHtml({
       title: finalTitle,
-      academyName,
       round: r,
-      size: s,
-      questions
+      count: s,
+      includeList,
+      includeTest,
+      listItems,
+      testItems
     });
-    const answerHtml = renderAnswerHtml({
-      title: finalTitle,
-      round: r,
-      questions
-    });
+
+    // 3) answerHtml 생성 블록 교체
+    const answerHtml = includeTest
+      ? renderAnswerHtml({
+          title: finalTitle,
+          round: r,
+          answerItems: testItems.map(item => ({
+            answerNumber: item.answerNumber,
+            answerWord: item.answerWord,
+            answerNote: item.answerNote
+          }))
+        })
+      : "";
+
+    // 4) 최종 응답 블록 교체
     return res.status(200).json({
-      success: true,
+      ok: true,
       engine: "VOCAB_CSAT",
       round: r,
-      size: s,
+      count: s,
       total: vocabDB.length,
-      count: questions.length,
       title: finalTitle,
-      questions,
+      outputType: normalizedOutputType,
       worksheetHtml,
       answerHtml
     });
-  } catch (err) {
-    console.error("VOCAB_CSAT error:", err);
-    return res.status(500).json({
-      error: "Server Error",
-      detail: err.message
-    });
+
+  } catch (error) {
+    console.error("API ERROR:", error);
+    return res.status(500).json({ error: "Internal Server Error", detail: error.message });
   }
 }
 
-function addCors(res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
+// 구조형 HTML 렌더 유틸
+function escapeHtml(value = '') {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderCsatQuestionBlock(item, index) {
+  const q = index + 1;
+  const choicesHtml = (item.choices || [])
+    .map(choice => `<div class="choice-line">${escapeHtml(choice)}</div>`)
+    .join('');
+
+  const stemLines = [];
+  if (item.typeLabel) stemLines.push(`<div class="stem-line" style="font-weight:700; color:#16a34a;">${escapeHtml(item.typeLabel)}</div>`);
+  if (item.prompt) stemLines.push(`<div class="stem-line">${escapeHtml(item.prompt)}</div>`);
+  if (item.korean) stemLines.push(`<div class="stem-line">${escapeHtml(item.korean)}</div>`);
+  if (item.expression) stemLines.push(`<div class="stem-line">${escapeHtml(item.expression)}</div>`);
+  if (item.hint) stemLines.push(`<div class="tail-line">${escapeHtml(item.hint)}</div>`);
+
+  return `
+    <div class="question-block">
+      <div class="question-line">${q}. ${escapeHtml(item.question)}</div>
+      ${stemLines.join('')}
+      <div class="choices-wrap">
+        ${choicesHtml}
+      </div>
+    </div>
+  `;
+}
+
+function renderCsatListBlock(words, roundLabel) {
+  const rows = words.map((item, index) => {
+    const parts = [
+      `${index + 1}. <strong>${escapeHtml(item.word || '')}</strong>`,
+      item.meaning ? `/ ${escapeHtml(item.meaning)}` : '',
+      item.example ? `<br/><small style="color:#64748b;">Example: ${escapeHtml(item.example)}</small>` : ''
+    ].filter(Boolean).join(' ');
+
+    return `<div class="stem-line" style="margin-bottom:12px; border-bottom:1px dashed #eee; padding-bottom:4px;">${parts}</div>`;
+  }).join('');
+
+  return `
+    <div class="question-block" style="margin-bottom:40px; background:#f8fafc; padding:20px; border-radius:12px;">
+      <div class="question-line" style="border-bottom:2px solid #1e293b; padding-bottom:8px;">A. Vocabulary List</div>
+      <div class="tail-line" style="margin-bottom:15px;">${escapeHtml(roundLabel)}</div>
+      <div class="choices-wrap">
+        ${rows}
+      </div>
+    </div>
+  `;
+}
+
+function renderWorksheetHtml({ title, round, count, includeList, includeTest, listItems, testItems }) {
+  const roundLabel = `Round ${round}`;
+  let bodyHtml = '';
+
+  if (includeList) {
+    bodyHtml += renderCsatListBlock(listItems, roundLabel);
+  }
+
+  if (includeTest) {
+    if (includeList) bodyHtml += `<h2 style="margin-top:40px; margin-bottom:20px; padding-left:10px; border-left:4px solid #22c55e;">B. Practice Test</h2>`;
+    bodyHtml += testItems.map((item, index) => renderCsatQuestionBlock(item, index)).join('');
+  }
+
+  return `
+    <div class="iaw-csat-render">
+      <div class="iaw-csat-head">
+        <div class="iaw-csat-title">${escapeHtml(title)}</div>
+        <div class="iaw-csat-sub">CSAT Vocabulary · ${escapeHtml(roundLabel)} · ${escapeHtml(String(count))} Items</div>
+      </div>
+      <div class="iaw-csat-body">
+        ${bodyHtml}
+      </div>
+    </div>
+  `;
+}
+
+function renderAnswerHtml({ title, round, answerItems }) {
+  const answerRows = answerItems.map((item, index) => {
+    return `
+      <div class="question-block" style="margin-bottom:10px; display:flex; gap:15px; align-items:baseline; border-bottom:1px solid #f1f5f9; padding-bottom:6px;">
+        <div class="question-line" style="min-width:30px; margin-bottom:0;">${index + 1}.</div>
+        <div class="question-line" style="color:#16a34a; margin-bottom:0;">(${escapeHtml(String(item.answerNumber))})</div>
+        <div class="stem-line" style="font-weight:700; margin-bottom:0;">${escapeHtml(item.answerWord || '')}</div>
+        <div class="tail-line" style="margin-top:0; color:#64748b;">${escapeHtml(item.answerNote || '')}</div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="iaw-csat-render">
+      <div class="iaw-csat-head">
+        <div class="iaw-csat-title">${escapeHtml(title)} - Answer Key</div>
+        <div class="iaw-csat-sub">Round ${escapeHtml(String(round))} · Answer Sheet</div>
+      </div>
+      <div class="iaw-csat-body">
+        <div style="display:grid; grid-template-columns: 1fr; gap:2px;">
+          ${answerRows}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// 1) 헬퍼 함수 블록 교체
+function buildTestItem(entry) {
+  return {
+    question: entry.question || '다음 의미에 해당하는 단어로 가장 적절한 것은?',
+    typeLabel: entry.typeLabel || '',
+    prompt: entry.prompt || '',
+    korean: entry.korean || '',
+    expression: entry.expression || '',
+    hint: entry.hint || '',
+    choices: entry.choices || [],
+    answerNumber: entry.answerNumber || 1,
+    answerWord: entry.answerWord || '',
+    answerNote: entry.answerNote || ''
+  };
 }
 
 function normalize(text = "") {
@@ -94,31 +336,6 @@ function splitField(text = "") {
     .filter(Boolean);
 }
 
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-// 2-1. chooseQuestionType 교체
-function chooseQuestionType(idx) {
-  const pattern = [
-    "meaning",
-    "meaning",
-    "synonym",
-    "phrase",
-    "meaning",
-    "antonym",
-    "meaning",
-    "phrase"
-  ];
-  return pattern[idx % pattern.length];
-}
-
-// 2-2. Helper 블록 추가
 function uniqueTrimmed(arr = []) {
   const seen = new Set();
   const out = [];
@@ -130,6 +347,18 @@ function uniqueTrimmed(arr = []) {
     out.push(v);
   }
   return out;
+}
+
+function getPrimarySynonym(item = {}) {
+  if (item.synonym) return String(item.synonym).trim();
+  const arr = splitField(item.synonyms || "");
+  return arr[0] || "";
+}
+
+function getPrimaryAntonym(item = {}) {
+  if (item.antonym) return String(item.antonym).trim();
+  const arr = splitField(item.antonyms || "");
+  return arr[0] || "";
 }
 
 function getPosBucket(word = "") {
@@ -150,26 +379,37 @@ function getLengthBucket(word = "") {
 
 function getSemanticBucket(item = {}) {
   const meaning = normalize(item.meaning || "");
+  const example = normalize(item.example || "");
   const phrase = normalize(item.phrase || "");
+  const source = `${meaning} ${example} ${phrase}`;
 
-  if (/(increase|grow|rise|expand|boost)/.test(meaning + " " + phrase)) return "increase";
-  if (/(decrease|reduce|decline|drop|lower)/.test(meaning + " " + phrase)) return "decrease";
-  if (/(important|essential|significant|major|critical)/.test(meaning + " " + phrase)) return "importance";
-  if (/(difficult|hard|complex|challenging)/.test(meaning + " " + phrase)) return "difficulty";
-  if (/(happy|pleased|glad|delighted)/.test(meaning + " " + phrase)) return "positive-emotion";
-  if (/(sad|upset|depressed|sorrow)/.test(meaning + " " + phrase)) return "negative-emotion";
-  if (/(law|rule|policy|standard)/.test(meaning + " " + phrase)) return "rule";
-  if (/(money|cost|price|finance|economic)/.test(meaning + " " + phrase)) return "money";
-  if (/(think|know|understand|recognize|consider)/.test(meaning + " " + phrase)) return "cognition";
-  if (/(say|tell|speak|argue|claim)/.test(meaning + " " + phrase)) return "communication";
+  if (/(increase|grow|rise|expand|boost)/.test(source)) return "increase";
+  if (/(decrease|reduce|decline|drop|lower)/.test(source)) return "decrease";
+  if (/(important|essential|significant|major|critical)/.test(source)) return "importance";
+  if (/(difficult|hard|complex|challenging)/.test(source)) return "difficulty";
+  if (/(happy|pleased|glad|delighted)/.test(source)) return "positive-emotion";
+  if (/(sad|upset|depressed|sorrow)/.test(source)) return "negative-emotion";
+  if (/(law|rule|policy|standard)/.test(source)) return "rule";
+  if (/(money|cost|price|finance|economic)/.test(source)) return "money";
+  if (/(think|know|understand|recognize|consider)/.test(source)) return "cognition";
+  if (/(say|tell|speak|argue|claim)/.test(source)) return "communication";
   return "general";
+}
+
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
 function pickDistractorWords(pool = [], answerWord = "", count = 3) {
   const out = [];
   const seen = new Set([normalize(answerWord)]);
-  for (const item of shuffle(pool)) {
-    const w = String(item.word || "").trim();
+  for (const item of shuffleArray(pool)) {
+    const w = String(item.word || item || "").trim();
     const key = normalize(w);
     if (!w || seen.has(key)) continue;
     seen.add(key);
@@ -205,203 +445,10 @@ function buildMeaningDistractors(db, item, answerWord) {
   return pickDistractorWords(pool, answerWord, 3);
 }
 
-function buildSynonymDistractors(db, item, targetSyn) {
-  const answerSem = getSemanticBucket(item);
-  const pool = uniqueTrimmed(
-    db.flatMap(x => splitField(x.synonyms || ""))
-  ).filter(x =>
-    normalize(x) !== normalize(targetSyn) &&
-    getLengthBucket(x) === getLengthBucket(targetSyn) &&
-    getSemanticBucket({ meaning: x, phrase: "" }) !== answerSem
+function getDistractors(db, correctWord, count = 4) {
+  return pickDistractorWords(
+    db.filter(item => normalize(item.word) !== normalize(correctWord)),
+    correctWord,
+    count
   );
-
-  return shuffle(pool).slice(0, 3);
-}
-
-function buildAntonymDistractors(db, item, targetAnt) {
-  const answerSem = getSemanticBucket(item);
-  const pool = uniqueTrimmed(
-    db.flatMap(x => splitField(x.antonyms || ""))
-  ).filter(x =>
-    normalize(x) !== normalize(targetAnt) &&
-    getLengthBucket(x) === getLengthBucket(targetAnt) &&
-    getSemanticBucket({ meaning: x, phrase: "" }) !== answerSem
-  );
-
-  return shuffle(pool).slice(0, 3);
-}
-
-function buildPhraseDistractors(db, item, answerWord) {
-  const answerPos = getPosBucket(answerWord);
-  let pool = db.filter(x =>
-    normalize(x.word) !== normalize(answerWord) &&
-    getPosBucket(x.word) === answerPos
-  );
-
-  if (pool.length < 3) {
-    pool = db.filter(x => normalize(x.word) !== normalize(answerWord));
-  }
-
-  return pickDistractorWords(pool, answerWord, 3);
-}
-
-// 2-3. buildQuestion(...) 전체 교체
-function buildQuestion({ item, idx, db, usedWords, type }) {
-  const word = String(item.word || "").trim();
-  const meaning = String(item.meaning || "").trim();
-  const synonyms = splitField(item.synonyms || "");
-  const antonyms = splitField(item.antonyms || "");
-  const phrase = String(item.phrase || "").trim();
-
-  if (type === "meaning") {
-    const distractors = buildMeaningDistractors(db, item, word);
-    const options = shuffle(uniqueTrimmed([word, ...distractors])).slice(0, 4);
-    const answer = options.findIndex(opt => normalize(opt) === normalize(word)) + 1;
-
-    return {
-      no: idx + 1,
-      type: "meaning",
-      prompt: `다음 의미에 해당하는 단어로 가장 적절한 것은?`,
-      stem: meaning,
-      options,
-      answer,
-      answerText: word,
-      explanation: `${meaning} → ${word}`
-    };
-  }
-
-  if (type === "synonym" && synonyms.length) {
-    const targetSyn = synonyms[0];
-    let distractors = buildSynonymDistractors(db, item, targetSyn);
-
-    if (distractors.length < 3) {
-      distractors = uniqueTrimmed([
-        ...distractors,
-        ...buildPhraseDistractors(db, item, word)
-      ]).slice(0, 3);
-    }
-
-    const options = shuffle(uniqueTrimmed([targetSyn, ...distractors])).slice(0, 4);
-    const answer = options.findIndex(opt => normalize(opt) === normalize(targetSyn)) + 1;
-
-    return {
-      no: idx + 1,
-      type: "synonym",
-      prompt: `다음 단어의 유의어로 가장 적절한 것은?`,
-      stem: word,
-      options,
-      answer,
-      answerText: targetSyn,
-      explanation: `${word} → synonym: ${targetSyn}`
-    };
-  }
-
-  if (type === "antonym" && antonyms.length) {
-    const targetAnt = antonyms[0];
-    let distractors = buildAntonymDistractors(db, item, targetAnt);
-
-    if (distractors.length < 3) {
-      distractors = uniqueTrimmed([
-        ...distractors,
-        ...buildPhraseDistractors(db, item, word)
-      ]).slice(0, 3);
-    }
-
-    const options = shuffle(uniqueTrimmed([targetAnt, ...distractors])).slice(0, 4);
-    const answer = options.findIndex(opt => normalize(opt) === normalize(targetAnt)) + 1;
-
-    return {
-      no: idx + 1,
-      type: "antonym",
-      prompt: `다음 단어의 반의어로 가장 적절한 것은?`,
-      stem: word,
-      options,
-      answer,
-      answerText: targetAnt,
-      explanation: `${word} → antonym: ${targetAnt}`
-    };
-  }
-
-  const blankedPhrase = makeBlankPhrase(phrase, word);
-  const distractors = buildPhraseDistractors(db, item, word);
-  const options = shuffle(uniqueTrimmed([word, ...distractors])).slice(0, 4);
-  const answer = options.findIndex(opt => normalize(opt) === normalize(word)) + 1;
-
-  return {
-    no: idx + 1,
-    type: "phrase",
-    prompt: `다음 표현의 빈칸에 들어갈 말로 가장 적절한 것은?`,
-    stem: blankedPhrase || `(${meaning})의 의미를 가진 단어를 고르시오.`,
-    options,
-    answer,
-    answerText: word,
-    explanation: `${phrase} → ${word}`
-  };
-}
-
-function makeBlankPhrase(phrase = "", word = "") {
-  if (!phrase || !word) return "";
-  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const regex = new RegExp(escaped, "i");
-  if (regex.test(phrase)) {
-    return phrase.replace(regex, "______");
-  }
-  return `${phrase} (관련 단어 선택)`;
-}
-
-function renderWorksheetHtml({ title, academyName, round, size, questions }) {
-  return `
-    <div class="iaw-csat-render">
-      <div class="iaw-csat-head">
-        <div class="iaw-csat-title">${escapeHtml(title)}</div>
-        <div class="iaw-csat-sub">
-          CSAT Vocabulary Test · Round ${round} · ${size} Questions
-        </div>
-      </div>
-
-      <div class="iaw-csat-body">
-        ${questions.map(q => `
-           <div class="csat-q" style="margin-bottom:24px;">
-            <div style="font-weight:800; margin-bottom:8px;">${q.no}. ${escapeHtml(q.prompt)}</div>
-            <div style="margin-bottom:10px;">${escapeHtml(q.stem)}</div>
-            <div>
-              ${q.options.map((opt, i) => `
-                <div style="margin:4px 0;">${i + 1}) ${escapeHtml(opt)}</div>
-               `).join("")}
-            </div>
-          </div>
-        `).join("")}
-      </div>
-    </div>
-  `;
-}
-
-function renderAnswerHtml({ title, round, questions }) {
-  return `
-    <div class="iaw-csat-render">
-      <div class="iaw-csat-head">
-        <div class="iaw-csat-title">${escapeHtml(title)} - Answer Key</div>
-        <div class="iaw-csat-sub">Round ${round} · Answer Sheet</div>
-      </div>
-
-      <div class="iaw-csat-body">
-        ${questions.map(q => `
-          <div style="margin-bottom:16px;">
-            <div style="font-weight:800;">${q.no}. ${q.answer}</div>
-             <div>${escapeHtml(q.answerText)}</div>
-            <div style="color:#6b7280;">${escapeHtml(q.explanation)}</div>
-          </div>
-        `).join("")}
-      </div>
-    </div>
-  `;
-}
-
-function escapeHtml(str = "") {
-  return String(str)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
 }
