@@ -154,6 +154,7 @@ function detectMagicIntent(text = "") {
 function sanitizeEngine(value) {
   const v = sanitizeString(value).toLowerCase();
 
+  if (v === "abc_starter" || v === "abcstarter") return "magic"; 
   if (v === "mock_exam") return "mocks";
   if (v === "vocab_workbook" || v === "vocab_csat") return "vocab";
 
