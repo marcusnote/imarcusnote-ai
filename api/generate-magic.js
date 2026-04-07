@@ -1182,7 +1182,8 @@ function formatMagicResponse(rawText, input) {
   const finalTitle = title.trim() || buildMagicTitle(input);
 
   const normalizedInstructions = (instructions || "").trim();
-let normalizedQuestions = (questions || "").trim();
+  let normalizedQuestions = (questions || "").trim();
+  let normalizedAnswers = (answers || "").trim();
 
   // fallback: 마커가 누락되어도 본문이 완전히 비지 않게 보호
   if (!normalizedQuestions && rawText && rawText.trim()) {
