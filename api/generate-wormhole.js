@@ -969,7 +969,6 @@ function normalizeQuestionLine(line = "") {
     .trim();
 }
 
-// ✅ ensureFiveChoicesPerQuestion 전체 교체 반영
 function ensureFiveChoicesPerQuestion(questions = "") {
   const source = String(questions || "").replace(/\r\n/g, "\n");
   const blocks = source
@@ -986,16 +985,14 @@ function ensureFiveChoicesPerQuestion(questions = "") {
       if (/^\s*[①②③④⑤]\s+/.test(line)) {
         choices.push(line.trim());
       } else {
-        stem.push(line);
+        stem.push(line.trim());
       }
     }
 
     const normalizedChoices = choices
-      .map((choice, idx) => choice.replace(/^\s*[①②③④⑤]\s+/, `${["①","②","③","④","⑤"][idx]} `))
+      .map((choice, idx) => choice.replace(/^\s*[①②③④⑤]\s+/, `${["①", "②", "③", "④", "⑤"][idx]} `))
       .slice(0, 5);
 
-    // ✅ 4개 이하인 경우 억지 선지 삽입 대신 그대로 두고,
-    // 이후 supplement 생성 단계에서 재생성 대상으로 잡히게 함
     return [...stem, ...normalizedChoices].join("\n");
   });
 
