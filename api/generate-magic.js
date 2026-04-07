@@ -1113,6 +1113,8 @@ ${input.userPrompt || "(추가 요청 없음)"}
 `.trim();
 }
 
+// legacy - do not use
+/*
 function buildMagicResponse(rawText, input) {
   const title = extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]");
   const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
@@ -1124,6 +1126,7 @@ function buildMagicResponse(rawText, input) {
   if (answers.trim()) {
     fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + answers.trim());
   }
+*/
 
   return {
     title: finalTitle,
@@ -1174,28 +1177,32 @@ rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function formatMagicResponse(rawText, input) {
-  const title = extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]");
-  const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
-  const questions = extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]");
-  const answers = extractSection(rawText, "[[ANSWERS]]", null);
+  const safeRawText = String(rawText || "");
 
-  const finalTitle = title.trim() || buildMagicTitle(input);
+  const title = extractSection(safeRawText, "[[TITLE]]", "[[INSTRUCTIONS]]");
+  const instructions = extractSection(safeRawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
+  const questions = extractSection(safeRawText, "[[QUESTIONS]]", "[[ANSWERS]]");
+  const answers = extractSection(safeRawText, "[[ANSWERS]]", null);
+
+  const finalTitle = (title || "").trim() || buildMagicTitle(input);
 
   const normalizedInstructions = (instructions || "").trim();
   let normalizedQuestions = (questions || "").trim();
   let normalizedAnswers = (answers || "").trim();
 
-  // fallback: 마커가 누락되어도 본문이 완전히 비지 않게 보호
-  if (!normalizedQuestions && rawText && rawText.trim()) {
-    const cleaned = String(rawText)
+  // [[QUESTIONS]] 마커가 누락된 경우에도 최소한 본문은 살림
+  if (!normalizedQuestions && safeRawText.trim()) {
+    normalizedQuestions = safeRawText
       .replace(/\[\[TITLE\]\]/g, "")
       .replace(/\[\[INSTRUCTIONS\]\]/g, "")
       .replace(/\[\[QUESTIONS\]\]/g, "")
       .replace(/\[\[ANSWERS\]\]/g, "")
       .trim();
-
-    normalizedQuestions = cleaned;
   }
+
+  // 질문 수 계산
+  const actualCount =
+    (normalizedQuestions.match(/^\s*(\d+[\.\)]|[A-Z][\.\)]|[가-힣][\.\)])/gm) || []).length;
 
   const contentParts = [
     finalTitle,
@@ -1205,7 +1212,9 @@ function formatMagicResponse(rawText, input) {
 
   const fullParts = [...contentParts];
   if (normalizedAnswers) {
-    fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + normalizedAnswers);
+    fullParts.push(
+      (input.language === "en" ? "Answers\n" : "정답\n") + normalizedAnswers
+    );
   }
 
   return {
@@ -1214,7 +1223,7 @@ function formatMagicResponse(rawText, input) {
     content: contentParts.join("\n\n"),
     answerSheet: normalizedAnswers,
     fullText: fullParts.join("\n\n"),
-    actualCount: (normalizedQuestions.match(/^\s*\d+\./gm) || []).length
+    actualCount
   };
 }
 
