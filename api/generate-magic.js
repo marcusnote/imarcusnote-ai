@@ -1178,20 +1178,44 @@ function formatMagicResponse(rawText, input) {
   const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
   const questions = extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]");
   const answers = extractSection(rawText, "[[ANSWERS]]", null);
+
   const finalTitle = title.trim() || buildMagicTitle(input);
-  const contentParts = [finalTitle, instructions.trim(), questions.trim()].filter(Boolean);
+
+  const normalizedInstructions = instructions.trim();
+  let normalizedQuestions = questions.trim();
+  const normalizedInstructions = (instructions || "").trim();
+let normalizedQuestions = (questions || "").trim();
+
+  // fallback: 마커가 누락되어도 본문이 완전히 비지 않게 보호
+  if (!normalizedQuestions && rawText && rawText.trim()) {
+    const cleaned = String(rawText)
+      .replace(/\[\[TITLE\]\]/g, "")
+      .replace(/\[\[INSTRUCTIONS\]\]/g, "")
+      .replace(/\[\[QUESTIONS\]\]/g, "")
+      .replace(/\[\[ANSWERS\]\]/g, "")
+      .trim();
+
+    normalizedQuestions = cleaned;
+  }
+
+  const contentParts = [
+    finalTitle,
+    normalizedInstructions,
+    normalizedQuestions
+  ].filter(Boolean);
+
   const fullParts = [...contentParts];
-  if (answers.trim()) {
-    fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + answers.trim());
+  if (normalizedAnswers) {
+    fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + normalizedAnswers);
   }
 
   return {
     title: finalTitle,
-    instructions: instructions.trim(),
+    instructions: normalizedInstructions,
     content: contentParts.join("\n\n"),
-    answerSheet: answers.trim(),
+    answerSheet: normalizedAnswers,
     fullText: fullParts.join("\n\n"),
-    actualCount: (questions.match(/^\s*\d+\./gm) || []).length
+    actualCount: (normalizedQuestions.match(/^\s*\d+\./gm) || []).length
   };
 }
 
