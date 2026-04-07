@@ -1181,8 +1181,6 @@ function formatMagicResponse(rawText, input) {
 
   const finalTitle = title.trim() || buildMagicTitle(input);
 
-  const normalizedInstructions = instructions.trim();
-  let normalizedQuestions = questions.trim();
   const normalizedInstructions = (instructions || "").trim();
 let normalizedQuestions = (questions || "").trim();
 
