@@ -154,7 +154,7 @@ function detectMagicIntent(text = "") {
 function sanitizeEngine(value) {
   const v = sanitizeString(value).toLowerCase();
 
-  if (v === "abc_starter" || v === "abcstarter") return "magic"; 
+  if (v === "abc_starter" || v === "abcstarter") return "magic";
   if (v === "mock_exam") return "mocks";
   if (v === "vocab_workbook" || v === "vocab_csat") return "vocab";
 
@@ -1113,8 +1113,6 @@ ${input.userPrompt || "(추가 요청 없음)"}
 `.trim();
 }
 
-// legacy - do not use
-/*
 function buildMagicResponse(rawText, input) {
   const title = extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]");
   const instructions = extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
@@ -1126,7 +1124,6 @@ function buildMagicResponse(rawText, input) {
   if (answers.trim()) {
     fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + answers.trim());
   }
-*/
 
   return {
     title: finalTitle,
@@ -1190,19 +1187,17 @@ function formatMagicResponse(rawText, input) {
   let normalizedQuestions = (questions || "").trim();
   let normalizedAnswers = (answers || "").trim();
 
-  // [[QUESTIONS]] 마커가 누락된 경우에도 최소한 본문은 살림
+  // fallback: 마커가 누락되어도 본문이 완전히 비지 않게 보호
   if (!normalizedQuestions && safeRawText.trim()) {
-    normalizedQuestions = safeRawText
+    const cleaned = safeRawText
       .replace(/\[\[TITLE\]\]/g, "")
       .replace(/\[\[INSTRUCTIONS\]\]/g, "")
       .replace(/\[\[QUESTIONS\]\]/g, "")
       .replace(/\[\[ANSWERS\]\]/g, "")
       .trim();
-  }
 
-  // 질문 수 계산
-  const actualCount =
-    (normalizedQuestions.match(/^\s*(\d+[\.\)]|[A-Z][\.\)]|[가-힣][\.\)])/gm) || []).length;
+    normalizedQuestions = cleaned;
+  }
 
   const contentParts = [
     finalTitle,
@@ -1212,9 +1207,7 @@ function formatMagicResponse(rawText, input) {
 
   const fullParts = [...contentParts];
   if (normalizedAnswers) {
-    fullParts.push(
-      (input.language === "en" ? "Answers\n" : "정답\n") + normalizedAnswers
-    );
+    fullParts.push((input.language === "en" ? "Answers\n" : "정답\n") + normalizedAnswers);
   }
 
   return {
@@ -1223,7 +1216,7 @@ function formatMagicResponse(rawText, input) {
     content: contentParts.join("\n\n"),
     answerSheet: normalizedAnswers,
     fullText: fullParts.join("\n\n"),
-    actualCount
+    actualCount: (normalizedQuestions.match(/^\s*\d+\./gm) || []).length
   };
 }
 
@@ -1493,6 +1486,7 @@ mpState.member,
 function sanitizeEngine(value) {
   const v = sanitizeString(value).toLowerCase();
 
+  if (v === "abc_starter" || v === "abcstarter") return "magic";
   if (v === "mock_exam") return "mocks";
   if (v === "vocab_workbook" || v === "vocab_csat") return "vocab";
 
