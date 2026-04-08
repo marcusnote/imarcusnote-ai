@@ -457,6 +457,15 @@ Preferred item tendencies:
 - clue와 안내는 매우 친절하고 분명해야 한다.
 - 자유 영작보다 안내형 생산 훈련을 우선할 것.
 - 어휘는 기초적이고 학교 친화적이어야 한다.
+- 반드시 문제와 정답을 분리 가능한 구조로 출력할 것.
+
+초등 문법 정확성 특수 규칙:
+- countable noun 복수에는 many / a few를 우선 사용하고, much / a little을 쓰지 말 것.
+- uncountable noun에는 much / a little을 사용하고, many / a few를 쓰지 말 것.
+- much water, much money, a little milk, a few books 같은 자연스러운 조합을 사용할 것.
+- a little books, much candies, a few foods 같은 어색하거나 틀린 표현을 절대 만들지 말 것.
+- 문항 한국어도 초등학생이 이해하기 쉽게 짧고 자연스럽게 쓸 것.
+- 정답 문장은 반드시 초등 교실에서 바로 읽어줄 수 있을 정도로 자연스러워야 한다.
 선호 유형:
 - 조각형 clue 영작
 - 쉬운 재배열형
@@ -812,9 +821,10 @@ Output format:
 11. 웜홀식 함정형 문제지나 모의고사식 독해 시험지로 변질되지 말 것.
 12. 학습자가 직접 쓰고, 배열하고, 변환하고, 완성하게 만드는 방향으로 설계할 것.
 13. 제목, 안내, 문제, 정답 구조를 반드시 유지할 것.
-14. 정답 섹션을 반드시 제공할 것.
-15. 문항 수를 가능한 한 정확히 맞출 것.
-16. 각 문항은 실제 수업에서 자연스럽고 교육적으로 사용 가능해야 한다.
+14. 정답 섹션은 반드시 [[ANSWERS]] 아래에만 작성하고, [[QUESTIONS]] 안에 섞어 넣지 말 것.
+15. 문제 파트에는 정답이나 해설을 절대 포함하지 말 것.
+16. 문항 수를 가능한 한 정확히 맞출 것.
+17. 각 문항은 실제 수업에서 자연스럽고 교육적으로 사용 가능해야 한다.
 
 문항 유형 설계 규칙:
 - 반드시 최소 3가지 유형을 혼합할 것.
@@ -896,9 +906,10 @@ Top-level universal rules:
 12. Do not drift into Mocks-style exam-passage identity.
 13. Make learners write, rearrange, transform, and complete sentences.
 14. Maintain TITLE / INSTRUCTIONS / QUESTIONS / ANSWERS structure.
-15. Always provide an answer section.
-16. Match the requested item count as accurately as possible.
-17. Keep every item classroom-usable and educationally natural.
+15. Put answers only under [[ANSWERS]], never inside [[QUESTIONS]].
+16. Always provide an answer section.
+17. Match the requested item count as accurately as possible.
+18. Keep every item classroom-usable and educationally natural.
 Item design rules:
 - Mix at least 3 item types.
 - Recommended ratio:
@@ -1173,13 +1184,78 @@ function extractSection(rawText, startMarker, endMarker) {
 rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
+function countWorksheetItems(text = "") {
+  const source = String(text || "");
+  const patterns = [
+    /^\s*\d+\./gm,
+    /^\s*\d+\)/gm,
+    /^\s*[A-Z]\./gm,
+    /^\s*[A-Z]\)/gm,
+  ];
+
+  let maxCount = 0;
+  for (const pattern of patterns) {
+    const matches = source.match(pattern) || [];
+    if (matches.length > maxCount) maxCount = matches.length;
+  }
+  return maxCount;
+}
+
+function hasMeaningfulWorksheetBody(text = "") {
+  const compact = String(text || "").replace(/\s+/g, " ").trim();
+  return compact.length >= 80;
+}
+
+function isGenerationSuccessful(formatted, input) {
+  if (!formatted || typeof formatted !== "object") {
+    return { ok: false, reason: "formatted_missing" };
+  }
+
+  const contentOk = hasMeaningfulWorksheetBody(formatted.content);
+  const answerOk = hasMeaningfulWorksheetBody(formatted.answerSheet);
+  const questionsOk = hasMeaningfulWorksheetBody(formatted.questions);
+  const requestedCount = Number(input?.count || 0);
+  const actualCount = Number(formatted.actualCount || 0);
+  const isConcept = ["concept", "concept+training"].includes(input?.intentMode);
+  const isVocabSeries = input?.mode === "vocab-builder" && Number(input?.vocabSeriesEnd || 1) > Number(input?.vocabSeriesStart || 1);
+
+  if (!contentOk) {
+    return { ok: false, reason: "content_too_short" };
+  }
+  if (!answerOk) {
+    return { ok: false, reason: "answer_sheet_missing" };
+  }
+  if (!questionsOk) {
+    return { ok: false, reason: "questions_missing" };
+  }
+  if (requestedCount > 0 && !isConcept && !isVocabSeries) {
+    const minimumAcceptable = Math.max(1, Math.ceil(requestedCount * 0.6));
+    if (actualCount < minimumAcceptable) {
+      return {
+        ok: false,
+        reason: "actual_count_too_low",
+        requestedCount,
+        actualCount,
+        minimumAcceptable,
+      };
+    }
+  }
+
+  return { ok: true };
+}
+
 function formatMagicResponse(rawText, input) {
   const safeRawText = String(rawText || "");
 
-  const title = extractSection(safeRawText, "[[TITLE]]", "[[INSTRUCTIONS]]");
-  const instructions = extractSection(safeRawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
-  const questions = extractSection(safeRawText, "[[QUESTIONS]]", "[[ANSWERS]]");
-  const answers = extractSection(safeRawText, "[[ANSWERS]]", null);
+  let title = extractSection(safeRawText, "[[TITLE]]", "[[INSTRUCTIONS]]");
+  let instructions = extractSection(safeRawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]");
+  let questions = extractSection(safeRawText, "[[QUESTIONS]]", "[[ANSWERS]]");
+  let answers = extractSection(safeRawText, "[[ANSWERS]]", null);
+
+  if (!title) title = extractSection(safeRawText, "[[TITLE]]", "[[안내]]");
+  if (!instructions) instructions = extractSection(safeRawText, "[[안내]]", "[[문항]]");
+  if (!questions) questions = extractSection(safeRawText, "[[문항]]", "[[정답]]");
+  if (!answers) answers = extractSection(safeRawText, "[[정답]]", null);
 
   const finalTitle = (title || "").trim() || buildMagicTitle(input);
 
@@ -1187,16 +1263,40 @@ function formatMagicResponse(rawText, input) {
   let normalizedQuestions = (questions || "").trim();
   let normalizedAnswers = (answers || "").trim();
 
-  // fallback: 마커가 누락되어도 본문이 완전히 비지 않게 보호
   if (!normalizedQuestions && safeRawText.trim()) {
     const cleaned = safeRawText
       .replace(/\[\[TITLE\]\]/g, "")
       .replace(/\[\[INSTRUCTIONS\]\]/g, "")
       .replace(/\[\[QUESTIONS\]\]/g, "")
       .replace(/\[\[ANSWERS\]\]/g, "")
+      .replace(/\[\[안내\]\]/g, "")
+      .replace(/\[\[문항\]\]/g, "")
+      .replace(/\[\[정답\]\]/g, "")
       .trim();
 
     normalizedQuestions = cleaned;
+  }
+
+  const integratedAnswerMarkers = ["\n[[ANSWERS]]", "\n[[정답]]", "\n[정답]", "\n정답", "\nAnswers"];
+  let splitIndex = -1;
+  let splitMarker = "";
+
+  for (const marker of integratedAnswerMarkers) {
+    const idx = normalizedQuestions.indexOf(marker);
+    if (idx !== -1 && (splitIndex === -1 || idx < splitIndex)) {
+      splitIndex = idx;
+      splitMarker = marker;
+    }
+  }
+
+  if (splitIndex !== -1) {
+    if (!normalizedAnswers) {
+      normalizedAnswers = normalizedQuestions
+        .slice(splitIndex + splitMarker.length)
+        .trim()
+        .replace(/^[:：\s-]+/, "");
+    }
+    normalizedQuestions = normalizedQuestions.slice(0, splitIndex).trim();
   }
 
   const contentParts = [
@@ -1213,10 +1313,11 @@ function formatMagicResponse(rawText, input) {
   return {
     title: finalTitle,
     instructions: normalizedInstructions,
+    questions: normalizedQuestions,
     content: contentParts.join("\n\n"),
     answerSheet: normalizedAnswers,
     fullText: fullParts.join("\n\n"),
-    actualCount: (normalizedQuestions.match(/^\s*\d+\./gm) || []).length
+    actualCount: countWorksheetItems(normalizedQuestions)
   };
 }
 
@@ -1483,109 +1584,6 @@ mpState.member,
   };
 }
 
-function sanitizeEngine(value) {
-  const v = sanitizeString(value).toLowerCase();
-
-  if (v === "abc_starter" || v === "abcstarter") return "magic";
-  if (v === "mock_exam") return "mocks";
-  if (v === "vocab_workbook" || v === "vocab_csat") return "vocab";
-
-  if (["wormhole", "magic", "mocks", "vocab"].includes(v)) {
-    return v;
-  }
-
-  return "magic";
-}
-
-function normalizeInput(body = {}) {
-  const userPrompt = sanitizeString(body.userPrompt || body.prompt || "");
-  const mergedText = [
-    userPrompt,
-    sanitizeString(body.topic || ""),
-    sanitizeString(body.mode || ""),
-    sanitizeString(body.level || ""),
-    sanitizeString(body.difficulty || ""),
-    sanitizeString(body.examType || ""),
-    sanitizeString(body.worksheetTitle || ""),
-    sanitizeString(body.engine || ""),
-  ]
-    .filter(Boolean)
-    .join(" ");
-
-  const engine = sanitizeEngine(body.engine);
-
-  const level =
-    ["elementary", "middle", "high"].includes(body.level)
-      ? body.level
-      : inferLevel(mergedText);
-
-  const modeCandidates = [
-    "magic",
-    "magic-card",
-    "writing",
-    "abcstarter",
-    "textbook-grammar",
-    "chapter-grammar",
-    "vocab-builder",
-    "vocab-csat",
-  ];
-  const mode = modeCandidates.includes(body.mode)
-    ? body.mode
-    : inferMode(mergedText);
-
-  const difficulty =
-    ["basic", "standard", "high", "extreme"].includes(body.difficulty)
-      ? body.difficulty
-      : inferDifficulty(mergedText);
-
-  const language =
-    ["ko", "en"].includes(body.language)
-      ? body.language
-      : inferLanguage(mergedText);
-
-  const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
-  const examType = sanitizeString(body.examType || "") || "workbook";
-  const worksheetTitle = sanitizeString(body.worksheetTitle || "");
-  const academyName = sanitizeString(body.academyName || "Imarcusnote");
-  const count = sanitizeCount(body.count);
-  const intentMode = detectMagicIntent(mergedText);
-
-  const effectiveCount =
-    intentMode === "concept"
-      ? 3
-      : intentMode === "concept+training"
-      ? 5
-      : count;
-
-  const gradeLabel = inferGradeLabel(mergedText, level);
-
-  const vocabSeriesStart = clamp(Number(body.vocabSeriesStart || 1), 1, 200);
-  const vocabSeriesEnd = clamp(Number(body.vocabSeriesEnd || 1), 1, 200);
-  const vocabItemsPerRound = clamp(
-    Number(body.vocabItemsPerRound || 20),
-    10,
-    30
-  );
-
-  return {
-    engine,
-    level,
-    mode,
-    topic,
-    examType,
-    difficulty,
-    count: effectiveCount,
-    language,
-    worksheetTitle,
-    academyName,
-    userPrompt,
-    gradeLabel,
-    vocabSeriesStart,
-    vocabSeriesEnd: Math.max(vocabSeriesStart, vocabSeriesEnd),
-    vocabItemsPerRound,
-    intentMode,
-  };
-}
 
 /* =========================
    Main Handler
@@ -1625,6 +1623,35 @@ module.exports = async function handler(req, res) {
 
     const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
     const formatted = formatMagicResponse(rawText, input);
+    const generationCheck = isGenerationSuccessful(formatted, input);
+
+    if (!generationCheck.ok) {
+      return json(res, 502, {
+        success: false,
+        message: "생성 결과 구조가 불완전하여 MP를 차감하지 않았습니다. 다시 시도해주세요.",
+        detail: generationCheck.reason,
+        meta: {
+          language: input.language,
+          requestedCount: input.count,
+          actualCount: formatted.actualCount,
+          generatedAt: new Date().toISOString()
+        },
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: mpState.currentMp,
+        trialGranted: Boolean(mpState.trialGranted),
+        mpSyncEnabled: Boolean(mpState.enabled),
+        mpSyncReason: mpState.reason || "unknown",
+        mp: {
+          requiredMp: mpState.requiredMp,
+          currentMp: mpState.currentMp,
+          remainingMp: mpState.currentMp,
+          deducted: false,
+          trialGranted: Boolean(mpState.trialGranted),
+        }
+      });
+    }
+
     const finalMpState = await deductMpAfterSuccess(mpState);
     return json(res, 200, {
       success: true,
