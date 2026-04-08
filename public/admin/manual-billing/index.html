@@ -124,6 +124,13 @@
       outline:none;
     }
 
+    .mn-input:focus,
+    .mn-select:focus,
+    .mn-textarea:focus{
+      border-color:#cbd5e1;
+      box-shadow:0 0 0 4px rgba(15,23,42,.05);
+    }
+
     .mn-textarea{
       min-height:110px;
       resize:vertical;
@@ -144,9 +151,13 @@
       font-size:14px;
       font-weight:800;
       cursor:pointer;
+      transition:opacity .18s ease, transform .18s ease;
     }
 
-    .mn-btn:hover{ opacity:.95; }
+    .mn-btn:hover{
+      opacity:.95;
+      transform:translateY(-1px);
+    }
 
     .mn-btn-soft{
       background:#fff;
@@ -250,6 +261,7 @@
       border:1px solid var(--line);
       border-radius:16px;
       background:#fff;
+      -webkit-overflow-scrolling:touch;
     }
 
     .mn-billing-table{
@@ -279,6 +291,15 @@
       z-index:1;
     }
 
+    .mn-billing-table tbody tr{
+      cursor:pointer;
+      transition:background .18s ease;
+    }
+
+    .mn-billing-table tbody tr:hover{
+      background:#f8fafc;
+    }
+
     .mn-status-badge{
       display:inline-flex;
       align-items:center;
@@ -295,26 +316,86 @@
       color:var(--muted);
     }
 
+    .mn-helper{
+      margin-top:10px;
+      font-size:12px;
+      color:#64748b;
+      line-height:1.6;
+    }
+
     @media (max-width: 1100px){
       .mn-grid{
         grid-template-columns:1fr;
       }
     }
 
-    @media (max-width: 720px){
-      .mn-shell{
-        padding:16px;
+    @media (max-width: 900px){
+      .mn-admin-head{
+        flex-direction:column;
+        align-items:stretch;
       }
-      .mn-page-title{
-        font-size:32px;
-      }
-      .mn-card h2,
-      .mn-admin-head h2{
-        font-size:26px;
-      }
+
       .mn-row,
       .mn-member-grid{
         grid-template-columns:1fr;
+      }
+
+      .mn-btn{
+        width:100%;
+      }
+
+      .mn-billing-table{
+        min-width:980px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .mn-shell{
+        padding:14px;
+      }
+
+      .mn-page-title{
+        font-size:28px;
+        line-height:1.08;
+      }
+
+      .mn-page-sub{
+        font-size:14px;
+        margin-bottom:18px;
+      }
+
+      .mn-card,
+      .mn-admin-billing-panel{
+        padding:18px;
+        border-radius:18px;
+      }
+
+      .mn-card h2,
+      .mn-admin-head h2{
+        font-size:22px;
+        line-height:1.12;
+      }
+
+      .mn-input,
+      .mn-select,
+      .mn-textarea{
+        padding:13px 14px;
+        font-size:16px;
+      }
+
+      .mn-status-box,
+      .mn-billing-status{
+        font-size:13px;
+      }
+
+      .mn-billing-table th,
+      .mn-billing-table td{
+        padding:12px 10px;
+        font-size:13px;
+      }
+
+      .mn-billing-table{
+        min-width:900px;
       }
     }
   </style>
@@ -417,6 +498,7 @@
           </div>
 
           <div id="mn-billing-status" class="mn-billing-status">Loading requests...</div>
+          <div class="mn-helper">Tip: tap a row to auto-fill the email field and run member lookup.</div>
 
           <div id="mn-billing-table-wrap" class="mn-billing-table-wrap" style="display:none;">
             <table class="mn-billing-table">
@@ -468,6 +550,7 @@
       const billingRefreshBtn = document.getElementById('mn-billing-refresh-btn');
 
       let currentMemberEmail = '';
+      let isLookupRunning = false;
 
       function escapeHtml(value) {
         return String(value == null ? '' : value)
@@ -506,6 +589,8 @@
       }
 
       async function lookupMember() {
+        if (isLookupRunning) return;
+
         const email = memberEmailInput.value.trim();
         const adminKey = adminKeyInput.value.trim();
 
@@ -519,6 +604,8 @@
           return;
         }
 
+        isLookupRunning = true;
+        lookupBtn.disabled = true;
         memberStatus.textContent = 'Looking up member...';
         memberCard.style.display = 'none';
         creditStatus.textContent = 'No update applied yet.';
@@ -553,6 +640,9 @@
         } catch (err) {
           memberStatus.textContent = 'Lookup failed: ' + (err.message || err);
           memberCard.style.display = 'none';
+        } finally {
+          isLookupRunning = false;
+          lookupBtn.disabled = false;
         }
       }
 
@@ -578,6 +668,7 @@
         }
 
         creditStatus.textContent = 'Applying manual update...';
+        applyCreditBtn.disabled = true;
 
         try {
           const res = await fetch('/api/admin/manual-credit', {
@@ -610,6 +701,8 @@
           await lookupMember();
         } catch (err) {
           creditStatus.textContent = 'Update failed: ' + (err.message || err);
+        } finally {
+          applyCreditBtn.disabled = false;
         }
       }
 
@@ -627,6 +720,21 @@
         setText(memberPlanValue, '-');
       }
 
+      function handleBillingRowClick(email) {
+        const safeEmail = String(email || '').trim();
+        if (!safeEmail) return;
+
+        memberEmailInput.value = safeEmail;
+        memberStatus.textContent = 'Email imported from billing request. Running lookup...';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (adminKeyInput.value.trim()) {
+          lookupMember();
+        } else {
+          memberStatus.textContent = 'Email imported from billing request. Enter admin secret, then tap Lookup Member.';
+        }
+      }
+
       function renderBillingRows(rows) {
         if (!Array.isArray(rows) || rows.length === 0) {
           billingStatusEl.textContent = 'No billing requests yet.';
@@ -635,12 +743,13 @@
           return;
         }
 
-        billingTbody.innerHTML = rows.map(function (row) {
+        billingTbody.innerHTML = rows.map(function (row, index) {
+          const email = row.collectedEmail || row.accountEmail || '';
           return `
-            <tr>
+            <tr data-row-index="${index}" data-email="${escapeHtml(email)}">
               <td>${escapeHtml(row.timestamp || '-')}</td>
               <td>${escapeHtml(row.fullName || '-')}</td>
-              <td>${escapeHtml(row.collectedEmail || row.accountEmail || '-')}</td>
+              <td>${escapeHtml(email || '-')}</td>
               <td>${escapeHtml(row.requestedPlan || '-')}</td>
               <td>${escapeHtml(row.paymentMethod || '-')}</td>
               <td>${statusBadge(row.status || 'New')}</td>
@@ -650,6 +759,13 @@
           `;
         }).join('');
 
+        Array.from(billingTbody.querySelectorAll('tr')).forEach(function (rowEl) {
+          rowEl.addEventListener('click', function () {
+            const email = rowEl.getAttribute('data-email') || '';
+            handleBillingRowClick(email);
+          });
+        });
+
         billingStatusEl.textContent = 'Loaded ' + rows.length + ' recent requests.';
         billingTableWrap.style.display = 'block';
       }
@@ -657,6 +773,7 @@
       async function loadBillingRequests() {
         billingStatusEl.textContent = 'Loading requests...';
         billingTableWrap.style.display = 'none';
+        billingRefreshBtn.disabled = true;
 
         try {
           const url =
@@ -676,6 +793,8 @@
         } catch (err) {
           billingStatusEl.textContent = 'Failed to load billing requests: ' + (err.message || err);
           billingTableWrap.style.display = 'none';
+        } finally {
+          billingRefreshBtn.disabled = false;
         }
       }
 
@@ -683,6 +802,20 @@
       applyCreditBtn.addEventListener('click', applyManualCredit);
       resetBtn.addEventListener('click', resetAdminForm);
       billingRefreshBtn.addEventListener('click', loadBillingRequests);
+
+      memberEmailInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          lookupMember();
+        }
+      });
+
+      adminKeyInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          lookupMember();
+        }
+      });
 
       loadBillingRequests();
     })();
