@@ -871,6 +871,8 @@ clue 설계 규칙:
 4. 관사, 전치사, 어순, 의문문 구조를 자연스럽게 맞출 것.
 5. 관계대명사, to부정사, 동명사, 현재완료 등 목표 문법의 핵심이 분명히 드러나야 한다.
 6. 한국어 원문이 어색하면 자연스러운 학습용 문장으로 다듬되, 문법 목표는 유지할 것.
+7. 영어식으로 어색한 직역 표현보다 자연스러운 교육용 기본 결합을 우선할 것. 예: go shopping, play the piano, see a movie, go to the beach.
+8. 최상급 단원에서는 비교급 문장으로 새지 말고, 최상급 구조와 완전한 명사구를 자연스럽게 드러낼 것.
 금지 규칙:
 - 정답 완성문장을 clue로 그대로 제시하지 말 것.
 - 모든 문항을 한 가지 유형으로만 만들지 말 것.
@@ -952,6 +954,8 @@ Grammar accuracy rules:
 4. Keep articles, prepositions, word order, and question structure natural.
 5. Make the target grammar clearly visible in the final answer.
 6. If the source prompt is awkward, smooth it into a natural learning sentence while preserving the target grammar.
+7. Prefer natural classroom collocations such as go shopping, play the piano, see a movie, and go to the beach.
+8. In superlative units, do not drift into comparative answers, and keep full natural noun phrases visible.
 Forbidden:
 - Do not provide the exact final sentence as the clue.
 - Do not make all items the same type.
@@ -1086,6 +1090,11 @@ Quality control:
 - Do not create present perfect + finished past-time conflicts.
 - Do not generate weak copy-the-answer style items.
 - Do not make all ${input.count} items the same pattern.
+- Prefer natural classroom English and common collocations.
+- Prefer go shopping, play the piano, see a movie, and go to the beach over awkward literal phrasing.
+- In superlative units, keep the target structure visibly superlative and avoid drifting into comparative answers unless explicitly requested.
+- In superlative answers, use complete and natural phrases such as "the tallest boy in the class", "the most beautiful city", and "among the people I know."
+- Avoid awkward endings like "the most beneficial I take" or bare endings like "This city is the most beautiful."
 - Make the output feel like premium guided training.
 
 Original request:
@@ -1117,6 +1126,11 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 - 현재완료 + last week 같은 시제 충돌을 만들지 말 것.
 - 답을 거의 그대로 베끼는 약한 문제를 만들지 말 것.
 - ${input.count}문항이 모두 같은 패턴이 되지 않게 할 것.
+- 영어 문장은 실제 교실에서 바로 읽어줄 수 있을 정도로 자연스러워야 할 것.
+- 어색한 직역보다 자연스러운 기본 결합을 우선할 것. 예: go shopping, play the piano, see a movie, go to the beach.
+- 최상급 단원에서는 비교급으로 흐르지 말고 최상급 구조가 정답에 분명히 드러나게 할 것.
+- 최상급 문장은 "the tallest boy in the class", "the most beautiful city", "among the people I know"처럼 완전하고 자연스럽게 작성할 것.
+- "the most beneficial I take", "This city is the most beautiful." 같은 어색한 문장을 만들지 말 것.
 - 결과물은 프리미엄 guided training 워크북처럼 느껴져야 한다.
 
 사용자 원문:
@@ -1199,6 +1213,33 @@ function countWorksheetItems(text = "") {
     if (matches.length > maxCount) maxCount = matches.length;
   }
   return maxCount;
+}
+
+function smoothGeneratedEnglish(text = "", input = {}) {
+  let output = String(text || "");
+  if (!output) return output;
+
+  const replacements = [
+    [/\bdo shopping\b/gi, "go shopping"],
+    [/\blearn piano\b/gi, "learn the piano"],
+    [/\bplay piano\b/gi, "play the piano"],
+    [/\bsee movie\b/gi, "see a movie"],
+    [/\bgo beach\b/gi, "go to the beach"],
+    [/\bamong friends\b/gi, "among his friends"],
+    [/\bamong classmates\b/gi, "among her classmates"],
+  ];
+
+  for (const [pattern, replacement] of replacements) {
+    output = output.replace(pattern, replacement);
+  }
+
+  if (String(input?.topic || "").includes("최상급")) {
+    output = output
+      .replace(/\bmost beneficial I take\b/gi, "most beneficial class I take")
+      .replace(/\bThis city is the most beautiful\.(?!\w)/g, "This is the most beautiful city.");
+  }
+
+  return output;
 }
 
 function hasMeaningfulWorksheetBody(text = "") {
@@ -1298,6 +1339,9 @@ function formatMagicResponse(rawText, input) {
     }
     normalizedQuestions = normalizedQuestions.slice(0, splitIndex).trim();
   }
+
+  normalizedQuestions = smoothGeneratedEnglish(normalizedQuestions, input);
+  normalizedAnswers = smoothGeneratedEnglish(normalizedAnswers, input);
 
   const contentParts = [
     finalTitle,
