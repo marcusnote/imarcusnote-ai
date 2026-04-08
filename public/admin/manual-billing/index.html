@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual Billing Admin</title>
+</head>
+
+<body style="font-family:sans-serif; padding:20px;">
+
+<h2>Manual Billing Admin</h2>
+
+<input id="adminKey" placeholder="Admin Key" style="width:100%;margin-bottom:10px;"><br>
+<input id="email" placeholder="User Email" style="width:100%;margin-bottom:10px;"><br>
+<input id="mp" placeholder="Add MP" style="width:100%;margin-bottom:10px;"><br>
+
+<button onclick="lookup()">회원 조회</button>
+<button onclick="apply()">MP 지급</button>
+
+<pre id="result"></pre>
+
+<script>
+async function lookup() {
+  const res = await fetch('/api/admin/member-lookup', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({
+      email: document.getElementById('email').value,
+      adminKey: document.getElementById('adminKey').value
+    })
+  });
+
+  const data = await res.json();
+  document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+}
+
+async function apply() {
+  const res = await fetch('/api/admin/manual-credit', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({
+      email: document.getElementById('email').value,
+      addMp: document.getElementById('mp').value,
+      adminKey: document.getElementById('adminKey').value
+    })
+  });
+
+  const data = await res.json();
+  document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>
