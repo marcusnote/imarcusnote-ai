@@ -1,144 +1,216 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Admin</title>
+<section id="mn-admin-billing-panel">
+  <div class="mn-admin-head">
+    <div>
+      <div class="mn-admin-kicker">ADMIN</div>
+      <h2>Billing Support Requests</h2>
+      <p>Recent billing, upgrade, and manual payment requests from Google Sheets.</p>
+    </div>
+    <button id="mn-billing-refresh-btn" type="button">Refresh</button>
+  </div>
+
+  <div id="mn-billing-status">Loading requests...</div>
+
+  <div id="mn-billing-table-wrap" style="display:none;">
+    <table class="mn-billing-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Plan</th>
+          <th>Payment</th>
+          <th>Status</th>
+          <th>School</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="mn-billing-tbody"></tbody>
+    </table>
+  </div>
+</section>
 
 <style>
-body {
-  font-family: -apple-system;
-  background: #f5f5f7;
-  padding: 20px;
-}
-
-.card {
-  max-width: 600px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-input {
-  width: 100%;
-  height: 50px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-button {
-  height: 50px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.primary {
-  background: #0071e3;
-  color: white;
-}
-
-.plan {
-  width: 48%;
-  margin-bottom: 10px;
-}
-
-.row {
-  display: flex;
-  gap: 10px;
-}
-
-pre {
-  background: #f2f2f2;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
+  #mn-admin-billing-panel{
+    margin-top:28px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:22px;
+    padding:24px;
+    box-shadow:0 12px 32px rgba(17,24,39,.06);
+  }
+  #mn-admin-billing-panel *{
+    box-sizing:border-box;
+  }
+  #mn-admin-billing-panel .mn-admin-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
+    margin-bottom:18px;
+  }
+  #mn-admin-billing-panel .mn-admin-kicker{
+    font-size:12px;
+    font-weight:800;
+    color:#16a34a;
+    letter-spacing:.08em;
+    margin-bottom:6px;
+  }
+  #mn-admin-billing-panel h2{
+    margin:0 0 8px 0;
+    font-size:28px;
+    line-height:1.1;
+    font-weight:900;
+    color:#111827;
+  }
+  #mn-admin-billing-panel p{
+    margin:0;
+    color:#6b7280;
+    line-height:1.6;
+    font-size:14px;
+  }
+  #mn-billing-refresh-btn{
+    border:none;
+    background:#111827;
+    color:#fff;
+    padding:12px 16px;
+    border-radius:12px;
+    font-weight:800;
+    cursor:pointer;
+    min-width:96px;
+  }
+  #mn-billing-refresh-btn:hover{
+    opacity:.94;
+  }
+  #mn-billing-status{
+    padding:14px 16px;
+    background:#f9fafb;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    color:#4b5563;
+    margin-bottom:16px;
+    font-size:14px;
+    line-height:1.5;
+  }
+  #mn-billing-table-wrap{
+    overflow:auto;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    background:#fff;
+  }
+  .mn-billing-table{
+    width:100%;
+    min-width:1100px;
+    border-collapse:collapse;
+    font-size:14px;
+  }
+  .mn-billing-table th,
+  .mn-billing-table td{
+    padding:14px 12px;
+    border-bottom:1px solid #eef2f7;
+    text-align:left;
+    vertical-align:top;
+    line-height:1.55;
+    color:#111827;
+  }
+  .mn-billing-table thead th{
+    background:#f8fafc;
+    color:#374151;
+    font-size:13px;
+    font-weight:800;
+    position:sticky;
+    top:0;
+    z-index:1;
+  }
+  .mn-status-badge{
+    display:inline-flex;
+    align-items:center;
+    border-radius:999px;
+    padding:6px 10px;
+    font-size:12px;
+    font-weight:800;
+    background:#eef2ff;
+    color:#4338ca;
+    white-space:nowrap;
+  }
 </style>
-</head>
-
-<body>
-
-<div class="card">
-
-<h2>Manual Billing Admin</h2>
-
-<input id="key" placeholder="Admin Key">
-<input id="email" placeholder="User Email">
-<input id="mp" placeholder="Add MP">
-
-<div class="row">
-<button onclick="lookup()">회원 조회</button>
-<button class="primary" onclick="apply()">MP 지급</button>
-</div>
-
-<h3>플랜 변경</h3>
-
-<div class="row">
-<button class="plan" onclick="plan('basic')">Basic</button>
-<button class="plan" onclick="plan('standard')">Standard</button>
-</div>
-
-<div class="row">
-<button class="plan" onclick="plan('premium')">Premium</button>
-<button class="plan" onclick="plan('elite')">Elite</button>
-</div>
-
-<pre id="out"></pre>
-
-</div>
 
 <script>
+(function () {
+  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbySyuIWFWLBrFjlFMV13vQOJBABNo3CGti-a5lOQOSr81AfA5OSJeVRshrU7eDrKUTsbg/exec';
+  const ADMIN_API_KEY = 'MN_ADMIN_2026_SECRET_KEY';
 
-async function request(body){
-  const res = await fetch('/api/admin/manual-credit',{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body: JSON.stringify(body)
-  });
-  return await res.json();
-}
+  const statusEl = document.getElementById('mn-billing-status');
+  const tableWrap = document.getElementById('mn-billing-table-wrap');
+  const tbody = document.getElementById('mn-billing-tbody');
+  const refreshBtn = document.getElementById('mn-billing-refresh-btn');
 
-async function lookup(){
-  const data = await fetch('/api/admin/member-lookup',{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body: JSON.stringify({
-      email: email.value,
-      adminKey: key.value
-    })
-  }).then(r=>r.json());
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
 
-  out.innerText = JSON.stringify(data,null,2);
-}
+  function statusBadge(status) {
+    const safe = escapeHtml(status || 'New');
+    return '<span class="mn-status-badge">' + safe + '</span>';
+  }
 
-async function apply(){
-  if(!confirm('MP 지급하시겠습니까?')) return;
+  function renderRows(rows) {
+    if (!Array.isArray(rows) || rows.length === 0) {
+      statusEl.textContent = 'No billing requests yet.';
+      tableWrap.style.display = 'none';
+      tbody.innerHTML = '';
+      return;
+    }
 
-  const data = await request({
-    email: email.value,
-    addMp: Number(mp.value),
-    adminKey: key.value
-  });
+    tbody.innerHTML = rows.map(function (row) {
+      return `
+        <tr>
+          <td>${escapeHtml(row.timestamp || '-')}</td>
+          <td>${escapeHtml(row.fullName || '-')}</td>
+          <td>${escapeHtml(row.collectedEmail || row.accountEmail || '-')}</td>
+          <td>${escapeHtml(row.requestedPlan || '-')}</td>
+          <td>${escapeHtml(row.paymentMethod || '-')}</td>
+          <td>${statusBadge(row.status || 'New')}</td>
+          <td>${escapeHtml(row.schoolName || '-')}</td>
+          <td>${escapeHtml(row.notes || '-')}</td>
+        </tr>
+      `;
+    }).join('');
 
-  out.innerText = JSON.stringify(data,null,2);
-}
+    statusEl.textContent = 'Loaded ' + rows.length + ' recent requests.';
+    tableWrap.style.display = 'block';
+  }
 
-async function plan(type){
-  if(!confirm(type + ' 플랜 적용할까요?')) return;
+  async function loadBillingRequests() {
+    statusEl.textContent = 'Loading requests...';
+    tableWrap.style.display = 'none';
 
-  const data = await request({
-    email: email.value,
-    setPlan: type,
-    adminKey: key.value
-  });
+    try {
+      const url =
+        WEB_APP_URL +
+        '?action=billingRequests&key=' +
+        encodeURIComponent(ADMIN_API_KEY) +
+        '&t=' + Date.now();
 
-  out.innerText = JSON.stringify(data,null,2);
-}
+      const res = await fetch(url, { method: 'GET' });
+      const data = await res.json();
 
+      if (!data || !data.success) {
+        throw new Error((data && data.error) || 'Failed to load requests');
+      }
+
+      renderRows(data.rows || []);
+    } catch (err) {
+      statusEl.textContent = 'Failed to load billing requests: ' + (err.message || err);
+      tableWrap.style.display = 'none';
+    }
+  }
+
+  refreshBtn.addEventListener('click', loadBillingRequests);
+  loadBillingRequests();
+})();
 </script>
-
-</body>
-</html>
