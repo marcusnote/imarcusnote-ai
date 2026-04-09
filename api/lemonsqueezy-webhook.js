@@ -1,7 +1,7 @@
 // /api/lemonsqueezy-webhook.js
-// Lemon Squeezy webhook → Vercel → Memberstack free plan 부여/제거 + 관리자 이메일 알림
-// 공식 문서 기준 X-Signature 헤더로 HMAC SHA256 검증
-// 기존 로직은 유지하고, 관리자 이메일 알림만 최소 추가한 버전입니다.
+// Lemon Squeezy webhook → Vercel → Memberstack 플랜 반영/다운그레이드 + 관리자 이메일 알림 + Google Sheets 기록
+// X-Signature 헤더로 HMAC SHA256 검증
+// 기존 로직 유지 + 운영자 알림/로그만 추가한 완성본
 
 import crypto from "crypto";
 import { getMemberByEmail } from "../lib/memberstack-admin.js";
@@ -42,11 +42,11 @@ function verifySignature(rawBody, signature) {
 }
 
 function getEventName(req) {
-  return req.headers["x-event-name"] || "";
+  return String(req.headers["x-event-name"] || "");
 }
 
 function getSignature(req) {
-  return req.headers["x-signature"] || "";
+  return String(req.headers["x-signature"] || "");
 }
 
 function extractUsefulFields(payload) {
@@ -85,9 +85,7 @@ function extractUsefulFields(payload) {
 
   const orderId =
     attributes?.order_id ||
-    payload?.meta?.event_name === "order_created"
-      ? data?.id || ""
-      : "";
+    (payload?.meta?.event_name === "order_created" ? data?.id || "" : "");
 
   return {
     variantId: String(variantId || ""),
@@ -97,7 +95,7 @@ function extractUsefulFields(payload) {
     memberId: String(memberId || ""),
     orderId: String(orderId || ""),
     status: String(attributes?.status || "").toLowerCase(),
-    cancelUrl: attributes?.urls?.customer_portal || "",
+    cancelUrl: String(attributes?.urls?.customer_portal || ""),
     productName: String(attributes?.product_name || ""),
     variantName: String(attributes?.variant_name || ""),
   };
@@ -108,7 +106,6 @@ async function resolveMember(payloadFields) {
     const found = await getMemberByEmail(payloadFields.email);
     return normalizeMember(found);
   }
-
   return null;
 }
 
@@ -159,6 +156,66 @@ async function sendAdminEmail({ subject, html, text }) {
   return data;
 }
 
+async function sendToGoogleSheets(rowData) {
+  const url = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+
+  if (!url) {
+    console.warn("GOOGLE_SHEETS_WEBHOOK_URL missing - sheets logging skipped");
+    return { skipped: true, reason: "Missing GOOGLE_SHEETS_WEBHOOK_URL" };
+  }
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(rowData),
+  });
+
+  const text = await response.text().catch(() => "");
+
+  if (!response.ok) {
+    throw new Error(
+      `Google Sheets webhook failed (${response.status}): ${text || "No response body"}`
+    );
+  }
+
+  return { ok: true, text };
+}
+
+function buildLogPayload({
+  stage,
+  eventName,
+  info = {},
+  member = null,
+  planKey = "",
+  action = "",
+  result = null,
+  note = "",
+}) {
+  return {
+    timestamp: new Date().toISOString(),
+    stage: stage || "",
+    eventName: eventName || "",
+    email: info.email || "",
+    productName: info.productName || "",
+    variantName: info.variantName || "",
+    variantId: info.variantId || "",
+    orderId: info.orderId || "",
+    subscriptionId: info.subscriptionId || "",
+    customerId: info.customerId || "",
+    status: info.status || "",
+    memberId: member?.id || "",
+    planKey: planKey || "",
+    action: action || "",
+    mp: result?.remainingMp ?? result?.mp ?? "",
+    mpResetAt: result?.mpResetAt || "",
+    cancelUrl: info.cancelUrl || "",
+    note: note || "",
+    source: "lemonsqueezy-webhook",
+  };
+}
+
 async function notifyAdmin({
   stage,
   eventName,
@@ -169,63 +226,77 @@ async function notifyAdmin({
   result = null,
   note = "",
 }) {
-  const memberId = member?.id || "";
-  const remainingMp = result?.remainingMp ?? result?.mp ?? "";
-  const mpResetAt = result?.mpResetAt || "";
-  const now = new Date().toISOString();
+  const payload = buildLogPayload({
+    stage,
+    eventName,
+    info,
+    member,
+    planKey,
+    action,
+    result,
+    note,
+  });
 
-  const subject = `[Marcusnote][Lemon] ${stage} · ${eventName || "unknown_event"} · ${info.email || "no-email"}`;
+  const subject = `[Marcusnote][Lemon] ${payload.stage} · ${payload.eventName || "unknown_event"} · ${payload.email || "no-email"}`;
 
   const html = `
     <div style="font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#111;">
       <h2 style="margin:0 0 12px;">Marcusnote Lemon Squeezy Alert</h2>
-      <p style="margin:0 0 16px;"><strong>Stage:</strong> ${escapeHtml(stage)}</p>
+      <p style="margin:0 0 16px;"><strong>Stage:</strong> ${escapeHtml(payload.stage)}</p>
       <table style="border-collapse:collapse;width:100%;max-width:720px;">
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Time</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(now)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Event</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(eventName)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Email</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(info.email)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Product</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(info.productName)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Variant</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(info.variantName)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Variant ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(info.variantId)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Order ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(info.orderId)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Subscription ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(info.subscriptionId)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Customer ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(info.customerId)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Status</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(info.status)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Matched Member ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(memberId)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Plan</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(planKey)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Action</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(action)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>MP to check</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(remainingMp)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>MP reset at</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(mpResetAt)}</td></tr>
-        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Note</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(note)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Time</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.timestamp)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Event</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.eventName)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Email</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.email)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Product</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.productName)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Variant</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.variantName)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Variant ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.variantId)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Order ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.orderId)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Subscription ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.subscriptionId)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Customer ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.customerId)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Status</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.status)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Matched Member ID</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.memberId)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Plan</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.planKey)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Action</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.action)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>MP to check</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.mp)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>MP reset at</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.mpResetAt)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Cancel URL</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.cancelUrl)}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;"><strong>Note</strong></td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(payload.note)}</td></tr>
       </table>
     </div>
   `.trim();
 
   const text = [
     "Marcusnote Lemon Squeezy Alert",
-    `Stage: ${stage}`,
-    `Time: ${now}`,
-    `Event: ${eventName}`,
-    `Email: ${info.email || ""}`,
-    `Product: ${info.productName || ""}`,
-    `Variant: ${info.variantName || ""}`,
-    `Variant ID: ${info.variantId || ""}`,
-    `Order ID: ${info.orderId || ""}`,
-    `Subscription ID: ${info.subscriptionId || ""}`,
-    `Customer ID: ${info.customerId || ""}`,
-    `Status: ${info.status || ""}`,
-    `Matched Member ID: ${memberId}`,
-    `Plan: ${planKey || ""}`,
-    `Action: ${action || ""}`,
-    `MP to check: ${remainingMp}`,
-    `MP reset at: ${mpResetAt}`,
-    `Note: ${note || ""}`,
+    `Stage: ${payload.stage}`,
+    `Time: ${payload.timestamp}`,
+    `Event: ${payload.eventName}`,
+    `Email: ${payload.email}`,
+    `Product: ${payload.productName}`,
+    `Variant: ${payload.variantName}`,
+    `Variant ID: ${payload.variantId}`,
+    `Order ID: ${payload.orderId}`,
+    `Subscription ID: ${payload.subscriptionId}`,
+    `Customer ID: ${payload.customerId}`,
+    `Status: ${payload.status}`,
+    `Matched Member ID: ${payload.memberId}`,
+    `Plan: ${payload.planKey}`,
+    `Action: ${payload.action}`,
+    `MP to check: ${payload.mp}`,
+    `MP reset at: ${payload.mpResetAt}`,
+    `Cancel URL: ${payload.cancelUrl}`,
+    `Note: ${payload.note}`,
   ].join("\n");
 
   try {
     await sendAdminEmail({ subject, html, text });
   } catch (emailError) {
     console.error("Admin email send failed:", emailError?.message || emailError);
+  }
+
+  try {
+    await sendToGoogleSheets(payload);
+  } catch (sheetsError) {
+    console.error("Google Sheets send failed:", sheetsError?.message || sheetsError);
   }
 }
 
@@ -260,7 +331,6 @@ export default async function handler(req, res) {
     eventName = getEventName(req);
     info = extractUsefulFields(payload);
     const plan = getPlanByVariantId(info.variantId);
-
     const member = await resolveMember(info);
 
     if (!member?.id) {
@@ -280,7 +350,6 @@ export default async function handler(req, res) {
       });
     }
 
-    // 신규/갱신/재개 → 유료 플랜 부여 + 현재 기존 MP 지급 로직 유지
     if (
       eventName === "order_created" ||
       eventName === "subscription_created" ||
@@ -332,7 +401,6 @@ export default async function handler(req, res) {
       });
     }
 
-    // 취소/만료/실패 → associate 로 다운그레이드
     if (
       eventName === "subscription_cancelled" ||
       eventName === "subscription_expired" ||
@@ -362,7 +430,6 @@ export default async function handler(req, res) {
       });
     }
 
-    // 환불 정책은 운영 판단에 따라 조정 가능
     if (eventName === "order_refunded") {
       const result = await downgradeToAssociate(member.id);
 
