@@ -157,7 +157,7 @@ async function sendAdminEmail({ subject, html, text }) {
 }
 
 async function sendToGoogleSheets(rowData) {
-  const url = process.env.GOOGLE_SHEETS_WEBHOOK_URL;"https://script.google.com/macros/s/AKfycbx-8svjk-v4dSnx00uJHQfpfDBrZyoQEAX1GZks8Odz6gycA9v-5kw1u7PaYISLEq_F/exec";
+  const url = "https://script.google.com/macros/s/AKfycbx-8svjk-v4dSnx00uJHQfpfDBrZyoQEAX1GZks8Odz6gycA9v-5kw1u7PaYISLEq_F/exec";
 
   if (!url) {
     console.warn("GOOGLE_SHEETS_WEBHOOK_URL missing - sheets logging skipped");
