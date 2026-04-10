@@ -4,13 +4,14 @@ export default async function handler(req, res) {
   const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
   const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
   const DEFAULT_TRIAL_MP = 15;
-  const PLAN_VERIFY_RETRY_COUNT = 5;
-  const PLAN_VERIFY_RETRY_DELAY = 1200;
 
   const ASSOCIATE_PLAN_ID =
     process.env.MEMBERSTACK_PLAN_ID_ASSOCIATE ||
     process.env.MEMBERSTACK_ASSOCIATE_PLAN_ID ||
     "";
+
+  const PLAN_VERIFY_RETRY_COUNT = 5;
+  const PLAN_VERIFY_DELAY_MS = 900;
 
   function addCors() {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -86,6 +87,7 @@ export default async function handler(req, res) {
       req.body?.memberId ||
         req.headers["x-member-id"] ||
         req.headers["X-Member-Id"] ||
+        req.query?.memberId ||
         ""
     );
   }
@@ -159,6 +161,7 @@ export default async function handler(req, res) {
         : sanitizeMp(nextState.mp, 0);
 
     const safeCurrentPlan = sanitizeString(nextState.currentPlan).toLowerCase();
+
     const currentCustomFields =
       member?.customFields && typeof member.customFields === "object"
         ? member.customFields
@@ -229,17 +232,18 @@ export default async function handler(req, res) {
     return true;
   }
 
-  async function verifyPlanApplied(memberId, planId) {
-    for (let attempt = 1; attempt <= PLAN_VERIFY_RETRY_COUNT; attempt += 1) {
-      const refreshed = await getMemberById(memberId);
-      if (refreshed && memberHasPlan(refreshed, planId)) {
-        return refreshed;
+  async function waitForPlan(memberId, planId) {
+    let latestMember = null;
+
+    for (let i = 0; i < PLAN_VERIFY_RETRY_COUNT; i += 1) {
+      latestMember = await getMemberById(memberId);
+      if (memberHasPlan(latestMember, planId)) {
+        return latestMember;
       }
-      if (attempt < PLAN_VERIFY_RETRY_COUNT) {
-        await sleep(PLAN_VERIFY_RETRY_DELAY);
-      }
+      await sleep(PLAN_VERIFY_DELAY_MS);
     }
-    return null;
+
+    return latestMember;
   }
 
   function extractPlanName(member) {
@@ -289,10 +293,31 @@ export default async function handler(req, res) {
       return res.status(200).end();
     }
 
+    if (req.method === "GET") {
+      const explicitMemberId = extractMemberId(req);
+      const bearerToken = extractBearerToken(req);
+
+      if (!explicitMemberId && !bearerToken) {
+        return res.status(200).json({
+          success: true,
+          route: "member-bootstrap",
+          healthy: true,
+          message: "member-bootstrap is alive",
+          requiresAuthForBootstrap: true,
+          associatePlanConfigured: !!ASSOCIATE_PLAN_ID,
+          hasSecretKey: !!MEMBERSTACK_SECRET_KEY,
+          appIdConfigured: !!MEMBERSTACK_APP_ID,
+          mpField: MEMBERSTACK_MP_FIELD,
+          defaultTrialMp: DEFAULT_TRIAL_MP,
+        });
+      }
+    }
+
     if (req.method !== "GET" && req.method !== "POST") {
-      return res
-        .status(405)
-        .json({ success: false, error: "Method not allowed" });
+      return res.status(405).json({
+        success: false,
+        error: "method-not-allowed",
+      });
     }
 
     const bearerToken = extractBearerToken(req);
@@ -344,20 +369,23 @@ export default async function handler(req, res) {
           currentPlan,
         })) || member;
 
+      const finalMpPaid = readMpFromMember(member) ?? currentMp;
+      const finalPlanPaid = extractPlanName(member);
+
       return res.status(200).json({
         success: true,
         memberId: member.id,
         email: member.email || "",
-        mp: readMpFromMember(member) ?? currentMp,
-        remaining_mp: readMpFromMember(member) ?? currentMp,
-        plan: extractPlanName(member),
-        current_plan: extractPlanName(member),
+        mp: finalMpPaid,
+        remaining_mp: finalMpPaid,
+        plan: finalPlanPaid,
+        current_plan: finalPlanPaid,
         initialized: false,
         associatePlanAssigned: false,
         associatePlanAlreadyPresent: false,
         associatePlanSkipped: true,
         associatePlanConfigured: !!ASSOCIATE_PLAN_ID,
-        paidPlanProtected,
+        paidPlanProtected: true,
       });
     }
 
@@ -373,13 +401,14 @@ export default async function handler(req, res) {
       if (!associatePlanAlreadyPresent) {
         await addFreePlanToMember(member.id, ASSOCIATE_PLAN_ID);
 
-        const updatedMember = await verifyPlanApplied(member.id, ASSOCIATE_PLAN_ID);
+        const updatedMember = (await waitForPlan(member.id, ASSOCIATE_PLAN_ID)) || member;
+        const hasPlanNow = memberHasPlan(updatedMember, ASSOCIATE_PLAN_ID);
 
-        if (!updatedMember) {
+        if (!hasPlanNow) {
           return res.status(500).json({
             success: false,
             error: "associate-plan-not-applied",
-            message: "Associate plan assignment failed after retries",
+            message: "Associate plan assignment failed",
             memberId: member.id,
             associatePlanConfigured: !!ASSOCIATE_PLAN_ID,
           });
