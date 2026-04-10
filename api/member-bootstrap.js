@@ -4,8 +4,9 @@ export default async function handler(req, res) {
   const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
   const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
   const DEFAULT_TRIAL_MP = 15;
+  const PLAN_VERIFY_RETRY_COUNT = 5;
+  const PLAN_VERIFY_RETRY_DELAY = 1200;
 
-  // 둘 다 지원
   const ASSOCIATE_PLAN_ID =
     process.env.MEMBERSTACK_PLAN_ID_ASSOCIATE ||
     process.env.MEMBERSTACK_ASSOCIATE_PLAN_ID ||
@@ -28,6 +29,10 @@ export default async function handler(req, res) {
     const n = Number(value);
     if (!Number.isFinite(n)) return fallback;
     return Math.max(0, Math.floor(n));
+  }
+
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   function getHeaders() {
@@ -224,6 +229,19 @@ export default async function handler(req, res) {
     return true;
   }
 
+  async function verifyPlanApplied(memberId, planId) {
+    for (let attempt = 1; attempt <= PLAN_VERIFY_RETRY_COUNT; attempt += 1) {
+      const refreshed = await getMemberById(memberId);
+      if (refreshed && memberHasPlan(refreshed, planId)) {
+        return refreshed;
+      }
+      if (attempt < PLAN_VERIFY_RETRY_COUNT) {
+        await sleep(PLAN_VERIFY_RETRY_DELAY);
+      }
+    }
+    return null;
+  }
+
   function extractPlanName(member) {
     const connections = Array.isArray(member?.planConnections)
       ? member.planConnections
@@ -313,7 +331,6 @@ export default async function handler(req, res) {
     let associatePlanSkipped = false;
     let paidPlanProtected = false;
 
-    // 유료 플랜 회원은 associate 자동 부여 금지
     if (isPaidPlan(currentPlan)) {
       paidPlanProtected = true;
 
@@ -344,28 +361,25 @@ export default async function handler(req, res) {
       });
     }
 
-    // 1) MP 최초 지급
     if (currentMp === null) {
       currentMp = DEFAULT_TRIAL_MP;
       member = (await updateMemberState(member, { mp: currentMp })) || member;
       initialized = true;
     }
 
-    // 2) Associate 무료 플랜 자동 부여 + 실제 반영 검증
     if (ASSOCIATE_PLAN_ID) {
       associatePlanAlreadyPresent = memberHasPlan(member, ASSOCIATE_PLAN_ID);
 
       if (!associatePlanAlreadyPresent) {
         await addFreePlanToMember(member.id, ASSOCIATE_PLAN_ID);
 
-        const updatedMember = (await getMemberById(member.id)) || member;
-        const hasPlanNow = memberHasPlan(updatedMember, ASSOCIATE_PLAN_ID);
+        const updatedMember = await verifyPlanApplied(member.id, ASSOCIATE_PLAN_ID);
 
-        if (!hasPlanNow) {
+        if (!updatedMember) {
           return res.status(500).json({
             success: false,
             error: "associate-plan-not-applied",
-            message: "Associate plan assignment failed",
+            message: "Associate plan assignment failed after retries",
             memberId: member.id,
             associatePlanConfigured: !!ASSOCIATE_PLAN_ID,
           });
@@ -382,7 +396,6 @@ export default async function handler(req, res) {
       associatePlanSkipped = true;
     }
 
-    // 3) current_plan / remaining_mp / mp 동기화
     currentPlan = extractPlanName(member);
     currentMp = readMpFromMember(member);
     if (currentMp === null) currentMp = DEFAULT_TRIAL_MP;
