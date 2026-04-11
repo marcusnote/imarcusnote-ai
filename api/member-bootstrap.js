@@ -1,3 +1,10 @@
+import {
+  settleExpiredMonthlyMp,
+  readCarryoverMp,
+  readMonthlyMp,
+  readMpResetAt,
+} from "../lib/mp.js";
+
 export default async function handler(req, res) {
   const MEMBERSTACK_SECRET_KEY = process.env.MEMBERSTACK_SECRET_KEY;
   const MEMBERSTACK_APP_ID = process.env.MEMBERSTACK_APP_ID || "";
@@ -359,6 +366,11 @@ export default async function handler(req, res) {
     if (isPaidPlan(currentPlan)) {
       paidPlanProtected = true;
 
+      member = (await settleExpiredMonthlyMp(member.id, member)) || member;
+
+      currentPlan = extractPlanName(member);
+      currentMp = readMpFromMember(member);
+
       if (currentMp === null) {
         currentMp = 0;
       }
@@ -371,6 +383,14 @@ export default async function handler(req, res) {
 
       const finalMpPaid = readMpFromMember(member) ?? currentMp;
       const finalPlanPaid = extractPlanName(member);
+      const finalMonthlyMp =
+        sanitizeMp(
+          member?.customFields?.monthly_mp ??
+            member?.metaData?.monthly_mp,
+          0
+        ) || readMonthlyMp(member);
+      const finalCarryoverMp = readCarryoverMp(member);
+      const finalResetAt = readMpResetAt(member);
 
       return res.status(200).json({
         success: true,
@@ -378,6 +398,9 @@ export default async function handler(req, res) {
         email: member.email || "",
         mp: finalMpPaid,
         remaining_mp: finalMpPaid,
+        monthly_mp: finalMonthlyMp,
+        carryover_mp: finalCarryoverMp,
+        mp_reset_at: finalResetAt,
         plan: finalPlanPaid,
         current_plan: finalPlanPaid,
         initialized: false,
@@ -401,7 +424,8 @@ export default async function handler(req, res) {
       if (!associatePlanAlreadyPresent) {
         await addFreePlanToMember(member.id, ASSOCIATE_PLAN_ID);
 
-        const updatedMember = (await waitForPlan(member.id, ASSOCIATE_PLAN_ID)) || member;
+        const updatedMember =
+          (await waitForPlan(member.id, ASSOCIATE_PLAN_ID)) || member;
         const hasPlanNow = memberHasPlan(updatedMember, ASSOCIATE_PLAN_ID);
 
         if (!hasPlanNow) {
