@@ -239,7 +239,7 @@ function normalizeInput(body = {}) {
 
 /* =========================
    Mocks Prompt Rebuild
-   Step 3: Objective-format lock
+   Step 3 Soft Lock
    ========================= */
 
 function getMocksModeLabel(mode = "hybrid", language = "ko") {
@@ -294,25 +294,24 @@ You create premium Korean English reading worksheets for school exams and CSAT-s
 - Difficulty: ${input.difficulty}
 - Generation Profile: ${input.generationProfile}
 - Source Passage Included By User: ${input.hasSourcePassage ? "YES" : "NO"}
-- Required Choice Count Per Item: ${choiceCount}
+- Preferred Choice Count Per Item: ${choiceCount}
 
 [CORE IDENTITY]
-Mocks is a passage-transformation multiple-choice exam engine.
+Mocks is a passage-transformation reading exam engine.
 Mocks is NOT a grammar worksheet.
 Mocks is NOT a short-answer worksheet.
-Mocks is NOT a comprehension Q&A sheet.
-Mocks must look like a real Korean test handout.
+Mocks should strongly prefer objective multiple-choice format.
+Mocks must feel like a real Korean test handout.
 
-[ABSOLUTE FORMAT LAW]
-Every question MUST be objective multiple-choice.
-Every question MUST include exactly ${choiceCount} answer choices.
-Do NOT write open-ended questions.
-Do NOT ask students to explain, describe, or provide examples in free response.
-Do NOT output any item without numbered options.
-Do NOT output essay-type prompts.
+[SOFT FORMAT LAW]
+Strongly prefer objective multiple-choice questions.
+Strongly prefer exactly ${choiceCount} options for each question.
+Use Korean option markers whenever possible: ① ② ③ ④ ${choiceCount === 5 ? "⑤" : ""}
+Avoid short-answer questions, essay prompts, and free-response explanations in the question section.
+However, if exact formatting is slightly imperfect, still produce the best possible exam output instead of collapsing into a descriptive worksheet.
 
 [PRIMARY MISSION]
-Generate a polished, premium, publishable transformed worksheet that feels like it was edited by a veteran Korean exam editor.
+Generate a polished, premium, publishable worksheet that feels like it was edited by a veteran Korean exam editor.
 
 [HARD RULE 1: SOURCE-BOUND GENERATION]
 If the user included a real source passage:
@@ -330,7 +329,7 @@ If the user did NOT include a real source passage:
 - Generate a coherent advanced reading drill set based on the requested topic, exam context, and level.
 
 [HARD RULE 2: TRANSFORMATION QUALITY]
-When a passage exists, transformation must involve several of the following:
+When a passage exists, transformation should involve several of the following:
 - sentence restructuring
 - viewpoint shift
 - syntactic compression or expansion
@@ -348,7 +347,7 @@ Transformation must NOT be:
 [HARD RULE 3: ITEM VALIDITY]
 Only create question types that are valid for the material actually shown.
 
-If a transformed passage is shown, allowed item families include:
+If a transformed passage is shown, preferred item families include:
 - main idea / theme / title
 - gist / summary
 - inference / implication
@@ -377,28 +376,14 @@ If no full passage is shown, avoid or severely restrict:
 - irrelevant sentence
 - passage-dependent blank inference
 
-[HARD RULE 4: OBJECTIVE ITEM SHAPE]
-Each item must look like this:
-1. question stem
-① option one
-② option two
-③ option three
-④ option four
-${choiceCount === 5 ? "⑤ option five" : ""}
-
-Use Korean numeric option markers exactly as shown above.
-Do not omit options.
-Do not merge multiple items into one.
-Do not output answer letters inside the question section.
-
-[HARD RULE 5: ANTI-DRIFT]
+[HARD RULE 4: ANTI-DRIFT]
 Never output a set that could fit any random topic.
 The result must reflect the user's actual requested source, topic, exam label, or title.
 Avoid repetitive abstract distractors like:
 education / society / growth / technology / sustainability
 unless those are truly central to the user’s source.
 
-[HARD RULE 6: PREMIUM EXAM QUALITY]
+[HARD RULE 5: PREMIUM EXAM QUALITY]
 - strong distractors
 - no trivial answer elimination
 - no repetitive stems
@@ -421,26 +406,23 @@ You MUST output in exactly this structure:
 (include only when a real source passage exists and passage-based transformation is required)
 
 [[QUESTIONS]]
-(all questions only, fully numbered, every item objective multiple-choice)
+(all questions only, fully numbered)
 
 [[ANSWERS]]
 (answer key and brief explanation for each item)
 
-[ANSWER SHEET RULE]
-Every answer line must begin exactly like:
+[ANSWER SHEET PREFERENCE]
+Prefer answer lines like:
 1) ② - brief explanation
 2) ④ - brief explanation
 3) ① - brief explanation
 
-The answer section must use only option numbers, not free-response answers.
+If the model struggles, still keep answers concise and objective-oriented.
 
 [FINAL INTERNAL CHECK]
 Before answering, verify:
-- every question is multiple-choice
-- every question has exactly ${choiceCount} options
 - if source passage exists, PASSAGE section exists
 - if source passage does not exist, no fake passage instruction appears
-- all item types are valid for the displayed material
 - question count matches exactly
 - answer count matches exactly
 - the worksheet feels premium and publishable
@@ -479,7 +461,7 @@ You must:
 1. Create one transformed passage.
 2. Preserve the original meaning domain and logical core.
 3. Rewrite the surface substantially.
-4. Build objective multiple-choice questions that depend on the transformed passage.
+4. Build exam-style questions that depend on the transformed passage.
 5. Make the set feel like a real 변형모의고사.
 
 Recommended item mix:
@@ -498,8 +480,6 @@ Important:
 - Do not merely restate the original passage.
 - Do not drift into generic unrelated content.
 - The transformed passage and items must clearly belong together.
-- Every item must be objective multiple-choice.
-- Never ask students to write short answers.
 `.trim()
     : `
 [TOPIC-BASED DRILL MODE]
@@ -509,7 +489,7 @@ You must:
 1. Generate an advanced reading drill set based on the topic/request.
 2. Do NOT fake a hidden passage.
 3. Do NOT say "다음 지문을 읽고" unless an actual passage is shown.
-4. Prefer self-contained objective multiple-choice items.
+4. Prefer self-contained exam-style items.
 
 Recommended item mix:
 - 주제 / 요지 / 제목
@@ -525,7 +505,6 @@ Avoid unless fully self-contained:
 - 글의 순서
 - 무관문
 - passage-dependent 빈칸추론
-- short-answer explanation prompts
 `.trim();
 
   return `
@@ -540,7 +519,7 @@ Generate a complete MARCUSNOTE Mocks worksheet.
 - Question Count: ${input.count}
 - Language: ${input.language}
 - Generation Profile: ${input.generationProfile}
-- Required Choice Count: ${choiceCount}
+- Preferred Choice Count: ${choiceCount}
 
 [USER REQUEST]
 ${input.userPrompt || input.topic || "고난도 변형문제를 만들어라."}
@@ -552,18 +531,18 @@ ${languageGuide}
 
 ${profileGuide}
 
-[STRICT FORMAT RULES]
-1. Every question must be objective multiple-choice.
-2. Every question must include exactly ${choiceCount} options.
-3. Use Korean option markers: ① ② ③ ④ ${choiceCount === 5 ? "⑤" : ""}
-4. Do not create short-answer, essay, or explanation prompts in the question section.
-5. The answer sheet must use option numbers only.
-6. Each answer line must follow this format: 1) ② - explanation
-7. Do not put free-response model answers in the answer sheet.
+[CRITICAL FORMAT LOCK - SOFT]
+- Prefer multiple-choice format strongly.
+- Try to ensure each question has exactly ${choiceCount} options.
+- Avoid short-answer questions.
+- Avoid essay prompts.
+- Prefer answer lines with option numbers.
+- Keep the output exam-like, even if exact formatting is slightly imperfect.
+- Do NOT collapse into a descriptive worksheet.
 
 [STRICT QUALITY RULES]
 1. Every question must be test-valid.
-2. Every distractor must be plausible.
+2. Every distractor should be plausible when options are used.
 3. Avoid repetitive stems and repetitive answer logic.
 4. Keep the overall set coherent.
 5. Do not use broad generic filler content.
@@ -583,28 +562,13 @@ ${input.hasSourcePassage ? `[[PASSAGE]]
 (Provide one transformed passage only.)` : ""}
 
 [[QUESTIONS]]
-1. question stem
-① option one
-② option two
-③ option three
-④ option four
-${choiceCount === 5 ? "⑤ option five" : ""}
-
-2. question stem
-① option one
-② option two
-③ option three
-④ option four
-${choiceCount === 5 ? "⑤ option five" : ""}
+(Write fully numbered exam-style questions. Prefer objective multiple-choice format.)
 
 [[ANSWERS]]
-1) ② - brief explanation
-2) ④ - brief explanation
+(Write concise answer key and brief explanation.)
 
 [FINAL SELF-CHECK]
 Before finishing, verify:
-- every item is multiple-choice
-- every item has exactly ${choiceCount} options
 - question count is exactly ${input.count}
 - numbering is sequential
 - answer count matches question count
@@ -628,7 +592,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
     },
     body: JSON.stringify({
       model: OPENAI_MODEL,
-      temperature: 0.35,
+      temperature: 0.4,
       max_tokens: 8000,
       messages: [
         { role: "system", content: systemPrompt },
@@ -776,7 +740,7 @@ function addCors(res) {
 
 /* =========================
    Output Validation Helpers
-   Step 3: objective-format validation
+   Step 3 Soft Lock: warn only
    ========================= */
 
 function hasFakePassageInstruction(text = "") {
@@ -832,6 +796,7 @@ function answerSheetUsesOptionNumbersOnly(text = "") {
 
 function validateMocksOutput(formatted, input) {
   const errors = [];
+  const warnings = [];
   const choiceCount = input.level === "elementary" ? 4 : 5;
 
   if (formatted.actualCount !== input.count) {
@@ -852,26 +817,27 @@ function validateMocksOutput(formatted, input) {
       errors.push("FAKE_PASSAGE_INSTRUCTION");
     }
     if (containsPassageDependentItems(formatted.content)) {
-      errors.push("INVALID_PASSAGE_DEPENDENT_ITEMS_WITHOUT_PASSAGE");
+      warnings.push("PASSAGE_DEPENDENT_ITEMS_WITHOUT_PASSAGE");
     }
   }
 
   const objectiveCount = countObjectiveItems(formatted.content);
   if (objectiveCount !== input.count) {
-    errors.push(`NON_OBJECTIVE_ITEMS_DETECTED:${objectiveCount}/${input.count}`);
+    warnings.push(`NON_OBJECTIVE_ITEMS_DETECTED:${objectiveCount}/${input.count}`);
   }
 
   if (!allItemsHaveExactChoices(formatted.content, choiceCount)) {
-    errors.push(`INVALID_CHOICE_STRUCTURE:${choiceCount}`);
+    warnings.push(`INVALID_CHOICE_STRUCTURE:${choiceCount}`);
   }
 
   if (!answerSheetUsesOptionNumbersOnly(formatted.answerSheet)) {
-    errors.push("ANSWER_SHEET_NOT_OBJECTIVE");
+    warnings.push("ANSWER_SHEET_NOT_OBJECTIVE");
   }
 
   return {
     ok: errors.length === 0,
     errors,
+    warnings,
   };
 }
 
@@ -1040,9 +1006,15 @@ export default async function handler(req, res) {
     const rawText = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatMocksResponse(rawText, input);
     const validation = validateMocksOutput(formatted, input);
+
     if (!validation.ok) {
       throw new Error(`MOCKS_OUTPUT_VALIDATION_FAILED: ${validation.errors.join(", ")}`);
     }
+
+    if (validation.warnings.length) {
+      console.warn("MOCKS_OUTPUT_VALIDATION_WARNING:", validation.warnings.join(", "));
+    }
+
     const meta = buildMeta(input, formatted.actualCount);
     const finalMpState = await deductMpAfterSuccess(mpState);
 
@@ -1050,6 +1022,9 @@ export default async function handler(req, res) {
       success: true,
       ...formatted,
       meta,
+      validation: {
+        warnings: validation.warnings,
+      },
       mp: {
         requiredMp: mpState.requiredMp,
         currentMp: mpState.currentMp,
