@@ -149,9 +149,7 @@ function inferGradeLabel(text = "", level = "high") {
 }
 
 /* =========================
-   Step 1: Source Detection Helpers (신규 추가)
-   - 아직 기존 동작을 바꾸지 않는 안전한 준비 단계
-   - 이후 단계에서 prompt / validation에 연결 예정
+   Source Detection Helpers
    ========================= */
 
 function detectSourcePassage(text = "") {
@@ -165,7 +163,6 @@ function detectSourcePassage(text = "") {
     (normalized.match(/[.!?]/g) || []).length +
     (normalized.match(/다\./g) || []).length;
 
-  // 지문으로 판단할 가능성이 높은 조건
   if (wordCount >= 80) return true;
   if (lineCount >= 5 && wordCount >= 50) return true;
   if (sentenceCount >= 5 && wordCount >= 60) return true;
@@ -241,7 +238,8 @@ function normalizeInput(body = {}) {
 }
 
 /* =========================
-   Mocks Prompt Rebuild (교체된 섹션)
+   Mocks Prompt Rebuild
+   Step 2: Prompt Lock + Passage-aware Output
    ========================= */
 
 function getMocksModeLabel(mode = "hybrid", language = "ko") {
@@ -283,89 +281,119 @@ function buildSystemPrompt(input) {
   const title = buildMocksTitle(input);
 
   return `
-You are the chief exam-editor of MARCUSNOTE, a premium English assessment brand.
+You are the chief assessment architect and senior exam editor of MARCUSNOTE.
 
-Your task is to generate a polished, high-difficulty transformed worksheet for the Mocks engine.
+You create premium Korean English reading worksheets for school exams and CSAT-style preparation.
 
 [ENGINE IDENTITY]
 - Engine: Mocks
-- Mode: ${modeLabel}
-- Difficulty: ${input.difficulty}
-- Level: ${input.level}
 - Title: ${title}
+- Mode: ${modeLabel}
+- Level: ${input.level}
+- Difficulty: ${input.difficulty}
+- Generation Profile: ${input.generationProfile}
+- Source Passage Included By User: ${input.hasSourcePassage ? "YES" : "NO"}
 
-[NON-NEGOTIABLE IDENTITY]
-Mocks is NOT a grammar workbook.
-Mocks is NOT a simple summary worksheet.
-Mocks is a premium passage-transformation exam engine for advanced Korean learners.
+[CORE IDENTITY]
+Mocks is a passage-transformation reading exam engine.
+Mocks is NOT a grammar worksheet.
+Mocks is NOT a generic topic question generator.
+Mocks is NOT a shallow summary quiz.
 
-[PRIMARY GOAL]
-Create a high-quality transformed exam set based on the user's source passage or topic.
-The result must feel editorially designed, test-oriented, and suitable for school / mock-exam preparation.
+[PRIMARY MISSION]
+Generate a polished, premium, publishable worksheet that feels like it was edited by a veteran Korean exam editor.
 
-[CRITICAL TRANSFORMATION POLICY]
-1. DO NOT copy the source passage verbatim in large chunks.
-2. DO NOT simply repackage the original sentences with superficial word swaps.
-3. You MUST transform, reconstruct, compress, expand, reorder, and reframe the ideas.
-4. Maintain the core meaning domain, but alter sentence surfaces substantially.
-5. Prefer newly written transformed sentences rather than patched originals.
-6. Wrong choices must be plausible, academic, and non-trivial.
+[HARD RULE 1: SOURCE-BOUND GENERATION]
+If the user included a real source passage:
+- You MUST generate a transformed reading set anchored to that passage.
+- You MUST include a transformed passage block in the output.
+- The passage must preserve the original meaning domain, logic, and concept structure.
+- The passage surface must be substantially rewritten.
+- Do NOT copy the original passage verbatim in long chunks.
+- Do NOT drift into unrelated broad themes.
 
-[QUESTION DESIGN PRIORITY]
-Prioritize these advanced item families:
-- synonym / antonym / paraphrase
-- transformed title / transformed theme / transformed main idea
-- implication / inference / author's intention
-- sentence insertion / order / blank inference when appropriate
-- meaning distinction based on transformed context
-- logical consistency / inconsistency
+If the user did NOT include a real source passage:
+- Do NOT pretend there was a passage.
+- Do NOT generate fake “read the passage” instructions.
+- Do NOT create insertion / order / blank / irrelevant-sentence items that require an actual passage unless you explicitly provide the necessary mini-text inside the item.
+- Generate a coherent advanced reading drill set based on the requested topic, exam context, and level.
+
+[HARD RULE 2: TRANSFORMATION QUALITY]
+When a passage exists, transformation must involve several of the following:
+- sentence restructuring
+- viewpoint shift
+- syntactic compression or expansion
+- paraphrase with changed surface form
+- logic-preserving reframing
+- altered rhetorical flow
+- transformed phrasing of central claims
+- changed ordering of supporting ideas where appropriate
+
+Transformation must NOT be:
+- synonym swapping only
+- line-by-line rewriting with obvious copying
+- generic educational filler unrelated to the source
+
+[HARD RULE 3: ITEM VALIDITY]
+Only create question types that are valid for the material actually shown.
+
+If a transformed passage is shown, allowed item families include:
+- main idea / theme / title
+- gist / summary
+- inference / implication
 - tone / attitude / purpose
+- statement validity / inconsistency
+- vocabulary in context
+- paraphrase match / mismatch
+- blank inference
+- sentence insertion
+- order arrangement
+- irrelevant sentence
 - summary completion
-- statement validity using transformed passage logic
 
-[MODE GUIDELINES]
-If mode is school:
-- Lean toward internal-school-exam style.
-- Include detail checking, statement truth, paraphrase matching, sequence logic, and wording analysis.
+If no full passage is shown, prioritize:
+- theme / gist / title
+- inference / implication
+- paraphrase judgment
+- statement validity
+- tone / purpose
+- vocabulary in context using mini-context
+- summary logic using self-contained item text
 
-If mode is csat:
-- Lean toward CSAT-style reading logic.
-- Favor theme, title, inference, blank, insertion, order, summary, tone, vocabulary-in-context.
+If no full passage is shown, avoid or severely restrict:
+- sentence insertion
+- order arrangement
+- irrelevant sentence
+- passage-dependent blank inference
 
-If mode is transform:
-- Strongly prioritize transformed derivative items.
-- Use altered passage content, changed sentence structure, semantic recasting, and editorial paraphrase.
+[HARD RULE 4: ANTI-DRIFT]
+Never output a set that could fit any random topic.
+The result must reflect the user's actual requested source, topic, exam label, or title.
+Avoid repetitive abstract distractors like:
+education / society / growth / technology / sustainability
+unless those are truly central to the user’s source.
 
-If mode is hybrid:
-- Blend school-exam precision and CSAT-style thinking.
-- Keep the sheet varied but coherent.
+[HARD RULE 5: PREMIUM EXAM QUALITY]
+- strong distractors
+- no trivial answer elimination
+- no repetitive stems
+- no awkward Korean
+- no childish wording
+- no answer pattern bias
+- no contradiction between passage and answer key
+- no vague editorial commentary
 
-[DIFFICULTY CONTROL]
-- basic: accessible but still test-oriented
-- standard: school top-class average difficulty
-- high: clearly challenging, strong distractors, refined paraphrase pressure
-- extreme: elite level, inference-heavy, subtle distinctions, dense editorial transformation
-
-[EDITORIAL RULES]
-1. The worksheet must look like a premium Korean English exam handout.
-2. Numbering must be clean and strictly sequential.
-3. Each item must be self-contained and unambiguous.
-4. Avoid repetitive question types.
-5. Avoid shallow distractors.
-6. Avoid obvious answer patterns.
-7. Avoid low-level wording errors and awkward Korean instructions.
-8. Maintain consistency between title, instruction, questions, and answer sheet.
-9. Keep the passage-transformation spirit throughout the set.
-10. Never output commentary about how you created the items.
-
-[OUTPUT FORMAT RULE]
-You MUST output in this exact structure:
+[OUTPUT STRUCTURE]
+You MUST output in exactly this structure:
 
 [[TITLE]]
 (title only)
 
 [[INSTRUCTIONS]]
-(one concise instruction block in Korean unless the user requested English)
+(one concise Korean instruction block unless English was explicitly requested)
+
+[[PASSAGE]]
+(include only when a real source passage exists and passage-based transformation is required)
 
 [[QUESTIONS]]
 (all questions only, fully numbered)
@@ -373,36 +401,100 @@ You MUST output in this exact structure:
 [[ANSWERS]]
 (answer key and brief explanation for each item)
 
-[ANSWER SHEET RULE]
-- Each answer line must begin with: 1) / 2) / 3) ...
-- Include the correct answer.
-- Add a brief Korean explanation when useful.
-- Keep explanations concise.
+[OUTPUT RULES]
+- Number questions sequentially.
+- Number answers as 1) 2) 3) ...
+- Keep explanations concise and useful.
+- Do not include any extra section.
+- Do not explain your process.
+- Do not include markdown code fences.
 
-[FINAL QUALITY BAR]
-The worksheet must feel like it was designed by a veteran Korean exam editor, not by a generic chatbot.
+[FINAL INTERNAL CHECK]
+Before answering, verify:
+- if source passage exists, PASSAGE section exists
+- if source passage does not exist, no fake passage instruction appears
+- all item types are valid for the displayed material
+- question count matches exactly
+- answer count matches exactly
+- the worksheet feels premium and publishable
 `.trim();
 }
 
 function buildUserPrompt(input) {
   const title = buildMocksTitle(input);
+
   const languageGuide =
     input.language === "en"
-      ? "Use English instructions only if the user explicitly requested English. Otherwise default to Korean instructions."
-      : "문항 안내와 해설은 기본적으로 한국어를 사용하되, 영어 지문과 선택지는 자연스럽게 유지하시오.";
+      ? "Use English only if the user explicitly requested English. Otherwise keep directions and explanations in Korean."
+      : "문항 안내와 해설은 기본적으로 한국어를 사용하되, 영어 지문/선지/표현은 시험지답게 자연스럽게 유지하시오.";
 
   const premiumGuide = input.premium
     ? `
 [PREMIUM QUALITY MODE]
-- Raise distractor quality.
-- Increase paraphrase sophistication.
-- Use tighter logic and more elegant editorial phrasing.
-- Make the sheet feel worthy of a premium paid product.
+- Distractors must be highly competitive.
+- Paraphrase quality must be sophisticated.
+- Inference must feel test-valid, not arbitrary.
+- The worksheet must look worthy of a paid premium product.
 `.trim()
     : `
 [STANDARD QUALITY MODE]
-- Keep the quality strong, clean, and practical.
-- Maintain clear exam usability.
+- Keep the worksheet clean, reliable, and classroom-usable.
+- Prioritize test validity and editorial clarity.
+`.trim();
+
+  const profileGuide = input.hasSourcePassage
+    ? `
+[PASSAGE-BASED TRANSFORM MODE]
+The user included a real source passage.
+
+You must:
+1. Create a transformed passage.
+2. Preserve the original meaning domain and logical core.
+3. Rewrite the surface substantially.
+4. Build questions that depend on the transformed passage.
+5. Make the set feel like a real 변형모의고사.
+
+Recommended item mix:
+- 주제 / 요지 / 제목
+- 내용 일치 / 불일치
+- 함축 의미 / 추론
+- 패러프레이즈 일치 / 불일치
+- 어휘 의미 / 문맥상 의미
+- 빈칸 추론
+- 문장 삽입
+- 글의 순서
+- 무관문
+- 요약문 완성
+
+Important:
+- Do not merely restate the original passage.
+- Do not drift into generic unrelated content.
+- The transformed passage and items must clearly belong together.
+`.trim()
+    : `
+[TOPIC-BASED DRILL MODE]
+The user did NOT include a full source passage.
+
+You must:
+1. Generate an advanced reading drill set based on the topic/request.
+2. Do NOT fake a hidden passage.
+3. Do NOT say "다음 지문을 읽고" unless an actual passage is shown.
+4. Prefer self-contained advanced items.
+
+Recommended item mix:
+- 주제 / 요지 / 제목
+- 함축 의미 / 추론
+- 패러프레이즈 판단
+- 진술 일치 / 불일치
+- 요약 판단
+- 어휘 의미 / 문맥 의미
+- 필자 의도 / 태도 / 목적
+
+Avoid unless fully self-contained:
+- 문장 삽입
+- 글의 순서
+- 무관문
+- passage-dependent 빈칸추론
 `.trim();
 
   return `
@@ -416,6 +508,7 @@ Generate a complete MARCUSNOTE Mocks worksheet.
 - Difficulty: ${input.difficulty}
 - Question Count: ${input.count}
 - Language: ${input.language}
+- Generation Profile: ${input.generationProfile}
 
 [USER REQUEST]
 ${input.userPrompt || input.topic || "고난도 변형문제를 만들어라."}
@@ -425,46 +518,28 @@ ${premiumGuide}
 [LANGUAGE RULE]
 ${languageGuide}
 
-[STRICT CONTENT RULES]
-1. Do not dump the original passage unchanged.
-2. Rebuild the content into transformed exam material.
-3. Preserve the academic meaning field, but not the original sentence surface.
-4. Include a healthy mix of high-value exam item types.
-5. Prefer advanced transformed items over easy recall questions.
-6. Do not let all items depend on trivial wording differences.
-7. Ensure the full set is coherent and premium in tone.
+${profileGuide}
 
-[RECOMMENDED TYPE BALANCE]
-Use a strong mixture of the following, depending on the source:
-- 주제 / 요지 / 제목
-- 내용 일치 / 불일치
-- 함축 의미 / 추론
-- 어휘 의미 / 문맥상 의미
-- 패러프레이즈 일치 / 불일치
-- 유의어 / 반의어 기반 판단
-- 빈칸 추론
-- 문장 삽입
-- 글의 순서
-- 요약문 완성
-- 필자 의도 / 분위기 / 태도
+[STRICT QUALITY RULES]
+1. Every question must be test-valid.
+2. Every distractor must be plausible.
+3. Avoid repetitive stems and repetitive answer logic.
+4. Keep the overall set coherent.
+5. Do not use broad generic filler content.
+6. Match the grade, difficulty, and Korean exam style.
+7. Maintain strong editorial tone.
 
-[ANTI-LOW-QUALITY RULES]
-- No simplistic one-step answers.
-- No repetitive item stems.
-- No sloppy distractors.
-- No direct copy-heavy passage blocks.
-- No worksheet-style grammar drift.
-- No childish wording.
-- No awkward literal Korean.
-
-[FORMAT RULE]
-Return ONLY the following 4 sections:
+[FORMAT REQUIREMENT]
+Return ONLY these sections in this order:
 
 [[TITLE]]
 ${title}
 
 [[INSTRUCTIONS]]
-수준 높은 변형 독해 문항을 읽고 각 문제에 답하시오.
+(Write one concise instruction block in Korean unless English was explicitly requested.)
+
+${input.hasSourcePassage ? `[[PASSAGE]]
+(Provide one transformed passage only.)` : ""}
 
 [[QUESTIONS]]
 1. ...
@@ -476,13 +551,14 @@ ${title}
 2) ...
 3) ...
 
-[FINAL CHECK]
+[FINAL SELF-CHECK]
 Before finishing, verify:
 - question count is exactly ${input.count}
 - numbering is sequential
 - answer count matches question count
-- transformed quality is maintained across the full set
-- the worksheet feels premium and publishable
+- no fake passage-dependent item appears when no passage is shown
+- if passage-based mode, a transformed passage is included
+- the result is premium and classroom-usable
 `.trim();
 }
 
@@ -543,16 +619,25 @@ function cleanupText(text = "") {
 }
 
 function normalizeQuestionNumbering(text = "") {
-  const blocks = cleanupText(text).split(/(?=^\s*\d+[\.\)]\s+)/gm).map((v) => v.trim()).filter(Boolean);
+  const blocks = cleanupText(text)
+    .split(/(?=^\s*\d+[\.\)]\s+)/gm)
+    .map((v) => v.trim())
+    .filter(Boolean);
   if (!blocks.length) return cleanupText(text);
-  return blocks.map((block, idx) => block.replace(/^\s*\d+[\.\)]\s*/, `${idx + 1}. `)).join("\n\n").trim();
+  return blocks
+    .map((block, idx) => block.replace(/^\s*\d+[\.\)]\s*/, `${idx + 1}. `))
+    .join("\n\n")
+    .trim();
 }
 
 function normalizeAnswerNumbering(text = "") {
   const lines = cleanupText(text).split("\n").map((v) => v.trim()).filter(Boolean);
   const numbered = lines.filter((line) => /^\d+[\.\)]\s+/.test(line));
   if (!numbered.length) return cleanupText(text);
-  return numbered.map((line, idx) => line.replace(/^\d+[\.\)]\s*/, `${idx + 1}) `)).join("\n").trim();
+  return numbered
+    .map((line, idx) => line.replace(/^\d+[\.\)]\s*/, `${idx + 1}) `))
+    .join("\n")
+    .trim();
 }
 
 function buildFallbackSplit(rawText) {
@@ -569,12 +654,22 @@ function buildFallbackSplit(rawText) {
 
 function formatMocksResponse(rawText, input) {
   const title = cleanupText(extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]"));
-  const instructions = cleanupText(extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]"));
+  const instructions = cleanupText(
+    extractSection(
+      rawText,
+      "[[INSTRUCTIONS]]",
+      input.hasSourcePassage ? "[[PASSAGE]]" : "[[QUESTIONS]]"
+    )
+  );
+  const passage = input.hasSourcePassage
+    ? cleanupText(extractSection(rawText, "[[PASSAGE]]", "[[QUESTIONS]]"))
+    : "";
   const questions = cleanupText(extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]"));
   const answers = cleanupText(extractSection(rawText, "[[ANSWERS]]", null));
 
   let finalTitle = title || buildMocksTitle(input);
   let finalInstructions = instructions;
+  let finalPassage = passage;
   let finalQuestions = questions;
   let finalAnswers = answers;
 
@@ -589,15 +684,20 @@ function formatMocksResponse(rawText, input) {
   finalQuestions = normalizeQuestionNumbering(finalQuestions);
   finalAnswers = normalizeAnswerNumbering(finalAnswers);
 
-  const contentParts = [finalTitle, finalInstructions, finalQuestions].filter(Boolean);
+  const contentParts = [finalTitle, finalInstructions];
+  if (input.hasSourcePassage && finalPassage) contentParts.push(finalPassage);
+  contentParts.push(finalQuestions);
+
   const fullParts = [...contentParts];
   if (finalAnswers) fullParts.push("정답 및 해설\n" + finalAnswers);
+
   return {
     title: finalTitle,
     instructions: finalInstructions,
-    content: cleanupText(contentParts.join("\n\n")),
+    passage: finalPassage,
+    content: cleanupText(contentParts.filter(Boolean).join("\n\n")),
     answerSheet: cleanupText(finalAnswers),
-    fullText: cleanupText(fullParts.join("\n\n")),
+    fullText: cleanupText(fullParts.filter(Boolean).join("\n\n")),
     actualCount: countQuestions(finalQuestions),
   };
 }
@@ -620,6 +720,51 @@ function addCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
+}
+
+/* =========================
+   Output Validation Helpers
+   Step 2: conservative validation
+   ========================= */
+
+function hasFakePassageInstruction(text = "") {
+  return /다음\s+지문을\s+읽고|read the following passage/i.test(String(text || ""));
+}
+
+function containsPassageDependentItems(text = "") {
+  const t = String(text || "");
+  return /문장\s*삽입|글의\s*순서|무관한\s*문장|빈칸에\s*적절한|다음\s*문장이\s*들어갈|주어진\s*문장의\s*위치/i.test(t);
+}
+
+function validateMocksOutput(formatted, input) {
+  const errors = [];
+
+  if (formatted.actualCount !== input.count) {
+    errors.push(`QUESTION_COUNT_MISMATCH:${formatted.actualCount}/${input.count}`);
+  }
+
+  const answerCount = (String(formatted.answerSheet || "").match(/^\s*\d+\)\s+/gm) || []).length;
+  if (answerCount !== input.count) {
+    errors.push(`ANSWER_COUNT_MISMATCH:${answerCount}/${input.count}`);
+  }
+
+  if (input.hasSourcePassage) {
+    if (!formatted.passage || formatted.passage.length < 120) {
+      errors.push("MISSING_OR_WEAK_PASSAGE");
+    }
+  } else {
+    if (hasFakePassageInstruction(formatted.content)) {
+      errors.push("FAKE_PASSAGE_INSTRUCTION");
+    }
+    if (containsPassageDependentItems(formatted.content)) {
+      errors.push("INVALID_PASSAGE_DEPENDENT_ITEMS_WITHOUT_PASSAGE");
+    }
+  }
+
+  return {
+    ok: errors.length === 0,
+    errors,
+  };
 }
 
 /* =========================
@@ -786,6 +931,10 @@ export default async function handler(req, res) {
     const userPrompt = buildUserPrompt(input);
     const rawText = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatMocksResponse(rawText, input);
+    const validation = validateMocksOutput(formatted, input);
+    if (!validation.ok) {
+      throw new Error(`MOCKS_OUTPUT_VALIDATION_FAILED: ${validation.errors.join(", ")}`);
+    }
     const meta = buildMeta(input, formatted.actualCount);
     const finalMpState = await deductMpAfterSuccess(mpState);
 
