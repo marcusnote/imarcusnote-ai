@@ -51,8 +51,8 @@ function sanitizeString(value, fallback = "") {
 
 function sanitizeCount(value) {
   const num = Number(value);
-  if (!Number.isFinite(num)) return 25;
-  return clamp(Math.round(num), 5, 30);
+  if (!Number.isFinite(num)) return 12;
+  return clamp(Math.round(num), 8, 15);
 }
 
 function sanitizeMp(value, fallback = 5) {
@@ -238,8 +238,11 @@ function normalizeInput(body = {}) {
 }
 
 /* =========================
-   Mocks Prompt Rebuild
-   Step 3 Soft Lock
+   Step 4: Final Mocks Prompt Rebuild
+   - 유형 분포 강제
+   - 반복 금지 강화
+   - 변형 강도 강화
+   - 소프트락 유지
    ========================= */
 
 function getMocksModeLabel(mode = "hybrid", language = "ko") {
@@ -276,15 +279,205 @@ function buildMocksTitle(input) {
   return `${gradeLabel} ${topic} ${modeLabel} 변형문제 1회`;
 }
 
+function getTypeDistributionGuide(count = 12, hasSourcePassage = true, language = "ko") {
+  const koPassage = {
+    8: [
+      "주제/요지 1",
+      "제목 1",
+      "추론 1",
+      "패러프레이즈 1",
+      "어휘/문맥 1",
+      "빈칸 1",
+      "요약 1",
+      "삽입·순서·무관문 중 1",
+    ],
+    9: [
+      "주제/요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 1",
+      "어휘/문맥 1",
+      "빈칸 1",
+      "요약 1",
+      "삽입·순서·무관문 중 1",
+    ],
+    10: [
+      "주제/요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 1",
+      "어휘/문맥 1",
+      "빈칸 1",
+      "요약 1",
+      "삽입 1",
+      "순서·무관문 중 1",
+    ],
+    11: [
+      "주제/요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 1",
+      "빈칸 1",
+      "요약 1",
+      "삽입 1",
+      "순서·무관문 중 1",
+    ],
+    12: [
+      "주제 1",
+      "요지 또는 제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 1",
+      "빈칸 1",
+      "요약 1",
+      "삽입 1",
+      "순서 1",
+      "무관문 1",
+    ],
+    13: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 1",
+      "빈칸 1",
+      "요약 1",
+      "삽입 1",
+      "순서 1",
+      "무관문 1",
+    ],
+    14: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 2",
+      "빈칸 1",
+      "요약 1",
+      "삽입 1",
+      "순서 1",
+      "무관문 1",
+    ],
+    15: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 2",
+      "빈칸 1",
+      "요약 1",
+      "삽입 1",
+      "순서 1",
+      "무관문 1",
+      "일치/불일치 1",
+    ],
+  };
+
+  const koNoPassage = {
+    8: [
+      "주제/요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 1",
+      "어휘/문맥 1",
+      "요약 1",
+      "일치/불일치 1",
+    ],
+    9: [
+      "주제/요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 1",
+      "요약 1",
+      "일치/불일치 1",
+    ],
+    10: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 1",
+      "요약 1",
+      "일치/불일치 1",
+    ],
+    11: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 1",
+      "요약 1",
+      "일치/불일치 2",
+    ],
+    12: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 2",
+      "패러프레이즈 2",
+      "어휘/문맥 2",
+      "요약 1",
+      "일치/불일치 2",
+    ],
+    13: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 3",
+      "패러프레이즈 2",
+      "어휘/문맥 2",
+      "요약 1",
+      "일치/불일치 2",
+    ],
+    14: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 3",
+      "패러프레이즈 2",
+      "어휘/문맥 2",
+      "요약 2",
+      "일치/불일치 2",
+    ],
+    15: [
+      "주제 1",
+      "요지 1",
+      "제목 1",
+      "추론 3",
+      "패러프레이즈 3",
+      "어휘/문맥 2",
+      "요약 2",
+      "일치/불일치 2",
+    ],
+  };
+
+  const koSelected = hasSourcePassage ? koPassage : koNoPassage;
+  const selected = koSelected[count] || koSelected[12];
+
+  if (language === "en") {
+    return selected.map((line) => `- ${line}`);
+  }
+  return selected.map((line) => `- ${line}`).join("\n");
+}
+
 function buildSystemPrompt(input) {
   const modeLabel = getMocksModeLabel(input.mode, input.language);
   const title = buildMocksTitle(input);
   const choiceCount = input.level === "elementary" ? 4 : 5;
+  const typeGuide = getTypeDistributionGuide(input.count, input.hasSourcePassage, input.language);
 
   return `
-You are the chief assessment architect and senior exam editor of MARCUSNOTE.
+You are a senior Korean CSAT-style item writer and premium exam editor at MARCUSNOTE.
 
-You create premium Korean English reading worksheets for school exams and CSAT-style preparation.
+You do NOT merely make comprehension questions.
+You design transformed exam sets with varied item types, strong distractors, and editorial logic.
 
 [ENGINE IDENTITY]
 - Engine: Mocks
@@ -295,13 +488,20 @@ You create premium Korean English reading worksheets for school exams and CSAT-s
 - Generation Profile: ${input.generationProfile}
 - Source Passage Included By User: ${input.hasSourcePassage ? "YES" : "NO"}
 - Preferred Choice Count Per Item: ${choiceCount}
+- Question Count: ${input.count}
 
 [CORE IDENTITY]
 Mocks is a passage-transformation reading exam engine.
 Mocks is NOT a grammar worksheet.
 Mocks is NOT a short-answer worksheet.
+Mocks is NOT a repetitive comprehension checklist.
 Mocks should strongly prefer objective multiple-choice format.
 Mocks must feel like a real Korean test handout.
+
+[COUNT POLICY]
+- Optimal range for one transformed passage is 12~15 items.
+- Avoid redundancy.
+- Never inflate the sheet by repeating the same cognitive task.
 
 [SOFT FORMAT LAW]
 Strongly prefer objective multiple-choice questions.
@@ -343,8 +543,27 @@ Transformation must NOT be:
 - synonym swapping only
 - line-by-line rewriting with obvious copying
 - generic educational filler unrelated to the source
+- simple Korean restatement of the source
 
-[HARD RULE 3: ITEM VALIDITY]
+[HARD RULE 3: ITEM WRITER MINDSET]
+Each question must test a DIFFERENT cognitive skill whenever possible.
+Do NOT rephrase the same question stem repeatedly.
+Do NOT ask the same meaning question in slightly different wording.
+Do NOT fill the sheet with only theme/meaning/detail questions.
+Every few items, the cognitive task should change.
+Distractors must be plausible and exam-like.
+Wrong choices should fail for a meaningful reason.
+
+[HARD RULE 4: TYPE DISTRIBUTION]
+You MUST distribute item types across the full set.
+Use this target distribution as a strong guide:
+${typeGuide}
+
+If exact matching is slightly difficult, stay as close as possible.
+Do NOT cluster too many similar items together.
+Spread question types naturally across the sheet.
+
+[HARD RULE 5: ITEM VALIDITY]
 Only create question types that are valid for the material actually shown.
 
 If a transformed passage is shown, preferred item families include:
@@ -376,14 +595,14 @@ If no full passage is shown, avoid or severely restrict:
 - irrelevant sentence
 - passage-dependent blank inference
 
-[HARD RULE 4: ANTI-DRIFT]
+[HARD RULE 6: ANTI-DRIFT]
 Never output a set that could fit any random topic.
 The result must reflect the user's actual requested source, topic, exam label, or title.
 Avoid repetitive abstract distractors like:
 education / society / growth / technology / sustainability
 unless those are truly central to the user’s source.
 
-[HARD RULE 5: PREMIUM EXAM QUALITY]
+[HARD RULE 7: PREMIUM EXAM QUALITY]
 - strong distractors
 - no trivial answer elimination
 - no repetitive stems
@@ -425,6 +644,8 @@ Before answering, verify:
 - if source passage does not exist, no fake passage instruction appears
 - question count matches exactly
 - answer count matches exactly
+- question types are varied
+- repeated stem patterns are minimized
 - the worksheet feels premium and publishable
 `.trim();
 }
@@ -432,6 +653,7 @@ Before answering, verify:
 function buildUserPrompt(input) {
   const title = buildMocksTitle(input);
   const choiceCount = input.level === "elementary" ? 4 : 5;
+  const typeGuide = getTypeDistributionGuide(input.count, input.hasSourcePassage, input.language);
 
   const languageGuide =
     input.language === "en"
@@ -464,22 +686,17 @@ You must:
 4. Build exam-style questions that depend on the transformed passage.
 5. Make the set feel like a real 변형모의고사.
 
-Recommended item mix:
-- 주제 / 요지 / 제목
-- 내용 일치 / 불일치
-- 함축 의미 / 추론
-- 패러프레이즈 일치 / 불일치
-- 어휘 의미 / 문맥상 의미
-- 빈칸 추론
-- 문장 삽입
-- 글의 순서
-- 무관문
-- 요약문 완성
+Do this transformation actively:
+- alter sentence structure
+- alter rhetorical focus
+- alter local wording
+- alter supporting order when appropriate
+- preserve meaning but not surface form
 
-Important:
-- Do not merely restate the original passage.
-- Do not drift into generic unrelated content.
-- The transformed passage and items must clearly belong together.
+Do NOT:
+- reuse original sentence structure heavily
+- restate the same claim repeatedly
+- turn the whole set into a meaning-check worksheet
 `.trim()
     : `
 [TOPIC-BASED DRILL MODE]
@@ -490,21 +707,7 @@ You must:
 2. Do NOT fake a hidden passage.
 3. Do NOT say "다음 지문을 읽고" unless an actual passage is shown.
 4. Prefer self-contained exam-style items.
-
-Recommended item mix:
-- 주제 / 요지 / 제목
-- 함축 의미 / 추론
-- 패러프레이즈 판단
-- 진술 일치 / 불일치
-- 요약 판단
-- 어휘 의미 / 문맥 의미
-- 필자 의도 / 태도 / 목적
-
-Avoid unless fully self-contained:
-- 문장 삽입
-- 글의 순서
-- 무관문
-- passage-dependent 빈칸추론
+5. Keep the set varied in cognitive skill.
 `.trim();
 
   return `
@@ -531,6 +734,15 @@ ${languageGuide}
 
 ${profileGuide}
 
+[COUNT STRATEGY]
+- This worksheet should stay within a realistic high-quality range.
+- Do not pad the set with redundant items.
+- ${input.count} questions are enough only if each item tests a different skill or angle.
+
+[TYPE DISTRIBUTION TARGET]
+Stay close to this distribution:
+${typeGuide}
+
 [CRITICAL FORMAT LOCK - SOFT]
 - Prefer multiple-choice format strongly.
 - Try to ensure each question has exactly ${choiceCount} options.
@@ -539,6 +751,12 @@ ${profileGuide}
 - Prefer answer lines with option numbers.
 - Keep the output exam-like, even if exact formatting is slightly imperfect.
 - Do NOT collapse into a descriptive worksheet.
+
+[REPETITION BAN]
+- Do NOT ask the same type of question repeatedly.
+- Do NOT ask 3 or more near-identical meaning questions.
+- Do NOT recycle the same claim as separate items.
+- Each question must test a different cognitive task whenever possible.
 
 [STRICT QUALITY RULES]
 1. Every question must be test-valid.
@@ -574,6 +792,7 @@ Before finishing, verify:
 - answer count matches question count
 - no fake passage-dependent item appears when no passage is shown
 - if passage-based mode, a transformed passage is included
+- question types are varied
 - the result is premium and classroom-usable
 `.trim();
 }
@@ -592,7 +811,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
     },
     body: JSON.stringify({
       model: OPENAI_MODEL,
-      temperature: 0.4,
+      temperature: 0.42,
       max_tokens: 8000,
       messages: [
         { role: "system", content: systemPrompt },
@@ -740,7 +959,7 @@ function addCors(res) {
 
 /* =========================
    Output Validation Helpers
-   Step 3 Soft Lock: warn only
+   Step 4: soft warnings only
    ========================= */
 
 function hasFakePassageInstruction(text = "") {
