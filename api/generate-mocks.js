@@ -148,6 +148,43 @@ function inferGradeLabel(text = "", level = "high") {
   return "고등";
 }
 
+/* =========================
+   Step 1: Source Detection Helpers (신규 추가)
+   - 아직 기존 동작을 바꾸지 않는 안전한 준비 단계
+   - 이후 단계에서 prompt / validation에 연결 예정
+   ========================= */
+
+function detectSourcePassage(text = "") {
+  const t = String(text || "").trim();
+  if (!t) return false;
+
+  const normalized = t.replace(/\r\n/g, "\n");
+  const lineCount = normalized.split(/\n+/).filter(Boolean).length;
+  const wordCount = normalized.split(/\s+/).filter(Boolean).length;
+  const sentenceCount =
+    (normalized.match(/[.!?]/g) || []).length +
+    (normalized.match(/다\./g) || []).length;
+
+  // 지문으로 판단할 가능성이 높은 조건
+  if (wordCount >= 80) return true;
+  if (lineCount >= 5 && wordCount >= 50) return true;
+  if (sentenceCount >= 5 && wordCount >= 60) return true;
+
+  return false;
+}
+
+function inferGenerationProfile(input = {}) {
+  const sourceText = String(input.userPrompt || input.prompt || "").trim();
+  const hasSourcePassage = detectSourcePassage(sourceText);
+
+  return {
+    hasSourcePassage,
+    generationProfile: hasSourcePassage
+      ? "passage_based_transform"
+      : "topic_based_drill",
+  };
+}
+
 function normalizeInput(body = {}) {
   const userPrompt = sanitizeString(body.userPrompt || body.prompt || "");
   const mergedText = [
@@ -182,6 +219,8 @@ function normalizeInput(body = {}) {
   const examType = sanitizeString(body.examType || "") || mode;
   const gradeLabel = inferGradeLabel(mergedText, level);
   const premium = body.premium === true || inferPremium(mergedText);
+  const profile = inferGenerationProfile({ userPrompt, topic });
+
   return {
     engine,
     level,
@@ -196,294 +235,260 @@ function normalizeInput(body = {}) {
     userPrompt,
     gradeLabel,
     premium,
+    hasSourcePassage: profile.hasSourcePassage,
+    generationProfile: profile.generationProfile,
   };
 }
 
-function getDifficultyLabel(difficulty, language = "ko") {
-  if (language === "en") {
-    if (difficulty === "extreme") return "Extreme Difficulty";
-    if (difficulty === "high") return "High Difficulty";
-    if (difficulty === "standard") return "Standard Difficulty";
-    return "Basic Difficulty";
-  }
+/* =========================
+   Mocks Prompt Rebuild (교체된 섹션)
+   ========================= */
 
-  if (difficulty === "extreme") return "최고난도";
-  if (difficulty === "high") return "고난도";
-  if (difficulty === "standard") return "표준난도";
-  return "기본난도";
-}
+function getMocksModeLabel(mode = "hybrid", language = "ko") {
+  const koMap = {
+    school: "내신형",
+    csat: "수능형",
+    transform: "변형형",
+    hybrid: "혼합형",
+  };
 
-function getModeLabel(mode, language = "ko") {
-  if (language === "en") {
-    if (mode === "school") return "School Exam";
-    if (mode === "csat") return "CSAT Style";
-    if (mode === "transform") return "Transformation";
-    return "Hybrid Mock";
-  }
+  const enMap = {
+    school: "School Exam",
+    csat: "CSAT Style",
+    transform: "Transformation",
+    hybrid: "Hybrid",
+  };
 
-  if (mode === "school") return "내신형";
-  if (mode === "csat") return "수능형";
-  if (mode === "transform") return "변형형";
-  return "혼합형";
+  return language === "en"
+    ? (enMap[mode] || "Hybrid")
+    : (koMap[mode] || "혼합형");
 }
 
 function buildMocksTitle(input) {
   if (input.worksheetTitle) return input.worksheetTitle;
 
-  const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
-  const modeLabel = getModeLabel(input.mode, input.language);
+  const gradeLabel = input.gradeLabel || "고등";
+  const topic = input.topic || "모의고사";
+  const modeLabel = getMocksModeLabel(input.mode, input.language);
+
   if (input.language === "en") {
-    return `${input.gradeLabel} ${input.topic} Mock Exam ${modeLabel} ${difficultyLabel} ${input.count} Questions`;
+    return `${gradeLabel} ${topic} ${modeLabel} Transformation Set`;
   }
 
-  return `${input.gradeLabel} ${input.topic} 마커스모의고사 ${modeLabel} ${input.count}문항`;
-}
-
-function buildPremiumBlock(language = "ko") {
-  if (language === "en") {
-    return `
-[MOCKS PREMIUM MODE]
-This is a premium upper-tier transformation mode.
-Rules:
-- Raise distractor quality significantly.
-- Increase implication and inference density.
-- Make all answer choices partially plausible.
-- Keep clear conceptual linkage to the source while transforming wording and structure strongly.
-- The final worksheet must feel like a premium advanced assessment set.
-`.trim();
-  }
-
-  return `
-[MOCKS PREMIUM MODE]
-이 모드는 상위권용 프리미엄 변형 모드이다.
-
-규칙:
-- 선택지의 부분 타당성을 높일 것.
-- 함축과 추론 밀도를 높일 것.
-- 모든 선택지를 그럴듯하게 설계할 것.
-- 원문과의 개념적 연결감은 유지하되, 표현과 구조는 강하게 변형할 것.
-- 결과물은 상위권용 프리미엄 시험지처럼 보여야 한다.
-`.trim();
+  return `${gradeLabel} ${topic} ${modeLabel} 변형문제 1회`;
 }
 
 function buildSystemPrompt(input) {
-  const premiumBlock = input.premium ? "\n\n" + buildPremiumBlock(input.language) + "\n\n" : "\n\n";
+  const modeLabel = getMocksModeLabel(input.mode, input.language);
+  const title = buildMocksTitle(input);
+
   return `
-You are the premium transformed reading-exam engine of I•marcusnote.
+You are the chief exam-editor of MARCUSNOTE, a premium English assessment brand.
+
+Your task is to generate a polished, high-difficulty transformed worksheet for the Mocks engine.
+
 [ENGINE IDENTITY]
-Engine Name: Mocks
-Purpose: premium transformed reading worksheet generator
-Target: Korean middle/high school exams, CSAT-style mock tests, advanced academy materials
-This is NOT a basic workbook generator.
-This is a premium transformed exam generator.
+- Engine: Mocks
+- Mode: ${modeLabel}
+- Difficulty: ${input.difficulty}
+- Level: ${input.level}
+- Title: ${title}
 
-[CORE GOAL]
-Generate a premium transformed reading worksheet based on the user's source material.
-The output must feel like a real school-exam / CSAT-style transformation set.
-[CONTROLLED TRANSFORMATION RULE]
-The worksheet must be clearly based on the source passage.
-However, it must NOT become a completely unrelated new passage.
-Strict rules:
-- Preserve the core topic, main logic, and central message of the source.
-- Maintain recognizable conceptual overlap with the original.
-- Students should feel that the worksheet is transformed from the original passage.
-- Do NOT copy original sentences directly.
-- Rewrite sentence structures substantially.
-- Replace wording meaningfully.
-- Reorder or regroup supporting details when helpful.
-- Change the testing angle while preserving the original intellectual base.
-The final result must feel like:
-"a professionally transformed version of the original passage"
+[NON-NEGOTIABLE IDENTITY]
+Mocks is NOT a grammar workbook.
+Mocks is NOT a simple summary worksheet.
+Mocks is a premium passage-transformation exam engine for advanced Korean learners.
 
-It must NOT feel like:
-- a copied worksheet
-- a completely different passage
+[PRIMARY GOAL]
+Create a high-quality transformed exam set based on the user's source passage or topic.
+The result must feel editorially designed, test-oriented, and suitable for school / mock-exam preparation.
 
-[QUESTION PHILOSOPHY]
-This engine must create exam-quality transformed items.
-Therefore:
-- do not merely paraphrase superficially
-- do not create trivial keyword questions
-- do not create predictable distractors
-- do not overuse the same stem pattern
-- do not simplify into middle-school workbook style unless the user clearly requests a lower level
+[CRITICAL TRANSFORMATION POLICY]
+1. DO NOT copy the source passage verbatim in large chunks.
+2. DO NOT simply repackage the original sentences with superficial word swaps.
+3. You MUST transform, reconstruct, compress, expand, reorder, and reframe the ideas.
+4. Maintain the core meaning domain, but alter sentence surfaces substantially.
+5. Prefer newly written transformed sentences rather than patched originals.
+6. Wrong choices must be plausible, academic, and non-trivial.
 
-Instead:
-- redesign the testing point
-- test interpretation, comparison, implication, inference, attitude, and transformed understanding
-- create items that feel written by a real exam writer
-
-[MANDATORY CORE TYPES]
-These are central and must be meaningfully included when the passage supports them:
-1. Main Idea / 주제
-2. Gist / 요지
-3. Title / 제목
-4. Author's Claim / 주장
-5. Author's Attitude / 태도
-
-These must remain distinct.
-Do NOT collapse them into one vague type.
-
-[REQUIRED TYPE POOL]
-Also include, when appropriate:
-- purpose
-- implication
-- inference
-- content agreement / disagreement
-- blank inference
+[QUESTION DESIGN PRIORITY]
+Prioritize these advanced item families:
+- synonym / antonym / paraphrase
+- transformed title / transformed theme / transformed main idea
+- implication / inference / author's intention
+- sentence insertion / order / blank inference when appropriate
+- meaning distinction based on transformed context
+- logical consistency / inconsistency
+- tone / attitude / purpose
 - summary completion
-- paraphrase
-- equivalent expression
-- synonym / antonym in context
-- sentence insertion
-- order arrangement
-- flow disruption / awkward sentence
-- transformed detail questions
+- statement validity using transformed passage logic
 
-[STRUCTURED EXAM RULE]
-For a 25-item full set, follow this structure as closely as possible:
+[MODE GUIDELINES]
+If mode is school:
+- Lean toward internal-school-exam style.
+- Include detail checking, statement truth, paraphrase matching, sequence logic, and wording analysis.
 
-1–3: main idea / gist / title
-4–6: claim / purpose / attitude
-7–10: implication / inference / meaning interpretation
-11–14: detail agreement / disagreement / key detail
-15–18: blank / summary / paraphrase
-19–21: sentence insertion / order arrangement / flow
-22–25: high-difficulty integrated reasoning
+If mode is csat:
+- Lean toward CSAT-style reading logic.
+- Favor theme, title, inference, blank, insertion, order, summary, tone, vocabulary-in-context.
 
-If the item count is smaller, compress proportionally while preserving variety.
+If mode is transform:
+- Strongly prioritize transformed derivative items.
+- Use altered passage content, changed sentence structure, semantic recasting, and editorial paraphrase.
 
-[DISTRACTOR RULE]
-Wrong answers must be plausible.
-Use distractors such as:
-- partially true but incomplete
-- reversed logic
-- exaggerated claim
-- wrong scope
-- tone mismatch
-- related but not central
-- detail misuse
-- unsupported inference
+If mode is hybrid:
+- Blend school-exam precision and CSAT-style thinking.
+- Keep the sheet varied but coherent.
 
-Do NOT make silly or obviously wrong distractors.
-[HIGH DIFFICULTY RULE]
-If any question is worth 5 points or more, you MUST mark it with [High Difficulty].
-High-difficulty items should usually involve:
-- inference
-- implication
-- title
-- gist
-- attitude
-- paraphrase
-- summary
-- integrated reasoning
+[DIFFICULTY CONTROL]
+- basic: accessible but still test-oriented
+- standard: school top-class average difficulty
+- high: clearly challenging, strong distractors, refined paraphrase pressure
+- extreme: elite level, inference-heavy, subtle distinctions, dense editorial transformation
 
-[ANTI-REPETITION RULE]
-Avoid repeating:
-- the same question stem pattern
-- the same answer logic
-- the same distractor style
-- the same cognitive skill too many times
+[EDITORIAL RULES]
+1. The worksheet must look like a premium Korean English exam handout.
+2. Numbering must be clean and strictly sequential.
+3. Each item must be self-contained and unambiguous.
+4. Avoid repetitive question types.
+5. Avoid shallow distractors.
+6. Avoid obvious answer patterns.
+7. Avoid low-level wording errors and awkward Korean instructions.
+8. Maintain consistency between title, instruction, questions, and answer sheet.
+9. Keep the passage-transformation spirit throughout the set.
+10. Never output commentary about how you created the items.
 
-Each item should feel independently designed.
-[EXAM FEEL RULE]
-The final worksheet must feel like:
-- a premium academy material
-- a real transformed school exam
-- a CSAT-aware mock set
-- not an AI-generated repetitive worksheet
+[OUTPUT FORMAT RULE]
+You MUST output in this exact structure:
 
-${premiumBlock}
-
-출력 형식:
-반드시 아래 마커 구조만 출력한다.
 [[TITLE]]
-(한 줄 제목)
+(title only)
 
 [[INSTRUCTIONS]]
-(시험지 안내문 1문단)
+(one concise instruction block in Korean unless the user requested English)
 
 [[QUESTIONS]]
-1. ...
-① ...
-② ...
-③ ...
-④ ...
-⑤ ...
+(all questions only, fully numbered)
 
 [[ANSWERS]]
-1. 정답 - 해설
-2. 정답 - 해설
-...
+(answer key and brief explanation for each item)
+
+[ANSWER SHEET RULE]
+- Each answer line must begin with: 1) / 2) / 3) ...
+- Include the correct answer.
+- Add a brief Korean explanation when useful.
+- Keep explanations concise.
+
+[FINAL QUALITY BAR]
+The worksheet must feel like it was designed by a veteran Korean exam editor, not by a generic chatbot.
 `.trim();
 }
 
 function buildUserPrompt(input) {
   const title = buildMocksTitle(input);
-  const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
-  const modeLabel = getModeLabel(input.mode, input.language);
-  const premiumNote = input.premium
-    ? (input.language === "en"
-        ? `\nPremium mode is ON.\n- Raise distractor quality.\n- Increase inference and implication density.\n- Make answer choices more competitive.\n`
-        : `\n프리미엄 모드 활성화:\n- 선택지의 부분 타당성과 경쟁력을 높일 것.\n- 함축과 추론 밀도를 높일 것.\n- 정답이 키워드만으로 보이지 않게 설계할 것.\n`)
-    : "";
-  if (input.language === "en") {
-    return `
-Generate a premium transformed Mock Exam worksheet with the following conditions.
-Title: ${title}
-Engine: mock_exam
-Level: ${input.level}
-Grade label: ${input.gradeLabel}
-Mode: ${input.mode} (${modeLabel})
-Topic: ${input.topic}
-Exam type: ${input.examType}
-Difficulty: ${input.difficulty} (${difficultyLabel})
-Question count: ${input.count}
-Academy name: ${input.academyName}
-${premiumNote}
+  const languageGuide =
+    input.language === "en"
+      ? "Use English instructions only if the user explicitly requested English. Otherwise default to Korean instructions."
+      : "문항 안내와 해설은 기본적으로 한국어를 사용하되, 영어 지문과 선택지는 자연스럽게 유지하시오.";
 
-Mandatory rules:
-- The worksheet must clearly feel based on the original source.
-- However, do NOT copy the source passage directly.
-- Preserve the core topic and message.
-- Rewrite wording and structure meaningfully.
-- Keep recognizable overlap with the original passage.
-- Every question must have exactly 5 options.
-- Mark 5pt+ questions with [High Difficulty].
-- Ensure meaningful type variety.
-Original user request:
-${input.userPrompt || "(No additional request provided.)"}
+  const premiumGuide = input.premium
+    ? `
+[PREMIUM QUALITY MODE]
+- Raise distractor quality.
+- Increase paraphrase sophistication.
+- Use tighter logic and more elegant editorial phrasing.
+- Make the sheet feel worthy of a premium paid product.
+`.trim()
+    : `
+[STANDARD QUALITY MODE]
+- Keep the quality strong, clean, and practical.
+- Maintain clear exam usability.
 `.trim();
-  }
 
   return `
-다음 조건에 맞는 상품형 마커스 모의고사 변형문제를 생성하시오.
-제목: ${title}
-엔진: mock_exam
-레벨: ${input.level}
-학년 라벨: ${input.gradeLabel}
-모드: ${input.mode} (${modeLabel})
-주제: ${input.topic}
-시험 유형: ${input.examType}
-난이도: ${input.difficulty} (${difficultyLabel})
-문항 수: ${input.count}
-브랜드명: ${input.academyName}
-${premiumNote}
+Generate a complete MARCUSNOTE Mocks worksheet.
 
-추가 필수 요구사항:
-- 결과물은 반드시 원문 기반 변형이라는 느낌이 나야 한다.
-- 그러나 입력 지문을 그대로 다시 사용해서는 안 된다.
-- 원문의 핵심 주제와 중심 메시지는 유지할 것.
-- 문장 구조와 표현은 충분히 새롭게 바꿀 것.
-- 학생이 보기에 '원문을 바탕으로 전문적으로 변형했다'는 느낌이 나야 한다.
-- 모든 문항은 5지선다형으로 작성할 것.
-- 5점 이상 문항은 반드시 [High Difficulty]라고 표기할 것.
-- 주제, 요지, 제목, 주장, 태도, 추론, 함축, 요약, 문장삽입, 순서배열 등 유형 다양성을 확보할 것.
+[WORKSHEET META]
+- Title: ${title}
+- Grade: ${input.gradeLabel || "고등"}
+- Topic: ${input.topic || "모의고사 변형"}
+- Mode: ${getMocksModeLabel(input.mode, input.language)}
+- Difficulty: ${input.difficulty}
+- Question Count: ${input.count}
+- Language: ${input.language}
 
-사용자 원문 요청:
-${input.userPrompt || "(추가 요청 없음)"}
+[USER REQUEST]
+${input.userPrompt || input.topic || "고난도 변형문제를 만들어라."}
+
+${premiumGuide}
+
+[LANGUAGE RULE]
+${languageGuide}
+
+[STRICT CONTENT RULES]
+1. Do not dump the original passage unchanged.
+2. Rebuild the content into transformed exam material.
+3. Preserve the academic meaning field, but not the original sentence surface.
+4. Include a healthy mix of high-value exam item types.
+5. Prefer advanced transformed items over easy recall questions.
+6. Do not let all items depend on trivial wording differences.
+7. Ensure the full set is coherent and premium in tone.
+
+[RECOMMENDED TYPE BALANCE]
+Use a strong mixture of the following, depending on the source:
+- 주제 / 요지 / 제목
+- 내용 일치 / 불일치
+- 함축 의미 / 추론
+- 어휘 의미 / 문맥상 의미
+- 패러프레이즈 일치 / 불일치
+- 유의어 / 반의어 기반 판단
+- 빈칸 추론
+- 문장 삽입
+- 글의 순서
+- 요약문 완성
+- 필자 의도 / 분위기 / 태도
+
+[ANTI-LOW-QUALITY RULES]
+- No simplistic one-step answers.
+- No repetitive item stems.
+- No sloppy distractors.
+- No direct copy-heavy passage blocks.
+- No worksheet-style grammar drift.
+- No childish wording.
+- No awkward literal Korean.
+
+[FORMAT RULE]
+Return ONLY the following 4 sections:
+
+[[TITLE]]
+${title}
+
+[[INSTRUCTIONS]]
+수준 높은 변형 독해 문항을 읽고 각 문제에 답하시오.
+
+[[QUESTIONS]]
+1. ...
+2. ...
+3. ...
+
+[[ANSWERS]]
+1) ...
+2) ...
+3) ...
+
+[FINAL CHECK]
+Before finishing, verify:
+- question count is exactly ${input.count}
+- numbering is sequential
+- answer count matches question count
+- transformed quality is maintained across the full set
+- the worksheet feels premium and publishable
 `.trim();
 }
+
+/* =========================
+   OpenAI & Utility Helpers
+   ========================= */
 
 async function callOpenAI(systemPrompt, userPrompt) {
   if (!OPENAI_API_KEY) throw new Error("Missing OPENAI_API_KEY");
@@ -521,12 +526,11 @@ function extractSection(rawText, startMarker, endMarker) {
   if (start === -1) return "";
   const from = start + startMarker.length;
   const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
-  return end === -1 ?
-    rawText.slice(from).trim() : rawText.slice(from, end).trim();
+  return end === -1 ? rawText.slice(from).trim() : rawText.slice(from, end).trim();
 }
 
 function countQuestions(text = "") {
-  return (String(text || "").match(/^\s*\d+\.\s+/gm) || []).length;
+  return (String(text || "").match(/^\s*\d+[\.\)]\s+/gm) || []).length;
 }
 
 function cleanupText(text = "") {
@@ -539,16 +543,16 @@ function cleanupText(text = "") {
 }
 
 function normalizeQuestionNumbering(text = "") {
-  const blocks = cleanupText(text).split(/(?=^\s*\d+\.\s+)/gm).map((v) => v.trim()).filter(Boolean);
+  const blocks = cleanupText(text).split(/(?=^\s*\d+[\.\)]\s+)/gm).map((v) => v.trim()).filter(Boolean);
   if (!blocks.length) return cleanupText(text);
-  return blocks.map((block, idx) => block.replace(/^\s*\d+\.\s*/, `${idx + 1}. `)).join("\n\n").trim();
+  return blocks.map((block, idx) => block.replace(/^\s*\d+[\.\)]\s*/, `${idx + 1}. `)).join("\n\n").trim();
 }
 
 function normalizeAnswerNumbering(text = "") {
   const lines = cleanupText(text).split("\n").map((v) => v.trim()).filter(Boolean);
-  const numbered = lines.filter((line) => /^\d+\.\s+/.test(line));
+  const numbered = lines.filter((line) => /^\d+[\.\)]\s+/.test(line));
   if (!numbered.length) return cleanupText(text);
-  return numbered.map((line, idx) => line.replace(/^\d+\.\s*/, `${idx + 1}. `)).join("\n").trim();
+  return numbered.map((line, idx) => line.replace(/^\d+[\.\)]\s*/, `${idx + 1}) `)).join("\n").trim();
 }
 
 function buildFallbackSplit(rawText) {
@@ -573,6 +577,7 @@ function formatMocksResponse(rawText, input) {
   let finalInstructions = instructions;
   let finalQuestions = questions;
   let finalAnswers = answers;
+
   if (!finalQuestions) {
     const fallback = buildFallbackSplit(rawText);
     finalTitle = finalTitle || buildMocksTitle(input);
@@ -631,58 +636,32 @@ function getMemberstackHeaders() {
 
 async function memberstackRequest(path, options = {}) {
   const headers = getMemberstackHeaders();
-  if (!headers) {
-    throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-  }
+  if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
 
   const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
     ...options,
-    headers: {
-      ...headers,
-      ...(options.headers || {}),
-    },
+    headers: { ...headers, ...(options.headers || {}) },
   });
-
   const text = await response.text();
   let data = null;
-
-  try {
-    data = text ? JSON.parse(text) : null;
-  } catch {
-    data = text;
-  }
-
-  if (!response.ok) {
-    throw new Error(`Memberstack request failed: ${response.status} ${typeof data === "string" ? data : JSON.stringify(data)}`);
-  }
-
+  try { data = text ? JSON.parse(text) : null; } catch { data = text; }
+  if (!response.ok) throw new Error(`Memberstack request failed: ${response.status}`);
   return data;
 }
 
 function normalizeCostKey(value = "") {
-  return String(value || "")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "_");
+  return String(value || "").trim().toLowerCase().replace(/\s+/g, "_");
 }
 
 function getRequiredMp(reqBody = {}) {
   const explicit = Number(reqBody.mpCost);
-  if (Number.isFinite(explicit)) {
-    return sanitizeMp(explicit, 5);
-  }
+  if (Number.isFinite(explicit)) return sanitizeMp(explicit, 5);
 
   const modeKey = normalizeCostKey(reqBody.mode);
   const engineKey = normalizeCostKey(reqBody.engine);
 
-  if (modeKey && Number.isFinite(MP_COST_TABLE[modeKey])) {
-    return MP_COST_TABLE[modeKey];
-  }
-
-  if (engineKey && Number.isFinite(MP_COST_TABLE[engineKey])) {
-    return MP_COST_TABLE[engineKey];
-  }
-
+  if (modeKey && Number.isFinite(MP_COST_TABLE[modeKey])) return MP_COST_TABLE[modeKey];
+  if (engineKey && Number.isFinite(MP_COST_TABLE[engineKey])) return MP_COST_TABLE[engineKey];
   return 5;
 }
 
@@ -697,242 +676,109 @@ function extractBearerToken(req) {
 }
 
 function extractMemberId(req) {
-  return sanitizeString(
-    req?.body?.memberId ||
-    req?.headers?.["x-member-id"] ||
-    req?.headers?.["X-Member-Id"] ||
-    ""
-  );
+  return sanitizeString(req?.body?.memberId || req?.headers?.["x-member-id"] || req?.headers?.["X-Member-Id"] || "");
 }
 
 async function verifyMemberToken(token) {
   if (!token) return null;
-
   const payload = { token };
-  if (MEMBERSTACK_APP_ID) {
-    payload.audience = MEMBERSTACK_APP_ID;
-  }
-
-  const data = await memberstackRequest("/verify-token", {
-    method: "POST",
-    body: JSON.stringify(payload),
-  });
+  if (MEMBERSTACK_APP_ID) payload.audience = MEMBERSTACK_APP_ID;
+  const data = await memberstackRequest("/verify-token", { method: "POST", body: JSON.stringify(payload) });
   return data?.data || null;
 }
 
 async function getMemberById(memberId) {
   if (!memberId) return null;
-  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, {
-    method: "GET",
-  });
+  const data = await memberstackRequest(`/${encodeURIComponent(memberId)}`, { method: "GET" });
   return data?.data || null;
 }
 
 function readMpFromMember(member) {
   if (!member) return null;
-
   const candidates = [
     member?.customFields?.[MEMBERSTACK_MP_FIELD],
     member?.metaData?.[MEMBERSTACK_MP_FIELD],
     member?.customFields?.mp,
-    member?.metaData?.mp,
-    member?.customFields?.MP,
-    member?.metaData?.MP,
+    member?.metaData?.mp
   ];
-
   for (const value of candidates) {
     const parsed = Number(value);
-    if (Number.isFinite(parsed)) {
-      return sanitizeMp(parsed, 0);
-    }
+    if (Number.isFinite(parsed)) return sanitizeMp(parsed, 0);
   }
-
   return null;
 }
 
 async function updateMemberMp(member, nextMp) {
-  if (!member?.id) {
-    throw new Error("Missing member id for MP update");
-  }
-
+  if (!member?.id) throw new Error("Missing member id for MP update");
   const safeNextMp = sanitizeMp(nextMp, 0);
-  const currentCustomFields =
-    member?.customFields && typeof member.customFields === "object"
-      ? member.customFields
-      : {};
-  const currentMetaData =
-    member?.metaData && typeof member.metaData === "object"
-      ? member.metaData
-      : {};
-
   const body = {
-    customFields: {
-      ...currentCustomFields,
-      [MEMBERSTACK_MP_FIELD]: safeNextMp,
-      mp: safeNextMp,
-      MP: safeNextMp,
-    },
-    metaData: {
-      ...currentMetaData,
-      [MEMBERSTACK_MP_FIELD]: safeNextMp,
-      mp: safeNextMp,
-      MP: safeNextMp,
-    },
+    customFields: { ...member?.customFields, [MEMBERSTACK_MP_FIELD]: safeNextMp, mp: safeNextMp },
+    metaData: { ...member?.metaData, [MEMBERSTACK_MP_FIELD]: safeNextMp, mp: safeNextMp },
   };
-
-  const data = await memberstackRequest(`/${encodeURIComponent(member.id)}`, {
-    method: "PATCH",
-    body: JSON.stringify(body),
-  });
-
+  const data = await memberstackRequest(`/${encodeURIComponent(member.id)}`, { method: "PATCH", body: JSON.stringify(body) });
   return data?.data || null;
 }
 
 async function ensureTrialMp(member) {
   const current = readMpFromMember(member);
-  if (current !== null) {
-    return {
-      member,
-      currentMp: current,
-      trialGranted: false,
-    };
-  }
+  if (current !== null) return { member, currentMp: current, trialGranted: false };
 
   const trialMp = getInitialTrialMp();
   const updatedMember = await updateMemberMp(member, trialMp);
-
-  return {
-    member: updatedMember || member,
-    currentMp: trialMp,
-    trialGranted: true,
-  };
+  return { member: updatedMember || member, currentMp: trialMp, trialGranted: true };
 }
 
 async function prepareMpState(req) {
   const requiredMp = getRequiredMp(req.body || {});
-
-  if (!MEMBERSTACK_SECRET_KEY) {
-    return {
-      enabled: false,
-      reason: "missing-secret-key",
-      requiredMp,
-      currentMp: null,
-      remainingMp: null,
-      member: null,
-      deducted: false,
-      trialGranted: false,
-    };
-  }
+  if (!MEMBERSTACK_SECRET_KEY) return { enabled: false, reason: "missing-secret-key", requiredMp, currentMp: null, deducted: false };
 
   let member = null;
-
   try {
     const bearer = extractBearerToken(req);
     if (bearer) {
       const verified = await verifyMemberToken(bearer);
-      if (verified?.id) {
-        member = await getMemberById(verified.id);
-      }
+      if (verified?.id) member = await getMemberById(verified.id);
     }
-  } catch (error) {
-    console.warn("verifyMemberToken failed:", error?.message || error);
-  }
+  } catch (error) { console.warn("Token verification failed"); }
 
   if (!member?.id) {
     const memberId = extractMemberId(req);
-    if (memberId) {
-      try {
-        member = await getMemberById(memberId);
-      } catch (error) {
-        console.warn("getMemberById failed:", error?.message || error);
-      }
-    }
+    if (memberId) { try { member = await getMemberById(memberId); } catch (e) {} }
   }
 
-  if (!member?.id) {
-    return {
-      enabled: false,
-      reason: "member-not-provided",
-      requiredMp,
-      currentMp: null,
-      remainingMp: null,
-      member: null,
-      deducted: false,
-      trialGranted: false,
-    };
-  }
+  if (!member?.id) return { enabled: false, reason: "member-not-provided", requiredMp, currentMp: null, deducted: false };
 
   const ensured = await ensureTrialMp(member);
-
-  return {
-    enabled: true,
-    reason: "memberstack-synced",
-    requiredMp,
-    currentMp: ensured.currentMp,
-    remainingMp: ensured.currentMp,
-    member: ensured.member,
-    deducted: false,
-    trialGranted: ensured.trialGranted,
-  };
+  return { enabled: true, reason: "memberstack-synced", requiredMp, currentMp: ensured.currentMp, member: ensured.member, deducted: false, trialGranted: ensured.trialGranted };
 }
 
 async function deductMpAfterSuccess(mpState) {
-  if (!mpState?.enabled || !mpState?.member) {
-    return {
-      ...mpState,
-      deducted: false,
-    };
-  }
-
-  const currentMp = sanitizeMp(mpState.currentMp, 0);
-  const requiredMp = sanitizeMp(mpState.requiredMp, 0);
-
-  if (!Number.isFinite(currentMp) || !Number.isFinite(requiredMp)) {
-    return {
-      ...mpState,
-      deducted: false,
-    };
-  }
-
-  const nextMp = Math.max(0, currentMp - requiredMp);
+  if (!mpState?.enabled || !mpState?.member) return { ...mpState, deducted: false };
+  const nextMp = Math.max(0, sanitizeMp(mpState.currentMp, 0) - sanitizeMp(mpState.requiredMp, 0));
   const updatedMember = await updateMemberMp(mpState.member, nextMp);
-
-  return {
-    ...mpState,
-    member: updatedMember || mpState.member,
-    currentMp: nextMp,
-    remainingMp: nextMp,
-    deducted: true,
-  };
+  return { ...mpState, member: updatedMember || mpState.member, currentMp: nextMp, remainingMp: nextMp, deducted: true };
 }
+
+// --- Main Handler ---
 
 export default async function handler(req, res) {
   addCors(res);
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return json(res, 405, { success: false, error: "METHOD_NOT_ALLOWED", message: "POST 요청만 허용됩니다." });
+
   try {
     const input = normalizeInput(req.body || {});
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, error: "INVALID_REQUEST", message: "prompt 또는 topic이 필요합니다." });
+
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
       return json(res, 403, {
         success: false,
         error: "INSUFFICIENT_MP",
-        message: "MP가 부족합니다. 업그레이드 후 계속 이용해주세요.",
-        needsUpgrade: true,
+        message: "MP가 부족합니다.",
         requiredMp: mpState.requiredMp,
         currentMp: mpState.currentMp,
-        remainingMp: mpState.currentMp,
-        trialGranted: mpState.trialGranted,
-        mpSyncEnabled: Boolean(mpState.enabled),
-        mpSyncReason: mpState.reason || "unknown",
-        mp: {
-          requiredMp: mpState.requiredMp,
-          currentMp: mpState.currentMp,
-          remainingMp: mpState.currentMp,
-          deducted: false,
-          trialGranted: Boolean(mpState.trialGranted),
-        },
+        mp: { requiredMp: mpState.requiredMp, currentMp: mpState.currentMp, deducted: false, trialGranted: Boolean(mpState.trialGranted) },
       });
     }
 
@@ -942,29 +788,11 @@ export default async function handler(req, res) {
     const formatted = formatMocksResponse(rawText, input);
     const meta = buildMeta(input, formatted.actualCount);
     const finalMpState = await deductMpAfterSuccess(mpState);
+
     return json(res, 200, {
       success: true,
-      engine: input.engine,
-      title: formatted.title,
-      worksheetTitle: formatted.title,
-      level: input.level,
-      mode: input.mode,
-      topic: input.topic,
-      difficulty: input.difficulty,
-      count: input.count,
-      academyName: input.academyName,
-      instructions: formatted.instructions,
-      content: formatted.content,
-      answerSheet: formatted.answerSheet,
-      fullText: formatted.fullText,
+      ...formatted,
       meta,
-      requiredMp: mpState.requiredMp,
-      currentMp: mpState.currentMp,
-      remainingMp: finalMpState?.remainingMp ?? null,
-      needsUpgrade: false,
-      trialGranted: Boolean(mpState.trialGranted),
-      mpSyncEnabled: Boolean(mpState.enabled),
-      mpSyncReason: mpState.reason || "unknown",
       mp: {
         requiredMp: mpState.requiredMp,
         currentMp: mpState.currentMp,
@@ -975,6 +803,6 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("generate-mocks error:", error);
-    return json(res, 500, { success: false, error: "GENERATION_FAILED", message: "Mocks Exam 생성에 실패했습니다.", detail: error?.message || "Unknown error" });
+    return json(res, 500, { success: false, error: "GENERATION_FAILED", message: "Mocks Exam 생성에 실패했습니다.", detail: error?.message });
   }
 }
