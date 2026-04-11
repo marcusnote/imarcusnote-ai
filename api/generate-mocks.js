@@ -270,10 +270,11 @@ function enforceSourceRequirement(input) {
 }
 
 /* =========================
-   Step 5: Final Mocks Prompt Rebuild
-   - 원문 그대로 유지
+   Step 6: Final Mocks Prompt Rebuild
+   - 원문 유지
    - 출처 표기 강제
    - 문제만 변형
+   - High Difficulty 4문항 포함
    ========================= */
 
 function getMocksModeLabel(mode = "hybrid", language = "ko") {
@@ -491,11 +492,18 @@ function getTypeDistributionGuide(count = 12, hasSourcePassage = true, language 
 
   const koSelected = hasSourcePassage ? koPassage : koNoPassage;
   const selected = koSelected[count] || koSelected[12];
-
-  if (language === "en") {
-    return selected.map((line) => `- ${line}`).join("\n");
-  }
   return selected.map((line) => `- ${line}`).join("\n");
+}
+
+function getHighDifficultyPlan(count = 12, language = "ko") {
+  const killerCount = Math.min(4, Math.max(2, count >= 12 ? 4 : Math.floor(count / 3)));
+  const items = Array.from({ length: killerCount }, (_, idx) => count - killerCount + idx + 1);
+  const label = language === "en" ? "High Difficulty items" : "High Difficulty 문항";
+  return {
+    killerCount,
+    items,
+    label,
+  };
 }
 
 function buildSystemPrompt(input) {
@@ -503,6 +511,7 @@ function buildSystemPrompt(input) {
   const title = buildMocksTitle(input);
   const choiceCount = input.level === "elementary" ? 4 : 5;
   const typeGuide = getTypeDistributionGuide(input.count, input.hasSourcePassage, input.language);
+  const hdPlan = getHighDifficultyPlan(input.count, input.language);
 
   return `
 You are a senior Korean CSAT-style item writer and premium exam editor at MARCUSNOTE.
@@ -521,6 +530,8 @@ You design transformed exam sets with varied item types, strong distractors, and
 - Required Source Label: ${input.sourceLabel}
 - Preferred Choice Count Per Item: ${choiceCount}
 - Question Count: ${input.count}
+- High Difficulty Item Count: ${hdPlan.killerCount}
+- High Difficulty Item Numbers: ${hdPlan.items.join(", ")}
 
 [CORE IDENTITY]
 Mocks is a passage-based CSAT transformation engine.
@@ -608,7 +619,21 @@ If exact matching is slightly difficult, stay as close as possible.
 Do NOT cluster too many similar items together.
 Spread question types naturally across the sheet.
 
-[HARD RULE 5: ITEM VALIDITY]
+[HARD RULE 5: HIGH DIFFICULTY POLICY]
+You MUST include ${hdPlan.killerCount} clearly harder items.
+Use the exact item numbers: ${hdPlan.items.join(", ")}.
+For those items:
+- add the tag [High Difficulty] in the question stem
+- require at least one extra inferential step
+- make at least two distractors highly competitive
+- avoid direct textual match answers
+- prefer paraphrase distortion, inference trap, or logic discrimination
+- make the answer depend on the whole passage or multiple linked ideas
+
+High Difficulty items must NOT be impossible.
+They must still be solvable from the passage.
+
+[HARD RULE 6: ITEM VALIDITY]
 Only create question types that are valid for the material actually shown.
 
 If a passage is shown, preferred item families include:
@@ -631,14 +656,14 @@ If no full passage is shown, avoid or severely restrict:
 - irrelevant sentence
 - passage-dependent blank inference
 
-[HARD RULE 6: ANTI-DRIFT]
+[HARD RULE 7: ANTI-DRIFT]
 Never output a set that could fit any random topic.
 The result must reflect the user's actual requested source, topic, exam label, or title.
 Avoid repetitive abstract distractors like:
 education / society / growth / technology / sustainability
 unless those are truly central to the user’s source.
 
-[HARD RULE 7: PREMIUM EXAM QUALITY]
+[HARD RULE 8: PREMIUM EXAM QUALITY]
 - strong distractors
 - no trivial answer elimination
 - no repetitive stems
@@ -682,6 +707,7 @@ Before answering, verify:
 - answer count matches exactly
 - question types are varied
 - repeated stem patterns are minimized
+- item numbers ${hdPlan.items.join(", ")} are clearly marked [High Difficulty]
 - the worksheet feels premium and publishable
 `.trim();
 }
@@ -690,6 +716,7 @@ function buildUserPrompt(input) {
   const title = buildMocksTitle(input);
   const choiceCount = input.level === "elementary" ? 4 : 5;
   const typeGuide = getTypeDistributionGuide(input.count, input.hasSourcePassage, input.language);
+  const hdPlan = getHighDifficultyPlan(input.count, input.language);
 
   const languageGuide =
     input.language === "en"
@@ -761,6 +788,8 @@ Generate a complete MARCUSNOTE Mocks worksheet.
 - Generation Profile: ${input.generationProfile}
 - Preferred Choice Count: ${choiceCount}
 - Required Source Label: ${input.sourceLabel}
+- High Difficulty Item Count: ${hdPlan.killerCount}
+- High Difficulty Item Numbers: ${hdPlan.items.join(", ")}
 
 [USER REQUEST]
 ${input.userPrompt || input.topic || "고난도 변형문제를 만들어라."}
@@ -780,6 +809,14 @@ ${profileGuide}
 [TYPE DISTRIBUTION TARGET]
 Stay close to this distribution:
 ${typeGuide}
+
+[HIGH DIFFICULTY RULE]
+- You MUST make item numbers ${hdPlan.items.join(", ")} clearly harder.
+- Add [High Difficulty] in those question stems.
+- For those items, avoid direct answer retrieval.
+- Use inference, paraphrase distortion, logic traps, or subtle option discrimination.
+- At least two options in each High Difficulty item should look very plausible.
+- Do not make them impossible.
 
 [CRITICAL FORMAT LOCK - SOFT]
 - Prefer multiple-choice format strongly.
@@ -822,6 +859,7 @@ Then place the original passage exactly as provided by the user, unchanged.
 Write fully numbered exam-style questions.
 Prefer objective multiple-choice format.
 The passage itself must remain unchanged.
+Question numbers ${hdPlan.items.join(", ")} must include [High Difficulty].
 
 [[ANSWERS]]
 Write concise answer key and brief explanation.
@@ -833,6 +871,7 @@ Before finishing, verify:
 - answer count matches question count
 - if passage-based mode, the source label appears and the original passage is unchanged
 - question types are varied
+- item numbers ${hdPlan.items.join(", ")} are marked [High Difficulty]
 - the result is premium and classroom-usable
 `.trim();
 }
@@ -851,7 +890,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
     },
     body: JSON.stringify({
       model: OPENAI_MODEL,
-      temperature: 0.42,
+      temperature: 0.44,
       max_tokens: 8000,
       messages: [
         { role: "system", content: systemPrompt },
@@ -988,6 +1027,8 @@ function buildMeta(input, actualCount) {
     requestedCount: input.count,
     actualCount,
     sourceLabel: input.sourceLabel,
+    highDifficultyCount: getHighDifficultyPlan(input.count, input.language).killerCount,
+    highDifficultyItems: getHighDifficultyPlan(input.count, input.language).items,
     generatedAt: new Date().toISOString(),
   };
 }
@@ -1000,7 +1041,7 @@ function addCors(res) {
 
 /* =========================
    Output Validation Helpers
-   Step 5: soft warnings only
+   Step 6: soft warnings only
    ========================= */
 
 function hasFakePassageInstruction(text = "") {
@@ -1054,10 +1095,15 @@ function answerSheetUsesOptionNumbersOnly(text = "") {
   return lines.every((line) => /^\d+\)\s+[①-⑤]\s+-\s+/.test(line) || /^\d+\)\s+[1-5]\s+-\s+/.test(line));
 }
 
+function countHighDifficultyTaggedItems(text = "") {
+  return (cleanupText(text).match(/\[High Difficulty\]/g) || []).length;
+}
+
 function validateMocksOutput(formatted, input) {
   const errors = [];
   const warnings = [];
   const choiceCount = input.level === "elementary" ? 4 : 5;
+  const hdPlan = getHighDifficultyPlan(input.count, input.language);
 
   if (formatted.actualCount !== input.count) {
     errors.push(`QUESTION_COUNT_MISMATCH:${formatted.actualCount}/${input.count}`);
@@ -1095,6 +1141,11 @@ function validateMocksOutput(formatted, input) {
 
   if (!answerSheetUsesOptionNumbersOnly(formatted.answerSheet)) {
     warnings.push("ANSWER_SHEET_NOT_OBJECTIVE");
+  }
+
+  const hdTagged = countHighDifficultyTaggedItems(formatted.content);
+  if (hdTagged < hdPlan.killerCount) {
+    warnings.push(`HIGH_DIFFICULTY_TAG_MISSING:${hdTagged}/${hdPlan.killerCount}`);
   }
 
   return {
