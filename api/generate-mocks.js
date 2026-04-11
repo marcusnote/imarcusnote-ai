@@ -239,7 +239,7 @@ function normalizeInput(body = {}) {
 
 /* =========================
    Mocks Prompt Rebuild
-   Step 2: Prompt Lock + Passage-aware Output
+   Step 3: Objective-format lock
    ========================= */
 
 function getMocksModeLabel(mode = "hybrid", language = "ko") {
@@ -279,6 +279,7 @@ function buildMocksTitle(input) {
 function buildSystemPrompt(input) {
   const modeLabel = getMocksModeLabel(input.mode, input.language);
   const title = buildMocksTitle(input);
+  const choiceCount = input.level === "elementary" ? 4 : 5;
 
   return `
 You are the chief assessment architect and senior exam editor of MARCUSNOTE.
@@ -293,15 +294,25 @@ You create premium Korean English reading worksheets for school exams and CSAT-s
 - Difficulty: ${input.difficulty}
 - Generation Profile: ${input.generationProfile}
 - Source Passage Included By User: ${input.hasSourcePassage ? "YES" : "NO"}
+- Required Choice Count Per Item: ${choiceCount}
 
 [CORE IDENTITY]
-Mocks is a passage-transformation reading exam engine.
+Mocks is a passage-transformation multiple-choice exam engine.
 Mocks is NOT a grammar worksheet.
-Mocks is NOT a generic topic question generator.
-Mocks is NOT a shallow summary quiz.
+Mocks is NOT a short-answer worksheet.
+Mocks is NOT a comprehension Q&A sheet.
+Mocks must look like a real Korean test handout.
+
+[ABSOLUTE FORMAT LAW]
+Every question MUST be objective multiple-choice.
+Every question MUST include exactly ${choiceCount} answer choices.
+Do NOT write open-ended questions.
+Do NOT ask students to explain, describe, or provide examples in free response.
+Do NOT output any item without numbered options.
+Do NOT output essay-type prompts.
 
 [PRIMARY MISSION]
-Generate a polished, premium, publishable worksheet that feels like it was edited by a veteran Korean exam editor.
+Generate a polished, premium, publishable transformed worksheet that feels like it was edited by a veteran Korean exam editor.
 
 [HARD RULE 1: SOURCE-BOUND GENERATION]
 If the user included a real source passage:
@@ -366,14 +377,28 @@ If no full passage is shown, avoid or severely restrict:
 - irrelevant sentence
 - passage-dependent blank inference
 
-[HARD RULE 4: ANTI-DRIFT]
+[HARD RULE 4: OBJECTIVE ITEM SHAPE]
+Each item must look like this:
+1. question stem
+① option one
+② option two
+③ option three
+④ option four
+${choiceCount === 5 ? "⑤ option five" : ""}
+
+Use Korean numeric option markers exactly as shown above.
+Do not omit options.
+Do not merge multiple items into one.
+Do not output answer letters inside the question section.
+
+[HARD RULE 5: ANTI-DRIFT]
 Never output a set that could fit any random topic.
 The result must reflect the user's actual requested source, topic, exam label, or title.
 Avoid repetitive abstract distractors like:
 education / society / growth / technology / sustainability
 unless those are truly central to the user’s source.
 
-[HARD RULE 5: PREMIUM EXAM QUALITY]
+[HARD RULE 6: PREMIUM EXAM QUALITY]
 - strong distractors
 - no trivial answer elimination
 - no repetitive stems
@@ -396,21 +421,23 @@ You MUST output in exactly this structure:
 (include only when a real source passage exists and passage-based transformation is required)
 
 [[QUESTIONS]]
-(all questions only, fully numbered)
+(all questions only, fully numbered, every item objective multiple-choice)
 
 [[ANSWERS]]
 (answer key and brief explanation for each item)
 
-[OUTPUT RULES]
-- Number questions sequentially.
-- Number answers as 1) 2) 3) ...
-- Keep explanations concise and useful.
-- Do not include any extra section.
-- Do not explain your process.
-- Do not include markdown code fences.
+[ANSWER SHEET RULE]
+Every answer line must begin exactly like:
+1) ② - brief explanation
+2) ④ - brief explanation
+3) ① - brief explanation
+
+The answer section must use only option numbers, not free-response answers.
 
 [FINAL INTERNAL CHECK]
 Before answering, verify:
+- every question is multiple-choice
+- every question has exactly ${choiceCount} options
 - if source passage exists, PASSAGE section exists
 - if source passage does not exist, no fake passage instruction appears
 - all item types are valid for the displayed material
@@ -422,6 +449,7 @@ Before answering, verify:
 
 function buildUserPrompt(input) {
   const title = buildMocksTitle(input);
+  const choiceCount = input.level === "elementary" ? 4 : 5;
 
   const languageGuide =
     input.language === "en"
@@ -448,10 +476,10 @@ function buildUserPrompt(input) {
 The user included a real source passage.
 
 You must:
-1. Create a transformed passage.
+1. Create one transformed passage.
 2. Preserve the original meaning domain and logical core.
 3. Rewrite the surface substantially.
-4. Build questions that depend on the transformed passage.
+4. Build objective multiple-choice questions that depend on the transformed passage.
 5. Make the set feel like a real 변형모의고사.
 
 Recommended item mix:
@@ -470,6 +498,8 @@ Important:
 - Do not merely restate the original passage.
 - Do not drift into generic unrelated content.
 - The transformed passage and items must clearly belong together.
+- Every item must be objective multiple-choice.
+- Never ask students to write short answers.
 `.trim()
     : `
 [TOPIC-BASED DRILL MODE]
@@ -479,7 +509,7 @@ You must:
 1. Generate an advanced reading drill set based on the topic/request.
 2. Do NOT fake a hidden passage.
 3. Do NOT say "다음 지문을 읽고" unless an actual passage is shown.
-4. Prefer self-contained advanced items.
+4. Prefer self-contained objective multiple-choice items.
 
 Recommended item mix:
 - 주제 / 요지 / 제목
@@ -495,6 +525,7 @@ Avoid unless fully self-contained:
 - 글의 순서
 - 무관문
 - passage-dependent 빈칸추론
+- short-answer explanation prompts
 `.trim();
 
   return `
@@ -509,6 +540,7 @@ Generate a complete MARCUSNOTE Mocks worksheet.
 - Question Count: ${input.count}
 - Language: ${input.language}
 - Generation Profile: ${input.generationProfile}
+- Required Choice Count: ${choiceCount}
 
 [USER REQUEST]
 ${input.userPrompt || input.topic || "고난도 변형문제를 만들어라."}
@@ -519,6 +551,15 @@ ${premiumGuide}
 ${languageGuide}
 
 ${profileGuide}
+
+[STRICT FORMAT RULES]
+1. Every question must be objective multiple-choice.
+2. Every question must include exactly ${choiceCount} options.
+3. Use Korean option markers: ① ② ③ ④ ${choiceCount === 5 ? "⑤" : ""}
+4. Do not create short-answer, essay, or explanation prompts in the question section.
+5. The answer sheet must use option numbers only.
+6. Each answer line must follow this format: 1) ② - explanation
+7. Do not put free-response model answers in the answer sheet.
 
 [STRICT QUALITY RULES]
 1. Every question must be test-valid.
@@ -542,17 +583,28 @@ ${input.hasSourcePassage ? `[[PASSAGE]]
 (Provide one transformed passage only.)` : ""}
 
 [[QUESTIONS]]
-1. ...
-2. ...
-3. ...
+1. question stem
+① option one
+② option two
+③ option three
+④ option four
+${choiceCount === 5 ? "⑤ option five" : ""}
+
+2. question stem
+① option one
+② option two
+③ option three
+④ option four
+${choiceCount === 5 ? "⑤ option five" : ""}
 
 [[ANSWERS]]
-1) ...
-2) ...
-3) ...
+1) ② - brief explanation
+2) ④ - brief explanation
 
 [FINAL SELF-CHECK]
 Before finishing, verify:
+- every item is multiple-choice
+- every item has exactly ${choiceCount} options
 - question count is exactly ${input.count}
 - numbering is sequential
 - answer count matches question count
@@ -576,7 +628,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
     },
     body: JSON.stringify({
       model: OPENAI_MODEL,
-      temperature: 0.45,
+      temperature: 0.35,
       max_tokens: 8000,
       messages: [
         { role: "system", content: systemPrompt },
@@ -724,7 +776,7 @@ function addCors(res) {
 
 /* =========================
    Output Validation Helpers
-   Step 2: conservative validation
+   Step 3: objective-format validation
    ========================= */
 
 function hasFakePassageInstruction(text = "") {
@@ -736,8 +788,51 @@ function containsPassageDependentItems(text = "") {
   return /문장\s*삽입|글의\s*순서|무관한\s*문장|빈칸에\s*적절한|다음\s*문장이\s*들어갈|주어진\s*문장의\s*위치/i.test(t);
 }
 
+function countObjectiveItems(text = "") {
+  const blocks = cleanupText(text)
+    .split(/(?=^\s*\d+[\.\)]\s+)/gm)
+    .map((v) => v.trim())
+    .filter(Boolean);
+
+  return blocks.filter((block) => {
+    const hasQ = /^\s*\d+[\.\)]\s+/m.test(block);
+    const has1 = /^①\s+/m.test(block);
+    const has2 = /^②\s+/m.test(block);
+    const has3 = /^③\s+/m.test(block);
+    const has4 = /^④\s+/m.test(block);
+    return hasQ && has1 && has2 && has3 && has4;
+  }).length;
+}
+
+function allItemsHaveExactChoices(text = "", choiceCount = 5) {
+  const blocks = cleanupText(text)
+    .split(/(?=^\s*\d+[\.\)]\s+)/gm)
+    .map((v) => v.trim())
+    .filter(Boolean);
+
+  if (!blocks.length) return false;
+
+  return blocks.every((block) => {
+    const count = ["①", "②", "③", "④", "⑤"].reduce((acc, marker) => {
+      const re = new RegExp(`^${marker}\\s+`, "gm");
+      return acc + ((block.match(re) || []).length ? 1 : 0);
+    }, 0);
+    if (choiceCount === 4) {
+      return /^①\s+/m.test(block) && /^②\s+/m.test(block) && /^③\s+/m.test(block) && /^④\s+/m.test(block) && !/^⑤\s+/m.test(block) && count === 4;
+    }
+    return /^①\s+/m.test(block) && /^②\s+/m.test(block) && /^③\s+/m.test(block) && /^④\s+/m.test(block) && /^⑤\s+/m.test(block) && count === 5;
+  });
+}
+
+function answerSheetUsesOptionNumbersOnly(text = "") {
+  const lines = cleanupText(text).split("\n").map((v) => v.trim()).filter(Boolean);
+  if (!lines.length) return false;
+  return lines.every((line) => /^\d+\)\s+[①-⑤]\s+-\s+/.test(line) || /^\d+\)\s+[1-5]\s+-\s+/.test(line));
+}
+
 function validateMocksOutput(formatted, input) {
   const errors = [];
+  const choiceCount = input.level === "elementary" ? 4 : 5;
 
   if (formatted.actualCount !== input.count) {
     errors.push(`QUESTION_COUNT_MISMATCH:${formatted.actualCount}/${input.count}`);
@@ -759,6 +854,19 @@ function validateMocksOutput(formatted, input) {
     if (containsPassageDependentItems(formatted.content)) {
       errors.push("INVALID_PASSAGE_DEPENDENT_ITEMS_WITHOUT_PASSAGE");
     }
+  }
+
+  const objectiveCount = countObjectiveItems(formatted.content);
+  if (objectiveCount !== input.count) {
+    errors.push(`NON_OBJECTIVE_ITEMS_DETECTED:${objectiveCount}/${input.count}`);
+  }
+
+  if (!allItemsHaveExactChoices(formatted.content, choiceCount)) {
+    errors.push(`INVALID_CHOICE_STRUCTURE:${choiceCount}`);
+  }
+
+  if (!answerSheetUsesOptionNumbersOnly(formatted.answerSheet)) {
+    errors.push("ANSWER_SHEET_NOT_OBJECTIVE");
   }
 
   return {
