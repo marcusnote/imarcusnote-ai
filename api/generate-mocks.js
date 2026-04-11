@@ -170,6 +170,23 @@ function detectSourcePassage(text = "") {
   return false;
 }
 
+function extractSourceLabel(text = "") {
+  const t = String(text || "");
+  const patterns = [
+    /출처\s*[:：]\s*(.+)/i,
+    /source\s*[:：]\s*(.+)/i,
+    /((?:20\d{2}|19\d{2})년\s*\d+월\s*(?:고1|고2|고3|중1|중2|중3|고등|중등)?\s*\d+번)/,
+    /((?:20\d{2}|19\d{2})\s*학년도?\s*\d+월\s*(?:모의고사|학평|평가원)?\s*\d+번)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = t.match(pattern);
+    if (match?.[1]) return sanitizeString(match[1]);
+  }
+
+  return "";
+}
+
 function inferGenerationProfile(input = {}) {
   const sourceText = String(input.userPrompt || input.prompt || "").trim();
   const hasSourcePassage = detectSourcePassage(sourceText);
@@ -217,6 +234,8 @@ function normalizeInput(body = {}) {
   const gradeLabel = inferGradeLabel(mergedText, level);
   const premium = body.premium === true || inferPremium(mergedText);
   const profile = inferGenerationProfile({ userPrompt, topic });
+  const sourceLabel =
+    sanitizeString(body.sourceLabel || body.source || "") || extractSourceLabel(userPrompt);
 
   return {
     engine,
@@ -234,15 +253,27 @@ function normalizeInput(body = {}) {
     premium,
     hasSourcePassage: profile.hasSourcePassage,
     generationProfile: profile.generationProfile,
+    sourceLabel,
   };
 }
 
+function enforceSourceRequirement(input) {
+  if (!input?.hasSourcePassage) {
+    throw new Error("SOURCE_PASSAGE_REQUIRED: 변형문제를 만들려면 실제 지문을 입력해야 합니다.");
+  }
+
+  if (!sanitizeString(input.sourceLabel || "")) {
+    throw new Error("SOURCE_LABEL_REQUIRED: 출처를 함께 입력해 주세요. 예: 출처: 2026년 3월 고1 21번");
+  }
+
+  return input;
+}
+
 /* =========================
-   Step 4: Final Mocks Prompt Rebuild
-   - 유형 분포 강제
-   - 반복 금지 강화
-   - 변형 강도 강화
-   - 소프트락 유지
+   Step 5: Final Mocks Prompt Rebuild
+   - 원문 그대로 유지
+   - 출처 표기 강제
+   - 문제만 변형
    ========================= */
 
 function getMocksModeLabel(mode = "hybrid", language = "ko") {
@@ -462,7 +493,7 @@ function getTypeDistributionGuide(count = 12, hasSourcePassage = true, language 
   const selected = koSelected[count] || koSelected[12];
 
   if (language === "en") {
-    return selected.map((line) => `- ${line}`);
+    return selected.map((line) => `- ${line}`).join("\n");
   }
   return selected.map((line) => `- ${line}`).join("\n");
 }
@@ -487,16 +518,32 @@ You design transformed exam sets with varied item types, strong distractors, and
 - Difficulty: ${input.difficulty}
 - Generation Profile: ${input.generationProfile}
 - Source Passage Included By User: ${input.hasSourcePassage ? "YES" : "NO"}
+- Required Source Label: ${input.sourceLabel}
 - Preferred Choice Count Per Item: ${choiceCount}
 - Question Count: ${input.count}
 
 [CORE IDENTITY]
-Mocks is a passage-transformation reading exam engine.
-Mocks is NOT a grammar worksheet.
+Mocks is a passage-based CSAT transformation engine.
+Mocks keeps the original passage and transforms ONLY the questions.
+Mocks is NOT a passage rewriting engine.
 Mocks is NOT a short-answer worksheet.
 Mocks is NOT a repetitive comprehension checklist.
 Mocks should strongly prefer objective multiple-choice format.
 Mocks must feel like a real Korean test handout.
+
+[ABSOLUTE PASSAGE POLICY]
+You MUST use the original source passage EXACTLY as provided by the user.
+You MUST NOT rewrite the full passage.
+You MUST NOT paraphrase the full passage.
+You MUST NOT summarize the full passage.
+You MUST NOT alter sentence order in the full passage block.
+The passage section should display the original user-provided passage unchanged.
+The transformation happens in the QUESTIONS, not in the passage itself.
+
+[SOURCE LABEL POLICY]
+You MUST place the source label above the passage in Korean.
+Format:
+출처: ${input.sourceLabel}
 
 [COUNT POLICY]
 - Optimal range for one transformed passage is 12~15 items.
@@ -515,35 +562,33 @@ Generate a polished, premium, publishable worksheet that feels like it was edite
 
 [HARD RULE 1: SOURCE-BOUND GENERATION]
 If the user included a real source passage:
-- You MUST generate a transformed reading set anchored to that passage.
-- You MUST include a transformed passage block in the output.
-- The passage must preserve the original meaning domain, logic, and concept structure.
-- The passage surface must be substantially rewritten.
-- Do NOT copy the original passage verbatim in long chunks.
+- Use that original passage unchanged.
+- Create transformed exam questions anchored to that passage.
+- Keep the source domain, logic, and textual evidence tightly aligned.
 - Do NOT drift into unrelated broad themes.
 
 If the user did NOT include a real source passage:
 - Do NOT pretend there was a passage.
 - Do NOT generate fake “read the passage” instructions.
-- Do NOT create insertion / order / blank / irrelevant-sentence items that require an actual passage unless you explicitly provide the necessary mini-text inside the item.
 - Generate a coherent advanced reading drill set based on the requested topic, exam context, and level.
 
-[HARD RULE 2: TRANSFORMATION QUALITY]
-When a passage exists, transformation should involve several of the following:
-- sentence restructuring
-- viewpoint shift
-- syntactic compression or expansion
-- paraphrase with changed surface form
-- logic-preserving reframing
-- altered rhetorical flow
-- transformed phrasing of central claims
-- changed ordering of supporting ideas where appropriate
+[HARD RULE 2: QUESTION TRANSFORMATION QUALITY]
+Transformation should happen in the question design.
+Use several of the following:
+- viewpoint shift in answer options
+- paraphrase mismatch
+- logical reframing in distractors
+- altered rhetorical focus in question stems
+- inference pressure
+- summary compression
+- blank inference
+- insertion / order / irrelevant sentence design
 
-Transformation must NOT be:
-- synonym swapping only
-- line-by-line rewriting with obvious copying
-- generic educational filler unrelated to the source
-- simple Korean restatement of the source
+Do NOT:
+- ask the same meaning question repeatedly
+- turn all items into direct detail checks
+- restate the source in easy Korean and ask obvious questions
+- rely only on synonym swaps
 
 [HARD RULE 3: ITEM WRITER MINDSET]
 Each question must test a DIFFERENT cognitive skill whenever possible.
@@ -566,7 +611,7 @@ Spread question types naturally across the sheet.
 [HARD RULE 5: ITEM VALIDITY]
 Only create question types that are valid for the material actually shown.
 
-If a transformed passage is shown, preferred item families include:
+If a passage is shown, preferred item families include:
 - main idea / theme / title
 - gist / summary
 - inference / implication
@@ -579,15 +624,6 @@ If a transformed passage is shown, preferred item families include:
 - order arrangement
 - irrelevant sentence
 - summary completion
-
-If no full passage is shown, prioritize:
-- theme / gist / title
-- inference / implication
-- paraphrase judgment
-- statement validity
-- tone / purpose
-- vocabulary in context using mini-context
-- summary logic using self-contained item text
 
 If no full passage is shown, avoid or severely restrict:
 - sentence insertion
@@ -622,7 +658,7 @@ You MUST output in exactly this structure:
 (one concise Korean instruction block unless English was explicitly requested)
 
 [[PASSAGE]]
-(include only when a real source passage exists and passage-based transformation is required)
+(put the source label first, then the original source passage exactly as given)
 
 [[QUESTIONS]]
 (all questions only, fully numbered)
@@ -640,8 +676,8 @@ If the model struggles, still keep answers concise and objective-oriented.
 
 [FINAL INTERNAL CHECK]
 Before answering, verify:
-- if source passage exists, PASSAGE section exists
-- if source passage does not exist, no fake passage instruction appears
+- the passage is unchanged from the user input
+- the source label appears above the passage
 - question count matches exactly
 - answer count matches exactly
 - question types are varied
@@ -680,23 +716,24 @@ function buildUserPrompt(input) {
 The user included a real source passage.
 
 You must:
-1. Create one transformed passage.
-2. Preserve the original meaning domain and logical core.
-3. Rewrite the surface substantially.
-4. Build exam-style questions that depend on the transformed passage.
+1. Use the original passage exactly as given.
+2. Write the source label above the passage exactly like this: 출처: ${input.sourceLabel}
+3. Transform ONLY the questions.
+4. Build exam-style questions that depend on the original passage.
 5. Make the set feel like a real 변형모의고사.
 
-Do this transformation actively:
-- alter sentence structure
+Do this transformation actively in the items:
+- alter cognitive task
+- alter answer-option framing
 - alter rhetorical focus
-- alter local wording
-- alter supporting order when appropriate
-- preserve meaning but not surface form
+- force inference and comparison
+- build advanced distractors
 
 Do NOT:
-- reuse original sentence structure heavily
-- restate the same claim repeatedly
-- turn the whole set into a meaning-check worksheet
+- rewrite the passage
+- summarize the passage as the passage block
+- reuse the same meaning question repeatedly
+- turn the sheet into a basic comprehension set
 `.trim()
     : `
 [TOPIC-BASED DRILL MODE]
@@ -723,6 +760,7 @@ Generate a complete MARCUSNOTE Mocks worksheet.
 - Language: ${input.language}
 - Generation Profile: ${input.generationProfile}
 - Preferred Choice Count: ${choiceCount}
+- Required Source Label: ${input.sourceLabel}
 
 [USER REQUEST]
 ${input.userPrompt || input.topic || "고난도 변형문제를 만들어라."}
@@ -776,22 +814,24 @@ ${title}
 [[INSTRUCTIONS]]
 (Write one concise instruction block in Korean unless English was explicitly requested.)
 
-${input.hasSourcePassage ? `[[PASSAGE]]
-(Provide one transformed passage only.)` : ""}
+[[PASSAGE]]
+First line must be: 출처: ${input.sourceLabel}
+Then place the original passage exactly as provided by the user, unchanged.
 
 [[QUESTIONS]]
-(Write fully numbered exam-style questions. Prefer objective multiple-choice format.)
+Write fully numbered exam-style questions.
+Prefer objective multiple-choice format.
+The passage itself must remain unchanged.
 
 [[ANSWERS]]
-(Write concise answer key and brief explanation.)
+Write concise answer key and brief explanation.
 
 [FINAL SELF-CHECK]
 Before finishing, verify:
 - question count is exactly ${input.count}
 - numbering is sequential
 - answer count matches question count
-- no fake passage-dependent item appears when no passage is shown
-- if passage-based mode, a transformed passage is included
+- if passage-based mode, the source label appears and the original passage is unchanged
 - question types are varied
 - the result is premium and classroom-usable
 `.trim();
@@ -947,6 +987,7 @@ function buildMeta(input, actualCount) {
     difficulty: input.difficulty,
     requestedCount: input.count,
     actualCount,
+    sourceLabel: input.sourceLabel,
     generatedAt: new Date().toISOString(),
   };
 }
@@ -959,7 +1000,7 @@ function addCors(res) {
 
 /* =========================
    Output Validation Helpers
-   Step 4: soft warnings only
+   Step 5: soft warnings only
    ========================= */
 
 function hasFakePassageInstruction(text = "") {
@@ -1030,6 +1071,9 @@ function validateMocksOutput(formatted, input) {
   if (input.hasSourcePassage) {
     if (!formatted.passage || formatted.passage.length < 120) {
       errors.push("MISSING_OR_WEAK_PASSAGE");
+    }
+    if (!formatted.passage.includes(`출처: ${input.sourceLabel}`)) {
+      warnings.push("SOURCE_LABEL_MISSING_IN_PASSAGE");
     }
   } else {
     if (hasFakePassageInstruction(formatted.content)) {
@@ -1205,8 +1249,14 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return json(res, 405, { success: false, error: "METHOD_NOT_ALLOWED", message: "POST 요청만 허용됩니다." });
 
   try {
-    const input = normalizeInput(req.body || {});
-    if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, error: "INVALID_REQUEST", message: "prompt 또는 topic이 필요합니다." });
+    const input = enforceSourceRequirement(normalizeInput(req.body || {}));
+    if (!input.userPrompt && !input.topic) {
+      return json(res, 400, {
+        success: false,
+        error: "INVALID_REQUEST",
+        message: "prompt 또는 topic이 필요합니다.",
+      });
+    }
 
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
@@ -1216,7 +1266,12 @@ export default async function handler(req, res) {
         message: "MP가 부족합니다.",
         requiredMp: mpState.requiredMp,
         currentMp: mpState.currentMp,
-        mp: { requiredMp: mpState.requiredMp, currentMp: mpState.currentMp, deducted: false, trialGranted: Boolean(mpState.trialGranted) },
+        mp: {
+          requiredMp: mpState.requiredMp,
+          currentMp: mpState.currentMp,
+          deducted: false,
+          trialGranted: Boolean(mpState.trialGranted),
+        },
       });
     }
 
@@ -1254,6 +1309,11 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("generate-mocks error:", error);
-    return json(res, 500, { success: false, error: "GENERATION_FAILED", message: "Mocks Exam 생성에 실패했습니다.", detail: error?.message });
+    return json(res, 500, {
+      success: false,
+      error: "GENERATION_FAILED",
+      message: "Mocks Exam 생성에 실패했습니다.",
+      detail: error?.message,
+    });
   }
 }
