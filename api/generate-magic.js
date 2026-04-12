@@ -1876,8 +1876,13 @@ function runLightGrammarValidator(formatted, input) {
   const countMatches = (pattern) => numberedLines.filter((line) => pattern.test(line.toLowerCase())).length;
 
   if (focus.isSoThatPurpose) {
-    const incomplete = numberedLines.some((line) => /so that\s+[^.?!]*\b(can|could|will|would|may|might)\s*[.]?\s*$/i.test(line));
-    if (incomplete) return { ok: false, reason: "so_that_incomplete" };
+    const incompleteCount = numberedLines.filter((line) => /so that\s+[^.?!]*\b(can|could|will|would|may|might)\s*[.]?\s*$/i.test(line)).length;
+    if (incompleteCount >= Math.max(2, Math.ceil(total * 0.12))) {
+      return { ok: false, reason: "so_that_incomplete", incompleteCount, total, severity: "high" };
+    }
+    if (incompleteCount === 1) {
+      return { ok: true, warning: "so_that_incomplete_minor", incompleteCount, total };
+    }
   }
 
   if (focus.isCausative) {
@@ -1928,9 +1933,19 @@ ${badOutput}
 - Fix incomplete or awkward sentences.
 - Increase target grammar coverage if it is too low.
 - Keep item count and workbook tone as much as possible.
+- If the grammar is so that purpose, complete any unfinished 'so that + subject + modal' clauses naturally.
 - Return only the repaired worksheet text.`;
 
   return callOpenAI(repairSystemPrompt, repairUserPrompt);
+}
+
+function shouldAcceptSoftFailure(check, input) {
+  if (!check || check.ok) return false;
+  const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
+  if (focus.isSoThatPurpose && check.reason === "so_that_incomplete" && Number(check.incompleteCount || 0) <= 1) {
+    return true;
+  }
+  return false;
 }
 
 function isGenerationSuccessful(formatted, input) {
@@ -2375,6 +2390,10 @@ module.exports = async function handler(req, res) {
       } catch (repairError) {
         console.error("repair_failed", repairError?.message || repairError);
       }
+    }
+
+    if (!generationCheck.ok && shouldAcceptSoftFailure(generationCheck, input)) {
+      generationCheck = { ok: true, softAccepted: true, originalReason: generationCheck.reason };
     }
 
     if (!generationCheck.ok) {
