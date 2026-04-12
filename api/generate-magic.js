@@ -198,6 +198,16 @@ function detectGrammarFocus(text = "") {
     /superlative/i,
   ]);
 
+  const isParticipialModifier = hasAny([
+    /분사의\s*한정적\s*용법/,
+    /분사\s*한정적\s*용법/,
+    /현재분사\s*한정적\s*용법/,
+    /과거분사\s*한정적\s*용법/,
+    /participial\s*modifier/i,
+    /attributive\s*participle/i,
+    /participle\s+as\s+adjective/i,
+  ]);
+
   const isNonRestrictive = hasAny([
     /계속적\s*용법/,
     /non[-\s]?restrictive/i,
@@ -227,6 +237,7 @@ function detectGrammarFocus(text = "") {
   else if (isPresentPerfect) chapterKey = "present_perfect";
   else if (isSuperlative) chapterKey = "superlative";
   else if (isComparative) chapterKey = "comparative";
+  else if (isParticipialModifier) chapterKey = "participial_modifier";
 
   return {
     chapterKey,
@@ -238,6 +249,7 @@ function detectGrammarFocus(text = "") {
     isPresentPerfect,
     isComparative,
     isSuperlative,
+    isParticipialModifier,
     isNonRestrictive,
     isRestrictive,
     isObjectiveRelativePronoun,
@@ -727,6 +739,39 @@ function buildLearningVariationRuleBlock(input) {
 `;
 }
 
+function buildTargetCoverageRuleBlock(input) {
+  const focus = input.grammarFocus || detectGrammarFocus([input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" "));
+  const isEn = input.language === "en";
+  const targetHeavy = (labelEn, labelKo) => isEn ? `
+[Target Grammar Coverage Rules]
+- At least 70% of the items and answers must directly realize the target grammar: ${labelEn}.
+- Do not fill the worksheet with generic sentences that could appear in any chapter.
+- If an item does not directly show the target grammar, it must still support the chapter as a warm-up, contrast, or mixed application item.
+- Completely off-target answers are forbidden.
+- Every answer must be checked for grammar accuracy, naturalness, and chapter alignment before finalizing.
+` : `
+[목표 문법 커버리지 규칙]
+- 전체 문항과 정답의 최소 70% 이상은 목표 문법 ${labelKo}이 직접 드러나야 한다.
+- 어느 챕터에나 들어갈 수 있는 일반 문장을 대량으로 넣지 말 것.
+- 목표 문법이 직접 드러나지 않는 문항이 있더라도, 그것은 도입형·대조형·혼합형 보조 문항이어야 한다.
+- 챕터와 무관한 정답은 금지한다.
+- 모든 정답은 최종 출력 전에 문법 정확성, 자연성, 챕터 정합성을 다시 점검할 것.
+`;
+
+  if (focus.isNonRestrictive) return targetHeavy('non-restrictive relative clauses', '관계대명사의 계속적 용법');
+  if (focus.isObjectiveRelativePronoun) return targetHeavy('objective relative pronouns', '목적격 관계대명사');
+  if (focus.isRelativePronoun && focus.isRestrictive) return targetHeavy('restrictive relative clauses', '관계대명사의 제한적 용법');
+  if (focus.isRelativePronoun) return targetHeavy('relative pronouns', '관계대명사');
+  if (focus.isParticipialModifier) return targetHeavy('attributive participles / participial modifiers', '분사의 한정적 용법');
+  if (focus.isToInfinitive) return targetHeavy('to-infinitives', 'to부정사');
+  if (focus.isGerund) return targetHeavy('gerunds', '동명사');
+  if (focus.isPassive) return targetHeavy('passive voice', '수동태');
+  if (focus.isPresentPerfect) return targetHeavy('present perfect', '현재완료');
+  if (focus.isComparative) return targetHeavy('comparatives', '비교급');
+  if (focus.isSuperlative) return targetHeavy('superlatives', '최상급');
+  return '';
+}
+
 function buildGrammarRuleBlock(input) {
   const focus = input.grammarFocus || detectGrammarFocus(
     [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
@@ -764,6 +809,8 @@ function buildGrammarRuleBlock(input) {
    - My brother, who lives in Busan, is a teacher.
    - This movie, which I saw yesterday, is really interesting.
 7. Keep the Korean prompts and clues aligned with comma-based non-restrictive meaning.
+8. Prefer visibly comma-framed structures such as "Noun, who/which ..., main clause."
+9. Do not escape into safe restrictive patterns like "the one that" or "the person who".
 ` : `
 [관계대명사의 계속적 용법 규칙]
 1. 목표 정답은 반드시 계속적 용법 관계대명사 문장으로 작성할 것.
@@ -777,6 +824,8 @@ function buildGrammarRuleBlock(input) {
    - My brother, who lives in Busan, is a teacher.
    - This movie, which I saw yesterday, is really interesting.
 7. 한국어 제시문과 clue도 쉼표 기반의 부가설명 의미에 맞게 설계할 것.
+8. 정답은 가능한 한 "Noun, who/which ..., main clause" 형태를 분명하게 보여 줄 것.
+9. "the one that", "the person who" 같은 제한적 용법형 안전문장으로 도망가지 말 것.
 `);
   }
 
@@ -881,6 +930,24 @@ function buildGrammarRuleBlock(input) {
 - 최상급 구조가 분명히 드러나게 할 것.
 - 완전한 명사구와 자연스러운 비교 범위를 사용할 것.
 - 비교급 정답으로 흐르지 말 것.
+`);
+  }
+
+  if (focus.isParticipialModifier) {
+    blocks.push(isEn ? `
+[Attributive Participle Rules]
+- Keep the chapter visibly centered on participles used as modifiers.
+- Answers should frequently contain structures like "the boy running fast", "the book written in English", "the woman wearing a hat".
+- Do not let the set drift into generic simple sentences without participial modification.
+- Distinguish present participles (-ing) for active meaning and past participles (p.p.) for passive/completed meaning when relevant.
+- Avoid replacing the target with ordinary relative clauses unless a limited comparison item is intentionally included.
+` : `
+[분사의 한정적 용법 규칙]
+- 목표 문법은 반드시 명사를 수식하는 분사 구조 중심으로 드러나게 할 것.
+- 정답에는 "빠르게 달리는 소년", "영어로 쓰인 책", "모자를 쓰고 있는 여자"처럼 분사가 명사를 꾸미는 구조가 자주 나타나야 한다.
+- 챕터와 무관한 일반 평서문으로 세트가 무너지지 말 것.
+- 현재분사는 능동·진행 의미, 과거분사는 수동·완료 의미를 자연스럽게 반영할 것.
+- 비교 또는 보조 목적이 아닌 이상, 관계대명사절로만 바꿔 쓰는 정답은 지양할 것.
 `);
   }
 
@@ -1208,6 +1275,7 @@ clue 설계 규칙:
 - 사용자 요청과 무관한 독해 지문형 시험지로 만들지 말 것.
 ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
+${buildTargetCoverageRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 
 출력 형식:
@@ -1293,6 +1361,7 @@ Forbidden:
 - Do not drift into unrelated passage-based exam content.
 ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
+${buildTargetCoverageRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 
 Output format:
@@ -1404,6 +1473,7 @@ Difficulty: ${input.difficulty} (${difficultyLabel})
 Item count: ${input.count}
 Requirement: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
+${buildTargetCoverageRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 
 Mandatory Magic rules:
@@ -1421,6 +1491,8 @@ Mandatory Magic rules:
 Quality control:
 - Do not create present perfect + finished past-time conflicts.
 - Do not generate weak copy-the-answer style items.
+- Do not output broken, incomplete, or awkward sentences.
+- Reject answers that are grammatical only on the surface but unnatural in real classroom English.
 - Do not make all ${input.count} items the same pattern.
 - Prefer natural classroom English and common collocations.
 - Prefer go shopping, play the piano, see a movie, and go to the beach over awkward literal phrasing.
@@ -1442,6 +1514,7 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 문항 수: ${input.count}
 요구사항: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
+${buildTargetCoverageRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 
 매직 필수 규칙:
@@ -1459,6 +1532,8 @@ ${buildLearningVariationRuleBlock(input)}
 품질 통제:
 - 현재완료 + last week 같은 시제 충돌을 만들지 말 것.
 - 답을 거의 그대로 베끼는 약한 문제를 만들지 말 것.
+- 비문, 미완성문, 어색한 교재체 문장을 출력하지 말 것.
+- 겉보기에만 문법적이고 실제 교실 영어로는 부자연스러운 정답은 폐기할 것.
 - ${input.count}문항이 모두 같은 패턴이 되지 않게 할 것.
 - 영어 문장은 실제 교실에서 바로 읽어줄 수 있을 정도로 자연스러워야 할 것.
 - 어색한 직역보다 자연스러운 기본 결합을 우선할 것. 예: go shopping, play the piano, see a movie, go to the beach.
