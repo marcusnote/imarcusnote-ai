@@ -1882,26 +1882,55 @@ function runLightGrammarValidator(formatted, input) {
 
   if (focus.isCausative) {
     const matched = countMatches(/\b(make|let|have|help|get)\b/);
-    if (matched < Math.max(6, Math.floor(total * 0.45))) {
+    if (matched < Math.max(3, Math.floor(total * 0.30))) {
       return { ok: false, reason: "causative_coverage_low", matched, total };
     }
   }
 
   if (focus.isParticipialModifier) {
     const matched = countMatches(/\b\w+ing\b|\bwritten\b|\bbuilt\b|\bpainted\b|\bgiven\b|\bdecorated\b|\bknown\b|\bmade\b|\bblooming\b|\bwearing\b|\brunning\b|\bsleeping\b/);
-    if (matched < Math.max(6, Math.floor(total * 0.45))) {
+    if (matched < Math.max(3, Math.floor(total * 0.30))) {
       return { ok: false, reason: "participle_coverage_low", matched, total };
     }
   }
 
   if (focus.isNonRestrictive) {
     const matched = countMatches(/,\s*(who|which)\b/);
-    if (matched < Math.max(6, Math.floor(total * 0.45))) {
+    if (matched < Math.max(3, Math.floor(total * 0.30))) {
       return { ok: false, reason: "non_restrictive_coverage_low", matched, total };
     }
   }
 
   return { ok: true };
+}
+
+async function tryRepairOnce(systemPrompt, userPrompt, badOutput, input) {
+  const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
+  const repairSystemPrompt = `You are a strict educational worksheet repair editor.
+- Repair only weak or off-target items.
+- Preserve worksheet identity, numbering, structure, clue style, and target grammar.
+- Do not rewrite the whole worksheet unless necessary.
+- Ensure answers are complete, natural, and classroom-ready.
+- Keep the output in the same [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] structure.`;
+
+  const repairUserPrompt = `Target grammar focus: ${JSON.stringify(focus)}
+
+[Original system prompt]
+${systemPrompt}
+
+[Original user prompt]
+${userPrompt}
+
+[Weak output to repair]
+${badOutput}
+
+[Repair instructions]
+- Fix incomplete or awkward sentences.
+- Increase target grammar coverage if it is too low.
+- Keep item count and workbook tone as much as possible.
+- Return only the repaired worksheet text.`;
+
+  return callOpenAI(repairSystemPrompt, repairUserPrompt);
 }
 
 function isGenerationSuccessful(formatted, input) {
@@ -2327,20 +2356,38 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
-    const formatted = formatMagicResponse(rawText, input);
-    const generationCheck = isGenerationSuccessful(formatted, input);
+    const systemPrompt = buildSystemPrompt(input);
+    const userPrompt = buildUserPrompt(input);
+    const rawText = await callOpenAI(systemPrompt, userPrompt);
+
+    let finalRawText = rawText;
+    let formatted = formatMagicResponse(finalRawText, input);
+    let generationCheck = isGenerationSuccessful(formatted, input);
+
+    if (!generationCheck.ok) {
+      try {
+        const repairedRawText = await tryRepairOnce(systemPrompt, userPrompt, finalRawText, input);
+        if (repairedRawText && typeof repairedRawText === "string") {
+          finalRawText = repairedRawText;
+          formatted = formatMagicResponse(finalRawText, input);
+          generationCheck = isGenerationSuccessful(formatted, input);
+        }
+      } catch (repairError) {
+        console.error("repair_failed", repairError?.message || repairError);
+      }
+    }
 
     if (!generationCheck.ok) {
       return json(res, 502, {
         success: false,
-        message: "생성 결과 구조가 불완전하여 MP를 차감하지 않았습니다. 다시 시도해주세요.",
-        detail: generationCheck.reason,
+        error: "generation_unstable",
+        message: "생성 결과를 자동 보정했지만 안정 기준을 충족하지 못했습니다. 다시 시도해주세요.",
         meta: {
           language: input.language,
           requestedCount: input.count,
           actualCount: formatted.actualCount,
-          generatedAt: new Date().toISOString()
+          generatedAt: new Date().toISOString(),
+          repaired: true
         },
         requiredMp: mpState.requiredMp,
         currentMp: mpState.currentMp,
