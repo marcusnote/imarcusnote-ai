@@ -1868,41 +1868,83 @@ function hasMeaningfulWorksheetBody(text = "") {
   return compact.length >= 80;
 }
 
+function extractNumberedWorksheetLines(text = "") {
+  return String(text || "")
+    .replace(/\r\n/g, "\n")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((line) => /^\d+[\.)]\s+/.test(line));
+}
+
+function isLikelyBrokenWorksheetLine(line = "") {
+  const s = String(line || "").trim();
+  if (!s) return false;
+  if (s.length < 8) return true;
+  if (/\bso that\s*$/i.test(s)) return true;
+  if (/\bso that\s+(he|she|it|they|we|i|you)\s*$/i.test(s)) return true;
+  if (/\b(which|who|whom|whose)\s*$/i.test(s)) return true;
+  if (/,+\s*$/.test(s)) return true;
+  if (/\bthe one that\b/i.test(s)) return false;
+  if (!/[a-zA-Z]/.test(s)) return false;
+  if (!/[.!?]$/.test(s) && s.split(/\s+/).length <= 3) return true;
+  return false;
+}
+
 function runLightGrammarValidator(formatted, input) {
   const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
-  const answerText = String(formatted?.answerSheet || formatted?.answers || "");
-  const numberedLines = answerText.split(/\n/).filter((line) => /^\s*\d+\.\s+/.test(line));
+  const questionLines = extractNumberedWorksheetLines(formatted?.questions || formatted?.content || "");
+  const answerLines = extractNumberedWorksheetLines(formatted?.answerSheet || formatted?.answers || "");
+  const numberedLines = [...questionLines, ...answerLines];
   const total = Math.max(1, numberedLines.length);
-  const countMatches = (pattern) => numberedLines.filter((line) => pattern.test(line.toLowerCase())).length;
+  const countMatches = (pattern) => numberedLines.filter((line) => pattern.test(line)).length;
+
+  if (!numberedLines.length) {
+    return { ok: false, reason: "no_numbered_lines" };
+  }
+
+  const brokenCount = numberedLines.filter((line) => isLikelyBrokenWorksheetLine(line)).length;
+  if (brokenCount > 0) {
+    return { ok: false, reason: "broken_sentence_detected", brokenCount, total };
+  }
 
   if (focus.isSoThatPurpose) {
-    const incompleteCount = numberedLines.filter((line) => /so that\s+[^.?!]*\b(can|could|will|would|may|might)\s*[.]?\s*$/i.test(line)).length;
-    if (incompleteCount >= Math.max(2, Math.ceil(total * 0.12))) {
+    const relevant = numberedLines.filter((line) => /\bso that\b/i.test(line));
+    const incompleteCount = relevant.filter((line) => {
+      if (/\bso that\s+(i|you|he|she|it|we|they)\s+(can|could|will|would|may|might)\b/i.test(line)) {
+        return false;
+      }
+      return true;
+    }).length;
+
+    if (incompleteCount >= Math.max(1, Math.ceil(Math.max(1, relevant.length) * 0.20))) {
       return { ok: false, reason: "so_that_incomplete", incompleteCount, total, severity: "high" };
-    }
-    if (incompleteCount === 1) {
-      return { ok: true, warning: "so_that_incomplete_minor", incompleteCount, total };
     }
   }
 
   if (focus.isCausative) {
-    const matched = countMatches(/\b(make|let|have|help|get)\b/);
+    const matched = countMatches(/\b(make|let|have|help|get)\b/i);
     if (matched < Math.max(3, Math.floor(total * 0.30))) {
       return { ok: false, reason: "causative_coverage_low", matched, total };
     }
   }
 
   if (focus.isParticipialModifier) {
-    const matched = countMatches(/\b\w+ing\b|\bwritten\b|\bbuilt\b|\bpainted\b|\bgiven\b|\bdecorated\b|\bknown\b|\bmade\b|\bblooming\b|\bwearing\b|\brunning\b|\bsleeping\b/);
+    const matched = countMatches(/\b\w+ing\b|\bwritten\b|\bbuilt\b|\bpainted\b|\bgiven\b|\bdecorated\b|\bknown\b|\bmade\b|\bblooming\b|\bwearing\b|\brunning\b|\bsleeping\b/i);
     if (matched < Math.max(3, Math.floor(total * 0.30))) {
       return { ok: false, reason: "participle_coverage_low", matched, total };
     }
   }
 
   if (focus.isNonRestrictive) {
-    const matched = countMatches(/,\s*(who|which)\b/);
-    if (matched < Math.max(3, Math.floor(total * 0.30))) {
+    const matched = countMatches(/,\s*(who|which|whom|whose)\b/i);
+    if (matched < Math.max(2, Math.floor(total * 0.30))) {
       return { ok: false, reason: "non_restrictive_coverage_low", matched, total };
+    }
+
+    const thatViolations = countMatches(/,\s*that\b/i);
+    if (thatViolations > 0) {
+      return { ok: false, reason: "non_restrictive_that_used", thatViolations, total };
     }
   }
 
@@ -1934,7 +1976,6 @@ ${badOutput}
 - Increase target grammar coverage if it is too low.
 - Keep item count and workbook tone as much as possible.
 - If the grammar is so that purpose, complete any unfinished 'so that + subject + modal' clauses naturally.
-- If the grammar is non-restrictive relative clauses, repair restrictive sentences into natural non-restrictive patterns with commas and who/which where appropriate, but do not over-rewrite every item.
 - Return only the repaired worksheet text.`;
 
   return callOpenAI(repairSystemPrompt, repairUserPrompt);
@@ -1945,13 +1986,6 @@ function shouldAcceptSoftFailure(check, input) {
   const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
   if (focus.isSoThatPurpose && check.reason === "so_that_incomplete" && Number(check.incompleteCount || 0) <= 1) {
     return true;
-  }
-  if (focus.isNonRestrictive && check.reason === "non_restrictive_coverage_low") {
-    const matched = Number(check.matched || 0);
-    const total = Math.max(1, Number(check.total || 0));
-    if (matched >= 2 || matched >= Math.floor(total * 0.16)) {
-      return true;
-    }
   }
   return false;
 }
@@ -2408,7 +2442,7 @@ module.exports = async function handler(req, res) {
       return json(res, 502, {
         success: false,
         error: "generation_unstable",
-        message: "생성 결과를 자동 보정했지만 품질 기준을 충분히 만족하지 못했습니다. 다시 시도해주세요.",
+        message: "생성 결과를 자동 보정했지만 안정 기준을 충족하지 못했습니다. 다시 시도해주세요.",
         meta: {
           language: input.language,
           requestedCount: input.count,
