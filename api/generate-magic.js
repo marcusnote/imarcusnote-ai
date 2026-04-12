@@ -1934,6 +1934,7 @@ ${badOutput}
 - Increase target grammar coverage if it is too low.
 - Keep item count and workbook tone as much as possible.
 - If the grammar is so that purpose, complete any unfinished 'so that + subject + modal' clauses naturally.
+- If the grammar is non-restrictive relative clauses, repair restrictive sentences into natural non-restrictive patterns with commas and who/which where appropriate, but do not over-rewrite every item.
 - Return only the repaired worksheet text.`;
 
   return callOpenAI(repairSystemPrompt, repairUserPrompt);
@@ -1944,6 +1945,13 @@ function shouldAcceptSoftFailure(check, input) {
   const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
   if (focus.isSoThatPurpose && check.reason === "so_that_incomplete" && Number(check.incompleteCount || 0) <= 1) {
     return true;
+  }
+  if (focus.isNonRestrictive && check.reason === "non_restrictive_coverage_low") {
+    const matched = Number(check.matched || 0);
+    const total = Math.max(1, Number(check.total || 0));
+    if (matched >= 2 || matched >= Math.floor(total * 0.16)) {
+      return true;
+    }
   }
   return false;
 }
@@ -2400,7 +2408,7 @@ module.exports = async function handler(req, res) {
       return json(res, 502, {
         success: false,
         error: "generation_unstable",
-        message: "생성 결과를 자동 보정했지만 안정 기준을 충족하지 못했습니다. 다시 시도해주세요.",
+        message: "생성 결과를 자동 보정했지만 품질 기준을 충분히 만족하지 못했습니다. 다시 시도해주세요.",
         meta: {
           language: input.language,
           requestedCount: input.count,
