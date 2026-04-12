@@ -793,6 +793,7 @@ function buildStabilityLockRuleBlock(input) {
 - Avoid ordinary relative clauses with who/which/that as the main answer style.
 - Use present participles for active/ongoing meaning and past participles for passive/completed meaning.
 - If the chapter is about participial modifiers, the worksheet must teach noun-modifying participles, not just any sentence containing -ing or p.p. forms.
+- Prefer noun + participle patterns over generic subject-predicate sentences.
 ` : `
 [분사의 한정적 용법 안정화 규칙]
 - 핵심 목표 문항의 최소 80% 이상은 분사가 명사를 직접 수식하는 구조가 눈에 보여야 한다.
@@ -804,6 +805,7 @@ function buildStabilityLockRuleBlock(input) {
 - who/which/that 관계절을 주된 정답 스타일로 사용하지 말 것.
 - 현재분사는 능동·진행 의미, 과거분사는 수동·완료 의미를 분명히 반영할 것.
 - 분사의 한정적 용법 챕터라면, 단순히 -ing나 p.p.가 들어간 문장이 아니라 "명사를 꾸미는 분사"를 실제로 가르치는 출력이어야 한다.
+- 일반적인 주어+서술어 문장보다 "명사 + 현재분사/과거분사" 수식 구조를 우선한다.
 `);
   }
 
@@ -814,12 +816,18 @@ function buildStabilityLockRuleBlock(input) {
 - Do not fall back to restrictive answers using that, bare noun + relative clause, or "the one that" templates.
 - If an answer can be expressed either restrictively or non-restrictively, choose the non-restrictive version.
 - At least 80% of the main target items should clearly show comma-based extra information.
+- Avoid weak endings such as "is a person", "is the one", or other empty fallback predicates.
+- Prefer natural main-clause endings such as "is kind", "is talented", "is interesting", "is here", "was memorable", or similar teachable predicates.
+- Prefer already-identified nouns such as my brother, my parents, this book, this movie, our teacher, this city, this song, or this place.
 ` : `
 [관계대명사의 계속적 용법 안정화 규칙]
 - 목표 정답은 쉼표가 보이는 계속적 용법 관계절로 분명하게 작성할 것.
 - that, bare noun + 관계절, "the one that" 같은 제한적 용법 안전문장으로 되돌아가지 말 것.
 - 제한적 용법과 계속적 용법이 모두 가능한 경우에는 계속적 용법 정답을 우선할 것.
 - 핵심 목표 문항의 최소 80% 이상은 쉼표 기반의 부가설명 구조가 분명히 보여야 한다.
+- "~는 사람이다", "~는 것이다"처럼 빈약한 끝맺음(is a person / is the one)으로 마무리하지 말 것.
+- 주절 끝은 kind, talented, interesting, delicious, helpful, special, was memorable 같은 자연스러운 교육용 서술어를 우선할 것.
+- 선행사는 my brother, my parents, this book, this movie, our teacher, this city, this song, this place처럼 이미 특정된 명사를 우선 사용할 것.
 `);
   }
 
@@ -844,12 +852,16 @@ function buildStabilityLockRuleBlock(input) {
 - Do not end after can / could / will / would.
 - Keep the purpose clause explicit, natural, and teachable.
 - Most main target answers should visibly contain so that.
+- The modal in the so-that clause must be followed by a real action verb phrase from the prompt meaning.
+- Do not use unfinished endings such as "so that I can." or "so that we could.".
 ` : `
 [so that 안정화 규칙]
 - so that 정답은 모두 완전한 문장이어야 한다.
 - can / could / will / would 뒤에서 끝내지 않는다.
 - 목적절은 분명하고 자연스럽고 수업용으로 가르칠 수 있어야 한다.
 - 핵심 목표 정답 다수는 실제로 so that을 보여야 한다.
+- so that절의 조동사 뒤에는 반드시 실제 행동 동사구가 이어져야 한다.
+- "so that I can.", "so that we could."처럼 미완성으로 끝나는 문장은 금지한다.
 `);
   }
 
@@ -906,6 +918,12 @@ function buildHardChapterLockBlock(input) {
 - Do not use restrictive fallback answers such as "the book that I like" or "the person who helped me" as the main target style.
 - Keep the clause as extra information about an already identified noun.
 - At least most target answers should visibly follow: Noun, who/which ..., main clause.
+- Prefer natural answer shapes such as:
+  * My brother, who lives in Busan, is kind.
+  * This book, which I read yesterday, is very interesting.
+  * Our teacher, who always helps us, is thoughtful.
+- Avoid empty endings such as "is a person", "is the one", or "is the place".
+- Prefer already-identified nouns and natural educational predicates.
 ` : `
 [Hard Chapter Lock: 관계대명사의 계속적 용법]
 - 이 챕터의 핵심 목표 정답은 반드시 계속적 용법이어야 한다.
@@ -914,6 +932,11 @@ function buildHardChapterLockBlock(input) {
 - "내가 좋아하는 책", "나를 도와준 사람" 같은 제한적 용법형을 주된 정답 스타일로 쓰지 않는다.
 - 관계절은 이미 특정된 선행사에 대한 부가 설명이어야 한다.
 - 핵심 목표 정답 다수는 "선행사, who/which ..., 주절" 형태가 눈에 보여야 한다.
+- 정답은 다음과 같은 자연한 형태를 우선한다:
+  * My brother, who lives in Busan, is kind.
+  * This book, which I read yesterday, is very interesting.
+  * Our teacher, who always helps us, is thoughtful.
+- "~는 사람이다", "~는 것이다", "~는 장소이다"처럼 빈약한 끝맺음은 피한다.
 `;
   }
 
@@ -925,6 +948,11 @@ function buildHardChapterLockBlock(input) {
 - Never end a sentence with an unfinished so that clause.
 - Do not let make / let / help / want to become the dominant answer style in this chapter.
 - At least most target answers should explicitly show so that purpose meaning.
+- Preferred answer shapes:
+  * I study hard so that I can do well on the exam.
+  * We left early so that we could catch the bus.
+  * She spoke clearly so that everyone could understand her.
+- The verb after can/could/will/would must complete the purpose meaning.
 ` : `
 [Hard Chapter Lock: so that 구문 (목적)]
 - 이 챕터의 핵심 목표 정답은 반드시 so that 목적 구문 중심이어야 한다.
@@ -932,6 +960,11 @@ function buildHardChapterLockBlock(input) {
 - so that 뒤를 미완성으로 끝내지 않는다.
 - make / let / help / want to 구조가 이 챕터의 주된 정답 스타일이 되지 않게 한다.
 - 핵심 목표 정답 다수는 so that 목적 의미가 분명하게 드러나야 한다.
+- 정답은 다음과 같은 완전한 형태를 우선한다:
+  * I study hard so that I can do well on the exam.
+  * We left early so that we could catch the bus.
+  * She spoke clearly so that everyone could understand her.
+- can/could/will/would 뒤에는 반드시 목적 의미를 완성하는 동사구가 따라야 한다.
 `;
   }
 
