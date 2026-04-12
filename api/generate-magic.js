@@ -208,6 +208,18 @@ function detectGrammarFocus(text = "") {
     /participle\s+as\s+adjective/i,
   ]);
 
+  const isCausative = hasAny([
+    /사역동사/,
+    /causative/i,
+  ]);
+
+  const isSoThatPurpose = hasAny([
+    /so that\s*구문/,
+    /so that\s*\(목적\)/,
+    /purpose clause/i,
+    /so that/i,
+  ]);
+
   const isNonRestrictive = hasAny([
     /계속적\s*용법/,
     /non[-\s]?restrictive/i,
@@ -238,6 +250,8 @@ function detectGrammarFocus(text = "") {
   else if (isSuperlative) chapterKey = "superlative";
   else if (isComparative) chapterKey = "comparative";
   else if (isParticipialModifier) chapterKey = "participial_modifier";
+  else if (isCausative) chapterKey = "causative";
+  else if (isSoThatPurpose) chapterKey = "so_that_purpose";
 
   return {
     chapterKey,
@@ -250,6 +264,8 @@ function detectGrammarFocus(text = "") {
     isComparative,
     isSuperlative,
     isParticipialModifier,
+    isCausative,
+    isSoThatPurpose,
     isNonRestrictive,
     isRestrictive,
     isObjectiveRelativePronoun,
@@ -841,6 +857,125 @@ function buildTargetCoverageRuleBlock(input) {
   if (focus.isComparative) return targetHeavy('comparatives', '비교급');
   if (focus.isSuperlative) return targetHeavy('superlatives', '최상급');
   return '';
+}
+
+function buildRuleCardBlock(input) {
+  const focus = input.grammarFocus || detectGrammarFocus(
+    [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
+  );
+  const isEn = input.language === "en";
+
+  const cards = {
+    relative_pronoun_non_restrictive: isEn ? `[Rule Card: Non-Restrictive Relative Clauses]
+- Use commas.
+- Prefer who/which.
+- Do not use that.
+- The relative clause must add extra information to an already identified noun.
+- Avoid safe fallback patterns such as "the one that".` : `[Rule Card: 관계대명사의 계속적 용법]
+- 쉼표를 사용한다.
+- who/which를 우선 사용한다.
+- that은 사용하지 않는다.
+- 관계절은 이미 특정된 선행사에 부가 정보를 더해야 한다.
+- "the one that" 같은 안전한 제한적 문장으로 도망가지 않는다.`,
+    relative_pronoun_objective: isEn ? `[Rule Card: Objective Relative Pronouns]
+- Keep the object role visible.
+- Prefer natural object relative clauses.
+- Do not collapse into only subject relative clauses.` : `[Rule Card: 목적격 관계대명사]
+- 목적격 역할이 실제 문장에 드러나야 한다.
+- 주격 관계절만 반복하지 않는다.`,
+    relative_pronoun_restrictive: isEn ? `[Rule Card: Restrictive Relative Clauses]
+- Keep the clause essential.
+- Do not use commas unless truly necessary.` : `[Rule Card: 관계대명사의 제한적 용법]
+- 관계절은 대상을 한정하는 필수 정보여야 한다.
+- 쉼표를 억지로 넣지 않는다.`,
+    participial_modifier: isEn ? `[Rule Card: Attributive Participles]
+- Use participles directly modifying nouns.
+- Prefer patterns like "the boy running fast" or "the book written in English".
+- Avoid drifting into ordinary relative clauses.` : `[Rule Card: 분사의 한정적 용법]
+- 분사가 명사를 직접 수식하게 한다.
+- "빠르게 달리는 소년", "영어로 쓰인 책" 같은 구조를 우선한다.
+- 관계절로만 바꿔 쓰지 않는다.`,
+    causative: isEn ? `[Rule Card: Causative Verbs]
+- Use real causative structures.
+- make/let/have/help/get must appear visibly.
+- Avoid ordinary non-causative paraphrases.` : `[Rule Card: 사역동사]
+- 실제 사역 구조를 사용한다.
+- make / let / have / help / get 이 실제 문장에 드러나야 한다.
+- 일반 평서문으로 바꾸지 않는다.`,
+    so_that_purpose: isEn ? `[Rule Card: so that Purpose]
+- Use complete so that + subject + can/could/will/would structures.
+- Never leave the sentence unfinished after so that.` : `[Rule Card: so that 구문 (목적)]
+- 완전한 so that + 주어 + can/could/will/would 구조를 사용한다.
+- so that 뒤를 미완성으로 끝내지 않는다.`,
+    to_infinitive: isEn ? `[Rule Card: To-Infinitive]
+- Keep to + base verb visible.
+- Do not drift into gerunds.` : `[Rule Card: to부정사]
+- to + 동사원형 구조를 분명하게 유지한다.
+- 동명사로 흐르지 않는다.`,
+    gerund: isEn ? `[Rule Card: Gerund]
+- Keep the -ing form functioning as a noun visible.` : `[Rule Card: 동명사]
+- -ing가 명사 역할로 쓰이는 구조를 분명하게 유지한다.`,
+    passive: isEn ? `[Rule Card: Passive Voice]
+- Keep be + past participle visible.` : `[Rule Card: 수동태]
+- be + 과거분사 구조를 분명하게 유지한다.`,
+    present_perfect: isEn ? `[Rule Card: Present Perfect]
+- Keep have/has + past participle visible.
+- Avoid finished past-time adverbials.` : `[Rule Card: 현재완료]
+- have/has + 과거분사 구조를 분명하게 유지한다.
+- finished past-time expression과 충돌시키지 않는다.`,
+    comparative: isEn ? `[Rule Card: Comparative]
+- Keep comparative forms visibly comparative.` : `[Rule Card: 비교급]
+- 비교급 구조를 분명하게 유지한다.`,
+    superlative: isEn ? `[Rule Card: Superlative]
+- Keep superlative forms visibly superlative.` : `[Rule Card: 최상급]
+- 최상급 구조를 분명하게 유지한다.`,
+  };
+
+  const card = cards[focus.chapterKey] || "";
+  return card ? `
+${card}
+` : "";
+}
+
+function buildLightValidationBlock(input) {
+  const focus = input.grammarFocus || detectGrammarFocus(
+    [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
+  );
+  const isEn = input.language === "en";
+  if (focus.isCausative) {
+    return isEn ? `
+[Light Validation]
+- At least most answers must visibly contain make / let / have / help / get.
+- If an answer lacks causative meaning, rewrite it instead of keeping it.
+` : `
+[Light Validation]
+- 정답 다수에 make / let / have / help / get 이 실제로 보여야 한다.
+- 사역 의미가 없으면 보존하지 말고 다시 쓴다.
+`;
+  }
+  if (focus.isSoThatPurpose) {
+    return isEn ? `
+[Light Validation]
+- Do not leave any answer unfinished after "so that".
+- Every so-that sentence must end as a complete sentence.
+` : `
+[Light Validation]
+- so that 뒤를 미완성으로 남기지 않는다.
+- 모든 so that 문장은 완전한 문장으로 끝나야 한다.
+`;
+  }
+  if (focus.isParticipialModifier) {
+    return isEn ? `
+[Light Validation]
+- Most answers must visibly show participles modifying nouns.
+- Replace off-target relative clauses with participial modifiers when natural.
+` : `
+[Light Validation]
+- 정답 다수에 분사가 명사를 수식하는 구조가 실제로 보여야 한다.
+- 목표에서 벗어난 관계절은 자연스러운 분사 수식으로 바꾼다.
+`;
+  }
+  return "";
 }
 
 function buildGrammarRuleBlock(input) {
@@ -1733,6 +1868,42 @@ function hasMeaningfulWorksheetBody(text = "") {
   return compact.length >= 80;
 }
 
+function runLightGrammarValidator(formatted, input) {
+  const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
+  const answerText = String(formatted?.answerSheet || formatted?.answers || "");
+  const numberedLines = answerText.split(/\n/).filter((line) => /^\s*\d+\.\s+/.test(line));
+  const total = Math.max(1, numberedLines.length);
+  const countMatches = (pattern) => numberedLines.filter((line) => pattern.test(line.toLowerCase())).length;
+
+  if (focus.isSoThatPurpose) {
+    const incomplete = numberedLines.some((line) => /so that\s+[^.?!]*\b(can|could|will|would|may|might)\s*[.]?\s*$/i.test(line));
+    if (incomplete) return { ok: false, reason: "so_that_incomplete" };
+  }
+
+  if (focus.isCausative) {
+    const matched = countMatches(/\b(make|let|have|help|get)\b/);
+    if (matched < Math.max(6, Math.floor(total * 0.45))) {
+      return { ok: false, reason: "causative_coverage_low", matched, total };
+    }
+  }
+
+  if (focus.isParticipialModifier) {
+    const matched = countMatches(/\b\w+ing\b|\bwritten\b|\bbuilt\b|\bpainted\b|\bgiven\b|\bdecorated\b|\bknown\b|\bmade\b|\bblooming\b|\bwearing\b|\brunning\b|\bsleeping\b/);
+    if (matched < Math.max(6, Math.floor(total * 0.45))) {
+      return { ok: false, reason: "participle_coverage_low", matched, total };
+    }
+  }
+
+  if (focus.isNonRestrictive) {
+    const matched = countMatches(/,\s*(who|which)\b/);
+    if (matched < Math.max(6, Math.floor(total * 0.45))) {
+      return { ok: false, reason: "non_restrictive_coverage_low", matched, total };
+    }
+  }
+
+  return { ok: true };
+}
+
 function isGenerationSuccessful(formatted, input) {
   if (!formatted || typeof formatted !== "object") {
     return { ok: false, reason: "formatted_missing" };
@@ -1766,6 +1937,11 @@ function isGenerationSuccessful(formatted, input) {
         minimumAcceptable,
       };
     }
+  }
+
+  const grammarValidation = runLightGrammarValidator(formatted, input);
+  if (!grammarValidation.ok) {
+    return grammarValidation;
   }
 
   return { ok: true };
