@@ -834,6 +834,38 @@ Output format:
   ③ 부분완성 후 전체 영작 20%
   ④ 문장변환 영작 10%
 
+문항 배열 및 단계 규칙:
+1. 전체 문항 수는 가능한 한 정확히 25문항으로 고정할 것.
+2. 문항은 1번부터 25번까지 단계적으로 전개될 것.
+3. 초반부는 진입형, 중반부는 확장형, 후반부는 혼합형과 응용형이 자연스럽게 늘어나게 설계할 것.
+4. 권장 흐름:
+   - 1~5번: 진입형 (쉬운 구조, clue 풍부)
+   - 6~10번: 기본 적용형
+   - 11~15번: 확장형 (수식어 추가, 길이 증가)
+   - 16~20번: 혼합형 일부 포함
+   - 21~25번: 혼합형 / 응용형 / 마무리형
+5. 난이도는 점진적으로 올라가되, 학습자가 끝까지 풀 수 있어야 한다.
+
+혼합형 표시 규칙:
+1. 두 가지 이상의 생산형 과업이 동시에 필요한 문항에만 [혼합형]을 붙일 것.
+2. 단순 재배열형, 단순 완성형에는 절대 붙이지 말 것.
+3. [혼합형]은 전체 문항 중 4~8문항 내외로 제한할 것.
+4. 문항 번호 바로 앞에 붙일 것.
+   예: [혼합형] 18.
+5. 후반부 문항에서 더 자주 등장하도록 설계할 것.
+6. 학습자에게 난이도를 알려주되, 정답 구조를 노출하지는 말 것.
+
+문항 출력 형식 규칙:
+1. 각 문항은 반드시 번호를 붙일 것.
+2. 번호는 1번부터 연속적으로 작성할 것.
+3. 혼합형 문항만 선택적으로 [혼합형]을 표시할 것.
+4. 각 문항은 다음 구조를 따른다:
+   - 한국어 제시문
+   - clue / 핵심 표현 / 배열 재료
+   - 영작 지시
+5. 문제 영역에는 정답을 절대 포함하지 말 것.
+6. 정답은 반드시 [[ANSWERS]] 아래에만 작성할 것.
+
 유형별 상세 규칙:
 [A. 조각형 clue 기반 영작]
 - 입력 언어 문장을 먼저 제시할 것.
@@ -988,8 +1020,8 @@ function buildTaskGuide(input) {
     case "writing":
       return isEn
         ?
-"Focus strongly on English writing training through fragment-clue composition, rearrangement with one extra word, partial completion, and sentence transformation."
-: "조각형 clue 영작, 초과단어 재배열형, 부분완성형, 문장변환형을 포함한 영작훈련 중심으로 구성할 것.";
+"Focus strongly on English writing training through fragment-clue composition, rearrangement with one extra word, partial completion, and sentence transformation. Mark only selected hybrid items with [Mixed Training], and do not label every item by type."
+: "조각형 clue 영작, 초과단어 재배열형, 부분완성형, 문장변환형을 포함한 영작훈련 중심으로 구성하되, 일부 응용 문항만 [혼합형]으로 표시하고 모든 문항을 유형 라벨링하지 말 것.";
     case "textbook-grammar":
       return isEn
         ?
@@ -1003,8 +1035,8 @@ function buildTaskGuide(input) {
     default:
       return isEn
         ?
-"Create a premium guided English writing-training workbook with fragment-based clues, mixed item types, and one-extra-word rearrangement tasks."
-: "조각형 clue, 혼합 생산형 문항, 초과단어 재배열형이 포함된 프리미엄 영작훈련 워크북으로 구성할 것.";
+"Create a premium guided English writing-training workbook with fragment-based clues, mixed item types, and one-extra-word rearrangement tasks. Mark only selected hybrid items with [Mixed Training], and do not label every item by type."
+: "조각형 clue, 혼합 생산형 문항, 초과단어 재배열형이 포함된 프리미엄 영작훈련 워크북으로 구성하되, 일부 응용 문항만 [혼합형]으로 표시하고 모든 문항을 유형 라벨링하지 말 것.";
   }
 }
 
