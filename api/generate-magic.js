@@ -217,7 +217,7 @@ function detectGrammarFocus(text = "") {
     /so that\s*구문/,
     /so that\s*\(목적\)/,
     /purpose clause/i,
-    /\bso that\b/i,
+    /so that/i,
   ]);
 
   const isNonRestrictive = hasAny([
@@ -826,28 +826,30 @@ function buildStabilityLockRuleBlock(input) {
   if (focus.isCausative) {
     blocks.push(isEn ? `
 [Causative Stability Rules]
-- Keep make / let / have / help / get structures natural and complete.
-- Avoid malformed patterns such as unnecessary to-infinitives after make/let/have.
-- Do not let generic non-causative sentences dominate the answer sheet.
+- Most answers should visibly contain make / let / have / help / get.
+- Keep the causative structure complete and natural.
+- Do not simplify most target answers into ordinary non-causative sentences.
 ` : `
 [사역동사 안정화 규칙]
-- make / let / have / help / get 구조를 자연스럽고 완전하게 유지할 것.
-- make/let/have 뒤에 불필요한 to부정사를 넣는 식의 붕괴를 피할 것.
-- 일반 평서문이 정답지를 지배하지 않게 할 것.
+- 정답 다수에는 make / let / have / help / get 구조가 실제로 보여야 한다.
+- 사역 구조는 완전하고 자연스러운 문장으로 유지한다.
+- 핵심 목표 정답 다수를 일반 평서문으로 단순화하지 않는다.
 `);
   }
 
   if (focus.isSoThatPurpose) {
     blocks.push(isEn ? `
 [so that Stability Rules]
-- Every main target answer must keep a complete so that clause.
-- Do not leave the sentence unfinished after "so that".
-- Prefer natural modal support such as can / could / will / would when expressing purpose.
+- Every so-that answer must be a complete sentence.
+- Do not end after can / could / will / would.
+- Keep the purpose clause explicit, natural, and teachable.
+- Most main target answers should visibly contain so that.
 ` : `
-[so that 구문 안정화 규칙]
-- 핵심 목표 정답에는 완전한 so that 절이 유지되어야 한다.
-- so that 뒤를 미완성으로 남기지 말 것.
-- 목적 의미를 나타낼 때 can / could / will / would 같은 조동사를 자연스럽게 활용할 것.
+[so that 안정화 규칙]
+- so that 정답은 모두 완전한 문장이어야 한다.
+- can / could / will / would 뒤에서 끝내지 않는다.
+- 목적절은 분명하고 자연스럽고 수업용으로 가르칠 수 있어야 한다.
+- 핵심 목표 정답 다수는 실제로 so that을 보여야 한다.
 `);
   }
 
@@ -887,6 +889,53 @@ function buildTargetCoverageRuleBlock(input) {
   if (focus.isComparative) return targetHeavy('comparatives', '비교급');
   if (focus.isSuperlative) return targetHeavy('superlatives', '최상급');
   return '';
+}
+
+function buildHardChapterLockBlock(input) {
+  const focus = input.grammarFocus || detectGrammarFocus(
+    [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
+  );
+  const isEn = input.language === "en";
+
+  if (focus.isRelativePronoun && focus.isNonRestrictive) {
+    return isEn ? `
+[Hard Chapter Lock: Non-Restrictive Relative Clauses]
+- This chapter MUST stay non-restrictive.
+- Use comma + who / which / whom / whose in the main target answers.
+- Do not use that as the main relative pronoun in this chapter.
+- Do not use restrictive fallback answers such as "the book that I like" or "the person who helped me" as the main target style.
+- Keep the clause as extra information about an already identified noun.
+- At least most target answers should visibly follow: Noun, who/which ..., main clause.
+` : `
+[Hard Chapter Lock: 관계대명사의 계속적 용법]
+- 이 챕터의 핵심 목표 정답은 반드시 계속적 용법이어야 한다.
+- 쉼표 + who / which / whom / whose 구조를 사용한다.
+- that을 중심 관계대명사로 사용하지 않는다.
+- "내가 좋아하는 책", "나를 도와준 사람" 같은 제한적 용법형을 주된 정답 스타일로 쓰지 않는다.
+- 관계절은 이미 특정된 선행사에 대한 부가 설명이어야 한다.
+- 핵심 목표 정답 다수는 "선행사, who/which ..., 주절" 형태가 눈에 보여야 한다.
+`;
+  }
+
+  if (focus.isSoThatPurpose) {
+    return isEn ? `
+[Hard Chapter Lock: so that Purpose]
+- This chapter MUST stay centered on so that purpose clauses.
+- Main target answers should visibly contain: so that + subject + can/could/will/would + base verb.
+- Never end a sentence with an unfinished so that clause.
+- Do not let make / let / help / want to become the dominant answer style in this chapter.
+- At least most target answers should explicitly show so that purpose meaning.
+` : `
+[Hard Chapter Lock: so that 구문 (목적)]
+- 이 챕터의 핵심 목표 정답은 반드시 so that 목적 구문 중심이어야 한다.
+- 핵심 목표 정답은 so that + 주어 + can/could/will/would + 동사원형 구조를 눈에 보이게 사용한다.
+- so that 뒤를 미완성으로 끝내지 않는다.
+- make / let / help / want to 구조가 이 챕터의 주된 정답 스타일이 되지 않게 한다.
+- 핵심 목표 정답 다수는 so that 목적 의미가 분명하게 드러나야 한다.
+`;
+  }
+
+  return "";
 }
 
 function buildGrammarRuleBlock(input) {
@@ -1065,38 +1114,6 @@ function buildGrammarRuleBlock(input) {
 - 챕터와 무관한 일반 평서문으로 세트가 무너지지 말 것.
 - 현재분사는 능동·진행 의미, 과거분사는 수동·완료 의미를 자연스럽게 반영할 것.
 - 비교 또는 보조 목적이 아닌 이상, 관계대명사절로만 바꿔 쓰는 정답은 지양할 것.
-`);
-  }
-
-  if (focus.isCausative) {
-    blocks.push(isEn ? `
-[Causative Verb Rules]
-- Keep real causative meaning visible in the answer sentences.
-- Prefer natural make / let / have / help / get patterns when the chapter requires them.
-- Do not let the worksheet drift into generic want-to / decide-to / hope-to sentences.
-- At least most target answers should clearly show causative or permissive force.
-` : `
-[사역동사 규칙]
-- 정답 문장에 실제 사역 또는 허용의 의미가 드러나야 한다.
-- 단원 요구에 맞게 make / let / have / help / get 구조를 자연스럽게 사용할 것.
-- want to, decide to, hope to 같은 일반 부정사 문장으로 세트가 무너지지 말 것.
-- 핵심 목표 문항 다수에는 사역 또는 허용 구조가 분명히 보여야 한다.
-`);
-  }
-
-  if (focus.isSoThatPurpose) {
-    blocks.push(isEn ? `
-[so that Purpose Rules]
-- Keep the chapter visibly centered on full so-that purpose clauses.
-- Prefer complete shapes such as "..., so that + subject + can/could/will/would + verb."
-- Do not replace the target with make / let / help / want-to paraphrases as the main answer style.
-- If a clue contains "so that", preserve that target structure in the final answer naturally.
-` : `
-[so that 구문 (목적) 규칙]
-- 목표 문법은 반드시 완전한 so that 목적절 구조 중심으로 드러나게 할 것.
-- "..., so that + 주어 + can/could/will/would + 동사원형" 형태를 우선한다.
-- make / let / help / want to 류의 우회 표현을 주된 정답 스타일로 사용하지 말 것.
-- clue에 so that이 들어 있으면, 최종 정답에서도 그 목표 구조를 자연스럽게 유지할 것.
 `);
   }
 
@@ -1424,6 +1441,7 @@ clue 설계 규칙:
 - 사용자 요청과 무관한 독해 지문형 시험지로 만들지 말 것.
 ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
+${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
@@ -1511,6 +1529,7 @@ Forbidden:
 - Do not drift into unrelated passage-based exam content.
 ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
+${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
@@ -1624,6 +1643,7 @@ Difficulty: ${input.difficulty} (${difficultyLabel})
 Item count: ${input.count}
 Requirement: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
+${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
@@ -1667,6 +1687,7 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 문항 수: ${input.count}
 요구사항: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
+${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
