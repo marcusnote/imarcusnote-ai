@@ -172,6 +172,149 @@ function detectMagicIntent(text = "") {
   return "training";
 }
 
+
+function detectGrammarFocus(text = "") {
+  const t = String(text || "").toLowerCase();
+  return {
+    isRelativePronoun: /관계대명사|relative pronoun/.test(t),
+    isNonRestrictive: /계속적\s*용법|계속적인\s*용법|non[- ]?restrictive|nonrestrictive/.test(t),
+    isRestrictive: /제한적\s*용법|restrictive/.test(t),
+    isObjectiveRelative: /목적격\s*관계대명사|objective relative|object relative/.test(t),
+    isParticipleModifier: /분사의\s*한정적\s*용법|현재분사\s*한정적\s*용법|과거분사\s*한정적\s*용법|participle modifier|participial adjective|participial phrase/.test(t),
+    isCausative: /사역동사|causative/.test(t),
+    isSoThatPurpose: /so that\s*구문|so that \(목적\)|so that/.test(t),
+    isToInfinitive: /to부정사|to-infinitive|infinitive/.test(t),
+    isGerund: /동명사|gerund/.test(t),
+    isPassive: /수동태|passive/.test(t),
+    isPresentPerfect: /현재완료|present perfect/.test(t),
+    isComparative: /비교급|comparative/.test(t),
+    isSuperlative: /최상급|superlative/.test(t),
+  };
+}
+
+function buildGrammarValidationBlock(grammarFocus, language = "ko") {
+  const isKo = language === "ko";
+  const rules = [];
+
+  if (grammarFocus.isRelativePronoun) {
+    rules.push(isKo
+      ? "- 관계대명사 챕터이면 관계절이 실제 문장 안에 분명히 드러나야 한다."
+      : "- In a relative-pronoun chapter, the relative clause must be clearly visible in the final sentence.");
+  }
+  if (grammarFocus.isNonRestrictive) {
+    rules.push(isKo
+      ? "- 계속적 용법이면 쉼표를 사용하고 who/which를 우선 사용하라. that은 사용하지 말라."
+      : "- For non-restrictive relative clauses, use commas and prefer who/which. Do not use that.");
+  }
+  if (grammarFocus.isRestrictive) {
+    rules.push(isKo
+      ? "- 제한적 용법이면 쉼표 없이 필수 정보 관계절로 유지하라."
+      : "- For restrictive relative clauses, keep the clause essential and do not use commas.");
+  }
+  if (grammarFocus.isObjectiveRelative) {
+    rules.push(isKo
+      ? "- 목적격 관계대명사 챕터이면 목적격 관계절이 드러나야 하며, 주격 관계절만 반복하지 말라."
+      : "- In an objective-relative chapter, visibly use object relative clauses rather than repeating only subject relative clauses.");
+  }
+  if (grammarFocus.isParticipleModifier) {
+    rules.push(isKo
+      ? "- 분사의 한정적 용법 챕터이면 문항과 정답의 다수가 명사를 직접 수식하는 분사 구조(-ing / p.p.)를 보여야 한다. 관계절로 대체하지 말라."
+      : "- In a participle-modifier chapter, most items and answers must show participles directly modifying nouns (-ing / past participle). Do not replace them with relative clauses.");
+  }
+  if (grammarFocus.isCausative) {
+    rules.push(isKo
+      ? "- 사역동사 챕터이면 make / let / have / get 등의 사역 구조가 실제 정답에 드러나야 한다. 일반 문장으로 바꾸지 말라."
+      : "- In a causative-verb chapter, real causative structures such as make / let / have / get must appear in the answers. Do not rewrite into ordinary sentences.");
+  }
+  if (grammarFocus.isSoThatPurpose) {
+    rules.push(isKo
+      ? "- so that 구문(목적) 챕터이면 so that + 주어 + can/could 구조를 분명히 유지하고 문장을 미완성으로 끝내지 말라."
+      : "- In a so-that purpose chapter, clearly keep so that + subject + can/could and never leave the sentence incomplete.");
+  }
+  if (grammarFocus.isToInfinitive) {
+    rules.push(isKo
+      ? "- to부정사 챕터이면 to + 동사원형 구조가 목표 문법으로 분명히 드러나야 한다."
+      : "- In a to-infinitive chapter, the target to + base verb structure must be clearly visible.");
+  }
+  if (grammarFocus.isGerund) {
+    rules.push(isKo
+      ? "- 동명사 챕터이면 동명사(-ing)가 명사 역할로 쓰이는 구조가 실제 정답에 드러나야 한다."
+      : "- In a gerund chapter, the -ing form used as a noun must be clearly visible in the final answers.");
+  }
+  if (grammarFocus.isPassive) {
+    rules.push(isKo
+      ? "- 수동태 챕터이면 be + p.p. 구조를 실제 정답에 유지하라."
+      : "- In a passive chapter, keep real be + past participle structures in the final answers.");
+  }
+  if (grammarFocus.isPresentPerfect) {
+    rules.push(isKo
+      ? "- 현재완료 챕터이면 have/has + p.p.를 유지하고 finished past-time expression과 충돌시키지 말라."
+      : "- In a present-perfect chapter, preserve have/has + past participle and avoid conflicts with finished past-time expressions.");
+  }
+  if (grammarFocus.isComparative) {
+    rules.push(isKo
+      ? "- 비교급 챕터이면 비교급 구조가 눈에 보이게 유지되어야 한다."
+      : "- In a comparative chapter, visibly preserve comparative structures.");
+  }
+  if (grammarFocus.isSuperlative) {
+    rules.push(isKo
+      ? "- 최상급 챕터이면 최상급 구조가 분명히 보여야 하며 비교급이나 막연한 일반문장으로 흐르지 말라."
+      : "- In a superlative chapter, visibly preserve superlative structures and do not drift into comparative or vague generic sentences.");
+  }
+
+  if (!rules.length) {
+    return isKo
+      ? "- 원래 문법 타깃이 정답과 문항에 실제로 드러나도록 유지하라."
+      : "- Keep the original grammar target visibly present in both items and answers.";
+  }
+
+  return rules.join("
+");
+}
+
+function buildMagicReviewControlBlock({ intentMode, grammarFocus, language }) {
+  const isKo = language === "ko";
+  const focusRules = buildGrammarValidationBlock(grammarFocus, language);
+
+  if (intentMode === "concept" || intentMode === "concept+training") {
+    return isKo
+      ? `
+추가 안정화 규칙:
+- 개념설명 자료는 과도하게 재창작하지 말고, 잘못된 문장이나 구조만 바로잡아라.
+- 개념설명 흐름이 무너지지 않도록 교정하되, 명백히 틀린 설명/예문은 수정하라.
+- 문법 포커스 규칙:
+${focusRules}`.trim()
+      : `
+Additional stability rules:
+- Do not over-rewrite concept sheets; correct only what is wrong or broken.
+- Preserve the explanation flow, but fix clearly wrong examples or structures.
+- Grammar focus rules:
+${focusRules}`.trim();
+  }
+
+  return isKo
+    ? `
+추가 안정화 규칙:
+- 과도하게 조이지 말고, 좋은 문항은 유지하라.
+- 그러나 비문, 미완성 문장, 목표 문법 이탈, 챕터 불일치 문장은 반드시 고쳐라.
+- 동일 문항 수를 가능한 한 유지하라.
+- clue는 최대한 유지하되, 오답을 유도할 만큼 잘못된 clue는 최소한으로 보정하라.
+- 문항과 정답의 최소 70% 이상에서 목표 문법이 실제로 드러나게 하라.
+- 분명히 잘못된 문장은 '보존'하지 말고 자연스럽고 교재용으로 다시 써라.
+- 문법 포커스 규칙:
+${focusRules}`.trim()
+    : `
+Additional stability rules:
+- Do not over-tighten; keep good items intact.
+- But always fix broken sentences, incomplete sentences, off-target grammar, and chapter mismatch.
+- Preserve the original item count as closely as possible.
+- Preserve clues where possible, but minimally repair clues that would clearly mislead students.
+- Make the target grammar visibly appear in at least about 70% of items and answers.
+- Do not preserve clearly wrong sentences; rewrite them into natural classroom-ready English.
+- Grammar focus rules:
+${focusRules}`.trim();
+}
+
 async function callOpenAI(systemPrompt, userPrompt) {
   if (!OPENAI_API_KEY) {
     throw new Error("Missing OPENAI_API_KEY");
@@ -208,7 +351,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
   return text.trim();
 }
 
-function buildSystemPrompt({ engine, language, difficulty, intentMode }) {
+function buildSystemPrompt({ engine, language, difficulty, intentMode, grammarFocus }) {
   const isKo = language === "ko";
   
   if (engine === "magic" && (intentMode === "concept" || intentMode === "concept+training")) {
@@ -236,6 +379,7 @@ function buildSystemPrompt({ engine, language, difficulty, intentMode }) {
 8. 형식, 번호, 줄바꿈, 간격만 정돈하고 과도한 재창작은 하지 말 것.
 9. 출력은 반드시 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 구조를 유지할 것.
 10. 마크다운 설명문, 부가 코멘트, 편집자 메모를 넣지 말 것.
+${buildMagicReviewControlBlock({ intentMode, grammarFocus, language })}
 `.trim()
       : `
 You are a strict educational editor reviewing a MARCUSNOTE Magic concept sheet.
@@ -260,6 +404,7 @@ Must do:
 8. Clean formatting, numbering, spacing only.
 9. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
 10. Output worksheet only with no commentary.
+${buildMagicReviewControlBlock({ intentMode, grammarFocus, language })}
 `.trim();
   }
 
@@ -282,6 +427,7 @@ Must do:
 7. 과도한 재창작은 하지 말 것.
 8. 출력은 반드시 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 구조를 유지할 것.
 9. 설명문 추가, 코멘트 추가, 시험형 변환을 하지 말 것.
+${buildMagicReviewControlBlock({ intentMode, grammarFocus, language })}
 `.trim()
       : `
 You are a strict educational editor reviewing a MARCUSNOTE Magic writing workbook.
@@ -298,6 +444,7 @@ Must do:
 7. Avoid excessive rewriting.
 8. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
 9. Do not add commentary or concept explanation.
+${buildMagicReviewControlBlock({ intentMode, grammarFocus, language })}
 `.trim();
   }
 
@@ -425,6 +572,7 @@ function buildUserPrompt({
   rawOutput,
   intentMode,
   language,
+  grammarFocus,
 }) {
   const isKo = language === "ko";
   return isKo
@@ -443,6 +591,8 @@ ${rawOutput || ""}
 
 [검수 작업]
 - 구조를 유지하면서 다듬으시오.
+- 아래 문법 포커스를 실제로 살려야 한다.
+${buildGrammarValidationBlock(grammarFocus, language)}
 - 반드시 [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] 4개 섹션으로 반환하시오.
 - 제목은 자연스럽게 정리하되 주제를 바꾸지 마시오.
 - instructions는 1개 단락으로 정리하시오.
@@ -450,6 +600,7 @@ ${rawOutput || ""}
 - answers에는 정답/해설만 넣으시오.
 - 매직 concept 모드면 개념설명과 예문 흐름을 보존하시오. (문제 수를 늘리지 마시오)
 - 매직 training 모드면 영작훈련 구조를 보존하시오.
+- 그러나 목표 문법이 보이지 않거나 문장이 비문이면 반드시 자연스럽게 고치시오.
 - 어휘 자료면 라운드 구조와 1번부터 시작하는 번호 체계를 보존하시오.
 - 미완성 문장을 반드시 완성하시오.
 - 불필요한 잡문, 마크다운, 코드펜스는 넣지 마시오.
@@ -469,6 +620,8 @@ ${rawOutput || ""}
 
 [Review task]
 - Refine while preserving structure.
+- Keep the following grammar focus truly visible.
+${buildGrammarValidationBlock(grammarFocus, language)}
 - Return exactly 4 sections: [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
 - Keep the title natural without changing the topic.
 - Keep instructions as one paragraph.
@@ -476,6 +629,7 @@ ${rawOutput || ""}
 - Put only answer/explanation content in answers.
 - If magic concept mode, preserve explanation + examples flow and do NOT increase question count.
 - If magic training mode, preserve writing-training flow.
+- But if the target grammar is not visible or the sentence is broken, rewrite it naturally.
 - If vocab mode, preserve round structure and numbering starting from 1.
 - Repair incomplete sentences.
 - Do not add markdown or commentary.
@@ -522,6 +676,7 @@ export default async function handler(req, res) {
       language,
       difficulty,
       intentMode,
+      grammarFocus,
     });
 
     const userPrompt = buildUserPrompt({
@@ -533,6 +688,7 @@ export default async function handler(req, res) {
       rawOutput,
       intentMode,
       language,
+      grammarFocus,
     });
 
     const reviewedRaw = await callOpenAI(systemPrompt, userPrompt);
@@ -552,6 +708,7 @@ export default async function handler(req, res) {
         count,
         language,
         intentMode,
+        grammarFocus,
       },
     });
   } catch (error) {
