@@ -739,6 +739,77 @@ function buildLearningVariationRuleBlock(input) {
 `;
 }
 
+
+function buildStabilityLockRuleBlock(input) {
+  const focus = input.grammarFocus || detectGrammarFocus([input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" "));
+  const isEn = input.language === "en";
+  const blocks = [];
+
+  blocks.push(isEn ? `
+[Answer Stability Lock Rules]
+- Every final answer must be a complete, natural, classroom-usable English sentence.
+- Do not output broken syntax, dangling endings, malformed relative clauses, or incomplete predicate structures.
+- If a drafted answer sounds unnatural, rewrite it before finalizing.
+- If a clue is poor or misleading, silently repair the clue logic in the output instead of preserving a broken structure.
+- Do not force a sentence just to use every clue word. Natural grammar has priority over clue preservation.
+- Avoid empty templates such as "the one that" unless the chapter truly requires them.
+- Reject outputs that are off-target, awkward, or not teachable in class.
+` : `
+[정답 안정화 잠금 규칙]
+- 모든 최종 정답은 완전하고 자연스러우며 교실에서 바로 사용할 수 있는 영어 문장이어야 한다.
+- 비문, 술어가 빠진 문장, 관계절 붕괴, 끝맺음이 어색한 문장을 출력하지 말 것.
+- 초안 정답이 어색하면 반드시 더 자연스럽게 고쳐서 최종 출력할 것.
+- clue가 부정확하거나 어색하더라도, 깨진 구조를 억지로 보존하지 말고 출력 단계에서 조용히 바로잡을 것.
+- clue 단어를 모두 억지로 쓰기 위해 비문을 만들지 말 것. 자연스러운 문법이 clue 보존보다 우선한다.
+- 챕터 요구가 없는 한 "the one that" 같은 빈 템플릿 문장을 남발하지 말 것.
+- 챕터와 무관하거나, 어색하거나, 수업에서 가르치기 힘든 정답은 폐기할 것.
+`);
+
+  if (focus.isParticipialModifier) {
+    blocks.push(isEn ? `
+[Participial Modifier Stability Rules]
+- At least 80% of the main target items must visibly contain participles modifying nouns.
+- Preferred answer shapes:
+  - The boy running fast ...
+  - The book written in English ...
+  - The woman wearing a hat ...
+- Do not replace the target with generic simple sentences such as "This movie is interesting" or "I like swimming" unless a small warm-up item is intentionally included.
+- Avoid ordinary relative clauses with who/which/that as the main answer style.
+- Use present participles for active/ongoing meaning and past participles for passive/completed meaning.
+- If the chapter is about participial modifiers, the worksheet must teach noun-modifying participles, not just any sentence containing -ing or p.p. forms.
+` : `
+[분사의 한정적 용법 안정화 규칙]
+- 핵심 목표 문항의 최소 80% 이상은 분사가 명사를 직접 수식하는 구조가 눈에 보여야 한다.
+- 정답은 다음 형태를 우선한다:
+  - 빠르게 달리는 소년
+  - 영어로 쓰인 책
+  - 모자를 쓰고 있는 여자
+- "이 영화는 재미있다", "나는 수영하는 것을 좋아한다" 같은 일반 평서문으로 목표 문법을 대체하지 말 것.
+- who/which/that 관계절을 주된 정답 스타일로 사용하지 말 것.
+- 현재분사는 능동·진행 의미, 과거분사는 수동·완료 의미를 분명히 반영할 것.
+- 분사의 한정적 용법 챕터라면, 단순히 -ing나 p.p.가 들어간 문장이 아니라 "명사를 꾸미는 분사"를 실제로 가르치는 출력이어야 한다.
+`);
+  }
+
+  if (focus.isNonRestrictive) {
+    blocks.push(isEn ? `
+[Non-Restrictive Stability Rules]
+- Use visible comma-framed non-restrictive clauses in the target answers.
+- Do not fall back to restrictive answers using that, bare noun + relative clause, or "the one that" templates.
+- If an answer can be expressed either restrictively or non-restrictively, choose the non-restrictive version.
+- At least 80% of the main target items should clearly show comma-based extra information.
+` : `
+[관계대명사의 계속적 용법 안정화 규칙]
+- 목표 정답은 쉼표가 보이는 계속적 용법 관계절로 분명하게 작성할 것.
+- that, bare noun + 관계절, "the one that" 같은 제한적 용법 안전문장으로 되돌아가지 말 것.
+- 제한적 용법과 계속적 용법이 모두 가능한 경우에는 계속적 용법 정답을 우선할 것.
+- 핵심 목표 문항의 최소 80% 이상은 쉼표 기반의 부가설명 구조가 분명히 보여야 한다.
+`);
+  }
+
+  return blocks.filter(Boolean).join("\n");
+}
+
 function buildTargetCoverageRuleBlock(input) {
   const focus = input.grammarFocus || detectGrammarFocus([input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" "));
   const isEn = input.language === "en";
@@ -1276,6 +1347,7 @@ clue 설계 규칙:
 ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
+${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 
 출력 형식:
@@ -1362,6 +1434,7 @@ Forbidden:
 ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
+${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 
 Output format:
@@ -1474,6 +1547,7 @@ Item count: ${input.count}
 Requirement: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
+${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 
 Mandatory Magic rules:
@@ -1492,6 +1566,7 @@ Quality control:
 - Do not create present perfect + finished past-time conflicts.
 - Do not generate weak copy-the-answer style items.
 - Do not output broken, incomplete, or awkward sentences.
+- If a clue would naturally produce a broken sentence, rewrite the output into a correct teachable sentence instead of forcing the clue literally.
 - Reject answers that are grammatical only on the surface but unnatural in real classroom English.
 - Do not make all ${input.count} items the same pattern.
 - Prefer natural classroom English and common collocations.
@@ -1515,6 +1590,7 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 요구사항: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
+${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 
 매직 필수 규칙:
@@ -1533,6 +1609,7 @@ ${buildLearningVariationRuleBlock(input)}
 - 현재완료 + last week 같은 시제 충돌을 만들지 말 것.
 - 답을 거의 그대로 베끼는 약한 문제를 만들지 말 것.
 - 비문, 미완성문, 어색한 교재체 문장을 출력하지 말 것.
+- clue를 문자 그대로 억지로 맞추다가 깨진 문장을 만들지 말고, 출력 단계에서 자연스러운 교재용 문장으로 바로잡을 것.
 - 겉보기에만 문법적이고 실제 교실 영어로는 부자연스러운 정답은 폐기할 것.
 - ${input.count}문항이 모두 같은 패턴이 되지 않게 할 것.
 - 영어 문장은 실제 교실에서 바로 읽어줄 수 있을 정도로 자연스러워야 할 것.
