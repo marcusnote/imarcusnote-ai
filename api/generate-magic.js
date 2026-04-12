@@ -151,6 +151,100 @@ function detectMagicIntent(text = "") {
   return "training";
 }
 
+function detectGrammarFocus(text = "") {
+  const raw = String(text || "");
+  const t = raw.toLowerCase();
+
+  const hasAny = (patterns) => patterns.some((p) => p.test(raw) || p.test(t));
+
+  const isRelativePronoun = hasAny([
+    /관계대명사/,
+    /relative\s*pronoun/i,
+  ]);
+
+  const isRelativeAdverb = hasAny([
+    /관계부사/,
+    /relative\s*adverb/i,
+  ]);
+
+  const isToInfinitive = hasAny([
+    /to부정사/,
+    /to-infinitive/i,
+    /infinitive/i,
+  ]);
+
+  const isGerund = hasAny([
+    /동명사/,
+    /gerund/i,
+  ]);
+
+  const isPassive = hasAny([
+    /수동태/,
+    /passive/i,
+  ]);
+
+  const isPresentPerfect = hasAny([
+    /현재완료/,
+    /present\s+perfect/i,
+  ]);
+
+  const isComparative = hasAny([
+    /비교급/,
+    /comparative/i,
+  ]);
+
+  const isSuperlative = hasAny([
+    /최상급/,
+    /superlative/i,
+  ]);
+
+  const isNonRestrictive = hasAny([
+    /계속적\s*용법/,
+    /non[-\s]?restrictive/i,
+    /nonrestrictive/i,
+    /comma relative/i,
+  ]);
+
+  const isRestrictive = hasAny([
+    /제한적\s*용법/,
+    /restrictive/i,
+  ]) && !isNonRestrictive;
+
+  const isObjectiveRelativePronoun = hasAny([
+    /목적격\s*관계대명사/,
+    /objective\s*relative\s*pronoun/i,
+  ]);
+
+  let chapterKey = "general";
+  if (isRelativePronoun && isNonRestrictive) chapterKey = "relative_pronoun_non_restrictive";
+  else if (isRelativePronoun && isObjectiveRelativePronoun) chapterKey = "relative_pronoun_objective";
+  else if (isRelativePronoun && isRestrictive) chapterKey = "relative_pronoun_restrictive";
+  else if (isRelativePronoun) chapterKey = "relative_pronoun_general";
+  else if (isRelativeAdverb) chapterKey = "relative_adverb";
+  else if (isToInfinitive) chapterKey = "to_infinitive";
+  else if (isGerund) chapterKey = "gerund";
+  else if (isPassive) chapterKey = "passive";
+  else if (isPresentPerfect) chapterKey = "present_perfect";
+  else if (isSuperlative) chapterKey = "superlative";
+  else if (isComparative) chapterKey = "comparative";
+
+  return {
+    chapterKey,
+    isRelativePronoun,
+    isRelativeAdverb,
+    isToInfinitive,
+    isGerund,
+    isPassive,
+    isPresentPerfect,
+    isComparative,
+    isSuperlative,
+    isNonRestrictive,
+    isRestrictive,
+    isObjectiveRelativePronoun,
+  };
+}
+
+
 function sanitizeEngine(value) {
   const v = sanitizeString(value).toLowerCase();
 
@@ -217,6 +311,7 @@ function normalizeInput(body = {}) {
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
   const count = sanitizeCount(body.count);
   const intentMode = detectMagicIntent(mergedText);
+  const grammarFocus = detectGrammarFocus(mergedText);
 
   const effectiveCount =
     intentMode === "concept"
@@ -252,6 +347,7 @@ function normalizeInput(body = {}) {
     vocabSeriesEnd: Math.max(vocabSeriesStart, vocabSeriesEnd),
     vocabItemsPerRound,
     intentMode,
+    grammarFocus,
   };
 }
 
@@ -594,122 +690,201 @@ Mode Identity:
 }
 
 
-function detectGrammarFocus(input) {
-  const merged = [
-    input.topic || "",
-    input.userPrompt || "",
-    input.worksheetTitle || "",
-  ]
-    .join(" ")
-    .toLowerCase();
-
-  const isRelativePronoun = /관계대명사|relative\s*pronoun/.test(merged);
-  const isNonrestrictive = /계속적\s*용법|계속적인\s*용법|non[-\s]?restrictive|nonrestrictive/.test(merged);
-  const isObjective = /목적격/.test(merged) || /objective\s*relative/.test(merged);
-  const isRestrictive = /제한적\s*용법|restrictive/.test(merged);
-
-  return {
-    isRelativePronoun,
-    isNonrestrictive,
-    isObjective,
-    isRestrictive,
-  };
+function buildLearningVariationRuleBlock(input) {
+  const isEn = input.language === "en";
+  return isEn ? `
+[Learning-Oriented Repetition and Variation Rules]
+1. Keep the target grammar visible through repetition, but do not clone the same sentence pattern too many times.
+2. Repetition is allowed only when the learning value remains clear. Avoid empty duplication.
+3. Vary the following while keeping the same grammar target:
+   - subject type: person, thing, place, event, abstract noun
+   - sentence opening: This / That / The / My / Our / These / It
+   - predicate shape: is, was, became, seems, looks, feels
+   - meaning function: description, evaluation, experience, feeling, comparison, explanation
+4. The following meaning patterns should not dominate the whole set:
+   - "I saw"
+   - "I like"
+   - "my friend"
+   - "my family"
+5. Similar practice is good, but near-duplicate pattern copying is forbidden.
+6. Build a workbook that feels intentionally repetitive for mastery, yet meaningfully varied for real learning.
+` : `
+[학습형 반복 + 다양성 설계 규칙]
+1. 목표 문법은 반복하되, 똑같은 문장 틀을 기계적으로 복사하지 말 것.
+2. 반복은 허용되지만, 학습 가치가 분명할 때만 허용할 것. 영양가 없는 중복은 금지한다.
+3. 같은 문법을 유지하면서도 다음 요소를 다양화할 것:
+   - 주어 유형: 사람, 사물, 장소, 사건, 추상명사
+   - 문장 시작: 이/그/저, 나의, 우리의, these, it 등
+   - 서술 방식: ~이다, ~였다, ~처럼 보인다, ~가 되었다, ~하게 느껴진다
+   - 의미 기능: 설명, 평가, 경험, 감정, 비교, 부가설명
+4. 다음 의미 패턴이 세트 전체를 지배하지 않게 할 것:
+   - "내가 본"
+   - "내가 좋아하는"
+   - "내 친구인"
+   - "내 가족인"
+5. 비슷한 연습은 허용하되, 패턴 복사 수준의 반복은 금지할 것.
+6. 결과물은 "반복을 통한 숙달"과 "다양한 적용 훈련"이 동시에 느껴지는 매직 스타일이어야 한다.
+`;
 }
 
-function buildChapterSpecificGuide(input) {
-  const focus = detectGrammarFocus(input);
-  if (!focus.isRelativePronoun) return "";
+function buildGrammarRuleBlock(input) {
+  const focus = input.grammarFocus || detectGrammarFocus(
+    [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
+  );
+  const isEn = input.language === "en";
+  const blocks = [];
 
-  if (input.language === "en") {
-    if (focus.isNonrestrictive) {
-      return `
-[Relative Pronoun: Nonrestrictive Use Rules]
-- Treat this worksheet as a nonrestrictive relative pronoun unit.
-- Make the target structure visibly nonrestrictive, not general restrictive relative clauses.
-- Use commas in the target answers wherever the nonrestrictive clause appears.
-- Do NOT use "that" in nonrestrictive relative clauses.
-- Prefer structures such as:
-  - My brother, who lives in Busan, is a teacher.
-  - This book, which I bought yesterday, is interesting.
-- Avoid restrictive-only answers such as:
-  - the person who helped me
-  - the book that I like
-- The head noun should already feel identified, and the relative clause should add extra information.
-- At least 80% of the set should clearly reflect nonrestrictive use.
-- If a prompt would naturally become restrictive, rewrite the Korean prompt itself so that it truly fits nonrestrictive use.
-`.trim();
-    }
-
-    if (focus.isObjective) {
-      return `
-[Relative Pronoun: Objective Use Rules]
-- Treat this worksheet as an objective relative pronoun unit.
-- Make the object relationship clear in the answer.
-- Allow natural school-style answers using who, whom, which, that, or omission when appropriate.
-- Do not drift into nonrestrictive comma-focused output unless explicitly requested.
-`.trim();
-    }
-
-    if (focus.isRestrictive) {
-      return `
-[Relative Pronoun: Restrictive Use Rules]
-- Treat this worksheet as a restrictive relative pronoun unit.
-- Do not force comma-based nonrestrictive clauses.
-- Use natural school-style identifying clauses.
-`.trim();
-    }
-
-    return `
-[Relative Pronoun General Rules]
-- Keep the relationship between antecedent and relative clause explicit and classroom-usable.
-- Match the requested subtype carefully when it is specified.
-`.trim();
+  if (focus.isRelativePronoun) {
+    blocks.push(isEn ? `
+[Relative Pronoun Rules]
+- Keep the target visibly centered on relative pronouns.
+- Make sure the relative clause is structurally meaningful, not decorative only.
+- Do not let every item collapse into the same "The person who..." pattern.
+- Vary between people, things, places, and situations while keeping the chapter focus clear.
+` : `
+[관계대명사 규칙]
+- 목표 문법은 반드시 관계대명사 중심으로 드러나게 할 것.
+- 관계절은 장식이 아니라 실제 구조 학습이 되도록 설계할 것.
+- 모든 문항이 "그 사람은 ~이다" 형태로만 무너지지 않게 할 것.
+- 사람, 사물, 장소, 상황을 고르게 섞되, 챕터 초점은 유지할 것.
+`);
   }
 
-  if (focus.isNonrestrictive) {
-    return `
-[관계대명사 계속적 용법 강제 규칙]
-- 이 워크북은 반드시 관계대명사의 계속적 용법 단원으로 처리할 것.
-- 단순한 관계대명사 일반 문제나 제한적 용법 문제로 흐르지 말 것.
-- 계속적 용법 정답에는 관계절 앞뒤 쉼표(,)가 분명히 드러나야 한다.
-- 계속적 용법에서는 that을 절대 사용하지 말 것.
-- 선행사는 이미 특정된 대상이어야 하며, 관계절은 추가 정보·부가 설명 역할을 해야 한다.
-- 정답은 다음과 같은 구조를 선호할 것.
-  예: My brother, who lives in Busan, is a teacher.
-  예: This book, which I bought yesterday, is interesting.
-- 다음과 같은 제한적 용법형 정답은 금지할 것.
-  예: the person who helped me
-  예: the book that I like
-- 전체 세트의 최소 80% 이상은 계속적 용법이 분명하게 드러나야 한다.
-- 원래 한국어 문장이 제한적 용법으로 흐르기 쉬우면, 한국어 제시문 자체를 계속적 용법에 맞게 다시 설계할 것.
-  예: "내가 좋아하는 책"보다 "이 책은, 내가 아주 좋아하는데, 재미있다"처럼 부가 설명 구조를 유도할 것.
-`.trim();
+  if (focus.isNonRestrictive) {
+    blocks.push(isEn ? `
+[Non-Restrictive Relative Pronoun Rules]
+1. Every target answer must use non-restrictive relative clauses.
+2. Commas are mandatory.
+3. Do NOT use "that".
+4. The clause must function as added information about an already identified noun.
+5. Avoid restrictive patterns such as:
+   - the book that I like
+   - the person who helped me
+6. Prefer outputs such as:
+   - My brother, who lives in Busan, is a teacher.
+   - This movie, which I saw yesterday, is really interesting.
+7. Keep the Korean prompts and clues aligned with comma-based non-restrictive meaning.
+` : `
+[관계대명사의 계속적 용법 규칙]
+1. 목표 정답은 반드시 계속적 용법 관계대명사 문장으로 작성할 것.
+2. 쉼표(,)는 필수이다.
+3. that은 절대 사용하지 말 것.
+4. 관계절은 이미 특정된 선행사에 대한 부가 설명이어야 한다.
+5. 다음과 같은 제한적 용법형 정답은 금지한다:
+   - 내가 좋아하는 책
+   - 나를 도와준 사람
+6. 다음과 같은 계속적 용법형 출력을 우선한다:
+   - My brother, who lives in Busan, is a teacher.
+   - This movie, which I saw yesterday, is really interesting.
+7. 한국어 제시문과 clue도 쉼표 기반의 부가설명 의미에 맞게 설계할 것.
+`);
   }
 
-  if (focus.isObjective) {
-    return `
-[관계대명사 목적격 규칙]
-- 이 워크북은 관계대명사 목적격 단원으로 처리할 것.
-- 목적어 관계를 분명히 드러낼 것.
-- who, whom, which, that, 생략 가능 구조를 학교 문법 수준에 맞게 자연스럽게 사용할 것.
-- 계속적 용법 쉼표 구조를 억지로 섞지 말 것.
-`.trim();
+  if (focus.isObjectiveRelativePronoun) {
+    blocks.push(isEn ? `
+[Objective Relative Pronoun Rules]
+- Keep the object role visible.
+- Allow natural use of whom, which, or that depending on level and naturalness.
+- Sentence answers should clearly show that the relative pronoun refers to the object, not the subject.
+` : `
+[목적격 관계대명사 규칙]
+- 목적격 역할이 분명히 드러나게 할 것.
+- 학년과 자연성에 따라 whom, which, that을 자연스럽게 사용할 수 있다.
+- 정답 문장에서 관계대명사가 주격이 아니라 목적격이라는 점이 분명해야 한다.
+`);
   }
 
   if (focus.isRestrictive) {
-    return `
-[관계대명사 제한적 용법 규칙]
-- 이 워크북은 제한적 용법 중심으로 처리할 것.
-- 쉼표 중심의 계속적 용법으로 바꾸지 말 것.
-- 선행사를 한정하는 관계절 구조를 자연스럽게 유지할 것.
-`.trim();
+    blocks.push(isEn ? `
+[Restrictive Relative Clause Rules]
+- Use identifying meaning, not comma-based extra information.
+- Do not force commas.
+- Keep the target as noun-identifying relative clauses.
+` : `
+[제한적 용법 규칙]
+- 쉼표 중심의 부가설명이 아니라, 대상을 한정하는 의미로 설계할 것.
+- 쉼표를 억지로 넣지 말 것.
+- 명사를 한정하는 관계절 구조가 분명히 드러나게 할 것.
+`);
   }
 
-  return `
-[관계대명사 일반 규칙]
-- 선행사와 관계절의 연결이 분명해야 한다.
-- 사용자가 세부 유형을 명시하면 그 유형을 우선 적용할 것.
-`.trim();
+  if (focus.isToInfinitive) {
+    blocks.push(isEn ? `
+[To-Infinitive Rules]
+- Keep the target visibly on "to + verb".
+- Do not drift into gerund answers when the chapter target is to-infinitive.
+- Vary between noun, adjective, and adverbial uses only when appropriate to the request.
+` : `
+[to부정사 규칙]
+- 목표 문법은 반드시 "to + 동사원형" 구조로 분명하게 드러나게 할 것.
+- to부정사 단원인데 동명사 정답으로 흐르지 말 것.
+- 요청에 맞는 경우에만 명사적/형용사적/부사적 용법을 구분해 사용할 것.
+`);
+  }
+
+  if (focus.isGerund) {
+    blocks.push(isEn ? `
+[Gerund Rules]
+- Keep gerund forms visible as noun-like uses of verbs.
+- Do not drift into to-infinitive answers unless explicitly requested.
+` : `
+[동명사 규칙]
+- 동사를 명사처럼 쓰는 동명사 구조가 분명히 드러나게 할 것.
+- 요청이 없는 한 to부정사 정답으로 흘러가지 말 것.
+`);
+  }
+
+  if (focus.isPassive) {
+    blocks.push(isEn ? `
+[Passive Voice Rules]
+- Keep be + past participle clearly visible.
+- Do not drift into active paraphrases when passive voice is the chapter target.
+` : `
+[수동태 규칙]
+- be동사 + 과거분사 구조가 분명하게 드러나게 할 것.
+- 수동태 단원인데 능동태 바꿔쓰기 식으로 흐르지 말 것.
+`);
+  }
+
+  if (focus.isPresentPerfect) {
+    blocks.push(isEn ? `
+[Present Perfect Rules]
+- Use present perfect naturally.
+- Do not combine it with finished past-time adverbials such as yesterday or last week.
+` : `
+[현재완료 규칙]
+- 현재완료는 자연스럽게 사용할 것.
+- yesterday, last week 같은 완료 불가능 시간표현과 결합하지 말 것.
+`);
+  }
+
+  if (focus.isComparative) {
+    blocks.push(isEn ? `
+[Comparative Rules]
+- Keep comparative forms visibly comparative.
+- Do not let the chapter drift into superlative answers.
+` : `
+[비교급 규칙]
+- 비교급 구조가 분명히 드러나게 할 것.
+- 최상급 정답으로 흐르지 말 것.
+`);
+  }
+
+  if (focus.isSuperlative) {
+    blocks.push(isEn ? `
+[Superlative Rules]
+- Keep superlative forms visibly superlative.
+- Use complete noun phrases and natural comparison ranges.
+- Do not drift into comparative answers.
+` : `
+[최상급 규칙]
+- 최상급 구조가 분명히 드러나게 할 것.
+- 완전한 명사구와 자연스러운 비교 범위를 사용할 것.
+- 비교급 정답으로 흐르지 말 것.
+`);
+  }
+
+  return blocks.filter(Boolean).join("\n");
 }
 
 function buildSystemPrompt(input) {
@@ -1032,7 +1207,8 @@ clue 설계 규칙:
 - 시험용 함정 객관식으로 만들지 말 것.
 - 사용자 요청과 무관한 독해 지문형 시험지로 만들지 말 것.
 ${buildModeSpecificGuide(input)}
-${buildChapterSpecificGuide(input)}
+${buildGrammarRuleBlock(input)}
+${buildLearningVariationRuleBlock(input)}
 
 출력 형식:
 [[TITLE]]
@@ -1116,7 +1292,8 @@ Forbidden:
 - Do not turn it into a multiple-choice_trap test.
 - Do not drift into unrelated passage-based exam content.
 ${buildModeSpecificGuide(input)}
-${buildChapterSpecificGuide(input)}
+${buildGrammarRuleBlock(input)}
+${buildLearningVariationRuleBlock(input)}
 
 Output format:
 [[TITLE]]
@@ -1226,9 +1403,8 @@ Topic: ${input.topic}
 Difficulty: ${input.difficulty} (${difficultyLabel})
 Item count: ${input.count}
 Requirement: ${taskGuide}
-
-Chapter-specific focus:
-${buildChapterSpecificGuide(input) || "(No special chapter rule)"}
+${buildGrammarRuleBlock(input)}
+${buildLearningVariationRuleBlock(input)}
 
 Mandatory Magic rules:
 - Present prompts in the learner's input language first.
@@ -1265,9 +1441,8 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 난이도: ${input.difficulty} (${difficultyLabel})
 문항 수: ${input.count}
 요구사항: ${taskGuide}
-
-챕터별 집중 규칙:
-${buildChapterSpecificGuide(input) || "(특수 챕터 규칙 없음)"}
+${buildGrammarRuleBlock(input)}
+${buildLearningVariationRuleBlock(input)}
 
 매직 필수 규칙:
 - 문제는 먼저 학습자의 입력 언어로 제시할 것.
