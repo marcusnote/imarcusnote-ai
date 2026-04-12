@@ -593,6 +593,125 @@ Mode Identity:
 `.trim();
 }
 
+
+function detectGrammarFocus(input) {
+  const merged = [
+    input.topic || "",
+    input.userPrompt || "",
+    input.worksheetTitle || "",
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  const isRelativePronoun = /관계대명사|relative\s*pronoun/.test(merged);
+  const isNonrestrictive = /계속적\s*용법|계속적인\s*용법|non[-\s]?restrictive|nonrestrictive/.test(merged);
+  const isObjective = /목적격/.test(merged) || /objective\s*relative/.test(merged);
+  const isRestrictive = /제한적\s*용법|restrictive/.test(merged);
+
+  return {
+    isRelativePronoun,
+    isNonrestrictive,
+    isObjective,
+    isRestrictive,
+  };
+}
+
+function buildChapterSpecificGuide(input) {
+  const focus = detectGrammarFocus(input);
+  if (!focus.isRelativePronoun) return "";
+
+  if (input.language === "en") {
+    if (focus.isNonrestrictive) {
+      return `
+[Relative Pronoun: Nonrestrictive Use Rules]
+- Treat this worksheet as a nonrestrictive relative pronoun unit.
+- Make the target structure visibly nonrestrictive, not general restrictive relative clauses.
+- Use commas in the target answers wherever the nonrestrictive clause appears.
+- Do NOT use "that" in nonrestrictive relative clauses.
+- Prefer structures such as:
+  - My brother, who lives in Busan, is a teacher.
+  - This book, which I bought yesterday, is interesting.
+- Avoid restrictive-only answers such as:
+  - the person who helped me
+  - the book that I like
+- The head noun should already feel identified, and the relative clause should add extra information.
+- At least 80% of the set should clearly reflect nonrestrictive use.
+- If a prompt would naturally become restrictive, rewrite the Korean prompt itself so that it truly fits nonrestrictive use.
+`.trim();
+    }
+
+    if (focus.isObjective) {
+      return `
+[Relative Pronoun: Objective Use Rules]
+- Treat this worksheet as an objective relative pronoun unit.
+- Make the object relationship clear in the answer.
+- Allow natural school-style answers using who, whom, which, that, or omission when appropriate.
+- Do not drift into nonrestrictive comma-focused output unless explicitly requested.
+`.trim();
+    }
+
+    if (focus.isRestrictive) {
+      return `
+[Relative Pronoun: Restrictive Use Rules]
+- Treat this worksheet as a restrictive relative pronoun unit.
+- Do not force comma-based nonrestrictive clauses.
+- Use natural school-style identifying clauses.
+`.trim();
+    }
+
+    return `
+[Relative Pronoun General Rules]
+- Keep the relationship between antecedent and relative clause explicit and classroom-usable.
+- Match the requested subtype carefully when it is specified.
+`.trim();
+  }
+
+  if (focus.isNonrestrictive) {
+    return `
+[관계대명사 계속적 용법 강제 규칙]
+- 이 워크북은 반드시 관계대명사의 계속적 용법 단원으로 처리할 것.
+- 단순한 관계대명사 일반 문제나 제한적 용법 문제로 흐르지 말 것.
+- 계속적 용법 정답에는 관계절 앞뒤 쉼표(,)가 분명히 드러나야 한다.
+- 계속적 용법에서는 that을 절대 사용하지 말 것.
+- 선행사는 이미 특정된 대상이어야 하며, 관계절은 추가 정보·부가 설명 역할을 해야 한다.
+- 정답은 다음과 같은 구조를 선호할 것.
+  예: My brother, who lives in Busan, is a teacher.
+  예: This book, which I bought yesterday, is interesting.
+- 다음과 같은 제한적 용법형 정답은 금지할 것.
+  예: the person who helped me
+  예: the book that I like
+- 전체 세트의 최소 80% 이상은 계속적 용법이 분명하게 드러나야 한다.
+- 원래 한국어 문장이 제한적 용법으로 흐르기 쉬우면, 한국어 제시문 자체를 계속적 용법에 맞게 다시 설계할 것.
+  예: "내가 좋아하는 책"보다 "이 책은, 내가 아주 좋아하는데, 재미있다"처럼 부가 설명 구조를 유도할 것.
+`.trim();
+  }
+
+  if (focus.isObjective) {
+    return `
+[관계대명사 목적격 규칙]
+- 이 워크북은 관계대명사 목적격 단원으로 처리할 것.
+- 목적어 관계를 분명히 드러낼 것.
+- who, whom, which, that, 생략 가능 구조를 학교 문법 수준에 맞게 자연스럽게 사용할 것.
+- 계속적 용법 쉼표 구조를 억지로 섞지 말 것.
+`.trim();
+  }
+
+  if (focus.isRestrictive) {
+    return `
+[관계대명사 제한적 용법 규칙]
+- 이 워크북은 제한적 용법 중심으로 처리할 것.
+- 쉼표 중심의 계속적 용법으로 바꾸지 말 것.
+- 선행사를 한정하는 관계절 구조를 자연스럽게 유지할 것.
+`.trim();
+  }
+
+  return `
+[관계대명사 일반 규칙]
+- 선행사와 관계절의 연결이 분명해야 한다.
+- 사용자가 세부 유형을 명시하면 그 유형을 우선 적용할 것.
+`.trim();
+}
+
 function buildSystemPrompt(input) {
   const isConcept = input.intentMode === "concept" || input.intentMode === "concept+training";
   if (isConcept) {
@@ -913,6 +1032,7 @@ clue 설계 규칙:
 - 시험용 함정 객관식으로 만들지 말 것.
 - 사용자 요청과 무관한 독해 지문형 시험지로 만들지 말 것.
 ${buildModeSpecificGuide(input)}
+${buildChapterSpecificGuide(input)}
 
 출력 형식:
 [[TITLE]]
@@ -996,6 +1116,7 @@ Forbidden:
 - Do not turn it into a multiple-choice_trap test.
 - Do not drift into unrelated passage-based exam content.
 ${buildModeSpecificGuide(input)}
+${buildChapterSpecificGuide(input)}
 
 Output format:
 [[TITLE]]
@@ -1106,6 +1227,9 @@ Difficulty: ${input.difficulty} (${difficultyLabel})
 Item count: ${input.count}
 Requirement: ${taskGuide}
 
+Chapter-specific focus:
+${buildChapterSpecificGuide(input) || "(No special chapter rule)"}
+
 Mandatory Magic rules:
 - Present prompts in the learner's input language first.
 - Make learners produce English sentences by themselves.
@@ -1141,6 +1265,9 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 난이도: ${input.difficulty} (${difficultyLabel})
 문항 수: ${input.count}
 요구사항: ${taskGuide}
+
+챕터별 집중 규칙:
+${buildChapterSpecificGuide(input) || "(특수 챕터 규칙 없음)"}
 
 매직 필수 규칙:
 - 문제는 먼저 학습자의 입력 언어로 제시할 것.
