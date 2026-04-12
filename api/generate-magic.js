@@ -217,7 +217,7 @@ function detectGrammarFocus(text = "") {
     /so that\s*구문/,
     /so that\s*\(목적\)/,
     /purpose clause/i,
-    /so that/i,
+    /\bso that\b/i,
   ]);
 
   const isNonRestrictive = hasAny([
@@ -823,6 +823,34 @@ function buildStabilityLockRuleBlock(input) {
 `);
   }
 
+  if (focus.isCausative) {
+    blocks.push(isEn ? `
+[Causative Stability Rules]
+- Keep make / let / have / help / get structures natural and complete.
+- Avoid malformed patterns such as unnecessary to-infinitives after make/let/have.
+- Do not let generic non-causative sentences dominate the answer sheet.
+` : `
+[사역동사 안정화 규칙]
+- make / let / have / help / get 구조를 자연스럽고 완전하게 유지할 것.
+- make/let/have 뒤에 불필요한 to부정사를 넣는 식의 붕괴를 피할 것.
+- 일반 평서문이 정답지를 지배하지 않게 할 것.
+`);
+  }
+
+  if (focus.isSoThatPurpose) {
+    blocks.push(isEn ? `
+[so that Stability Rules]
+- Every main target answer must keep a complete so that clause.
+- Do not leave the sentence unfinished after "so that".
+- Prefer natural modal support such as can / could / will / would when expressing purpose.
+` : `
+[so that 구문 안정화 규칙]
+- 핵심 목표 정답에는 완전한 so that 절이 유지되어야 한다.
+- so that 뒤를 미완성으로 남기지 말 것.
+- 목적 의미를 나타낼 때 can / could / will / would 같은 조동사를 자연스럽게 활용할 것.
+`);
+  }
+
   return blocks.filter(Boolean).join("\n");
 }
 
@@ -850,6 +878,8 @@ function buildTargetCoverageRuleBlock(input) {
   if (focus.isRelativePronoun && focus.isRestrictive) return targetHeavy('restrictive relative clauses', '관계대명사의 제한적 용법');
   if (focus.isRelativePronoun) return targetHeavy('relative pronouns', '관계대명사');
   if (focus.isParticipialModifier) return targetHeavy('attributive participles / participial modifiers', '분사의 한정적 용법');
+  if (focus.isCausative) return targetHeavy('causative verbs', '사역동사');
+  if (focus.isSoThatPurpose) return targetHeavy('so that purpose clauses', 'so that 구문 (목적)');
   if (focus.isToInfinitive) return targetHeavy('to-infinitives', 'to부정사');
   if (focus.isGerund) return targetHeavy('gerunds', '동명사');
   if (focus.isPassive) return targetHeavy('passive voice', '수동태');
@@ -1038,78 +1068,39 @@ function buildGrammarRuleBlock(input) {
 `);
   }
 
-  return blocks.filter(Boolean).join("\n");
-}
-
-function buildSoftChapterControlBlock(input) {
-  const focus = input.grammarFocus || detectGrammarFocus(
-    [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
-  );
-  const isEn = input.language === "en";
-
-  if (focus.isRelativePronoun && focus.isNonRestrictive) {
-    return isEn ? `
-[Soft Chapter Control: Non-Restrictive Relative Clauses]
-- Treat this chapter as non-restrictive relative clauses, not general relative pronouns.
-- Prefer comma + who / which / whom / whose in most target answers.
-- The relative clause should add extra information to an already identified noun.
-- Avoid drifting into restrictive-only patterns such as bare noun + that-clause, "the one that", or ordinary identifying relative clauses.
-- Keep the worksheet classroom-friendly and natural, but let the non-restrictive identity remain clearly visible.
-` : `
-[챕터 소프트 제어: 관계대명사의 계속적 용법]
-- 이 챕터는 일반 관계대명사가 아니라 관계대명사의 계속적 용법으로 다룬다.
-- 핵심 목표 정답은 가능하면 쉼표 + who / which / whom / whose 구조를 우선한다.
-- 관계절은 이미 특정된 선행사에 부가 정보를 더하는 형태로 설계한다.
-- bare noun + that 관계절, "the one that", 단순 제한적 용법 안전문장으로 과도하게 흐르지 않는다.
-- 너무 빡빡한 시험형이 아니라 자연스럽고 수업용으로 쓰기 좋은 문장을 유지하되, 계속적 용법 정체성은 분명히 보이게 한다.
-`;
-  }
-
-  if (focus.isParticipialModifier) {
-    return isEn ? `
-[Soft Chapter Control: Attributive Participles]
-- Keep noun-modifying participles visible in most target items.
-- Prefer natural shapes such as "the boy running fast", "the book written in English", and "the woman wearing a hat".
-- Do not let the worksheet drift mainly into generic simple sentences or ordinary relative clauses.
-- A small amount of warm-up variety is acceptable, but the participial-modifier identity should remain obvious.
-` : `
-[챕터 소프트 제어: 분사의 한정적 용법]
-- 핵심 목표 문항에서는 분사가 명사를 직접 수식하는 구조가 눈에 보이게 유지한다.
-- "빠르게 달리는 소년", "영어로 쓰인 책", "모자를 쓰고 있는 여자" 같은 자연스러운 형태를 우선한다.
-- 세트가 일반 평서문이나 관계대명사절 중심으로 무너지지 않게 한다.
-- 소량의 도입형 다양성은 허용하되, 전체 인상은 분사의 한정적 용법 학습지여야 한다.
-`;
-  }
-
   if (focus.isCausative) {
-    return isEn ? `
-[Soft Chapter Control: Causative Verbs]
-- Keep real causative meaning visible through make / let / have / help / get patterns when appropriate.
-- Do not paraphrase most items into ordinary non-causative sentences.
-- Keep answers natural and teachable, but let the causative structure remain visible in the core items.
+    blocks.push(isEn ? `
+[Causative Verb Rules]
+- Keep real causative meaning visible in the answer sentences.
+- Prefer natural make / let / have / help / get patterns when the chapter requires them.
+- Do not let the worksheet drift into generic want-to / decide-to / hope-to sentences.
+- At least most target answers should clearly show causative or permissive force.
 ` : `
-[챕터 소프트 제어: 사역동사]
-- 핵심 문항에서는 make / let / have / help / get 등 실제 사역 의미가 드러나게 한다.
-- 대부분의 문항을 일반 평서문으로 바꿔 버리지 않는다.
-- 정답은 자연스럽고 수업용으로 가르치기 쉬워야 하되, 핵심 문항에서는 사역 구조가 보이게 유지한다.
-`;
+[사역동사 규칙]
+- 정답 문장에 실제 사역 또는 허용의 의미가 드러나야 한다.
+- 단원 요구에 맞게 make / let / have / help / get 구조를 자연스럽게 사용할 것.
+- want to, decide to, hope to 같은 일반 부정사 문장으로 세트가 무너지지 말 것.
+- 핵심 목표 문항 다수에는 사역 또는 허용 구조가 분명히 보여야 한다.
+`);
   }
 
   if (focus.isSoThatPurpose) {
-    return isEn ? `
-[Soft Chapter Control: so that Purpose]
-- Keep the purpose meaning clearly visible.
-- Prefer complete so that + subject + can/could/will/would + verb structures in the core items.
-- Do not leave the clause unfinished after so that.
+    blocks.push(isEn ? `
+[so that Purpose Rules]
+- Keep the chapter visibly centered on full so-that purpose clauses.
+- Prefer complete shapes such as "..., so that + subject + can/could/will/would + verb."
+- Do not replace the target with make / let / help / want-to paraphrases as the main answer style.
+- If a clue contains "so that", preserve that target structure in the final answer naturally.
 ` : `
-[챕터 소프트 제어: so that 구문 목적]
-- 핵심 문항에서는 목적 의미가 분명하게 드러나야 한다.
-- 가능하면 완전한 so that + 주어 + can/could/will/would + 동사 구조를 우선한다.
-- so that 뒤를 미완성으로 남기지 않는다.
-`;
+[so that 구문 (목적) 규칙]
+- 목표 문법은 반드시 완전한 so that 목적절 구조 중심으로 드러나게 할 것.
+- "..., so that + 주어 + can/could/will/would + 동사원형" 형태를 우선한다.
+- make / let / help / want to 류의 우회 표현을 주된 정답 스타일로 사용하지 말 것.
+- clue에 so that이 들어 있으면, 최종 정답에서도 그 목표 구조를 자연스럽게 유지할 것.
+`);
   }
 
-  return "";
+  return blocks.filter(Boolean).join("\n");
 }
 
 function buildSystemPrompt(input) {
@@ -1433,7 +1424,6 @@ clue 설계 규칙:
 - 사용자 요청과 무관한 독해 지문형 시험지로 만들지 말 것.
 ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
-${buildSoftChapterControlBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
@@ -1521,7 +1511,6 @@ Forbidden:
 - Do not drift into unrelated passage-based exam content.
 ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
-${buildSoftChapterControlBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
@@ -1635,7 +1624,6 @@ Difficulty: ${input.difficulty} (${difficultyLabel})
 Item count: ${input.count}
 Requirement: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
-${buildSoftChapterControlBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
@@ -1679,7 +1667,6 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 문항 수: ${input.count}
 요구사항: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
-${buildSoftChapterControlBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
