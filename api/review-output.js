@@ -192,6 +192,47 @@ function detectGrammarFocus(text = "") {
   };
 }
 
+function buildRuleCardForReview(grammarFocus, language = "ko") {
+  const isKo = language === "ko";
+  if (grammarFocus.isParticipleModifier) {
+    return isKo ? `
+[Rule Card]
+- 분사의 한정적 용법 챕터에서는 명사를 직접 수식하는 분사 구조를 우선한다.
+- 관계절로만 바꾸지 않는다.
+- 어색한 분사 배치는 자연스럽게 고친다.` : `
+[Rule Card]
+- In participle-modifier chapters, prefer participles directly modifying nouns.
+- Do not rewrite everything into relative clauses.
+- Repair awkward participle placement naturally.`;
+  }
+  if (grammarFocus.isCausative) {
+    return isKo ? `
+[Rule Card]
+- 사역동사 챕터에서는 make / let / have / help / get 구조를 실제 정답에 드러낸다.
+- 일반 평서문으로 바꾸지 않는다.` : `
+[Rule Card]
+- In causative chapters, keep real make / let / have / help / get structures in final answers.
+- Do not rewrite into ordinary non-causative sentences.`;
+  }
+  if (grammarFocus.isSoThatPurpose) {
+    return isKo ? `
+[Rule Card]
+- so that 구문 챕터에서는 완전한 so that + 주어 + can/could/will/would 구조를 유지한다.
+- so that 뒤를 미완성으로 두지 않는다.` : `
+[Rule Card]
+- In so-that chapters, keep complete so that + subject + can/could/will/would structures.
+- Never leave the clause unfinished.`;
+  }
+  if (grammarFocus.isNonRestrictive) {
+    return isKo ? `
+[Rule Card]
+- 계속적 용법 챕터에서는 쉼표와 who/which를 유지하고 that을 쓰지 않는다.` : `
+[Rule Card]
+- In non-restrictive relative-clause chapters, keep commas and who/which, and do not use that.`;
+  }
+  return "";
+}
+
 function buildGrammarValidationBlock(grammarFocus, language = "ko") {
   const isKo = language === "ko";
   const rules = [];
@@ -268,13 +309,13 @@ function buildGrammarValidationBlock(grammarFocus, language = "ko") {
       : "- Keep the original grammar target visibly present in both items and answers.";
   }
 
-  return rules.join("
-");
+  return rules.join("\n");
 }
 
 function buildMagicReviewControlBlock({ intentMode, grammarFocus, language }) {
   const isKo = language === "ko";
   const focusRules = buildGrammarValidationBlock(grammarFocus, language);
+  const ruleCard = buildRuleCardForReview(grammarFocus, language);
 
   if (intentMode === "concept" || intentMode === "concept+training") {
     return isKo
@@ -283,13 +324,15 @@ function buildMagicReviewControlBlock({ intentMode, grammarFocus, language }) {
 - 개념설명 자료는 과도하게 재창작하지 말고, 잘못된 문장이나 구조만 바로잡아라.
 - 개념설명 흐름이 무너지지 않도록 교정하되, 명백히 틀린 설명/예문은 수정하라.
 - 문법 포커스 규칙:
-${focusRules}`.trim()
+${focusRules}
+${ruleCard}`.trim()
       : `
 Additional stability rules:
 - Do not over-rewrite concept sheets; correct only what is wrong or broken.
 - Preserve the explanation flow, but fix clearly wrong examples or structures.
 - Grammar focus rules:
-${focusRules}`.trim();
+${focusRules}
+${ruleCard}`.trim();
   }
 
   return isKo
@@ -302,7 +345,8 @@ ${focusRules}`.trim();
 - 문항과 정답의 최소 70% 이상에서 목표 문법이 실제로 드러나게 하라.
 - 분명히 잘못된 문장은 '보존'하지 말고 자연스럽고 교재용으로 다시 써라.
 - 문법 포커스 규칙:
-${focusRules}`.trim()
+${focusRules}
+${ruleCard}`.trim()
     : `
 Additional stability rules:
 - Do not over-tighten; keep good items intact.
@@ -312,7 +356,8 @@ Additional stability rules:
 - Make the target grammar visibly appear in at least about 70% of items and answers.
 - Do not preserve clearly wrong sentences; rewrite them into natural classroom-ready English.
 - Grammar focus rules:
-${focusRules}`.trim();
+${focusRules}
+${ruleCard}`.trim();
 }
 
 async function callOpenAI(systemPrompt, userPrompt) {
@@ -444,6 +489,8 @@ Must do:
 7. Avoid excessive rewriting.
 8. Preserve [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
 9. Do not add commentary or concept explanation.
+10. If an item clearly fails the target grammar, rewrite that item and its answer instead of preserving it.
+11. Keep good items intact, but do not preserve off-target items.
 ${buildMagicReviewControlBlock({ intentMode, grammarFocus, language })}
 `.trim();
   }
@@ -632,6 +679,7 @@ ${buildGrammarValidationBlock(grammarFocus, language)}
 - But if the target grammar is not visible or the sentence is broken, rewrite it naturally.
 - If vocab mode, preserve round structure and numbering starting from 1.
 - Repair incomplete sentences.
+- If a line clearly fails the chapter grammar, rewrite it into a chapter-aligned sentence.
 - Do not add markdown or commentary.
 `.trim();
 }
@@ -670,6 +718,10 @@ export default async function handler(req, res) {
     const count = (intentMode === "concept" || intentMode === "concept+training")
       ? 5
       : rawCount;
+
+    const grammarFocus = detectGrammarFocus(`${worksheetTitle}
+${prompt}
+${rawOutput}`);
 
     const systemPrompt = buildSystemPrompt({
       engine,
