@@ -208,18 +208,6 @@ function detectGrammarFocus(text = "") {
     /participle\s+as\s+adjective/i,
   ]);
 
-  const isCausative = hasAny([
-    /사역동사/,
-    /causative/i,
-  ]);
-
-  const isSoThatPurpose = hasAny([
-    /so that\s*구문/,
-    /so that\s*\(목적\)/,
-    /purpose clause/i,
-    /so that/i,
-  ]);
-
   const isNonRestrictive = hasAny([
     /계속적\s*용법/,
     /non[-\s]?restrictive/i,
@@ -250,8 +238,6 @@ function detectGrammarFocus(text = "") {
   else if (isSuperlative) chapterKey = "superlative";
   else if (isComparative) chapterKey = "comparative";
   else if (isParticipialModifier) chapterKey = "participial_modifier";
-  else if (isCausative) chapterKey = "causative";
-  else if (isSoThatPurpose) chapterKey = "so_that_purpose";
 
   return {
     chapterKey,
@@ -264,8 +250,6 @@ function detectGrammarFocus(text = "") {
     isComparative,
     isSuperlative,
     isParticipialModifier,
-    isCausative,
-    isSoThatPurpose,
     isNonRestrictive,
     isRestrictive,
     isObjectiveRelativePronoun,
@@ -857,125 +841,6 @@ function buildTargetCoverageRuleBlock(input) {
   if (focus.isComparative) return targetHeavy('comparatives', '비교급');
   if (focus.isSuperlative) return targetHeavy('superlatives', '최상급');
   return '';
-}
-
-function buildRuleCardBlock(input) {
-  const focus = input.grammarFocus || detectGrammarFocus(
-    [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
-  );
-  const isEn = input.language === "en";
-
-  const cards = {
-    relative_pronoun_non_restrictive: isEn ? `[Rule Card: Non-Restrictive Relative Clauses]
-- Use commas.
-- Prefer who/which.
-- Do not use that.
-- The relative clause must add extra information to an already identified noun.
-- Avoid safe fallback patterns such as "the one that".` : `[Rule Card: 관계대명사의 계속적 용법]
-- 쉼표를 사용한다.
-- who/which를 우선 사용한다.
-- that은 사용하지 않는다.
-- 관계절은 이미 특정된 선행사에 부가 정보를 더해야 한다.
-- "the one that" 같은 안전한 제한적 문장으로 도망가지 않는다.`,
-    relative_pronoun_objective: isEn ? `[Rule Card: Objective Relative Pronouns]
-- Keep the object role visible.
-- Prefer natural object relative clauses.
-- Do not collapse into only subject relative clauses.` : `[Rule Card: 목적격 관계대명사]
-- 목적격 역할이 실제 문장에 드러나야 한다.
-- 주격 관계절만 반복하지 않는다.`,
-    relative_pronoun_restrictive: isEn ? `[Rule Card: Restrictive Relative Clauses]
-- Keep the clause essential.
-- Do not use commas unless truly necessary.` : `[Rule Card: 관계대명사의 제한적 용법]
-- 관계절은 대상을 한정하는 필수 정보여야 한다.
-- 쉼표를 억지로 넣지 않는다.`,
-    participial_modifier: isEn ? `[Rule Card: Attributive Participles]
-- Use participles directly modifying nouns.
-- Prefer patterns like "the boy running fast" or "the book written in English".
-- Avoid drifting into ordinary relative clauses.` : `[Rule Card: 분사의 한정적 용법]
-- 분사가 명사를 직접 수식하게 한다.
-- "빠르게 달리는 소년", "영어로 쓰인 책" 같은 구조를 우선한다.
-- 관계절로만 바꿔 쓰지 않는다.`,
-    causative: isEn ? `[Rule Card: Causative Verbs]
-- Use real causative structures.
-- make/let/have/help/get must appear visibly.
-- Avoid ordinary non-causative paraphrases.` : `[Rule Card: 사역동사]
-- 실제 사역 구조를 사용한다.
-- make / let / have / help / get 이 실제 문장에 드러나야 한다.
-- 일반 평서문으로 바꾸지 않는다.`,
-    so_that_purpose: isEn ? `[Rule Card: so that Purpose]
-- Use complete so that + subject + can/could/will/would structures.
-- Never leave the sentence unfinished after so that.` : `[Rule Card: so that 구문 (목적)]
-- 완전한 so that + 주어 + can/could/will/would 구조를 사용한다.
-- so that 뒤를 미완성으로 끝내지 않는다.`,
-    to_infinitive: isEn ? `[Rule Card: To-Infinitive]
-- Keep to + base verb visible.
-- Do not drift into gerunds.` : `[Rule Card: to부정사]
-- to + 동사원형 구조를 분명하게 유지한다.
-- 동명사로 흐르지 않는다.`,
-    gerund: isEn ? `[Rule Card: Gerund]
-- Keep the -ing form functioning as a noun visible.` : `[Rule Card: 동명사]
-- -ing가 명사 역할로 쓰이는 구조를 분명하게 유지한다.`,
-    passive: isEn ? `[Rule Card: Passive Voice]
-- Keep be + past participle visible.` : `[Rule Card: 수동태]
-- be + 과거분사 구조를 분명하게 유지한다.`,
-    present_perfect: isEn ? `[Rule Card: Present Perfect]
-- Keep have/has + past participle visible.
-- Avoid finished past-time adverbials.` : `[Rule Card: 현재완료]
-- have/has + 과거분사 구조를 분명하게 유지한다.
-- finished past-time expression과 충돌시키지 않는다.`,
-    comparative: isEn ? `[Rule Card: Comparative]
-- Keep comparative forms visibly comparative.` : `[Rule Card: 비교급]
-- 비교급 구조를 분명하게 유지한다.`,
-    superlative: isEn ? `[Rule Card: Superlative]
-- Keep superlative forms visibly superlative.` : `[Rule Card: 최상급]
-- 최상급 구조를 분명하게 유지한다.`,
-  };
-
-  const card = cards[focus.chapterKey] || "";
-  return card ? `
-${card}
-` : "";
-}
-
-function buildLightValidationBlock(input) {
-  const focus = input.grammarFocus || detectGrammarFocus(
-    [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
-  );
-  const isEn = input.language === "en";
-  if (focus.isCausative) {
-    return isEn ? `
-[Light Validation]
-- At least most answers must visibly contain make / let / have / help / get.
-- If an answer lacks causative meaning, rewrite it instead of keeping it.
-` : `
-[Light Validation]
-- 정답 다수에 make / let / have / help / get 이 실제로 보여야 한다.
-- 사역 의미가 없으면 보존하지 말고 다시 쓴다.
-`;
-  }
-  if (focus.isSoThatPurpose) {
-    return isEn ? `
-[Light Validation]
-- Do not leave any answer unfinished after "so that".
-- Every so-that sentence must end as a complete sentence.
-` : `
-[Light Validation]
-- so that 뒤를 미완성으로 남기지 않는다.
-- 모든 so that 문장은 완전한 문장으로 끝나야 한다.
-`;
-  }
-  if (focus.isParticipialModifier) {
-    return isEn ? `
-[Light Validation]
-- Most answers must visibly show participles modifying nouns.
-- Replace off-target relative clauses with participial modifiers when natural.
-` : `
-[Light Validation]
-- 정답 다수에 분사가 명사를 수식하는 구조가 실제로 보여야 한다.
-- 목표에서 벗어난 관계절은 자연스러운 분사 수식으로 바꾼다.
-`;
-  }
-  return "";
 }
 
 function buildGrammarRuleBlock(input) {
@@ -1868,128 +1733,6 @@ function hasMeaningfulWorksheetBody(text = "") {
   return compact.length >= 80;
 }
 
-function extractNumberedWorksheetLines(text = "") {
-  return String(text || "")
-    .replace(/\r\n/g, "\n")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .filter((line) => /^\d+[\.)]\s+/.test(line));
-}
-
-function isLikelyBrokenWorksheetLine(line = "") {
-  const s = String(line || "").trim();
-  if (!s) return false;
-  if (s.length < 8) return true;
-  if (/\bso that\s*$/i.test(s)) return true;
-  if (/\bso that\s+(he|she|it|they|we|i|you)\s*$/i.test(s)) return true;
-  if (/\b(which|who|whom|whose)\s*$/i.test(s)) return true;
-  if (/,+\s*$/.test(s)) return true;
-  if (/\bthe one that\b/i.test(s)) return false;
-  if (!/[a-zA-Z]/.test(s)) return false;
-  if (!/[.!?]$/.test(s) && s.split(/\s+/).length <= 3) return true;
-  return false;
-}
-
-function runLightGrammarValidator(formatted, input) {
-  const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
-  const questionLines = extractNumberedWorksheetLines(formatted?.questions || formatted?.content || "");
-  const answerLines = extractNumberedWorksheetLines(formatted?.answerSheet || formatted?.answers || "");
-  const numberedLines = [...questionLines, ...answerLines];
-  const total = Math.max(1, numberedLines.length);
-  const countMatches = (pattern) => numberedLines.filter((line) => pattern.test(line)).length;
-
-  if (!numberedLines.length) {
-    return { ok: false, reason: "no_numbered_lines" };
-  }
-
-  const brokenCount = numberedLines.filter((line) => isLikelyBrokenWorksheetLine(line)).length;
-  if (brokenCount > 0) {
-    return { ok: false, reason: "broken_sentence_detected", brokenCount, total };
-  }
-
-  if (focus.isSoThatPurpose) {
-    const relevant = numberedLines.filter((line) => /\bso that\b/i.test(line));
-    const incompleteCount = relevant.filter((line) => {
-      if (/\bso that\s+(i|you|he|she|it|we|they)\s+(can|could|will|would|may|might)\b/i.test(line)) {
-        return false;
-      }
-      return true;
-    }).length;
-
-    if (incompleteCount >= Math.max(1, Math.ceil(Math.max(1, relevant.length) * 0.20))) {
-      return { ok: false, reason: "so_that_incomplete", incompleteCount, total, severity: "high" };
-    }
-  }
-
-  if (focus.isCausative) {
-    const matched = countMatches(/\b(make|let|have|help|get)\b/i);
-    if (matched < Math.max(3, Math.floor(total * 0.30))) {
-      return { ok: false, reason: "causative_coverage_low", matched, total };
-    }
-  }
-
-  if (focus.isParticipialModifier) {
-    const matched = countMatches(/\b\w+ing\b|\bwritten\b|\bbuilt\b|\bpainted\b|\bgiven\b|\bdecorated\b|\bknown\b|\bmade\b|\bblooming\b|\bwearing\b|\brunning\b|\bsleeping\b/i);
-    if (matched < Math.max(3, Math.floor(total * 0.30))) {
-      return { ok: false, reason: "participle_coverage_low", matched, total };
-    }
-  }
-
-  if (focus.isNonRestrictive) {
-    const matched = countMatches(/,\s*(who|which|whom|whose)\b/i);
-    if (matched < Math.max(2, Math.floor(total * 0.30))) {
-      return { ok: false, reason: "non_restrictive_coverage_low", matched, total };
-    }
-
-    const thatViolations = countMatches(/,\s*that\b/i);
-    if (thatViolations > 0) {
-      return { ok: false, reason: "non_restrictive_that_used", thatViolations, total };
-    }
-  }
-
-  return { ok: true };
-}
-
-async function tryRepairOnce(systemPrompt, userPrompt, badOutput, input) {
-  const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
-  const repairSystemPrompt = `You are a strict educational worksheet repair editor.
-- Repair only weak or off-target items.
-- Preserve worksheet identity, numbering, structure, clue style, and target grammar.
-- Do not rewrite the whole worksheet unless necessary.
-- Ensure answers are complete, natural, and classroom-ready.
-- Keep the output in the same [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]] structure.`;
-
-  const repairUserPrompt = `Target grammar focus: ${JSON.stringify(focus)}
-
-[Original system prompt]
-${systemPrompt}
-
-[Original user prompt]
-${userPrompt}
-
-[Weak output to repair]
-${badOutput}
-
-[Repair instructions]
-- Fix incomplete or awkward sentences.
-- Increase target grammar coverage if it is too low.
-- Keep item count and workbook tone as much as possible.
-- If the grammar is so that purpose, complete any unfinished 'so that + subject + modal' clauses naturally.
-- Return only the repaired worksheet text.`;
-
-  return callOpenAI(repairSystemPrompt, repairUserPrompt);
-}
-
-function shouldAcceptSoftFailure(check, input) {
-  if (!check || check.ok) return false;
-  const focus = input?.grammarFocus || detectGrammarFocus([input?.worksheetTitle, input?.userPrompt, input?.topic].filter(Boolean).join(" "));
-  if (focus.isSoThatPurpose && check.reason === "so_that_incomplete" && Number(check.incompleteCount || 0) <= 1) {
-    return true;
-  }
-  return false;
-}
-
 function isGenerationSuccessful(formatted, input) {
   if (!formatted || typeof formatted !== "object") {
     return { ok: false, reason: "formatted_missing" };
@@ -2023,11 +1766,6 @@ function isGenerationSuccessful(formatted, input) {
         minimumAcceptable,
       };
     }
-  }
-
-  const grammarValidation = runLightGrammarValidator(formatted, input);
-  if (!grammarValidation.ok) {
-    return grammarValidation;
   }
 
   return { ok: true };
@@ -2413,42 +2151,20 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    const systemPrompt = buildSystemPrompt(input);
-    const userPrompt = buildUserPrompt(input);
-    const rawText = await callOpenAI(systemPrompt, userPrompt);
-
-    let finalRawText = rawText;
-    let formatted = formatMagicResponse(finalRawText, input);
-    let generationCheck = isGenerationSuccessful(formatted, input);
-
-    if (!generationCheck.ok) {
-      try {
-        const repairedRawText = await tryRepairOnce(systemPrompt, userPrompt, finalRawText, input);
-        if (repairedRawText && typeof repairedRawText === "string") {
-          finalRawText = repairedRawText;
-          formatted = formatMagicResponse(finalRawText, input);
-          generationCheck = isGenerationSuccessful(formatted, input);
-        }
-      } catch (repairError) {
-        console.error("repair_failed", repairError?.message || repairError);
-      }
-    }
-
-    if (!generationCheck.ok && shouldAcceptSoftFailure(generationCheck, input)) {
-      generationCheck = { ok: true, softAccepted: true, originalReason: generationCheck.reason };
-    }
+    const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
+    const formatted = formatMagicResponse(rawText, input);
+    const generationCheck = isGenerationSuccessful(formatted, input);
 
     if (!generationCheck.ok) {
       return json(res, 502, {
         success: false,
-        error: "generation_unstable",
-        message: "생성 결과를 자동 보정했지만 안정 기준을 충족하지 못했습니다. 다시 시도해주세요.",
+        message: "생성 결과 구조가 불완전하여 MP를 차감하지 않았습니다. 다시 시도해주세요.",
+        detail: generationCheck.reason,
         meta: {
           language: input.language,
           requestedCount: input.count,
           actualCount: formatted.actualCount,
-          generatedAt: new Date().toISOString(),
-          repaired: true
+          generatedAt: new Date().toISOString()
         },
         requiredMp: mpState.requiredMp,
         currentMp: mpState.currentMp,
