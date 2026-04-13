@@ -313,15 +313,28 @@ function normalizeInput(body = {}) {
     "magic",
     "magic-card",
     "writing",
+    "writing_lab",
     "abcstarter",
+    "abc_starter",
     "textbook-grammar",
+    "grammar_intensive",
     "chapter-grammar",
+    "reading_mocks",
     "vocab-builder",
+    "vocab_workbook",
     "vocab-csat",
+    "vocab_csat",
   ];
-  const mode = modeCandidates.includes(body.mode)
+  let mode = modeCandidates.includes(body.mode)
     ? body.mode
     : inferMode(mergedText);
+
+  if (mode === "writing_lab") mode = "writing";
+  if (mode === "abc_starter") mode = "abcstarter";
+  if (mode === "grammar_intensive") mode = "chapter-grammar";
+  if (mode === "reading_mocks") mode = "magic";
+  if (mode === "vocab_workbook") mode = "vocab-builder";
+  if (mode === "vocab_csat") mode = "vocab-csat";
 
   const difficulty =
     ["basic", "standard", "high", "extreme"].includes(body.difficulty)
@@ -2477,11 +2490,19 @@ rawText.slice(from).trim() : rawText.slice(from, end).trim();
 
 function countWorksheetItems(text = "") {
   const source = String(text || "");
+  if (!source.trim()) return 0;
+
   const patterns = [
     /^\s*\d+\./gm,
     /^\s*\d+\)/gm,
+    /^\s*\[\d+\]/gm,
+    /^\s*Q\s*\d+\b/gim,
+    /^\s*Question\s*\d+\b/gim,
+    /^\s*문항\s*\d+\b/gm,
+    /^\s*번호\s*\d+\b/gm,
     /^\s*[A-Z]\./gm,
     /^\s*[A-Z]\)/gm,
+    /^\s*(?:- |• |· )(?=.+(?:clue|쓰기|영작|문장|rewrite|rearrange|sentence))/gim,
   ];
 
   let maxCount = 0;
@@ -2489,7 +2510,21 @@ function countWorksheetItems(text = "") {
     const matches = source.match(pattern) || [];
     if (matches.length > maxCount) maxCount = matches.length;
   }
-  return maxCount;
+
+  if (maxCount > 0) return maxCount;
+
+  const blocks = source
+    .split(/\n\s*\n+/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .filter((s) => {
+      if (s.length < 18) return false;
+      if (/^(정답|answers?)\b/i.test(s)) return false;
+      return /[a-zA-Z가-힣]/.test(s);
+    });
+
+  const sentenceLikeBlocks = blocks.filter((s) => /[.?!]$/.test(s) || s.includes("__") || s.includes("(") || s.includes("[")).length;
+  return sentenceLikeBlocks >= 3 ? sentenceLikeBlocks : blocks.length >= 5 ? blocks.length : 0;
 }
 
 function smoothGeneratedEnglish(text = "", input = {}) {
@@ -2524,6 +2559,32 @@ function hasMeaningfulWorksheetBody(text = "") {
   return compact.length >= 80;
 }
 
+function getMinimumAcceptableCount(input = {}, requestedCount = 0) {
+  const mode = String(input?.mode || "").toLowerCase();
+  const chapterKey = String(input?.grammarFocus?.chapterKey || "").toLowerCase();
+  const isConcept = ["concept", "concept+training"].includes(input?.intentMode);
+  const isVocabSeries = mode === "vocab-builder" && Number(input?.vocabSeriesEnd || 1) > Number(input?.vocabSeriesStart || 1);
+  if (requestedCount <= 0 || isConcept || isVocabSeries) return 0;
+
+  const isWritingLike = ["writing", "writing_lab", "magic-card", "chapter-grammar", "textbook-grammar"].includes(mode);
+  const isSensitiveGrammar = [
+    "relative_pronoun_non_restrictive",
+    "participial_modifier",
+    "causative",
+    "so_that_purpose",
+  ].includes(chapterKey);
+
+  let ratio = 0.6;
+  if (isWritingLike) ratio = 0.4;
+  if (isSensitiveGrammar) ratio = Math.min(ratio, 0.4);
+  if (isWritingLike && isSensitiveGrammar) ratio = 0.35;
+
+  if (requestedCount <= 10) {
+    return Math.max(3, Math.ceil(requestedCount * ratio));
+  }
+  return Math.max(4, Math.ceil(requestedCount * ratio));
+}
+
 function isGenerationSuccessful(formatted, input) {
   if (!formatted || typeof formatted !== "object") {
     return { ok: false, reason: "formatted_missing" };
@@ -2534,8 +2595,7 @@ function isGenerationSuccessful(formatted, input) {
   const questionsOk = hasMeaningfulWorksheetBody(formatted.questions);
   const requestedCount = Number(input?.count || 0);
   const actualCount = Number(formatted.actualCount || 0);
-  const isConcept = ["concept", "concept+training"].includes(input?.intentMode);
-  const isVocabSeries = input?.mode === "vocab-builder" && Number(input?.vocabSeriesEnd || 1) > Number(input?.vocabSeriesStart || 1);
+  const minimumAcceptable = getMinimumAcceptableCount(input, requestedCount);
 
   if (!contentOk) {
     return { ok: false, reason: "content_too_short" };
@@ -2546,17 +2606,14 @@ function isGenerationSuccessful(formatted, input) {
   if (!questionsOk) {
     return { ok: false, reason: "questions_missing" };
   }
-  if (requestedCount > 0 && !isConcept && !isVocabSeries) {
-    const minimumAcceptable = Math.max(1, Math.ceil(requestedCount * 0.6));
-    if (actualCount < minimumAcceptable) {
-      return {
-        ok: false,
-        reason: "actual_count_too_low",
-        requestedCount,
-        actualCount,
-        minimumAcceptable,
-      };
-    }
+  if (minimumAcceptable > 0 && actualCount < minimumAcceptable) {
+    return {
+      ok: false,
+      reason: "actual_count_too_low",
+      requestedCount,
+      actualCount,
+      minimumAcceptable,
+    };
   }
 
   return { ok: true };
@@ -2641,6 +2698,13 @@ function formatMagicResponse(rawText, input) {
     actualCount: countWorksheetItems(normalizedQuestions)
   };
 }
+
+/* =========================
+   SAFE PATCH: count-validation hardening
+   - broader item counting
+   - gentler minimums for writing/non-restrictive outputs
+   - mode alias normalization
+   ========================= */
 
 /* =========================
    MP deduction helpers
