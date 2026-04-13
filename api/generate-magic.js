@@ -1807,6 +1807,251 @@ async function callOpenAI(systemPrompt, userPrompt) {
   return data?.choices?.[0]?.message?.content?.trim() || "";
 }
 
+
+/* =========================
+   S8.5 Integrated Core Layer
+   ========================= */
+
+function buildGrammarVisibilityLock(input = {}) {
+  const focus = input?.grammarFocus || {};
+  const isKo = input?.language !== "en";
+  const rules = [];
+
+  if (focus.isRelativePronoun) {
+    rules.push(
+      isKo
+        ? "- 관계대명사 챕터이면 관계절이 실제 문항과 정답에 분명히 드러나야 한다."
+        : "- In a relative-pronoun chapter, the relative clause must be clearly visible in items and answers."
+    );
+  }
+
+  if (focus.isNonRestrictive) {
+    rules.push(
+      isKo
+        ? "- 계속적 용법이면 쉼표를 사용하고 who/which를 우선 사용하며 that은 쓰지 않는다."
+        : "- For non-restrictive relative clauses, use commas and prefer who/which. Do not use that."
+    );
+  }
+
+  if (focus.isRestrictive) {
+    rules.push(
+      isKo
+        ? "- 제한적 용법이면 쉼표 없이 필수 정보 관계절로 유지한다."
+        : "- For restrictive relative clauses, keep the clause essential and do not use commas."
+    );
+  }
+
+  if (focus.isObjectiveRelativePronoun) {
+    rules.push(
+      isKo
+        ? "- 목적격 관계대명사 챕터이면 목적격 관계절이 드러나야 하며, 주격 관계절만 반복하지 않는다."
+        : "- In an objective-relative chapter, visibly use object relative clauses rather than repeating only subject relative clauses."
+    );
+  }
+
+  if (focus.isParticipialModifier) {
+    rules.push(
+      isKo
+        ? "- 분사의 한정적 용법 챕터이면 문항과 정답의 다수에서 명사를 직접 수식하는 분사 구조(-ing / p.p.)를 보여야 한다."
+        : "- In a participle-modifier chapter, most items and answers must show participles directly modifying nouns (-ing / past participle)."
+    );
+  }
+
+  if (focus.isCausative) {
+    rules.push(
+      isKo
+        ? "- 사역동사 챕터이면 make / let / have / get 등의 사역 구조가 실제 정답에 드러나야 한다."
+        : "- In a causative-verb chapter, real causative structures such as make / let / have / get must appear in the answers."
+    );
+  }
+
+  if (focus.isSoThatPurpose) {
+    rules.push(
+      isKo
+        ? "- so that 구문(목적) 챕터이면 so that + 주어 + can/could 구조를 분명히 유지하고 문장을 미완성으로 끝내지 않는다."
+        : "- In a so-that purpose chapter, clearly keep so that + subject + can/could and never leave the sentence incomplete."
+    );
+  }
+
+  if (focus.isToInfinitive) {
+    rules.push(
+      isKo
+        ? "- to부정사 챕터이면 to + 동사원형 구조가 목표 문법으로 분명히 드러나야 한다."
+        : "- In a to-infinitive chapter, the target to + base verb structure must be clearly visible."
+    );
+  }
+
+  if (focus.isGerund) {
+    rules.push(
+      isKo
+        ? "- 동명사 챕터이면 동명사(-ing)가 명사 역할로 쓰이는 구조가 실제 정답에 드러나야 한다."
+        : "- In a gerund chapter, the -ing form used as a noun must be clearly visible in the final answers."
+    );
+  }
+
+  if (focus.isPassive) {
+    rules.push(
+      isKo
+        ? "- 수동태 챕터이면 be + p.p. 구조를 실제 정답에 유지한다."
+        : "- In a passive chapter, keep real be + past participle structures in the final answers."
+    );
+  }
+
+  if (focus.isPresentPerfect) {
+    rules.push(
+      isKo
+        ? "- 현재완료 챕터이면 have/has + p.p.를 유지하고 finished past-time expression과 충돌시키지 않는다."
+        : "- In a present-perfect chapter, preserve have/has + past participle and avoid conflicts with finished past-time expressions."
+    );
+  }
+
+  if (focus.isComparative) {
+    rules.push(
+      isKo
+        ? "- 비교급 챕터이면 비교급 구조가 눈에 보이게 유지되어야 한다."
+        : "- In a comparative chapter, visibly preserve comparative structures."
+    );
+  }
+
+  if (focus.isSuperlative) {
+    rules.push(
+      isKo
+        ? "- 최상급 챕터이면 최상급 구조가 분명히 보여야 하며 비교급이나 막연한 일반문장으로 흐르지 않는다."
+        : "- In a superlative chapter, visibly preserve superlative structures and do not drift into comparative or vague generic sentences."
+    );
+  }
+
+  if (!rules.length) {
+    rules.push(
+      isKo
+        ? "- 원래 문법 타깃이 정답과 문항에 실제로 드러나도록 유지하라."
+        : "- Keep the original grammar target visibly present in both items and answers."
+    );
+  }
+
+  return `
+[GRAMMAR VISIBILITY LOCK]
+${rules.join("\n")}`.trim();
+}
+
+function validateStructureStrict(text = "") {
+  if (!text.includes("[[TITLE]]")) return "Missing TITLE";
+  if (!text.includes("[[INSTRUCTIONS]]")) return "Missing INSTRUCTIONS";
+  if (!text.includes("[[QUESTIONS]]")) return "Missing QUESTIONS";
+  if (!text.includes("[[ANSWERS]]")) return "Missing ANSWERS";
+  return "";
+}
+
+function validateQualityStrict(text = "") {
+  const badPatterns = [
+    /made me interesting/i,
+    /made me enjoyable/i,
+    /let me comfortable/i,
+    /made us touched/i,
+    /a little books/i,
+    /much candies/i,
+    /a few foods/i,
+  ];
+
+  for (const pattern of badPatterns) {
+    if (pattern.test(text)) return "Unnatural sentence";
+  }
+
+  return "";
+}
+
+function validateLengthStrict(text = "", input = {}) {
+  const isConcept =
+    input?.intentMode === "concept" ||
+    input?.intentMode === "concept+training";
+
+  const minLength = isConcept ? 300 : 400;
+  if (String(text || "").trim().length < minLength) {
+    return "Too short";
+  }
+
+  return "";
+}
+
+function buildCoreUserPrompt(input) {
+  const basePrompt = buildUserPrompt(input);
+  const grammarLock = buildGrammarVisibilityLock(input);
+
+  return `
+${basePrompt}
+
+${grammarLock}
+
+[STRICT OUTPUT REMINDER]
+- Return exactly 4 sections:
+[[TITLE]]
+[[INSTRUCTIONS]]
+[[QUESTIONS]]
+[[ANSWERS]]
+- Do not add markdown or commentary outside the required sections.
+- Keep workbook identity.
+- Keep questions and answers separable.
+- Keep numbering stable.
+- Keep the requested grammar clearly visible in the final worksheet.
+`.trim();
+}
+
+function buildCoreRepairPrompt(lastError, input) {
+  return `
+Fix previous output.
+
+Error:
+${lastError}
+
+Repair rules:
+- Return exactly 4 sections:
+[[TITLE]]
+[[INSTRUCTIONS]]
+[[QUESTIONS]]
+[[ANSWERS]]
+- Fix broken grammar.
+- Fix broken structure.
+- Expand if too short.
+- Preserve worksheet identity.
+- Keep the target grammar clearly visible.
+- Preserve item count as closely as possible.
+- Keep output teacher-ready and workbook-style.
+
+${buildGrammarVisibilityLock(input)}
+`.trim();
+}
+
+async function generateMagicCore(input) {
+  const systemPrompt = buildSystemPrompt(input);
+  let userPrompt = buildCoreUserPrompt(input);
+  let lastError = "";
+
+  for (let i = 0; i < 5; i += 1) {
+    const out = await callOpenAI(systemPrompt, userPrompt);
+
+    const e1 = validateStructureStrict(out);
+    const e2 = validateQualityStrict(out);
+    const e3 = validateLengthStrict(out, input);
+
+    if (!e1 && !e2 && !e3) {
+      return out;
+    }
+
+    lastError = e1 || e2 || e3;
+
+    userPrompt = `
+${buildCoreUserPrompt(input)}
+
+[PREVIOUS OUTPUT]
+${out}
+
+${buildCoreRepairPrompt(lastError, input)}
+`.trim();
+  }
+
+  throw new Error(`MAGIC_CORE_GENERATION_FAILED: ${lastError || "unknown"}`);
+}
+
 function extractSection(rawText, startMarker, endMarker) {
   const start = rawText.indexOf(startMarker);
   if (start === -1) return "";
@@ -2283,7 +2528,7 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    const rawText = await callOpenAI(buildSystemPrompt(input), buildUserPrompt(input));
+    const rawText = await generateMagicCore(input);
     const formatted = formatMagicResponse(rawText, input);
     const generationCheck = isGenerationSuccessful(formatted, input);
 
