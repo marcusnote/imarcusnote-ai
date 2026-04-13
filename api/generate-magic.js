@@ -1196,6 +1196,21 @@ function buildGrammarOptionRuleBlock(input) {
           : "- my brother, our teacher, this book, this city처럼 특정된 선행사를 우선 사용할 것."
       );
     }
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Every main target answer must be a complete sentence with a finished main clause after the comma clause."
+        : "- HARD LOCK: 모든 핵심 정답은 쉼표 관계절 뒤에 주절이 완성된 완전한 문장이어야 한다."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Do not end answers with bare 'is', 'are', 'was', or empty fallback endings."
+        : "- HARD LOCK: 정답을 bare is/are/was 같은 미완성 끝맺음으로 끝내지 말 것."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Prefer patterns like 'My friend, who lives in Seoul, is kind.' rather than unfinished fragments."
+        : "- HARD LOCK: 미완성 단편 대신 'My friend, who lives in Seoul, is kind.' 같은 완성형 문장을 우선할 것."
+    );
   }
 
   if (key === "so_that_purpose") {
@@ -1289,6 +1304,21 @@ function buildGrammarOptionRuleBlock(input) {
           : "- 일반 관계절 정답으로 흐르지 않게 할 것."
       );
     }
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: At least 85% of the main target items must visibly show participles modifying nouns."
+        : "- HARD LOCK: 핵심 목표 문항의 최소 85% 이상은 분사가 명사를 직접 수식하는 구조가 분명히 보여야 한다."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Block generic simple sentences, progressive-only sentences, and ordinary lexical practice that do not teach noun-modifying participles."
+        : "- HARD LOCK: 명사를 수식하는 분사를 가르치지 않는 일반 평서문, 단순 진행형 문장, 단순 어휘 연습을 차단할 것."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Prefer patterns like 'the boy running quickly', 'the book written in English', 'the woman wearing a hat', 'the children playing at the beach'."
+        : "- HARD LOCK: 'the boy running quickly', 'the book written in English', 'the woman wearing a hat', 'the children playing at the beach' 같은 패턴을 우선 사용할 것."
+    );
   }
 
   if (key === "passive") {
@@ -1337,6 +1367,26 @@ function buildGrammarOptionRuleBlock(input) {
           : "- 필요할 때 명사적 / 형용사적 용법을 자연스럽게 포함할 수 있다."
       );
     }
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: At least 85% of the main target items must visibly contain to-infinitives."
+        : "- HARD LOCK: 핵심 목표 문항의 최소 85% 이상은 to부정사 구조가 눈에 보여야 한다."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Do not let the worksheet drift into make/let/have/get causative structures as main answers."
+        : "- HARD LOCK: make/let/have/get 사역 구조가 주된 정답이 되지 않게 할 것."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Do not use awkward patterns such as suggest + object + to-infinitive. Rewrite into natural teachable English."
+        : "- HARD LOCK: suggest + 목적어 + to부정사 같은 어색한 구조는 사용하지 말고, 자연스럽고 가르칠 수 있는 영어로 다시 쓸 것."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: If a sentence can be written either with a gerund or a to-infinitive, choose the to-infinitive version unless the chapter explicitly contrasts them."
+        : "- HARD LOCK: 동명사와 to부정사가 모두 가능한 경우, 비교 목적이 아니면 to부정사 정답을 우선할 것."
+    );
   }
 
   if (key === "gerund") {
@@ -1361,6 +1411,26 @@ function buildGrammarOptionRuleBlock(input) {
           : "- enjoy reading, finish doing처럼 자연스러운 동사 + 동명사 결합을 우선 사용할 것."
       );
     }
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: At least 85% of the main target items must visibly contain gerunds as the teachable target."
+        : "- HARD LOCK: 핵심 목표 문항의 최소 85% 이상은 동명사가 학습 목표로 눈에 보여야 한다."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Do not let the worksheet drift into ordinary simple present sentences or bare lexical practice."
+        : "- HARD LOCK: 일반 현재시제 평서문이나 단순 어휘 연습으로 흐르지 말 것."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Block make/let/have/get causative structures and block to-infinitive-led answers unless a very small comparison item is intentionally included."
+        : "- HARD LOCK: 아주 제한된 비교 문항이 아닌 이상, make/let/have/get 사역 구조와 to부정사 중심 정답을 차단할 것."
+    );
+    blocks.push(
+      isEn
+        ? "- HARD LOCK: Prefer natural gerund patterns such as enjoy reading, like jogging, finish doing, avoid studying, consider helping, dream of doing."
+        : "- HARD LOCK: enjoy reading, like jogging, finish doing, avoid studying, consider helping, dream of doing 같은 자연스러운 동명사 패턴을 우선 사용할 것."
+    );
   }
 
   if (key === "relative_adverb") {
