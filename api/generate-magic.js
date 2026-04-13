@@ -313,28 +313,15 @@ function normalizeInput(body = {}) {
     "magic",
     "magic-card",
     "writing",
-    "writing_lab",
     "abcstarter",
-    "abc_starter",
     "textbook-grammar",
-    "grammar_intensive",
     "chapter-grammar",
-    "reading_mocks",
     "vocab-builder",
-    "vocab_workbook",
     "vocab-csat",
-    "vocab_csat",
   ];
-  let mode = modeCandidates.includes(body.mode)
+  const mode = modeCandidates.includes(body.mode)
     ? body.mode
     : inferMode(mergedText);
-
-  if (mode === "writing_lab") mode = "writing";
-  if (mode === "abc_starter") mode = "abcstarter";
-  if (mode === "grammar_intensive") mode = "chapter-grammar";
-  if (mode === "reading_mocks") mode = "magic";
-  if (mode === "vocab_workbook") mode = "vocab-builder";
-  if (mode === "vocab_csat") mode = "vocab-csat";
 
   const difficulty =
     ["basic", "standard", "high", "extreme"].includes(body.difficulty)
@@ -1277,16 +1264,6 @@ function buildGrammarOptionRuleBlock(input) {
           ? "- Keep the worksheet strongly centered on causative structures."
           : "- 학습지 전체를 사역 구조 중심으로 유지할 것."
       );
-      blocks.push(
-        isEn
-          ? "- Avoid drifting into ordinary non-causative sentences."
-          : "- 일반 비사역 문장으로 흐르지 말 것."
-      );
-      blocks.push(
-        isEn
-          ? "- Prefer classroom-natural patterns such as make + object + verb, let + object + verb, have + object + verb, or get + object + to-infinitive."
-          : "- make/let/have/get의 교실 친화적 사역 구조를 우선 사용할 것."
-      );
     }
   }
 
@@ -1311,15 +1288,173 @@ function buildGrammarOptionRuleBlock(input) {
           ? "- Do not let the worksheet drift into ordinary relative-clause answers."
           : "- 일반 관계절 정답으로 흐르지 않게 할 것."
       );
+    }
+  }
+
+  if (key === "passive") {
+    if (opts.requirePassiveVoice) {
       blocks.push(
         isEn
-          ? "- Prefer noun + participle structures over who/which/that relative clauses."
-          : "- who/which/that 관계절보다 명사 + 분사 구조를 우선할 것."
+          ? "- Keep the target answers visibly in passive voice."
+          : "- 목표 정답이 눈에 보이게 수동태로 유지되게 할 것."
       );
+    }
+    if (opts.allowByPhraseOption) {
       blocks.push(
         isEn
-          ? "- Most target answers should visibly show participles directly modifying nouns."
-          : "- 핵심 문항 다수는 분사가 명사를 직접 수식하는 형태로 보이게 할 것."
+          ? "- You may include limited natural by-phrases when they help learning."
+          : "- 학습에 도움이 될 때 자연스러운 by-phrase를 일부 포함할 수 있다."
+      );
+    }
+    if (opts.avoidActiveRewrite) {
+      blocks.push(
+        isEn
+          ? "- Do not rewrite the target items into active-voice answers."
+          : "- 목표 문항을 능동태 정답으로 바꾸지 말 것."
+      );
+    }
+  }
+
+  if (key === "to_infinitive") {
+    if (opts.preferToInfinitiveCore) {
+      blocks.push(
+        isEn
+          ? "- Keep to-infinitives clearly visible as the core target structure."
+          : "- to부정사 구조가 핵심 목표 문법으로 분명히 드러나게 할 것."
+      );
+    }
+    if (opts.allowPurposeUsage) {
+      blocks.push(
+        isEn
+          ? "- You may include natural purpose uses of to-infinitives."
+          : "- to부정사의 목적 용법을 자연스럽게 포함할 수 있다."
+      );
+    }
+    if (opts.allowNounAdjUsage) {
+      blocks.push(
+        isEn
+          ? "- You may include noun or adjective uses of to-infinitives when appropriate."
+          : "- 필요할 때 명사적 / 형용사적 용법을 자연스럽게 포함할 수 있다."
+      );
+    }
+  }
+
+  if (key === "gerund") {
+    if (opts.requireGerundVisible) {
+      blocks.push(
+        isEn
+          ? "- Keep gerunds clearly visible in the target answers."
+          : "- 목표 정답에 동명사 구조가 분명히 드러나게 할 것."
+      );
+    }
+    if (opts.contrastWithToInfinitive) {
+      blocks.push(
+        isEn
+          ? "- You may include limited contrast items with to-infinitives, but keep gerunds primary."
+          : "- 필요 시 to부정사와의 비교 문항을 일부 포함할 수 있으나, 중심은 동명사로 유지할 것."
+      );
+    }
+    if (opts.preferNaturalVerbGerundPairs) {
+      blocks.push(
+        isEn
+          ? "- Prefer natural verb + gerund collocations such as enjoy reading or finish doing."
+          : "- enjoy reading, finish doing처럼 자연스러운 동사 + 동명사 결합을 우선 사용할 것."
+      );
+    }
+  }
+
+  if (key === "relative_adverb") {
+    if (opts.preferWhereWhenWhy) {
+      blocks.push(
+        isEn
+          ? "- Prefer clear relative adverbs such as where, when, and why."
+          : "- where, when, why 같은 관계부사를 분명하게 우선 사용할 것."
+      );
+    }
+    if (opts.forbidRelativePronounFallback) {
+      blocks.push(
+        isEn
+          ? "- Do not let the set drift into relative-pronoun answers."
+          : "- 세트가 관계대명사 정답으로 흐르지 않게 할 것."
+      );
+    }
+    if (opts.keepAdverbialRelation) {
+      blocks.push(
+        isEn
+          ? "- Keep the place / time / reason relationship visible in the answers."
+          : "- 장소 / 시간 / 이유의 부사적 관계가 정답에 드러나게 할 것."
+      );
+    }
+  }
+
+  if (key === "present_perfect") {
+    if (opts.requirePresentPerfectForm) {
+      blocks.push(
+        isEn
+          ? "- Keep present perfect forms clearly visible as have/has + p.p."
+          : "- have/has + p.p. 형태의 현재완료 구조가 분명히 드러나게 할 것."
+      );
+    }
+    if (opts.allowExperienceSinceFor) {
+      blocks.push(
+        isEn
+          ? "- You may include experience, since, or for patterns when appropriate."
+          : "- 필요 시 경험, since, for 패턴을 자연스럽게 포함할 수 있다."
+      );
+    }
+    if (opts.avoidSimplePastFallback) {
+      blocks.push(
+        isEn
+          ? "- Do not simplify the target items into simple past answers."
+          : "- 목표 문항을 단순과거 정답으로 단순화하지 말 것."
+      );
+    }
+  }
+
+  if (key === "comparative") {
+    if (opts.requireComparativeVisible) {
+      blocks.push(
+        isEn
+          ? "- Keep comparative forms clearly visible in the target answers."
+          : "- 목표 정답에 비교급 구조가 분명히 드러나게 할 것."
+      );
+    }
+    if (opts.allowThanStructure) {
+      blocks.push(
+        isEn
+          ? "- Prefer natural than-comparison structures when appropriate."
+          : "- 필요할 때 than 비교 구조를 자연스럽게 우선 사용할 것."
+      );
+    }
+    if (opts.avoidSuperlativeDrift) {
+      blocks.push(
+        isEn
+          ? "- Do not let comparative items drift into superlative answers."
+          : "- 비교급 문항이 최상급 정답으로 흐르지 않게 할 것."
+      );
+    }
+  }
+
+  if (key === "superlative") {
+    if (opts.requireSuperlativeVisible) {
+      blocks.push(
+        isEn
+          ? "- Keep superlative forms clearly visible in the target answers."
+          : "- 목표 정답에 최상급 구조가 분명히 드러나게 할 것."
+      );
+    }
+    if (opts.allowInOfRange) {
+      blocks.push(
+        isEn
+          ? "- You may use natural in / of comparison ranges for superlatives."
+          : "- 최상급 문항에서 자연스러운 in / of 비교 범위를 사용할 수 있다."
+      );
+    }
+    if (opts.avoidComparativeDrift) {
+      blocks.push(
+        isEn
+          ? "- Do not let superlative items drift into comparative answers."
+          : "- 최상급 문항이 비교급 정답으로 흐르지 않게 할 것."
       );
     }
   }
@@ -2121,238 +2256,6 @@ function buildGrammarVisibilityLock(input = {}) {
 ${rules.join("\n")}`.trim();
 }
 
-
-function validateSoThatSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-
-  const badPatterns = [
-    /so that it rains/i,
-    /so that the weather/i,
-    /so that .* can know/i,
-    /so that .* could know/i,
-    /so that our guests can arrive/i,
-  ];
-
-  for (const pattern of badPatterns) {
-    if (pattern.test(lower)) return "INVALID_SO_THAT_MEANING";
-  }
-
-  const weakPatterns = [
-    /so that .* can be on time/i,
-    /so that .* can arrive/i,
-  ];
-  for (const pattern of weakPatterns) {
-    if (pattern.test(lower)) return "WEAK_SO_THAT_MEANING";
-  }
-
-  return "";
-}
-
-function validateCausativeSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-
-  const badPatterns = [
-    /make\s+\w+\s+happy\s+to/i,
-    /let\s+\w+\s+comfortable/i,
-    /have\s+\w+\s+happy/i,
-    /get\s+\w+\s+happy/i,
-  ];
-
-  for (const pattern of badPatterns) {
-    if (pattern.test(lower)) return "INVALID_CAUSATIVE_MEANING";
-  }
-
-  const hits =
-    (lower.match(/\bmake\b/g) || []).length +
-    (lower.match(/\blet\b/g) || []).length +
-    (lower.match(/\bhave\b/g) || []).length +
-    (lower.match(/\bget\b/g) || []).length +
-    (lower.match(/\bhelp\b/g) || []).length;
-
-  if (hits < 3) return "WEAK_CAUSATIVE_VISIBILITY";
-
-  return "";
-}
-
-function validateParticipialModifierSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-
-  const participleHits =
-    (lower.match(/\b\w+ing\b/g) || []).length +
-    (lower.match(/\b\w+ed\b/g) || []).length;
-
-  const relativeClauseHits =
-    (lower.match(/\bwho\b/g) || []).length +
-    (lower.match(/\bwhich\b/g) || []).length +
-    (lower.match(/\bthat\b/g) || []).length;
-
-  if (participleHits < 3) return "WEAK_PARTICIPIAL_VISIBILITY";
-  if (relativeClauseHits > participleHits) return "RELATIVE_CLAUSE_FALLBACK";
-
-  return "";
-}
-
-function validatePassiveSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-  const passiveHits = (lower.match(/\b(am|is|are|was|were|be|been|being)\s+\w+ed\b/g) || []).length;
-  if (passiveHits < 3) return "WEAK_PASSIVE_VISIBILITY";
-  return "";
-}
-
-function validatePresentPerfectSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-  const perfectHits = (lower.match(/\b(has|have)\s+\w+ed\b/g) || []).length;
-  if (perfectHits < 3) return "WEAK_PRESENT_PERFECT_VISIBILITY";
-  if (/\byesterday\b|\blast year\b|\bago\b/.test(lower)) return "PRESENT_PERFECT_TIME_CONFLICT";
-  return "";
-}
-
-function validateToInfinitiveSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-  const hits = (lower.match(/\bto\s+[a-z]+/g) || []).length;
-  if (hits < 3) return "WEAK_TO_INF_VISIBILITY";
-  return "";
-}
-
-function validateGerundSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-  const ingHits = (lower.match(/\b\w+ing\b/g) || []).length;
-  if (ingHits < 3) return "WEAK_GERUND_VISIBILITY";
-  return "";
-}
-
-function validateComparativeSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-  const hits = (lower.match(/\bmore\b|\bthan\b|\ber\b/g) || []).length;
-  if (hits < 3) return "WEAK_COMPARATIVE_VISIBILITY";
-  return "";
-}
-
-function validateSuperlativeSemantic(text = "") {
-  const lower = String(text || "").toLowerCase();
-  const hits = (lower.match(/\bmost\b|\best\b/g) || []).length;
-  if (hits < 3) return "WEAK_SUPERLATIVE_VISIBILITY";
-  return "";
-}
-
-function validateHighLevelAbstractness(text = "", input = {}) {
-  if (input?.level !== "high") return "";
-
-  const lower = String(text || "").toLowerCase();
-
-  const abstractSignals = [
-    "education","society","culture","technology","ethics","freedom","responsibility",
-    "creativity","knowledge","identity","philosophy","environment","community",
-    "critical thinking","value","perspective"
-  ];
-
-  const simpleSignals = [
-    "my friend","my family","my dog","my cat","go to the park","play soccer","buy a toy","eat pizza"
-  ];
-
-  const abstractCount = abstractSignals.filter((s) => lower.includes(s)).length;
-  const simpleCount = simpleSignals.filter((s) => lower.includes(s)).length;
-  if (abstractCount === 0 && simpleCount >= 2) {
-    return "HIGH_LEVEL_TOO_SIMPLE";
-  }
-  return "";
-}
-
-function cleanClueArtifacts(text = "") {
-  return String(text || "")
-    .replace(/,\s*is,\s*is/g, ", is")
-    .replace(/,\s*are,\s*are/g, ", are")
-    .replace(/,\s*can,\s*can/g, ", can")
-    .replace(/\(\s*/g, "(")
-    .replace(/\s{2,}/g, " ");
-}
-
-function strengthenExpressionVariety(text = "") {
-  return String(text || "")
-    .replace(/is very nice/g, "is genuinely admirable")
-    .replace(/is very interesting/g, "is intellectually engaging")
-    .replace(/is amazing/g, "is deeply impressive")
-    .replace(/is wonderful/g, "is especially meaningful")
-    .replace(/is my favorite/g, "means a great deal to me");
-}
-
-function validateAdvancedQuality(text = "", input = {}) {
-  let err = "";
-
-  const grammarKey =
-    input?.grammarOptions?.grammarKey ||
-    input?.grammarFocus?.chapterKey ||
-    "";
-
-  if (grammarKey === "so_that_purpose") {
-    err = validateSoThatSemantic(text);
-    if (err) return err;
-  }
-
-  if (grammarKey === "causative") {
-    err = validateCausativeSemantic(text);
-    if (err) return err;
-  }
-
-  if (grammarKey === "participial_modifier") {
-    err = validateParticipialModifierSemantic(text);
-    if (err) return err;
-  }
-
-  if (grammarKey === "passive") {
-    err = validatePassiveSemantic(text);
-    if (err) return err;
-  }
-
-  if (grammarKey === "present_perfect") {
-    err = validatePresentPerfectSemantic(text);
-    if (err) return err;
-  }
-
-  if (grammarKey === "to_infinitive") {
-    err = validateToInfinitiveSemantic(text);
-    if (err) return err;
-  }
-
-  if (grammarKey === "gerund") {
-    err = validateGerundSemantic(text);
-    if (err) return err;
-  }
-
-  if (grammarKey === "comparative") {
-    err = validateComparativeSemantic(text);
-    if (err) return err;
-  }
-
-  if (grammarKey === "superlative") {
-    err = validateSuperlativeSemantic(text);
-    if (err) return err;
-  }
-
-  err = validateHighLevelAbstractness(text, input);
-  if (err) return err;
-
-  return "";
-}
-
-function buildHighLevelRuleBlock(input) {
-  if (input?.level !== "high") return "";
-  return input.language === "en"
-    ? `
-[HIGH-LEVEL ACADEMIC CONTENT RULE]
-- Prefer abstract, academic, social, ethical, philosophical, educational, or humanities-oriented content.
-- Avoid overly childish daily-life sentences unless explicitly requested.
-- Make the worksheet feel cognitively richer and more mature.
-`.trim()
-    : `
-[고등부 추가 규칙]
-- 고등부는 추상명사, 사회, 교육, 윤리, 철학, 인문, 사고력 중심 소재를 우선할 것.
-- 지나치게 유아적이거나 일상적이고 단순한 문장은 요청이 없는 한 피할 것.
-- 전체 워크북이 더 성숙하고 사고력 중심적으로 느껴지게 할 것.
-`.trim();
-}
-
-
 function validateStructureStrict(text = "") {
   if (!text.includes("[[TITLE]]")) return "Missing TITLE";
   if (!text.includes("[[INSTRUCTIONS]]")) return "Missing INSTRUCTIONS";
@@ -2401,8 +2304,6 @@ ${basePrompt}
 
 ${grammarLock}
 
-${buildHighLevelRuleBlock(input)}
-
 [STRICT OUTPUT REMINDER]
 - Return exactly 4 sections:
 [[TITLE]]
@@ -2439,8 +2340,6 @@ Repair rules:
 - Keep output teacher-ready and workbook-style.
 
 ${buildGrammarVisibilityLock(input)}
-
-${buildHighLevelRuleBlock(input)}
 `.trim();
 }
 
@@ -2455,16 +2354,12 @@ async function generateMagicCore(input) {
     const e1 = validateStructureStrict(out);
     const e2 = validateQualityStrict(out);
     const e3 = validateLengthStrict(out, input);
-    const e4 = validateAdvancedQuality(out, input);
 
-    if (!e1 && !e2 && !e3 && !e4) {
-      let finalOutput = out;
-      finalOutput = cleanClueArtifacts(finalOutput);
-      finalOutput = strengthenExpressionVariety(finalOutput);
-      return finalOutput;
+    if (!e1 && !e2 && !e3) {
+      return out;
     }
 
-    lastError = e1 || e2 || e3 || e4;
+    lastError = e1 || e2 || e3;
 
     userPrompt = `
 ${buildCoreUserPrompt(input)}
@@ -2490,19 +2385,11 @@ rawText.slice(from).trim() : rawText.slice(from, end).trim();
 
 function countWorksheetItems(text = "") {
   const source = String(text || "");
-  if (!source.trim()) return 0;
-
   const patterns = [
     /^\s*\d+\./gm,
     /^\s*\d+\)/gm,
-    /^\s*\[\d+\]/gm,
-    /^\s*Q\s*\d+\b/gim,
-    /^\s*Question\s*\d+\b/gim,
-    /^\s*문항\s*\d+\b/gm,
-    /^\s*번호\s*\d+\b/gm,
     /^\s*[A-Z]\./gm,
     /^\s*[A-Z]\)/gm,
-    /^\s*(?:- |• |· )(?=.+(?:clue|쓰기|영작|문장|rewrite|rearrange|sentence))/gim,
   ];
 
   let maxCount = 0;
@@ -2510,21 +2397,7 @@ function countWorksheetItems(text = "") {
     const matches = source.match(pattern) || [];
     if (matches.length > maxCount) maxCount = matches.length;
   }
-
-  if (maxCount > 0) return maxCount;
-
-  const blocks = source
-    .split(/\n\s*\n+/)
-    .map((s) => s.trim())
-    .filter(Boolean)
-    .filter((s) => {
-      if (s.length < 18) return false;
-      if (/^(정답|answers?)\b/i.test(s)) return false;
-      return /[a-zA-Z가-힣]/.test(s);
-    });
-
-  const sentenceLikeBlocks = blocks.filter((s) => /[.?!]$/.test(s) || s.includes("__") || s.includes("(") || s.includes("[")).length;
-  return sentenceLikeBlocks >= 3 ? sentenceLikeBlocks : blocks.length >= 5 ? blocks.length : 0;
+  return maxCount;
 }
 
 function smoothGeneratedEnglish(text = "", input = {}) {
@@ -2559,32 +2432,6 @@ function hasMeaningfulWorksheetBody(text = "") {
   return compact.length >= 80;
 }
 
-function getMinimumAcceptableCount(input = {}, requestedCount = 0) {
-  const mode = String(input?.mode || "").toLowerCase();
-  const chapterKey = String(input?.grammarFocus?.chapterKey || "").toLowerCase();
-  const isConcept = ["concept", "concept+training"].includes(input?.intentMode);
-  const isVocabSeries = mode === "vocab-builder" && Number(input?.vocabSeriesEnd || 1) > Number(input?.vocabSeriesStart || 1);
-  if (requestedCount <= 0 || isConcept || isVocabSeries) return 0;
-
-  const isWritingLike = ["writing", "writing_lab", "magic-card", "chapter-grammar", "textbook-grammar"].includes(mode);
-  const isSensitiveGrammar = [
-    "relative_pronoun_non_restrictive",
-    "participial_modifier",
-    "causative",
-    "so_that_purpose",
-  ].includes(chapterKey);
-
-  let ratio = 0.6;
-  if (isWritingLike) ratio = 0.4;
-  if (isSensitiveGrammar) ratio = Math.min(ratio, 0.4);
-  if (isWritingLike && isSensitiveGrammar) ratio = 0.35;
-
-  if (requestedCount <= 10) {
-    return Math.max(3, Math.ceil(requestedCount * ratio));
-  }
-  return Math.max(4, Math.ceil(requestedCount * ratio));
-}
-
 function isGenerationSuccessful(formatted, input) {
   if (!formatted || typeof formatted !== "object") {
     return { ok: false, reason: "formatted_missing" };
@@ -2595,7 +2442,8 @@ function isGenerationSuccessful(formatted, input) {
   const questionsOk = hasMeaningfulWorksheetBody(formatted.questions);
   const requestedCount = Number(input?.count || 0);
   const actualCount = Number(formatted.actualCount || 0);
-  const minimumAcceptable = getMinimumAcceptableCount(input, requestedCount);
+  const isConcept = ["concept", "concept+training"].includes(input?.intentMode);
+  const isVocabSeries = input?.mode === "vocab-builder" && Number(input?.vocabSeriesEnd || 1) > Number(input?.vocabSeriesStart || 1);
 
   if (!contentOk) {
     return { ok: false, reason: "content_too_short" };
@@ -2606,14 +2454,17 @@ function isGenerationSuccessful(formatted, input) {
   if (!questionsOk) {
     return { ok: false, reason: "questions_missing" };
   }
-  if (minimumAcceptable > 0 && actualCount < minimumAcceptable) {
-    return {
-      ok: false,
-      reason: "actual_count_too_low",
-      requestedCount,
-      actualCount,
-      minimumAcceptable,
-    };
+  if (requestedCount > 0 && !isConcept && !isVocabSeries) {
+    const minimumAcceptable = Math.max(1, Math.ceil(requestedCount * 0.6));
+    if (actualCount < minimumAcceptable) {
+      return {
+        ok: false,
+        reason: "actual_count_too_low",
+        requestedCount,
+        actualCount,
+        minimumAcceptable,
+      };
+    }
   }
 
   return { ok: true };
@@ -2698,13 +2549,6 @@ function formatMagicResponse(rawText, input) {
     actualCount: countWorksheetItems(normalizedQuestions)
   };
 }
-
-/* =========================
-   SAFE PATCH: count-validation hardening
-   - broader item counting
-   - gentler minimums for writing/non-restrictive outputs
-   - mode alias normalization
-   ========================= */
 
 /* =========================
    MP deduction helpers
