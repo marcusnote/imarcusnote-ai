@@ -485,6 +485,55 @@ Rules:
 `.trim();
 }
 
+
+/* =========================
+   S13 Hard Upgrade Patch
+   ========================= */
+function buildS13HardUpgradePatchBlock() {
+  return `
+[LEVEL UPGRADE – MANDATORY EXECUTION]
+
+All generated sentences MUST follow these rules:
+
+1. Sentence Length Rule
+- Each sentence MUST contain at least 10~14 words.
+- Very short simple sentences are NOT allowed unless a tiny warm-up item is intentionally needed.
+
+2. Clause Expansion Rule (VERY IMPORTANT)
+- At least 70% of all sentences MUST include one of the following:
+  - because / since (reason)
+  - to / in order to (purpose)
+  - when / if / while (time or condition)
+  - who / which / that / where / when (embedded clause when suitable)
+
+3. Complexity Rule
+- Avoid simple Subject + Verb + Object structures as the dominant pattern.
+- Add additional phrases, modifiers, or clauses.
+
+4. Natural Context Rule
+- Sentences must feel like real-life educational or reflective situations.
+- Avoid robotic textbook-only micro-sentences.
+
+5. Advanced Expression Rule
+- Use slightly more advanced vocabulary than the direct student level.
+  - 중1 문법 → 중2 문장 수준
+  - 중2 문법 → 중3 문장 수준
+  - 중3 문법 → 고1 문장 수준
+  - 고등 문법 → 고2~3 문장 수준
+
+6. Variation Rule
+- DO NOT repeat the same sentence structure.
+- Each sentence should vary in subject, context, and expression pattern.
+
+7. ABSOLUTE RESTRICTION
+- Outputs that are too short, too simple, or repetitive are INVALID.
+- If a sentence is simple, it MUST be expanded naturally.
+
+This rule overrides weak style preferences and should be actively enforced.
+`.trim();
+}
+
+
 function buildConceptGuide(input) {
   const isEn = input.language === "en";
   return isEn ?
@@ -2035,6 +2084,7 @@ ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
+${buildS13HardUpgradePatchBlock()}
 
 출력 형식:
 [[TITLE]]
