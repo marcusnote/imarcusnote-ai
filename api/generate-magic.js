@@ -340,6 +340,10 @@ function normalizeInput(body = {}) {
   const count = sanitizeCount(body.count);
   const intentMode = detectMagicIntent(mergedText);
   const grammarFocus = detectGrammarFocus(mergedText);
+  const grammarOptions =
+    body.grammarOptions && typeof body.grammarOptions === "object"
+      ? body.grammarOptions
+      : null;
 
   const effectiveCount =
     intentMode === "concept"
@@ -376,6 +380,7 @@ function normalizeInput(body = {}) {
     vocabItemsPerRound,
     intentMode,
     grammarFocus,
+    grammarOptions,
   };
 }
 
@@ -1153,6 +1158,147 @@ function buildGrammarRuleBlock(input) {
   return blocks.filter(Boolean).join("\n");
 }
 
+function buildGrammarOptionRuleBlock(input) {
+  const opts = input?.grammarOptions || null;
+  const isEn = input?.language === "en";
+
+  if (!opts || typeof opts !== "object") return "";
+
+  const key = String(opts.grammarKey || "").trim();
+  const blocks = [];
+
+  if (key === "relative_pronoun_non_restrictive") {
+    if (opts.commaRequired) {
+      blocks.push(
+        isEn
+          ? "- Require commas in the target relative clauses."
+          : "- 목표 관계절에는 쉼표를 반드시 유지할 것."
+      );
+    }
+    if (opts.disallowThat) {
+      blocks.push(
+        isEn
+          ? "- Do not use 'that' in the target non-restrictive relative clauses."
+          : "- 계속적 용법 목표 문항에서는 that을 사용하지 말 것."
+      );
+    }
+    if (opts.nonRestrictiveOnly) {
+      blocks.push(
+        isEn
+          ? "- Keep the worksheet centered on non-restrictive relative clauses only."
+          : "- 학습지 전체를 계속적 용법 중심으로 유지할 것."
+      );
+    }
+    if (opts.preferSpecificAntecedents) {
+      blocks.push(
+        isEn
+          ? "- Prefer already-identified antecedents such as my brother, our teacher, this book, or this city."
+          : "- my brother, our teacher, this book, this city처럼 특정된 선행사를 우선 사용할 것."
+      );
+    }
+  }
+
+  if (key === "so_that_purpose") {
+    if (opts.keepSoThatPrimary) {
+      blocks.push(
+        isEn
+          ? "- Keep 'so that' as the primary target structure."
+          : "- so that 구문을 가장 핵심 목표 구조로 유지할 것."
+      );
+    }
+    if (opts.allowInOrderToComparison) {
+      blocks.push(
+        isEn
+          ? "- You may include limited comparison items using 'in order to'."
+          : "- 필요 시 in order to 비교 문항을 일부 포함할 수 있다."
+      );
+    }
+    if (opts.allowSoAsToComparison) {
+      blocks.push(
+        isEn
+          ? "- You may include limited comparison items using 'so as to'."
+          : "- 필요 시 so as to 비교 문항을 일부 포함할 수 있다."
+      );
+    }
+    if (opts.preferModalPurposeForm) {
+      blocks.push(
+        isEn
+          ? "- Prefer full purpose clauses such as so that + subject + can/could."
+          : "- so that + 주어 + can/could 형태의 완전한 목적절을 우선할 것."
+      );
+    }
+  }
+
+  if (key === "causative") {
+    if (opts.useMake) {
+      blocks.push(
+        isEn
+          ? "- Include natural make + object + verb patterns."
+          : "- make + 목적어 + 동사원형 구조를 자연스럽게 포함할 것."
+      );
+    }
+    if (opts.useLet) {
+      blocks.push(
+        isEn
+          ? "- Include natural let + object + verb patterns."
+          : "- let + 목적어 + 동사원형 구조를 자연스럽게 포함할 것."
+      );
+    }
+    if (opts.useHave) {
+      blocks.push(
+        isEn
+          ? "- Include natural have + object + verb patterns."
+          : "- have + 목적어 + 동사원형 구조를 자연스럽게 포함할 것."
+      );
+    }
+    if (opts.useGet) {
+      blocks.push(
+        isEn
+          ? "- Include natural get + object + to-infinitive / p.p. patterns when appropriate."
+          : "- 필요할 때 get + 목적어 + to부정사 / p.p. 구조를 자연스럽게 포함할 것."
+      );
+    }
+    if (opts.causativeOnly) {
+      blocks.push(
+        isEn
+          ? "- Keep the worksheet strongly centered on causative structures."
+          : "- 학습지 전체를 사역 구조 중심으로 유지할 것."
+      );
+    }
+  }
+
+  if (key === "participial_modifier") {
+    if (opts.preferPresentParticiple) {
+      blocks.push(
+        isEn
+          ? "- Prefer active noun-modifying present participles where appropriate."
+          : "- 현재분사형 명사 수식을 적절히 우선 사용할 것."
+      );
+    }
+    if (opts.preferPastParticiple) {
+      blocks.push(
+        isEn
+          ? "- Prefer passive/completed noun-modifying past participles where appropriate."
+          : "- 과거분사형 명사 수식을 적절히 우선 사용할 것."
+      );
+    }
+    if (opts.blockRelativeClauseFallback) {
+      blocks.push(
+        isEn
+          ? "- Do not let the worksheet drift into ordinary relative-clause answers."
+          : "- 일반 관계절 정답으로 흐르지 않게 할 것."
+      );
+    }
+  }
+
+  if (!blocks.length) return "";
+
+  return `
+[USER-CONFIRMED GRAMMAR OPTIONS]
+${blocks.join("\n")}
+`.trim();
+}
+
 function buildSystemPrompt(input) {
   const isConcept = input.intentMode === "concept" || input.intentMode === "concept+training";
   if (isConcept) {
@@ -1174,6 +1320,7 @@ Universal rules:
 8. Do not output incomplete example answers.
 9. Maintain [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
 ${buildConceptGuide(input)}
+${buildGrammarOptionRuleBlock(input)}
 
 Output format:
 [[TITLE]]
@@ -1202,6 +1349,7 @@ Output format:
 8. 전체 문항형 문제를 길게 나열하지 말 것.
 9. "설명 1문단 + 문제 다수" 구조를 절대 금지할 것.
 10. 출력은 반드시 아래 형식을 따를 것.
+${buildGrammarOptionRuleBlock(input)}
 
 출력 형식:
 [[TITLE]]
@@ -1639,6 +1787,8 @@ Additional rules:
 - Allowed task types: meaning check, contextual vocabulary use, synonym, antonym, lexical gap-fill, usage review.
 - Forbidden: grammar-dominant worksheet, relative pronoun drill, tense drill, generic grammar quiz.
 
+${buildGrammarOptionRuleBlock(input)}
+
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
 `.trim()
@@ -1661,6 +1811,8 @@ ${vocabSeriesBlock}
 - 허용 유형: 뜻 확인, 문맥상 어휘 사용, 유의어, 반의어, 어휘 빈칸, 용법 점검.
 - 금지 유형: 문법 중심 문제지, 관계대명사 문제지, 시제 문제지, 일반 문법 퀴즈.
 
+${buildGrammarOptionRuleBlock(input)}
+
 사용자 원문:
 ${input.userPrompt || "(추가 요청 없음)"}
 `.trim();
@@ -1680,6 +1832,7 @@ ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
+${buildGrammarOptionRuleBlock(input)}
 
 Mandatory Magic rules:
 - Present prompts in the learner's input language first.
@@ -1724,6 +1877,7 @@ ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
+${buildGrammarOptionRuleBlock(input)}
 
 매직 필수 규칙:
 - 문제는 먼저 학습자의 입력 언어로 제시할 것.
