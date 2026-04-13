@@ -1435,6 +1435,150 @@ function buildGrammarOptionRuleBlock(input) {
     }
   }
 
+  if (key === "participial_modifier") {
+    blocks.push(
+      isEn
+        ? `
+[Participial Modifier - HARD LOCK]
+[MUST]
+- Every target answer must visibly include a participle modifying a noun.
+- Use noun + V-ing or noun + p.p. structures as the core answer shape.
+
+[MUST NOT]
+- Do not use who / which / that relative clauses as the main answer pattern.
+- Do not drift into ordinary simple subject-predicate sentences.
+
+[STRICT]
+- At least 80% of the items must be noun-modifying participial structures.
+- Prefer patterns such as "the boy running", "the book written", "the woman wearing".
+
+[FAIL CONDITION]
+- Do not generate any item whose core target is not a participial modifier.`.trim()
+        : `
+[분사의 한정적 용법 - HARD LOCK]
+[MUST]
+- 모든 목표 정답은 분사가 명사를 직접 수식하는 구조를 눈에 보이게 포함해야 한다.
+- "명사 + 현재분사" 또는 "명사 + 과거분사"가 핵심 정답 형태여야 한다.
+
+[MUST NOT]
+- who / which / that 관계절을 주된 정답 패턴으로 사용하지 말 것.
+- 일반적인 단순 주어+서술어 문장으로 흐르지 말 것.
+
+[STRICT]
+- 최소 80% 이상의 문항이 분사의 한정적 용법 구조여야 한다.
+- "the boy running", "the book written", "the woman wearing" 같은 패턴을 우선 사용할 것.
+
+[FAIL CONDITION]
+- 핵심 목표가 분사의 한정적 용법이 아닌 문항은 생성하지 말 것.`.trim()
+    );
+  }
+
+  if (key === "to_infinitive") {
+    blocks.push(
+      isEn
+        ? `
+[to-Infinitive - HARD LOCK]
+[MUST]
+- Every target answer must clearly include a to-infinitive as the core structure.
+- Show one of the major functions clearly: noun use, adjective use, or purpose use.
+
+[MUST NOT]
+- Do not let let / make / have / help causative patterns dominate the set.
+- Do not produce unnatural suggest + object + to-infinitive patterns.
+
+[STRICT]
+- At least 85% of the items must be centered on to-infinitives.
+- Prefer natural patterns such as want to, decide to, ask to, try to, plan to.
+
+[FAIL CONDITION]
+- Do not generate any item whose core target is not a to-infinitive.`.trim()
+        : `
+[to부정사 - HARD LOCK]
+[MUST]
+- 모든 목표 정답은 to부정사가 핵심 구조로 분명히 보여야 한다.
+- 명사적 / 형용사적 / 목적 용법 중 하나가 분명해야 한다.
+
+[MUST NOT]
+- let / make / have / help 같은 사역구조가 세트를 지배하지 않게 할 것.
+- suggest + 목적어 + to부정사 같은 부자연스러운 패턴을 만들지 말 것.
+
+[STRICT]
+- 최소 85% 이상의 문항이 to부정사 중심이어야 한다.
+- want to, decide to, ask to, try to, plan to 같은 자연스러운 패턴을 우선할 것.
+
+[FAIL CONDITION]
+- 핵심 목표가 to부정사가 아닌 문항은 생성하지 말 것.`.trim()
+    );
+  }
+
+  if (key === "gerund") {
+    blocks.push(
+      isEn
+        ? `
+[Gerund - HARD LOCK]
+[MUST]
+- Every target answer must keep a gerund (-ing) visibly as the core structure.
+- Use gerunds naturally as subject, object, or after prepositions.
+
+[MUST NOT]
+- Do not let to-infinitive-centered items dominate the set.
+- Do not let make / let / have causative structures dominate the set.
+
+[STRICT]
+- At least 85% of the items must be centered on gerunds.
+- Prefer natural verb + gerund patterns such as enjoy reading, avoid making, finish doing, recommend reading, mind waiting.
+
+[FAIL CONDITION]
+- Do not generate any item whose core target is not a gerund.`.trim()
+        : `
+[동명사 - HARD LOCK]
+[MUST]
+- 모든 목표 정답은 동명사(-ing)가 핵심 구조로 눈에 보여야 한다.
+- 주어 / 목적어 / 전치사 뒤에서 동명사를 자연스럽게 사용할 것.
+
+[MUST NOT]
+- to부정사 중심 문장이 세트를 지배하지 않게 할 것.
+- make / let / have 같은 사역구조가 세트를 지배하지 않게 할 것.
+
+[STRICT]
+- 최소 85% 이상의 문항이 동명사 중심이어야 한다.
+- enjoy reading, avoid making, finish doing, recommend reading, mind waiting 같은 자연스러운 결합을 우선할 것.
+
+[FAIL CONDITION]
+- 핵심 목표가 동명사가 아닌 문항은 생성하지 말 것.`.trim()
+    );
+  }
+
+  if (key === "causative") {
+    blocks.push(
+      isEn
+        ? `
+[Causative - REFINED LOCK]
+[MUST]
+- Keep make / let / have / help / get visibly as the core target structures.
+- Keep object + bare infinitive or object + p.p. patterns complete and natural.
+
+[MUST NOT]
+- Do not generate let + object + to-infinitive.
+- Do not simplify the set into ordinary to-infinitive sentences.
+
+[STRICT]
+- At least 80% of the items must visibly contain causative structures.`.trim()
+        : `
+[사역동사 - REFINED LOCK]
+[MUST]
+- make / let / have / help / get 구조를 핵심 목표 구조로 눈에 보이게 유지할 것.
+- 목적어 + 동사원형 또는 목적어 + p.p. 구조를 완전하고 자연스럽게 유지할 것.
+
+[MUST NOT]
+- let + 목적어 + to부정사 형태를 생성하지 말 것.
+- 일반적인 to부정사 문장으로 단순화하지 말 것.
+
+[STRICT]
+- 최소 80% 이상의 문항이 사역 구조를 눈에 보이게 포함해야 한다.`.trim()
+    );
+  }
+
   if (key === "superlative") {
     if (opts.requireSuperlativeVisible) {
       blocks.push(
