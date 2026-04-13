@@ -761,6 +761,102 @@ function buildLearningVariationRuleBlock(input) {
 }
 
 
+function buildDifficultyUpliftRuleBlock(input) {
+  const isEn = input.language === "en";
+  const level = input.level || "middle";
+  const grade = input.gradeLabel || "중등";
+
+  const uplift = (() => {
+    if (/초1|초2|초3|초4|초5|초6|초등/.test(grade) || level === "elementary") {
+      return {
+        target: isEn ? "elementary grammar with middle-school sentence level" : "초등 문법 + 중등 문장 수준",
+        complexity: isEn
+          ? "Most items should expand beyond one short clause by adding reason, situation, purpose, or description."
+          : "대부분의 문항은 짧은 단문 하나로 끝내지 말고, 이유·상황·목적·설명 요소를 덧붙여 중등형 문장 길이로 확장할 것.",
+        vocab: isEn
+          ? "Use common but slightly richer middle-school vocabulary instead of ultra-basic survival English."
+          : "초기 생존영어 수준을 넘어서, 중등 학습자가 익숙하게 접하는 약간 더 풍부한 어휘를 사용할 것.",
+      };
+    }
+    if (/중1/.test(grade)) {
+      return {
+        target: isEn ? "middle1 grammar with middle2 sentence level" : "중1 문법 + 중2 문장 수준",
+        complexity: isEn
+          ? "At least 70% of items should contain an added phrase or clause such as because, when, with, for, or a descriptive modifier."
+          : "최소 70%의 문항은 because, when, with, for 또는 수식어구를 추가하여 중2 수준의 확장 문장으로 만들 것.",
+        vocab: isEn
+          ? "Prefer school-topic vocabulary involving habits, study, relationships, feelings, plans, and responsibilities."
+          : "습관, 학습, 관계, 감정, 계획, 책임 같은 학교 친화적 주제 어휘를 우선할 것.",
+      };
+    }
+    if (/중2/.test(grade)) {
+      return {
+        target: isEn ? "middle2 grammar with middle3 sentence level" : "중2 문법 + 중3 문장 수준",
+        complexity: isEn
+          ? "At least 75% of items should show meaningful sentence expansion with context, reason, result, comparison, or supporting detail."
+          : "최소 75%의 문항은 맥락, 이유, 결과, 비교, 보충 설명 중 하나 이상이 드러나는 중3 수준의 확장 문장으로 만들 것.",
+        vocab: isEn
+          ? "Use slightly more academic and reflective vocabulary such as effort, confidence, decision, opportunity, communication, and environment when natural."
+          : "effort, confidence, decision, opportunity, communication, environment 같은 약간 더 학술적이고 사고형인 어휘를 자연스럽게 섞을 것.",
+      };
+    }
+    if (/중3/.test(grade)) {
+      return {
+        target: isEn ? "middle3 grammar with high1 sentence level" : "중3 문법 + 고1 문장 수준",
+        complexity: isEn
+          ? "At least 80% of items should include a fuller idea with clause expansion, abstract meaning, opinion, cause, or educational context."
+          : "최소 80%의 문항은 절 확장, 추상 의미, 의견, 원인, 교육적 맥락 중 하나 이상이 드러나는 고1 수준 문장으로 만들 것.",
+        vocab: isEn
+          ? "Prefer more mature school-academic vocabulary such as perspective, responsibility, motivation, influence, achievement, and communication."
+          : "perspective, responsibility, motivation, influence, achievement, communication 같은 더 성숙한 학교·학술 어휘를 우선할 것.",
+      };
+    }
+    if (/고1|고2|고3|고등/.test(grade) || level === "high") {
+      return {
+        target: isEn ? "high-school grammar with high2-3 sentence level" : "고등 문법 + 고2·고3 문장 수준",
+        complexity: isEn
+          ? "Most items should avoid short literal daily-life sentences and instead use richer clauses, abstract content, reasoning, contrast, implication, or explanatory detail."
+          : "대부분의 문항은 짧은 생활영어형 단문을 피하고, 더 풍부한 절 구조와 추상 내용, 이유, 대조, 함의, 설명 요소를 포함하는 고2·고3 수준 문장으로 만들 것.",
+        vocab: isEn
+          ? "Allow more advanced academic and humanistic vocabulary such as principle, interpretation, social change, education, ethics, identity, and opportunity."
+          : "principle, interpretation, social change, education, ethics, identity, opportunity 같은 더 높은 사고형 어휘를 허용할 것.",
+      };
+    }
+    return {
+      target: isEn ? "stable middle-school sentence level" : "안정적인 중등 문장 수준",
+      complexity: isEn ? "Avoid overly short sentences." : "과도하게 짧은 문장을 피할 것.",
+      vocab: isEn ? "Use natural school-usable vocabulary." : "자연스럽고 수업에 바로 쓸 수 있는 어휘를 사용할 것.",
+    };
+  })();
+
+  return isEn ? `
+[Difficulty Uplift Rules]
+Target level: ${uplift.target}
+- Raise the sentence level without breaking the target grammar.
+- Keep the current grammar chapter fully visible, but make the content one school stage more mature than the grammar label itself.
+- Avoid ultra-short textbook starter sentences unless a small warm-up item is intentionally needed.
+- Prefer fuller educational sentences with reason, purpose, result, contrast, opinion, context, or description.
+- ${uplift.complexity}
+- ${uplift.vocab}
+- At least 70% of the items should be more expanded than a basic one-clause sentence.
+- Do not let many items end as weak minimal patterns such as "is", "has", "likes", or other bare predicates.
+- Even when the grammar target is simple, the thought content should feel one level higher.
+- Keep the worksheet classroom-usable, natural, and teachable.
+` : `
+[문장 수준 상향 규칙]
+목표 수준: ${uplift.target}
+- 목표 문법은 그대로 유지하되, 문장 수준은 문법 학년보다 한 단계 더 성숙하게 올릴 것.
+- 지나치게 짧고 교과서 입문형인 단문을 반복하지 말 것. 필요하면 일부 워밍업 문항만 예외로 둘 수 있다.
+- 이유, 목적, 결과, 대조, 의견, 맥락, 설명 요소가 드러나는 더 풍부한 교육용 문장을 우선할 것.
+- ${uplift.complexity}
+- ${uplift.vocab}
+- 최소 70% 이상의 문항은 기본 한 절짜리 단문보다 더 확장된 문장으로 만들 것.
+- 많은 문항이 "is", "has", "likes" 같은 약한 최소 술어로 끝나지 않게 할 것.
+- 문법 목표가 쉬워도, 사고 내용과 문장 질감은 한 단계 위 수준으로 느껴지게 할 것.
+- 결과물은 실제 수업에서 바로 사용할 수 있을 정도로 자연스럽고 가르칠 만해야 한다.
+`;
+}
+
 function buildStabilityLockRuleBlock(input) {
   const focus = input.grammarFocus || detectGrammarFocus([input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" "));
   const isEn = input.language === "en";
@@ -1196,21 +1292,6 @@ function buildGrammarOptionRuleBlock(input) {
           : "- my brother, our teacher, this book, this city처럼 특정된 선행사를 우선 사용할 것."
       );
     }
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Every main target answer must be a complete sentence with a finished main clause after the comma clause."
-        : "- HARD LOCK: 모든 핵심 정답은 쉼표 관계절 뒤에 주절이 완성된 완전한 문장이어야 한다."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Do not end answers with bare 'is', 'are', 'was', or empty fallback endings."
-        : "- HARD LOCK: 정답을 bare is/are/was 같은 미완성 끝맺음으로 끝내지 말 것."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Prefer patterns like 'My friend, who lives in Seoul, is kind.' rather than unfinished fragments."
-        : "- HARD LOCK: 미완성 단편 대신 'My friend, who lives in Seoul, is kind.' 같은 완성형 문장을 우선할 것."
-    );
   }
 
   if (key === "so_that_purpose") {
@@ -1304,21 +1385,6 @@ function buildGrammarOptionRuleBlock(input) {
           : "- 일반 관계절 정답으로 흐르지 않게 할 것."
       );
     }
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: At least 85% of the main target items must visibly show participles modifying nouns."
-        : "- HARD LOCK: 핵심 목표 문항의 최소 85% 이상은 분사가 명사를 직접 수식하는 구조가 분명히 보여야 한다."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Block generic simple sentences, progressive-only sentences, and ordinary lexical practice that do not teach noun-modifying participles."
-        : "- HARD LOCK: 명사를 수식하는 분사를 가르치지 않는 일반 평서문, 단순 진행형 문장, 단순 어휘 연습을 차단할 것."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Prefer patterns like 'the boy running quickly', 'the book written in English', 'the woman wearing a hat', 'the children playing at the beach'."
-        : "- HARD LOCK: 'the boy running quickly', 'the book written in English', 'the woman wearing a hat', 'the children playing at the beach' 같은 패턴을 우선 사용할 것."
-    );
   }
 
   if (key === "passive") {
@@ -1367,26 +1433,6 @@ function buildGrammarOptionRuleBlock(input) {
           : "- 필요할 때 명사적 / 형용사적 용법을 자연스럽게 포함할 수 있다."
       );
     }
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: At least 85% of the main target items must visibly contain to-infinitives."
-        : "- HARD LOCK: 핵심 목표 문항의 최소 85% 이상은 to부정사 구조가 눈에 보여야 한다."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Do not let the worksheet drift into make/let/have/get causative structures as main answers."
-        : "- HARD LOCK: make/let/have/get 사역 구조가 주된 정답이 되지 않게 할 것."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Do not use awkward patterns such as suggest + object + to-infinitive. Rewrite into natural teachable English."
-        : "- HARD LOCK: suggest + 목적어 + to부정사 같은 어색한 구조는 사용하지 말고, 자연스럽고 가르칠 수 있는 영어로 다시 쓸 것."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: If a sentence can be written either with a gerund or a to-infinitive, choose the to-infinitive version unless the chapter explicitly contrasts them."
-        : "- HARD LOCK: 동명사와 to부정사가 모두 가능한 경우, 비교 목적이 아니면 to부정사 정답을 우선할 것."
-    );
   }
 
   if (key === "gerund") {
@@ -1411,26 +1457,6 @@ function buildGrammarOptionRuleBlock(input) {
           : "- enjoy reading, finish doing처럼 자연스러운 동사 + 동명사 결합을 우선 사용할 것."
       );
     }
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: At least 85% of the main target items must visibly contain gerunds as the teachable target."
-        : "- HARD LOCK: 핵심 목표 문항의 최소 85% 이상은 동명사가 학습 목표로 눈에 보여야 한다."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Do not let the worksheet drift into ordinary simple present sentences or bare lexical practice."
-        : "- HARD LOCK: 일반 현재시제 평서문이나 단순 어휘 연습으로 흐르지 말 것."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Block make/let/have/get causative structures and block to-infinitive-led answers unless a very small comparison item is intentionally included."
-        : "- HARD LOCK: 아주 제한된 비교 문항이 아닌 이상, make/let/have/get 사역 구조와 to부정사 중심 정답을 차단할 것."
-    );
-    blocks.push(
-      isEn
-        ? "- HARD LOCK: Prefer natural gerund patterns such as enjoy reading, like jogging, finish doing, avoid studying, consider helping, dream of doing."
-        : "- HARD LOCK: enjoy reading, like jogging, finish doing, avoid studying, consider helping, dream of doing 같은 자연스러운 동명사 패턴을 우선 사용할 것."
-    );
   }
 
   if (key === "relative_adverb") {
@@ -2008,6 +2034,7 @@ ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
+${buildDifficultyUpliftRuleBlock(input)}
 
 출력 형식:
 [[TITLE]]
@@ -2096,6 +2123,7 @@ ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
+${buildDifficultyUpliftRuleBlock(input)}
 
 Output format:
 [[TITLE]]
@@ -2214,6 +2242,7 @@ ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
+${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 
 Mandatory Magic rules:
@@ -2259,6 +2288,7 @@ ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
+${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 
 매직 필수 규칙:
