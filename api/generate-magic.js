@@ -495,6 +495,110 @@ function hasInvalidPastTimeMarker(text = "") {
   return patterns.some((pattern) => pattern.test(value));
 }
 
+
+
+function buildMarcusChapterExpansionBlock(input = {}) {
+  const focus = input?.grammarFocus || detectGrammarFocus(
+    [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+  );
+  const isEn = input?.language === "en";
+  const blocks = [];
+
+  if (focus?.isPassive) {
+    blocks.push(isEn ? `
+[Passive Chapter Expansion]
+- Keep at least most core items visibly in passive voice: be + past participle.
+- Prefer classroom-usable passive sentences such as "The window was broken", "The homework has been finished", or "The picture was painted by..."
+- Do not let the set drift into ordinary active-voice statements.
+- Mixed support items are allowed, but the worksheet should still feel like a passive-voice workbook.
+`.trim() : `
+[수동태 챕터 확장]
+- 핵심 문항 다수는 be + 과거분사 수동태가 눈에 보이게 유지되어야 한다.
+- "The window was broken", "The homework has been finished", "The picture was painted by..." 같은 교실형 수동태 문장을 우선한다.
+- 일반 능동태 평서문으로 세트가 무너지지 않게 할 것.
+- 일부 혼합형 문항은 허용하되, 전체 워크북의 인상은 수동태 중심이어야 한다.
+`.trim());
+  }
+
+  if (focus?.isRelativePronoun) {
+    blocks.push(isEn ? `
+[Relative Pronoun Chapter Expansion]
+- Keep at least most core items visibly centered on relative clauses with who / which / that / whom / whose.
+- Prefer noun + relative clause structures over generic unrelated simple sentences.
+- Mixed support items are allowed, but the worksheet should still feel like a relative-clause workbook.
+`.trim() : `
+[관계대명사 챕터 확장]
+- 핵심 문항 다수는 who / which / that / whom / whose가 들어간 관계절 중심으로 유지할 것.
+- 무관한 일반 평서문보다 명사 + 관계절 구조를 우선할 것.
+- 일부 혼합형 문항은 허용하되, 전체 워크북의 인상은 관계대명사 중심이어야 한다.
+`.trim());
+  }
+
+  if (focus?.isToInfinitive) {
+    blocks.push(isEn ? `
+[To-Infinitive Chapter Expansion]
+- Keep at least most core items visibly centered on to + base verb structures.
+- Allow purpose, noun, and adjective uses when natural, but do not let the set drift into gerund-dominant items.
+- Mixed support items are allowed, but the worksheet should still feel like a to-infinitive workbook.
+`.trim() : `
+[to부정사 챕터 확장]
+- 핵심 문항 다수는 to + 동사원형 구조 중심으로 유지할 것.
+- 목적/명사적/형용사적 용법은 자연스러우면 허용하되, 동명사 중심 세트로 흐르지 않게 할 것.
+- 일부 혼합형 문항은 허용하되, 전체 워크북의 인상은 to부정사 중심이어야 한다.
+`.trim());
+  }
+
+  return blocks.filter(Boolean).join("\n");
+}
+
+function countChapterSignalRatio(answerSheet = "", regex) {
+  const lines = String(answerSheet || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line))
+    .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+    .filter(Boolean);
+
+  if (!lines.length) return 0;
+  const matched = lines.filter((line) => regex.test(line)).length;
+  return matched / lines.length;
+}
+
+function hasMildChapterCoverage(text = "", input = {}) {
+  const raw = String(text || "");
+  const answers = extractSection(raw, "[[ANSWERS]]", null) || raw;
+  const focus = input?.grammarFocus || detectGrammarFocus(
+    [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+  );
+
+  if (focus?.isPassive) {
+    const ratio = countChapterSignalRatio(
+      answers,
+      /\b(am|is|are|was|were|be|been|being)\b\s+\b[\w'-]+(?:ed|en|wn|ne|lt|pt|nt|ft|ght)\b/i
+    );
+    return ratio >= 0.4;
+  }
+
+  if (focus?.isRelativePronoun) {
+    const ratio = countChapterSignalRatio(
+      answers,
+      /\b(who|which|that|whom|whose)\b/i
+    );
+    return ratio >= 0.35;
+  }
+
+  if (focus?.isToInfinitive) {
+    const ratio = countChapterSignalRatio(
+      answers,
+      /\bto\s+[a-z]+\b/i
+    );
+    return ratio >= 0.35;
+  }
+
+  return true;
+}
+
+
 /* =========================
    Magic Output Builders
    ========================= */
@@ -2609,6 +2713,7 @@ ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 ${buildPresentPerfectStrictFilterBlock(input)}
+${buildMarcusChapterExpansionBlock(input)}
 ${buildRelaxedRepairValidationBlock(input)}
 ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
@@ -2661,6 +2766,7 @@ ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 ${buildPresentPerfectStrictFilterBlock(input)}
+${buildMarcusChapterExpansionBlock(input)}
 ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
 ${buildMarcusSequencePromptBlock(input)}
@@ -3287,6 +3393,8 @@ function validateWritingOutput(text = "", input = {}) {
       return false;
     }
   }
+
+  if (!hasMildChapterCoverage(raw, input)) return false;
 
   if (input?.mode === "abcstarter" || input?.level === "elementary") {
     const answerLines = String(text || "")
