@@ -2988,7 +2988,7 @@ function validateServiceSafeOutput(formatted = {}, input = {}) {
   if (!hasMeaningfulWorksheetBody(answers)) return false;
   if (!hasSequentialNumbering(questions)) return false;
   if (!hasSequentialNumbering(answers)) return false;
-  if (hasPlaceholderAnswers(answers) && !(input?.mode === "abcstarter" || input?.level === "elementary")) return false;
+  if (hasPlaceholderAnswers(answers)) return false;
   const requestedCount = Number(input?.count || 0);
   const actualCount = Number(formatted.actualCount || countWorksheetItems(questions) || 0);
   if (requestedCount > 0 && actualCount < Math.max(1, Math.ceil(requestedCount * 0.5))) return false;
@@ -3546,6 +3546,15 @@ module.exports = async function handler(req, res) {
 
     const rawText = await generateMagicCore(input);
     let formatted = formatMagicResponse(rawText, input);
+
+    if ((input.mode === "abcstarter" || input.level === "elementary") && String(formatted.questions || "").trim()) {
+      formatted.answerSheet = normalizeMagicAnswerSheet(formatted.answerSheet || "", formatted.questions || "", input);
+      const contentParts = [formatted.title, formatted.instructions, formatted.questions].filter(Boolean);
+      formatted.content = contentParts.join("\n\n");
+      formatted.fullText = [...contentParts, ((input.language === "en" ? "Answers\n" : "정답\n") + (formatted.answerSheet || ""))].filter(Boolean).join("\n\n");
+      formatted.actualCount = countWorksheetItems(formatted.questions || "");
+    }
+
     let generationCheck = isGenerationSuccessful(formatted, input);
     let validationOk = validateWritingOutput(`[[QUESTIONS]]\n${formatted.questions || ""}\n[[ANSWERS]]\n${formatted.answerSheet || ""}`, input);
 
@@ -3564,8 +3573,24 @@ module.exports = async function handler(req, res) {
           generationCheck = repairedCheck;
           validationOk = repairedValidationOk;
         } else {
-          generationCheck = repairedCheck.ok ? { ok: false, reason: "repair_validation_failed" } : repairedCheck;
-          validationOk = repairedValidationOk;
+          const safeRecovered = {
+            ...repaired,
+            questions: String(repaired.questions || formatted.questions || "").trim(),
+            answerSheet: normalizeMagicAnswerSheet(repaired.answerSheet || "", repaired.questions || formatted.questions || "", input),
+          };
+          const safeContentParts = [safeRecovered.title, safeRecovered.instructions, safeRecovered.questions].filter(Boolean);
+          safeRecovered.content = safeContentParts.join("\n\n");
+          safeRecovered.fullText = [...safeContentParts, ((input.language === "en" ? "Answers\n" : "정답\n") + (safeRecovered.answerSheet || ""))].filter(Boolean).join("\n\n");
+          safeRecovered.actualCount = countWorksheetItems(safeRecovered.questions || "");
+
+          if (validateServiceSafeOutput(safeRecovered, input)) {
+            formatted = safeRecovered;
+            generationCheck = { ok: true, reason: "soft_recovered" };
+            validationOk = true;
+          } else {
+            generationCheck = repairedCheck.ok ? { ok: false, reason: "repair_validation_failed" } : repairedCheck;
+            validationOk = repairedValidationOk;
+          }
         }
       } catch (repairError) {
         console.error("post-format repair failed:", repairError);
@@ -3573,30 +3598,52 @@ module.exports = async function handler(req, res) {
     }
 
     if (!generationCheck.ok || !validationOk) {
-      return json(res, 502, {
-        success: false,
-        message: "생성 결과 구조를 안정적으로 복구하지 못했습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
-        detail: generationCheck.reason || "validation_failed",
-        meta: {
-          language: input.language,
-          requestedCount: input.count,
-          actualCount: formatted.actualCount,
-          generatedAt: new Date().toISOString()
-        },
-        requiredMp: mpState.requiredMp,
-        currentMp: mpState.currentMp,
-        remainingMp: mpState.currentMp,
-        trialGranted: Boolean(mpState.trialGranted),
-        mpSyncEnabled: Boolean(mpState.enabled),
-        mpSyncReason: mpState.reason || "unknown",
-        mp: {
+      const emergencyRecovered = {
+        ...formatted,
+        questions: String(formatted.questions || "").trim(),
+        answerSheet: normalizeMagicAnswerSheet(formatted.answerSheet || "", formatted.questions || "", input),
+      };
+      const emergencyParts = [emergencyRecovered.title, emergencyRecovered.instructions, emergencyRecovered.questions].filter(Boolean);
+      emergencyRecovered.content = emergencyParts.join("
+
+");
+      emergencyRecovered.fullText = [...emergencyParts, ((input.language === "en" ? "Answers
+" : "정답
+") + (emergencyRecovered.answerSheet || ""))].filter(Boolean).join("
+
+");
+      emergencyRecovered.actualCount = countWorksheetItems(emergencyRecovered.questions || "");
+
+      if (validateServiceSafeOutput(emergencyRecovered, input)) {
+        formatted = emergencyRecovered;
+        generationCheck = { ok: true, reason: "emergency_recovered" };
+        validationOk = true;
+      } else {
+        return json(res, 502, {
+          success: false,
+          message: "생성 결과 구조를 안정적으로 복구하지 못했습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
+          detail: generationCheck.reason || "validation_failed",
+          meta: {
+            language: input.language,
+            requestedCount: input.count,
+            actualCount: formatted.actualCount,
+            generatedAt: new Date().toISOString()
+          },
           requiredMp: mpState.requiredMp,
           currentMp: mpState.currentMp,
           remainingMp: mpState.currentMp,
-          deducted: false,
           trialGranted: Boolean(mpState.trialGranted),
-        }
-      });
+          mpSyncEnabled: Boolean(mpState.enabled),
+          mpSyncReason: mpState.reason || "unknown",
+          mp: {
+            requiredMp: mpState.requiredMp,
+            currentMp: mpState.currentMp,
+            remainingMp: mpState.currentMp,
+            deducted: false,
+            trialGranted: Boolean(mpState.trialGranted),
+          }
+        });
+      }
     }
 
     collectRecentAnswerLines(formatted, input);
