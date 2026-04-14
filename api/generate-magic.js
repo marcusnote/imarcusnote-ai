@@ -381,6 +381,8 @@ function normalizeInput(body = {}) {
     intentMode,
     grammarFocus,
     grammarOptions,
+    magicStyle: sanitizeString(body.magicStyle || (mode === "writing" ? "marcus_magic" : "")),
+    wordCountMode: sanitizeString(body.wordCountMode || (mode === "writing" ? "auto" : "")),
   };
 }
 
@@ -2428,6 +2430,72 @@ function buildMarcusSequencePromptBlock(input) {
 }
 
 
+
+function buildMarcusMagicWordCountRuleBlock(input = {}) {
+  const shouldApply = input?.mode === "writing" || input?.magicStyle === "marcus_magic" || input?.wordCountMode === "auto";
+  if (!shouldApply) return "";
+
+  return input.language === "en"
+    ? `
+[Marcus Magic Word Count Rule]
+- Treat Writing Lab as Marcus Magic by default.
+- Every question item must include a visible word count target.
+- Display it in the question line as: (Word count: N)
+- The word count target must match the final answer that appears in the answer sheet.
+- Word count means the number of space-separated English words in the final answer sentence.
+- Build clue-based production items so that the learner must respect both grammar and word count.
+- If the grammar target is present perfect, keep present perfect visible even under the word count target.
+- Do not give a word count that would naturally force the answer out of the target grammar unless the user explicitly asked for contrast practice.
+- Prefer Marcus Magic style: guided composition, clue-rich prompts, structural control, and training value.
+`.trim()
+    : `
+[마커스매직 단어 수 규칙]
+- Writing Lab은 기본적으로 마커스매직 스타일로 처리할 것.
+- 모든 문항에는 보이는 단어 수 목표를 포함할 것.
+- 문항 끝에는 반드시 (Word count: N) 형식으로 표시할 것.
+- 단어 수 목표는 정답지에 제시되는 최종 정답 문장의 실제 단어 수와 일치해야 한다.
+- 단어 수는 영어 최종 정답 문장에서 공백 기준 영어 단어 개수로 계산한다.
+- clue 기반 생산형 문항이 되도록 하되, 학습자가 문법과 단어 수를 함께 맞추게 할 것.
+- 목표 문법이 현재완료라면, 단어 수 조건 아래에서도 현재완료가 분명히 유지되게 할 것.
+- 사용자가 대비 훈련을 명시적으로 요구하지 않는 한, 단어 수 때문에 목표 문법이 무너지도록 설계하지 말 것.
+- 결과물은 guided composition, 풍부한 clue, 구조 통제, 훈련 가치가 살아 있는 마커스매직 느낌이어야 한다.
+`.trim();
+}
+
+function countEnglishWordsForMagic(line = "") {
+  const body = String(line || "")
+    .replace(/^\d+[.)-]?\s*/, "")
+    .replace(/\(Word count:\s*\d+\)$/i, "")
+    .replace(/[.,!?;:()[\]"']/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!body) return 0;
+  const matches = body.match(/[A-Za-z]+(?:[-'][A-Za-z]+)*/g) || [];
+  return matches.length;
+}
+
+function annotateQuestionsWithWordCounts(questions = "", answers = "") {
+  const questionLines = String(questions || "").split("\n");
+  const answerBodies = String(answers || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line))
+    .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim());
+
+  let answerIdx = 0;
+  return questionLines.map((line) => {
+    const trimmed = line.trim();
+    if (!/^\d+[.)-]?\s+/.test(trimmed)) return line;
+    const count = countEnglishWordsForMagic(answerBodies[answerIdx] || "");
+    answerIdx += 1;
+    if (!count) return line;
+    if (/\(Word count:\s*\d+\)$/i.test(trimmed)) {
+      return line.replace(/\(Word count:\s*\d+\)$/i, `(Word count: ${count})`);
+    }
+    return `${line} (Word count: ${count})`;
+  }).join("\n");
+}
+
 function buildUserPrompt(input) {
   const title = buildMagicTitle(input);
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
@@ -2511,6 +2579,7 @@ ${buildRelaxedRepairValidationBlock(input)}
 ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
 ${buildMarcusSequencePromptBlock(input)}
+${buildMarcusMagicWordCountRuleBlock(input)}
 
 Mandatory Magic rules:
 - Present prompts in the learner's input language first.
@@ -2561,6 +2630,7 @@ ${buildPresentPerfectStrictFilterBlock(input)}
 ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
 ${buildMarcusSequencePromptBlock(input)}
+${buildMarcusMagicWordCountRuleBlock(input)}
 
 매직 필수 규칙:
 - 문제는 먼저 학습자의 입력 언어로 제시할 것.
@@ -3124,6 +3194,10 @@ function formatMagicResponse(rawText, input) {
     normalizedAnswers = buildEmergencyAnswerSheet(normalizedQuestions, input);
   }
   normalizedAnswers = smoothGeneratedEnglish(normalizedAnswers, input);
+
+  if (input?.mode === "writing" || input?.magicStyle === "marcus_magic" || input?.wordCountMode === "auto") {
+    normalizedQuestions = annotateQuestionsWithWordCounts(normalizedQuestions, normalizedAnswers);
+  }
 
   const contentParts = [
     finalTitle,
