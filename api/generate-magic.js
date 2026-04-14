@@ -3529,11 +3529,136 @@ function hasMeaningfulWorksheetBody(text = "") {
 }
 
 
+
+function parseNumberedBlocks(text = "") {
+  const lines = String(text || "").split("\n");
+  const blocks = [];
+  let current = null;
+
+  for (const rawLine of lines) {
+    const line = String(rawLine || "").replace(/\r/g, "");
+    const trimmed = line.trim();
+    if (!trimmed) {
+      if (current && current.lines.length) current.lines.push("");
+      continue;
+    }
+
+    if (/^\d+\s*[\.)\-:]/.test(trimmed)) {
+      if (current) blocks.push(current);
+      current = { number: trimmed.match(/^\d+/)?.[0] || "", lines: [trimmed] };
+    } else if (current) {
+      current.lines.push(trimmed);
+    }
+  }
+
+  if (current) blocks.push(current);
+  return blocks;
+}
+
+function renumberGroupedBlocks(blocks = []) {
+  return blocks
+    .map((block, index) => {
+      const lines = Array.isArray(block?.lines) ? block.lines.filter((line, i, arr) => !(line === "" && i === arr.length - 1)) : [];
+      if (!lines.length) return "";
+      const first = String(lines[0] || "").replace(/^\d+\s*[\.)\-:]\s*/, "").trim();
+      const rest = lines.slice(1).map((line) => String(line || "").trim()).filter(Boolean);
+      return [`${index + 1}. ${first}`, ...rest].join("\n");
+    })
+    .filter(Boolean)
+    .join("\n");
+}
+
+function hasQuestionClueSignals(text = "") {
+  const source = String(text || "");
+  return /[（(].+[)）]/.test(source) || /_{2,}/.test(source) || /\[혼합형\]|\[Mixed Training\]/i.test(source);
+}
+
+function tokenizeForClue(answer = "") {
+  const raw = String(answer || "")
+    .replace(/[?!.]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!raw) return [];
+
+  const tokens = raw.split(" ").filter(Boolean);
+  const compact = [];
+  for (const token of tokens) {
+    const clean = token.replace(/^[,;:]+|[,;:]+$/g, "");
+    if (!clean) continue;
+    if (!compact.includes(clean)) compact.push(clean);
+  }
+  return compact.slice(0, 8);
+}
+
+function buildWritingQuestionFromPair(questionLine = "", answerLine = "", index = 0, input = {}) {
+  const prompt = String(questionLine || "").replace(/^\d+\s*[\.)\-:]\s*/, "").trim();
+  const answer = String(answerLine || "").replace(/^\d+\s*[\.)\-:]\s*/, "").trim();
+  const isEn = input?.language === "en";
+  const n = index + 1;
+  if (!prompt) return "";
+
+  const tokens = tokenizeForClue(answer);
+  const blanked = answer
+    ? answer
+        .split(" ")
+        .map((token, idx) => (idx < 2 ? "____" : token))
+        .join(" ")
+        .replace(/\s+[?!.]$/, (m) => m.trim())
+    : "____";
+
+  if (index % 4 === 0) {
+    const clue = tokens.length ? `(${tokens.join(" / ")})` : "(clue)";
+    return `${n}. ${prompt}\n   ${clue}`;
+  }
+  if (index % 4 === 1) {
+    const clueTokens = tokens.slice()
+    if (clueTokens.length > 1) {
+      clueTokens.splice(Math.min(1, clueTokens.length), 0, isEn ? "EXTRA" : "추가어");
+    } else if (clueTokens.length === 1) {
+      clueTokens.push(isEn ? "EXTRA" : "추가어");
+    }
+    const clue = clueTokens.length ? `(${clueTokens.join(" / ")})` : "(rearrange)";
+    return `${n}. ${prompt}\n   ${isEn ? "[Mixed Training] Rearrange the clues and remove one extra word." : "[혼합형] clue를 재배열하고 남는 단어 1개를 제외하세요."}\n   ${clue}`;
+  }
+  if (index % 4 === 2) {
+    return `${n}. ${prompt}\n   ${blanked}`;
+  }
+  const core = tokens.slice(0, 5);
+  const clue = core.length ? `(${core.join(" / ")})` : "(transform)";
+  return `${n}. ${prompt}\n   ${isEn ? "[Mixed Training] Rewrite it with the target grammar." : "[혼합형] 목표 문법을 사용해 다시 완성하세요."}\n   ${clue}`;
+}
+
+function ensureWritingLabQuestionRichness(questions = "", answers = "", input = {}) {
+  const mode = String(input?.mode || "");
+  if (!["writing", "magic", "magic-card", "textbook-grammar", "chapter-grammar"].includes(mode)) {
+    return String(questions || "").trim();
+  }
+
+  const sourceQuestions = String(questions || "").trim();
+  if (!sourceQuestions) return sourceQuestions;
+  if (hasQuestionClueSignals(sourceQuestions)) return sourceQuestions;
+
+  const questionBlocks = parseNumberedBlocks(sourceQuestions);
+  if (!questionBlocks.length) return sourceQuestions;
+
+  const answerItems = extractNumberedItems(answers);
+  if (answerItems.length !== questionBlocks.length) return sourceQuestions;
+
+  const rebuilt = questionBlocks.map((block, index) => {
+    const firstLine = Array.isArray(block?.lines) ? block.lines[0] : "";
+    return buildWritingQuestionFromPair(firstLine, answerItems[index], index, input);
+  }).filter(Boolean);
+
+  return rebuilt.length ? rebuilt.join("\n") : sourceQuestions;
+}
+
+
 function extractNumberedQuestionItems(text = "") {
-  return String(text || "")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => /^\d+[\)\.\-]/.test(line));
+  return parseNumberedBlocks(text).map((block, index) => {
+    const firstLine = Array.isArray(block?.lines) ? String(block.lines[0] || "") : "";
+    const clean = firstLine.replace(/^\d+\s*[\.)\-:]\s*/, "").trim();
+    return `${index + 1}. ${clean}`;
+  });
 }
 
 function buildEmergencyAnswerSheet(questions = "", input = {}) {
@@ -3613,29 +3738,15 @@ function renumberItems(lines = []) {
 function stabilizeNumberedBlock(text = "") {
   const source = String(text || "").trim();
   if (!source) return "";
-
-  const lines = source
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean);
-
-  const numbered = [];
-  const others = [];
-
-  for (const line of lines) {
-    if (/^\d+\s*[\.)\-:]/.test(line)) {
-      numbered.push(line.replace(/^\d+\s*[\.)\-:]\s*/, "").trim());
-    } else {
-      others.push(line);
-    }
+  const blocks = parseNumberedBlocks(source);
+  if (!blocks.length) {
+    return source
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .join("\n");
   }
-
-  if (!numbered.length) {
-    return lines.join("\n");
-  }
-
-  const rebuilt = numbered.map((line, index) => `${index + 1}. ${line}`);
-  return rebuilt.join("\n");
+  return renumberGroupedBlocks(blocks);
 }
 
 function hasPastPerfectStructure(sentence = "") {
@@ -3965,6 +4076,7 @@ function formatMagicResponse(rawText, input) {
   normalizedQuestions = smoothGeneratedEnglish(normalizedQuestions, input);
   normalizedAnswers = smoothGeneratedEnglish(normalizedAnswers, input);
 
+  normalizedQuestions = ensureWritingLabQuestionRichness(normalizedQuestions, normalizedAnswers, input);
   normalizedQuestions = stabilizeNumberedBlock(normalizedQuestions);
   normalizedAnswers = stabilizeNumberedBlock(normalizedAnswers);
 
@@ -3978,6 +4090,8 @@ function formatMagicResponse(rawText, input) {
     normalizedQuestions,
     input
   );
+  normalizedQuestions = ensureWritingLabQuestionRichness(normalizedQuestions, normalizedAnswers, input);
+  normalizedQuestions = stabilizeNumberedBlock(normalizedQuestions);
 
   if (!validateWritingOutput(`[[QUESTIONS]]\n${normalizedQuestions}\n[[ANSWERS]]\n${normalizedAnswers}`, input)) {
     normalizedAnswers = normalizeMagicAnswerSheet("", normalizedQuestions, input);
