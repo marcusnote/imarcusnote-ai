@@ -3472,11 +3472,13 @@ rawText.slice(from).trim() : rawText.slice(from, end).trim();
 
 function countWorksheetItems(text = "") {
   const source = String(text || "");
+  if (!source.trim()) return 0;
+
   const patterns = [
-    /^\s*\d+\./gm,
-    /^\s*\d+\)/gm,
-    /^\s*[A-Z]\./gm,
-    /^\s*[A-Z]\)/gm,
+    /^\s*\d+\s*[\.)\-:]/gm,
+    /^\s*\[?\d+\]?\s*[\.)\-:]/gm,
+    /^\s*[A-Z]\s*[\.)]/gm,
+    /^\s*(?:Q|Question)\s*\d+\s*[:.)-]/gim,
   ];
 
   let maxCount = 0;
@@ -3484,6 +3486,13 @@ function countWorksheetItems(text = "") {
     const matches = source.match(pattern) || [];
     if (matches.length > maxCount) maxCount = matches.length;
   }
+
+  const numberedLines = source
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+\s*[\.)\-:]/.test(line));
+  if (numberedLines.length > maxCount) maxCount = numberedLines.length;
+
   return maxCount;
 }
 
@@ -3553,66 +3562,283 @@ function normalizeMagicAnswerSheet(answers = "", questions = "", input = {}) {
   return buildEmergencyAnswerSheet(questions, input);
 }
 
-function validateWritingOutput(text = "", input = {}) {
-  const raw = String(text || "");
+
+function resolveGrammarEnforcementProfile(input = {}) {
+  const focus =
+    input?.grammarFocus ||
+    detectGrammarFocus(
+      [input?.userPrompt, input?.topic, input?.worksheetTitle]
+        .filter(Boolean)
+        .join(" ")
+    );
   const topic = String(input?.topic || "");
-  const focus = input?.grammarFocus || detectGrammarFocus(
-    [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
-  );
-  const track = resolveWritingTrack(input);
-
-  if (!raw.includes("[[ANSWERS]]")) return false;
-
-  const answerBody = raw.split("[[ANSWERS]]").slice(1).join("[[ANSWERS]]").trim();
-  PLACEHOLDER
-  const numberedAnswers = answerLines.filter((v) => /^\d+[\)\.\-]/.test(v));
-  const answerText = answerLines.join(" ");
-
-  if (!answerText) return false;
-  if (numberedAnswers.length === 0) return false;
 
   if (/과거완료|past perfect/i.test(topic)) {
-    const hasPastPerfect = /had\s+[a-z][a-z\-']*/i.test(answerText);
-    if (hasPastPerfect) {
-      const hasPastTimeConflict = /(last week|last month|last year|yesterday|ago|in 20\d\d)/i.test(answerText);
-      const hasReferenceFrame = /(before|after|by the time|when|already|before then)/i.test(answerText);
-      if (hasPastTimeConflict && !hasReferenceFrame) return false;
-    }
+    return { type: "past_perfect", minRatio: 0.8 };
+  }
+  if (focus?.isParticipialModifier || /분사의 한정적 용법|participle/i.test(topic)) {
+    return { type: "participial_modifier", minRatio: 0.7 };
+  }
+  if (focus?.isSoThatPurpose || /so that/i.test(topic)) {
+    return { type: "so_that_purpose", minRatio: 0.8 };
+  }
+  if (focus?.isNonRestrictive || /계속적 용법|non[-\s]?restrictive/i.test(topic)) {
+    return { type: "non_restrictive_relative", minRatio: 0.7 };
+  }
+  if (focus?.isCausative || /사역동사|causative/i.test(topic)) {
+    return { type: "causative", minRatio: 0.7 };
   }
 
-  if (focus?.isParticipialModifier) {
-    const strongModifierSignals = [
-      /(the|a|an)\s+[a-z][a-z\-']*\s+(running|wearing|sleeping|growing|shining|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted)/i,
-      /(book|boy|girl|woman|man|report|project|movie|painting|letter|cake|tree|student|teacher)\s+(running|wearing|sleeping|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted)/i,
-    ];
-    const hasStrongSignal = strongModifierSignals.some((rx) => rx.test(answerText));
-    const relativeClauseCount = (answerText.match(/(who|which|that)/gi) || []).length;
-    if (!hasStrongSignal) return false;
-    if (relativeClauseCount > Math.max(2, Math.floor(numberedAnswers.length * 0.3))) return false;
-  }
+  return null;
+}
 
-  if (focus?.isNonRestrictive) {
-    const commaRelativeCount = (answerText.match(/,\s*(who|which|whom|whose)/gi) || []).length;
-    if (commaRelativeCount === 0) return false;
-  }
+function extractNumberedItems(text = "") {
+  return String(text || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[\)\.\-]/.test(line));
+}
 
-  if (focus?.isSoThatPurpose) {
-    if (/so that/i.test(answerText) && /so that[\s\S]*?(can|could|will|would)(?:\s*[\.]|\s*$)/i.test(answerText)) {
-      return false;
-    }
-  }
+function stripItemNumber(line = "") {
+  return String(line || "").replace(/^\d+[\)\.\-]\s*/, "").trim();
+}
 
-  if (track === "crown") {
-    const crownSignals = (answerText.match(/(because|although|while|which|who|that|when|if|therefore|however|responsibility|motivation|perspective|education|communication|society|ethical|interpretation|influence)/gi) || []).length;
-    const avgWords = numberedAnswers.length
-      ? numberedAnswers.reduce((sum, line) => sum + line.split(/\s+/).length, 0) / numberedAnswers.length
-      : 0;
-    if (avgWords < 9 && crownSignals < Math.max(2, Math.floor(numberedAnswers.length * 0.4))) return false;
-  }
+function renumberItems(lines = []) {
+  return lines
+    .map((line, index) => `${index + 1}. ${stripItemNumber(line)}`)
+    .join("\n");
+}
 
+function hasPastPerfectStructure(sentence = "") {
+  const s = String(sentence || "");
+  const hasHadPP =
+    /\bhad\s+(?:already\s+|just\s+|never\s+|recently\s+)?(?:[a-z]+ed|been|gone|done|seen|written|read|left|met|made|built|bought|brought|told|thought|known|taken|given|found|felt|become|begun|broken|chosen|driven|eaten|fallen|forgotten|forgiven|got|grown|heard|held|kept|lost|paid|put|run|said|sold|sent|shown|sat|slept|spoken|spent|stood|taught|understood|won)\b/i.test(s);
+  const hasReference =
+    /\b(before|after|by the time|when|already|before then)\b/i.test(s);
+  const hasBadTime =
+    /\b(last week|last month|last year|yesterday|ago|in 20\d\d)\b/i.test(s);
+  if (!hasHadPP) return false;
+  if (hasBadTime && !hasReference) return false;
+  return hasReference || /\bhad\b/i.test(s);
+}
+
+function hasParticipialModifierStructure(sentence = "") {
+  const s = String(sentence || "");
+  const strongSignals = [
+    /\b(the|a|an)\s+[a-z][a-z\-']*\s+(running|wearing|sleeping|growing|shining|smiling|crying|standing|sitting|waiting|looking|holding|carrying|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted|invited)\b/i,
+    /\b(book|boy|girl|woman|man|report|project|movie|painting|letter|cake|tree|student|teacher|people|scene)\s+(running|wearing|sleeping|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted|invited)\b/i,
+  ];
+  if (strongSignals.some((rx) => rx.test(s))) return true;
+  return false;
+}
+
+function hasSoThatPurposeStructure(sentence = "") {
+  return /\bso that\s+(i|we|you|he|she|they|it)\s+(can|could|will|would)\s+[a-z]/i.test(String(sentence || ""));
+}
+
+function hasNonRestrictiveRelativeStructure(sentence = "") {
+  return /,\s*(who|which|whom|whose)\b/i.test(String(sentence || ""));
+}
+
+function hasCausativeStructure(sentence = "") {
+  return /\b(make|let|have|help|get)\s+\w+\s+(?:to\s+)?[a-z]/i.test(String(sentence || ""));
+}
+
+function validateSingleAnswer(sentence = "", profile = null) {
+  if (!profile) return true;
+  if (profile.type === "past_perfect") return hasPastPerfectStructure(sentence);
+  if (profile.type === "participial_modifier") return hasParticipialModifierStructure(sentence);
+  if (profile.type === "so_that_purpose") return hasSoThatPurposeStructure(sentence);
+  if (profile.type === "non_restrictive_relative") return hasNonRestrictiveRelativeStructure(sentence);
+  if (profile.type === "causative") return hasCausativeStructure(sentence);
   return true;
 }
 
+function enforceQuestionSet(parsed = {}, input = {}) {
+  const profile = resolveGrammarEnforcementProfile(input);
+  if (!profile) {
+    return {
+      ...parsed,
+      questions: stabilizeNumberedBlock(parsed.questions || ""),
+      answers: stabilizeNumberedBlock(parsed.answers || ""),
+    };
+  }
+
+  const questionItems = extractNumberedItems(parsed.questions || "");
+  const answerItems = extractNumberedItems(parsed.answers || "");
+  const pairCount = Math.min(questionItems.length, answerItems.length);
+
+  if (!pairCount) {
+    return {
+      ...parsed,
+      questions: stabilizeNumberedBlock(parsed.questions || ""),
+      answers: stabilizeNumberedBlock(parsed.answers || ""),
+    };
+  }
+
+  const validQuestions = [];
+  const validAnswers = [];
+
+  for (let i = 0; i < pairCount; i += 1) {
+    const q = questionItems[i];
+    const a = answerItems[i];
+    if (validateSingleAnswer(a, profile)) {
+      validQuestions.push(q);
+      validAnswers.push(a);
+    }
+  }
+
+  const ratio = validAnswers.length / pairCount;
+  if (ratio >= profile.minRatio && validAnswers.length > 0) {
+    return {
+      ...parsed,
+      questions: renumberItems(validQuestions),
+      answers: renumberItems(validAnswers),
+      enforcedMeta: {
+        originalCount: pairCount,
+        validCount: validAnswers.length,
+        ratio,
+        profile: profile.type,
+        mode: "filtered",
+      },
+    };
+  }
+
+  return {
+    ...parsed,
+    questions: stabilizeNumberedBlock(parsed.questions || ""),
+    answers: stabilizeNumberedBlock(parsed.answers || ""),
+    enforcedMeta: {
+      originalCount: pairCount,
+      validCount: validAnswers.length,
+      ratio,
+      profile: profile.type,
+      mode: "preserved_original",
+    },
+  };
+}
+
+
+function validateWritingOutput(text = "", input = {}) {
+  try {
+    const raw = String(text || "");
+    const topic = String(input?.topic || "");
+    const focus = input?.grammarFocus || detectGrammarFocus(
+      [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+    );
+    const track = resolveWritingTrack(input);
+
+    if (!raw.includes("[[ANSWERS]]")) return false;
+
+    const answerBody = raw.split("[[ANSWERS]]").slice(1).join("[[ANSWERS]]").trim();
+    const answerLines = answerBody
+      .split("\n")
+      .map((v) => v.trim())
+      .filter(Boolean);
+
+    const numberedAnswers = answerLines.filter((v) => /^\d+[\)\.\-]/.test(v));
+    const answerText = answerLines.join(" ");
+
+    if (!answerText) return false;
+    if (numberedAnswers.length === 0) return false;
+
+    if (/과거완료|past perfect/i.test(topic)) {
+      const hasPastPerfect = /\bhad\s+[a-z][a-z\-']*/i.test(answerText);
+      if (hasPastPerfect) {
+        const hasPastTimeConflict = /\b(last week|last month|last year|yesterday|ago|in 20\d\d)\b/i.test(answerText);
+        const hasReferenceFrame = /\b(before|after|by the time|when|already|before then)\b/i.test(answerText);
+        if (hasPastTimeConflict && !hasReferenceFrame) return false;
+      }
+    }
+
+    if (focus?.isParticipialModifier) {
+      const strongModifierSignals = [
+        /\b(the|a|an)\s+[a-z][a-z\-']*\s+(running|wearing|sleeping|growing|shining|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted)\b/i,
+        /\b(book|boy|girl|woman|man|report|project|movie|painting|letter|cake|tree|student|teacher)\s+(running|wearing|sleeping|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted)\b/i,
+      ];
+      const hasStrongSignal = strongModifierSignals.some((rx) => rx.test(answerText));
+      const relativeClauseCount = (answerText.match(/\b(who|which|that)\b/gi) || []).length;
+      if (!hasStrongSignal) return false;
+      if (relativeClauseCount > Math.max(2, Math.floor(numberedAnswers.length * 0.3))) return false;
+    }
+
+    if (focus?.isNonRestrictive) {
+      const commaRelativeCount = (answerText.match(/,\s*(who|which|whom|whose)\b/gi) || []).length;
+      if (commaRelativeCount === 0) return false;
+    }
+
+    if (focus?.isSoThatPurpose) {
+      if (/\bso that\b/i.test(answerText) && /\bso that\b[\s\S]*?\b(can|could|will|would)\b(?:\s*[\.]|\s*$)/i.test(answerText)) {
+        return false;
+      }
+    }
+
+    if (track === "crown") {
+      const crownSignals = (answerText.match(/\b(because|although|while|which|who|that|when|if|therefore|however|responsibility|motivation|perspective|education|communication|society|ethical|interpretation|influence)\b/gi) || []).length;
+      const avgWords = numberedAnswers.length
+        ? numberedAnswers.reduce((sum, line) => sum + line.split(/\s+/).length, 0) / numberedAnswers.length
+        : 0;
+      if (avgWords < 9 && crownSignals < Math.max(2, Math.floor(numberedAnswers.length * 0.4))) return false;
+    }
+
+    return true;
+  } catch (err) {
+    console.error("validateWritingOutput failed:", err);
+    return false;
+  }
+}
+
+function buildPostFormatRepairPrompt(formatted = {}, input = {}, failure = {}) {
+  const isKo = input?.language !== "en";
+  const reason = String(failure?.reason || "unknown");
+  const requestedCount = Number(input?.count || 0);
+  const actualCount = Number(formatted?.actualCount || 0);
+
+  return `${buildCoreUserPrompt(input)}
+
+[POST-FORMAT REPAIR]
+- The previous output became unstable after formatting or validation.
+- Repair the worksheet into a stable teacher-ready result.
+- Keep exactly 4 sections:
+[[TITLE]]
+[[INSTRUCTIONS]]
+[[QUESTIONS]]
+[[ANSWERS]]
+- Keep numbering strictly sequential as 1. 2. 3.
+- Do not skip item numbers.
+- Do not merge multiple items onto one line.
+- Keep questions and answers aligned by the same numbers.
+- Preserve the requested grammar target and workbook identity.
+- Preserve the requested count as closely as possible.
+- If count is short, add additional valid items to reach the requested count.
+- If an answer set is weak, rewrite it fully instead of leaving placeholders.
+
+[FAILURE CONTEXT]
+- reason: ${reason}
+- requestedCount: ${requestedCount}
+- actualCount: ${actualCount}
+
+[PREVIOUS TITLE]
+${formatted?.title || ""}
+
+[PREVIOUS INSTRUCTIONS]
+${formatted?.instructions || ""}
+
+[PREVIOUS QUESTIONS]
+${formatted?.questions || ""}
+
+[PREVIOUS ANSWERS]
+${formatted?.answerSheet || ""}
+
+${isKo ? "번호가 부족하거나 어긋나면 반드시 다시 정렬하고 보강할 것." : "If numbering is unstable or too short, rebuild and complete it before returning."}`.trim();
+}
+
+async function repairFormattedMagicOutput(formatted, input, failure) {
+  const systemPrompt = buildSystemPrompt(input);
+  const repairPrompt = buildPostFormatRepairPrompt(formatted, input, failure);
+  const repairedRaw = await callOpenAI(systemPrompt, repairPrompt);
+  return formatMagicResponse(repairedRaw, input);
+}
 
 function isGenerationSuccessful(formatted, input) {
   if (!formatted || typeof formatted !== "object") {
@@ -3709,6 +3935,20 @@ function formatMagicResponse(rawText, input) {
 
   normalizedQuestions = smoothGeneratedEnglish(normalizedQuestions, input);
   normalizedAnswers = smoothGeneratedEnglish(normalizedAnswers, input);
+
+  normalizedQuestions = stabilizeNumberedBlock(normalizedQuestions);
+  normalizedAnswers = stabilizeNumberedBlock(normalizedAnswers);
+
+  const enforcedSet = enforceQuestionSet(
+    { questions: normalizedQuestions, answers: normalizedAnswers },
+    input
+  );
+  normalizedQuestions = stabilizeNumberedBlock(String(enforcedSet.questions || normalizedQuestions || "").trim());
+  normalizedAnswers = normalizeMagicAnswerSheet(
+    stabilizeNumberedBlock(String(enforcedSet.answers || normalizedAnswers || "").trim()),
+    normalizedQuestions,
+    input
+  );
 
   if (!validateWritingOutput(`[[QUESTIONS]]\n${normalizedQuestions}\n[[ANSWERS]]\n${normalizedAnswers}`, input)) {
     normalizedAnswers = normalizeMagicAnswerSheet("", normalizedQuestions, input);
@@ -4037,13 +4277,28 @@ module.exports = async function handler(req, res) {
     }
 
     const rawText = await generateMagicCore(input);
-    const formatted = formatMagicResponse(rawText, input);
-    const generationCheck = isGenerationSuccessful(formatted, input);
+    let formatted = formatMagicResponse(rawText, input);
+    let generationCheck = isGenerationSuccessful(formatted, input);
+
+    if (!generationCheck.ok) {
+      try {
+        const repaired = await repairFormattedMagicOutput(formatted, input, generationCheck);
+        const repairedCheck = isGenerationSuccessful(repaired, input);
+        if (repairedCheck.ok) {
+          formatted = repaired;
+          generationCheck = repairedCheck;
+        } else {
+          generationCheck = repairedCheck;
+        }
+      } catch (repairError) {
+        console.error("post-format repair failed:", repairError);
+      }
+    }
 
     if (!generationCheck.ok) {
       return json(res, 502, {
         success: false,
-        message: "생성 결과 구조가 불완전하여 MP를 차감하지 않았습니다. 다시 시도해주세요.",
+        message: "생성 결과 구조를 안정적으로 복구하지 못했습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
         detail: generationCheck.reason,
         meta: {
           language: input.language,
