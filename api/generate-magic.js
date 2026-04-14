@@ -488,39 +488,51 @@ function getDifficultyLabel(difficulty, language = "ko") {
 
 function getModeLabel(mode, language = "ko") {
   const koMap = {
-    magic: "매직형",
-    "magic-card": "매직카드형",
+    magic: "마커스매직형",
+    "magic-card": "마커스매직카드형",
     writing: "영작훈련형",
     abcstarter: "ABC Starter형",
     "textbook-grammar": "교과서 문법형",
     "chapter-grammar": "챕터 문법형",
-    "vocab-builder": "어휘 빌더형"
+    "vocab-builder": "어휘 빌더형",
+    "vocab-csat": "수능 어휘형"
   };
+
   const enMap = {
-    magic: "Magic",
-    "magic-card": "Magic Card",
+    magic: "Marcus Magic",
+    "magic-card": "Marcus Magic Card",
     writing: "Writing Training",
     abcstarter: "ABC Starter",
     "textbook-grammar": "Textbook Grammar",
     "chapter-grammar": "Chapter Grammar",
-    "vocab-builder": "Vocab Builder"
+    "vocab-builder": "Vocab Builder",
+    "vocab-csat": "CSAT Vocabulary"
   };
-  return language === "en" ? (enMap[mode] || "Magic") : (koMap[mode] || "매직형");
+
+  return language === "en"
+    ? (enMap[mode] || "Marcus Magic")
+    : (koMap[mode] || "마커스매직형");
 }
 
 function buildMagicTitle(input) {
   if (input.worksheetTitle) return input.worksheetTitle;
-  if (input.mode === "vocab-builder") {
+
+  if (input.mode === "vocab-builder" || input.mode === "vocab-csat") {
     const start = Number(input.vocabSeriesStart || 1);
     const end = Number(input.vocabSeriesEnd || 1);
+    const vocabLabel = input.mode === "vocab-csat"
+      ? (input.language === "en" ? "CSAT Vocabulary" : "수능 어휘")
+      : (input.language === "en" ? "Vocabulary" : "필수어휘");
+
     if (input.language === "en") {
-      if (start === end) return `Vocabulary Round ${start}`;
-      return `Vocabulary Rounds ${start}-${end}`;
+      if (start === end) return `${vocabLabel} Round ${start}`;
+      return `${vocabLabel} Rounds ${start}-${end}`;
     }
+
     if (start === end) {
-      return `${input.gradeLabel} 필수어휘 ${start}회`;
+      return `${input.gradeLabel} ${vocabLabel} ${start}회`;
     }
-    return `${input.gradeLabel} 필수어휘 ${start}~${end}회`;
+    return `${input.gradeLabel} ${vocabLabel} ${start}~${end}회`;
   }
 
   const isConcept = input.intentMode === "concept" || input.intentMode === "concept+training";
@@ -532,13 +544,32 @@ function buildMagicTitle(input) {
   }
 
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
+
+  const modeTitleMapKo = {
+    abcstarter: "ABC Starter",
+    writing: "영작훈련",
+    "magic-card": "마커스매직카드",
+    "textbook-grammar": "교과서 문법",
+    "chapter-grammar": "챕터 문법",
+    magic: "마커스매직",
+  };
+
+  const modeTitleMapEn = {
+    abcstarter: "ABC Starter",
+    writing: "Writing Training",
+    "magic-card": "Marcus Magic Card",
+    "textbook-grammar": "Textbook Grammar Writing",
+    "chapter-grammar": "Chapter Grammar Writing",
+    magic: "Marcus Magic",
+  };
+
   if (input.language === "en") {
-    return `${input.gradeLabel} ${input.topic} Magic ${difficultyLabel} ${input.count} Items`;
+    const label = modeTitleMapEn[input.mode] || "Marcus Magic";
+    return `${input.gradeLabel} ${input.topic} ${label} ${difficultyLabel} ${input.count} Items`;
   }
-  if (input.mode === "abcstarter") {
-    return `${input.gradeLabel} ${input.topic} ABC Starter ${difficultyLabel} ${input.count}문항`;
-  }
-  return `${input.gradeLabel} ${input.topic} 마커스매직 ${difficultyLabel} ${input.count}문항`;
+
+  const label = modeTitleMapKo[input.mode] || "마커스매직";
+  return `${input.gradeLabel} ${input.topic} ${label} ${difficultyLabel} ${input.count}문항`;
 }
 
 function buildVocabSeriesBlock(input) {
@@ -1808,6 +1839,41 @@ ${blocks.join("\n")}
 `.trim();
 }
 
+function buildRelaxedRepairValidationBlock(input = {}) {
+  const isElementary = input?.mode === "abcstarter" || input?.level === "elementary";
+  const isEn = input?.language === "en";
+
+  if (isElementary) {
+    return isEn ? `
+[Elementary Answer Enforcement]
+- The worksheet MUST contain a clearly separated answer section.
+- Every question must have a matching numbered answer.
+- Do not leave placeholders such as [CHECK].
+- Keep answers short, natural, and classroom-friendly.
+`.trim() : `
+[초등 정답 강제 규칙]
+- 학습지에는 반드시 분리된 정답 섹션이 있어야 한다.
+- 모든 문항에는 대응되는 번호의 정답이 있어야 한다.
+- [CHECK] 같은 placeholder를 남기지 말 것.
+- 정답은 짧고 자연스럽고 교실 친화적으로 작성할 것.
+`.trim();
+  }
+
+  return isEn ? `
+[Middle Relaxed Repair Validation]
+- A separate answer section must exist.
+- If some answers are weak, repair them naturally instead of leaving placeholders.
+- Preserve stable numbering.
+- Minor variation is allowed, but broken or incomplete sentences are not allowed.
+`.trim() : `
+[중등 Relaxed Repair Validation]
+- 분리된 정답 섹션이 반드시 있어야 한다.
+- 일부 정답이 약하면 placeholder로 두지 말고 자연스럽게 보정할 것.
+- 번호 안정성을 유지할 것.
+- 약간의 표현 차이는 허용하지만, 깨진 문장이나 미완성 문장은 허용하지 않는다.
+`.trim();
+}
+
 function buildSystemPrompt(input) {
   const isConcept = input.intentMode === "concept" || input.intentMode === "concept+training";
   if (isConcept) {
@@ -1830,6 +1896,7 @@ Universal rules:
 9. Maintain [[TITLE]], [[INSTRUCTIONS]], [[QUESTIONS]], [[ANSWERS]].
 ${buildConceptGuide(input)}
 ${buildGrammarOptionRuleBlock(input)}
+${buildRelaxedRepairValidationBlock(input)}
 
 Output format:
 [[TITLE]]
@@ -1859,6 +1926,7 @@ Output format:
 9. "설명 1문단 + 문제 다수" 구조를 절대 금지할 것.
 10. 출력은 반드시 아래 형식을 따를 것.
 ${buildGrammarOptionRuleBlock(input)}
+${buildRelaxedRepairValidationBlock(input)}
 
 출력 형식:
 [[TITLE]]
@@ -2293,7 +2361,7 @@ function buildMarcusIdentityPromptBlock(input) {
 - 챕터 순도를 높게 유지하고, 핵심 목표 문항에 무관한 문법 계열이 섞이지 않게 할 것.
 - clue 설계는 친절하지만 세련되게, 영어 문장은 자연스럽고 교사용으로 바로 쓸 수 있게 만들 것.
 - 세트는 도입 → 구조 반복 → 혼합 적용으로 보이는 편집 흐름을 가져야 한다.
-- 겉으로는 깔끔하지만, 내부적으로는 구조 밀도가 높은 “더블 레이어드” 워크북처럼 느껴져야 한다.
+- 겉으로는 깔끔하지만, 내부적으로는 구조 밀도가 높은 더블 레이어드 워크북처럼 느껴져야 한다.
 `;
   const elementary = isElementary ? (isEn ? `
 [MARCUS ELEMENTARY BRAND RULE]
@@ -2359,34 +2427,6 @@ function buildMarcusSequencePromptBlock(input) {
 `;
 }
 
-function countAnswerLines(answerSheet = "") {
-  return String(answerSheet || "")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => /^\d+[.)-]\s+/.test(line)).length;
-}
-
-function hasPlaceholderAnswers(answerSheet = "") {
-  return /\[CHECK\]/i.test(String(answerSheet || ""));
-}
-
-function hasSequentialNumbering(text = "") {
-  const nums = String(text || "")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => /^\d+[.)-]\s+/.test(line))
-    .map((line) => {
-      const m = line.match(/^(\d+)[.)-]\s+/);
-      return m ? Number(m[1]) : null;
-    })
-    .filter((n) => Number.isFinite(n));
-  if (!nums.length) return false;
-  for (let i = 0; i < nums.length; i += 1) {
-    if (nums[i] !== i + 1) return false;
-  }
-  return true;
-}
-
 
 function buildUserPrompt(input) {
   const title = buildMagicTitle(input);
@@ -2418,6 +2458,7 @@ Additional rules:
 - Forbidden: grammar-dominant worksheet, relative pronoun drill, tense drill, generic grammar quiz.
 
 ${buildGrammarOptionRuleBlock(input)}
+${buildRelaxedRepairValidationBlock(input)}
 
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
@@ -2442,6 +2483,7 @@ ${vocabSeriesBlock}
 - 금지 유형: 문법 중심 문제지, 관계대명사 문제지, 시제 문제지, 일반 문법 퀴즈.
 
 ${buildGrammarOptionRuleBlock(input)}
+${buildRelaxedRepairValidationBlock(input)}
 
 사용자 원문:
 ${input.userPrompt || "(추가 요청 없음)"}
@@ -2465,6 +2507,7 @@ ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 ${buildPresentPerfectStrictFilterBlock(input)}
+${buildRelaxedRepairValidationBlock(input)}
 ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
 ${buildMarcusSequencePromptBlock(input)}
@@ -2494,8 +2537,6 @@ Quality control:
 - In superlative answers, use complete and natural phrases such as "the tallest boy in the class", "the most beautiful city", and "among the people I know."
 - Avoid awkward endings like "the most beneficial I take" or bare endings like "This city is the most beautiful."
 - Make the output feel like premium guided training.
-- Keep Marcusnote editorial sequencing visible across the whole set.
-- Keep chapter purity high in the main target items.
 
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
@@ -2546,8 +2587,6 @@ ${buildMarcusSequencePromptBlock(input)}
 - 최상급 문장은 "the tallest boy in the class", "the most beautiful city", "among the people I know"처럼 완전하고 자연스럽게 작성할 것.
 - "the most beneficial I take", "This city is the most beautiful." 같은 어색한 문장을 만들지 말 것.
 - 결과물은 프리미엄 guided training 워크북처럼 느껴져야 한다.
-- 세트 전체에서 마커스노트 편집 리듬이 보이게 할 것.
-- 핵심 목표 문항에서는 챕터 순도를 높게 유지할 것.
 
 사용자 원문:
 ${input.userPrompt || "(추가 요청 없음)"}
@@ -2908,6 +2947,54 @@ function hasMeaningfulWorksheetBody(text = "") {
   return compact.length >= 80;
 }
 
+
+function countAnswerLines(answerSheet = "") {
+  return String(answerSheet || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]\s+/.test(line)).length;
+}
+
+function hasPlaceholderAnswers(answerSheet = "") {
+  return /\[CHECK\]/i.test(String(answerSheet || ""));
+}
+
+function hasSequentialNumbering(text = "") {
+  const nums = String(text || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]\s+/.test(line))
+    .map((line) => {
+      const m = line.match(/^(\d+)[.)-]\s+/);
+      return m ? Number(m[1]) : null;
+    })
+    .filter((n) => Number.isFinite(n));
+  if (!nums.length) return false;
+  for (let i = 0; i < nums.length; i += 1) {
+    if (nums[i] !== i + 1) return false;
+  }
+  return true;
+}
+
+function validateServiceSafeOutput(formatted = {}, input = {}) {
+  if (!formatted || typeof formatted !== "object") return false;
+  const questions = String(formatted.questions || "").trim();
+  let answers = String(formatted.answerSheet || "").trim();
+  if ((!answers || countAnswerLines(answers) < 2) && questions) {
+    answers = normalizeMagicAnswerSheet("", questions, input);
+    formatted.answerSheet = answers;
+  }
+  if (!hasMeaningfulWorksheetBody(questions)) return false;
+  if (!hasMeaningfulWorksheetBody(answers)) return false;
+  if (!hasSequentialNumbering(questions)) return false;
+  if (!hasSequentialNumbering(answers)) return false;
+  if (hasPlaceholderAnswers(answers) && !(input?.mode === "abcstarter" || input?.level === "elementary")) return false;
+  const requestedCount = Number(input?.count || 0);
+  const actualCount = Number(formatted.actualCount || countWorksheetItems(questions) || 0);
+  if (requestedCount > 0 && actualCount < Math.max(1, Math.ceil(requestedCount * 0.5))) return false;
+  return true;
+}
+
 function isGenerationSuccessful(formatted, input) {
   if (!formatted || typeof formatted !== "object") {
     return { ok: false, reason: "formatted_missing" };
@@ -2920,7 +3007,9 @@ function isGenerationSuccessful(formatted, input) {
   const actualCount = Number(formatted.actualCount || 0);
   const answerCount = countAnswerLines(formatted.answerSheet);
   const isConcept = ["concept", "concept+training"].includes(input?.intentMode);
-  const isVocabSeries = input?.mode === "vocab-builder" && Number(input?.vocabSeriesEnd || 1) > Number(input?.vocabSeriesStart || 1);
+  const isVocabSeries =
+    input?.mode === "vocab-builder" &&
+    Number(input?.vocabSeriesEnd || 1) > Number(input?.vocabSeriesStart || 1);
   const isElementary = input?.mode === "abcstarter" || input?.level === "elementary";
 
   if (!contentOk) {
@@ -2939,14 +3028,20 @@ function isGenerationSuccessful(formatted, input) {
     return { ok: false, reason: "answer_numbering_broken" };
   }
   if (hasPlaceholderAnswers(formatted.answerSheet)) {
-    return { ok: false, reason: "placeholder_answer_detected" };
+    return {
+      ok: false,
+      reason: isElementary ? "elementary_placeholder_answer_detected" : "placeholder_answer_detected"
+    };
   }
+
   if (requestedCount > 0 && answerCount < Math.max(1, Math.ceil(actualCount * 0.6))) {
     return { ok: false, reason: "answer_count_too_low", requestedCount, actualCount, answerCount };
   }
+
   if (isElementary && answerCount < Math.max(1, Math.ceil(actualCount * 0.8))) {
     return { ok: false, reason: "elementary_answer_count_too_low", requestedCount, actualCount, answerCount };
   }
+
   if (requestedCount > 0 && !isConcept && !isVocabSeries) {
     const minimumAcceptable = Math.max(1, Math.ceil(requestedCount * 0.6));
     if (actualCount < minimumAcceptable) {
@@ -3021,6 +3116,15 @@ function formatMagicResponse(rawText, input) {
   normalizedQuestions = smoothGeneratedEnglish(normalizedQuestions, input);
   normalizedAnswers = smoothGeneratedEnglish(normalizedAnswers, input);
 
+  const requiredElementaryAnswers = input?.mode === "abcstarter" || input?.level === "elementary";
+  if (!normalizedAnswers || countAnswerLines(normalizedAnswers) < Math.max(3, Math.min(8, Math.ceil(Number(input?.count || 0) * 0.5)))) {
+    normalizedAnswers = normalizeMagicAnswerSheet("", normalizedQuestions, input);
+  }
+  if (requiredElementaryAnswers && hasPlaceholderAnswers(normalizedAnswers)) {
+    normalizedAnswers = buildEmergencyAnswerSheet(normalizedQuestions, input);
+  }
+  normalizedAnswers = smoothGeneratedEnglish(normalizedAnswers, input);
+
   const contentParts = [
     finalTitle,
     normalizedInstructions,
@@ -3069,21 +3173,10 @@ function validateWritingOutput(text = "", input = {}) {
     if (!/,\s*(who|which|whom|whose)\b/i.test(raw)) return false;
   }
 
-  if (focus?.isComparative && !focus?.isSuperlative) {
-    const superlativeLeak = raw.match(/\b(the most|the least|among my|among the|\w+est among)\b/gi) || [];
-    const comparativeSignal = raw.match(/\bthan\b/gi) || [];
-    if (superlativeLeak.length > Math.max(2, comparativeSignal.length)) return false;
-  }
-
-  if (focus?.isParticipialModifier) {
-    const causativeLeak = raw.match(/\b(make|let|have|help|get)\b/gi) || [];
-    const participialFrames = raw.match(/\b\w+\s+(running|wearing|written|made|completed|painted|broken|known|built|given|called|sleeping|growing|used)\b/gi) || [];
-    if (participialFrames.length < Math.max(2, Math.ceil(causativeLeak.length / 2))) return false;
-  }
-
-  if (focus?.isPresentPerfect) {
-    if (/\bhas won the competition ever\b/i.test(raw)) return false;
-    if (/\bhave wanted to see\b/i.test(raw)) return false;
+  if (focus?.isSoThatPurpose) {
+    if (/\bso that\b/i.test(raw) && /\b(can|could|will|would)\b[\s\.]*(\n|$)/i.test(raw)) {
+      return false;
+    }
   }
 
   if (input?.mode === "abcstarter" || input?.level === "elementary") {
@@ -3092,8 +3185,6 @@ function validateWritingOutput(text = "", input = {}) {
       .map((line) => line.trim())
       .filter((line) => /^\d+[.)-]\s+/.test(line));
     if (answerLines.some((line) => line.length > 160)) return false;
-    if (answerLines.length < Math.max(1, Math.ceil(Number(input?.count || 0) * 0.8))) return false;
-    if (/\b(a little books|much candies|a few foods)\b/i.test(raw)) return false;
   }
 
   return true;
@@ -3547,40 +3638,121 @@ function extractNumberedQuestionItems(text = "") {
     .map((line) => line.trim())
     .filter((line) => /^\d+[.)-]?\s+/.test(line));
 }
-function buildEmergencyAnswerSheet(q = "", input = {}) {
+
+function extractLikelyAnswerLines(text = "") {
+  return String(text || "")
+    .replace(/\r\n/g, "\n")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((line) => /^\d+[.)-]?\s+/.test(line));
+}
+
+function isBrokenAnswerLine(line = "") {
+  const s = String(line || "").trim();
+  if (!s) return true;
+
+  const body = s.replace(/^\d+[.)-]?\s*/, "").trim();
+  if (!body) return true;
+  if (body.length < 6) return true;
+  if (/^\[(check|todo|pending|answer)\]$/i.test(body)) return true;
+  if (/\bso that\s*$/i.test(body)) return true;
+  if (/\b(which|who|whom|whose|that)\s*$/i.test(body)) return true;
+  if (/,+\s*$/.test(body)) return true;
+  return false;
+}
+
+function sanitizeAnswerBodyForElementary(text = "") {
+  return String(text || "")
+    .replace(/^\d+[.)-]?\s*/, "")
+    .replace(/^\[(check|todo|pending|answer)\]\s*/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function sanitizeAnswerBodyForMiddle(text = "") {
+  return String(text || "")
+    .replace(/^\d+[.)-]?\s*/, "")
+    .replace(/^\[(check|todo|pending|answer)\]\s*/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function buildElementaryForcedAnswerSheet(q = "", input = {}) {
   const items = extractNumberedQuestionItems(q);
+
   return items
-    .map((l, i) => {
-      const stripped = l.replace(/^\d+[.)-]?\s*/, "");
-      if (input?.mode === "abcstarter" || input?.level === "elementary") {
-        return `${i + 1}. ${stripped}`;
-      }
-      return `${i + 1}. [CHECK] ${stripped}`;
+    .map((line, idx) => {
+      const stripped = line.replace(/^\d+[.)-]?\s*/, "").trim();
+      return `${idx + 1}. ${stripped}`;
     })
     .join("\n");
 }
+
+function buildMiddleRelaxedAnswerSheet(a = "", q = "", input = {}) {
+  const answerLines = extractLikelyAnswerLines(a);
+  const questionLines = extractNumberedQuestionItems(q);
+
+  const cleaned = answerLines
+    .map((line, idx) => sanitizeAnswerBodyForMiddle(line))
+    .filter(Boolean)
+    .filter((line) => !isBrokenAnswerLine(line))
+    .map((line, idx) => `${idx + 1}. ${line}`);
+
+  const minimumNeeded = Math.max(1, Math.ceil(questionLines.length * 0.6));
+
+  if (cleaned.length >= minimumNeeded) {
+    return cleaned.join("\n");
+  }
+
+  return questionLines
+    .map((line, idx) => {
+      const stripped = line.replace(/^\d+[.)-]?\s*/, "").trim();
+      return `${idx + 1}. [CHECK] ${stripped}`;
+    })
+    .join("\n");
+}
+
+function buildEmergencyAnswerSheet(q = "", input = {}) {
+  const isElementary = input?.mode === "abcstarter" || input?.level === "elementary";
+  if (isElementary) {
+    return buildElementaryForcedAnswerSheet(q, input);
+  }
+  return buildMiddleRelaxedAnswerSheet("", q, input);
+}
+
 function normalizeMagicAnswerSheet(a = "", q = "", input = {}) {
   const cleaned = String(a || "").trim();
+  const isElementary = input?.mode === "abcstarter" || input?.level === "elementary";
 
-  const renumber = (value = "") =>
+  const renumber = (value = "", sanitizer = (s) => s) =>
     String(value || "")
       .split("\n")
       .map((line) => line.trim())
       .filter(Boolean)
-      .map((line, index) => {
-        const body = line
-          .replace(/^\d+[.)-]?\s*/, "")
-          .replace(/^\[CHECK\]\s*/i, "")
-          .trim();
-        return body ? `${index + 1}. ${body}` : "";
-      })
+      .map((line) => sanitizer(line))
       .filter(Boolean)
+      .map((body, index) => `${index + 1}. ${body}`)
       .join("\n");
 
-  if (cleaned.length > 20) {
-    return renumber(cleaned);
+  if (isElementary) {
+    const renumbered = renumber(cleaned, sanitizeAnswerBodyForElementary);
+    const questionCount = extractNumberedQuestionItems(q).length;
+    const answerCount = countAnswerLines(renumbered);
+
+    if (
+      renumbered &&
+      answerCount >= Math.max(1, Math.ceil(questionCount * 0.8)) &&
+      !hasPlaceholderAnswers(renumbered) &&
+      hasSequentialNumbering(renumbered)
+    ) {
+      return renumbered;
+    }
+
+    return buildElementaryForcedAnswerSheet(q, input);
   }
 
-  const fallback = buildEmergencyAnswerSheet(q, input);
-  return renumber(fallback);
+  const renumbered = renumber(cleaned, sanitizeAnswerBodyForMiddle);
+  const relaxed = buildMiddleRelaxedAnswerSheet(renumbered, q, input);
+  return relaxed || buildMiddleRelaxedAnswerSheet(cleaned, q, input);
 }
