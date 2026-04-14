@@ -2439,8 +2439,9 @@ function buildMarcusMagicWordCountRuleBlock(input = {}) {
     ? `
 [Marcus Magic Word Count Rule]
 - Treat Writing Lab as Marcus Magic by default.
-- Every question item must include a visible word count target.
-- Display it in the question line as: (Word count: N)
+- Every question item should be compatible with a visible word count target.
+- Do NOT print (Word count: N) yourself inside the generated questions.
+- The backend will append a single final word count to each numbered question line after validation.
 - The word count target must match the final answer that appears in the answer sheet.
 - Word count means the number of space-separated English words in the final answer sentence.
 - Build clue-based production items so that the learner must respect both grammar and word count.
@@ -2451,8 +2452,9 @@ function buildMarcusMagicWordCountRuleBlock(input = {}) {
     : `
 [마커스매직 단어 수 규칙]
 - Writing Lab은 기본적으로 마커스매직 스타일로 처리할 것.
-- 모든 문항에는 보이는 단어 수 목표를 포함할 것.
-- 문항 끝에는 반드시 (Word count: N) 형식으로 표시할 것.
+- 모든 문항은 보이는 단어 수 목표와 호환되게 설계할 것.
+- 생성 단계에서 (Word count: N)을 직접 문항에 출력하지 말 것.
+- 백엔드가 검증 후 각 번호 문항 끝에 최종 단어 수를 한 번만 자동 부착한다.
 - 단어 수 목표는 정답지에 제시되는 최종 정답 문장의 실제 단어 수와 일치해야 한다.
 - 단어 수는 영어 최종 정답 문장에서 공백 기준 영어 단어 개수로 계산한다.
 - clue 기반 생산형 문항이 되도록 하되, 학습자가 문법과 단어 수를 함께 맞추게 할 것.
@@ -2472,6 +2474,14 @@ function countEnglishWordsForMagic(line = "") {
   if (!body) return 0;
   const matches = body.match(/[A-Za-z]+(?:[-'][A-Za-z]+)*/g) || [];
   return matches.length;
+}
+
+function removeExistingWordCounts(text = "") {
+  return String(text || "")
+    .replace(/\(Word count:\s*\d+\)/gi, "")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 function annotateQuestionsWithWordCounts(questions = "", answers = "") {
@@ -3196,7 +3206,8 @@ function formatMagicResponse(rawText, input) {
   normalizedAnswers = smoothGeneratedEnglish(normalizedAnswers, input);
 
   if (input?.mode === "writing" || input?.magicStyle === "marcus_magic" || input?.wordCountMode === "auto") {
-    normalizedQuestions = annotateQuestionsWithWordCounts(normalizedQuestions, normalizedAnswers);
+    const cleanedQuestions = removeExistingWordCounts(normalizedQuestions);
+    normalizedQuestions = annotateQuestionsWithWordCounts(cleanedQuestions, normalizedAnswers);
   }
 
   const contentParts = [
