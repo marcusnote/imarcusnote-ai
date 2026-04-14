@@ -3604,14 +3604,11 @@ module.exports = async function handler(req, res) {
         answerSheet: normalizeMagicAnswerSheet(formatted.answerSheet || "", formatted.questions || "", input),
       };
       const emergencyParts = [emergencyRecovered.title, emergencyRecovered.instructions, emergencyRecovered.questions].filter(Boolean);
-      emergencyRecovered.content = emergencyParts.join("
-
-");
-      emergencyRecovered.fullText = [...emergencyParts, ((input.language === "en" ? "Answers
-" : "정답
-") + (emergencyRecovered.answerSheet || ""))].filter(Boolean).join("
-
-");
+      emergencyRecovered.content = emergencyParts.join("\n\n");
+      emergencyRecovered.fullText = [
+        ...emergencyParts,
+        ((input.language === "en" ? "Answers\n" : "정답\n") + (emergencyRecovered.answerSheet || ""))
+      ].filter(Boolean).join("\n\n");
       emergencyRecovered.actualCount = countWorksheetItems(emergencyRecovered.questions || "");
 
       if (validateServiceSafeOutput(emergencyRecovered, input)) {
