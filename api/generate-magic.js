@@ -454,21 +454,45 @@ function buildPresentPerfectStrictFilterBlock(input = {}) {
   return input.language === "en"
     ? `
 [PRESENT PERFECT STRICT FILTER]
-- NEVER combine present perfect with finished past-time markers such as:
-  yesterday, last week, last month, last year, ago, in 2020, when I was young.
-- Prefer time signals such as:
-  since, for, already, yet, ever, never, recently, so far, up to now.
-- If a Korean prompt naturally forces simple past, rewrite the item so that present perfect remains natural.
+- Only generate sentences that naturally fit present perfect.
+- Allowed meaning zones:
+  experience, duration, completion, result.
+- Do not generate weak simple-past meanings, wishes, hopes, bare intentions, or generic present statements and then force them into present perfect.
+- NEVER use finished past-time markers such as:
+  yesterday, last week, last month, last year, ago, when, in 2020.
+- Prefer valid present-perfect signals such as:
+  since, for, before, already, yet, never, ever, recently, just, so far, up to now.
+- If a Korean source meaning naturally pushes simple past, replace it with a naturally valid present-perfect meaning before generating the item.
 - Reject tense-time collisions even if the sentence looks superficially correct.
 `.trim()
     : `
 [현재완료 엄격 필터]
-- 현재완료는 다음과 같은 완료 불가능 시간표현과 절대 결합하지 말 것:
-  yesterday, last week, last month, last year, ago, in 2020, when I was young
-- 대신 since, for, already, yet, ever, never, recently, so far, up to now 같은 표현을 우선 사용할 것.
-- 한국어 제시문이 단순과거를 강하게 유도하면, 문항 자체를 현재완료가 자연스러운 의미로 다시 구성할 것.
+- 현재완료에 자연스럽게 맞는 문장만 생성할 것.
+- 허용 의미: 경험, 계속, 완료, 결과.
+- 단순과거 의미, 희망, 바람, 단순 의도, 일반현재 진술을 억지로 현재완료로 바꾸지 말 것.
+- 다음과 같은 완료 불가능 시간표현은 절대 사용하지 말 것:
+  yesterday, last week, last month, last year, ago, when, in 2020
+- 대신 다음과 같은 현재완료 신호어를 우선 사용할 것:
+  since, for, before, already, yet, never, ever, recently, just, so far, up to now
+- 한국어 원문의 의미가 단순과거를 강하게 유도하면, 문항 의미 자체를 현재완료에 자연스러운 뜻으로 바꾸어 생성할 것.
 - 겉보기에만 맞는 시제-시간 충돌 문장은 폐기할 것.
 `.trim();
+}
+
+function hasInvalidPastTimeMarker(text = "") {
+  const value = String(text || "").toLowerCase();
+  const patterns = [
+    /\byesterday\b/,
+    /\blast\s+(week|month|year|night|weekend|summer|winter|spring|fall|autumn)\b/,
+    /\b\d+\s+days?\s+ago\b/,
+    /\b\d+\s+weeks?\s+ago\b/,
+    /\b\d+\s+months?\s+ago\b/,
+    /\b\d+\s+years?\s+ago\b/,
+    /\bago\b/,
+    /\bwhen\b/,
+    /\bin\s+(19|20)\d{2}\b/,
+  ];
+  return patterns.some((pattern) => pattern.test(value));
 }
 
 /* =========================
@@ -3245,7 +3269,7 @@ function validateWritingOutput(text = "", input = {}) {
 
   if ((focus?.isPresentPerfect || /현재완료|present\s+perfect/i.test(topic)) &&
       !/현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic) &&
-      /\b(yesterday|last week|last month|last year|ago|in \d{4}|when I was young)\b/i.test(raw)) {
+      hasInvalidPastTimeMarker(raw)) {
     return false;
   }
 
