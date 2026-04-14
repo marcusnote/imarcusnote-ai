@@ -2270,6 +2270,124 @@ function buildTaskGuide(input) {
   }
 }
 
+
+function buildMarcusIdentityPromptBlock(input) {
+  const isEn = input.language === "en";
+  const isElementary = input.mode === "abcstarter" || input.level === "elementary";
+  const base = isEn ? `
+[MARCUS MAGIC IDENTITY]
+- This worksheet must feel edited, not randomly generated.
+- Preserve one chapter, one teaching intention, one training flow.
+- Keep the whole set premium, guided, teachable, and classroom-ready.
+- The worksheet should feel like a branded MARCUSNOTE workbook, not a generic GPT list.
+- Keep chapter purity high. Do not leak unrelated grammar families into the main target items.
+- Prefer elegant clue design, natural English, and strong teacher usability.
+- Arrange the set with visible progression from guided entry to mixed application.
+- Keep the workbook feeling double-layered: clean on the surface, but structurally rich underneath.
+` : `
+[마커스매직 정체성 블록]
+- 이 워크북은 랜덤 생성물이 아니라, 실제 편집자가 설계한 교재처럼 느껴져야 한다.
+- 한 챕터, 한 수업 의도, 한 훈련 흐름을 유지할 것.
+- 결과물은 프리미엄, guided, teachable, classroom-ready한 마커스노트 워크북처럼 보여야 한다.
+- generic GPT 목록형 출력처럼 보이지 말 것.
+- 챕터 순도를 높게 유지하고, 핵심 목표 문항에 무관한 문법 계열이 섞이지 않게 할 것.
+- clue 설계는 친절하지만 세련되게, 영어 문장은 자연스럽고 교사용으로 바로 쓸 수 있게 만들 것.
+- 세트는 도입 → 구조 반복 → 혼합 적용으로 보이는 편집 흐름을 가져야 한다.
+- 겉으로는 깔끔하지만, 내부적으로는 구조 밀도가 높은 “더블 레이어드” 워크북처럼 느껴져야 한다.
+`;
+  const elementary = isElementary ? (isEn ? `
+[MARCUS ELEMENTARY BRAND RULE]
+- Elementary output must still feel premium.
+- Keep sentences short, but do not let the set look flat or mechanical.
+- Vary item rhythm intentionally: direct clue, rearrangement, question form, mixed application.
+- Always produce a usable answer sheet. Worksheet-only output is not acceptable.
+` : `
+[마커스 초등 브랜드 규칙]
+- 초등 출력도 반드시 프리미엄 워크북처럼 느껴져야 한다.
+- 문장은 짧게 유지하되, 세트 전체가 납작하고 기계적으로 보이지 않게 할 것.
+- 직접 clue형, 배열형, 의문문형, 혼합 응용형을 의도적으로 배열해 리듬을 만들 것.
+- 문제지만 있고 정답지가 없는 출력은 허용되지 않는다. 반드시 사용 가능한 정답지를 생성할 것.
+`) : "";
+  return `${base}\n${elementary}`.trim();
+}
+
+function buildMarcusSequencePromptBlock(input) {
+  const isEn = input.language === "en";
+  const count = Number(input.count || 25);
+  const isElementary = input.mode === "abcstarter" || input.level === "elementary";
+  if (isElementary) {
+    return isEn ? `
+[MARCUS SEQUENCE PLAN]
+- Organize the worksheet with visible rhythm.
+- Suggested flow:
+  1-8: direct guided clue writing
+  9-16: rearrangement / question / negative variation
+  17-${count}: mixed application with slightly freer but still guided production
+- Do not let all items share the same shell.
+- Even in elementary mode, keep at least 3 productive item families visible.
+` : `
+[마커스 시퀀스 설계]
+- 세트는 눈에 보이는 리듬을 가지고 배열할 것.
+- 권장 흐름:
+  1~8: 직접 clue 기반 안내형 영작
+  9~16: 배열형 / 의문문형 / 부정문형 변주
+  17~${count}: 조금 더 응용된 혼합형이지만 여전히 guided production 유지
+- 모든 문항을 같은 껍데기로 만들지 말 것.
+- 초등 모드에서도 최소 3가지 이상의 생산형 문항 계열이 보이게 할 것.
+`;
+  }
+  return isEn ? `
+[MARCUS SEQUENCE PLAN]
+- The worksheet must feel intentionally edited in 4 waves.
+- Suggested flow:
+  1-6: direct clue-based sentence building
+  7-12: rearrangement with one extra unnecessary word
+  13-18: partial-completion or controlled transformation
+  19-${count}: mixed application with slightly richer content
+- Keep item families visibly mixed, but never random.
+- Preserve chapter purity while changing task surface.
+` : `
+[마커스 시퀀스 설계]
+- 세트는 4개의 파동으로 편집된 것처럼 느껴져야 한다.
+- 권장 흐름:
+  1~6: 직접 clue 기반 문장 구성
+  7~12: 초과단어 1개 포함 재배열형
+  13~18: 부분완성형 또는 통제된 문장변환형
+  19~${count}: 내용이 조금 더 풍부한 혼합 적용형
+- 문항 유형은 분명히 섞이되, 랜덤처럼 보이면 안 된다.
+- 문항 표면은 달라져도 챕터 순도는 유지할 것.
+`;
+}
+
+function countAnswerLines(answerSheet = "") {
+  return String(answerSheet || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]\s+/.test(line)).length;
+}
+
+function hasPlaceholderAnswers(answerSheet = "") {
+  return /\[CHECK\]/i.test(String(answerSheet || ""));
+}
+
+function hasSequentialNumbering(text = "") {
+  const nums = String(text || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]\s+/.test(line))
+    .map((line) => {
+      const m = line.match(/^(\d+)[.)-]\s+/);
+      return m ? Number(m[1]) : null;
+    })
+    .filter((n) => Number.isFinite(n));
+  if (!nums.length) return false;
+  for (let i = 0; i < nums.length; i += 1) {
+    if (nums[i] !== i + 1) return false;
+  }
+  return true;
+}
+
+
 function buildUserPrompt(input) {
   const title = buildMagicTitle(input);
   const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
@@ -2348,6 +2466,8 @@ ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 ${buildPresentPerfectStrictFilterBlock(input)}
 ${buildAntiRepetitionPromptBlock(input)}
+${buildMarcusIdentityPromptBlock(input)}
+${buildMarcusSequencePromptBlock(input)}
 
 Mandatory Magic rules:
 - Present prompts in the learner's input language first.
@@ -2374,6 +2494,8 @@ Quality control:
 - In superlative answers, use complete and natural phrases such as "the tallest boy in the class", "the most beautiful city", and "among the people I know."
 - Avoid awkward endings like "the most beneficial I take" or bare endings like "This city is the most beautiful."
 - Make the output feel like premium guided training.
+- Keep Marcusnote editorial sequencing visible across the whole set.
+- Keep chapter purity high in the main target items.
 
 Original request:
 ${input.userPrompt || "(No additional user prompt provided.)"}
@@ -2396,6 +2518,8 @@ ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 ${buildPresentPerfectStrictFilterBlock(input)}
 ${buildAntiRepetitionPromptBlock(input)}
+${buildMarcusIdentityPromptBlock(input)}
+${buildMarcusSequencePromptBlock(input)}
 
 매직 필수 규칙:
 - 문제는 먼저 학습자의 입력 언어로 제시할 것.
@@ -2422,6 +2546,8 @@ ${buildAntiRepetitionPromptBlock(input)}
 - 최상급 문장은 "the tallest boy in the class", "the most beautiful city", "among the people I know"처럼 완전하고 자연스럽게 작성할 것.
 - "the most beneficial I take", "This city is the most beautiful." 같은 어색한 문장을 만들지 말 것.
 - 결과물은 프리미엄 guided training 워크북처럼 느껴져야 한다.
+- 세트 전체에서 마커스노트 편집 리듬이 보이게 할 것.
+- 핵심 목표 문항에서는 챕터 순도를 높게 유지할 것.
 
 사용자 원문:
 ${input.userPrompt || "(추가 요청 없음)"}
@@ -2792,8 +2918,10 @@ function isGenerationSuccessful(formatted, input) {
   const questionsOk = hasMeaningfulWorksheetBody(formatted.questions);
   const requestedCount = Number(input?.count || 0);
   const actualCount = Number(formatted.actualCount || 0);
+  const answerCount = countAnswerLines(formatted.answerSheet);
   const isConcept = ["concept", "concept+training"].includes(input?.intentMode);
   const isVocabSeries = input?.mode === "vocab-builder" && Number(input?.vocabSeriesEnd || 1) > Number(input?.vocabSeriesStart || 1);
+  const isElementary = input?.mode === "abcstarter" || input?.level === "elementary";
 
   if (!contentOk) {
     return { ok: false, reason: "content_too_short" };
@@ -2803,6 +2931,21 @@ function isGenerationSuccessful(formatted, input) {
   }
   if (!questionsOk) {
     return { ok: false, reason: "questions_missing" };
+  }
+  if (!hasSequentialNumbering(formatted.questions)) {
+    return { ok: false, reason: "question_numbering_broken" };
+  }
+  if (!hasSequentialNumbering(formatted.answerSheet)) {
+    return { ok: false, reason: "answer_numbering_broken" };
+  }
+  if (hasPlaceholderAnswers(formatted.answerSheet)) {
+    return { ok: false, reason: "placeholder_answer_detected" };
+  }
+  if (requestedCount > 0 && answerCount < Math.max(1, Math.ceil(actualCount * 0.6))) {
+    return { ok: false, reason: "answer_count_too_low", requestedCount, actualCount, answerCount };
+  }
+  if (isElementary && answerCount < Math.max(1, Math.ceil(actualCount * 0.8))) {
+    return { ok: false, reason: "elementary_answer_count_too_low", requestedCount, actualCount, answerCount };
   }
   if (requestedCount > 0 && !isConcept && !isVocabSeries) {
     const minimumAcceptable = Math.max(1, Math.ceil(requestedCount * 0.6));
@@ -2909,6 +3052,7 @@ function validateWritingOutput(text = "", input = {}) {
   );
 
   if (!raw.includes("[[ANSWERS]]")) return false;
+  if (hasPlaceholderAnswers(raw)) return false;
 
   if ((focus?.isPresentPerfect || /현재완료|present\s+perfect/i.test(topic)) &&
       !/현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic) &&
@@ -2925,10 +3069,21 @@ function validateWritingOutput(text = "", input = {}) {
     if (!/,\s*(who|which|whom|whose)\b/i.test(raw)) return false;
   }
 
-  if (focus?.isSoThatPurpose) {
-    if (/\bso that\b/i.test(raw) && /\b(can|could|will|would)\b[\s\.]*(\n|$)/i.test(raw)) {
-      return false;
-    }
+  if (focus?.isComparative && !focus?.isSuperlative) {
+    const superlativeLeak = raw.match(/\b(the most|the least|among my|among the|\w+est among)\b/gi) || [];
+    const comparativeSignal = raw.match(/\bthan\b/gi) || [];
+    if (superlativeLeak.length > Math.max(2, comparativeSignal.length)) return false;
+  }
+
+  if (focus?.isParticipialModifier) {
+    const causativeLeak = raw.match(/\b(make|let|have|help|get)\b/gi) || [];
+    const participialFrames = raw.match(/\b\w+\s+(running|wearing|written|made|completed|painted|broken|known|built|given|called|sleeping|growing|used)\b/gi) || [];
+    if (participialFrames.length < Math.max(2, Math.ceil(causativeLeak.length / 2))) return false;
+  }
+
+  if (focus?.isPresentPerfect) {
+    if (/\bhas won the competition ever\b/i.test(raw)) return false;
+    if (/\bhave wanted to see\b/i.test(raw)) return false;
   }
 
   if (input?.mode === "abcstarter" || input?.level === "elementary") {
@@ -2937,6 +3092,8 @@ function validateWritingOutput(text = "", input = {}) {
       .map((line) => line.trim())
       .filter((line) => /^\d+[.)-]\s+/.test(line));
     if (answerLines.some((line) => line.length > 160)) return false;
+    if (answerLines.length < Math.max(1, Math.ceil(Number(input?.count || 0) * 0.8))) return false;
+    if (/\b(a little books|much candies|a few foods)\b/i.test(raw)) return false;
   }
 
   return true;
@@ -3411,7 +3568,10 @@ function normalizeMagicAnswerSheet(a = "", q = "", input = {}) {
       .map((line) => line.trim())
       .filter(Boolean)
       .map((line, index) => {
-        const body = line.replace(/^\d+[.)-]?\s*/, "").trim();
+        const body = line
+          .replace(/^\d+[.)-]?\s*/, "")
+          .replace(/^\[CHECK\]\s*/i, "")
+          .trim();
         return body ? `${index + 1}. ${body}` : "";
       })
       .filter(Boolean)
@@ -3420,5 +3580,7 @@ function normalizeMagicAnswerSheet(a = "", q = "", input = {}) {
   if (cleaned.length > 20) {
     return renumber(cleaned);
   }
-  return buildEmergencyAnswerSheet(q, input);
+
+  const fallback = buildEmergencyAnswerSheet(q, input);
+  return renumber(fallback);
 }
