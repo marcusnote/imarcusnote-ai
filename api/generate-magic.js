@@ -237,8 +237,22 @@ function detectGrammarFocus(text = "") {
     /objective\s*relative\s*pronoun/i,
   ]);
 
+  const isWhatRelativePronoun = hasAny([
+    /관계대명사\s*what/,
+    /what\s*관계대명사/,
+    /relative\s*pronoun\s*what/i,
+  ]);
+
+  const isToInfinitiveAdjective = hasAny([
+    /to부정사의\s*형용사적\s*용법/,
+    /형용사적\s*용법/,
+    /adjective use of to-infinitive/i,
+    /adjectival to-infinitive/i,
+  ]);
+
   let chapterKey = "general";
-  if (isRelativePronoun && isNonRestrictive) chapterKey = "relative_pronoun_non_restrictive";
+  if (isWhatRelativePronoun) chapterKey = "relative_pronoun_what";
+  else if (isRelativePronoun && isNonRestrictive) chapterKey = "relative_pronoun_non_restrictive";
   else if (isRelativePronoun && isObjectiveRelativePronoun) chapterKey = "relative_pronoun_objective";
   else if (isRelativePronoun && isRestrictive) chapterKey = "relative_pronoun_restrictive";
   else if (isRelativePronoun) chapterKey = "relative_pronoun_general";
@@ -269,6 +283,8 @@ function detectGrammarFocus(text = "") {
     isNonRestrictive,
     isRestrictive,
     isObjectiveRelativePronoun,
+    isWhatRelativePronoun,
+    isToInfinitiveAdjective,
   };
 }
 
@@ -520,7 +536,21 @@ function buildMarcusChapterExpansionBlock(input = {}) {
 `.trim());
   }
 
-  if (focus?.isRelativePronoun) {
+  if (focus?.isWhatRelativePronoun) {
+    blocks.push(isEn ? `
+[Relative Pronoun What Chapter Expansion]
+- Keep the worksheet centered on WHAT meaning: the thing(s) that / what + clause.
+- Prefer answer shapes such as "What I need is...", "What he said was...", or Korean prompts that naturally equal "~하는 것".
+- Do not let the set drift into ordinary who / which / that relative clauses as the dominant answer style.
+- Mixed support items are allowed only in a small minority, but the worksheet should still feel like a WHAT workbook.
+`.trim() : `
+[관계대명사 what 챕터 확장]
+- 학습지는 반드시 WHAT 의미, 즉 "~하는 것" 중심으로 유지할 것.
+- "What I need is...", "What he said was..."처럼 what절이 실제로 보이는 정답을 우선할 것.
+- who / which / that 일반 관계절이 주된 정답 스타일이 되지 않게 할 것.
+- 일부 혼합형은 허용하되, 전체 인상은 반드시 what 중심이어야 한다.
+`.trim());
+  } else if (focus?.isRelativePronoun) {
     blocks.push(isEn ? `
 [Relative Pronoun Chapter Expansion]
 - Keep at least most core items visibly centered on relative clauses with who / which / that / whom / whose.
@@ -534,7 +564,21 @@ function buildMarcusChapterExpansionBlock(input = {}) {
 `.trim());
   }
 
-  if (focus?.isToInfinitive) {
+  if (focus?.isToInfinitiveAdjective) {
+    blocks.push(isEn ? `
+[Adjectival To-Infinitive Chapter Expansion]
+- Keep the worksheet centered on adjective-use to-infinitives modifying nouns.
+- Prefer answer shapes such as "I need a book to read", "She has something to do", "We need a place to sit".
+- Do not let make / let / help / see / believe patterns dominate this chapter.
+- Mixed support items are allowed only in a small minority, but the worksheet should still feel like an adjectival to-infinitive workbook.
+`.trim() : `
+[to부정사의 형용사적 용법 챕터 확장]
+- 학습지는 반드시 명사를 꾸미는 to부정사 구조 중심으로 유지할 것.
+- "a book to read", "something to do", "a place to sit"처럼 명사 뒤에서 수식하는 형태를 우선할 것.
+- make / let / help / see / believe 같은 5형식, 지각동사, 사역동사 패턴이 주된 정답 스타일이 되지 않게 할 것.
+- 일부 혼합형은 허용하되, 전체 인상은 반드시 형용사적 용법 중심이어야 한다.
+`.trim());
+  } else if (focus?.isToInfinitive) {
     blocks.push(isEn ? `
 [To-Infinitive Chapter Expansion]
 - Keep at least most core items visibly centered on to + base verb structures.
@@ -579,12 +623,35 @@ function hasMildChapterCoverage(text = "", input = {}) {
     return ratio >= 0.4;
   }
 
+  if (focus?.isWhatRelativePronoun) {
+    const ratio = countChapterSignalRatio(
+      answers,
+      /(^|\s)what\b/i
+    );
+    return ratio >= 0.2;
+  }
+
   if (focus?.isRelativePronoun) {
     const ratio = countChapterSignalRatio(
       answers,
       /\b(who|which|that|whom|whose)\b/i
     );
     return ratio >= 0.35;
+  }
+
+  if (focus?.isToInfinitiveAdjective) {
+    const lines = String(answers || "")
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => /^\d+[.)-]?\s+/.test(line))
+      .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+      .filter(Boolean);
+
+    if (!lines.length) return false;
+    const good = lines.filter((line) =>
+      /\b(a|an|the|something|anything|nothing|someone|anyone|no one|time|place|way|book|thing|chance|opportunity|work|project|job|problem|report|movie|class|plan)\b[^.?!\n]{0,40}\bto\s+[a-z]+\b/i.test(line)
+    ).length;
+    return (good / lines.length) >= 0.18;
   }
 
   if (focus?.isToInfinitive) {
@@ -1172,6 +1239,22 @@ function buildStabilityLockRuleBlock(input) {
 `);
   }
 
+  if (focus.isWhatRelativePronoun) {
+    blocks.push(isEn ? `
+[Relative Pronoun What Rules]
+- The worksheet must visibly teach WHAT meaning: what = the thing(s) that.
+- Prefer complete patterns such as "What I need is...", "What she said was...", "What I learned helped me."
+- Do not let who / which / that dominate the set.
+- Korean prompts should naturally map to "~하는 것", "~한 것은", "~이 필요한 것".
+` : `
+[관계대명사 what 규칙]
+- 학습지는 what = the thing(s) that 의미를 눈에 보이게 가르쳐야 한다.
+- "What I need is...", "What she said was...", "What I learned helped me." 같은 완전한 패턴을 우선할 것.
+- who / which / that이 세트를 지배하지 않게 할 것.
+- 한국어 제시문은 "~하는 것", "~한 것은", "~이 필요한 것" 의미로 자연스럽게 설계할 것.
+`);
+  }
+
   if (focus.isNonRestrictive) {
     blocks.push(isEn ? `
 [Non-Restrictive Stability Rules]
@@ -1206,6 +1289,32 @@ function buildStabilityLockRuleBlock(input) {
 - 사역 구조는 완전하고 자연스러운 문장으로 유지한다.
 - 핵심 목표 정답 다수를 일반 평서문으로 단순화하지 않는다.
 `);
+  }
+
+  if (focus.isToInfinitiveAdjective) {
+    return isEn ? `
+[Hard Chapter Lock: Adjectival To-Infinitive]
+- This chapter MUST stay centered on adjectival to-infinitives modifying nouns.
+- Prefer answer shapes like:
+  * I need a book to read.
+  * She has something to do.
+  * We need a place to sit.
+  * He has no time to waste.
+- Do not let let / make / help / see / have + object patterns dominate this chapter.
+- Do not let bare purpose-only sentences dominate this chapter.
+- Most target answers should visibly contain a noun followed by to + base verb.
+` : `
+[Hard Chapter Lock: to부정사의 형용사적 용법]
+- 이 챕터의 핵심 목표 정답은 반드시 명사를 수식하는 to부정사 중심이어야 한다.
+- 다음과 같은 형태를 우선한다:
+  * a book to read
+  * something to do
+  * a place to sit
+  * no time to waste
+- let / make / help / see / have + 목적어 구조가 이 챕터의 주된 정답 스타일이 되지 않게 할 것.
+- 단순 목적 용법 문장이 다수를 차지하지 않게 할 것.
+- 핵심 목표 정답 다수는 명사 뒤에 to + 동사원형이 실제로 보여야 한다.
+`;
   }
 
   if (focus.isSoThatPurpose) {
@@ -1250,6 +1359,7 @@ function buildTargetCoverageRuleBlock(input) {
 - 모든 정답은 최종 출력 전에 문법 정확성, 자연성, 챕터 정합성을 다시 점검할 것.
 `;
 
+  if (focus.isWhatRelativePronoun) return targetHeavy('relative pronoun what', '관계대명사 what');
   if (focus.isNonRestrictive) return targetHeavy('non-restrictive relative clauses', '관계대명사의 계속적 용법');
   if (focus.isObjectiveRelativePronoun) return targetHeavy('objective relative pronouns', '목적격 관계대명사');
   if (focus.isRelativePronoun && focus.isRestrictive) return targetHeavy('restrictive relative clauses', '관계대명사의 제한적 용법');
@@ -1257,6 +1367,7 @@ function buildTargetCoverageRuleBlock(input) {
   if (focus.isParticipialModifier) return targetHeavy('attributive participles / participial modifiers', '분사의 한정적 용법');
   if (focus.isCausative) return targetHeavy('causative verbs', '사역동사');
   if (focus.isSoThatPurpose) return targetHeavy('so that purpose clauses', 'so that 구문 (목적)');
+  if (focus.isToInfinitiveAdjective) return targetHeavy('adjectival to-infinitives', 'to부정사의 형용사적 용법');
   if (focus.isToInfinitive) return targetHeavy('to-infinitives', 'to부정사');
   if (focus.isGerund) return targetHeavy('gerunds', '동명사');
   if (focus.isPassive) return targetHeavy('passive voice', '수동태');
@@ -1271,6 +1382,30 @@ function buildHardChapterLockBlock(input) {
     [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ")
   );
   const isEn = input.language === "en";
+
+  if (focus.isWhatRelativePronoun) {
+    return isEn ? `
+[Hard Chapter Lock: Relative Pronoun What]
+- This chapter MUST stay centered on relative pronoun WHAT.
+- Prefer answer shapes like:
+  * What I need is time.
+  * What he said was true.
+  * What I learned helped me a lot.
+- Do not let who / which / that become the dominant answer style.
+- Avoid rewriting most target answers as "the thing that..." unless a small comparison item is intentionally included.
+- Korean prompts should naturally express "~하는 것", "~한 것은", "~이 필요한 것" meanings.
+` : `
+[Hard Chapter Lock: 관계대명사 what]
+- 이 챕터의 핵심 목표 정답은 반드시 관계대명사 what 중심이어야 한다.
+- 정답은 다음과 같은 형태를 우선한다:
+  * What I need is time.
+  * What he said was true.
+  * What I learned helped me a lot.
+- who / which / that이 주된 정답 스타일이 되지 않게 할 것.
+- 대부분의 문항을 "the thing that..."로 우회하지 말 것.
+- 한국어 제시문은 "~하는 것", "~한 것은", "~이 필요한 것" 의미가 자연스럽게 드러나게 할 것.
+`;
+  }
 
   if (focus.isRelativePronoun && focus.isNonRestrictive) {
     return isEn ? `
@@ -1416,6 +1551,22 @@ function buildGrammarRuleBlock(input) {
 - 쉼표 중심의 부가설명이 아니라, 대상을 한정하는 의미로 설계할 것.
 - 쉼표를 억지로 넣지 말 것.
 - 명사를 한정하는 관계절 구조가 분명히 드러나게 할 것.
+`);
+  }
+
+  if (focus.isToInfinitiveAdjective) {
+    blocks.push(isEn ? `
+[Adjectival To-Infinitive Rules]
+- Keep noun + to-infinitive modifier patterns visible.
+- Prefer answers such as "a book to read", "something to do", "a place to visit", "time to study".
+- Do not let causative / perception / help / let / make patterns dominate this chapter.
+- Do not let bare purpose-only infinitive sentences dominate this chapter.
+` : `
+[to부정사의 형용사적 용법 규칙]
+- 명사 + to부정사 수식 구조가 분명히 드러나게 할 것.
+- "a book to read", "something to do", "a place to visit", "time to study" 같은 정답을 우선할 것.
+- 사역동사 / 지각동사 / help / let / make 패턴이 이 챕터를 지배하지 않게 할 것.
+- 단순 목적 용법 문장이 다수를 차지하지 않게 할 것.
 `);
   }
 
