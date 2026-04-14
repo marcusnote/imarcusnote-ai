@@ -3554,65 +3554,73 @@ function normalizeMagicAnswerSheet(answers = "", questions = "", input = {}) {
 }
 
 function validateWritingOutput(text = "", input = {}) {
-  const raw = String(text || "");
-  const topic = String(input?.topic || "");
-  const focus = input?.grammarFocus || detectGrammarFocus(
-    [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
-  );
-  const track = resolveWritingTrack(input);
+  try {
+    const raw = String(text || "");
+    const topic = String(input?.topic || "");
+    const focus = input?.grammarFocus || detectGrammarFocus(
+      [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+    );
+    const track = resolveWritingTrack(input);
 
-  if (!raw.includes("[[ANSWERS]]")) return false;
+    if (!raw.includes("[[ANSWERS]]")) return false;
 
-  const answerBody = raw.split("[[ANSWERS]]").slice(1).join("[[ANSWERS]]").trim();
-  PLACEHOLDER
-  const numberedAnswers = answerLines.filter((v) => /^\d+[\)\.\-]/.test(v));
-  const answerText = answerLines.join(" ");
+    const answerBody = raw.split("[[ANSWERS]]").slice(1).join("[[ANSWERS]]").trim();
+    const answerLines = answerBody
+      .split("\n")
+      .map((v) => v.trim())
+      .filter(Boolean);
 
-  if (!answerText) return false;
-  if (numberedAnswers.length === 0) return false;
+    const numberedAnswers = answerLines.filter((v) => /^\d+[\)\.\-]/.test(v));
+    const answerText = answerLines.join(" ");
 
-  if (/과거완료|past perfect/i.test(topic)) {
-    const hasPastPerfect = /had\s+[a-z][a-z\-']*/i.test(answerText);
-    if (hasPastPerfect) {
-      const hasPastTimeConflict = /(last week|last month|last year|yesterday|ago|in 20\d\d)/i.test(answerText);
-      const hasReferenceFrame = /(before|after|by the time|when|already|before then)/i.test(answerText);
-      if (hasPastTimeConflict && !hasReferenceFrame) return false;
+    if (!answerText) return false;
+    if (numberedAnswers.length === 0) return false;
+
+    if (/과거완료|past perfect/i.test(topic)) {
+      const hasPastPerfect = /\bhad\s+[a-z][a-z\-']*/i.test(answerText);
+      if (hasPastPerfect) {
+        const hasPastTimeConflict = /\b(last week|last month|last year|yesterday|ago|in 20\d\d)\b/i.test(answerText);
+        const hasReferenceFrame = /\b(before|after|by the time|when|already|before then)\b/i.test(answerText);
+        if (hasPastTimeConflict && !hasReferenceFrame) return false;
+      }
     }
-  }
 
-  if (focus?.isParticipialModifier) {
-    const strongModifierSignals = [
-      /(the|a|an)\s+[a-z][a-z\-']*\s+(running|wearing|sleeping|growing|shining|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted)/i,
-      /(book|boy|girl|woman|man|report|project|movie|painting|letter|cake|tree|student|teacher)\s+(running|wearing|sleeping|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted)/i,
-    ];
-    const hasStrongSignal = strongModifierSignals.some((rx) => rx.test(answerText));
-    const relativeClauseCount = (answerText.match(/(who|which|that)/gi) || []).length;
-    if (!hasStrongSignal) return false;
-    if (relativeClauseCount > Math.max(2, Math.floor(numberedAnswers.length * 0.3))) return false;
-  }
-
-  if (focus?.isNonRestrictive) {
-    const commaRelativeCount = (answerText.match(/,\s*(who|which|whom|whose)/gi) || []).length;
-    if (commaRelativeCount === 0) return false;
-  }
-
-  if (focus?.isSoThatPurpose) {
-    if (/so that/i.test(answerText) && /so that[\s\S]*?(can|could|will|would)(?:\s*[\.]|\s*$)/i.test(answerText)) {
-      return false;
+    if (focus?.isParticipialModifier) {
+      const strongModifierSignals = [
+        /\b(the|a|an)\s+[a-z][a-z\-']*\s+(running|wearing|sleeping|growing|shining|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted)\b/i,
+        /\b(book|boy|girl|woman|man|report|project|movie|painting|letter|cake|tree|student|teacher)\s+(running|wearing|sleeping|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted)\b/i,
+      ];
+      const hasStrongSignal = strongModifierSignals.some((rx) => rx.test(answerText));
+      const relativeClauseCount = (answerText.match(/\b(who|which|that)\b/gi) || []).length;
+      if (!hasStrongSignal) return false;
+      if (relativeClauseCount > Math.max(2, Math.floor(numberedAnswers.length * 0.3))) return false;
     }
-  }
 
-  if (track === "crown") {
-    const crownSignals = (answerText.match(/(because|although|while|which|who|that|when|if|therefore|however|responsibility|motivation|perspective|education|communication|society|ethical|interpretation|influence)/gi) || []).length;
-    const avgWords = numberedAnswers.length
-      ? numberedAnswers.reduce((sum, line) => sum + line.split(/\s+/).length, 0) / numberedAnswers.length
-      : 0;
-    if (avgWords < 9 && crownSignals < Math.max(2, Math.floor(numberedAnswers.length * 0.4))) return false;
-  }
+    if (focus?.isNonRestrictive) {
+      const commaRelativeCount = (answerText.match(/,\s*(who|which|whom|whose)\b/gi) || []).length;
+      if (commaRelativeCount === 0) return false;
+    }
 
-  return true;
+    if (focus?.isSoThatPurpose) {
+      if (/\bso that\b/i.test(answerText) && /\bso that\b[\s\S]*?\b(can|could|will|would)\b(?:\s*[\.]|\s*$)/i.test(answerText)) {
+        return false;
+      }
+    }
+
+    if (track === "crown") {
+      const crownSignals = (answerText.match(/\b(because|although|while|which|who|that|when|if|therefore|however|responsibility|motivation|perspective|education|communication|society|ethical|interpretation|influence)\b/gi) || []).length;
+      const avgWords = numberedAnswers.length
+        ? numberedAnswers.reduce((sum, line) => sum + line.split(/\s+/).length, 0) / numberedAnswers.length
+        : 0;
+      if (avgWords < 9 && crownSignals < Math.max(2, Math.floor(numberedAnswers.length * 0.4))) return false;
+    }
+
+    return true;
+  } catch (err) {
+    console.error("validateWritingOutput failed:", err);
+    return false;
+  }
 }
-
 
 function isGenerationSuccessful(formatted, input) {
   if (!formatted || typeof formatted !== "object") {
