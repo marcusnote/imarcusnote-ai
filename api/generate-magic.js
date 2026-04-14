@@ -3609,6 +3609,35 @@ function renumberItems(lines = []) {
     .join("\n");
 }
 
+
+function stabilizeNumberedBlock(text = "") {
+  const source = String(text || "").trim();
+  if (!source) return "";
+
+  const lines = source
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const numbered = [];
+  const others = [];
+
+  for (const line of lines) {
+    if (/^\d+\s*[\.)\-:]/.test(line)) {
+      numbered.push(line.replace(/^\d+\s*[\.)\-:]\s*/, "").trim());
+    } else {
+      others.push(line);
+    }
+  }
+
+  if (!numbered.length) {
+    return lines.join("\n");
+  }
+
+  const rebuilt = numbered.map((line, index) => `${index + 1}. ${line}`);
+  return rebuilt.join("\n");
+}
+
 function hasPastPerfectStructure(sentence = "") {
   const s = String(sentence || "");
   const hasHadPP =
