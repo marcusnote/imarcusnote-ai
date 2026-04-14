@@ -384,6 +384,91 @@ function normalizeInput(body = {}) {
   };
 }
 
+
+/* =========================
+   Runtime Anti-Repetition Memory
+   ========================= */
+const RECENT_OUTPUT_MEMORY = Object.create(null);
+
+function getRecentMemoryKey(input = {}) {
+  return [
+    String(input.topic || "").trim().toLowerCase(),
+    String(input.mode || "").trim().toLowerCase(),
+    String(input.gradeLabel || "").trim().toLowerCase(),
+    String(input.difficulty || "").trim().toLowerCase(),
+  ].join("::");
+}
+
+function buildAntiRepetitionPromptBlock(input = {}) {
+  const key = getRecentMemoryKey(input);
+  const recent = Array.isArray(RECENT_OUTPUT_MEMORY[key]) ? RECENT_OUTPUT_MEMORY[key] : [];
+  if (!recent.length) return "";
+
+  const samples = recent.slice(-12).map((line) => `- ${line}`).join("\n");
+  return input.language === "en"
+    ? `
+[ANTI-REPETITION MEMORY]
+- Avoid reusing or closely imitating the following recent answer patterns for this same chapter/mode/grade.
+- Keep the grammar target, but change subject, setting, lexical choice, and sentence family.
+
+${samples}
+`.trim()
+    : `
+[중복 방지 메모리]
+- 같은 챕터/모드/학년에서 최근 생성된 아래 정답 패턴을 그대로 재사용하거나 매우 비슷하게 반복하지 말 것.
+- 목표 문법은 유지하되, 주어, 상황, 어휘 선택, 문장 계열을 바꿀 것.
+
+${samples}
+`.trim();
+}
+
+function collectRecentAnswerLines(formatted = {}, input = {}) {
+  const key = getRecentMemoryKey(input);
+  const answerLines = String(formatted?.answerSheet || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]\s+/.test(line))
+    .map((line) => line.replace(/^\d+[.)-]\s*/, "").trim())
+    .filter(Boolean);
+
+  if (!answerLines.length) return;
+  if (!Array.isArray(RECENT_OUTPUT_MEMORY[key])) RECENT_OUTPUT_MEMORY[key] = [];
+  RECENT_OUTPUT_MEMORY[key].push(...answerLines);
+  RECENT_OUTPUT_MEMORY[key] = RECENT_OUTPUT_MEMORY[key].slice(-40);
+}
+
+function buildPresentPerfectStrictFilterBlock(input = {}) {
+  const topic = String(input?.topic || "");
+  const focus = input?.grammarFocus || detectGrammarFocus(
+    [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+  );
+
+  const isPresentPerfectContinuous =
+    /현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic);
+  const isPresentPerfect = focus?.isPresentPerfect || /현재완료|present\s+perfect/i.test(topic);
+
+  if (!isPresentPerfect && !isPresentPerfectContinuous) return "";
+
+  return input.language === "en"
+    ? `
+[PRESENT PERFECT STRICT FILTER]
+- NEVER combine present perfect with finished past-time markers such as:
+  yesterday, last week, last month, last year, ago, in 2020, when I was young.
+- Prefer time signals such as:
+  since, for, already, yet, ever, never, recently, so far, up to now.
+- If a Korean prompt naturally forces simple past, rewrite the item so that present perfect remains natural.
+- Reject tense-time collisions even if the sentence looks superficially correct.
+`.trim()
+    : `
+[현재완료 엄격 필터]
+- 현재완료는 다음과 같은 완료 불가능 시간표현과 절대 결합하지 말 것:
+  yesterday, last week, last month, last year, ago, in 2020, when I was young
+- 대신 since, for, already, yet, ever, never, recently, so far, up to now 같은 표현을 우선 사용할 것.
+- 한국어 제시문이 단순과거를 강하게 유도하면, 문항 자체를 현재완료가 자연스러운 의미로 다시 구성할 것.
+- 겉보기에만 맞는 시제-시간 충돌 문장은 폐기할 것.
+`.trim();
+}
+
 /* =========================
    Magic Output Builders
    ========================= */
@@ -2261,6 +2346,8 @@ ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
+${buildPresentPerfectStrictFilterBlock(input)}
+${buildAntiRepetitionPromptBlock(input)}
 
 Mandatory Magic rules:
 - Present prompts in the learner's input language first.
@@ -2307,6 +2394,8 @@ ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
+${buildPresentPerfectStrictFilterBlock(input)}
+${buildAntiRepetitionPromptBlock(input)}
 
 매직 필수 규칙:
 - 문제는 먼저 학습자의 입력 언어로 제시할 것.
@@ -2748,7 +2837,7 @@ function formatMagicResponse(rawText, input) {
 
   const normalizedInstructions = (instructions || "").trim();
   let normalizedQuestions = (questions || "").trim();
-  let normalizedAnswers = (answers || "").trim();
+  let normalizedAnswers = normalizeMagicAnswerSheet((answers || "").trim(), normalizedQuestions, input);
 
   if (!normalizedQuestions && safeRawText.trim()) {
     const cleaned = safeRawText
@@ -2809,6 +2898,102 @@ function formatMagicResponse(rawText, input) {
     fullText: fullParts.join("\n\n"),
     actualCount: countWorksheetItems(normalizedQuestions)
   };
+}
+
+
+function validateWritingOutput(text = "", input = {}) {
+  const raw = String(text || "");
+  const topic = String(input?.topic || "");
+  const focus = input?.grammarFocus || detectGrammarFocus(
+    [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+  );
+
+  if (!raw.includes("[[ANSWERS]]")) return false;
+
+  if ((focus?.isPresentPerfect || /현재완료|present\s+perfect/i.test(topic)) &&
+      !/현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic) &&
+      /\b(yesterday|last week|last month|last year|ago|in \d{4}|when I was young)\b/i.test(raw)) {
+    return false;
+  }
+
+  if (focus?.isParticipialModifier) {
+    const participleSignal = /\b(running|wearing|written|made|completed|painted|broken|known|built|given|called|sleeping|growing|used)\b/i.test(raw);
+    if (!participleSignal) return false;
+  }
+
+  if (focus?.isNonRestrictive) {
+    if (!/,\s*(who|which|whom|whose)\b/i.test(raw)) return false;
+  }
+
+  if (focus?.isSoThatPurpose) {
+    if (/\bso that\b/i.test(raw) && /\b(can|could|will|would)\b[\s\.]*(\n|$)/i.test(raw)) {
+      return false;
+    }
+  }
+
+  if (input?.mode === "abcstarter" || input?.level === "elementary") {
+    const answerLines = String(text || "")
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => /^\d+[.)-]\s+/.test(line));
+    if (answerLines.some((line) => line.length > 160)) return false;
+  }
+
+  return true;
+}
+
+function buildPostFormatRepairPrompt(formatted = {}, input = {}, failure = {}) {
+  const isKo = input?.language !== "en";
+  const reason = String(failure?.reason || "unknown");
+  const requestedCount = Number(input?.count || 0);
+  const actualCount = Number(formatted?.actualCount || 0);
+
+  return `${buildUserPrompt(input)}
+
+[POST-FORMAT REPAIR]
+- The previous output became unstable after formatting or validation.
+- Repair the worksheet into a stable teacher-ready result.
+- Keep exactly 4 sections:
+[[TITLE]]
+[[INSTRUCTIONS]]
+[[QUESTIONS]]
+[[ANSWERS]]
+- Keep numbering strictly sequential as 1. 2. 3.
+- Do not skip item numbers.
+- Do not merge multiple items onto one line.
+- Keep questions and answers aligned by the same numbers.
+- Preserve the requested grammar target and workbook identity.
+- Preserve the requested count as closely as possible.
+- If count is short, add additional valid items to reach the requested count.
+- If an answer set is weak, rewrite it fully instead of leaving placeholders.
+- In elementary / abcstarter mode, keep answer lines short, direct, and one-sentence based.
+- Do not copy the previous broken numbering blindly. Rebuild it cleanly.
+
+[FAILURE CONTEXT]
+- reason: ${reason}
+- requestedCount: ${requestedCount}
+- actualCount: ${actualCount}
+
+[PREVIOUS TITLE]
+${formatted?.title || ""}
+
+[PREVIOUS INSTRUCTIONS]
+${formatted?.instructions || ""}
+
+[PREVIOUS QUESTIONS]
+${formatted?.questions || ""}
+
+[PREVIOUS ANSWERS]
+${formatted?.answerSheet || ""}
+
+${isKo ? "번호가 부족하거나 어긋나면 반드시 다시 정렬하고 보강할 것." : "If numbering is unstable or too short, rebuild and complete it before returning."}`.trim();
+}
+
+async function repairFormattedMagicOutput(formatted, input, failure) {
+  const systemPrompt = buildSystemPrompt(input);
+  const repairPrompt = buildPostFormatRepairPrompt(formatted, input, failure);
+  const repairedRaw = await callOpenAI(systemPrompt, repairPrompt);
+  return formatMagicResponse(repairedRaw, input);
 }
 
 /* =========================
@@ -3112,14 +3297,38 @@ module.exports = async function handler(req, res) {
     }
 
     const rawText = await generateMagicCore(input);
-    const formatted = formatMagicResponse(rawText, input);
-    const generationCheck = isGenerationSuccessful(formatted, input);
+    let formatted = formatMagicResponse(rawText, input);
+    let generationCheck = isGenerationSuccessful(formatted, input);
+    let validationOk = validateWritingOutput(`[[QUESTIONS]]\n${formatted.questions || ""}\n[[ANSWERS]]\n${formatted.answerSheet || ""}`, input);
+
+    if (!validationOk && generationCheck.ok) {
+      generationCheck = { ok: false, reason: "validation_failed" };
+    }
 
     if (!generationCheck.ok) {
+      try {
+        const repaired = await repairFormattedMagicOutput(formatted, input, generationCheck);
+        const repairedValidationOk = validateWritingOutput(`[[QUESTIONS]]\n${repaired.questions || ""}\n[[ANSWERS]]\n${repaired.answerSheet || ""}`, input);
+        const repairedCheck = isGenerationSuccessful(repaired, input);
+
+        if (repairedValidationOk && repairedCheck.ok) {
+          formatted = repaired;
+          generationCheck = repairedCheck;
+          validationOk = repairedValidationOk;
+        } else {
+          generationCheck = repairedCheck.ok ? { ok: false, reason: "repair_validation_failed" } : repairedCheck;
+          validationOk = repairedValidationOk;
+        }
+      } catch (repairError) {
+        console.error("post-format repair failed:", repairError);
+      }
+    }
+
+    if (!generationCheck.ok || !validationOk) {
       return json(res, 502, {
         success: false,
-        message: "생성 결과 구조가 불완전하여 MP를 차감하지 않았습니다. 다시 시도해주세요.",
-        detail: generationCheck.reason,
+        message: "생성 결과 구조를 안정적으로 복구하지 못했습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
+        detail: generationCheck.reason || "validation_failed",
         meta: {
           language: input.language,
           requestedCount: input.count,
@@ -3142,6 +3351,7 @@ module.exports = async function handler(req, res) {
       });
     }
 
+    collectRecentAnswerLines(formatted, input);
     const finalMpState = await deductMpAfterSuccess(mpState);
     return json(res, 200, {
       success: true,
@@ -3173,14 +3383,42 @@ module.exports = async function handler(req, res) {
 }
 
 
+
 function extractNumberedQuestionItems(text = "") {
-  return (text || "").split("\n").filter(l => /^\d+/.test(l.trim()));
+  return (text || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line));
 }
-function buildEmergencyAnswerSheet(q = "") {
+function buildEmergencyAnswerSheet(q = "", input = {}) {
   const items = extractNumberedQuestionItems(q);
-  return items.map((l,i)=>`${i+1}. [CHECK] ${l.replace(/^\d+[.)-]?\s*/, "")}`).join("\n");
+  return items
+    .map((l, i) => {
+      const stripped = l.replace(/^\d+[.)-]?\s*/, "");
+      if (input?.mode === "abcstarter" || input?.level === "elementary") {
+        return `${i + 1}. ${stripped}`;
+      }
+      return `${i + 1}. [CHECK] ${stripped}`;
+    })
+    .join("\n");
 }
-function normalizeMagicAnswerSheet(a = "", q = "") {
-  if (a && a.length > 20) return a;
-  return buildEmergencyAnswerSheet(q);
+function normalizeMagicAnswerSheet(a = "", q = "", input = {}) {
+  const cleaned = String(a || "").trim();
+
+  const renumber = (value = "") =>
+    String(value || "")
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .map((line, index) => {
+        const body = line.replace(/^\d+[.)-]?\s*/, "").trim();
+        return body ? `${index + 1}. ${body}` : "";
+      })
+      .filter(Boolean)
+      .join("\n");
+
+  if (cleaned.length > 20) {
+    return renumber(cleaned);
+  }
+  return buildEmergencyAnswerSheet(q, input);
 }
