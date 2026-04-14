@@ -3661,11 +3661,79 @@ function extractNumberedQuestionItems(text = "") {
   });
 }
 
+function extractClueTokensFromBlock(block = {}) {
+  const lines = Array.isArray(block?.lines) ? block.lines.map((line) => String(line || "").trim()).filter(Boolean) : [];
+  const clueLine = lines.find((line) => /[\(\[].+[\)\]]/.test(line));
+  if (!clueLine) return [];
+  const inner = clueLine
+    .replace(/^.*?[\(\[]/, "")
+    .replace(/[\)\]].*$/, "")
+    .trim();
+
+  return inner
+    .split(/\s*[,\/]\s*/)
+    .map((token) => token.trim())
+    .filter(Boolean)
+    .filter((token) => !/^추가어$/i.test(token) && !/^EXTRA$/i.test(token) && !/^clue$/i.test(token));
+}
+
+function buildElementaryFallbackAnswer(block = {}, index = 0) {
+  const tokens = extractClueTokensFromBlock(block);
+  if (!tokens.length) return "";
+
+  const normalized = tokens.map((token) => token.replace(/^the\s+/i, (m) => m.toLowerCase()));
+  const subjectPatterns = [
+    /^the\s+(boy|girl|man|woman|teacher|student|movie|book|problem|class|school)$/i,
+    /^my\s+friend$/i,
+    /^his\s+father$/i,
+    /^her\s+mother$/i,
+    /^(he|she|it|the boy|the girl|the man|the woman)$/i,
+  ];
+
+  let subjectIndex = normalized.findIndex((token) => subjectPatterns.some((rx) => rx.test(token)));
+  if (subjectIndex === -1 && normalized.includes("he")) subjectIndex = normalized.index("he");
+  if (subjectIndex === -1 && normalized.includes("she")) subjectIndex = normalized.index("she");
+  if (subjectIndex === -1 && normalized.includes("it")) subjectIndex = normalized.index("it");
+
+  let subject = "";
+  if (subjectIndex !== -1) {
+    subject = normalized.splice(subjectIndex, 1)[0];
+  }
+
+  let verbIndex = normalized.findIndex((token) => /(?:s|es)$/.test(token) || /^(has|does|is)$/i.test(token) || /^(takes a walk|gets up|have dinner|spend time|play games)$/i.test(token));
+  if (verbIndex === -1) {
+    verbIndex = normalized.findIndex((token) => /^(go|goes|like|likes|study|studies|read|reads|watch|watches|ride|rides|listen|listens|exercise|exercises|cook|cooks|drink|drinks|practice|practices|swim|swims|want|wants|take|takes|gets up|have dinner|spend time|play games)$/i.test(token));
+  }
+
+  let verb = "";
+  if (verbIndex !== -1) {
+    verb = normalized.splice(verbIndex, 1)[0];
+  }
+
+  if (!subject) {
+    return `${index + 1}. ${tokens.join(" ")}.`;
+  }
+
+  const ordered = [subject, verb].concat(normalized).filter(Boolean).join(" ").replace(/\s+/g, " ").trim();
+  const sentence = ordered ? ordered.charAt(0).toUpperCase() + ordered.slice(1) + "." : "";
+  return `${index + 1}. ${sentence}`;
+}
+
 function buildEmergencyAnswerSheet(questions = "", input = {}) {
+  const questionBlocks = parseNumberedBlocks(questions);
   const items = extractNumberedQuestionItems(questions);
   if (!items.length) return "";
 
   const isKo = input?.language !== "en";
+  const isElementary = String(input?.mode || "") === "abcstarter" || String(input?.level || "") === "elementary";
+
+  if (isElementary && questionBlocks.length === items.length) {
+    const rebuilt = questionBlocks.map((block, index) => buildElementaryFallbackAnswer(block, index)).filter(Boolean);
+    if (rebuilt.length === items.length) {
+      return rebuilt.join("\n");
+    }
+  }
+
   const header = isKo ? "정답 생성 보완본" : "Emergency Answer Guide";
 
   return [header]
@@ -3697,7 +3765,21 @@ function resolveGrammarEnforcementProfile(input = {}) {
         .join(" ")
     );
   const topic = String(input?.topic || "");
+  const mode = String(input?.mode || "");
+  const grade = String(input?.gradeLabel || "");
 
+  if (/현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic)) {
+    return { type: "present_perfect_continuous", minRatio: 0.75 };
+  }
+  if (/현재완료|present perfect/i.test(topic)) {
+    return { type: "present_perfect", minRatio: 0.8 };
+  }
+  if (/be동사의\s*의문문|be\s+questions?/i.test(topic)) {
+    return { type: "be_question", minRatio: 0.85 };
+  }
+  if (/3인칭\s*단수|third\s*person\s*singular/i.test(topic) || (mode === "abcstarter" && /초등/.test(grade))) {
+    return { type: "third_person_singular", minRatio: 0.8 };
+  }
   if (/과거완료|past perfect/i.test(topic)) {
     return { type: "past_perfect", minRatio: 0.8 };
   }
@@ -3762,6 +3844,22 @@ function hasPastPerfectStructure(sentence = "") {
   return hasReference || /\bhad\b/i.test(s);
 }
 
+function hasPresentPerfectStructure(sentence = "") {
+  const s = String(sentence || "");
+  if (!/\b(?:have|has)\s+(?!been\s+[a-z]+ing\b)(?:already\s+|just\s+|never\s+|ever\s+|recently\s+)?(?:[a-z]+ed|been|gone|done|seen|written|read|left|met|made|built|bought|brought|told|thought|known|taken|given|found|felt|become|begun|broken|chosen|driven|eaten|fallen|forgotten|forgiven|got|grown|heard|held|kept|lost|paid|put|run|said|sold|sent|shown|sat|slept|spoken|spent|stood|taught|understood|won)\b/i.test(s)) {
+    return false;
+  }
+  if (/\b(last week|last month|last year|yesterday|ago|when did|in 20\d\d)\b/i.test(s)) return false;
+  return true;
+}
+
+function hasPresentPerfectContinuousStructure(sentence = "") {
+  const s = String(sentence || "");
+  if (!/\b(?:have|has)\s+been\s+[a-z]+ing\b/i.test(s)) return false;
+  if (/\b(last week|last month|last year|yesterday|ago|when did|when have you started)\b/i.test(s)) return false;
+  return true;
+}
+
 function hasParticipialModifierStructure(sentence = "") {
   const s = String(sentence || "");
   const strongSignals = [
@@ -3784,9 +3882,34 @@ function hasCausativeStructure(sentence = "") {
   return /\b(make|let|have|help|get)\s+\w+\s+(?:to\s+)?[a-z]/i.test(String(sentence || ""));
 }
 
-function validateSingleAnswer(sentence = "", profile = null) {
+function hasBeQuestionStructure(sentence = "") {
+  const s = String(sentence || "").trim();
+  if (!/^(Am|Is|Are|Was|Were)\b/i.test(s) && !/^(Where|Why|When|How|What)\s+(am|is|are|was|were)\b/i.test(s)) {
+    return false;
+  }
+  if (/\b(do|does|did|can|will|would|have|has)\b/i.test(s.split("?")[0]) && !/^(Where|Why|When|How|What)\s+(am|is|are|was|were)\b/i.test(s)) {
+    return false;
+  }
+  return true;
+}
+
+function hasThirdPersonSingularStructure(sentence = "", questionLine = "") {
+  const s = String(sentence || "").trim();
+  const q = String(questionLine || "");
+  const singularQuestion = !q || /그\s*(소년|소녀|남자|여자|아이)|그의\s*아버지|그녀|그는|my friend|his father|the boy|the girl|the man|the woman/i.test(q);
+  if (!singularQuestion) return false;
+  const singularStart = /^(He|She|It|The boy|The girl|The man|The woman|My friend|His father)\b/i.test(s);
+  if (!singularStart) return false;
+  return /\b(goes|likes|wakes|studies|reads|swims|listens|exercises|wants|drinks|rides|watches|practices|cooks|takes|gets|has)\b/i.test(s);
+}
+
+function validateSingleAnswer(sentence = "", profile = null, questionLine = "") {
   if (!profile) return true;
   if (profile.type === "past_perfect") return hasPastPerfectStructure(sentence);
+  if (profile.type === "present_perfect") return hasPresentPerfectStructure(sentence);
+  if (profile.type === "present_perfect_continuous") return hasPresentPerfectContinuousStructure(sentence);
+  if (profile.type === "be_question") return hasBeQuestionStructure(sentence);
+  if (profile.type === "third_person_singular") return hasThirdPersonSingularStructure(sentence, questionLine);
   if (profile.type === "participial_modifier") return hasParticipialModifierStructure(sentence);
   if (profile.type === "so_that_purpose") return hasSoThatPurposeStructure(sentence);
   if (profile.type === "non_restrictive_relative") return hasNonRestrictiveRelativeStructure(sentence);
@@ -3796,6 +3919,9 @@ function validateSingleAnswer(sentence = "", profile = null) {
 
 function enforceQuestionSet(parsed = {}, input = {}) {
   const profile = resolveGrammarEnforcementProfile(input);
+  const questionBlocks = parseNumberedBlocks(parsed.questions || "");
+  const answerItems = extractNumberedItems(parsed.answers || "");
+
   if (!profile) {
     return {
       ...parsed,
@@ -3804,9 +3930,7 @@ function enforceQuestionSet(parsed = {}, input = {}) {
     };
   }
 
-  const questionItems = extractNumberedItems(parsed.questions || "");
-  const answerItems = extractNumberedItems(parsed.answers || "");
-  const pairCount = Math.min(questionItems.length, answerItems.length);
+  const pairCount = Math.min(questionBlocks.length, answerItems.length);
 
   if (!pairCount) {
     return {
@@ -3816,14 +3940,15 @@ function enforceQuestionSet(parsed = {}, input = {}) {
     };
   }
 
-  const validQuestions = [];
+  const validQuestionBlocks = [];
   const validAnswers = [];
 
   for (let i = 0; i < pairCount; i += 1) {
-    const q = questionItems[i];
+    const qBlock = questionBlocks[i];
+    const firstLine = Array.isArray(qBlock?.lines) ? String(qBlock.lines[0] || "") : "";
     const a = answerItems[i];
-    if (validateSingleAnswer(a, profile)) {
-      validQuestions.push(q);
+    if (validateSingleAnswer(a, profile, firstLine)) {
+      validQuestionBlocks.push(qBlock);
       validAnswers.push(a);
     }
   }
@@ -3832,7 +3957,7 @@ function enforceQuestionSet(parsed = {}, input = {}) {
   if (ratio >= profile.minRatio && validAnswers.length > 0) {
     return {
       ...parsed,
-      questions: renumberItems(validQuestions),
+      questions: renumberGroupedBlocks(validQuestionBlocks),
       answers: renumberItems(validAnswers),
       enforcedMeta: {
         originalCount: pairCount,
@@ -3881,6 +4006,26 @@ function validateWritingOutput(text = "", input = {}) {
 
     if (!answerText) return false;
     if (numberedAnswers.length === 0) return false;
+
+    if (/현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic)) {
+      const ppContCount = numberedAnswers.filter((line) => hasPresentPerfectContinuousStructure(stripItemNumber(line))).length;
+      if (ppContCount < Math.max(1, Math.ceil(numberedAnswers.length * 0.6))) return false;
+    }
+
+    if (/현재완료|present perfect/i.test(topic) && !/현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic)) {
+      const ppCount = numberedAnswers.filter((line) => hasPresentPerfectStructure(stripItemNumber(line))).length;
+      if (ppCount < Math.max(1, Math.ceil(numberedAnswers.length * 0.6))) return false;
+    }
+
+    if (/be동사의\s*의문문|be\s+questions?/i.test(topic)) {
+      const beCount = numberedAnswers.filter((line) => hasBeQuestionStructure(stripItemNumber(line))).length;
+      if (beCount < Math.max(1, Math.ceil(numberedAnswers.length * 0.7))) return false;
+    }
+
+    if (/3인칭\s*단수|third\s*person\s*singular/i.test(topic)) {
+      const thirdCount = numberedAnswers.filter((line) => hasThirdPersonSingularStructure(stripItemNumber(line), stripItemNumber(line))).length;
+      if (thirdCount < Math.max(1, Math.ceil(numberedAnswers.length * 0.6))) return false;
+    }
 
     if (/과거완료|past perfect/i.test(topic)) {
       const hasPastPerfect = /\bhad\s+[a-z][a-z\-']*/i.test(answerText);
