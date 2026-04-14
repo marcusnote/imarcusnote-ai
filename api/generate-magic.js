@@ -3553,6 +3553,149 @@ function normalizeMagicAnswerSheet(answers = "", questions = "", input = {}) {
   return buildEmergencyAnswerSheet(questions, input);
 }
 
+
+function resolveGrammarEnforcementProfile(input = {}) {
+  const focus =
+    input?.grammarFocus ||
+    detectGrammarFocus(
+      [input?.userPrompt, input?.topic, input?.worksheetTitle]
+        .filter(Boolean)
+        .join(" ")
+    );
+  const topic = String(input?.topic || "");
+
+  if (/과거완료|past perfect/i.test(topic)) {
+    return { type: "past_perfect", minRatio: 0.8 };
+  }
+  if (focus?.isParticipialModifier || /분사의 한정적 용법|participle/i.test(topic)) {
+    return { type: "participial_modifier", minRatio: 0.7 };
+  }
+  if (focus?.isSoThatPurpose || /so that/i.test(topic)) {
+    return { type: "so_that_purpose", minRatio: 0.8 };
+  }
+  if (focus?.isNonRestrictive || /계속적 용법|non[-\s]?restrictive/i.test(topic)) {
+    return { type: "non_restrictive_relative", minRatio: 0.7 };
+  }
+  if (focus?.isCausative || /사역동사|causative/i.test(topic)) {
+    return { type: "causative", minRatio: 0.7 };
+  }
+
+  return null;
+}
+
+function extractNumberedItems(text = "") {
+  return String(text || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[\)\.\-]/.test(line));
+}
+
+function stripItemNumber(line = "") {
+  return String(line || "").replace(/^\d+[\)\.\-]\s*/, "").trim();
+}
+
+function renumberItems(lines = []) {
+  return lines
+    .map((line, index) => `${index + 1}. ${stripItemNumber(line)}`)
+    .join("\n");
+}
+
+function hasPastPerfectStructure(sentence = "") {
+  const s = String(sentence || "");
+  const hasHadPP =
+    /\bhad\s+(?:already\s+|just\s+|never\s+|recently\s+)?(?:[a-z]+ed|been|gone|done|seen|written|read|left|met|made|built|bought|brought|told|thought|known|taken|given|found|felt|become|begun|broken|chosen|driven|eaten|fallen|forgotten|forgiven|got|grown|heard|held|kept|lost|paid|put|run|said|sold|sent|shown|sat|slept|spoken|spent|stood|taught|understood|won)\b/i.test(s);
+  const hasReference =
+    /\b(before|after|by the time|when|already|before then)\b/i.test(s);
+  const hasBadTime =
+    /\b(last week|last month|last year|yesterday|ago|in 20\d\d)\b/i.test(s);
+  if (!hasHadPP) return false;
+  if (hasBadTime && !hasReference) return false;
+  return hasReference || /\bhad\b/i.test(s);
+}
+
+function hasParticipialModifierStructure(sentence = "") {
+  const s = String(sentence || "");
+  const strongSignals = [
+    /\b(the|a|an)\s+[a-z][a-z\-']*\s+(running|wearing|sleeping|growing|shining|smiling|crying|standing|sitting|waiting|looking|holding|carrying|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted|invited)\b/i,
+    /\b(book|boy|girl|woman|man|report|project|movie|painting|letter|cake|tree|student|teacher|people|scene)\s+(running|wearing|sleeping|written|made|completed|painted|broken|known|built|given|called|used|chosen|prepared|planted|invited)\b/i,
+  ];
+  if (strongSignals.some((rx) => rx.test(s))) return true;
+  return false;
+}
+
+function hasSoThatPurposeStructure(sentence = "") {
+  return /\bso that\s+(i|we|you|he|she|they|it)\s+(can|could|will|would)\s+[a-z]/i.test(String(sentence || ""));
+}
+
+function hasNonRestrictiveRelativeStructure(sentence = "") {
+  return /,\s*(who|which|whom|whose)\b/i.test(String(sentence || ""));
+}
+
+function hasCausativeStructure(sentence = "") {
+  return /\b(make|let|have|help|get)\s+\w+\s+(?:to\s+)?[a-z]/i.test(String(sentence || ""));
+}
+
+function validateSingleAnswer(sentence = "", profile = null) {
+  if (!profile) return true;
+  if (profile.type === "past_perfect") return hasPastPerfectStructure(sentence);
+  if (profile.type === "participial_modifier") return hasParticipialModifierStructure(sentence);
+  if (profile.type === "so_that_purpose") return hasSoThatPurposeStructure(sentence);
+  if (profile.type === "non_restrictive_relative") return hasNonRestrictiveRelativeStructure(sentence);
+  if (profile.type === "causative") return hasCausativeStructure(sentence);
+  return true;
+}
+
+function enforceQuestionSet(parsed = {}, input = {}) {
+  const profile = resolveGrammarEnforcementProfile(input);
+  if (!profile) return parsed;
+
+  const questionItems = extractNumberedItems(parsed.questions || "");
+  const answerItems = extractNumberedItems(parsed.answers || "");
+  const pairCount = Math.min(questionItems.length, answerItems.length);
+
+  if (!pairCount) return parsed;
+
+  const validQuestions = [];
+  const validAnswers = [];
+
+  for (let i = 0; i < pairCount; i += 1) {
+    const q = questionItems[i];
+    const a = answerItems[i];
+    if (validateSingleAnswer(a, profile)) {
+      validQuestions.push(q);
+      validAnswers.push(a);
+    }
+  }
+
+  const ratio = validAnswers.length / pairCount;
+  if (ratio >= profile.minRatio || validAnswers.length > 0) {
+    return {
+      ...parsed,
+      questions: renumberItems(validQuestions),
+      answers: renumberItems(validAnswers),
+      enforcedMeta: {
+        originalCount: pairCount,
+        validCount: validAnswers.length,
+        ratio,
+        profile: profile.type,
+      },
+    };
+  }
+
+  return {
+    ...parsed,
+    questions: "",
+    answers: "",
+    enforcedMeta: {
+      originalCount: pairCount,
+      validCount: 0,
+      ratio: 0,
+      profile: profile.type,
+    },
+  };
+}
+
+
 function validateWritingOutput(text = "", input = {}) {
   try {
     const raw = String(text || "");
@@ -3717,6 +3860,17 @@ function formatMagicResponse(rawText, input) {
 
   normalizedQuestions = smoothGeneratedEnglish(normalizedQuestions, input);
   normalizedAnswers = smoothGeneratedEnglish(normalizedAnswers, input);
+
+  const enforcedSet = enforceQuestionSet(
+    { questions: normalizedQuestions, answers: normalizedAnswers },
+    input
+  );
+  normalizedQuestions = String(enforcedSet.questions || normalizedQuestions || "").trim();
+  normalizedAnswers = normalizeMagicAnswerSheet(
+    String(enforcedSet.answers || normalizedAnswers || "").trim(),
+    normalizedQuestions,
+    input
+  );
 
   if (!validateWritingOutput(`[[QUESTIONS]]\n${normalizedQuestions}\n[[ANSWERS]]\n${normalizedAnswers}`, input)) {
     normalizedAnswers = normalizeMagicAnswerSheet("", normalizedQuestions, input);
