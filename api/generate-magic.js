@@ -4374,3 +4374,490 @@ function normalizeMagicAnswerSheet(a = "", q = "", input = {}) {
   const relaxed = buildMiddleRelaxedAnswerSheet(renumbered, q, input);
   return relaxed || buildMiddleRelaxedAnswerSheet(cleaned, q, input);
 }
+
+
+
+
+/* =========================
+   v8.2.1 SAFE FILTER PATCH (INTEGRATED)
+   ========================= */
+
+function enforceCorePattern(sentence, focus) {
+  if (focus === "present_perfect") return /have|has/.test(sentence)
+  if (focus === "gerund") return /\b\w+ing\b/.test(sentence)
+  if (focus === "comparative") return /than/.test(sentence)
+  if (focus === "relative_adverb") return /where|when|why/.test(sentence)
+  if (focus === "elementary_negative") return /do not|does not|did not/.test(sentence)
+  return true
+}
+
+function blockInvalidPatterns(sentence, focus) {
+  if (focus === "present_perfect") {
+    if (/^I asked|^She told|^He went|^They did/.test(sentence)) return false
+  }
+  if (focus === "comparative") {
+    if (/among/.test(sentence)) return false
+  }
+  if (focus === "relative_adverb") {
+    if (/the place .* (gave|met|showed|visited)/.test(sentence)) return false
+  }
+  if (focus === "gerund") {
+    if (/^to\s+\w+/.test(sentence)) return false
+  }
+  if (focus === "elementary_negative") {
+    if (/let me|let us|make me|have him/.test(sentence)) return false
+  }
+  return true
+}
+
+function repairSentence(sentence, focus) {
+  if (focus === "present_perfect") {
+    if (/^I asked/.test(sentence)) return sentence.replace(/^I asked/, "I have asked")
+  }
+  if (focus === "comparative") {
+    if (/the most/.test(sentence)) return sentence
+    return sentence.replace(/\bmost\b/g, "more")
+  }
+  if (focus === "relative_adverb") {
+    return sentence.replace("the place we visited", "the place where we went")
+  }
+  if (focus === "elementary_negative") {
+    return sentence.replace(/let me/g, "help me")
+  }
+  return sentence
+}
+
+function validateChapterPurity(sentences, focus) {
+  const valid = sentences.filter(s => enforceCorePattern(s, focus))
+  return valid.length / sentences.length > 0.7
+}
+
+function applyV821Filters(sentences, focus) {
+  let processed = sentences.map(s => repairSentence(s, focus))
+  processed = processed.filter(s =>
+    enforceCorePattern(s, focus) &&
+    blockInvalidPatterns(s, focus)
+  )
+  if (!validateChapterPurity(processed, focus)) {
+    return sentences
+  }
+  return processed
+}
+
+/* === USAGE ===
+After sentence generation:
+sentences = applyV821Filters(sentences, focus)
+*/
+
+
+/*
+  Marcusnote Magic Engine v8.2.2
+  Diversity + Stability Patch for apigenerate-magic-s14-v8.2.1-complete.js
+
+  HOW TO APPLY
+  1) Open your current apigenerate-magic-s14-v8.2.1-complete.js
+  2) Paste this entire patch at the VERY END of the file
+  3) Save as a new final file name
+
+  This patch is append-safe. It overrides selected functions at runtime.
+*/
+
+(function applyMarcusV822DiversityStabilityPatch() {
+  const PATCH_TAG = "v8.2.2-diversity-stability";
+
+  const __origNormalizeInput = typeof normalizeInput === "function" ? normalizeInput : null;
+  const __origBuildSystemPrompt = typeof buildSystemPrompt === "function" ? buildSystemPrompt : null;
+  const __origBuildUserPrompt = typeof buildUserPrompt === "function" ? buildUserPrompt : null;
+  const __origBuildAntiRepetitionPromptBlock = typeof buildAntiRepetitionPromptBlock === "function" ? buildAntiRepetitionPromptBlock : null;
+  const __origCollectRecentAnswerLines = typeof collectRecentAnswerLines === "function" ? collectRecentAnswerLines : null;
+  const __origIsGenerationSuccessful = typeof isGenerationSuccessful === "function" ? isGenerationSuccessful : null;
+  const __origFormatMagicResponse = typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+  const __origRepairFormattedMagicOutput = typeof repairFormattedMagicOutput === "function" ? repairFormattedMagicOutput : null;
+
+  const GLOBAL_RECENT_SIGNATURE_MEMORY = globalThis.__MARCUS_RECENT_SIGNATURE_MEMORY || Object.create(null);
+  globalThis.__MARCUS_RECENT_SIGNATURE_MEMORY = GLOBAL_RECENT_SIGNATURE_MEMORY;
+
+  let REQUEST_NONCE = Number(globalThis.__MARCUS_REQUEST_NONCE || 0);
+  globalThis.__MARCUS_REQUEST_NONCE = REQUEST_NONCE;
+
+  function nextRequestNonce() {
+    REQUEST_NONCE += 1;
+    globalThis.__MARCUS_REQUEST_NONCE = REQUEST_NONCE;
+    return REQUEST_NONCE;
+  }
+
+  function safeText(value) {
+    return String(value || "").replace(/\r\n/g, "\n");
+  }
+
+  function normalizeSentenceSignature(text = "") {
+    return String(text || "")
+      .toLowerCase()
+      .replace(/^\d+[.)-]?\s*/, "")
+      .replace(/\[[^\]]+\]/g, " ")
+      .replace(/["'`”“‘’]/g, "")
+      .replace(/[^a-z0-9\s]/g, " ")
+      .replace(/\b(the|a|an)\b/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function sentenceCoreKey(text = "") {
+    const sig = normalizeSentenceSignature(text);
+    const tokens = sig.split(" ").filter(Boolean);
+    return tokens.slice(0, 8).join(" ");
+  }
+
+  function extractNumberedBodies(text = "") {
+    return safeText(text)
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => /^\d+[.)-]?\s+/.test(line))
+      .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+      .filter(Boolean);
+  }
+
+  function extractQuestionStemBodies(text = "") {
+    return safeText(text)
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => /^\d+[.)-]?\s+/.test(line))
+      .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+      .map((line) => line.replace(/\([^)]*\)/g, " ").replace(/\[[^\]]*\]/g, " ").replace(/\s+/g, " ").trim())
+      .filter(Boolean);
+  }
+
+  function collectDuplicateDetails(lines = []) {
+    const seen = new Map();
+    const duplicates = [];
+
+    lines.forEach((line, index) => {
+      const normalized = normalizeSentenceSignature(line);
+      const core = sentenceCoreKey(line);
+      const key = `${normalized}__${core}`;
+      if (!normalized) return;
+
+      if (seen.has(key)) {
+        duplicates.push({
+          firstIndex: seen.get(key) + 1,
+          secondIndex: index + 1,
+          line,
+          normalized,
+        });
+      } else {
+        seen.set(key, index);
+      }
+    });
+
+    return duplicates;
+  }
+
+  function collectNearDuplicateDetails(lines = []) {
+    const duplicates = [];
+    const normalized = lines.map((line) => ({
+      raw: line,
+      sig: normalizeSentenceSignature(line),
+      core: sentenceCoreKey(line),
+    }));
+
+    for (let i = 0; i < normalized.length; i += 1) {
+      for (let j = i + 1; j < normalized.length; j += 1) {
+        const a = normalized[i];
+        const b = normalized[j];
+        if (!a.sig || !b.sig) continue;
+        if (a.sig === b.sig) continue;
+        if (!a.core || !b.core) continue;
+        if (a.core === b.core) {
+          duplicates.push({
+            firstIndex: i + 1,
+            secondIndex: j + 1,
+            a: a.raw,
+            b: b.raw,
+            type: "same_core",
+          });
+          continue;
+        }
+
+        const aTokens = new Set(a.sig.split(" ").filter(Boolean));
+        const bTokens = new Set(b.sig.split(" ").filter(Boolean));
+        const overlap = [...aTokens].filter((token) => bTokens.has(token)).length;
+        const minSize = Math.max(1, Math.min(aTokens.size, bTokens.size));
+        const ratio = overlap / minSize;
+        if (ratio >= 0.85 && overlap >= 4) {
+          duplicates.push({
+            firstIndex: i + 1,
+            secondIndex: j + 1,
+            a: a.raw,
+            b: b.raw,
+            type: "high_overlap",
+          });
+        }
+      }
+    }
+
+    return duplicates;
+  }
+
+  function getDiversityMemoryKey(input = {}) {
+    const grammarKey = input?.grammarFocus?.chapterKey || "general";
+    return [
+      String(input.topic || "").trim().toLowerCase(),
+      String(input.mode || "").trim().toLowerCase(),
+      String(input.gradeLabel || "").trim().toLowerCase(),
+      String(input.difficulty || "").trim().toLowerCase(),
+      String(grammarKey || "general").trim().toLowerCase(),
+    ].join("::");
+  }
+
+  function getRecentSignaturesForInput(input = {}) {
+    const key = getDiversityMemoryKey(input);
+    return Array.isArray(GLOBAL_RECENT_SIGNATURE_MEMORY[key]) ? GLOBAL_RECENT_SIGNATURE_MEMORY[key] : [];
+  }
+
+  function storeRecentSignatures(input = {}, answerLines = []) {
+    const key = getDiversityMemoryKey(input);
+    if (!Array.isArray(GLOBAL_RECENT_SIGNATURE_MEMORY[key])) {
+      GLOBAL_RECENT_SIGNATURE_MEMORY[key] = [];
+    }
+
+    const bucket = GLOBAL_RECENT_SIGNATURE_MEMORY[key];
+    answerLines.forEach((line) => {
+      const signature = normalizeSentenceSignature(line);
+      if (!signature) return;
+      bucket.push(signature);
+    });
+
+    GLOBAL_RECENT_SIGNATURE_MEMORY[key] = bucket.slice(-120);
+  }
+
+  function buildStrongDiversityRuleBlock(input = {}) {
+    const recent = getRecentSignaturesForInput(input).slice(-15);
+    const recentList = recent.map((s) => `- ${s}`).join("\n");
+    const count = Number(input?.count || 0);
+
+    return input?.language === "en"
+      ? `
+[DIVERSITY LOCK - CRITICAL]
+- Every answer sentence must be natural, complete, and structurally stable.
+- Do NOT repeat the same sentence, near-duplicate sentence, or lightly edited sentence inside one worksheet.
+- If the worksheet has ${Math.max(count, 5)} items or more, every numbered answer must be unique.
+- Change subject, setting, verb family, object, modifier, and clue shape across items.
+- Use multiple sentence families instead of repeating one frame.
+- Avoid batches such as only student/school/library or only buy/go/make patterns.
+- Keep the target grammar visible, but vary the lexical world and scenario.
+- Never recycle a recent sentence pattern from the same chapter batch.
+${recentList ? `[RECENTLY USED PATTERNS TO AVOID]\n${recentList}` : ""}
+`.trim()
+      : `
+[문장 다양성 잠금 - 매우 중요]
+- 모든 정답 문장은 자연스럽고 완전하며 구조적으로 안정적이어야 한다.
+- 한 워크북 내부에서 같은 문장, 거의 같은 문장, 단어만 조금 바꾼 문장을 반복하지 말 것.
+- 문항이 ${Math.max(count, 5)}개 이상이면 번호별 정답 문장은 전부 서로 달라야 한다.
+- 주어, 상황, 동사 계열, 목적어, 수식어, clue 형태를 바꾸어 다양성을 확보할 것.
+- 하나의 틀만 반복하지 말고 여러 문장 계열을 섞을 것.
+- 학생/학교/도서관 같은 배경만 몰아 쓰거나 buy/go/make 같은 동사만 몰아 쓰지 말 것.
+- 목표 문법은 유지하되, 어휘 세계와 상황은 계속 바꿀 것.
+- 같은 챕터에서 최근 생성된 문장 패턴을 재사용하지 말 것.
+${recentList ? `[최근 사용 패턴 - 재사용 금지]\n${recentList}` : ""}
+`.trim();
+  }
+
+  normalizeInput = function patchedNormalizeInput(body = {}) {
+    const input = __origNormalizeInput ? __origNormalizeInput(body) : (body || {});
+    return {
+      ...input,
+      patchTag: PATCH_TAG,
+      requestNonce: nextRequestNonce(),
+    };
+  };
+
+  buildAntiRepetitionPromptBlock = function patchedBuildAntiRepetitionPromptBlock(input = {}) {
+    const legacy = __origBuildAntiRepetitionPromptBlock ? __origBuildAntiRepetitionPromptBlock(input) : "";
+    const stronger = buildStrongDiversityRuleBlock(input);
+    return [legacy, stronger].filter(Boolean).join("\n\n").trim();
+  };
+
+  buildSystemPrompt = function patchedBuildSystemPrompt(input = {}) {
+    const base = __origBuildSystemPrompt ? __origBuildSystemPrompt(input) : "";
+    const extra = buildStrongDiversityRuleBlock(input);
+    const nonceBlock = input?.language === "en"
+      ? `[REQUEST NONCE]\n- This generation sequence id is ${input.requestNonce || 1}. Treat this as a fresh batch and avoid prior sentence reuse.`
+      : `[요청 시퀀스]\n- 이번 생성 시퀀스 번호는 ${input.requestNonce || 1}이다. 반드시 새로운 배치로 간주하고 이전 문장 재사용을 피할 것.`;
+    return [base, extra, nonceBlock].filter(Boolean).join("\n\n");
+  };
+
+  buildUserPrompt = function patchedBuildUserPrompt(input = {}) {
+    const base = __origBuildUserPrompt ? __origBuildUserPrompt(input) : String(input?.userPrompt || "");
+    const extra = input?.language === "en"
+      ? `\n\n[Freshness request]\n- Produce a fresh set for batch ${input.requestNonce || 1}.\n- Even within the same chapter, do not repeat answer lines from recent batches.`
+      : `\n\n[새 배치 요청]\n- 이번은 배치 ${input.requestNonce || 1}용 새 세트이다.\n- 같은 챕터라도 최근 배치의 정답 문장을 반복하지 말 것.`;
+    return `${base}${extra}`;
+  };
+
+  collectRecentAnswerLines = function patchedCollectRecentAnswerLines(formatted = {}, input = {}) {
+    if (__origCollectRecentAnswerLines) {
+      try {
+        __origCollectRecentAnswerLines(formatted, input);
+      } catch (error) {
+        console.error("collectRecentAnswerLines legacy call failed:", error);
+      }
+    }
+
+    const answerLines = extractNumberedBodies(formatted?.answerSheet || "");
+    if (answerLines.length) {
+      storeRecentSignatures(input, answerLines);
+    }
+  };
+
+  function validateWorksheetDiversity(formatted = {}, input = {}) {
+    const answerLines = extractNumberedBodies(formatted?.answerSheet || "");
+    const questionLines = extractQuestionStemBodies(formatted?.questions || "");
+    const count = Math.max(answerLines.length, Number(formatted?.actualCount || 0), Number(input?.count || 0));
+
+    if (count < 5) {
+      return { ok: true };
+    }
+
+    const exactAnswerDupes = collectDuplicateDetails(answerLines);
+    if (exactAnswerDupes.length) {
+      return {
+        ok: false,
+        reason: "duplicate_answer_sentences_detected",
+        duplicates: exactAnswerDupes.slice(0, 5),
+      };
+    }
+
+    const nearAnswerDupes = collectNearDuplicateDetails(answerLines);
+    if (nearAnswerDupes.length) {
+      return {
+        ok: false,
+        reason: "near_duplicate_answer_sentences_detected",
+        duplicates: nearAnswerDupes.slice(0, 5),
+      };
+    }
+
+    const exactQuestionDupes = collectDuplicateDetails(questionLines);
+    if (exactQuestionDupes.length) {
+      return {
+        ok: false,
+        reason: "duplicate_question_prompts_detected",
+        duplicates: exactQuestionDupes.slice(0, 5),
+      };
+    }
+
+    const recent = new Set(getRecentSignaturesForInput(input));
+    const reusedRecent = answerLines
+      .map((line, index) => ({ index: index + 1, line, sig: normalizeSentenceSignature(line) }))
+      .filter((entry) => entry.sig && recent.has(entry.sig));
+
+    if (reusedRecent.length >= 2) {
+      return {
+        ok: false,
+        reason: "recent_batch_reuse_detected",
+        duplicates: reusedRecent.slice(0, 5),
+      };
+    }
+
+    return { ok: true };
+  }
+
+  isGenerationSuccessful = function patchedIsGenerationSuccessful(formatted, input) {
+    const legacy = __origIsGenerationSuccessful
+      ? __origIsGenerationSuccessful(formatted, input)
+      : { ok: true };
+
+    if (!legacy || !legacy.ok) return legacy;
+
+    const diversity = validateWorksheetDiversity(formatted, input);
+    if (!diversity.ok) return diversity;
+
+    return legacy;
+  };
+
+  formatMagicResponse = function patchedFormatMagicResponse(rawText, input) {
+    const formatted = __origFormatMagicResponse
+      ? __origFormatMagicResponse(rawText, input)
+      : {
+          title: "",
+          instructions: "",
+          questions: "",
+          content: "",
+          answerSheet: "",
+          fullText: safeText(rawText),
+          actualCount: 0,
+        };
+
+    const answerLines = extractNumberedBodies(formatted.answerSheet || "");
+    const uniqueLines = [];
+    const seen = new Set();
+
+    answerLines.forEach((line) => {
+      const sig = normalizeSentenceSignature(line);
+      if (!sig || seen.has(sig)) return;
+      seen.add(sig);
+      uniqueLines.push(line);
+    });
+
+    if (uniqueLines.length && uniqueLines.length !== answerLines.length) {
+      formatted.answerSheet = uniqueLines
+        .map((line, index) => `${index + 1}. ${line.replace(/^\d+[.)-]?\s*/, "")}`)
+        .join("\n");
+      if (typeof countWorksheetItems === "function") {
+        formatted.actualCount = countWorksheetItems(formatted.questions || "") || uniqueLines.length;
+      } else {
+        formatted.actualCount = uniqueLines.length;
+      }
+      formatted.fullText = [formatted.title, formatted.instructions, formatted.questions, input?.language === "en" ? "Answers" : "정답", formatted.answerSheet]
+        .filter(Boolean)
+        .join("\n\n");
+    }
+
+    return formatted;
+  };
+
+  async function attemptDiversityRepair(formatted = {}, input = {}, check = {}) {
+    if (typeof callOpenAI !== "function") {
+      return formatted;
+    }
+
+    const repairSystemPrompt = `${buildSystemPrompt(input)}\n\n${input?.language === "en"
+      ? `[DIVERSITY REPAIR]\nReturn only the repaired worksheet in [[TITLE]] [[INSTRUCTIONS]] [[QUESTIONS]] [[ANSWERS]] format. Remove duplicate or near-duplicate items. Keep the requested grammar target strong.`
+      : `[다양성 복구]\n반드시 [[TITLE]] [[INSTRUCTIONS]] [[QUESTIONS]] [[ANSWERS]] 형식으로만 복구된 워크북을 반환하라. 중복 또는 유사중복 문항을 제거하고 새 문장으로 교체하라. 요청 문법은 강하게 유지하라.`}`;
+
+    const repairUserPrompt = `${buildUserPrompt(input)}\n\n[CURRENT BROKEN WORKSHEET]\n${formatted?.fullText || ""}\n\n[FAILURE REASON]\n${JSON.stringify(check || {})}`;
+    const repairedRaw = await callOpenAI(repairSystemPrompt, repairUserPrompt, {
+      temperature: 0.22,
+      max_tokens: 8000,
+    });
+    return formatMagicResponse(repairedRaw, input);
+  }
+
+  repairFormattedMagicOutput = async function patchedRepairFormattedMagicOutput(formatted, input, check) {
+    let repaired = formatted;
+
+    if (__origRepairFormattedMagicOutput) {
+      try {
+        repaired = await __origRepairFormattedMagicOutput(formatted, input, check);
+      } catch (error) {
+        console.error("legacy repairFormattedMagicOutput failed:", error);
+      }
+    }
+
+    const repairedCheck = isGenerationSuccessful(repaired, input);
+    if (repairedCheck?.ok) return repaired;
+
+    if (/duplicate|reuse|near_duplicate/.test(String(repairedCheck?.reason || ""))) {
+      try {
+        const diversityRepaired = await attemptDiversityRepair(repaired, input, repairedCheck);
+        const diversityCheck = isGenerationSuccessful(diversityRepaired, input);
+        if (diversityCheck?.ok) return diversityRepaired;
+      } catch (error) {
+        console.error("attemptDiversityRepair failed:", error);
+      }
+    }
+
+    return repaired;
+  };
+
+  console.log(`[${PATCH_TAG}] loaded`);
+})();
