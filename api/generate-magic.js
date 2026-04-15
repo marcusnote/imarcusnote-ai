@@ -4861,3 +4861,287 @@ ${recentList ? `[최근 사용 패턴 - 재사용 금지]\n${recentList}` : ""}
 
   console.log(`[${PATCH_TAG}] loaded`);
 })();
+
+
+/* =========================
+   v8.2.3 QUALITY + CSAT ADVANCED PATCH
+   ========================= */
+(function qualityCsatPatch(){
+  const PATCH_TAG = "v8.2.3-quality-csat";
+
+  const __prevBuildSystemPrompt = typeof buildSystemPrompt === "function" ? buildSystemPrompt : null;
+  const __prevBuildUserPrompt = typeof buildUserPrompt === "function" ? buildUserPrompt : null;
+  const __prevIsGenerationSuccessful = typeof isGenerationSuccessful === "function" ? isGenerationSuccessful : null;
+  const __prevFormatMagicResponse = typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+  const __prevRepairFormattedMagicOutput = typeof repairFormattedMagicOutput === "function" ? repairFormattedMagicOutput : null;
+
+  function qSafe(value) {
+    return String(value || "").trim();
+  }
+
+  function extractAnswerBodiesLocal(text = "") {
+    return qSafe(text)
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter((line) => /^\d+[.)-]?\s+/.test(line))
+      .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+      .filter(Boolean);
+  }
+
+  function qNormalize(text = "") {
+    return qSafe(text)
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, " ")
+      .replace(/\b(a|an|the|this|that|these|those|my|your|his|her|our|their)\b/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function hasBadNaturalPattern(text = "") {
+    const s = qSafe(text);
+    const lower = s.toLowerCase();
+    const patterns = [
+      /\bno\s+thing\b/i,
+      /\bopportunity\s+to\s+get\b/i,
+      /\bskill\s+to\s+learn\b/i,
+      /\btime\s+to\s+send\b/i,
+      /\bthings\s+to\s+do\s+to\s+go\s+out\b/i,
+      /\ba\s+friend\s+to\s+hang\s+out\s+with\s+me\b/i,
+      /\ba\s+person\s+to\s+help\s+me\b/i,
+      /\bopportunity\s+to\s+experience\b/i,
+      /\bis\s+friends\b/i,
+      /\bhas\s+been\s+won\b/i,
+      /\bhas\s+experience\s+in\s+solving\b/i,
+      /\bhave\s+met\s+often\s+for\s+\d+/i,
+      /\btraveled\s+for\s+\d+\s+days\b/i,
+      /\bfelt\s+\w+\s+after\s+he\s+saw\b/i,
+      /\bfelt\s+\w+\s+after\s+i\s+finished\b/i,
+      /\bthing\s+to\s+do\b/i,
+      /\bthings\s+to\s+learn\b/i
+    ];
+    if (patterns.some((re) => re.test(s))) return true;
+
+    if (/\b(?:something|anything|nothing)\s+to\s+do\s+(?:often|every day|always)\b/i.test(s)) return true;
+    if (/\bexperience\b/.test(lower) && /\bopportunity\s+to\s+experience\b/.test(lower)) return true;
+    return false;
+  }
+
+  function similarityScore(a = "", b = "") {
+    const A = qNormalize(a).split(" ").filter(Boolean);
+    const B = qNormalize(b).split(" ").filter(Boolean);
+    if (!A.length || !B.length) return 0;
+    const aSet = new Set(A);
+    const bSet = new Set(B);
+    let overlap = 0;
+    for (const token of aSet) if (bSet.has(token)) overlap += 1;
+    return overlap / Math.max(aSet.size, bSet.size, 1);
+  }
+
+  function removeNearDuplicates(lines = []) {
+    const kept = [];
+    for (const line of lines) {
+      const dup = kept.some((prev) => similarityScore(prev, line) >= 0.72);
+      if (!dup) kept.push(line);
+    }
+    return kept;
+  }
+
+  function getFocusLocal(input = {}) {
+    if (input && input.grammarFocus) return input.grammarFocus;
+    if (typeof detectGrammarFocus === "function") {
+      return detectGrammarFocus([input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" "));
+    }
+    return {};
+  }
+
+  function passiveCoverageReport(lines = []) {
+    let passive = 0;
+    let activeAllowed = 0;
+    for (const line of lines) {
+      if (/\b(am|is|are|was|were|be|been|being|can be|will be|has been|have been)\b[^.]{0,40}\b([a-z]+ed|known|built|made|given|seen|written|held|sent|won|found|taught|bought|caught|left|felt|read|sold|paid|shown|taken|done|prepared|completed|reviewed|translated|decorated|offered|reported|painted|solved|loved|borrowed|sung)\b/i.test(line)) {
+        passive += 1;
+      } else {
+        activeAllowed += 1;
+      }
+    }
+    return { passive, activeAllowed, total: lines.length };
+  }
+
+  function hasCsatAbstractSignal(text = "") {
+    return /\b(principle|perspective|interpretation|responsibility|ethics|identity|social|society|education|environment|communication|motivation|influence|achievement|growth|decision|evidence|policy|value|belief|awareness|cooperation|creativity|diversity|justice|community|technology|culture|critical)\b/i.test(text);
+  }
+
+  function buildCsatAdvancedBlock(input = {}) {
+    const isHigh = input?.level === "high" || /고1|고2|고3|고등|수능/.test(String(input?.gradeLabel || "") + " " + String(input?.userPrompt || "") + " " + String(input?.topic || ""));
+    const isExtreme = input?.difficulty === "extreme" || /수능|고난도|최고난도/.test(String(input?.userPrompt || "") + " " + String(input?.topic || ""));
+    if (!isHigh && !isExtreme) return "";
+    return input?.language === "en"
+      ? `[CSAT-LEVEL ADVANCED CONTENT]
+- For high-school and CSAT-level requests, sentence meaning must stimulate thinking, not remain at shallow daily-life level.
+- Prefer themes such as education, ethics, responsibility, identity, environment, communication, social change, decision-making, evidence, interpretation, and personal growth.
+- Avoid childish daily-life content dominating the set: pizza, toys, pets, simple hobbies, or ultra-basic family chatter.
+- At least half of the set should contain abstract or reflective meaning.
+- Keep the grammar target visible while raising cognitive depth.`
+      : `[수능형 고난도 내용 규칙]
+- 고등부와 수능형 요청에서는 내용 자체가 사고를 자극해야 하며, 단순 생활영어 수준에 머물지 말 것.
+- 교육, 윤리, 책임, 정체성, 환경, 소통, 사회 변화, 의사결정, 근거, 해석, 성장 같은 주제를 우선한다.
+- 피자, 장난감, 애완동물, 단순 취미, 지나치게 가벼운 가족 잡담이 세트를 지배하지 않게 할 것.
+- 최소 절반 이상의 문항은 추상적이거나 성찰적인 의미를 담아야 한다.
+- 문법 목표는 유지하되, 사고 깊이는 한 단계 이상 높일 것.`;
+  }
+
+  function buildNaturalnessBlock(input = {}) {
+    return input?.language === "en"
+      ? `[NATURAL ENGLISH LOCK]
+- Reject awkward textbook-English such as "no thing", "opportunity to get", "a person to help me", or other literal-but-unnatural combinations.
+- Prefer fluent classroom English that a teacher would actually accept as a model answer.
+- If a noun choice feels weak, replace it silently with a better noun.
+- If a prompt is semantically odd, repair the meaning before finalizing the answer.`
+      : `[자연스러운 영어 잠금]
+- "no thing", "opportunity to get", "a person to help me" 같은 직역형 어색한 영어는 모두 폐기할 것.
+- 교사가 모범답안으로 바로 제시할 수 있는 자연스러운 영어를 우선한다.
+- 명사 선택이 약하면 더 좋은 명사로 조용히 교체할 것.
+- 제시문 의미가 어색하면, 최종 정답 단계에서 자연스럽게 보정할 것.`;
+  }
+
+  buildSystemPrompt = function buildSystemPrompt_v823(input = {}) {
+    const base = __prevBuildSystemPrompt ? __prevBuildSystemPrompt(input) : "";
+    return [base, buildNaturalnessBlock(input), buildCsatAdvancedBlock(input)].filter(Boolean).join("\n\n");
+  };
+
+  buildUserPrompt = function buildUserPrompt_v823(input = {}) {
+    const base = __prevBuildUserPrompt ? __prevBuildUserPrompt(input) : "";
+    const extra = input?.language === "en"
+      ? `[QUALITY TARGET]
+- Keep sentence families varied across the set.
+- Do not repeat the same noun frame too often, especially book to read / something to do / things to do.
+- Use stronger noun variety: article, task, approach, opportunity, perspective, strategy, place, reason, evidence, plan, discussion, project.
+- For high-school requests, include reflective or academic meaning regularly.`
+      : `[품질 목표]
+- 세트 전체에서 문장 계열을 다양하게 유지할 것.
+- 특히 book to read / something to do / things to do 같은 명사 틀을 과도하게 반복하지 말 것.
+- article, task, approach, opportunity, perspective, strategy, place, reason, evidence, plan, discussion, project 같은 더 강한 명사 다양성을 사용할 것.
+- 고등부 요청에서는 사고형·학술형 의미를 꾸준히 포함할 것.`;
+    return [base, extra].filter(Boolean).join("\n\n");
+  };
+
+  function qualityAudit(formatted = {}, input = {}) {
+    const lines = extractAnswerBodiesLocal(formatted?.answerSheet || "");
+    if (!lines.length) {
+      return { ok: false, reason: "no_answers" };
+    }
+
+    const badLines = lines.filter((line) => hasBadNaturalPattern(line));
+    if (badLines.length) {
+      return { ok: false, reason: "unnatural_english", details: badLines.slice(0, 5) };
+    }
+
+    const deduped = removeNearDuplicates(lines);
+    if (deduped.length < Math.max(5, Math.ceil(lines.length * 0.72))) {
+      return { ok: false, reason: "near_duplicate_density", details: lines.slice(0, 8) };
+    }
+
+    const focus = getFocusLocal(input);
+    if (focus?.isPassive) {
+      const report = passiveCoverageReport(lines);
+      const activeRatio = report.total ? report.activeAllowed / report.total : 0;
+      if (activeRatio > 0.18) {
+        return { ok: false, reason: "passive_coverage_too_low", details: report };
+      }
+    }
+
+    if (focus?.isPresentPerfect) {
+      const invalid = lines.filter((line) => {
+        if (typeof hasInvalidPastTimeMarker === "function" && hasInvalidPastTimeMarker(line)) return true;
+        if (!/\b(have|has)\b/i.test(line)) return true;
+        return /\bhas\s+experience\b|\bafter\b/i.test(line);
+      });
+      if (invalid.length) {
+        return { ok: false, reason: "present_perfect_quality", details: invalid.slice(0, 5) };
+      }
+    }
+
+    const isHigh = input?.level === "high" || /고1|고2|고3|고등|수능/.test(String(input?.gradeLabel || "") + " " + String(input?.topic || "") + " " + String(input?.userPrompt || ""));
+    if (isHigh) {
+      const abstractCount = lines.filter((line) => hasCsatAbstractSignal(line)).length;
+      if (abstractCount < Math.ceil(lines.length * 0.22)) {
+        return { ok: false, reason: "csat_depth_low", details: { abstractCount, total: lines.length } };
+      }
+    }
+
+    return { ok: true };
+  }
+
+  formatMagicResponse = function formatMagicResponse_v823(rawText, input) {
+    const formatted = __prevFormatMagicResponse ? __prevFormatMagicResponse(rawText, input) : {
+      title: "",
+      instructions: "",
+      questions: "",
+      answerSheet: qSafe(rawText),
+      fullText: qSafe(rawText),
+      actualCount: 0,
+    };
+
+    const lines = extractAnswerBodiesLocal(formatted?.answerSheet || "");
+    const filtered = removeNearDuplicates(lines).filter((line) => !hasBadNaturalPattern(line));
+    if (filtered.length && filtered.length !== lines.length) {
+      formatted.answerSheet = filtered.map((line, idx) => `${idx + 1}. ${line}`).join("\n");
+      if (typeof countWorksheetItems === "function") {
+        formatted.actualCount = countWorksheetItems(formatted.questions || "") || filtered.length;
+      } else {
+        formatted.actualCount = filtered.length;
+      }
+      formatted.fullText = [formatted.title, formatted.instructions, formatted.questions, input?.language === "en" ? "Answers" : "정답", formatted.answerSheet]
+        .filter(Boolean)
+        .join("\n\n");
+    }
+    return formatted;
+  };
+
+  isGenerationSuccessful = function isGenerationSuccessful_v823(formatted, input) {
+    const base = __prevIsGenerationSuccessful ? __prevIsGenerationSuccessful(formatted, input) : { ok: true };
+    if (!base?.ok) return base;
+    return qualityAudit(formatted, input);
+  };
+
+  async function attemptQualityRepair(formatted = {}, input = {}, failure = {}) {
+    if (typeof callOpenAI !== "function") return formatted;
+    const repairSystemPrompt = `${buildSystemPrompt(input)}\n\n${input?.language === "en"
+      ? `[QUALITY REPAIR]\nReturn only [[TITLE]] [[INSTRUCTIONS]] [[QUESTIONS]] [[ANSWERS]]. Replace awkward English, near-duplicates, and shallow high-school content. Keep the grammar target strong.`
+      : `[품질 복구]\n반드시 [[TITLE]] [[INSTRUCTIONS]] [[QUESTIONS]] [[ANSWERS]] 형식으로만 반환하라. 어색한 영어, 유사중복, 얕은 고등부 내용을 새 문장으로 교체하라. 문법 목표는 강하게 유지하라.`}`;
+    const repairUserPrompt = `${buildUserPrompt(input)}\n\n[CURRENT WORKSHEET]\n${formatted?.fullText || ""}\n\n[FAILURE]\n${JSON.stringify(failure || {})}`;
+    const repairedRaw = await callOpenAI(repairSystemPrompt, repairUserPrompt, {
+      temperature: 0.28,
+      max_tokens: 8000,
+    });
+    return formatMagicResponse(repairedRaw, input);
+  }
+
+  repairFormattedMagicOutput = async function repairFormattedMagicOutput_v823(formatted, input, failure) {
+    let repaired = formatted;
+    if (__prevRepairFormattedMagicOutput) {
+      try {
+        repaired = await __prevRepairFormattedMagicOutput(formatted, input, failure);
+      } catch (error) {
+        console.error("legacy repairFormattedMagicOutput failed:", error);
+      }
+    }
+
+    const check = qualityAudit(repaired, input);
+    if (check?.ok) return repaired;
+
+    if (/unnatural_english|near_duplicate_density|passive_coverage_too_low|present_perfect_quality|csat_depth_low/.test(String(check?.reason || ""))) {
+      try {
+        const repairedAgain = await attemptQualityRepair(repaired, input, check);
+        const finalCheck = qualityAudit(repairedAgain, input);
+        if (finalCheck?.ok) return repairedAgain;
+      } catch (error) {
+        console.error("attemptQualityRepair failed:", error);
+      }
+    }
+
+    return repaired;
+  };
+
+  console.log(`[${PATCH_TAG}] loaded`);
+})();
