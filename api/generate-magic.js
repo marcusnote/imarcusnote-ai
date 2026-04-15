@@ -286,7 +286,7 @@ function detectGrammarFocus(text = "") {
     isWhatRelativePronoun,
     isToInfinitiveAdjective,
   };
-
+}
 
 const CHAPTER_EXPANSION_LIBRARY = {
   relative_pronoun_what: {
@@ -481,8 +481,6 @@ function hasBlockedChapterLeak(answerText = "", input = {}) {
 
   return false;
 }
-}
-
 
 function sanitizeEngine(value) {
   const v = sanitizeString(value).toLowerCase();
