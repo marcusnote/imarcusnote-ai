@@ -286,6 +286,201 @@ function detectGrammarFocus(text = "") {
     isWhatRelativePronoun,
     isToInfinitiveAdjective,
   };
+
+
+const CHAPTER_EXPANSION_LIBRARY = {
+  relative_pronoun_what: {
+    en: `[Chapter Blueprint: Relative Pronoun What]
+- Core ratio: about 80% target what-clause items, about 20% mixed support or application items.
+- Preferred answer families: What I need is ..., What she said was ..., What I learned helped me ....
+- Prefer Korean prompts that naturally mean "~하는 것" or "~한 것은".
+- Keep lexical variety across need / say / learn / enjoy / want / suggest / create / write.`,
+    ko: `[챕터 청사진: 관계대명사 what]
+- 권장 비율: 핵심 what절 80% 내외, 혼합 적용 20% 내외.
+- 정답 계열은 What I need is ..., What she said was ..., What I learned helped me ...를 우선한다.
+- 한국어 제시문은 "~하는 것", "~한 것은" 의미가 자연스럽게 드러나게 한다.
+- need / say / learn / enjoy / want / suggest / create / write 계열을 고르게 섞어 반복을 줄인다.`
+  },
+  relative_pronoun_non_restrictive: {
+    en: `[Chapter Blueprint: Non-Restrictive Relative Clauses]
+- Core ratio: about 80% comma-based non-restrictive items.
+- Use already-identified antecedents such as my brother, our teacher, this book, this city, this movie.
+- Main answer family: Noun, who/which ..., main clause.
+- Keep the predicate natural after the comma-clause.`,
+    ko: `[챕터 청사진: 관계대명사의 계속적 용법]
+- 권장 비율: 쉼표가 보이는 계속적 용법 80% 내외.
+- my brother, our teacher, this book, this city, this movie 같은 특정 선행사를 우선한다.
+- 정답 계열은 "선행사, who/which ..., 주절"을 기본으로 한다.
+- 쉼표 뒤 부가설명 뒤에는 자연스러운 주절 서술을 유지한다.`
+  },
+  relative_pronoun_general: {
+    en: `[Chapter Blueprint: Relative Pronouns]
+- Core ratio: about 75% noun + relative clause target items.
+- Balance people, things, places, and school situations.
+- Vary who / which / that / whose naturally by antecedent.`,
+    ko: `[챕터 청사진: 관계대명사]
+- 권장 비율: 명사 + 관계절 핵심 문항 75% 내외.
+- 사람, 사물, 장소, 학교 상황을 고르게 배치한다.
+- 선행사에 따라 who / which / that / whose를 자연스럽게 분배한다.`
+  },
+  relative_pronoun_objective: {
+    en: `[Chapter Blueprint: Objective Relative Pronouns]
+- Keep object-role relative clauses visible.
+- Prefer answer families like the book that I bought, the student whom we met, the movie which she recommended.`,
+    ko: `[챕터 청사진: 목적격 관계대명사]
+- 관계대명사가 목적격 역할을 하는 구조가 분명히 보여야 한다.
+- the book that I bought, the student whom we met, the movie which she recommended 같은 계열을 우선한다.`
+  },
+  relative_adverb: {
+    en: `[Chapter Blueprint: Relative Adverbs]
+- Core ratio: about 75% items with when / where / why.
+- Prefer answer families like the day when ..., the place where ..., the reason why ....`,
+    ko: `[챕터 청사진: 관계부사]
+- 권장 비율: when / where / why가 보이는 핵심 문항 75% 내외.
+- the day when ..., the place where ..., the reason why ... 계열을 우선한다.`
+  },
+  to_infinitive: {
+    en: `[Chapter Blueprint: To-Infinitives]
+- Core ratio: about 75% explicit to + base verb items.
+- Mix noun, adjective, and adverbial uses only when appropriate to the request.
+- Avoid gerund-dominant sets.`,
+    ko: `[챕터 청사진: to부정사]
+- 권장 비율: to + 동사원형이 분명히 보이는 핵심 문항 75% 내외.
+- 요청에 맞을 때만 명사적·형용사적·부사적 용법을 섞는다.
+- 동명사 중심 세트로 흐르지 않게 한다.`
+  },
+  to_infinitive_adjective: {
+    en: `[Chapter Blueprint: Adjectival To-Infinitives]
+- Core ratio: about 80% noun + to-verb modifier items.
+- Preferred nouns: book, thing, place, time, work, task, chance, article, activity, plan, skill.
+- Mixed support items may appear, but do not allow purpose-only or be going to patterns to dominate.`,
+    ko: `[챕터 청사진: to부정사의 형용사적 용법]
+- 권장 비율: 명사 + to부정사 수식 핵심 문항 80% 내외.
+- 선호 명사: book, thing, place, time, work, task, chance, article, activity, plan, skill.
+- 혼합 문항은 허용하되, 단순 목적 용법이나 be going to 계열이 주류가 되지 않게 한다.`
+  },
+  gerund: {
+    en: `[Chapter Blueprint: Gerunds]
+- Core ratio: about 75% gerund-as-noun items.
+- Balance object gerunds, subject gerunds, and preposition + gerund when natural.
+- Do not let infinitive patterns dominate.`,
+    ko: `[챕터 청사진: 동명사]
+- 권장 비율: 동사를 명사처럼 쓰는 핵심 문항 75% 내외.
+- 목적어 동명사, 주어 동명사, 전치사 + 동명사를 자연스럽게 배치한다.
+- to부정사 패턴이 세트를 지배하지 않게 한다.`
+  },
+  passive: {
+    en: `[Chapter Blueprint: Passive Voice]
+- Core ratio: about 80% visible passive items.
+- Balance present, past, modal passive, future passive, and progressive passive when suitable.
+- Prefer verbs that sound natural in passive classroom English: write, build, invite, complete, translate, prepare, hold, review, solve, paint, break, announce.
+- Avoid weak passive combinations such as was helped by unless the full phrase is naturally repaired.`,
+    ko: `[챕터 청사진: 수동태]
+- 권장 비율: 수동태가 눈에 보이는 핵심 문항 80% 내외.
+- 현재·과거·조동사 수동·미래 수동·진행 수동을 적절히 분산한다.
+- write, build, invite, complete, translate, prepare, hold, review, solve, paint, break, announce 같이 수동태로 자연스러운 동사를 우선한다.
+- was helped by 같은 약한 수동 결합은 자연스럽게 보정되지 않으면 사용하지 않는다.`
+  },
+  present_perfect: {
+    en: `[Chapter Blueprint: Present Perfect]
+- Core ratio: about 80% valid present perfect items.
+- Balance experience, continuation, completion, and result.
+- Prefer since / for / already / yet / recently / just / before / never when natural.`,
+    ko: `[챕터 청사진: 현재완료]
+- 권장 비율: 현재완료가 분명한 핵심 문항 80% 내외.
+- 경험·계속·완료·결과 의미를 고르게 배치한다.
+- since / for / already / yet / recently / just / before / never를 자연스럽게 활용한다.`
+  },
+  comparative: {
+    en: `[Chapter Blueprint: Comparatives]
+- Core ratio: about 75% comparative target items.
+- Use complete comparison frames such as taller than, more useful than, less expensive than.
+- Vary adjective comparatives and adverb comparatives.`,
+    ko: `[챕터 청사진: 비교급]
+- 권장 비율: 비교급 핵심 문항 75% 내외.
+- taller than, more useful than, less expensive than처럼 완전한 비교 틀을 유지한다.
+- 형용사 비교급과 부사 비교급을 적절히 섞는다.`
+  },
+  superlative: {
+    en: `[Chapter Blueprint: Superlatives]
+- Core ratio: about 75% superlative target items.
+- Prefer complete noun phrases such as the tallest boy in the class, the most useful tool for students.
+- Keep comparison range visible with in / of / among when natural.`,
+    ko: `[챕터 청사진: 최상급]
+- 권장 비율: 최상급 핵심 문항 75% 내외.
+- the tallest boy in the class, the most useful tool for students 같은 완전한 명사구를 우선한다.
+- in / of / among 등 비교 범위를 자연스럽게 드러낸다.`
+  },
+  participial_modifier: {
+    en: `[Chapter Blueprint: Participial Modifiers]
+- Core ratio: about 80% noun-modifying participle items.
+- Balance present participle modifiers and past participle modifiers.
+- Prefer answer families like the boy running fast, the book written in English, the students waiting outside.`,
+    ko: `[챕터 청사진: 분사의 한정적 용법]
+- 권장 비율: 분사가 명사를 꾸미는 핵심 문항 80% 내외.
+- 현재분사 수식과 과거분사 수식을 균형 있게 배치한다.
+- the boy running fast, the book written in English, the students waiting outside 같은 계열을 우선한다.`
+  },
+  causative: {
+    en: `[Chapter Blueprint: Causatives]
+- Core ratio: about 75% make / let / have / help / get target items.
+- Balance force, permission, arrangement, assistance, and causation meanings.`,
+    ko: `[챕터 청사진: 사역동사]
+- 권장 비율: make / let / have / help / get 핵심 문항 75% 내외.
+- 강제, 허용, 시킴, 도움, 유발 의미를 고르게 배치한다.`
+  },
+  so_that_purpose: {
+    en: `[Chapter Blueprint: so that Purpose]
+- Core ratio: about 80% so that purpose items.
+- Prefer complete purpose clauses with can / could / will / would + full verb phrase.
+- Keep the purpose meaning explicit and teachable.`,
+    ko: `[챕터 청사진: so that 구문 목적]
+- 권장 비율: so that 목적 핵심 문항 80% 내외.
+- can / could / will / would 뒤에 완전한 동사구가 오는 목적절을 우선한다.
+- 목적 의미가 분명하고 수업용으로 가르칠 수 있어야 한다.`
+  }
+};
+
+function buildChapterExpansionBlueprintBlock(input = {}) {
+  const focus = input?.grammarFocus || detectGrammarFocus(
+    [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+  );
+  const key = focus?.isToInfinitiveAdjective ? "to_infinitive_adjective" : (focus?.chapterKey || "general");
+  const entry = CHAPTER_EXPANSION_LIBRARY[key];
+  if (!entry) return "";
+  return input?.language === "en" ? entry.en : entry.ko;
+}
+
+function hasBlockedChapterLeak(answerText = "", input = {}) {
+  const focus = input?.grammarFocus || detectGrammarFocus(
+    [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+  );
+  const lines = String(answerText || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line))
+    .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+    .filter(Boolean);
+
+  if (!lines.length) return false;
+
+  if (focus?.isToInfinitiveAdjective) {
+    const leaking = lines.filter((line) => /\bgoing to be\b/i.test(line)).length;
+    return leaking >= 2;
+  }
+
+  if (focus?.isPassive) {
+    const leaking = lines.filter((line) => /\b(?:am|is|are|was|were|been)\s+helped\s+by\b/i.test(line)).length;
+    return leaking >= 1;
+  }
+
+  if (focus?.isWhatRelativePronoun) {
+    const leaking = lines.filter((line) => /\bthe thing that\b/i.test(line)).length;
+    return leaking >= Math.max(2, Math.ceil(lines.length * 0.2));
+  }
+
+  return false;
+}
 }
 
 
@@ -592,6 +787,9 @@ function buildMarcusChapterExpansionBlock(input = {}) {
 `.trim());
   }
 
+  const blueprint = buildChapterExpansionBlueprintBlock(input);
+  if (blueprint) blocks.push(blueprint);
+
   return blocks.filter(Boolean).join("\n");
 }
 
@@ -637,6 +835,14 @@ function hasMildChapterCoverage(text = "", input = {}) {
       /\b(who|which|that|whom|whose)\b/i
     );
     return ratio >= 0.35;
+  }
+
+  if (focus?.isRelativeAdverb) {
+    const ratio = countChapterSignalRatio(
+      answers,
+      /\b(where|when|why)\b/i
+    );
+    return ratio >= 0.3;
   }
 
   if (focus?.isToInfinitiveAdjective) {
@@ -2575,6 +2781,7 @@ ${buildTargetCoverageRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
+${buildS14PrecisionUpgradeBlock(input)}
 
 Output format:
 [[TITLE]]
@@ -3546,6 +3753,7 @@ function validateWritingOutput(text = "", input = {}) {
   }
 
   if (!hasMildChapterCoverage(raw, input)) return false;
+  if (hasBlockedChapterLeak(extractSection(raw, "[[ANSWERS]]", null) || raw, input)) return false;
 
   if (input?.mode === "abcstarter" || input?.level === "elementary") {
     const answerLines = String(text || "")
