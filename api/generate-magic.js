@@ -51,6 +51,79 @@ function sanitizeCount(value) {
   return clamp(Math.round(num), 5, 30);
 }
 
+function sanitizeRefillCount(value) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return 0;
+  return clamp(Math.round(num), 0, 10);
+}
+
+function sanitizeRemainingQuestions(list) {
+  if (!Array.isArray(list)) return [];
+  return list
+    .map((v) => String(v || "").replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .slice(0, 50);
+}
+
+function buildRefillPromptBlock(body = {}, input = {}) {
+  if (!body || body.isRefill !== true) return "";
+  const refillCount = sanitizeRefillCount(body.refillCount);
+  const remaining = sanitizeRemainingQuestions(body.remainingQuestions);
+  if (refillCount <= 0) return "";
+
+  const joined = remaining.length
+    ? remaining.map((line, idx) => `${idx + 1}. ${line}`).join("\n")
+    : "(remaining questions unavailable)";
+
+  return input.language === "en"
+    ? `
+[REFILL GENERATION MODE]
+- This is NOT a full worksheet regeneration.
+- Generate exactly ${refillCount} NEW items only.
+- Keep the same worksheet identity, difficulty, tone, and grammar focus.
+- Do not repeat or closely imitate any of the remaining questions below.
+- Return only the newly generated ${refillCount} items with their matching answers.
+
+[REMAINING QUESTIONS TO AVOID]
+${joined}
+`.trim()
+    : `
+[보충 생성 모드]
+- 이번 요청은 전체 재생성이 아니다.
+- 정확히 ${refillCount}개의 새 문항만 생성할 것.
+- 기존 워크시트의 난도, 톤, 문법 초점, 출력 정체성을 유지할 것.
+- 아래 남아 있는 문항들과 중복되거나 매우 유사한 문항을 만들지 말 것.
+- 새로 추가할 ${refillCount}문항과 그에 맞는 정답만 반환할 것.
+
+[중복 금지용 기존 문항]
+${joined}
+`.trim();
+}
+
+function validateRefillOutput(formatted = {}, input = {}) {
+  if (!input?.isRefill) return true;
+  const expected = Number(input?.refillCount || input?.count || 0);
+  if (expected <= 0) return false;
+
+  const questionCount = String(formatted?.questions || formatted?.worksheet || formatted?.worksheetHtml || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line))
+    .length;
+
+  const answerCount = String(formatted?.answerSheet || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line))
+    .length;
+
+  if (questionCount && questionCount !== expected) return false;
+  if (answerCount && answerCount !== expected) return false;
+  if (!String(formatted?.answerSheet || "").trim()) return false;
+
+  return true;
+}
+
 function sanitizeMp(value, fallback = 5) {
   const num = Number(value);
   if (!Number.isFinite(num)) return fallback;
@@ -554,8 +627,12 @@ function normalizeInput(body = {}) {
       ? body.grammarOptions
       : null;
 
+  const refillCount = sanitizeRefillCount(body.refillCount);
+
   const effectiveCount =
-    intentMode === "concept"
+    body.isRefill === true && refillCount > 0
+      ? refillCount
+      : intentMode === "concept"
       ? 3
       : intentMode === "concept+training"
       ? 5
@@ -590,6 +667,9 @@ function normalizeInput(body = {}) {
     intentMode,
     grammarFocus,
     grammarOptions,
+    isRefill: body.isRefill === true && refillCount > 0,
+    refillCount,
+    remainingQuestions: sanitizeRemainingQuestions(body.remainingQuestions),
     magicStyle: sanitizeString(body.magicStyle || (mode === "writing" ? "marcus_magic" : "")),
     wordCountMode: sanitizeString(body.wordCountMode || (mode === "writing" ? "auto" : "")),
   };
@@ -3070,6 +3150,7 @@ ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 ${buildPresentPerfectStrictFilterBlock(input)}
 ${buildMarcusChapterExpansionBlock(input)}
+${buildRefillPromptBlock(input.__rawBody || {}, input)}
 ${buildRelaxedRepairValidationBlock(input)}
 ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
@@ -3123,6 +3204,7 @@ ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 ${buildPresentPerfectStrictFilterBlock(input)}
 ${buildMarcusChapterExpansionBlock(input)}
+${buildRefillPromptBlock(input.__rawBody || {}, input)}
 ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
 ${buildMarcusSequencePromptBlock(input)}
@@ -3558,6 +3640,7 @@ function validateServiceSafeOutput(formatted = {}, input = {}) {
   const requestedCount = Number(input?.count || 0);
   const actualCount = Number(formatted.actualCount || countWorksheetItems(questions) || 0);
   if (requestedCount > 0 && actualCount < Math.max(1, Math.ceil(requestedCount * 0.5))) return false;
+  if (!validateRefillOutput(formatted, input)) return false;
   return true;
 }
 
@@ -3619,6 +3702,10 @@ function isGenerationSuccessful(formatted, input) {
         minimumAcceptable,
       };
     }
+  }
+
+  if (!validateRefillOutput(formatted, input)) {
+    return { ok: false, reason: "refill_count_mismatch" };
   }
 
   return { ok: true };
@@ -4095,6 +4182,7 @@ module.exports = async function handler(req, res) {
   if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
   try {
     const input = normalizeInput(req.body || {});
+    input.__rawBody = req.body || {};
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
