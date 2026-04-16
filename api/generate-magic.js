@@ -5575,3 +5575,159 @@ module.exports = async function handler_v83_strict(req, res) {
     return json(res, 500, { success: false, message: "매직 워크북 생성에 실패했습니다.", detail: error.message });
   }
 };
+
+
+/* ========================================================================
+   Marcusnote Magic v8.3.2 Balanced Parity Handler Override
+   - Overrides strict handler with near-miss parity rebalance
+   - Uses failed formatted output and rebuilds answer sheet once
+   ======================================================================== */
+function __mn832RebalanceFailedFormatted(failedFormatted = {}, input = {}) {
+  const formatted = failedFormatted && typeof failedFormatted === "object" ? { ...failedFormatted } : null;
+  if (!formatted) return { ok: false, reason: "formatted_missing" };
+
+  const questions = String(formatted.questions || "").trim();
+  if (!questions) return { ok: false, reason: "questions_missing" };
+
+  const rebuiltAnswers = normalizeMagicAnswerSheet(
+    String(formatted.answerSheet || ""),
+    questions,
+    input
+  );
+
+  const rebuilt = {
+    ...formatted,
+    answerSheet: rebuiltAnswers
+  };
+
+  const parts = [rebuilt.title, rebuilt.instructions, rebuilt.questions].filter(Boolean);
+  rebuilt.content = parts.join("\n\n");
+  rebuilt.fullText = [
+    ...parts,
+    ((input.language === "en" ? "Answers\n" : "정답\n") + (rebuilt.answerSheet || ""))
+  ].filter(Boolean).join("\n\n");
+  rebuilt.actualCount = countWorksheetItems(rebuilt.questions || "");
+
+  const strictAudit = __mn83StrictAudit(rebuilt, input);
+  rebuilt.itemPairs = strictAudit?.pairs || __mn83BuildItemPairs(rebuilt.questions || "", rebuilt.answerSheet || "");
+  rebuilt.pairIntegrity = {
+    ok: Boolean(strictAudit?.ok),
+    reason: strictAudit?.reason || "",
+    questionCount: strictAudit?.qCount ?? countWorksheetItems(rebuilt.questions || ""),
+    answerCount: strictAudit?.aCount ?? countAnswerLines(rebuilt.answerSheet || "")
+  };
+
+  const validationOk = validateWritingOutput(`[[QUESTIONS]]\n${rebuilt.questions || ""}\n[[ANSWERS]]\n${rebuilt.answerSheet || ""}`, input);
+
+  if (validationOk && strictAudit.ok) {
+    return { ok: true, formatted: rebuilt };
+  }
+
+  return {
+    ok: false,
+    reason: strictAudit?.reason || (!validationOk ? "validation_failed" : "rebalance_failed"),
+    formatted: rebuilt
+  };
+}
+
+module.exports = async function handler_v832_balanced(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
+
+  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
+
+  try {
+    const input = normalizeInput(req.body || {});
+    input.__rawBody = req.body || {};
+
+    if (!input.userPrompt && !input.topic) {
+      return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
+    }
+
+    const mpState = await prepareMpState(req);
+    if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
+      return json(res, 403, {
+        success: false,
+        error: "INSUFFICIENT_MP",
+        message: "MP가 부족합니다.",
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: mpState.currentMp,
+        trialGranted: Boolean(mpState.trialGranted),
+        mpSyncEnabled: Boolean(mpState.enabled),
+        mpSyncReason: mpState.reason || "unknown",
+        mp: {
+          requiredMp: mpState.requiredMp,
+          currentMp: mpState.currentMp,
+          remainingMp: mpState.currentMp,
+          deducted: false,
+          trialGranted: Boolean(mpState.trialGranted),
+        },
+      });
+    }
+
+    const generation = await __mn83TryStrictGenerate(input, input?.isRefill ? 2 : 3);
+
+    let finalGeneration = generation;
+    if (!generation.ok && ["exact_parity_failed", "pair_answer_missing", "answers_missing_strict"].includes(String(generation?.failure?.reason || ""))) {
+      const rebalanced = __mn832RebalanceFailedFormatted(generation.formatted, input);
+      if (rebalanced.ok) {
+        finalGeneration = {
+          ok: true,
+          formatted: rebalanced.formatted,
+          attemptsUsed: (generation?.attemptsUsed || generation?.failure?.attempt || 0),
+          repairedBy: "balanced_parity_rebuild"
+        };
+      }
+    }
+
+    if (!finalGeneration.ok) {
+      return json(res, 502, {
+        success: false,
+        message: input?.isRefill
+          ? "보충 생성 결과의 정답 품질 또는 개수가 불안정하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요."
+          : "매직 정답 품질 검수에서 실패하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
+        detail: finalGeneration?.failure?.reason || "strict_generation_failed",
+        userMessage:
+          "정답 수와 문제 수가 완전히 맞지 않아 생성이 중단되었습니다. 이번 버전은 자동 복구를 한 번 시도했지만 통과하지 못했습니다. 다시 시도해주세요.",
+      });
+    }
+
+    const formatted = finalGeneration.formatted;
+    const deduction = await deductMpIfNeeded(req, input, mpState);
+    return json(res, 200, {
+      success: true,
+      engine: "magic",
+      version: "v8.3.2-balanced-handler",
+      title: formatted.title,
+      instructions: formatted.instructions,
+      questions: formatted.questions,
+      content: formatted.content,
+      answerSheet: formatted.answerSheet,
+      fullText: formatted.fullText,
+      worksheetHtml: typeof buildMagicWorksheetHtml === "function" ? buildMagicWorksheetHtml(formatted, input) : "",
+      answerHtml: typeof buildMagicAnswerHtml === "function" ? buildMagicAnswerHtml(formatted, input) : "",
+      actualCount: formatted.actualCount,
+      itemPairs: formatted.itemPairs || [],
+      pairIntegrity: formatted.pairIntegrity || null,
+      mp: deduction?.mp || {
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: mpState.enabled ? Math.max(0, mpState.currentMp - mpState.requiredMp) : mpState.currentMp,
+        deducted: Boolean(mpState.enabled),
+        trialGranted: Boolean(mpState.trialGranted),
+      },
+    });
+  } catch (error) {
+    console.error("[v8.3.2-balanced-handler] fatal:", error);
+    return json(res, 500, {
+      success: false,
+      message: "매직 엔진 처리 중 오류가 발생했습니다.",
+      detail: error?.message || "unknown_error",
+    });
+  }
+};
+
+console.log("[v8.3.2-balanced-handler] loaded");
