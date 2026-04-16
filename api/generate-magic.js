@@ -3204,7 +3204,6 @@ ${buildDifficultyUpliftRuleBlock(input)}
 ${buildGrammarOptionRuleBlock(input)}
 ${buildPresentPerfectStrictFilterBlock(input)}
 ${buildMarcusChapterExpansionBlock(input)}
-${buildRefillPromptBlock(input.__rawBody || {}, input)}
 ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
 ${buildMarcusSequencePromptBlock(input)}
@@ -4309,6 +4308,7 @@ module.exports = async function handler(req, res) {
     const finalMpState = await deductMpAfterSuccess(mpState);
     return json(res, 200, {
       success: true,
+      requestNonce: req.body?.requestNonce || input.requestNonce || '',
       ...formatted,
       meta: {
         language: input.language,
