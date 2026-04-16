@@ -5696,11 +5696,11 @@ module.exports = async function handler_v832_balanced(req, res) {
     }
 
     const formatted = finalGeneration.formatted;
-    const deduction = await deductMpIfNeeded(req, input, mpState);
+    const deduction = await deductMpAfterSuccess(mpState);
     return json(res, 200, {
       success: true,
       engine: "magic",
-      version: "v8.3.2-balanced-handler",
+      version: "v8.3.3-balanced-handler-fixed-mp",
       title: formatted.title,
       instructions: formatted.instructions,
       questions: formatted.questions,
@@ -5730,4 +5730,4 @@ module.exports = async function handler_v832_balanced(req, res) {
   }
 };
 
-console.log("[v8.3.2-balanced-handler] loaded");
+console.log("[v8.3.3-balanced-handler-fixed-mp] loaded");
