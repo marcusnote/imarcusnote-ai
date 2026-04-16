@@ -5233,3 +5233,299 @@ ${recentList ? `[최근 사용 패턴 - 재사용 금지]\n${recentList}` : ""}
 
   console.log(`[${PATCH_TAG}] loaded`);
 })();
+
+
+/* ========================================================================
+   Marcusnote Magic v8.3 Strict Stability Patch
+   - Removes soft answer-only recovery from the final decision path
+   - Uses full regeneration retries instead of weak answer-sheet patching
+   - Enforces exact question/answer parity for Magic outputs
+   - Adds answer diversity and repetition audit
+   - Separates refill validation from full-generation validation
+   ======================================================================== */
+
+function __mn83ExtractNumberedLines(text = "") {
+  return String(text || "")
+    .replace(/\r\n/g, "\n")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line));
+}
+
+function __mn83ExtractBodies(text = "") {
+  return __mn83ExtractNumberedLines(text)
+    .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+    .filter(Boolean);
+}
+
+function __mn83NormalizeSignature(text = "") {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/^\d+[.)-]?\s*/, "")
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\[[^\]]*\]/g, " ")
+    .replace(/["'`“”‘’]/g, "")
+    .replace(/[^a-z0-9가-힣\s]/g, " ")
+    .replace(/\b(the|a|an)\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function __mn83BuildItemPairs(questions = "", answers = "") {
+  const qLines = __mn83ExtractNumberedLines(questions);
+  const aLines = __mn83ExtractNumberedLines(answers);
+  const answerMap = new Map();
+
+  for (const line of aLines) {
+    const match = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+    if (!match) continue;
+    answerMap.set(Number(match[1]), String(match[2] || "").trim());
+  }
+
+  const pairs = [];
+  for (const line of qLines) {
+    const match = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+    if (!match) continue;
+    const no = Number(match[1]);
+    pairs.push({
+      no,
+      question: String(match[2] || "").trim(),
+      answer: answerMap.get(no) || "",
+    });
+  }
+  return pairs;
+}
+
+function __mn83HasLowAnswerDiversity(answerSheet = "") {
+  const bodies = __mn83ExtractBodies(answerSheet);
+  if (bodies.length < 4) return false;
+
+  const signatures = bodies.map(__mn83NormalizeSignature).filter(Boolean);
+  const unique = new Set(signatures);
+  const uniqueRatio = unique.size / Math.max(1, signatures.length);
+
+  let maxRun = 1;
+  let currentRun = 1;
+  for (let i = 1; i < signatures.length; i += 1) {
+    if (signatures[i] && signatures[i] === signatures[i - 1]) {
+      currentRun += 1;
+      maxRun = Math.max(maxRun, currentRun);
+    } else {
+      currentRun = 1;
+    }
+  }
+
+  const explanationLike = bodies.filter((line) => /어색한 표현입니다|올바른 문장입니다|바른 문장입니다|정답은|해설/i.test(line)).length;
+  const explanationRatio = explanationLike / Math.max(1, bodies.length);
+
+  return uniqueRatio < 0.72 || maxRun >= 2 || explanationRatio > 0.85;
+}
+
+function __mn83StrictAudit(formatted = {}, input = {}) {
+  const questions = String(formatted?.questions || "").trim();
+  const answers = String(formatted?.answerSheet || "").trim();
+  const qCount = typeof countWorksheetItems === "function" ? countWorksheetItems(questions) : __mn83ExtractNumberedLines(questions).length;
+  const aCount = typeof countAnswerLines === "function" ? countAnswerLines(answers) : __mn83ExtractNumberedLines(answers).length;
+  const isConcept = input?.magicIntent === "concept" || input?.magicIntent === "concept+training";
+  const isVocabSeries = /vocab/i.test(String(input?.mode || ""));
+
+  if (!questions) return { ok: false, reason: "questions_missing_strict" };
+  if (!answers) return { ok: false, reason: "answers_missing_strict" };
+  if (!hasSequentialNumbering(questions)) return { ok: false, reason: "question_numbering_broken_strict" };
+  if (!hasSequentialNumbering(answers)) return { ok: false, reason: "answer_numbering_broken_strict" };
+
+  if (input?.isRefill) {
+    const expected = Number(input?.refillCount || 0);
+    if (expected > 0 && qCount !== expected) {
+      return { ok: false, reason: "refill_question_count_mismatch", details: { expected, qCount } };
+    }
+    if (expected > 0 && aCount !== expected) {
+      return { ok: false, reason: "refill_answer_count_mismatch", details: { expected, aCount } };
+    }
+  } else if (!isConcept && !isVocabSeries) {
+    if (qCount !== aCount) {
+      return { ok: false, reason: "exact_parity_failed", details: { qCount, aCount } };
+    }
+    if (Number(input?.count || 0) > 0 && qCount !== Number(input.count)) {
+      return { ok: false, reason: "requested_count_mismatch", details: { requested: Number(input.count), qCount } };
+    }
+  }
+
+  if (__mn83HasLowAnswerDiversity(answers)) {
+    return { ok: false, reason: "answer_diversity_low" };
+  }
+
+  const pairs = __mn83BuildItemPairs(questions, answers);
+  if (!pairs.length) return { ok: false, reason: "pair_build_failed" };
+  if (pairs.some((pair) => !pair.answer)) {
+    return { ok: false, reason: "pair_answer_missing" };
+  }
+
+  return {
+    ok: true,
+    qCount,
+    aCount,
+    pairs
+  };
+}
+
+async function __mn83TryStrictGenerate(input = {}, maxAttempts = 3) {
+  let lastFailure = { reason: "unknown" };
+  let lastFormatted = null;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    const rawText = await generateMagicCore(input);
+    let formatted = formatMagicResponse(rawText, input);
+
+    if ((input.mode === "abcstarter" || input.level === "elementary") && String(formatted.questions || "").trim()) {
+      formatted.answerSheet = normalizeMagicAnswerSheet(formatted.answerSheet || "", formatted.questions || "", input);
+      const parts = [formatted.title, formatted.instructions, formatted.questions].filter(Boolean);
+      formatted.content = parts.join("\n\n");
+      formatted.fullText = [
+        ...parts,
+        ((input.language === "en" ? "Answers\n" : "정답\n") + (formatted.answerSheet || ""))
+      ].filter(Boolean).join("\n\n");
+      formatted.actualCount = countWorksheetItems(formatted.questions || "");
+    }
+
+    const validationOk = validateWritingOutput(`[[QUESTIONS]]\n${formatted.questions || ""}\n[[ANSWERS]]\n${formatted.answerSheet || ""}`, input);
+    const strictAudit = __mn83StrictAudit(formatted, input);
+
+    formatted.itemPairs = strictAudit?.pairs || __mn83BuildItemPairs(formatted.questions || "", formatted.answerSheet || "");
+    formatted.pairIntegrity = {
+      ok: Boolean(strictAudit?.ok),
+      reason: strictAudit?.reason || "",
+      questionCount: strictAudit?.qCount ?? countWorksheetItems(formatted.questions || ""),
+      answerCount: strictAudit?.aCount ?? countAnswerLines(formatted.answerSheet || "")
+    };
+
+    lastFormatted = formatted;
+
+    if (validationOk && strictAudit.ok) {
+      return {
+        ok: true,
+        formatted,
+        attemptsUsed: attempt
+      };
+    }
+
+    lastFailure = {
+      reason: !validationOk ? "validation_failed" : (strictAudit.reason || "strict_audit_failed"),
+      details: strictAudit?.details || null,
+      attempt
+    };
+  }
+
+  return {
+    ok: false,
+    formatted: lastFormatted,
+    failure: lastFailure
+  };
+}
+
+module.exports = async function handler_v83_strict(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
+
+  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method !== "POST") return json(res, 405, { success: false, message: "POST 요청만 허용됩니다." });
+
+  try {
+    const input = normalizeInput(req.body || {});
+    input.__rawBody = req.body || {};
+
+    if (!input.userPrompt && !input.topic) {
+      return json(res, 400, { success: false, message: "userPrompt 또는 topic이 필요합니다." });
+    }
+
+    const mpState = await prepareMpState(req);
+    if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
+      return json(res, 403, {
+        success: false,
+        error: "INSUFFICIENT_MP",
+        message: "MP가 부족합니다.",
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: mpState.currentMp,
+        trialGranted: Boolean(mpState.trialGranted),
+        mpSyncEnabled: Boolean(mpState.enabled),
+        mpSyncReason: mpState.reason || "unknown",
+        mp: {
+          requiredMp: mpState.requiredMp,
+          currentMp: mpState.currentMp,
+          remainingMp: mpState.currentMp,
+          deducted: false,
+          trialGranted: Boolean(mpState.trialGranted),
+        },
+      });
+    }
+
+    const generation = await __mn83TryStrictGenerate(input, input?.isRefill ? 2 : 3);
+
+    if (!generation.ok) {
+      return json(res, 502, {
+        success: false,
+        message: input?.isRefill
+          ? "보충 생성 결과의 정답 품질 또는 개수가 불안정하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요."
+          : "매직 정답 품질 검수에서 실패하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
+        detail: generation?.failure?.reason || "strict_generation_failed",
+        meta: {
+          language: input.language,
+          requestedCount: input.count,
+          actualCount: generation?.formatted?.actualCount || 0,
+          generatedAt: new Date().toISOString(),
+          strictGeneration: true,
+          attemptsUsed: generation?.failure?.attempt || (input?.isRefill ? 2 : 3)
+        },
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: mpState.currentMp,
+        trialGranted: Boolean(mpState.trialGranted),
+        mpSyncEnabled: Boolean(mpState.enabled),
+        mpSyncReason: mpState.reason || "unknown",
+        mp: {
+          requiredMp: mpState.requiredMp,
+          currentMp: mpState.currentMp,
+          remainingMp: mpState.currentMp,
+          deducted: false,
+          trialGranted: Boolean(mpState.trialGranted),
+        }
+      });
+    }
+
+    const formatted = generation.formatted;
+    collectRecentAnswerLines(formatted, input);
+    const finalMpState = await deductMpAfterSuccess(mpState);
+
+    return json(res, 200, {
+      success: true,
+      requestNonce: req.body?.requestNonce || input.requestNonce || '',
+      ...formatted,
+      meta: {
+        language: input.language,
+        requestedCount: input.count,
+        actualCount: formatted.actualCount,
+        generatedAt: new Date().toISOString(),
+        strictGeneration: true,
+        attemptsUsed: generation.attemptsUsed
+      },
+      requiredMp: mpState.requiredMp,
+      currentMp: mpState.currentMp,
+      remainingMp: finalMpState?.remainingMp ?? null,
+      trialGranted: Boolean(mpState.trialGranted),
+      mpSyncEnabled: Boolean(mpState.enabled),
+      mpSyncReason: mpState.reason || "unknown",
+      mp: {
+        requiredMp: mpState.requiredMp,
+        currentMp: mpState.currentMp,
+        remainingMp: finalMpState?.remainingMp ?? null,
+        deducted: Boolean(finalMpState?.deducted),
+        trialGranted: Boolean(mpState.trialGranted),
+      }
+    });
+  } catch (error) {
+    console.error("Handler error (v8.3 strict):", error);
+    return json(res, 500, { success: false, message: "매직 워크북 생성에 실패했습니다.", detail: error.message });
+  }
+};
