@@ -5369,6 +5369,49 @@ function __mn83StrictAudit(formatted = {}, input = {}) {
   };
 }
 
+
+function __mn831RebuildFormattedBundle(formatted = {}, input = {}) {
+  const parts = [formatted.title, formatted.instructions, formatted.questions].filter(Boolean);
+  formatted.content = parts.join("\n\n");
+  formatted.fullText = [
+    ...parts,
+    ((input.language === "en" ? "Answers\n" : "정답\n") + (formatted.answerSheet || ""))
+  ].filter(Boolean).join("\n\n");
+  formatted.actualCount = countWorksheetItems(formatted.questions || "");
+  return formatted;
+}
+
+function __mn831ApplyBalancedParityRepair(formatted = {}, input = {}) {
+  if (!formatted || typeof formatted !== "object") return formatted;
+  const questions = String(formatted.questions || "").trim();
+  if (!questions) return formatted;
+
+  const qCount = countWorksheetItems(questions);
+  const currentAnswers = String(formatted.answerSheet || "").trim();
+  const aCount = countAnswerLines(currentAnswers);
+
+  // Only repair when there is a realistic near-miss or obvious missing-answer state.
+  // This avoids reviving the old loose emergency path.
+  const shouldRepair =
+    qCount > 0 &&
+    (
+      aCount === 0 ||
+      (aCount < qCount && aCount >= Math.max(1, Math.ceil(qCount * 0.6)))
+    );
+
+  if (!shouldRepair) return formatted;
+
+  const repaired = { ...formatted };
+  let nextAnswers = normalizeMagicAnswerSheet(currentAnswers, questions, input);
+
+  if (!nextAnswers || countAnswerLines(nextAnswers) < qCount) {
+    nextAnswers = normalizeMagicAnswerSheet("", questions, input);
+  }
+
+  repaired.answerSheet = String(nextAnswers || "").trim();
+  return __mn831RebuildFormattedBundle(repaired, input);
+}
+
 async function __mn83TryStrictGenerate(input = {}, maxAttempts = 3) {
   let lastFailure = { reason: "unknown" };
   let lastFormatted = null;
@@ -5470,6 +5513,9 @@ module.exports = async function handler_v83_strict(req, res) {
           ? "보충 생성 결과의 정답 품질 또는 개수가 불안정하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요."
           : "매직 정답 품질 검수에서 실패하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
         detail: generation?.failure?.reason || "strict_generation_failed",
+        userMessage: generation?.failure?.reason === "exact_parity_failed"
+          ? "문항 수와 정답 수가 맞지 않아 자동 재정렬을 시도했지만 기준을 통과하지 못했습니다. 다시 생성해 주세요."
+          : undefined,
         meta: {
           language: input.language,
           requestedCount: input.count,
