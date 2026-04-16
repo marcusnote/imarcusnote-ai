@@ -672,6 +672,8 @@ function normalizeInput(body = {}) {
     remainingQuestions: sanitizeRemainingQuestions(body.remainingQuestions),
     magicStyle: sanitizeString(body.magicStyle || (mode === "writing" ? "marcus_magic" : "")),
     wordCountMode: sanitizeString(body.wordCountMode || (mode === "writing" ? "auto" : "")),
+    workbookType: normalizeWorkbookType(body.workbookType || body.workbook_type || ""),
+    profile: normalizeProfile(body.profile || body.levelProfile || body.gradeProfile || ""),
   };
 }
 
@@ -5630,7 +5632,259 @@ function __mn832RebalanceFailedFormatted(failedFormatted = {}, input = {}) {
   };
 }
 
-module.exports = async function handler_v832_balanced(req, res) {
+
+function normalizeWorkbookType(value = "") {
+  const v = sanitizeString(value, "").toLowerCase();
+  if (!v) return "guided_writing";
+  if (["guided_writing", "blank_fill", "binary_choice", "sentence_build"].includes(v)) return v;
+  if (["guided", "writing", "guidedwriting"].includes(v)) return "guided_writing";
+  if (["blank", "blankfill", "fill_blank", "fill_in_blank"].includes(v)) return "blank_fill";
+  if (["choice", "binarychoice", "binary", "either_or"].includes(v)) return "binary_choice";
+  return "guided_writing";
+}
+
+function normalizeProfile(value = "") {
+  const v = sanitizeString(value, "").toLowerCase();
+  if (!v || v === "auto") return "auto";
+  if (["elementary", "middle", "high"].includes(v)) return v;
+  return "auto";
+}
+
+function __v84ExtractQuestionBlocks(questions = "") {
+  const lines = String(questions || "").split("\n");
+  const blocks = [];
+  let current = null;
+
+  const pushCurrent = () => {
+    if (!current) return;
+    const lead = String(current.lines[0] || "").replace(/^\d+[.)-]?\s*/, "").trim();
+    const rest = current.lines.slice(1).join("\n").trim();
+    blocks.push({
+      no: current.no,
+      lead,
+      rest,
+      lines: current.lines.slice(),
+      raw: current.lines.join("\n").trim()
+    });
+  };
+
+  for (const rawLine of lines) {
+    const line = String(rawLine || "").trim();
+    if (!line) continue;
+    const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+    if (m) {
+      pushCurrent();
+      current = { no: Number(m[1]), lines: [line] };
+    } else if (current) {
+      current.lines.push(line);
+    }
+  }
+  pushCurrent();
+  return blocks;
+}
+
+function __v84ExtractAnswerMap(answerSheet = "") {
+  const map = new Map();
+  const lines = String(answerSheet || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  for (const line of lines) {
+    const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+    if (!m) continue;
+    map.set(Number(m[1]), String(m[2] || "").trim());
+  }
+  return map;
+}
+
+function __v84GetLocale(input = {}) {
+  return input?.language === "en" ? "en" : "ko";
+}
+
+function __v84BuildWorkbookTypeInstructions(input = {}, baseInstructions = "") {
+  const type = normalizeWorkbookType(input?.workbookType || "");
+  const locale = __v84GetLocale(input);
+  const base = String(baseInstructions || "").trim();
+
+  if (type === "blank_fill") {
+    const addon = locale === "en"
+      ? "Fill in each blank to complete the full English sentence. Use the original Korean prompt and the blanked sentence together."
+      : "각 문항의 빈칸을 채워 완전한 영어 문장을 완성하세요. 한국어 지시와 빈칸 문장을 함께 참고하세요.";
+    return [base, addon].filter(Boolean).join("\n");
+  }
+
+  if (type === "binary_choice") {
+    const addon = locale === "en"
+      ? "Choose the better option in each item and complete the full English sentence."
+      : "각 문항에서 두 보기 중 더 알맞은 표현을 골라 완전한 영어 문장을 완성하세요.";
+    return [base, addon].filter(Boolean).join("\n");
+  }
+
+  return base;
+}
+
+function __v84PickContentWord(answer = "") {
+  const tokens = String(answer || "").split(/\s+/).filter(Boolean);
+  const stop = new Set(["i","you","he","she","it","we","they","me","him","her","us","them","a","an","the","this","that","these","those","my","your","his","her","our","their","to","of","for","in","on","at","with","and","or","but","is","am","are","was","were","be","been","being"]);
+  const cleaned = tokens.map((t, idx) => ({
+    idx,
+    raw: t,
+    core: t.replace(/^[^A-Za-z]+|[^A-Za-z]+$/g, "")
+  })).filter((x) => x.core);
+
+  const midStart = Math.max(0, Math.floor(cleaned.length / 3));
+  for (const x of cleaned.slice(midStart)) {
+    if (!stop.has(x.core.toLowerCase()) && x.core.length >= 3) return x;
+  }
+  for (const x of cleaned) {
+    if (!stop.has(x.core.toLowerCase())) return x;
+  }
+  return cleaned[cleaned.length - 1] || null;
+}
+
+function __v84BlankSentence(answer = "", input = {}) {
+  const sentence = String(answer || "").trim();
+  if (!sentence) return { transformed: "", answer: sentence };
+
+  const bareVerbPattern = /\b(make|let|have|help|see|hear|watch|feel|notice)\b\s+([A-Za-z]+)\s+([A-Za-z]+)\b/i;
+  const infinitivePattern = /\b(get|want|tell|ask|expect)\b\s+([A-Za-z]+)\s+to\s+([A-Za-z]+)\b/i;
+
+  if (bareVerbPattern.test(sentence)) {
+    const m = sentence.match(bareVerbPattern);
+    const full = `${m[2]} ${m[3]}`;
+    return { transformed: sentence.replace(full, `${m[2]} _____`), answer: sentence };
+  }
+  if (infinitivePattern.test(sentence)) {
+    const m = sentence.match(infinitivePattern);
+    return { transformed: sentence.replace(`to ${m[3]}`, "_____"), answer: sentence };
+  }
+
+  const picked = __v84PickContentWord(sentence);
+  if (!picked) return { transformed: sentence, answer: sentence };
+  const escaped = picked.raw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const transformed = sentence.replace(new RegExp(escaped), "_____");
+  return { transformed, answer: sentence };
+}
+
+function __v84BuildDistractor(target = "", answer = "") {
+  const t = String(target || "").trim();
+  const lower = t.toLowerCase();
+
+  if (!t) return "_____";
+  if (lower === "to") return "for";
+  if (lower in {go:1, read:1, solve:1, help:1, watch:1, finish:1, take:1, attend:1, use:1, apply:1}) return `to ${t}`;
+  if (/ing$/i.test(t)) return t.replace(/ing$/i, "") || "do";
+  return `${t}s`;
+}
+
+function __v84ChoiceSentence(answer = "", input = {}) {
+  const sentence = String(answer || "").trim();
+  if (!sentence) return { transformed: "", answer: sentence };
+
+  const bareVerbPattern = /\b(make|let|have|help|see|hear|watch|feel|notice)\b\s+([A-Za-z]+)\s+([A-Za-z]+)\b/i;
+  const infinitivePattern = /\b(get|want|tell|ask|expect)\b\s+([A-Za-z]+)\s+to\s+([A-Za-z]+)\b/i;
+
+  if (bareVerbPattern.test(sentence)) {
+    const m = sentence.match(bareVerbPattern);
+    const verb = m[3];
+    const choice = `(to ${verb} / ${verb})`;
+    return { transformed: sentence.replace(new RegExp(`\\b${verb}\\b`), choice), answer: sentence };
+  }
+  if (infinitivePattern.test(sentence)) {
+    const m = sentence.match(infinitivePattern);
+    const phrase = `to ${m[3]}`;
+    const choice = `(${m[3]} / ${phrase})`;
+    return { transformed: sentence.replace(phrase, choice), answer: sentence };
+  }
+
+  const picked = __v84PickContentWord(sentence);
+  if (!picked) return { transformed: sentence, answer: sentence };
+  const wrong = __v84BuildDistractor(picked.core, sentence);
+  const choice = `(${wrong} / ${picked.core})`;
+  const escaped = picked.raw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const transformed = sentence.replace(new RegExp(escaped), choice);
+  return { transformed, answer: sentence };
+}
+
+function __v84BuildQuestionBlock(block = {}, transformedLine = "", label = "", input = {}) {
+  const locale = __v84GetLocale(input);
+  const labelText = label
+    ? (locale === "en" ? `[${label}]` : `[${label}]`)
+    : "";
+
+  const parts = [];
+  parts.push(`${block.no}. ${block.lead}`);
+  if (labelText) parts.push(labelText);
+  parts.push(transformedLine);
+  return parts.filter(Boolean).join("\n");
+}
+
+function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
+  const type = normalizeWorkbookType(input?.workbookType || "");
+  if (type === "guided_writing") {
+    const passthrough = { ...formatted };
+    passthrough.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
+    return passthrough;
+  }
+
+  const qBlocks = __v84ExtractQuestionBlocks(formatted.questions || "");
+  const aMap = __v84ExtractAnswerMap(formatted.answerSheet || "");
+  if (!qBlocks.length || !aMap.size) {
+    const passthrough = { ...formatted };
+    passthrough.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
+    return passthrough;
+  }
+
+  const renderedBlocks = [];
+  const renderedAnswers = [];
+
+  for (const block of qBlocks) {
+    const answer = String(aMap.get(block.no) || "").trim();
+    if (!answer) continue;
+
+    if (type === "blank_fill") {
+      const blanked = __v84BlankSentence(answer, input);
+      renderedBlocks.push(__v84BuildQuestionBlock(block, blanked.transformed, "Blank Fill", input));
+      renderedAnswers.push(`${block.no}. ${blanked.answer}`);
+      continue;
+    }
+
+    if (type === "binary_choice") {
+      const chosen = __v84ChoiceSentence(answer, input);
+      renderedBlocks.push(__v84BuildQuestionBlock(block, chosen.transformed, "Choice", input));
+      renderedAnswers.push(`${block.no}. ${chosen.answer}`);
+      continue;
+    }
+
+    renderedBlocks.push(block.raw);
+    renderedAnswers.push(`${block.no}. ${answer}`);
+  }
+
+  const next = { ...formatted };
+  next.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
+  next.questions = renderedBlocks.join("\n");
+  next.answerSheet = renderedAnswers.join("\n");
+  next.actualCount = renderedAnswers.length;
+  next.itemPairs = __mn83BuildItemPairs(next.questions || "", next.answerSheet || "");
+  next.pairIntegrity = {
+    ok: true,
+    reason: "workbook_type_transformed",
+    questionCount: next.actualCount,
+    answerCount: next.actualCount
+  };
+  next.content = [next.title, next.instructions, next.questions].filter(Boolean).join("\n\n");
+  next.fullText = [
+    next.title,
+    next.instructions,
+    next.questions,
+    ((input.language === "en" ? "Answers\n" : "정답\n") + (next.answerSheet || ""))
+  ].filter(Boolean).join("\n\n");
+  return next;
+}
+
+
+module.exports = async function handler_v84_workbook_type_router(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
@@ -5695,12 +5949,15 @@ module.exports = async function handler_v832_balanced(req, res) {
       });
     }
 
-    const formatted = finalGeneration.formatted;
+    let formatted = finalGeneration.formatted;
+    formatted = __v84TransformFormattedByWorkbookType(formatted, input);
     const deduction = await deductMpAfterSuccess(mpState);
     return json(res, 200, {
       success: true,
       engine: "magic",
-      version: "v8.3.3-balanced-handler-fixed-mp",
+      workbookType: input.workbookType,
+      profile: input.profile,
+      version: "v8.4-workbook-type-router-beta",
       title: formatted.title,
       instructions: formatted.instructions,
       questions: formatted.questions,
@@ -5721,7 +5978,7 @@ module.exports = async function handler_v832_balanced(req, res) {
       },
     });
   } catch (error) {
-    console.error("[v8.3.2-balanced-handler] fatal:", error);
+    console.error("[v8.4-workbook-type-router-beta] fatal:", error);
     return json(res, 500, {
       success: false,
       message: "매직 엔진 처리 중 오류가 발생했습니다.",
@@ -5730,4 +5987,4 @@ module.exports = async function handler_v832_balanced(req, res) {
   }
 };
 
-console.log("[v8.3.3-balanced-handler-fixed-mp] loaded");
+console.log("[v8.4-workbook-type-router-beta] loaded");
