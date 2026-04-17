@@ -5584,40 +5584,6 @@ module.exports = async function handler_v83_strict(req, res) {
    - Overrides strict handler with near-miss parity rebalance
    - Uses failed formatted output and rebuilds answer sheet once
    ======================================================================== */
-
-function __v841AcceptGuidedWritingNearMiss(candidate = {}, input = {}) {
-  if (!candidate || !candidate.formatted) return { ok: false, reason: "candidate_missing" };
-  const wbType = normalizeWorkbookType(input?.workbookType || "");
-  if (wbType !== "guided_writing") return { ok: false, reason: "not_guided_writing" };
-  const formatted = candidate.formatted;
-  const qCount = countWorksheetItems(String(formatted.questions || ""));
-  const aCount = countAnswerLines(String(formatted.answerSheet || ""));
-  const expected = Number(input?.count || 0);
-  if (!qCount || !aCount || qCount !== aCount) {
-    return { ok: false, reason: "count_mismatch", meta: { qCount, aCount, expected } };
-  }
-  if (expected && qCount !== expected) {
-    return { ok: false, reason: "expected_mismatch", meta: { qCount, aCount, expected } };
-  }
-  const validationOk = validateWritingOutput(`[[QUESTIONS]]
-${formatted.questions || ""}
-[[ANSWERS]]
-${formatted.answerSheet || ""}`, input);
-  if (!validationOk) {
-    return { ok: false, reason: "validation_failed", meta: { qCount, aCount, expected } };
-  }
-  const next = { ...formatted };
-  next.itemPairs = __mn83BuildItemPairs(next.questions || "", next.answerSheet || "");
-  next.pairIntegrity = {
-    ok: true,
-    reason: "guided_writing_near_miss_accepted",
-    questionCount: qCount,
-    answerCount: aCount,
-  };
-  next.actualCount = qCount;
-  return { ok: true, formatted: next, reason: "guided_writing_near_miss_accepted" };
-}
-
 function __mn832RebalanceFailedFormatted(failedFormatted = {}, input = {}) {
   const formatted = failedFormatted && typeof failedFormatted === "object" ? { ...failedFormatted } : null;
   if (!formatted) return { ok: false, reason: "formatted_missing" };
@@ -5968,16 +5934,6 @@ module.exports = async function handler_v84_workbook_type_router(req, res) {
           attemptsUsed: (generation?.attemptsUsed || generation?.failure?.attempt || 0),
           repairedBy: "balanced_parity_rebuild"
         };
-      } else {
-        const nearMiss = __v841AcceptGuidedWritingNearMiss(rebalanced, input);
-        if (nearMiss.ok) {
-          finalGeneration = {
-            ok: true,
-            formatted: nearMiss.formatted,
-            attemptsUsed: (generation?.attemptsUsed || generation?.failure?.attempt || 0),
-            repairedBy: nearMiss.reason || "guided_writing_near_miss_accepted"
-          };
-        }
       }
     }
 
@@ -6001,7 +5957,7 @@ module.exports = async function handler_v84_workbook_type_router(req, res) {
       engine: "magic",
       workbookType: input.workbookType,
       profile: input.profile,
-      version: "v8.4.1-guided-writing-nearmiss",
+      version: "v8.4-workbook-type-router-beta",
       title: formatted.title,
       instructions: formatted.instructions,
       questions: formatted.questions,
@@ -6031,4 +5987,4 @@ module.exports = async function handler_v84_workbook_type_router(req, res) {
   }
 };
 
-console.log("[v8.4.1-guided-writing-nearmiss] loaded");
+console.log("[v8.4-workbook-type-router-beta] loaded");
