@@ -5521,6 +5521,58 @@ module.exports = async function handler_v83_strict(req, res) {
       }
     }
 
+    if (!finalGeneration.ok && [
+      "exact_parity_failed",
+      "requested_count_mismatch",
+      "answer_diversity_low",
+      "pair_answer_missing",
+      "answers_missing_strict",
+      "question_numbering_broken_strict",
+      "answer_numbering_broken_strict",
+      "refill_question_count_mismatch",
+      "refill_answer_count_mismatch"
+    ].includes(String(finalGeneration?.failure?.reason || generation?.failure?.reason || ""))) {
+      const softened = __v841BuildSoftRecoveredFormatted(
+        finalGeneration?.formatted || generation?.formatted,
+        input,
+        finalGeneration?.failure || generation?.failure || {}
+      );
+      if (softened.ok) {
+        finalGeneration = {
+          ok: true,
+          formatted: softened.formatted,
+          attemptsUsed: (generation?.attemptsUsed || generation?.failure?.attempt || 0),
+          repairedBy: softened.repairedBy || "soft_recovered_no_throw"
+        };
+      }
+    }
+
+    if (!finalGeneration.ok && [
+      "exact_parity_failed",
+      "requested_count_mismatch",
+      "answer_diversity_low",
+      "pair_answer_missing",
+      "answers_missing_strict",
+      "question_numbering_broken_strict",
+      "answer_numbering_broken_strict",
+      "refill_question_count_mismatch",
+      "refill_answer_count_mismatch"
+    ].includes(String(finalGeneration?.failure?.reason || generation?.failure?.reason || ""))) {
+      const degraded = __v842BuildDegradedFormatted(
+        finalGeneration?.formatted || generation?.formatted,
+        input,
+        finalGeneration?.failure || generation?.failure || {}
+      );
+      if (degraded.ok) {
+        finalGeneration = {
+          ok: true,
+          formatted: degraded.formatted,
+          attemptsUsed: (generation?.attemptsUsed || generation?.failure?.attempt || 0),
+          repairedBy: degraded.repairedBy || "degraded_nonblocking_return"
+        };
+      }
+    }
+
     if (!finalGeneration.ok) {
       return json(res, 502, {
         success: false,
@@ -5641,6 +5693,117 @@ function __mn832RebalanceFailedFormatted(failedFormatted = {}, input = {}) {
     ok: false,
     reason: strictAudit?.reason || (!validationOk ? "validation_failed" : "rebalance_failed"),
     formatted: rebuilt
+  };
+}
+
+
+function __v841BuildSoftRecoveredFormatted(failedFormatted = {}, input = {}, failure = {}) {
+  const formatted = failedFormatted && typeof failedFormatted === "object" ? { ...failedFormatted } : null;
+  if (!formatted) return { ok: false, reason: "formatted_missing" };
+
+  const questions = String(formatted.questions || "").trim();
+  if (!questions) return { ok: false, reason: "questions_missing" };
+
+  let rebuiltAnswers = normalizeMagicAnswerSheet(
+    String(formatted.answerSheet || ""),
+    questions,
+    input
+  );
+  rebuiltAnswers = smoothGeneratedEnglish(rebuiltAnswers, input);
+
+  if (!String(rebuiltAnswers || "").trim()) {
+    rebuiltAnswers = buildEmergencyAnswerSheet(questions, input);
+  }
+  rebuiltAnswers = smoothGeneratedEnglish(rebuiltAnswers, input);
+
+  if (!String(rebuiltAnswers || "").trim()) {
+    return { ok: false, reason: "answers_missing_after_soft_recovery" };
+  }
+
+  const rebuilt = {
+    ...formatted,
+    answerSheet: rebuiltAnswers
+  };
+
+  const parts = [rebuilt.title, rebuilt.instructions, rebuilt.questions].filter(Boolean);
+  rebuilt.content = parts.join("\n\n");
+  rebuilt.fullText = [
+    ...parts,
+    ((input.language === "en" ? "Answers\n" : "정답\n") + (rebuilt.answerSheet || ""))
+  ].filter(Boolean).join("\n\n");
+  rebuilt.actualCount = countWorksheetItems(rebuilt.questions || "");
+  rebuilt.itemPairs = __mn83BuildItemPairs(rebuilt.questions || "", rebuilt.answerSheet || "");
+
+  const pairQuestionCount = countWorksheetItems(rebuilt.questions || "");
+  const pairAnswerCount = countAnswerLines(rebuilt.answerSheet || "");
+  rebuilt.pairIntegrity = {
+    ok: pairQuestionCount === pairAnswerCount && rebuilt.itemPairs.every((pair) => String(pair.answer || "").trim()),
+    reason: `soft_recovered:${String(failure?.reason || "unknown")}`,
+    questionCount: pairQuestionCount,
+    answerCount: pairAnswerCount
+  };
+
+  return {
+    ok: true,
+    formatted: rebuilt,
+    repairedBy: "soft_recovered_no_throw"
+  };
+}
+
+
+
+function __v842BuildDegradedFormatted(failedFormatted = {}, input = {}, failure = {}) {
+  const formatted = failedFormatted && typeof failedFormatted === "object" ? { ...failedFormatted } : null;
+  if (!formatted) return { ok: false, reason: "formatted_missing" };
+
+  const questions = String(formatted.questions || "").trim();
+  if (!questions || !hasMeaningfulWorksheetBody(questions)) {
+    return { ok: false, reason: "questions_missing_after_degraded_recovery" };
+  }
+
+  let rebuiltAnswers = normalizeMagicAnswerSheet(
+    String(formatted.answerSheet || ""),
+    questions,
+    input
+  );
+  rebuiltAnswers = smoothGeneratedEnglish(rebuiltAnswers, input);
+
+  if (!String(rebuiltAnswers || "").trim() || !hasMeaningfulWorksheetBody(rebuiltAnswers)) {
+    rebuiltAnswers = buildEmergencyAnswerSheet(questions, input);
+  }
+  rebuiltAnswers = smoothGeneratedEnglish(rebuiltAnswers, input);
+
+  if (!String(rebuiltAnswers || "").trim() || !hasMeaningfulWorksheetBody(rebuiltAnswers)) {
+    return { ok: false, reason: "answers_missing_after_degraded_recovery" };
+  }
+
+  const rebuilt = {
+    ...formatted,
+    answerSheet: rebuiltAnswers
+  };
+
+  const parts = [rebuilt.title, rebuilt.instructions, rebuilt.questions].filter(Boolean);
+  rebuilt.content = parts.join("\n\n");
+  rebuilt.fullText = [
+    ...parts,
+    ((input.language === "en" ? "Answers\n" : "정답\n") + (rebuilt.answerSheet || ""))
+  ].filter(Boolean).join("\n\n");
+  rebuilt.actualCount = countWorksheetItems(rebuilt.questions || "");
+  rebuilt.itemPairs = __mn83BuildItemPairs(rebuilt.questions || "", rebuilt.answerSheet || "");
+
+  const qCount = countWorksheetItems(rebuilt.questions || "");
+  const aCount = countAnswerLines(rebuilt.answerSheet || "");
+  rebuilt.pairIntegrity = {
+    ok: Boolean(qCount && aCount),
+    reason: `degraded_recovered:${String(failure?.reason || "unknown")}`,
+    questionCount: qCount,
+    answerCount: aCount
+  };
+
+  return {
+    ok: true,
+    formatted: rebuilt,
+    repairedBy: "degraded_nonblocking_return"
   };
 }
 
@@ -5896,7 +6059,7 @@ function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
 }
 
 
-module.exports = async function handler_v84_workbook_type_router(req, res) {
+module.exports = async function handler_v841_workbook_type_router(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
@@ -5949,6 +6112,32 @@ module.exports = async function handler_v84_workbook_type_router(req, res) {
       }
     }
 
+    if (!finalGeneration.ok && [
+      "exact_parity_failed",
+      "requested_count_mismatch",
+      "answer_diversity_low",
+      "pair_answer_missing",
+      "answers_missing_strict",
+      "question_numbering_broken_strict",
+      "answer_numbering_broken_strict",
+      "refill_question_count_mismatch",
+      "refill_answer_count_mismatch"
+    ].includes(String(finalGeneration?.failure?.reason || generation?.failure?.reason || ""))) {
+      const degraded = __v842BuildDegradedFormatted(
+        finalGeneration?.formatted || generation?.formatted,
+        input,
+        finalGeneration?.failure || generation?.failure || {}
+      );
+      if (degraded.ok) {
+        finalGeneration = {
+          ok: true,
+          formatted: degraded.formatted,
+          attemptsUsed: (generation?.attemptsUsed || generation?.failure?.attempt || 0),
+          repairedBy: degraded.repairedBy || "degraded_nonblocking_return"
+        };
+      }
+    }
+
     if (!finalGeneration.ok) {
       return json(res, 502, {
         success: false,
@@ -5969,7 +6158,7 @@ module.exports = async function handler_v84_workbook_type_router(req, res) {
       engine: "magic",
       workbookType: input.workbookType,
       profile: input.profile,
-      version: "v8.4.0-router-beta-rebalance-hotfix",
+      version: "s14-v8.4.2-full-softguard",
       title: formatted.title,
       instructions: formatted.instructions,
       questions: formatted.questions,
