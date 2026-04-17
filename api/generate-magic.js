@@ -1225,14 +1225,6 @@ Mode Identity:
 - Strongly prioritize learner sentence production.
 - The worksheet should feel like guided composition training, not grammar explanation.
 - Mix fragment-clue writing, rearrangement with one extra word, partial completion, and sentence transformation aggressively.
-
-Guided Writing Hardlock:
-- Every question item MUST include a visible clue line in parentheses.
-- Never output a plain translation-only line without a clue.
-- At least 70% of items must use fragment clues, not full-sentence clues.
-- Clues must contain key words, structure hints, or phrase anchors.
-- If the model is about to output only Korean prompt lines, stop and rebuild the worksheet with clue lines.
-
 Priority:
 - productivity
 - sentence construction
@@ -1244,13 +1236,6 @@ Priority:
 - 학습자의 문장 산출을 강하게 우선할 것.
 - 문법 설명지처럼 보이지 말고, guided composition 훈련지처럼 보여야 한다.
 - 조각형 clue 영작, 초과단어 재배열형, 부분완성형, 문장변환형을 적극적으로 혼합할 것.
-
-Guided Writing 하드락:
-- 모든 문항은 반드시 괄호형 clue 한 줄을 눈에 보이게 포함해야 한다.
-- clue 없는 단순 번역형 한 줄 문항은 절대 출력하지 말 것.
-- 최소 70% 이상은 완성문장 힌트가 아니라 조각형 clue를 사용해야 한다.
-- clue에는 핵심 단어, 구조 힌트, 구문 앵커 중 하나 이상이 들어가야 한다.
-- 한국어 제시문만 나열되는 형태가 나오면 즉시 폐기하고 clue 포함형으로 다시 작성할 것.
 
 우선순위:
 - 생산성
@@ -3012,6 +2997,28 @@ function buildMarcusSequencePromptBlock(input) {
 
 
 
+function buildSoftClueRecoveryBlock(input = {}) {
+  const guided = input?.mode === "writing" || input?.magicStyle === "marcus_magic" || normalizeWorkbookType(input?.workbookType || "") === "guided_writing";
+  if (!guided) return "";
+  return input.language === "en"
+    ? `
+[Soft Guided Clue Recovery Rule]
+- Guided writing should prefer visible clues, but opening items may remain simple translation-style prompts.
+- Do NOT fail the whole worksheet only because some items do not show explicit clue lines.
+- If clues are present, keep them fragment-based and teachable.
+- If clues are missing, preserve generation first and allow the backend to pass the worksheet as long as numbering, answers, and target grammar remain stable.
+- A mixed worksheet is acceptable: simple prompt items + clue items + partial completion + rearrangement.
+`.trim()
+    : `
+[소프트 Guided Clue 복구 규칙]
+- Guided writing은 clue를 우선하되, 도입부 일부 문항은 단순 영작형으로 남아 있어도 된다.
+- 몇몇 문항에 명시적 clue 줄이 없다는 이유만으로 전체 워크북을 실패 처리하지 말 것.
+- clue가 있을 때는 조각형이고 가르칠 수 있는 형태로 유지할 것.
+- clue가 부족해도 번호, 정답지, 목표 문법이 안정적이면 생성 우선으로 통과시킬 것.
+- 단순 제시문 + clue 문항 + 부분완성 + 재배열이 섞인 혼합형 워크북도 허용한다.
+`.trim();
+}
+
 function buildMarcusMagicWordCountRuleBlock(input = {}) {
   const shouldApply = input?.mode === "writing" || input?.magicStyle === "marcus_magic" || input?.wordCountMode === "auto";
   if (!shouldApply) return "";
@@ -3022,7 +3029,7 @@ function buildMarcusMagicWordCountRuleBlock(input = {}) {
 - Treat Writing Lab as Marcus Magic by default.
 - Every question item should be compatible with a visible word count target.
 - Do NOT print (Word count: N) yourself inside the generated questions.
-- Every guided-writing item must keep a visible clue line or clue-friendly structure that the backend can preserve.
+- Prefer a visible clue line or clue-friendly structure in guided-writing items, but do not fail the whole worksheet if some opening items are simple translation-style prompts.
 - The backend will append a single final word count to each numbered question line after validation.
 - The word count target must match the final answer that appears in the answer sheet.
 - Word count means the number of space-separated English words in the final answer sentence.
@@ -3036,7 +3043,7 @@ function buildMarcusMagicWordCountRuleBlock(input = {}) {
 - Writing Lab은 기본적으로 마커스매직 스타일로 처리할 것.
 - 모든 문항은 보이는 단어 수 목표와 호환되게 설계할 것.
 - 생성 단계에서 (Word count: N)을 직접 문항에 출력하지 말 것.
-- guided writing 문항마다 백엔드가 보존할 수 있는 clue 또는 clue 친화적 구조가 반드시 살아 있어야 한다.
+- guided writing 문항은 가능하면 clue 또는 clue 친화적 구조를 유지하되, 도입용 단순 영작 문항이 일부 포함되어도 전체 워크북을 실패 처리하지 말 것.
 - 백엔드가 검증 후 각 번호 문항 끝에 최종 단어 수를 한 번만 자동 부착한다.
 - 단어 수 목표는 정답지에 제시되는 최종 정답 문장의 실제 단어 수와 일치해야 한다.
 - 단어 수는 영어 최종 정답 문장에서 공백 기준 영어 단어 개수로 계산한다.
@@ -3175,11 +3182,11 @@ ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
 ${buildMarcusSequencePromptBlock(input)}
 ${buildMarcusMagicWordCountRuleBlock(input)}
+${buildSoftClueRecoveryBlock(input)}
 
 Mandatory Magic rules:
 - Present prompts in the learner's input language first.
 - Make learners produce English sentences by themselves.
-- Every guided writing item MUST include a visible clue line in parentheses.
 - Never use the full final answer sentence as the clue.
 - Use fragment-based clues instead of full-sentence clues.
 - Mix at least 3 productive item types across the set.
@@ -3188,7 +3195,6 @@ Mandatory Magic rules:
 - Include some sentence-transformation writing items.
 - Keep the worksheet production-oriented, not copy-based.
 - Keep the grammar accurate and classroom-usable.
-- Reject any worksheet that looks like plain translation practice without clues.
 
 Quality control:
 - Do not create present perfect + finished past-time conflicts.
@@ -3229,6 +3235,7 @@ ${buildAntiRepetitionPromptBlock(input)}
 ${buildMarcusIdentityPromptBlock(input)}
 ${buildMarcusSequencePromptBlock(input)}
 ${buildMarcusMagicWordCountRuleBlock(input)}
+${buildSoftClueRecoveryBlock(input)}
 
 매직 필수 규칙:
 - 문제는 먼저 학습자의 입력 언어로 제시할 것.
@@ -3826,25 +3833,6 @@ function formatMagicResponse(rawText, input) {
 }
 
 
-
-function __v851CountNumberedQuestionBlocks(questions = "") {
-  return __v84ExtractQuestionBlocks(String(questions || "")).length;
-}
-
-function __v851CountExplicitClueLines(questions = "") {
-  return String(questions || "")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .filter((line) => /^\((?:clue|힌트)\s*:/i.test(line))
-    .length;
-}
-
-function __v851RequiresGuidedClues(input = {}) {
-  const workbookType = normalizeWorkbookType(input?.workbookType || "");
-  return workbookType === "guided_writing" || input?.mode === "writing" || input?.magicStyle === "marcus_magic";
-}
-
 function validateWritingOutput(text = "", input = {}) {
   const raw = String(text || "");
   const topic = String(input?.topic || "");
@@ -3854,22 +3842,6 @@ function validateWritingOutput(text = "", input = {}) {
 
   if (!raw.includes("[[ANSWERS]]")) return false;
   if (hasPlaceholderAnswers(raw)) return false;
-
-  const questionsSection = extractSection(raw, "[[QUESTIONS]]", "[[ANSWERS]]") || raw;
-  const answersSection = extractSection(raw, "[[ANSWERS]]", null) || "";
-  if (__v851RequiresGuidedClues(input)) {
-    const qCount = __v851CountNumberedQuestionBlocks(questionsSection);
-    const clueCount = __v851CountExplicitClueLines(questionsSection);
-    const aCount = String(answersSection)
-      .split("\n")
-      .map((line) => line.trim())
-      .filter((line) => /^\d+[.)-]?\s+/.test(line))
-      .length;
-
-    if (!qCount || !aCount) return false;
-    if (qCount !== aCount) return false;
-    if (clueCount < Math.max(1, Math.ceil(qCount * 0.7))) return false;
-  }
 
   if ((focus?.isPresentPerfect || /현재완료|present\s+perfect/i.test(topic)) &&
       !/현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic) &&
@@ -3931,9 +3903,6 @@ function buildPostFormatRepairPrompt(formatted = {}, input = {}, failure = {}) {
 - If count is short, add additional valid items to reach the requested count.
 - If an answer set is weak, rewrite it fully instead of leaving placeholders.
 - In elementary / abcstarter mode, keep answer lines short, direct, and one-sentence based.
-- In guided_writing / writing mode, every numbered question MUST include a second line formatted as:
-  (clue: keyword1, keyword2, keyword3)
-- Never return translation-only question lines without clue lines in guided_writing / writing mode.
 - Do not copy the previous broken numbering blindly. Rebuild it cleanly.
 
 [FAILURE CONTEXT]
@@ -6214,12 +6183,11 @@ function __v843BuildGuidedWritingQuestionBlock(block = {}, answer = "", input = 
   const wordCountSuffix = __v843ExtractWordCountSuffix(block.lead || "");
   const clue = __v843BuildGuidedWritingClue(repairedAnswer, input);
 
-  const safeLead = [leadBase, wordCountSuffix].filter(Boolean).join(" ").trim() || (locale === "en" ? "Write the English sentence." : "영어 문장을 쓰세요.");
-  const clueLabel = locale === "en" ? "clue" : "힌트";
-  const fallbackClue = locale === "en" ? "build, sentence, carefully" : "핵심어, 구조, 순서";
-  const clueLine = clue ? `(${clueLabel}: ${clue})` : `(${clueLabel}: ${fallbackClue})`;
+  const leadLine = [leadBase, wordCountSuffix].filter(Boolean).join(" ").trim();
+  const clueLabel = locale === "en" ? "clue" : "clue";
+  const clueLine = clue ? `(${clueLabel}: ${clue})` : "(clue: build, sentence, carefully)";
 
-  return [ `${block.no}. ${safeLead}`, clueLine ].filter(Boolean).join("\n");
+  return [ `${block.no}. ${leadLine}`, clueLine ].filter(Boolean).join("\n");
 }
 
 function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
@@ -6228,27 +6196,19 @@ function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
   const aMap = __v84ExtractAnswerMap(formatted.answerSheet || "");
 
   if (type === "guided_writing") {
-    const fallbackBlocks = [];
-    const sourceBlocks = qBlocks.length
-      ? qBlocks
-      : Array.from(aMap.keys())
-          .sort((a, b) => a - b)
-          .map((no) => ({
-            no,
-            lead: input?.language === "en" ? `Write the sentence for item ${no}.` : `${no}번 뜻에 맞는 영어 문장을 쓰세요.`,
-            rest: "",
-            lines: [],
-            raw: `${no}. ${input?.language === "en" ? `Write the sentence for item ${no}.` : `${no}번 뜻에 맞는 영어 문장을 쓰세요.`}`
-          }));
+    if (!qBlocks.length || !aMap.size) {
+      const passthrough = { ...formatted };
+      passthrough.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
+      return passthrough;
+    }
 
     const renderedBlocks = [];
     const renderedAnswers = [];
 
-    for (const block of sourceBlocks) {
+    for (const block of qBlocks) {
       const answer = __v85RepairGuidedWritingAnswer(String(aMap.get(block.no) || "").trim(), input);
       if (!answer) continue;
-      const rendered = __v843BuildGuidedWritingQuestionBlock(block, answer, input);
-      renderedBlocks.push(rendered);
+      renderedBlocks.push(__v843BuildGuidedWritingQuestionBlock(block, answer, input));
       renderedAnswers.push(`${block.no}. ${answer}`);
     }
 
@@ -6256,14 +6216,6 @@ function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
     next.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
     next.questions = renderedBlocks.join("\n");
     next.answerSheet = renderedAnswers.join("\n");
-
-    const clueCount = __v851CountExplicitClueLines(next.questions || "");
-    if (!renderedAnswers.length || clueCount < Math.max(1, Math.ceil(renderedAnswers.length * 0.7))) {
-      const passthrough = { ...formatted };
-      passthrough.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
-      return passthrough;
-    }
-
     next.actualCount = renderedAnswers.length;
     next.itemPairs = __mn83BuildItemPairs(next.questions || "", next.answerSheet || "");
     next.pairIntegrity = {
@@ -6429,7 +6381,7 @@ module.exports = async function handler_v841_workbook_type_router(req, res) {
       engine: "magic",
       workbookType: input.workbookType,
       profile: input.profile,
-      version: "s14-v8.5.1-guided-clue-hardlock",
+      version: "s14-v8.5.2-recovery-softclue",
       title: formatted.title,
       instructions: formatted.instructions,
       questions: formatted.questions,
