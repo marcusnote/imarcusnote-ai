@@ -5995,15 +5995,143 @@ function __v84BuildQuestionBlock(block = {}, transformedLine = "", label = "", i
   return parts.filter(Boolean).join("\n");
 }
 
-function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
-  const type = normalizeWorkbookType(input?.workbookType || "");
-  if (type === "guided_writing") {
-    const passthrough = { ...formatted };
-    passthrough.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
-    return passthrough;
+function __v843ExtractWordCountSuffix(text = "") {
+  const value = String(text || "").trim();
+  const m = value.match(/\(Word count:\s*\d+\)\s*$/i);
+  return m ? m[0].trim() : "";
+}
+
+function __v843StripWordCountSuffix(text = "") {
+  return String(text || "").replace(/\s*\(Word count:\s*\d+\)\s*$/i, "").trim();
+}
+
+function __v843NormalizeClueToken(token = "") {
+  return String(token || "")
+    .replace(/^[^A-Za-z]+|[^A-Za-z]+$/g, "")
+    .trim();
+}
+
+function __v843BuildGuidedWritingClue(answer = "", input = {}) {
+  const sentence = String(answer || "").trim();
+  if (!sentence) return "";
+
+  const stop = new Set([
+    "i","you","he","she","it","we","they","me","him","her","us","them",
+    "a","an","the","to","of","for","and","or","but","if","that","this","these","those",
+    "my","your","his","her","our","their","its",
+    "am","is","are","was","were","be","been","being",
+    "do","does","did","can","could","may","might","must","shall","should","will","would",
+    "have","has","had","not"
+  ]);
+
+  const phrasePatterns = [
+    /\bwith [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\ba movie\b/gi,
+    /\bthe piano\b/gi,
+    /\bthe guitar\b/gi,
+    /\bto [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\bnext (?:week|month|year)\b/gi,
+    /\bafter [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\bat [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\bon [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi
+  ];
+
+  const picked = [];
+  const pushUnique = (value) => {
+    const v = String(value || "").trim();
+    if (!v) return;
+    const key = v.toLowerCase();
+    if (!picked.some((item) => item.toLowerCase() == key)) picked.push(v);
+  };
+
+  const lower = sentence.toLowerCase();
+
+  const modalMatch = lower.match(/\b(can|could|may|might|must|should|will|would)\b/);
+  if (modalMatch) pushUnique(modalMatch[1]);
+
+  for (const pattern of phrasePatterns) {
+    const matches = sentence.match(pattern) || [];
+    for (const m of matches) pushUnique(m);
   }
 
+  const bareVerbMatch = sentence.match(/\b(?:can|could|may|might|must|should|will|would|to)\s+([A-Za-z]+)\b/i);
+  if (bareVerbMatch) pushUnique(bareVerbMatch[1]);
+
+  const words = sentence
+    .replace(/[.,!?;:()[\]"']/g, " ")
+    .split(/\s+/)
+    .map(__v843NormalizeClueToken)
+    .filter(Boolean);
+
+  for (const word of words) {
+    const key = word.toLowerCase();
+    if (stop.has(key)) continue;
+    if (key.length <= 2) continue;
+    pushUnique(word);
+    if (picked.length >= 5) break;
+  }
+
+  const finalClues = picked.slice(0, 5);
+  return finalClues.join(", ");
+}
+
+function __v843BuildGuidedWritingQuestionBlock(block = {}, answer = "", input = {}) {
+  const locale = __v84GetLocale(input);
+  const leadBase = __v843StripWordCountSuffix(block.lead || "");
+  const wordCountSuffix = __v843ExtractWordCountSuffix(block.lead || "");
+  const clue = __v843BuildGuidedWritingClue(answer, input);
+
+  const leadLine = [leadBase, wordCountSuffix].filter(Boolean).join(" ").trim();
+  const clueLabel = locale === "en" ? "clue" : "clue";
+  const clueLine = clue ? `(${clueLabel}: ${clue})` : "";
+
+  return [ `${block.no}. ${leadLine}`, clueLine ].filter(Boolean).join("\n");
+}
+
+function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
+  const type = normalizeWorkbookType(input?.workbookType || "");
   const qBlocks = __v84ExtractQuestionBlocks(formatted.questions || "");
+  const aMap = __v84ExtractAnswerMap(formatted.answerSheet || "");
+
+  if (type === "guided_writing") {
+    if (!qBlocks.length || !aMap.size) {
+      const passthrough = { ...formatted };
+      passthrough.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
+      return passthrough;
+    }
+
+    const renderedBlocks = [];
+    const renderedAnswers = [];
+
+    for (const block of qBlocks) {
+      const answer = String(aMap.get(block.no) || "").trim();
+      if (!answer) continue;
+      renderedBlocks.push(__v843BuildGuidedWritingQuestionBlock(block, answer, input));
+      renderedAnswers.push(`${block.no}. ${answer}`);
+    }
+
+    const next = { ...formatted };
+    next.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
+    next.questions = renderedBlocks.join("\n");
+    next.answerSheet = renderedAnswers.join("\n");
+    next.actualCount = renderedAnswers.length;
+    next.itemPairs = __mn83BuildItemPairs(next.questions || "", next.answerSheet || "");
+    next.pairIntegrity = {
+      ok: true,
+      reason: "guided_writing_clue_hardlock",
+      questionCount: next.actualCount,
+      answerCount: next.actualCount
+    };
+    next.content = [next.title, next.instructions, next.questions].filter(Boolean).join("\n\n");
+    next.fullText = [
+      next.title,
+      next.instructions,
+      next.questions,
+      ((input.language === "en" ? "Answers\n" : "정답\n") + (next.answerSheet || ""))
+    ].filter(Boolean).join("\n\n");
+    return next;
+  }
+
   const aMap = __v84ExtractAnswerMap(formatted.answerSheet || "");
   if (!qBlocks.length || !aMap.size) {
     const passthrough = { ...formatted };
