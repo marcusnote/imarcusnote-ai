@@ -6695,3 +6695,217 @@ module.exports = async function handler_v841_workbook_type_router(req, res) {
 };
 
 console.log("[v8.5.3-stable-router-recovery] loaded");
+
+
+/* ========================================================================
+   Marcusnote Magic v8.7 Chapter Prompt Differentiation Patch
+   - Prevents example-rich writing prompts from collapsing into concept mode
+   - Forces stronger chapter-specific prompt shells for present continuous/perfect
+   - Adds light answer cleanup for present perfect and slot guidance for present continuous
+   ======================================================================== */
+(function () {
+  const PATCH_TAG = "v8.7-chapter-prompt-differentiation";
+
+  const __prevDetectMagicIntent_v87 = typeof detectMagicIntent === "function" ? detectMagicIntent : null;
+  const __prevBuildUserPrompt_v87 = typeof buildUserPrompt === "function" ? buildUserPrompt : null;
+  const __prevFormatMagicResponse_v87 = typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+
+  function hasWorksheetTrainingSignal(text = "") {
+    const t = String(text || "").toLowerCase();
+    return /(영작훈련|영작 워크북|워크북|guided writing|writing lab|writing training|worksheet|문항|문제|제작해|생성해|만들어)/i.test(t);
+  }
+
+  function hasExampleOnlySignal(text = "") {
+    const t = String(text || "").toLowerCase();
+    return /(예시문항|예시|예문|example|examples)/i.test(t);
+  }
+
+  detectMagicIntent = function detectMagicIntent_v87(text = "") {
+    const raw = String(text || "");
+    const t = raw.toLowerCase();
+
+    const conceptKeywords = [
+      "개념설명", "개념 설명", "개념 정리", "문법 설명", "문법 개념", "grammar explanation", "grammar concept"
+    ];
+    const trainingKeywords = [
+      "영작", "영작훈련", "쓰기", "writing", "composition", "rearrange", "재배열", "문장 완성", "워크북", "훈련", "worksheet"
+    ];
+
+    const isConcept = conceptKeywords.some((k) => t.includes(k));
+    const isTraining = trainingKeywords.some((k) => t.includes(k));
+    const exampleOnly = hasExampleOnlySignal(raw);
+    const worksheetTraining = hasWorksheetTrainingSignal(raw);
+
+    // Critical fix:
+    // If the user is clearly asking for a worksheet/writing set and merely includes examples,
+    // do NOT downgrade the request into concept or concept+training mode.
+    if (worksheetTraining && exampleOnly) return "training";
+    if (worksheetTraining && !isConcept) return "training";
+
+    if (isConcept && isTraining) return "concept+training";
+    if (isConcept) return "concept";
+    if (isTraining) return "training";
+
+    if (__prevDetectMagicIntent_v87) {
+      try {
+        return __prevDetectMagicIntent_v87(raw);
+      } catch (_) {}
+    }
+    return "training";
+  };
+
+  function getV87ChapterKey(input = {}) {
+    const focus = input?.grammarFocus || detectGrammarFocus(
+      [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+    );
+    if (focus?.chapterKey === "present_perfect") return "present_perfect";
+    if (/현재진행|present\s+continuous|present\s+progressive|be\s*-?\s*ing/i.test(
+      [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ")
+    )) return "present_continuous";
+    return "other";
+  }
+
+  function buildPresentContinuousSlotBlock(input = {}) {
+    const isEn = input?.language === "en";
+    return isEn
+      ? `[CHAPTER-SPECIFIC OUTPUT SHELL: PRESENT CONTINUOUS]
+- This chapter is structure-driven, not generic translation-driven.
+- Build exactly ${input?.count || 25} items unless refill mode explicitly says otherwise.
+- Use the following visible slot balance as much as possible:
+  1) Items 1-8: Korean prompt + Marcus clue block in parentheses or bracketed word-combination style.
+  2) Items 9-13: word-combination / rearrangement style with 1 unnecessary extra word.
+  3) Items 14-18: question / negative / transformation style.
+  4) Items 19-${input?.count || 25}: mixed application items that still keep present continuous visible.
+- Present continuous clue shells should resemble Marcus Magic Card surface shapes such as:
+  [8 words, be-ing, now, play soccer, they, watch TV]
+  or
+  (be -ing, now, take pictures of, your dogs, look in)
+- For present continuous, do NOT output a bare list of simple Korean sentences only.
+- If examples are provided, copy the clue shell and item family first, not just the meaning.
+- Keep now / right now / at the moment / these days / look / listen spread across the set.
+- Do not let stative verbs like know, like, want, resemble, or have(ownership) dominate the core answer lines.`
+      : `[챕터별 출력 껍데기: 현재진행형]
+- 현재진행형은 단순 번역형이 아니라 구조 훈련형 챕터이다.
+- 보충생성이 아니라면 정확히 ${input?.count || 25}문항을 만들 것.
+- 다음 슬롯 균형이 눈에 보이게 드러나야 한다.
+  1) 1-8번: 한국어 제시문 + Marcus식 clue 괄호형 또는 대괄호 단어조합형
+  2) 9-13번: 단어조합/재배열형 + 불필요한 단어 1개 포함
+  3) 14-18번: 의문문/부정문/전환형
+  4) 19-${input?.count || 25}번: 현재진행형이 분명히 드러나는 혼합 응용형
+- 현재진행형 clue 껍데기는 Marcus Magic Card처럼 보여야 한다.
+  예: [8단어, be -ing, now, play soccer, they, watch TV]
+  또는 (be -ing, now, take pictures of, your dogs, look in)
+- 단순한 한국어 문장 나열만으로 끝내지 말 것.
+- 예시문항이 주어지면 의미만 흉내 내지 말고 clue 껍데기와 문항 계열을 먼저 복제할 것.
+- now / right now / at the moment / these days / look / listen 신호를 세트 전반에 분산할 것.
+- know, like, want, resemble, have(소유) 같은 상태동사가 핵심 정답을 지배하지 않게 할 것.`;
+  }
+
+  function buildPresentPerfectSlotBlock(input = {}) {
+    const isEn = input?.language === "en";
+    return isEn
+      ? `[CHAPTER-SPECIFIC OUTPUT SHELL: PRESENT PERFECT]
+- Build exactly ${input?.count || 25} items unless refill mode explicitly says otherwise.
+- Keep the 4 meaning zones visible across the whole set:
+  completion / experience / duration / result.
+- Prefer Korean prompt + clue in parentheses for most items.
+- Do not let generic simple-past paraphrases survive in final answers.
+- If examples are provided, preserve the clue shell across much of the set.
+- For duration items, strongly prefer for / since constructions.
+- For experience items, strongly prefer ever / never / before / once / twice.
+- For completion items, strongly prefer already / yet / just / recently.
+- For result items, use natural result-state verbs only when teachable.`
+      : `[챕터별 출력 껍데기: 현재완료]
+- 보충생성이 아니라면 정확히 ${input?.count || 25}문항을 만들 것.
+- 세트 전체에서 현재완료 4영역이 눈에 보이게 섞여야 한다: 완료 / 경험 / 계속 / 결과.
+- 대부분의 문항은 한국어 제시문 + 괄호 clue 형태를 유지할 것.
+- 최종 정답에서 단순과거 우회 표현이 살아남지 않게 할 것.
+- 예시문항이 주어지면 세트 전반에 clue 껍데기를 최대한 유지할 것.
+- 계속 용법은 for / since를 강하게 우선할 것.
+- 경험 용법은 ever / never / before / once / twice를 강하게 우선할 것.
+- 완료 용법은 already / yet / just / recently를 강하게 우선할 것.
+- 결과 용법은 교실에서 가르칠 수 있는 자연스러운 결과 동사만 사용할 것.`;
+  }
+
+  buildUserPrompt = function buildUserPrompt_v87(input = {}) {
+    const base = __prevBuildUserPrompt_v87 ? __prevBuildUserPrompt_v87(input) : "";
+    const chapterKey = getV87ChapterKey(input);
+    const blocks = [base];
+    if (chapterKey === "present_continuous") {
+      blocks.push(buildPresentContinuousSlotBlock(input));
+    } else if (chapterKey === "present_perfect") {
+      blocks.push(buildPresentPerfectSlotBlock(input));
+    }
+    return blocks.filter(Boolean).join("\n\n");
+  };
+
+  function cleanupPresentPerfectAnswerLine(line = "") {
+    let s = String(line || "").trim();
+    s = s.replace(/\bvisited the new cafe recently\b/i, "have visited the new cafe recently");
+    s = s.replace(/\bwent on that trip\b/i, "gone on that trip");
+    s = s.replace(/\bgo on that trip\b/i, "gone on that trip");
+    if (/\brecently\b/i.test(s) && !/\b(have|has)\b/i.test(s) && /\b(visit|visited|hear|heard|read|saw|seen|finish|finished|send|sent|take|took|taken)\b/i.test(s)) {
+      s = s.replace(/^I\s+/i, "I have ")
+           .replace(/^We\s+/i, "We have ")
+           .replace(/^They\s+/i, "They have ")
+           .replace(/^He\s+/i, "He has ")
+           .replace(/^She\s+/i, "She has ");
+    }
+    return s;
+  }
+
+  function rewriteQuestionLineWithClue(line = "", chapterKey = "other") {
+    const m = String(line || "").match(/^(\d+[.)]?\s*)(.+?)(\s*\(Word count:\s*\d+\))$/i);
+    if (!m) return line;
+    const prefix = m[1] || "";
+    const stem = (m[2] || "").trim();
+    const suffix = m[3] || "";
+    if (/\([^)]*\)/.test(stem)) return line;
+    if (chapterKey === "present_continuous") {
+      const hint = "(be -ing, now)";
+      return `${prefix}${stem} ${hint}${suffix}`;
+    }
+    return line;
+  }
+
+  formatMagicResponse = function formatMagicResponse_v87(rawText, input) {
+    const formatted = __prevFormatMagicResponse_v87 ? __prevFormatMagicResponse_v87(rawText, input) : {
+      title: "",
+      instructions: "",
+      questions: String(rawText || ""),
+      answerSheet: "",
+      fullText: String(rawText || ""),
+      actualCount: 0,
+    };
+
+    const chapterKey = getV87ChapterKey(input);
+
+    if (chapterKey === "present_perfect" && formatted?.answerSheet) {
+      const repaired = String(formatted.answerSheet)
+        .split("\n")
+        .map((line) => {
+          if (!/^\d+[.)-]?\s+/.test(String(line).trim())) return line;
+          const prefix = line.match(/^\d+[.)-]?\s+/)[0];
+          const body = line.replace(/^\d+[.)-]?\s+/, "");
+          return prefix + cleanupPresentPerfectAnswerLine(body);
+        })
+        .join("\n");
+      formatted.answerSheet = repaired;
+    }
+
+    if (chapterKey === "present_continuous" && formatted?.questions) {
+      const patchedQuestions = String(formatted.questions)
+        .split("\n")
+        .map((line) => rewriteQuestionLineWithClue(line, chapterKey))
+        .join("\n");
+      formatted.questions = patchedQuestions;
+      formatted.fullText = [formatted.title, formatted.instructions, formatted.questions, input?.language === "en" ? "Answers" : "정답", formatted.answerSheet]
+        .filter(Boolean)
+        .join("\n\n");
+    }
+
+    return formatted;
+  };
+
+  console.log(`[${PATCH_TAG}] loaded`);
+})();
