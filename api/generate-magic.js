@@ -6132,13 +6132,6 @@ function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
     return next;
   }
 
-  const aMap = __v84ExtractAnswerMap(formatted.answerSheet || "");
-  if (!qBlocks.length || !aMap.size) {
-    const passthrough = { ...formatted };
-    passthrough.instructions = __v84BuildWorkbookTypeInstructions(input, formatted.instructions || "");
-    return passthrough;
-  }
-
   const renderedBlocks = [];
   const renderedAnswers = [];
 
