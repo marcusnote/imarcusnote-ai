@@ -3007,6 +3007,7 @@ function buildMarcusMagicWordCountRuleBlock(input = {}) {
 - Treat Writing Lab as Marcus Magic by default.
 - Every question item should be compatible with a visible word count target.
 - Do NOT print (Word count: N) yourself inside the generated questions.
+- Every guided-writing item must keep a visible clue line or clue-friendly structure that the backend can preserve.
 - The backend will append a single final word count to each numbered question line after validation.
 - The word count target must match the final answer that appears in the answer sheet.
 - Word count means the number of space-separated English words in the final answer sentence.
@@ -3020,6 +3021,7 @@ function buildMarcusMagicWordCountRuleBlock(input = {}) {
 - Writing Lab은 기본적으로 마커스매직 스타일로 처리할 것.
 - 모든 문항은 보이는 단어 수 목표와 호환되게 설계할 것.
 - 생성 단계에서 (Word count: N)을 직접 문항에 출력하지 말 것.
+- guided writing 문항마다 백엔드가 보존할 수 있는 clue 또는 clue 친화적 구조가 반드시 살아 있어야 한다.
 - 백엔드가 검증 후 각 번호 문항 끝에 최종 단어 수를 한 번만 자동 부착한다.
 - 단어 수 목표는 정답지에 제시되는 최종 정답 문장의 실제 단어 수와 일치해야 한다.
 - 단어 수는 영어 최종 정답 문장에서 공백 기준 영어 단어 개수로 계산한다.
@@ -6011,57 +6013,117 @@ function __v843NormalizeClueToken(token = "") {
     .trim();
 }
 
-function __v843BuildGuidedWritingClue(answer = "", input = {}) {
-  const sentence = String(answer || "").trim();
-  if (!sentence) return "";
 
-  const stop = new Set([
-    "i","you","he","she","it","we","they","me","him","her","us","them",
-    "a","an","the","to","of","for","and","or","but","if","that","this","these","those",
-    "my","your","his","her","our","their","its",
-    "am","is","are","was","were","be","been","being",
-    "do","does","did","can","could","may","might","must","shall","should","will","would",
-    "have","has","had","not"
-  ]);
+function __v85NormalizeSpaces(text = "") {
+  return String(text || "").replace(/\s+/g, " ").trim();
+}
 
-  const phrasePatterns = [
-    /\bwith [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
-    /\ba movie\b/gi,
-    /\bthe piano\b/gi,
-    /\bthe guitar\b/gi,
-    /\bto [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
-    /\bnext (?:week|month|year)\b/gi,
-    /\bafter [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
-    /\bat [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
-    /\bon [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi
+function __v85DetectPresentProgressiveFocus(input = {}) {
+  const merged = [input?.topic, input?.worksheetTitle, input?.userPrompt]
+    .filter(Boolean)
+    .join(" ");
+  return /현재진행|present\s+progressive|present\s+continuous/i.test(merged);
+}
+
+function __v85RepairProgressiveTimeMarker(sentence = "") {
+  let fixed = String(sentence || "");
+  const replacements = [
+    [/\bevery morning\b/gi, "this morning"],
+    [/\bevery afternoon\b/gi, "this afternoon"],
+    [/\bevery evening\b/gi, "this evening"],
+    [/\bevery night\b/gi, "tonight"],
+    [/\bevery day\b/gi, "these days"],
+    [/\balways\b/gi, "right now"],
   ];
+  for (const [pattern, value] of replacements) {
+    fixed = fixed.replace(pattern, value);
+  }
+  return fixed;
+}
+
+function __v85RepairProgressiveLexicon(sentence = "") {
+  let fixed = String(sentence || "");
+  fixed = fixed.replace(/\b(am|is|are)\s+doing exercise\b/gi, (_, be) => `${be} exercising`);
+  fixed = fixed.replace(/\b(am|is|are)\s+doing sports\b/gi, (_, be) => `${be} playing sports`);
+  fixed = fixed.replace(/\b(am|is|are)\s+learning English this morning\b/gi, (_, be) => `${be} studying English this morning`);
+  return __v85NormalizeSpaces(fixed);
+}
+
+function __v85RepairGuidedWritingAnswer(answer = "", input = {}) {
+  let fixed = String(answer || "").trim();
+  if (!fixed) return "";
+
+  if (__v85DetectPresentProgressiveFocus(input)) {
+    fixed = __v85RepairProgressiveTimeMarker(fixed);
+    fixed = __v85RepairProgressiveLexicon(fixed);
+  }
+
+  fixed = fixed.replace(/\s+([.,!?;:])/g, "$1").trim();
+  if (!/[.!?]$/.test(fixed)) fixed += ".";
+  return fixed;
+}
+
+function __v85BuildGuidedWritingClue(answer = "", input = {}) {
+  const sentence = __v85RepairGuidedWritingAnswer(answer, input);
+  if (!sentence) return "";
 
   const picked = [];
   const pushUnique = (value) => {
-    const v = String(value || "").trim();
+    const v = __v85NormalizeSpaces(String(value || ""));
     if (!v) return;
     const key = v.toLowerCase();
-    if (!picked.some((item) => item.toLowerCase() == key)) picked.push(v);
+    if (!picked.some((item) => item.toLowerCase() === key)) picked.push(v);
   };
 
   const lower = sentence.toLowerCase();
 
-  const modalMatch = lower.match(/\b(can|could|may|might|must|should|will|would)\b/);
-  if (modalMatch) pushUnique(modalMatch[1]);
+  if (__v85DetectPresentProgressiveFocus(input)) {
+    const aux = lower.match(/\b(am|is|are)\b/);
+    if (aux) pushUnique(aux[1]);
+
+    const ingVerb = sentence.match(/\b([A-Za-z]+ing)\b/);
+    if (ingVerb) pushUnique(ingVerb[1]);
+
+    const timeMatch = sentence.match(/\b(right now|at the moment|now|this morning|this afternoon|this evening|tonight|these days)\b/i);
+    if (timeMatch) pushUnique(timeMatch[1]);
+  }
+
+  const phrasePatterns = [
+    /\bwith [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\ba [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\bthe [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\bto [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\bon [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi,
+    /\bat [A-Za-z]+(?: [A-Za-z]+){0,2}\b/gi
+  ];
 
   for (const pattern of phrasePatterns) {
     const matches = sentence.match(pattern) || [];
-    for (const m of matches) pushUnique(m);
+    for (const m of matches) {
+      if (picked.length >= 5) break;
+      const normalized = __v85NormalizeSpaces(m)
+        .replace(/\b(a|the)\s+(moment|computer|school|cinema)\b/gi, (_, art, noun) => noun)
+        .replace(/\b(the|a)\s+/i, "")
+        .trim();
+      if (normalized && normalized.toLowerCase() !== "moment") pushUnique(normalized);
+    }
+    if (picked.length >= 5) break;
   }
-
-  const bareVerbMatch = sentence.match(/\b(?:can|could|may|might|must|should|will|would|to)\s+([A-Za-z]+)\b/i);
-  if (bareVerbMatch) pushUnique(bareVerbMatch[1]);
 
   const words = sentence
     .replace(/[.,!?;:()[\]"']/g, " ")
     .split(/\s+/)
     .map(__v843NormalizeClueToken)
     .filter(Boolean);
+
+  const stop = new Set([
+    "i","you","he","she","it","we","they","me","him","her","us","them",
+    "a","an","the","to","of","for","and","or","but","if","that","this","these","those",
+    "my","your","his","her","our","their","its","with",
+    "am","is","are","was","were","be","been","being",
+    "do","does","did","can","could","may","might","must","shall","should","will","would",
+    "have","has","had","not","right","now"
+  ]);
 
   for (const word of words) {
     const key = word.toLowerCase();
@@ -6071,19 +6133,35 @@ function __v843BuildGuidedWritingClue(answer = "", input = {}) {
     if (picked.length >= 5) break;
   }
 
-  const finalClues = picked.slice(0, 5);
-  return finalClues.join(", ");
+  return picked.slice(0, 5).join(", ");
+}
+
+
+function __v843BuildGuidedWritingClue(answer = "", input = {}) {
+  const built = __v85BuildGuidedWritingClue(answer, input);
+  if (built) return built;
+
+  const sentence = String(answer || "").trim();
+  if (!sentence) return "";
+  const words = sentence
+    .replace(/[.,!?;:()[\]"']/g, " ")
+    .split(/\s+/)
+    .map(__v843NormalizeClueToken)
+    .filter(Boolean)
+    .slice(0, 4);
+  return words.join(", ");
 }
 
 function __v843BuildGuidedWritingQuestionBlock(block = {}, answer = "", input = {}) {
   const locale = __v84GetLocale(input);
+  const repairedAnswer = __v85RepairGuidedWritingAnswer(answer, input);
   const leadBase = __v843StripWordCountSuffix(block.lead || "");
   const wordCountSuffix = __v843ExtractWordCountSuffix(block.lead || "");
-  const clue = __v843BuildGuidedWritingClue(answer, input);
+  const clue = __v843BuildGuidedWritingClue(repairedAnswer, input);
 
   const leadLine = [leadBase, wordCountSuffix].filter(Boolean).join(" ").trim();
   const clueLabel = locale === "en" ? "clue" : "clue";
-  const clueLine = clue ? `(${clueLabel}: ${clue})` : "";
+  const clueLine = clue ? `(${clueLabel}: ${clue})` : "(clue: build, sentence, carefully)";
 
   return [ `${block.no}. ${leadLine}`, clueLine ].filter(Boolean).join("\n");
 }
@@ -6104,7 +6182,7 @@ function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
     const renderedAnswers = [];
 
     for (const block of qBlocks) {
-      const answer = String(aMap.get(block.no) || "").trim();
+      const answer = __v85RepairGuidedWritingAnswer(String(aMap.get(block.no) || "").trim(), input);
       if (!answer) continue;
       renderedBlocks.push(__v843BuildGuidedWritingQuestionBlock(block, answer, input));
       renderedAnswers.push(`${block.no}. ${answer}`);
@@ -6279,7 +6357,7 @@ module.exports = async function handler_v841_workbook_type_router(req, res) {
       engine: "magic",
       workbookType: input.workbookType,
       profile: input.profile,
-      version: "s14-v8.4.2-full-softguard",
+      version: "s14-v8.5.0-marcus-guidedclue-safe",
       title: formatted.title,
       instructions: formatted.instructions,
       questions: formatted.questions,
