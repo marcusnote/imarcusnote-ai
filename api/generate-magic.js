@@ -5259,6 +5259,104 @@ ${recentList ? `[최근 사용 패턴 - 재사용 금지]\n${recentList}` : ""}
 - 제시문 의미가 어색하면, 최종 정답 단계에서 자연스럽게 보정할 것.`;
   }
 
+
+  function buildMarcusReferenceDrivenBlock(input = {}) {
+    const raw = [input?.topic, input?.worksheetTitle, input?.userPrompt].filter(Boolean).join(" ");
+    const focus = input?.grammarFocus || detectGrammarFocus(raw);
+    const isWriting = input?.mode === "writing" || input?.magicStyle === "marcus_magic" || normalizeWorkbookType(input?.workbookType || "") === "guided_writing";
+    if (!isWriting) return "";
+    const isPresentContinuous = /현재진행|present\s*continuous|present\s*progressive|be\s*-?\s*ing/i.test(raw);
+    const isPresentPerfect = focus?.isPresentPerfect || /현재완료|have\s*p\.?p/i.test(raw);
+    if (isPresentContinuous) {
+      return input?.language === "en"
+        ? `[MARCUSNOTE CHAPTER HARD TEMPLATE: PRESENT CONTINUOUS]
+- Follow Marcus Magic Card present-continuous training identity, not a generic translation worksheet.
+- The set must visibly mix 4 item families inside one 25-item worksheet:
+  1) direct guided composition with clue fragments
+  2) word-combination sentence building with one extra unnecessary word
+  3) negative/question conversion or controlled transformation
+  4) mixed application that still keeps be + -ing visible
+- Target distribution for 25 items:
+  * 1-6: direct guided composition
+  * 7-13: word-combination items with [N words, ...] style clue payload
+  * 14-18: negative/question/conversion items
+  * 19-25: mixed but chapter-pure application items
+- In word-combination items, clues should look like Marcus workbook style: [8 words, be -ing, now, play soccer, they, watch TV]
+- Include be -ing or an equivalent structural anchor in most present-continuous clue sets.
+- Allow 1-2 extra unnecessary clue words in rearrangement / combination items.
+- Use strong present-continuous signals across the set: now, right now, at the moment, these days, look, listen.
+- Respect the workbook warning that stative possession/mental verbs should not dominate present-continuous answers: know, like, want, resemble, have (possession).
+- Avoid a flat list of Korean-to-English translation prompts. The worksheet must feel trained, staged, and edited.
+- Keep answer sentences natural and simple enough for middle-school learners, but task surfaces must be structurally rich.`
+        : `[마커스노트 챕터 하드 템플릿: 현재진행형]
+- 현재진행형 출력은 generic 번역형 워크시트가 아니라 Marcus Magic Card식 훈련 구조를 따라야 한다.
+- 한 세트 25문항 안에 다음 4가지 문항 계열이 눈에 보이게 섞여야 한다.
+  1) 직접 clue 기반 영작형
+  2) 단어조합형 영작(불필요 단어 1개 포함 가능)
+  3) 부정문/의문문/변환형
+  4) be + -ing가 유지되는 혼합 응용형
+- 25문항 권장 분배:
+  * 1-6: 직접 clue 기반 영작
+  * 7-13: [N단어, ...] 형태의 단어조합형
+  * 14-18: 부정문/의문문/전환형
+  * 19-25: 챕터 순도를 유지하는 혼합 응용형
+- 단어조합형 clue는 Marcus 워크북처럼 보여야 한다: [8단어, be -ing, now, play soccer, they, watch TV]
+- 현재진행형 단어조합 clue 다수에는 be -ing 또는 그에 준하는 구조 앵커를 포함할 것.
+- 배열형/조합형 clue에는 불필요 단어 1~2개를 허용한다.
+- now, right now, at the moment, these days, look, listen 같은 현재진행 신호를 세트 전반에 분산시킬 것.
+- 교재 설명처럼 know, like, want, resemble, have(소유) 같은 상태/소유 동사가 현재진행 핵심 정답을 지배하지 않게 할 것.
+- 단순한 한글→영어 번역문장 나열로 끝내지 말고, 훈련 단계가 보이도록 설계할 것.
+- 정답 문장은 중등 학습자 수준으로 자연스럽게 유지하되, 문항 표면은 구조적으로 풍부해야 한다.`;
+    }
+    if (isPresentPerfect) {
+      return input?.language === "en"
+        ? `[MARCUSNOTE CHAPTER HARD TEMPLATE: PRESENT PERFECT]
+- Follow Marcus Magic Card present-perfect applied workbook identity.
+- The worksheet must visibly balance the 4 meaning zones of present perfect:
+  1) completion/already-yet-just-recently
+  2) experience/ever-never-before-once-twice
+  3) duration/for-since-how long
+  4) result/gone-lost-left-broken etc.
+- Recommended distribution for 25 items: 6 completion, 6 experience, 7 duration, 6 result/application.
+- Most items should include fragment clues in parentheses, not bare translation only.
+- Keep have/has + past participle visible in the final answers.
+- Absolutely forbid finished-past triggers inside present-perfect target items: yesterday, last week, ago, when + past event, specific past years used as finished-time adverbials.
+- If the Korean source naturally suggests simple past, rewrite the item meaning into a valid present-perfect meaning before finalizing.
+- Use clue payloads that help learners choose the meaning zone: (for five years), (already), (never, before), (just), (since 2011), (once), (twice).
+- The worksheet should feel like a chapter-trained present-perfect set, not a random collection of generic sentences.`
+        : `[마커스노트 챕터 하드 템플릿: 현재완료]
+- 현재완료 출력은 Marcus Magic Card 응용편식 훈련 구조를 따라야 한다.
+- 세트 안에서 현재완료 4가지 의미 영역이 눈에 보이게 균형 있게 섞여야 한다.
+  1) 완료 already / yet / just / recently
+  2) 경험 ever / never / before / once / twice
+  3) 계속 for / since / how long
+  4) 결과 gone / lost / left / broken 등
+- 25문항 권장 분배: 완료 6, 경험 6, 계속 7, 결과·응용 6
+- 대부분의 문항은 단순 번역형이 아니라 괄호 clue가 포함된 조각형 영작이어야 한다.
+- 최종 정답에는 have/has + 과거분사가 분명하게 드러나야 한다.
+- 현재완료 목표 문항에는 yesterday, last week, ago, when절 과거 사건, 특정 과거연도 같은 완료 불가능 시간 표현을 절대 넣지 말 것.
+- 한국어 제시문이 단순과거를 강하게 유도하면, 최종 생성 전에 현재완료에 맞는 의미로 조정할 것.
+- clue에는 의미 영역 선택을 돕는 신호를 적극적으로 포함할 것: (for five years), (already), (never, before), (just), (since 2011), (once), (twice)
+- 결과물은 random sentence list가 아니라, 현재완료 챕터 훈련 세트처럼 보여야 한다.`;
+    }
+    return "";
+  }
+
+  function buildMarcusExamplePriorityBlock(input = {}) {
+    const request = String(input?.userPrompt || "");
+    const hasExamples = /(예시문항|예시|예문|example)/i.test(request);
+    if (!hasExamples) return "";
+    return input?.language === "en"
+      ? `[REFERENCE EXAMPLE PRIORITY]
+- The user provided or referenced example items. Match the SURFACE SHAPE of those examples first.
+- Prioritize the same clue shell, wording rhythm, and item family before inventing a new format.
+- If the examples show Marcus-style clue lines, preserve that shell across much of the set.`
+      : `[예시문항 우선 반영 규칙]
+- 사용자가 예시문항/예문을 함께 주었다면, 그 예시의 표면 형식을 먼저 따라야 한다.
+- 새로운 형식을 임의로 발명하기보다, 예시의 clue 모양, 리듬, 문항 계열을 우선 복제할 것.
+- 예시가 Marcus식 clue 줄을 보여 주면, 세트 전반에 그 껍데기를 최대한 유지할 것.`;
+  }
+
   buildSystemPrompt = function buildSystemPrompt_v823(input = {}) {
     const base = __prevBuildSystemPrompt ? __prevBuildSystemPrompt(input) : "";
     return [base, buildNaturalnessBlock(input), buildCsatAdvancedBlock(input)].filter(Boolean).join("\n\n");
@@ -5277,7 +5375,7 @@ ${recentList ? `[최근 사용 패턴 - 재사용 금지]\n${recentList}` : ""}
 - 특히 book to read / something to do / things to do 같은 명사 틀을 과도하게 반복하지 말 것.
 - article, task, approach, opportunity, perspective, strategy, place, reason, evidence, plan, discussion, project 같은 더 강한 명사 다양성을 사용할 것.
 - 고등부 요청에서는 사고형·학술형 의미를 꾸준히 포함할 것.`;
-    return [base, extra].filter(Boolean).join("\n\n");
+    return [base, extra, buildMarcusReferenceDrivenBlock(input), buildMarcusExamplePriorityBlock(input)].filter(Boolean).join("\n\n");
   };
 
   function qualityAudit(formatted = {}, input = {}) {
