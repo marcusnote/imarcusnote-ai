@@ -6220,7 +6220,7 @@ function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
     next.itemPairs = __mn83BuildItemPairs(next.questions || "", next.answerSheet || "");
     next.pairIntegrity = {
       ok: true,
-      reason: "guided_writing_clue_hardlock",
+      reason: "guided_writing_softclue",
       questionCount: next.actualCount,
       answerCount: next.actualCount
     };
@@ -6346,6 +6346,32 @@ module.exports = async function handler_v841_workbook_type_router(req, res) {
       "refill_question_count_mismatch",
       "refill_answer_count_mismatch"
     ].includes(String(finalGeneration?.failure?.reason || generation?.failure?.reason || ""))) {
+      const softened = __v841BuildSoftRecoveredFormatted(
+        finalGeneration?.formatted || generation?.formatted,
+        input,
+        finalGeneration?.failure || generation?.failure || {}
+      );
+      if (softened.ok) {
+        finalGeneration = {
+          ok: true,
+          formatted: softened.formatted,
+          attemptsUsed: (generation?.attemptsUsed || generation?.failure?.attempt || 0),
+          repairedBy: softened.repairedBy || "soft_recovered_no_throw"
+        };
+      }
+    }
+
+    if (!finalGeneration.ok && [
+      "exact_parity_failed",
+      "requested_count_mismatch",
+      "answer_diversity_low",
+      "pair_answer_missing",
+      "answers_missing_strict",
+      "question_numbering_broken_strict",
+      "answer_numbering_broken_strict",
+      "refill_question_count_mismatch",
+      "refill_answer_count_mismatch"
+    ].includes(String(finalGeneration?.failure?.reason || generation?.failure?.reason || ""))) {
       const degraded = __v842BuildDegradedFormatted(
         finalGeneration?.formatted || generation?.formatted,
         input,
@@ -6362,15 +6388,38 @@ module.exports = async function handler_v841_workbook_type_router(req, res) {
     }
 
     if (!finalGeneration.ok) {
-      return json(res, 502, {
-        success: false,
-        message: input?.isRefill
-          ? "보충 생성 결과의 정답 품질 또는 개수가 불안정하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요."
-          : "매직 정답 품질 검수에서 실패하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
-        detail: finalGeneration?.failure?.reason || "strict_generation_failed",
-        userMessage:
-          "정답 수와 문제 수가 완전히 맞지 않아 생성이 중단되었습니다. 이번 버전은 자동 복구를 한 번 시도했지만 통과하지 못했습니다. 다시 시도해주세요.",
-      });
+      const emergencySource = finalGeneration?.formatted || generation?.formatted || {};
+      const emergencyRecovered = {
+        ...emergencySource,
+        questions: String(emergencySource.questions || "").trim(),
+        answerSheet: normalizeMagicAnswerSheet(emergencySource.answerSheet || "", emergencySource.questions || "", input),
+      };
+      const emergencyParts = [emergencyRecovered.title, emergencyRecovered.instructions, emergencyRecovered.questions].filter(Boolean);
+      emergencyRecovered.content = emergencyParts.join("\n\n");
+      emergencyRecovered.fullText = [
+        ...emergencyParts,
+        ((input.language === "en" ? "Answers\n" : "정답\n") + (emergencyRecovered.answerSheet || ""))
+      ].filter(Boolean).join("\n\n");
+      emergencyRecovered.actualCount = countWorksheetItems(emergencyRecovered.questions || "");
+
+      if (validateServiceSafeOutput(emergencyRecovered, input)) {
+        finalGeneration = {
+          ok: true,
+          formatted: emergencyRecovered,
+          attemptsUsed: (generation?.attemptsUsed || generation?.failure?.attempt || 0),
+          repairedBy: "router_emergency_service_safe"
+        };
+      } else {
+        return json(res, 502, {
+          success: false,
+          message: input?.isRefill
+            ? "보충 생성 결과의 정답 품질 또는 개수가 불안정하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요."
+            : "매직 정답 품질 검수에서 실패하여 생성이 중단되었습니다. MP는 차감되지 않았습니다. 다시 시도해주세요.",
+          detail: finalGeneration?.failure?.reason || "strict_generation_failed",
+          userMessage:
+            "정답 수와 문제 수가 완전히 맞지 않아 생성이 중단되었습니다. 이번 버전은 자동 복구를 여러 단계 시도했지만 통과하지 못했습니다. 다시 시도해주세요.",
+        });
+      }
     }
 
     let formatted = finalGeneration.formatted;
@@ -6381,7 +6430,7 @@ module.exports = async function handler_v841_workbook_type_router(req, res) {
       engine: "magic",
       workbookType: input.workbookType,
       profile: input.profile,
-      version: "s14-v8.5.2-recovery-softclue",
+      version: "s14-v8.5.3-stable-router-recovery",
       title: formatted.title,
       instructions: formatted.instructions,
       questions: formatted.questions,
@@ -6402,7 +6451,7 @@ module.exports = async function handler_v841_workbook_type_router(req, res) {
       },
     });
   } catch (error) {
-    console.error("[v8.4-workbook-type-router-beta] fatal:", error);
+    console.error("[v8.5.3-stable-router-recovery] fatal:", error);
     return json(res, 500, {
       success: false,
       message: "매직 엔진 처리 중 오류가 발생했습니다.",
@@ -6411,4 +6460,4 @@ module.exports = async function handler_v841_workbook_type_router(req, res) {
   }
 };
 
-console.log("[v8.4-workbook-type-router-beta] loaded");
+console.log("[v8.5.3-stable-router-recovery] loaded");
