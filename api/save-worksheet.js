@@ -2,91 +2,99 @@ module.exports.config = { runtime: "nodejs" };
 
 const { createClient } = require("@supabase/supabase-js");
 
-function getSupabaseAdmin() {
-  const url = process.env.SUPABASE_URL;
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const SUPABASE_URL = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
 
-  if (!url || !serviceRoleKey) {
-    throw new Error("Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
-  }
-
-  return createClient(url, serviceRoleKey, {
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
+function setCors(res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
 }
 
-function normalizeString(value, fallback = "") {
+function json(res, status, payload) {
+  return res.status(status).json(payload);
+}
+
+function sanitizeString(value, fallback = "") {
   return typeof value === "string" ? value.trim() : fallback;
 }
 
-function normalizeContent(value) {
-  if (typeof value === "string") return value.trim();
-  if (value && typeof value === "object") return JSON.stringify(value);
-  return "";
-}
-
-function normalizeEngineMode(value) {
-  const v = normalizeString(value).toLowerCase();
-  if (!v) return "unknown";
-  return v.slice(0, 50);
+function buildSupabase() {
+  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
+    throw new Error("SUPABASE_ENV_MISSING");
+  }
+  return createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
+    auth: { persistSession: false, autoRefreshToken: false }
+  });
 }
 
 module.exports = async function handler(req, res) {
+  setCors(res);
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ ok: false, error: "Method Not Allowed" });
+    return json(res, 405, { ok: false, error: "Method Not Allowed" });
   }
 
   try {
-    const body = req.body || {};
-    const userId = normalizeString(body.userId);
-    const title = normalizeString(body.title, "Untitled Worksheet");
-    const content = normalizeContent(body.content);
-    const engineMode = normalizeEngineMode(body.engine_mode || body.engineMode || "");
+    const userId = sanitizeString(req.body?.userId || req.body?.user_id || "");
+    const title = sanitizeString(req.body?.title || "Untitled Worksheet");
+    const content = sanitizeString(req.body?.content || "");
+    const engineMode = sanitizeString(req.body?.engineMode || req.body?.engine_mode || "unknown");
+    const worksheetHtml = sanitizeString(req.body?.worksheetHtml || req.body?.worksheet_html || "");
+    const answerHtml = sanitizeString(req.body?.answerHtml || req.body?.answer_html || "");
 
-    if (!userId) {
-      return res.status(400).json({ ok: false, error: "Missing userId" });
-    }
+    if (!userId) return json(res, 400, { ok: false, error: "Missing userId" });
+    if (!content) return json(res, 400, { ok: false, error: "Missing content" });
 
-    if (!content) {
-      return res.status(400).json({ ok: false, error: "Missing content" });
-    }
+    const supabase = buildSupabase();
 
-    const supabase = getSupabaseAdmin();
-
-    const payload = {
+    const richRow = {
       user_id: userId,
-      title: title.slice(0, 200),
+      title,
       content,
       engine_mode: engineMode,
-      updated_at: new Date().toISOString(),
+      worksheet_html: worksheetHtml || null,
+      answer_html: answerHtml || null
     };
 
-    const { data, error } = await supabase
+    const safeRow = {
+      user_id: userId,
+      title,
+      content,
+      engine_mode: engineMode
+    };
+
+    let result = await supabase
       .from("worksheets")
-      .insert(payload)
-      .select("id, user_id, title, engine_mode, created_at")
+      .insert(richRow)
+      .select("*")
       .single();
 
-    if (error) {
-      console.error("[save-worksheet] supabase insert error:", error);
-      return res.status(500).json({
+    if (result.error) {
+      result = await supabase
+        .from("worksheets")
+        .insert(safeRow)
+        .select("*")
+        .single();
+    }
+
+    if (result.error) {
+      return json(res, 500, {
         ok: false,
-        error: "Failed to save worksheet",
-        detail: error.message || "unknown_insert_error",
+        error: result.error.message || "Failed to save worksheet"
       });
     }
 
-    return res.status(200).json({
+    return json(res, 200, {
       ok: true,
-      worksheet: data,
+      worksheet: result.data
     });
-  } catch (err) {
-    console.error("[save-worksheet] fatal:", err);
-    return res.status(500).json({
-      ok: false,
-      error: "Server error",
-      detail: err.message || "unknown_server_error",
-    });
+  } catch (error) {
+    const message = error && error.message ? error.message : "unknown_error";
+    return json(res, 500, { ok: false, error: message });
   }
 };
