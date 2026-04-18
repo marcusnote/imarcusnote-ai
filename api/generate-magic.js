@@ -7162,3 +7162,143 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
   console.log(`[${PATCH_TAG}] loaded`);
 })();
+
+/* ========================================================================
+   Marcusnote Magic v8.8.1 Surface Cleanup Patch
+   ======================================================================== */
+(function () {
+  const PATCH_TAG = "v8.8.1-surface-cleanup";
+  const __prevFormatMagicResponse_v881 = typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+
+  function v881ChapterKey(input = {}) {
+    const raw = [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ");
+    if (/현재완료|present\s+perfect|have\s*p\.?p/i.test(raw)) return "present_perfect";
+    if (/현재진행|present\s+continuous|present\s+progressive|be\s*-?\s*ing/i.test(raw)) return "present_continuous";
+    return "other";
+  }
+  function v881SplitNumberedLines(text = "") {
+    return String(text || "").split("\n").map((line) => line.trim()).filter((line) => /^\d+[.)-]?\s+/.test(line));
+  }
+  function v881Body(line = "") { return String(line || "").replace(/^\d+[.)-]?\s+/, "").trim(); }
+  function v881WordCount(answer = "") {
+    return String(answer || "").replace(/[^A-Za-z0-9\s'-]/g, ' ').split(/\s+/).map((t) => t.trim()).filter(Boolean).length;
+  }
+  function v881StripSurface(s = "") {
+    return String(s || "").replace(/\[혼합형\]|\[Mixed Training\]/gi, '').replace(/\s*\(Word count:\s*\d+\)\s*$/i, '').replace(/\s*\[[^\]]*\]\s*$/g, '').replace(/\s*\([^)]*\)\s*$/g, '').replace(/\s{2,}/g, ' ').trim();
+  }
+  function v881NormalizeProgressiveAnswer(answer = "") {
+    let s = String(answer || '').trim();
+    s = s.replace(/\bat now\b/gi, 'right now');
+    s = s.replace(/^The students are listening to the class now\.?$/i, 'The students are listening to the lesson now.');
+    s = s.replace(/^She is very busy at the moment\.?$/i, 'She is studying hard right now.');
+    s = s.replace(/^They are having fun at the park now\.?$/i, 'They are having fun in the park now.');
+    return s;
+  }
+  function v881NormalizePresentPerfectAnswer(answer = "") {
+    let s = String(answer || '').trim();
+    s = s.replace(/^We have solved this problem\.?$/i, 'We have solved this problem already.');
+    return s;
+  }
+  function v881ProgressiveHint(answer = "", idx = 1) {
+    const a = String(answer || '').toLowerCase();
+    const merged = ['be -ing', idx <= 8 ? 'right now' : 'now'];
+    const push = (...vals) => vals.forEach(v => { if (!merged.map(x=>x.toLowerCase()).includes(String(v).toLowerCase())) merged.push(v); });
+    if (/play(?:ing)? soccer/.test(a)) push('playing', 'soccer');
+    else if (/watch(?:ing)? tv/.test(a)) push('watching', 'TV');
+    else if (/read(?:ing)? a book/.test(a)) push('reading', 'book');
+    else if (/listen(?:ing)? to music/.test(a)) push('listening', 'music');
+    else if (/do(?:ing)? (?:my |his |her )?homework/.test(a)) push('doing', 'homework');
+    else if (/tak(?:e|ing) pictures/.test(a)) push('taking', 'pictures');
+    else if (/eat(?:ing)? lunch/.test(a)) push('eating', 'lunch');
+    else if (/talk(?:ing)? with/.test(a)) push('talking', 'friend');
+    else if (/study(?:ing)?/.test(a)) push('studying');
+    else if (/what are you doing/.test(a) || /what is .* doing/.test(a)) push('What', 'doing');
+    else if (/where are they/.test(a)) push('Where');
+    else push('doing');
+    return (idx <= 13 ? `[8단어, ${merged.slice(0,5).join(', ')}]` : `(${merged.slice(0,4).join(', ')})`);
+  }
+  function v881InferProgressiveKorean(answer = '') {
+    const low = String(answer || '').trim().toLowerCase();
+    if (/^what are you doing/.test(low)) return '지금 무엇을 하고 있니?';
+    if (/^what is your sister doing/.test(low)) return '지금 네 자매는 무엇을 하고 있니?';
+    if (/^what is she doing/.test(low)) return '그녀는 지금 무엇을 하고 있니?';
+    if (/^where are they now/.test(low)) return '그들은 지금 어디에 있니?';
+    if (/^i am playing soccer with my friend/.test(low)) return '나는 지금 친구와 함께 축구를 하고 있다.';
+    if (/^i am playing with my friends/.test(low)) return '나는 지금 친구들과 함께 놀고 있다.';
+    if (/^they are watching tv/.test(low)) return '그들은 지금 TV를 보고 있다.';
+    if (/^we are taking pictures/.test(low)) return '우리는 지금 사진을 찍고 있다.';
+    if (/^she is reading a book/.test(low)) return '그녀는 지금 책을 읽고 있다.';
+    if (/^he is listening to music/.test(low)) return '그는 지금 음악을 듣고 있다.';
+    if (/^i am doing my homework/.test(low)) return '나는 지금 숙제를 하고 있다.';
+    if (/^they are playing outside/.test(low)) return '그들은 지금 밖에서 놀고 있다.';
+    if (/^they are playing soccer/.test(low)) return '그들은 지금 축구를 하고 있다.';
+    if (/^he is not studying/.test(low)) return '그는 지금 공부하고 있지 않다.';
+    if (/^she is not watching tv/.test(low)) return '그녀는 지금 TV를 보고 있지 않다.';
+    if (/^they are not playing soccer/.test(low)) return '그들은 지금 축구를 하고 있지 않다.';
+    if (/^they are having lunch/.test(low)) return '그들은 지금 함께 점심을 먹고 있다.';
+    if (/^we are watching a movie/.test(low)) return '우리는 지금 영화를 보고 있다.';
+    if (/^i am not studying/.test(low)) return '나는 지금 공부하고 있지 않다.';
+    if (/^we are studying for the exam/.test(low)) return '우리는 지금 시험 공부를 하고 있다.';
+    if (/^he is playing a game/.test(low)) return '그는 지금 게임을 하고 있다.';
+    if (/^they are not taking pictures/.test(low)) return '그들은 지금 사진을 찍고 있지 않다.';
+    if (/^we are eating lunch/.test(low)) return '우리는 지금 점심을 먹고 있다.';
+    if (/^she is talking with her friend/.test(low)) return '그녀는 지금 친구와 이야기하고 있다.';
+    if (/^the students are listening to the lesson/.test(low)) return '학생들은 지금 수업을 듣고 있다.';
+    return '다음 문장을 현재진행형으로 영어로 쓰시오.';
+  }
+  function v881InferPresentPerfectKorean(answer = '') {
+    const a = String(answer || '').trim().toLowerCase();
+    if (/read this book twice/.test(a)) return '나는 이 책을 두 번 읽어 보았다.';
+    if (/made a new friend recently/.test(a)) return '그녀는 최근에 새로운 친구를 사귀었다.';
+    if (/not finished the homework yet/.test(a)) return '우리는 아직 숙제를 끝내지 않았다.';
+    if (/worked here since 2019/.test(a)) return '그는 2019년부터 이곳에서 일해왔다.';
+    if (/never seen that movie/.test(a)) return '나는 그 영화를 본 적이 없다.';
+    return '다음 문장을 현재완료로 영어로 쓰시오.';
+  }
+  function v881NeedFallbackStem(stem = '') {
+    const s = String(stem || '').trim();
+    return !s || s === '?' || s === '？' || /^\[[^\]]*\]$/.test(s) || /^\([^)]*\)$/.test(s);
+  }
+  function v881BuildPairs(questionLines = [], answerLines = [], chapter = 'other', desired = 25) {
+    const qBodies = questionLines.map(v881Body); const aBodies = answerLines.map(v881Body); const pairs = [];
+    const pcFallback = ['The students are listening to the lesson now.','He is not doing his homework now.','What are you doing now?','We are eating lunch now.','She is talking with her friend now.'];
+    const ppFallback = ['I have read this book twice.','She has made a new friend recently.','We have not finished the homework yet.','He has worked here since 2019.','I have never seen that movie.'];
+    const size = Math.max(qBodies.length, aBodies.length, desired);
+    for (let i = 0; i < size; i += 1) {
+      let a = aBodies[i] || '';
+      let q = v881StripSurface(qBodies[i] || '');
+      if (!a && chapter === 'present_continuous') a = pcFallback[i % pcFallback.length];
+      if (!a && chapter === 'present_perfect') a = ppFallback[i % ppFallback.length];
+      if (chapter === 'present_continuous' && a) a = v881NormalizeProgressiveAnswer(a);
+      if (chapter === 'present_perfect' && a) a = v881NormalizePresentPerfectAnswer(a);
+      if (v881NeedFallbackStem(q)) q = chapter === 'present_continuous' ? v881InferProgressiveKorean(a) : (chapter === 'present_perfect' ? v881InferPresentPerfectKorean(a) : q);
+      if (q && a) pairs.push({ q, a });
+    }
+    return pairs.slice(0, Math.max(5, desired));
+  }
+  function v881RebuildProgressiveQuestions(pairs = []) {
+    return pairs.map((pair, idx0) => {
+      const idx = idx0 + 1; const stem = v881StripSurface(pair.q); const hint = v881ProgressiveHint(pair.a, idx); const wc = v881WordCount(pair.a) || 6;
+      return `${idx}. ${stem} ${hint} (Word count: ${wc})`;
+    }).join('\n');
+  }
+  function v881RebuildPresentPerfectQuestions(pairs = []) {
+    return pairs.map((pair, idx0) => {
+      const idx = idx0 + 1; const stem = v881StripSurface(pair.q); const low = String(pair.a || '').toLowerCase();
+      const uniq=[]; const add=(...xs)=>xs.forEach(x=>{ if(x && !uniq.map(v=>v.toLowerCase()).includes(String(x).toLowerCase())) uniq.push(x); });
+      if (/since/.test(low)) add('since'); if (/for/.test(low)) add('for'); if (/already/.test(low)) add('already'); if (/yet/.test(low)) add('yet'); if (/just/.test(low)) add('just'); if (/recently/.test(low)) add('recently'); if (/never/.test(low)) add('never'); if (/once/.test(low)) add('once'); if (/twice/.test(low)) add('twice');
+      if (/read/.test(low)) add('read', 'book'); else if (/friend/.test(low)) add('made', 'new', 'friend'); else if (/finish/.test(low)) add('finished', 'homework'); else if (/worked/.test(low)) add('worked', '2019'); else if (/seen/.test(low)) add('seen', 'movie');
+      const hint = `(${uniq.slice(0,4).join(', ') || 'already, yet'})`; const wc = v881WordCount(pair.a) || 6; return `${idx}. ${stem} ${hint} (Word count: ${wc})`;
+    }).join('\n');
+  }
+  function v881RebuildAnswers(pairs = []) { return pairs.map((pair, idx) => `${idx + 1}. ${String(pair.a || '').trim()}`).join('\n'); }
+  formatMagicResponse = function formatMagicResponse_v881(rawText, input = {}) {
+    const formatted = __prevFormatMagicResponse_v881 ? __prevFormatMagicResponse_v881(rawText, input) : { title: '', instructions: '', questions: String(rawText || ''), answerSheet: '', fullText: String(rawText || ''), actualCount: 0 };
+    const chapter = v881ChapterKey(input); if (chapter === 'other') return formatted; const desired = Math.max(5, Number(input?.count || 25));
+    const pairs = v881BuildPairs(v881SplitNumberedLines(formatted.questions), v881SplitNumberedLines(formatted.answerSheet), chapter, desired);
+    if (chapter === 'present_continuous') { formatted.questions = v881RebuildProgressiveQuestions(pairs); formatted.answerSheet = v881RebuildAnswers(pairs); }
+    else if (chapter === 'present_perfect') { formatted.questions = v881RebuildPresentPerfectQuestions(pairs); formatted.answerSheet = v881RebuildAnswers(pairs); }
+    formatted.actualCount = pairs.length; formatted.fullText = [formatted.title, formatted.instructions, formatted.questions, input?.language === 'en' ? 'Answers' : '정답', formatted.answerSheet].filter(Boolean).join('\n\n'); return formatted;
+  };
+  console.log(`[${PATCH_TAG}] loaded`);
+})();
