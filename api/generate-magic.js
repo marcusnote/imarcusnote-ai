@@ -1,4 +1,4 @@
-module.exports.config = { runtime: "nodejs" };
+// config moved to final export block
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
@@ -323,8 +323,42 @@ function detectGrammarFocus(text = "") {
     /adjectival to-infinitive/i,
   ]);
 
+  const isDitransitive = hasAny([
+    /수여동사/,
+    /ditransitive/i,
+    /간접목적어/,
+    /직접목적어/,
+    /4형식/,
+  ]);
+
+  const isBeQuestion = hasAny([
+    /be동사.*의문문/,
+    /be동사 의문문/,
+    /am\/is\/are/,
+    /be-verb question/i,
+  ]);
+
+  const isDoQuestion = hasAny([
+    /일반동사.*의문문/,
+    /일반동사의 의문문/,
+    /do-question/i,
+    /does-question/i,
+    /do\/does question/i,
+  ]);
+
+  const isPresentPerfectProgressive = hasAny([
+    /현재완료\s*진행형/,
+    /present\s+perfect\s+(continuous|progressive)/i,
+    /have\s+been\s+\w+ing/i,
+    /has\s+been\s+\w+ing/i,
+  ]);
+
   let chapterKey = "general";
-  if (isWhatRelativePronoun) chapterKey = "relative_pronoun_what";
+  if (isPresentPerfectProgressive) chapterKey = "present_perfect_progressive";
+  else if (isDitransitive) chapterKey = "ditransitive";
+  else if (isBeQuestion) chapterKey = "be_question";
+  else if (isDoQuestion) chapterKey = "do_question";
+  else if (isWhatRelativePronoun) chapterKey = "relative_pronoun_what";
   else if (isRelativePronoun && isNonRestrictive) chapterKey = "relative_pronoun_non_restrictive";
   else if (isRelativePronoun && isObjectiveRelativePronoun) chapterKey = "relative_pronoun_objective";
   else if (isRelativePronoun && isRestrictive) chapterKey = "relative_pronoun_restrictive";
@@ -358,6 +392,10 @@ function detectGrammarFocus(text = "") {
     isObjectiveRelativePronoun,
     isWhatRelativePronoun,
     isToInfinitiveAdjective,
+    isDitransitive,
+    isBeQuestion,
+    isDoQuestion,
+    isPresentPerfectProgressive,
   };
 }
 
@@ -512,6 +550,66 @@ const CHAPTER_EXPANSION_LIBRARY = {
 - can / could / will / would 뒤에 완전한 동사구가 오는 목적절을 우선한다.
 - 목적 의미가 분명하고 수업용으로 가르칠 수 있어야 한다.`
   }
+  ,
+  ditransitive: {
+    en: `[Chapter Blueprint: Ditransitive Verbs]
+- Core ratio: about 80% true ditransitive items.
+- Prefer give, send, show, teach, tell, buy, make, find, offer.
+- Preferred answer families:
+  give + indirect object + direct object
+  send + direct object + to + person
+  buy + direct object + for + person
+- Do not let causatives such as make/let/have dominate unless explicitly requested.`,
+    ko: `[챕터 청사진: 수여동사]
+- 권장 비율: 진짜 수여동사 핵심 문항 80% 내외.
+- give, send, show, teach, tell, buy, make, find, offer를 우선 사용한다.
+- 선호 정답 계열:
+  give + 간접목적어 + 직접목적어
+  send + 직접목적어 + to + 사람
+  buy + 직접목적어 + for + 사람
+- make/let/have 같은 사역동사 구조가 주류가 되지 않게 한다.`
+  },
+  be_question: {
+    en: `[Chapter Blueprint: Be-Verb Questions]
+- Core ratio: about 85% be-verb question items.
+- Preferred answer family:
+  Am/Is/Are + subject + complement/adverbial?
+- Keep present be-verb questions highly visible.
+- Do not allow declarative statements to dominate.`,
+    ko: `[챕터 청사진: be동사 의문문]
+- 권장 비율: be동사 의문문 핵심 문항 85% 내외.
+- 선호 정답 계열:
+  Am/Is/Are + 주어 + 보어/부사어?
+- 현재형 be동사 의문문이 눈에 잘 보이게 유지한다.
+- 평서문이 세트를 지배하지 않게 한다.`
+  },
+  do_question: {
+    en: `[Chapter Blueprint: Do/Does Questions]
+- Core ratio: about 85% do/does question items.
+- Preferred answer family:
+  Do/Does + subject + base verb ...?
+- Keep simple present question structure visible.
+- Avoid declarative drift and unrelated modal patterns.`,
+    ko: `[챕터 청사진: 일반동사 의문문]
+- 권장 비율: do/does 의문문 핵심 문항 85% 내외.
+- 선호 정답 계열:
+  Do/Does + 주어 + 동사원형 ...?
+- 단순현재 의문문 구조가 눈에 잘 보이게 유지한다.
+- 평서문, 조동사 혼합형으로 흐르지 않게 한다.`
+  },
+  present_perfect_progressive: {
+    en: `[Chapter Blueprint: Present Perfect Progressive]
+- Core ratio: about 80% have/has been + -ing items.
+- Preferred meaning: action continuing up to now.
+- Prefer for / since with duration and continuity.
+- Do not let simple present perfect dominate.`,
+    ko: `[챕터 청사진: 현재완료 진행형]
+- 권장 비율: have/has been + 동사ing 핵심 문항 80% 내외.
+- 지금까지 계속 이어지는 동작 의미를 우선한다.
+- for / since를 활용한 지속 의미를 우선한다.
+- 현재완료 일반형이 주류가 되지 않게 한다.`
+  }
+
 };
 
 function buildChapterExpansionBlueprintBlock(input = {}) {
@@ -867,6 +965,64 @@ function buildMarcusChapterExpansionBlock(input = {}) {
 `.trim());
   }
 
+  if (focus?.isDitransitive) {
+    blocks.push(isEn ? `
+[Ditransitive Chapter Expansion]
+- Keep the worksheet centered on real ditransitive patterns.
+- Prefer give/show/send/teach/tell/buy/make/find/offer.
+- Answer shapes should visibly show indirect object + direct object, or direct object + to/for + person.
+- Do not let causatives like make/let/have dominate.
+`.trim() : `
+[수여동사 챕터 확장]
+- 학습지는 반드시 진짜 수여동사 구조 중심으로 유지할 것.
+- give/show/send/teach/tell/buy/make/find/offer를 우선 사용할 것.
+- 정답 형태는 간접목적어 + 직접목적어, 또는 직접목적어 + to/for + 사람 구조가 눈에 보이게 할 것.
+- make/let/have 같은 사역동사 구조가 주류가 되지 않게 할 것.
+`.trim());
+  }
+
+  if (focus?.isBeQuestion) {
+    blocks.push(isEn ? `
+[Be-Verb Question Chapter Expansion]
+- Keep the worksheet centered on Am/Is/Are questions.
+- Most items must be true questions ending with a question mark.
+- Avoid declarative drift.
+`.trim() : `
+[be동사 의문문 챕터 확장]
+- 학습지는 반드시 Am/Is/Are 의문문 중심으로 유지할 것.
+- 대부분의 문항은 물음표가 있는 진짜 의문문이어야 한다.
+- 평서문으로 새지 말 것.
+`.trim());
+  }
+
+  if (focus?.isDoQuestion) {
+    blocks.push(isEn ? `
+[Do/Does Question Chapter Expansion]
+- Keep the worksheet centered on Do/Does + subject + base verb questions.
+- Most items must be true questions ending with a question mark.
+- Avoid declaratives and unrelated modal-heavy patterns.
+`.trim() : `
+[일반동사 의문문 챕터 확장]
+- 학습지는 반드시 Do/Does + 주어 + 동사원형 의문문 중심으로 유지할 것.
+- 대부분의 문항은 물음표가 있는 진짜 의문문이어야 한다.
+- 평서문이나 조동사 중심 문제로 흐르지 말 것.
+`.trim());
+  }
+
+  if (focus?.isPresentPerfectProgressive) {
+    blocks.push(isEn ? `
+[Present Perfect Progressive Chapter Expansion]
+- Keep the worksheet centered on have/has been + -ing.
+- Prefer continuation meaning up to now.
+- Do not let plain present perfect dominate.
+`.trim() : `
+[현재완료 진행형 챕터 확장]
+- 학습지는 반드시 have/has been + 동사ing 구조 중심으로 유지할 것.
+- 지금까지 계속 이어지는 동작 의미를 우선할 것.
+- 현재완료 일반형이 세트를 지배하지 않게 할 것.
+`.trim());
+  }
+
   const blueprint = buildChapterExpansionBlueprintBlock(input);
   if (blueprint) blocks.push(blueprint);
 
@@ -950,6 +1106,56 @@ function hasMildChapterCoverage(text = "", input = {}) {
 
   return true;
 }
+
+
+function hasHardChapterCoverage(answerSheet = "", input = {}) {
+  const focus = input?.grammarFocus || {};
+  const lines = String(answerSheet || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line))
+    .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+    .filter(Boolean);
+
+  if (!lines.length) return false;
+
+  const ratio = (predicate) => lines.filter(predicate).length / lines.length;
+
+  if (focus?.isDitransitive) {
+    const good = ratio((line) =>
+      /\b(give|gives|gave|send|sends|sent|show|shows|showed|teach|teaches|taught|tell|tells|told|buy|buys|bought|offer|offers|offered|make|makes|made|find|finds|found)\b/i.test(line) &&
+      (
+        /\b(me|you|him|her|us|them)\b.*\b(a|an|the|this|that|my|your|his|her|our|their)\b/i.test(line) ||
+        /\bto\b|\bfor\b/i.test(line)
+      )
+    );
+    return good >= 0.65;
+  }
+
+  if (focus?.isBeQuestion) {
+    const good = ratio((line) =>
+      /^(Am|Is|Are)\b/.test(line) && /\?$/.test(line)
+    );
+    return good >= 0.75;
+  }
+
+  if (focus?.isDoQuestion) {
+    const good = ratio((line) =>
+      /^(Do|Does)\b/.test(line) && /\?$/.test(line)
+    );
+    return good >= 0.75;
+  }
+
+  if (focus?.isPresentPerfectProgressive) {
+    const good = ratio((line) =>
+      /\b(have|has)\s+been\s+\w+ing\b/i.test(line)
+    );
+    return good >= 0.7;
+  }
+
+  return true;
+}
+
 
 
 /* =========================
@@ -4004,6 +4210,7 @@ function validateWritingOutput(text = "", input = {}) {
   }
 
   if (!hasMildChapterCoverage(raw, input)) return false;
+  if (!hasHardChapterCoverage(extractSection(raw, "[[ANSWERS]]", null) || raw, input)) return false;
   if (hasBlockedChapterLeak(extractSection(raw, "[[ANSWERS]]", null) || raw, input)) return false;
 
   if (input?.mode === "abcstarter" || input?.level === "elementary") {
@@ -4339,7 +4546,7 @@ mpState.member,
    Main Handler
    ========================= */
 
-module.exports = async function handler(req, res) {
+async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
@@ -5731,7 +5938,7 @@ async function __mn83TryStrictGenerate(input = {}, maxAttempts = 3) {
   };
 }
 
-module.exports = async function handler_v83_strict(req, res) {
+async function handler_v83_strict(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
@@ -6519,7 +6726,7 @@ function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
 }
 
 
-module.exports = async function handler_v841_workbook_type_router(req, res) {
+async function handler_v841_workbook_type_router(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
@@ -8021,10 +8228,10 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 (() => {
   let __s16core = null;
   try {
-    __s16core = require("../lib/magic-s16-core");
-    console.log("✅ S16 core loaded");
+    __s16core = require("../lib/magic-s17-core");
+    console.log("✅ S17 core loaded");
   } catch (err) {
-    console.warn("⚠️ S16 core not loaded:", err && err.message ? err.message : err);
+    console.warn("⚠️ S17 core not loaded:", err && err.message ? err.message : err);
     return;
   }
 
@@ -8058,7 +8265,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     buildUserPrompt = function buildUserPrompt_s16(input = {}) {
       let prompt = __s16_prevBuildUserPrompt(input);
       const guideBlock = buildTextbookGuideBlock(input);
-      if (guideBlock && !String(prompt || "").includes("[S16 교과서 1학기 매핑]")) {
+      if (guideBlock && !String(prompt || "").includes("[S17 교과서 1학기 매핑]")) {
         prompt = [prompt, guideBlock].filter(Boolean).join("\n\n");
       }
       return prompt;
@@ -8123,5 +8330,10 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     };
   }
 
-  console.log("✅ S16 textbook mapping patch applied");
+  console.log("✅ S17 textbook mapping patch applied");
 })();
+
+
+// Final Vercel export
+module.exports = handler_v841_workbook_type_router;
+module.exports.config = { runtime: "nodejs" };
