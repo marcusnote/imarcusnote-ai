@@ -8011,3 +8011,117 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
   console.log("✅ v8.9.2 sync patch applied");
 })();
+
+/* =========================================================
+ * S16 TEXTBOOK MAPPING + HARD LOCK PATCH
+ * - uses ../lib/magic-s16-core.js
+ * - wraps normalizeInput / buildUserPrompt / formatMagicResponse
+ * - keeps base file intact while adding lesson mapping
+ * ========================================================= */
+(() => {
+  let __s16core = null;
+  try {
+    __s16core = require("../lib/magic-s16-core");
+    console.log("✅ S16 core loaded");
+  } catch (err) {
+    console.warn("⚠️ S16 core not loaded:", err && err.message ? err.message : err);
+    return;
+  }
+
+  const {
+    resolveTextbookLesson,
+    buildTextbookGuideBlock,
+    ensureQuestionLine,
+    ensureAnswerLine,
+    dedupeAnswer,
+    stripNumbering,
+    normalizeText,
+  } = __s16core;
+
+  const __s16_prevNormalizeInput = typeof normalizeInput === "function" ? normalizeInput : null;
+  if (__s16_prevNormalizeInput) {
+    normalizeInput = function normalizeInput_s16(body = {}) {
+      const input = __s16_prevNormalizeInput(body);
+      const resolvedLesson = resolveTextbookLesson(input);
+      if (resolvedLesson) {
+        input.textbookLesson = resolvedLesson;
+        if (!input.grammarFocus || !input.grammarFocus.chapterKey || input.grammarFocus.chapterKey === "general") {
+          input.grammarFocus = { ...(input.grammarFocus || {}), chapterKey: resolvedLesson.chapterKey };
+        }
+      }
+      return input;
+    };
+  }
+
+  const __s16_prevBuildUserPrompt = typeof buildUserPrompt === "function" ? buildUserPrompt : null;
+  if (__s16_prevBuildUserPrompt) {
+    buildUserPrompt = function buildUserPrompt_s16(input = {}) {
+      let prompt = __s16_prevBuildUserPrompt(input);
+      const guideBlock = buildTextbookGuideBlock(input);
+      if (guideBlock && !String(prompt || "").includes("[S16 교과서 1학기 매핑]")) {
+        prompt = [prompt, guideBlock].filter(Boolean).join("\n\n");
+      }
+      return prompt;
+    };
+  }
+
+  const __s16_prevFormatMagicResponse = typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+  if (__s16_prevFormatMagicResponse) {
+    formatMagicResponse = function formatMagicResponse_s16(rawText, input = {}) {
+      const base = __s16_prevFormatMagicResponse(rawText, input) || {};
+      const qLines = String(base.questions || "")
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => /^\d+[.)-]?\s+/.test(line));
+      const aLines = String(base.answerSheet || "")
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => /^\d+[.)-]?\s+/.test(line));
+
+      const count = 25;
+      const seen = new Set();
+      const finalQuestions = [];
+      const finalAnswers = [];
+
+      for (let i = 0; i < count; i += 1) {
+        const qRaw = qLines[i] || "";
+        const aRaw = aLines[i] || "";
+        let answer = stripNumbering(aRaw);
+        answer = ensureAnswerLine(answer, input, i);
+        answer = dedupeAnswer(answer, seen, input, i);
+
+        let question = stripNumbering(qRaw);
+        question = ensureQuestionLine(question, answer, input, i);
+
+        finalQuestions.push(`${i + 1}. ${question}`);
+        finalAnswers.push(`${i + 1}. ${answer}`);
+      }
+
+      const next = { ...base };
+      next.questions = finalQuestions.join("\n");
+      next.answerSheet = finalAnswers.join("\n");
+      next.actualCount = count;
+      next.itemPairs = finalQuestions.map((q, idx) => ({
+        no: idx + 1,
+        question: stripNumbering(q),
+        answer: stripNumbering(finalAnswers[idx]),
+      }));
+      next.pairIntegrity = {
+        ok: true,
+        reason: "s16_textbook_sync",
+        questionCount: count,
+        answerCount: count,
+      };
+      next.content = [next.title, next.instructions, next.questions].filter(Boolean).join("\n\n");
+      next.fullText = [
+        next.title,
+        next.instructions,
+        next.questions,
+        ((input.language === "en" ? "Answers\n" : "정답\n") + (next.answerSheet || "")),
+      ].filter(Boolean).join("\n\n");
+      return next;
+    };
+  }
+
+  console.log("✅ S16 textbook mapping patch applied");
+})();
