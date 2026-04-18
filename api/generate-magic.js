@@ -6909,3 +6909,256 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
   console.log(`[${PATCH_TAG}] loaded`);
 })();
+
+
+/* ========================================================================
+   Marcusnote Magic v8.8 Chapter Output Assembly Patch
+   - Present continuous now uses chapter-aware slot-style question reconstruction
+   - Present perfect gets auto-fill to 25, answer/question alignment repair, and richer clue shells
+   - Uses answer lines to build Marcus-style clue shells instead of repeating generic (be-ing, now)
+   ======================================================================== */
+(function () {
+  const PATCH_TAG = "v8.8-chapter-output-assembly";
+  const __prevFormatMagicResponse_v88 = typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+  const __prevBuildUserPrompt_v88 = typeof buildUserPrompt === "function" ? buildUserPrompt : null;
+
+  function v88ChapterKey(input = {}) {
+    const raw = [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" ");
+    if (/현재완료|present\s+perfect|have\s*p\.?p/i.test(raw)) return "present_perfect";
+    if (/현재진행|present\s+continuous|present\s+progressive|be\s*-?\s*ing/i.test(raw)) return "present_continuous";
+    return "other";
+  }
+
+  function splitNumberedLines(text = "") {
+    return String(text || "")
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => /^\d+[.)-]?\s+/.test(line));
+  }
+
+  function getLineBody(line = "") {
+    return String(line || "").replace(/^\d+[.)-]?\s+/, "").trim();
+  }
+
+  function stripExistingHintAndWordCount(stem = "") {
+    let s = String(stem || "").trim();
+    s = s.replace(/\s*\([^)]*Word count:[^)]*\)\s*$/i, "").trim();
+    s = s.replace(/\s*\[[^\]]*\]\s*$/g, "").trim();
+    s = s.replace(/\s*\([^)]*\)\s*$/g, "").trim();
+    return s;
+  }
+
+  function dedupe(arr = []) {
+    const out = [];
+    const seen = new Set();
+    for (const item of arr) {
+      const k = String(item || "").trim().toLowerCase();
+      if (!k || seen.has(k)) continue;
+      seen.add(k);
+      out.push(String(item).trim());
+    }
+    return out;
+  }
+
+  function contentWords(answer = "") {
+    const stop = new Set([
+      "i","you","he","she","we","they","it","am","is","are","was","were","be","been","being",
+      "have","has","had","do","does","did","not","a","an","the","this","that","these","those",
+      "to","for","in","on","at","of","with","and","or","but","from","by","my","your","his","her","our","their",
+      "there","here","very","really","just","already","yet","before","never","once","twice","recently","now","right"
+    ]);
+    const tokens = String(answer || "")
+      .replace(/[^A-Za-z0-9\s'-]/g, " ")
+      .split(/\s+/)
+      .map((t) => t.trim())
+      .filter(Boolean)
+      .filter((t) => !stop.has(t.toLowerCase()))
+      .filter((t) => t.length > 1);
+    return dedupe(tokens).slice(0, 6);
+  }
+
+  function presentPerfectSignal(answer = "") {
+    const a = String(answer || "").toLowerCase();
+    const signals = [];
+    if (/\bsince\b/.test(a)) signals.push("since");
+    if (/\bfor\b/.test(a)) signals.push("for");
+    if (/\balready\b/.test(a)) signals.push("already");
+    if (/\byet\b/.test(a)) signals.push("yet");
+    if (/\bjust\b/.test(a)) signals.push("just");
+    if (/\brecently\b/.test(a)) signals.push("recently");
+    if (/\bnever\b/.test(a)) signals.push("never");
+    if (/\bbefore\b/.test(a)) signals.push("before");
+    if (/\bonce\b/.test(a)) signals.push("once");
+    if (/\btwice\b/.test(a)) signals.push("twice");
+    return dedupe(signals);
+  }
+
+  function buildPresentContinuousHint(answer = "", idx = 1) {
+    const words = contentWords(answer);
+    const base = ["be -ing", "now"];
+    const picked = dedupe(base.concat(words.slice(0, 4)));
+    if (idx <= 8) return `[8단어, ${picked.slice(0, 5).join(", ")}]`;
+    if (idx <= 13) return `[8단어, ${picked.slice(0, 5).join(", ")}]`;
+    return `(${picked.slice(0, 4).join(", ")})`;
+  }
+
+  function buildPresentPerfectHint(answer = "") {
+    const sig = presentPerfectSignal(answer);
+    const words = contentWords(answer);
+    const picked = dedupe(sig.concat(words)).slice(0, 4);
+    return `(${picked.join(", ")})`;
+  }
+
+  function ensureQuestionMarkForProgressive(text = "", idx = 1) {
+    if (idx >= 9 && idx <= 13) {
+      if (!/[?？]$/.test(text)) return text + "?";
+    }
+    return text;
+  }
+
+  function wordCountFromAnswer(answer = "") {
+    return String(answer || "")
+      .replace(/[^A-Za-z0-9\s'-]/g, " ")
+      .split(/\s+/)
+      .map((t) => t.trim())
+      .filter(Boolean).length;
+  }
+
+  const PP_FALLBACK = [
+    ["나는 이 책을 두 번 읽어 보았다.", "I have read this book twice."],
+    ["그녀는 최근에 새로운 친구를 사귀었다.", "She has made a new friend recently."],
+    ["우리는 아직 그 숙제를 끝내지 않았다.", "We have not finished the homework yet."],
+    ["그는 2019년부터 이곳에서 일하고 있다.", "He has worked here since 2019."],
+    ["나는 그 영화를 본 적이 없다.", "I have never seen that movie."]
+  ];
+
+  const PC_FALLBACK = [
+    ["학생들은 지금 수업을 듣고 있다.", "The students are listening to the class now."],
+    ["그는 지금 숙제를 하고 있지 않다.", "He is not doing his homework now."],
+    ["너는 지금 무엇을 하고 있니?", "What are you doing now?"],
+    ["우리는 지금 점심을 먹고 있다.", "We are eating lunch now."],
+    ["그녀는 지금 친구와 이야기하고 있다.", "She is talking with her friend now."]
+  ];
+
+  function alignPairs(questionLines = [], answerLines = [], chapter = "other", desired = 25) {
+    const pairs = [];
+    const qBodies = questionLines.map(getLineBody);
+    const aBodies = answerLines.map(getLineBody);
+    const size = Math.max(qBodies.length, aBodies.length);
+    for (let i = 0; i < size; i += 1) {
+      let q = qBodies[i] || "";
+      let a = aBodies[i] || "";
+      if (!q && a) q = chapter === "present_perfect" ? PP_FALLBACK[i % PP_FALLBACK.length][0] : PC_FALLBACK[i % PC_FALLBACK.length][0];
+      if (!a && q) a = chapter === "present_perfect" ? PP_FALLBACK[i % PP_FALLBACK.length][1] : PC_FALLBACK[i % PC_FALLBACK.length][1];
+      if (q && a) pairs.push({ q, a });
+    }
+    const bank = chapter === "present_perfect" ? PP_FALLBACK : PC_FALLBACK;
+    let bi = 0;
+    while (pairs.length < desired) {
+      const [q, a] = bank[bi % bank.length];
+      pairs.push({ q, a });
+      bi += 1;
+    }
+    return pairs.slice(0, desired);
+  }
+
+  function rebuildPresentContinuousQuestions(pairs = []) {
+    return pairs.map((pair, i) => {
+      const idx = i + 1;
+      const stem = ensureQuestionMarkForProgressive(stripExistingHintAndWordCount(pair.q), idx);
+      const hint = buildPresentContinuousHint(pair.a, idx);
+      const wc = wordCountFromAnswer(pair.a) || 8;
+      return `${idx}. ${stem} ${hint} (Word count: ${wc})`;
+    }).join("\n");
+  }
+
+  function rebuildPresentPerfectQuestions(pairs = []) {
+    return pairs.map((pair, i) => {
+      const idx = i + 1;
+      const stem = stripExistingHintAndWordCount(pair.q);
+      const hint = buildPresentPerfectHint(pair.a);
+      const wc = wordCountFromAnswer(pair.a) || 8;
+      return `${idx}. ${stem} ${hint} (Word count: ${wc})`;
+    }).join("\n");
+  }
+
+  function rebuildAnswers(pairs = []) {
+    return pairs.map((pair, i) => `${i + 1}. ${pair.a}`).join("\n");
+  }
+
+  function normalizePresentPerfectAnswer(answer = "") {
+    let s = String(answer || "").trim();
+    s = s.replace(/^We visited the new cafe recently\.?$/i, "We have visited the new cafe recently.");
+    s = s.replace(/^I have attended this library for three years\.?$/i, "I have used this library for three years.");
+    s = s.replace(/\bgo to that restaurant twice\b/i, "been to that restaurant twice");
+    s = s.replace(/\bmet that friend once\b/i, "met that friend once");
+    return s;
+  }
+
+  function buildV88PromptShell(input = {}) {
+    const chapter = v88ChapterKey(input);
+    if (chapter === "present_continuous") {
+      return `[v8.8 CURRENT PROGRESSIVE ASSEMBLY]
+- Treat this chapter as a structured training workbook, not a generic translation list.
+- Exactly ${input?.count || 25} items.
+- Visible slot plan:
+  1-8 word-build / clue-shell items
+  9-13 question items
+  14-18 negative or transformation items
+  19-${input?.count || 25} basic + mixed application items
+- Avoid repeating the empty shell '(be -ing, now)' with no real clue content.
+- If examples exist, imitate their clue-shell surface first.`;
+    }
+    if (chapter === "present_perfect") {
+      return `[v8.8 PRESENT PERFECT ASSEMBLY]
+- Exactly ${input?.count || 25} items.
+- Keep completion / experience / duration / result visible across the set.
+- Keep Korean stem + clue shell surface.
+- Avoid finished-past leakage.
+- If examples exist, preserve their clue-shell style across the whole set.`;
+    }
+    return "";
+  }
+
+  buildUserPrompt = function buildUserPrompt_v88(input = {}) {
+    const base = __prevBuildUserPrompt_v88 ? __prevBuildUserPrompt_v88(input) : "";
+    const shell = buildV88PromptShell(input);
+    return [base, shell].filter(Boolean).join("\n\n");
+  };
+
+  formatMagicResponse = function formatMagicResponse_v88(rawText, input = {}) {
+    const formatted = __prevFormatMagicResponse_v88 ? __prevFormatMagicResponse_v88(rawText, input) : {
+      title: "",
+      instructions: "",
+      questions: String(rawText || ""),
+      answerSheet: "",
+      fullText: String(rawText || ""),
+      actualCount: 0,
+    };
+
+    const chapter = v88ChapterKey(input);
+    if (chapter === "other") return formatted;
+
+    const desired = Math.max(5, Number(input?.count || 25));
+    const qLines = splitNumberedLines(formatted.questions);
+    const aLines = splitNumberedLines(formatted.answerSheet);
+    let pairs = alignPairs(qLines, aLines, chapter, desired);
+
+    if (chapter === "present_perfect") {
+      pairs = pairs.map((p) => ({ q: p.q, a: normalizePresentPerfectAnswer(p.a) }));
+      formatted.questions = rebuildPresentPerfectQuestions(pairs);
+      formatted.answerSheet = rebuildAnswers(pairs);
+    } else if (chapter === "present_continuous") {
+      formatted.questions = rebuildPresentContinuousQuestions(pairs);
+      formatted.answerSheet = rebuildAnswers(pairs);
+    }
+
+    formatted.actualCount = pairs.length;
+    formatted.fullText = [formatted.title, formatted.instructions, formatted.questions, input?.language === "en" ? "Answers" : "정답", formatted.answerSheet]
+      .filter(Boolean)
+      .join("\n\n");
+    return formatted;
+  };
+
+  console.log(`[${PATCH_TAG}] loaded`);
+})();
