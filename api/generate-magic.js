@@ -1150,7 +1150,7 @@ function hasHardChapterCoverage(answerSheet = "", input = {}) {
     const good = ratio((line) =>
       /\b(have|has)\s+been\s+\w+ing\b/i.test(line)
     );
-    return good >= 0.7;
+    return good >= 0.8;
   }
 
   return true;
@@ -1832,21 +1832,154 @@ function buildStabilityLockRuleBlock(input) {
   return blocks.filter(Boolean).join("\n");
 }
 
+
+function getControlledContrastPolicy(input = {}) {
+  const focus = input?.grammarFocus || detectGrammarFocus([input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(" "));
+  const total = Math.max(5, Number(input?.count || 25));
+  const coreRatioMin = 0.84;
+  const coreRatioMax = 0.92;
+  const targetCoreCount = Math.max(1, Math.round(total * 0.88));
+  const contrastCount = Math.max(0, total - targetCoreCount);
+
+  let chapterLabelEn = "target chapter grammar";
+  let chapterLabelKo = "목표 챕터 문법";
+  let allowedContrastEn = "closely related warm-up, contrast, or near-neighbor items only";
+  let allowedContrastKo = "가까운 대조 문항 또는 도입형 보조 문항만 허용";
+  let coreRegex = null;
+  let contrastRegex = null;
+
+  if (focus?.isPresentPerfectProgressive) {
+    chapterLabelEn = "present perfect progressive";
+    chapterLabelKo = "현재완료 진행형";
+    allowedContrastEn = "plain present perfect or tightly related continuation contrasts only";
+    allowedContrastKo = "현재완료 일반형 또는 지속 의미 대조 문항만 허용";
+    coreRegex = /\b(have|has)\s+been\s+\w+ing\b/i;
+    contrastRegex = /\b(have|has)\s+(?!been\b)\w+(ed|en|wn|ne|lt|pt|nt|ft|ght|n)\b/i;
+  } else if (focus?.isPresentPerfect) {
+    chapterLabelEn = "present perfect";
+    chapterLabelKo = "현재완료";
+    allowedContrastEn = "present perfect progressive or tightly related time-contrast items only";
+    allowedContrastKo = "현재완료 진행형 또는 시간 대비용 보조 문항만 허용";
+    coreRegex = /\b(have|has)\s+(?!been\b)\w+(ed|en|wn|ne|lt|pt|nt|ft|ght|n)\b/i;
+    contrastRegex = /\b(have|has)\s+been\s+\w+ing\b/i;
+  } else if (focus?.isWhatRelativePronoun) {
+    chapterLabelEn = "relative pronoun what";
+    chapterLabelKo = "관계대명사 what";
+    allowedContrastEn = "very small comparison items such as the thing that only when clearly contrastive";
+    allowedContrastKo = "명시적 대조용 the thing that 계열만 소수 허용";
+    coreRegex = /(^|\s)what\b/i;
+    contrastRegex = /\bthe thing that\b/i;
+  } else if (focus?.isDitransitive) {
+    chapterLabelEn = "ditransitive verbs";
+    chapterLabelKo = "수여동사";
+    allowedContrastEn = "3rd/4th-form comparison or to/for alternation only";
+    allowedContrastKo = "3형식/4형식 대비 또는 to/for 교체형만 허용";
+    coreRegex = /\b(give|gives|gave|send|sends|sent|show|shows|showed|teach|teaches|taught|tell|tells|told|buy|buys|bought|offer|offers|offered|make|makes|made|find|finds|found)\b/i;
+    contrastRegex = /\bto\b|\bfor\b/i;
+  } else if (focus?.isBeQuestion) {
+    chapterLabelEn = "be-verb questions";
+    chapterLabelKo = "be동사 의문문";
+    allowedContrastEn = "declarative-to-question contrast or near-neighbor do-questions only";
+    allowedContrastKo = "평서문 대조 또는 일반동사 의문문과의 근접 대비만 허용";
+    coreRegex = /^(Am|Is|Are)\b.*\?$/i;
+    contrastRegex = /^(Do|Does)\b.*\?$/i;
+  } else if (focus?.isDoQuestion) {
+    chapterLabelEn = "do/does questions";
+    chapterLabelKo = "일반동사 의문문";
+    allowedContrastEn = "declarative-to-question contrast or near-neighbor be-questions only";
+    allowedContrastKo = "평서문 대조 또는 be동사 의문문과의 근접 대비만 허용";
+    coreRegex = /^(Do|Does)\b.*\?$/i;
+    contrastRegex = /^(Am|Is|Are)\b.*\?$/i;
+  } else if (focus?.isPassive) {
+    chapterLabelEn = "passive voice";
+    chapterLabelKo = "수동태";
+    allowedContrastEn = "active/passive contrast only";
+    allowedContrastKo = "능동/수동 대조만 허용";
+    coreRegex = /\b(am|is|are|was|were|be|been|being)\b\s+\b[\w'-]+(?:ed|en|wn|ne|lt|pt|nt|ft|ght)\b/i;
+    contrastRegex = /\b(active|by)\b/i;
+  }
+
+  return {
+    total,
+    coreRatioMin,
+    coreRatioMax,
+    targetCoreCount,
+    contrastCount,
+    chapterLabelEn,
+    chapterLabelKo,
+    allowedContrastEn,
+    allowedContrastKo,
+    coreRegex,
+    contrastRegex,
+  };
+}
+
+function buildControlledContrastRuleBlock(input = {}) {
+  const policy = getControlledContrastPolicy(input);
+  if (!policy?.coreRegex) return "";
+  const isEn = input?.language === "en";
+  return isEn ? `
+[Controlled Contrast Mix Rule]
+- Keep the worksheet premium and slightly tense for learners.
+- About ${policy.targetCoreCount} of ${policy.total} items should be core ${policy.chapterLabelEn} items.
+- About ${policy.contrastCount} of ${policy.total} items may be intentional contrast items.
+- The contrast items must stay very close to the chapter and must NEVER drift into unrelated grammar.
+- Allowed contrast zone: ${policy.allowedContrastEn}.
+- Recommended placement for contrast items: around item 7, item 14, and item 21 rather than clustered together.
+- Most of the worksheet must still visibly teach the chapter itself.
+` : `
+[통제된 대조 혼합 규칙]
+- 학습자가 약간 긴장하도록 설계하되, 교재 품질은 유지할 것.
+- 총 ${policy.total}문항 중 약 ${policy.targetCoreCount}문항은 핵심 ${policy.chapterLabelKo} 문항으로 구성할 것.
+- 약 ${policy.contrastCount}문항만 의도된 대조 문항으로 허용한다.
+- 대조 문항은 반드시 챕터와 매우 가까운 문법이어야 하며, 무관한 다른 챕터로 새면 안 된다.
+- 허용 대조 범위: ${policy.allowedContrastKo}.
+- 대조 문항은 한곳에 몰아넣지 말고 7번, 14번, 21번 부근처럼 분산 배치하는 것을 권장한다.
+- 워크북의 대다수는 여전히 해당 챕터를 직접 가르쳐야 한다.
+`.trim();
+}
+
+function hasControlledContrastBalance(answerSheet = "", input = {}) {
+  const policy = getControlledContrastPolicy(input);
+  if (!policy?.coreRegex) return true;
+
+  const lines = String(answerSheet || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => /^\d+[.)-]?\s+/.test(line))
+    .map((line) => line.replace(/^\d+[.)-]?\s*/, "").trim())
+    .filter(Boolean);
+
+  if (!lines.length) return false;
+
+  const coreCount = lines.filter((line) => policy.coreRegex.test(line)).length;
+  const contrastCount = policy.contrastRegex ? lines.filter((line) => policy.contrastRegex.test(line) && !policy.coreRegex.test(line)).length : 0;
+  const coreRatio = coreCount / lines.length;
+  const contrastRatio = contrastCount / lines.length;
+
+  if (coreRatio < policy.coreRatioMin) return false;
+  if (coreRatio > 0.97) return false;
+  if (contrastRatio > 0.2) return false;
+
+  return true;
+}
+
+
 function buildTargetCoverageRuleBlock(input) {
   const focus = input.grammarFocus || detectGrammarFocus([input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" "));
   const isEn = input.language === "en";
   const targetHeavy = (labelEn, labelKo) => isEn ? `
 [Target Grammar Coverage Rules]
-- At least 70% of the items and answers must directly realize the target grammar: ${labelEn}.
+- About 85% to 90% of the items and answers should directly realize the target grammar: ${labelEn}.
 - Do not fill the worksheet with generic sentences that could appear in any chapter.
-- If an item does not directly show the target grammar, it must still support the chapter as a warm-up, contrast, or mixed application item.
+- If an item does not directly show the target grammar, it must be an intentional warm-up, contrast, or mixed application item very close to the chapter.
 - Completely off-target answers are forbidden.
 - Every answer must be checked for grammar accuracy, naturalness, and chapter alignment before finalizing.
 ` : `
 [목표 문법 커버리지 규칙]
-- 전체 문항과 정답의 최소 70% 이상은 목표 문법 ${labelKo}이 직접 드러나야 한다.
+- 전체 문항과 정답의 약 85%~90%는 목표 문법 ${labelKo}이 직접 드러나야 한다.
 - 어느 챕터에나 들어갈 수 있는 일반 문장을 대량으로 넣지 말 것.
-- 목표 문법이 직접 드러나지 않는 문항이 있더라도, 그것은 도입형·대조형·혼합형 보조 문항이어야 한다.
+- 목표 문법이 직접 드러나지 않는 문항이 있더라도, 그것은 챕터와 가까운 의도된 도입형·대조형·혼합형 보조 문항이어야 한다.
 - 챕터와 무관한 정답은 금지한다.
 - 모든 정답은 최종 출력 전에 문법 정확성, 자연성, 챕터 정합성을 다시 점검할 것.
 `;
@@ -2974,6 +3107,7 @@ ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
 ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
+${buildControlledContrastRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
@@ -3064,6 +3198,7 @@ ${buildModeSpecificGuide(input)}
 ${buildGrammarRuleBlock(input)}
 ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
+${buildControlledContrastRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
@@ -3376,6 +3511,7 @@ Requirement: ${taskGuide}
 ${buildGrammarRuleBlock(input)}
 ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
+${buildControlledContrastRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
@@ -3431,6 +3567,7 @@ ${input.userPrompt || "(No additional user prompt provided.)"}
 ${buildGrammarRuleBlock(input)}
 ${buildHardChapterLockBlock(input)}
 ${buildTargetCoverageRuleBlock(input)}
+${buildControlledContrastRuleBlock(input)}
 ${buildStabilityLockRuleBlock(input)}
 ${buildLearningVariationRuleBlock(input)}
 ${buildDifficultyUpliftRuleBlock(input)}
@@ -4211,6 +4348,7 @@ function validateWritingOutput(text = "", input = {}) {
 
   if (!hasMildChapterCoverage(raw, input)) return false;
   if (!hasHardChapterCoverage(extractSection(raw, "[[ANSWERS]]", null) || raw, input)) return false;
+  if (!hasControlledContrastBalance(extractSection(raw, "[[ANSWERS]]", null) || raw, input)) return false;
   if (hasBlockedChapterLeak(extractSection(raw, "[[ANSWERS]]", null) || raw, input)) return false;
 
   if (input?.mode === "abcstarter" || input?.level === "elementary") {
