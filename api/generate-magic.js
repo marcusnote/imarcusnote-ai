@@ -7619,3 +7619,395 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
   console.log(`[${PATCH_TAG}] loaded`);
 })();
+
+/* ===== v8.9.2 SAFE APPEND PATCH ===== */
+
+/* =========================================================
+ * v8.9.2 STABILITY + SYNC PATCH
+ * Append-safe patch for apigenerate-magic-s14-v8.9.1
+ *
+ * Goals:
+ * - lock question/answer synchronization
+ * - preserve exactly 25 items
+ * - reduce fallback overuse
+ * - improve chapter-specific diversity
+ * - protect present continuous / present perfect quality
+ * ========================================================= */
+
+(function apply_v892_sync_patch() {
+  console.log("⚙️ Applying v8.9.2 sync patch...");
+
+  function pickOne(arr, idx) {
+    if (!Array.isArray(arr) || !arr.length) return "";
+    return arr[idx % arr.length];
+  }
+
+  function normalizeLine(s) {
+    return String(s || "").replace(/\s+/g, " ").trim();
+  }
+
+  function ensureSentenceEnd(s) {
+    const t = normalizeLine(s);
+    if (!t) return "";
+    return /[.?!]$/.test(t) ? t : `${t}.`;
+  }
+
+  function titleCaseStart(s) {
+    const t = normalizeLine(s);
+    if (!t) return "";
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+
+  function chunkPairs(obj) {
+    const q = Array.isArray(obj?.questions) ? obj.questions : [];
+    const a = Array.isArray(obj?.answerSheet) ? obj.answerSheet : [];
+    const n = Math.min(q.length, a.length);
+    const pairs = [];
+    for (let i = 0; i < n; i += 1) {
+      pairs.push({
+        q: normalizeLine(q[i]),
+        a: ensureSentenceEnd(titleCaseStart(a[i])),
+      });
+    }
+    return pairs;
+  }
+
+  function grammarFocusOf(input = {}) {
+    return input?.grammarFocus || {};
+  }
+
+  function isPresentContinuousTopic(input = {}) {
+    const t = String(input?.topic || input?.userPrompt || "").toLowerCase();
+    return /현재진행형|present\s+continuous|present\s+progressive/.test(t);
+  }
+
+  function isPresentPerfectTopic(input = {}) {
+    const t = String(input?.topic || input?.userPrompt || "").toLowerCase();
+    return /현재완료|present\s+perfect/.test(t);
+  }
+
+  function isNaturalSentence(ans) {
+    const t = normalizeLine(ans);
+    if (!t) return false;
+    if (t.length < 8) return false;
+    if (/^\d+[.)]/.test(t)) return false;
+    if (/(\.\.)|(___)/.test(t)) return false;
+    return /^[A-Z]/.test(t);
+  }
+
+  function hasProgressive(ans) {
+    return /\b(am|is|are|was|were)\b[\w\s,'"-]{0,40}\b[a-z]+ing\b/i.test(ans);
+  }
+
+  function hasPerfect(ans) {
+    return /\b(have|has)\b[\w\s,'"-]{0,30}\b([a-z]+ed|been|gone|done|seen|made|written|eaten|read|met|heard|finished|completed|lived|worked|learned|solved|visited|played|exercised|gotten)\b/i.test(ans);
+  }
+
+  function hasPassive(ans) {
+    return /\b(am|is|are|was|were|be|been|being)\b[\w\s,'"-]{0,30}\b([a-z]+ed|written|made|held|read|known|seen|understood|praised|invited|taken|translated|completed|sold|loved|awarded|submitted|carried)\b/i.test(ans);
+  }
+
+  function hasToInfAdj(ans) {
+    return /\b(a|an|the|something|anything|nothing|someone|anyone|no one|time|place|way|book|thing|chance|opportunity|work|project|job|problem|report|movie|class|plan|friends?)\b[^.?!\n]{0,40}\bto\s+[a-z]+\b/i.test(ans);
+  }
+
+  function hasWhatClause(ans) {
+    return /\bwhat\b\s+[A-Za-z][^?!.]*\b(is|was|helped|matters|means|needs|wanted|need|said|learned)\b/i.test(ans) || /^\s*What\b/.test(ans);
+  }
+
+  function hasParticipialModifier(ans) {
+    return /\b(the|a|an|this|that|these|those|my|our|his|her)\s+\w+\s+(running|waiting|sleeping|talking|written|painted|broken|invited|called|made|known|used|loved)\b/i.test(ans);
+  }
+
+  function hasRelativeAdverb(ans) {
+    return /\b(where|when|why|how)\b/i.test(ans);
+  }
+
+  function hasBadFinishedPastMarker(ans) {
+    return /\b(yesterday|ago|last\s+(week|month|year|night|summer|winter|spring|fall|autumn)|in\s+(19|20)\d{2})\b/i.test(ans);
+  }
+
+  function uniquePush(list, item, used) {
+    const key = normalizeLine(item.a).toLowerCase();
+    if (!key) return;
+    if (used.has(key)) return;
+    used.add(key);
+    list.push(item);
+  }
+
+  function getQuestionTemplateBank(input = {}) {
+    const focus = grammarFocusOf(input);
+
+    if (isPresentContinuousTopic(input)) {
+      return [
+        "나는 지금 친구와 함께 영화를 보고 있다.",
+        "그들은 지금 교실에서 공부하고 있다.",
+        "그는 지금 점심을 먹고 있지 않다.",
+        "너는 지금 무엇을 하고 있니?",
+        "우리는 지금 공원에서 뛰고 있다.",
+      ];
+    }
+
+    if (isPresentPerfectTopic(input)) {
+      return [
+        "나는 3년 동안 이 도시에 살고 있다.",
+        "그녀는 이미 숙제를 끝냈다.",
+        "나는 그를 한 번도 본 적이 없다.",
+        "우리는 이미 점심을 먹었다.",
+        "그는 아직 그 문제를 풀지 않았다.",
+      ];
+    }
+
+    if (focus.chapterKey === "passive") {
+      return [
+        "이 책은 많은 사람들에 의해 읽힌다.",
+        "그 프로젝트는 내년에 완료될 것이다.",
+        "이 그림은 유명한 화가에 의해 그려졌다.",
+        "그 문제는 쉽게 해결될 수 있다.",
+        "이 발표는 내일 진행될 것이다.",
+      ];
+    }
+
+    if (focus.isToInfinitiveAdjective) {
+      return [
+        "나는 오늘 읽을 책이 필요하다.",
+        "그녀는 지금 할 일이 많다.",
+        "우리는 함께 앉을 자리를 찾았다.",
+        "그는 친구와 이야기할 시간이 필요하다.",
+        "나는 너에게 줄 중요한 것이 있다.",
+      ];
+    }
+
+    if (focus.isWhatRelativePronoun) {
+      return [
+        "내가 필요한 것은 더 많은 시간이다.",
+        "그녀가 말한 것은 사실이었다.",
+        "그가 원하는 것은 새로운 기회이다.",
+        "우리가 배운 것은 매우 중요하다.",
+        "네가 해야 할 것은 지금 시작하는 것이다.",
+      ];
+    }
+
+    if (focus.isParticipialModifier) {
+      return [
+        "공원에서 뛰고 있는 소년은 내 동생이다.",
+        "영어로 쓰인 책은 매우 유용하다.",
+        "밖에서 기다리고 있는 학생들은 피곤해 보인다.",
+        "많은 사람들에게 사랑받는 노래는 오래 남는다.",
+        "복도에서 이야기하고 있는 아이들은 내 친구들이다.",
+      ];
+    }
+
+    if (focus.chapterKey === "relative_adverb") {
+      return [
+        "이곳은 내가 태어난 도시이다.",
+        "그날은 우리가 처음 만난 날이었다.",
+        "그 이유는 내가 늦게 도착했기 때문이다.",
+        "그것이 그가 문제를 해결한 방법이다.",
+        "그 시간은 모두가 가장 바빴던 때였다.",
+      ];
+    }
+
+    return [
+      "주어진 단서를 바탕으로 영어 문장을 쓰시오.",
+      "문법 구조가 보이도록 영어 문장을 완성하시오.",
+      "주어진 의미를 자연스러운 영어 문장으로 쓰시오.",
+      "단서를 활용하여 완전한 영어 문장을 만드시오.",
+      "주어진 표현을 사용하여 영어 문장을 작성하시오.",
+    ];
+  }
+
+  function getAnswerFallbackBank(input = {}) {
+    const focus = grammarFocusOf(input);
+
+    if (isPresentContinuousTopic(input)) {
+      return [
+        "I am watching a movie with my friend now.",
+        "They are studying in the classroom now.",
+        "He is not eating lunch now.",
+        "What are you doing now?",
+        "We are running in the park now.",
+        "She is reading a book now.",
+        "They are playing outside now.",
+      ];
+    }
+
+    if (isPresentPerfectTopic(input)) {
+      return [
+        "I have lived in this city for three years.",
+        "She has already finished her homework.",
+        "I have never seen him before.",
+        "We have already eaten lunch.",
+        "He has not solved the problem yet.",
+        "They have worked here for two years.",
+        "I have read this book twice.",
+      ];
+    }
+
+    if (focus.chapterKey === "passive") {
+      return [
+        "This book is read by many students.",
+        "The project will be completed next year.",
+        "This picture was painted by a famous artist.",
+        "The problem can be solved easily.",
+        "The presentation will be held tomorrow.",
+        "This report was written by experts.",
+        "The class is held every Friday.",
+      ];
+    }
+
+    if (focus.isToInfinitiveAdjective) {
+      return [
+        "I need a book to read today.",
+        "She has something to do now.",
+        "We found a place to sit together.",
+        "He needs time to talk with his friend.",
+        "I have something important to tell you.",
+        "They need a plan to follow carefully.",
+      ];
+    }
+
+    if (focus.isWhatRelativePronoun) {
+      return [
+        "What I need is more time.",
+        "What she said was true.",
+        "What he wants is a new chance.",
+        "What we learned was very useful.",
+        "What you should do is start now.",
+        "What matters is your effort.",
+      ];
+    }
+
+    if (focus.isParticipialModifier) {
+      return [
+        "The boy running in the park is my brother.",
+        "The book written in English is very useful.",
+        "The students waiting outside look tired.",
+        "The song loved by many people is still popular.",
+        "The girls talking in the hall are my classmates.",
+        "The picture painted by the artist was expensive.",
+      ];
+    }
+
+    if (focus.chapterKey === "relative_adverb") {
+      return [
+        "This is the city where I was born.",
+        "That was the day when we first met.",
+        "This is the reason why he was late.",
+        "That is the way how he solved the problem.",
+        "It was the time when everyone was busy.",
+      ];
+    }
+
+    return [
+      "I can write a complete English sentence.",
+      "She made a natural English sentence.",
+      "We used the clue to make a sentence.",
+      "They completed the workbook carefully.",
+      "He wrote the sentence correctly.",
+    ];
+  }
+
+  function matchesChapter(answer, input = {}) {
+    const focus = grammarFocusOf(input);
+    const ans = normalizeLine(answer);
+
+    if (!isNaturalSentence(ans)) return false;
+
+    if (isPresentContinuousTopic(input)) return hasProgressive(ans);
+    if (isPresentPerfectTopic(input)) return hasPerfect(ans) && !hasBadFinishedPastMarker(ans);
+    if (focus.chapterKey === "passive") return hasPassive(ans);
+    if (focus.isToInfinitiveAdjective) return hasToInfAdj(ans);
+    if (focus.isWhatRelativePronoun) return hasWhatClause(ans);
+    if (focus.isParticipialModifier) return hasParticipialModifier(ans);
+    if (focus.chapterKey === "relative_adverb") return hasRelativeAdverb(ans);
+
+    return true;
+  }
+
+  function diversifyPair(pair, idx, input = {}) {
+    const focus = grammarFocusOf(input);
+    let q = normalizeLine(pair.q);
+    let a = ensureSentenceEnd(titleCaseStart(pair.a));
+
+    if (!q) q = pickOne(getQuestionTemplateBank(input), idx);
+    if (!a || !matchesChapter(a, input)) a = pickOne(getAnswerFallbackBank(input), idx);
+
+    if (focus.chapterKey === "passive") {
+      const subjects = [
+        "This book", "The report", "The project", "The picture", "The song",
+        "The class", "The document", "The building", "The lecture", "The photo"
+      ];
+      a = a.replace(/^(This|The)\s+\w+/i, pickOne(subjects, idx));
+    }
+
+    if (isPresentContinuousTopic(input)) {
+      const starts = ["I am", "She is", "They are", "We are", "He is"];
+      if (/^(I am|She is|They are|We are|He is)\b/i.test(a)) {
+        a = a.replace(/^(I am|She is|They are|We are|He is)\b/i, pickOne(starts, idx));
+      }
+    }
+
+    if (isPresentPerfectTopic(input)) {
+      const starts = ["I have", "She has", "We have", "He has", "They have"];
+      if (/^(I have|She has|We have|He has|They have)\b/i.test(a)) {
+        a = a.replace(/^(I have|She has|We have|He has|They have)\b/i, pickOne(starts, idx));
+      }
+    }
+
+    return { q, a };
+  }
+
+  const previousFormat = global.formatMagicResponse;
+
+  global.formatMagicResponse = function patchedFormatMagicResponse_v892(result, input) {
+    const base = previousFormat ? previousFormat(result, input) : result;
+    let pairs = chunkPairs(base);
+
+    const usedAnswers = new Set();
+    const finalPairs = [];
+
+    for (let i = 0; i < pairs.length; i += 1) {
+      const adjusted = diversifyPair(pairs[i], i, input);
+
+      if (!matchesChapter(adjusted.a, input)) {
+        adjusted.a = pickOne(getAnswerFallbackBank(input), i);
+      }
+
+      uniquePush(finalPairs, adjusted, usedAnswers);
+    }
+
+    let cursor = 0;
+    const qBank = getQuestionTemplateBank(input);
+    const aBank = getAnswerFallbackBank(input);
+
+    while (finalPairs.length < 25) {
+      const item = {
+        q: pickOne(qBank, cursor),
+        a: pickOne(aBank, cursor),
+      };
+      uniquePush(finalPairs, item, usedAnswers);
+      cursor += 1;
+      if (cursor > 100) break;
+    }
+
+    cursor = 0;
+    while (finalPairs.length < 25) {
+      finalPairs.push({
+        q: `${pickOne(qBank, cursor)} (${finalPairs.length + 1})`,
+        a: pickOne(aBank, cursor),
+      });
+      cursor += 1;
+    }
+
+    finalPairs.length = 25;
+
+    return {
+      ...base,
+      questions: finalPairs.map((p, i) => `${i + 1}. ${normalizeLine(String(p.q).replace(/^\d+[.)]\s*/, ""))}`),
+      answerSheet: finalPairs.map((p, i) => `${i + 1}. ${ensureSentenceEnd(titleCaseStart(String(p.a).replace(/^\d+[.)]\s*/, "")))}`),
+    };
+  };
+
+  console.log("✅ v8.9.2 sync patch applied");
+})();
