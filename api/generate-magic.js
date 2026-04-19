@@ -4002,11 +4002,20 @@ function validateServiceSafeOutput(formatted = {}, input = {}) {
     answers = normalizeMagicAnswerSheet("", questions, input);
     formatted.answerSheet = answers;
   }
+  if (__mn90IsDoBeQuestionInput(input) && questions) {
+    answers = normalizeMagicAnswerSheet(answers, questions, input);
+    formatted.answerSheet = answers;
+  }
   if (!hasMeaningfulWorksheetBody(questions)) return false;
   if (!hasMeaningfulWorksheetBody(answers)) return false;
   if (!hasSequentialNumbering(questions)) return false;
   if (!hasSequentialNumbering(answers)) return false;
   if (hasPlaceholderAnswers(answers)) return false;
+  if (__mn90IsDoBeQuestionInput(input)) {
+    const aLines = extractLikelyAnswerLines(answers);
+    if (!aLines.length || aLines.some((line) => !__mn90HasCompleteShortAnswer(line, input))) return false;
+    if (__mn90HasLowQuestionDiversity(questions, input)) return false;
+  }
   const requestedCount = Number(input?.count || 0);
   const actualCount = Number(formatted.actualCount || countWorksheetItems(questions) || 0);
   if (requestedCount > 0 && actualCount < Math.max(1, Math.ceil(requestedCount * 0.5))) return false;
@@ -4209,6 +4218,9 @@ function __v854ApplyWritingLabPolish(formatted = {}, input = {}) {
   questions = __v854EnforceGuidedRatio(questions, answers, input);
   next.questions = questions;
   next.answerSheet = normalizeMagicAnswerSheet(answers, questions, input);
+  if (__mn90IsDoBeQuestionInput(input)) {
+    next.answerSheet = normalizeMagicAnswerSheet(next.answerSheet || "", next.questions || "", input);
+  }
   next.actualCount = countWorksheetItems(next.questions || "");
   next.itemPairs = typeof __mn83BuildItemPairs === "function" ? __mn83BuildItemPairs(next.questions || "", next.answerSheet || "") : [];
   next.pairIntegrity = next.pairIntegrity || { ok: true, reason: "v854_writinglab_polish", questionCount: next.actualCount, answerCount: countWorksheetItems(next.answerSheet || "") };
@@ -4907,12 +4919,264 @@ function buildElementaryForcedAnswerSheet(q = "", input = {}) {
     .join("\n");
 }
 
+
+function __mn90IsDoBeQuestionInput(input = {}) {
+  const focus = input?.grammarFocus || {};
+  return Boolean(
+    focus.isDoQuestion ||
+    focus.isBeQuestion ||
+    /일반동사.*의문문|be동사.*의문문|do\/does question|be-verb question/i.test(
+      String(input?.topic || '') + ' ' + String(input?.userPrompt || '') + ' ' + String(input?.worksheetTitle || '')
+    )
+  );
+}
+
+function __mn90IsBeQuestionInput(input = {}) {
+  const focus = input?.grammarFocus || {};
+  return Boolean(
+    focus.isBeQuestion ||
+    /be동사.*의문문|be-verb question|am\/is\/are/i.test(
+      String(input?.topic || '') + ' ' + String(input?.userPrompt || '') + ' ' + String(input?.worksheetTitle || '')
+    )
+  );
+}
+
+function __mn90HasCompleteShortAnswer(line = '', input = {}) {
+  const body = String(line || '').replace(/^\d+[.)-]?\s*/, '').trim();
+  if (!body) return false;
+  if (__mn90IsBeQuestionInput(input)) {
+    return /\?\s*\/\s*Yes,\s+[^\/]+\b(?:am|is|are)\b\.\s*\/\s*No,\s+[^\/]+\b(?:am not|is not|are not|isn't|aren't)\b\.?/i.test(body);
+  }
+  if (__mn90IsDoBeQuestionInput(input)) {
+    return /\?\s*\/\s*Yes,\s+[^\/]+\b(?:do|does)\b\.\s*\/\s*No,\s+[^\/]+\b(?:do not|does not|don't|doesn't)\b\.?/i.test(body);
+  }
+  return true;
+}
+
+function __mn90NormalizeQuestionSurface(text = '') {
+  return String(text || '')
+    .replace(/^\d+[.)-]?\s*/, '')
+    .replace(/\s*\(Word count:[^)]+\)\s*/gi, ' ')
+    .replace(/\s*\(clue:[^)]+\)\s*/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function __mn90ExtractQuestionCluePairs(q = '') {
+  const lines = String(q || '').replace(/\r\n/g, '\n').split('\n');
+  const pairs = [];
+  for (let i = 0; i < lines.length; i += 1) {
+    const raw = String(lines[i] || '').trim();
+    const m = raw.match(/^(\d+)[.)-]?\s+(.*)$/);
+    if (!m) continue;
+    const no = Number(m[1]);
+    let clue = '';
+    for (let j = i + 1; j < Math.min(lines.length, i + 4); j += 1) {
+      const next = String(lines[j] || '').trim();
+      if (/^clue\s*:/i.test(next)) {
+        clue = next.replace(/^clue\s*:/i, '').trim();
+        break;
+      }
+      if (/^(\d+)[.)-]?\s+/.test(next)) break;
+    }
+    pairs.push({ no, prompt: String(m[2] || '').trim(), clue });
+  }
+  return pairs;
+}
+
+function __mn90StartsWithVowelSound(word = '') {
+  const t = String(word || '').trim().toLowerCase();
+  if (!t) return false;
+  if (/^(honest|hour|heir|english)/.test(t)) return true;
+  if (/^u[bcfhjkqrstnlg]/.test(t)) return false;
+  return /^[aeiou]/.test(t);
+}
+
+function __mn90BuildCopulaTailFromTokens(tokens = []) {
+  const cleaned = tokens.map((t) => String(t || '').trim()).filter(Boolean);
+  if (!cleaned.length) return '';
+  const joined = cleaned.join(' ');
+  if (/^(at|in|on|under|behind|near|with|from|to|for|of|today|now|here|there|home|school|classroom|park|library)\b/i.test(joined)) {
+    return joined;
+  }
+  if (cleaned.length === 1 && /s$/.test(cleaned[0])) return joined;
+  if (cleaned.length >= 1 && /^(kind|busy|ready|free|sleepy|safe|angry|happy|sad|tired|hungry|late|early)$/i.test(cleaned[0])) {
+    return joined;
+  }
+  const first = cleaned[0];
+  const article = __mn90StartsWithVowelSound(first) ? 'an' : 'a';
+  return `${article} ${joined}`;
+}
+
+function __mn90BuildQuestionFromClue(pair = {}, input = {}) {
+  const clueTokens = String(pair?.clue || '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (!clueTokens.length) return '';
+
+  if (__mn90IsBeQuestionInput(input)) {
+    const aux = clueTokens[0] || '';
+    const subject = clueTokens[1] || '';
+    const tail = __mn90BuildCopulaTailFromTokens(clueTokens.slice(2));
+    if (!aux || !subject || !tail) return '';
+    return `${aux} ${subject} ${tail}?`;
+  }
+
+  const aux = clueTokens[0] || '';
+  const subject = clueTokens[1] || '';
+  const verb = clueTokens[2] || '';
+  const rest = clueTokens.slice(3).join(' ');
+  if (!aux || !subject || !verb) return '';
+  return `${aux} ${subject} ${verb}${rest ? ' ' + rest : ''}?`;
+}
+
+function __mn90ShortAnswerForQuestion(question = '', input = {}) {
+  const q = __mn90NormalizeQuestionSurface(question).replace(/\s+/g, ' ').trim();
+  if (!q) return '';
+  const bePatterns = [
+    [/^Am\s+I\b/i, ['Yes, you are.', 'No, you are not.']],
+    [/^Are\s+you\b/i, ['Yes, I am.', 'No, I am not.']],
+    [/^Are\s+we\b/i, ['Yes, we are.', 'No, we are not.']],
+    [/^Are\s+they\b/i, ['Yes, they are.', 'No, they are not.']],
+    [/^Is\s+he\b/i, ['Yes, he is.', 'No, he is not.']],
+    [/^Is\s+she\b/i, ['Yes, she is.', 'No, she is not.']],
+    [/^Is\s+it\b/i, ['Yes, it is.', 'No, it is not.']],
+  ];
+  const doPatterns = [
+    [/^Do\s+you\b/i, ['Yes, I do.', 'No, I do not.']],
+    [/^Do\s+we\b/i, ['Yes, we do.', 'No, we do not.']],
+    [/^Do\s+they\b/i, ['Yes, they do.', 'No, they do not.']],
+    [/^Do\s+I\b/i, ['Yes, you do.', 'No, you do not.']],
+    [/^Does\s+he\b/i, ['Yes, he does.', 'No, he does not.']],
+    [/^Does\s+she\b/i, ['Yes, she does.', 'No, she does not.']],
+    [/^Does\s+it\b/i, ['Yes, it does.', 'No, it does not.']],
+  ];
+  const patterns = __mn90IsBeQuestionInput(input) ? bePatterns : doPatterns;
+  for (const [regex, answers] of patterns) {
+    if (regex.test(q)) return `${q} / ${answers[0]} / ${answers[1]}`;
+  }
+  return q;
+}
+
+function __mn90CompleteAnswerLine(line = '', input = {}) {
+  const body = sanitizeAnswerBodyForMiddle(line);
+  if (!body) return '';
+  if (!__mn90IsDoBeQuestionInput(input)) return body;
+  if (__mn90HasCompleteShortAnswer(body, input)) return body;
+  const questionOnly = body.split('/')[0].trim();
+  return __mn90ShortAnswerForQuestion(questionOnly, input);
+}
+
+function __mn90BuildDedicatedQuestionBank(input = {}) {
+  if (__mn90IsBeQuestionInput(input)) {
+    return [
+      'Is he kind? / Yes, he is. / No, he is not.',
+      'Are they in the park? / Yes, they are. / No, they are not.',
+      'Is she a student? / Yes, she is. / No, she is not.',
+      'Is he angry now? / Yes, he is. / No, he is not.',
+      'Are you tired now? / Yes, I am. / No, I am not.',
+      'Are they in the classroom? / Yes, they are. / No, they are not.',
+      'Is she at school today? / Yes, she is. / No, she is not.',
+      'Are you in the classroom now? / Yes, I am. / No, I am not.',
+      'Are they classmates? / Yes, they are. / No, they are not.',
+      'Are they basketball players? / Yes, they are. / No, they are not.',
+      'Are they safe now? / Yes, they are. / No, they are not.',
+      'Are you sleepy? / Yes, I am. / No, I am not.',
+      'Is he busy now? / Yes, he is. / No, he is not.',
+      'Is he in the classroom now? / Yes, he is. / No, he is not.',
+      'Is he at home now? / Yes, he is. / No, he is not.',
+      'Is he a doctor? / Yes, he is. / No, he is not.',
+      'Are you kind? / Yes, I am. / No, I am not.',
+      'Is she at home? / Yes, she is. / No, she is not.',
+      'Are you ready? / Yes, I am. / No, I am not.',
+      'Are you free now? / Yes, I am. / No, I am not.',
+      'Are you at home now? / Yes, I am. / No, I am not.',
+      'Is he an English teacher? / Yes, he is. / No, he is not.',
+      'Is she a musician? / Yes, she is. / No, she is not.',
+      'Is she at home now? / Yes, she is. / No, she is not.',
+      'Are they busy today? / Yes, they are. / No, they are not.'
+    ];
+  }
+  return [
+    'Do you exercise every day? / Yes, I do. / No, I do not.',
+    'Does he walk to school? / Yes, he does. / No, he does not.',
+    'Does she play the piano? / Yes, she does. / No, she does not.',
+    'Do you study English? / Yes, I do. / No, I do not.',
+    'Do they play soccer on weekends? / Yes, they do. / No, they do not.',
+    'Do you read books after school? / Yes, I do. / No, I do not.',
+    'Does he drink milk in the morning? / Yes, he does. / No, he does not.',
+    'Does she help her mother at home? / Yes, she does. / No, she does not.',
+    'Do they clean the classroom every Friday? / Yes, they do. / No, they do not.',
+    'Do you go to bed early? / Yes, I do. / No, I do not.',
+    'Does he like math? / Yes, he does. / No, he does not.',
+    'Do you eat lunch at school? / Yes, I do. / No, I do not.',
+    'Do you do your homework in the evening? / Yes, I do. / No, I do not.',
+    'Do you visit your grandfather on weekends? / Yes, I do. / No, I do not.',
+    'Does she write an English diary? / Yes, she does. / No, she does not.',
+    'Do they watch TV after dinner? / Yes, they do. / No, they do not.',
+    'Does he play basketball after school? / Yes, he does. / No, he does not.',
+    'Does she get up early every morning? / Yes, she does. / No, she does not.',
+    'Do you listen to music at home? / Yes, I do. / No, I do not.',
+    'Do they ride their bikes in the park? / Yes, they do. / No, they do not.',
+    'Does he wash his hands before lunch? / Yes, he does. / No, he does not.',
+    'Do you wear slippers at home? / Yes, I do. / No, I do not.',
+    'Does she carry a bag to school? / Yes, she does. / No, she does not.',
+    'Do they practice English every day? / Yes, they do. / No, they do not.',
+    'Do you use a computer at school? / Yes, I do. / No, I do not.'
+  ];
+}
+
+function __mn90BuildDoBeAnswerSheetFromQuestions(q = '', input = {}) {
+  const pairs = __mn90ExtractQuestionCluePairs(q);
+  if (!pairs.length) return '';
+  const built = pairs.map((pair, idx) => {
+    const question = __mn90BuildQuestionFromClue(pair, input);
+    if (!question) return '';
+    return `${idx + 1}. ${__mn90ShortAnswerForQuestion(question, input)}`;
+  }).filter(Boolean);
+  if (built.length >= Math.max(5, Math.ceil(pairs.length * 0.7))) return built.join('\n');
+  return '';
+}
+
+function __mn90HasLowQuestionDiversity(questions = '', input = {}) {
+  if (!__mn90IsDoBeQuestionInput(input)) return false;
+  const bodies = typeof __mn83ExtractBodies === 'function'
+    ? __mn83ExtractBodies(questions)
+    : String(questions || '').split('\n').map((s) => s.trim()).filter((s) => /^\d+[.)-]?\s+/.test(s)).map((s) => s.replace(/^\d+[.)-]?\s*/, ''));
+  if (bodies.length < 8) return false;
+  const sigs = bodies.map((line) => typeof __mn83NormalizeSignature === 'function' ? __mn83NormalizeSignature(line) : line.toLowerCase()).filter(Boolean);
+  const unique = new Set(sigs);
+  return (unique.size / Math.max(1, sigs.length)) < 0.72;
+}
+
 function buildMiddleRelaxedAnswerSheet(a = "", q = "", input = {}) {
   const answerLines = extractLikelyAnswerLines(a);
   const questionLines = extractNumberedQuestionItems(q);
 
+  if (__mn90IsDoBeQuestionInput(input)) {
+    const completed = answerLines
+      .map((line) => __mn90CompleteAnswerLine(line, input))
+      .filter(Boolean)
+      .map((line, idx) => `${idx + 1}. ${line}`);
+
+    if (completed.length >= questionLines.length && completed.every((line) => __mn90HasCompleteShortAnswer(line, input))) {
+      return completed.join("\n");
+    }
+
+    const rebuiltFromQuestions = __mn90BuildDoBeAnswerSheetFromQuestions(q, input);
+    if (rebuiltFromQuestions && countAnswerLines(rebuiltFromQuestions) >= Math.max(1, Math.ceil(questionLines.length * 0.8))) {
+      return rebuiltFromQuestions;
+    }
+
+    const bank = __mn90BuildDedicatedQuestionBank(input);
+    if (bank.length >= questionLines.length && questionLines.length > 0) {
+      return bank.slice(0, questionLines.length).map((body, idx) => `${idx + 1}. ${body}`).join("\n");
+    }
+  }
+
   const cleaned = answerLines
-    .map((line, idx) => sanitizeAnswerBodyForMiddle(line))
+    .map((line) => sanitizeAnswerBodyForMiddle(line))
     .filter(Boolean)
     .filter((line) => !isBrokenAnswerLine(line))
     .map((line, idx) => `${idx + 1}. ${line}`);
@@ -5964,11 +6228,17 @@ function __mn83StrictAudit(formatted = {}, input = {}) {
   if (__mn83HasLowAnswerDiversity(answers)) {
     return { ok: false, reason: "answer_diversity_low" };
   }
+  if (__mn90HasLowQuestionDiversity(questions, input)) {
+    return { ok: false, reason: "question_diversity_low" };
+  }
 
   const pairs = __mn83BuildItemPairs(questions, answers);
   if (!pairs.length) return { ok: false, reason: "pair_build_failed" };
   if (pairs.some((pair) => !pair.answer)) {
     return { ok: false, reason: "pair_answer_missing" };
+  }
+  if (__mn90IsDoBeQuestionInput(input) && pairs.some((pair) => !__mn90HasCompleteShortAnswer(pair.answer, input))) {
+    return { ok: false, reason: "short_answer_missing_do_be" };
   }
 
   return {
@@ -5999,13 +6269,13 @@ function __mn831ApplyBalancedParityRepair(formatted = {}, input = {}) {
   const qCount = countWorksheetItems(questions);
   const currentAnswers = String(formatted.answerSheet || "").trim();
   const aCount = countAnswerLines(currentAnswers);
+  const hasBrokenDoBeShortAnswers = __mn90IsDoBeQuestionInput(input) && extractLikelyAnswerLines(currentAnswers).some((line) => !__mn90HasCompleteShortAnswer(line, input));
 
-  // Only repair when there is a realistic near-miss or obvious missing-answer state.
-  // This avoids reviving the old loose emergency path.
   const shouldRepair =
     qCount > 0 &&
     (
       aCount === 0 ||
+      hasBrokenDoBeShortAnswers ||
       (aCount < qCount && aCount >= Math.max(1, Math.ceil(qCount * 0.6)))
     );
 
@@ -6014,7 +6284,7 @@ function __mn831ApplyBalancedParityRepair(formatted = {}, input = {}) {
   const repaired = { ...formatted };
   let nextAnswers = normalizeMagicAnswerSheet(currentAnswers, questions, input);
 
-  if (!nextAnswers || countAnswerLines(nextAnswers) < qCount) {
+  if (!nextAnswers || countAnswerLines(nextAnswers) < qCount || (__mn90IsDoBeQuestionInput(input) && extractLikelyAnswerLines(nextAnswers).some((line) => !__mn90HasCompleteShortAnswer(line, input)))) {
     nextAnswers = normalizeMagicAnswerSheet("", questions, input);
   }
 
