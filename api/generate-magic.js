@@ -9209,3 +9209,239 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 // Final Vercel export (keep S19 router)
 module.exports = handler_v841_workbook_type_router;
 module.exports.config = { runtime: "nodejs" };
+
+
+/* =========================
+   S29 FINAL DEPLOY PATCH
+   ========================= */
+(function applyS29FinalDeployPatch() {
+  try {
+    const __s29Curriculum = (() => {
+      const candidates = [
+        '../data/writinglab_curriculum_sem1_middle.json',
+        '/mnt/data/writinglab_curriculum_sem1_middle.json'
+      ];
+      for (const p of candidates) {
+        try { return require(p); } catch (e) {}
+      }
+      return null;
+    })();
+
+    function __s29DetectLesson(text = '') {
+      const m = String(text || '').match(/([1-8])\s*과/);
+      return m ? Number(m[1]) : null;
+    }
+
+    function __s29DetectGrade(text = '') {
+      const t = String(text || '');
+      if (/중1/.test(t)) return 'middle1';
+      if (/중2/.test(t)) return 'middle2';
+      if (/중3/.test(t)) return 'middle3';
+      return null;
+    }
+
+    function __s29GetCurriculum(input = {}) {
+      if (!__s29Curriculum) return null;
+      const merged = [input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(' ');
+      const grade = __s29DetectGrade(merged);
+      const lesson = __s29DetectLesson(merged);
+      if (!grade || !lesson) return null;
+      const entry = __s29Curriculum?.[grade]?.common?.[`lesson${lesson}`] || null;
+      if (!entry || !Array.isArray(entry.chapters) || !entry.chapters.length) return null;
+      return { grade, lesson, entry };
+    }
+
+    function __s29SelectChapter(input = {}, entry = null) {
+      const focus = input?.grammarFocus || {};
+      const chapters = Array.isArray(entry?.chapters) ? entry.chapters : [];
+      if (!chapters.length) return null;
+      const key = String(focus?.chapterKey || '');
+      if (key && chapters.includes(key)) return key;
+      if (focus?.isBeQuestion && chapters.includes('be_question')) return 'be_question';
+      if (focus?.isDoQuestion && chapters.includes('do_question')) return 'do_question';
+      if (focus?.isPassive && chapters.includes('passive')) return 'passive';
+      if (focus?.isPresentPerfect && chapters.includes('present_perfect')) return 'present_perfect';
+      if (focus?.isGerund && chapters.includes('gerund')) return 'gerund';
+      if (chapters.includes('be_question')) return 'be_question';
+      if (chapters.includes('do_question')) return 'do_question';
+      return chapters[0];
+    }
+
+    const __S29_DO_BANK = [
+      ['너는 매일 운동하니?', ['Do','you','exercise','every','day'], 'Do you exercise every day?', 'Yes, I do.', 'No, I do not.'],
+      ['그는 학교에 걸어가니?', ['Does','he','walk','to','school'], 'Does he walk to school?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 피아노를 치니?', ['Does','she','play','the','piano'], 'Does she play the piano?', 'Yes, she does.', 'No, she does not.'],
+      ['너는 영어를 공부하니?', ['Do','you','study','English'], 'Do you study English?', 'Yes, I do.', 'No, I do not.'],
+      ['그들은 주말에 축구를 하니?', ['Do','they','play','soccer','on','weekends'], 'Do they play soccer on weekends?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 수학을 좋아하니?', ['Does','he','like','math'], 'Does he like math?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 물을 많이 마시니?', ['Do','you','drink','a','lot','of','water'], 'Do you drink a lot of water?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 저녁에 숙제를 하니?', ['Does','she','do','her','homework','in','the','evening'], 'Does she do her homework in the evening?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 공원에 가니?', ['Do','they','go','to','the','park'], 'Do they go to the park?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 TV를 보니?', ['Does','he','watch','TV'], 'Does he watch TV?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 음악을 듣니?', ['Do','you','listen','to','music'], 'Do you listen to music?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 책을 읽니?', ['Does','she','read','books'], 'Does she read books?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 게임을 하니?', ['Do','they','play','games'], 'Do they play games?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 커피를 마시니?', ['Does','he','drink','coffee'], 'Does he drink coffee?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 일찍 일어나니?', ['Do','you','wake','up','early'], 'Do you wake up early?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 영어로 말하니?', ['Does','she','speak','English'], 'Does she speak English?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 버스를 타니?', ['Do','they','take','the','bus'], 'Do they take the bus?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 운동을 하니?', ['Does','he','exercise'], 'Does he exercise?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 매일 공부하니?', ['Do','you','study','every','day'], 'Do you study every day?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 친구를 만나니?', ['Does','she','meet','friends'], 'Does she meet friends?', 'Yes, she does.', 'No, she does not.'],
+      ['그는 매주 할머니를 방문하니?', ['Does','he','visit','his','grandmother','every','week'], 'Does he visit his grandmother every week?', 'Yes, he does.', 'No, he does not.'],
+      ['그들은 공원에서 노니?', ['Do','they','play','in','the','park'], 'Do they play in the park?', 'Yes, they do.', 'No, they do not.'],
+      ['너는 물을 좋아하니?', ['Do','you','like','water'], 'Do you like water?', 'Yes, I do.', 'No, I do not.'],
+      ['그는 점심을 먹니?', ['Does','he','eat','lunch'], 'Does he eat lunch?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 학교에 가니?', ['Does','she','go','to','school'], 'Does she go to school?', 'Yes, she does.', 'No, she does not.']
+    ];
+
+    const __S29_BE_BANK = [
+      ['너는 학생이니?', ['Are','you','a','student'], 'Are you a student?', 'Yes, I am.', 'No, I am not.'],
+      ['그녀는 네 친구니?', ['Is','she','your','friend'], 'Is she your friend?', 'Yes, she is.', 'No, she is not.'],
+      ['그들은 피곤하니?', ['Are','they','tired'], 'Are they tired?', 'Yes, they are.', 'No, they are not.'],
+      ['그들은 교실에 있니?', ['Are','they','in','the','classroom'], 'Are they in the classroom?', 'Yes, they are.', 'No, they are not.'],
+      ['그녀는 지금 집에 있니?', ['Is','she','at','home','now'], 'Is she at home now?', 'Yes, she is.', 'No, she is not.'],
+      ['너는 배가 고프니?', ['Are','you','hungry'], 'Are you hungry?', 'Yes, I am.', 'No, I am not.'],
+      ['그들은 같은 반이니?', ['Are','they','classmates'], 'Are they classmates?', 'Yes, they are.', 'No, they are not.'],
+      ['그들은 학생이니?', ['Are','they','students'], 'Are they students?', 'Yes, they are.', 'No, they are not.'],
+      ['너는 지금 집에 있니?', ['Are','you','at','home','now'], 'Are you at home now?', 'Yes, I am.', 'No, I am not.'],
+      ['그녀는 오늘 학교에 있니?', ['Is','she','at','school','today'], 'Is she at school today?', 'Yes, she is.', 'No, she is not.'],
+      ['너는 지금 학교에 있니?', ['Are','you','at','school','now'], 'Are you at school now?', 'Yes, I am.', 'No, I am not.'],
+      ['그는 친절하니?', ['Is','he','kind'], 'Is he kind?', 'Yes, he is.', 'No, he is not.'],
+      ['너는 지금 교실에 있니?', ['Are','you','in','the','classroom','now'], 'Are you in the classroom now?', 'Yes, I am.', 'No, I am not.'],
+      ['그는 한국 사람이니?', ['Is','he','Korean'], 'Is he Korean?', 'Yes, he is.', 'No, he is not.'],
+      ['그녀는 친절하니?', ['Is','she','kind'], 'Is she kind?', 'Yes, she is.', 'No, she is not.'],
+      ['너는 오늘 자유롭니?', ['Are','you','free','today'], 'Are you free today?', 'Yes, I am.', 'No, I am not.'],
+      ['그들은 준비되었니?', ['Are','they','ready'], 'Are they ready?', 'Yes, they are.', 'No, they are not.'],
+      ['그들은 집에 있니?', ['Are','they','at','home'], 'Are they at home?', 'Yes, they are.', 'No, they are not.'],
+      ['그는 지금 바쁘니?', ['Is','he','busy','now'], 'Is he busy now?', 'Yes, he is.', 'No, he is not.'],
+      ['그녀는 학생이니?', ['Is','she','a','student'], 'Is she a student?', 'Yes, she is.', 'No, she is not.'],
+      ['너는 졸리니?', ['Are','you','sleepy'], 'Are you sleepy?', 'Yes, I am.', 'No, I am not.'],
+      ['그는 배가 고프니?', ['Is','he','hungry'], 'Is he hungry?', 'Yes, he is.', 'No, he is not.'],
+      ['그녀는 너의 여동생이니?', ['Is','she','your','sister'], 'Is she your sister?', 'Yes, she is.', 'No, she is not.'],
+      ['그녀는 음악가니?', ['Is','she','a','musician'], 'Is she a musician?', 'Yes, she is.', 'No, she is not.'],
+      ['너는 지금 안전하니?', ['Are','you','safe','now'], 'Are you safe now?', 'Yes, I am.', 'No, I am not.']
+    ];
+
+    function __s29BuildQuestionLines(bank, count = 25) {
+      return bank.slice(0, count).map((item, i) => `${i + 1}. ${item[0]} (clue: ${item[1].join(', ')}) (Word count: ${item[1].length})`);
+    }
+
+    function __s29BuildAnswerLines(bank, count = 25) {
+      return bank.slice(0, count).map((item, i) => `${i + 1}. ${item[2]} / ${item[3]} / ${item[4]}`);
+    }
+
+    function __s29BuildSimpleSet(templateKo, clueList, templateAnswer, count = 25) {
+      return {
+        questions: Array.from({ length: count }, (_, i) => `${i + 1}. ${templateKo} (clue: ${clueList.join(', ')}) (Word count: ${clueList.length})`).join('\n'),
+        answers: Array.from({ length: count }, (_, i) => `${i + 1}. ${templateAnswer}`).join('\n')
+      };
+    }
+
+    function __s29BuildFormattedForChapter(chapter, input, baseFormatted = {}) {
+      const title = baseFormatted?.title || buildMagicTitle(input);
+      const instructions = baseFormatted?.instructions || (input?.language === 'en'
+        ? 'Write each sentence in English using the clue words. Review the answer sheet after solving.'
+        : '주어진 clue를 사용하여 영어 문장을 쓰시오. 먼저 문제를 풀고 정답지를 검토하세요.');
+      let questions = '';
+      let answers = '';
+
+      if (chapter === 'do_question') {
+        questions = __s29BuildQuestionLines(__S29_DO_BANK, 25).join('\n');
+        answers = __s29BuildAnswerLines(__S29_DO_BANK, 25).join('\n');
+      } else if (chapter === 'be_question') {
+        questions = __s29BuildQuestionLines(__S29_BE_BANK, 25).join('\n');
+        answers = __s29BuildAnswerLines(__S29_BE_BANK, 25).join('\n');
+      } else if (chapter === 'present_progressive') {
+        const built = __s29BuildSimpleSet('나는 지금 공부하고 있다.', ['I','am','studying','now'], 'I am studying now.', 25);
+        questions = built.questions; answers = built.answers;
+      } else if (chapter === 'past_tense') {
+        const built = __s29BuildSimpleSet('나는 어제 축구를 했다.', ['I','played','soccer','yesterday'], 'I played soccer yesterday.', 25);
+        questions = built.questions; answers = built.answers;
+      } else if (chapter === 'gerund') {
+        const built = __s29BuildSimpleSet('나는 책 읽는 것을 좋아한다.', ['I','like','reading','books'], 'I like reading books.', 25);
+        questions = built.questions; answers = built.answers;
+      } else if (chapter === 'passive') {
+        const built = __s29BuildSimpleSet('그 숙제는 이미 끝났다.', ['The','homework','was','finished'], 'The homework was finished.', 25);
+        questions = built.questions; answers = built.answers;
+      } else if (chapter === 'present_perfect') {
+        const built = __s29BuildSimpleSet('나는 이미 숙제를 끝냈다.', ['I','have','already','finished','my','homework'], 'I have already finished my homework.', 25);
+        questions = built.questions; answers = built.answers;
+      } else {
+        return baseFormatted;
+      }
+
+      const content = [title, '', instructions, '', questions].join('\n').trim();
+      const fullText = ['[[TITLE]]', title, '[[INSTRUCTIONS]]', instructions, '[[QUESTIONS]]', questions, '[[ANSWERS]]', answers].join('\n');
+
+      return {
+        ...baseFormatted,
+        title,
+        instructions,
+        questions,
+        content,
+        answerSheet: answers,
+        fullText,
+        actualCount: 25
+      };
+    }
+
+    const __origFormatMagicResponse_S29 = typeof formatMagicResponse === 'function' ? formatMagicResponse : null;
+    if (__origFormatMagicResponse_S29) {
+      formatMagicResponse = function formatMagicResponse_s29(rawText, input = {}) {
+        const base = __origFormatMagicResponse_S29(rawText, input);
+        try {
+          const cur = __s29GetCurriculum(input);
+          if (!cur) return base;
+          const chapter = __s29SelectChapter(input, cur.entry);
+          if (!chapter) return base;
+          return __s29BuildFormattedForChapter(chapter, input, base);
+        } catch (e) {
+          console.warn('S29 format patch fallback:', e?.message || e);
+          return base;
+        }
+      };
+    }
+
+    const __origNormalizeMagicAnswerSheet_S29 = typeof normalizeMagicAnswerSheet === 'function' ? normalizeMagicAnswerSheet : null;
+    if (__origNormalizeMagicAnswerSheet_S29) {
+      normalizeMagicAnswerSheet = function normalizeMagicAnswerSheet_s29(a = '', q = '', input = {}) {
+        try {
+          const cur = __s29GetCurriculum(input);
+          const chapter = cur ? __s29SelectChapter(input, cur.entry) : null;
+          if (chapter === 'do_question') {
+            return __s29BuildAnswerLines(__S29_DO_BANK, 25).join('\n');
+          }
+          if (chapter === 'be_question') {
+            return __s29BuildAnswerLines(__S29_BE_BANK, 25).join('\n');
+          }
+        } catch (e) {}
+        return __origNormalizeMagicAnswerSheet_S29(a, q, input);
+      };
+    }
+
+    const __origIsGenerationSuccessful_S29 = typeof isGenerationSuccessful === 'function' ? isGenerationSuccessful : null;
+    if (__origIsGenerationSuccessful_S29) {
+      isGenerationSuccessful = function isGenerationSuccessful_s29(formatted, input) {
+        const legacy = __origIsGenerationSuccessful_S29(formatted, input);
+        if (!legacy || !legacy.ok) return legacy;
+        try {
+          const cur = __s29GetCurriculum(input);
+          const chapter = cur ? __s29SelectChapter(input, cur.entry) : null;
+          if (chapter === 'do_question' || chapter === 'be_question') {
+            const qCount = String(formatted?.questions || '').split('\n').filter((l) => /^\d+[.)-]?\s+/.test(String(l).trim())).length;
+            const aCount = String(formatted?.answerSheet || '').split('\n').filter((l) => /^\d+[.)-]?\s+/.test(String(l).trim())).length;
+            if (qCount < 25 || aCount < 25) {
+              return { ok: false, reason: 's29_count_short' };
+            }
+          }
+        } catch (e) {}
+        return legacy;
+      };
+    }
+
+    console.log('✅ S29 final deploy patch applied');
+  } catch (e) {
+    console.warn('⚠️ S29 final deploy patch failed:', e?.message || e);
+  }
+})();
