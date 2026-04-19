@@ -8676,20 +8676,18 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
   console.log("✅ S17 textbook mapping patch applied");
 })();
 
-
 /* =========================
-   S27 FINAL FIX (STRICT ONELINE DB ASSEMBLER)
-   - DB as answer anchor
-   - Every question = exactly one numbered line
-   - Every answer = exactly one numbered line
-   - Preserve S19 response shape
+   S28 FINAL CLEAN FIX
+   - single DB patch only
+   - remove layered wrapper conflicts
+   - strict one-line worksheet / one-line answer sheet
    ========================= */
 (() => {
   let __dbLoader = null;
   try {
     __dbLoader = require("../lib/sentence-bank-loader");
   } catch (e) {
-    console.warn("⚠️ S27 DB loader require failed:", e?.message || e);
+    console.warn("⚠️ S28 DB loader require failed:", e?.message || e);
   }
 
   const loadSentenceBank =
@@ -8700,8 +8698,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
   function __safeBankChapter(input = {}) {
     const focus = input && input.grammarFocus ? input.grammarFocus : {};
     const key = String(focus.chapterKey || "").trim();
-    if (key === "be_question" || key === "do_question") return key;
-    return "";
+    return (key === "be_question" || key === "do_question") ? key : "";
   }
 
   function __safeBankGrade(input = {}) {
@@ -8731,7 +8728,6 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     const engineOk = engine === "magic" || engine === "";
     const workbookOk = workbookType === "" || workbookType === "guided_writing";
     const intentOk = intent === "" || intent === "training" || intent === "concept+training";
-
     return modeOk && engineOk && workbookOk && intentOk;
   }
 
@@ -8752,48 +8748,16 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
       .filter(Boolean).length;
   }
 
-  function __tokenizeForClue(answer = "") {
-    const cleaned = String(answer || "").replace(/[?]/g, "").trim();
-    if (!cleaned) return [];
-    const words = cleaned.split(/\s+/);
-
-    const chunks = [];
-    let i = 0;
-    while (i < words.length) {
-      const w = words[i];
-      const n1 = words[i + 1] || "";
-      const n2 = words[i + 2] || "";
-
-      if (/^(every)$/i.test(w) && /^(day|week|month|year)$/i.test(n1)) {
-        chunks.push(`${w} ${n1}`);
-        i += 2;
-        continue;
-      }
-
-      if (/^(after|before|at|in|on|to|for|with|by)$/i.test(w) && n1) {
-        if (/^(the|a|an)$/i.test(n1) && n2) {
-          chunks.push(`${w} ${n1} ${n2}`);
-          i += 3;
-          continue;
-        }
-        if (/^(school|home|weekends|weekend|morning|evening|night|park|library|airport|hospital|classroom|church|Saturday|Sunday)$/i.test(n1)) {
-          chunks.push(`${w} ${n1}`);
-          i += 2;
-          continue;
-        }
-      }
-
-      if (/^(a|an|the)$/i.test(w) && n1) {
-        chunks.push(`${w} ${n1}`);
-        i += 2;
-        continue;
-      }
-
-      chunks.push(w);
-      i += 1;
+  function __clueFromItemOrAnswer(item = {}) {
+    if (Array.isArray(item.clue) && item.clue.length) {
+      return item.clue
+        .map(v => String(v || "").replace(/\s+/g, " ").trim())
+        .filter(Boolean)
+        .slice(0, 12);
     }
-
-    return chunks.slice(0, 12);
+    const cleaned = String(item.enAnswer || "").replace(/\?/g, "").trim();
+    if (!cleaned) return [];
+    return cleaned.split(/\s+/).slice(0, 12);
   }
 
   function __buildShortAnswers(answerText = "") {
@@ -8814,27 +8778,22 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     return ["Yes.", "No."];
   }
 
-  function __normalizeQuestionFromItem(item = {}, chapterKey = "") {
+  function __questionFromItem(item = {}, chapterKey = "") {
     const ko = String(item.koPrompt || "").replace(/\s+/g, " ").trim();
     if (ko) return ko;
     const en = String(item.enAnswer || "").trim();
-
     if (chapterKey === "be_question") {
       if (/^Are you\b/i.test(en)) return "너는 ~니?";
       if (/^Are they\b/i.test(en)) return "그들은 ~니?";
       if (/^Is he\b/i.test(en)) return "그는 ~니?";
       if (/^Is she\b/i.test(en)) return "그녀는 ~니?";
-      return "다음 문장을 영작하시오.";
     }
-
     if (chapterKey === "do_question") {
       if (/^Do you\b/i.test(en)) return "너는 ~하니?";
       if (/^Do they\b/i.test(en)) return "그들은 ~하니?";
       if (/^Does he\b/i.test(en)) return "그는 ~하니?";
       if (/^Does she\b/i.test(en)) return "그녀는 ~하니?";
-      return "다음 문장을 영작하시오.";
     }
-
     return "다음 문장을 영작하시오.";
   }
 
@@ -8848,23 +8807,15 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
     for (const item of pool) {
       if (selected.length >= desired) break;
-      const answer = String(item?.enAnswer || "").trim().toLowerCase();
-      const group = String(item?.similarGroup || "").trim().toLowerCase();
-      if (!answer || usedAnswers.has(answer)) continue;
-      if (group && usedGroups.has(group)) continue;
-      selected.push(item);
-      usedAnswers.add(answer);
-      if (group) usedGroups.add(group);
-    }
+      const answerKey = String(item?.enAnswer || "").trim().toLowerCase();
+      const groupKey = String(item?.similarGroup || "").trim().toLowerCase();
 
-    if (selected.length < desired) {
-      for (const item of pool) {
-        if (selected.length >= desired) break;
-        const answer = String(item?.enAnswer || "").trim().toLowerCase();
-        if (!answer || usedAnswers.has(answer)) continue;
-        selected.push(item);
-        usedAnswers.add(answer);
-      }
+      if (!answerKey || usedAnswers.has(answerKey)) continue;
+      if (groupKey && usedGroups.has(groupKey)) continue;
+
+      selected.push(item);
+      usedAnswers.add(answerKey);
+      if (groupKey) usedGroups.add(groupKey);
     }
 
     return selected.slice(0, desired);
@@ -8873,12 +8824,10 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
   function __assembleItems(bankItems = [], chapterKey = "") {
     return bankItems.map((item, idx) => {
       const answer = String(item.enAnswer || "").replace(/\s+/g, " ").trim();
-      const clue = Array.isArray(item.clue) && item.clue.length
-        ? item.clue.map(v => String(v || "").replace(/\s+/g, " ").trim()).filter(Boolean).slice(0, 12)
-        : __tokenizeForClue(answer);
+      const clue = __clueFromItemOrAnswer(item);
       const wordCount = Number(item.wordCount || 0) || __countWords(answer);
-      const question = __normalizeQuestionFromItem(item, chapterKey);
       const shortAnswers = __buildShortAnswers(answer);
+      const question = __questionFromItem(item, chapterKey);
 
       return {
         no: idx + 1,
@@ -8887,7 +8836,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
         clue,
         wordCount,
         shortAnswers,
-        source: "db_hybrid_strict_oneline",
+        source: "s28_clean_db",
       };
     });
   }
@@ -8931,7 +8880,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     }));
     next.pairIntegrity = {
       ok: true,
-      reason: "s27_strict_oneline_db_assembler",
+      reason: "s28_clean_single_patch",
       questionCount: assembled.length,
       answerCount: assembled.length,
     };
@@ -8949,16 +8898,16 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
     next.worksheetHtml = __renderWorksheetHtml(assembled);
     next.answerSheetHtml = __renderAnswerHtml(assembled);
-    next.source = "db_hybrid_front_compatible_oneline";
+    next.source = "s28_clean_front_compatible";
     return next;
   }
 
-  const __prevFormatMagicResponseS27 =
+  const __prevFormatMagicResponseS28 =
     typeof formatMagicResponse === "function" ? formatMagicResponse : null;
 
-  if (__prevFormatMagicResponseS27) {
-    formatMagicResponse = function formatMagicResponse_s27_strict_oneline_db(rawText, input = {}) {
-      const base = __prevFormatMagicResponseS27(rawText, input) || {};
+  if (__prevFormatMagicResponseS28) {
+    formatMagicResponse = function formatMagicResponse_s28_clean(rawText, input = {}) {
+      const base = __prevFormatMagicResponseS28(rawText, input) || {};
 
       try {
         if (!loadSentenceBank) return base;
@@ -8971,22 +8920,20 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
         const desired = __desiredCountFromInput(input);
         const bank = loadSentenceBank(gradeKey, chapterKey);
 
-        if (!Array.isArray(bank) || bank.length < desired) {
-          return base;
-        }
+        if (!Array.isArray(bank) || bank.length < desired) return base;
 
         const selected = __selectDbAnchors(bank, desired);
         if (selected.length < desired) return base;
 
         return __buildDbResponse(base, input, selected, chapterKey);
       } catch (e) {
-        console.warn("⚠️ S27 DB hook fallback:", e?.message || e);
+        console.warn("⚠️ S28 clean patch fallback:", e?.message || e);
         return base;
       }
     };
   }
 
-  console.log("✅ S27 strict oneline DB assembler applied");
+  console.log("✅ S28 clean single DB patch applied");
 })();
 
 // Final Vercel export (keep S19 router)
