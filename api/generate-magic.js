@@ -8678,114 +8678,188 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
 
 /* =========================
-   S23 FINAL FIX (DB OUTPUT OVERRIDE)
-   - Safe final override for be/do DB chapters
+   S24 FINAL FIX (FRONT-COMPATIBLE DB PATCH)
+   - Preserve S19 response shape
+   - DB chapters: be_question, do_question
    ========================= */
 (() => {
   let __dbLoader = null;
-
   try {
     __dbLoader = require("../lib/sentence-bank-loader");
   } catch (e) {
-    console.warn("DB loader 없음");
+    console.warn("⚠️ S24 DB loader require failed:", e?.message || e);
   }
 
   const loadSentenceBank =
-    __dbLoader && __dbLoader.loadSentenceBank
+    __dbLoader && typeof __dbLoader.loadSentenceBank === "function"
       ? __dbLoader.loadSentenceBank
       : null;
 
-  function isTargetChapter(input = {}) {
-    const key = input?.grammarFocus?.chapterKey || "";
-    return key === "be_question" || key === "do_question";
+  function __safeBankChapter(input = {}) {
+    const focus = input && input.grammarFocus ? input.grammarFocus : {};
+    const key = String(focus.chapterKey || "").trim();
+    if (key === "be_question" || key === "do_question") return key;
+    return "";
   }
 
-  function buildShortAnswers(main = "") {
-    const sentence = String(main || "").trim();
-    if (/^Are\s+you\b/i.test(sentence)) return ["Yes, I am.", "No, I am not."];
-    if (/^Are\s+they\b/i.test(sentence)) return ["Yes, they are.", "No, they are not."];
-    if (/^Are\s+we\b/i.test(sentence)) return ["Yes, we are.", "No, we are not."];
-    if (/^Is\s+he\b/i.test(sentence)) return ["Yes, he is.", "No, he is not."];
-    if (/^Is\s+she\b/i.test(sentence)) return ["Yes, she is.", "No, she is not."];
-    if (/^Is\s+it\b/i.test(sentence)) return ["Yes, it is.", "No, it is not."];
-    if (/^Do\s+you\b/i.test(sentence)) return ["Yes, I do.", "No, I do not."];
-    if (/^Do\s+they\b/i.test(sentence)) return ["Yes, they do.", "No, they do not."];
-    if (/^Do\s+we\b/i.test(sentence)) return ["Yes, we do.", "No, we do not."];
-    if (/^Do\s+I\b/i.test(sentence)) return ["Yes, you do.", "No, you do not."];
-    if (/^Does\s+he\b/i.test(sentence)) return ["Yes, he does.", "No, he does not."];
-    if (/^Does\s+she\b/i.test(sentence)) return ["Yes, she does.", "No, she does not."];
-    if (/^Does\s+it\b/i.test(sentence)) return ["Yes, it does.", "No, it does not."];
+  function __safeBankGrade(input = {}) {
+    const level = String(input.level || "").trim().toLowerCase();
+    const grade = String(input.gradeLabel || "").trim();
+    if (level === "middle" && /중1/.test(grade || "")) return "middle1";
+    if (level === "middle") return "middle1";
+    return "middle1";
+  }
+
+  function __desiredCountFromInput(input = {}) {
+    const n = Number(input.count || 25);
+    if (!Number.isFinite(n)) return 25;
+    return Math.max(5, Math.min(30, Math.round(n)));
+  }
+
+  function __isDbEligible(input = {}) {
+    const chapterKey = __safeBankChapter(input);
+    if (!chapterKey) return false;
+
+    const mode = String(input.mode || "").trim().toLowerCase();
+    const engine = String(input.engine || "").trim().toLowerCase();
+    const intent = String(input.intentMode || "").trim().toLowerCase();
+    const workbookType = String(input.workbookType || "").trim().toLowerCase();
+
+    const modeOk = ["writing", "magic", "magic-card", "chapter-grammar", "textbook-grammar"].includes(mode) || mode === "";
+    const engineOk = engine === "magic" || engine === "";
+    const workbookOk = workbookType === "" || workbookType === "guided_writing";
+    const intentOk = intent === "" || intent === "training" || intent === "concept+training";
+
+    return modeOk && engineOk && workbookOk && intentOk;
+  }
+
+  function __normalizeClueArray(arr) {
+    if (!Array.isArray(arr)) return [];
+    return arr
+      .map(v => String(v || "").replace(/\s+/g, " ").trim())
+      .filter(Boolean)
+      .slice(0, 12);
+  }
+
+  function __buildQuestionLine(item, idx) {
+    const prompt = String(item.koPrompt || "").replace(/\s+/g, " ").trim();
+    const clue = __normalizeClueArray(item.clue);
+    const wc = Number(item.wordCount || 0);
+    const clueText = clue.length ? clue.join(", ") : "";
+    return `${idx + 1}. ${prompt}\n(clue: ${clueText}) (Word count: ${wc})`;
+  }
+
+  function __buildShortAnswers(answerText = "") {
+    const s = String(answerText || "").trim();
+    if (/^Are\s+you\b/i.test(s)) return ["Yes, I am.", "No, I am not."];
+    if (/^Are\s+they\b/i.test(s)) return ["Yes, they are.", "No, they are not."];
+    if (/^Are\s+we\b/i.test(s)) return ["Yes, we are.", "No, we are not."];
+    if (/^Is\s+he\b/i.test(s)) return ["Yes, he is.", "No, he is not."];
+    if (/^Is\s+she\b/i.test(s)) return ["Yes, she is.", "No, she is not."];
+    if (/^Is\s+it\b/i.test(s)) return ["Yes, it is.", "No, it is not."];
+    if (/^Do\s+you\b/i.test(s)) return ["Yes, I do.", "No, I do not."];
+    if (/^Do\s+they\b/i.test(s)) return ["Yes, they do.", "No, they do not."];
+    if (/^Do\s+we\b/i.test(s)) return ["Yes, we do.", "No, we do not."];
+    if (/^Do\s+I\b/i.test(s)) return ["Yes, you do.", "No, you do not."];
+    if (/^Does\s+he\b/i.test(s)) return ["Yes, he does.", "No, he does not."];
+    if (/^Does\s+she\b/i.test(s)) return ["Yes, she does.", "No, she does not."];
+    if (/^Does\s+it\b/i.test(s)) return ["Yes, it does.", "No, it does not."];
     return ["Yes.", "No."];
   }
 
-  function buildDBOutput(input, items) {
-    const worksheet = items.map((item, i) => {
-      const clue = Array.isArray(item.clue) ? item.clue.join(", ") : "";
-      const wc = Number(item.wordCount || 0);
-      return `${i + 1}. ${item.koPrompt}\n\n[clue] ${clue}\n[word count] ${wc}`;
-    }).join("\n\n");
+  function __buildAnswerLine(item, idx) {
+    const ans = String(item.enAnswer || "").replace(/\s+/g, " ").trim();
+    const pair = __buildShortAnswers(ans);
+    return `${idx + 1}. ${ans}\n→ ${pair[0]}\n→ ${pair[1]}`;
+  }
 
-    const answerSheet = items.map((item, i) => {
-      const main = String(item.enAnswer || "").trim();
-      const [yes, no] = buildShortAnswers(main);
-      return `${i + 1}. ${main}\n→ ${yes}\n→ ${no}`;
-    }).join("\n\n");
+  function __buildDbResponse(base = {}, input = {}, bankItems = []) {
+    const next = { ...(base || {}) };
 
-    return {
-      worksheet,
-      questions: worksheet,
-      answerSheet,
-      source: "DB_STRICT",
-      actualCount: items.length,
-      itemPairs: items.map((item, idx) => {
-        const [yes, no] = buildShortAnswers(item.enAnswer || "");
-        return {
-          no: idx + 1,
-          question: String(item.koPrompt || "").trim(),
-          answer: String(item.enAnswer || "").trim(),
-          clue: Array.isArray(item.clue) ? item.clue : [],
-          wordCount: Number(item.wordCount || 0),
-          shortAnswers: [yes, no],
-          source: "db_strict"
-        };
-      }),
-      pairIntegrity: {
-        ok: true,
-        reason: "s23_db_output_override",
-        questionCount: items.length,
-        answerCount: items.length
+    const questionLines = [];
+    const answerLines = [];
+
+    for (let i = 0; i < bankItems.length; i += 1) {
+      questionLines.push(__buildQuestionLine(bankItems[i], i));
+      answerLines.push(__buildAnswerLine(bankItems[i], i));
+    }
+
+    next.questions = questionLines.join("\n\n");
+    next.worksheet = next.questions;
+    next.answerSheet = answerLines.join("\n\n");
+    next.actualCount = bankItems.length;
+    next.itemPairs = bankItems.map((item, idx) => {
+      const shortAnswers = __buildShortAnswers(item.enAnswer || "");
+      return {
+        no: idx + 1,
+        question: String(item.koPrompt || "").trim(),
+        answer: String(item.enAnswer || "").trim(),
+        clue: __normalizeClueArray(item.clue),
+        wordCount: Number(item.wordCount || 0),
+        shortAnswers,
+        source: "db",
+      };
+    });
+    next.pairIntegrity = {
+      ok: true,
+      reason: "s24_db_hook",
+      questionCount: bankItems.length,
+      answerCount: bankItems.length,
+    };
+
+    const title = String(next.title || next.worksheetTitle || input.worksheetTitle || "").trim();
+    const instructions = String(next.instructions || "").trim();
+
+    next.content = [title, instructions, next.questions].filter(Boolean).join("\n\n");
+    next.fullText = [
+      title,
+      instructions,
+      next.questions,
+      ((input.language === "en" ? "Answers\n" : "정답\n") + (next.answerSheet || "")),
+    ].filter(Boolean).join("\n\n");
+
+    next.worksheetHtml = next.questions;
+    next.answerSheetHtml = next.answerSheet;
+    next.source = "db_front_compatible";
+    return next;
+  }
+
+  const __prevFormatMagicResponseS24 =
+    typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+
+  if (__prevFormatMagicResponseS24) {
+    formatMagicResponse = function formatMagicResponse_s24_front_compatible(rawText, input = {}) {
+      const base = __prevFormatMagicResponseS24(rawText, input) || {};
+
+      try {
+        if (!loadSentenceBank) return base;
+        if (!__isDbEligible(input)) return base;
+
+        const chapterKey = __safeBankChapter(input);
+        if (!chapterKey) return base;
+
+        const gradeKey = __safeBankGrade(input);
+        const desired = __desiredCountFromInput(input);
+        const bank = loadSentenceBank(gradeKey, chapterKey);
+
+        if (!Array.isArray(bank) || bank.length < desired) {
+          return base;
+        }
+
+        const shuffled = [...bank].sort(() => Math.random() - 0.5);
+        const selected = shuffled.slice(0, desired);
+
+        return __buildDbResponse(base, input, selected);
+      } catch (e) {
+        console.warn("⚠️ S24 DB hook fallback:", e?.message || e);
+        return base;
       }
     };
   }
 
-  const __prevHandler = handler_v841_workbook_type_router;
-
-  handler_v841_workbook_type_router = async function(req, res) {
-    const input = normalizeInput(req.body || {});
-
-    try {
-      if (loadSentenceBank && isTargetChapter(input)) {
-        const chapterKey = input.grammarFocus.chapterKey;
-        const desired = Math.max(5, Math.min(30, Number(input.count || 25)));
-        const bank = loadSentenceBank("middle1", chapterKey);
-
-        if (bank && bank.length >= desired) {
-          const shuffled = [...bank].sort(() => Math.random() - 0.5);
-          const selected = shuffled.slice(0, desired);
-          const result = buildDBOutput(input, selected);
-          return res.json(result);
-        }
-      }
-    } catch (e) {
-      console.warn("DB override 실패 → fallback", e?.message || e);
-    }
-
-    return __prevHandler(req, res);
-  };
-
-  console.log("✅ S23 final DB output override applied");
+  console.log("✅ S24 front-compatible DB patch applied");
 })();
 
-// Final Vercel export
+// Final Vercel export (keep S19 router)
 module.exports = handler_v841_workbook_type_router;
 module.exports.config = { runtime: "nodejs" };
