@@ -1,10 +1,16 @@
+//data/sentence_bank/middle1/be_question.json
+
 [
   {
     "id": "m1_be_q_001",
     "chapterKey": "be_question",
     "koPrompt": "너는 학생이니?",
     "enAnswer": "Are you a student?",
-    "clue": ["Are", "you", "student"],
+    "clue": [
+      "Are",
+      "you",
+      "student"
+    ],
     "wordCount": 4,
     "answerShape": "be_question",
     "similarGroup": "identity_student"
@@ -14,7 +20,11 @@
     "chapterKey": "be_question",
     "koPrompt": "그는 선생님이니?",
     "enAnswer": "Is he a teacher?",
-    "clue": ["Is", "he", "teacher"],
+    "clue": [
+      "Is",
+      "he",
+      "teacher"
+    ],
     "wordCount": 4,
     "answerShape": "be_question",
     "similarGroup": "identity_teacher"
@@ -24,7 +34,12 @@
     "chapterKey": "be_question",
     "koPrompt": "그녀는 집에 있니?",
     "enAnswer": "Is she at home?",
-    "clue": ["Is", "she", "at", "home"],
+    "clue": [
+      "Is",
+      "she",
+      "at",
+      "home"
+    ],
     "wordCount": 4,
     "answerShape": "be_question",
     "similarGroup": "location_home"
@@ -34,7 +49,11 @@
     "chapterKey": "be_question",
     "koPrompt": "그들은 피곤하니?",
     "enAnswer": "Are they tired?",
-    "clue": ["Are", "they", "tired"],
+    "clue": [
+      "Are",
+      "they",
+      "tired"
+    ],
     "wordCount": 3,
     "answerShape": "be_question",
     "similarGroup": "state_tired"
@@ -44,7 +63,11 @@
     "chapterKey": "be_question",
     "koPrompt": "너희는 준비되었니?",
     "enAnswer": "Are you ready?",
-    "clue": ["Are", "you", "ready"],
+    "clue": [
+      "Are",
+      "you",
+      "ready"
+    ],
     "wordCount": 3,
     "answerShape": "be_question",
     "similarGroup": "state_ready"
@@ -54,7 +77,11 @@
     "chapterKey": "be_question",
     "koPrompt": "그녀는 의사니?",
     "enAnswer": "Is she a doctor?",
-    "clue": ["Is", "she", "doctor"],
+    "clue": [
+      "Is",
+      "she",
+      "doctor"
+    ],
     "wordCount": 4,
     "answerShape": "be_question",
     "similarGroup": "identity_doctor"
@@ -64,7 +91,13 @@
     "chapterKey": "be_question",
     "koPrompt": "그들은 교실에 있니?",
     "enAnswer": "Are they in the classroom?",
-    "clue": ["Are", "they", "in", "classroom"],
+    "clue": [
+      "Are",
+      "they",
+      "in",
+      "the",
+      "classroom"
+    ],
     "wordCount": 5,
     "answerShape": "be_question",
     "similarGroup": "location_classroom"
@@ -74,7 +107,11 @@
     "chapterKey": "be_question",
     "koPrompt": "너는 바쁘니?",
     "enAnswer": "Are you busy?",
-    "clue": ["Are", "you", "busy"],
+    "clue": [
+      "Are",
+      "you",
+      "busy"
+    ],
     "wordCount": 3,
     "answerShape": "be_question",
     "similarGroup": "state_busy"
@@ -84,7 +121,11 @@
     "chapterKey": "be_question",
     "koPrompt": "그는 한국 사람이니?",
     "enAnswer": "Is he Korean?",
-    "clue": ["Is", "he", "Korean"],
+    "clue": [
+      "Is",
+      "he",
+      "Korean"
+    ],
     "wordCount": 3,
     "answerShape": "be_question",
     "similarGroup": "identity_nationality"
@@ -94,9 +135,772 @@
     "chapterKey": "be_question",
     "koPrompt": "그녀는 지금 학교에 있니?",
     "enAnswer": "Is she at school now?",
-    "clue": ["Is", "she", "at", "school", "now"],
+    "clue": [
+      "Is",
+      "she",
+      "at",
+      "school",
+      "now"
+    ],
     "wordCount": 5,
     "answerShape": "be_question",
-    "similarGroup": "location_school"
+    "similarGroup": "location_school_now"
+  },
+  {
+    "id": "m1_be_q_011",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 공원에 있니?",
+    "enAnswer": "Are they in the park?",
+    "clue": [
+      "Are",
+      "they",
+      "in",
+      "the",
+      "park"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_park"
+  },
+  {
+    "id": "m1_be_q_012",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 지금 괜찮니?",
+    "enAnswer": "Are you okay now?",
+    "clue": [
+      "Are",
+      "you",
+      "okay",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_okay_now"
+  },
+  {
+    "id": "m1_be_q_013",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 친절하니?",
+    "enAnswer": "Is he kind?",
+    "clue": [
+      "Is",
+      "he",
+      "kind"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_kind"
+  },
+  {
+    "id": "m1_be_q_014",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 행복하니?",
+    "enAnswer": "Is she happy?",
+    "clue": [
+      "Is",
+      "she",
+      "happy"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_happy"
+  },
+  {
+    "id": "m1_be_q_015",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 도서관에 있니?",
+    "enAnswer": "Are they in the library?",
+    "clue": [
+      "Are",
+      "they",
+      "in",
+      "the",
+      "library"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_library"
+  },
+  {
+    "id": "m1_be_q_016",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 오늘 자유롭니?",
+    "enAnswer": "Are you free today?",
+    "clue": [
+      "Are",
+      "you",
+      "free",
+      "today"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_free_today"
+  },
+  {
+    "id": "m1_be_q_017",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 지금 집에 있니?",
+    "enAnswer": "Is he at home now?",
+    "clue": [
+      "Is",
+      "he",
+      "at",
+      "home",
+      "now"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_home_now"
+  },
+  {
+    "id": "m1_be_q_018",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 네 친구니?",
+    "enAnswer": "Is she your friend?",
+    "clue": [
+      "Is",
+      "she",
+      "your",
+      "friend"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_friend"
+  },
+  {
+    "id": "m1_be_q_019",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 농구 선수니?",
+    "enAnswer": "Are they basketball players?",
+    "clue": [
+      "Are",
+      "they",
+      "basketball",
+      "players"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_players"
+  },
+  {
+    "id": "m1_be_q_020",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 지금 교실에 있니?",
+    "enAnswer": "Are you in the classroom now?",
+    "clue": [
+      "Are",
+      "you",
+      "in",
+      "the",
+      "classroom",
+      "now"
+    ],
+    "wordCount": 6,
+    "answerShape": "be_question",
+    "similarGroup": "location_classroom_now"
+  },
+  {
+    "id": "m1_be_q_021",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 병원에 있니?",
+    "enAnswer": "Is he in the hospital?",
+    "clue": [
+      "Is",
+      "he",
+      "in",
+      "the",
+      "hospital"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_hospital"
+  },
+  {
+    "id": "m1_be_q_022",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 지금 바쁘니?",
+    "enAnswer": "Is she busy now?",
+    "clue": [
+      "Is",
+      "she",
+      "busy",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_busy_now"
+  },
+  {
+    "id": "m1_be_q_023",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 집에 있니?",
+    "enAnswer": "Are they at home?",
+    "clue": [
+      "Are",
+      "they",
+      "at",
+      "home"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "location_home_plural"
+  },
+  {
+    "id": "m1_be_q_024",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 졸리니?",
+    "enAnswer": "Are you sleepy?",
+    "clue": [
+      "Are",
+      "you",
+      "sleepy"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_sleepy"
+  },
+  {
+    "id": "m1_be_q_025",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 지금 화나 있니?",
+    "enAnswer": "Is he angry now?",
+    "clue": [
+      "Is",
+      "he",
+      "angry",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_angry_now"
+  },
+  {
+    "id": "m1_be_q_026",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 학생이니?",
+    "enAnswer": "Is she a student?",
+    "clue": [
+      "Is",
+      "she",
+      "student"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_student_female"
+  },
+  {
+    "id": "m1_be_q_027",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 지금 안전하니?",
+    "enAnswer": "Are they safe now?",
+    "clue": [
+      "Are",
+      "they",
+      "safe",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_safe_now"
+  },
+  {
+    "id": "m1_be_q_028",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 배가 고프니?",
+    "enAnswer": "Are you hungry?",
+    "clue": [
+      "Are",
+      "you",
+      "hungry"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_hungry"
+  },
+  {
+    "id": "m1_be_q_029",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 너의 형이니?",
+    "enAnswer": "Is he your brother?",
+    "clue": [
+      "Is",
+      "he",
+      "your",
+      "brother"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_brother"
+  },
+  {
+    "id": "m1_be_q_030",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 오늘 학교에 있니?",
+    "enAnswer": "Is she at school today?",
+    "clue": [
+      "Is",
+      "she",
+      "at",
+      "school",
+      "today"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_school_today"
+  },
+  {
+    "id": "m1_be_q_031",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 지금 공원에 있니?",
+    "enAnswer": "Are they in the park now?",
+    "clue": [
+      "Are",
+      "they",
+      "in",
+      "the",
+      "park",
+      "now"
+    ],
+    "wordCount": 6,
+    "answerShape": "be_question",
+    "similarGroup": "location_park_now"
+  },
+  {
+    "id": "m1_be_q_032",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 지금 행복하니?",
+    "enAnswer": "Are you happy now?",
+    "clue": [
+      "Are",
+      "you",
+      "happy",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_happy_now"
+  },
+  {
+    "id": "m1_be_q_033",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 지금 자유롭니?",
+    "enAnswer": "Is he free now?",
+    "clue": [
+      "Is",
+      "he",
+      "free",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_free_now"
+  },
+  {
+    "id": "m1_be_q_034",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 음악가니?",
+    "enAnswer": "Is she a musician?",
+    "clue": [
+      "Is",
+      "she",
+      "musician"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_musician"
+  },
+  {
+    "id": "m1_be_q_035",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 같은 반이니?",
+    "enAnswer": "Are they classmates?",
+    "clue": [
+      "Are",
+      "they",
+      "classmates"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "identity_classmates"
+  },
+  {
+    "id": "m1_be_q_036",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 지금 집에 있니?",
+    "enAnswer": "Are you at home now?",
+    "clue": [
+      "Are",
+      "you",
+      "at",
+      "home",
+      "now"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_you_home_now"
+  },
+  {
+    "id": "m1_be_q_037",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 공항에 있니?",
+    "enAnswer": "Is he at the airport?",
+    "clue": [
+      "Is",
+      "he",
+      "at",
+      "the",
+      "airport"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_airport"
+  },
+  {
+    "id": "m1_be_q_038",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 친절하니?",
+    "enAnswer": "Is she kind?",
+    "clue": [
+      "Is",
+      "she",
+      "kind"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_kind_female"
+  },
+  {
+    "id": "m1_be_q_039",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 오늘 바쁘니?",
+    "enAnswer": "Are they busy today?",
+    "clue": [
+      "Are",
+      "they",
+      "busy",
+      "today"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_busy_today"
+  },
+  {
+    "id": "m1_be_q_040",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 지금 피곤하니?",
+    "enAnswer": "Are you tired now?",
+    "clue": [
+      "Are",
+      "you",
+      "tired",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_tired_now"
+  },
+  {
+    "id": "m1_be_q_041",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 영어 선생님이니?",
+    "enAnswer": "Is he an English teacher?",
+    "clue": [
+      "Is",
+      "he",
+      "English",
+      "teacher"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "identity_english_teacher"
+  },
+  {
+    "id": "m1_be_q_042",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 지금 병원에 있니?",
+    "enAnswer": "Is she in the hospital now?",
+    "clue": [
+      "Is",
+      "she",
+      "in",
+      "the",
+      "hospital",
+      "now"
+    ],
+    "wordCount": 6,
+    "answerShape": "be_question",
+    "similarGroup": "location_hospital_now"
+  },
+  {
+    "id": "m1_be_q_043",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 준비되었니?",
+    "enAnswer": "Are they ready?",
+    "clue": [
+      "Are",
+      "they",
+      "ready"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_ready_plural"
+  },
+  {
+    "id": "m1_be_q_044",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 오늘 바쁘니?",
+    "enAnswer": "Are you busy today?",
+    "clue": [
+      "Are",
+      "you",
+      "busy",
+      "today"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_you_busy_today"
+  },
+  {
+    "id": "m1_be_q_045",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 배가 고프니?",
+    "enAnswer": "Is he hungry?",
+    "clue": [
+      "Is",
+      "he",
+      "hungry"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_hungry_male"
+  },
+  {
+    "id": "m1_be_q_046",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 지금 집에 있니?",
+    "enAnswer": "Is she at home now?",
+    "clue": [
+      "Is",
+      "she",
+      "at",
+      "home",
+      "now"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_she_home_now"
+  },
+  {
+    "id": "m1_be_q_047",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 학생이니?",
+    "enAnswer": "Are they students?",
+    "clue": [
+      "Are",
+      "they",
+      "students"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "identity_students"
+  },
+  {
+    "id": "m1_be_q_048",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 친절하니?",
+    "enAnswer": "Are you kind?",
+    "clue": [
+      "Are",
+      "you",
+      "kind"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_you_kind"
+  },
+  {
+    "id": "m1_be_q_049",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 지금 교실에 있니?",
+    "enAnswer": "Is he in the classroom now?",
+    "clue": [
+      "Is",
+      "he",
+      "in",
+      "the",
+      "classroom",
+      "now"
+    ],
+    "wordCount": 6,
+    "answerShape": "be_question",
+    "similarGroup": "location_he_classroom_now"
+  },
+  {
+    "id": "m1_be_q_050",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 지금 행복하니?",
+    "enAnswer": "Is she happy now?",
+    "clue": [
+      "Is",
+      "she",
+      "happy",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_she_happy_now"
+  },
+  {
+    "id": "m1_be_q_051",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 지금 도서관에 있니?",
+    "enAnswer": "Are they in the library now?",
+    "clue": [
+      "Are",
+      "they",
+      "in",
+      "the",
+      "library",
+      "now"
+    ],
+    "wordCount": 6,
+    "answerShape": "be_question",
+    "similarGroup": "location_library_now"
+  },
+  {
+    "id": "m1_be_q_052",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 지금 안전하니?",
+    "enAnswer": "Are you safe now?",
+    "clue": [
+      "Are",
+      "you",
+      "safe",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_you_safe_now"
+  },
+  {
+    "id": "m1_be_q_053",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 의사니?",
+    "enAnswer": "Is he a doctor?",
+    "clue": [
+      "Is",
+      "he",
+      "doctor"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_doctor_male"
+  },
+  {
+    "id": "m1_be_q_054",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 너의 여동생이니?",
+    "enAnswer": "Is she your sister?",
+    "clue": [
+      "Is",
+      "she",
+      "your",
+      "sister"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_sister"
+  },
+  {
+    "id": "m1_be_q_055",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 오늘 학교에 있니?",
+    "enAnswer": "Are they at school today?",
+    "clue": [
+      "Are",
+      "they",
+      "at",
+      "school",
+      "today"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_they_school_today"
+  },
+  {
+    "id": "m1_be_q_056",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 지금 자유롭니?",
+    "enAnswer": "Are you free now?",
+    "clue": [
+      "Are",
+      "you",
+      "free",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_you_free_now"
+  },
+  {
+    "id": "m1_be_q_057",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 지금 바쁘니?",
+    "enAnswer": "Is he busy now?",
+    "clue": [
+      "Is",
+      "he",
+      "busy",
+      "now"
+    ],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "state_he_busy_now"
+  },
+  {
+    "id": "m1_be_q_058",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 일본 사람이니?",
+    "enAnswer": "Is she Japanese?",
+    "clue": [
+      "Is",
+      "she",
+      "Japanese"
+    ],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "identity_japanese"
+  },
+  {
+    "id": "m1_be_q_059",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 공항에 있니?",
+    "enAnswer": "Are they at the airport?",
+    "clue": [
+      "Are",
+      "they",
+      "at",
+      "the",
+      "airport"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_they_airport"
+  },
+  {
+    "id": "m1_be_q_060",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 지금 학교에 있니?",
+    "enAnswer": "Are you at school now?",
+    "clue": [
+      "Are",
+      "you",
+      "at",
+      "school",
+      "now"
+    ],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_you_school_now"
   }
 ]
