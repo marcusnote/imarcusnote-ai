@@ -8678,9 +8678,10 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
 
 /* =========================
-   S26 FINAL FIX (ONE-LINE FRONT SAFE DB ASSEMBLER)
+   S27 FINAL FIX (STRICT ONELINE DB ASSEMBLER)
    - DB as answer anchor
-   - One-line worksheet / one-line answer sheet
+   - Every question = exactly one numbered line
+   - Every answer = exactly one numbered line
    - Preserve S19 response shape
    ========================= */
 (() => {
@@ -8688,7 +8689,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
   try {
     __dbLoader = require("../lib/sentence-bank-loader");
   } catch (e) {
-    console.warn("⚠️ S26 DB loader require failed:", e?.message || e);
+    console.warn("⚠️ S27 DB loader require failed:", e?.message || e);
   }
 
   const loadSentenceBank =
@@ -8760,26 +8761,30 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     let i = 0;
     while (i < words.length) {
       const w = words[i];
-      const next = words[i + 1] || "";
-      const next2 = words[i + 2] || "";
+      const n1 = words[i + 1] || "";
+      const n2 = words[i + 2] || "";
 
-      if (/^(every)$/i.test(w) && /^(day|week|month|year)$/i.test(next)) {
-        chunks.push(`${w} ${next}`);
+      if (/^(every)$/i.test(w) && /^(day|week|month|year)$/i.test(n1)) {
+        chunks.push(`${w} ${n1}`);
         i += 2;
         continue;
       }
-      if (/^(a|an|the)$/i.test(w) && next) {
-        chunks.push(`${w} ${next}`);
-        i += 2;
-        continue;
-      }
-      if (/^(to|at|in|on|for|after|before|with|by)$/i.test(w) && next) {
-        if (/^(the|a|an)$/i.test(next) && next2) {
-          chunks.push(`${w} ${next} ${next2}`);
+
+      if (/^(after|before|at|in|on|to|for|with|by)$/i.test(w) && n1) {
+        if (/^(the|a|an)$/i.test(n1) && n2) {
+          chunks.push(`${w} ${n1} ${n2}`);
           i += 3;
           continue;
         }
-        chunks.push(`${w} ${next}`);
+        if (/^(school|home|weekends|weekend|morning|evening|night|park|library|airport|hospital|classroom|church|Saturday|Sunday)$/i.test(n1)) {
+          chunks.push(`${w} ${n1}`);
+          i += 2;
+          continue;
+        }
+      }
+
+      if (/^(a|an|the)$/i.test(w) && n1) {
+        chunks.push(`${w} ${n1}`);
         i += 2;
         continue;
       }
@@ -8817,20 +8822,16 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     if (chapterKey === "be_question") {
       if (/^Are you\b/i.test(en)) return "너는 ~니?";
       if (/^Are they\b/i.test(en)) return "그들은 ~니?";
-      if (/^Are we\b/i.test(en)) return "우리는 ~니?";
       if (/^Is he\b/i.test(en)) return "그는 ~니?";
       if (/^Is she\b/i.test(en)) return "그녀는 ~니?";
-      if (/^Is it\b/i.test(en)) return "그것은 ~니?";
       return "다음 문장을 영작하시오.";
     }
 
     if (chapterKey === "do_question") {
       if (/^Do you\b/i.test(en)) return "너는 ~하니?";
       if (/^Do they\b/i.test(en)) return "그들은 ~하니?";
-      if (/^Do we\b/i.test(en)) return "우리는 ~하니?";
       if (/^Does he\b/i.test(en)) return "그는 ~하니?";
       if (/^Does she\b/i.test(en)) return "그녀는 ~하니?";
-      if (/^Does it\b/i.test(en)) return "그것은 ~하니?";
       return "다음 문장을 영작하시오.";
     }
 
@@ -8849,13 +8850,21 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
       if (selected.length >= desired) break;
       const answer = String(item?.enAnswer || "").trim().toLowerCase();
       const group = String(item?.similarGroup || "").trim().toLowerCase();
-
       if (!answer || usedAnswers.has(answer)) continue;
       if (group && usedGroups.has(group)) continue;
-
       selected.push(item);
       usedAnswers.add(answer);
       if (group) usedGroups.add(group);
+    }
+
+    if (selected.length < desired) {
+      for (const item of pool) {
+        if (selected.length >= desired) break;
+        const answer = String(item?.enAnswer || "").trim().toLowerCase();
+        if (!answer || usedAnswers.has(answer)) continue;
+        selected.push(item);
+        usedAnswers.add(answer);
+      }
     }
 
     return selected.slice(0, desired);
@@ -8864,8 +8873,10 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
   function __assembleItems(bankItems = [], chapterKey = "") {
     return bankItems.map((item, idx) => {
       const answer = String(item.enAnswer || "").replace(/\s+/g, " ").trim();
-      const clue = __tokenizeForClue(answer);
-      const wordCount = __countWords(answer);
+      const clue = Array.isArray(item.clue) && item.clue.length
+        ? item.clue.map(v => String(v || "").replace(/\s+/g, " ").trim()).filter(Boolean).slice(0, 12)
+        : __tokenizeForClue(answer);
+      const wordCount = Number(item.wordCount || 0) || __countWords(answer);
       const question = __normalizeQuestionFromItem(item, chapterKey);
       const shortAnswers = __buildShortAnswers(answer);
 
@@ -8876,7 +8887,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
         clue,
         wordCount,
         shortAnswers,
-        source: "db_hybrid_oneline",
+        source: "db_hybrid_strict_oneline",
       };
     });
   }
@@ -8920,7 +8931,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     }));
     next.pairIntegrity = {
       ok: true,
-      reason: "s26_oneline_front_safe",
+      reason: "s27_strict_oneline_db_assembler",
       questionCount: assembled.length,
       answerCount: assembled.length,
     };
@@ -8938,16 +8949,16 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
     next.worksheetHtml = __renderWorksheetHtml(assembled);
     next.answerSheetHtml = __renderAnswerHtml(assembled);
-    next.source = "db_hybrid_oneline_front_safe";
+    next.source = "db_hybrid_front_compatible_oneline";
     return next;
   }
 
-  const __prevFormatMagicResponseS26 =
+  const __prevFormatMagicResponseS27 =
     typeof formatMagicResponse === "function" ? formatMagicResponse : null;
 
-  if (__prevFormatMagicResponseS26) {
-    formatMagicResponse = function formatMagicResponse_s26_oneline(rawText, input = {}) {
-      const base = __prevFormatMagicResponseS26(rawText, input) || {};
+  if (__prevFormatMagicResponseS27) {
+    formatMagicResponse = function formatMagicResponse_s27_strict_oneline_db(rawText, input = {}) {
+      const base = __prevFormatMagicResponseS27(rawText, input) || {};
 
       try {
         if (!loadSentenceBank) return base;
@@ -8965,17 +8976,17 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
         }
 
         const selected = __selectDbAnchors(bank, desired);
-        if (!selected.length || selected.length < desired) return base;
+        if (selected.length < desired) return base;
 
         return __buildDbResponse(base, input, selected, chapterKey);
       } catch (e) {
-        console.warn("⚠️ S26 DB hook fallback:", e?.message || e);
+        console.warn("⚠️ S27 DB hook fallback:", e?.message || e);
         return base;
       }
     };
   }
 
-  console.log("✅ S26 one-line front-safe DB assembler applied");
+  console.log("✅ S27 strict oneline DB assembler applied");
 })();
 
 // Final Vercel export (keep S19 router)
