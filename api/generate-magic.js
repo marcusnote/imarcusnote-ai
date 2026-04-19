@@ -8678,9 +8678,9 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
 
 /* =========================
-   S25 FINAL FIX (HYBRID DB ASSEMBLER)
+   S26 FINAL FIX (ONE-LINE FRONT SAFE DB ASSEMBLER)
    - DB as answer anchor
-   - Rebuild question/clue/word count/short answers
+   - One-line worksheet / one-line answer sheet
    - Preserve S19 response shape
    ========================= */
 (() => {
@@ -8688,7 +8688,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
   try {
     __dbLoader = require("../lib/sentence-bank-loader");
   } catch (e) {
-    console.warn("⚠️ S25 DB loader require failed:", e?.message || e);
+    console.warn("⚠️ S26 DB loader require failed:", e?.message || e);
   }
 
   const loadSentenceBank =
@@ -8761,22 +8761,25 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     while (i < words.length) {
       const w = words[i];
       const next = words[i + 1] || "";
+      const next2 = words[i + 2] || "";
 
-      if (/^(every|at|in|on|to|for|after|before|with|by)$/i.test(w) && next) {
-        if (/^(day|night|school|home|weekends|the|a|an|evening|morning|park|classroom|library|airport|hospital)$/i.test(next)) {
-          if (/^(the|a|an)$/i.test(next) && words[i + 2]) {
-            chunks.push([w, next, words[i + 2]].join(" "));
-            i += 3;
-            continue;
-          }
-          chunks.push([w, next].join(" "));
-          i += 2;
+      if (/^(every)$/i.test(w) && /^(day|week|month|year)$/i.test(next)) {
+        chunks.push(`${w} ${next}`);
+        i += 2;
+        continue;
+      }
+      if (/^(a|an|the)$/i.test(w) && next) {
+        chunks.push(`${w} ${next}`);
+        i += 2;
+        continue;
+      }
+      if (/^(to|at|in|on|for|after|before|with|by)$/i.test(w) && next) {
+        if (/^(the|a|an)$/i.test(next) && next2) {
+          chunks.push(`${w} ${next} ${next2}`);
+          i += 3;
           continue;
         }
-      }
-
-      if (/^(a|an|the)$/i.test(w) && next) {
-        chunks.push([w, next].join(" "));
+        chunks.push(`${w} ${next}`);
         i += 2;
         continue;
       }
@@ -8814,6 +8817,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     if (chapterKey === "be_question") {
       if (/^Are you\b/i.test(en)) return "너는 ~니?";
       if (/^Are they\b/i.test(en)) return "그들은 ~니?";
+      if (/^Are we\b/i.test(en)) return "우리는 ~니?";
       if (/^Is he\b/i.test(en)) return "그는 ~니?";
       if (/^Is she\b/i.test(en)) return "그녀는 ~니?";
       if (/^Is it\b/i.test(en)) return "그것은 ~니?";
@@ -8823,6 +8827,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     if (chapterKey === "do_question") {
       if (/^Do you\b/i.test(en)) return "너는 ~하니?";
       if (/^Do they\b/i.test(en)) return "그들은 ~하니?";
+      if (/^Do we\b/i.test(en)) return "우리는 ~하니?";
       if (/^Does he\b/i.test(en)) return "그는 ~하니?";
       if (/^Does she\b/i.test(en)) return "그녀는 ~하니?";
       if (/^Does it\b/i.test(en)) return "그것은 ~하니?";
@@ -8844,21 +8849,13 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
       if (selected.length >= desired) break;
       const answer = String(item?.enAnswer || "").trim().toLowerCase();
       const group = String(item?.similarGroup || "").trim().toLowerCase();
+
       if (!answer || usedAnswers.has(answer)) continue;
       if (group && usedGroups.has(group)) continue;
+
       selected.push(item);
       usedAnswers.add(answer);
       if (group) usedGroups.add(group);
-    }
-
-    if (selected.length < desired) {
-      for (const item of pool) {
-        if (selected.length >= desired) break;
-        const answer = String(item?.enAnswer || "").trim().toLowerCase();
-        if (!answer || usedAnswers.has(answer)) continue;
-        selected.push(item);
-        usedAnswers.add(answer);
-      }
     }
 
     return selected.slice(0, desired);
@@ -8879,43 +8876,38 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
         clue,
         wordCount,
         shortAnswers,
-        source: "db_hybrid",
+        source: "db_hybrid_oneline",
       };
     });
   }
 
   function __questionLine(item) {
-    return `${item.no}. ${item.question}\n(clue: ${item.clue.join(", ")}) (Word count: ${item.wordCount})`;
+    return `${item.no}. ${item.question} (clue: ${item.clue.join(", ")}) (Word count: ${item.wordCount})`;
   }
 
   function __answerLine(item) {
-    return `${item.no}. ${item.answer}\n→ ${item.shortAnswers[0]}\n→ ${item.shortAnswers[1]}`;
+    return `${item.no}. ${item.answer} / ${item.shortAnswers[0]} / ${item.shortAnswers[1]}`;
   }
 
   function __renderWorksheetHtml(items = []) {
-    return items.map((item) => `
-<div class="worksheet-item">
-  <p><strong>${item.no}. ${__escapeHtml(item.question)}</strong></p>
-  <p>(clue: ${__escapeHtml(item.clue.join(", "))}) (Word count: ${item.wordCount})</p>
-</div>`.trim()).join("\n");
+    return items.map((item) =>
+      `<p><strong>${item.no}. ${__escapeHtml(item.question)}</strong> <span>(clue: ${__escapeHtml(item.clue.join(", "))}) (Word count: ${item.wordCount})</span></p>`
+    ).join("\n");
   }
 
   function __renderAnswerHtml(items = []) {
-    return items.map((item) => `
-<div class="answer-item">
-  <p><strong>${item.no}. ${__escapeHtml(item.answer)}</strong></p>
-  <p>→ ${__escapeHtml(item.shortAnswers[0])}</p>
-  <p>→ ${__escapeHtml(item.shortAnswers[1])}</p>
-</div>`.trim()).join("\n");
+    return items.map((item) =>
+      `<p><strong>${item.no}. ${__escapeHtml(item.answer)}</strong> <span>/ ${__escapeHtml(item.shortAnswers[0])} / ${__escapeHtml(item.shortAnswers[1])}</span></p>`
+    ).join("\n");
   }
 
   function __buildDbResponse(base = {}, input = {}, bankItems = [], chapterKey = "") {
     const next = { ...(base || {}) };
     const assembled = __assembleItems(bankItems, chapterKey);
 
-    next.questions = assembled.map(__questionLine).join("\n\n");
+    next.questions = assembled.map(__questionLine).join("\n");
     next.worksheet = next.questions;
-    next.answerSheet = assembled.map(__answerLine).join("\n\n");
+    next.answerSheet = assembled.map(__answerLine).join("\n");
     next.actualCount = assembled.length;
     next.itemPairs = assembled.map((item) => ({
       no: item.no,
@@ -8928,7 +8920,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     }));
     next.pairIntegrity = {
       ok: true,
-      reason: "s25_hybrid_db_assembler",
+      reason: "s26_oneline_front_safe",
       questionCount: assembled.length,
       answerCount: assembled.length,
     };
@@ -8946,16 +8938,16 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
     next.worksheetHtml = __renderWorksheetHtml(assembled);
     next.answerSheetHtml = __renderAnswerHtml(assembled);
-    next.source = "db_hybrid_front_compatible";
+    next.source = "db_hybrid_oneline_front_safe";
     return next;
   }
 
-  const __prevFormatMagicResponseS25 =
+  const __prevFormatMagicResponseS26 =
     typeof formatMagicResponse === "function" ? formatMagicResponse : null;
 
-  if (__prevFormatMagicResponseS25) {
-    formatMagicResponse = function formatMagicResponse_s25_hybrid_db(rawText, input = {}) {
-      const base = __prevFormatMagicResponseS25(rawText, input) || {};
+  if (__prevFormatMagicResponseS26) {
+    formatMagicResponse = function formatMagicResponse_s26_oneline(rawText, input = {}) {
+      const base = __prevFormatMagicResponseS26(rawText, input) || {};
 
       try {
         if (!loadSentenceBank) return base;
@@ -8973,17 +8965,17 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
         }
 
         const selected = __selectDbAnchors(bank, desired);
-        if (!selected.length) return base;
+        if (!selected.length || selected.length < desired) return base;
 
         return __buildDbResponse(base, input, selected, chapterKey);
       } catch (e) {
-        console.warn("⚠️ S25 DB hook fallback:", e?.message || e);
+        console.warn("⚠️ S26 DB hook fallback:", e?.message || e);
         return base;
       }
     };
   }
 
-  console.log("✅ S25 hybrid DB assembler applied");
+  console.log("✅ S26 one-line front-safe DB assembler applied");
 })();
 
 // Final Vercel export (keep S19 router)
