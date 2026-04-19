@@ -8680,3 +8680,338 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 // Final Vercel export
 module.exports = handler_v841_workbook_type_router;
 module.exports.config = { runtime: "nodejs" };
+
+
+/* =========================
+   S20 Worksheet Assembly Lock Patch
+   ========================= */
+
+/*
+  MARCUSNOTE Magic Engine S20
+  Worksheet Assembly Lock Patch
+
+  목적:
+  - 정답지는 살아 있는데 문제지가 무너지는 현상 차단
+  - guided_writing 문제지에서 챕터 정체성 이탈 차단
+  - be/do/so that/passive/present perfect 문제지 조립을 answerSheet 기준으로 재정렬
+
+  적용 방법:
+  1) 현재 배포본 apigenerate-magic-s19-guidedwriting-final.js의 맨 아래에
+  2) 이 패치 전체를 그대로 추가
+  3) 새 파일명으로 저장 후 배포
+*/
+
+(function applyMarcusS20WorksheetAssemblyLockPatch() {
+  const __origTransformByWorkbookType = typeof __v84TransformFormattedByWorkbookType === "function"
+    ? __v84TransformFormattedByWorkbookType
+    : null;
+  const __origValidateServiceSafeOutput = typeof validateServiceSafeOutput === "function"
+    ? validateServiceSafeOutput
+    : null;
+
+  const S20_FALLBACKS = {
+    be_question: [
+      ["너는 학생이니?", "Are you a student?"],
+      ["그들은 친구들이니?", "Are they friends?"],
+      ["그녀는 선생님이니?", "Is she a teacher?"],
+      ["너의 형은 의사니?", "Is your brother a doctor?"],
+      ["그것은 좋은 기회니?", "Is it a good opportunity?"],
+      ["그들은 지금 학교에 있니?", "Are they at school now?"],
+      ["너는 오늘 행복하니?", "Are you happy today?"],
+      ["그 문제는 어렵니?", "Is the problem difficult?"],
+      ["이 방은 깨끗하니?", "Is this room clean?"],
+      ["그 계획은 가능하니?", "Is the plan possible?"]
+    ],
+    do_question: [
+      ["너는 매일 운동하니?", "Do you exercise every day?"],
+      ["그는 학교에 걸어가니?", "Does he walk to school?"],
+      ["그녀는 피아노를 치니?", "Does she play the piano?"],
+      ["너는 영어를 공부하니?", "Do you study English?"],
+      ["그들은 주말에 축구를 하니?", "Do they play soccer on weekends?"],
+      ["너는 집에서 아침을 먹니?", "Do you eat breakfast at home?"],
+      ["그는 책을 자주 읽니?", "Does he read books often?"],
+      ["그녀는 매일 일찍 일어나니?", "Does she get up early every day?"],
+      ["너는 방과 후에 공부하니?", "Do you study after school?"],
+      ["그는 저녁에 게임을 하니?", "Does he play games in the evening?"]
+    ],
+    so_that_purpose: [
+      ["나는 그가 영어를 잘할 수 있도록 도와주고 싶다.", "I want to help him so that he can speak English well."],
+      ["그녀는 우리가 제시간에 도착할 수 있도록 일찍 출발했다.", "She left early so that we could arrive on time."],
+      ["우리는 모두가 잘 볼 수 있도록 문을 열었다.", "We opened the door so that everyone could see well."],
+      ["그는 내가 이 문제를 이해할 수 있도록 천천히 설명했다.", "He explained slowly so that I could understand the problem."],
+      ["나는 그녀가 충분히 연습할 수 있도록 시간을 주었다.", "I gave her time so that she could practice enough."],
+      ["그들은 학생들이 집중할 수 있도록 조용히 했다.", "They stayed quiet so that the students could focus."],
+      ["우리는 모두가 참여할 수 있도록 계획을 바꾸었다.", "We changed the plan so that everyone could participate."],
+      ["그는 우리가 길을 잃지 않도록 지도를 그려 주었다.", "He drew a map so that we would not get lost."],
+      ["나는 아이들이 안전하게 건널 수 있도록 차를 세웠다.", "I stopped the car so that the children could cross safely."],
+      ["그녀는 내가 더 잘 준비할 수 있도록 조언을 해주었다.", "She gave me advice so that I could prepare better."]
+    ],
+    passive: [
+      ["이 책은 많은 사람들에게 읽힌다.", "This book is read by many people."],
+      ["그 프로젝트는 다음 주에 완료될 것이다.", "The project will be completed next week."],
+      ["이 문제는 쉽게 해결될 수 있다.", "This problem can be solved easily."],
+      ["그 그림은 유명한 화가에 의해 그려졌다.", "The picture was painted by the famous artist."],
+      ["그 발표는 모든 학생들에 의해 준비되었다.", "The presentation was prepared by all students."],
+      ["이 행사는 매년 개최된다.", "This event is held every year."],
+      ["그 문서는 어제 작성되었다.", "The document was written yesterday."],
+      ["그 편지는 영어로 쓰였다.", "The letter was written in English."],
+      ["학생들은 파티에 초대되었다.", "The students were invited to the party."],
+      ["그 보고서는 전문가들에 의해 검토되었다.", "The report was reviewed by the experts."]
+    ],
+    present_perfect: [
+      ["나는 이미 그 영화를 봤다.", "I have already seen the movie."],
+      ["그녀는 3년 동안 영어를 배워왔다.", "She has learned English for three years."],
+      ["우리는 그 프로젝트를 두 번 해봤다.", "We have done the project twice."],
+      ["그는 방금 그 책을 읽었다.", "He has just read the book."],
+      ["나는 아직 그 문제를 풀지 못했다.", "I have not solved the problem yet."],
+      ["그들은 2015년부터 이 도시에 살아왔다.", "They have lived in this city since 2015."],
+      ["나는 이 책을 전에 읽어본 적이 있다.", "I have read this book before."],
+      ["우리는 최근에 새로운 카페를 발견했다.", "We have recently discovered a new cafe."],
+      ["그는 이미 그 일을 끝냈다.", "He has already finished the task."],
+      ["나는 그 기회를 놓친 적이 없다.", "I have never missed the opportunity."]
+    ]
+  };
+
+  function s20Safe(value = "") {
+    return String(value || "").trim();
+  }
+
+  function s20NumberedBlocks(text = "") {
+    if (typeof __v84ExtractQuestionBlocks === "function") return __v84ExtractQuestionBlocks(text);
+    const lines = String(text || "").split("\n");
+    const blocks = [];
+    let current = null;
+    const push = () => {
+      if (!current) return;
+      blocks.push({
+        no: current.no,
+        lead: String(current.lines[0] || "").replace(/^\d+[.)-]?\s*/, "").trim(),
+        lines: current.lines.slice(),
+        raw: current.lines.join("\n").trim()
+      });
+    };
+    for (const raw of lines) {
+      const line = String(raw || "").trim();
+      if (!line) continue;
+      const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if (m) {
+        push();
+        current = { no: Number(m[1]), lines: [line] };
+      } else if (current) {
+        current.lines.push(line);
+      }
+    }
+    push();
+    return blocks;
+  }
+
+  function s20AnswerMap(text = "") {
+    if (typeof __v84ExtractAnswerMap === "function") return __v84ExtractAnswerMap(text);
+    const map = new Map();
+    String(text || "")
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .forEach((line) => {
+        const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+        if (m) map.set(Number(m[1]), String(m[2] || "").trim());
+      });
+    return map;
+  }
+
+  function s20ChapterKey(input = {}) {
+    const merged = [input?.topic, input?.worksheetTitle, input?.userPrompt].filter(Boolean).join(" ");
+    const focus = input?.grammarFocus || (typeof detectGrammarFocus === "function" ? detectGrammarFocus(merged) : {});
+    if (focus?.isBeQuestion) return "be_question";
+    if (focus?.isDoQuestion) return "do_question";
+    if (focus?.isSoThatPurpose) return "so_that_purpose";
+    if (focus?.isPassive) return "passive";
+    if (focus?.isPresentPerfect && !focus?.isPresentPerfectProgressive) return "present_perfect";
+    return "general";
+  }
+
+  function s20CoreAnswerOk(answer = "", key = "general") {
+    const a = s20Safe(answer);
+    if (!a) return false;
+    if (key === "be_question") return /^(Am|Is|Are)\b.*\?$/.test(a);
+    if (key === "do_question") return /^(Do|Does)\b.*\?$/.test(a);
+    if (key === "so_that_purpose") return /\bso that\b/i.test(a) && /\b(can|could|will|would)\b/i.test(a);
+    if (key === "passive") return /\b(am|is|are|was|were|be|been|being|can be|will be|has been|have been)\b[^.?!]{0,40}\b([a-z]+ed|known|built|made|given|seen|written|held|sent|won|found|taught|bought|caught|left|felt|read|sold|paid|shown|taken|done|prepared|completed|reviewed|translated|decorated|offered|reported|painted|solved|loved|borrowed|invited)\b/i.test(a);
+    if (key === "present_perfect") return /\b(have|has)\b/i.test(a) && !/\b(have|has)\s+been\s+[A-Za-z]+ing\b/i.test(a);
+    return true;
+  }
+
+  function s20QuestionLeadBad(lead = "", key = "general") {
+    const q = s20Safe(lead);
+    if (!q) return true;
+
+    if (key === "be_question") {
+      if (!/[?？]$|니\?|인가\?|이니\?|있니\?|맞니\?|좋니\?|어렵니\?|가능하니\?$/.test(q)) return true;
+      if (/무엇|왜|어디|언제|어떻게|누구|몇\s*시/.test(q)) return true;
+      if (/할 수|보았|좋아하|이해하|원하|시작하|사용하|공부하|만났/.test(q)) return true;
+      return false;
+    }
+
+    if (key === "do_question") {
+      if (!/[?？]$|니\?$/.test(q)) return true;
+      if (/무엇|왜|어디|언제|어떻게|누구|몇\s*시/.test(q)) return true;
+      if (/있니|인가|이니|맞니/.test(q)) return true;
+      return false;
+    }
+
+    if (key === "so_that_purpose") {
+      return !(/도록|위해서|위하여/.test(q));
+    }
+
+    if (key === "passive") {
+      return !(/되[다었]|되어|되었다|되었|받[다았]|주어졌|작성되|준비되|개최되|초대되|번역되|완료되|해결되/.test(q));
+    }
+
+    if (key === "present_perfect") {
+      return !(/이미|벌써|방금|아직|한 번|두 번|이전에|최근에|~부터|동안|해왔다|적이 있다|적이 없다/.test(q));
+    }
+
+    return false;
+  }
+
+  function s20PickFallback(idx = 0, key = "general") {
+    const bank = S20_FALLBACKS[key] || [];
+    if (!bank.length) return null;
+    return bank[idx % bank.length];
+  }
+
+  function s20NeedsPairReplacement(pair = {}, key = "general") {
+    if (!pair) return true;
+    const answer = s20Safe(pair.a);
+    const lead = s20Safe(pair.q || pair.lead);
+    if (!s20CoreAnswerOk(answer, key)) return true;
+    if (s20QuestionLeadBad(lead, key)) return true;
+    return false;
+  }
+
+  function s20RebuildGuidedPairList(qBlocks = [], aMap = new Map(), input = {}) {
+    const key = s20ChapterKey(input);
+    const rebuilt = [];
+    let fallbackIdx = 0;
+
+    for (const block of qBlocks) {
+      const originalAnswer = s20Safe(aMap.get(block.no) || "");
+      if (!originalAnswer) continue;
+
+      const pair = {
+        no: block.no,
+        lead: s20Safe(block.lead),
+        lines: Array.isArray(block.lines) ? block.lines.slice() : [],
+        q: s20Safe(block.lead),
+        a: typeof __v85RepairGuidedWritingAnswer === "function"
+          ? __v85RepairGuidedWritingAnswer(originalAnswer, input)
+          : originalAnswer
+      };
+
+      if (s20NeedsPairReplacement(pair, key)) {
+        const fb = s20PickFallback(fallbackIdx, key);
+        fallbackIdx += 1;
+        if (fb) {
+          pair.q = fb[0];
+          pair.lead = fb[0];
+          pair.a = fb[1];
+          pair.lines = [`${pair.no}. ${pair.q}`];
+        }
+      }
+
+      rebuilt.push(pair);
+    }
+
+    return rebuilt;
+  }
+
+  function s20ValidateGuidedWorksheet(formatted = {}, input = {}) {
+    const key = s20ChapterKey(input);
+    if (key === "general") return true;
+
+    const qBlocks = s20NumberedBlocks(formatted.questions || "");
+    const aMap = s20AnswerMap(formatted.answerSheet || "");
+    if (!qBlocks.length || !aMap.size) return false;
+
+    let bad = 0;
+    for (const block of qBlocks) {
+      const answer = s20Safe(aMap.get(block.no) || "");
+      const lead = s20Safe(block.lead || "");
+      if (!s20CoreAnswerOk(answer, key) || s20QuestionLeadBad(lead, key)) bad += 1;
+    }
+
+    const ratio = bad / Math.max(1, qBlocks.length);
+    return ratio <= 0.12;
+  }
+
+  __v84TransformFormattedByWorkbookType = function patchedS20TransformFormattedByWorkbookType(formatted = {}, input = {}) {
+    let next = __origTransformByWorkbookType
+      ? __origTransformByWorkbookType(formatted, input)
+      : formatted;
+
+    const type = typeof normalizeWorkbookType === "function"
+      ? normalizeWorkbookType(input?.workbookType || "")
+      : "guided_writing";
+
+    if (type !== "guided_writing") return next;
+
+    const qBlocks = s20NumberedBlocks(next.questions || formatted.questions || "");
+    const aMap = s20AnswerMap(next.answerSheet || formatted.answerSheet || "");
+    if (!qBlocks.length || !aMap.size) return next;
+
+    const rebuiltPairs = s20RebuildGuidedPairList(qBlocks, aMap, input);
+    if (!rebuiltPairs.length) return next;
+
+    const renderedBlocks = [];
+    const renderedAnswers = [];
+    for (const pair of rebuiltPairs) {
+      const block = { no: pair.no, lead: pair.q, lines: [`${pair.no}. ${pair.q}`] };
+      const answer = s20Safe(pair.a);
+      const questionBlock = typeof __v843BuildGuidedWritingQuestionBlock === "function"
+        ? __v843BuildGuidedWritingQuestionBlock(block, answer, input)
+        : `${pair.no}. ${pair.q}\n(clue: build, sentence, carefully)`;
+      renderedBlocks.push(questionBlock);
+      renderedAnswers.push(`${pair.no}. ${answer}`);
+    }
+
+    next = {
+      ...next,
+      questions: renderedBlocks.join("\n"),
+      answerSheet: renderedAnswers.join("\n"),
+      actualCount: renderedAnswers.length
+    };
+
+    next.itemPairs = typeof __mn83BuildItemPairs === "function"
+      ? __mn83BuildItemPairs(next.questions || "", next.answerSheet || "")
+      : [];
+    next.pairIntegrity = {
+      ok: s20ValidateGuidedWorksheet(next, input),
+      reason: "s20_guided_assembly_lock",
+      questionCount: next.actualCount,
+      answerCount: renderedAnswers.length
+    };
+    next.content = [next.title, next.instructions, next.questions].filter(Boolean).join("\n\n");
+    next.fullText = [
+      next.title,
+      next.instructions,
+      next.questions,
+      ((input.language === "en" ? "Answers\n" : "정답\n") + (next.answerSheet || ""))
+    ].filter(Boolean).join("\n\n");
+
+    return next;
+  };
+
+  validateServiceSafeOutput = function patchedS20ValidateServiceSafeOutput(formatted = {}, input = {}) {
+    const baseOk = __origValidateServiceSafeOutput
+      ? __origValidateServiceSafeOutput(formatted, input)
+      : true;
+    if (!baseOk) return false;
+
+    const type = typeof normalizeWorkbookType === "function"
+      ? normalizeWorkbookType(input?.workbookType || "")
+      : "guided_writing";
+    if (type !== "guided_writing") return baseOk;
+
+    return s20ValidateGuidedWorksheet(formatted, input);
+  };
+})();
