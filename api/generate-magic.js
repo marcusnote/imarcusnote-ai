@@ -9574,3 +9574,189 @@ module.exports.config = { runtime: "nodejs" };
     console.warn('⚠️ S29 do_question hardlock patch failed:', e?.message || e);
   }
 })();
+
+
+/* =========================
+   S30-2 DO QUESTION RUNTIME FIX + VARIATION PATCH
+   ========================= */
+(function applyS30DoQuestionRuntimeFix() {
+  try {
+    function __s30IsDoQuestionInput(input = {}) {
+      const merged = [input?.userPrompt, input?.topic, input?.worksheetTitle]
+        .filter(Boolean)
+        .join(' ');
+      const t = String(merged || '').replace(/\s+/g, ' ').trim();
+      if (/일반동사/.test(t) && /의문문/.test(t)) return true;
+      if (/일반동사/.test(t) && /활용/.test(t)) return true;
+      if (/일반동사/.test(t) && /질문/.test(t)) return true;
+      if (/do\s*does\s*의문문/i.test(t)) return true;
+      if (/do\s*question/i.test(t)) return true;
+      if (/does\s*question/i.test(t)) return true;
+      if (input?.aliasResolved?.chapterKey === 'do_question') return true;
+      if (String(input?.resolvedChapterKey || '') === 'do_question') return true;
+      if (input?.grammarFocus?.isDoQuestion) return true;
+      if (String(input?.grammarFocus?.chapterKey || '') === 'do_question') return true;
+      return false;
+    }
+
+    const __S30_DO_POOL = [
+      ['너는 매일 운동하니?', ['Do','you','exercise','every','day'], 'Do you exercise every day?', 'Yes, I do.', 'No, I do not.'],
+      ['그는 학교에 걸어가니?', ['Does','he','walk','to','school'], 'Does he walk to school?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 피아노를 치니?', ['Does','she','play','the','piano'], 'Does she play the piano?', 'Yes, she does.', 'No, she does not.'],
+      ['너는 영어를 공부하니?', ['Do','you','study','English'], 'Do you study English?', 'Yes, I do.', 'No, I do not.'],
+      ['그들은 주말에 축구를 하니?', ['Do','they','play','soccer','on','weekends'], 'Do they play soccer on weekends?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 매일 수업에 참석하니?', ['Does','he','attend','classes','every','day'], 'Does he attend classes every day?', 'Yes, he does.', 'No, he does not.'],
+      ['그는 매일 이를 닦니?', ['Does','he','brush','his','teeth','every','day'], 'Does he brush his teeth every day?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 책을 읽니?', ['Does','she','read','books'], 'Does she read books?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 공원에 가니?', ['Do','they','go','to','the','park'], 'Do they go to the park?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 수학을 좋아하니?', ['Does','he','like','math'], 'Does he like math?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 물을 많이 마시니?', ['Do','you','drink','a','lot','of','water'], 'Do you drink a lot of water?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 저녁에 숙제를 하니?', ['Does','she','do','her','homework','in','the','evening'], 'Does she do her homework in the evening?', 'Yes, she does.', 'No, she does not.'],
+      ['그는 TV를 보니?', ['Does','he','watch','TV'], 'Does he watch TV?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 음악을 듣니?', ['Do','you','listen','to','music'], 'Do you listen to music?', 'Yes, I do.', 'No, I do not.'],
+      ['그들은 게임을 하니?', ['Do','they','play','games'], 'Do they play games?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 커피를 마시니?', ['Does','he','drink','coffee'], 'Does he drink coffee?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 일찍 일어나니?', ['Do','you','wake','up','early'], 'Do you wake up early?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 영어로 말하니?', ['Does','she','speak','English'], 'Does she speak English?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 버스를 타니?', ['Do','they','take','the','bus'], 'Do they take the bus?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 운동을 하니?', ['Does','he','exercise'], 'Does he exercise?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 매일 공부하니?', ['Do','you','study','every','day'], 'Do you study every day?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 친구를 만나니?', ['Does','she','meet','friends'], 'Does she meet friends?', 'Yes, she does.', 'No, she does not.'],
+      ['그는 아침에 샤워하니?', ['Does','he','take','a','shower','in','the','morning'], 'Does he take a shower in the morning?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 학교에서 영어를 사용하니?', ['Do','you','use','English','at','school'], 'Do you use English at school?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 주말에 할머니를 방문하니?', ['Does','she','visit','her','grandmother','on','weekends'], 'Does she visit her grandmother on weekends?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 저녁 식사 후 산책하니?', ['Do','they','take','a','walk','after','dinner'], 'Do they take a walk after dinner?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 매일 아침 신문을 읽니?', ['Does','he','read','the','newspaper','every','morning'], 'Does he read the newspaper every morning?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 온라인으로 숙제하니?', ['Do','you','do','your','homework','online'], 'Do you do your homework online?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 방과 후 농구를 하니?', ['Does','she','play','basketball','after','school'], 'Does she play basketball after school?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 매일 교실을 청소하니?', ['Do','they','clean','the','classroom','every','day'], 'Do they clean the classroom every day?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 개를 산책시키니?', ['Does','he','walk','his','dog'], 'Does he walk his dog?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 점심시간에 친구들과 이야기하니?', ['Do','you','talk','with','your','friends','at','lunch'], 'Do you talk with your friends at lunch?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 집에서 저녁을 먹니?', ['Does','she','eat','dinner','at','home'], 'Does she eat dinner at home?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 토요일에 도서관에 가니?', ['Do','they','go','to','the','library','on','Saturdays'], 'Do they go to the library on Saturdays?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 과학을 좋아하니?', ['Does','he','like','science'], 'Does he like science?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 매일 아침 우유를 마시니?', ['Do','you','drink','milk','every','morning'], 'Do you drink milk every morning?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 가족과 함께 영화를 보니?', ['Does','she','watch','movies','with','her','family'], 'Does she watch movies with her family?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 휴대폰으로 사진을 찍니?', ['Do','they','take','pictures','with','their','phones'], 'Do they take pictures with their phones?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 일요일에 교회에 가니?', ['Does','he','go','to','church','on','Sundays'], 'Does he go to church on Sundays?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 수업 전에 복습하니?', ['Do','you','review','before','class'], 'Do you review before class?', 'Yes, I do.', 'No, I do not.']
+    ];
+
+    function __s30Shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+      }
+      return a;
+    }
+
+    function __s30PickDoBank(input = {}) {
+      const recent = globalThis.__S30_DO_RECENT_SIGNATURE || '';
+      let picked = [];
+      let safety = 0;
+      while (safety < 6) {
+        safety += 1;
+        const shuffled = __s30Shuffle(__S30_DO_POOL).slice(0, 25);
+        const sig = shuffled.map((x) => x[2]).join('||');
+        if (sig !== recent) {
+          globalThis.__S30_DO_RECENT_SIGNATURE = sig;
+          picked = shuffled;
+          break;
+        }
+      }
+      if (!picked.length) picked = __s30Shuffle(__S30_DO_POOL).slice(0, 25);
+      return picked;
+    }
+
+    function __s30DoQuestions(bank) {
+      return bank.map(function(item, i) {
+        return (i + 1) + '. ' + item[0] + ' (clue: ' + item[1].join(', ') + ') (Word count: ' + item[1].length + ')';
+      }).join('\n');
+    }
+
+    function __s30DoAnswers(bank) {
+      return bank.map(function(item, i) {
+        return (i + 1) + '. ' + item[2] + ' / ' + item[3] + ' / ' + item[4];
+      }).join('\n');
+    }
+
+    function __s30DoFullFormatted(input = {}, base = {}) {
+      const title = (base && base.title) || buildMagicTitle(input);
+      const instructions = (base && base.instructions) || (input?.language === 'en'
+        ? 'Write each sentence in English using the clue words. Review the answer sheet after solving.'
+        : '주어진 clue를 사용하여 영어 문장을 쓰시오. 먼저 문제를 풀고 정답지를 검토하세요.');
+      const bank = __s30PickDoBank(input);
+      const questions = __s30DoQuestions(bank);
+      const answers = __s30DoAnswers(bank);
+      const content = [title, '', instructions, '', questions].join('\n').trim();
+      const fullText = ['[[TITLE]]', title, '[[INSTRUCTIONS]]', instructions, '[[QUESTIONS]]', questions, '[[ANSWERS]]', answers].join('\n');
+      return Object.assign({}, base || {}, {
+        title,
+        instructions,
+        questions,
+        answerSheet: answers,
+        content,
+        fullText,
+        actualCount: 25
+      });
+    }
+
+    const __prevFormatMagicResponse_s30Fix =
+      typeof formatMagicResponse === 'function' ? formatMagicResponse : null;
+
+    if (__prevFormatMagicResponse_s30Fix) {
+      formatMagicResponse = function formatMagicResponse_s30Fix(rawText, input = {}) {
+        const base = __prevFormatMagicResponse_s30Fix(rawText, input);
+        try {
+          if (!__s30IsDoQuestionInput(input)) return base;
+          return __s30DoFullFormatted(input, base);
+        } catch (e) {
+          return base;
+        }
+      };
+    }
+
+    const __prevNormalizeMagicAnswerSheet_s30Fix =
+      typeof normalizeMagicAnswerSheet === 'function' ? normalizeMagicAnswerSheet : null;
+
+    if (__prevNormalizeMagicAnswerSheet_s30Fix) {
+      normalizeMagicAnswerSheet = function normalizeMagicAnswerSheet_s30Fix(a = '', q = '', input = {}) {
+        try {
+          if (!__s30IsDoQuestionInput(input)) return __prevNormalizeMagicAnswerSheet_s30Fix(a, q, input);
+          const bank = (__s30PickDoBank(input) || []).slice(0,25);
+          return __s30DoAnswers(bank);
+        } catch (e) {
+          return __prevNormalizeMagicAnswerSheet_s30Fix(a, q, input);
+        }
+      };
+    }
+
+    const __prevIsGenerationSuccessful_s30Fix =
+      typeof isGenerationSuccessful === 'function' ? isGenerationSuccessful : null;
+
+    if (__prevIsGenerationSuccessful_s30Fix) {
+      isGenerationSuccessful = function isGenerationSuccessful_s30Fix(formatted, input) {
+        const legacy = __prevIsGenerationSuccessful_s30Fix(formatted, input);
+        if (!legacy || !legacy.ok) return legacy;
+        try {
+          if (!__s30IsDoQuestionInput(input)) return legacy;
+          const qCount = String(formatted?.questions || '').split('\n').filter((l) => /^\d+[.)-]?\s+/.test(String(l).trim())).length;
+          const aCount = String(formatted?.answerSheet || '').split('\n').filter((l) => /^\d+[.)-]?\s+/.test(String(l).trim())).length;
+          const qText = String(formatted?.questions || '');
+          if (qCount !== 25 || aCount !== 25) return { ok: false, reason: 's30_do_count_mismatch' };
+          if (!/\(clue:\s*(Do|Does),/.test(qText)) return { ok: false, reason: 's30_do_clue_missing' };
+          return legacy;
+        } catch (e) {
+          return legacy;
+        }
+      };
+    }
+
+    console.log('✅ S30-2 do_question runtime fix + variation patch applied');
+  } catch (e) {
+    console.warn('⚠️ S30-2 do_question runtime fix failed:', e?.message || e);
+  }
+})();
