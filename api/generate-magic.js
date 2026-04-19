@@ -8678,16 +8678,17 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 
 
 /* =========================
-   S24 FINAL FIX (FRONT-COMPATIBLE DB PATCH)
+   S25 FINAL FIX (HYBRID DB ASSEMBLER)
+   - DB as answer anchor
+   - Rebuild question/clue/word count/short answers
    - Preserve S19 response shape
-   - DB chapters: be_question, do_question
    ========================= */
 (() => {
   let __dbLoader = null;
   try {
     __dbLoader = require("../lib/sentence-bank-loader");
   } catch (e) {
-    console.warn("⚠️ S24 DB loader require failed:", e?.message || e);
+    console.warn("⚠️ S25 DB loader require failed:", e?.message || e);
   }
 
   const loadSentenceBank =
@@ -8733,20 +8734,58 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     return modeOk && engineOk && workbookOk && intentOk;
   }
 
-  function __normalizeClueArray(arr) {
-    if (!Array.isArray(arr)) return [];
-    return arr
-      .map(v => String(v || "").replace(/\s+/g, " ").trim())
-      .filter(Boolean)
-      .slice(0, 12);
+  function __escapeHtml(str = "") {
+    return String(str || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
   }
 
-  function __buildQuestionLine(item, idx) {
-    const prompt = String(item.koPrompt || "").replace(/\s+/g, " ").trim();
-    const clue = __normalizeClueArray(item.clue);
-    const wc = Number(item.wordCount || 0);
-    const clueText = clue.length ? clue.join(", ") : "";
-    return `${idx + 1}. ${prompt}\n(clue: ${clueText}) (Word count: ${wc})`;
+  function __countWords(answer = "") {
+    return String(answer || "")
+      .replace(/[?!.,]/g, " ")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean).length;
+  }
+
+  function __tokenizeForClue(answer = "") {
+    const cleaned = String(answer || "").replace(/[?]/g, "").trim();
+    if (!cleaned) return [];
+    const words = cleaned.split(/\s+/);
+
+    const chunks = [];
+    let i = 0;
+    while (i < words.length) {
+      const w = words[i];
+      const next = words[i + 1] || "";
+
+      if (/^(every|at|in|on|to|for|after|before|with|by)$/i.test(w) && next) {
+        if (/^(day|night|school|home|weekends|the|a|an|evening|morning|park|classroom|library|airport|hospital)$/i.test(next)) {
+          if (/^(the|a|an)$/i.test(next) && words[i + 2]) {
+            chunks.push([w, next, words[i + 2]].join(" "));
+            i += 3;
+            continue;
+          }
+          chunks.push([w, next].join(" "));
+          i += 2;
+          continue;
+        }
+      }
+
+      if (/^(a|an|the)$/i.test(w) && next) {
+        chunks.push([w, next].join(" "));
+        i += 2;
+        continue;
+      }
+
+      chunks.push(w);
+      i += 1;
+    }
+
+    return chunks.slice(0, 12);
   }
 
   function __buildShortAnswers(answerText = "") {
@@ -8767,44 +8806,131 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
     return ["Yes.", "No."];
   }
 
-  function __buildAnswerLine(item, idx) {
-    const ans = String(item.enAnswer || "").replace(/\s+/g, " ").trim();
-    const pair = __buildShortAnswers(ans);
-    return `${idx + 1}. ${ans}\n→ ${pair[0]}\n→ ${pair[1]}`;
-  }
+  function __normalizeQuestionFromItem(item = {}, chapterKey = "") {
+    const ko = String(item.koPrompt || "").replace(/\s+/g, " ").trim();
+    if (ko) return ko;
+    const en = String(item.enAnswer || "").trim();
 
-  function __buildDbResponse(base = {}, input = {}, bankItems = []) {
-    const next = { ...(base || {}) };
-
-    const questionLines = [];
-    const answerLines = [];
-
-    for (let i = 0; i < bankItems.length; i += 1) {
-      questionLines.push(__buildQuestionLine(bankItems[i], i));
-      answerLines.push(__buildAnswerLine(bankItems[i], i));
+    if (chapterKey === "be_question") {
+      if (/^Are you\b/i.test(en)) return "너는 ~니?";
+      if (/^Are they\b/i.test(en)) return "그들은 ~니?";
+      if (/^Is he\b/i.test(en)) return "그는 ~니?";
+      if (/^Is she\b/i.test(en)) return "그녀는 ~니?";
+      if (/^Is it\b/i.test(en)) return "그것은 ~니?";
+      return "다음 문장을 영작하시오.";
     }
 
-    next.questions = questionLines.join("\n\n");
-    next.worksheet = next.questions;
-    next.answerSheet = answerLines.join("\n\n");
-    next.actualCount = bankItems.length;
-    next.itemPairs = bankItems.map((item, idx) => {
-      const shortAnswers = __buildShortAnswers(item.enAnswer || "");
+    if (chapterKey === "do_question") {
+      if (/^Do you\b/i.test(en)) return "너는 ~하니?";
+      if (/^Do they\b/i.test(en)) return "그들은 ~하니?";
+      if (/^Does he\b/i.test(en)) return "그는 ~하니?";
+      if (/^Does she\b/i.test(en)) return "그녀는 ~하니?";
+      if (/^Does it\b/i.test(en)) return "그것은 ~하니?";
+      return "다음 문장을 영작하시오.";
+    }
+
+    return "다음 문장을 영작하시오.";
+  }
+
+  function __selectDbAnchors(bank = [], desired = 25) {
+    const pool = Array.isArray(bank) ? [...bank] : [];
+    pool.sort(() => Math.random() - 0.5);
+
+    const selected = [];
+    const usedGroups = new Set();
+    const usedAnswers = new Set();
+
+    for (const item of pool) {
+      if (selected.length >= desired) break;
+      const answer = String(item?.enAnswer || "").trim().toLowerCase();
+      const group = String(item?.similarGroup || "").trim().toLowerCase();
+      if (!answer || usedAnswers.has(answer)) continue;
+      if (group && usedGroups.has(group)) continue;
+      selected.push(item);
+      usedAnswers.add(answer);
+      if (group) usedGroups.add(group);
+    }
+
+    if (selected.length < desired) {
+      for (const item of pool) {
+        if (selected.length >= desired) break;
+        const answer = String(item?.enAnswer || "").trim().toLowerCase();
+        if (!answer || usedAnswers.has(answer)) continue;
+        selected.push(item);
+        usedAnswers.add(answer);
+      }
+    }
+
+    return selected.slice(0, desired);
+  }
+
+  function __assembleItems(bankItems = [], chapterKey = "") {
+    return bankItems.map((item, idx) => {
+      const answer = String(item.enAnswer || "").replace(/\s+/g, " ").trim();
+      const clue = __tokenizeForClue(answer);
+      const wordCount = __countWords(answer);
+      const question = __normalizeQuestionFromItem(item, chapterKey);
+      const shortAnswers = __buildShortAnswers(answer);
+
       return {
         no: idx + 1,
-        question: String(item.koPrompt || "").trim(),
-        answer: String(item.enAnswer || "").trim(),
-        clue: __normalizeClueArray(item.clue),
-        wordCount: Number(item.wordCount || 0),
+        question,
+        answer,
+        clue,
+        wordCount,
         shortAnswers,
-        source: "db",
+        source: "db_hybrid",
       };
     });
+  }
+
+  function __questionLine(item) {
+    return `${item.no}. ${item.question}\n(clue: ${item.clue.join(", ")}) (Word count: ${item.wordCount})`;
+  }
+
+  function __answerLine(item) {
+    return `${item.no}. ${item.answer}\n→ ${item.shortAnswers[0]}\n→ ${item.shortAnswers[1]}`;
+  }
+
+  function __renderWorksheetHtml(items = []) {
+    return items.map((item) => `
+<div class="worksheet-item">
+  <p><strong>${item.no}. ${__escapeHtml(item.question)}</strong></p>
+  <p>(clue: ${__escapeHtml(item.clue.join(", "))}) (Word count: ${item.wordCount})</p>
+</div>`.trim()).join("\n");
+  }
+
+  function __renderAnswerHtml(items = []) {
+    return items.map((item) => `
+<div class="answer-item">
+  <p><strong>${item.no}. ${__escapeHtml(item.answer)}</strong></p>
+  <p>→ ${__escapeHtml(item.shortAnswers[0])}</p>
+  <p>→ ${__escapeHtml(item.shortAnswers[1])}</p>
+</div>`.trim()).join("\n");
+  }
+
+  function __buildDbResponse(base = {}, input = {}, bankItems = [], chapterKey = "") {
+    const next = { ...(base || {}) };
+    const assembled = __assembleItems(bankItems, chapterKey);
+
+    next.questions = assembled.map(__questionLine).join("\n\n");
+    next.worksheet = next.questions;
+    next.answerSheet = assembled.map(__answerLine).join("\n\n");
+    next.actualCount = assembled.length;
+    next.itemPairs = assembled.map((item) => ({
+      no: item.no,
+      question: item.question,
+      answer: item.answer,
+      clue: item.clue,
+      wordCount: item.wordCount,
+      shortAnswers: item.shortAnswers,
+      source: item.source,
+    }));
     next.pairIntegrity = {
       ok: true,
-      reason: "s24_db_hook",
-      questionCount: bankItems.length,
-      answerCount: bankItems.length,
+      reason: "s25_hybrid_db_assembler",
+      questionCount: assembled.length,
+      answerCount: assembled.length,
     };
 
     const title = String(next.title || next.worksheetTitle || input.worksheetTitle || "").trim();
@@ -8818,18 +8944,18 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
       ((input.language === "en" ? "Answers\n" : "정답\n") + (next.answerSheet || "")),
     ].filter(Boolean).join("\n\n");
 
-    next.worksheetHtml = next.questions;
-    next.answerSheetHtml = next.answerSheet;
-    next.source = "db_front_compatible";
+    next.worksheetHtml = __renderWorksheetHtml(assembled);
+    next.answerSheetHtml = __renderAnswerHtml(assembled);
+    next.source = "db_hybrid_front_compatible";
     return next;
   }
 
-  const __prevFormatMagicResponseS24 =
+  const __prevFormatMagicResponseS25 =
     typeof formatMagicResponse === "function" ? formatMagicResponse : null;
 
-  if (__prevFormatMagicResponseS24) {
-    formatMagicResponse = function formatMagicResponse_s24_front_compatible(rawText, input = {}) {
-      const base = __prevFormatMagicResponseS24(rawText, input) || {};
+  if (__prevFormatMagicResponseS25) {
+    formatMagicResponse = function formatMagicResponse_s25_hybrid_db(rawText, input = {}) {
+      const base = __prevFormatMagicResponseS25(rawText, input) || {};
 
       try {
         if (!loadSentenceBank) return base;
@@ -8846,18 +8972,18 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
           return base;
         }
 
-        const shuffled = [...bank].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, desired);
+        const selected = __selectDbAnchors(bank, desired);
+        if (!selected.length) return base;
 
-        return __buildDbResponse(base, input, selected);
+        return __buildDbResponse(base, input, selected, chapterKey);
       } catch (e) {
-        console.warn("⚠️ S24 DB hook fallback:", e?.message || e);
+        console.warn("⚠️ S25 DB hook fallback:", e?.message || e);
         return base;
       }
     };
   }
 
-  console.log("✅ S24 front-compatible DB patch applied");
+  console.log("✅ S25 hybrid DB assembler applied");
 })();
 
 // Final Vercel export (keep S19 router)
