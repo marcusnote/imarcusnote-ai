@@ -6655,6 +6655,192 @@ function __v85RepairProgressiveLexicon(sentence = "") {
   return __v85NormalizeSpaces(fixed);
 }
 
+
+function __v85DetectPresentPerfectFocus(input = {}) {
+  const merged = [input?.topic, input?.worksheetTitle, input?.userPrompt]
+    .filter(Boolean)
+    .join(" ");
+  return /현재완료(?!\s*진행형)|present\s+perfect(?!\s+(continuous|progressive))/i.test(merged);
+}
+
+function __v85DetectPresentPerfectProgressiveFocus(input = {}) {
+  const merged = [input?.topic, input?.worksheetTitle, input?.userPrompt]
+    .filter(Boolean)
+    .join(" ");
+  return /현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(merged);
+}
+
+function __v85DetectWhatFocus(input = {}) {
+  const merged = [input?.topic, input?.worksheetTitle, input?.userPrompt]
+    .filter(Boolean)
+    .join(" ");
+  return /관계대명사\s*what|relative\s*pronoun\s*what/i.test(merged);
+}
+
+function __v85DetectDoQuestionFocus(input = {}) {
+  const merged = [input?.topic, input?.worksheetTitle, input?.userPrompt]
+    .filter(Boolean)
+    .join(" ");
+  return /일반동사.*의문문|일반동사의 의문문|do-question|do\/does question/i.test(merged);
+}
+
+function __v85DetectBeQuestionFocus(input = {}) {
+  const merged = [input?.topic, input?.worksheetTitle, input?.userPrompt]
+    .filter(Boolean)
+    .join(" ");
+  return /be동사.*의문문|be동사 의문문|be-verb question/i.test(merged);
+}
+
+function __v85ToIng(base = "") {
+  const v = String(base || "").toLowerCase().trim();
+  const irregular = {
+    lie: "lying", die: "dying", tie: "tying", run: "running", sit: "sitting",
+    begin: "beginning", swim: "swimming", get: "getting", put: "putting",
+    plan: "planning", stop: "stopping", travel: "traveling", make: "making",
+    take: "taking", write: "writing", have: "having", use: "using", come: "coming"
+  };
+  if (!v) return "";
+  if (irregular[v]) return irregular[v];
+  if (/ie$/.test(v)) return v.slice(0, -2) + "ying";
+  if (/e$/.test(v) && !/ee$/.test(v)) return v.slice(0, -1) + "ing";
+  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(v)) return v + v.slice(-1) + "ing";
+  return v + "ing";
+}
+
+function __v85GuessBaseVerbFromPastForm(token = "") {
+  const t = String(token || "").toLowerCase().trim();
+  const irregular = {
+    read: "read", made: "make", seen: "see", written: "write", sent: "send",
+    heard: "hear", taught: "teach", spoken: "speak", given: "give", taken: "take",
+    done: "do", gone: "go", been: "be", begun: "begin", sung: "sing",
+    met: "meet", solved: "solve", worked: "work", learned: "learn", learnt: "learn",
+    discussed: "discuss", completed: "complete", tried: "try", visited: "visit",
+    invited: "invite", attended: "attend", participated: "participate", invested: "invest",
+    talked: "talk", exercised: "exercise", finished: "finish", studied: "study"
+  };
+  if (irregular[t]) return irregular[t];
+  if (/ied$/.test(t)) return t.slice(0, -3) + "y";
+  if (/ed$/.test(t)) return t.slice(0, -2);
+  return t;
+}
+
+function __v85ConvertToPresentPerfectProgressive(sentence = "") {
+  let s = String(sentence || "").trim();
+  if (!s) return "";
+  if (/\b(have|has)\s+been\s+[A-Za-z]+ing\b/i.test(s)) return s;
+
+  const subjectMatch = s.match(/^(I|You|We|They|He|She|It)\b/i);
+  const subject = subjectMatch ? subjectMatch[1] : "I";
+  const aux = /^(He|She|It)$/i.test(subject) ? "has been" : "have been";
+  const afterAux = s.replace(/^(I|You|We|They|He|She|It)\s+(have|has)\s+/i, "");
+  const verbMatch = afterAux.match(/^([A-Za-z]+)\b/);
+  const verbToken = verbMatch ? verbMatch[1] : "work";
+  const baseVerb = __v85GuessBaseVerbFromPastForm(verbToken);
+  const ingVerb = __v85ToIng(baseVerb || "work");
+  const tail = afterAux.replace(/^([A-Za-z]+)\b\s*/i, "").trim();
+  s = `${subject} ${aux} ${ingVerb}${tail ? " " + tail : ""}`.trim();
+
+  if (!/\b(for|since)\b/i.test(s)) {
+    if (/\b(several years|many years|three years|four years|five years|six months|two weeks|three months|201\d|20\d\d)\b/i.test(sentence)) {
+      const m = sentence.match(/\b(several years|many years|three years|four years|five years|six months|two weeks|three months|201\d|20\d\d)\b/i);
+      if (m) {
+        const marker = /^20\d\d$/.test(m[1]) ? `since ${m[1]}` : `for ${m[1]}`;
+        s = s.replace(/[.]?$/, ` ${marker}.`);
+      }
+    }
+  }
+  return s.replace(/\s+([.,!?;:])/g, "$1").trim();
+}
+
+const __V85_CHAPTER_FALLBACKS = {
+  present_perfect_progressive: [
+    ["나는 5년 동안 영어를 공부해왔다.", "I have been studying English for five years."],
+    ["그녀는 2019년부터 그 회사에서 일해왔다.", "She has been working at that company since 2019."],
+    ["우리는 3개월 동안 이 프로젝트를 진행해왔다.", "We have been working on this project for three months."],
+    ["그는 지난 2주 동안 매일 운동해왔다.", "He has been exercising every day for the last two weeks."],
+    ["나는 지금까지 이 문제를 해결하려고 노력해왔다.", "I have been trying to solve this problem so far."],
+    ["그들은 오랫동안 그 문제를 논의해왔다.", "They have been discussing the issue for a long time."],
+    ["나는 몇 년 동안 이 책을 읽어왔다.", "I have been reading this book for several years."],
+    ["그녀는 4년 동안 피아노를 배워왔다.", "She has been learning piano for four years."],
+    ["우리는 오랫동안 그 회의에 대해 이야기해왔다.", "We have been talking about that meeting for a long time."],
+    ["그는 몇 달 동안 그 보고서를 준비해왔다.", "He has been preparing the report for several months."]
+  ],
+  present_perfect: [
+    ["나는 최근에 새로운 영화를 보았다.", "I have seen a new movie recently."],
+    ["그녀는 3년 동안 피아노를 배워왔다.", "She has learned piano for three years."],
+    ["우리는 이미 그 책을 읽었다.", "We have read the book already."],
+    ["그는 그 도시를 두 번 방문한 적이 있다.", "He has visited the city twice."],
+    ["나는 그 영화를 아직 보지 않았다.", "I have not seen the movie yet."],
+    ["그들은 2019년부터 이곳에서 일해왔다.", "They have worked here since 2019."],
+    ["나는 그 문제를 풀어본 적이 있다.", "I have solved the problem before."],
+    ["그녀는 최근에 새로운 친구를 사귀었다.", "She has made a new friend recently."],
+    ["우리는 방금 그 영화를 보았다.", "We have just seen the movie."],
+    ["나는 이 책을 두 번 읽어 보았다.", "I have read this book twice."]
+  ],
+  do_question: [
+    ["너는 매일 운동하니?", "Do you exercise every day?"],
+    ["그는 학교에 걸어가니?", "Does he walk to school?"],
+    ["그녀는 피아노를 치니?", "Does she play the piano?"],
+    ["너는 영어를 공부하니?", "Do you study English?"],
+    ["그들은 주말에 축구를 하니?", "Do they play soccer on weekends?"]
+  ],
+  relative_pronoun_what: [
+    ["내가 필요한 것은 시간이다.", "What I need is time."],
+    ["그녀가 말한 것은 사실이었다.", "What she said was true."],
+    ["내가 배운 것은 나에게 큰 도움이 되었다.", "What I learned helped me a lot."],
+    ["내가 원하는 것은 더 많은 시간이다.", "What I want is more time."],
+    ["그들이 제안한 것은 매우 유용하다.", "What they suggested is very useful."]
+  ]
+};
+
+function __v85ChapterKeyForGuided(input = {}) {
+  const merged = [input?.topic, input?.worksheetTitle, input?.userPrompt].filter(Boolean).join(" ");
+  if (__v85DetectPresentPerfectProgressiveFocus(input)) return "present_perfect_progressive";
+  if (__v85DetectPresentPerfectFocus(input)) return "present_perfect";
+  if (__v85DetectDoQuestionFocus(input)) return "do_question";
+  if (__v85DetectBeQuestionFocus(input)) return "be_question";
+  if (__v85DetectWhatFocus(input)) return "relative_pronoun_what";
+  if (/현재진행|present\s+(continuous|progressive)/i.test(merged)) return "present_continuous";
+  return "general";
+}
+
+function __v85CorePredicateFactory(input = {}) {
+  const key = __v85ChapterKeyForGuided(input);
+  if (key === "present_perfect_progressive") return (answer) => /\b(have|has)\s+been\s+[A-Za-z]+ing\b/i.test(answer);
+  if (key === "present_perfect") return (answer) => /\b(have|has)\s+(?:already\s+|just\s+|never\s+|not\s+)?[A-Za-z]+(?:ed|en|wn|ne|lt|pt|ght|t)\b/i.test(answer) && !/\b(have|has)\s+been\s+[A-Za-z]+ing\b/i.test(answer);
+  if (key === "do_question") return (answer) => /^(Do|Does)\b.*\?$/.test(String(answer || "").trim());
+  if (key === "be_question") return (answer) => /^(Am|Is|Are)\b.*\?$/.test(String(answer || "").trim());
+  if (key === "relative_pronoun_what") return (answer) => /^What\b/i.test(String(answer || "").trim());
+  return () => true;
+}
+
+function __v85GetFallbackPairsForChapter(input = {}) {
+  const key = __v85ChapterKeyForGuided(input);
+  return __V85_CHAPTER_FALLBACKS[key] || [];
+}
+
+function __v85EnforceChapterBalance(pairs = [], input = {}) {
+  const key = __v85ChapterKeyForGuided(input);
+  if (!["present_perfect_progressive", "present_perfect", "do_question", "relative_pronoun_what", "be_question"].includes(key)) return pairs;
+  const predicate = __v85CorePredicateFactory(input);
+  const total = Math.max(1, pairs.length);
+  const minCore = key === "present_perfect_progressive" ? Math.ceil(total * 0.84) : Math.ceil(total * 0.8);
+  let coreCount = pairs.filter((pair) => predicate(pair.a)).length;
+  if (coreCount >= minCore) return pairs;
+  const fallback = __v85GetFallbackPairsForChapter(input);
+  if (!fallback.length) return pairs;
+  const next = pairs.map((pair) => ({ ...pair }));
+  let fi = 0;
+  for (let i = 0; i < next.length && coreCount < minCore; i += 1) {
+    if (predicate(next[i].a)) continue;
+    const bank = fallback[fi % fallback.length];
+    fi += 1;
+    next[i] = { q: bank[0], a: bank[1] };
+    coreCount += 1;
+  }
+  return next;
+}
+
 function __v85RepairGuidedWritingAnswer(answer = "", input = {}) {
   let fixed = String(answer || "").trim();
   if (!fixed) return "";
@@ -6664,8 +6850,14 @@ function __v85RepairGuidedWritingAnswer(answer = "", input = {}) {
     fixed = __v85RepairProgressiveLexicon(fixed);
   }
 
+  if (__v85DetectPresentPerfectProgressiveFocus(input) && !/(have|has)\s+been\s+[A-Za-z]+ing/i.test(fixed)) {
+    if (/for|since|so far|lately|recently|these days|the last/i.test(fixed)) {
+      fixed = __v85ConvertToPresentPerfectProgressive(fixed);
+    }
+  }
+
   fixed = fixed.replace(/\s+([.,!?;:])/g, "$1").trim();
-  if (!/[.!?]$/.test(fixed)) fixed += ".";
+  if (!/[.!?]$/.test(fixed)) fixed += /\?$/.test(fixed) ? "" : ".";
   return fixed;
 }
 
@@ -6787,11 +6979,24 @@ function __v84TransformFormattedByWorkbookType(formatted = {}, input = {}) {
     const renderedBlocks = [];
     const renderedAnswers = [];
 
+    const guidedPairs = [];
     for (const block of qBlocks) {
       const answer = __v85RepairGuidedWritingAnswer(String(aMap.get(block.no) || "").trim(), input);
       if (!answer) continue;
-      renderedBlocks.push(__v843BuildGuidedWritingQuestionBlock(block, answer, input));
-      renderedAnswers.push(`${block.no}. ${answer}`);
+      guidedPairs.push({ no: block.no, lead: block.lead, lines: Array.isArray(block.lines) ? block.lines.slice() : [], q: block.lead, a: answer });
+    }
+
+    const balancedPairs = __v85EnforceChapterBalance(guidedPairs.map((pair) => ({ q: pair.q, a: pair.a })), input);
+    for (let i = 0; i < Math.min(guidedPairs.length, balancedPairs.length); i += 1) {
+      guidedPairs[i].q = balancedPairs[i].q;
+      guidedPairs[i].lead = balancedPairs[i].q;
+      guidedPairs[i].a = __v85RepairGuidedWritingAnswer(balancedPairs[i].a, input);
+    }
+
+    for (const pair of guidedPairs) {
+      const block = { no: pair.no, lead: pair.lead, lines: pair.lines };
+      renderedBlocks.push(__v843BuildGuidedWritingQuestionBlock(block, pair.a, input));
+      renderedAnswers.push(`${pair.no}. ${pair.a}`);
     }
 
     const next = { ...formatted };
@@ -8366,7 +8571,7 @@ console.log("[v8.5.3-stable-router-recovery] loaded");
 (() => {
   let __s16core = null;
   try {
-    __s16core = require("../lib/magic-s17-core");
+    __s16core = require("../lib/magic-s19-core");
     console.log("✅ S17 core loaded");
   } catch (err) {
     console.warn("⚠️ S17 core not loaded:", err && err.message ? err.message : err);
