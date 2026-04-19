@@ -9563,3 +9563,207 @@ module.exports.config = { runtime: "nodejs" };
     console.warn('⚠️ S29 do_question hardlock patch failed:', e?.message || e);
   }
 })();
+
+
+
+/* =========================
+   S30 ALIAS + DO QUESTION FULL HARDLOCK PATCH
+   ========================= */
+(function applyS30AliasAndDoQuestionHardlock() {
+  try {
+    const __s30_fs = require('fs');
+    const __s30_path = require('path');
+
+    let __S30_ALIAS_DB_CACHE = null;
+
+    function __s30LoadAliasDb() {
+      if (__S30_ALIAS_DB_CACHE) return __S30_ALIAS_DB_CACHE;
+      try {
+        const p = __s30_path.join(process.cwd(), 'data', 'writinglab_chapter_aliases_middle_complete.json');
+        const raw = __s30_fs.readFileSync(p, 'utf8');
+        __S30_ALIAS_DB_CACHE = JSON.parse(raw);
+        return __S30_ALIAS_DB_CACHE;
+      } catch (e) {
+        __S30_ALIAS_DB_CACHE = {};
+        return __S30_ALIAS_DB_CACHE;
+      }
+    }
+
+    function __s30Norm(v) {
+      return String(v || '').toLowerCase().replace(/\s+/g, ' ').trim();
+    }
+
+    function __s30InferGradeKey(text) {
+      const t = String(text || '');
+      if (/중1/.test(t)) return 'middle1';
+      if (/중2/.test(t)) return 'middle2';
+      if (/중3/.test(t)) return 'middle3';
+      return null;
+    }
+
+    function __s30InferLessonKey(text) {
+      const m = String(text || '').match(/([1-4])\s*과/);
+      return m ? ('lesson' + m[1]) : null;
+    }
+
+    function __s30ResolveChapterByAlias(input) {
+      try {
+        const merged = [
+          input?.userPrompt,
+          input?.topic,
+          input?.worksheetTitle
+        ].filter(Boolean).join(' ');
+        const text = __s30Norm(merged);
+        const db = __s30LoadAliasDb();
+        const gradeKey = __s30InferGradeKey(merged);
+        const lessonKey = __s30InferLessonKey(merged);
+
+        function scanLesson(lessonObj) {
+          if (!lessonObj || typeof lessonObj !== 'object') return null;
+          for (const chapterKey of Object.keys(lessonObj)) {
+            const aliases = Array.isArray(lessonObj[chapterKey]) ? lessonObj[chapterKey] : [];
+            for (const alias of aliases) {
+              const a = __s30Norm(alias);
+              if (a && text.includes(a)) {
+                return { gradeKey, lessonKey, chapterKey };
+              }
+            }
+          }
+          return null;
+        }
+
+        if (gradeKey && lessonKey && db[gradeKey] && db[gradeKey][lessonKey]) {
+          const exact = scanLesson(db[gradeKey][lessonKey]);
+          if (exact) return exact;
+        }
+
+        if (gradeKey && db[gradeKey]) {
+          for (const lk of Object.keys(db[gradeKey])) {
+            const found = scanLesson(db[gradeKey][lk]);
+            if (found) return Object.assign({}, found, { lessonKey: lk });
+          }
+        }
+
+        return null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function __s30IsDoQuestionInput(input = {}) {
+      const merged = [input?.userPrompt, input?.topic, input?.worksheetTitle]
+        .filter(Boolean)
+        .join(' ');
+      const t = String(merged || '');
+      const aliasResolved = __s30ResolveChapterByAlias(input);
+
+      if (aliasResolved?.chapterKey === 'do_question') return true;
+      if (input?.aliasResolved?.chapterKey === 'do_question') return true;
+      if (String(input?.resolvedChapterKey || '') === 'do_question') return true;
+      if (String(input?.grammarFocus?.chapterKey || '') === 'do_question') return true;
+      if (input?.grammarFocus?.isDoQuestion) return true;
+
+      if (/일반동사/.test(t) && /(의문문|질문|활용|질문과 대답|영작훈련|영작 워크북)/.test(t)) return true;
+      if (/(do question|does question|do\/does 의문문|do does 의문문)/i.test(t)) return true;
+
+      return false;
+    }
+
+    const __S30_DO_HARDLOCK_BANK = [
+      ['너는 매일 운동하니?', ['Do','you','exercise','every','day'], 'Do you exercise every day?', 'Yes, I do.', 'No, I do not.'],
+      ['그는 학교에 걸어가니?', ['Does','he','walk','to','school'], 'Does he walk to school?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 피아노를 치니?', ['Does','she','play','the','piano'], 'Does she play the piano?', 'Yes, she does.', 'No, she does not.'],
+      ['너는 영어를 공부하니?', ['Do','you','study','English'], 'Do you study English?', 'Yes, I do.', 'No, I do not.'],
+      ['그들은 주말에 축구를 하니?', ['Do','they','play','soccer','on','weekends'], 'Do they play soccer on weekends?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 매일 수업에 참석하니?', ['Does','he','attend','classes','every','day'], 'Does he attend classes every day?', 'Yes, he does.', 'No, he does not.'],
+      ['그는 매일 이를 닦니?', ['Does','he','brush','his','teeth','every','day'], 'Does he brush his teeth every day?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 영어를 공부하니?', ['Does','she','study','English'], 'Does she study English?', 'Yes, she does.', 'No, she does not.'],
+      ['그는 주말마다 축구를 보니?', ['Does','he','watch','soccer','on','weekends'], 'Does he watch soccer on weekends?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 매일 영어 단어를 외우니?', ['Do','you','memorize','English','words','every','day'], 'Do you memorize English words every day?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 책을 읽니?', ['Does','she','read','books'], 'Does she read books?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 공원에 가니?', ['Do','they','go','to','the','park'], 'Do they go to the park?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 수학을 좋아하니?', ['Does','he','like','math'], 'Does he like math?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 물을 많이 마시니?', ['Do','you','drink','a','lot','of','water'], 'Do you drink a lot of water?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 저녁에 숙제를 하니?', ['Does','she','do','her','homework','in','the','evening'], 'Does she do her homework in the evening?', 'Yes, she does.', 'No, she does not.'],
+      ['그는 TV를 보니?', ['Does','he','watch','TV'], 'Does he watch TV?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 음악을 듣니?', ['Do','you','listen','to','music'], 'Do you listen to music?', 'Yes, I do.', 'No, I do not.'],
+      ['그들은 게임을 하니?', ['Do','they','play','games'], 'Do they play games?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 커피를 마시니?', ['Does','he','drink','coffee'], 'Does he drink coffee?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 일찍 일어나니?', ['Do','you','wake','up','early'], 'Do you wake up early?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 영어로 말하니?', ['Does','she','speak','English'], 'Does she speak English?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 버스를 타니?', ['Do','they','take','the','bus'], 'Do they take the bus?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 운동을 하니?', ['Does','he','exercise'], 'Does he exercise?', 'Yes, he does.', 'No, he does not.'],
+      ['너는 매일 공부하니?', ['Do','you','study','every','day'], 'Do you study every day?', 'Yes, I do.', 'No, I do not.'],
+      ['그녀는 친구를 만나니?', ['Does','she','meet','friends'], 'Does she meet friends?', 'Yes, she does.', 'No, she does not.']
+    ];
+
+    function __s30DoHardlockQuestions() {
+      return __S30_DO_HARDLOCK_BANK.map(function(item, i) {
+        return (i + 1) + '. ' + item[0] + ' (clue: ' + item[1].join(', ') + ') (Word count: ' + item[1].length + ')';
+      }).join('\n');
+    }
+
+    function __s30DoHardlockAnswers() {
+      return __S30_DO_HARDLOCK_BANK.map(function(item, i) {
+        return (i + 1) + '. ' + item[2] + ' / ' + item[3] + ' / ' + item[4];
+      }).join('\n');
+    }
+
+    const __prevFormatMagicResponse_s30 =
+      typeof formatMagicResponse === 'function' ? formatMagicResponse : null;
+
+    if (__prevFormatMagicResponse_s30) {
+      formatMagicResponse = function formatMagicResponse_s30(rawText, input = {}) {
+        const base = __prevFormatMagicResponse_s30(rawText, input);
+        try {
+          if (!__s30IsDoQuestionInput(input)) return base;
+          return Object.assign({}, base || {}, {
+            title: (base && base.title) || buildMagicTitle(input),
+            instructions: (base && base.instructions) || (input?.language === 'en'
+              ? 'Write each sentence in English using the clue words. Review the answer sheet after solving.'
+              : '주어진 clue를 사용하여 영어 문장을 쓰시오. 먼저 문제를 풀고 정답지를 검토하세요.'),
+            questions: __s30DoHardlockQuestions(),
+            answerSheet: __s30DoHardlockAnswers()
+          });
+        } catch (e) {
+          return base;
+        }
+      };
+    }
+
+    const __prevNormalizeMagicAnswerSheet_s30 =
+      typeof normalizeMagicAnswerSheet === 'function' ? normalizeMagicAnswerSheet : null;
+
+    if (__prevNormalizeMagicAnswerSheet_s30) {
+      normalizeMagicAnswerSheet = function normalizeMagicAnswerSheet_s30(a = '', q = '', input = {}) {
+        try {
+          if (__s30IsDoQuestionInput(input)) return __s30DoHardlockAnswers();
+        } catch (e) {}
+        return __prevNormalizeMagicAnswerSheet_s30(a, q, input);
+      };
+    }
+
+    const __prevIsGenerationSuccessful_s30 =
+      typeof isGenerationSuccessful === 'function' ? isGenerationSuccessful : null;
+
+    if (__prevIsGenerationSuccessful_s30) {
+      isGenerationSuccessful = function isGenerationSuccessful_s30(formatted, input) {
+        const legacy = __prevIsGenerationSuccessful_s30(formatted, input);
+        if (!legacy || !legacy.ok) return legacy;
+        try {
+          if (!__s30IsDoQuestionInput(input)) return legacy;
+          const qCount = String(formatted?.questions || '').split('\n').filter((l) => /^\d+[.)-]?\s+/.test(String(l).trim())).length;
+          const aCount = String(formatted?.answerSheet || '').split('\n').filter((l) => /^\d+[.)-]?\s+/.test(String(l).trim())).length;
+          const qText = String(formatted?.questions || '');
+          if (qCount !== 25 || aCount !== 25) return { ok: false, reason: 's30_do_hardlock_count_mismatch' };
+          if (!/\(clue:\s*Do, you, exercise, every, day\)/.test(qText)) return { ok: false, reason: 's30_do_hardlock_not_applied' };
+        } catch (e) {}
+        return legacy;
+      };
+    }
+
+    console.log('✅ S30 alias + do_question full hardlock patch applied');
+  } catch (e) {
+    console.warn('⚠️ S30 alias + do_question full hardlock patch failed:', e?.message || e);
+  }
+})();
