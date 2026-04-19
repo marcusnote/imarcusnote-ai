@@ -1,0 +1,102 @@
+[
+  {
+    "id": "m1_be_q_001",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 학생이니?",
+    "enAnswer": "Are you a student?",
+    "clue": ["Are", "you", "student"],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_student"
+  },
+  {
+    "id": "m1_be_q_002",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 선생님이니?",
+    "enAnswer": "Is he a teacher?",
+    "clue": ["Is", "he", "teacher"],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_teacher"
+  },
+  {
+    "id": "m1_be_q_003",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 집에 있니?",
+    "enAnswer": "Is she at home?",
+    "clue": ["Is", "she", "at", "home"],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "location_home"
+  },
+  {
+    "id": "m1_be_q_004",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 피곤하니?",
+    "enAnswer": "Are they tired?",
+    "clue": ["Are", "they", "tired"],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_tired"
+  },
+  {
+    "id": "m1_be_q_005",
+    "chapterKey": "be_question",
+    "koPrompt": "너희는 준비되었니?",
+    "enAnswer": "Are you ready?",
+    "clue": ["Are", "you", "ready"],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_ready"
+  },
+  {
+    "id": "m1_be_q_006",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 의사니?",
+    "enAnswer": "Is she a doctor?",
+    "clue": ["Is", "she", "doctor"],
+    "wordCount": 4,
+    "answerShape": "be_question",
+    "similarGroup": "identity_doctor"
+  },
+  {
+    "id": "m1_be_q_007",
+    "chapterKey": "be_question",
+    "koPrompt": "그들은 교실에 있니?",
+    "enAnswer": "Are they in the classroom?",
+    "clue": ["Are", "they", "in", "classroom"],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_classroom"
+  },
+  {
+    "id": "m1_be_q_008",
+    "chapterKey": "be_question",
+    "koPrompt": "너는 바쁘니?",
+    "enAnswer": "Are you busy?",
+    "clue": ["Are", "you", "busy"],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "state_busy"
+  },
+  {
+    "id": "m1_be_q_009",
+    "chapterKey": "be_question",
+    "koPrompt": "그는 한국 사람이니?",
+    "enAnswer": "Is he Korean?",
+    "clue": ["Is", "he", "Korean"],
+    "wordCount": 3,
+    "answerShape": "be_question",
+    "similarGroup": "identity_nationality"
+  },
+  {
+    "id": "m1_be_q_010",
+    "chapterKey": "be_question",
+    "koPrompt": "그녀는 지금 학교에 있니?",
+    "enAnswer": "Is she at school now?",
+    "clue": ["Is", "she", "at", "school", "now"],
+    "wordCount": 5,
+    "answerShape": "be_question",
+    "similarGroup": "location_school"
+  }
+]
