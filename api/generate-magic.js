@@ -11195,7 +11195,7 @@ module.exports.config = { runtime: "nodejs" };
 
   function __s309NormalizeLead(value='') {
     return String(value || '')
-      .replace(/^\s*\d+[.)]\s*/, '')
+      .replace(/^(?:\s*\d+[.)]\s*)+/, '')
       .replace(/\s*\(?word count:\s*\d+\)?\s*$/i, '')
       .trim();
   }
@@ -11209,7 +11209,7 @@ module.exports.config = { runtime: "nodejs" };
       if (!line) continue;
       if (/^clue:/i.test(line)) continue;
       if (/^word count:/i.test(line)) continue;
-      hints.push(line.replace(/^\s*\d+[.)]\s*/, '').trim());
+      hints.push(line.replace(/^(?:\s*\d+[.)]\s*)+/, '').trim());
     }
     return {
       lead,
@@ -11368,7 +11368,7 @@ module.exports.config = { runtime: "nodejs" };
 
   function __s31rNormalizeLead(value='') {
     return String(value || '')
-      .replace(/^\s*\d+[.)]\s*/, '')
+      .replace(/^(?:\s*\d+[.)]\s*)+/, '')
       .replace(/\s*\(?word count:\s*\d+\)?\s*$/i, '')
       .replace(/\s*\[\s*clue:.*$/i, '')
       .trim();
@@ -11383,7 +11383,7 @@ module.exports.config = { runtime: "nodejs" };
       if (!line) continue;
       if (/^clue:/i.test(line)) continue;
       if (/^word count:/i.test(line)) continue;
-      hints.push(line.replace(/^\s*\d+[.)]\s*/, '').trim());
+      hints.push(line.replace(/^(?:\s*\d+[.)]\s*)+/, '').trim());
     }
     const metaParts = [];
     if (hints.length) metaParts.push(hints.join(' / '));
