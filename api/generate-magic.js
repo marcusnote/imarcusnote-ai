@@ -10516,3 +10516,222 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S30-6 hardlock renderer patch applied');
 })();
+
+
+/* =========================================================
+   S30-7 WorkbookType Inference + PDF Word Count Survival Patch
+   - infer workbookType from title/prompt when UI field is missing
+   - hardlock final render again after router transform
+   - move guided word count to support line so PDF survives
+========================================================= */
+(function applyS307WorkbookInferenceAndPdfWordcountPatch(){
+  const __prevNormalizeInput_s307 = (typeof normalizeInput === 'function') ? normalizeInput : null;
+  const __prevTransform_s307 = (typeof __v84TransformFormattedByWorkbookType === 'function') ? __v84TransformFormattedByWorkbookType : null;
+  const __prevWorksheetHtml_s307 = (typeof buildMagicWorksheetHtml === 'function') ? buildMagicWorksheetHtml : null;
+  const __prevAnswerHtml_s307 = (typeof buildMagicAnswerHtml === 'function') ? buildMagicAnswerHtml : null;
+
+  function __s307Text(v){ return String(v || '').replace(/\r\n/g, '\n'); }
+  function __s307Esc(v){ return String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function __s307InferWorkbookType(raw=''){
+    const t = String(raw || '').toLowerCase();
+    if (/blank\s*fill|blankfill|빈칸\s*넣기|빈칸형/.test(t)) return 'blank_fill';
+    if (/sentence\s*build|sentence_build|재배열|문장\s*재배열/.test(t)) return 'sentence_build';
+    if (/choice|multiple\s*choice|객관식|선택형/.test(t)) return 'choice';
+    if (/guided\s*writing|guided_writing|가이드드|영작훈련|guided/.test(t)) return 'guided_writing';
+    return '';
+  }
+
+  function __s307QuestionBlocks(questions=''){
+    const lines = __s307Text(questions).split('\n');
+    const blocks=[]; let cur=null;
+    const push = ()=>{ if(cur) blocks.push(cur); };
+    for(const raw of lines){
+      const line = String(raw || '').trim();
+      if(!line) continue;
+      const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if(m){
+        push();
+        cur = { no:Number(m[1]), lead:String(m[2] || '').trim(), support:[] };
+      } else if(cur){
+        cur.support.push(line);
+      }
+    }
+    push();
+    return blocks;
+  }
+
+  function __s307AnswerMap(answerSheet=''){
+    const map = new Map();
+    const lines = __s307Text(answerSheet).split('\n').map(s=>s.trim()).filter(Boolean);
+    for(const line of lines){
+      const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if(m) map.set(Number(m[1]), String(m[2] || '').trim());
+    }
+    return map;
+  }
+
+  function __s307CoreAnswer(answer=''){
+    return String(answer || '').split('/').map(s=>s.trim()).filter(Boolean)[0] || '';
+  }
+
+  function __s307Words(answer=''){
+    return __s307CoreAnswer(answer).replace(/[?.!]/g,'').split(/\s+/).map(s=>s.trim()).filter(Boolean);
+  }
+
+  function __s307WordCount(answer=''){ return __s307Words(answer).length; }
+  function __s307Clue(answer=''){ return __s307Words(answer).join(', '); }
+
+  function __s307BlankSentence(answer='', input={}){
+    const core = __s307CoreAnswer(answer);
+    if(!core) return '';
+    if(input?.grammarFocus?.isBeQuestion) return core.replace(/^(Am|Is|Are)\b/i, '____');
+    if(input?.grammarFocus?.isDoQuestion) return core.replace(/^(Do|Does)\b/i, '____');
+    const words = core.split(/\s+/);
+    if(!words.length) return '';
+    words[0] = '_____';
+    return words.join(' ');
+  }
+
+  function __s307Shuffle(arr){
+    const a = arr.slice();
+    for(let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function __s307Choices(answer='', input={}){
+    const core = __s307CoreAnswer(answer);
+    if(!core) return [];
+    const ds = [];
+    if(input?.grammarFocus?.isBeQuestion){
+      ds.push(core.replace(/^(Am|Is|Are)\b/i, 'Do'));
+      ds.push(core.replace(/^(Am|Is|Are)\b/i, 'Does'));
+      ds.push(core.replace(/\?$/, ''));
+    } else if(input?.grammarFocus?.isDoQuestion){
+      ds.push(core.replace(/^(Do|Does)\b/i, 'Is'));
+      ds.push(core.replace(/^(Do|Does)\b/i, 'Are'));
+      ds.push(core.replace(/^(Do|Does)\b/i, 'Did'));
+    } else {
+      ds.push(core.replace(/\?$/, '.'));
+      ds.push(core.replace(/\b(is|are|was|were|can|must|will)\b/i, 'should'));
+      ds.push(core.replace(/\bthe\b/i, 'a'));
+    }
+    const uniq = [];
+    for(const x of [core, ...ds]){
+      const v = String(x || '').trim();
+      if(v && !uniq.includes(v)) uniq.push(v);
+      if(uniq.length >= 4) break;
+    }
+    return __s307Shuffle(uniq);
+  }
+
+  function __s307ResolveWorkbookType(input={}, formatted={}){
+    const candidates = [
+      input?.workbookType,
+      formatted?.workbookType,
+      input?.worksheetTitle,
+      input?.userPrompt,
+      input?.topic,
+      formatted?.title
+    ].filter(Boolean);
+    for(const c of candidates){
+      const inferred = __s307InferWorkbookType(c);
+      if(inferred) return normalizeWorkbookType(inferred);
+    }
+    return normalizeWorkbookType(input?.workbookType || formatted?.workbookType || '');
+  }
+
+  function __s307RenderFinal(formatted={}, input={}){
+    const qBlocks = __s307QuestionBlocks(formatted.questions || '');
+    const aMap = __s307AnswerMap(formatted.answerSheet || '');
+    if(!qBlocks.length || !aMap.size) return formatted;
+
+    const type = __s307ResolveWorkbookType(input, formatted);
+    const qOut = [];
+    const aOut = [];
+    const labels = ['①','②','③','④','⑤'];
+
+    for(const block of qBlocks){
+      const ans = String(aMap.get(block.no) || '').trim();
+      if(!ans) continue;
+      const lead = String(block.lead || '').replace(/\s*\(Word count:\s*\d+\)\s*$/i,'').trim();
+
+      if(type === 'blank_fill'){
+        qOut.push(`${block.no}. ${lead}\nblank: ${__s307BlankSentence(ans, input)}`);
+      } else if(type === 'choice'){
+        const choices = __s307Choices(ans, input);
+        qOut.push([`${block.no}. ${lead}`].concat(choices.map((c,i)=>`${labels[i] || '-'} ${c}`)).join('\n'));
+      } else if(type === 'sentence_build'){
+        qOut.push(`${block.no}. ${lead}\n[ ${__s307Shuffle(__s307Words(ans)).join(' / ')} ]`);
+      } else {
+        const clue = __s307Clue(ans);
+        const wc = __s307WordCount(ans);
+        qOut.push(`${block.no}. ${lead}\nclue: ${clue}\nword count: ${wc}`);
+      }
+
+      aOut.push(`${block.no}. ${ans}`);
+    }
+
+    const next = { ...formatted };
+    next.workbookType = type;
+    next.questions = qOut.join('\n');
+    next.answerSheet = aOut.join('\n');
+    next.actualCount = aOut.length;
+    next.worksheet = next.questions;
+    next.content = [next.title, next.instructions, next.questions].filter(Boolean).join('\n\n');
+    next.fullText = [next.title, next.instructions, next.questions, ((input?.language === 'en' ? 'Answers\n' : '정답\n') + next.answerSheet)].filter(Boolean).join('\n\n');
+    return next;
+  }
+
+  if(__prevNormalizeInput_s307){
+    normalizeInput = function normalizeInput_s307(body={}){
+      const next = __prevNormalizeInput_s307(body);
+      const inferred = __s307ResolveWorkbookType(
+        {
+          workbookType: body.workbookType || body.workbook_type || next?.workbookType || '',
+          worksheetTitle: body.worksheetTitle || next?.worksheetTitle || '',
+          userPrompt: body.userPrompt || body.prompt || next?.userPrompt || '',
+          topic: body.topic || next?.topic || ''
+        },
+        next || {}
+      );
+      next.workbookType = inferred;
+      if(inferred === 'guided_writing'){
+        next.wordCountMode = 'auto';
+        next.magicStyle = next.magicStyle || 'marcus_magic';
+      }
+      return next;
+    };
+  }
+
+  if(__prevTransform_s307){
+    __v84TransformFormattedByWorkbookType = function __v84TransformFormattedByWorkbookType_s307(formatted={}, input={}){
+      const base = __prevTransform_s307(formatted, input);
+      return __s307RenderFinal(base, input);
+    };
+  }
+
+  buildMagicWorksheetHtml = function buildMagicWorksheetHtml_s307(formatted={}, input={}){
+    const blocks = __s307QuestionBlocks(formatted.questions || '');
+    if(!blocks.length){
+      return __prevWorksheetHtml_s307 ? __prevWorksheetHtml_s307(formatted, input) : '';
+    }
+    return blocks.map(b=>{
+      const support = (b.support || []).map(s=>`<div>${__s307Esc(s)}</div>`).join('');
+      return `<div class="worksheet-item"><p><strong>${b.no}. ${__s307Esc(b.lead)}</strong></p>${support}</div>`;
+    }).join('\n');
+  };
+
+  buildMagicAnswerHtml = function buildMagicAnswerHtml_s307(formatted={}, input={}){
+    const lines = String(formatted.answerSheet || '').split('\n').map(s=>s.trim()).filter(Boolean);
+    if(!lines.length){
+      return __prevAnswerHtml_s307 ? __prevAnswerHtml_s307(formatted, input) : '';
+    }
+    return lines.map(line=>`<p>${__s307Esc(line)}</p>`).join('\n');
+  };
+
+  console.log('✅ S30-7 workbook inference + PDF wordcount patch applied');
+})();
