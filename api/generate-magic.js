@@ -11190,51 +11190,48 @@ module.exports.config = { runtime: "nodejs" };
   }
 
   function __s309BuildClue(answer='') {
-    return `clue: ${String(answer || '').trim().replace(/\s+/g, ', ')} word count: ${__s309WordCount(answer)}`;
+    return `clue: ${String(answer || '').trim().replace(/\s+/g, ', ')}`;
+  }
+
+  function __s309NormalizeLead(value='') {
+    return String(value || '')
+      .replace(/^\s*\d+[.)]\s*/, '')
+      .replace(/\s*\(?word count:\s*\d+\)?\s*$/i, '')
+      .trim();
   }
 
   function __s309NormalizeGuidedBlock(block, answer) {
-    const lead = String(block?.lead || '').replace(/\s*\(?word count:\s*\d+\)?\s*$/i, '').trim();
+    const lead = __s309NormalizeLead(block?.lead || '');
     const rawLines = Array.isArray(block?.lines) ? block.lines.slice() : [];
-    const cleaned = [];
-    let sawClue = false;
+    const hints = [];
     for (const raw of rawLines) {
       const line = String(raw || '').trim();
       if (!line) continue;
-      if (/^clue:/i.test(line)) {
-        sawClue = true;
-        continue;
-      }
+      if (/^clue:/i.test(line)) continue;
       if (/^word count:/i.test(line)) continue;
-      cleaned.push(line);
+      hints.push(line.replace(/^\s*\d+[.)]\s*/, '').trim());
     }
-    if (!sawClue) {
-      cleaned.push(__s309BuildClue(answer));
-    } else {
-      cleaned.push(__s309BuildClue(answer));
-    }
-    return { lead, lines: cleaned };
+    return {
+      lead,
+      hints,
+      inlineMeta: `${hints.length ? '(' + hints.join(' / ') + ') ' : ''}[${__s309BuildClue(answer)} | word count: ${__s309WordCount(answer)}]`
+    };
   }
 
   function __s309BuildGuidedWorksheetHtml(pairs) {
     const items = pairs.map((pair) => {
       const norm = __s309NormalizeGuidedBlock(pair.block, pair.answer);
-      const lineHtml = norm.lines.map((line, idx) => {
-        const cls = /^clue:/i.test(line) ? 'q-clue' : 'q-hint';
-        return `<div class="${cls}" style="display:block !important; width:100% !important; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important; margin:0 0 ${/^clue:/i.test(line) ? '0' : '6px'} 0; line-height:1.65;">${__s309EscapeHtml(line)}</div>`;
-      }).join('');
       return (
         `<table class="worksheet-item-table" style="width:100% !important; border-collapse:collapse !important; margin:0 0 16px 0 !important; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">` +
           `<tr style="page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">` +
             `<td style="padding:0 0 14px 0 !important; border-bottom:1px solid #dfe7e2 !important; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">` +
-              `<div class="q-main" style="display:block !important; width:100% !important; font-weight:700; margin:0 0 6px 0; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">${pair.no}. ${__s309EscapeHtml(norm.lead)}</div>` +
-              lineHtml +
+              `<div class="q-main" style="display:block !important; width:100% !important; font-weight:700; margin:0; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">${pair.no}. ${__s309EscapeHtml(norm.lead)} <span class="q-inline-meta" style="font-weight:400 !important; font-size:12px !important; color:#4b5563 !important; white-space:normal !important;">${__s309EscapeHtml(norm.inlineMeta)}</span></div>` +
             `</td>` +
           `</tr>` +
         `</table>`
       );
     }).join('');
-    return `<div class="iaw-rendered worksheet-root guided-print-lock" style="display:block !important; width:100% !important;">${items}</div>`;
+    return `<div class="iaw-rendered worksheet-root guided-inline-lock" style="display:block !important; width:100% !important;">${items}</div>`;
   }
 
   function __s309RepairGuidedPayload(payload = {}, reqBody = {}) {
@@ -11299,5 +11296,5 @@ module.exports.config = { runtime: "nodejs" };
     module.exports.config = __prevExportS309.config;
   }
 
-  console.log('✅ S30-9 guided print block lock patch applied');
+  console.log('✅ S31 guided inline clue lock patch applied');
 })();
