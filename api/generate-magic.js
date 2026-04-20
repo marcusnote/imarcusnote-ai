@@ -11298,3 +11298,178 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S31 guided inline clue lock patch applied');
 })();
+
+
+
+/* =========================================================
+   S31R Guided Inline Clue Lock Fix
+   - fix S31 payload rewrite bug
+   - keep each guided question on a single line
+   - remove duplicate clue rows and duplicate numbering
+========================================================= */
+(function applyS31RGuidedInlineClueLockFix(){
+  const __prevExportS31R = module.exports;
+
+  function __s31rEscapeHtml(value='') {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function __s31rNormalizeWorkbookType(value='') {
+    const v = String(value || '').trim().toLowerCase();
+    if (['guided_writing','guided writing','guided-writing','guided','writing'].includes(v)) return 'guided_writing';
+    if (['blank_fill','blank fill','blank-fill','blank','blankfill'].includes(v)) return 'blank_fill';
+    if (['choice','binary_choice','binary-choice','binary choice'].includes(v)) return 'choice';
+    if (['sentence_build','sentence-build','sentence build'].includes(v)) return 'sentence_build';
+    return 'guided_writing';
+  }
+
+  function __s31rExtractQuestionBlocks(text='') {
+    const lines = String(text || '').replace(/\r\n?/g, '\n').split('\n');
+    const blocks = [];
+    let current = null;
+    for (const raw of lines) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      const m = line.match(/^(\d+)[.)]\s*(.*)$/);
+      if (m) {
+        if (current) blocks.push(current);
+        current = { no: Number(m[1]), lead: String(m[2] || '').trim(), lines: [] };
+      } else if (current) {
+        current.lines.push(line);
+      }
+    }
+    if (current) blocks.push(current);
+    return blocks;
+  }
+
+  function __s31rExtractAnswerMap(text='') {
+    const map = new Map();
+    const lines = String(text || '').replace(/\r\n?/g, '\n').split('\n');
+    for (const raw of lines) {
+      const line = String(raw || '').trim();
+      const m = line.match(/^(\d+)[.)]\s*(.*)$/);
+      if (m) map.set(Number(m[1]), String(m[2] || '').trim());
+    }
+    return map;
+  }
+
+  function __s31rWordCount(answer='') {
+    return String(answer || '').trim().split(/\s+/).filter(Boolean).length;
+  }
+
+  function __s31rBuildClue(answer='') {
+    return String(answer || '').trim().replace(/\s+/g, ', ');
+  }
+
+  function __s31rNormalizeLead(value='') {
+    return String(value || '')
+      .replace(/^\s*\d+[.)]\s*/, '')
+      .replace(/\s*\(?word count:\s*\d+\)?\s*$/i, '')
+      .replace(/\s*\[\s*clue:.*$/i, '')
+      .trim();
+  }
+
+  function __s31rNormalizeGuidedBlock(block, answer) {
+    const lead = __s31rNormalizeLead(block?.lead || '');
+    const rawLines = Array.isArray(block?.lines) ? block.lines.slice() : [];
+    const hints = [];
+    for (const raw of rawLines) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      if (/^clue:/i.test(line)) continue;
+      if (/^word count:/i.test(line)) continue;
+      hints.push(line.replace(/^\s*\d+[.)]\s*/, '').trim());
+    }
+    const metaParts = [];
+    if (hints.length) metaParts.push(hints.join(' / '));
+    metaParts.push(`clue: ${__s31rBuildClue(answer)}`);
+    metaParts.push(`word count: ${__s31rWordCount(answer)}`);
+    return {
+      lead,
+      hints,
+      inlineMeta: `(${metaParts.join(' | ')})`
+    };
+  }
+
+  function __s31rBuildGuidedWorksheetHtml(pairs) {
+    const items = pairs.map((pair) => {
+      const norm = __s31rNormalizeGuidedBlock(pair.block, pair.answer);
+      return (
+        `<div class="worksheet-item guided-inline-row" style="display:block !important; width:100% !important; margin:0 0 14px 0 !important; padding:0 0 12px 0 !important; border-bottom:1px solid #dfe7e2 !important; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">` +
+          `<div class="q-main" style="display:block !important; width:100% !important; font-weight:700 !important; line-height:1.65 !important; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">${pair.no}. ${__s31rEscapeHtml(norm.lead)} <span class="q-inline-meta" style="font-weight:400 !important; font-size:12px !important; color:#4b5563 !important; white-space:normal !important;">${__s31rEscapeHtml(norm.inlineMeta)}</span></div>` +
+        `</div>`
+      );
+    }).join('');
+    return `<div class="iaw-rendered worksheet-root guided-inline-lock" style="display:block !important; width:100% !important;">${items}</div>`;
+  }
+
+  function __s31rRepairGuidedPayload(payload = {}, reqBody = {}) {
+    if (!payload || typeof payload !== 'object') return payload;
+    const workbookType = __s31rNormalizeWorkbookType(
+      reqBody.workbookType || reqBody.workbook_type || payload.workbookType || payload.meta?.workbookType || ''
+    );
+    if (workbookType !== 'guided_writing') return payload;
+
+    const qBlocks = __s31rExtractQuestionBlocks(payload.questions || payload.worksheet || '');
+    const aMap = __s31rExtractAnswerMap(payload.answerSheet || '');
+    if (!qBlocks.length || !aMap.size) return payload;
+
+    const pairs = [];
+    for (const block of qBlocks) {
+      const answer = String(aMap.get(block.no) || '').trim();
+      if (!answer) continue;
+      pairs.push({ no: pairs.length + 1, block, answer });
+    }
+    if (!pairs.length) return payload;
+
+    const renderedQ = [];
+    const renderedA = [];
+    const renderedPairs = [];
+    for (const pair of pairs) {
+      const norm = __s31rNormalizeGuidedBlock(pair.block, pair.answer);
+      const qLine = `${pair.no}. ${norm.lead} ${norm.inlineMeta}`.replace(/\s+/g, ' ').trim();
+      renderedQ.push(qLine);
+      renderedA.push(`${pair.no}. ${pair.answer}`);
+      renderedPairs.push({
+        no: pair.no,
+        question: qLine,
+        answer: pair.answer,
+        clue: __s31rBuildClue(pair.answer),
+        wordCount: __s31rWordCount(pair.answer)
+      });
+    }
+
+    payload.questions = renderedQ.join('\n');
+    payload.answerSheet = renderedA.join('\n');
+    payload.worksheet = payload.questions;
+    payload.actualCount = renderedPairs.length;
+    payload.itemPairs = renderedPairs;
+    payload.worksheetHtml = __s31rBuildGuidedWorksheetHtml(pairs);
+    return payload;
+  }
+
+  module.exports = async function handler_v841_workbook_type_router_s31r(req, res) {
+    const originalJson = res.json.bind(res);
+    res.json = function patchedJson(payload) {
+      let nextPayload = payload;
+      try {
+        nextPayload = __s31rRepairGuidedPayload(payload, req?.body || {});
+      } catch (err) {
+        console.error('S31R guided inline clue lock fix failed:', err);
+      }
+      return originalJson(nextPayload);
+    };
+    return __prevExportS31R(req, res);
+  };
+
+  if (__prevExportS31R && __prevExportS31R.config) {
+    module.exports.config = __prevExportS31R.config;
+  }
+
+  console.log('✅ S31R guided inline clue lock fix applied');
+})();
