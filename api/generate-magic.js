@@ -10957,3 +10957,170 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S30-7R final response workbookType hardlock patch applied');
 })();
+
+
+/* =========================
+   S30-8R Safe Pair Recovery Patch
+   ========================= */
+(function(){
+  const __prevExportS308R = module.exports;
+
+  function __s308rExtractQuestionBlocks(text='') {
+    const lines = String(text || '').replace(/\r\n?/g, '\n').split('\n');
+    const blocks = [];
+    let current = null;
+    for (const raw of lines) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      const m = line.match(/^(\d+)[.)]\s*(.*)$/);
+      if (m) {
+        if (current) blocks.push(current);
+        current = { no: Number(m[1]), lead: String(m[2] || '').trim(), lines: [] };
+      } else if (current) {
+        current.lines.push(line);
+      }
+    }
+    if (current) blocks.push(current);
+    return blocks;
+  }
+
+  function __s308rExtractAnswerMap(text='') {
+    const map = new Map();
+    const lines = String(text || '').replace(/\r\n?/g, '\n').split('\n');
+    for (const raw of lines) {
+      const line = String(raw || '').trim();
+      const m = line.match(/^(\d+)[.)]\s*(.*)$/);
+      if (m) map.set(Number(m[1]), String(m[2] || '').trim());
+    }
+    return map;
+  }
+
+  function __s308rNormalizeGuidedBlock(block, answer) {
+    const lead = String(block?.lead || '').trim();
+    const rawLines = Array.isArray(block?.lines) ? block.lines.slice() : [];
+    const clean = [];
+    let hasClue = false;
+    let hasWordCount = false;
+    for (const raw of rawLines) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      const low = line.toLowerCase();
+      if (low.startsWith('clue:')) hasClue = true;
+      if (low.startsWith('word count:') || low.includes('word count:')) hasWordCount = true;
+      clean.push(line.replace(/^\((.*)\)$/,'$1'));
+    }
+    if (!hasClue && answer) clean.push(`clue: ${__mnRClue(answer)}`);
+    if (!hasWordCount && answer) clean.push(`word count: ${__mnRWordCount(answer)}`);
+    return { lead, lines: clean };
+  }
+
+  function __s308rEscapeHtml(text='') {
+    return String(text || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  function __s308rRepairPayload(payload={}, reqBody={}) {
+    if (!payload || payload.success !== true) return payload;
+    const type = (typeof normalizeWorkbookType === 'function')
+      ? normalizeWorkbookType(payload.workbookType || reqBody.workbookType || reqBody.workbook_type || '')
+      : String(payload.workbookType || reqBody.workbookType || 'guided_writing').toLowerCase().trim();
+
+    const qBlocks = __s308rExtractQuestionBlocks(payload.questions || '');
+    const aMap = __s308rExtractAnswerMap(payload.answerSheet || '');
+    if (!qBlocks.length || !aMap.size) return payload;
+
+    const pairs = [];
+    for (const block of qBlocks) {
+      const answer = String(aMap.get(block.no) || '').trim();
+      if (!answer) continue;
+      pairs.push({ no: pairs.length + 1, block, answer });
+    }
+    if (!pairs.length) return payload;
+
+    const renderedQ = [];
+    const renderedA = [];
+    const labels = ['①','②','③','④','⑤'];
+    const gf = (typeof detectGrammarFocus === 'function')
+      ? detectGrammarFocus([reqBody.userPrompt, reqBody.prompt, reqBody.topic, reqBody.worksheetTitle, payload.title].filter(Boolean).join(' '))
+      : {};
+    const lang = reqBody.language || payload.language || 'ko';
+
+    for (const pair of pairs) {
+      const no = pair.no;
+      const answer = pair.answer;
+      const lead = String(pair.block.lead || '').replace(/\s*\(?word count:\s*\d+\)?\s*$/i, '').trim();
+      if (type === 'blank_fill') {
+        renderedQ.push(`${no}. ${lead}`);
+        renderedQ.push(__mnRBlankSentence(answer, { grammarFocus: gf, language: lang }));
+      } else if (type === 'choice') {
+        renderedQ.push(`${no}. ${lead}`);
+        for (const [idx, c] of __mnRChoices(answer, { language: lang }).entries()) {
+          renderedQ.push(`${labels[idx] || '-'} ${c}`);
+        }
+      } else if (type === 'sentence_build') {
+        renderedQ.push(`${no}. ${lead}`);
+        renderedQ.push(`[ ${__mnRShuffle(__mnRWords(answer)).join(' / ')} ]`);
+      } else {
+        const norm = __s308rNormalizeGuidedBlock(pair.block, answer);
+        renderedQ.push(`${no}. ${norm.lead}`);
+        for (const line of norm.lines) renderedQ.push(line);
+      }
+      renderedA.push(`${no}. ${answer}`);
+    }
+
+    payload.workbookType = type;
+    payload.questions = renderedQ.join('\n');
+    payload.answerSheet = renderedA.join('\n');
+    payload.worksheet = payload.questions;
+    payload.actualCount = pairs.length;
+    payload.itemPairs = pairs.map((pair) => ({
+      no: pair.no,
+      question: `${pair.no}. ${String(pair.block.lead || '').trim()}`,
+      answer: pair.answer,
+    }));
+    payload.pairIntegrity = { ok: true, reason: 's30_8r_safe_pair_recovery', questionCount: pairs.length, answerCount: pairs.length };
+    payload.fullText = [payload.title, payload.instructions, payload.questions, ((lang === 'en' ? 'Answers\n' : '정답\n') + payload.answerSheet)].filter(Boolean).join('\n\n');
+
+    if (type === 'guided_writing') {
+      const itemsHtml = pairs.map((pair) => {
+        const norm = __s308rNormalizeGuidedBlock(pair.block, pair.answer);
+        const lead = `${pair.no}. ${norm.lead}`;
+        const lines = norm.lines.map((line) => `<div class="line">${__s308rEscapeHtml(line)}</div>`).join('');
+        return `<div class="worksheet-item" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+               `<div class="line">${__s308rEscapeHtml(lead)}</div>${lines}</div>`;
+      }).join('');
+      payload.worksheetHtml = `<div class="iaw-rendered worksheet-root">${itemsHtml}</div>`;
+    }
+
+    return payload;
+  }
+
+  module.exports = async function handler_v841_workbook_type_router_s308r(req, res) {
+    let currentJson = res.json.bind(res);
+    Object.defineProperty(res, 'json', {
+      configurable: true,
+      enumerable: true,
+      get() { return currentJson; },
+      set(fn) {
+        currentJson = function patchedJson(payload) {
+          let nextPayload = payload;
+          try {
+            nextPayload = __s308rRepairPayload(payload, req?.body || {});
+          } catch (err) {
+            console.error('S30-8R safe pair recovery failed:', err);
+          }
+          return fn.call(res, nextPayload);
+        };
+      }
+    });
+    return __prevExportS308R(req, res);
+  };
+
+  if (__prevExportS308R && __prevExportS308R.config) {
+    module.exports.config = __prevExportS308R.config;
+  }
+
+  console.log('✅ S30-8R safe pair recovery patch applied');
+})();
