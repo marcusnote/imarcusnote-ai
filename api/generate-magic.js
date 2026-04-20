@@ -11474,80 +11474,73 @@ module.exports.config = { runtime: "nodejs" };
   console.log('✅ S31R guided inline clue lock fix applied');
 })();
 
+
 /* =========================================================
-   S34 Guided Final Number Dedupe Fix
-   - final guided-only cleanup for duplicated numbering like "1. 1."
-   - preserves existing inline clue / word count behavior
+   S34 Guided Final Number Fix (integrated)
+   - final-response guided numbering dedupe only
+   - keeps existing guided inline clue logic intact
    - does not touch blank_fill / choice / sentence_build / wormhole
 ========================================================= */
 (function applyS34GuidedFinalNumberFix(){
   const __prevExportS34 = module.exports;
 
   function __s34NormalizeWorkbookType(value='') {
-    const v = String(value || '').trim().toLowerCase();
-    if (['guided_writing','guided writing','guided-writing','guided','writing'].includes(v)) return 'guided_writing';
-    if (['blank_fill','blank fill','blank-fill','blank','blankfill'].includes(v)) return 'blank_fill';
-    if (['choice','binary_choice','binary-choice','binary choice'].includes(v)) return 'choice';
-    if (['sentence_build','sentence-build','sentence build'].includes(v)) return 'sentence_build';
-    return 'guided_writing';
+    const v = String(value || '').toLowerCase().trim();
+    if (['guided_writing','guided writing','guided'].includes(v)) return 'guided_writing';
+    if (['blank_fill','blank fill','blankfill'].includes(v)) return 'blank_fill';
+    if (['choice','multiple_choice','multiple choice'].includes(v)) return 'choice';
+    if (['sentence_build','sentence build','sentencebuild'].includes(v)) return 'sentence_build';
+    return v;
+  }
+
+  function __s34IsGuidedPayload(payload = {}, reqBody = {}) {
+    const workbookType = __s34NormalizeWorkbookType(
+      reqBody.workbookType || reqBody.workbook_type || payload.workbookType || payload?.meta?.workbookType || ''
+    );
+    if (workbookType === 'guided_writing') return true
+    const header = [payload?.instructions, payload?.content, payload?.fullText].filter(Boolean).join('\n');
+    return /Writing Lab\s*·\s*Guided Writing Training/i.test(header);
   }
 
   function __s34DedupeLeadingNumber(text='') {
-    return String(text || '')
-      .replace(/^(\s*\d+[.)]\s+)(\d+[.)]\s+)/, '$1')
-      .replace(/^(?:\s*\d+[.)]\s*)+(.*)$/,'$1')
-      .trim();
+    return String(text || '').replace(/^(\s*\d+[.)]\s*)(?:\d+[.)]\s*)+/, '$1').trim();
   }
 
-  function __s34FixMultilineQuestions(text='') {
-    const lines = String(text || '').replace(/\r\n?/g,'\n').split('\n');
-    return lines.map((raw) => {
-      const line = String(raw || '');
-      const m = line.match(/^(\s*)(\d+)[.)]\s+(\d+)[.)]\s+(.*)$/);
-      if (m && m[2] === m[3]) {
-        return `${m[1]}${m[2]}. ${m[4]}`;
-      }
-      return line;
+  function __s34DedupeNumberedTextBlock(text='') {
+    return String(text || '').split('\n').map((line) => {
+      if (!/^\s*\d+[.)]\s*/.test(line)) return line;
+      return __s34DedupeLeadingNumber(line);
     }).join('\n');
   }
 
-  function __s34FixWorksheetHtml(html='') {
-    return String(html || '')
-      .replace(/>(\s*)(\d+)\.\s+(\2)\.\s+/g, '>$1$2. ')
-      .replace(/(<strong>\s*)(\d+)\.\s+(\2)\.\s+/g, '$1$2. ');
-  }
-
-  function __s34FixItemPairs(itemPairs) {
-    if (!Array.isArray(itemPairs)) return itemPairs;
-    return itemPairs.map((pair, idx) => {
-      if (!pair || typeof pair !== 'object') return pair;
-      const next = { ...pair };
-      if (typeof next.question === 'string') {
-        next.question = __s34FixMultilineQuestions(next.question);
-        const qm = next.question.match(/^(\d+)[.)]\s+(.*)$/);
-        if (qm) {
-          next.no = Number(qm[1]);
-        } else if (typeof next.no !== 'number') {
-          next.no = idx + 1;
-        }
-      }
-      return next;
-    });
+  function __s34DedupeHtml(html='') {
+    let out = String(html || '');
+    out = out.replace(/(<strong[^>]*>\s*\d+[.)]\s*)(?:\d+[.)]\s*)+/gi, '$1');
+    out = out.replace(/(<div[^>]*class="q-main"[^>]*>\s*\d+[.)]\s*)(?:\d+[.)]\s*)+/gi, '$1');
+    out = out.replace(/(<div[^>]*class="q"[^>]*>\s*<strong>\s*\d+[.)]\s*)(?:\d+[.)]\s*)+/gi, '$1');
+    return out;
   }
 
   function __s34RepairPayload(payload = {}, reqBody = {}) {
     if (!payload || typeof payload !== 'object') return payload;
-    const workbookType = __s34NormalizeWorkbookType(
-      reqBody.workbookType || reqBody.workbook_type || payload.workbookType || payload.meta?.workbookType || ''
-    );
-    if (workbookType !== 'guided_writing') return payload;
+    if (!__s34IsGuidedPayload(payload, reqBody)) return payload;
 
-    if (typeof payload.questions === 'string') payload.questions = __s34FixMultilineQuestions(payload.questions);
-    if (typeof payload.worksheet === 'string') payload.worksheet = __s34FixMultilineQuestions(payload.worksheet);
-    if (typeof payload.content === 'string') payload.content = __s34FixMultilineQuestions(payload.content);
-    if (typeof payload.fullText === 'string') payload.fullText = __s34FixMultilineQuestions(payload.fullText);
-    if (typeof payload.worksheetHtml === 'string') payload.worksheetHtml = __s34FixWorksheetHtml(payload.worksheetHtml);
-    payload.itemPairs = __s34FixItemPairs(payload.itemPairs);
+    if (typeof payload.questions === 'string') payload.questions = __s34DedupeNumberedTextBlock(payload.questions);
+    if (typeof payload.worksheet === 'string') payload.worksheet = __s34DedupeNumberedTextBlock(payload.worksheet);
+    if (typeof payload.content === 'string') payload.content = __s34DedupeNumberedTextBlock(payload.content);
+    if (typeof payload.fullText === 'string') payload.fullText = __s34DedupeNumberedTextBlock(payload.fullText);
+    if (typeof payload.worksheetHtml === 'string') payload.worksheetHtml = __s34DedupeHtml(payload.worksheetHtml);
+
+    if (Array.isArray(payload.itemPairs)) {
+      payload.itemPairs = payload.itemPairs.map((pair, idx) => {
+        const next = { ...pair };
+        if (typeof next.question === 'string') {
+          next.question = __s34DedupeNumberedTextBlock(next.question);
+        }
+        if (!next.no || !Number.isFinite(Number(next.no))) next.no = idx + 1;
+        return next;
+      });
+    }
 
     return payload;
   }
