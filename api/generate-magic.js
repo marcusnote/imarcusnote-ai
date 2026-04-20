@@ -10343,3 +10343,176 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log(`✅ ${PATCH_TAG} applied`);
 })();
+
+
+/* =========================================================
+   S30-6 Hardlock Renderer Patch
+   - final workbookType hardlock
+   - worksheet/pdf synchronized from final questions/answers
+   - blank fill truly removes clue lines
+   - guided writing restores clue/word count from answers
+========================================================= */
+(function applyS306HardlockRendererPatch(){
+  const __prevNormalizeWorkbookType = typeof normalizeWorkbookType === 'function' ? normalizeWorkbookType : null;
+  normalizeWorkbookType = function normalizeWorkbookType_s306(value = '') {
+    const v = String(value || '').trim().toLowerCase();
+    if (!v) return 'guided_writing';
+    if (['guided_writing','guided-writing','guided writing','guided','guide','writing'].includes(v)) return 'guided_writing';
+    if (['blank_fill','blank-fill','blank fill','blank','blankfill','fill_blank','fill_in_blank'].includes(v)) return 'blank_fill';
+    if (['choice','binary_choice','binary-choice','multiple choice','mcq','binarychoice','binary','either_or'].includes(v)) return 'choice';
+    if (['sentence_build','sentence-build','sentence build','build','rearrange'].includes(v)) return 'sentence_build';
+    if (__prevNormalizeWorkbookType) {
+      const prev = __prevNormalizeWorkbookType(value);
+      if (prev === 'binary_choice') return 'choice';
+      return prev || 'guided_writing';
+    }
+    return 'guided_writing';
+  };
+
+  function __s306ParseQuestionBlocks(questions=''){
+    const lines=String(questions||'').replace(/\r\n/g,'\n').split('\n');
+    const blocks=[]; let cur=null;
+    const push=()=>{ if(cur) blocks.push(cur); };
+    for(const raw of lines){
+      const line=String(raw||'').trim();
+      if(!line) continue;
+      const m=line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if(m){ push(); cur={ no:Number(m[1]), lead:String(m[2]||'').trim(), support:[] }; }
+      else if(cur){ cur.support.push(line); }
+    }
+    push();
+    return blocks;
+  }
+
+  function __s306ParseAnswerMap(answerSheet=''){
+    const map=new Map();
+    const lines=String(answerSheet||'').replace(/\r\n/g,'\n').split('\n').map(s=>s.trim()).filter(Boolean);
+    for(const line of lines){
+      const m=line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if(m) map.set(Number(m[1]), String(m[2]||'').trim());
+    }
+    return map;
+  }
+
+  function __s306CoreAnswer(answer=''){
+    return String(answer||'').split('/').map(s=>s.trim()).filter(Boolean)[0] || '';
+  }
+
+  function __s306AnswerWords(answer=''){
+    return __s306CoreAnswer(answer).replace(/[?.!]/g,'').split(/\s+/).map(s=>s.trim()).filter(Boolean);
+  }
+
+  function __s306WordCount(answer=''){
+    return __s306AnswerWords(answer).length;
+  }
+
+  function __s306Clue(answer=''){
+    return __s306AnswerWords(answer).join(', ');
+  }
+
+  function __s306BlankSentence(answer='', input={}){
+    const core=__s306CoreAnswer(answer);
+    if(!core) return '';
+    if(input?.grammarFocus?.isBeQuestion) return core.replace(/^(Am|Is|Are)\b/i,'____');
+    if(input?.grammarFocus?.isDoQuestion) return core.replace(/^(Do|Does)\b/i,'____');
+    const words=core.split(/\s+/);
+    if(!words.length) return core;
+    words[0]='_____';
+    return words.join(' ');
+  }
+
+  function __s306Shuffle(arr){
+    const a=arr.slice();
+    for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+    return a;
+  }
+
+  function __s306Choices(answer='', input={}){
+    const core=__s306CoreAnswer(answer);
+    if(!core) return [];
+    const ds=[];
+    if(input?.grammarFocus?.isBeQuestion){
+      ds.push(core.replace(/^(Am|Is|Are)\b/i,'Do'));
+      ds.push(core.replace(/^(Am|Is|Are)\b/i,'Does'));
+      ds.push(core.replace(/\?$/, ''));
+    } else if(input?.grammarFocus?.isDoQuestion){
+      ds.push(core.replace(/^(Do|Does)\b/i,'Is'));
+      ds.push(core.replace(/^(Do|Does)\b/i,'Are'));
+      ds.push(core.replace(/^(Do|Does)\b/i,'Did'));
+    } else {
+      ds.push(core.replace(/\?$/, '.'));
+      ds.push(core.replace(/\b(can|must|will|is|are|was|were)\b/i,'should'));
+      ds.push(core.replace(/\bthe\b/i,'a'));
+    }
+    const uniq=[];
+    for(const x of [core,...ds]){ const v=String(x||'').trim(); if(v && !uniq.includes(v)) uniq.push(v); if(uniq.length>=4) break; }
+    return __s306Shuffle(uniq);
+  }
+
+  function __s306RenderQuestions(formatted={}, input={}){
+    const type=normalizeWorkbookType(input?.workbookType || formatted?.workbookType || '');
+    const qBlocks=__s306ParseQuestionBlocks(formatted.questions || '');
+    const aMap=__s306ParseAnswerMap(formatted.answerSheet || '');
+    if(!qBlocks.length || !aMap.size) return formatted;
+    const qOut=[]; const aOut=[];
+    const labels=['①','②','③','④','⑤'];
+    for(const block of qBlocks){
+      const ans=String(aMap.get(block.no) || '').trim();
+      if(!ans) continue;
+      const lead=String(block.lead||'').replace(/\s*\(Word count:\s*\d+\)\s*$/i,'').trim();
+      if(type==='blank_fill'){
+        qOut.push(`${block.no}. ${lead}\n${__s306BlankSentence(ans, input)}`);
+      } else if(type==='choice'){
+        const choices=__s306Choices(ans, input);
+        qOut.push([`${block.no}. ${lead}`].concat(choices.map((c,i)=>`${labels[i]||'-'} ${c}`)).join('\n'));
+      } else if(type==='sentence_build'){
+        qOut.push(`${block.no}. ${lead}\n[ ${__s306Shuffle(__s306AnswerWords(ans)).join(' / ')} ]`);
+      } else {
+        const wc=__s306WordCount(ans);
+        const clue=__s306Clue(ans);
+        qOut.push(`${block.no}. ${lead}${wc?` (Word count: ${wc})`:''}\nclue: ${clue}`);
+      }
+      aOut.push(`${block.no}. ${ans}`);
+    }
+    const next={...formatted};
+    next.workbookType=type;
+    next.questions=qOut.join('\n');
+    next.answerSheet=aOut.join('\n');
+    next.actualCount=aOut.length;
+    next.worksheet=next.questions;
+    next.worksheetHtml='';
+    next.answerHtml='';
+    next.answerSheetHtml='';
+    next.itemPairs=(typeof __mn83BuildItemPairs==='function') ? __mn83BuildItemPairs(next.questions||'', next.answerSheet||'') : [];
+    next.pairIntegrity={ ok:true, reason:`s30_6_hardlock_${type}`, questionCount:aOut.length, answerCount:aOut.length };
+    next.content=[next.title, next.instructions, next.questions].filter(Boolean).join('\n\n');
+    next.fullText=[next.title, next.instructions, next.questions, ((input?.language==='en'?'Answers\n':'정답\n') + next.answerSheet)].filter(Boolean).join('\n\n');
+    return next;
+  }
+
+  const __prevTransform = typeof __v84TransformFormattedByWorkbookType === 'function' ? __v84TransformFormattedByWorkbookType : null;
+  if(__prevTransform){
+    __v84TransformFormattedByWorkbookType = function __v84TransformFormattedByWorkbookType_s306(formatted={}, input={}){
+      const base=__prevTransform(formatted, input);
+      return __s306RenderQuestions(base, input);
+    };
+  }
+
+  buildMagicWorksheetHtml = function buildMagicWorksheetHtml_s306(formatted={}, input={}){
+    const blocks=__s306ParseQuestionBlocks(formatted.questions || '');
+    if(!blocks.length) return '';
+    const esc = (v)=> String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return blocks.map(b=>{
+      const support=(b.support||[]).map(s=>`<div>${esc(s)}</div>`).join('');
+      return `<div class="worksheet-item"><p><strong>${b.no}. ${esc(b.lead)}</strong></p>${support}</div>`;
+    }).join('\n');
+  };
+
+  buildMagicAnswerHtml = function buildMagicAnswerHtml_s306(formatted={}, input={}){
+    const lines=String(formatted.answerSheet||'').split('\n').map(s=>s.trim()).filter(Boolean);
+    const esc = (v)=> String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return lines.map(line=>`<p>${esc(line)}</p>`).join('\n');
+  };
+
+  console.log('✅ S30-6 hardlock renderer patch applied');
+})();
