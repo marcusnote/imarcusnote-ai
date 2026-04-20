@@ -10957,3 +10957,247 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S30-7R final response workbookType hardlock patch applied');
 })();
+
+
+/* =========================================================
+   S30-8 Pair Lock Repair Patch
+   - keep question/answer alignment by number pair
+   - rebuild itemPairs from question blocks, not single lines
+   - keep each worksheet-item together in print/html
+========================================================= */
+(function applyS308PairLockRepairPatch(){
+  function __s308QuestionBlocks(questions = '') {
+    if (typeof __v84ExtractQuestionBlocks === 'function') {
+      return __v84ExtractQuestionBlocks(questions);
+    }
+    const lines = String(questions || '').split('\n');
+    const blocks = [];
+    let current = null;
+    const push = () => {
+      if (!current) return;
+      const lead = String(current.lines[0] || '').replace(/^\d+[.)-]?\s*/, '').trim();
+      const support = current.lines.slice(1).map((s) => String(s || '').trim()).filter(Boolean);
+      blocks.push({
+        no: current.no,
+        lead,
+        support,
+        lines: current.lines.slice(),
+        raw: current.lines.join('\n').trim(),
+      });
+    };
+    for (const raw of lines) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if (m) {
+        push();
+        current = { no: Number(m[1]), lines: [line] };
+      } else if (current) {
+        current.lines.push(line);
+      }
+    }
+    push();
+    return blocks;
+  }
+
+  function __s308AnswerMap(answerSheet = '') {
+    if (typeof __v84ExtractAnswerMap === 'function') {
+      return __v84ExtractAnswerMap(answerSheet);
+    }
+    const map = new Map();
+    for (const raw of String(answerSheet || '').split('\n')) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if (!m) continue;
+      map.set(Number(m[1]), String(m[2] || '').trim());
+    }
+    return map;
+  }
+
+  function __s308BuildPairsFromBlocks(questions = '', answers = '') {
+    const qBlocks = __s308QuestionBlocks(questions);
+    const aMap = __s308AnswerMap(answers);
+    return qBlocks
+      .map((block) => {
+        const answer = String(aMap.get(block.no) || '').trim();
+        if (!answer) return null;
+        const question = [block.lead].concat(block.support || []).filter(Boolean).join('\n').trim();
+        return {
+          no: block.no,
+          question,
+          answer,
+          lead: block.lead,
+          support: (block.support || []).slice(),
+          raw: block.raw,
+        };
+      })
+      .filter(Boolean);
+  }
+
+  function __s308RebuildQuestionsFromPairs(pairs = []) {
+    return pairs.map((pair, idx) => {
+      const no = Number(pair.no || idx + 1);
+      const lines = String(pair.question || '').split('\n').map((s) => s.trim()).filter(Boolean);
+      if (!lines.length) return '';
+      const [lead, ...support] = lines;
+      return [`${no}. ${lead}`].concat(support).join('\n');
+    }).filter(Boolean).join('\n');
+  }
+
+  function __s308RebuildAnswersFromPairs(pairs = []) {
+    return pairs.map((pair, idx) => `${Number(pair.no || idx + 1)}. ${String(pair.answer || '').trim()}`)
+      .filter(Boolean)
+      .join('\n');
+  }
+
+  function __s308RenumberPairs(pairs = []) {
+    return pairs.map((pair, idx) => ({ ...pair, no: idx + 1 }));
+  }
+
+  function __s308ApplyPairLock(formatted = {}, input = {}, reason = 's308_pair_lock') {
+    if (!formatted || typeof formatted !== 'object') return formatted;
+    const pairs = __s308BuildPairsFromBlocks(formatted.questions || '', formatted.answerSheet || '');
+    if (!pairs.length) return formatted;
+    const nextPairs = __s308RenumberPairs(pairs);
+    const next = { ...formatted };
+    next.questions = __s308RebuildQuestionsFromPairs(nextPairs);
+    next.answerSheet = __s308RebuildAnswersFromPairs(nextPairs);
+    next.actualCount = nextPairs.length;
+    next.itemPairs = nextPairs.map((pair) => ({ no: pair.no, question: pair.question, answer: pair.answer }));
+    next.pairIntegrity = { ok: true, reason, questionCount: nextPairs.length, answerCount: nextPairs.length };
+    next.content = [next.title, next.instructions, next.questions].filter(Boolean).join('\n\n');
+    next.fullText = [next.title, next.instructions, next.questions, ((input?.language === 'en' ? 'Answers\n' : '정답\n') + next.answerSheet)].filter(Boolean).join('\n\n');
+    if (typeof buildMagicWorksheetHtml === 'function') {
+      next.worksheetHtml = buildMagicWorksheetHtml(next, input);
+    }
+    if (typeof buildMagicAnswerHtml === 'function') {
+      next.answerHtml = buildMagicAnswerHtml(next, input);
+      next.answerSheetHtml = next.answerHtml;
+    }
+    return next;
+  }
+
+  const __prevMn83BuildItemPairs = typeof __mn83BuildItemPairs === 'function' ? __mn83BuildItemPairs : null;
+  __mn83BuildItemPairs = function __mn83BuildItemPairs_s308(questions = '', answers = '') {
+    const pairs = __s308BuildPairsFromBlocks(questions, answers);
+    if (pairs.length) {
+      return pairs.map((pair) => ({ no: pair.no, question: pair.question, answer: pair.answer }));
+    }
+    return __prevMn83BuildItemPairs ? __prevMn83BuildItemPairs(questions, answers) : [];
+  };
+
+  const __prevV854PolishPresentPerfectPairs = typeof __v854PolishPresentPerfectPairs === 'function' ? __v854PolishPresentPerfectPairs : null;
+  __v854PolishPresentPerfectPairs = function __v854PolishPresentPerfectPairs_s308(questions = '', answers = '', input = {}) {
+    const focus = input?.grammarFocus || (typeof detectGrammarFocus === 'function'
+      ? detectGrammarFocus([input?.userPrompt, input?.topic, input?.worksheetTitle].filter(Boolean).join(' '))
+      : {});
+    const topic = String(input?.topic || '');
+    const isPresentPerfect = focus?.isPresentPerfect || /현재완료|present\s+perfect/i.test(topic);
+    const isPresentPerfectContinuous = /현재완료\s*진행형|present\s+perfect\s+(continuous|progressive)/i.test(topic);
+    if (!isPresentPerfect || isPresentPerfectContinuous) {
+      return __prevV854PolishPresentPerfectPairs
+        ? __prevV854PolishPresentPerfectPairs(questions, answers, input)
+        : { questions: String(questions || '').trim(), answers: String(answers || '').trim() };
+    }
+
+    const qEntries = typeof __v854ExtractNumberedEntries === 'function' ? __v854ExtractNumberedEntries(questions) : [];
+    const aEntries = typeof __v854ExtractNumberedEntries === 'function' ? __v854ExtractNumberedEntries(answers) : [];
+    const qMap = new Map(qEntries.map((entry) => [entry.no, entry]));
+    const aMap = new Map(aEntries.map((entry) => [entry.no, entry]));
+    const pairedNos = qEntries.map((entry) => entry.no).filter((no) => aMap.has(no));
+    if (!pairedNos.length) {
+      return { questions: String(questions || '').trim(), answers: String(answers || '').trim() };
+    }
+
+    const keptPairs = [];
+    for (const no of pairedNos) {
+      const q = qMap.get(no);
+      const a = aMap.get(no);
+      const qText = (q?.lines || []).join(' ');
+      const aText = (a?.lines || []).join(' ');
+      if (typeof hasInvalidPastTimeMarker === 'function' && (hasInvalidPastTimeMarker(qText) || hasInvalidPastTimeMarker(aText))) continue;
+      if (/Note: This is a simple past tense|does not meet the criteria of present\s*perfect/i.test(aText)) continue;
+      keptPairs.push({ q: { no, lines: [...(q?.lines || [])] }, a: { no, lines: [...(a?.lines || [])] } });
+    }
+
+    const minKeep = Math.max(12, Math.ceil(pairedNos.length * 0.6));
+    const finalPairs = keptPairs.length >= minKeep
+      ? keptPairs
+      : pairedNos.map((no) => ({ q: qMap.get(no), a: aMap.get(no) }));
+
+    const qText = (typeof __v854RebuildNumberedEntries === 'function'
+      ? __v854RebuildNumberedEntries(finalPairs.map((pair) => pair.q), false)
+      : String(questions || ''))
+      .replace(/지난\s*주에/g, '최근에')
+      .replace(/어제/g, '최근에')
+      .replace(/\bthis morning\b/gi, 'recently');
+
+    const aText = (typeof __v854RebuildNumberedEntries === 'function'
+      ? __v854RebuildNumberedEntries(finalPairs.map((pair) => pair.a), false)
+      : String(answers || ''))
+      .replace(/\s*\(Note:[^)]+\)\.?/gi, '')
+      .replace(/\bI read that book recently\./gi, 'I have read that book recently.')
+      .replace(/\bI saw that movie recently\./gi, 'I have seen that movie recently.')
+      .replace(/\bHe went there recently\./gi, 'He has gone there recently.')
+      .replace(/\bShe has traveled many countries so far\./gi, 'She has traveled to many countries so far.')
+      .replace(/\bShe has learned the piano for three years\./gi, 'She has learned to play the piano for three years.')
+      .replace(/\bI have helped me to solve this problem\./gi, 'I have been helped to solve this problem.');
+
+    return { questions: qText.trim(), answers: aText.trim() };
+  };
+
+  const __prevV854ApplyWritingLabPolish = typeof __v854ApplyWritingLabPolish === 'function' ? __v854ApplyWritingLabPolish : null;
+  __v854ApplyWritingLabPolish = function __v854ApplyWritingLabPolish_s308(formatted = {}, input = {}) {
+    const base = __prevV854ApplyWritingLabPolish ? __prevV854ApplyWritingLabPolish(formatted, input) : formatted;
+    return __s308ApplyPairLock(base, input, 's308_writinglab_pair_lock');
+  };
+
+  const __prevMn831ApplyBalancedParityRepair = typeof __mn831ApplyBalancedParityRepair === 'function' ? __mn831ApplyBalancedParityRepair : null;
+  __mn831ApplyBalancedParityRepair = function __mn831ApplyBalancedParityRepair_s308(formatted = {}, input = {}) {
+    const base = __prevMn831ApplyBalancedParityRepair ? __prevMn831ApplyBalancedParityRepair(formatted, input) : formatted;
+    return __s308ApplyPairLock(base, input, 's308_balanced_parity_pair_lock');
+  };
+
+  const __prevFormatMagicResponse_s308 = typeof formatMagicResponse === 'function' ? formatMagicResponse : null;
+  formatMagicResponse = function formatMagicResponse_s308(rawText, input) {
+    const formatted = __prevFormatMagicResponse_s308 ? __prevFormatMagicResponse_s308(rawText, input) : {
+      title: '', instructions: '', questions: '', answerSheet: '', content: '', fullText: '', actualCount: 0,
+    };
+    return __s308ApplyPairLock(formatted, input, 's308_format_pair_lock');
+  };
+
+  const __prevBuildMagicWorksheetHtml = typeof buildMagicWorksheetHtml === 'function' ? buildMagicWorksheetHtml : null;
+  buildMagicWorksheetHtml = function buildMagicWorksheetHtml_s308(formatted = {}, input = {}) {
+    const source = __s308ApplyPairLock(formatted, input, 's308_html_pair_lock');
+    const blocks = __s308QuestionBlocks(source.questions || '');
+    if (!blocks.length && __prevBuildMagicWorksheetHtml) {
+      return __prevBuildMagicWorksheetHtml(formatted, input);
+    }
+    const esc = (v) => String(v || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return blocks.map((b) => {
+      const support = (b.lines.slice(1) || []).map((s) => `<div>${esc(s)}</div>`).join('');
+      return `<div class="worksheet-item" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 16px;"><p><strong>${b.no}. ${esc(b.lead)}</strong></p>${support}</div>`;
+    }).join('\n');
+  };
+
+  const __prevExport = module.exports;
+  module.exports = async function handler_s308_pairlock(req, res) {
+    const originalJson = res.json.bind(res);
+    res.json = function patchedJson_s308(payload) {
+      try {
+        if (payload && payload.success === true) {
+          const input = typeof normalizeInput === 'function' ? normalizeInput(req?.body || {}) : (req?.body || {});
+          payload = __s308ApplyPairLock(payload, input, 's308_final_response_pair_lock');
+        }
+      } catch (err) {
+        console.error('S30-8 pair lock response patch failed:', err);
+      }
+      return originalJson(payload);
+    };
+    return __prevExport(req, res);
+  };
+  if (__prevExport && __prevExport.config) module.exports.config = __prevExport.config;
+
+  console.log('✅ S30-8 pair lock repair patch applied');
+})();
