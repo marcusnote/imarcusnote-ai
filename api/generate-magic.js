@@ -9983,3 +9983,363 @@ module.exports.config = { runtime: "nodejs" };
     console.warn("⚠️ S30-5 patch failed:", e?.message || e);
   }
 })();
+
+
+/* =========================================================
+   S30-5 Workbook Type Stabilizer Patch
+   - guided_writing / blank_fill / choice / sentence_build
+   - be/do question stabilizer
+   - preview/PDF source alignment helper
+   Integrated build
+========================================================= */
+(function applyS305WorkbookTypeStabilizerPatch() {
+  const PATCH_TAG = "s30-5-workbook-type-stabilizer";
+
+  const __origNormalizeInput =
+    typeof normalizeInput === "function" ? normalizeInput : null;
+  const __origFormatMagicResponse =
+    typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+  const __origRepairFormattedMagicOutput =
+    typeof repairFormattedMagicOutput === "function"
+      ? repairFormattedMagicOutput
+      : null;
+
+  function __safeText(v) {
+    return String(v || "").replace(/\r\n/g, "\n");
+  }
+
+  function __normalizeWorkbookType(value = "") {
+    const v = String(value || "").trim().toLowerCase();
+
+    if (
+      [
+        "guided",
+        "guided writing",
+        "guided_writing",
+        "guided-writing",
+        "guide",
+      ].includes(v)
+    ) {
+      return "guided_writing";
+    }
+
+    if (
+      [
+        "blank",
+        "blank fill",
+        "blank_fill",
+        "blank-fill",
+        "fill",
+      ].includes(v)
+    ) {
+      return "blank_fill";
+    }
+
+    if (["choice", "multiple choice", "mcq", "multiple_choice"].includes(v)) {
+      return "choice";
+    }
+
+    if (
+      [
+        "sentence build",
+        "sentence_build",
+        "sentence-build",
+        "build",
+        "rearrange",
+      ].includes(v)
+    ) {
+      return "sentence_build";
+    }
+
+    return "guided_writing";
+  }
+
+  function __stripNumberPrefix(line = "") {
+    return String(line || "").replace(/^\s*\d+[.)-]?\s*/, "").trim();
+  }
+
+  function __extractQuestionBlocks(questions = "") {
+    const lines = __safeText(questions).split("\n");
+    const blocks = [];
+    let current = null;
+
+    for (const raw of lines) {
+      const line = String(raw || "");
+      const trimmed = line.trim();
+
+      if (/^\d+[.)-]?\s+/.test(trimmed)) {
+        if (current) blocks.push(current);
+        current = {
+          number: Number((trimmed.match(/^(\d+)/) || [])[1] || blocks.length + 1),
+          questionLine: line,
+          supportLines: [],
+        };
+      } else if (current) {
+        current.supportLines.push(line);
+      }
+    }
+
+    if (current) blocks.push(current);
+    return blocks;
+  }
+
+  function __extractAnswerBodies(answerSheet = "") {
+    return __safeText(answerSheet)
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => /^\d+[.)-]?\s+/.test(line))
+      .map((line) => __stripNumberPrefix(line));
+  }
+
+  function __removeWordCount(line = "") {
+    return String(line || "").replace(/\s*\(Word count:\s*\d+\)\s*$/i, "").trim();
+  }
+
+  function __countWordsFromAnswer(answer = "") {
+    const firstSentence = String(answer || "")
+      .split("/")
+      .map((v) => v.trim())
+      .filter(Boolean)[0] || "";
+
+    const cleaned = firstSentence
+      .replace(/[?.!,:;()[\]"']/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (!cleaned) return 0;
+    const words = cleaned.match(/[A-Za-z]+(?:[-'][A-Za-z]+)*/g) || [];
+    return words.length;
+  }
+
+  function __extractCoreAnswer(answer = "") {
+    return String(answer || "")
+      .split("/")
+      .map((v) => v.trim())
+      .filter(Boolean)[0] || "";
+  }
+
+  function __answerToWords(answer = "") {
+    return __extractCoreAnswer(answer)
+      .replace(/[?.!]/g, "")
+      .split(/\s+/)
+      .map((v) => v.trim())
+      .filter(Boolean);
+  }
+
+  function __buildClueFromAnswer(answer = "") {
+    return __answerToWords(answer).join(", ");
+  }
+
+  function __blankLeadingOperator(answer = "", input = {}) {
+    const core = __extractCoreAnswer(answer);
+    if (!core) return "";
+
+    if (input?.grammarFocus?.isBeQuestion) {
+      return core.replace(/^(Am|Is|Are)\b/i, "____");
+    }
+    if (input?.grammarFocus?.isDoQuestion) {
+      return core.replace(/^(Do|Does)\b/i, "____");
+    }
+
+    const words = core.split(/\s+/);
+    if (!words.length) return "";
+    words[0] = "____";
+    return words.join(" ");
+  }
+
+  function __shuffle(arr = []) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function __buildChoiceSet(answer = "", input = {}) {
+    const core = __extractCoreAnswer(answer);
+    if (!core) return [];
+
+    const distractors = [];
+    const base = core;
+
+    if (input?.grammarFocus?.isBeQuestion) {
+      distractors.push(base.replace(/^(Am|Is|Are)\b/i, "Do"));
+      distractors.push(base.replace(/\?$/, "").trim());
+      distractors.push(base.replace(/^(Am|Is|Are)\b/i, "Does"));
+    } else if (input?.grammarFocus?.isDoQuestion) {
+      distractors.push(base.replace(/^(Do|Does)\b/i, "Is"));
+      distractors.push(base.replace(/^(Do|Does)\b/i, "Are"));
+      distractors.push(base.replace(/\bdo\b/i, "Does"));
+    } else {
+      distractors.push(base.replace(/\?$/, "."));
+      distractors.push(base.replace(/\b(is|are|am|do|does)\b/i, "will"));
+      distractors.push(base.replace(/\bthe\b/i, "a"));
+    }
+
+    const unique = [base, ...distractors]
+      .map((v) => String(v || "").trim())
+      .filter(Boolean)
+      .filter((v, i, arr) => arr.indexOf(v) === i)
+      .slice(0, 4);
+
+    return __shuffle(unique);
+  }
+
+  function __renderGuidedBlocks(blocks = [], answers = [], input = {}) {
+    return blocks.map((block, idx) => {
+      const q = __removeWordCount(block.questionLine);
+      const answer = answers[idx] || "";
+      const count = __countWordsFromAnswer(answer);
+
+      const support = block.supportLines
+        .map((v) => String(v || "").trim())
+        .filter(Boolean)
+        .filter((v) => !/^\(Word count:\s*\d+\)$/i.test(v));
+
+      const hasClue = support.some((v) => /^clue\s*:/i.test(v));
+      if (!hasClue && answer) {
+        support.push(`clue: ${__buildClueFromAnswer(answer)}`);
+      }
+
+      const out = [q, ...support];
+      if (count > 0) {
+        out[0] = `${out[0]} (Word count: ${count})`;
+      }
+      return out.join("\n");
+    }).join("\n");
+  }
+
+  function __renderBlankFillBlocks(blocks = [], answers = [], input = {}) {
+    return blocks.map((block, idx) => {
+      const q = __removeWordCount(block.questionLine);
+      const answer = answers[idx] || "";
+      const blank = __blankLeadingOperator(answer, input);
+      const out = [q];
+      if (blank) out.push(blank);
+      return out.join("\n");
+    }).join("\n");
+  }
+
+  function __renderChoiceBlocks(blocks = [], answers = [], input = {}) {
+    const labels = ["①", "②", "③", "④", "⑤"];
+    return blocks.map((block, idx) => {
+      const q = __removeWordCount(block.questionLine);
+      const choices = __buildChoiceSet(answers[idx] || "", input);
+      const out = [q];
+      choices.forEach((c, i) => out.push(`${labels[i] || "-"} ${c}`));
+      return out.join("\n");
+    }).join("\n");
+  }
+
+  function __renderSentenceBuildBlocks(blocks = [], answers = []) {
+    return blocks.map((block, idx) => {
+      const q = __removeWordCount(block.questionLine);
+      const words = __answerToWords(answers[idx] || "");
+      const jumbled = words.length ? __shuffle(words).join(" / ") : "";
+      const out = [q];
+      if (jumbled) out.push(`[ ${jumbled} ]`);
+      return out.join("\n");
+    }).join("\n");
+  }
+
+  function __syncWorksheetSections(formatted, renderedQuestions) {
+    if (!formatted || typeof formatted !== "object") return formatted;
+
+    if (typeof formatted.worksheet === "string" && formatted.worksheet.includes("[[QUESTIONS]]")) {
+      formatted.worksheet = formatted.worksheet.replace(
+        /\[\[QUESTIONS\]\][\s\S]*?(?=\[\[ANSWERS\]\])/,
+        `[[QUESTIONS]]\n${renderedQuestions}\n`
+      );
+    }
+
+    if (typeof formatted.rawText === "string" && formatted.rawText.includes("[[QUESTIONS]]")) {
+      formatted.rawText = formatted.rawText.replace(
+        /\[\[QUESTIONS\]\][\s\S]*?(?=\[\[ANSWERS\]\])/,
+        `[[QUESTIONS]]\n${renderedQuestions}\n`
+      );
+    }
+
+    if (typeof formatted.worksheetHtml === "string" && formatted.worksheetHtml.trim()) {
+      formatted.worksheetHtml = "";
+    }
+
+    return formatted;
+  }
+
+  function __applyWorkbookTypeRendering(formatted = {}, input = {}) {
+    if (!formatted || typeof formatted !== "object") return formatted;
+
+    const workbookType = __normalizeWorkbookType(
+      input?.workbookType ||
+      formatted?.workbookType ||
+      formatted?.meta?.workbookType ||
+      ""
+    );
+
+    const blocks = __extractQuestionBlocks(formatted.questions || "");
+    const answers = __extractAnswerBodies(formatted.answerSheet || "");
+
+    if (!blocks.length || !answers.length) return formatted;
+
+    let renderedQuestions = formatted.questions || "";
+
+    if (workbookType === "blank_fill") {
+      renderedQuestions = __renderBlankFillBlocks(blocks, answers, input);
+    } else if (workbookType === "choice") {
+      renderedQuestions = __renderChoiceBlocks(blocks, answers, input);
+    } else if (workbookType === "sentence_build") {
+      renderedQuestions = __renderSentenceBuildBlocks(blocks, answers);
+    } else {
+      renderedQuestions = __renderGuidedBlocks(blocks, answers, input);
+    }
+
+    formatted.questions = renderedQuestions;
+    formatted.workbookType = workbookType;
+
+    __syncWorksheetSections(formatted, renderedQuestions);
+    return formatted;
+  }
+
+  if (__origNormalizeInput) {
+    normalizeInput = function normalizeInput_s305_workbooktype(body = {}) {
+      const next = __origNormalizeInput(body);
+
+      const workbookType = __normalizeWorkbookType(
+        body.workbookType ||
+        body.workbook_type ||
+        body.sheetType ||
+        body.outputType ||
+        next?.workbookType ||
+        ""
+      );
+
+      next.workbookType = workbookType;
+
+      if (workbookType === "guided_writing") {
+        next.magicStyle = next.magicStyle || "marcus_magic";
+        next.wordCountMode = next.wordCountMode || "auto";
+      } else {
+        next.wordCountMode = "";
+      }
+
+      return next;
+    };
+  }
+
+  if (__origFormatMagicResponse) {
+    formatMagicResponse = function formatMagicResponse_s305_workbooktype(rawText, input) {
+      const formatted = __origFormatMagicResponse(rawText, input);
+      return __applyWorkbookTypeRendering(formatted, input);
+    };
+  }
+
+  if (__origRepairFormattedMagicOutput) {
+    repairFormattedMagicOutput = async function repairFormattedMagicOutput_s305_workbooktype(formatted, input, failure) {
+      const repaired = await __origRepairFormattedMagicOutput(formatted, input, failure);
+      return __applyWorkbookTypeRendering(repaired, input);
+    };
+  }
+
+  console.log(`✅ ${PATCH_TAG} applied`);
+})();
