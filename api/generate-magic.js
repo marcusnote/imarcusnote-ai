@@ -11738,3 +11738,426 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S40 guided object split patch applied');
 })();
+
+
+/* =========================================================
+   S41 Canonical Guided Pipeline Patch
+   - guided_writing => object-render only from canonical itemPairs
+   - blank_fill / choice => derived from guided answer only
+   - block legacy string re-parse for guided / blank_fill / choice
+   - minimal invasive final-layer patch over latest deploy base
+========================================================= */
+(function applyS41CanonicalGuidedPipelinePatch(){
+  const __prevFormat_s41 = (typeof formatMagicResponse === 'function') ? formatMagicResponse : null;
+  const __prevTransform_s41 = (typeof __v84TransformFormattedByWorkbookType === 'function') ? __v84TransformFormattedByWorkbookType : null;
+  const __prevWorksheetHtml_s41 = (typeof buildMagicWorksheetHtml === 'function') ? buildMagicWorksheetHtml : null;
+  const __prevAnswerHtml_s41 = (typeof buildMagicAnswerHtml === 'function') ? buildMagicAnswerHtml : null;
+
+  function __s41Text(v){
+    if (v === null || v === undefined) return '';
+    return String(v).replace(/\r\n/g, '\n').replace(/\u00A0/g, ' ').trim();
+  }
+
+  function __s41NormType(v=''){
+    const t = __s41Text(v).toLowerCase();
+    if (!t) return 'guided_writing';
+    if (['guided_writing','guided-writing','guided writing','guided','guide','writing'].includes(t)) return 'guided_writing';
+    if (['blank_fill','blank-fill','blank fill','blank','fill','blankfill'].includes(t)) return 'blank_fill';
+    if (['choice','multiple choice','multiple_choice','mcq','binary_choice','binary-choice'].includes(t)) return 'choice';
+    if (['sentence_build','sentence-build','sentence build','build','rearrange'].includes(t)) return 'sentence_build';
+    return t;
+  }
+
+  function __s41Esc(v=''){
+    return String(v || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function __s41StripLeadingNumbers(v=''){
+    return __s41Text(v).replace(/^\s*\d+\s*[.)-]?\s*/, '').trim();
+  }
+
+  function __s41NormalizeWordCount(value, answer=''){
+    const s = __s41Text(value);
+    const m = s.match(/\d+/);
+    if (m) return Number(m[0]);
+    return __s41CountWords(answer);
+  }
+
+  function __s41CountWords(answer=''){
+    return __s41Text(answer)
+      .replace(/[.,!?;:()[\]"']/g, ' ')
+      .split(/\s+/)
+      .map(s => s.trim())
+      .filter(Boolean)
+      .length;
+  }
+
+  function __s41Clone(v){
+    try { return JSON.parse(JSON.stringify(v)); } catch(_) { return v; }
+  }
+
+  function __s41NormalizeClue(raw){
+    if (Array.isArray(raw)) {
+      return raw.map(x => __s41Text(x)).filter(Boolean);
+    }
+    const s = __s41Text(raw);
+    if (!s) return [];
+    return s.split(/\s*,\s*/).map(x => __s41Text(x)).filter(Boolean);
+  }
+
+  function __s41NormalizeSinglePair(raw, idx){
+    const source = raw && typeof raw === 'object' ? raw : {};
+    const question = __s41StripLeadingNumbers(
+      source.question ?? source.prompt ?? source.korean ?? source.stem ?? source.q ?? ''
+    );
+    const answer = __s41StripLeadingNumbers(
+      source.answer ?? source.modelAnswer ?? source.english ?? source.finalAnswer ?? source.a ?? ''
+    );
+    const clue = __s41NormalizeClue(source.clue ?? source.hint ?? source.keywords ?? source.words ?? '');
+    const wordCount = __s41NormalizeWordCount(
+      source.wordCount ?? source.word_count ?? source.wordsCount ?? source.lengthHint ?? '',
+      answer
+    );
+    return {
+      no: idx + 1,
+      question,
+      clue,
+      clueText: clue.join(', '),
+      wordCount,
+      answer,
+      shortAnswers: Array.isArray(source.shortAnswers) ? source.shortAnswers : [],
+      source: source.source || 's41_canonical_pipeline'
+    };
+  }
+
+  function __s41CanonicalizePairs(rawItems){
+    if (!Array.isArray(rawItems)) return [];
+    return rawItems
+      .map((item, idx) => __s41NormalizeSinglePair(item, idx))
+      .filter(item => item.question && item.answer)
+      .map((item, idx) => ({ ...item, no: idx + 1 }));
+  }
+
+  function __s41ResolveSourcePairs(formatted = {}){
+    const candidates = [
+      formatted.__s41CanonicalSourceItems,
+      formatted.__s40GuidedSourceItems,
+      formatted.itemPairs
+    ];
+    for (const candidate of candidates) {
+      if (Array.isArray(candidate) && candidate.length) {
+        const pairs = __s41CanonicalizePairs(__s41Clone(candidate));
+        if (pairs.length) return pairs;
+      }
+    }
+    return [];
+  }
+
+  function __s41EnsureCanonicalSource(formatted = {}, input = {}){
+    const next = formatted && typeof formatted === 'object' ? formatted : {};
+    const type = __s41NormType(input?.workbookType || next?.workbookType || next?.meta?.workbookType || '');
+    if (!['guided_writing','blank_fill','choice'].includes(type)) return next;
+
+    const sourcePairs = __s41ResolveSourcePairs(next);
+    if (sourcePairs.length) {
+      next.__s41CanonicalSourceItems = __s41Clone(sourcePairs);
+      next.__s41CanonicalPairIntegrity = {
+        ok: true,
+        workbookType: type,
+        count: sourcePairs.length
+      };
+    }
+    return next;
+  }
+
+  if (__prevFormat_s41) {
+    formatMagicResponse = function formatMagicResponse_s41(rawText, input = {}) {
+      const base = __prevFormat_s41(rawText, input) || {};
+      try {
+        return __s41EnsureCanonicalSource(base, input);
+      } catch (e) {
+        console.warn('⚠️ S41 canonical source stash skipped:', e?.message || e);
+        return base;
+      }
+    };
+  }
+
+  function __s41RenderGuidedWorksheet(pairs){
+    return `<div class="iaw-rendered worksheet-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      const clueHtml = pair.clueText
+        ? `<div class="guided-clue-line"><span class="guided-meta-label">Clue:</span> <span class="guided-meta-value">${__s41Esc(pair.clueText)}</span></div>`
+        : '';
+      const wcHtml = pair.wordCount
+        ? `<div class="guided-wordcount-line"><span class="guided-meta-label">Word Count:</span> <span class="guided-meta-value">${pair.wordCount}</span></div>`
+        : '';
+      return `<div class="worksheet-item guided-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+             `<div class="guided-question-line"><span class="guided-item-no">${no}.</span> <span class="guided-question-text">${__s41Esc(pair.question)}</span></div>` +
+             clueHtml + wcHtml +
+             `<div class="guided-answer-space"></div>` +
+             `</div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s41RenderGuidedAnswers(pairs){
+    return `<div class="iaw-rendered answer-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      return `<div class="guided-answer-item" data-item-no="${no}"><span class="guided-answer-no">${no}.</span> <span class="guided-answer-text">${__s41Esc(pair.answer)}</span></div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s41IsBlankableToken(token=''){
+    const clean = __s41Text(token).replace(/[.,!?;:()[\]"']/g, '');
+    if (!clean) return false;
+    if (clean.length <= 1) return false;
+    if (/^\d+$/.test(clean)) return false;
+    return true;
+  }
+
+  function __s41ConvertAnswerToBlank(answer=''){
+    const source = __s41Text(answer);
+    if (!source) return '';
+    const words = source.split(/\s+/).filter(Boolean);
+    const blankable = words
+      .map((word, index) => ({ word, index }))
+      .filter(({ word }) => __s41IsBlankableToken(word))
+      .map(({ index }) => index);
+    if (!blankable.length) return source;
+    const selected = blankable.slice(Math.max(0, blankable.length - 2));
+    return words.map((word, index) => selected.includes(index) ? '______' : word).join(' ');
+  }
+
+  function __s41BuildBlankPairs(guidedPairs){
+    return guidedPairs.map((pair, idx) => ({
+      no: idx + 1,
+      question: pair.question,
+      clue: pair.clue,
+      clueText: pair.clueText,
+      wordCount: pair.wordCount,
+      answer: pair.answer,
+      blankText: __s41ConvertAnswerToBlank(pair.answer)
+    }));
+  }
+
+  function __s41RenderBlankWorksheet(pairs){
+    return `<div class="iaw-rendered worksheet-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      const clueHtml = pair.clueText
+        ? `<div class="blankfill-clue-line"><span class="blankfill-meta-label">Clue:</span> <span class="blankfill-meta-value">${__s41Esc(pair.clueText)}</span></div>`
+        : '';
+      const wcHtml = pair.wordCount
+        ? `<div class="blankfill-wordcount-line"><span class="blankfill-meta-label">Word Count:</span> <span class="blankfill-meta-value">${pair.wordCount}</span></div>`
+        : '';
+      return `<div class="worksheet-item blankfill-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+             `<div class="blankfill-question-line"><span class="blankfill-item-no">${no}.</span> <span class="blankfill-question-text">${__s41Esc(pair.question)}</span></div>` +
+             clueHtml + wcHtml +
+             `<div class="blankfill-sentence-line">${__s41Esc(pair.blankText)}</div>` +
+             `</div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s41RenderBlankAnswers(pairs){
+    return `<div class="iaw-rendered answer-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      return `<div class="blankfill-answer-item" data-item-no="${no}"><span class="blankfill-answer-no">${no}.</span> <span class="blankfill-answer-text">${__s41Esc(pair.answer)}</span></div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s41CleanChoiceText(v=''){ return __s41Text(v); }
+
+  function __s41UniqueChoices(list){
+    const seen = new Set();
+    const out = [];
+    for (const item of list || []) {
+      const norm = __s41CleanChoiceText(item);
+      if (!norm || seen.has(norm)) continue;
+      seen.add(norm);
+      out.push(norm);
+    }
+    return out;
+  }
+
+  function __s41FlipNegation(answer=''){
+    const s = __s41CleanChoiceText(answer);
+    if (!s) return s;
+    if (/\bnot\b/i.test(s)) return __s41CleanChoiceText(s.replace(/\bnot\b/i, ''));
+    if (/\b(am|is|are|was|were|do|does|did|can|will|would|should|may|might|must|have|has|had)\b/i.test(s)) {
+      return __s41CleanChoiceText(
+        s.replace(/\b(am|is|are|was|were|do|does|did|can|will|would|should|may|might|must|have|has|had)\b/i, '$1 not')
+      );
+    }
+    return `not ${s}`;
+  }
+
+  function __s41RemoveArticle(answer=''){
+    return __s41CleanChoiceText(answer.replace(/\b(a|an|the)\b\s+/i, ''));
+  }
+
+  function __s41SwapLastToken(answer=''){
+    const words = __s41Text(answer).split(/\s+/).filter(Boolean);
+    if (words.length < 2) return answer;
+    const clone = [...words];
+    clone[clone.length - 1] = 'something';
+    return clone.join(' ');
+  }
+
+  function __s41BuildChoicePairs(guidedPairs){
+    return guidedPairs.map((pair, idx) => {
+      const choices = __s41UniqueChoices([
+        pair.answer,
+        __s41FlipNegation(pair.answer),
+        __s41RemoveArticle(pair.answer),
+        __s41SwapLastToken(pair.answer)
+      ]).slice(0, 4);
+      const correctIndex = choices.findIndex(choice => choice === pair.answer);
+      return {
+        no: idx + 1,
+        question: pair.question,
+        clue: pair.clue,
+        clueText: pair.clueText,
+        wordCount: pair.wordCount,
+        answer: pair.answer,
+        choices,
+        correctIndex: correctIndex >= 0 ? correctIndex : 0
+      };
+    }).filter(pair => Array.isArray(pair.choices) && pair.choices.length >= 2);
+  }
+
+  function __s41RenderChoiceWorksheet(pairs){
+    return `<div class="iaw-rendered worksheet-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      const clueHtml = pair.clueText
+        ? `<div class="choice-clue-line"><span class="choice-meta-label">Clue:</span> <span class="choice-meta-value">${__s41Esc(pair.clueText)}</span></div>`
+        : '';
+      const wcHtml = pair.wordCount
+        ? `<div class="choice-wordcount-line"><span class="choice-meta-label">Word Count:</span> <span class="choice-meta-value">${pair.wordCount}</span></div>`
+        : '';
+      const optionsHtml = (pair.choices || []).map((choice, cIdx) =>
+        `<div class="choice-option-line"><span class="choice-option-no">${cIdx + 1})</span> <span class="choice-option-text">${__s41Esc(choice)}</span></div>`
+      ).join('');
+      return `<div class="worksheet-item choice-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+             `<div class="choice-question-line"><span class="choice-item-no">${no}.</span> <span class="choice-question-text">${__s41Esc(pair.question)}</span></div>` +
+             clueHtml + wcHtml + `<div class="choice-options-wrap">${optionsHtml}</div>` + `</div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s41RenderChoiceAnswers(pairs){
+    return `<div class="iaw-rendered answer-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      const answerNo = Number.isInteger(pair.correctIndex) && pair.correctIndex >= 0 ? pair.correctIndex + 1 : '-';
+      return `<div class="choice-answer-item" data-item-no="${no}"><span class="choice-answer-no">${no}.</span> <span class="choice-answer-index">${answerNo}</span> <span class="choice-answer-text">(${__s41Esc(pair.answer)})</span></div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s41BuildCanonicalBundle(type, formatted = {}, input = {}){
+    const sourcePairs = __s41ResolveSourcePairs(formatted);
+    if (!sourcePairs.length) return null;
+
+    if (type === 'guided_writing') {
+      return {
+        workbookType: 'guided_writing',
+        sourcePairs,
+        questions: sourcePairs.map(pair => `${pair.no}. ${pair.question}`).join('\n'),
+        answerSheet: sourcePairs.map(pair => `${pair.no}. ${pair.answer}`).join('\n'),
+        worksheetHtml: __s41RenderGuidedWorksheet(sourcePairs),
+        answerSheetHtml: __s41RenderGuidedAnswers(sourcePairs)
+      };
+    }
+
+    if (type === 'blank_fill') {
+      const blankPairs = __s41BuildBlankPairs(sourcePairs);
+      return {
+        workbookType: 'blank_fill',
+        sourcePairs,
+        derivedPairs: blankPairs,
+        questions: blankPairs.map(pair => `${pair.no}. ${pair.question}\n${pair.blankText}`).join('\n'),
+        answerSheet: blankPairs.map(pair => `${pair.no}. ${pair.answer}`).join('\n'),
+        worksheetHtml: __s41RenderBlankWorksheet(blankPairs),
+        answerSheetHtml: __s41RenderBlankAnswers(blankPairs)
+      };
+    }
+
+    if (type === 'choice') {
+      const choicePairs = __s41BuildChoicePairs(sourcePairs);
+      return {
+        workbookType: 'choice',
+        sourcePairs,
+        derivedPairs: choicePairs,
+        questions: choicePairs.map(pair => `${pair.no}. ${pair.question}`).join('\n'),
+        answerSheet: choicePairs.map(pair => `${pair.no}. ${pair.correctIndex + 1}. ${pair.answer}`).join('\n'),
+        worksheetHtml: __s41RenderChoiceWorksheet(choicePairs),
+        answerSheetHtml: __s41RenderChoiceAnswers(choicePairs)
+      };
+    }
+
+    return null;
+  }
+
+  if (__prevTransform_s41) {
+    __v84TransformFormattedByWorkbookType = function __v84TransformFormattedByWorkbookType_s41(formatted = {}, input = {}) {
+      const base = __prevTransform_s41(formatted, input) || formatted || {};
+      try {
+        const type = __s41NormType(input?.workbookType || base?.workbookType || '');
+        if (!['guided_writing','blank_fill','choice'].includes(type)) return base;
+        const prepared = __s41EnsureCanonicalSource(base, input);
+        const bundle = __s41BuildCanonicalBundle(type, prepared, input);
+        if (!bundle) return base;
+
+        const next = { ...prepared };
+        next.workbookType = bundle.workbookType;
+        next.questions = bundle.questions;
+        next.worksheet = bundle.questions;
+        next.answerSheet = bundle.answerSheet;
+        next.actualCount = Array.isArray(bundle.derivedPairs) ? bundle.derivedPairs.length : bundle.sourcePairs.length;
+        next.itemPairs = __s41Clone(Array.isArray(bundle.derivedPairs) ? bundle.derivedPairs : bundle.sourcePairs);
+        next.worksheetHtml = bundle.worksheetHtml;
+        next.answerSheetHtml = bundle.answerSheetHtml;
+        next.answerHtml = bundle.answerSheetHtml;
+        next.__s41CanonicalSourceItems = __s41Clone(bundle.sourcePairs);
+        next.pairIntegrity = {
+          ok: true,
+          reason: 's41_canonical_pipeline',
+          workbookType: bundle.workbookType,
+          sourceCount: bundle.sourcePairs.length,
+          renderCount: next.actualCount
+        };
+        next.content = [next.title, next.instructions, next.questions].filter(Boolean).join('\n\n');
+        next.fullText = [
+          next.title,
+          next.instructions,
+          next.questions,
+          ((input?.language === 'en' ? 'Answers\n' : '정답\n') + next.answerSheet)
+        ].filter(Boolean).join('\n\n');
+        return next;
+      } catch (e) {
+        console.warn('⚠️ S41 transform skipped:', e?.message || e);
+        return base;
+      }
+    };
+  }
+
+  buildMagicWorksheetHtml = function buildMagicWorksheetHtml_s41(formatted = {}, input = {}) {
+    const type = __s41NormType(input?.workbookType || formatted?.workbookType || '');
+    if (['guided_writing','blank_fill','choice'].includes(type) && formatted && formatted.worksheetHtml) {
+      return formatted.worksheetHtml;
+    }
+    if (__prevWorksheetHtml_s41) return __prevWorksheetHtml_s41(formatted, input);
+    return '';
+  };
+
+  buildMagicAnswerHtml = function buildMagicAnswerHtml_s41(formatted = {}, input = {}) {
+    const type = __s41NormType(input?.workbookType || formatted?.workbookType || '');
+    if (['guided_writing','blank_fill','choice'].includes(type) && formatted && (formatted.answerSheetHtml || formatted.answerHtml)) {
+      return formatted.answerSheetHtml || formatted.answerHtml || '';
+    }
+    if (__prevAnswerHtml_s41) return __prevAnswerHtml_s41(formatted, input);
+    return '';
+  };
+
+  console.log('✅ S41 canonical guided pipeline patch applied');
+})();
