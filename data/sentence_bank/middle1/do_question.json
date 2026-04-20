@@ -1,1058 +1,658 @@
 [
   {
-    "id": "m1_do_q_001",
+    "id": 1,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "너는 축구를 하니?",
-    "enAnswer": "Do you play soccer?",
-    "clue": [
-      "Do",
-      "you",
-      "play",
-      "soccer"
-    ],
-    "wordCount": 4,
-    "answerShape": "do_question",
-    "similarGroup": "habit_sports_soccer"
-  },
-  {
-    "id": "m1_do_q_002",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 영어를 공부하니?",
-    "enAnswer": "Does she study English?",
-    "clue": [
-      "Does",
-      "she",
-      "study",
-      "English"
-    ],
-    "wordCount": 4,
-    "answerShape": "do_question",
-    "similarGroup": "habit_study_english"
-  },
-  {
-    "id": "m1_do_q_003",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 매일 운동하니?",
-    "enAnswer": "Do you exercise every day?",
-    "clue": [
-      "Do",
-      "you",
-      "exercise",
-      "every",
-      "day"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_exercise_daily"
-  },
-  {
-    "id": "m1_do_q_004",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 피아노를 치니?",
-    "enAnswer": "Does he play the piano?",
-    "clue": [
-      "Does",
-      "he",
-      "play",
-      "the",
-      "piano"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_music_piano"
-  },
-  {
-    "id": "m1_do_q_005",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 아침을 먹니?",
-    "enAnswer": "Do you eat breakfast?",
-    "clue": [
-      "Do",
-      "you",
-      "eat",
-      "breakfast"
-    ],
-    "wordCount": 4,
-    "answerShape": "do_question",
-    "similarGroup": "habit_food_breakfast"
-  },
-  {
-    "id": "m1_do_q_006",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 책을 읽니?",
-    "enAnswer": "Does she read books?",
-    "clue": [
-      "Does",
-      "she",
-      "read",
-      "books"
-    ],
-    "wordCount": 4,
-    "answerShape": "do_question",
-    "similarGroup": "habit_reading_books"
-  },
-  {
-    "id": "m1_do_q_007",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 TV를 보니?",
-    "enAnswer": "Do you watch TV?",
-    "clue": [
-      "Do",
-      "you",
-      "watch",
-      "TV"
-    ],
-    "wordCount": 4,
-    "answerShape": "do_question",
-    "similarGroup": "habit_watch_tv"
-  },
-  {
-    "id": "m1_do_q_008",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 학교에 걸어가니?",
-    "enAnswer": "Does he walk to school?",
-    "clue": [
-      "Does",
-      "he",
-      "walk",
-      "to",
-      "school"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_transport_walk"
-  },
-  {
-    "id": "m1_do_q_009",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 영어를 좋아하니?",
-    "enAnswer": "Do you like English?",
-    "clue": [
-      "Do",
-      "you",
-      "like",
-      "English"
-    ],
-    "wordCount": 4,
-    "answerShape": "do_question",
-    "similarGroup": "preference_subject_english"
-  },
-  {
-    "id": "m1_do_q_010",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 음악을 듣니?",
-    "enAnswer": "Does she listen to music?",
-    "clue": [
-      "Does",
-      "she",
-      "listen",
-      "to",
-      "music"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_listen_music"
-  },
-  {
-    "id": "m1_do_q_011",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 주말에 영화를 보니?",
-    "enAnswer": "Do you watch movies on weekends?",
-    "clue": [
-      "Do",
-      "you",
-      "watch",
-      "movies",
-      "on",
-      "weekends"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_movies_weekend"
-  },
-  {
-    "id": "m1_do_q_012",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 매일 숙제를 하니?",
-    "enAnswer": "Does he do his homework every day?",
-    "clue": [
-      "Does",
-      "he",
-      "do",
-      "his",
-      "homework",
-      "every",
-      "day"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_homework_daily"
-  },
-  {
-    "id": "m1_do_q_013",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 방과 후에 공부하니?",
-    "enAnswer": "Do you study after school?",
-    "clue": [
-      "Do",
-      "you",
-      "study",
-      "after",
-      "school"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_study_after_school"
-  },
-  {
-    "id": "m1_do_q_014",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 일찍 일어나니?",
-    "enAnswer": "Does she get up early?",
-    "clue": [
-      "Does",
-      "she",
-      "get",
-      "up",
-      "early"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_get_up_early"
-  },
-  {
-    "id": "m1_do_q_015",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 저녁에 음악을 듣니?",
-    "enAnswer": "Do you listen to music in the evening?",
-    "clue": [
-      "Do",
-      "you",
-      "listen",
-      "to",
-      "music",
-      "in",
-      "the",
-      "evening"
-    ],
-    "wordCount": 8,
-    "answerShape": "do_question",
-    "similarGroup": "habit_music_evening"
-  },
-  {
-    "id": "m1_do_q_016",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 친구들을 자주 만나니?",
-    "enAnswer": "Does he meet his friends often?",
-    "clue": [
-      "Does",
-      "he",
-      "meet",
-      "his",
-      "friends",
-      "often"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_meet_friends_often"
-  },
-  {
-    "id": "m1_do_q_017",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 학교에서 점심을 먹니?",
-    "enAnswer": "Do you eat lunch at school?",
-    "clue": [
-      "Do",
-      "you",
-      "eat",
-      "lunch",
-      "at",
-      "school"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_lunch_school"
-  },
-  {
-    "id": "m1_do_q_018",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 영어 일기를 쓰니?",
-    "enAnswer": "Does she write an English diary?",
-    "clue": [
-      "Does",
-      "she",
-      "write",
-      "an",
-      "English",
-      "diary"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_write_diary"
-  },
-  {
-    "id": "m1_do_q_019",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 일요일에 늦게 자니?",
-    "enAnswer": "Do you go to bed late on Sunday?",
-    "clue": [
-      "Do",
-      "you",
-      "go",
-      "to",
-      "bed",
-      "late",
-      "on",
-      "Sunday"
-    ],
-    "wordCount": 8,
-    "answerShape": "do_question",
-    "similarGroup": "habit_sleep_sunday"
-  },
-  {
-    "id": "m1_do_q_020",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 학교 도서관을 이용하니?",
-    "enAnswer": "Does he use the school library?",
-    "clue": [
-      "Does",
-      "he",
-      "use",
-      "the",
-      "school",
-      "library"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_use_library"
-  },
-  {
-    "id": "m1_do_q_021",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 매일 영어 단어를 외우니?",
-    "enAnswer": "Do you memorize English words every day?",
-    "clue": [
-      "Do",
-      "you",
-      "memorize",
-      "English",
-      "words",
-      "every",
-      "day"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_memorize_words"
-  },
-  {
-    "id": "m1_do_q_022",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 토요일에 쇼핑하니?",
-    "enAnswer": "Does she go shopping on Saturday?",
-    "clue": [
-      "Does",
-      "she",
-      "go",
-      "shopping",
-      "on",
-      "Saturday"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_shopping_saturday"
-  },
-  {
-    "id": "m1_do_q_023",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 자전거를 타니?",
-    "enAnswer": "Do you ride a bike?",
-    "clue": [
-      "Do",
-      "you",
-      "ride",
-      "a",
-      "bike"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_ride_bike"
-  },
-  {
-    "id": "m1_do_q_024",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 수업에 매일 참석하니?",
-    "enAnswer": "Does he attend classes every day?",
-    "clue": [
-      "Does",
-      "he",
-      "attend",
-      "classes",
-      "every",
-      "day"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_attend_classes"
-  },
-  {
-    "id": "m1_do_q_025",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 방을 자주 청소하니?",
-    "enAnswer": "Do you clean your room often?",
-    "clue": [
-      "Do",
-      "you",
-      "clean",
-      "your",
-      "room",
-      "often"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_clean_room"
-  },
-  {
-    "id": "m1_do_q_026",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 개를 키우니?",
-    "enAnswer": "Does she have a dog?",
-    "clue": [
-      "Does",
-      "she",
-      "have",
-      "a",
-      "dog"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_have_dog"
-  },
-  {
-    "id": "m1_do_q_027",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 물을 많이 마시니?",
-    "enAnswer": "Do you drink a lot of water?",
-    "clue": [
+    "korean": "너는 매일 아침 물을 마시니?",
+    "english": "Do you drink water every morning?",
+    "words": [
       "Do",
       "you",
       "drink",
-      "a",
-      "lot",
-      "of",
-      "water"
+      "water",
+      "every",
+      "morning",
+      "?"
     ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_drink_water"
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_028",
+    "id": 2,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "그는 저녁에 게임을 하니?",
-    "enAnswer": "Does he play games in the evening?",
-    "clue": [
+    "korean": "그녀는 방과 후에 숙제를 하니?",
+    "english": "Does she do her homework after school?",
+    "words": [
+      "Does",
+      "she",
+      "do",
+      "her",
+      "homework",
+      "after",
+      "school",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그는 매주 토요일에 축구를 하니?",
+    "english": "Does he play soccer every Saturday?",
+    "words": [
       "Does",
       "he",
       "play",
-      "games",
-      "in",
-      "the",
-      "evening"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_games_evening"
-  },
-  {
-    "id": "m1_do_q_029",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 주말에 공원에 가니?",
-    "enAnswer": "Do you go to the park on weekends?",
-    "clue": [
-      "Do",
-      "you",
-      "go",
-      "to",
-      "the",
-      "park",
-      "on",
-      "weekends"
-    ],
-    "wordCount": 8,
-    "answerShape": "do_question",
-    "similarGroup": "habit_park_weekend"
-  },
-  {
-    "id": "m1_do_q_030",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 동생을 도와주니?",
-    "enAnswer": "Does she help her younger brother?",
-    "clue": [
-      "Does",
-      "she",
-      "help",
-      "her",
-      "younger",
-      "brother"
+      "soccer",
+      "every",
+      "Saturday",
+      "?"
     ],
     "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_help_brother"
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_031",
+    "id": 4,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "너는 아침에 샤워하니?",
-    "enAnswer": "Do you take a shower in the morning?",
-    "clue": [
+    "korean": "너희는 점심시간에 영어를 공부하니?",
+    "english": "Do you study English at lunch time?",
+    "words": [
       "Do",
       "you",
-      "take",
-      "a",
-      "shower",
-      "in",
-      "the",
-      "morning"
+      "study",
+      "English",
+      "at",
+      "lunch",
+      "time",
+      "?"
     ],
-    "wordCount": 8,
-    "answerShape": "do_question",
-    "similarGroup": "habit_shower_morning"
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_032",
+    "id": 5,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "그는 버스로 학교에 가니?",
-    "enAnswer": "Does he go to school by bus?",
-    "clue": [
-      "Does",
-      "he",
-      "go",
+    "korean": "그들은 저녁에 TV를 보니?",
+    "english": "Do they watch TV in the evening?",
+    "words": [
+      "Do",
+      "they",
+      "watch",
+      "TV",
+      "in",
+      "the",
+      "evening",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "너는 학교에 걸어서 가니?",
+    "english": "Do you walk to school?",
+    "words": [
+      "Do",
+      "you",
+      "walk",
       "to",
       "school",
-      "by",
-      "bus"
+      "?"
     ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_bus_school"
+    "wordCount": 5,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_033",
+    "id": 7,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "너는 교실에서 영어를 사용하니?",
-    "enAnswer": "Do you use English in the classroom?",
-    "clue": [
-      "Do",
-      "you",
-      "use",
-      "English",
-      "in",
-      "the",
-      "classroom"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_use_english_class"
-  },
-  {
-    "id": "m1_do_q_034",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 일요일마다 교회에 가니?",
-    "enAnswer": "Does she go to church every Sunday?",
-    "clue": [
+    "korean": "그녀는 일요일마다 교회에 가니?",
+    "english": "Does she go to church every Sunday?",
+    "words": [
       "Does",
       "she",
       "go",
       "to",
       "church",
       "every",
-      "Sunday"
+      "Sunday",
+      "?"
     ],
     "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_church_sunday"
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_035",
+    "id": 8,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "너는 친구와 전화하니?",
-    "enAnswer": "Do you talk to your friend on the phone?",
-    "clue": [
-      "Do",
-      "you",
-      "talk",
-      "to",
-      "your",
-      "friend",
-      "on",
-      "the",
-      "phone"
-    ],
-    "wordCount": 9,
-    "answerShape": "do_question",
-    "similarGroup": "habit_phone_friend"
-  },
-  {
-    "id": "m1_do_q_036",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 수학을 좋아하니?",
-    "enAnswer": "Does he like math?",
-    "clue": [
+    "korean": "그는 버스로 학교에 오니?",
+    "english": "Does he come to school by bus?",
+    "words": [
       "Does",
       "he",
-      "like",
-      "math"
+      "come",
+      "to",
+      "school",
+      "by",
+      "bus",
+      "?"
     ],
-    "wordCount": 4,
-    "answerShape": "do_question",
-    "similarGroup": "preference_math"
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_037",
+    "id": 9,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "너는 저녁 식사 후에 산책하니?",
-    "enAnswer": "Do you take a walk after dinner?",
-    "clue": [
+    "korean": "너희는 주말마다 조부모님을 방문하니?",
+    "english": "Do you visit your grandparents every weekend?",
+    "words": [
+      "Do",
+      "you",
+      "visit",
+      "your",
+      "grandparents",
+      "every",
+      "weekend",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그들은 수업 시간에 질문을 많이 하니?",
+    "english": "Do they ask many questions in class?",
+    "words": [
+      "Do",
+      "they",
+      "ask",
+      "many",
+      "questions",
+      "in",
+      "class",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "너는 밤에 책을 읽니?",
+    "english": "Do you read books at night?",
+    "words": [
+      "Do",
+      "you",
+      "read",
+      "books",
+      "at",
+      "night",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그녀는 피아노를 잘 치니?",
+    "english": "Does she play the piano well?",
+    "words": [
+      "Does",
+      "she",
+      "play",
+      "the",
+      "piano",
+      "well",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그는 친구들과 농구를 하니?",
+    "english": "Does he play basketball with his friends?",
+    "words": [
+      "Does",
+      "he",
+      "play",
+      "basketball",
+      "with",
+      "his",
+      "friends",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "너희는 매일 아침 교실을 청소하니?",
+    "english": "Do you clean the classroom every morning?",
+    "words": [
+      "Do",
+      "you",
+      "clean",
+      "the",
+      "classroom",
+      "every",
+      "morning",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그들은 시험 전에 열심히 공부하니?",
+    "english": "Do they study hard before exams?",
+    "words": [
+      "Do",
+      "they",
+      "study",
+      "hard",
+      "before",
+      "exams",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "너는 매주 엄마를 도와 저녁을 만드니?",
+    "english": "Do you help your mother cook dinner every week?",
+    "words": [
+      "Do",
+      "you",
+      "help",
+      "your",
+      "mother",
+      "cook",
+      "dinner",
+      "every",
+      "week",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그녀는 학교에서 많은 친구를 사귀니?",
+    "english": "Does she make many friends at school?",
+    "words": [
+      "Does",
+      "she",
+      "make",
+      "many",
+      "friends",
+      "at",
+      "school",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그는 아침 식사로 빵을 먹니?",
+    "english": "Does he eat bread for breakfast?",
+    "words": [
+      "Does",
+      "he",
+      "eat",
+      "bread",
+      "for",
+      "breakfast",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "너희는 음악 시간에 노래를 부르니?",
+    "english": "Do you sing songs in music class?",
+    "words": [
+      "Do",
+      "you",
+      "sing",
+      "songs",
+      "in",
+      "music",
+      "class",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그들은 쉬는 시간에 밖에서 노니?",
+    "english": "Do they play outside during break time?",
+    "words": [
+      "Do",
+      "they",
+      "play",
+      "outside",
+      "during",
+      "break",
+      "time",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "너는 수업 후에 일기를 쓰니?",
+    "english": "Do you write in your diary after class?",
+    "words": [
+      "Do",
+      "you",
+      "write",
+      "in",
+      "your",
+      "diary",
+      "after",
+      "class",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그녀는 매일 아침 머리를 빗니?",
+    "english": "Does she brush her hair every morning?",
+    "words": [
+      "Does",
+      "she",
+      "brush",
+      "her",
+      "hair",
+      "every",
+      "morning",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그는 집에서 강아지와 노니?",
+    "english": "Does he play with his dog at home?",
+    "words": [
+      "Does",
+      "he",
+      "play",
+      "with",
+      "his",
+      "dog",
+      "at",
+      "home",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "너희는 과학 시간에 실험을 하니?",
+    "english": "Do you do experiments in science class?",
+    "words": [
+      "Do",
+      "you",
+      "do",
+      "experiments",
+      "in",
+      "science",
+      "class",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그들은 주말에 자전거를 타니?",
+    "english": "Do they ride bicycles on weekends?",
+    "words": [
+      "Do",
+      "they",
+      "ride",
+      "bicycles",
+      "on",
+      "weekends",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "너는 저녁마다 아빠와 산책하니?",
+    "english": "Do you take a walk with your father every evening?",
+    "words": [
       "Do",
       "you",
       "take",
       "a",
       "walk",
-      "after",
-      "dinner"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_walk_after_dinner"
-  },
-  {
-    "id": "m1_do_q_038",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 매일 아침 신문을 읽니?",
-    "enAnswer": "Does she read the newspaper every morning?",
-    "clue": [
-      "Does",
-      "she",
-      "read",
-      "the",
-      "newspaper",
-      "every",
-      "morning"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_newspaper_morning"
-  },
-  {
-    "id": "m1_do_q_039",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 방과 후에 농구를 하니?",
-    "enAnswer": "Do you play basketball after school?",
-    "clue": [
-      "Do",
-      "you",
-      "play",
-      "basketball",
-      "after",
-      "school"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_basketball_after_school"
-  },
-  {
-    "id": "m1_do_q_040",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 매주 할머니를 방문하니?",
-    "enAnswer": "Does he visit his grandmother every week?",
-    "clue": [
-      "Does",
-      "he",
-      "visit",
-      "his",
-      "grandmother",
-      "every",
-      "week"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_visit_grandmother"
-  },
-  {
-    "id": "m1_do_q_041",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 학교에서 친구들을 만나니?",
-    "enAnswer": "Do you meet your friends at school?",
-    "clue": [
-      "Do",
-      "you",
-      "meet",
+      "with",
       "your",
-      "friends",
-      "at",
-      "school"
+      "father",
+      "every",
+      "evening",
+      "?"
     ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_meet_friends_school"
+    "wordCount": 10,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_042",
+    "id": 27,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "그녀는 아침에 커피를 마시니?",
-    "enAnswer": "Does she drink coffee in the morning?",
-    "clue": [
-      "Does",
-      "she",
-      "drink",
-      "coffee",
-      "in",
-      "the",
-      "morning"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_coffee_morning"
-  },
-  {
-    "id": "m1_do_q_043",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 저녁에 책을 읽니?",
-    "enAnswer": "Do you read books in the evening?",
-    "clue": [
-      "Do",
-      "you",
-      "read",
-      "books",
-      "in",
-      "the",
-      "evening"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_read_evening"
-  },
-  {
-    "id": "m1_do_q_044",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 주말마다 축구를 보니?",
-    "enAnswer": "Does he watch soccer on weekends?",
-    "clue": [
-      "Does",
-      "he",
-      "watch",
-      "soccer",
-      "on",
-      "weekends"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_watch_soccer_weekend"
-  },
-  {
-    "id": "m1_do_q_045",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 주말에 늦게 일어나니?",
-    "enAnswer": "Do you get up late on weekends?",
-    "clue": [
-      "Do",
-      "you",
-      "get",
-      "up",
-      "late",
-      "on",
-      "weekends"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_getup_weekends"
-  },
-  {
-    "id": "m1_do_q_046",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 학교에서 점심을 먹니?",
-    "enAnswer": "Does she eat lunch at school?",
-    "clue": [
+    "korean": "그녀는 점심으로 샐러드를 먹니?",
+    "english": "Does she eat salad for lunch?",
+    "words": [
       "Does",
       "she",
       "eat",
+      "salad",
+      "for",
       "lunch",
-      "at",
-      "school"
+      "?"
     ],
     "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_she_lunch_school"
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_047",
+    "id": 28,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "너는 저녁에 숙제를 하니?",
-    "enAnswer": "Do you do your homework in the evening?",
-    "clue": [
-      "Do",
-      "you",
-      "do",
-      "your",
-      "homework",
-      "in",
-      "the",
-      "evening"
-    ],
-    "wordCount": 8,
-    "answerShape": "do_question",
-    "similarGroup": "habit_homework_evening"
-  },
-  {
-    "id": "m1_do_q_048",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 매일 이를 닦니?",
-    "enAnswer": "Does he brush his teeth every day?",
-    "clue": [
+    "korean": "그는 휴일에 사진을 찍니?",
+    "english": "Does he take pictures on holidays?",
+    "words": [
       "Does",
       "he",
-      "brush",
-      "his",
-      "teeth",
-      "every",
-      "day"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_brush_teeth"
-  },
-  {
-    "id": "m1_do_q_049",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 주말에 할아버지를 만나니?",
-    "enAnswer": "Do you visit your grandfather on weekends?",
-    "clue": [
-      "Do",
-      "you",
-      "visit",
-      "your",
-      "grandfather",
-      "on",
-      "weekends"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_visit_grandfather"
-  },
-  {
-    "id": "m1_do_q_050",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 매일 학교에 늦지 않니?",
-    "enAnswer": "Does she arrive at school on time every day?",
-    "clue": [
-      "Does",
-      "she",
-      "arrive",
-      "at",
-      "school",
-      "on",
-      "time",
-      "every",
-      "day"
-    ],
-    "wordCount": 9,
-    "answerShape": "do_question",
-    "similarGroup": "habit_arrive_on_time"
-  },
-  {
-    "id": "m1_do_q_051",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 친구들과 게임을 하니?",
-    "enAnswer": "Do you play games with your friends?",
-    "clue": [
-      "Do",
-      "you",
-      "play",
-      "games",
-      "with",
-      "your",
-      "friends"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_games_with_friends"
-  },
-  {
-    "id": "m1_do_q_052",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 저녁을 가족과 함께 먹니?",
-    "enAnswer": "Does he eat dinner with his family?",
-    "clue": [
-      "Does",
-      "he",
-      "eat",
-      "dinner",
-      "with",
-      "his",
-      "family"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_dinner_family"
-  },
-  {
-    "id": "m1_do_q_053",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 학교에서 영어를 배우니?",
-    "enAnswer": "Do you learn English at school?",
-    "clue": [
-      "Do",
-      "you",
-      "learn",
-      "English",
-      "at",
-      "school"
-    ],
-    "wordCount": 6,
-    "answerShape": "do_question",
-    "similarGroup": "habit_learn_english_school"
-  },
-  {
-    "id": "m1_do_q_054",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 매일 버스를 타니?",
-    "enAnswer": "Does she take the bus every day?",
-    "clue": [
-      "Does",
-      "she",
       "take",
-      "the",
-      "bus",
-      "every",
-      "day"
+      "pictures",
+      "on",
+      "holidays",
+      "?"
     ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_take_bus"
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   },
   {
-    "id": "m1_do_q_055",
+    "id": 29,
+    "grade": "middle1",
+    "semester": 1,
     "chapterKey": "do_question",
-    "koPrompt": "너는 매일 물병을 가지고 다니니?",
-    "enAnswer": "Do you carry a water bottle every day?",
-    "clue": [
+    "korean": "너희는 방과 후에 함께 연습하니?",
+    "english": "Do you practice together after school?",
+    "words": [
       "Do",
       "you",
-      "carry",
-      "a",
-      "water",
-      "bottle",
-      "every",
-      "day"
+      "practice",
+      "together",
+      "after",
+      "school",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
+  },
+  {
+    "id": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "chapterKey": "do_question",
+    "korean": "그들은 밤에 별을 보니?",
+    "english": "Do they look at the stars at night?",
+    "words": [
+      "Do",
+      "they",
+      "look",
+      "at",
+      "the",
+      "stars",
+      "at",
+      "night",
+      "?"
     ],
     "wordCount": 8,
-    "answerShape": "do_question",
-    "similarGroup": "habit_carry_bottle"
-  },
-  {
-    "id": "m1_do_q_056",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 영어 뉴스를 보니?",
-    "enAnswer": "Does he watch English news?",
-    "clue": [
-      "Does",
-      "he",
-      "watch",
-      "English",
-      "news"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_watch_english_news"
-  },
-  {
-    "id": "m1_do_q_057",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 주말에 청소를 하니?",
-    "enAnswer": "Do you clean the house on weekends?",
-    "clue": [
-      "Do",
-      "you",
-      "clean",
-      "the",
-      "house",
-      "on",
-      "weekends"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_clean_house"
-  },
-  {
-    "id": "m1_do_q_058",
-    "chapterKey": "do_question",
-    "koPrompt": "그녀는 방과 후에 춤을 추니?",
-    "enAnswer": "Does she dance after school?",
-    "clue": [
-      "Does",
-      "she",
-      "dance",
-      "after",
-      "school"
-    ],
-    "wordCount": 5,
-    "answerShape": "do_question",
-    "similarGroup": "habit_dance_after_school"
-  },
-  {
-    "id": "m1_do_q_059",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 아침에 우유를 마시니?",
-    "enAnswer": "Do you drink milk in the morning?",
-    "clue": [
-      "Do",
-      "you",
-      "drink",
-      "milk",
-      "in",
-      "the",
-      "morning"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_drink_milk"
-  },
-  {
-    "id": "m1_do_q_060",
-    "chapterKey": "do_question",
-    "koPrompt": "그는 주말에 가족과 시간을 보내니?",
-    "enAnswer": "Does he spend time with his family on weekends?",
-    "clue": [
-      "Does",
-      "he",
-      "spend",
-      "time",
-      "with",
-      "his",
-      "family",
-      "on",
-      "weekends"
-    ],
-    "wordCount": 9,
-    "answerShape": "do_question",
-    "similarGroup": "habit_family_time_weekend"
-  },
-  {
-    "id": "m1_do_q_061",
-    "chapterKey": "do_question",
-    "koPrompt": "너는 저녁 식사 전에 손을 씻니?",
-    "enAnswer": "Do you wash your hands before dinner?",
-    "clue": [
-      "Do",
-      "you",
-      "wash",
-      "your",
-      "hands",
-      "before",
-      "dinner"
-    ],
-    "wordCount": 7,
-    "answerShape": "do_question",
-    "similarGroup": "habit_wash_hands"
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed"
   }
 ]
