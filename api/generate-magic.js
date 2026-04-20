@@ -11565,3 +11565,176 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S34 guided final number fix applied');
 })();
+
+
+
+/* =========================================================
+   S40 Guided/Object Split Patch
+   - guided_writing => preserve s28 object-render source items
+   - blank_fill / choice / sentence_build => keep s30-6 hardlock path
+   - minimal invasive final-layer patch
+========================================================= */
+(function applyS40GuidedObjectSplitPatch(){
+  const __prevFormat_s40 = (typeof formatMagicResponse === 'function') ? formatMagicResponse : null;
+  const __prevTransform_s40 = (typeof __v84TransformFormattedByWorkbookType === 'function') ? __v84TransformFormattedByWorkbookType : null;
+  const __prevWorksheetHtml_s40 = (typeof buildMagicWorksheetHtml === 'function') ? buildMagicWorksheetHtml : null;
+  const __prevAnswerHtml_s40 = (typeof buildMagicAnswerHtml === 'function') ? buildMagicAnswerHtml : null;
+
+  function __s40NormType(v=''){
+    const t = String(v || '').trim().toLowerCase();
+    if (!t) return 'guided_writing';
+    if (['guided_writing','guided-writing','guided writing','guided','guide','writing'].includes(t)) return 'guided_writing';
+    if (['blank_fill','blank-fill','blank fill','blank','fill'].includes(t)) return 'blank_fill';
+    if (['choice','multiple choice','multiple_choice','mcq'].includes(t)) return 'choice';
+    if (['sentence_build','sentence-build','sentence build','build','rearrange'].includes(t)) return 'sentence_build';
+    return t;
+  }
+
+  function __s40Esc(v=''){
+    return String(v || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  function __s40StripLeadingNumbers(v=''){
+    return String(v || '').replace(/^(?:\s*\d+[.)-]?\s*)+/, '').trim();
+  }
+
+  function __s40WordCount(answer=''){
+    return String(answer || '')
+      .replace(/[?!.,]/g, ' ')
+      .split(/\s+/)
+      .map(s => s.trim())
+      .filter(Boolean)
+      .length;
+  }
+
+  function __s40Clone(v){
+    try { return JSON.parse(JSON.stringify(v)); } catch(_){ return v; }
+  }
+
+  if (__prevFormat_s40) {
+    formatMagicResponse = function formatMagicResponse_s40(rawText, input = {}) {
+      const base = __prevFormat_s40(rawText, input) || {};
+      try {
+        const type = __s40NormType(input?.workbookType || base?.workbookType || '');
+        if (type === 'guided_writing' && Array.isArray(base.itemPairs) && base.itemPairs.length) {
+          base.__s40GuidedSourceItems = __s40Clone(base.itemPairs);
+          if (base.worksheetHtml) base.__s40GuidedSourceWorksheetHtml = String(base.worksheetHtml || '');
+          if (base.answerSheetHtml) base.__s40GuidedSourceAnswerHtml = String(base.answerSheetHtml || '');
+        }
+      } catch (e) {
+        console.warn('⚠️ S40 format stash skipped:', e?.message || e);
+      }
+      return base;
+    };
+  }
+
+  function __s40ResolveGuidedItems(formatted = {}) {
+    if (Array.isArray(formatted.__s40GuidedSourceItems) && formatted.__s40GuidedSourceItems.length) {
+      return formatted.__s40GuidedSourceItems;
+    }
+    if (Array.isArray(formatted.itemPairs) && formatted.itemPairs.length) {
+      return formatted.itemPairs;
+    }
+    return [];
+  }
+
+  function __s40RebuildGuidedPayload(formatted = {}, input = {}) {
+    const sourceItems = __s40ResolveGuidedItems(formatted);
+    if (!sourceItems.length) return formatted;
+
+    const rebuiltRows = sourceItems.map((row, idx) => {
+      const no = idx + 1;
+      const question = __s40StripLeadingNumbers(row?.question || '');
+      const answer = __s40StripLeadingNumbers(row?.answer || '');
+      const clueArray = Array.isArray(row?.clue)
+        ? row.clue.map(x => String(x || '').trim()).filter(Boolean)
+        : String(row?.clue || '').split(',').map(x => x.trim()).filter(Boolean);
+      const clueText = clueArray.join(', ');
+      const wc = Number(row?.wordCount || 0) || __s40WordCount(answer);
+      const qLine = `${no}. ${question}${clueText ? ` (clue: ${clueText})` : ''}${wc ? ` | word count: ${wc}` : ''}`;
+      return {
+        no,
+        question,
+        answer,
+        clueArray,
+        clueText,
+        wordCount: wc,
+        shortAnswers: Array.isArray(row?.shortAnswers) ? row.shortAnswers : [],
+        source: row?.source || 's40_guided_object_split',
+        qLine,
+        aLine: `${no}. ${answer}`,
+      };
+    });
+
+    const next = { ...formatted };
+    next.workbookType = 'guided_writing';
+    next.questions = rebuiltRows.map(r => r.qLine).join('\n');
+    next.worksheet = next.questions;
+    next.answerSheet = rebuiltRows.map(r => r.aLine).join('\n');
+    next.actualCount = rebuiltRows.length;
+    next.itemPairs = rebuiltRows.map(r => ({
+      no: r.no,
+      question: r.question,
+      answer: r.answer,
+      clue: r.clueArray,
+      wordCount: r.wordCount,
+      shortAnswers: r.shortAnswers,
+      source: r.source,
+    }));
+    next.pairIntegrity = {
+      ok: true,
+      reason: 's40_guided_object_split',
+      questionCount: rebuiltRows.length,
+      answerCount: rebuiltRows.length,
+    };
+
+    next.content = [next.title, next.instructions, next.questions].filter(Boolean).join('\n\n');
+    next.fullText = [
+      next.title,
+      next.instructions,
+      next.questions,
+      ((input?.language === 'en' ? 'Answers\n' : '정답\n') + next.answerSheet)
+    ].filter(Boolean).join('\n\n');
+
+    next.worksheetHtml = rebuiltRows.map(r =>
+      `<div class="worksheet-item"><p><strong>${r.no}. ${__s40Esc(r.question)}</strong>${r.clueText ? ` <span>(clue: ${__s40Esc(r.clueText)})</span>` : ''}${r.wordCount ? ` <span>| word count: ${r.wordCount}</span>` : ''}</p></div>`
+    ).join('\n');
+
+    next.answerSheetHtml = rebuiltRows.map(r =>
+      `<p><strong>${r.no}. ${__s40Esc(r.answer)}</strong></p>`
+    ).join('\n');
+
+    next.answerHtml = next.answerSheetHtml;
+    return next;
+  }
+
+  if (__prevTransform_s40) {
+    __v84TransformFormattedByWorkbookType = function __v84TransformFormattedByWorkbookType_s40(formatted = {}, input = {}) {
+      const base = __prevTransform_s40(formatted, input) || formatted || {};
+      const type = __s40NormType(input?.workbookType || base?.workbookType || '');
+      if (type !== 'guided_writing') return base;
+      return __s40RebuildGuidedPayload(base, input);
+    };
+  }
+
+  buildMagicWorksheetHtml = function buildMagicWorksheetHtml_s40(formatted = {}, input = {}) {
+    const type = __s40NormType(input?.workbookType || formatted?.workbookType || '');
+    if (type === 'guided_writing' && formatted && formatted.worksheetHtml) return formatted.worksheetHtml;
+    if (__prevWorksheetHtml_s40) return __prevWorksheetHtml_s40(formatted, input);
+    return '';
+  };
+
+  buildMagicAnswerHtml = function buildMagicAnswerHtml_s40(formatted = {}, input = {}) {
+    const type = __s40NormType(input?.workbookType || formatted?.workbookType || '');
+    if (type === 'guided_writing' && formatted && (formatted.answerSheetHtml || formatted.answerHtml)) {
+      return formatted.answerSheetHtml || formatted.answerHtml || '';
+    }
+    if (__prevAnswerHtml_s40) return __prevAnswerHtml_s40(formatted, input);
+    return '';
+  };
+
+  console.log('✅ S40 guided object split patch applied');
+})();
