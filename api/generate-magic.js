@@ -9763,11 +9763,11 @@ module.exports.config = { runtime: "nodejs" };
 
 
 /* =========================
-   S30-3 FINAL GUIDED HARDLOCK OVERRIDE
+   S30-4 FINAL RENDERER HARDLOCK
    ========================= */
-(function applyS303FinalGuidedHardlockOverride() {
+(function applyS304FinalRendererHardlock() {
   try {
-    function __s303MergedInputText(input = {}) {
+    function __s304Text(input = {}) {
       return [input?.userPrompt, input?.topic, input?.worksheetTitle]
         .filter(Boolean)
         .join(" ")
@@ -9775,26 +9775,30 @@ module.exports.config = { runtime: "nodejs" };
         .trim();
     }
 
-    function __s303IsDoQuestionInput(input = {}) {
-      const t = __s303MergedInputText(input);
-      if (!t) return false;
+    function __s304IsGuided(input = {}) {
+      const type = (typeof normalizeWorkbookType === "function")
+        ? normalizeWorkbookType(input?.workbookType || input?.workbook_type || "")
+        : "";
+      return type === "guided_writing" || input?.mode === "writing" || input?.magicStyle === "marcus_magic";
+    }
 
+    function __s304IsDoQuestion(input = {}) {
+      const t = __s304Text(input);
+      if (!t) return false;
       if (/일반동사/.test(t) && /의문문/.test(t)) return true;
       if (/일반동사/.test(t) && /활용/.test(t)) return true;
       if (/일반동사/.test(t) && /질문/.test(t)) return true;
       if (/do\s*의문문/i.test(t)) return true;
       if (/do\s*question/i.test(t)) return true;
       if (/does\s*question/i.test(t)) return true;
-
       if (input?.aliasResolved?.chapterKey === "do_question") return true;
       if (String(input?.resolvedChapterKey || "") === "do_question") return true;
       if (input?.grammarFocus?.isDoQuestion) return true;
       if (String(input?.grammarFocus?.chapterKey || "") === "do_question") return true;
-
       return false;
     }
 
-    const __S303_DO_BANKS = {
+    const __S304_BANKS = {
       daily: [
         ['너는 매일 운동하니?', ['Do','you','exercise','every','day'], 'Do you exercise every day?', 'Yes, I do.', 'No, I do not.'],
         ['너는 일찍 일어나니?', ['Do','you','wake','up','early'], 'Do you wake up early?', 'Yes, I do.', 'No, I do not.'],
@@ -9805,32 +9809,32 @@ module.exports.config = { runtime: "nodejs" };
         ['너는 물을 많이 마시니?', ['Do','you','drink','a','lot','of','water'], 'Do you drink a lot of water?', 'Yes, I do.', 'No, I do not.'],
         ['너는 점심시간에 친구들과 이야기하니?', ['Do','you','talk','with','your','friends','at','lunch'], 'Do you talk with your friends at lunch?', 'Yes, I do.', 'No, I do not.'],
         ['너는 학교에서 영어를 사용하니?', ['Do','you','use','English','at','school'], 'Do you use English at school?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 음악을 듣니?', ['Do','you','listen','to','music'], 'Do you listen to music?', 'Yes, I do.', 'No, I do not.']
-      ],
+        ['너는 음악을 듣니?', ['Do','you','listen','to','music'], 'Do you listen to music?', 'Yes, I do.', 'No, I do not.']]
+      ,
       school: [
         ['그는 학교에 걸어가니?', ['Does','he','walk','to','school'], 'Does he walk to school?', 'Yes, he does.', 'No, he does not.'],
         ['그는 매일 수업에 참석하니?', ['Does','he','attend','classes','every','day'], 'Does he attend classes every day?', 'Yes, he does.', 'No, he does not.'],
         ['그들은 매일 교실을 청소하니?', ['Do','they','clean','the','classroom','every','day'], 'Do they clean the classroom every day?', 'Yes, they do.', 'No, they do not.'],
         ['그들은 버스를 타니?', ['Do','they','take','the','bus'], 'Do they take the bus?', 'Yes, they do.', 'No, they do not.'],
         ['그들은 토요일에 도서관에 가니?', ['Do','they','go','to','the','library','on','Saturdays'], 'Do they go to the library on Saturdays?', 'Yes, they do.', 'No, they do not.'],
-        ['그들은 공원에 가니?', ['Do','they','go','to','the','park'], 'Do they go to the park?', 'Yes, they do.', 'No, they do not.']
-      ],
+        ['그들은 공원에 가니?', ['Do','they','go','to','the','park'], 'Do they go to the park?', 'Yes, they do.', 'No, they do not.']]
+      ,
       hobby: [
         ['그녀는 피아노를 치니?', ['Does','she','play','the','piano'], 'Does she play the piano?', 'Yes, she does.', 'No, she does not.'],
         ['그들은 주말에 축구를 하니?', ['Do','they','play','soccer','on','weekends'], 'Do they play soccer on weekends?', 'Yes, they do.', 'No, they do not.'],
         ['그녀는 방과 후 농구를 하니?', ['Does','she','play','basketball','after','school'], 'Does she play basketball after school?', 'Yes, she does.', 'No, she does not.'],
         ['그들은 게임을 하니?', ['Do','they','play','games'], 'Do they play games?', 'Yes, they do.', 'No, they do not.'],
         ['그녀는 가족과 함께 영화를 보니?', ['Does','she','watch','movies','with','her','family'], 'Does she watch movies with her family?', 'Yes, she does.', 'No, she does not.'],
-        ['그는 TV를 보니?', ['Does','he','watch','TV'], 'Does he watch TV?', 'Yes, he does.', 'No, he does not.']
-      ],
+        ['그는 TV를 보니?', ['Does','he','watch','TV'], 'Does he watch TV?', 'Yes, he does.', 'No, he does not.']]
+      ,
       life: [
         ['그녀는 집에서 저녁을 먹니?', ['Does','she','eat','dinner','at','home'], 'Does she eat dinner at home?', 'Yes, she does.', 'No, she does not.'],
         ['그녀는 저녁에 숙제를 하니?', ['Does','she','do','her','homework','in','the','evening'], 'Does she do her homework in the evening?', 'Yes, she does.', 'No, she does not.'],
         ['그는 매일 이를 닦니?', ['Does','he','brush','his','teeth','every','day'], 'Does he brush his teeth every day?', 'Yes, he does.', 'No, he does not.'],
         ['그는 커피를 마시니?', ['Does','he','drink','coffee'], 'Does he drink coffee?', 'Yes, he does.', 'No, he does not.'],
         ['그녀는 친구를 만나니?', ['Does','she','meet','friends'], 'Does she meet friends?', 'Yes, she does.', 'No, she does not.'],
-        ['그는 개를 산책시키니?', ['Does','he','walk','his','dog'], 'Does he walk his dog?', 'Yes, he does.', 'No, he does not.']
-      ],
+        ['그는 개를 산책시키니?', ['Does','he','walk','his','dog'], 'Does he walk his dog?', 'Yes, he does.', 'No, he does not.']]
+      ,
       extended: [
         ['그녀는 영어를 공부하니?', ['Does','she','study','English'], 'Does she study English?', 'Yes, she does.', 'No, she does not.'],
         ['너는 영어를 공부하니?', ['Do','you','study','English'], 'Do you study English?', 'Yes, I do.', 'No, I do not.'],
@@ -9839,100 +9843,75 @@ module.exports.config = { runtime: "nodejs" };
         ['그는 과학을 좋아하니?', ['Does','he','like','science'], 'Does he like science?', 'Yes, he does.', 'No, he does not.'],
         ['그는 수학을 좋아하니?', ['Does','he','like','math'], 'Does he like math?', 'Yes, he does.', 'No, he does not.'],
         ['그는 운동을 하니?', ['Does','he','exercise'], 'Does he exercise?', 'Yes, he does.', 'No, he does not.'],
-        ['그는 일요일에 교회에 가니?', ['Does','he','go','to','church','on','Sundays'], 'Does he go to church on Sundays?', 'Yes, he does.', 'No, he does not.']
-      ]
+        ['그는 일요일에 교회에 가니?', ['Does','he','go','to','church','on','Sundays'], 'Does he go to church on Sundays?', 'Yes, he does.', 'No, he does not.']]
     };
 
-    function __s303Shuffle(arr) {
+    function __s304Shuffle(arr) {
       const a = arr.slice();
-      for (let i = a.length - 1; i > 0; i -= 1) {
+      for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        const tmp = a[i];
-        a[i] = a[j];
-        a[j] = tmp;
+        const t = a[i]; a[i] = a[j]; a[j] = t;
       }
       return a;
     }
 
-    function __s303RecentKey(input = {}) {
-      const t = __s303MergedInputText(input).toLowerCase();
-      const type = String(normalizeWorkbookType(input?.workbookType || "") || "guided_writing");
-      return "__S303_RECENT__::" + type + "::" + t;
+    function __s304Pick(input = {}) {
+      const all = [];
+      const quotas = [["daily",5],["school",5],["hobby",5],["life",5],["extended",5]];
+      for (const [group, cnt] of quotas) {
+        const picked = __s304Shuffle(__S304_BANKS[group] || []).slice(0, cnt);
+        all.push(...picked);
+      }
+      return __s304Shuffle(all).slice(0, 25);
     }
 
-    function __s303PickBank(input = {}) {
-      const pieces = [];
-      const quotas = [
-        ["daily", 5],
-        ["school", 5],
-        ["hobby", 5],
-        ["life", 5],
-        ["extended", 5]
-      ];
-
-      for (const [group, count] of quotas) {
-        const pool = __s303Shuffle(__S303_DO_BANKS[group] || []).slice(0, count);
-        pieces.push(...pool);
-      }
-
-      let picked = __s303Shuffle(pieces).slice(0, 25);
-      const key = __s303RecentKey(input);
-      const last = globalThis[key] || "";
-      const sig = picked.map((x) => x[2]).join("||");
-
-      if (sig === last) {
-        picked = __s303Shuffle(pieces).slice(0, 25);
-      }
-      globalThis[key] = picked.map((x) => x[2]).join("||");
-      return picked;
-    }
-
-    function __s303BuildGuided(input = {}, base = {}) {
-      const bank = __s303PickBank(input);
+    function __s304Build(input = {}, formatted = {}) {
+      const bank = __s304Pick(input);
       const questions = bank.map((item, idx) =>
-        `${idx + 1}. ${item[0]}\nclue: ${item[1].join(", ")}`
+        `${idx + 1}. ${item[0]} (clue: ${item[1].join(", ")}) (Word count: ${item[1].length})`
       ).join("\n");
       const answers = bank.map((item, idx) =>
         `${idx + 1}. ${item[2]} / ${item[3]} / ${item[4]}`
       ).join("\n");
 
-      const next = Object.assign({}, base || {});
-      next.title = next.title || buildMagicTitle(input);
-      next.instructions = __v84BuildWorkbookTypeInstructions(input, next.instructions || "");
+      const next = Object.assign({}, formatted || {});
       next.questions = questions;
       next.answerSheet = answers;
       next.actualCount = 25;
-      next.itemPairs = __mn83BuildItemPairs(next.questions || "", next.answerSheet || "");
-      next.pairIntegrity = { ok: true, reason: "s30_3_do_guided_hardlock", questionCount: 25, answerCount: 25 };
+      next.title = next.title || (typeof buildMagicTitle === "function" ? buildMagicTitle(input) : "");
+      if (typeof __v84BuildWorkbookTypeInstructions === "function") {
+        next.instructions = __v84BuildWorkbookTypeInstructions(input, next.instructions || "");
+      }
+      next.itemPairs = (typeof __mn83BuildItemPairs === "function")
+        ? __mn83BuildItemPairs(next.questions || "", next.answerSheet || "")
+        : [];
+      next.pairIntegrity = { ok: true, reason: "s30_4_final_renderer_hardlock", questionCount: 25, answerCount: 25 };
       next.content = [next.title, next.instructions, next.questions].filter(Boolean).join("\n\n");
       next.fullText = [
         next.title,
         next.instructions,
         next.questions,
-        ((input.language === "en" ? "Answers\n" : "정답\n") + (next.answerSheet || ""))
+        input?.language === "en" ? "Answers" : "정답",
+        next.answerSheet
       ].filter(Boolean).join("\n\n");
       return next;
     }
 
-    const __prevWorkbookRouterS303 =
-      typeof __v84TransformFormattedByWorkbookType === "function"
-        ? __v84TransformFormattedByWorkbookType
-        : null;
-
-    if (__prevWorkbookRouterS303) {
-      __v84TransformFormattedByWorkbookType = function __v84TransformFormattedByWorkbookType_s303(formatted = {}, input = {}) {
+    const __prevFormatS304 = typeof formatMagicResponse === "function" ? formatMagicResponse : null;
+    if (__prevFormatS304) {
+      formatMagicResponse = function formatMagicResponse_s304(rawText, input = {}) {
+        const formatted = __prevFormatS304(rawText, input);
         try {
-          const type = normalizeWorkbookType(input?.workbookType || "");
-          if (__s303IsDoQuestionInput(input) && type === "guided_writing") {
-            return __s303BuildGuided(input, formatted);
+          if (__s304IsGuided(input) && __s304IsDoQuestion(input)) {
+            return __s304Build(input, formatted);
           }
         } catch (e) {}
-        return __prevWorkbookRouterS303(formatted, input);
+        return formatted;
       };
     }
 
-    console.log("✅ S30-3 final guided hardlock override applied");
+    console.log("✅ S30-4 final renderer hardlock applied");
   } catch (e) {
-    console.warn("⚠️ S30-3 final guided hardlock override failed:", e?.message || e);
+    console.warn("⚠️ S30-4 final renderer hardlock failed:", e?.message || e);
   }
 })();
