@@ -10735,3 +10735,225 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S30-7 workbook inference + PDF wordcount patch applied');
 })();
+
+
+/* =========================================================
+   S30-7R Final Response WorkbookType Hardlock Patch
+   - force final workbookType rendering right before JSON response
+   - keep blank fill / choice / sentence build stable in preview and PDF
+========================================================= */
+(function applyS307ResponseHardlockPatch(){
+  const __prevExport = module.exports;
+
+  function __mnRNormType(value='') {
+    const v = String(value || '').trim().toLowerCase();
+    if (!v) return 'guided_writing';
+    if (['guided_writing','guided-writing','guided writing','guided','guide','writing'].includes(v)) return 'guided_writing';
+    if (['blank_fill','blank-fill','blank fill','blank','blankfill','fill_blank','fill_in_blank'].includes(v)) return 'blank_fill';
+    if (['choice','binary_choice','binary-choice','multiple choice','mcq','binarychoice','binary','either_or'].includes(v)) return 'choice';
+    if (['sentence_build','sentence-build','sentence build','build','rearrange'].includes(v)) return 'sentence_build';
+    return 'guided_writing';
+  }
+
+  function __mnRText(v){ return String(v || '').replace(/\r\n/g, '\n'); }
+  function __mnREsc(v){ return String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function __mnRQuestionBlocks(questions='') {
+    const lines = __mnRText(questions).split('\n');
+    const blocks = [];
+    let cur = null;
+    const push = () => { if (cur) blocks.push(cur); };
+    for (const raw of lines) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if (m) {
+        push();
+        cur = { no: Number(m[1]), lead: String(m[2] || '').trim(), support: [] };
+      } else if (cur) {
+        cur.support.push(line);
+      }
+    }
+    push();
+    return blocks;
+  }
+
+  function __mnRAnswerMap(answerSheet='') {
+    const map = new Map();
+    const lines = __mnRText(answerSheet).split('\n').map(s => s.trim()).filter(Boolean);
+    for (const line of lines) {
+      const m = line.match(/^(\d+)[.)-]?\s+(.*)$/);
+      if (m) map.set(Number(m[1]), String(m[2] || '').trim());
+    }
+    return map;
+  }
+
+  function __mnRCoreAnswer(answer='') {
+    return String(answer || '').split('/').map(s => s.trim()).filter(Boolean)[0] || '';
+  }
+
+  function __mnRWords(answer='') {
+    return __mnRCoreAnswer(answer)
+      .replace(/[?.!]/g, '')
+      .split(/\s+/)
+      .map(s => s.trim())
+      .filter(Boolean);
+  }
+
+  function __mnRWordCount(answer='') { return __mnRWords(answer).length; }
+  function __mnRClue(answer='') { return __mnRWords(answer).join(', '); }
+
+  function __mnRBlankSentence(answer='', input={}) {
+    const core = __mnRCoreAnswer(answer);
+    if (!core) return '';
+    if (input?.grammarFocus?.isBeQuestion) return core.replace(/^(Am|Is|Are)\b/i, '____');
+    if (input?.grammarFocus?.isDoQuestion) return core.replace(/^(Do|Does)\b/i, '____');
+    const words = core.split(/\s+/);
+    if (!words.length) return '';
+    words[0] = '____';
+    return words.join(' ');
+  }
+
+  function __mnRShuffle(arr=[]) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function __mnRChoices(answer='', input={}) {
+    const core = __mnRCoreAnswer(answer);
+    if (!core) return [];
+    const ds = [];
+    if (input?.grammarFocus?.isBeQuestion) {
+      ds.push(core.replace(/^(Am|Is|Are)\b/i, 'Do'));
+      ds.push(core.replace(/^(Am|Is|Are)\b/i, 'Does'));
+      ds.push(core.replace(/\?$/, ''));
+    } else if (input?.grammarFocus?.isDoQuestion) {
+      ds.push(core.replace(/^(Do|Does)\b/i, 'Is'));
+      ds.push(core.replace(/^(Do|Does)\b/i, 'Are'));
+      ds.push(core.replace(/^(Do|Does)\b/i, 'Did'));
+    } else {
+      ds.push(core.replace(/\?$/, '.'));
+      ds.push(core.replace(/\b(is|are|was|were|can|must|will)\b/i, 'should'));
+      ds.push(core.replace(/\bthe\b/i, 'a'));
+    }
+    const uniq = [];
+    for (const x of [core, ...ds]) {
+      const v = String(x || '').trim();
+      if (v && !uniq.includes(v)) uniq.push(v);
+      if (uniq.length >= 4) break;
+    }
+    return __mnRShuffle(uniq);
+  }
+
+  function __mnRBuildWorksheetHtml(questions='') {
+    const blocks = __mnRQuestionBlocks(questions);
+    return blocks.map((b) => {
+      const support = (b.support || []).map((s) => `<div>${__mnREsc(s)}</div>`).join('');
+      return `<div class="worksheet-item"><p><strong>${b.no}. ${__mnREsc(b.lead)}</strong></p>${support}</div>`;
+    }).join('\n');
+  }
+
+  function __mnRBuildAnswerHtml(answerSheet='') {
+    return __mnRText(answerSheet)
+      .split('\n')
+      .map((s) => s.trim())
+      .filter(Boolean)
+      .map((line) => `<p>${__mnREsc(line)}</p>`)
+      .join('\n');
+  }
+
+  function __mnRBuildItemPairs(questions='', answerSheet='') {
+    const qBlocks = __mnRQuestionBlocks(questions);
+    const aMap = __mnRAnswerMap(answerSheet);
+    return qBlocks
+      .map((block) => {
+        const q = [block.lead].concat(block.support || []).filter(Boolean).join('\n').trim();
+        const a = String(aMap.get(block.no) || '').trim();
+        return q && a ? { question: q, answer: a } : null;
+      })
+      .filter(Boolean);
+  }
+
+  function __mnRForceWorkbookType(payload, reqBody={}) {
+    if (!payload || payload.success !== true) return payload;
+
+    const input = {
+      workbookType: __mnRNormType(payload.workbookType || reqBody.workbookType || reqBody.workbook_type || ''),
+      grammarFocus: (typeof detectGrammarFocus === 'function')
+        ? detectGrammarFocus([
+            reqBody.userPrompt,
+            reqBody.prompt,
+            reqBody.topic,
+            reqBody.worksheetTitle,
+            payload.title,
+          ].filter(Boolean).join(' '))
+        : {},
+      language: reqBody.language || payload.language || 'ko',
+    };
+
+    const qBlocks = __mnRQuestionBlocks(payload.questions || '');
+    const aMap = __mnRAnswerMap(payload.answerSheet || '');
+    if (!qBlocks.length || !aMap.size) {
+      payload.workbookType = input.workbookType;
+      return payload;
+    }
+
+    const labels = ['①','②','③','④','⑤'];
+    const renderedQ = [];
+    const renderedA = [];
+
+    for (const block of qBlocks) {
+      const ans = String(aMap.get(block.no) || '').trim();
+      if (!ans) continue;
+      const lead = String(block.lead || '').replace(/\s*\(Word count:\s*\d+\)\s*$/i, '').trim();
+
+      if (input.workbookType === 'blank_fill') {
+        renderedQ.push(`${block.no}. ${lead}\n${__mnRBlankSentence(ans, input)}`);
+      } else if (input.workbookType === 'choice') {
+        const choices = __mnRChoices(ans, input);
+        renderedQ.push([`${block.no}. ${lead}`].concat(choices.map((c, i) => `${labels[i] || '-'} ${c}`)).join('\n'));
+      } else if (input.workbookType === 'sentence_build') {
+        renderedQ.push(`${block.no}. ${lead}\n[ ${__mnRShuffle(__mnRWords(ans)).join(' / ')} ]`);
+      } else {
+        renderedQ.push(`${block.no}. ${lead}\nclue: ${__mnRClue(ans)}\nword count: ${__mnRWordCount(ans)}`);
+      }
+
+      renderedA.push(`${block.no}. ${ans}`);
+    }
+
+    payload.workbookType = input.workbookType;
+    payload.questions = renderedQ.join('\n');
+    payload.answerSheet = renderedA.join('\n');
+    payload.worksheet = payload.questions;
+    payload.actualCount = renderedA.length;
+    payload.worksheetHtml = __mnRBuildWorksheetHtml(payload.questions);
+    payload.answerHtml = __mnRBuildAnswerHtml(payload.answerSheet);
+    payload.answerSheetHtml = payload.answerHtml;
+    payload.itemPairs = __mnRBuildItemPairs(payload.questions, payload.answerSheet);
+    payload.fullText = [payload.title, payload.instructions, payload.questions, ((input.language === 'en' ? 'Answers\n' : '정답\n') + payload.answerSheet)].filter(Boolean).join('\n\n');
+    return payload;
+  }
+
+  module.exports = async function handler_v841_workbook_type_router_s307_response(req, res) {
+    const originalJson = res.json.bind(res);
+    res.json = function patchedJson(payload) {
+      try {
+        payload = __mnRForceWorkbookType(payload, req?.body || {});
+      } catch (err) {
+        console.error('S30-7R response hardlock failed:', err);
+      }
+      return originalJson(payload);
+    };
+    return __prevExport(req, res);
+  };
+
+  if (__prevExport && __prevExport.config) {
+    module.exports.config = __prevExport.config;
+  }
+
+  console.log('✅ S30-7R final response workbookType hardlock patch applied');
+})();
