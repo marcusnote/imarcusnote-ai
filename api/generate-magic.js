@@ -9763,11 +9763,11 @@ module.exports.config = { runtime: "nodejs" };
 
 
 /* =========================
-   S30-4 FINAL RENDERER HARDLOCK
+   S30-5 FINAL DO/BE HARDLOCK + PDF WORDCOUNT PRESERVE
    ========================= */
-(function applyS304FinalRendererHardlock() {
+(function applyS305FinalDoBeHardlock() {
   try {
-    function __s304Text(input = {}) {
+    function __s305Text(input = {}) {
       return [input?.userPrompt, input?.topic, input?.worksheetTitle]
         .filter(Boolean)
         .join(" ")
@@ -9775,143 +9775,420 @@ module.exports.config = { runtime: "nodejs" };
         .trim();
     }
 
-    function __s304IsGuided(input = {}) {
-      const type = (typeof normalizeWorkbookType === "function")
-        ? normalizeWorkbookType(input?.workbookType || input?.workbook_type || "")
-        : "";
-      return type === "guided_writing" || input?.mode === "writing" || input?.magicStyle === "marcus_magic";
+    function __s305Type(input = {}) {
+      try {
+        return typeof normalizeWorkbookType === "function"
+          ? normalizeWorkbookType(input?.workbookType || input?.workbook_type || "")
+          : "guided_writing";
+      } catch (e) {
+        return "guided_writing";
+      }
     }
 
-    function __s304IsDoQuestion(input = {}) {
-      const t = __s304Text(input);
+    function __s305IsGuided(input = {}) {
+      const t = __s305Type(input);
+      return t === "guided_writing";
+    }
+
+    function __s305IsDo(input = {}) {
+      const t = __s305Text(input);
       if (!t) return false;
       if (/일반동사/.test(t) && /의문문/.test(t)) return true;
       if (/일반동사/.test(t) && /활용/.test(t)) return true;
       if (/일반동사/.test(t) && /질문/.test(t)) return true;
+      if (/\bdo\s*question\b/i.test(t)) return true;
+      if (/\bdoes\s*question\b/i.test(t)) return true;
       if (/do\s*의문문/i.test(t)) return true;
-      if (/do\s*question/i.test(t)) return true;
-      if (/does\s*question/i.test(t)) return true;
-      if (input?.aliasResolved?.chapterKey === "do_question") return true;
-      if (String(input?.resolvedChapterKey || "") === "do_question") return true;
+      const chapter = String(input?.resolvedChapterKey || input?.grammarFocus?.chapterKey || input?.aliasResolved?.chapterKey || "");
+      if (chapter === "do_question") return true;
       if (input?.grammarFocus?.isDoQuestion) return true;
-      if (String(input?.grammarFocus?.chapterKey || "") === "do_question") return true;
       return false;
     }
 
-    const __S304_BANKS = {
-      daily: [
-        ['너는 매일 운동하니?', ['Do','you','exercise','every','day'], 'Do you exercise every day?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 일찍 일어나니?', ['Do','you','wake','up','early'], 'Do you wake up early?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 매일 공부하니?', ['Do','you','study','every','day'], 'Do you study every day?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 매일 아침 우유를 마시니?', ['Do','you','drink','milk','every','morning'], 'Do you drink milk every morning?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 수업 전에 복습하니?', ['Do','you','review','before','class'], 'Do you review before class?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 온라인으로 숙제하니?', ['Do','you','do','your','homework','online'], 'Do you do your homework online?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 물을 많이 마시니?', ['Do','you','drink','a','lot','of','water'], 'Do you drink a lot of water?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 점심시간에 친구들과 이야기하니?', ['Do','you','talk','with','your','friends','at','lunch'], 'Do you talk with your friends at lunch?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 학교에서 영어를 사용하니?', ['Do','you','use','English','at','school'], 'Do you use English at school?', 'Yes, I do.', 'No, I do not.'],
-        ['너는 음악을 듣니?', ['Do','you','listen','to','music'], 'Do you listen to music?', 'Yes, I do.', 'No, I do not.']]
-      ,
-      school: [
-        ['그는 학교에 걸어가니?', ['Does','he','walk','to','school'], 'Does he walk to school?', 'Yes, he does.', 'No, he does not.'],
-        ['그는 매일 수업에 참석하니?', ['Does','he','attend','classes','every','day'], 'Does he attend classes every day?', 'Yes, he does.', 'No, he does not.'],
-        ['그들은 매일 교실을 청소하니?', ['Do','they','clean','the','classroom','every','day'], 'Do they clean the classroom every day?', 'Yes, they do.', 'No, they do not.'],
-        ['그들은 버스를 타니?', ['Do','they','take','the','bus'], 'Do they take the bus?', 'Yes, they do.', 'No, they do not.'],
-        ['그들은 토요일에 도서관에 가니?', ['Do','they','go','to','the','library','on','Saturdays'], 'Do they go to the library on Saturdays?', 'Yes, they do.', 'No, they do not.'],
-        ['그들은 공원에 가니?', ['Do','they','go','to','the','park'], 'Do they go to the park?', 'Yes, they do.', 'No, they do not.']]
-      ,
-      hobby: [
-        ['그녀는 피아노를 치니?', ['Does','she','play','the','piano'], 'Does she play the piano?', 'Yes, she does.', 'No, she does not.'],
-        ['그들은 주말에 축구를 하니?', ['Do','they','play','soccer','on','weekends'], 'Do they play soccer on weekends?', 'Yes, they do.', 'No, they do not.'],
-        ['그녀는 방과 후 농구를 하니?', ['Does','she','play','basketball','after','school'], 'Does she play basketball after school?', 'Yes, she does.', 'No, she does not.'],
-        ['그들은 게임을 하니?', ['Do','they','play','games'], 'Do they play games?', 'Yes, they do.', 'No, they do not.'],
-        ['그녀는 가족과 함께 영화를 보니?', ['Does','she','watch','movies','with','her','family'], 'Does she watch movies with her family?', 'Yes, she does.', 'No, she does not.'],
-        ['그는 TV를 보니?', ['Does','he','watch','TV'], 'Does he watch TV?', 'Yes, he does.', 'No, he does not.']]
-      ,
-      life: [
-        ['그녀는 집에서 저녁을 먹니?', ['Does','she','eat','dinner','at','home'], 'Does she eat dinner at home?', 'Yes, she does.', 'No, she does not.'],
-        ['그녀는 저녁에 숙제를 하니?', ['Does','she','do','her','homework','in','the','evening'], 'Does she do her homework in the evening?', 'Yes, she does.', 'No, she does not.'],
-        ['그는 매일 이를 닦니?', ['Does','he','brush','his','teeth','every','day'], 'Does he brush his teeth every day?', 'Yes, he does.', 'No, he does not.'],
-        ['그는 커피를 마시니?', ['Does','he','drink','coffee'], 'Does he drink coffee?', 'Yes, he does.', 'No, he does not.'],
-        ['그녀는 친구를 만나니?', ['Does','she','meet','friends'], 'Does she meet friends?', 'Yes, she does.', 'No, she does not.'],
-        ['그는 개를 산책시키니?', ['Does','he','walk','his','dog'], 'Does he walk his dog?', 'Yes, he does.', 'No, he does not.']]
-      ,
-      extended: [
-        ['그녀는 영어를 공부하니?', ['Does','she','study','English'], 'Does she study English?', 'Yes, she does.', 'No, she does not.'],
-        ['너는 영어를 공부하니?', ['Do','you','study','English'], 'Do you study English?', 'Yes, I do.', 'No, I do not.'],
-        ['그녀는 영어로 말하니?', ['Does','she','speak','English'], 'Does she speak English?', 'Yes, she does.', 'No, she does not.'],
-        ['그들은 휴대폰으로 사진을 찍니?', ['Do','they','take','pictures','with','their','phones'], 'Do they take pictures with their phones?', 'Yes, they do.', 'No, they do not.'],
-        ['그는 과학을 좋아하니?', ['Does','he','like','science'], 'Does he like science?', 'Yes, he does.', 'No, he does not.'],
-        ['그는 수학을 좋아하니?', ['Does','he','like','math'], 'Does he like math?', 'Yes, he does.', 'No, he does not.'],
-        ['그는 운동을 하니?', ['Does','he','exercise'], 'Does he exercise?', 'Yes, he does.', 'No, he does not.'],
-        ['그는 일요일에 교회에 가니?', ['Does','he','go','to','church','on','Sundays'], 'Does he go to church on Sundays?', 'Yes, he does.', 'No, he does not.']]
-    };
+    function __s305IsBe(input = {}) {
+      const t = __s305Text(input);
+      if (!t) return false;
+      if (/be동사/.test(t) && /의문문/.test(t)) return true;
+      if (/be동사/.test(t) && /질문/.test(t)) return true;
+      if (/be동사/.test(t) && /활용/.test(t)) return true;
+      if (/\bbe\s*question\b/i.test(t)) return true;
+      if (/be\s*의문문/i.test(t)) return true;
+      const chapter = String(input?.resolvedChapterKey || input?.grammarFocus?.chapterKey || input?.aliasResolved?.chapterKey || "");
+      if (chapter === "be_question") return true;
+      if (input?.grammarFocus?.isBeQuestion) return true;
+      return false;
+    }
 
-    function __s304Shuffle(arr) {
+    function __s305Shuffle(arr) {
       const a = arr.slice();
       for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        const t = a[i]; a[i] = a[j]; a[j] = t;
+        const tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
       }
       return a;
     }
 
-    function __s304Pick(input = {}) {
-      const all = [];
-      const quotas = [["daily",5],["school",5],["hobby",5],["life",5],["extended",5]];
-      for (const [group, cnt] of quotas) {
-        const picked = __s304Shuffle(__S304_BANKS[group] || []).slice(0, cnt);
-        all.push(...picked);
-      }
-      return __s304Shuffle(all).slice(0, 25);
+    const __S305_DO_BANK = [
+      ['너는 매일 운동하니?', ['Do','you','exercise','every','day'], 'Do you exercise every day?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 일찍 일어나니?', ['Do','you','wake','up','early'], 'Do you wake up early?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 매일 공부하니?', ['Do','you','study','every','day'], 'Do you study every day?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 매일 아침 우유를 마시니?', ['Do','you','drink','milk','every','morning'], 'Do you drink milk every morning?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 수업 전에 복습하니?', ['Do','you','review','before','class'], 'Do you review before class?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 온라인으로 숙제하니?', ['Do','you','do','your','homework','online'], 'Do you do your homework online?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 물을 많이 마시니?', ['Do','you','drink','a','lot','of','water'], 'Do you drink a lot of water?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 점심시간에 친구들과 이야기하니?', ['Do','you','talk','with','your','friends','at','lunch'], 'Do you talk with your friends at lunch?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 학교에서 영어를 사용하니?', ['Do','you','use','English','at','school'], 'Do you use English at school?', 'Yes, I do.', 'No, I do not.'],
+      ['너는 음악을 듣니?', ['Do','you','listen','to','music'], 'Do you listen to music?', 'Yes, I do.', 'No, I do not.'],
+      ['그는 학교에 걸어가니?', ['Does','he','walk','to','school'], 'Does he walk to school?', 'Yes, he does.', 'No, he does not.'],
+      ['그는 매일 수업에 참석하니?', ['Does','he','attend','classes','every','day'], 'Does he attend classes every day?', 'Yes, he does.', 'No, he does not.'],
+      ['그들은 매일 교실을 청소하니?', ['Do','they','clean','the','classroom','every','day'], 'Do they clean the classroom every day?', 'Yes, they do.', 'No, they do not.'],
+      ['그들은 버스를 타니?', ['Do','they','take','the','bus'], 'Do they take the bus?', 'Yes, they do.', 'No, they do not.'],
+      ['그들은 토요일에 도서관에 가니?', ['Do','they','go','to','the','library','on','Saturdays'], 'Do they go to the library on Saturdays?', 'Yes, they do.', 'No, they do not.'],
+      ['그들은 공원에 가니?', ['Do','they','go','to','the','park'], 'Do they go to the park?', 'Yes, they do.', 'No, they do not.'],
+      ['그녀는 피아노를 치니?', ['Does','she','play','the','piano'], 'Does she play the piano?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 주말에 축구를 하니?', ['Do','they','play','soccer','on','weekends'], 'Do they play soccer on weekends?', 'Yes, they do.', 'No, they do not.'],
+      ['그녀는 방과 후 농구를 하니?', ['Does','she','play','basketball','after','school'], 'Does she play basketball after school?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 게임을 하니?', ['Do','they','play','games'], 'Do they play games?', 'Yes, they do.', 'No, they do not.'],
+      ['그녀는 가족과 함께 영화를 보니?', ['Does','she','watch','movies','with','her','family'], 'Does she watch movies with her family?', 'Yes, she does.', 'No, she does not.'],
+      ['그는 TV를 보니?', ['Does','he','watch','TV'], 'Does he watch TV?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 집에서 저녁을 먹니?', ['Does','she','eat','dinner','at','home'], 'Does she eat dinner at home?', 'Yes, she does.', 'No, she does not.'],
+      ['그녀는 저녁에 숙제를 하니?', ['Does','she','do','her','homework','in','the','evening'], 'Does she do her homework in the evening?', 'Yes, she does.', 'No, she does not.'],
+      ['그는 매일 이를 닦니?', ['Does','he','brush','his','teeth','every','day'], 'Does he brush his teeth every day?', 'Yes, he does.', 'No, he does not.'],
+      ['그는 커피를 마시니?', ['Does','he','drink','coffee'], 'Does he drink coffee?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 친구를 만나니?', ['Does','she','meet','friends'], 'Does she meet friends?', 'Yes, she does.', 'No, she does not.'],
+      ['그는 개를 산책시키니?', ['Does','he','walk','his','dog'], 'Does he walk his dog?', 'Yes, he does.', 'No, he does not.'],
+      ['그녀는 영어를 공부하니?', ['Does','she','study','English'], 'Does she study English?', 'Yes, she does.', 'No, she does not.'],
+      ['그녀는 영어로 말하니?', ['Does','she','speak','English'], 'Does she speak English?', 'Yes, she does.', 'No, she does not.'],
+      ['그들은 휴대폰으로 사진을 찍니?', ['Do','they','take','pictures','with','their','phones'], 'Do they take pictures with their phones?', 'Yes, they do.', 'No, they do not.'],
+      ['그는 과학을 좋아하니?', ['Does','he','like','science'], 'Does he like science?', 'Yes, he does.', 'No, he does not.'],
+      ['그는 수학을 좋아하니?', ['Does','he','like','math'], 'Does he like math?', 'Yes, he does.', 'No, he does not.'],
+      ['그는 운동을 하니?', ['Does','he','exercise'], 'Does he exercise?', 'Yes, he does.', 'No, he does not.'],
+      ['그는 일요일에 교회에 가니?', ['Does','he','go','to','church','on','Sundays'], 'Does he go to church on Sundays?', 'Yes, he does.', 'No, he does not.']
+    ];
+
+    const __S305_BE_BANK = [
+      ['너는 지금 행복하니?', ['Are','you','happy','now'], 'Are you happy now?', 'Yes, I am.', 'No, I am not.'],
+      ['그들은 공원에 있니?', ['Are','they','in','the','park'], 'Are they in the park?', 'Yes, they are.', 'No, they are not.'],
+      ['너는 오늘 자유롭니?', ['Are','you','free','today'], 'Are you free today?', 'Yes, I am.', 'No, I am not.'],
+      ['너는 졸리니?', ['Are','you','sleepy'], 'Are you sleepy?', 'Yes, I am.', 'No, I am not.'],
+      ['너는 오늘 바쁘니?', ['Are','you','busy','today'], 'Are you busy today?', 'Yes, I am.', 'No, I am not.'],
+      ['그들은 지금 도서관에 있니?', ['Are','they','in','the','library','now'], 'Are they in the library now?', 'Yes, they are.', 'No, they are not.'],
+      ['그녀는 너의 여동생이니?', ['Is','she','your','sister'], 'Is she your sister?', 'Yes, she is.', 'No, she is not.'],
+      ['그들은 지금 안전하니?', ['Are','they','safe','now'], 'Are they safe now?', 'Yes, they are.', 'No, they are not.'],
+      ['그들은 피곤하니?', ['Are','they','tired'], 'Are they tired?', 'Yes, they are.', 'No, they are not.'],
+      ['그녀는 집에 있니?', ['Is','she','at','home'], 'Is she at home?', 'Yes, she is.', 'No, she is not.'],
+      ['그는 지금 집에 있니?', ['Is','he','at','home','now'], 'Is he at home now?', 'Yes, he is.', 'No, he is not.'],
+      ['그는 공항에 있니?', ['Is','he','at','the','airport'], 'Is he at the airport?', 'Yes, he is.', 'No, he is not.'],
+      ['그녀는 일본 사람이니?', ['Is','she','Japanese'], 'Is she Japanese?', 'Yes, she is.', 'No, she is not.'],
+      ['그녀는 오늘 학교에 있니?', ['Is','she','at','school','today'], 'Is she at school today?', 'Yes, she is.', 'No, she is not.'],
+      ['너는 친절하니?', ['Are','you','kind'], 'Are you kind?', 'Yes, I am.', 'No, I am not.'],
+      ['그녀는 지금 집에 있니?', ['Is','she','at','home','now'], 'Is she at home now?', 'Yes, she is.', 'No, she is not.'],
+      ['그녀는 의사니?', ['Is','she','a','doctor'], 'Is she a doctor?', 'Yes, she is.', 'No, she is not.'],
+      ['너희는 준비되었니?', ['Are','you','ready'], 'Are you ready?', 'Yes, I am.', 'No, I am not.'],
+      ['너는 지금 교실에 있니?', ['Are','you','in','the','classroom','now'], 'Are you in the classroom now?', 'Yes, I am.', 'No, I am not.'],
+      ['그녀는 지금 학교에 있니?', ['Is','she','at','school','now'], 'Is she at school now?', 'Yes, she is.', 'No, she is not.'],
+      ['그녀는 지금 병원에 있니?', ['Is','she','in','the','hospital','now'], 'Is she in the hospital now?', 'Yes, she is.', 'No, she is not.'],
+      ['그는 너의 형이니?', ['Is','he','your','brother'], 'Is he your brother?', 'Yes, he is.', 'No, he is not.'],
+      ['그들은 지금 공원에 있니?', ['Are','they','in','the','park','now'], 'Are they in the park now?', 'Yes, they are.', 'No, they are not.'],
+      ['너는 지금 학교에 있니?', ['Are','you','at','school','now'], 'Are you at school now?', 'Yes, I am.', 'No, I am not.'],
+      ['그녀는 지금 행복하니?', ['Is','she','happy','now'], 'Is she happy now?', 'Yes, she is.', 'No, she is not.']
+    ];
+
+    function __s305Pick(bank, count) {
+      return __s305Shuffle(bank).slice(0, count);
     }
 
-    function __s304Build(input = {}, formatted = {}) {
-      const bank = __s304Pick(input);
-      const questions = bank.map((item, idx) =>
-        `${idx + 1}. ${item[0]} (clue: ${item[1].join(", ")}) (Word count: ${item[1].length})`
-      ).join("\n");
-      const answers = bank.map((item, idx) =>
-        `${idx + 1}. ${item[2]} / ${item[3]} / ${item[4]}`
-      ).join("\n");
+    function __s305WorksheetLine(item, idx) {
+      return `${idx + 1}. ${item[0]} (clue: ${item[1].join(", ")}) (Word count: ${item[1].length})`;
+    }
 
-      const next = Object.assign({}, formatted || {});
-      next.questions = questions;
-      next.answerSheet = answers;
+    function __s305AnswerLine(item, idx) {
+      return `${idx + 1}. ${item[2]} / ${item[3]} / ${item[4]}`;
+    }
+
+    function __s305Html(items) {
+      return items.map((item, idx) =>
+        `<p><strong>${idx + 1}. ${typeof __escapeHtml === "function" ? __escapeHtml(item[0]) : item[0]}</strong> <span>(clue: ${typeof __escapeHtml === "function" ? __escapeHtml(item[1].join(", ")) : item[1].join(", ")}) (Word count: ${item[1].length})</span></p>`
+      ).join("\n");
+    }
+
+    function __s305AnswerHtml(items) {
+      return items.map((item, idx) =>
+        `<p><strong>${idx + 1}. ${typeof __escapeHtml === "function" ? __escapeHtml(item[2]) : item[2]}</strong> <span>/ ${typeof __escapeHtml === "function" ? __escapeHtml(item[3]) : item[3]} / ${typeof __escapeHtml === "function" ? __escapeHtml(item[4]) : item[4]}</span></p>`
+      ).join("\n");
+    }
+
+    function __s305Build(base = {}, input = {}, mode = "do") {
+      const items = __s305Pick(mode === "be" ? __S305_BE_BANK : __S305_DO_BANK, 25);
+      const next = Object.assign({}, base || {});
+      next.questions = items.map(__s305WorksheetLine).join("\n");
+      next.answerSheet = items.map(__s305AnswerLine).join("\n");
       next.actualCount = 25;
-      next.title = next.title || (typeof buildMagicTitle === "function" ? buildMagicTitle(input) : "");
-      if (typeof __v84BuildWorkbookTypeInstructions === "function") {
-        next.instructions = __v84BuildWorkbookTypeInstructions(input, next.instructions || "");
-      }
-      next.itemPairs = (typeof __mn83BuildItemPairs === "function")
-        ? __mn83BuildItemPairs(next.questions || "", next.answerSheet || "")
-        : [];
-      next.pairIntegrity = { ok: true, reason: "s30_4_final_renderer_hardlock", questionCount: 25, answerCount: 25 };
+      next.worksheet = next.questions;
+      next.worksheetHtml = __s305Html(items);
+      next.answerSheetHtml = __s305AnswerHtml(items);
+      next.answerHtml = next.answerSheetHtml;
+      next.itemPairs = items.map((item, idx) => ({
+        no: idx + 1,
+        question: item[0],
+        answer: item[2],
+        clue: item[1],
+        wordCount: item[1].length
+      }));
+      next.pairIntegrity = { ok: true, reason: "s30_5_final_do_be_hardlock", questionCount: 25, answerCount: 25 };
       next.content = [next.title, next.instructions, next.questions].filter(Boolean).join("\n\n");
-      next.fullText = [
-        next.title,
-        next.instructions,
-        next.questions,
-        input?.language === "en" ? "Answers" : "정답",
-        next.answerSheet
-      ].filter(Boolean).join("\n\n");
+      next.fullText = [next.title, next.instructions, next.questions, ((input.language === "en" ? "Answers\n" : "정답\n") + next.answerSheet)].filter(Boolean).join("\n\n");
       return next;
     }
 
-    const __prevFormatS304 = typeof formatMagicResponse === "function" ? formatMagicResponse : null;
-    if (__prevFormatS304) {
-      formatMagicResponse = function formatMagicResponse_s304(rawText, input = {}) {
-        const formatted = __prevFormatS304(rawText, input);
+    const __prevWorkbookRouterS305 =
+      typeof __v84TransformFormattedByWorkbookType === "function"
+        ? __v84TransformFormattedByWorkbookType
+        : null;
+
+    if (__prevWorkbookRouterS305) {
+      __v84TransformFormattedByWorkbookType = function __v84TransformFormattedByWorkbookType_s305(formatted = {}, input = {}) {
         try {
-          if (__s304IsGuided(input) && __s304IsDoQuestion(input)) {
-            return __s304Build(input, formatted);
+          if (__s305IsGuided(input) && __s305IsDo(input)) {
+            return __s305Build(__prevWorkbookRouterS305(formatted, input), input, "do");
+          }
+          if (__s305IsGuided(input) && __s305IsBe(input)) {
+            return __s305Build(__prevWorkbookRouterS305(formatted, input), input, "be");
           }
         } catch (e) {}
-        return formatted;
+        return __prevWorkbookRouterS305(formatted, input);
       };
     }
 
-    console.log("✅ S30-4 final renderer hardlock applied");
+    const __prevBuildWorksheetHtmlS305 = (typeof buildMagicWorksheetHtml === "function") ? buildMagicWorksheetHtml : null;
+    const __prevBuildAnswerHtmlS305 = (typeof buildMagicAnswerHtml === "function") ? buildMagicAnswerHtml : null;
+
+    buildMagicWorksheetHtml = function buildMagicWorksheetHtml_s305(formatted = {}, input = {}) {
+      if (formatted && formatted.worksheetHtml) return formatted.worksheetHtml;
+      if (__prevBuildWorksheetHtmlS305) return __prevBuildWorksheetHtmlS305(formatted, input);
+      return "";
+    };
+
+    buildMagicAnswerHtml = function buildMagicAnswerHtml_s305(formatted = {}, input = {}) {
+      if (formatted && formatted.answerSheetHtml) return formatted.answerSheetHtml;
+      if (formatted && formatted.answerHtml) return formatted.answerHtml;
+      if (__prevBuildAnswerHtmlS305) return __prevBuildAnswerHtmlS305(formatted, input);
+      return "";
+    };
+
+    console.log("✅ S30-5 final do/be hardlock + pdf wordcount preserve applied");
   } catch (e) {
-    console.warn("⚠️ S30-4 final renderer hardlock failed:", e?.message || e);
+    console.warn("⚠️ S30-5 patch failed:", e?.message || e);
+  }
+})();
+
+/* =========================
+   S30-6 ALIAS BRIDGE PATCH
+   ========================= */
+(function applyS306AliasBridgePatch() {
+  try {
+    function __s306TryRequire(candidates) {
+      for (const p of candidates) {
+        try { return require(p); } catch (e) {}
+      }
+      return null;
+    }
+
+    const __s306Aliases = __s306TryRequire([
+      '../data/writinglab_chapter_aliases_middle_complete.json',
+      '../data/writinglab_chapter_aliases_middle_complete(1).json',
+      '/mnt/data/writinglab_chapter_aliases_middle_complete.json',
+      '/mnt/data/writinglab_chapter_aliases_middle_complete(1).json'
+    ]);
+
+    const __s306Curriculum = __s306TryRequire([
+      '../data/writinglab_curriculum_sem1_middle.json',
+      '../data/writinglab_curriculum_sem1_middle(3).json',
+      '/mnt/data/writinglab_curriculum_sem1_middle.json',
+      '/mnt/data/writinglab_curriculum_sem1_middle(3).json'
+    ]);
+
+    function __s306Text(input = {}, body = null) {
+      return [
+        input?.userPrompt,
+        input?.topic,
+        input?.worksheetTitle,
+        body?.userPrompt,
+        body?.prompt,
+        body?.topic,
+        body?.worksheetTitle
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function __s306DetectGrade(text = '') {
+      const t = String(text || '');
+      if (/중1/.test(t)) return 'middle1';
+      if (/중2/.test(t)) return 'middle2';
+      if (/중3/.test(t)) return 'middle3';
+      return null;
+    }
+
+    function __s306DetectLesson(text = '') {
+      const m = String(text || '').match(/([1-8])\s*과/);
+      return m ? Number(m[1]) : null;
+    }
+
+    function __s306FlattenAliases() {
+      const rows = [];
+      const root = __s306Aliases && typeof __s306Aliases === 'object' ? __s306Aliases : {};
+      Object.keys(root).forEach((gradeKey) => {
+        const gradeNode = root[gradeKey] || {};
+        Object.keys(gradeNode).forEach((lessonKey) => {
+          const lessonNode = gradeNode[lessonKey] || {};
+          Object.keys(lessonNode).forEach((chapterKey) => {
+            const aliases = Array.isArray(lessonNode[chapterKey]) ? lessonNode[chapterKey] : [];
+            aliases.forEach((alias) => {
+              const phrase = String(alias || '').replace(/\s+/g, ' ').trim();
+              if (!phrase) return;
+              rows.push({
+                gradeKey,
+                lessonKey,
+                lessonNumber: Number(String(lessonKey).replace(/\D/g, '')) || null,
+                chapterKey,
+                alias: phrase,
+                score: phrase.length
+              });
+            });
+          });
+        });
+      });
+      rows.sort((a, b) => b.score - a.score);
+      return rows;
+    }
+
+    const __s306AliasRows = __s306FlattenAliases();
+
+    function __s306ResolveAlias(text = '', input = {}) {
+      const normalized = String(text || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      if (!normalized || !__s306AliasRows.length) return null;
+
+      const requestedGrade = __s306DetectGrade(text) || input?.gradeKey || null;
+      const requestedLesson = __s306DetectLesson(text);
+
+      let best = null;
+      for (const row of __s306AliasRows) {
+        if (!normalized.includes(String(row.alias || '').toLowerCase())) continue;
+        if (requestedGrade && row.gradeKey !== requestedGrade) continue;
+        if (requestedLesson && row.lessonNumber && row.lessonNumber !== requestedLesson) continue;
+        best = row;
+        break;
+      }
+
+      if (!best && requestedGrade) {
+        for (const row of __s306AliasRows) {
+          if (!normalized.includes(String(row.alias || '').toLowerCase())) continue;
+          if (row.gradeKey !== requestedGrade) continue;
+          best = row;
+          break;
+        }
+      }
+
+      return best ? {
+        chapterKey: best.chapterKey,
+        gradeKey: best.gradeKey,
+        lessonKey: best.lessonKey,
+        lessonNumber: best.lessonNumber,
+        matchedAlias: best.alias,
+        source: 's30_6_alias_json'
+      } : null;
+    }
+
+    function __s306CurriculumChapters(gradeKey, lessonNumber) {
+      if (!__s306Curriculum || !gradeKey || !lessonNumber) return [];
+      const entry = __s306Curriculum?.[gradeKey]?.common?.[`lesson${lessonNumber}`];
+      return Array.isArray(entry?.chapters) ? entry.chapters.slice() : [];
+    }
+
+    function __s306ApplyChapterFlags(target = {}, chapterKey = '') {
+      if (!target || !chapterKey) return target;
+      target.chapterKey = target.chapterKey || chapterKey;
+      if (chapterKey === 'be_question') target.isBeQuestion = true;
+      if (chapterKey === 'do_question') target.isDoQuestion = true;
+      if (chapterKey === 'passive') target.isPassive = true;
+      if (chapterKey === 'present_perfect') target.isPresentPerfect = true;
+      if (chapterKey === 'gerund') target.isGerund = true;
+      if (chapterKey === 'to_infinitive_adjective') target.isToInfinitive = true;
+      if (chapterKey === 'to_infinitive_adjective') target.isToInfinitiveAdjective = true;
+      if (chapterKey === 'relative_pronoun_nonrestrictive') {
+        target.isRelativePronoun = true;
+        target.isNonRestrictive = true;
+      }
+      if (chapterKey === 'relative_pronoun_what') {
+        target.isRelativePronoun = true;
+        target.isWhatRelativePronoun = true;
+      }
+      return target;
+    }
+
+    const __prevNormalizeInput_s306 = typeof normalizeInput === 'function' ? normalizeInput : null;
+    if (__prevNormalizeInput_s306) {
+      normalizeInput = function normalizeInput_s306(body = {}) {
+        const next = __prevNormalizeInput_s306(body);
+        try {
+          const merged = __s306Text(next, body);
+          const detectedGrade = __s306DetectGrade(merged);
+          const detectedLesson = __s306DetectLesson(merged);
+          const aliasResolved = __s306ResolveAlias(merged, next);
+          const lessonChapters = __s306CurriculumChapters(detectedGrade, detectedLesson);
+
+          if (detectedGrade && !next.gradeKey) next.gradeKey = detectedGrade;
+          if (detectedLesson && !next.lessonNumber) next.lessonNumber = detectedLesson;
+          if (lessonChapters.length) next.curriculumResolved = {
+            gradeKey: detectedGrade,
+            lessonNumber: detectedLesson,
+            chapters: lessonChapters
+          };
+
+          if (aliasResolved) {
+            next.aliasResolved = aliasResolved;
+            if (!next.gradeKey) next.gradeKey = aliasResolved.gradeKey;
+            if (!next.lessonNumber) next.lessonNumber = aliasResolved.lessonNumber;
+          }
+
+          let resolvedChapterKey = String(next.resolvedChapterKey || '');
+
+          if (!resolvedChapterKey && aliasResolved?.chapterKey) {
+            resolvedChapterKey = aliasResolved.chapterKey;
+          }
+
+          if (!resolvedChapterKey && next?.grammarFocus?.chapterKey && lessonChapters.includes(next.grammarFocus.chapterKey)) {
+            resolvedChapterKey = next.grammarFocus.chapterKey;
+          }
+
+          if (!resolvedChapterKey && lessonChapters.length === 1) {
+            resolvedChapterKey = lessonChapters[0];
+          }
+
+          if (!resolvedChapterKey && lessonChapters.length >= 2) {
+            if (next?.grammarFocus?.isBeQuestion && lessonChapters.includes('be_question')) resolvedChapterKey = 'be_question';
+            else if (next?.grammarFocus?.isDoQuestion && lessonChapters.includes('do_question')) resolvedChapterKey = 'do_question';
+            else if (aliasResolved?.chapterKey && lessonChapters.includes(aliasResolved.chapterKey)) resolvedChapterKey = aliasResolved.chapterKey;
+          }
+
+          if (resolvedChapterKey) {
+            next.resolvedChapterKey = resolvedChapterKey;
+            next.grammarFocus = __s306ApplyChapterFlags(Object.assign({}, next.grammarFocus || {}), resolvedChapterKey);
+          }
+        } catch (e) {
+          console.warn('⚠️ S30-6 normalizeInput bridge warning:', e?.message || e);
+        }
+        return next;
+      };
+    }
+
+    console.log('✅ S30-6 alias bridge patch applied');
+  } catch (e) {
+    console.warn('⚠️ S30-6 alias bridge patch failed:', e?.message || e);
   }
 })();
