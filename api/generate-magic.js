@@ -11473,3 +11473,102 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S31R guided inline clue lock fix applied');
 })();
+
+/* =========================================================
+   S34 Guided Final Number Dedupe Fix
+   - final guided-only cleanup for duplicated numbering like "1. 1."
+   - preserves existing inline clue / word count behavior
+   - does not touch blank_fill / choice / sentence_build / wormhole
+========================================================= */
+(function applyS34GuidedFinalNumberFix(){
+  const __prevExportS34 = module.exports;
+
+  function __s34NormalizeWorkbookType(value='') {
+    const v = String(value || '').trim().toLowerCase();
+    if (['guided_writing','guided writing','guided-writing','guided','writing'].includes(v)) return 'guided_writing';
+    if (['blank_fill','blank fill','blank-fill','blank','blankfill'].includes(v)) return 'blank_fill';
+    if (['choice','binary_choice','binary-choice','binary choice'].includes(v)) return 'choice';
+    if (['sentence_build','sentence-build','sentence build'].includes(v)) return 'sentence_build';
+    return 'guided_writing';
+  }
+
+  function __s34DedupeLeadingNumber(text='') {
+    return String(text || '')
+      .replace(/^(\s*\d+[.)]\s+)(\d+[.)]\s+)/, '$1')
+      .replace(/^(?:\s*\d+[.)]\s*)+(.*)$/,'$1')
+      .trim();
+  }
+
+  function __s34FixMultilineQuestions(text='') {
+    const lines = String(text || '').replace(/\r\n?/g,'\n').split('\n');
+    return lines.map((raw) => {
+      const line = String(raw || '');
+      const m = line.match(/^(\s*)(\d+)[.)]\s+(\d+)[.)]\s+(.*)$/);
+      if (m && m[2] === m[3]) {
+        return `${m[1]}${m[2]}. ${m[4]}`;
+      }
+      return line;
+    }).join('\n');
+  }
+
+  function __s34FixWorksheetHtml(html='') {
+    return String(html || '')
+      .replace(/>(\s*)(\d+)\.\s+(\2)\.\s+/g, '>$1$2. ')
+      .replace(/(<strong>\s*)(\d+)\.\s+(\2)\.\s+/g, '$1$2. ');
+  }
+
+  function __s34FixItemPairs(itemPairs) {
+    if (!Array.isArray(itemPairs)) return itemPairs;
+    return itemPairs.map((pair, idx) => {
+      if (!pair || typeof pair !== 'object') return pair;
+      const next = { ...pair };
+      if (typeof next.question === 'string') {
+        next.question = __s34FixMultilineQuestions(next.question);
+        const qm = next.question.match(/^(\d+)[.)]\s+(.*)$/);
+        if (qm) {
+          next.no = Number(qm[1]);
+        } else if (typeof next.no !== 'number') {
+          next.no = idx + 1;
+        }
+      }
+      return next;
+    });
+  }
+
+  function __s34RepairPayload(payload = {}, reqBody = {}) {
+    if (!payload || typeof payload !== 'object') return payload;
+    const workbookType = __s34NormalizeWorkbookType(
+      reqBody.workbookType || reqBody.workbook_type || payload.workbookType || payload.meta?.workbookType || ''
+    );
+    if (workbookType !== 'guided_writing') return payload;
+
+    if (typeof payload.questions === 'string') payload.questions = __s34FixMultilineQuestions(payload.questions);
+    if (typeof payload.worksheet === 'string') payload.worksheet = __s34FixMultilineQuestions(payload.worksheet);
+    if (typeof payload.content === 'string') payload.content = __s34FixMultilineQuestions(payload.content);
+    if (typeof payload.fullText === 'string') payload.fullText = __s34FixMultilineQuestions(payload.fullText);
+    if (typeof payload.worksheetHtml === 'string') payload.worksheetHtml = __s34FixWorksheetHtml(payload.worksheetHtml);
+    payload.itemPairs = __s34FixItemPairs(payload.itemPairs);
+
+    return payload;
+  }
+
+  module.exports = async function handler_v841_workbook_type_router_s34(req, res) {
+    const originalJson = res.json.bind(res);
+    res.json = function patchedJson(payload) {
+      let nextPayload = payload;
+      try {
+        nextPayload = __s34RepairPayload(payload, req?.body || {});
+      } catch (err) {
+        console.error('S34 guided final number fix failed:', err);
+      }
+      return originalJson(nextPayload);
+    };
+    return __prevExportS34(req, res);
+  };
+
+  if (__prevExportS34 && __prevExportS34.config) {
+    module.exports.config = __prevExportS34.config;
+  }
+
+  console.log('✅ S34 guided final number fix applied');
+})();
