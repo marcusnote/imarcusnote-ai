@@ -12670,3 +12670,316 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S42 guided hard cutover patch applied');
 })();
+
+/* =========================================================
+   S43 Render Separation + Cleanup Patch
+   - keep guided stable
+   - blank_fill: remove leaked full-answer line and render one true blank sentence only
+   - choice: strip duplicated option numbering and rebuild cleaner options
+   - final response hard override
+========================================================= */
+(function applyS43RenderSeparationCleanupPatch(){
+  const __prevExport_s43 = module.exports;
+
+  function __s43Text(v){
+    if (v === null || v === undefined) return '';
+    return String(v).replace(/\r\n/g, '\n').replace(/\u00A0/g, ' ').trim();
+  }
+
+  function __s43Esc(v=''){
+    return String(v || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function __s43NormType(v=''){
+    const t = __s43Text(v).toLowerCase();
+    if (!t) return 'guided_writing';
+    if (['guided_writing','guided-writing','guided writing','guided','guide','writing'].includes(t)) return 'guided_writing';
+    if (['blank_fill','blank-fill','blank fill','blank','fill','blankfill'].includes(t)) return 'blank_fill';
+    if (['choice','multiple choice','multiple_choice','mcq','binary_choice','binary-choice'].includes(t)) return 'choice';
+    return t;
+  }
+
+  function __s43StripLead(v=''){
+    return __s43Text(v).replace(/^(?:\s*[①-⑤]\s*)?(?:\s*\d+\s*[.)-]?\s*)+/, '').trim();
+  }
+
+  function __s43CountWords(answer=''){
+    return __s43Text(answer)
+      .replace(/[.,!?;:()[\]"']/g, ' ')
+      .split(/\s+/)
+      .map(s => s.trim())
+      .filter(Boolean)
+      .length;
+  }
+
+  function __s43ResolveSourcePairs(payload = {}, input = {}){
+    const candidates = [
+      payload.__s42CanonicalSourceItems,
+      payload.__s41CanonicalSourceItems,
+      payload.__s40GuidedSourceItems,
+      payload.itemPairs
+    ];
+    for (const candidate of candidates) {
+      if (!Array.isArray(candidate) || !candidate.length) continue;
+      const pairs = candidate.map((row, idx) => {
+        const answer = __s43StripLead(row?.answer ?? row?.modelAnswer ?? row?.english ?? row?.finalAnswer ?? '');
+        const clue = Array.isArray(row?.clue)
+          ? row.clue.map(x => __s43Text(x)).filter(Boolean)
+          : __s43Text(row?.clueText || row?.clue || '').split(/\s*,\s*/).map(x => __s43Text(x)).filter(Boolean);
+        return {
+          no: idx + 1,
+          question: __s43StripLead(row?.question ?? row?.prompt ?? row?.korean ?? row?.stem ?? ''),
+          answer,
+          clue,
+          clueText: clue.join(', '),
+          wordCount: Number(row?.wordCount || row?.word_count || 0) || __s43CountWords(answer)
+        };
+      }).filter(pair => pair.question && pair.answer);
+      if (pairs.length) return pairs;
+    }
+    return [];
+  }
+
+  function __s43GuessBlankTarget(answer=''){
+    const tokens = __s43Text(answer).split(/\s+/).filter(Boolean);
+    const clean = (t) => __s43Text(t).replace(/^[^A-Za-z]+|[^A-Za-z]+$/g, '');
+    const bad = new Set(['am','is','are','was','were','be','been','being','a','an','the','to','by','for','of','in','on','at','with','and']);
+    for (let i = tokens.length - 1; i >= 0; i--) {
+      const c = clean(tokens[i]).toLowerCase();
+      if (!c || bad.has(c)) continue;
+      if (c.length >= 3) return { index: i, cue: c };
+    }
+    for (let i = 0; i < tokens.length; i++) {
+      const c = clean(tokens[i]).toLowerCase();
+      if (!c || bad.has(c)) continue;
+      return { index: i, cue: c };
+    }
+    return { index: -1, cue: '' };
+  }
+
+  function __s43BuildBlankPairs(sourcePairs){
+    return sourcePairs.map((pair, idx) => {
+      const tokens = __s43Text(pair.answer).split(/\s+/).filter(Boolean);
+      const target = __s43GuessBlankTarget(pair.answer);
+      const blankText = target.index >= 0
+        ? tokens.map((tok, i) => i === target.index ? '_______' : tok).join(' ')
+        : __s43Text(pair.answer);
+      return {
+        no: idx + 1,
+        question: pair.question,
+        answer: pair.answer,
+        blankText,
+        cueWord: target.cue,
+        wordCount: pair.wordCount,
+        clue: pair.clue,
+        clueText: pair.clueText
+      };
+    });
+  }
+
+  function __s43ArticleSwap(answer=''){
+    const s = __s43StripLead(answer);
+    if (/^the\b/i.test(s)) return s.replace(/^the\b/i, 'A');
+    if (/^this\b/i.test(s)) return s.replace(/^this\b/i, 'The');
+    return 'A ' + s.charAt(0).toLowerCase() + s.slice(1);
+  }
+
+  function __s43Modalize(answer=''){
+    const s = __s43StripLead(answer);
+    if (/\b(can|will|must|should|may|might)\s+be\b/i.test(s)) {
+      return s.replace(/\b(can|will|must|may|might)\s+be\b/i, 'should be');
+    }
+    if (/\b(am|is|are|was|were)\b/i.test(s)) {
+      return s.replace(/\b(am|is|are|was|were)\b/i, 'should be');
+    }
+    return s;
+  }
+
+  function __s43DeBe(answer=''){
+    const s = __s43StripLead(answer);
+    return s.replace(/\b(am|is|are|was|were|be|been|being)\b\s+/i, '');
+  }
+
+  function __s43Unique(list){
+    const seen = new Set();
+    const out = [];
+    for (const raw of list || []) {
+      const item = __s43StripLead(raw);
+      if (!item || seen.has(item)) continue;
+      seen.add(item);
+      out.push(item);
+    }
+    return out;
+  }
+
+  function __s43BuildChoicePairs(sourcePairs){
+    return sourcePairs.map((pair, idx) => {
+      const answer = __s43StripLead(pair.answer);
+      let choices = __s43Unique([
+        answer,
+        __s43ArticleSwap(answer),
+        __s43Modalize(answer),
+        __s43DeBe(answer)
+      ]);
+      if (!choices.includes(answer)) choices.unshift(answer);
+      choices = choices.slice(0, 4);
+      const correctIndex = Math.max(0, choices.findIndex(c => c === answer));
+      return {
+        no: idx + 1,
+        question: pair.question,
+        answer,
+        choices,
+        correctIndex,
+        wordCount: pair.wordCount,
+        clue: pair.clue,
+        clueText: pair.clueText
+      };
+    });
+  }
+
+  function __s43RenderGuidedWorksheet(pairs){
+    return `<div class="iaw-rendered worksheet-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      const clueHtml = pair.clueText ? `<div class="guided-clue-line"><span class="guided-meta-label">clue:</span> <span class="guided-meta-value">${__s43Esc(pair.clueText)}</span></div>` : '';
+      const wcHtml = pair.wordCount ? `<div class="guided-wordcount-line"><span class="guided-meta-label">word count:</span> <span class="guided-meta-value">${pair.wordCount}</span></div>` : '';
+      return `<div class="worksheet-item guided-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+             `<div class="guided-question-line"><span class="guided-item-no">${no}.</span> <span class="guided-question-text">${__s43Esc(pair.question)}</span></div>` +
+             clueHtml + wcHtml + `<div class="guided-answer-space"></div>` + `</div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s43RenderGuidedAnswers(pairs){
+    return `<div class="iaw-rendered answer-root">` + pairs.map((pair, idx) => `<div class="guided-answer-item" data-item-no="${idx+1}"><span class="guided-answer-no">${idx+1}.</span> <span class="guided-answer-text">${__s43Esc(pair.answer)}</span></div>`).join('') + `</div>`;
+  }
+
+  function __s43RenderBlankWorksheet(pairs){
+    return `<div class="iaw-rendered worksheet-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      const cueHtml = pair.cueWord ? ` <span class="blankfill-cue-word">(${__s43Esc(pair.cueWord)})</span>` : '';
+      return `<div class="worksheet-item blankfill-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+             `<div class="blankfill-question-line"><span class="blankfill-item-no">${no}.</span> <span class="blankfill-question-text">${__s43Esc(pair.question)}</span></div>` +
+             `<div class="blankfill-sentence-line"><span class="blankfill-body">${__s43Esc(pair.blankText)}</span>${cueHtml}</div>` + `</div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s43RenderBlankAnswers(pairs){
+    return `<div class="iaw-rendered answer-root">` + pairs.map((pair, idx) => `<div class="blankfill-answer-item" data-item-no="${idx+1}"><span class="blankfill-answer-no">${idx+1}.</span> <span class="blankfill-answer-text">${__s43Esc(pair.answer)}</span></div>`).join('') + `</div>`;
+  }
+
+  function __s43RenderChoiceWorksheet(pairs){
+    return `<div class="iaw-rendered worksheet-root">` + pairs.map((pair, idx) => {
+      const no = idx + 1;
+      const optionsHtml = (pair.choices || []).map((choice, cIdx) => `<div class="choice-option-line"><span class="choice-option-no">${['①','②','③','④'][cIdx] || (cIdx+1)+')'}</span> <span class="choice-option-text">${__s43Esc(__s43StripLead(choice))}</span></div>`).join('');
+      return `<div class="worksheet-item choice-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+             `<div class="choice-question-line"><span class="choice-item-no">${no}.</span> <span class="choice-question-text">${__s43Esc(pair.question)}</span></div>` +
+             `<div class="choice-options-wrap">${optionsHtml}</div>` + `</div>`;
+    }).join('') + `</div>`;
+  }
+
+  function __s43RenderChoiceAnswers(pairs){
+    return `<div class="iaw-rendered answer-root">` + pairs.map((pair, idx) => `<div class="choice-answer-item" data-item-no="${idx+1}"><span class="choice-answer-no">${idx+1}.</span> <span class="choice-answer-index">${(pair.correctIndex || 0)+1}</span> <span class="choice-answer-text">(${__s43Esc(pair.answer)})</span></div>`).join('') + `</div>`;
+  }
+
+  function __s44InlineGuidedMeta(pair){
+    const bits = [];
+    if (pair?.clueText) bits.push(`clue: ${pair.clueText}`);
+    if (pair?.wordCount) bits.push(`word count: ${pair.wordCount}`);
+    return bits.length ? ` (${bits.join(' / ')})` : '';
+  }
+
+  function __s43BuildBundle(type, sourcePairs){
+    if (type === 'guided_writing') {
+      return {
+        workbookType: 'guided_writing',
+        renderPairs: sourcePairs,
+        questions: sourcePairs.map(pair => `${pair.no}. ${pair.question}${pair.clueText ? `\nclue: ${pair.clueText}` : ''}${pair.wordCount ? `\nword count: ${pair.wordCount}` : ''}`).join('\n'),
+        answerSheet: sourcePairs.map(pair => `${pair.no}. ${pair.answer}`).join('\n'),
+        worksheetHtml: __s43RenderGuidedWorksheet(sourcePairs),
+        answerSheetHtml: __s43RenderGuidedAnswers(sourcePairs)
+      };
+    }
+    if (type === 'blank_fill') {
+      const renderPairs = __s43BuildBlankPairs(sourcePairs);
+      return {
+        workbookType: 'blank_fill',
+        renderPairs,
+        questions: renderPairs.map(pair => `${pair.no}. ${pair.question}\n${pair.blankText}${pair.cueWord ? ` (${pair.cueWord})` : ''}`).join('\n'),
+        answerSheet: renderPairs.map(pair => `${pair.no}. ${pair.answer}`).join('\n'),
+        worksheetHtml: __s43RenderBlankWorksheet(renderPairs),
+        answerSheetHtml: __s43RenderBlankAnswers(renderPairs)
+      };
+    }
+    if (type === 'choice') {
+      const renderPairs = __s43BuildChoicePairs(sourcePairs);
+      return {
+        workbookType: 'choice',
+        renderPairs,
+        questions: renderPairs.map(pair => `${pair.no}. ${pair.question}`).join('\n'),
+        answerSheet: renderPairs.map(pair => `${pair.no}. ${pair.correctIndex + 1}. ${pair.answer}`).join('\n'),
+        worksheetHtml: __s43RenderChoiceWorksheet(renderPairs),
+        answerSheetHtml: __s43RenderChoiceAnswers(renderPairs)
+      };
+    }
+    return null;
+  }
+
+  function __s43ApplyBundle(base, input, sourcePairs){
+    const type = __s43NormType(input?.workbookType || base?.workbookType || base?.meta?.workbookType || '');
+    const bundle = __s43BuildBundle(type, sourcePairs);
+    if (!bundle) return base;
+    const next = { ...(base || {}) };
+    next.workbookType = bundle.workbookType;
+    next.questions = bundle.questions;
+    next.worksheet = bundle.questions;
+    next.answerSheet = bundle.answerSheet;
+    next.actualCount = bundle.renderPairs.length;
+    next.itemPairs = JSON.parse(JSON.stringify(bundle.renderPairs));
+    next.worksheetHtml = bundle.worksheetHtml;
+    next.answerSheetHtml = bundle.answerSheetHtml;
+    next.answerHtml = bundle.answerSheetHtml;
+    next.__s43CanonicalSourceItems = JSON.parse(JSON.stringify(sourcePairs));
+    next.pairIntegrity = { ok: true, reason: 's43_render_separated', workbookType: bundle.workbookType, sourceCount: sourcePairs.length, renderCount: bundle.renderPairs.length };
+    next.content = [next.title, next.instructions, next.questions].filter(Boolean).join('\n\n');
+    next.fullText = [next.title, next.instructions, next.questions, (((input?.language === 'en') ? 'Answers\n' : '정답\n') + next.answerSheet)].filter(Boolean).join('\n\n');
+    return next;
+  }
+
+  module.exports = async function handler_s43(req, res){
+    let currentJson = res.json.bind(res);
+    Object.defineProperty(res, 'json', {
+      configurable: true,
+      enumerable: true,
+      get(){ return currentJson; },
+      set(fn){
+        currentJson = function patchedJson(payload){
+          let nextPayload = payload;
+          try {
+            const input = req?.body || {};
+            const type = __s43NormType(input?.workbookType || payload?.workbookType || payload?.meta?.workbookType || '');
+            if (['guided_writing','blank_fill','choice'].includes(type)) {
+              const sourcePairs = __s43ResolveSourcePairs(payload, input);
+              if (sourcePairs.length) {
+                nextPayload = __s43ApplyBundle(payload, input, sourcePairs);
+              }
+            }
+          } catch (err) {
+            console.error('S43 final render separation failed:', err);
+          }
+          return fn.call(res, nextPayload);
+        };
+      }
+    });
+    return __prevExport_s43(req, res);
+  };
+
+  if (__prevExport_s43 && __prevExport_s43.config) {
+    module.exports.config = __prevExport_s43.config;
+  }
+
+  console.log('✅ S43 render separation patch applied');
+})();
