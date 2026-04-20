@@ -11124,3 +11124,180 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S30-8R safe pair recovery patch applied');
 })();
+
+
+
+
+/* =========================================================
+   S30-9 Guided Print Block Lock Patch
+   - keep guided item as one print-safe block
+   - prevent clue/word-count line from visually falling to next number
+   - rebuild worksheetHtml/itemPairs from normalized guided blocks only
+========================================================= */
+(function applyS309GuidedPrintBlockLockPatch(){
+  const __prevExportS309 = module.exports;
+
+  function __s309EscapeHtml(value='') {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function __s309NormalizeWorkbookType(value='') {
+    const v = String(value || '').trim().toLowerCase();
+    if (['guided_writing','guided writing','guided-writing','guided','writing'].includes(v)) return 'guided_writing';
+    if (['blank_fill','blank fill','blank-fill','blank','blankfill'].includes(v)) return 'blank_fill';
+    if (['choice','binary_choice','binary-choice','binary choice'].includes(v)) return 'choice';
+    if (['sentence_build','sentence-build','sentence build'].includes(v)) return 'sentence_build';
+    return 'guided_writing';
+  }
+
+  function __s309ExtractQuestionBlocks(text='') {
+    const lines = String(text || '').replace(/\r\n?/g, '\n').split('\n');
+    const blocks = [];
+    let current = null;
+    for (const raw of lines) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      const m = line.match(/^(\d+)[.)]\s*(.*)$/);
+      if (m) {
+        if (current) blocks.push(current);
+        current = { no: Number(m[1]), lead: String(m[2] || '').trim(), lines: [] };
+      } else if (current) {
+        current.lines.push(line);
+      }
+    }
+    if (current) blocks.push(current);
+    return blocks;
+  }
+
+  function __s309ExtractAnswerMap(text='') {
+    const map = new Map();
+    const lines = String(text || '').replace(/\r\n?/g, '\n').split('\n');
+    for (const raw of lines) {
+      const line = String(raw || '').trim();
+      const m = line.match(/^(\d+)[.)]\s*(.*)$/);
+      if (m) map.set(Number(m[1]), String(m[2] || '').trim());
+    }
+    return map;
+  }
+
+  function __s309WordCount(answer='') {
+    return String(answer || '').trim().split(/\s+/).filter(Boolean).length;
+  }
+
+  function __s309BuildClue(answer='') {
+    return `clue: ${String(answer || '').trim().replace(/\s+/g, ', ')} word count: ${__s309WordCount(answer)}`;
+  }
+
+  function __s309NormalizeGuidedBlock(block, answer) {
+    const lead = String(block?.lead || '').replace(/\s*\(?word count:\s*\d+\)?\s*$/i, '').trim();
+    const rawLines = Array.isArray(block?.lines) ? block.lines.slice() : [];
+    const cleaned = [];
+    let sawClue = false;
+    for (const raw of rawLines) {
+      const line = String(raw || '').trim();
+      if (!line) continue;
+      if (/^clue:/i.test(line)) {
+        sawClue = true;
+        continue;
+      }
+      if (/^word count:/i.test(line)) continue;
+      cleaned.push(line);
+    }
+    if (!sawClue) {
+      cleaned.push(__s309BuildClue(answer));
+    } else {
+      cleaned.push(__s309BuildClue(answer));
+    }
+    return { lead, lines: cleaned };
+  }
+
+  function __s309BuildGuidedWorksheetHtml(pairs) {
+    const items = pairs.map((pair) => {
+      const norm = __s309NormalizeGuidedBlock(pair.block, pair.answer);
+      const lineHtml = norm.lines.map((line, idx) => {
+        const cls = /^clue:/i.test(line) ? 'q-clue' : 'q-hint';
+        return `<div class="${cls}" style="display:block !important; width:100% !important; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important; margin:0 0 ${/^clue:/i.test(line) ? '0' : '6px'} 0; line-height:1.65;">${__s309EscapeHtml(line)}</div>`;
+      }).join('');
+      return (
+        `<table class="worksheet-item-table" style="width:100% !important; border-collapse:collapse !important; margin:0 0 16px 0 !important; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">` +
+          `<tr style="page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">` +
+            `<td style="padding:0 0 14px 0 !important; border-bottom:1px solid #dfe7e2 !important; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">` +
+              `<div class="q-main" style="display:block !important; width:100% !important; font-weight:700; margin:0 0 6px 0; page-break-inside:avoid !important; break-inside:avoid-page !important; break-inside:avoid !important;">${pair.no}. ${__s309EscapeHtml(norm.lead)}</div>` +
+              lineHtml +
+            `</td>` +
+          `</tr>` +
+        `</table>`
+      );
+    }).join('');
+    return `<div class="iaw-rendered worksheet-root guided-print-lock" style="display:block !important; width:100% !important;">${items}</div>`;
+  }
+
+  function __s309RepairGuidedPayload(payload = {}, reqBody = {}) {
+    if (!payload || typeof payload !== 'object') return payload;
+    const workbookType = __s309NormalizeWorkbookType(
+      reqBody.workbookType || reqBody.workbook_type || payload.workbookType || payload.meta?.workbookType || ''
+    );
+    if (workbookType !== 'guided_writing') return payload;
+
+    const qBlocks = __s309ExtractQuestionBlocks(payload.questions || '');
+    const aMap = __s309ExtractAnswerMap(payload.answerSheet || '');
+    if (!qBlocks.length || !aMap.size) return payload;
+
+    const pairs = [];
+    for (const block of qBlocks) {
+      const answer = String(aMap.get(block.no) || '').trim();
+      if (!answer) continue;
+      pairs.push({ no: pairs.length + 1, block, answer });
+    }
+    if (!pairs.length) return payload;
+
+    const renderedQ = [];
+    const renderedA = [];
+    for (const pair of pairs) {
+      const norm = __s309NormalizeGuidedBlock(pair.block, pair.answer);
+      renderedQ.push(`${pair.no}. ${norm.lead}`);
+      for (const line of norm.lines) renderedQ.push(line);
+      renderedA.push(`${pair.no}. ${pair.answer}`);
+    }
+
+    payload.questions = renderedQ.join('\n');
+    payload.answerSheet = renderedA.join('\n');
+    payload.worksheet = payload.questions;
+    payload.actualCount = pairs.length;
+    payload.itemPairs = pairs.map((pair) => {
+      const norm = __s309NormalizeGuidedBlock(pair.block, pair.answer);
+      return {
+        no: pair.no,
+        question: [`${pair.no}. ${norm.lead}`, ...norm.lines].join('\n'),
+        answer: pair.answer,
+      };
+    });
+    payload.worksheetHtml = __s309BuildGuidedWorksheetHtml(pairs);
+    return payload;
+  }
+
+  module.exports = async function handler_v841_workbook_type_router_s309(req, res) {
+    const originalJson = res.json.bind(res);
+    res.json = function patchedJson(payload) {
+      let nextPayload = payload;
+      try {
+        nextPayload = __s309RepairGuidedPayload(payload, req?.body || {});
+      } catch (err) {
+        console.error('S30-9 guided print block lock failed:', err);
+      }
+      return originalJson(nextPayload);
+    };
+    return __prevExportS309(req, res);
+  };
+
+  if (__prevExportS309 && __prevExportS309.config) {
+    module.exports.config = __prevExportS309.config;
+  }
+
+  console.log('✅ S30-9 guided print block lock patch applied');
+})();
