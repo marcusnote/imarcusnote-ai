@@ -12983,3 +12983,793 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log('✅ S43 render separation patch applied');
 })();
+
+
+
+/* =========================================================
+   S45 DB-FIRST MIDDLE1 PATCH
+   - keeps other service areas untouched
+   - middle1 + supported chapters use sentence_bank first
+   - guided/blank_fill/choice rendered from canonical JSON items
+   ========================================================= */
+(function applyS45DbFirstMiddle1Patch(){
+  const __prevExportS45 = module.exports;
+  const fs = require("fs");
+  const path = require("path");
+
+  const __S45_SUPPORTED = new Set([
+    "be_verb",
+    "do_verb",
+    "be_question",
+    "do_question",
+    "modal_will"
+  ]);
+
+  function __s45SafeText(v){
+    return String(v || "").trim();
+  }
+
+  function __s45NormalizeWorkbookType(value = ""){
+    const v = String(value || "").trim().toLowerCase();
+    if (!v) return "guided_writing";
+    if (["guided_writing","guided-writing","guided writing","guided","guide","writing"].includes(v)) return "guided_writing";
+    if (["blank_fill","blank-fill","blank fill","blank","blankfill","fill_blank","fill_in_blank"].includes(v)) return "blank_fill";
+    if (["choice","multiple choice","multiple_choice","mcq","binary_choice","binary-choice"].includes(v)) return "choice";
+    return v;
+  }
+
+  function __s45ResolveMiddle1Chapter(reqBody = {}, payload = {}){
+    const direct =
+      __s45SafeText(reqBody.chapterKey || reqBody.chapter_key || payload.chapterKey || (payload.meta && payload.meta.chapterKey));
+    if (__S45_SUPPORTED.has(direct)) return direct;
+
+    const text = [
+      reqBody.userPrompt, reqBody.prompt, reqBody.topic, reqBody.worksheetTitle, reqBody.title,
+      payload.questions, payload.meta && payload.meta.topic
+    ].filter(Boolean).join(" ");
+
+    const raw = String(text || "");
+    const lower = raw.toLowerCase();
+
+    if (/be동사/.test(raw) && /의문문/.test(raw)) return "be_question";
+    if (/일반동사/.test(raw) && /의문문/.test(raw)) return "do_question";
+    if (/be동사/.test(raw)) return "be_verb";
+    if (/일반동사/.test(raw)) return "do_verb";
+    if (/조동사\s*will/.test(raw) || /\bmodal[_\s-]*will\b/.test(lower) || /\bwill\b/.test(lower)) return "modal_will";
+
+    return "";
+  }
+
+  function __s45ResolveGrade(reqBody = {}, payload = {}){
+    const t = [
+      reqBody.gradeLabel, reqBody.grade, reqBody.level,
+      payload.meta && payload.meta.gradeLabel, payload.meta && payload.meta.grade,
+      reqBody.userPrompt, reqBody.topic, reqBody.worksheetTitle
+    ].filter(Boolean).join(" ");
+    if (/중1/.test(t) || /middle1/i.test(t)) return "middle1";
+    return "";
+  }
+
+  function __s45DesiredCount(reqBody = {}, payload = {}){
+    const raw = Number(reqBody.count || reqBody.itemCount || payload.actualCount || 25);
+    if (!Number.isFinite(raw)) return 25;
+    return Math.max(5, Math.min(30, Math.round(raw)));
+  }
+
+  function __s45ReadJsonFile(absPath){
+    try {
+      return JSON.parse(fs.readFileSync(absPath, "utf8"));
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function __s45LoadBank(grade, chapter){
+    if (!grade || !chapter) return null;
+
+    try {
+      const dbLoader = require("../lib/sentence-bank-loader");
+      if (dbLoader && typeof dbLoader.loadSentenceBank === "function") {
+        const loaded = dbLoader.loadSentenceBank(grade, chapter);
+        if (Array.isArray(loaded) && loaded.length) return loaded;
+      }
+    } catch (_) {}
+
+    const candidates = [
+      path.join(process.cwd(), "data", "sentence_bank", grade, `${chapter}.json`),
+      path.join(__dirname, "..", "data", "sentence_bank", grade, `${chapter}.json`)
+    ];
+
+    for (const p of candidates) {
+      const loaded = __s45ReadJsonFile(p);
+      if (Array.isArray(loaded) && loaded.length) return loaded;
+    }
+    return null;
+  }
+
+  function __s45Shuffle(list){
+    const arr = Array.isArray(list) ? list.slice() : [];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = tmp;
+    }
+    return arr;
+  }
+
+  function __s45PickItems(bank, desired){
+    const shuffled = __s45Shuffle(bank || []);
+    return shuffled.slice(0, desired).map((item, idx) => ({
+      id: item.id || idx + 1,
+      no: idx + 1,
+      korean: __s45SafeText(item.korean),
+      english: __s45SafeText(item.english),
+      words: Array.isArray(item.words) ? item.words.filter(Boolean).map(String) : [],
+      wordCount: Number(item.wordCount || 0) || (__s45SafeText(item.english).split(/\s+/).filter(Boolean).length),
+      chapterKey: __s45SafeText(item.chapterKey || item.grammar || ""),
+      difficulty: __s45SafeText(item.difficulty || "basic"),
+      sourceType: __s45SafeText(item.sourceType || "db_seed")
+    })).filter(item => item.korean && item.english);
+  }
+
+  function __s45Esc(s = ""){
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function __s45JoinWords(item){
+    if (Array.isArray(item.words) && item.words.length) {
+      return item.words.filter(w => /^[A-Za-z']+$/.test(String(w))).join(", ");
+    }
+    return __s45SafeText(item.english)
+      .replace(/[.?!]/g, "")
+      .split(/\s+/)
+      .filter(Boolean)
+      .join(", ");
+  }
+
+  function __s45BlankSentence(item){
+    const english = __s45SafeText(item.english);
+    const chapter = item.chapterKey;
+    let blankSentence = english;
+    let hint = "";
+
+    function replaceFirst(regex, hintWord){
+      let done = false;
+      blankSentence = english.replace(regex, function(m){
+        if (done) return m;
+        done = true;
+        hint = hintWord || m.replace(/[.?!,]/g, "");
+        return "_____";
+      });
+      return done;
+    }
+
+    if (chapter === "modal_will") {
+      replaceFirst(/\bwill\b/i, "will");
+    } else if (chapter === "be_verb") {
+      replaceFirst(/\b(am|is|are)\b/i, "am/is/are");
+    } else if (chapter === "be_question") {
+      replaceFirst(/^(Am|Is|Are)\b/i, "Am/Is/Are");
+    } else if (chapter === "do_question") {
+      replaceFirst(/^(Do|Does)\b/i, "Do/Does");
+    } else if (chapter === "do_verb") {
+      const parts = english.split(" ");
+      if (parts.length >= 2) {
+        hint = parts[1].replace(/[.?!,]/g, "");
+        parts[1] = "_____";
+        blankSentence = parts.join(" ");
+      }
+    }
+
+    if (!/_____/.test(blankSentence)) {
+      const parts = english.split(" ");
+      if (parts.length >= 2) {
+        hint = parts[1].replace(/[.?!,]/g, "") || hint;
+        parts[1] = "_____";
+        blankSentence = parts.join(" ");
+      } else {
+        hint = english.replace(/[.?!,]/g, "");
+        blankSentence = "_____";
+      }
+    }
+
+    return { blankSentence: blankSentence, hint: hint };
+  }
+
+  function __s45SwapBeForm(sentence){
+    if (/\bam\b/i.test(sentence)) return sentence.replace(/\bam\b/i, "is");
+    if (/\bis\b/i.test(sentence)) return sentence.replace(/\bis\b/i, "are");
+    if (/\bare\b/i.test(sentence)) return sentence.replace(/\bare\b/i, "is");
+    return sentence;
+  }
+
+  function __s45ChoiceOptions(item){
+    const correct = __s45SafeText(item.english);
+    const chapter = item.chapterKey || "";
+    const options = [correct];
+
+    function add(s) {
+      const v = __s45SafeText(s);
+      if (v && options.indexOf(v) === -1) options.push(v);
+    }
+
+    if (chapter === "modal_will") {
+      add(correct.replace(/\bwill\b\s*/i, ""));
+      add(correct.replace(/\bwill\s+([A-Za-z']+)/i, "will $1s"));
+    } else if (chapter === "be_verb") {
+      add(__s45SwapBeForm(correct));
+      add(correct.replace(/\b(a|an|the)\b\s+/i, ""));
+    } else if (chapter === "be_question") {
+      add(correct.replace(/^([A-Za-z']+)\s+([A-Za-z']+)\b/, "$2 $1"));
+      add(__s45SwapBeForm(correct));
+    } else if (chapter === "do_question") {
+      add(correct.replace(/^Do\b/i, "Does"));
+      add(correct.replace(/^Does\b/i, "Do"));
+      add(correct.replace(/^([A-Za-z']+)\s+([A-Za-z']+)\s+([A-Za-z']+)/, "$2 $3 $1"));
+    } else if (chapter === "do_verb") {
+      add(correct.replace(/\b([A-Za-z']+s)\b/, function(m){ return m.replace(/s$/, ""); }));
+      add(correct.replace(/\b([A-Za-z']+)\b/, "$1s"));
+    }
+
+    while (options.length < 3) add(correct);
+    return options.slice(0, 3);
+  }
+
+  function __s45RenderGuided(items){
+    const qText = items.map(item =>
+      `${item.no}. ${item.korean} (clue: ${__s45JoinWords(item)} / word count: ${item.wordCount})`
+    ).join("\n");
+
+    const aText = items.map(item => `${item.no}. ${item.english}`).join("\n");
+
+    const html = `<div class="iaw-rendered worksheet-root s45-guided-root">` + items.map(item => {
+      return `<div class="worksheet-item guided-item" data-item-no="${item.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+        `<div class="guided-line"><span class="guided-no">${item.no}.</span> <span class="guided-question">${__s45Esc(item.korean)}</span> <span class="guided-inline-meta" style="font-weight:400;font-size:12px;color:#4b5563;">(clue: ${__s45Esc(__s45JoinWords(item))} / word count: ${item.wordCount})</span></div>` +
+        `</div>`;
+    }).join("") + `</div>`;
+
+    const answerHtml = `<div class="iaw-rendered answer-root s45-answer-root">` + items.map(item =>
+      `<div class="answer-item" data-item-no="${item.no}"><span class="answer-no">${item.no}.</span> <span class="answer-text">${__s45Esc(item.english)}</span></div>`
+    ).join("") + `</div>`;
+
+    return { questions: qText, answerSheet: aText, worksheetHtml: html, answerSheetHtml: answerHtml };
+  }
+
+  function __s45RenderBlank(items){
+    const blankItems = items.map(item => {
+      const derived = __s45BlankSentence(item);
+      return Object.assign({}, item, { blankSentence: derived.blankSentence, hint: derived.hint });
+    });
+
+    const qText = blankItems.map(item =>
+      `${item.no}. ${item.korean}\n${item.blankSentence}${item.hint ? ` (${item.hint})` : ""}`
+    ).join("\n");
+
+    const aText = blankItems.map(item => `${item.no}. ${item.english}`).join("\n");
+
+    const html = `<div class="iaw-rendered worksheet-root s45-blank-root">` + blankItems.map(item =>
+      `<div class="worksheet-item blank-item" data-item-no="${item.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+      `<div class="blank-question-line"><span class="blank-no">${item.no}.</span> <span class="blank-question">${__s45Esc(item.korean)}</span></div>` +
+      `<div class="blank-sentence-line">${__s45Esc(item.blankSentence)}${item.hint ? ` <span class="blank-hint">(${__s45Esc(item.hint)})</span>` : ""}</div>` +
+      `</div>`
+    ).join("") + `</div>`;
+
+    const answerHtml = `<div class="iaw-rendered answer-root s45-answer-root">` + blankItems.map(item =>
+      `<div class="answer-item" data-item-no="${item.no}"><span class="answer-no">${item.no}.</span> <span class="answer-text">${__s45Esc(item.english)}</span></div>`
+    ).join("") + `</div>`;
+
+    return { questions: qText, answerSheet: aText, worksheetHtml: html, answerSheetHtml: answerHtml };
+  }
+
+  function __s45RenderChoice(items){
+    const choiceItems = items.map(item => {
+      const options = __s45ChoiceOptions(item);
+      const correctIndex = options.findIndex(function(opt){ return opt === item.english; });
+      return Object.assign({}, item, { options: options, correctIndex: correctIndex });
+    });
+
+    const qText = choiceItems.map(item =>
+      `${item.no}. ${item.korean}\n` + item.options.map((opt, idx) => `${idx + 1}) ${opt.replace(/^\d+\.\s*/, "")}`).join("\n")
+    ).join("\n");
+
+    const aText = choiceItems.map(item => `${item.no}. ${item.correctIndex + 1} (${item.english})`).join("\n");
+
+    const html = `<div class="iaw-rendered worksheet-root s45-choice-root">` + choiceItems.map(item =>
+      `<div class="worksheet-item choice-item" data-item-no="${item.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+      `<div class="choice-question-line"><span class="choice-no">${item.no}.</span> <span class="choice-question">${__s45Esc(item.korean)}</span></div>` +
+      `<div class="choice-options-wrap">` +
+      item.options.map((opt, idx) =>
+        `<div class="choice-option-line"><span class="choice-option-no">${idx + 1})</span> <span class="choice-option-text">${__s45Esc(opt.replace(/^\d+\.\s*/, ""))}</span></div>`
+      ).join("") +
+      `</div></div>`
+    ).join("") + `</div>`;
+
+    const answerHtml = `<div class="iaw-rendered answer-root s45-answer-root">` + choiceItems.map(item =>
+      `<div class="answer-item" data-item-no="${item.no}"><span class="answer-no">${item.no}.</span> <span class="answer-text">${item.correctIndex + 1}) ${__s45Esc(item.english)}</span></div>`
+    ).join("") + `</div>`;
+
+    return { questions: qText, answerSheet: aText, worksheetHtml: html, answerSheetHtml: answerHtml };
+  }
+
+  function __s45BuildPayload(reqBody = {}, payload = {}){
+    const grade = __s45ResolveGrade(reqBody, payload);
+    const workbookType = __s45NormalizeWorkbookType(reqBody.workbookType || reqBody.workbook_type || payload.workbookType || (payload.meta && payload.meta.workbookType) || "");
+    const chapter = __s45ResolveMiddle1Chapter(reqBody, payload);
+
+    if (grade !== "middle1") return null;
+    if (!__S45_SUPPORTED.has(chapter)) return null;
+    if (["guided_writing", "blank_fill", "choice"].indexOf(workbookType) === -1) return null;
+
+    const desired = __s45DesiredCount(reqBody, payload);
+    const bank = __s45LoadBank(grade, chapter);
+    if (!Array.isArray(bank) || !bank.length) return null;
+
+    const items = __s45PickItems(bank, desired);
+    if (!items.length) return null;
+
+    const rendered =
+      workbookType === "blank_fill" ? __s45RenderBlank(items) :
+      workbookType === "choice" ? __s45RenderChoice(items) :
+      __s45RenderGuided(items);
+
+    return Object.assign({}, payload, {
+      workbookType: workbookType,
+      actualCount: items.length,
+      itemPairs: items.map(item => ({
+        no: item.no,
+        question: item.korean,
+        answer: item.english,
+        clue: __s45JoinWords(item),
+        wordCount: item.wordCount,
+        chapterKey: item.chapterKey,
+        sourceType: item.sourceType
+      })),
+      questions: rendered.questions,
+      answerSheet: rendered.answerSheet,
+      worksheet: rendered.questions,
+      worksheetHtml: rendered.worksheetHtml,
+      answerSheetHtml: rendered.answerSheetHtml,
+      chapterKey: chapter,
+      dbMode: true,
+      dbGrade: grade
+    });
+  }
+
+  module.exports = async function handler_s45_db_first(req, res){
+    const originalJson = res.json.bind(res);
+    res.json = function s45PatchedJson(payload){
+      try {
+        const next = __s45BuildPayload((req && req.body) || {}, payload || {});
+        if (next) {
+          console.log(`✅ S45 DB-first applied: ${next.dbGrade}/${next.chapterKey}/${next.workbookType} (${next.actualCount})`);
+          return originalJson(next);
+        }
+      } catch (err) {
+        console.error("S45 DB-first patch failed:", err);
+      }
+      return originalJson(payload);
+    };
+    return __prevExportS45(req, res);
+  };
+
+  if (__prevExportS45 && __prevExportS45.config) {
+    module.exports.config = __prevExportS45.config;
+  }
+
+  console.log("✅ S45 DB-FIRST MIDDLE1 PATCH applied");
+})();
+
+
+
+/* =========================================================
+   S46 MIDDLE1 ITEM ENGINE PATCH
+   - keeps other service areas untouched
+   - middle1 supported chapters use canonical item engine
+   - guided / blank_fill / choice fully rendered from items
+   ========================================================= */
+(function applyS46Middle1ItemEnginePatch(){
+  const __prevExportS46 = module.exports;
+  const fs = require("fs");
+  const path = require("path");
+
+  const __S46_SUPPORTED = new Set([
+    "be_verb",
+    "do_verb",
+    "be_question",
+    "do_question",
+    "modal_will"
+  ]);
+
+  function __s46Text(v){ return String(v || "").trim(); }
+
+  function __s46Esc(s){
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function __s46NormalizeWorkbookType(value){
+    const v = String(value || "").trim().toLowerCase();
+    if (!v) return "guided_writing";
+    if (["guided_writing","guided-writing","guided writing","guided","guide","writing"].includes(v)) return "guided_writing";
+    if (["blank_fill","blank-fill","blank fill","blank","blankfill","fill_blank","fill_in_blank"].includes(v)) return "blank_fill";
+    if (["choice","multiple choice","multiple_choice","mcq","binary_choice","binary-choice"].includes(v)) return "choice";
+    return v;
+  }
+
+  function __s46ResolveGrade(reqBody, payload){
+    const t = [
+      reqBody && reqBody.gradeLabel, reqBody && reqBody.grade, reqBody && reqBody.level,
+      payload && payload.meta && payload.meta.gradeLabel, payload && payload.meta && payload.meta.grade,
+      reqBody && reqBody.userPrompt, reqBody && reqBody.topic, reqBody && reqBody.worksheetTitle
+    ].filter(Boolean).join(" ");
+    if (/중1/.test(t) || /middle1/i.test(t)) return "middle1";
+    return "";
+  }
+
+  function __s46ResolveChapter(reqBody, payload){
+    const direct = __s46Text(
+      (reqBody && (reqBody.chapterKey || reqBody.chapter_key)) ||
+      (payload && payload.chapterKey) ||
+      (payload && payload.meta && payload.meta.chapterKey)
+    );
+    if (__S46_SUPPORTED.has(direct)) return direct;
+
+    const raw = [
+      reqBody && reqBody.userPrompt, reqBody && reqBody.prompt, reqBody && reqBody.topic,
+      reqBody && reqBody.worksheetTitle, payload && payload.questions,
+      payload && payload.meta && payload.meta.topic
+    ].filter(Boolean).join(" ");
+    const lower = String(raw || "").toLowerCase();
+
+    if (/be동사/.test(raw) && /의문문/.test(raw)) return "be_question";
+    if (/일반동사/.test(raw) && /의문문/.test(raw)) return "do_question";
+    if (/be동사/.test(raw)) return "be_verb";
+    if (/일반동사/.test(raw)) return "do_verb";
+    if (/조동사\s*will/.test(raw) || /\bmodal[_\s-]*will\b/.test(lower) || /\bwill\b/.test(lower)) return "modal_will";
+    return "";
+  }
+
+  function __s46DesiredCount(reqBody, payload){
+    const raw = Number((reqBody && (reqBody.count || reqBody.itemCount)) || (payload && payload.actualCount) || 25);
+    if (!Number.isFinite(raw)) return 25;
+    return Math.max(5, Math.min(30, Math.round(raw)));
+  }
+
+  function __s46ReadJsonFile(absPath){
+    try {
+      return JSON.parse(fs.readFileSync(absPath, "utf8"));
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function __s46LoadBank(grade, chapter){
+    if (!grade || !chapter) return null;
+
+    try {
+      const dbLoader = require("../lib/sentence-bank-loader");
+      if (dbLoader && typeof dbLoader.loadSentenceBank === "function") {
+        const loaded = dbLoader.loadSentenceBank(grade, chapter);
+        if (Array.isArray(loaded) && loaded.length) return loaded;
+      }
+    } catch (_) {}
+
+    const candidates = [
+      path.join(process.cwd(), "data", "sentence_bank", grade, `${chapter}.json`),
+      path.join(__dirname, "..", "data", "sentence_bank", grade, `${chapter}.json`)
+    ];
+
+    for (const p of candidates) {
+      const loaded = __s46ReadJsonFile(p);
+      if (Array.isArray(loaded) && loaded.length) return loaded;
+    }
+    return null;
+  }
+
+  function __s46Shuffle(list){
+    const arr = Array.isArray(list) ? list.slice() : [];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = tmp;
+    }
+    return arr;
+  }
+
+  function __s46PickItems(bank, desired){
+    const picked = __s46Shuffle(bank || []).slice(0, desired);
+    return picked.map(function(item, idx){
+      const english = __s46Text(item.english);
+      const words = Array.isArray(item.words) && item.words.length
+        ? item.words.filter(Boolean).map(String)
+        : english.replace(/[.?!]/g, "").split(/\s+/).filter(Boolean);
+
+      return {
+        id: item.id || idx + 1,
+        no: idx + 1,
+        korean: __s46Text(item.korean),
+        english: english,
+        words: words,
+        wordCount: Number(item.wordCount || 0) || words.filter(Boolean).length,
+        chapterKey: __s46Text(item.chapterKey || item.grammar || ""),
+        difficulty: __s46Text(item.difficulty || "basic"),
+        sourceType: __s46Text(item.sourceType || "db_seed")
+      };
+    }).filter(function(item){
+      return item.korean && item.english;
+    });
+  }
+
+  function __s46Clue(item){
+    return (Array.isArray(item.words) ? item.words : [])
+      .filter(function(w){ return /^[A-Za-z']+$/.test(String(w)); })
+      .join(", ");
+  }
+
+  function __s46MainVerbIndex(item){
+    const words = Array.isArray(item.words) ? item.words.slice() : [];
+    const chapter = item.chapterKey || "";
+    if (!words.length) return -1;
+
+    if (chapter === "modal_will") {
+      for (let i = 0; i < words.length; i++) if (/^will$/i.test(words[i])) return i;
+      return -1;
+    }
+    if (chapter === "be_verb") {
+      for (let i = 0; i < words.length; i++) if (/^(am|is|are)$/i.test(words[i])) return i;
+      return -1;
+    }
+    if (chapter === "be_question") {
+      return 0;
+    }
+    if (chapter === "do_question") {
+      return 0;
+    }
+    if (chapter === "do_verb") {
+      if (words.length >= 2) return 1;
+      return 0;
+    }
+    return words.length >= 2 ? 1 : 0;
+  }
+
+  function __s46BuildBlank(item){
+    const words = Array.isArray(item.words) ? item.words.slice() : __s46Text(item.english).replace(/[.?!]/g, "").split(/\s+/).filter(Boolean);
+    const idx = __s46MainVerbIndex(item);
+    let hint = "";
+    if (idx >= 0 && words[idx]) {
+      hint = String(words[idx]).replace(/[.?!,]/g, "");
+      words[idx] = "_____";
+    } else if (words.length) {
+      hint = String(words[0]).replace(/[.?!,]/g, "");
+      words[0] = "_____";
+    }
+    let sentence = words.join(" ");
+    const punct = __s46Text(item.english).match(/[.?!]$/);
+    if (punct) sentence += punct[0];
+    return { sentence, hint };
+  }
+
+  function __s46SwapBe(word){
+    if (/^am$/i.test(word)) return "is";
+    if (/^is$/i.test(word)) return "are";
+    if (/^are$/i.test(word)) return "is";
+    return word;
+  }
+
+  function __s46BuildChoices(item){
+    const correct = __s46Text(item.english);
+    const words = Array.isArray(item.words) ? item.words.slice() : correct.replace(/[.?!]/g, "").split(/\s+/).filter(Boolean);
+    const options = [];
+
+    function add(opt){
+      const cleaned = __s46Text(String(opt || "").replace(/^\d+\.\s*/, ""));
+      if (cleaned && options.indexOf(cleaned) === -1) options.push(cleaned);
+    }
+
+    add(correct);
+
+    if (item.chapterKey === "modal_will") {
+      add(correct.replace(/\bwill\b\s*/i, ""));
+      add(correct.replace(/\bwill\s+([A-Za-z']+)/i, "will $1s"));
+    } else if (item.chapterKey === "be_verb") {
+      const idx = __s46MainVerbIndex(item);
+      if (idx >= 0 && words[idx]) {
+        const a = words.slice();
+        a[idx] = __s46SwapBe(a[idx]);
+        add(a.join(" ") + (/[.?!]$/.test(correct) ? correct.match(/[.?!]$/)[0] : ""));
+      }
+      add(correct.replace(/\b(a|an|the)\b\s+/i, ""));
+    } else if (item.chapterKey === "be_question") {
+      if (words.length >= 2) {
+        const a = words.slice();
+        a[0] = __s46SwapBe(a[0]);
+        add(a.join(" ") + "?");
+        add(words.slice(1).concat(words[0]).join(" ") + "?");
+      }
+    } else if (item.chapterKey === "do_question") {
+      if (words.length >= 3) {
+        const a = words.slice();
+        a[0] = /^Do$/i.test(a[0]) ? "Does" : "Do";
+        add(a.join(" ") + "?");
+        add(words.slice(1).concat(words[0]).join(" ") + "?");
+      }
+    } else if (item.chapterKey === "do_verb") {
+      if (words.length >= 2) {
+        const a = words.slice();
+        a[1] = /s$/i.test(a[1]) ? a[1].replace(/s$/i, "") : a[1] + "s";
+        add(a.join(" ") + (/[.?!]$/.test(correct) ? correct.match(/[.?!]$/)[0] : ""));
+      }
+      add(correct.replace(/\b(a|an|the)\b\s+/i, ""));
+    }
+
+    while (options.length < 3) add(correct);
+    return options.slice(0, 3);
+  }
+
+  function __s46RenderGuided(items){
+    const questions = items.map(function(item){
+      return `${item.no}. ${item.korean} (clue: ${__s46Clue(item)} / word count: ${item.wordCount})`;
+    }).join("\n");
+
+    const answerSheet = items.map(function(item){
+      return `${item.no}. ${item.english}`;
+    }).join("\n");
+
+    const worksheetHtml = `<div class="iaw-rendered worksheet-root s46-guided-root">` + items.map(function(item){
+      return `<div class="worksheet-item s46-item s46-guided-item" data-item-no="${item.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+        `<div class="s46-guided-question-line"><span class="s46-no">${item.no}.</span> <span class="s46-question">${__s46Esc(item.korean)}</span></div>` +
+        `<div class="s46-guided-meta-line" style="font-size:12px;color:#4b5563;margin-top:4px;"><span class="s46-meta-clue">clue: ${__s46Esc(__s46Clue(item))}</span> <span class="s46-meta-sep"> / </span><span class="s46-meta-count">word count: ${item.wordCount}</span></div>` +
+      `</div>`;
+    }).join("") + `</div>`;
+
+    const answerSheetHtml = `<div class="iaw-rendered answer-root s46-answer-root">` + items.map(function(item){
+      return `<div class="answer-item" data-item-no="${item.no}"><span class="answer-no">${item.no}.</span> <span class="answer-text">${__s46Esc(item.english)}</span></div>`;
+    }).join("") + `</div>`;
+
+    return { questions, answerSheet, worksheetHtml, answerSheetHtml };
+  }
+
+  function __s46RenderBlank(items){
+    const blankItems = items.map(function(item){
+      const blank = __s46BuildBlank(item);
+      return Object.assign({}, item, { blankSentence: blank.sentence, blankHint: blank.hint });
+    });
+
+    const questions = blankItems.map(function(item){
+      return `${item.no}. ${item.korean}\n${item.blankSentence}${item.blankHint ? ` (${item.blankHint})` : ""}`;
+    }).join("\n");
+
+    const answerSheet = blankItems.map(function(item){
+      return `${item.no}. ${item.english}`;
+    }).join("\n");
+
+    const worksheetHtml = `<div class="iaw-rendered worksheet-root s46-blank-root">` + blankItems.map(function(item){
+      return `<div class="worksheet-item s46-item s46-blank-item" data-item-no="${item.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+        `<div class="s46-blank-question-line"><span class="s46-no">${item.no}.</span> <span class="s46-question">${__s46Esc(item.korean)}</span></div>` +
+        `<div class="s46-blank-sentence-line" style="margin-top:6px;">${__s46Esc(item.blankSentence)}${item.blankHint ? ` <span class="s46-blank-hint">(${__s46Esc(item.blankHint)})</span>` : ""}</div>` +
+      `</div>`;
+    }).join("") + `</div>`;
+
+    const answerSheetHtml = `<div class="iaw-rendered answer-root s46-answer-root">` + blankItems.map(function(item){
+      return `<div class="answer-item" data-item-no="${item.no}"><span class="answer-no">${item.no}.</span> <span class="answer-text">${__s46Esc(item.english)}</span></div>`;
+    }).join("") + `</div>`;
+
+    return { questions, answerSheet, worksheetHtml, answerSheetHtml };
+  }
+
+  function __s46RenderChoice(items){
+    const choiceItems = items.map(function(item){
+      const options = __s46BuildChoices(item);
+      const correctIndex = Math.max(0, options.indexOf(__s46Text(item.english)));
+      return Object.assign({}, item, { options, correctIndex });
+    });
+
+    const questions = choiceItems.map(function(item){
+      return `${item.no}. ${item.korean}\n` + item.options.map(function(opt, idx){
+        return `${idx + 1}) ${String(opt).replace(/^\d+\.\s*/, "")}`;
+      }).join("\n");
+    }).join("\n");
+
+    const answerSheet = choiceItems.map(function(item){
+      return `${item.no}. ${item.correctIndex + 1} (${item.english})`;
+    }).join("\n");
+
+    const worksheetHtml = `<div class="iaw-rendered worksheet-root s46-choice-root">` + choiceItems.map(function(item){
+      return `<div class="worksheet-item s46-item s46-choice-item" data-item-no="${item.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">` +
+        `<div class="s46-choice-question-line"><span class="s46-no">${item.no}.</span> <span class="s46-question">${__s46Esc(item.korean)}</span></div>` +
+        `<div class="s46-choice-options-wrap" style="margin-top:6px;">` +
+          item.options.map(function(opt, idx){
+            return `<div class="s46-choice-option-line"><span class="s46-choice-option-no">${idx + 1})</span> <span class="s46-choice-option-text">${__s46Esc(String(opt).replace(/^\d+\.\s*/, ""))}</span></div>`;
+          }).join("") +
+        `</div>` +
+      `</div>`;
+    }).join("") + `</div>`;
+
+    const answerSheetHtml = `<div class="iaw-rendered answer-root s46-answer-root">` + choiceItems.map(function(item){
+      return `<div class="answer-item" data-item-no="${item.no}"><span class="answer-no">${item.no}.</span> <span class="answer-text">${item.correctIndex + 1}) ${__s46Esc(item.english)}</span></div>`;
+    }).join("") + `</div>`;
+
+    return { questions, answerSheet, worksheetHtml, answerSheetHtml };
+  }
+
+  function __s46BuildPayload(reqBody, payload){
+    const grade = __s46ResolveGrade(reqBody, payload);
+    const workbookType = __s46NormalizeWorkbookType((reqBody && (reqBody.workbookType || reqBody.workbook_type)) || (payload && payload.workbookType) || (payload && payload.meta && payload.meta.workbookType) || "");
+    const chapter = __s46ResolveChapter(reqBody, payload);
+
+    if (grade !== "middle1") return null;
+    if (!__S46_SUPPORTED.has(chapter)) return null;
+    if (["guided_writing","blank_fill","choice"].indexOf(workbookType) === -1) return null;
+
+    const desired = __s46DesiredCount(reqBody, payload);
+    const bank = __s46LoadBank(grade, chapter);
+    if (!Array.isArray(bank) || !bank.length) return null;
+
+    const items = __s46PickItems(bank, desired);
+    if (!items.length) return null;
+
+    const rendered =
+      workbookType === "blank_fill" ? __s46RenderBlank(items) :
+      workbookType === "choice" ? __s46RenderChoice(items) :
+      __s46RenderGuided(items);
+
+    return Object.assign({}, payload, {
+      workbookType: workbookType,
+      actualCount: items.length,
+      itemPairs: items.map(function(item){
+        return {
+          no: item.no,
+          question: item.korean,
+          answer: item.english,
+          clue: __s46Clue(item),
+          wordCount: item.wordCount,
+          chapterKey: item.chapterKey,
+          sourceType: item.sourceType
+        };
+      }),
+      questions: rendered.questions,
+      answerSheet: rendered.answerSheet,
+      worksheet: rendered.questions,
+      worksheetHtml: rendered.worksheetHtml,
+      answerSheetHtml: rendered.answerSheetHtml,
+      chapterKey: chapter,
+      dbMode: true,
+      dbGrade: grade,
+      engineVersion: "s46-middle1-item-engine"
+    });
+  }
+
+  module.exports = async function handler_s46_middle1(req, res){
+    const originalJson = res.json.bind(res);
+    res.json = function s46PatchedJson(payload){
+      try {
+        const next = __s46BuildPayload((req && req.body) || {}, payload || {});
+        if (next) {
+          console.log(`✅ S46 item-engine applied: ${next.dbGrade}/${next.chapterKey}/${next.workbookType} (${next.actualCount})`);
+          return originalJson(next);
+        }
+      } catch (err) {
+        console.error("S46 item-engine patch failed:", err);
+      }
+      return originalJson(payload);
+    };
+    return __prevExportS46(req, res);
+  };
+
+  if (__prevExportS46 && __prevExportS46.config) {
+    module.exports.config = __prevExportS46.config;
+  }
+
+  console.log("✅ S46 MIDDLE1 ITEM ENGINE PATCH applied");
+})();
