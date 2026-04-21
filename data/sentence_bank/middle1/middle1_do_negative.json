@@ -1,0 +1,51 @@
+[
+  {
+    "id": "m1_s1_do_negative_001",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그녀는 매일 우유를 마시지 않는다.",
+    "english": "She does not drink milk every day.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "drink",
+      "milk",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not",
+      "drink",
+      "milk",
+      "every day"
+    ],
+    "extraClueWordPool": [
+      "water",
+      "juice",
+      "school"
+    ],
+    "blankTargets": [
+      "drink"
+    ],
+    "distractorSeeds": {
+      "auxError": "She do not drink milk every day.",
+      "statementForm": "She drinks milk every day.",
+      "fragmentForm": "She not drink milk every day."
+    },
+    "tags": [
+      "do_negative",
+      "daily",
+      "food"
+    ]
+  }
+]
