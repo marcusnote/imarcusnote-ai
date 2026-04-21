@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "m1_s1_do_question_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너는 매일 아침 물을 마시니?",
+    "english": "Do you drink water every morning?",
+    "words": [
+      "Do",
+      "you",
+      "drink",
+      "water",
+      "every",
+      "morning",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "drink",
+      "water",
+      "every morning"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "morning"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you drink water every morning?",
+      "statementForm": "You drink water every morning.",
+      "fragmentForm": "You drink water every morning?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그녀는 방과 후에 숙제를 하니?",
+    "english": "Does she do her homework after school?",
+    "words": [
+      "Does",
+      "she",
+      "do",
+      "her",
+      "homework",
+      "after",
+      "school",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "she",
+      "do",
+      "her homework",
+      "after school"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "her homework"
+    ],
+    "tags": [
+      "do_question",
+      "home",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do she do her homework after school?",
+      "statementForm": "She do her homework after school.",
+      "fragmentForm": "She do her homework after school?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그는 매주 토요일에 축구를 하니?",
+    "english": "Does he play soccer every Saturday?",
+    "words": [
+      "Does",
+      "he",
+      "play",
+      "soccer",
+      "every",
+      "Saturday",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "he",
+      "play",
+      "soccer",
+      "every Saturday"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "Saturday"
+    ],
+    "tags": [
+      "do_question",
+      "hobby"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do he play soccer every Saturday?",
+      "statementForm": "He play soccer every Saturday.",
+      "fragmentForm": "He play soccer every Saturday?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너희는 점심시간에 영어를 공부하니?",
+    "english": "Do you study English at lunch time?",
+    "words": [
+      "Do",
+      "you",
+      "study",
+      "English",
+      "at",
+      "lunch",
+      "time",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "study",
+      "English",
+      "at lunch",
+      "time"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "time"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you study English at lunch time?",
+      "statementForm": "You study English at lunch time.",
+      "fragmentForm": "You study English at lunch time?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그들은 저녁에 TV를 보니?",
+    "english": "Do they watch TV in the evening?",
+    "words": [
+      "Do",
+      "they",
+      "watch",
+      "TV",
+      "in",
+      "the",
+      "evening",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "they",
+      "watch",
+      "TV",
+      "in the evening"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "the evening"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does they watch TV in the evening?",
+      "statementForm": "They watch TV in the evening.",
+      "fragmentForm": "They watch TV in the evening?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너는 학교에 걸어서 가니?",
+    "english": "Do you walk to school?",
+    "words": [
+      "Do",
+      "you",
+      "walk",
+      "to",
+      "school",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "walk",
+      "to school"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "school"
+    ],
+    "tags": [
+      "do_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you walk to school?",
+      "statementForm": "You walk to school.",
+      "fragmentForm": "You walk to school?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그녀는 일요일마다 교회에 가니?",
+    "english": "Does she go to church every Sunday?",
+    "words": [
+      "Does",
+      "she",
+      "go",
+      "to",
+      "church",
+      "every",
+      "Sunday",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "she",
+      "go",
+      "to church",
+      "every Sunday"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "Sunday"
+    ],
+    "tags": [
+      "do_question",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do she go to church every Sunday?",
+      "statementForm": "She go to church every Sunday.",
+      "fragmentForm": "She go to church every Sunday?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그는 버스로 학교에 오니?",
+    "english": "Does he come to school by bus?",
+    "words": [
+      "Does",
+      "he",
+      "come",
+      "to",
+      "school",
+      "by",
+      "bus",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "he",
+      "come",
+      "to school",
+      "by bus"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "bus"
+    ],
+    "tags": [
+      "do_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do he come to school by bus?",
+      "statementForm": "He come to school by bus.",
+      "fragmentForm": "He come to school by bus?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너희는 주말마다 조부모님을 방문하니?",
+    "english": "Do you visit your grandparents every weekend?",
+    "words": [
+      "Do",
+      "you",
+      "visit",
+      "your",
+      "grandparents",
+      "every",
+      "weekend",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "visit",
+      "your grandparents",
+      "every weekend"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "your grandparents"
+    ],
+    "tags": [
+      "do_question",
+      "family",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you visit your grandparents every weekend?",
+      "statementForm": "You visit your grandparents every weekend.",
+      "fragmentForm": "You visit your grandparents every weekend?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그들은 수업 시간에 질문을 많이 하니?",
+    "english": "Do they ask many questions in class?",
+    "words": [
+      "Do",
+      "they",
+      "ask",
+      "many",
+      "questions",
+      "in",
+      "class",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "they",
+      "ask",
+      "many",
+      "questions",
+      "in class"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "class"
+    ],
+    "tags": [
+      "do_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does they ask many questions in class?",
+      "statementForm": "They ask many questions in class.",
+      "fragmentForm": "They ask many questions in class?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너는 밤에 책을 읽니?",
+    "english": "Do you read books at night?",
+    "words": [
+      "Do",
+      "you",
+      "read",
+      "books",
+      "at",
+      "night",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "read",
+      "books",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "night"
+    ],
+    "tags": [
+      "do_question",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you read books at night?",
+      "statementForm": "You read books at night.",
+      "fragmentForm": "You read books at night?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그녀는 피아노를 잘 치니?",
+    "english": "Does she play the piano well?",
+    "words": [
+      "Does",
+      "she",
+      "play",
+      "the",
+      "piano",
+      "well",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "she",
+      "play",
+      "the piano",
+      "well"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "the piano"
+    ],
+    "tags": [
+      "do_question",
+      "hobby"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do she play the piano well?",
+      "statementForm": "She play the piano well.",
+      "fragmentForm": "She play the piano well?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그는 친구들과 농구를 하니?",
+    "english": "Does he play basketball with his friends?",
+    "words": [
+      "Does",
+      "he",
+      "play",
+      "basketball",
+      "with",
+      "his",
+      "friends",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "he",
+      "play",
+      "basketball",
+      "with his friends"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "his friends"
+    ],
+    "tags": [
+      "do_question",
+      "hobby"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do he play basketball with his friends?",
+      "statementForm": "He play basketball with his friends.",
+      "fragmentForm": "He play basketball with his friends?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너희는 매일 아침 교실을 청소하니?",
+    "english": "Do you clean the classroom every morning?",
+    "words": [
+      "Do",
+      "you",
+      "clean",
+      "the",
+      "classroom",
+      "every",
+      "morning",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "clean",
+      "the classroom",
+      "every morning"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "the classroom"
+    ],
+    "tags": [
+      "do_question",
+      "place",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you clean the classroom every morning?",
+      "statementForm": "You clean the classroom every morning.",
+      "fragmentForm": "You clean the classroom every morning?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그들은 시험 전에 열심히 공부하니?",
+    "english": "Do they study hard before exams?",
+    "words": [
+      "Do",
+      "they",
+      "study",
+      "hard",
+      "before",
+      "exams",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "they",
+      "study",
+      "hard",
+      "before exams"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "exams"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does they study hard before exams?",
+      "statementForm": "They study hard before exams.",
+      "fragmentForm": "They study hard before exams?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너는 매주 엄마를 도와 저녁을 만드니?",
+    "english": "Do you help your mother cook dinner every week?",
+    "words": [
+      "Do",
+      "you",
+      "help",
+      "your",
+      "mother",
+      "cook",
+      "dinner",
+      "every",
+      "week",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "help",
+      "your mother",
+      "cook",
+      "dinner",
+      "every week"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "your mother"
+    ],
+    "tags": [
+      "do_question",
+      "family",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you help your mother cook dinner every week?",
+      "statementForm": "You help your mother cook dinner every week.",
+      "fragmentForm": "You help your mother cook dinner every week?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그녀는 학교에서 많은 친구를 사귀니?",
+    "english": "Does she make many friends at school?",
+    "words": [
+      "Does",
+      "she",
+      "make",
+      "many",
+      "friends",
+      "at",
+      "school",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "she",
+      "make",
+      "many",
+      "friends",
+      "at school"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "school"
+    ],
+    "tags": [
+      "do_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do she make many friends at school?",
+      "statementForm": "She make many friends at school.",
+      "fragmentForm": "She make many friends at school?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그는 아침 식사로 빵을 먹니?",
+    "english": "Does he eat bread for breakfast?",
+    "words": [
+      "Does",
+      "he",
+      "eat",
+      "bread",
+      "for",
+      "breakfast",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "he",
+      "eat",
+      "bread",
+      "for breakfast"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "breakfast"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do he eat bread for breakfast?",
+      "statementForm": "He eat bread for breakfast.",
+      "fragmentForm": "He eat bread for breakfast?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너희는 음악 시간에 노래를 부르니?",
+    "english": "Do you sing songs in music class?",
+    "words": [
+      "Do",
+      "you",
+      "sing",
+      "songs",
+      "in",
+      "music",
+      "class",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "sing",
+      "songs",
+      "in music",
+      "class"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "class"
+    ],
+    "tags": [
+      "do_question",
+      "hobby",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you sing songs in music class?",
+      "statementForm": "You sing songs in music class.",
+      "fragmentForm": "You sing songs in music class?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그들은 쉬는 시간에 밖에서 노니?",
+    "english": "Do they play outside during break time?",
+    "words": [
+      "Do",
+      "they",
+      "play",
+      "outside",
+      "during",
+      "break",
+      "time",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "they",
+      "play",
+      "outside",
+      "during break",
+      "time"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "time"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does they play outside during break time?",
+      "statementForm": "They play outside during break time.",
+      "fragmentForm": "They play outside during break time?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너는 수업 후에 일기를 쓰니?",
+    "english": "Do you write in your diary after class?",
+    "words": [
+      "Do",
+      "you",
+      "write",
+      "in",
+      "your",
+      "diary",
+      "after",
+      "class",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "write",
+      "in your diary",
+      "after class"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "your diary"
+    ],
+    "tags": [
+      "do_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you write in your diary after class?",
+      "statementForm": "You write in your diary after class.",
+      "fragmentForm": "You write in your diary after class?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그녀는 매일 아침 머리를 빗니?",
+    "english": "Does she brush her hair every morning?",
+    "words": [
+      "Does",
+      "she",
+      "brush",
+      "her",
+      "hair",
+      "every",
+      "morning",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "she",
+      "brush",
+      "her hair",
+      "every morning"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "her hair"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do she brush her hair every morning?",
+      "statementForm": "She brush her hair every morning.",
+      "fragmentForm": "She brush her hair every morning?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그는 집에서 강아지와 노니?",
+    "english": "Does he play with his dog at home?",
+    "words": [
+      "Does",
+      "he",
+      "play",
+      "with",
+      "his",
+      "dog",
+      "at",
+      "home",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "he",
+      "play",
+      "with his dog",
+      "at home"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "his dog"
+    ],
+    "tags": [
+      "do_question",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do he play with his dog at home?",
+      "statementForm": "He play with his dog at home.",
+      "fragmentForm": "He play with his dog at home?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너희는 과학 시간에 실험을 하니?",
+    "english": "Do you do experiments in science class?",
+    "words": [
+      "Do",
+      "you",
+      "do",
+      "experiments",
+      "in",
+      "science",
+      "class",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "do",
+      "experiments",
+      "in science",
+      "class"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "class"
+    ],
+    "tags": [
+      "do_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you do experiments in science class?",
+      "statementForm": "You do experiments in science class.",
+      "fragmentForm": "You do experiments in science class?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그들은 주말에 자전거를 타니?",
+    "english": "Do they ride bicycles on weekends?",
+    "words": [
+      "Do",
+      "they",
+      "ride",
+      "bicycles",
+      "on",
+      "weekends",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "they",
+      "ride",
+      "bicycles",
+      "on weekends"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "weekends"
+    ],
+    "tags": [
+      "do_question",
+      "hobby"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does they ride bicycles on weekends?",
+      "statementForm": "They ride bicycles on weekends.",
+      "fragmentForm": "They ride bicycles on weekends?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너는 저녁마다 아빠와 산책하니?",
+    "english": "Do you take a walk with your father every evening?",
+    "words": [
+      "Do",
+      "you",
+      "take",
+      "a",
+      "walk",
+      "with",
+      "your",
+      "father",
+      "every",
+      "evening",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "take",
+      "a walk",
+      "with your father",
+      "every evening"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "your father"
+    ],
+    "tags": [
+      "do_question",
+      "family",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you take a walk with your father every evening?",
+      "statementForm": "You take a walk with your father every evening.",
+      "fragmentForm": "You take a walk with your father every evening?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그녀는 점심으로 샐러드를 먹니?",
+    "english": "Does she eat salad for lunch?",
+    "words": [
+      "Does",
+      "she",
+      "eat",
+      "salad",
+      "for",
+      "lunch",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "she",
+      "eat",
+      "salad",
+      "for lunch"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "lunch"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do she eat salad for lunch?",
+      "statementForm": "She eat salad for lunch.",
+      "fragmentForm": "She eat salad for lunch?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그는 휴일에 사진을 찍니?",
+    "english": "Does he take pictures on holidays?",
+    "words": [
+      "Does",
+      "he",
+      "take",
+      "pictures",
+      "on",
+      "holidays",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "he",
+      "take",
+      "pictures",
+      "on holidays"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "holidays"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do he take pictures on holidays?",
+      "statementForm": "He take pictures on holidays.",
+      "fragmentForm": "He take pictures on holidays?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "너희는 방과 후에 함께 연습하니?",
+    "english": "Do you practice together after school?",
+    "words": [
+      "Do",
+      "you",
+      "practice",
+      "together",
+      "after",
+      "school",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you",
+      "practice",
+      "together",
+      "after school"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "school"
+    ],
+    "tags": [
+      "do_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you practice together after school?",
+      "statementForm": "You practice together after school.",
+      "fragmentForm": "You practice together after school?"
+    }
+  },
+  {
+    "id": "m1_s1_do_question_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_question",
+    "chapterLabelKo": "일반동사의 의문문",
+    "korean": "그들은 밤에 별을 보니?",
+    "english": "Do they look at the stars at night?",
+    "words": [
+      "Do",
+      "they",
+      "look",
+      "at",
+      "the",
+      "stars",
+      "at",
+      "night",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "do_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "they",
+      "look",
+      "at the stars",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "music",
+      "home",
+      "school",
+      "today",
+      "library",
+      "park",
+      "dinner"
+    ],
+    "blankTargets": [
+      "the stars"
+    ],
+    "tags": [
+      "do_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does they look at the stars at night?",
+      "statementForm": "They look at the stars at night.",
+      "fragmentForm": "They look at the stars at night?"
+    }
+  }
+]
