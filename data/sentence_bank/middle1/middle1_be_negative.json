@@ -1,0 +1,47 @@
+[
+  {
+    "id": "m1_s1_be_negative_001",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그는 학생이 아니다.",
+    "english": "He is not a student.",
+    "words": [
+      "He",
+      "is",
+      "not",
+      "a",
+      "student",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "is not",
+      "a student"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend"
+    ],
+    "blankTargets": [
+      "a student"
+    ],
+    "distractorSeeds": {
+      "auxError": "He are not a student.",
+      "statementForm": "He is a student.",
+      "fragmentForm": "He not a student."
+    },
+    "tags": [
+      "be_negative",
+      "school",
+      "identity"
+    ]
+  }
+]
