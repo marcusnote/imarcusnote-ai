@@ -1,0 +1,46 @@
+[
+  {
+    "id": "m1_s1_wh_question_001",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너는 어디에 사니?",
+    "english": "Where do you live?",
+    "words": [
+      "Where",
+      "do",
+      "you",
+      "live",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Where",
+      "do",
+      "you",
+      "live"
+    ],
+    "extraClueWordPool": [
+      "study",
+      "school",
+      "now"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where does you live?",
+      "statementForm": "You live where.",
+      "fragmentForm": "Where you live?"
+    },
+    "tags": [
+      "wh_question",
+      "location"
+    ]
+  }
+]
