@@ -502,35 +502,92 @@ function blankLastLexical(answer = "") {
 }
 
 function buildGuidedClue(answer = "") {
-  const tokens = String(answer).trim().split(/\s+/).filter(Boolean);
-  if (!tokens.length) return "_____";
-  if (tokens.length <= 3) {
-    return tokens.map((t, i) => (i === tokens.length - 1 ? "_____" : t)).join("\n");
+  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
+  const rawTokens = cleaned.split(/\s+/).filter(Boolean);
+  if (!rawTokens.length) return "";
+
+  const stop = new Set(["is", "are", "am", "do", "does", "did", "a", "an", "the"]);
+  let clueTokens = rawTokens.filter((token, idx) => {
+    const lower = token.toLowerCase();
+    if (idx === 0 && stop.has(lower)) return false;
+    return !stop.has(lower);
+  });
+
+  if (!clueTokens.length) clueTokens = rawTokens.slice(1);
+  if (!clueTokens.length) clueTokens = rawTokens;
+
+  return clueTokens.join(', ');
+}
+
+function buildDeclarativeDistractor(answer = "") {
+  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
+  const tokens = cleaned.split(/\s+/).filter(Boolean);
+  if (tokens.length < 2) return cleaned + '.';
+  const first = tokens[0].toLowerCase();
+  if (["is", "are", "am", "was", "were", "do", "does", "did"].includes(first)) {
+    return tokens.slice(1).concat(tokens[0].toLowerCase()).join(' ') + '.';
   }
-  return tokens.map((t, i) => {
-    const clean = t.replace(/[.?!,]/g, "");
-    if (i >= tokens.length - 2) return t.replace(clean, "_____");
-    return t;
-  }).join("\n");
+  return cleaned + '.';
+}
+
+function buildMissingQuestionMarkDistractor(answer = "") {
+  return String(answer || '').trim().replace(/[?!.]+$/g, '');
+}
+
+function buildBeQuestionGrammarDistractor(answer = "") {
+  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
+  const tokens = cleaned.split(/\s+/).filter(Boolean);
+  if (tokens.length < 2) return cleaned;
+  const aux = tokens[0].toLowerCase();
+  if (aux === 'is') tokens[0] = 'Are';
+  else if (aux === 'are') tokens[0] = 'Is';
+  else if (aux === 'am') tokens[0] = 'Is';
+  return tokens.join(' ') + '?';
+}
+
+function buildDoQuestionGrammarDistractor(answer = "") {
+  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
+  const tokens = cleaned.split(/\s+/).filter(Boolean);
+  if (tokens.length < 2) return cleaned;
+  const aux = tokens[0].toLowerCase();
+  if (aux === 'do') tokens[0] = 'Does';
+  else if (aux === 'does') tokens[0] = 'Do';
+  else if (aux === 'did') tokens[0] = 'Does';
+  return tokens.join(' ') + '?';
 }
 
 function makeChoiceOptions(answer = "", input) {
   const base = String(answer).trim();
-  const options = new Set([base]);
-  if (input.grammarFocus.chapterKey === "be_question") {
-    options.add(base.replace(/\bIs\b/, "Are"));
-    options.add(base.replace(/\bAre\b/, "Is"));
-    options.add(base.replace(/\?$/, "."));
-  } else if (input.grammarFocus.chapterKey === "do_question") {
-    options.add(base.replace(/\bDo\b/, "Does"));
-    options.add(base.replace(/\bDoes\b/, "Do"));
-    options.add(base.replace(/\?$/, "."));
+  const normalizedChapter = String(input?.grammarFocus?.chapterKey || '').trim();
+  const candidates = [base];
+
+  if (normalizedChapter === 'be_question') {
+    candidates.push(buildBeQuestionGrammarDistractor(base));
+    candidates.push(buildDeclarativeDistractor(base));
+    candidates.push(buildMissingQuestionMarkDistractor(base));
+  } else if (normalizedChapter === 'do_question') {
+    candidates.push(buildDoQuestionGrammarDistractor(base));
+    candidates.push(buildDeclarativeDistractor(base));
+    candidates.push(buildMissingQuestionMarkDistractor(base));
   } else {
-    options.add(base.replace(/\b(is|are|am)\b/i, "do"));
-    options.add(base.replace(/\bdo\b/i, "is"));
-    options.add(base.replace(/\?$/, "."));
+    candidates.push(buildDeclarativeDistractor(base));
+    candidates.push(buildMissingQuestionMarkDistractor(base));
+    candidates.push(base.replace(/(is|are|am|do|does|did)/i, 'Be'));
   }
-  return Array.from(options).slice(0, 4);
+
+  const options = [];
+  for (const candidate of candidates) {
+    const value = String(candidate || '').trim();
+    if (!value) continue;
+    if (!options.includes(value)) options.push(value);
+  }
+
+  while (options.length < 4) {
+    const filler = buildMissingQuestionMarkDistractor(base) + ' (' + (options.length + 1) + ')';
+    if (!options.includes(filler)) options.push(filler);
+  }
+
+  return options.slice(0, 4);
 }
 
 function normalizeWorkbookTypeLoose(value = "") {
@@ -632,7 +689,7 @@ function renderAnswerHtmlFromItemPairs(items = [], workbookType = "guided_writin
     const no = Number(item.no || item.number || 0);
     const answer = escapeHtml(item.answer || item.english || "");
     if (normalizedType === "choice") {
-      return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">${Number(item.answerIndex || 0) + 1}) ${answer}</span></div>`;
+      return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">정답 ${Number(item.answerIndex || 0) + 1}번 — ${answer}</span></div>`;
     }
     return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">${answer}</span></div>`;
   }).join("\n") + `</div>`;
@@ -642,7 +699,7 @@ function createWorkbookRenderBundle(worksheet, input = {}) {
   if (!worksheet || typeof worksheet !== "object") return null;
   const workbookType = normalizeWorkbookTypeLoose(worksheet.worksheetType || input.workbookType || input.requestedWorkbookType || "guided_writing");
   const itemPairs = buildItemPairsFromWorksheetParts(worksheet.questions, worksheet.answers, workbookType);
-  const answerSheet = itemPairs.map((row) => workbookType === "choice" ? `${row.no}. ${Number(row.answerIndex || 0) + 1}) ${row.answer}` : `${row.no}. ${row.answer}`).join("\n");
+  const answerSheet = itemPairs.map((row) => workbookType === "choice" ? `${row.no}. 정답 ${Number(row.answerIndex || 0) + 1}번 — ${row.answer}` : `${row.no}. ${row.answer}`).join("\n");
   const content = itemPairs.map((row) => {
     if (workbookType === "blank_fill") {
       return `${row.no}. ${row.blankSentence || row.question}${row.clue ? `
