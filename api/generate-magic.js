@@ -1,6 +1,6 @@
-import OpenAI from "openai";
+const OpenAI = require("openai");
 
-export const config = {
+const config = {
   runtime: "nodejs",
 };
 
@@ -253,7 +253,7 @@ function normalizeInput(body = {}) {
     sanitizeString(body.difficulty || ""),
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || ""),
-  ].filter(Boolean).join(" ");
+  ].filter(Boolean).join("\n");
 
   const level = ["elementary", "middle", "high"].includes(body.level) ? body.level : inferLevel(mergedText);
   const modeCandidates = ["magic", "magic-card", "writing", "abcstarter", "textbook-grammar", "chapter-grammar", "vocab-builder"];
@@ -498,20 +498,20 @@ function blankLastLexical(answer = "") {
   const last = tokens[tokens.length - 1];
   const cleanLast = last.replace(/[.?!,]/g, "");
   tokens[tokens.length - 1] = last.replace(cleanLast, "_____");
-  return tokens.join(" ");
+  return tokens.join("\n");
 }
 
 function buildGuidedClue(answer = "") {
   const tokens = String(answer).trim().split(/\s+/).filter(Boolean);
   if (!tokens.length) return "_____";
   if (tokens.length <= 3) {
-    return tokens.map((t, i) => (i === tokens.length - 1 ? "_____" : t)).join(" ");
+    return tokens.map((t, i) => (i === tokens.length - 1 ? "_____" : t)).join("\n");
   }
   return tokens.map((t, i) => {
     const clean = t.replace(/[.?!,]/g, "");
     if (i >= tokens.length - 2) return t.replace(clean, "_____");
     return t;
-  }).join(" ");
+  }).join("\n");
 }
 
 function makeChoiceOptions(answer = "", input) {
@@ -619,10 +619,10 @@ function renderWorksheetHtmlFromItemPairs(items = [], workbookType = "guided_wri
     }
     if (normalizedType === "choice") {
       const options = Array.isArray(item.options) ? item.options.slice(0, 4) : [];
-      return `<div class="worksheet-item choice-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="choice-question-line"><span class="choice-no">${no}.</span> <span class="choice-question">${prompt}</span></div><div class="choice-options-wrap">${options.map((opt, idx) => `<div class="choice-option-line"><span class="choice-option-no">${idx + 1})</span> <span class="choice-option-text">${escapeHtml(String(opt || "").replace(/^\d+[.)]\s*/, ""))}</span></div>`).join("")}</div>${clue ? `<div class="choice-clue-line"><span class="choice-meta-label">clue:</span> <span class="choice-clue">${clue}</span></div>` : ``}</div>`;
+      return `<div class="worksheet-item choice-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="choice-question-line"><span class="choice-no">${no}.</span> <span class="choice-question">${prompt}</span></div><div class="choice-options-wrap">${options.map((opt, idx) => `<div class="choice-option-line"><span class="choice-option-no">${idx + 1})</span> <span class="choice-option-text">${escapeHtml(String(opt || "").replace(/^\d+[.)]\s*/, ""))}</span></div>`).join("\n")}</div>${clue ? `<div class="choice-clue-line"><span class="choice-meta-label">clue:</span> <span class="choice-clue">${clue}</span></div>` : ``}</div>`;
     }
     return `<div class="worksheet-item guided-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="guided-question-line"><span class="guided-no">${no}.</span> <span class="guided-question">${prompt}</span></div>${clue ? `<div class="guided-clue-line"><span class="guided-meta-label">clue:</span> <span class="guided-clue">${clue}</span></div>` : ``}${wordCount ? `<div class="guided-wordcount-line"><span class="guided-meta-label">word count:</span> <span class="guided-wordcount">${wordCount}</span></div>` : ``}</div>`;
-  }).join("") + `</div>`;
+  }).join("\n") + `</div>`;
 }
 
 function renderAnswerHtmlFromItemPairs(items = [], workbookType = "guided_writing") {
@@ -635,15 +635,14 @@ function renderAnswerHtmlFromItemPairs(items = [], workbookType = "guided_writin
       return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">${Number(item.answerIndex || 0) + 1}) ${answer}</span></div>`;
     }
     return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">${answer}</span></div>`;
-  }).join("") + `</div>`;
+  }).join("\n") + `</div>`;
 }
 
 function createWorkbookRenderBundle(worksheet, input = {}) {
   if (!worksheet || typeof worksheet !== "object") return null;
   const workbookType = normalizeWorkbookTypeLoose(worksheet.worksheetType || input.workbookType || input.requestedWorkbookType || "guided_writing");
   const itemPairs = buildItemPairsFromWorksheetParts(worksheet.questions, worksheet.answers, workbookType);
-  const answerSheet = itemPairs.map((row) => workbookType === "choice" ? `${row.no}. ${Number(row.answerIndex || 0) + 1}) ${row.answer}` : `${row.no}. ${row.answer}`).join("
-");
+  const answerSheet = itemPairs.map((row) => workbookType === "choice" ? `${row.no}. ${Number(row.answerIndex || 0) + 1}) ${row.answer}` : `${row.no}. ${row.answer}`).join("\n");
   const content = itemPairs.map((row) => {
     if (workbookType === "blank_fill") {
       return `${row.no}. ${row.blankSentence || row.question}${row.clue ? `
@@ -651,8 +650,7 @@ function createWorkbookRenderBundle(worksheet, input = {}) {
 (word count: ${row.wordCount})` : ``}`;
     }
     if (workbookType === "choice") {
-      const optionLines = (Array.isArray(row.options) ? row.options : []).map((opt, idx) => `${idx + 1}) ${opt}`).join("
-");
+      const optionLines = (Array.isArray(row.options) ? row.options : []).map((opt, idx) => `${idx + 1}) ${opt}`).join("\n");
       return `${row.no}. ${row.question}${optionLines ? `
 ${optionLines}` : ``}${row.clue ? `
 (clue: ${row.clue})` : ``}`;
@@ -660,8 +658,7 @@ ${optionLines}` : ``}${row.clue ? `
     return `${row.no}. ${row.question}${row.clue ? `
 (clue: ${row.clue})` : ``}${row.wordCount ? `
 (word count: ${row.wordCount})` : ``}`;
-  }).join("
-");
+  }).join("\n");
   return { workbookType, itemPairs, worksheetHtml: renderWorksheetHtmlFromItemPairs(itemPairs, workbookType), answerHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheetHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheet, questions: content, content, fullText: content + (answerSheet ? `
 
 정답
@@ -759,7 +756,7 @@ function buildDbFirstWorksheet(input) {
 function shouldUseDbFirst(input) {
   const workbookType = normalizeWorkbookTypeLoose(input?.workbookType || input?.requestedWorkbookType || "");
   const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
-  const levelToken = [input?.gradeLabel || "", input?.level || "", input?.rawBody?.profile || ""].join(" ").toLowerCase();
+  const levelToken = [input?.gradeLabel || "", input?.level || "", input?.rawBody?.profile || ""].join("\n").toLowerCase();
   const isMiddle1 = /중1|middle1|middle 1/.test(levelToken);
   const supportedChapter = ["be_question", "do_question"].includes(chapterKey);
   const supportedType = ["guided_writing", "blank_fill", "choice"].includes(workbookType);
@@ -922,7 +919,7 @@ async function consumeMpIfNeeded(input) {
   };
 }
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   applyCors(res);
 
   if (req.method === "OPTIONS") {
@@ -953,3 +950,7 @@ export default async function handler(req, res) {
     });
   }
 }
+
+
+module.exports = handler;
+module.exports.config = config;
