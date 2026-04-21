@@ -74,6 +74,12 @@ function json(res, status, payload) {
   return res.status(status).json(payload);
 }
 
+function applyCors(res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+}
+
 function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));
 }
@@ -540,6 +546,12 @@ async function consumeMpIfNeeded(input) {
 }
 
 export default async function handler(req, res) {
+  applyCors(res);
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return json(res, 405, { ok: false, error: "POST only." });
   }
