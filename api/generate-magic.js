@@ -506,17 +506,60 @@ function buildGuidedClue(answer = "") {
   const rawTokens = cleaned.split(/\s+/).filter(Boolean);
   if (!rawTokens.length) return "";
 
-  const stop = new Set(["is", "are", "am", "do", "does", "did", "a", "an", "the"]);
-  let clueTokens = rawTokens.filter((token, idx) => {
+  const auxSet = new Set(["is", "are", "am", "do", "does", "did"]);
+  const articleSet = new Set(["a", "an", "the"]);
+  const prepSet = new Set(["at", "in", "on", "to", "from", "with", "for", "of"]);
+
+  const tokens = rawTokens.map((t) => String(t || "").trim()).filter(Boolean);
+  const parts = [];
+
+  if (tokens.length && auxSet.has(tokens[0].toLowerCase())) {
+    parts.push(tokens[0]);
+    tokens.shift();
+  }
+
+  if (tokens.length) {
+    parts.push(tokens[0]);
+    tokens.shift();
+  }
+
+  while (tokens.length) {
+    const token = tokens.shift();
     const lower = token.toLowerCase();
-    if (idx === 0 && stop.has(lower)) return false;
-    return !stop.has(lower);
-  });
 
-  if (!clueTokens.length) clueTokens = rawTokens.slice(1);
-  if (!clueTokens.length) clueTokens = rawTokens;
+    if (articleSet.has(lower)) {
+      if (tokens.length) {
+        parts.push(tokens.shift());
+      }
+      continue;
+    }
 
-  return clueTokens.join(', ');
+    if (prepSet.has(lower)) {
+      if (tokens.length) {
+        const next = tokens.shift();
+        const nextLower = String(next || "").toLowerCase();
+        if (articleSet.has(nextLower) && tokens.length) {
+          parts.push(`${token} ${tokens.shift()}`);
+        } else {
+          parts.push(`${token} ${next}`);
+        }
+      } else {
+        parts.push(token);
+      }
+      continue;
+    }
+
+    parts.push(token);
+  }
+
+  const deduped = [];
+  for (const part of parts) {
+    const value = String(part || "").trim();
+    if (!value) continue;
+    if (!deduped.includes(value)) deduped.push(value);
+  }
+
+  return deduped.join(' / ');
 }
 
 function buildDeclarativeDistractor(answer = "") {
