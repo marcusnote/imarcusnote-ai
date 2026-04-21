@@ -514,13 +514,11 @@ function buildGuidedClue(answer = "") {
   const parts = [];
 
   if (tokens.length && auxSet.has(tokens[0].toLowerCase())) {
-    parts.push(tokens[0]);
-    tokens.shift();
+    parts.push(tokens.shift());
   }
 
   if (tokens.length) {
-    parts.push(tokens[0]);
-    tokens.shift();
+    parts.push(tokens.shift());
   }
 
   while (tokens.length) {
@@ -529,7 +527,9 @@ function buildGuidedClue(answer = "") {
 
     if (articleSet.has(lower)) {
       if (tokens.length) {
-        parts.push(tokens.shift());
+        parts.push(`${token} ${tokens.shift()}`);
+      } else {
+        parts.push(token);
       }
       continue;
     }
@@ -539,7 +539,7 @@ function buildGuidedClue(answer = "") {
         const next = tokens.shift();
         const nextLower = String(next || "").toLowerCase();
         if (articleSet.has(nextLower) && tokens.length) {
-          parts.push(`${token} ${tokens.shift()}`);
+          parts.push(`${token} ${next} ${tokens.shift()}`);
         } else {
           parts.push(`${token} ${next}`);
         }
