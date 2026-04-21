@@ -1,83 +1,27 @@
-const OpenAI = require("openai");
+// api/generate-magic.js
+import fs from "fs/promises";
+import path from "path";
 
-const config = {
+export const config = {
   runtime: "nodejs",
 };
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
-const MEMBERSTACK_SECRET_KEY = process.env.MEMBERSTACK_SECRET_KEY || "";
-const MEMBERSTACK_APP_ID = process.env.MEMBERSTACK_APP_ID || "";
-const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
-const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
 
-const client = OPENAI_API_KEY ? new OpenAI({ apiKey: OPENAI_API_KEY }) : null;
-
-const MP_COST_TABLE = {
-  wormhole: 5,
-  magic: 4,
-  mocks: 5,
-  vocab: 4,
-  abcstarter: 3,
-  writing: 4,
-  "magic-card": 4,
-  "vocab-builder": 4,
-  "vocab-csat": 5,
-  "textbook-grammar": 5,
-  "chapter-grammar": 5,
-  junior_starter: 3,
-  writing_lab: 4,
-  grammar_intensive: 5,
-  reading_mocks: 5,
-  vocab_workbook: 4,
-  vocab_csat: 5,
-};
-
-const MIDDLE1_SENTENCE_BANK = {
-  be_question: [
-    { ko: "그는 학생이니?", en: "Is he a student?" },
-    { ko: "그녀는 지금 집에 있니?", en: "Is she at home now?" },
-    { ko: "너는 바쁘니?", en: "Are you busy?" },
-    { ko: "그들은 교실에 있니?", en: "Are they in the classroom?" },
-    { ko: "오늘은 춥니?", en: "Is it cold today?" },
-    { ko: "너의 부모님은 집에 계시니?", en: "Are your parents at home?" },
-    { ko: "이것은 네 가방이니?", en: "Is this your bag?" },
-    { ko: "저 소년들은 행복하니?", en: "Are those boys happy?" },
-  ],
-  do_question: [
-    { ko: "너는 축구를 하니?", en: "Do you play soccer?" },
-    { ko: "그는 매일 영어를 공부하니?", en: "Does he study English every day?" },
-    { ko: "그녀는 버스로 학교에 가니?", en: "Does she go to school by bus?" },
-    { ko: "너희는 주말에 숙제를 하니?", en: "Do you do your homework on weekends?" },
-    { ko: "그는 아침에 우유를 마시니?", en: "Does he drink milk in the morning?" },
-    { ko: "그들은 공원에서 뛰니?", en: "Do they run in the park?" },
-    { ko: "너는 피아노를 치니?", en: "Do you play the piano?" },
-    { ko: "그녀는 책을 많이 읽니?", en: "Does she read many books?" },
-  ],
-  present_continuous: [
-    { ko: "나는 지금 숙제를 하고 있다.", en: "I am doing my homework now." },
-    { ko: "그는 공원에서 달리고 있다.", en: "He is running in the park." },
-    { ko: "그녀는 영어를 공부하고 있다.", en: "She is studying English." },
-    { ko: "우리는 점심을 먹고 있다.", en: "We are having lunch." },
-    { ko: "그들은 사진을 찍고 있다.", en: "They are taking pictures." },
-  ],
-  present_perfect: [
-    { ko: "나는 이미 내 숙제를 끝냈다.", en: "I have already finished my homework." },
-    { ko: "그는 방을 청소했다.", en: "He has cleaned his room." },
-    { ko: "우리는 그 영화를 본 적이 있다.", en: "We have seen that movie." },
-    { ko: "그녀는 아직 점심을 먹지 않았다.", en: "She has not had lunch yet." },
-    { ko: "그들은 서울에 가 본 적이 있다.", en: "They have been to Seoul." },
-  ],
+const FILE_MAP = {
+  be_verb: "middle1_be_verb.json",
+  be_question: "middle1_be_question.json",
+  be_negative: "middle1_be_negative.json",
+  do_verb: "middle1_do_verb.json",
+  do_question: "middle1_do_question.json",
+  do_negative: "middle1_do_negative.json",
+  wh_question: "middle1_wh_question.json",
+  modal_will: "middle1_modal_will.json",
 };
 
 function json(res, status, payload) {
   return res.status(status).json(payload);
-}
-
-function applyCors(res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 }
 
 function clamp(n, min, max) {
@@ -95,152 +39,125 @@ function sanitizeCount(value) {
   return clamp(Math.round(num), 5, 30);
 }
 
-function sanitizeMp(value, fallback = 5) {
-  const num = Number(value);
-  if (!Number.isFinite(num)) return fallback;
-  return clamp(Math.round(num), 0, 999999);
-}
-
 function inferLanguage(text = "") {
-  return /[가-힣]/.test(String(text || "")) ? "ko" : "en";
+  const t = String(text || "");
+  const koreanMatches = t.match(/[가-힣]/g) || [];
+  return koreanMatches.length > 0 ? "ko" : "en";
 }
 
 function inferLevel(text = "") {
   const t = String(text || "").toLowerCase();
+
   if (/초등|초[1-6]|abc\s*starter|elementary|junior/.test(t)) return "elementary";
   if (/고1|고2|고3|고등|수능|high/.test(t)) return "high";
   if (/중1|중2|중3|중등|middle/.test(t)) return "middle";
+
   return "middle";
 }
 
 function inferMode(text = "") {
   const t = String(text || "").toLowerCase();
-  if (/vocab|vocabulary|어휘|단어|단어장|단어시험|어휘시험|어휘테스트|뜻쓰기|유의어|반의어/.test(t)) return "vocab-builder";
+
   if (/abc\s*starter|starter|phonics|파닉스|기초영어|알파벳/.test(t)) return "abcstarter";
-  if (/영작|writing|composition|rewrite|재배열|문장 재구성|guided writing/.test(t)) return "writing";
+  if (/영작|writing|composition|rewrite|재배열|문장 재구성/.test(t)) return "writing";
   if (/card|카드|magic\s*card|매직카드/.test(t)) return "magic-card";
   if (/교과서|textbook/.test(t)) return "textbook-grammar";
   if (/chapter|챕터/.test(t)) return "chapter-grammar";
+
   return "magic";
 }
 
 function inferDifficulty(text = "") {
   const t = String(text || "").toLowerCase();
+
   if (/extreme|최고난도|극상/.test(t)) return "extreme";
   if (/high|고난도|상/.test(t)) return "high";
   if (/basic|기초|입문|하/.test(t)) return "basic";
   if (/standard|중|보통/.test(t)) return "standard";
+
   return "standard";
 }
 
 function inferTopic(text = "") {
   const t = String(text || "");
+
   const topicPatterns = [
-    "알파벳", "파닉스", "be동사", "일반동사", "현재진행형", "현재완료", "현재완료 진행형",
-    "과거시제", "조동사", "명사", "대명사", "형용사", "부사", "비교급", "최상급",
-    "수동태", "관계대명사", "관계부사", "동명사", "to부정사", "가정법", "접속사",
-    "전치사", "시제", "수일치", "문장구조", "영작훈련", "사역동사", "수여동사"
+    "알파벳",
+    "파닉스",
+    "be동사",
+    "일반동사",
+    "현재진행형",
+    "현재완료",
+    "과거시제",
+    "조동사",
+    "명사",
+    "대명사",
+    "형용사",
+    "부사",
+    "비교급",
+    "최상급",
+    "수동태",
+    "관계대명사",
+    "관계부사",
+    "동명사",
+    "to부정사",
+    "가정법",
+    "접속사",
+    "전치사",
+    "시제",
+    "수일치",
+    "문장구조",
+    "영작훈련",
   ];
+
   for (const topic of topicPatterns) {
     if (t.includes(topic)) return topic;
   }
+
   const lower = t.toLowerCase();
+
+  if (/alphabet/.test(lower)) return "알파벳";
+  if (/phonics/.test(lower)) return "파닉스";
+  if (/writing|composition/.test(lower)) return "영작훈련";
   if (/relative pronoun/.test(lower)) return "관계대명사";
-  if (/passive/.test(lower)) return "수동태";
+  if (/infinitive|to-infinitive/.test(lower)) return "to부정사";
   if (/gerund/.test(lower)) return "동명사";
-  if (/infinitive/.test(lower)) return "to부정사";
-  if (/present perfect progressive/.test(lower)) return "현재완료 진행형";
-  if (/present perfect/.test(lower)) return "현재완료";
-  if (/be verb question/.test(lower)) return "be동사 의문문";
-  if (/do question/.test(lower)) return "일반동사 의문문";
+  if (/passive/.test(lower)) return "수동태";
+
   return "문법 학습";
 }
 
 function inferGradeLabel(text = "", level = "middle") {
   const t = String(text || "");
+
   if (/초1/.test(t)) return "초1";
   if (/초2/.test(t)) return "초2";
   if (/초3/.test(t)) return "초3";
   if (/초4/.test(t)) return "초4";
   if (/초5/.test(t)) return "초5";
   if (/초6/.test(t)) return "초6";
+
   if (/중1/.test(t)) return "중1";
   if (/중2/.test(t)) return "중2";
   if (/중3/.test(t)) return "중3";
+
   if (/고1/.test(t)) return "고1";
   if (/고2/.test(t)) return "고2";
   if (/고3/.test(t)) return "고3";
+
   if (level === "elementary") return "초등";
   if (level === "high") return "고등";
   return "중등";
 }
 
-function detectGrammarFocus(text = "") {
-  const raw = String(text || "");
-  const has = (...patterns) => patterns.some((p) => p.test(raw));
+function normalizeWorkbookType(value = "", mergedText = "") {
+  const direct = String(value || "").trim().toLowerCase();
+  if (["guided_writing", "blank_fill", "choice"].includes(direct)) return direct;
 
-  const flags = {
-    beQuestion: has(/be동사\s*의문문/i, /be동사.*의문문/i, /am\/is\/are/i, /be-?verb question/i),
-    doQuestion: has(/일반동사\s*의문문/i, /일반동사.*의문문/i, /do(?:es)?-?question/i),
-    presentContinuous: has(/현재진행형/i, /present continuous/i, /be \w+ing/i),
-    presentPerfect: has(/현재완료(?!\s*진행형)/i, /present perfect(?!\s*(continuous|progressive))/i),
-    presentPerfectProgressive: has(/현재완료\s*진행형/i, /present perfect\s*(continuous|progressive)/i),
-    passive: has(/수동태/i, /passive/i),
-    gerund: has(/동명사/i, /gerund/i),
-    toInfinitive: has(/to부정사/i, /to-infinitive/i, /infinitive/i),
-    relativePronoun: has(/관계대명사/i, /relative pronoun/i),
-    relativeAdverb: has(/관계부사/i, /relative adverb/i),
-    participialModifier: has(/분사의\s*한정적\s*용법/i, /participial modifier/i),
-    causative: has(/사역동사/i, /causative/i),
-    ditransitive: has(/수여동사/i, /4형식/i, /ditransitive/i),
-  };
-
-  let chapterKey = "general";
-  if (flags.beQuestion) chapterKey = "be_question";
-  else if (flags.doQuestion) chapterKey = "do_question";
-  else if (flags.presentPerfectProgressive) chapterKey = "present_perfect_progressive";
-  else if (flags.presentPerfect) chapterKey = "present_perfect";
-  else if (flags.presentContinuous) chapterKey = "present_continuous";
-  else if (flags.passive) chapterKey = "passive";
-  else if (flags.gerund) chapterKey = "gerund";
-  else if (flags.toInfinitive) chapterKey = "to_infinitive";
-  else if (flags.relativePronoun) chapterKey = "relative_pronoun";
-  else if (flags.relativeAdverb) chapterKey = "relative_adverb";
-  else if (flags.participialModifier) chapterKey = "participial_modifier";
-  else if (flags.causative) chapterKey = "causative";
-  else if (flags.ditransitive) chapterKey = "ditransitive";
-
-  return { chapterKey, ...flags };
-}
-
-function resolveWorkbookType(input) {
-  const mode = input.mode;
-  const focus = input.grammarFocus.chapterKey;
-  const requested = input.requestedWorkbookType;
-
-  if (["guided_writing", "blank_fill", "binary_choice", "choice"].includes(requested)) {
-    return requested === "choice" ? "binary_choice" : requested;
-  }
-
-  if (mode === "abcstarter") return "junior_starter";
-  if (mode === "vocab-builder") return input.level === "high" ? "vocab_csat" : "vocab_workbook";
-  if (mode === "writing" || mode === "magic-card") return "writing_lab";
-  if (mode === "textbook-grammar" || mode === "chapter-grammar") return "grammar_intensive";
-  if (mode === "magic" && ["be_question", "do_question", "present_continuous", "present_perfect"].includes(focus)) {
-    return "writing_lab";
-  }
-  return mode || "magic";
-}
-
-function buildWorkbookFallbacks(input) {
-  const out = new Set();
-  out.add(resolveWorkbookType(input));
-  out.add(input.mode);
-  if (input.mode === "magic-card") out.add("writing");
-  if (input.mode === "chapter-grammar") out.add("textbook-grammar");
-  if (input.mode === "textbook-grammar") out.add("chapter-grammar");
-  if (input.level === "middle") out.add("magic");
-  return Array.from(out).filter(Boolean);
+  const t = `${direct} ${String(mergedText || "").toLowerCase()}`;
+  if (/blank\s*fill|빈칸/.test(t)) return "blank_fill";
+  if (/choice|선택형|객관식/.test(t)) return "choice";
+  return "guided_writing";
 }
 
 function normalizeInput(body = {}) {
@@ -253,843 +170,809 @@ function normalizeInput(body = {}) {
     sanitizeString(body.difficulty || ""),
     sanitizeString(body.examType || ""),
     sanitizeString(body.worksheetTitle || ""),
-  ].filter(Boolean).join("\n");
+    sanitizeString(body.chapterKey || ""),
+    sanitizeString(body.workbookType || ""),
+  ]
+    .filter(Boolean)
+    .join(" ");
 
-  const level = ["elementary", "middle", "high"].includes(body.level) ? body.level : inferLevel(mergedText);
-  const modeCandidates = ["magic", "magic-card", "writing", "abcstarter", "textbook-grammar", "chapter-grammar", "vocab-builder"];
-  const mode = modeCandidates.includes(body.mode) ? body.mode : inferMode(mergedText);
-  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty) ? body.difficulty : inferDifficulty(mergedText);
-  const language = ["ko", "en"].includes(body.language) ? body.language : inferLanguage(mergedText);
+  const level = ["elementary", "middle", "high"].includes(body.level)
+    ? body.level
+    : inferLevel(mergedText);
+
+  const modeCandidates = [
+    "magic",
+    "magic-card",
+    "writing",
+    "abcstarter",
+    "textbook-grammar",
+    "chapter-grammar",
+  ];
+
+  const mode = modeCandidates.includes(body.mode)
+    ? body.mode
+    : inferMode(mergedText);
+
+  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
+    ? body.difficulty
+    : inferDifficulty(mergedText);
+
+  const language = ["ko", "en"].includes(body.language)
+    ? body.language
+    : inferLanguage(mergedText);
+
   const topic = sanitizeString(body.topic || "") || inferTopic(mergedText);
-  const examType = sanitizeString(body.examType || body.exam || "");
-  const count = sanitizeCount(body.count || body.itemCount || body.questionCount || 25);
-  const gradeLabel = sanitizeString(body.gradeLabel || "") || inferGradeLabel(mergedText, level);
-  const grammarFocus = detectGrammarFocus(`${mergedText} ${topic}`);
+  const examType = sanitizeString(body.examType || "") || "workbook";
+  const worksheetTitle = sanitizeString(body.worksheetTitle || "");
+  const academyName = sanitizeString(body.academyName || "Imarcusnote");
+  const count = sanitizeCount(body.count);
+  const engine = "magic";
+  const gradeLabel = inferGradeLabel(mergedText, level);
+  const workbookType = normalizeWorkbookType(body.workbookType || body.problemType || body.type || "", mergedText);
 
-  const requestedWorkbookType = sanitizeString(
-    body.workbookType || body.worksheetType || body.rawBody?.workbookType || ""
-  ).toLowerCase();
-
-  const normalized = {
-    userPrompt,
-    sourceText: sanitizeString(body.sourceText || body.passage || body.text || ""),
-    additionalNotes: sanitizeString(body.additionalNotes || body.notes || ""),
-    language,
+  return {
+    engine,
     level,
     mode,
-    difficulty,
     topic,
     examType,
+    difficulty,
     count,
+    language,
+    worksheetTitle,
+    academyName,
+    userPrompt,
     gradeLabel,
-    grammarFocus,
-    worksheetTitle: sanitizeString(body.worksheetTitle || body.title || ""),
-    memberId: sanitizeString(body.memberId || body.msMemberId || body.userId || ""),
-    useMp: body.useMp !== false,
-    requestedWorkbookType,
-    rawBody: body,
+    workbookType,
+    requestedChapterKey: sanitizeString(body.chapterKey || ""),
+  };
+}
+
+function getDifficultyLabel(difficulty, language = "ko") {
+  if (language === "en") {
+    if (difficulty === "extreme") return "Extreme Difficulty";
+    if (difficulty === "high") return "High Difficulty";
+    if (difficulty === "standard") return "Standard Difficulty";
+    return "Basic Difficulty";
+  }
+
+  if (difficulty === "extreme") return "최고난도";
+  if (difficulty === "high") return "고난도";
+  if (difficulty === "standard") return "표준난도";
+  return "기초난도";
+}
+
+function getModeLabel(mode, language = "ko") {
+  const koMap = {
+    magic: "매직형",
+    "magic-card": "매직카드형",
+    writing: "영작훈련형",
+    abcstarter: "ABC Starter형",
+    "textbook-grammar": "교과서 문법형",
+    "chapter-grammar": "챕터 문법형",
   };
 
-  normalized.workbookType = resolveWorkbookType(normalized);
-  normalized.workbookFallbacks = buildWorkbookFallbacks(normalized);
-  normalized.mpCost = MP_COST_TABLE[normalized.workbookType] || MP_COST_TABLE[normalized.mode] || 4;
-  return normalized;
+  const enMap = {
+    magic: "Magic",
+    "magic-card": "Magic Card",
+    writing: "Writing Training",
+    abcstarter: "ABC Starter",
+    "textbook-grammar": "Textbook Grammar",
+    "chapter-grammar": "Chapter Grammar",
+  };
+
+  return language === "en" ? enMap[mode] || "Magic" : koMap[mode] || "매직형";
 }
 
-function getMiddle1SentenceBank(input) {
-  if (input.gradeLabel !== "중1") return [];
-  const bank = MIDDLE1_SENTENCE_BANK[input.grammarFocus.chapterKey] || [];
-  return bank.slice(0, 8);
+function buildMagicTitle(input) {
+  if (input.worksheetTitle) return input.worksheetTitle;
+
+  const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
+
+  if (input.language === "en") {
+    return `${input.gradeLabel} ${input.topic} Magic ${difficultyLabel} ${input.count} Items`;
+  }
+
+  if (input.mode === "abcstarter") {
+    return `${input.gradeLabel} ${input.topic} ABC Starter ${difficultyLabel} ${input.count}문항`;
+  }
+
+  return `${input.gradeLabel} ${input.topic} 마커스매직 ${difficultyLabel} ${input.count}문항`;
 }
 
-function buildSentenceBankBlock(input) {
-  const bank = getMiddle1SentenceBank(input);
-  if (!bank.length) return "";
-  const lines = bank.map((item, i) => `${i + 1}. ${item.ko} → ${item.en}`).join("\n");
-  return input.language === "en"
-    ? `\n[MIDDLE1 SENTENCE BANK]\nUse the tone and difficulty of these seed patterns, but do not copy them directly.\n${lines}`
-    : `\n[중1 문장 은행]\n아래 예문들의 난도와 톤을 참고하되, 그대로 복사하지 말고 변형하여 활용할 것.\n${lines}`;
+function buildSystemPrompt(input) {
+  const isKo = input.language === "ko";
+
+  return isKo
+    ? `
+당신은 마커스매직 전용 워크북 생성 엔진이다.
+
+핵심 목표:
+- 학습자 친화적이면서도 교육적으로 정교한 영어 학습 워크북을 만든다.
+- 문제는 훈련용, 누적 학습용, 영작용, 교과서 문법 복습용이어야 한다.
+- 출력물은 교사와 학원이 바로 사용할 수 있을 정도로 깔끔해야 한다.
+- 억지로 시험형으로 만들기보다, 학습 효과와 반복 훈련 효과를 높인다.
+
+중요 원칙:
+1. 매직은 웜홀처럼 고난도 판별형 시험지가 아니라, 학습·훈련 중심이다.
+2. 영작 요청이면 객관식보다 쓰기·재구성·배열·완성형 문항을 우선한다.
+3. ABC Starter는 초등 입문자를 고려하여 지나치게 어렵지 않게 작성한다.
+4. 교과서/챕터 문법 요청이면 개념 흐름이 자연스럽게 이어지게 한다.
+5. 정답 또는 예시답안을 반드시 별도 섹션에 제공한다.
+6. 한국어 요청이면 제목/안내문/해설은 한국어로 작성한다.
+7. 문항 수는 정확히 맞춘다.
+8. 애매한 문제나 여러 답이 가능한 문제는 피한다.
+
+출력 형식:
+[[TITLE]]
+(제목 한 줄)
+
+[[INSTRUCTIONS]]
+(학습 안내문 한 단락)
+
+[[QUESTIONS]]
+1. ...
+2. ...
+3. ...
+
+[[ANSWERS]]
+1. ...
+2. ...
+3. ...
+`.trim()
+    : `
+You are the dedicated MARCUS Magic workbook generation engine.
+
+Core goals:
+- Generate clean, educational, workbook-style English practice materials.
+- Prioritize training value, progression, and learning effectiveness.
+- For writing requests, prefer production tasks over multiple choice.
+- For beginner requests, keep the content accessible and supportive.
+- Always provide answers or model responses in a separate section.
+
+Rules:
+1. Magic is a learning and training engine, not a high-difficulty exam engine.
+2. Prefer writing, sentence building, reordering, completion, and guided production tasks when appropriate.
+3. ABC Starter mode must stay beginner-friendly.
+4. Match the requested number of items exactly.
+5. Avoid ambiguous tasks and unclear answer keys.
+
+Output format:
+[[TITLE]]
+(one-line title)
+
+[[INSTRUCTIONS]]
+(one paragraph)
+
+[[QUESTIONS]]
+1. ...
+2. ...
+3. ...
+
+[[ANSWERS]]
+1. ...
+2. ...
+3. ...
+`.trim();
 }
 
 function buildTaskGuide(input) {
-  const guideMap = {
-    writing: input.language === "en"
-      ? "Create a guided English writing workbook with clear clues, controlled sentence length, and answerable Korean prompts."
-      : "명확한 clue와 통제된 문장 길이를 가진 guided writing 영작 훈련 워크북을 작성할 것.",
-    "magic-card": input.language === "en"
-      ? "Create a Marcus Magic Card style workbook with rich clues and sentence-building support."
-      : "마커스매직카드 스타일로 풍부한 clue와 문장 구성 지원이 있는 워크북을 작성할 것.",
-    abcstarter: input.language === "en"
-      ? "Create a very accessible starter workbook for younger learners."
-      : "초등 기초 학습자를 위한 매우 쉬운 starter 워크북을 작성할 것.",
-    "vocab-builder": input.language === "en"
-      ? "Create a vocabulary-centered worksheet rather than a grammar-centered worksheet."
-      : "문법 중심이 아니라 어휘 중심 워크시트를 작성할 것.",
-  };
-  return guideMap[input.mode] || (input.language === "en"
-    ? "Create a stable Marcus Magic grammar writing workbook."
-    : "안정적인 Marcus Magic 문법 영작 워크북을 작성할 것.");
-}
+  switch (input.mode) {
+    case "abcstarter":
+      return input.language === "en"
+        ? "Create beginner-friendly foundational English tasks such as alphabet, phonics, word-picture connection, basic sentence building, and guided completion."
+        : "알파벳, 파닉스, 단어-의미 연결, 기초 문장 만들기, 쉬운 완성형 문제 등 초등 입문 친화형 과제로 구성할 것.";
 
-function buildPrompt(input) {
-  const title = input.worksheetTitle || `${input.gradeLabel} ${input.topic} - 영작훈련 워크북`;
-  const sourceBlock = input.sourceText
-    ? (input.language === "en" ? `\n[Source Text]\n${input.sourceText}` : `\n[지문/자료]\n${input.sourceText}`)
-    : "";
-  const noteBlock = input.additionalNotes
-    ? (input.language === "en" ? `\n[Additional Notes]\n${input.additionalNotes}` : `\n[추가 메모]\n${input.additionalNotes}`)
-    : "";
-  const sentenceBankBlock = buildSentenceBankBlock(input);
-  const focus = input.grammarFocus.chapterKey;
+    case "writing":
+      return input.language === "en"
+        ? "Focus on English writing training: translation to English, sentence reconstruction, guided composition, reordering, and completion."
+        : "영작훈련 중심으로 구성할 것. 한영 전환, 문장 재배열, 영작 완성, 구조 재구성, 단서 기반 영작을 우선할 것.";
 
-  const strictFocusRule = input.language === "en"
-    ? `Keep the worksheet strictly focused on ${focus}. Do not drift into unrelated grammar chapters.`
-    : `${focus} 초점을 엄격하게 유지하고, 관련 없는 다른 문법 챕터로 새지 말 것.`;
+    case "magic-card":
+      return input.language === "en"
+        ? "Use compact, repeatable, workbook-card style items suitable for repeated drilling."
+        : "반복 훈련이 가능한 카드형 워크북 문항으로 구성할 것.";
 
-  const formRule = input.language === "en"
-    ? `Return valid JSON only with keys: title, worksheetType, questions, answers, meta. questions and answers must be arrays of exactly ${input.count} items.`
-    : `반드시 JSON만 반환할 것. 키는 title, worksheetType, questions, answers, meta 만 사용할 것. questions와 answers는 정확히 ${input.count}개여야 한다.`;
+    case "textbook-grammar":
+      return input.language === "en"
+        ? "Align tasks with textbook grammar learning and school-friendly progression."
+        : "교과서 문법 흐름과 내신 학습에 맞는 단계형 훈련으로 구성할 것.";
 
-  const writingRule = input.language === "en"
-    ? `For writing-oriented worksheets, each question must include a Korean prompt and a clue line. Prefer clue-rich guided production over multiple choice.`
-    : `영작형 워크시트에서는 각 문항에 한국어 제시문과 clue 줄을 포함할 것. 객관식보다 clue-rich guided production을 우선할 것.`;
+    case "chapter-grammar":
+      return input.language === "en"
+        ? "Organize items around chapter-based grammar mastery and reinforcement."
+        : "챕터별 문법 포인트를 중심으로 누적 복습이 가능하게 구성할 것.";
 
-  const styleRule = input.language === "en"
-    ? `Sentence length should be learner-appropriate. Middle school outputs should sound academic but teachable. High school outputs may use abstract nouns, thought, education, philosophy, or humanities themes when appropriate.`
-    : `문장 길이는 학습자 수준에 맞출 것. 중등은 학습 가능한 학문적 톤, 고등은 필요 시 추상명사·사고력·교육·인문 주제를 사용할 수 있다.`;
-
-  const repairRule = input.language === "en"
-    ? `If your first instinct would produce weak or repetitive items, self-repair before output. Avoid duplicate stems, duplicate answers, and shallow variations.`
-    : `약하거나 반복적인 문항이 떠오르면 출력 전에 스스로 보정할 것. 중복 stem, 중복 답, 얕은 변형을 피할 것.`;
-
-  const absoluteGrammarLock = input.language === "en"
-    ? `ABSOLUTE RULE: Only use "${focus}" grammar. If any sentence uses a different grammar concept, it is invalid and must be rewritten.`
-    : `절대 규칙: "${focus}" 문법만 사용해야 한다. 다른 문법이 포함되면 무효이며 다시 작성해야 한다.`;
-
-  const noMixedGrammarRule = input.language === "en"
-    ? `Do NOT mix grammar types such as do/does, past, perfect, or continuous unless they are part of "${focus}".`
-    : `${focus} 외의 문법(do/does, 과거, 완료, 진행형 등)을 절대 섞지 말 것.`;
-
-  const dbHardlockActive = shouldUseDbFirst(input);
-  const dbOnlyRule = input.language === "en"
-    ? `DB-FIRST ABSOLUTE RULE: For this request, use only the approved sentence bank. Do not invent, paraphrase, expand, or mix in GPT-generated grammar patterns.`
-    : `DB-FIRST 절대 규칙: 이번 요청은 승인된 sentence bank만 사용해야 한다. GPT가 문법 패턴을 새로 만들거나 바꾸거나 섞어서는 안 된다.`;
-
-  return (input.language === "en"
-    ? `Generate a MARCUS Magic worksheet.\nTitle: ${title}\nGrade: ${input.gradeLabel}\nLevel: ${input.level}\nMode: ${input.mode}\nWorkbookType: ${input.workbookType}\nTopic: ${input.topic}\nDifficulty: ${input.difficulty}\nItemCount: ${input.count}\nTask: ${buildTaskGuide(input)}\n\nRules:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[User Request]\n${input.userPrompt || "(none)"}`
-    : `MARCUS Magic 워크시트를 생성하시오.\n제목: ${title}\n학년: ${input.gradeLabel}\n레벨: ${input.level}\n모드: ${input.mode}\nWorkbookType: ${input.workbookType}\n주제: ${input.topic}\n난이도: ${input.difficulty}\n문항수: ${input.count}\n과업: ${buildTaskGuide(input)}\n\n규칙:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[사용자 요청]\n${input.userPrompt || "(없음)"}`);
-}
-
-function extractJson(text) {
-  const raw = String(text || "").trim();
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw);
-  } catch {}
-  const match = raw.match(/\{[\s\S]*\}/);
-  if (!match) return null;
-  try {
-    return JSON.parse(match[0]);
-  } catch {
-    return null;
+    case "magic":
+    default:
+      return input.language === "en"
+        ? "Create premium workbook-style English training material with clear learning value."
+        : "프리미엄 워크북형 영어 훈련 자료로 구성할 것.";
   }
 }
 
-function normalizeQuestionItem(item, index, input) {
-  if (typeof item === "string") {
-    return {
-      number: index + 1,
-      prompt: item.trim(),
-      clue: input.mode === "writing" || input.workbookType === "writing_lab" ? "" : undefined,
-    };
-  }
-  return {
-    number: index + 1,
-    prompt: sanitizeString(item?.prompt || item?.question || item?.korean || `Question ${index + 1}`),
-    clue: sanitizeString(item?.clue || item?.hint || ""),
-    answer: sanitizeString(item?.answer || item?.english || ""),
-  };
-}
+function buildUserPrompt(input) {
+  const title = buildMagicTitle(input);
+  const difficultyLabel = getDifficultyLabel(input.difficulty, input.language);
+  const modeLabel = getModeLabel(input.mode, input.language);
+  const taskGuide = buildTaskGuide(input);
 
-function normalizeAnswerItem(item, index, question) {
-  if (typeof item === "string") {
-    return { number: index + 1, answer: item.trim() };
-  }
-  return {
-    number: index + 1,
-    answer: sanitizeString(item?.answer || item?.english || question?.answer || ""),
-  };
-}
+  if (input.language === "en") {
+    return `
+Generate a Magic-style English workbook with the following conditions.
 
-function buildFallbackQuestion(input, index) {
-  const chapter = input.grammarFocus.chapterKey;
-  const bank = MIDDLE1_SENTENCE_BANK[chapter] || [];
-  const sample = bank[index % Math.max(bank.length, 1)] || null;
-  const basePrompt = sample?.ko || `${input.topic}에 맞는 문장을 영작하시오.`;
-  const baseAnswer = sample?.en || `Sample answer ${index + 1}.`;
-  return {
-    number: index + 1,
-    prompt: basePrompt,
-    clue: input.workbookType === "writing_lab" ? extractClueFromAnswer(baseAnswer) : "",
-    answer: baseAnswer,
-  };
-}
+Title: ${title}
+Engine: magic
+Level: ${input.level}
+Grade label: ${input.gradeLabel}
+Mode: ${input.mode} (${modeLabel})
+Topic: ${input.topic}
+Exam type: ${input.examType}
+Difficulty: ${input.difficulty} (${difficultyLabel})
+Item count: ${input.count}
+Academy name: ${input.academyName}
 
-function extractClueFromAnswer(answer = "") {
-  return String(answer)
-    .replace(/[.?!]/g, "")
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 6)
-    .join(", ");
-}
+Requirements:
+- This should feel like a premium educational workbook, not generic AI text.
+- Keep the set consistent in level and format.
+- Provide clear answers or model responses in the answer section.
+- Avoid unnecessary multiple-choice unless the request strongly calls for it.
+- ${taskGuide}
 
-function enforceWorksheetShape(data, input) {
-  const questions = Array.isArray(data?.questions) ? data.questions : [];
-  const answers = Array.isArray(data?.answers) ? data.answers : [];
-
-  const normalizedQuestions = [];
-  const normalizedAnswers = [];
-
-  for (let i = 0; i < input.count; i += 1) {
-    const q = questions[i] ? normalizeQuestionItem(questions[i], i, input) : buildFallbackQuestion(input, i);
-    if ((input.workbookType === "writing_lab" || input.mode === "writing" || input.mode === "magic-card") && !q.clue) {
-      q.clue = extractClueFromAnswer(q.answer || answers[i]?.answer || "");
-    }
-    const a = answers[i] ? normalizeAnswerItem(answers[i], i, q) : { number: i + 1, answer: q.answer || "" };
-    normalizedQuestions.push(q);
-    normalizedAnswers.push(a);
+Original user request:
+${input.userPrompt || "(No additional user prompt provided.)"}
+`.trim();
   }
 
-  return {
-    title: sanitizeString(data?.title || input.worksheetTitle || `${input.gradeLabel} ${input.topic} - 영작훈련 워크북`),
-    worksheetType: sanitizeString(data?.worksheetType || input.workbookType || input.mode || "magic"),
-    questions: normalizedQuestions.map((q, idx) => ({
-      number: q.number || idx + 1,
-      type: q.type || input.workbookType,
-      prompt: sanitizeString(q.prompt || ""),
-      clue: sanitizeString(q.clue || ""),
-      wordCount: Number.isFinite(Number(q.wordCount)) ? Number(q.wordCount) : wordCountOf(normalizedAnswers[idx]?.answer || q.answer || ""),
-      options: Array.isArray(q.options) ? q.options.slice(0, 4) : undefined,
-    })),
-    answers: normalizedAnswers,
-    meta: {
-      gradeLabel: input.gradeLabel,
-      level: input.level,
-      mode: input.mode,
-      workbookType: input.workbookType,
-      fallbacks: input.workbookFallbacks,
-      topic: input.topic,
-      difficulty: input.difficulty,
-      grammarFocus: input.grammarFocus.chapterKey,
-    },
-  };
+  return `
+다음 조건에 맞는 마커스매직 스타일 영어 워크북 세트를 생성하시오.
+
+제목: ${title}
+엔진: magic
+학년 수준: ${input.level}
+학년 표기: ${input.gradeLabel}
+모드: ${input.mode} (${modeLabel})
+주제: ${input.topic}
+유형: ${input.examType}
+난이도: ${input.difficulty} (${difficultyLabel})
+문항 수: ${input.count}
+학원명: ${input.academyName}
+
+필수 요구사항:
+- 결과물은 일반 AI 문장이 아니라 실제 학습용 워크북처럼 보여야 한다.
+- 세트 전체의 난이도와 형식을 일정하게 유지할 것.
+- 정답 또는 예시답안을 반드시 별도 섹션에 제시할 것.
+- 사용자가 강하게 요구하지 않는 한 불필요한 객관식은 피할 것.
+- ${taskGuide}
+
+사용자 원문 요청:
+${input.userPrompt || "(추가 요청 없음)"}
+`.trim();
 }
 
-
-function wordCountOf(text = "") {
-  return String(text).trim().split(/\s+/).filter(Boolean).length;
-}
-
-function blankLastLexical(answer = "") {
-  const tokens = String(answer).trim().split(/\s+/).filter(Boolean);
-  if (!tokens.length) return "_____";
-  if (tokens.length === 1) return "_____";
-  const last = tokens[tokens.length - 1];
-  const cleanLast = last.replace(/[.?!,]/g, "");
-  tokens[tokens.length - 1] = last.replace(cleanLast, "_____");
-  return tokens.join("\n");
-}
-
-function buildGuidedClue(answer = "") {
-  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
-  const rawTokens = cleaned.split(/\s+/).filter(Boolean);
-  if (!rawTokens.length) return "";
-
-  const auxSet = new Set(["is", "are", "am", "do", "does", "did"]);
-  const articleSet = new Set(["a", "an", "the"]);
-  const prepSet = new Set(["at", "in", "on", "to", "from", "with", "for", "of"]);
-
-  const tokens = rawTokens.map((t) => String(t || "").trim()).filter(Boolean);
-  const parts = [];
-
-  if (tokens.length && auxSet.has(tokens[0].toLowerCase())) {
-    parts.push(tokens.shift());
+async function callOpenAI(systemPrompt, userPrompt) {
+  if (!OPENAI_API_KEY) {
+    throw new Error("Missing OPENAI_API_KEY");
   }
 
-  if (tokens.length) {
-    parts.push(tokens.shift());
-  }
-
-  while (tokens.length) {
-    const token = tokens.shift();
-    const lower = token.toLowerCase();
-
-    if (articleSet.has(lower)) {
-      if (tokens.length) {
-        parts.push(`${token} ${tokens.shift()}`);
-      } else {
-        parts.push(token);
-      }
-      continue;
-    }
-
-    if (prepSet.has(lower)) {
-      if (tokens.length) {
-        const next = tokens.shift();
-        const nextLower = String(next || "").toLowerCase();
-        if (articleSet.has(nextLower) && tokens.length) {
-          parts.push(`${token} ${next} ${tokens.shift()}`);
-        } else {
-          parts.push(`${token} ${next}`);
-        }
-      } else {
-        parts.push(token);
-      }
-      continue;
-    }
-
-    parts.push(token);
-  }
-
-  const deduped = [];
-  for (const part of parts) {
-    const value = String(part || "").trim();
-    if (!value) continue;
-    if (!deduped.includes(value)) deduped.push(value);
-  }
-
-  return deduped.join(' / ');
-}
-
-function buildDeclarativeDistractor(answer = "") {
-  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
-  const tokens = cleaned.split(/\s+/).filter(Boolean);
-  if (tokens.length < 2) return cleaned + '.';
-  const first = tokens[0].toLowerCase();
-  if (["is", "are", "am", "was", "were"].includes(first)) {
-    const subject = tokens[1] || '';
-    const rest = tokens.slice(2).join(' ');
-    return [subject, tokens[0].toLowerCase(), rest].filter(Boolean).join(' ') + '.';
-  }
-  if (["do", "does", "did"].includes(first)) {
-    const subject = tokens[1] || '';
-    const rest = tokens.slice(2).join(' ');
-    return [subject, rest].filter(Boolean).join(' ') + '.';
-  }
-  return cleaned + '.';
-}
-
-function buildBeQuestionGrammarDistractor(answer = "") {
-  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
-  const tokens = cleaned.split(/\s+/).filter(Boolean);
-  if (tokens.length < 2) return cleaned;
-  const aux = tokens[0].toLowerCase();
-  if (aux === 'is') tokens[0] = 'Are';
-  else if (aux === 'are') tokens[0] = 'Is';
-  else if (aux === 'am') tokens[0] = 'Is';
-  return tokens.join(' ') + '?';
-}
-
-function buildDoQuestionGrammarDistractor(answer = "") {
-  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
-  const tokens = cleaned.split(/\s+/).filter(Boolean);
-  if (tokens.length < 2) return cleaned;
-  const aux = tokens[0].toLowerCase();
-  if (aux === 'do') tokens[0] = 'Does';
-  else if (aux === 'does') tokens[0] = 'Do';
-  else if (aux === 'did') tokens[0] = 'Does';
-  return tokens.join(' ') + '?';
-}
-
-function buildMissingAuxDistractor(answer = "", chapterKey = "") {
-  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
-  const tokens = cleaned.split(/\s+/).filter(Boolean);
-  if (tokens.length < 2) return cleaned;
-  const first = tokens[0].toLowerCase();
-  if (chapterKey === 'be_question' && ["is", "are", "am"].includes(first)) {
-    return tokens.slice(1).join(' ') + '?';
-  }
-  if (chapterKey === 'do_question' && ["do", "does", "did"].includes(first)) {
-    return tokens.slice(1).join(' ') + '?';
-  }
-  return tokens.slice(1).join(' ') + '?';
-}
-
-function rotateOptionsWithAnswer(options = [], answer = "", seed = 0) {
-  const cleanOptions = Array.isArray(options) ? options.slice(0, 4) : [];
-  const correctIndex = cleanOptions.findIndex((opt) => String(opt || '').trim() === String(answer || '').trim());
-  if (cleanOptions.length !== 4 || correctIndex < 0) {
-    return { options: cleanOptions, answerIndex: Math.max(0, correctIndex) };
-  }
-  const targetIndex = Math.abs(Number(seed) || 0) % 4;
-  if (correctIndex === targetIndex) {
-    return { options: cleanOptions, answerIndex: targetIndex };
-  }
-  const rotated = cleanOptions.slice();
-  const temp = rotated[targetIndex];
-  rotated[targetIndex] = rotated[correctIndex];
-  rotated[correctIndex] = temp;
-  return { options: rotated, answerIndex: targetIndex };
-}
-
-function makeChoiceOptions(answer = "", input, seed = 0) {
-  const base = String(answer).trim();
-  const normalizedChapter = String(input?.grammarFocus?.chapterKey || '').trim();
-  const candidates = [base];
-
-  if (normalizedChapter === 'be_question') {
-    candidates.push(buildBeQuestionGrammarDistractor(base));
-    candidates.push(buildDeclarativeDistractor(base));
-    candidates.push(buildMissingAuxDistractor(base, normalizedChapter));
-  } else if (normalizedChapter === 'do_question') {
-    candidates.push(buildDoQuestionGrammarDistractor(base));
-    candidates.push(buildDeclarativeDistractor(base));
-    candidates.push(buildMissingAuxDistractor(base, normalizedChapter));
-  } else {
-    candidates.push(buildDeclarativeDistractor(base));
-    candidates.push(buildMissingAuxDistractor(base, normalizedChapter));
-    candidates.push(base.replace(/\b(is|are|am|do|does|did)\b/i, 'Be'));
-  }
-
-  const options = [];
-  for (const candidate of candidates) {
-    const value = String(candidate || '').trim();
-    if (!value) continue;
-    if (!options.includes(value)) options.push(value);
-  }
-
-  while (options.length < 4) {
-    const filler = buildDeclarativeDistractor(base).replace(/[.]$/, '') + ' again';
-    if (!options.includes(filler)) options.push(filler);
-    else break;
-  }
-
-  const finalized = options.slice(0, 4);
-  return rotateOptionsWithAnswer(finalized, base, seed);
-}
-
-function normalizeWorkbookTypeLoose(value = "") {
-  const v = String(value || "").trim().toLowerCase();
-  if (!v) return "guided_writing";
-  if (["guided_writing", "guided-writing", "guided writing", "guided", "guide", "writing"].includes(v)) return "guided_writing";
-  if (["blank_fill", "blank-fill", "blank fill", "blank", "blankfill", "fill_blank", "fill_in_blank"].includes(v)) return "blank_fill";
-  if (["choice", "binary_choice", "binary-choice", "multiple choice", "mcq", "binarychoice", "binary", "either_or"].includes(v)) return "choice";
-  if (["sentence_build", "sentence-build", "sentence build", "build", "rearrange"].includes(v)) return "sentence_build";
-  return v;
-}
-
-function escapeHtml(value = "") {
-  return String(value || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/\"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-function buildItemPairsFromWorksheetParts(questions = [], answers = [], workbookType = "guided_writing") {
-  const answerByNumber = new Map();
-  (Array.isArray(answers) ? answers : []).forEach((row, idx) => {
-    const no = Number(row?.number) || (idx + 1);
-    answerByNumber.set(no, String(row?.answer || row?.english || "").trim());
-  });
-
-  return (Array.isArray(questions) ? questions : []).map((row, idx) => {
-    const no = Number(row?.number) || (idx + 1);
-    const answer = String(answerByNumber.get(no) || row?.answer || row?.english || "").trim();
-    const normalizedType = normalizeWorkbookTypeLoose(row?.type || workbookType);
-    const rawPrompt = String(row?.prompt || row?.question || row?.korean || "").trim();
-    const clue = String(row?.clue || row?.hint || "").trim();
-    const blankSentence = String(row?.blankSentence || (normalizedType === "blank_fill" ? rawPrompt : "")).trim();
-    let prompt = rawPrompt;
-    let question = rawPrompt;
-    let korean = String(row?.korean || "").trim();
-
-    if (normalizedType === "blank_fill") {
-      prompt = String(row?.korean || "").trim();
-      question = prompt;
-      korean = prompt || clue;
-    } else {
-      korean = korean || rawPrompt;
-    }
-
-    let options = Array.isArray(row?.options) ? row.options.slice(0, 4).map((v) => String(v || "").trim()).filter(Boolean) : [];
-    if (normalizedType === "choice") {
-      if (!options.includes(answer) && answer) options.unshift(answer);
-      options = Array.from(new Set(options)).slice(0, 4);
-      while (options.length < 4) options.push(`Option ${options.length + 1}`);
-    }
-    const answerIndex = normalizedType === "choice" ? Math.max(0, options.findIndex((opt) => opt === answer)) : 0;
-
-    return {
-      no,
-      number: no,
-      workbookType: normalizedType,
-      type: normalizedType,
-      prompt,
-      question,
-      clue,
-      wordCount: Number.isFinite(Number(row?.wordCount)) ? Number(row.wordCount) : wordCountOf(answer),
-      options,
-      answerIndex,
-      answer,
-      english: answer,
-      blankSentence,
-      korean,
-    };
-  }).filter((row) => row.prompt || row.question || row.blankSentence || row.answer);
-}
-
-function renderWorksheetHtmlFromItemPairs(items = [], workbookType = "guided_writing") {
-  const normalizedType = normalizeWorkbookTypeLoose(workbookType);
-  const rows = Array.isArray(items) ? items : [];
-  return `<div class="iaw-rendered worksheet-root ${normalizedType}-root">` + rows.map((item) => {
-    const no = Number(item.no || item.number || 0);
-    const prompt = escapeHtml(item.prompt || item.question || item.korean || "");
-    const clue = escapeHtml(item.clue || "");
-    const wordCount = String(item.wordCount || "").trim();
-    if (normalizedType === "blank_fill") {
-      const blankSentence = escapeHtml(item.blankSentence || item.question || "");
-      return `<div class="worksheet-item blank-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">${blankSentence ? `<div class="blank-sentence-line"><span class="blank-no">${no}.</span> <span class="blank-sentence">${blankSentence}</span></div>` : ``}${clue ? `<div class="blank-clue-line"><span class="blank-meta-label">clue:</span> <span class="blank-clue">${clue}</span></div>` : ``}${wordCount ? `<div class="blank-wordcount-line"><span class="blank-meta-label">word count:</span> <span class="blank-wordcount">${wordCount}</span></div>` : ``}</div>`;
-    }
-    if (normalizedType === "choice") {
-      const options = Array.isArray(item.options) ? item.options.slice(0, 4) : [];
-      return `<div class="worksheet-item choice-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="choice-question-line"><span class="choice-no">${no}.</span> <span class="choice-question">${prompt}</span></div><div class="choice-options-wrap">${options.map((opt, idx) => `<div class="choice-option-line"><span class="choice-option-no">${idx + 1})</span> <span class="choice-option-text">${escapeHtml(String(opt || "").replace(/^\d+[.)]\s*/, ""))}</span></div>`).join("\n")}</div>${clue ? `<div class="choice-clue-line"><span class="choice-meta-label">clue:</span> <span class="choice-clue">${clue}</span></div>` : ``}</div>`;
-    }
-    return `<div class="worksheet-item guided-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="guided-question-line"><span class="guided-no">${no}.</span> <span class="guided-question">${prompt}</span></div>${clue ? `<div class="guided-clue-line"><span class="guided-meta-label">clue:</span> <span class="guided-clue">${clue}</span></div>` : ``}${wordCount ? `<div class="guided-wordcount-line"><span class="guided-meta-label">word count:</span> <span class="guided-wordcount">${wordCount}</span></div>` : ``}</div>`;
-  }).join("\n") + `</div>`;
-}
-
-function renderAnswerHtmlFromItemPairs(items = [], workbookType = "guided_writing") {
-  const normalizedType = normalizeWorkbookTypeLoose(workbookType);
-  const rows = Array.isArray(items) ? items : [];
-  return `<div class="iaw-rendered answer-root ${normalizedType}-answer-root">` + rows.map((item) => {
-    const no = Number(item.no || item.number || 0);
-    const answer = escapeHtml(item.answer || item.english || "");
-    if (normalizedType === "choice") {
-      return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">정답 ${Number(item.answerIndex || 0) + 1}번 — ${answer}</span></div>`;
-    }
-    return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">${answer}</span></div>`;
-  }).join("\n") + `</div>`;
-}
-
-function createWorkbookRenderBundle(worksheet, input = {}) {
-  if (!worksheet || typeof worksheet !== "object") return null;
-  const workbookType = normalizeWorkbookTypeLoose(worksheet.worksheetType || input.workbookType || input.requestedWorkbookType || "guided_writing");
-  const itemPairs = buildItemPairsFromWorksheetParts(worksheet.questions, worksheet.answers, workbookType);
-  const answerSheet = itemPairs.map((row) => workbookType === "choice" ? `${row.no}. 정답 ${Number(row.answerIndex || 0) + 1}번 — ${row.answer}` : `${row.no}. ${row.answer}`).join("\n");
-  const content = itemPairs.map((row) => {
-    if (workbookType === "blank_fill") {
-      return `${row.no}. ${row.blankSentence || row.question}${row.clue ? `
-(clue: ${row.clue})` : ``}${row.wordCount ? `
-(word count: ${row.wordCount})` : ``}`;
-    }
-    if (workbookType === "choice") {
-      const optionLines = (Array.isArray(row.options) ? row.options : []).map((opt, idx) => `${idx + 1}) ${opt}`).join("\n");
-      return `${row.no}. ${row.question}${optionLines ? `
-${optionLines}` : ``}${row.clue ? `
-(clue: ${row.clue})` : ``}`;
-    }
-    return `${row.no}. ${row.question}${row.clue ? `
-(clue: ${row.clue})` : ``}${row.wordCount ? `
-(word count: ${row.wordCount})` : ``}`;
-  }).join("\n");
-  return { workbookType, itemPairs, worksheetHtml: renderWorksheetHtmlFromItemPairs(itemPairs, workbookType), answerHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheetHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheet, questions: content, content, fullText: content + (answerSheet ? `
-
-정답
-${answerSheet}` : "") };
-}
-
-function buildDbFirstWorksheet(input) {
-  const chapter = input.grammarFocus.chapterKey;
-  const bank = MIDDLE1_SENTENCE_BANK[chapter] || [];
-  if (!bank.length) return null;
-
-  const worksheetType = normalizeWorkbookTypeLoose(input.workbookType || input.requestedWorkbookType || "guided_writing");
-  const questions = [];
-  const answers = [];
-
-  for (let i = 0; i < input.count; i += 1) {
-    const seed = bank[i % bank.length];
-    const answer = String(seed.en || "").trim();
-    const promptKo = String(seed.ko || "").trim();
-    const wc = wordCountOf(answer);
-
-    if (worksheetType === "guided_writing") {
-      questions.push({
-        number: i + 1,
-        type: "guided_writing",
-        prompt: promptKo,
-        clue: buildGuidedClue(answer),
-        wordCount: wc,
-      });
-      answers.push({
-        number: i + 1,
-        answer,
-      });
-      continue;
-    }
-
-    if (worksheetType === "blank_fill") {
-      questions.push({
-        number: i + 1,
-        type: "blank_fill",
-        prompt: blankLastLexical(answer),
-        clue: promptKo,
-        wordCount: wc,
-      });
-      answers.push({
-        number: i + 1,
-        answer,
-      });
-      continue;
-    }
-
-    if (worksheetType === "choice") {
-      const choiceBundle = makeChoiceOptions(answer, input, i + 1);
-      questions.push({
-        number: i + 1,
-        type: "binary_choice",
-        prompt: promptKo,
-        options: choiceBundle.options,
-        answerIndex: choiceBundle.answerIndex,
-        clue: "",
-        wordCount: wc,
-      });
-      answers.push({
-        number: i + 1,
-        answer,
-        answerIndex: choiceBundle.answerIndex,
-      });
-      continue;
-    }
-  }
-
-  const worksheet = {
-    title: sanitizeString(input.worksheetTitle || `${input.gradeLabel} ${input.topic} - Writing Lab`),
-    worksheetType,
-    questions,
-    answers,
-    meta: {
-      gradeLabel: input.gradeLabel,
-      level: input.level,
-      mode: input.mode,
-      workbookType: worksheetType,
-      fallbacks: input.workbookFallbacks,
-      topic: input.topic,
-      difficulty: input.difficulty,
-      grammarFocus: input.grammarFocus.chapterKey,
-      dbFirst: true,
-      layoutLock: true,
-    },
-  };
-  return Object.assign(worksheet, createWorkbookRenderBundle(worksheet, input), {
-    dbMode: true,
-    dbForced: true,
-    gptFallbackBlocked: true,
-    meta: Object.assign({}, worksheet.meta || {}, { dbFirst: true, layoutLock: true })
-  });
-}
-
-function shouldUseDbFirst(input) {
-  const workbookType = normalizeWorkbookTypeLoose(input?.workbookType || input?.requestedWorkbookType || "");
-  const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
-  const levelToken = [input?.gradeLabel || "", input?.level || "", input?.rawBody?.profile || ""].join("\n").toLowerCase();
-  const isMiddle1 = /중1|middle1|middle 1/.test(levelToken);
-  const supportedChapter = ["be_question", "do_question"].includes(chapterKey);
-  const supportedType = ["guided_writing", "blank_fill", "choice"].includes(workbookType);
-  const supportedMode = ["magic", "writing", "magic-card"].includes(String(input?.mode || "").toLowerCase());
-  return supportedMode && isMiddle1 && supportedChapter && supportedType && Boolean(MIDDLE1_SENTENCE_BANK[chapterKey]?.length);
-}
-
-
-async function generateWithOpenAI(input) {
-  if (!client) {
-    throw new Error("OPENAI_API_KEY is missing.");
-  }
-
-  const prompt = buildPrompt(input);
-  const response = await client.responses.create({
-    model: OPENAI_MODEL,
-    input: [
-      {
-        role: "system",
-        content: [
-          {
-            type: "input_text",
-            text: "You are a precise worksheet generator. Output JSON only. No markdown fences.",
-          },
-        ],
-      },
-      {
-        role: "user",
-        content: [{ type: "input_text", text: prompt }],
-      },
-    ],
-    max_output_tokens: 4000,
-  });
-
-  const text = response.output_text || "";
-  const parsed = extractJson(text);
-  if (!parsed) {
-    throw new Error("Model output was not valid JSON.");
-  }
-  return enforceWorksheetShape(parsed, input);
-}
-
-async function readMemberMp(memberId) {
-  if (!memberId || !MEMBERSTACK_SECRET_KEY || !MEMBERSTACK_APP_ID) return null;
-  const res = await fetch(`${MEMBERSTACK_BASE_URL}/${memberId}.json?appId=${MEMBERSTACK_APP_ID}`, {
-    headers: { Authorization: `Bearer ${MEMBERSTACK_SECRET_KEY}` },
-  });
-  if (!res.ok) return null;
-  const data = await res.json();
-  const customFields = data?.data?.customFields || data?.customFields || {};
-  return sanitizeMp(customFields?.[MEMBERSTACK_MP_FIELD], 0);
-}
-
-async function writeMemberMp(memberId, nextMp) {
-  if (!memberId || !MEMBERSTACK_SECRET_KEY || !MEMBERSTACK_APP_ID) return false;
-  const res = await fetch(`${MEMBERSTACK_BASE_URL}/${memberId}.json?appId=${MEMBERSTACK_APP_ID}`, {
-    method: "PATCH",
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
     headers: {
-      Authorization: `Bearer ${MEMBERSTACK_SECRET_KEY}`,
       "Content-Type": "application/json",
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
     },
     body: JSON.stringify({
-      customFields: {
-        [MEMBERSTACK_MP_FIELD]: String(nextMp),
-      },
+      model: OPENAI_MODEL,
+      temperature: 0.55,
+      max_tokens: 8000,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
+      ],
     }),
   });
-  return res.ok;
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
+  }
+
+  const data = await response.json();
+  const text = data?.choices?.[0]?.message?.content;
+
+  if (!text || typeof text !== "string") {
+    throw new Error("Empty model response");
+  }
+
+  return text.trim();
 }
 
+function extractSection(rawText, startMarker, endMarker) {
+  const start = rawText.indexOf(startMarker);
+  if (start === -1) return "";
 
-function buildResponsePayload({ input, worksheet, renderBundle, mp }) {
-  const workbookType = normalizeWorkbookTypeLoose(worksheet?.worksheetType || renderBundle?.workbookType || input.workbookType || 'guided_writing');
-  const itemPairs = Array.isArray(renderBundle?.itemPairs) && renderBundle.itemPairs.length
-    ? renderBundle.itemPairs
-    : (Array.isArray(worksheet?.itemPairs) ? worksheet.itemPairs : []);
-  const questions = Array.isArray(worksheet?.questions) ? worksheet.questions : [];
-  const answers = Array.isArray(worksheet?.answers) ? worksheet.answers : [];
-  const answerSheet = String(renderBundle?.answerSheet || worksheet?.answerSheet || itemPairs.map((row, idx) => {
-    const no = Number(row?.no || row?.number || idx + 1);
-    if (workbookType === 'choice') return `${no}. ${Number(row?.answerIndex || 0) + 1}) ${String(row?.answer || row?.english || '').trim()}`;
-    return `${no}. ${String(row?.answer || row?.english || '').trim()}`;
-  }).filter(Boolean).join('\n')).trim();
-  const content = String(renderBundle?.content || renderBundle?.questions || worksheet?.content || itemPairs.map((row, idx) => {
-    const no = Number(row?.no || row?.number || idx + 1);
-    const prompt = String(row?.prompt || row?.question || row?.korean || '').trim();
-    const clue = String(row?.clue || '').trim();
-    const wc = String(row?.wordCount || '').trim();
-    return `${no}. ${prompt}${clue ? `\n(clue: ${clue})` : ''}${wc ? `\n(word count: ${wc})` : ''}`;
-  }).filter(Boolean).join('\n')).trim();
-  const worksheetHtml = String(renderBundle?.worksheetHtml || worksheet?.worksheetHtml || '').trim();
-  const answerHtml = String(renderBundle?.answerHtml || worksheet?.answerHtml || worksheet?.answerSheetHtml || '').trim();
-  const answerSheetHtml = String(renderBundle?.answerSheetHtml || worksheet?.answerSheetHtml || worksheet?.answerHtml || answerHtml).trim();
-  const fullText = String(renderBundle?.fullText || worksheet?.fullText || [content, answerSheet ? `정답\n${answerSheet}` : ''].filter(Boolean).join('\n\n')).trim();
+  const from = start + startMarker.length;
+  const end = endMarker ? rawText.indexOf(endMarker, from) : -1;
+
+  if (end === -1) {
+    return rawText.slice(from).trim();
+  }
+
+  return rawText.slice(from, end).trim();
+}
+
+function countItems(text = "") {
+  const matches = text.match(/^\s*\d+\./gm) || [];
+  return matches.length;
+}
+
+function cleanupText(text = "") {
+  return String(text || "")
+    .replace(/\r\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function buildFallbackSplit(rawText) {
+  const cleaned = cleanupText(rawText);
+  const answerMatch = cleaned.search(/\n\s*(정답|예시답안|모범답안|answers?)\s*[:\-]?\s*\n?/i);
+
+  if (answerMatch === -1) {
+    return {
+      title: "",
+      instructions: "",
+      questions: cleaned,
+      answers: "",
+    };
+  }
+
   return {
-    ok: true,
-    title: worksheet?.title || input.worksheetTitle || `${input.gradeLabel} ${input.topic}`,
-    workbookType,
-    worksheetHtml,
-    answerHtml,
-    answerSheetHtml,
-    answerSheet,
+    title: "",
+    instructions: "",
+    questions: cleaned.slice(0, answerMatch).trim(),
+    answers: cleaned.slice(answerMatch).trim(),
+  };
+}
+
+function formatMagicResponse(rawText, input) {
+  const title = cleanupText(
+    extractSection(rawText, "[[TITLE]]", "[[INSTRUCTIONS]]")
+  );
+  const instructions = cleanupText(
+    extractSection(rawText, "[[INSTRUCTIONS]]", "[[QUESTIONS]]")
+  );
+  const questions = cleanupText(
+    extractSection(rawText, "[[QUESTIONS]]", "[[ANSWERS]]")
+  );
+  const answers = cleanupText(
+    extractSection(rawText, "[[ANSWERS]]", null)
+  );
+
+  let finalTitle = title || buildMagicTitle(input);
+  let finalInstructions = instructions;
+  let finalQuestions = questions;
+  let finalAnswers = answers;
+
+  if (!finalQuestions) {
+    const fallback = buildFallbackSplit(rawText);
+    finalTitle = finalTitle || buildMagicTitle(input);
+    finalInstructions = fallback.instructions;
+    finalQuestions = fallback.questions;
+    finalAnswers = fallback.answers;
+  }
+
+  const actualCount = countItems(finalQuestions);
+  const contentParts = [];
+
+  if (finalTitle) contentParts.push(finalTitle);
+  if (finalInstructions) contentParts.push(finalInstructions);
+  if (finalQuestions) contentParts.push(finalQuestions);
+
+  const fullParts = [...contentParts];
+  if (finalAnswers) {
+    fullParts.push(
+      input.language === "en" ? "Answers / Model Responses\n" + finalAnswers : "정답 / 예시답안\n" + finalAnswers
+    );
+  }
+
+  return {
+    title: finalTitle,
+    instructions: finalInstructions,
+    content: cleanupText(contentParts.join("\n\n")),
+    answerSheet: cleanupText(finalAnswers),
+    fullText: cleanupText(fullParts.join("\n\n")),
+    actualCount,
+  };
+}
+
+function addCors(res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+}
+
+function shuffle(array) {
+  const copy = [...array];
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function uniqBy(arr, keyFn) {
+  const seen = new Set();
+  const out = [];
+  for (const item of arr) {
+    const key = keyFn(item);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(item);
+  }
+  return out;
+}
+
+function resolveChapterKey(input) {
+  if (input.requestedChapterKey && FILE_MAP[input.requestedChapterKey]) {
+    return input.requestedChapterKey;
+  }
+
+  const text = [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ").toLowerCase();
+
+  if (/의문사|wh[- ]?question|where|when|what|who|why|how/.test(text)) return "wh_question";
+  if (/will|조동사\s*will/.test(text)) return "modal_will";
+  if (/be동사.*부정|be negative/.test(text)) return "be_negative";
+  if (/일반동사.*부정|do negative/.test(text)) return "do_negative";
+  if (/be동사.*의문|be question/.test(text)) return "be_question";
+  if (/일반동사.*의문|do question/.test(text)) return "do_question";
+  if (/be동사|be verb/.test(text)) return "be_verb";
+  if (/일반동사|do verb/.test(text)) return "do_verb";
+
+  return "";
+}
+
+async function loadSentenceBank(chapterKey) {
+  const fileName = FILE_MAP[chapterKey];
+  if (!fileName) return [];
+  const fullPath = path.join(process.cwd(), "data", "sentence_bank", "middle1", fileName);
+  const raw = await fs.readFile(fullPath, "utf8");
+  const parsed = JSON.parse(raw);
+  if (!Array.isArray(parsed)) return [];
+  return parsed;
+}
+
+function selectBankItems(bank, count) {
+  const shuffled = shuffle(bank);
+  const unique = uniqBy(shuffled, (item) => String(item.english || "").toLowerCase());
+  if (unique.length >= count) return unique.slice(0, count);
+
+  const out = [...unique];
+  let cursor = 0;
+  while (out.length < count && unique.length > 0) {
+    out.push({ ...unique[cursor % unique.length], _reused: true, _slot: out.length + 1 });
+    cursor += 1;
+  }
+  return out;
+}
+
+function pickExtraWord(item) {
+  const pool = Array.isArray(item.extraClueWordPool) ? item.extraClueWordPool : [];
+  if (!pool.length) return "";
+  const clueText = (Array.isArray(item.clueUnits) ? item.clueUnits.join(" ") : "").toLowerCase();
+  const english = String(item.english || "").toLowerCase();
+  const candidates = pool.filter((word) => {
+    const w = String(word || "").toLowerCase().trim();
+    return w && !clueText.includes(w) && !english.includes(w);
+  });
+  const finalPool = candidates.length ? candidates : pool;
+  return finalPool[Math.floor(Math.random() * finalPool.length)];
+}
+
+function buildGuidedClue(item) {
+  const units = Array.isArray(item.clueUnits) && item.clueUnits.length
+    ? [...item.clueUnits]
+    : String(item.english || "")
+        .replace(/[?.!]/g, "")
+        .split(/\s+/)
+        .filter(Boolean);
+
+  const extra = pickExtraWord(item);
+  const parts = extra ? [...units, extra] : units;
+  return shuffle(parts).join(" / ");
+}
+
+function replaceFirst(text, searchValue, replacement) {
+  const idx = text.indexOf(searchValue);
+  if (idx === -1) return text;
+  return text.slice(0, idx) + replacement + text.slice(idx + searchValue.length);
+}
+
+function normalizeBlankTarget(item) {
+  if (Array.isArray(item.blankTargets) && item.blankTargets.length) {
+    return String(item.blankTargets[0] || "").trim();
+  }
+  const words = String(item.english || "").replace(/[?.!]/g, "").split(/\s+/).filter(Boolean);
+  return words[words.length - 1] || "";
+}
+
+function buildBlankSentence(item) {
+  const english = String(item.english || "").trim();
+  const target = normalizeBlankTarget(item);
+  if (!target) return english;
+  return replaceFirst(english, target, "_____");
+}
+
+function genericDistractors(item) {
+  const english = String(item.english || "").trim();
+  const chapterKey = String(item.chapterKey || "");
+  const noPunc = english.replace(/[?.!]/g, "");
+
+  if (chapterKey === "be_question") {
+    const parts = noPunc.split(/\s+/);
+    const aux = parts[0];
+    const swappedAux = aux === "Is" ? "Are" : aux === "Are" ? "Is" : "Is";
+    return [
+      `${swappedAux} ${parts.slice(1).join(" ")}?`,
+      `${parts.slice(1).join(" ")}?`,
+      `${parts.slice(1).join(" ")}.`,
+    ];
+  }
+
+  if (chapterKey === "do_question" || chapterKey === "wh_question") {
+    const parts = noPunc.split(/\s+/);
+    const first = parts[0];
+    if (first === "Do" || first === "Does") {
+      const swapped = first === "Do" ? "Does" : "Do";
+      return [
+        `${swapped} ${parts.slice(1).join(" ")}?`,
+        `${parts.slice(1).join(" ")}?`,
+        `${parts.slice(1).join(" ")}.`,
+      ];
+    }
+    return [`${noPunc}?`, `${noPunc}.`, noPunc];
+  }
+
+  if (chapterKey === "modal_will") {
+    return [
+      noPunc.replace(/\bwill\b/i, "do"),
+      noPunc.replace(/\bwill\b/i, "").replace(/\s+/g, " ").trim() + ".",
+      `Will ${noPunc.replace(/^\S+\s*/, "")}?`.replace(/\s+/g, " "),
+    ];
+  }
+
+  if (chapterKey === "be_negative" || chapterKey === "do_negative") {
+    const withoutNot = noPunc.replace(/\bnot\b/i, "").replace(/\s+/g, " ").trim();
+    return [
+      `${withoutNot}.`,
+      `${withoutNot}?`,
+      noPunc.replace(/\bis\b/i, "are").replace(/\s+/g, " ").trim() + ".",
+    ];
+  }
+
+  if (chapterKey === "be_verb" || chapterKey === "do_verb") {
+    const withoutBe = noPunc.replace(/\bis\b/i, "").replace(/\bare\b/i, "").replace(/\bam\b/i, "").replace(/\s+/g, " ").trim();
+    return [
+      `${noPunc}?`,
+      `Do ${noPunc.toLowerCase()}?`,
+      `${withoutBe}.`,
+    ];
+  }
+
+  return [`${noPunc}?`, `${noPunc}.`, noPunc];
+}
+
+function buildChoiceSet(item) {
+  const correct = String(item.english || "").trim();
+  const seeds = item.distractorSeeds || {};
+  const candidateDistractors = [
+    seeds.auxError,
+    seeds.statementForm,
+    seeds.fragmentForm,
+    ...genericDistractors(item),
+  ]
+    .map((v) => String(v || "").trim())
+    .filter(Boolean)
+    .filter((v) => v.toLowerCase() !== correct.toLowerCase());
+
+  const distractors = uniqBy(candidateDistractors, (v) => v.toLowerCase()).slice(0, 3);
+  while (distractors.length < 3) {
+    distractors.push(`${correct.replace(/[?.!]/g, "")}?`);
+  }
+
+  const combined = shuffle([
+    { text: correct, isAnswer: true },
+    ...distractors.slice(0, 3).map((text) => ({ text, isAnswer: false })),
+  ]);
+
+  const answerIndex = combined.findIndex((choice) => choice.isAnswer) + 1;
+  return { choices: combined, answerIndex };
+}
+
+function buildDbTitle(input, chapterLabel) {
+  if (input.worksheetTitle) return input.worksheetTitle;
+  const workbookTypeLabel = input.workbookType === "blank_fill"
+    ? "blank fill"
+    : input.workbookType === "choice"
+      ? "choice"
+      : "guided writing";
+  return `${input.gradeLabel} ${chapterLabel} ${workbookTypeLabel} 워크북 1`;
+}
+
+function buildDbInstructions(input, chapterLabel) {
+  const base = input.language === "en"
+    ? `Build a ${input.workbookType} worksheet for ${chapterLabel}.`
+    : `${chapterLabel} 단원 기반의 ${input.workbookType} 워크북입니다.`;
+
+  if (input.workbookType === "guided_writing") {
+    return input.language === "en"
+      ? `${base} One clue word is extra. Use the clue words to write the correct English sentence.`
+      : `${base} clue의 영어 단어/표현을 활용해 올바른 영어 문장을 쓰시오. clue에는 남는 단어 1개가 포함될 수 있다.`;
+  }
+
+  if (input.workbookType === "blank_fill") {
+    return input.language === "en"
+      ? `${base} Fill in the blank to complete the correct English sentence.`
+      : `${base} 빈칸에 알맞은 말을 써서 올바른 영어 문장을 완성하시오.`;
+  }
+
+  return input.language === "en"
+    ? `${base} Choose the correct English sentence.`
+    : `${base} 가장 알맞은 영어 문장을 고르시오.`;
+}
+
+function renderDbQuestion(item, index, workbookType) {
+  const number = `${index}.`;
+
+  if (workbookType === "guided_writing") {
+    return [
+      `${number} ${item.korean}`,
+      `clue: ${buildGuidedClue(item)}`,
+      `word count: ${item.wordCount}`,
+    ].join("\n");
+  }
+
+  if (workbookType === "blank_fill") {
+    return [
+      `${number} ${buildBlankSentence(item)}`,
+      `clue: ${item.korean}`,
+      `word count: ${item.wordCount}`,
+    ].join("\n");
+  }
+
+  const choiceSet = buildChoiceSet(item);
+  item._choiceAnswerIndex = choiceSet.answerIndex;
+  const choiceLines = choiceSet.choices.map((choice, idx) => `${idx + 1}) ${choice.text}`);
+  return [`${number} ${item.korean}`, ...choiceLines].join("\n");
+}
+
+function renderDbAnswer(item, index, workbookType) {
+  if (workbookType === "choice") {
+    return `${index}. ${item._choiceAnswerIndex}) ${item.english}`;
+  }
+  return `${index}. ${item.english}`;
+}
+
+function buildDbWorksheet(input, bank, chapterKey) {
+  const chapterLabel = bank[0]?.chapterLabelKo || chapterKey;
+  const title = buildDbTitle(input, chapterLabel);
+  const instructions = buildDbInstructions(input, chapterLabel);
+  const selected = selectBankItems(bank, input.count);
+  const questions = selected.map((item, idx) => renderDbQuestion(item, idx + 1, input.workbookType)).join("\n\n");
+  const answers = selected.map((item, idx) => renderDbAnswer(item, idx + 1, input.workbookType)).join("\n");
+  const content = cleanupText([title, instructions, questions].filter(Boolean).join("\n\n"));
+  const fullText = cleanupText([title, instructions, questions, `정답 / 예시답안\n${answers}`].filter(Boolean).join("\n\n"));
+
+  return {
+    title,
+    instructions,
     content,
+    answerSheet: answers,
     fullText,
-    itemPairs,
-    questions,
-    answers,
-    worksheet: Object.assign({}, worksheet || {}, {
-      worksheetType: workbookType,
-      questions,
-      answers,
-      itemPairs,
-      worksheetHtml,
-      answerHtml,
-      answerSheetHtml,
-      answerSheet,
-      content,
-      fullText,
-    }),
-    meta: {
-      workbookType,
-      fallbacks: input.workbookFallbacks,
-      grammarFocus: input.grammarFocus.chapterKey,
-      mp,
-      cleanRebuild: true,
-      dbForced: !!worksheet?.dbForced,
-      removedLayers: [
-        's30-8R safe pair recovery',
-        's30-9 guided print block lock',
-        's41~s47 additive patch layers',
-      ],
-    },
+    actualCount: selected.length,
+    chapterKey,
+    chapterLabel,
+    source: "db",
   };
 }
 
-async function consumeMpIfNeeded(input) {
-  if (!input.useMp || !input.memberId) {
-    return { enabled: false, cost: input.mpCost, remaining: null };
-  }
-
-  const currentMp = await readMemberMp(input.memberId);
-  if (currentMp == null) {
-    return { enabled: false, cost: input.mpCost, remaining: null, warning: "MP lookup skipped." };
-  }
-  if (currentMp < input.mpCost) {
-    const error = new Error("Not enough MP.");
-    error.code = "INSUFFICIENT_MP";
-    error.currentMp = currentMp;
-    error.requiredMp = input.mpCost;
-    throw error;
-  }
-
-  const nextMp = currentMp - input.mpCost;
-  const updated = await writeMemberMp(input.memberId, nextMp);
+function buildMeta(input, actualCount, extra = {}) {
   return {
-    enabled: true,
-    cost: input.mpCost,
-    remaining: updated ? nextMp : currentMp,
-    warning: updated ? null : "MP update failed; generation returned without MP writeback.",
+    language: input.language,
+    examType: input.examType,
+    requestedCount: input.count,
+    actualCount,
+    generatedAt: new Date().toISOString(),
+    workbookType: input.workbookType,
+    ...extra,
   };
 }
 
-async function handler(req, res) {
-  applyCors(res);
+export default async function handler(req, res) {
+  addCors(res);
 
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
 
   if (req.method !== "POST") {
-    return json(res, 405, { ok: false, error: "POST only." });
+    return json(res, 405, {
+      success: false,
+      error: "METHOD_NOT_ALLOWED",
+      message: "POST 요청만 허용됩니다.",
+    });
   }
 
   try {
     const input = normalizeInput(req.body || {});
-    const worksheet = shouldUseDbFirst(input)
-      ? buildDbFirstWorksheet(input)
-      : await generateWithOpenAI(input);
-    const renderBundle = createWorkbookRenderBundle(worksheet, input) || {};
-    const mp = await consumeMpIfNeeded(input);
-    return json(res, 200, buildResponsePayload({ input, worksheet, renderBundle, mp }));
+
+    if (!input.userPrompt && !input.topic) {
+      return json(res, 400, {
+        success: false,
+        error: "INVALID_REQUEST",
+        message: "userPrompt 또는 topic이 필요합니다.",
+      });
+    }
+
+    const chapterKey = resolveChapterKey(input);
+    if (chapterKey && FILE_MAP[chapterKey]) {
+      const bank = await loadSentenceBank(chapterKey);
+      if (bank.length > 0) {
+        const formatted = buildDbWorksheet(input, bank, chapterKey);
+        const meta = buildMeta(input, formatted.actualCount, {
+          source: formatted.source,
+          chapterKey: formatted.chapterKey,
+          chapterLabel: formatted.chapterLabel,
+        });
+
+        return json(res, 200, {
+          success: true,
+          engine: input.engine,
+          title: formatted.title,
+          level: input.level,
+          mode: input.mode,
+          topic: formatted.chapterLabel,
+          difficulty: input.difficulty,
+          count: input.count,
+          academyName: input.academyName,
+          instructions: formatted.instructions,
+          content: formatted.content,
+          answerSheet: formatted.answerSheet,
+          fullText: formatted.fullText,
+          meta,
+        });
+      }
+    }
+
+    const systemPrompt = buildSystemPrompt(input);
+    const userPrompt = buildUserPrompt(input);
+    const rawText = await callOpenAI(systemPrompt, userPrompt);
+    const formatted = formatMagicResponse(rawText, input);
+    const meta = buildMeta(input, formatted.actualCount, { source: "openai" });
+
+    return json(res, 200, {
+      success: true,
+      engine: input.engine,
+      title: formatted.title,
+      level: input.level,
+      mode: input.mode,
+      topic: input.topic,
+      difficulty: input.difficulty,
+      count: input.count,
+      academyName: input.academyName,
+      instructions: formatted.instructions,
+      content: formatted.content,
+      answerSheet: formatted.answerSheet,
+      fullText: formatted.fullText,
+      meta,
+    });
   } catch (error) {
-    const code = error?.code || "GENERATION_ERROR";
-    const status = code === "INSUFFICIENT_MP" ? 402 : 500;
-    return json(res, status, {
-      ok: false,
-      error: error?.message || "Generation failed.",
-      code,
-      currentMp: error?.currentMp ?? null,
-      requiredMp: error?.requiredMp ?? null,
+    console.error("generate-magic error:", error);
+
+    return json(res, 500, {
+      success: false,
+      error: "GENERATION_FAILED",
+      message: "매직 워크북 생성에 실패했습니다.",
+      detail: error?.message || "Unknown error",
     });
   }
 }
-
-
-module.exports = handler;
-module.exports.config = config;
