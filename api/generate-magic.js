@@ -562,17 +562,47 @@ function buildItemPairsFromWorksheetParts(questions = [], answers = [], workbook
   return (Array.isArray(questions) ? questions : []).map((row, idx) => {
     const no = Number(row?.number) || (idx + 1);
     const answer = String(answerByNumber.get(no) || row?.answer || row?.english || "").trim();
-    const prompt = String(row?.prompt || row?.question || row?.korean || "").trim();
-    const clue = String(row?.clue || row?.hint || "").trim();
     const normalizedType = normalizeWorkbookTypeLoose(row?.type || workbookType);
-    const options = Array.isArray(row?.options) ? row.options.slice(0, 4).map((v) => String(v || "").trim()) : [];
-    const answerIndex = options.length ? Math.max(0, options.findIndex((opt) => opt === answer)) : 0;
+    const rawPrompt = String(row?.prompt || row?.question || row?.korean || "").trim();
+    const clue = String(row?.clue || row?.hint || "").trim();
+    const blankSentence = String(row?.blankSentence || (normalizedType === "blank_fill" ? rawPrompt : "")).trim();
+    let prompt = rawPrompt;
+    let question = rawPrompt;
+    let korean = String(row?.korean || "").trim();
+
+    if (normalizedType === "blank_fill") {
+      prompt = String(row?.korean || "").trim();
+      question = prompt;
+      korean = prompt || clue;
+    } else {
+      korean = korean || rawPrompt;
+    }
+
+    let options = Array.isArray(row?.options) ? row.options.slice(0, 4).map((v) => String(v || "").trim()).filter(Boolean) : [];
+    if (normalizedType === "choice") {
+      if (!options.includes(answer) && answer) options.unshift(answer);
+      options = Array.from(new Set(options)).slice(0, 4);
+      while (options.length < 4) options.push(`Option ${options.length + 1}`);
+    }
+    const answerIndex = normalizedType === "choice" ? Math.max(0, options.findIndex((opt) => opt === answer)) : 0;
+
     return {
-      no, number: no, workbookType: normalizedType, type: normalizedType,
-      prompt, question: prompt, clue, wordCount: Number.isFinite(Number(row?.wordCount)) ? Number(row.wordCount) : wordCountOf(answer),
-      options, answerIndex, answer, english: answer, blankSentence: normalizedType === "blank_fill" ? prompt : "", korean: normalizedType === "blank_fill" ? clue : prompt,
+      no,
+      number: no,
+      workbookType: normalizedType,
+      type: normalizedType,
+      prompt,
+      question,
+      clue,
+      wordCount: Number.isFinite(Number(row?.wordCount)) ? Number(row.wordCount) : wordCountOf(answer),
+      options,
+      answerIndex,
+      answer,
+      english: answer,
+      blankSentence,
+      korean,
     };
-  }).filter((row) => row.prompt || row.answer);
+  }).filter((row) => row.prompt || row.question || row.blankSentence || row.answer);
 }
 
 function renderWorksheetHtmlFromItemPairs(items = [], workbookType = "guided_writing") {
@@ -584,8 +614,8 @@ function renderWorksheetHtmlFromItemPairs(items = [], workbookType = "guided_wri
     const clue = escapeHtml(item.clue || "");
     const wordCount = String(item.wordCount || "").trim();
     if (normalizedType === "blank_fill") {
-      const blankSentence = escapeHtml(item.blankSentence || item.prompt || item.question || "");
-      return `<div class="worksheet-item blank-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="blank-question-line"><span class="blank-no">${no}.</span> <span class="blank-question">${prompt}</span></div><div class="blank-sentence-line">${blankSentence}</div>${clue ? `<div class="blank-clue-line"><span class="blank-meta-label">clue:</span> <span class="blank-clue">${clue}</span></div>` : ``}${wordCount ? `<div class="blank-wordcount-line"><span class="blank-meta-label">word count:</span> <span class="blank-wordcount">${wordCount}</span></div>` : ``}</div>`;
+      const blankSentence = escapeHtml(item.blankSentence || item.question || "");
+      return `<div class="worksheet-item blank-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">${blankSentence ? `<div class="blank-sentence-line"><span class="blank-no">${no}.</span> <span class="blank-sentence">${blankSentence}</span></div>` : ``}${clue ? `<div class="blank-clue-line"><span class="blank-meta-label">clue:</span> <span class="blank-clue">${clue}</span></div>` : ``}${wordCount ? `<div class="blank-wordcount-line"><span class="blank-meta-label">word count:</span> <span class="blank-wordcount">${wordCount}</span></div>` : ``}</div>`;
     }
     if (normalizedType === "choice") {
       const options = Array.isArray(item.options) ? item.options.slice(0, 4) : [];
@@ -612,9 +642,30 @@ function createWorkbookRenderBundle(worksheet, input = {}) {
   if (!worksheet || typeof worksheet !== "object") return null;
   const workbookType = normalizeWorkbookTypeLoose(worksheet.worksheetType || input.workbookType || input.requestedWorkbookType || "guided_writing");
   const itemPairs = buildItemPairsFromWorksheetParts(worksheet.questions, worksheet.answers, workbookType);
-  const answerSheet = itemPairs.map((row) => workbookType === "choice" ? `${row.no}. ${Number(row.answerIndex || 0) + 1}) ${row.answer}` : `${row.no}. ${row.answer}`).join("\n");
-  const content = itemPairs.map((row) => `${row.no}. ${row.question}${row.clue ? `\n(clue: ${row.clue})` : ``}${row.wordCount ? `\n(word count: ${row.wordCount})` : ``}`).join("\n");
-  return { workbookType, itemPairs, worksheetHtml: renderWorksheetHtmlFromItemPairs(itemPairs, workbookType), answerHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheetHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheet, questions: content, content, fullText: content + (answerSheet ? `\n\n정답\n${answerSheet}` : "") };
+  const answerSheet = itemPairs.map((row) => workbookType === "choice" ? `${row.no}. ${Number(row.answerIndex || 0) + 1}) ${row.answer}` : `${row.no}. ${row.answer}`).join("
+");
+  const content = itemPairs.map((row) => {
+    if (workbookType === "blank_fill") {
+      return `${row.no}. ${row.blankSentence || row.question}${row.clue ? `
+(clue: ${row.clue})` : ``}${row.wordCount ? `
+(word count: ${row.wordCount})` : ``}`;
+    }
+    if (workbookType === "choice") {
+      const optionLines = (Array.isArray(row.options) ? row.options : []).map((opt, idx) => `${idx + 1}) ${opt}`).join("
+");
+      return `${row.no}. ${row.question}${optionLines ? `
+${optionLines}` : ``}${row.clue ? `
+(clue: ${row.clue})` : ``}`;
+    }
+    return `${row.no}. ${row.question}${row.clue ? `
+(clue: ${row.clue})` : ``}${row.wordCount ? `
+(word count: ${row.wordCount})` : ``}`;
+  }).join("
+");
+  return { workbookType, itemPairs, worksheetHtml: renderWorksheetHtmlFromItemPairs(itemPairs, workbookType), answerHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheetHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheet, questions: content, content, fullText: content + (answerSheet ? `
+
+정답
+${answerSheet}` : "") };
 }
 
 function buildDbFirstWorksheet(input) {
@@ -622,7 +673,7 @@ function buildDbFirstWorksheet(input) {
   const bank = MIDDLE1_SENTENCE_BANK[chapter] || [];
   if (!bank.length) return null;
 
-  const worksheetType = input.workbookType;
+  const worksheetType = normalizeWorkbookTypeLoose(input.workbookType || input.requestedWorkbookType || "guided_writing");
   const questions = [];
   const answers = [];
 
@@ -662,7 +713,7 @@ function buildDbFirstWorksheet(input) {
       continue;
     }
 
-    if (worksheetType === "binary_choice") {
+    if (worksheetType === "choice") {
       questions.push({
         number: i + 1,
         type: "binary_choice",
