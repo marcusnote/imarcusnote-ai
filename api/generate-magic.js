@@ -216,6 +216,11 @@ function detectGrammarFocus(text = "") {
 function resolveWorkbookType(input) {
   const mode = input.mode;
   const focus = input.grammarFocus.chapterKey;
+  const requested = input.requestedWorkbookType;
+
+  if (["guided_writing", "blank_fill", "binary_choice", "choice"].includes(requested)) {
+    return requested === "choice" ? "binary_choice" : requested;
+  }
 
   if (mode === "abcstarter") return "junior_starter";
   if (mode === "vocab-builder") return input.level === "high" ? "vocab_csat" : "vocab_workbook";
@@ -261,6 +266,10 @@ function normalizeInput(body = {}) {
   const gradeLabel = sanitizeString(body.gradeLabel || "") || inferGradeLabel(mergedText, level);
   const grammarFocus = detectGrammarFocus(`${mergedText} ${topic}`);
 
+  const requestedWorkbookType = sanitizeString(
+    body.workbookType || body.worksheetType || body.rawBody?.workbookType || ""
+  ).toLowerCase();
+
   const normalized = {
     userPrompt,
     sourceText: sanitizeString(body.sourceText || body.passage || body.text || ""),
@@ -277,6 +286,7 @@ function normalizeInput(body = {}) {
     worksheetTitle: sanitizeString(body.worksheetTitle || body.title || ""),
     memberId: sanitizeString(body.memberId || body.msMemberId || body.userId || ""),
     useMp: body.useMp !== false,
+    requestedWorkbookType,
     rawBody: body,
   };
 
@@ -352,9 +362,17 @@ function buildPrompt(input) {
     ? `If your first instinct would produce weak or repetitive items, self-repair before output. Avoid duplicate stems, duplicate answers, and shallow variations.`
     : `약하거나 반복적인 문항이 떠오르면 출력 전에 스스로 보정할 것. 중복 stem, 중복 답, 얕은 변형을 피할 것.`;
 
+  const absoluteGrammarLock = input.language === "en"
+    ? `ABSOLUTE RULE: Only use "${focus}" grammar. If any sentence uses a different grammar concept, it is invalid and must be rewritten.`
+    : `절대 규칙: "${focus}" 문법만 사용해야 한다. 다른 문법이 포함되면 무효이며 다시 작성해야 한다.`;
+
+  const noMixedGrammarRule = input.language === "en"
+    ? `Do NOT mix grammar types such as do/does, past, perfect, or continuous unless they are part of "${focus}".`
+    : `${focus} 외의 문법(do/does, 과거, 완료, 진행형 등)을 절대 섞지 말 것.`;
+
   return (input.language === "en"
-    ? `Generate a MARCUS Magic worksheet.\nTitle: ${title}\nGrade: ${input.gradeLabel}\nLevel: ${input.level}\nMode: ${input.mode}\nWorkbookType: ${input.workbookType}\nTopic: ${input.topic}\nDifficulty: ${input.difficulty}\nItemCount: ${input.count}\nTask: ${buildTaskGuide(input)}\n\nRules:\n- ${strictFocusRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[User Request]\n${input.userPrompt || "(none)"}`
-    : `MARCUS Magic 워크시트를 생성하시오.\n제목: ${title}\n학년: ${input.gradeLabel}\n레벨: ${input.level}\n모드: ${input.mode}\nWorkbookType: ${input.workbookType}\n주제: ${input.topic}\n난이도: ${input.difficulty}\n문항수: ${input.count}\n과업: ${buildTaskGuide(input)}\n\n규칙:\n- ${strictFocusRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[사용자 요청]\n${input.userPrompt || "(없음)"}`);
+    ? `Generate a MARCUS Magic worksheet.\nTitle: ${title}\nGrade: ${input.gradeLabel}\nLevel: ${input.level}\nMode: ${input.mode}\nWorkbookType: ${input.workbookType}\nTopic: ${input.topic}\nDifficulty: ${input.difficulty}\nItemCount: ${input.count}\nTask: ${buildTaskGuide(input)}\n\nRules:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[User Request]\n${input.userPrompt || "(none)"}`
+    : `MARCUS Magic 워크시트를 생성하시오.\n제목: ${title}\n학년: ${input.gradeLabel}\n레벨: ${input.level}\n모드: ${input.mode}\nWorkbookType: ${input.workbookType}\n주제: ${input.topic}\n난이도: ${input.difficulty}\n문항수: ${input.count}\n과업: ${buildTaskGuide(input)}\n\n규칙:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[사용자 요청]\n${input.userPrompt || "(없음)"}`);
 }
 
 function extractJson(text) {
@@ -441,7 +459,14 @@ function enforceWorksheetShape(data, input) {
   return {
     title: sanitizeString(data?.title || input.worksheetTitle || `${input.gradeLabel} ${input.topic} - 영작훈련 워크북`),
     worksheetType: sanitizeString(data?.worksheetType || input.workbookType || input.mode || "magic"),
-    questions: normalizedQuestions,
+    questions: normalizedQuestions.map((q, idx) => ({
+      number: q.number || idx + 1,
+      type: q.type || input.workbookType,
+      prompt: sanitizeString(q.prompt || ""),
+      clue: sanitizeString(q.clue || ""),
+      wordCount: Number.isFinite(Number(q.wordCount)) ? Number(q.wordCount) : wordCountOf(normalizedAnswers[idx]?.answer || q.answer || ""),
+      options: Array.isArray(q.options) ? q.options.slice(0, 4) : undefined,
+    })),
     answers: normalizedAnswers,
     meta: {
       gradeLabel: input.gradeLabel,
@@ -455,6 +480,145 @@ function enforceWorksheetShape(data, input) {
     },
   };
 }
+
+
+function wordCountOf(text = "") {
+  return String(text).trim().split(/\s+/).filter(Boolean).length;
+}
+
+function blankLastLexical(answer = "") {
+  const tokens = String(answer).trim().split(/\s+/).filter(Boolean);
+  if (!tokens.length) return "_____";
+  if (tokens.length === 1) return "_____";
+  const last = tokens[tokens.length - 1];
+  const cleanLast = last.replace(/[.?!,]/g, "");
+  tokens[tokens.length - 1] = last.replace(cleanLast, "_____");
+  return tokens.join(" ");
+}
+
+function buildGuidedClue(answer = "") {
+  const tokens = String(answer).trim().split(/\s+/).filter(Boolean);
+  if (!tokens.length) return "_____";
+  if (tokens.length <= 3) {
+    return tokens.map((t, i) => (i === tokens.length - 1 ? "_____" : t)).join(" ");
+  }
+  return tokens.map((t, i) => {
+    const clean = t.replace(/[.?!,]/g, "");
+    if (i >= tokens.length - 2) return t.replace(clean, "_____");
+    return t;
+  }).join(" ");
+}
+
+function makeChoiceOptions(answer = "", input) {
+  const base = String(answer).trim();
+  const options = new Set([base]);
+  if (input.grammarFocus.chapterKey === "be_question") {
+    options.add(base.replace(/\bIs\b/, "Are"));
+    options.add(base.replace(/\bAre\b/, "Is"));
+    options.add(base.replace(/\?$/, "."));
+  } else if (input.grammarFocus.chapterKey === "do_question") {
+    options.add(base.replace(/\bDo\b/, "Does"));
+    options.add(base.replace(/\bDoes\b/, "Do"));
+    options.add(base.replace(/\?$/, "."));
+  } else {
+    options.add(base.replace(/\b(is|are|am)\b/i, "do"));
+    options.add(base.replace(/\bdo\b/i, "is"));
+    options.add(base.replace(/\?$/, "."));
+  }
+  return Array.from(options).slice(0, 4);
+}
+
+function buildDbFirstWorksheet(input) {
+  const chapter = input.grammarFocus.chapterKey;
+  const bank = MIDDLE1_SENTENCE_BANK[chapter] || [];
+  if (!bank.length) return null;
+
+  const worksheetType = input.workbookType;
+  const questions = [];
+  const answers = [];
+
+  for (let i = 0; i < input.count; i += 1) {
+    const seed = bank[i % bank.length];
+    const answer = String(seed.en || "").trim();
+    const promptKo = String(seed.ko || "").trim();
+    const wc = wordCountOf(answer);
+
+    if (worksheetType === "guided_writing") {
+      questions.push({
+        number: i + 1,
+        type: "guided_writing",
+        prompt: promptKo,
+        clue: buildGuidedClue(answer),
+        wordCount: wc,
+      });
+      answers.push({
+        number: i + 1,
+        answer,
+      });
+      continue;
+    }
+
+    if (worksheetType === "blank_fill") {
+      questions.push({
+        number: i + 1,
+        type: "blank_fill",
+        prompt: blankLastLexical(answer),
+        clue: promptKo,
+        wordCount: wc,
+      });
+      answers.push({
+        number: i + 1,
+        answer,
+      });
+      continue;
+    }
+
+    if (worksheetType === "binary_choice") {
+      questions.push({
+        number: i + 1,
+        type: "binary_choice",
+        prompt: promptKo,
+        options: makeChoiceOptions(answer, input),
+        clue: "",
+        wordCount: wc,
+      });
+      answers.push({
+        number: i + 1,
+        answer,
+      });
+      continue;
+    }
+  }
+
+  return {
+    title: sanitizeString(input.worksheetTitle || `${input.gradeLabel} ${input.topic} - Writing Lab`),
+    worksheetType,
+    questions,
+    answers,
+    meta: {
+      gradeLabel: input.gradeLabel,
+      level: input.level,
+      mode: input.mode,
+      workbookType: worksheetType,
+      fallbacks: input.workbookFallbacks,
+      topic: input.topic,
+      difficulty: input.difficulty,
+      grammarFocus: input.grammarFocus.chapterKey,
+      dbFirst: true,
+      layoutLock: true,
+    },
+  };
+}
+
+function shouldUseDbFirst(input) {
+  return (
+    input.mode === "magic" &&
+    input.gradeLabel === "중1" &&
+    ["guided_writing", "blank_fill", "binary_choice"].includes(input.workbookType) &&
+    Boolean(MIDDLE1_SENTENCE_BANK[input.grammarFocus.chapterKey]?.length)
+  );
+}
+
 
 async function generateWithOpenAI(input) {
   if (!client) {
@@ -558,7 +722,9 @@ export default async function handler(req, res) {
 
   try {
     const input = normalizeInput(req.body || {});
-    const worksheet = await generateWithOpenAI(input);
+    const worksheet = shouldUseDbFirst(input)
+      ? buildDbFirstWorksheet(input)
+      : await generateWithOpenAI(input);
     const mp = await consumeMpIfNeeded(input);
 
     return json(res, 200, {
