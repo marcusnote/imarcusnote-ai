@@ -1,0 +1,1511 @@
+[
+  {
+    "id": "m1_s1_be_question_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "너는 지금 바쁘니?",
+    "english": "Are you busy now?",
+    "words": [
+      "Are",
+      "you",
+      "busy",
+      "now",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you",
+      "busy",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "now"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is you busy now?",
+      "statementForm": "You are busy now.",
+      "fragmentForm": "You busy now?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그녀는 학생이니?",
+    "english": "Is she a student?",
+    "words": [
+      "Is",
+      "she",
+      "a",
+      "student",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "she",
+      "a student"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "a student"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are she a student?",
+      "statementForm": "She is a student.",
+      "fragmentForm": "She a student?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그는 오늘 집에 있니?",
+    "english": "Is he at home today?",
+    "words": [
+      "Is",
+      "he",
+      "at",
+      "home",
+      "today",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "he",
+      "at home",
+      "today"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "today"
+    ],
+    "tags": [
+      "be_question",
+      "home",
+      "weather"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are he at home today?",
+      "statementForm": "He is at home today.",
+      "fragmentForm": "He at home today?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "너희는 같은 반이니?",
+    "english": "Are you in the same class?",
+    "words": [
+      "Are",
+      "you",
+      "in",
+      "the",
+      "same",
+      "class",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you",
+      "in the same class"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "same class"
+    ],
+    "tags": [
+      "be_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is you in the same class?",
+      "statementForm": "You are in the same class.",
+      "fragmentForm": "You in the same class?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 아이들은 공원에 있니?",
+    "english": "Are the children in the park?",
+    "words": [
+      "Are",
+      "the",
+      "children",
+      "in",
+      "the",
+      "park",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "the",
+      "children",
+      "in the park"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the park"
+    ],
+    "tags": [
+      "be_question",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the children in the park?",
+      "statementForm": "The are children in the park.",
+      "fragmentForm": "The children in the park?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "이 책은 재미있니?",
+    "english": "Is this book interesting?",
+    "words": [
+      "Is",
+      "this",
+      "book",
+      "interesting",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "this",
+      "book",
+      "interesting"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "this book"
+    ],
+    "tags": [
+      "be_question",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are this book interesting?",
+      "statementForm": "This is book interesting.",
+      "fragmentForm": "This book interesting?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "저 식당은 학교 근처에 있니?",
+    "english": "Is that restaurant near the school?",
+    "words": [
+      "Is",
+      "that",
+      "restaurant",
+      "near",
+      "the",
+      "school",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "that",
+      "restaurant",
+      "near the school"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the school"
+    ],
+    "tags": [
+      "be_question",
+      "place",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are that restaurant near the school?",
+      "statementForm": "That is restaurant near the school.",
+      "fragmentForm": "That restaurant near the school?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "너는 지금 괜찮니?",
+    "english": "Are you okay now?",
+    "words": [
+      "Are",
+      "you",
+      "okay",
+      "now",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you",
+      "okay",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "now"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is you okay now?",
+      "statementForm": "You are okay now.",
+      "fragmentForm": "You okay now?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그녀의 가방은 책상 위에 있니?",
+    "english": "Is her bag on the desk?",
+    "words": [
+      "Is",
+      "her",
+      "bag",
+      "on",
+      "the",
+      "desk",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "her",
+      "bag",
+      "on the desk"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the desk"
+    ],
+    "tags": [
+      "be_question",
+      "home",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are her bag on the desk?",
+      "statementForm": "Her is bag on the desk.",
+      "fragmentForm": "Her bag on the desk?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 문제는 어렵니?",
+    "english": "Is the question difficult?",
+    "words": [
+      "Is",
+      "the",
+      "question",
+      "difficult",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the",
+      "question",
+      "difficult"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the question"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the question difficult?",
+      "statementForm": "The is question difficult.",
+      "fragmentForm": "The question difficult?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "너희 부모님은 집에 계시니?",
+    "english": "Are your parents at home?",
+    "words": [
+      "Are",
+      "your",
+      "parents",
+      "at",
+      "home",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "your",
+      "parents",
+      "at home"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "your parents"
+    ],
+    "tags": [
+      "be_question",
+      "family",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is your parents at home?",
+      "statementForm": "Your are parents at home.",
+      "fragmentForm": "Your parents at home?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "이 사과는 달니?",
+    "english": "Is this apple sweet?",
+    "words": [
+      "Is",
+      "this",
+      "apple",
+      "sweet",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "this",
+      "apple",
+      "sweet"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "this apple"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are this apple sweet?",
+      "statementForm": "This is apple sweet.",
+      "fragmentForm": "This apple sweet?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 강아지는 귀엽니?",
+    "english": "Is the puppy cute?",
+    "words": [
+      "Is",
+      "the",
+      "puppy",
+      "cute",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the",
+      "puppy",
+      "cute"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the puppy"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the puppy cute?",
+      "statementForm": "The is puppy cute.",
+      "fragmentForm": "The puppy cute?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "우리 선생님은 교실에 계시니?",
+    "english": "Is our teacher in the classroom?",
+    "words": [
+      "Is",
+      "our",
+      "teacher",
+      "in",
+      "the",
+      "classroom",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "our",
+      "teacher",
+      "in the classroom"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the classroom"
+    ],
+    "tags": [
+      "be_question",
+      "place",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are our teacher in the classroom?",
+      "statementForm": "Our is teacher in the classroom.",
+      "fragmentForm": "Our teacher in the classroom?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "너는 오늘 행복하니?",
+    "english": "Are you happy today?",
+    "words": [
+      "Are",
+      "you",
+      "happy",
+      "today",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you",
+      "happy",
+      "today"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "today"
+    ],
+    "tags": [
+      "be_question",
+      "weather"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is you happy today?",
+      "statementForm": "You are happy today.",
+      "fragmentForm": "You happy today?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 영화는 지루하니?",
+    "english": "Is the movie boring?",
+    "words": [
+      "Is",
+      "the",
+      "movie",
+      "boring",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the",
+      "movie",
+      "boring"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the movie"
+    ],
+    "tags": [
+      "be_question",
+      "hobby"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the movie boring?",
+      "statementForm": "The is movie boring.",
+      "fragmentForm": "The movie boring?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "이 컴퓨터는 새것이니?",
+    "english": "Is this computer new?",
+    "words": [
+      "Is",
+      "this",
+      "computer",
+      "new",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "this",
+      "computer",
+      "new"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "this computer"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are this computer new?",
+      "statementForm": "This is computer new.",
+      "fragmentForm": "This computer new?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 남자는 의사니?",
+    "english": "Is the man a doctor?",
+    "words": [
+      "Is",
+      "the",
+      "man",
+      "a",
+      "doctor",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the",
+      "man",
+      "a doctor"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "a doctor"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the man a doctor?",
+      "statementForm": "The is man a doctor.",
+      "fragmentForm": "The man a doctor?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "너희는 준비가 되었니?",
+    "english": "Are you ready?",
+    "words": [
+      "Are",
+      "you",
+      "ready",
+      "?"
+    ],
+    "wordCount": 3,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you",
+      "ready"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "ready"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is you ready?",
+      "statementForm": "You are ready.",
+      "fragmentForm": "You ready?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 소녀는 열두 살이니?",
+    "english": "Is the girl twelve years old?",
+    "words": [
+      "Is",
+      "the",
+      "girl",
+      "twelve",
+      "years",
+      "old",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the",
+      "girl",
+      "twelve",
+      "years",
+      "old"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the girl"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the girl twelve years old?",
+      "statementForm": "The is girl twelve years old.",
+      "fragmentForm": "The girl twelve years old?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "우리 학교는 크니?",
+    "english": "Is our school big?",
+    "words": [
+      "Is",
+      "our",
+      "school",
+      "big",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "our",
+      "school",
+      "big"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "our school"
+    ],
+    "tags": [
+      "be_question",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are our school big?",
+      "statementForm": "Our is school big.",
+      "fragmentForm": "Our school big?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 교실은 조용하니?",
+    "english": "Is the classroom quiet?",
+    "words": [
+      "Is",
+      "the",
+      "classroom",
+      "quiet",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the",
+      "classroom",
+      "quiet"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the classroom"
+    ],
+    "tags": [
+      "be_question",
+      "place",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the classroom quiet?",
+      "statementForm": "The is classroom quiet.",
+      "fragmentForm": "The classroom quiet?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "너는 집에 있니?",
+    "english": "Are you at home?",
+    "words": [
+      "Are",
+      "you",
+      "at",
+      "home",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you",
+      "at home"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "home"
+    ],
+    "tags": [
+      "be_question",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is you at home?",
+      "statementForm": "You are at home.",
+      "fragmentForm": "You at home?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그들은 지금 매우 피곤하니?",
+    "english": "Are they very tired now?",
+    "words": [
+      "Are",
+      "they",
+      "very",
+      "tired",
+      "now",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "they",
+      "very",
+      "tired",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "now"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is they very tired now?",
+      "statementForm": "They are very tired now.",
+      "fragmentForm": "They very tired now?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "이 날씨는 좋니?",
+    "english": "Is the weather nice?",
+    "words": [
+      "Is",
+      "the",
+      "weather",
+      "nice",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the",
+      "weather",
+      "nice"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the weather"
+    ],
+    "tags": [
+      "be_question",
+      "weather"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the weather nice?",
+      "statementForm": "The is weather nice.",
+      "fragmentForm": "The weather nice?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 아이는 친절하니?",
+    "english": "Is the child kind?",
+    "words": [
+      "Is",
+      "the",
+      "child",
+      "kind",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the",
+      "child",
+      "kind"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the child"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the child kind?",
+      "statementForm": "The is child kind.",
+      "fragmentForm": "The child kind?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "너희는 오늘 한가하니?",
+    "english": "Are you free today?",
+    "words": [
+      "Are",
+      "you",
+      "free",
+      "today",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you",
+      "free",
+      "today"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "today"
+    ],
+    "tags": [
+      "be_question",
+      "weather"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is you free today?",
+      "statementForm": "You are free today.",
+      "fragmentForm": "You free today?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "저 학생들은 도서관에 있니?",
+    "english": "Are those students in the library?",
+    "words": [
+      "Are",
+      "those",
+      "students",
+      "in",
+      "the",
+      "library",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "those",
+      "students",
+      "in the library"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the library"
+    ],
+    "tags": [
+      "be_question",
+      "place",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is those students in the library?",
+      "statementForm": "Those are students in the library.",
+      "fragmentForm": "Those students in the library?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "이 연필은 길니?",
+    "english": "Is this pencil long?",
+    "words": [
+      "Is",
+      "this",
+      "pencil",
+      "long",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "this",
+      "pencil",
+      "long"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "this pencil"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are this pencil long?",
+      "statementForm": "This is pencil long.",
+      "fragmentForm": "This pencil long?"
+    }
+  },
+  {
+    "id": "m1_s1_be_question_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_question",
+    "chapterLabelKo": "be동사의 의문문",
+    "korean": "그 꽃들은 아름답니?",
+    "english": "Are the flowers beautiful?",
+    "words": [
+      "Are",
+      "the",
+      "flowers",
+      "beautiful",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "be_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "the",
+      "flowers",
+      "beautiful"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend",
+      "library",
+      "park",
+      "today",
+      "happy",
+      "busy"
+    ],
+    "blankTargets": [
+      "the flowers"
+    ],
+    "tags": [
+      "be_question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the flowers beautiful?",
+      "statementForm": "The are flowers beautiful.",
+      "fragmentForm": "The flowers beautiful?"
+    }
+  }
+]
