@@ -370,6 +370,11 @@ function buildPrompt(input) {
     ? `Do NOT mix grammar types such as do/does, past, perfect, or continuous unless they are part of "${focus}".`
     : `${focus} 외의 문법(do/does, 과거, 완료, 진행형 등)을 절대 섞지 말 것.`;
 
+  const dbHardlockActive = shouldUseDbFirst(input);
+  const dbOnlyRule = input.language === "en"
+    ? `DB-FIRST ABSOLUTE RULE: For this request, use only the approved sentence bank. Do not invent, paraphrase, expand, or mix in GPT-generated grammar patterns.`
+    : `DB-FIRST 절대 규칙: 이번 요청은 승인된 sentence bank만 사용해야 한다. GPT가 문법 패턴을 새로 만들거나 바꾸거나 섞어서는 안 된다.`;
+
   return (input.language === "en"
     ? `Generate a MARCUS Magic worksheet.\nTitle: ${title}\nGrade: ${input.gradeLabel}\nLevel: ${input.level}\nMode: ${input.mode}\nWorkbookType: ${input.workbookType}\nTopic: ${input.topic}\nDifficulty: ${input.difficulty}\nItemCount: ${input.count}\nTask: ${buildTaskGuide(input)}\n\nRules:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[User Request]\n${input.userPrompt || "(none)"}`
     : `MARCUS Magic 워크시트를 생성하시오.\n제목: ${title}\n학년: ${input.gradeLabel}\n레벨: ${input.level}\n모드: ${input.mode}\nWorkbookType: ${input.workbookType}\n주제: ${input.topic}\n난이도: ${input.difficulty}\n문항수: ${input.count}\n과업: ${buildTaskGuide(input)}\n\n규칙:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[사용자 요청]\n${input.userPrompt || "(없음)"}`);
@@ -528,6 +533,90 @@ function makeChoiceOptions(answer = "", input) {
   return Array.from(options).slice(0, 4);
 }
 
+function normalizeWorkbookTypeLoose(value = "") {
+  const v = String(value || "").trim().toLowerCase();
+  if (!v) return "guided_writing";
+  if (["guided_writing", "guided-writing", "guided writing", "guided", "guide", "writing"].includes(v)) return "guided_writing";
+  if (["blank_fill", "blank-fill", "blank fill", "blank", "blankfill", "fill_blank", "fill_in_blank"].includes(v)) return "blank_fill";
+  if (["choice", "binary_choice", "binary-choice", "multiple choice", "mcq", "binarychoice", "binary", "either_or"].includes(v)) return "choice";
+  if (["sentence_build", "sentence-build", "sentence build", "build", "rearrange"].includes(v)) return "sentence_build";
+  return v;
+}
+
+function escapeHtml(value = "") {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function buildItemPairsFromWorksheetParts(questions = [], answers = [], workbookType = "guided_writing") {
+  const answerByNumber = new Map();
+  (Array.isArray(answers) ? answers : []).forEach((row, idx) => {
+    const no = Number(row?.number) || (idx + 1);
+    answerByNumber.set(no, String(row?.answer || row?.english || "").trim());
+  });
+
+  return (Array.isArray(questions) ? questions : []).map((row, idx) => {
+    const no = Number(row?.number) || (idx + 1);
+    const answer = String(answerByNumber.get(no) || row?.answer || row?.english || "").trim();
+    const prompt = String(row?.prompt || row?.question || row?.korean || "").trim();
+    const clue = String(row?.clue || row?.hint || "").trim();
+    const normalizedType = normalizeWorkbookTypeLoose(row?.type || workbookType);
+    const options = Array.isArray(row?.options) ? row.options.slice(0, 4).map((v) => String(v || "").trim()) : [];
+    const answerIndex = options.length ? Math.max(0, options.findIndex((opt) => opt === answer)) : 0;
+    return {
+      no, number: no, workbookType: normalizedType, type: normalizedType,
+      prompt, question: prompt, clue, wordCount: Number.isFinite(Number(row?.wordCount)) ? Number(row.wordCount) : wordCountOf(answer),
+      options, answerIndex, answer, english: answer, blankSentence: normalizedType === "blank_fill" ? prompt : "", korean: normalizedType === "blank_fill" ? clue : prompt,
+    };
+  }).filter((row) => row.prompt || row.answer);
+}
+
+function renderWorksheetHtmlFromItemPairs(items = [], workbookType = "guided_writing") {
+  const normalizedType = normalizeWorkbookTypeLoose(workbookType);
+  const rows = Array.isArray(items) ? items : [];
+  return `<div class="iaw-rendered worksheet-root ${normalizedType}-root">` + rows.map((item) => {
+    const no = Number(item.no || item.number || 0);
+    const prompt = escapeHtml(item.prompt || item.question || item.korean || "");
+    const clue = escapeHtml(item.clue || "");
+    const wordCount = String(item.wordCount || "").trim();
+    if (normalizedType === "blank_fill") {
+      const blankSentence = escapeHtml(item.blankSentence || item.prompt || item.question || "");
+      return `<div class="worksheet-item blank-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="blank-question-line"><span class="blank-no">${no}.</span> <span class="blank-question">${prompt}</span></div><div class="blank-sentence-line">${blankSentence}</div>${clue ? `<div class="blank-clue-line"><span class="blank-meta-label">clue:</span> <span class="blank-clue">${clue}</span></div>` : ``}${wordCount ? `<div class="blank-wordcount-line"><span class="blank-meta-label">word count:</span> <span class="blank-wordcount">${wordCount}</span></div>` : ``}</div>`;
+    }
+    if (normalizedType === "choice") {
+      const options = Array.isArray(item.options) ? item.options.slice(0, 4) : [];
+      return `<div class="worksheet-item choice-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="choice-question-line"><span class="choice-no">${no}.</span> <span class="choice-question">${prompt}</span></div><div class="choice-options-wrap">${options.map((opt, idx) => `<div class="choice-option-line"><span class="choice-option-no">${idx + 1})</span> <span class="choice-option-text">${escapeHtml(String(opt || "").replace(/^\d+[.)]\s*/, ""))}</span></div>`).join("")}</div>${clue ? `<div class="choice-clue-line"><span class="choice-meta-label">clue:</span> <span class="choice-clue">${clue}</span></div>` : ``}</div>`;
+    }
+    return `<div class="worksheet-item guided-item" data-item-no="${no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;"><div class="guided-question-line"><span class="guided-no">${no}.</span> <span class="guided-question">${prompt}</span></div>${clue ? `<div class="guided-clue-line"><span class="guided-meta-label">clue:</span> <span class="guided-clue">${clue}</span></div>` : ``}${wordCount ? `<div class="guided-wordcount-line"><span class="guided-meta-label">word count:</span> <span class="guided-wordcount">${wordCount}</span></div>` : ``}</div>`;
+  }).join("") + `</div>`;
+}
+
+function renderAnswerHtmlFromItemPairs(items = [], workbookType = "guided_writing") {
+  const normalizedType = normalizeWorkbookTypeLoose(workbookType);
+  const rows = Array.isArray(items) ? items : [];
+  return `<div class="iaw-rendered answer-root ${normalizedType}-answer-root">` + rows.map((item) => {
+    const no = Number(item.no || item.number || 0);
+    const answer = escapeHtml(item.answer || item.english || "");
+    if (normalizedType === "choice") {
+      return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">${Number(item.answerIndex || 0) + 1}) ${answer}</span></div>`;
+    }
+    return `<div class="answer-item" data-item-no="${no}"><span class="answer-no">${no}.</span> <span class="answer-text">${answer}</span></div>`;
+  }).join("") + `</div>`;
+}
+
+function createWorkbookRenderBundle(worksheet, input = {}) {
+  if (!worksheet || typeof worksheet !== "object") return null;
+  const workbookType = normalizeWorkbookTypeLoose(worksheet.worksheetType || input.workbookType || input.requestedWorkbookType || "guided_writing");
+  const itemPairs = buildItemPairsFromWorksheetParts(worksheet.questions, worksheet.answers, workbookType);
+  const answerSheet = itemPairs.map((row) => workbookType === "choice" ? `${row.no}. ${Number(row.answerIndex || 0) + 1}) ${row.answer}` : `${row.no}. ${row.answer}`).join("\n");
+  const content = itemPairs.map((row) => `${row.no}. ${row.question}${row.clue ? `\n(clue: ${row.clue})` : ``}${row.wordCount ? `\n(word count: ${row.wordCount})` : ``}`).join("\n");
+  return { workbookType, itemPairs, worksheetHtml: renderWorksheetHtmlFromItemPairs(itemPairs, workbookType), answerHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheetHtml: renderAnswerHtmlFromItemPairs(itemPairs, workbookType), answerSheet, questions: content, content, fullText: content + (answerSheet ? `\n\n정답\n${answerSheet}` : "") };
+}
+
 function buildDbFirstWorksheet(input) {
   const chapter = input.grammarFocus.chapterKey;
   const bank = MIDDLE1_SENTENCE_BANK[chapter] || [];
@@ -590,7 +679,7 @@ function buildDbFirstWorksheet(input) {
     }
   }
 
-  return {
+  const worksheet = {
     title: sanitizeString(input.worksheetTitle || `${input.gradeLabel} ${input.topic} - Writing Lab`),
     worksheetType,
     questions,
@@ -608,15 +697,23 @@ function buildDbFirstWorksheet(input) {
       layoutLock: true,
     },
   };
+  return Object.assign(worksheet, createWorkbookRenderBundle(worksheet, input), {
+    dbMode: true,
+    dbForced: true,
+    gptFallbackBlocked: true,
+    meta: Object.assign({}, worksheet.meta || {}, { dbFirst: true, layoutLock: true })
+  });
 }
 
 function shouldUseDbFirst(input) {
-  return (
-    input.mode === "magic" &&
-    input.gradeLabel === "중1" &&
-    ["guided_writing", "blank_fill", "binary_choice"].includes(input.workbookType) &&
-    Boolean(MIDDLE1_SENTENCE_BANK[input.grammarFocus.chapterKey]?.length)
-  );
+  const workbookType = normalizeWorkbookTypeLoose(input?.workbookType || input?.requestedWorkbookType || "");
+  const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
+  const levelToken = [input?.gradeLabel || "", input?.level || "", input?.rawBody?.profile || ""].join(" ").toLowerCase();
+  const isMiddle1 = /중1|middle1|middle 1/.test(levelToken);
+  const supportedChapter = ["be_question", "do_question"].includes(chapterKey);
+  const supportedType = ["guided_writing", "blank_fill", "choice"].includes(workbookType);
+  const supportedMode = ["magic", "writing", "magic-card"].includes(String(input?.mode || "").toLowerCase());
+  return supportedMode && isMiddle1 && supportedChapter && supportedType && Boolean(MIDDLE1_SENTENCE_BANK[chapterKey]?.length);
 }
 
 
@@ -725,17 +822,29 @@ export default async function handler(req, res) {
     const worksheet = shouldUseDbFirst(input)
       ? buildDbFirstWorksheet(input)
       : await generateWithOpenAI(input);
+    const renderBundle = createWorkbookRenderBundle(worksheet, input) || {};
+    const workbookType = normalizeWorkbookTypeLoose(worksheet?.worksheetType || input.workbookType || "guided_writing");
     const mp = await consumeMpIfNeeded(input);
 
     return json(res, 200, {
       ok: true,
+      title: worksheet?.title || input.worksheetTitle || `${input.gradeLabel} ${input.topic}`,
+      workbookType,
+      worksheetHtml: renderBundle.worksheetHtml || worksheet?.worksheetHtml || "",
+      answerHtml: renderBundle.answerHtml || worksheet?.answerHtml || worksheet?.answerSheetHtml || "",
+      answerSheetHtml: renderBundle.answerSheetHtml || worksheet?.answerSheetHtml || worksheet?.answerHtml || "",
+      answerSheet: renderBundle.answerSheet || worksheet?.answerSheet || "",
+      content: renderBundle.content || worksheet?.content || "",
+      fullText: renderBundle.fullText || worksheet?.fullText || "",
+      itemPairs: Array.isArray(renderBundle.itemPairs) ? renderBundle.itemPairs : (Array.isArray(worksheet?.itemPairs) ? worksheet.itemPairs : []),
       worksheet,
       meta: {
-        workbookType: input.workbookType,
+        workbookType,
         fallbacks: input.workbookFallbacks,
         grammarFocus: input.grammarFocus.chapterKey,
         mp,
         cleanRebuild: true,
+        dbForced: !!worksheet?.dbForced,
         removedLayers: [
           "s30-8R safe pair recovery",
           "s30-9 guided print block lock",
