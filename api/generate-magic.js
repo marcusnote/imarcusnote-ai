@@ -524,14 +524,17 @@ function buildDeclarativeDistractor(answer = "") {
   const tokens = cleaned.split(/\s+/).filter(Boolean);
   if (tokens.length < 2) return cleaned + '.';
   const first = tokens[0].toLowerCase();
-  if (["is", "are", "am", "was", "were", "do", "does", "did"].includes(first)) {
-    return tokens.slice(1).concat(tokens[0].toLowerCase()).join(' ') + '.';
+  if (["is", "are", "am", "was", "were"].includes(first)) {
+    const subject = tokens[1] || '';
+    const rest = tokens.slice(2).join(' ');
+    return [subject, tokens[0].toLowerCase(), rest].filter(Boolean).join(' ') + '.';
+  }
+  if (["do", "does", "did"].includes(first)) {
+    const subject = tokens[1] || '';
+    const rest = tokens.slice(2).join(' ');
+    return [subject, rest].filter(Boolean).join(' ') + '.';
   }
   return cleaned + '.';
-}
-
-function buildMissingQuestionMarkDistractor(answer = "") {
-  return String(answer || '').trim().replace(/[?!.]+$/g, '');
 }
 
 function buildBeQuestionGrammarDistractor(answer = "") {
@@ -556,7 +559,38 @@ function buildDoQuestionGrammarDistractor(answer = "") {
   return tokens.join(' ') + '?';
 }
 
-function makeChoiceOptions(answer = "", input) {
+function buildMissingAuxDistractor(answer = "", chapterKey = "") {
+  const cleaned = String(answer || "").trim().replace(/[?!.]+$/g, "");
+  const tokens = cleaned.split(/\s+/).filter(Boolean);
+  if (tokens.length < 2) return cleaned;
+  const first = tokens[0].toLowerCase();
+  if (chapterKey === 'be_question' && ["is", "are", "am"].includes(first)) {
+    return tokens.slice(1).join(' ') + '?';
+  }
+  if (chapterKey === 'do_question' && ["do", "does", "did"].includes(first)) {
+    return tokens.slice(1).join(' ') + '?';
+  }
+  return tokens.slice(1).join(' ') + '?';
+}
+
+function rotateOptionsWithAnswer(options = [], answer = "", seed = 0) {
+  const cleanOptions = Array.isArray(options) ? options.slice(0, 4) : [];
+  const correctIndex = cleanOptions.findIndex((opt) => String(opt || '').trim() === String(answer || '').trim());
+  if (cleanOptions.length !== 4 || correctIndex < 0) {
+    return { options: cleanOptions, answerIndex: Math.max(0, correctIndex) };
+  }
+  const targetIndex = Math.abs(Number(seed) || 0) % 4;
+  if (correctIndex === targetIndex) {
+    return { options: cleanOptions, answerIndex: targetIndex };
+  }
+  const rotated = cleanOptions.slice();
+  const temp = rotated[targetIndex];
+  rotated[targetIndex] = rotated[correctIndex];
+  rotated[correctIndex] = temp;
+  return { options: rotated, answerIndex: targetIndex };
+}
+
+function makeChoiceOptions(answer = "", input, seed = 0) {
   const base = String(answer).trim();
   const normalizedChapter = String(input?.grammarFocus?.chapterKey || '').trim();
   const candidates = [base];
@@ -564,15 +598,15 @@ function makeChoiceOptions(answer = "", input) {
   if (normalizedChapter === 'be_question') {
     candidates.push(buildBeQuestionGrammarDistractor(base));
     candidates.push(buildDeclarativeDistractor(base));
-    candidates.push(buildMissingQuestionMarkDistractor(base));
+    candidates.push(buildMissingAuxDistractor(base, normalizedChapter));
   } else if (normalizedChapter === 'do_question') {
     candidates.push(buildDoQuestionGrammarDistractor(base));
     candidates.push(buildDeclarativeDistractor(base));
-    candidates.push(buildMissingQuestionMarkDistractor(base));
+    candidates.push(buildMissingAuxDistractor(base, normalizedChapter));
   } else {
     candidates.push(buildDeclarativeDistractor(base));
-    candidates.push(buildMissingQuestionMarkDistractor(base));
-    candidates.push(base.replace(/(is|are|am|do|does|did)/i, 'Be'));
+    candidates.push(buildMissingAuxDistractor(base, normalizedChapter));
+    candidates.push(base.replace(/\b(is|are|am|do|does|did)\b/i, 'Be'));
   }
 
   const options = [];
@@ -583,11 +617,13 @@ function makeChoiceOptions(answer = "", input) {
   }
 
   while (options.length < 4) {
-    const filler = buildMissingQuestionMarkDistractor(base) + ' (' + (options.length + 1) + ')';
+    const filler = buildDeclarativeDistractor(base).replace(/[.]$/, '') + ' again';
     if (!options.includes(filler)) options.push(filler);
+    else break;
   }
 
-  return options.slice(0, 4);
+  const finalized = options.slice(0, 4);
+  return rotateOptionsWithAnswer(finalized, base, seed);
 }
 
 function normalizeWorkbookTypeLoose(value = "") {
@@ -768,17 +804,20 @@ function buildDbFirstWorksheet(input) {
     }
 
     if (worksheetType === "choice") {
+      const choiceBundle = makeChoiceOptions(answer, input, i + 1);
       questions.push({
         number: i + 1,
         type: "binary_choice",
         prompt: promptKo,
-        options: makeChoiceOptions(answer, input),
+        options: choiceBundle.options,
+        answerIndex: choiceBundle.answerIndex,
         clue: "",
         wordCount: wc,
       });
       answers.push({
         number: i + 1,
         answer,
+        answerIndex: choiceBundle.answerIndex,
       });
       continue;
     }
