@@ -779,6 +779,71 @@ async function writeMemberMp(memberId, nextMp) {
   return res.ok;
 }
 
+
+function buildResponsePayload({ input, worksheet, renderBundle, mp }) {
+  const workbookType = normalizeWorkbookTypeLoose(worksheet?.worksheetType || renderBundle?.workbookType || input.workbookType || 'guided_writing');
+  const itemPairs = Array.isArray(renderBundle?.itemPairs) && renderBundle.itemPairs.length
+    ? renderBundle.itemPairs
+    : (Array.isArray(worksheet?.itemPairs) ? worksheet.itemPairs : []);
+  const questions = Array.isArray(worksheet?.questions) ? worksheet.questions : [];
+  const answers = Array.isArray(worksheet?.answers) ? worksheet.answers : [];
+  const answerSheet = String(renderBundle?.answerSheet || worksheet?.answerSheet || itemPairs.map((row, idx) => {
+    const no = Number(row?.no || row?.number || idx + 1);
+    if (workbookType === 'choice') return `${no}. ${Number(row?.answerIndex || 0) + 1}) ${String(row?.answer || row?.english || '').trim()}`;
+    return `${no}. ${String(row?.answer || row?.english || '').trim()}`;
+  }).filter(Boolean).join('\n')).trim();
+  const content = String(renderBundle?.content || renderBundle?.questions || worksheet?.content || itemPairs.map((row, idx) => {
+    const no = Number(row?.no || row?.number || idx + 1);
+    const prompt = String(row?.prompt || row?.question || row?.korean || '').trim();
+    const clue = String(row?.clue || '').trim();
+    const wc = String(row?.wordCount || '').trim();
+    return `${no}. ${prompt}${clue ? `\n(clue: ${clue})` : ''}${wc ? `\n(word count: ${wc})` : ''}`;
+  }).filter(Boolean).join('\n')).trim();
+  const worksheetHtml = String(renderBundle?.worksheetHtml || worksheet?.worksheetHtml || '').trim();
+  const answerHtml = String(renderBundle?.answerHtml || worksheet?.answerHtml || worksheet?.answerSheetHtml || '').trim();
+  const answerSheetHtml = String(renderBundle?.answerSheetHtml || worksheet?.answerSheetHtml || worksheet?.answerHtml || answerHtml).trim();
+  const fullText = String(renderBundle?.fullText || worksheet?.fullText || [content, answerSheet ? `정답\n${answerSheet}` : ''].filter(Boolean).join('\n\n')).trim();
+  return {
+    ok: true,
+    title: worksheet?.title || input.worksheetTitle || `${input.gradeLabel} ${input.topic}`,
+    workbookType,
+    worksheetHtml,
+    answerHtml,
+    answerSheetHtml,
+    answerSheet,
+    content,
+    fullText,
+    itemPairs,
+    questions,
+    answers,
+    worksheet: Object.assign({}, worksheet || {}, {
+      worksheetType: workbookType,
+      questions,
+      answers,
+      itemPairs,
+      worksheetHtml,
+      answerHtml,
+      answerSheetHtml,
+      answerSheet,
+      content,
+      fullText,
+    }),
+    meta: {
+      workbookType,
+      fallbacks: input.workbookFallbacks,
+      grammarFocus: input.grammarFocus.chapterKey,
+      mp,
+      cleanRebuild: true,
+      dbForced: !!worksheet?.dbForced,
+      removedLayers: [
+        's30-8R safe pair recovery',
+        's30-9 guided print block lock',
+        's41~s47 additive patch layers',
+      ],
+    },
+  };
+}
+
 async function consumeMpIfNeeded(input) {
   if (!input.useMp || !input.memberId) {
     return { enabled: false, cost: input.mpCost, remaining: null };
@@ -823,35 +888,8 @@ export default async function handler(req, res) {
       ? buildDbFirstWorksheet(input)
       : await generateWithOpenAI(input);
     const renderBundle = createWorkbookRenderBundle(worksheet, input) || {};
-    const workbookType = normalizeWorkbookTypeLoose(worksheet?.worksheetType || input.workbookType || "guided_writing");
     const mp = await consumeMpIfNeeded(input);
-
-    return json(res, 200, {
-      ok: true,
-      title: worksheet?.title || input.worksheetTitle || `${input.gradeLabel} ${input.topic}`,
-      workbookType,
-      worksheetHtml: renderBundle.worksheetHtml || worksheet?.worksheetHtml || "",
-      answerHtml: renderBundle.answerHtml || worksheet?.answerHtml || worksheet?.answerSheetHtml || "",
-      answerSheetHtml: renderBundle.answerSheetHtml || worksheet?.answerSheetHtml || worksheet?.answerHtml || "",
-      answerSheet: renderBundle.answerSheet || worksheet?.answerSheet || "",
-      content: renderBundle.content || worksheet?.content || "",
-      fullText: renderBundle.fullText || worksheet?.fullText || "",
-      itemPairs: Array.isArray(renderBundle.itemPairs) ? renderBundle.itemPairs : (Array.isArray(worksheet?.itemPairs) ? worksheet.itemPairs : []),
-      worksheet,
-      meta: {
-        workbookType,
-        fallbacks: input.workbookFallbacks,
-        grammarFocus: input.grammarFocus.chapterKey,
-        mp,
-        cleanRebuild: true,
-        dbForced: !!worksheet?.dbForced,
-        removedLayers: [
-          "s30-8R safe pair recovery",
-          "s30-9 guided print block lock",
-          "s41~s47 additive patch layers",
-        ],
-      },
-    });
+    return json(res, 200, buildResponsePayload({ input, worksheet, renderBundle, mp }));
   } catch (error) {
     const code = error?.code || "GENERATION_ERROR";
     const status = code === "INSUFFICIENT_MP" ? 402 : 500;
