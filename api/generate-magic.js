@@ -13773,3 +13773,145 @@ module.exports.config = { runtime: "nodejs" };
 
   console.log("✅ S46 MIDDLE1 ITEM ENGINE PATCH applied");
 })();
+
+
+/* =========================
+   S47 MIDDLE1 FORCE RENDER SYNC PATCH
+   - ensure worksheet paths agree across questions/itemPairs/html
+   - legacy frontends that render from itemPairs.question should still show guided meta / blank / choice
+   ========================= */
+(function applyS47Middle1ForceRenderSyncPatch(){
+  const __prevExportS47 = module.exports;
+
+  function __s47Text(v){ return String(v == null ? '' : v).replace(/\s+/g,' ').trim(); }
+  function __s47Esc(v){ return String(v == null ? '' : v)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function __s47NormalizeWorkbookType(v){
+    const t = __s47Text(v).toLowerCase();
+    if (['guided','guided_writing','guided-writing'].includes(t)) return 'guided_writing';
+    if (['blank','blank_fill','blank-fill'].includes(t)) return 'blank_fill';
+    if (t === 'choice') return 'choice';
+    return t;
+  }
+  function __s47ResolveGrade(reqBody, payload){
+    const raw = [
+      reqBody && reqBody.gradeLabel,
+      reqBody && reqBody.grade,
+      reqBody && reqBody.level,
+      reqBody && reqBody.userPrompt,
+      reqBody && reqBody.topic,
+      reqBody && reqBody.worksheetTitle,
+      payload && payload.gradeLabel,
+      payload && payload.level,
+      payload && payload.topic,
+      payload && payload.title,
+      payload && payload.worksheetTitle,
+    ].filter(Boolean).join(' ');
+    if (/중1/.test(raw) || /middle1/i.test(raw)) return 'middle1';
+    return '';
+  }
+  function __s47ResolveWorkbookType(reqBody, payload){
+    return __s47NormalizeWorkbookType((reqBody && (reqBody.workbookType || reqBody.workbook_type)) || (payload && payload.workbookType) || '');
+  }
+  function __s47IsS46Payload(payload){
+    return payload && payload.engineVersion === 's46-middle1-item-engine' && payload.dbMode === true && payload.dbGrade === 'middle1';
+  }
+  function __s47ExpandFromItemPairs(payload, workbookType){
+    const pairs = Array.isArray(payload && payload.itemPairs) ? payload.itemPairs : [];
+    if (!pairs.length) return null;
+
+    const normalized = pairs.map(function(p, idx){
+      const no = Number(p.no || idx + 1);
+      const question = __s47Text(p.question);
+      const answer = __s47Text(p.answer);
+      const clue = __s47Text(p.clue);
+      const wc = Number(p.wordCount || 0);
+      const blankSentence = __s47Text(p.blankSentence);
+      const blankHint = __s47Text(p.blankHint);
+      const options = Array.isArray(p.options) ? p.options.map(function(o){ return __s47Text(String(o).replace(/^\d+\.\s*/, '')); }).filter(Boolean) : [];
+      const correctIndex = Number.isFinite(Number(p.correctIndex)) ? Number(p.correctIndex) : 0;
+      return { no, question, answer, clue, wordCount: wc, blankSentence, blankHint, options, correctIndex };
+    });
+
+    if (workbookType === 'guided_writing') {
+      const qText = normalized.map(function(it){
+        return `${it.no}. ${it.question}\nclue: ${it.clue}${it.wordCount ? `\nword count: ${it.wordCount}` : ''}`;
+      }).join('\n');
+      const html = `<div class="iaw-rendered worksheet-root s47-guided-root">` + normalized.map(function(it){
+        return `<div class="worksheet-item s47-guided-item" data-item-no="${it.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">`
+          + `<div class="s47-q"><span class="s47-no">${it.no}.</span> <span class="s47-question">${__s47Esc(it.question)}</span></div>`
+          + `<div class="s47-meta" style="font-size:12px;color:#4b5563;margin-top:4px;">clue: ${__s47Esc(it.clue)}${it.wordCount ? `<br/>word count: ${it.wordCount}` : ''}</div>`
+          + `</div>`;
+      }).join('') + `</div>`;
+      const itemPairs = normalized.map(function(it){
+        return Object.assign({}, it, { question: `${it.question}\nclue: ${it.clue}${it.wordCount ? `\nword count: ${it.wordCount}` : ''}` });
+      });
+      return { questions: qText, worksheet: qText, worksheetHtml: html, itemPairs };
+    }
+
+    if (workbookType === 'blank_fill') {
+      const qText = normalized.map(function(it){
+        const line = `${it.no}. ${it.question}`;
+        const blank = it.blankSentence || '_____';
+        const hint = it.blankHint ? ` (${it.blankHint})` : '';
+        return `${line}\n${blank}${hint}`;
+      }).join('\n');
+      const html = `<div class="iaw-rendered worksheet-root s47-blank-root">` + normalized.map(function(it){
+        return `<div class="worksheet-item s47-blank-item" data-item-no="${it.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">`
+          + `<div class="s47-q"><span class="s47-no">${it.no}.</span> <span class="s47-question">${__s47Esc(it.question)}</span></div>`
+          + `<div class="s47-blank" style="margin-top:6px;">${__s47Esc(it.blankSentence || '_____')}${it.blankHint ? ` <span class="s47-hint">(${__s47Esc(it.blankHint)})</span>` : ''}</div>`
+          + `</div>`;
+      }).join('') + `</div>`;
+      const itemPairs = normalized.map(function(it){
+        return Object.assign({}, it, { question: `${it.question}\n${it.blankSentence || '_____'}${it.blankHint ? ` (${it.blankHint})` : ''}` });
+      });
+      return { questions: qText, worksheet: qText, worksheetHtml: html, itemPairs };
+    }
+
+    if (workbookType === 'choice') {
+      const qText = normalized.map(function(it){
+        return `${it.no}. ${it.question}\n` + it.options.map(function(opt, idx){ return `${idx+1}) ${opt}`; }).join('\n');
+      }).join('\n');
+      const html = `<div class="iaw-rendered worksheet-root s47-choice-root">` + normalized.map(function(it){
+        return `<div class="worksheet-item s47-choice-item" data-item-no="${it.no}" style="page-break-inside: avoid; break-inside: avoid; margin-bottom: 18px;">`
+          + `<div class="s47-q"><span class="s47-no">${it.no}.</span> <span class="s47-question">${__s47Esc(it.question)}</span></div>`
+          + `<div class="s47-options" style="margin-top:6px;">`
+          + it.options.map(function(opt, idx){ return `<div class="s47-option"><span class="s47-option-no">${idx+1})</span> <span class="s47-option-text">${__s47Esc(opt)}</span></div>`; }).join('')
+          + `</div></div>`;
+      }).join('') + `</div>`;
+      const itemPairs = normalized.map(function(it){
+        return Object.assign({}, it, { question: `${it.question}\n` + it.options.map(function(opt, idx){ return `${idx+1}) ${opt}`; }).join('\n') });
+      });
+      return { questions: qText, worksheet: qText, worksheetHtml: html, itemPairs };
+    }
+    return null;
+  }
+
+  module.exports = async function handler_s47_sync(req, res){
+    const originalJson = res.json.bind(res);
+    res.json = function s47PatchedJson(payload){
+      try {
+        const grade = __s47ResolveGrade((req && req.body) || {}, payload || {});
+        const workbookType = __s47ResolveWorkbookType((req && req.body) || {}, payload || {});
+        if (grade === 'middle1' && __s47IsS46Payload(payload) && ['guided_writing','blank_fill','choice'].includes(workbookType)) {
+          const synced = __s47ExpandFromItemPairs(payload, workbookType);
+          if (synced) {
+            payload.questions = synced.questions;
+            payload.worksheet = synced.worksheet;
+            payload.worksheetHtml = synced.worksheetHtml;
+            payload.itemPairs = synced.itemPairs;
+            payload.engineVersion = 's47-middle1-force-render-sync';
+            console.log(`✅ S47 force-render sync applied: ${workbookType}`);
+          }
+        }
+      } catch (err) {
+        console.error('S47 force-render sync failed:', err);
+      }
+      return originalJson(payload);
+    };
+    return __prevExportS47(req, res);
+  };
+
+  if (__prevExportS47 && __prevExportS47.config) module.exports.config = __prevExportS47.config;
+  console.log('✅ S47 MIDDLE1 FORCE RENDER SYNC PATCH applied');
+})();
