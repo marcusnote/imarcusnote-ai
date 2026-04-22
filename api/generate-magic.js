@@ -631,6 +631,13 @@ function resolveChapterKey(input) {
 
   const explicit = explicitRules.find((rule) => rule.re.test(text))?.key;
   if (explicit) return explicit;
+  if (/일반동사/.test(text) && /(평서문|서술문)/.test(text) && !/의문사|의문문|부정문/.test(text)) {
+    return "do_verb";
+  }
+
+  if (/be동사/.test(text) && /평서문/.test(text) && !/의문문|부정문/.test(text)) {
+    return "be_verb";
+  }
 
   if (input.requestedChapterKey && FILE_MAP[input.requestedChapterKey]) {
     return input.requestedChapterKey;
