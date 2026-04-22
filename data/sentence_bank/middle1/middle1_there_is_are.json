@@ -1,0 +1,5521 @@
+[
+  {
+    "id": "m1_s1_there_is_are_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "책상 위에 책 한 권이 있다.",
+    "english": "There is a book on the desk.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "book",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a book",
+      "on the desk"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a book"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a book on the desk.",
+      "statementForm": "a book on the desk.",
+      "fragmentForm": "There a book on the desk."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "문 앞에 한 노부인이 있다.",
+    "english": "There is an old lady in front of the door.",
+    "words": [
+      "There",
+      "is",
+      "an",
+      "old",
+      "lady",
+      "in",
+      "front",
+      "of",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "an old lady",
+      "in front of the door"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "an old lady"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "person"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are an old lady in front of the door.",
+      "statementForm": "an old lady in front of the door.",
+      "fragmentForm": "There an old lady in front of the door."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "지붕 위에 고양이 한 마리가 있다.",
+    "english": "There is a cat on the roof.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "cat",
+      "on",
+      "the",
+      "roof",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a cat",
+      "on the roof"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a cat"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a cat on the roof.",
+      "statementForm": "a cat on the roof.",
+      "fragmentForm": "There a cat on the roof."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "길에 많은 사람들이 있다.",
+    "english": "There are many people on the street.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "people",
+      "on",
+      "the",
+      "street",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "many people",
+      "on the street"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many people"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many people on the street.",
+      "statementForm": "many people on the street.",
+      "fragmentForm": "There many people on the street."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "나무 아래에 소 두 마리가 있다.",
+    "english": "There are two cows under the tree.",
+    "words": [
+      "There",
+      "are",
+      "two",
+      "cows",
+      "under",
+      "the",
+      "tree",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "two cows",
+      "under the tree"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "two cows"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is two cows under the tree.",
+      "statementForm": "two cows under the tree.",
+      "fragmentForm": "There two cows under the tree."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "거실에 라디오 한 대가 있다.",
+    "english": "There is a radio in the living room.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "radio",
+      "in",
+      "the",
+      "living",
+      "room",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a radio",
+      "in the living room"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a radio"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a radio in the living room.",
+      "statementForm": "a radio in the living room.",
+      "fragmentForm": "There a radio in the living room."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 근처에 영화관이 있다.",
+    "english": "There is a movie theater near here.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "movie",
+      "theater",
+      "near",
+      "here",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a movie theater",
+      "near here"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a movie theater"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a movie theater near here.",
+      "statementForm": "a movie theater near here.",
+      "fragmentForm": "There a movie theater near here."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 근처에 은행이 두 곳 있다.",
+    "english": "There are two banks near here.",
+    "words": [
+      "There",
+      "are",
+      "two",
+      "banks",
+      "near",
+      "here",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "two banks",
+      "near here"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "two banks"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is two banks near here.",
+      "statementForm": "two banks near here.",
+      "fragmentForm": "There two banks near here."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "인터넷에는 많은 정보가 있다.",
+    "english": "There is a lot of information on the Internet.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "lot",
+      "of",
+      "information",
+      "on",
+      "the",
+      "Internet",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a lot of information",
+      "on the Internet"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a lot of information"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a lot of information on the Internet.",
+      "statementForm": "a lot of information on the Internet.",
+      "fragmentForm": "There a lot of information on the Internet."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "우리 반에는 서른여섯 명의 학생이 있다.",
+    "english": "There are thirty-six students in my class.",
+    "words": [
+      "There",
+      "are",
+      "thirty-six",
+      "students",
+      "in",
+      "my",
+      "class",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "thirty-six students",
+      "in my class"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "thirty-six students"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is thirty-six students in my class.",
+      "statementForm": "thirty-six students in my class.",
+      "fragmentForm": "There thirty-six students in my class."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "그의 방에는 컴퓨터 두 대가 있다.",
+    "english": "There are two computers in his room.",
+    "words": [
+      "There",
+      "are",
+      "two",
+      "computers",
+      "in",
+      "his",
+      "room",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "two computers",
+      "in his room"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "two computers"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is two computers in his room.",
+      "statementForm": "two computers in his room.",
+      "fragmentForm": "There two computers in his room."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "세상에는 약 100종의 고래가 있다.",
+    "english": "There are about 100 kinds of whales in the world.",
+    "words": [
+      "There",
+      "are",
+      "about",
+      "100",
+      "kinds",
+      "of",
+      "whales",
+      "in",
+      "the",
+      "world",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "about 100 kinds of whales",
+      "in the world"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "about 100 kinds of whales"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is about 100 kinds of whales in the world.",
+      "statementForm": "about 100 kinds of whales in the world.",
+      "fragmentForm": "There about 100 kinds of whales in the world."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "탁자 아래에 많은 선물이 있다.",
+    "english": "There are a lot of presents under the table.",
+    "words": [
+      "There",
+      "are",
+      "a",
+      "lot",
+      "of",
+      "presents",
+      "under",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "a lot of presents",
+      "under the table"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a lot of presents"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a lot of presents under the table.",
+      "statementForm": "a lot of presents under the table.",
+      "fragmentForm": "There a lot of presents under the table."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "공원에 많은 꽃들이 있다.",
+    "english": "There are many flowers in the park.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "flowers",
+      "in",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "many flowers",
+      "in the park"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many flowers"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many flowers in the park.",
+      "statementForm": "many flowers in the park.",
+      "fragmentForm": "There many flowers in the park."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "우리 학교에는 많은 나무들이 있다.",
+    "english": "There are many trees in my school.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "trees",
+      "in",
+      "my",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "many trees",
+      "in my school"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many trees"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many trees in my school.",
+      "statementForm": "many trees in my school.",
+      "fragmentForm": "There many trees in my school."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "그의 서재에는 많은 책이 있다.",
+    "english": "There are many books in his study.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "books",
+      "in",
+      "his",
+      "study",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "many books",
+      "in his study"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many books"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many books in his study.",
+      "statementForm": "many books in his study.",
+      "fragmentForm": "There many books in his study."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "벽에 시계가 하나 있다.",
+    "english": "There is a clock on the wall.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "clock",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a clock",
+      "on the wall"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a clock"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a clock on the wall.",
+      "statementForm": "a clock on the wall.",
+      "fragmentForm": "There a clock on the wall."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "벽에 그림이 두 개 있다.",
+    "english": "There are two paintings on the wall.",
+    "words": [
+      "There",
+      "are",
+      "two",
+      "paintings",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "two paintings",
+      "on the wall"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "two paintings"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is two paintings on the wall.",
+      "statementForm": "two paintings on the wall.",
+      "fragmentForm": "There two paintings on the wall."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "냉장고에 우유가 많이 있다.",
+    "english": "There is a lot of milk in the refrigerator.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "lot",
+      "of",
+      "milk",
+      "in",
+      "the",
+      "refrigerator",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a lot of milk",
+      "in the refrigerator"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a lot of milk"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a lot of milk in the refrigerator.",
+      "statementForm": "a lot of milk in the refrigerator.",
+      "fragmentForm": "There a lot of milk in the refrigerator."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "탁자 위에 약간의 음식이 있다.",
+    "english": "There is a little food on the table.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "little",
+      "food",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a little food",
+      "on the table"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a little food"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a little food on the table.",
+      "statementForm": "a little food on the table.",
+      "fragmentForm": "There a little food on the table."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "우리 가족은 다섯 명이다.",
+    "english": "There are five people in my family.",
+    "words": [
+      "There",
+      "are",
+      "five",
+      "people",
+      "in",
+      "my",
+      "family",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "five people",
+      "in my family"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "five people"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "family"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is five people in my family.",
+      "statementForm": "five people in my family.",
+      "fragmentForm": "There five people in my family."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "다리 아래에 오리 세 마리가 있다.",
+    "english": "There are three ducks under the bridge.",
+    "words": [
+      "There",
+      "are",
+      "three",
+      "ducks",
+      "under",
+      "the",
+      "bridge",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "three ducks",
+      "under the bridge"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "three ducks"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is three ducks under the bridge.",
+      "statementForm": "three ducks under the bridge.",
+      "fragmentForm": "There three ducks under the bridge."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "나무 옆에 거위 다섯 마리가 있다.",
+    "english": "There are five geese next to the tree.",
+    "words": [
+      "There",
+      "are",
+      "five",
+      "geese",
+      "next",
+      "to",
+      "the",
+      "tree",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "five geese",
+      "next to the tree"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "five geese"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is five geese next to the tree.",
+      "statementForm": "five geese next to the tree.",
+      "fragmentForm": "There five geese next to the tree."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "내 학교 근처에 주차장이 있다.",
+    "english": "There is a parking lot near my school.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "parking",
+      "lot",
+      "near",
+      "my",
+      "school",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a parking lot",
+      "near my school"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a parking lot"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a parking lot near my school.",
+      "statementForm": "a parking lot near my school.",
+      "fragmentForm": "There a parking lot near my school."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "문 뒤에 빗자루가 한 자루 있다.",
+    "english": "There is a broom behind the door.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "broom",
+      "behind",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "a broom",
+      "behind the door"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a broom"
+    ],
+    "tags": [
+      "there_is_are",
+      "statement",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are a broom behind the door.",
+      "statementForm": "a broom behind the door.",
+      "fragmentForm": "There a broom behind the door."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "셔틀버스에 많은 사람들이 있었다.",
+    "english": "There were many people on the shuttle bus.",
+    "words": [
+      "There",
+      "were",
+      "many",
+      "people",
+      "on",
+      "the",
+      "shuttle",
+      "bus",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "were",
+      "many people",
+      "on the shuttle bus"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many people"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was many people on the shuttle bus.",
+      "statementForm": "many people on the shuttle bus.",
+      "fragmentForm": "There many people on the shuttle bus."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "어제 지붕 위에 새 한 마리가 있었다.",
+    "english": "There was a bird on the roof yesterday.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "bird",
+      "on",
+      "the",
+      "roof",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "was",
+      "a bird",
+      "on the roof",
+      "yesterday"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a bird"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were a bird on the roof yesterday.",
+      "statementForm": "a bird on the roof yesterday.",
+      "fragmentForm": "There a bird on the roof yesterday."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "지난주에 내 마당에 사슴 한 마리가 있었다.",
+    "english": "There was a deer in my yard last week.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "deer",
+      "in",
+      "my",
+      "yard",
+      "last",
+      "week",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "was",
+      "a deer",
+      "in my yard",
+      "last week"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a deer"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were a deer in my yard last week.",
+      "statementForm": "a deer in my yard last week.",
+      "fragmentForm": "There a deer in my yard last week."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "그 가게에는 오래된 접시가 많이 있었다.",
+    "english": "There were many old plates in that store.",
+    "words": [
+      "There",
+      "were",
+      "many",
+      "old",
+      "plates",
+      "in",
+      "that",
+      "store",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "were",
+      "many old plates",
+      "in that store"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many old plates"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was many old plates in that store.",
+      "statementForm": "many old plates in that store.",
+      "fragmentForm": "There many old plates in that store."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "광장에는 많은 군인들이 있었다.",
+    "english": "There were many soldiers in the square.",
+    "words": [
+      "There",
+      "were",
+      "many",
+      "soldiers",
+      "in",
+      "the",
+      "square",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "were",
+      "many soldiers",
+      "in the square"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many soldiers"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was many soldiers in the square.",
+      "statementForm": "many soldiers in the square.",
+      "fragmentForm": "There many soldiers in the square."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_031",
+    "seedId": 31,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "교실에는 학생들이 많이 있었다.",
+    "english": "There were many students in the classroom.",
+    "words": [
+      "There",
+      "were",
+      "many",
+      "students",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "were",
+      "many students",
+      "in the classroom"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many students"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was many students in the classroom.",
+      "statementForm": "many students in the classroom.",
+      "fragmentForm": "There many students in the classroom."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_032",
+    "seedId": 32,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "산에는 등산객들이 많이 있었다.",
+    "english": "There were many climbers on the mountain.",
+    "words": [
+      "There",
+      "were",
+      "many",
+      "climbers",
+      "on",
+      "the",
+      "mountain",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "were",
+      "many climbers",
+      "on the mountain"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many climbers"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was many climbers on the mountain.",
+      "statementForm": "many climbers on the mountain.",
+      "fragmentForm": "There many climbers on the mountain."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_033",
+    "seedId": 33,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "자동차 뒤에 개 한 마리가 있었다.",
+    "english": "There was a dog behind the car.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "dog",
+      "behind",
+      "the",
+      "car",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "was",
+      "a dog",
+      "behind the car"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a dog"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were a dog behind the car.",
+      "statementForm": "a dog behind the car.",
+      "fragmentForm": "There a dog behind the car."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_034",
+    "seedId": 34,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "도로 위에 시계 하나가 있었다.",
+    "english": "There was a watch on the road.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "watch",
+      "on",
+      "the",
+      "road",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "was",
+      "a watch",
+      "on the road"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a watch"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "object"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were a watch on the road.",
+      "statementForm": "a watch on the road.",
+      "fragmentForm": "There a watch on the road."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_035",
+    "seedId": 35,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "탁자 위에 사과 한 개가 있었다.",
+    "english": "There was an apple on the table.",
+    "words": [
+      "There",
+      "was",
+      "an",
+      "apple",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "was",
+      "an apple",
+      "on the table"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "an apple"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "object"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were an apple on the table.",
+      "statementForm": "an apple on the table.",
+      "fragmentForm": "There an apple on the table."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_036",
+    "seedId": 36,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "주차장에 차 다섯 대가 있었다.",
+    "english": "There were five cars in the parking lot.",
+    "words": [
+      "There",
+      "were",
+      "five",
+      "cars",
+      "in",
+      "the",
+      "parking",
+      "lot",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "were",
+      "five cars",
+      "in the parking lot"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "five cars"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was five cars in the parking lot.",
+      "statementForm": "five cars in the parking lot.",
+      "fragmentForm": "There five cars in the parking lot."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_037",
+    "seedId": 37,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "책 위에 손목시계가 하나 있었다.",
+    "english": "There was a watch on the book.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "watch",
+      "on",
+      "the",
+      "book",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "was",
+      "a watch",
+      "on the book"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a watch"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "object"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were a watch on the book.",
+      "statementForm": "a watch on the book.",
+      "fragmentForm": "There a watch on the book."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_038",
+    "seedId": 38,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "벽에 그림 세 개가 걸려 있었다.",
+    "english": "There were three paintings on the wall.",
+    "words": [
+      "There",
+      "were",
+      "three",
+      "paintings",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "were",
+      "three paintings",
+      "on the wall"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "three paintings"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was three paintings on the wall.",
+      "statementForm": "three paintings on the wall.",
+      "fragmentForm": "There three paintings on the wall."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_039",
+    "seedId": 39,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "너의 집 앞에 소녀 두 명이 있었다.",
+    "english": "There were two girls in front of your house.",
+    "words": [
+      "There",
+      "were",
+      "two",
+      "girls",
+      "in",
+      "front",
+      "of",
+      "your",
+      "house",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "were",
+      "two girls",
+      "in front of your house"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "two girls"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "person"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was two girls in front of your house.",
+      "statementForm": "two girls in front of your house.",
+      "fragmentForm": "There two girls in front of your house."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_040",
+    "seedId": 40,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "내 삶에는 희망이 없었다.",
+    "english": "There was no hope in my life.",
+    "words": [
+      "There",
+      "was",
+      "no",
+      "hope",
+      "in",
+      "my",
+      "life",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "was",
+      "no hope",
+      "in my life"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no hope"
+    ],
+    "tags": [
+      "there_is_are",
+      "past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were no hope in my life.",
+      "statementForm": "no hope in my life.",
+      "fragmentForm": "There no hope in my life."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_041",
+    "seedId": 41,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 근처에 버스 정류장이 있나요?",
+    "english": "Is there a bus stop near here?",
+    "words": [
+      "Is",
+      "there",
+      "a",
+      "bus",
+      "stop",
+      "near",
+      "here",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "a bus stop",
+      "near here"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a bus stop"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there a bus stop near here?",
+      "statementForm": "There is a bus stop near here.",
+      "fragmentForm": "a bus stop near here?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_042",
+    "seedId": 42,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "네 집에는 개가 많니?",
+    "english": "Are there many dogs in your house?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "dogs",
+      "in",
+      "your",
+      "house",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many dogs",
+      "in your house"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many dogs"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many dogs in your house?",
+      "statementForm": "There are many dogs in your house.",
+      "fragmentForm": "many dogs in your house?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_043",
+    "seedId": 43,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "세상에는 언어가 많니?",
+    "english": "Are there many languages in the world?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "languages",
+      "in",
+      "the",
+      "world",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many languages",
+      "in the world"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many languages"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many languages in the world?",
+      "statementForm": "There are many languages in the world.",
+      "fragmentForm": "many languages in the world?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_044",
+    "seedId": 44,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "네 글에는 어떤 실수들이 있니?",
+    "english": "Are there any errors in my writing?",
+    "words": [
+      "Are",
+      "there",
+      "any",
+      "errors",
+      "in",
+      "my",
+      "writing",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "any errors",
+      "in my writing"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "any errors"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there any errors in my writing?",
+      "statementForm": "There are any errors in my writing.",
+      "fragmentForm": "any errors in my writing?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_045",
+    "seedId": 45,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 근처에 물이 있나요?",
+    "english": "Is there any water near here?",
+    "words": [
+      "Is",
+      "there",
+      "any",
+      "water",
+      "near",
+      "here",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "any water",
+      "near here"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "any water"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there any water near here?",
+      "statementForm": "There is any water near here.",
+      "fragmentForm": "any water near here?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_046",
+    "seedId": 46,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "나에게 온 편지가 있니?",
+    "english": "Are there any letters for me?",
+    "words": [
+      "Are",
+      "there",
+      "any",
+      "letters",
+      "for",
+      "me",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "any letters",
+      "for me"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "any letters"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there any letters for me?",
+      "statementForm": "There are any letters for me.",
+      "fragmentForm": "any letters for me?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_047",
+    "seedId": 47,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "그들에게서 받은 도움이 있니?",
+    "english": "Is there any help from them?",
+    "words": [
+      "Is",
+      "there",
+      "any",
+      "help",
+      "from",
+      "them",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "any help",
+      "from them"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "any help"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there any help from them?",
+      "statementForm": "There is any help from them.",
+      "fragmentForm": "any help from them?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_048",
+    "seedId": 48,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이번 주에 행사가 많니?",
+    "english": "Are there many events this week?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "events",
+      "this",
+      "week",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many events",
+      "this week"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many events"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many events this week?",
+      "statementForm": "There are many events this week.",
+      "fragmentForm": "many events this week?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_049",
+    "seedId": 49,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "집에 꽃병이 많니?",
+    "english": "Are there many vases in the house?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "vases",
+      "in",
+      "the",
+      "house",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many vases",
+      "in the house"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many vases"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many vases in the house?",
+      "statementForm": "There are many vases in the house.",
+      "fragmentForm": "many vases in the house?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_050",
+    "seedId": 50,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "집에 맥주가 좀 있니?",
+    "english": "Is there any beer in the house?",
+    "words": [
+      "Is",
+      "there",
+      "any",
+      "beer",
+      "in",
+      "the",
+      "house",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "any beer",
+      "in the house"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "any beer"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there any beer in the house?",
+      "statementForm": "There is any beer in the house.",
+      "fragmentForm": "any beer in the house?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_051",
+    "seedId": 51,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "공원에 아이들이 많이 있니?",
+    "english": "Are there many children on the playground?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "children",
+      "on",
+      "the",
+      "playground",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many children",
+      "on the playground"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many children"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many children on the playground?",
+      "statementForm": "There are many children on the playground.",
+      "fragmentForm": "many children on the playground?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_052",
+    "seedId": 52,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "냉장고에 우유가 많이 있나요?",
+    "english": "Is there a lot of milk in the refrigerator?",
+    "words": [
+      "Is",
+      "there",
+      "a",
+      "lot",
+      "of",
+      "milk",
+      "in",
+      "the",
+      "refrigerator",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "a lot of milk",
+      "in the refrigerator"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a lot of milk"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there a lot of milk in the refrigerator?",
+      "statementForm": "There is a lot of milk in the refrigerator.",
+      "fragmentForm": "a lot of milk in the refrigerator?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_053",
+    "seedId": 53,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "네 방에 책이 많이 있니?",
+    "english": "Are there many books in your room?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "books",
+      "in",
+      "your",
+      "room",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many books",
+      "in your room"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many books"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many books in your room?",
+      "statementForm": "There are many books in your room.",
+      "fragmentForm": "many books in your room?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_054",
+    "seedId": 54,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "네 반에는 학생이 몇 명 있니?",
+    "english": "How many students are there in your class?",
+    "words": [
+      "How",
+      "many",
+      "students",
+      "are",
+      "there",
+      "in",
+      "your",
+      "class",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many students",
+      "are there",
+      "in your class"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How many students"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many students is there in your class?",
+      "statementForm": "There are many students in your class.",
+      "fragmentForm": "How many students are there in your class"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_055",
+    "seedId": 55,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "네 필통에는 연필이 몇 개 있니?",
+    "english": "How many pencils are there in your pencil case?",
+    "words": [
+      "How",
+      "many",
+      "pencils",
+      "are",
+      "there",
+      "in",
+      "your",
+      "pencil",
+      "case",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many pencils",
+      "are there",
+      "in your pencil case"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How many pencils"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many pencils is there in your pencil case?",
+      "statementForm": "There are many pencils in your pencil case.",
+      "fragmentForm": "How many pencils are there in your pencil case"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_056",
+    "seedId": 56,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "항아리에는 물이 얼마나 있나요?",
+    "english": "How much water is there in the jar?",
+    "words": [
+      "How",
+      "much",
+      "water",
+      "is",
+      "there",
+      "in",
+      "the",
+      "jar",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much water",
+      "is there",
+      "in the jar"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How much water"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much water are there in the jar?",
+      "statementForm": "There is much water in the jar.",
+      "fragmentForm": "How much water is there in the jar"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_057",
+    "seedId": 57,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "네 집에는 개가 몇 마리 있니?",
+    "english": "How many dogs are there in your house?",
+    "words": [
+      "How",
+      "many",
+      "dogs",
+      "are",
+      "there",
+      "in",
+      "your",
+      "house",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many dogs",
+      "are there",
+      "in your house"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How many dogs"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many dogs is there in your house?",
+      "statementForm": "There are many dogs in your house.",
+      "fragmentForm": "How many dogs are there in your house"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_058",
+    "seedId": 58,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "교실에는 학생들이 많이 있나요?",
+    "english": "Are there a lot of students in the classroom?",
+    "words": [
+      "Are",
+      "there",
+      "a",
+      "lot",
+      "of",
+      "students",
+      "in",
+      "the",
+      "classroom",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "a lot of students",
+      "in the classroom"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a lot of students"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there a lot of students in the classroom?",
+      "statementForm": "There are a lot of students in the classroom.",
+      "fragmentForm": "a lot of students in the classroom?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_059",
+    "seedId": 59,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "부엌에 채소가 많이 있나요?",
+    "english": "Are there a lot of vegetables in the kitchen?",
+    "words": [
+      "Are",
+      "there",
+      "a",
+      "lot",
+      "of",
+      "vegetables",
+      "in",
+      "the",
+      "kitchen",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "a lot of vegetables",
+      "in the kitchen"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a lot of vegetables"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there a lot of vegetables in the kitchen?",
+      "statementForm": "There are a lot of vegetables in the kitchen.",
+      "fragmentForm": "a lot of vegetables in the kitchen?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_060",
+    "seedId": 60,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 도시에는 공원이 몇 개 있니?",
+    "english": "How many parks are there in this city?",
+    "words": [
+      "How",
+      "many",
+      "parks",
+      "are",
+      "there",
+      "in",
+      "this",
+      "city",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many parks",
+      "are there",
+      "in this city"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How many parks"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many parks is there in this city?",
+      "statementForm": "There are many parks in this city.",
+      "fragmentForm": "How many parks are there in this city"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_061",
+    "seedId": 61,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 병에는 물이 얼마나 들어 있니?",
+    "english": "How much water is there in this bottle?",
+    "words": [
+      "How",
+      "much",
+      "water",
+      "is",
+      "there",
+      "in",
+      "this",
+      "bottle",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much water",
+      "is there",
+      "in this bottle"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How much water"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much water are there in this bottle?",
+      "statementForm": "There is much water in this bottle.",
+      "fragmentForm": "How much water is there in this bottle"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_062",
+    "seedId": 62,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 마을에는 집이 몇 채 있니?",
+    "english": "How many houses are there in this village?",
+    "words": [
+      "How",
+      "many",
+      "houses",
+      "are",
+      "there",
+      "in",
+      "this",
+      "village",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many houses",
+      "are there",
+      "in this village"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How many houses"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many houses is there in this village?",
+      "statementForm": "There are many houses in this village.",
+      "fragmentForm": "How many houses are there in this village"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_063",
+    "seedId": 63,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 공원에는 호수가 없니?",
+    "english": "Is there no lake in this park?",
+    "words": [
+      "Is",
+      "there",
+      "no",
+      "lake",
+      "in",
+      "this",
+      "park",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "no lake",
+      "in this park"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no lake"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there no lake in this park?",
+      "statementForm": "There is no lake in this park.",
+      "fragmentForm": "no lake in this park?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_064",
+    "seedId": 64,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 방에는 창문이 몇 개 있니?",
+    "english": "How many windows are there in this room?",
+    "words": [
+      "How",
+      "many",
+      "windows",
+      "are",
+      "there",
+      "in",
+      "this",
+      "room",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many windows",
+      "are there",
+      "in this room"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How many windows"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many windows is there in this room?",
+      "statementForm": "There are many windows in this room.",
+      "fragmentForm": "How many windows are there in this room"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_065",
+    "seedId": 65,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 근처에 식당이 있나요?",
+    "english": "Is there a restaurant near here?",
+    "words": [
+      "Is",
+      "there",
+      "a",
+      "restaurant",
+      "near",
+      "here",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "a restaurant",
+      "near here"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a restaurant"
+    ],
+    "tags": [
+      "there_is_are",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there a restaurant near here?",
+      "statementForm": "There is a restaurant near here.",
+      "fragmentForm": "a restaurant near here?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_066",
+    "seedId": 66,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 근처에는 주유소가 없다.",
+    "english": "There is not a gas station near here.",
+    "words": [
+      "There",
+      "is",
+      "not",
+      "a",
+      "gas",
+      "station",
+      "near",
+      "here",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is not",
+      "a gas station",
+      "near here"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a gas station"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are not a gas station near here.",
+      "statementForm": "not a gas station near here.",
+      "fragmentForm": "There not a gas station near here."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_067",
+    "seedId": 67,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "탁자 위에 음식이 없다.",
+    "english": "There is no food on the table.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "food",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no food",
+      "on the table"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no food"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no food on the table.",
+      "statementForm": "no food on the table.",
+      "fragmentForm": "There no food on the table."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_068",
+    "seedId": 68,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "우리 마을에는 자동차가 많지 않다.",
+    "english": "There are not many cars in my village.",
+    "words": [
+      "There",
+      "are",
+      "not",
+      "many",
+      "cars",
+      "in",
+      "my",
+      "village",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are not",
+      "many cars",
+      "in my village"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many cars"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is not many cars in my village.",
+      "statementForm": "not many cars in my village.",
+      "fragmentForm": "There not many cars in my village."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_069",
+    "seedId": 69,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "내 주머니에는 돈이 없다.",
+    "english": "There is no money in my pocket.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "money",
+      "in",
+      "my",
+      "pocket",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no money",
+      "in my pocket"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no money"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no money in my pocket.",
+      "statementForm": "no money in my pocket.",
+      "fragmentForm": "There no money in my pocket."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_070",
+    "seedId": 70,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "하늘에는 구름이 없다.",
+    "english": "There is no cloud in the sky.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "cloud",
+      "in",
+      "the",
+      "sky",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no cloud",
+      "in the sky"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no cloud"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no cloud in the sky.",
+      "statementForm": "no cloud in the sky.",
+      "fragmentForm": "There no cloud in the sky."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_071",
+    "seedId": 71,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "지붕 위에는 아무것도 없다.",
+    "english": "There is nothing on the roof.",
+    "words": [
+      "There",
+      "is",
+      "nothing",
+      "on",
+      "the",
+      "roof",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "nothing",
+      "on the roof"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "nothing"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are nothing on the roof.",
+      "statementForm": "nothing on the roof.",
+      "fragmentForm": "There nothing on the roof."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_072",
+    "seedId": 72,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 근처에는 식당이 없다.",
+    "english": "There is no restaurant near here.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "restaurant",
+      "near",
+      "here",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no restaurant",
+      "near here"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no restaurant"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no restaurant near here.",
+      "statementForm": "no restaurant near here.",
+      "fragmentForm": "There no restaurant near here."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_073",
+    "seedId": 73,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 책에는 정보가 많지 않다.",
+    "english": "There is not much information in this book.",
+    "words": [
+      "There",
+      "is",
+      "not",
+      "much",
+      "information",
+      "in",
+      "this",
+      "book",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is not",
+      "much information",
+      "in this book"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "much information"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are not much information in this book.",
+      "statementForm": "not much information in this book.",
+      "fragmentForm": "There not much information in this book."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_074",
+    "seedId": 74,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "우리 학교에는 시험이 많지 않다.",
+    "english": "There are not many tests in my school.",
+    "words": [
+      "There",
+      "are",
+      "not",
+      "many",
+      "tests",
+      "in",
+      "my",
+      "school",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are not",
+      "many tests",
+      "in my school"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many tests"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is not many tests in my school.",
+      "statementForm": "not many tests in my school.",
+      "fragmentForm": "There not many tests in my school."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_075",
+    "seedId": 75,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 근처에는 병원이 없다.",
+    "english": "There is no hospital near here.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "hospital",
+      "near",
+      "here",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no hospital",
+      "near here"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no hospital"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no hospital near here.",
+      "statementForm": "no hospital near here.",
+      "fragmentForm": "There no hospital near here."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_076",
+    "seedId": 76,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 방에는 가구가 많지 않다.",
+    "english": "There is not much furniture in this room.",
+    "words": [
+      "There",
+      "is",
+      "not",
+      "much",
+      "furniture",
+      "in",
+      "this",
+      "room",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is not",
+      "much furniture",
+      "in this room"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "much furniture"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are not much furniture in this room.",
+      "statementForm": "not much furniture in this room.",
+      "fragmentForm": "There not much furniture in this room."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_077",
+    "seedId": 77,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 학교에는 선생님이 많지 않다.",
+    "english": "There are not many teachers in this school.",
+    "words": [
+      "There",
+      "are",
+      "not",
+      "many",
+      "teachers",
+      "in",
+      "this",
+      "school",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are not",
+      "many teachers",
+      "in this school"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many teachers"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is not many teachers in this school.",
+      "statementForm": "not many teachers in this school.",
+      "fragmentForm": "There not many teachers in this school."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_078",
+    "seedId": 78,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 거리에는 자동차가 많지 않다.",
+    "english": "There are not many cars on this street.",
+    "words": [
+      "There",
+      "are",
+      "not",
+      "many",
+      "cars",
+      "on",
+      "this",
+      "street",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are not",
+      "many cars",
+      "on this street"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many cars"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is not many cars on this street.",
+      "statementForm": "not many cars on this street.",
+      "fragmentForm": "There not many cars on this street."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_079",
+    "seedId": 79,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 가방에는 아무것도 없다.",
+    "english": "There is nothing in this bag.",
+    "words": [
+      "There",
+      "is",
+      "nothing",
+      "in",
+      "this",
+      "bag",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "nothing",
+      "in this bag"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "nothing"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are nothing in this bag.",
+      "statementForm": "nothing in this bag.",
+      "fragmentForm": "There nothing in this bag."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_080",
+    "seedId": 80,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 공원에는 호수가 없다.",
+    "english": "There is no lake in this park.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "lake",
+      "in",
+      "this",
+      "park",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "there_is_are",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no lake",
+      "in this park"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no lake"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no lake in this park.",
+      "statementForm": "no lake in this park.",
+      "fragmentForm": "There no lake in this park."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_081",
+    "seedId": 81,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 건물에는 우리가 사용할 수 있는 방이 없다.",
+    "english": "There is no room that we can use in this building.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "room",
+      "that",
+      "we",
+      "can",
+      "use",
+      "in",
+      "this",
+      "building",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no room",
+      "that we can use",
+      "in this building"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no room"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no room that we can use in this building.",
+      "statementForm": "no room that we can use in this building.",
+      "fragmentForm": "There no room that we can use in this building."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_082",
+    "seedId": 82,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 지역에는 우리가 먹을 수 있는 음식이 없다.",
+    "english": "There is no food that we can eat in this area.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "food",
+      "that",
+      "we",
+      "can",
+      "eat",
+      "in",
+      "this",
+      "area",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no food",
+      "that we can eat",
+      "in this area"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no food"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no food that we can eat in this area.",
+      "statementForm": "no food that we can eat in this area.",
+      "fragmentForm": "There no food that we can eat in this area."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_083",
+    "seedId": 83,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 마을에는 사람들이 방문하지 않는 곳이 없다.",
+    "english": "There is no place that people do not visit in this village.",
+    "words": [
+      "There",
+      "is",
+      "no",
+      "place",
+      "that",
+      "people",
+      "do",
+      "not",
+      "visit",
+      "in",
+      "this",
+      "village",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "is",
+      "no place",
+      "that people do not visit",
+      "in this village"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no place"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are no place that people do not visit in this village.",
+      "statementForm": "no place that people do not visit in this village.",
+      "fragmentForm": "There no place that people do not visit in this village."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_084",
+    "seedId": 84,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 도시에는 사람들이 살지 않는 지역이 많지 않다.",
+    "english": "There are not many areas where people do not live in this city.",
+    "words": [
+      "There",
+      "are",
+      "not",
+      "many",
+      "areas",
+      "where",
+      "people",
+      "do",
+      "not",
+      "live",
+      "in",
+      "this",
+      "city",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are not",
+      "many areas",
+      "where people do not live",
+      "in this city"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many areas"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is not many areas where people do not live in this city.",
+      "statementForm": "not many areas where people do not live in this city.",
+      "fragmentForm": "There not many areas where people do not live in this city."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_085",
+    "seedId": 85,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 방에는 우리가 앉을 수 있는 의자가 없다.",
+    "english": "There are no chairs that we can sit on in this room.",
+    "words": [
+      "There",
+      "are",
+      "no",
+      "chairs",
+      "that",
+      "we",
+      "can",
+      "sit",
+      "on",
+      "in",
+      "this",
+      "room",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There",
+      "are",
+      "no chairs",
+      "that we can sit on",
+      "in this room"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no chairs"
+    ],
+    "tags": [
+      "there_is_are",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is no chairs that we can sit on in this room.",
+      "statementForm": "no chairs that we can sit on in this room.",
+      "fragmentForm": "There no chairs that we can sit on in this room."
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_086",
+    "seedId": 86,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 도시에는 사람들이 쉴 수 있는 공원이 많이 있니?",
+    "english": "Are there many parks where people can relax in this city?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "parks",
+      "where",
+      "people",
+      "can",
+      "relax",
+      "in",
+      "this",
+      "city",
+      "?"
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many parks",
+      "where people can relax",
+      "in this city"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many parks"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many parks where people can relax in this city?",
+      "statementForm": "There are many parks where people can relax in this city.",
+      "fragmentForm": "many parks where people can relax in this city?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_087",
+    "seedId": 87,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 마을에는 사람들이 살지 않는 집이 많이 있니?",
+    "english": "Are there many houses where people do not live in this village?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "houses",
+      "where",
+      "people",
+      "do",
+      "not",
+      "live",
+      "in",
+      "this",
+      "village",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many houses",
+      "where people do not live",
+      "in this village"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many houses"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many houses where people do not live in this village?",
+      "statementForm": "There are many houses where people do not live in this village.",
+      "fragmentForm": "many houses where people do not live in this village?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_088",
+    "seedId": 88,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 가방에는 내가 찾고 있는 책이 있니?",
+    "english": "Is there a book that I am looking for in this bag?",
+    "words": [
+      "Is",
+      "there",
+      "a",
+      "book",
+      "that",
+      "I",
+      "am",
+      "looking",
+      "for",
+      "in",
+      "this",
+      "bag",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "a book",
+      "that I am looking for",
+      "in this bag"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a book"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there a book that I am looking for in this bag?",
+      "statementForm": "There is a book that I am looking for in this bag.",
+      "fragmentForm": "a book that I am looking for in this bag?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_089",
+    "seedId": 89,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 도시에는 사람들이 방문하는 박물관이 몇 개 있니?",
+    "english": "How many museums are there that people visit in this city?",
+    "words": [
+      "How",
+      "many",
+      "museums",
+      "are",
+      "there",
+      "that",
+      "people",
+      "visit",
+      "in",
+      "this",
+      "city",
+      "?"
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many museums",
+      "are there",
+      "that people visit",
+      "in this city"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How many museums"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many museums is there that people visit in this city?",
+      "statementForm": "There are many museums that people visit in this city.",
+      "fragmentForm": "How many museums are there that people visit in this city"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_090",
+    "seedId": 90,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 방에는 우리가 앉을 수 있는 의자가 없니?",
+    "english": "Are there no chairs that we can sit on in this room?",
+    "words": [
+      "Are",
+      "there",
+      "no",
+      "chairs",
+      "that",
+      "we",
+      "can",
+      "sit",
+      "on",
+      "in",
+      "this",
+      "room",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "no chairs",
+      "that we can sit on",
+      "in this room"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no chairs"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there no chairs that we can sit on in this room?",
+      "statementForm": "There are no chairs that we can sit on in this room.",
+      "fragmentForm": "no chairs that we can sit on in this room?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_091",
+    "seedId": 91,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 지역에는 우리가 먹을 수 있는 음식이 없니?",
+    "english": "Is there no food that we can eat in this area?",
+    "words": [
+      "Is",
+      "there",
+      "no",
+      "food",
+      "that",
+      "we",
+      "can",
+      "eat",
+      "in",
+      "this",
+      "area",
+      "?"
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "no food",
+      "that we can eat",
+      "in this area"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no food"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there no food that we can eat in this area?",
+      "statementForm": "There is no food that we can eat in this area.",
+      "fragmentForm": "no food that we can eat in this area?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_092",
+    "seedId": 92,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 도시에는 사람들이 살지 않는 지역이 많이 있니?",
+    "english": "Are there many areas where people do not live in this city?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "areas",
+      "where",
+      "people",
+      "do",
+      "not",
+      "live",
+      "in",
+      "this",
+      "city",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many areas",
+      "where people do not live",
+      "in this city"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many areas"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many areas where people do not live in this city?",
+      "statementForm": "There are many areas where people do not live in this city.",
+      "fragmentForm": "many areas where people do not live in this city?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_093",
+    "seedId": 93,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 학교에는 학생들이 공부할 수 있는 공간이 있니?",
+    "english": "Is there a place where students can study in this school?",
+    "words": [
+      "Is",
+      "there",
+      "a",
+      "place",
+      "where",
+      "students",
+      "can",
+      "study",
+      "in",
+      "this",
+      "school",
+      "?"
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "a place",
+      "where students can study",
+      "in this school"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a place"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there a place where students can study in this school?",
+      "statementForm": "There is a place where students can study in this school.",
+      "fragmentForm": "a place where students can study in this school?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_094",
+    "seedId": 94,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 마을에는 사람들이 방문하지 않는 곳이 없니?",
+    "english": "Is there no place that people do not visit in this village?",
+    "words": [
+      "Is",
+      "there",
+      "no",
+      "place",
+      "that",
+      "people",
+      "do",
+      "not",
+      "visit",
+      "in",
+      "this",
+      "village",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "no place",
+      "that people do not visit",
+      "in this village"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no place"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there no place that people do not visit in this village?",
+      "statementForm": "There is no place that people do not visit in this village.",
+      "fragmentForm": "no place that people do not visit in this village?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_095",
+    "seedId": 95,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 도시에는 사람들이 자주 가는 공원이 몇 개 있니?",
+    "english": "How many parks are there that people often visit in this city?",
+    "words": [
+      "How",
+      "many",
+      "parks",
+      "are",
+      "there",
+      "that",
+      "people",
+      "often",
+      "visit",
+      "in",
+      "this",
+      "city",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many parks",
+      "are there",
+      "that people often visit",
+      "in this city"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "How many parks"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many parks is there that people often visit in this city?",
+      "statementForm": "There are many parks that people often visit in this city.",
+      "fragmentForm": "How many parks are there that people often visit in this city"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_096",
+    "seedId": 96,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 건물에는 학생들이 사용할 수 있는 교실이 있니?",
+    "english": "Is there a classroom that students can use in this building?",
+    "words": [
+      "Is",
+      "there",
+      "a",
+      "classroom",
+      "that",
+      "students",
+      "can",
+      "use",
+      "in",
+      "this",
+      "building",
+      "?"
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "a classroom",
+      "that students can use",
+      "in this building"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a classroom"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there a classroom that students can use in this building?",
+      "statementForm": "There is a classroom that students can use in this building.",
+      "fragmentForm": "a classroom that students can use in this building?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_097",
+    "seedId": 97,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 마을에는 차가 다닐 수 없는 길이 많이 있니?",
+    "english": "Are there many roads where cars cannot go in this village?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "roads",
+      "where",
+      "cars",
+      "cannot",
+      "go",
+      "in",
+      "this",
+      "village",
+      "?"
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "there",
+      "many roads",
+      "where cars cannot go",
+      "in this village"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "many roads"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many roads where cars cannot go in this village?",
+      "statementForm": "There are many roads where cars cannot go in this village.",
+      "fragmentForm": "many roads where cars cannot go in this village?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_098",
+    "seedId": 98,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 학교에는 책을 읽을 수 있는 조용한 장소가 있니?",
+    "english": "Is there a quiet place where students can read books in this school?",
+    "words": [
+      "Is",
+      "there",
+      "a",
+      "quiet",
+      "place",
+      "where",
+      "students",
+      "can",
+      "read",
+      "books",
+      "in",
+      "this",
+      "school",
+      "?"
+    ],
+    "wordCount": 13,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "a quiet place",
+      "where students can read books",
+      "in this school"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a quiet place"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there a quiet place where students can read books in this school?",
+      "statementForm": "There is a quiet place where students can read books in this school.",
+      "fragmentForm": "a quiet place where students can read books in this school?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_099",
+    "seedId": 99,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 도시에는 사람들이 수영할 수 있는 강이 있니?",
+    "english": "Is there a river where people can swim in this city?",
+    "words": [
+      "Is",
+      "there",
+      "a",
+      "river",
+      "where",
+      "people",
+      "can",
+      "swim",
+      "in",
+      "this",
+      "city",
+      "?"
+    ],
+    "wordCount": 11,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "a river",
+      "where people can swim",
+      "in this city"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "a river"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there a river where people can swim in this city?",
+      "statementForm": "There is a river where people can swim in this city.",
+      "fragmentForm": "a river where people can swim in this city?"
+    }
+  },
+  {
+    "id": "m1_s1_there_is_are_100",
+    "seedId": 100,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "there_is_are",
+    "chapterLabelKo": "There is(are) 구문",
+    "korean": "이 지역에는 아이들이 안전하게 놀 수 있는 공원이 없니?",
+    "english": "Is there no park where children can play safely in this area?",
+    "words": [
+      "Is",
+      "there",
+      "no",
+      "park",
+      "where",
+      "children",
+      "can",
+      "play",
+      "safely",
+      "in",
+      "this",
+      "area",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "there_is_are",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "there",
+      "no park",
+      "where children can play safely",
+      "in this area"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "now",
+      "tomorrow",
+      "school",
+      "park",
+      "book",
+      "water",
+      "many"
+    ],
+    "blankTargets": [
+      "no park"
+    ],
+    "tags": [
+      "there_is_are",
+      "question",
+      "negative",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there no park where children can play safely in this area?",
+      "statementForm": "There is no park where children can play safely in this area.",
+      "fragmentForm": "no park where children can play safely in this area?"
+    }
+  }
+]
