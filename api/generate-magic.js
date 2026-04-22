@@ -613,20 +613,28 @@ function uniqBy(arr, keyFn) {
 }
 
 function resolveChapterKey(input) {
+  const text = [input.userPrompt, input.topic, input.worksheetTitle]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  const explicitRules = [
+    { key: "be_negative", re: /(be동사\s*(의)?부정문|be동사.*부정|be\s*negative|be_negative)/ },
+    { key: "do_negative", re: /(일반동사\s*(의)?부정문|일반동사.*부정|do\s*negative|do_negative)/ },
+    { key: "be_question", re: /(be동사\s*(의)?의문문|be동사.*의문|be\s*question|be_question)/ },
+    { key: "do_question", re: /(일반동사\s*(의)?의문문|일반동사.*의문|do\s*question|do_question)/ },
+    { key: "wh_question", re: /(의문사\s*(의)?의문문|의문사|wh[\s_-]*question|wh_question)/ },
+    { key: "be_verb", re: /(be동사\s*(의)?평서문|be동사\s*평서문|be\s*verb|be_verb)/ },
+    { key: "do_verb", re: /(일반동사\s*(의)?평서문|일반동사\s*평서문|do\s*verb|do_verb)/ },
+    { key: "modal_will", re: /(조동사\s*will|\bmodal_will\b|\bwill\b)/ },
+  ];
+
+  const explicit = explicitRules.find((rule) => rule.re.test(text))?.key;
+  if (explicit) return explicit;
+
   if (input.requestedChapterKey && FILE_MAP[input.requestedChapterKey]) {
     return input.requestedChapterKey;
   }
-
-  const text = [input.userPrompt, input.topic, input.worksheetTitle].filter(Boolean).join(" ").toLowerCase();
-
-  if (/의문사|wh[- ]?question|where|when|what|who|why|how/.test(text)) return "wh_question";
-  if (/will|조동사\s*will/.test(text)) return "modal_will";
-  if (/be동사.*부정|be negative/.test(text)) return "be_negative";
-  if (/일반동사.*부정|do negative/.test(text)) return "do_negative";
-  if (/be동사.*의문|be question/.test(text)) return "be_question";
-  if (/일반동사.*의문|do question/.test(text)) return "do_question";
-  if (/be동사|be verb/.test(text)) return "be_verb";
-  if (/일반동사|do verb/.test(text)) return "do_verb";
 
   return "";
 }
@@ -634,22 +642,27 @@ function resolveChapterKey(input) {
 async function loadSentenceBank(chapterKey) {
   const fileName = FILE_MAP[chapterKey];
   if (!fileName) return [];
-  const fullPath = path.join(process.cwd(), "data", "sentence_bank", "middle1", fileName);
-  const raw = await fs.readFile(fullPath, "utf8");
-  const parsed = JSON.parse(raw);
-  if (!Array.isArray(parsed)) return [];
-  return parsed;
+  try {
+    const fullPath = path.join(process.cwd(), "data", "sentence_bank", "middle1", fileName);
+    const raw = await fs.readFile(fullPath, "utf8");
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed;
+  } catch (err) {
+    return [];
+  }
 }
 
 function selectBankItems(bank, count) {
   const shuffled = shuffle(bank);
-  const unique = uniqBy(shuffled, (item) => String(item.english || "").toLowerCase());
+  const unique = uniqBy(shuffled, (item) => `${String(item.english || "").toLowerCase()}__${String(item.korean || "").toLowerCase()}`);
   if (unique.length >= count) return unique.slice(0, count);
 
   const out = [...unique];
   let cursor = 0;
   while (out.length < count && unique.length > 0) {
-    out.push({ ...unique[cursor % unique.length], _reused: true, _slot: out.length + 1 });
+    const source = unique[cursor % unique.length];
+    out.push({ ...source, _reused: true, _slot: out.length + 1 });
     cursor += 1;
   }
   return out;
@@ -678,7 +691,7 @@ function buildGuidedClue(item) {
 
   const extra = pickExtraWord(item);
   const parts = extra ? [...units, extra] : units;
-  return shuffle(parts).join(" / ");
+  return parts.join(" / ");
 }
 
 function replaceFirst(text, searchValue, replacement) {
