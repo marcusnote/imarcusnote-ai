@@ -26,9 +26,9 @@
       "live"
     ],
     "extraClueWordPool": [
-      "study",
       "school",
-      "now"
+      "now",
+      "study"
     ],
     "blankTargets": [
       "Where"
@@ -41,6 +41,1371 @@
     "tags": [
       "wh_question",
       "location"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_002",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그녀는 방과 후에 어디에서 공부하니?",
+    "english": "Where does she study after school?",
+    "words": [
+      "Where",
+      "does",
+      "she",
+      "study",
+      "after",
+      "school",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Where",
+      "does",
+      "she",
+      "study",
+      "after school"
+    ],
+    "extraClueWordPool": [
+      "library",
+      "home",
+      "today"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where do she study after school?",
+      "statementForm": "She studies where after school.",
+      "fragmentForm": "Where she study after school?"
+    },
+    "tags": [
+      "wh_question",
+      "location",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_003",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그들은 언제 축구를 하니?",
+    "english": "When do they play soccer?",
+    "words": [
+      "When",
+      "do",
+      "they",
+      "play",
+      "soccer",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "When",
+      "do",
+      "they",
+      "play",
+      "soccer"
+    ],
+    "extraClueWordPool": [
+      "basketball",
+      "today",
+      "park"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "distractorSeeds": {
+      "auxError": "When does they play soccer?",
+      "statementForm": "They play soccer when.",
+      "fragmentForm": "When they play soccer?"
+    },
+    "tags": [
+      "wh_question",
+      "time",
+      "hobby"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_004",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너는 지금 무엇을 원하니?",
+    "english": "What do you want now?",
+    "words": [
+      "What",
+      "do",
+      "you",
+      "want",
+      "now",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "What",
+      "do",
+      "you",
+      "want",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "need",
+      "school",
+      "today"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "distractorSeeds": {
+      "auxError": "What does you want now?",
+      "statementForm": "You want what now.",
+      "fragmentForm": "What you want now?"
+    },
+    "tags": [
+      "wh_question",
+      "meaning"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_005",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그는 가장 누구를 좋아하니?",
+    "english": "Who does he like most?",
+    "words": [
+      "Who",
+      "does",
+      "he",
+      "like",
+      "most",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Who",
+      "does",
+      "he",
+      "like",
+      "most"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "friend",
+      "school"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who do he like most?",
+      "statementForm": "He likes who most.",
+      "fragmentForm": "Who he like most?"
+    },
+    "tags": [
+      "wh_question",
+      "person"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_006",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너는 왜 슬퍼 보이니?",
+    "english": "Why do you look sad?",
+    "words": [
+      "Why",
+      "do",
+      "you",
+      "look",
+      "sad",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Why",
+      "do",
+      "you",
+      "look",
+      "sad"
+    ],
+    "extraClueWordPool": [
+      "happy",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why does you look sad?",
+      "statementForm": "You look sad why.",
+      "fragmentForm": "Why you look sad?"
+    },
+    "tags": [
+      "wh_question",
+      "reason"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_007",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "우리는 어떻게 학교에 가니?",
+    "english": "How do we get to school?",
+    "words": [
+      "How",
+      "do",
+      "we",
+      "get",
+      "to",
+      "school",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How",
+      "do",
+      "we",
+      "get",
+      "to school"
+    ],
+    "extraClueWordPool": [
+      "bus",
+      "walk",
+      "today"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "distractorSeeds": {
+      "auxError": "How does we get to school?",
+      "statementForm": "We get to school how.",
+      "fragmentForm": "How we get to school?"
+    },
+    "tags": [
+      "wh_question",
+      "method",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_008",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너는 몇 시에 일어나니?",
+    "english": "What time do you get up?",
+    "words": [
+      "What",
+      "time",
+      "do",
+      "you",
+      "get",
+      "up",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "What time",
+      "do",
+      "you",
+      "get up"
+    ],
+    "extraClueWordPool": [
+      "sleep",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "What time"
+    ],
+    "distractorSeeds": {
+      "auxError": "What time does you get up?",
+      "statementForm": "You get up what time.",
+      "fragmentForm": "What time you get up?"
+    },
+    "tags": [
+      "wh_question",
+      "time",
+      "daily"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_009",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너의 부모님은 어디에서 일하시니?",
+    "english": "Where do your parents work?",
+    "words": [
+      "Where",
+      "do",
+      "your",
+      "parents",
+      "work",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Where",
+      "do",
+      "your parents",
+      "work"
+    ],
+    "extraClueWordPool": [
+      "school",
+      "office",
+      "home"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where does your parents work?",
+      "statementForm": "Your parents work where.",
+      "fragmentForm": "Where your parents work?"
+    },
+    "tags": [
+      "wh_question",
+      "location",
+      "family"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_010",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그는 언제 집에 오니?",
+    "english": "When does he come home?",
+    "words": [
+      "When",
+      "does",
+      "he",
+      "come",
+      "home",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "When",
+      "does",
+      "he",
+      "come",
+      "home"
+    ],
+    "extraClueWordPool": [
+      "school",
+      "today",
+      "now"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "distractorSeeds": {
+      "auxError": "When do he come home?",
+      "statementForm": "He comes home when.",
+      "fragmentForm": "When he come home?"
+    },
+    "tags": [
+      "wh_question",
+      "time",
+      "home"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_011",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그들은 점심으로 무엇을 먹니?",
+    "english": "What do they eat for lunch?",
+    "words": [
+      "What",
+      "do",
+      "they",
+      "eat",
+      "for",
+      "lunch",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "What",
+      "do",
+      "they",
+      "eat",
+      "for lunch"
+    ],
+    "extraClueWordPool": [
+      "dinner",
+      "breakfast",
+      "today"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "distractorSeeds": {
+      "auxError": "What does they eat for lunch?",
+      "statementForm": "They eat what for lunch.",
+      "fragmentForm": "What they eat for lunch?"
+    },
+    "tags": [
+      "wh_question",
+      "food"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_012",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너는 수업 후에 누구에게 전화하니?",
+    "english": "Who do you call after class?",
+    "words": [
+      "Who",
+      "do",
+      "you",
+      "call",
+      "after",
+      "class",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Who",
+      "do",
+      "you",
+      "call",
+      "after class"
+    ],
+    "extraClueWordPool": [
+      "friend",
+      "teacher",
+      "today"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who does you call after class?",
+      "statementForm": "You call who after class.",
+      "fragmentForm": "Who you call after class?"
+    },
+    "tags": [
+      "wh_question",
+      "person"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_013",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그녀는 왜 너의 도움이 필요하니?",
+    "english": "Why does she need your help?",
+    "words": [
+      "Why",
+      "does",
+      "she",
+      "need",
+      "your",
+      "help",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Why",
+      "does",
+      "she",
+      "need",
+      "your help"
+    ],
+    "extraClueWordPool": [
+      "book",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why do she need your help?",
+      "statementForm": "She needs your help why.",
+      "fragmentForm": "Why she need your help?"
+    },
+    "tags": [
+      "wh_question",
+      "reason"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_014",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그들은 어떻게 영어를 공부하니?",
+    "english": "How do they study English?",
+    "words": [
+      "How",
+      "do",
+      "they",
+      "study",
+      "English",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How",
+      "do",
+      "they",
+      "study",
+      "English"
+    ],
+    "extraClueWordPool": [
+      "math",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "distractorSeeds": {
+      "auxError": "How does they study English?",
+      "statementForm": "They study English how.",
+      "fragmentForm": "How they study English?"
+    },
+    "tags": [
+      "wh_question",
+      "method",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_015",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너의 형은 무엇을 원하니?",
+    "english": "What does your brother want?",
+    "words": [
+      "What",
+      "does",
+      "your",
+      "brother",
+      "want",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "What",
+      "does",
+      "your brother",
+      "want"
+    ],
+    "extraClueWordPool": [
+      "need",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "distractorSeeds": {
+      "auxError": "What do your brother want?",
+      "statementForm": "Your brother wants what.",
+      "fragmentForm": "What your brother want?"
+    },
+    "tags": [
+      "wh_question",
+      "meaning",
+      "family"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_016",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "저 학생들은 어디에 앉니?",
+    "english": "Where do those students sit?",
+    "words": [
+      "Where",
+      "do",
+      "those",
+      "students",
+      "sit",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Where",
+      "do",
+      "those students",
+      "sit"
+    ],
+    "extraClueWordPool": [
+      "classroom",
+      "today",
+      "home"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where does those students sit?",
+      "statementForm": "Those students sit where.",
+      "fragmentForm": "Where those students sit?"
+    },
+    "tags": [
+      "wh_question",
+      "location",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_017",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "우리는 언제 미술 수업이 있니?",
+    "english": "When do we have art class?",
+    "words": [
+      "When",
+      "do",
+      "we",
+      "have",
+      "art",
+      "class",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "When",
+      "do",
+      "we",
+      "have",
+      "art class"
+    ],
+    "extraClueWordPool": [
+      "music",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "distractorSeeds": {
+      "auxError": "When does we have art class?",
+      "statementForm": "We have art class when.",
+      "fragmentForm": "When we have art class?"
+    },
+    "tags": [
+      "wh_question",
+      "time",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_018",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너는 밤에 무엇을 읽니?",
+    "english": "What do you read at night?",
+    "words": [
+      "What",
+      "do",
+      "you",
+      "read",
+      "at",
+      "night",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "What",
+      "do",
+      "you",
+      "read",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "book",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "distractorSeeds": {
+      "auxError": "What does you read at night?",
+      "statementForm": "You read what at night.",
+      "fragmentForm": "What you read at night?"
+    },
+    "tags": [
+      "wh_question",
+      "meaning"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_019",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그녀는 일요일에 누구를 만나니?",
+    "english": "Who does she meet on Sunday?",
+    "words": [
+      "Who",
+      "does",
+      "she",
+      "meet",
+      "on",
+      "Sunday",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Who",
+      "does",
+      "she",
+      "meet",
+      "on Sunday"
+    ],
+    "extraClueWordPool": [
+      "friend",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who do she meet on Sunday?",
+      "statementForm": "She meets who on Sunday.",
+      "fragmentForm": "Who she meet on Sunday?"
+    },
+    "tags": [
+      "wh_question",
+      "person"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_020",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그들은 왜 매일 아침 달리니?",
+    "english": "Why do they run every morning?",
+    "words": [
+      "Why",
+      "do",
+      "they",
+      "run",
+      "every",
+      "morning",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Why",
+      "do",
+      "they",
+      "run",
+      "every morning"
+    ],
+    "extraClueWordPool": [
+      "school",
+      "park",
+      "today"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why does they run every morning?",
+      "statementForm": "They run every morning why.",
+      "fragmentForm": "Why they run every morning?"
+    },
+    "tags": [
+      "wh_question",
+      "reason",
+      "daily"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_021",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그는 어떻게 학교에 가니?",
+    "english": "How does he go to school?",
+    "words": [
+      "How",
+      "does",
+      "he",
+      "go",
+      "to",
+      "school",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How",
+      "does",
+      "he",
+      "go",
+      "to school"
+    ],
+    "extraClueWordPool": [
+      "bus",
+      "bike",
+      "today"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "distractorSeeds": {
+      "auxError": "How do he go to school?",
+      "statementForm": "He goes to school how.",
+      "fragmentForm": "How he go to school?"
+    },
+    "tags": [
+      "wh_question",
+      "method",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_022",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그 영화는 몇 시에 시작하니?",
+    "english": "What time does the movie start?",
+    "words": [
+      "What",
+      "time",
+      "does",
+      "the",
+      "movie",
+      "start",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "What time",
+      "does",
+      "the movie",
+      "start"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "night",
+      "school"
+    ],
+    "blankTargets": [
+      "What time"
+    ],
+    "distractorSeeds": {
+      "auxError": "What time do the movie start?",
+      "statementForm": "The movie starts what time.",
+      "fragmentForm": "What time the movie start?"
+    },
+    "tags": [
+      "wh_question",
+      "time"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_023",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너는 가방을 어디에 두니?",
+    "english": "Where do you put your bag?",
+    "words": [
+      "Where",
+      "do",
+      "you",
+      "put",
+      "your",
+      "bag",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Where",
+      "do",
+      "you",
+      "put",
+      "your bag"
+    ],
+    "extraClueWordPool": [
+      "desk",
+      "chair",
+      "today"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where does you put your bag?",
+      "statementForm": "You put your bag where.",
+      "fragmentForm": "Where you put your bag?"
+    },
+    "tags": [
+      "wh_question",
+      "location"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_024",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너의 수업은 언제 끝나니?",
+    "english": "When do your classes end?",
+    "words": [
+      "When",
+      "do",
+      "your",
+      "classes",
+      "end",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "When",
+      "do",
+      "your classes",
+      "end"
+    ],
+    "extraClueWordPool": [
+      "today",
+      "school",
+      "home"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "distractorSeeds": {
+      "auxError": "When does your classes end?",
+      "statementForm": "Your classes end when.",
+      "fragmentForm": "When your classes end?"
+    },
+    "tags": [
+      "wh_question",
+      "time",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_025",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그는 왜 창문을 여니?",
+    "english": "Why does he open the window?",
+    "words": [
+      "Why",
+      "does",
+      "he",
+      "open",
+      "the",
+      "window",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Why",
+      "does",
+      "he",
+      "open",
+      "the window"
+    ],
+    "extraClueWordPool": [
+      "door",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why do he open the window?",
+      "statementForm": "He opens the window why.",
+      "fragmentForm": "Why he open the window?"
+    },
+    "tags": [
+      "wh_question",
+      "reason"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_026",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너는 김치볶음밥을 어떻게 만드니?",
+    "english": "How do you make kimchi fried rice?",
+    "words": [
+      "How",
+      "do",
+      "you",
+      "make",
+      "kimchi",
+      "fried",
+      "rice",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How",
+      "do",
+      "you",
+      "make",
+      "kimchi fried rice"
+    ],
+    "extraClueWordPool": [
+      "cook",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "distractorSeeds": {
+      "auxError": "How does you make kimchi fried rice?",
+      "statementForm": "You make kimchi fried rice how.",
+      "fragmentForm": "How you make kimchi fried rice?"
+    },
+    "tags": [
+      "wh_question",
+      "method",
+      "food"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_027",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그녀는 가방에 무엇을 가지고 다니니?",
+    "english": "What does she carry in her bag?",
+    "words": [
+      "What",
+      "does",
+      "she",
+      "carry",
+      "in",
+      "her",
+      "bag",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "What",
+      "does",
+      "she",
+      "carry",
+      "in her bag"
+    ],
+    "extraClueWordPool": [
+      "book",
+      "phone",
+      "today"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "distractorSeeds": {
+      "auxError": "What do she carry in her bag?",
+      "statementForm": "She carries what in her bag.",
+      "fragmentForm": "What she carry in her bag?"
+    },
+    "tags": [
+      "wh_question",
+      "meaning"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_028",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "그들은 방과 후에 누구를 기다리니?",
+    "english": "Who do they wait for after school?",
+    "words": [
+      "Who",
+      "do",
+      "they",
+      "wait",
+      "for",
+      "after",
+      "school",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Who",
+      "do",
+      "they",
+      "wait for",
+      "after school"
+    ],
+    "extraClueWordPool": [
+      "friend",
+      "teacher",
+      "today"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who does they wait for after school?",
+      "statementForm": "They wait for who after school.",
+      "fragmentForm": "Who they wait for after school?"
+    },
+    "tags": [
+      "wh_question",
+      "person"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_029",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "너의 삼촌은 지금 어디에 사니?",
+    "english": "Where does your uncle live now?",
+    "words": [
+      "Where",
+      "does",
+      "your",
+      "uncle",
+      "live",
+      "now",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Where",
+      "does",
+      "your uncle",
+      "live",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "home",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where do your uncle live now?",
+      "statementForm": "Your uncle lives where now.",
+      "fragmentForm": "Where your uncle live now?"
+    },
+    "tags": [
+      "wh_question",
+      "location",
+      "family"
+    ]
+  },
+  {
+    "id": "m1_s1_wh_question_030",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "wh_question",
+    "chapterLabelKo": "의문사 의문문",
+    "korean": "우리는 왜 깨끗한 물이 필요하니?",
+    "english": "Why do we need clean water?",
+    "words": [
+      "Why",
+      "do",
+      "we",
+      "need",
+      "clean",
+      "water",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_question",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Why",
+      "do",
+      "we",
+      "need",
+      "clean water"
+    ],
+    "extraClueWordPool": [
+      "food",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why does we need clean water?",
+      "statementForm": "We need clean water why.",
+      "fragmentForm": "Why we need clean water?"
+    },
+    "tags": [
+      "wh_question",
+      "reason"
     ]
   }
 ]
