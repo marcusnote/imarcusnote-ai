@@ -6,6 +6,55 @@
     "lessonBand": "1-4",
     "chapterKey": "do_negative",
     "chapterLabelKo": "일반동사 부정문",
+    "korean": "나는 일요일에 일찍 일어나지 않는다.",
+    "english": "I do not get up early on Sunday.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "get",
+      "up",
+      "early",
+      "on",
+      "Sunday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "do not",
+      "get up",
+      "early",
+      "on Sunday"
+    ],
+    "extraClueWordPool": [
+      "Saturday",
+      "school",
+      "today"
+    ],
+    "blankTargets": [
+      "get up"
+    ],
+    "distractorSeeds": {
+      "auxError": "I does not get up early on Sunday.",
+      "statementForm": "I get up early on Sunday.",
+      "fragmentForm": "I not get up early on Sunday."
+    },
+    "tags": [
+      "do_negative",
+      "daily"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_002",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
     "korean": "그녀는 매일 우유를 마시지 않는다.",
     "english": "She does not drink milk every day.",
     "words": [
@@ -46,6 +95,1366 @@
       "do_negative",
       "daily",
       "food"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_003",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그는 방과 후에 축구를 하지 않는다.",
+    "english": "He does not play soccer after school.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "play",
+      "soccer",
+      "after",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not",
+      "play",
+      "soccer",
+      "after school"
+    ],
+    "extraClueWordPool": [
+      "basketball",
+      "music",
+      "home"
+    ],
+    "blankTargets": [
+      "play"
+    ],
+    "distractorSeeds": {
+      "auxError": "He do not play soccer after school.",
+      "statementForm": "He plays soccer after school.",
+      "fragmentForm": "He not play soccer after school."
+    },
+    "tags": [
+      "do_negative",
+      "hobby"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_004",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "우리는 밤에 영어를 공부하지 않는다.",
+    "english": "We do not study English at night.",
+    "words": [
+      "We",
+      "do",
+      "not",
+      "study",
+      "English",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "do not",
+      "study",
+      "English",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "math",
+      "science",
+      "today"
+    ],
+    "blankTargets": [
+      "study"
+    ],
+    "distractorSeeds": {
+      "auxError": "We does not study English at night.",
+      "statementForm": "We study English at night.",
+      "fragmentForm": "We not study English at night."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_005",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그들은 아침에 TV를 보지 않는다.",
+    "english": "They do not watch TV in the morning.",
+    "words": [
+      "They",
+      "do",
+      "not",
+      "watch",
+      "TV",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "do not",
+      "watch",
+      "TV",
+      "in the morning"
+    ],
+    "extraClueWordPool": [
+      "radio",
+      "music",
+      "school"
+    ],
+    "blankTargets": [
+      "watch"
+    ],
+    "distractorSeeds": {
+      "auxError": "They does not watch TV in the morning.",
+      "statementForm": "They watch TV in the morning.",
+      "fragmentForm": "They not watch TV in the morning."
+    },
+    "tags": [
+      "do_negative",
+      "daily"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_006",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "나는 학교에 걸어서 가지 않는다.",
+    "english": "I do not walk to school.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "walk",
+      "to",
+      "school",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "do not",
+      "walk",
+      "to school"
+    ],
+    "extraClueWordPool": [
+      "bus",
+      "home",
+      "today"
+    ],
+    "blankTargets": [
+      "walk"
+    ],
+    "distractorSeeds": {
+      "auxError": "I does not walk to school.",
+      "statementForm": "I walk to school.",
+      "fragmentForm": "I not walk to school."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_007",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그녀는 일요일에 교회에 가지 않는다.",
+    "english": "She does not go to church on Sunday.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "go",
+      "to",
+      "church",
+      "on",
+      "Sunday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not",
+      "go",
+      "to church",
+      "on Sunday"
+    ],
+    "extraClueWordPool": [
+      "park",
+      "school",
+      "home"
+    ],
+    "blankTargets": [
+      "go"
+    ],
+    "distractorSeeds": {
+      "auxError": "She do not go to church on Sunday.",
+      "statementForm": "She goes to church on Sunday.",
+      "fragmentForm": "She not go to church on Sunday."
+    },
+    "tags": [
+      "do_negative",
+      "place"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_008",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그는 버스로 학교에 오지 않는다.",
+    "english": "He does not come to school by bus.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "come",
+      "to",
+      "school",
+      "by",
+      "bus",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not",
+      "come",
+      "to school",
+      "by bus"
+    ],
+    "extraClueWordPool": [
+      "train",
+      "bike",
+      "today"
+    ],
+    "blankTargets": [
+      "come"
+    ],
+    "distractorSeeds": {
+      "auxError": "He do not come to school by bus.",
+      "statementForm": "He comes to school by bus.",
+      "fragmentForm": "He not come to school by bus."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_009",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "우리는 매주 주말마다 조부모님을 방문하지 않는다.",
+    "english": "We do not visit our grandparents every weekend.",
+    "words": [
+      "We",
+      "do",
+      "not",
+      "visit",
+      "our",
+      "grandparents",
+      "every",
+      "weekend",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "do not",
+      "visit",
+      "our grandparents",
+      "every weekend"
+    ],
+    "extraClueWordPool": [
+      "friends",
+      "cousins",
+      "home"
+    ],
+    "blankTargets": [
+      "visit"
+    ],
+    "distractorSeeds": {
+      "auxError": "We does not visit our grandparents every weekend.",
+      "statementForm": "We visit our grandparents every weekend.",
+      "fragmentForm": "We not visit our grandparents every weekend."
+    },
+    "tags": [
+      "do_negative",
+      "family"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_010",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그들은 수업 시간에 질문을 많이 하지 않는다.",
+    "english": "They do not ask many questions in class.",
+    "words": [
+      "They",
+      "do",
+      "not",
+      "ask",
+      "many",
+      "questions",
+      "in",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "do not",
+      "ask",
+      "many questions",
+      "in class"
+    ],
+    "extraClueWordPool": [
+      "answers",
+      "homework",
+      "school"
+    ],
+    "blankTargets": [
+      "ask"
+    ],
+    "distractorSeeds": {
+      "auxError": "They does not ask many questions in class.",
+      "statementForm": "They ask many questions in class.",
+      "fragmentForm": "They not ask many questions in class."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_011",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "나는 밤에 만화책을 읽지 않는다.",
+    "english": "I do not read comic books at night.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "read",
+      "comic",
+      "books",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "do not",
+      "read",
+      "comic books",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "novels",
+      "school",
+      "today"
+    ],
+    "blankTargets": [
+      "read"
+    ],
+    "distractorSeeds": {
+      "auxError": "I does not read comic books at night.",
+      "statementForm": "I read comic books at night.",
+      "fragmentForm": "I not read comic books at night."
+    },
+    "tags": [
+      "do_negative",
+      "hobby"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_012",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그녀는 집에서 엄마를 돕지 않는다.",
+    "english": "She does not help her mother at home.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "help",
+      "her",
+      "mother",
+      "at",
+      "home",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not",
+      "help",
+      "her mother",
+      "at home"
+    ],
+    "extraClueWordPool": [
+      "father",
+      "teacher",
+      "school"
+    ],
+    "blankTargets": [
+      "help"
+    ],
+    "distractorSeeds": {
+      "auxError": "She do not help her mother at home.",
+      "statementForm": "She helps her mother at home.",
+      "fragmentForm": "She not help her mother at home."
+    },
+    "tags": [
+      "do_negative",
+      "home"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_013",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그는 도서관에서 음악을 듣지 않는다.",
+    "english": "He does not listen to music in the library.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "listen",
+      "to",
+      "music",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not",
+      "listen to",
+      "music",
+      "in the library"
+    ],
+    "extraClueWordPool": [
+      "radio",
+      "school",
+      "park"
+    ],
+    "blankTargets": [
+      "listen to"
+    ],
+    "distractorSeeds": {
+      "auxError": "He do not listen to music in the library.",
+      "statementForm": "He listens to music in the library.",
+      "fragmentForm": "He not listen to music in the library."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_014",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "우리는 학교에서 점심을 먹지 않는다.",
+    "english": "We do not eat lunch at school.",
+    "words": [
+      "We",
+      "do",
+      "not",
+      "eat",
+      "lunch",
+      "at",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "do not",
+      "eat",
+      "lunch",
+      "at school"
+    ],
+    "extraClueWordPool": [
+      "dinner",
+      "breakfast",
+      "home"
+    ],
+    "blankTargets": [
+      "eat"
+    ],
+    "distractorSeeds": {
+      "auxError": "We does not eat lunch at school.",
+      "statementForm": "We eat lunch at school.",
+      "fragmentForm": "We not eat lunch at school."
+    },
+    "tags": [
+      "do_negative",
+      "food"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_015",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그들은 저녁 식사 후에 컴퓨터 게임을 하지 않는다.",
+    "english": "They do not play computer games after dinner.",
+    "words": [
+      "They",
+      "do",
+      "not",
+      "play",
+      "computer",
+      "games",
+      "after",
+      "dinner",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "do not",
+      "play",
+      "computer games",
+      "after dinner"
+    ],
+    "extraClueWordPool": [
+      "soccer",
+      "books",
+      "school"
+    ],
+    "blankTargets": [
+      "play"
+    ],
+    "distractorSeeds": {
+      "auxError": "They does not play computer games after dinner.",
+      "statementForm": "They play computer games after dinner.",
+      "fragmentForm": "They not play computer games after dinner."
+    },
+    "tags": [
+      "do_negative",
+      "hobby"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_016",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "나는 아침에 샤워를 하지 않는다.",
+    "english": "I do not take a shower in the morning.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "take",
+      "a",
+      "shower",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "do not",
+      "take",
+      "a shower",
+      "in the morning"
+    ],
+    "extraClueWordPool": [
+      "bath",
+      "school",
+      "today"
+    ],
+    "blankTargets": [
+      "take"
+    ],
+    "distractorSeeds": {
+      "auxError": "I does not take a shower in the morning.",
+      "statementForm": "I take a shower in the morning.",
+      "fragmentForm": "I not take a shower in the morning."
+    },
+    "tags": [
+      "do_negative",
+      "daily"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_017",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그녀는 토요일에 방을 청소하지 않는다.",
+    "english": "She does not clean her room on Saturday.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "clean",
+      "her",
+      "room",
+      "on",
+      "Saturday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not",
+      "clean",
+      "her room",
+      "on Saturday"
+    ],
+    "extraClueWordPool": [
+      "desk",
+      "school",
+      "today"
+    ],
+    "blankTargets": [
+      "clean"
+    ],
+    "distractorSeeds": {
+      "auxError": "She do not clean her room on Saturday.",
+      "statementForm": "She cleans her room on Saturday.",
+      "fragmentForm": "She not clean her room on Saturday."
+    },
+    "tags": [
+      "do_negative",
+      "home"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_018",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그는 학교에 자전거를 타고 가지 않는다.",
+    "english": "He does not ride a bike to school.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "ride",
+      "a",
+      "bike",
+      "to",
+      "school",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not",
+      "ride",
+      "a bike",
+      "to school"
+    ],
+    "extraClueWordPool": [
+      "bus",
+      "walk",
+      "today"
+    ],
+    "blankTargets": [
+      "ride"
+    ],
+    "distractorSeeds": {
+      "auxError": "He do not ride a bike to school.",
+      "statementForm": "He rides a bike to school.",
+      "fragmentForm": "He not ride a bike to school."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_019",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "우리는 수업 시간에 노래를 부르지 않는다.",
+    "english": "We do not sing songs in class.",
+    "words": [
+      "We",
+      "do",
+      "not",
+      "sing",
+      "songs",
+      "in",
+      "class",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "do not",
+      "sing",
+      "songs",
+      "in class"
+    ],
+    "extraClueWordPool": [
+      "dance",
+      "music",
+      "today"
+    ],
+    "blankTargets": [
+      "sing"
+    ],
+    "distractorSeeds": {
+      "auxError": "We does not sing songs in class.",
+      "statementForm": "We sing songs in class.",
+      "fragmentForm": "We not sing songs in class."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_020",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그들은 평일에 늦게 자지 않는다.",
+    "english": "They do not sleep late on weekdays.",
+    "words": [
+      "They",
+      "do",
+      "not",
+      "sleep",
+      "late",
+      "on",
+      "weekdays",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "do not",
+      "sleep",
+      "late",
+      "on weekdays"
+    ],
+    "extraClueWordPool": [
+      "weekends",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "sleep"
+    ],
+    "distractorSeeds": {
+      "auxError": "They does not sleep late on weekdays.",
+      "statementForm": "They sleep late on weekdays.",
+      "fragmentForm": "They not sleep late on weekdays."
+    },
+    "tags": [
+      "do_negative",
+      "daily"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_021",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "나는 학교에서 프랑스어를 말하지 않는다.",
+    "english": "I do not speak French at school.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "speak",
+      "French",
+      "at",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "do not",
+      "speak",
+      "French",
+      "at school"
+    ],
+    "extraClueWordPool": [
+      "English",
+      "Korean",
+      "today"
+    ],
+    "blankTargets": [
+      "speak"
+    ],
+    "distractorSeeds": {
+      "auxError": "I does not speak French at school.",
+      "statementForm": "I speak French at school.",
+      "fragmentForm": "I not speak French at school."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_022",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그녀는 점심 후에 설거지를 하지 않는다.",
+    "english": "She does not wash the dishes after lunch.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "wash",
+      "the",
+      "dishes",
+      "after",
+      "lunch",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not",
+      "wash",
+      "the dishes",
+      "after lunch"
+    ],
+    "extraClueWordPool": [
+      "clothes",
+      "desk",
+      "today"
+    ],
+    "blankTargets": [
+      "wash"
+    ],
+    "distractorSeeds": {
+      "auxError": "She do not wash the dishes after lunch.",
+      "statementForm": "She washes the dishes after lunch.",
+      "fragmentForm": "She not wash the dishes after lunch."
+    },
+    "tags": [
+      "do_negative",
+      "home"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_023",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그는 겨울에 창문을 열지 않는다.",
+    "english": "He does not open the window in winter.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "open",
+      "the",
+      "window",
+      "in",
+      "winter",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not",
+      "open",
+      "the window",
+      "in winter"
+    ],
+    "extraClueWordPool": [
+      "door",
+      "summer",
+      "today"
+    ],
+    "blankTargets": [
+      "open"
+    ],
+    "distractorSeeds": {
+      "auxError": "He do not open the window in winter.",
+      "statementForm": "He opens the window in winter.",
+      "fragmentForm": "He not open the window in winter."
+    },
+    "tags": [
+      "do_negative",
+      "home"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_024",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "우리는 수업 시간에 휴대폰을 사용하지 않는다.",
+    "english": "We do not use our phones in class.",
+    "words": [
+      "We",
+      "do",
+      "not",
+      "use",
+      "our",
+      "phones",
+      "in",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "do not",
+      "use",
+      "our phones",
+      "in class"
+    ],
+    "extraClueWordPool": [
+      "tablets",
+      "books",
+      "today"
+    ],
+    "blankTargets": [
+      "use"
+    ],
+    "distractorSeeds": {
+      "auxError": "We does not use our phones in class.",
+      "statementForm": "We use our phones in class.",
+      "fragmentForm": "We not use our phones in class."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_025",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그들은 방과 후에 간식을 사지 않는다.",
+    "english": "They do not buy snacks after school.",
+    "words": [
+      "They",
+      "do",
+      "not",
+      "buy",
+      "snacks",
+      "after",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "do not",
+      "buy",
+      "snacks",
+      "after school"
+    ],
+    "extraClueWordPool": [
+      "books",
+      "juice",
+      "today"
+    ],
+    "blankTargets": [
+      "buy"
+    ],
+    "distractorSeeds": {
+      "auxError": "They does not buy snacks after school.",
+      "statementForm": "They buy snacks after school.",
+      "fragmentForm": "They not buy snacks after school."
+    },
+    "tags": [
+      "do_negative",
+      "shopping"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_026",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "나는 밤에 이메일을 쓰지 않는다.",
+    "english": "I do not write emails at night.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "write",
+      "emails",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "do not",
+      "write",
+      "emails",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "letters",
+      "school",
+      "today"
+    ],
+    "blankTargets": [
+      "write"
+    ],
+    "distractorSeeds": {
+      "auxError": "I does not write emails at night.",
+      "statementForm": "I write emails at night.",
+      "fragmentForm": "I not write emails at night."
+    },
+    "tags": [
+      "do_negative",
+      "daily"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_027",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그녀는 수업 시간에 모자를 쓰지 않는다.",
+    "english": "She does not wear a hat in class.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "wear",
+      "a",
+      "hat",
+      "in",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not",
+      "wear",
+      "a hat",
+      "in class"
+    ],
+    "extraClueWordPool": [
+      "coat",
+      "shoes",
+      "today"
+    ],
+    "blankTargets": [
+      "wear"
+    ],
+    "distractorSeeds": {
+      "auxError": "She do not wear a hat in class.",
+      "statementForm": "She wears a hat in class.",
+      "fragmentForm": "She not wear a hat in class."
+    },
+    "tags": [
+      "do_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_028",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그는 지금 지도가 필요하지 않다.",
+    "english": "He does not need a map now.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "need",
+      "a",
+      "map",
+      "now",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not",
+      "need",
+      "a map",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "book",
+      "bag",
+      "today"
+    ],
+    "blankTargets": [
+      "need"
+    ],
+    "distractorSeeds": {
+      "auxError": "He do not need a map now.",
+      "statementForm": "He needs a map now.",
+      "fragmentForm": "He not need a map now."
+    },
+    "tags": [
+      "do_negative",
+      "daily"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_029",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "우리는 금요일에 저녁을 요리하지 않는다.",
+    "english": "We do not cook dinner on Friday.",
+    "words": [
+      "We",
+      "do",
+      "not",
+      "cook",
+      "dinner",
+      "on",
+      "Friday",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "do not",
+      "cook",
+      "dinner",
+      "on Friday"
+    ],
+    "extraClueWordPool": [
+      "breakfast",
+      "lunch",
+      "today"
+    ],
+    "blankTargets": [
+      "cook"
+    ],
+    "distractorSeeds": {
+      "auxError": "We does not cook dinner on Friday.",
+      "statementForm": "We cook dinner on Friday.",
+      "fragmentForm": "We not cook dinner on Friday."
+    },
+    "tags": [
+      "do_negative",
+      "food"
+    ]
+  },
+  {
+    "id": "m1_s1_do_negative_030",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "do_negative",
+    "chapterLabelKo": "일반동사 부정문",
+    "korean": "그들은 저녁 후에 과학을 공부하지 않는다.",
+    "english": "They do not study science after dinner.",
+    "words": [
+      "They",
+      "do",
+      "not",
+      "study",
+      "science",
+      "after",
+      "dinner",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "do_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "do not",
+      "study",
+      "science",
+      "after dinner"
+    ],
+    "extraClueWordPool": [
+      "math",
+      "English",
+      "today"
+    ],
+    "blankTargets": [
+      "study"
+    ],
+    "distractorSeeds": {
+      "auxError": "They does not study science after dinner.",
+      "statementForm": "They study science after dinner.",
+      "fragmentForm": "They not study science after dinner."
+    },
+    "tags": [
+      "do_negative",
+      "school"
     ]
   }
 ]
