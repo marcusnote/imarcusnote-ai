@@ -43,5 +43,1319 @@
       "school",
       "identity"
     ]
+  },
+  {
+    "id": "m1_s1_be_negative_002",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그녀는 선생님이 아니다.",
+    "english": "She is not a teacher.",
+    "words": [
+      "She",
+      "is",
+      "not",
+      "a",
+      "teacher",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "is not",
+      "a teacher"
+    ],
+    "extraClueWordPool": [
+      "student",
+      "doctor",
+      "friend"
+    ],
+    "blankTargets": [
+      "a teacher"
+    ],
+    "distractorSeeds": {
+      "auxError": "She are not a teacher.",
+      "statementForm": "She is a teacher.",
+      "fragmentForm": "She not a teacher."
+    },
+    "tags": [
+      "be_negative",
+      "school",
+      "identity"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_003",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "나는 오늘 바쁘지 않다.",
+    "english": "I am not busy today.",
+    "words": [
+      "I",
+      "am",
+      "not",
+      "busy",
+      "today",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "am not",
+      "busy",
+      "today"
+    ],
+    "extraClueWordPool": [
+      "happy",
+      "ready",
+      "school"
+    ],
+    "blankTargets": [
+      "busy"
+    ],
+    "distractorSeeds": {
+      "auxError": "I is not busy today.",
+      "statementForm": "I am busy today.",
+      "fragmentForm": "I not busy today."
+    },
+    "tags": [
+      "be_negative",
+      "daily",
+      "feeling"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_004",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "우리는 지금 늦지 않다.",
+    "english": "We are not late now.",
+    "words": [
+      "We",
+      "are",
+      "not",
+      "late",
+      "now",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "are not",
+      "late",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "busy",
+      "tired",
+      "today"
+    ],
+    "blankTargets": [
+      "late"
+    ],
+    "distractorSeeds": {
+      "auxError": "We is not late now.",
+      "statementForm": "We are late now.",
+      "fragmentForm": "We not late now."
+    },
+    "tags": [
+      "be_negative",
+      "school",
+      "time"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_005",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그들은 교실에 있지 않다.",
+    "english": "They are not in the classroom.",
+    "words": [
+      "They",
+      "are",
+      "not",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are not",
+      "in the classroom"
+    ],
+    "extraClueWordPool": [
+      "library",
+      "park",
+      "home"
+    ],
+    "blankTargets": [
+      "the classroom"
+    ],
+    "distractorSeeds": {
+      "auxError": "They is not in the classroom.",
+      "statementForm": "They are in the classroom.",
+      "fragmentForm": "They not in the classroom."
+    },
+    "tags": [
+      "be_negative",
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_006",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그는 지금 집에 있지 않다.",
+    "english": "He is not at home now.",
+    "words": [
+      "He",
+      "is",
+      "not",
+      "at",
+      "home",
+      "now",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "is not",
+      "at home",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "school",
+      "park",
+      "today"
+    ],
+    "blankTargets": [
+      "at home"
+    ],
+    "distractorSeeds": {
+      "auxError": "He are not at home now.",
+      "statementForm": "He is at home now.",
+      "fragmentForm": "He not at home now."
+    },
+    "tags": [
+      "be_negative",
+      "home",
+      "place"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_007",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그녀는 나에게 친절하지 않다.",
+    "english": "She is not kind to me.",
+    "words": [
+      "She",
+      "is",
+      "not",
+      "kind",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "is not",
+      "kind",
+      "to me"
+    ],
+    "extraClueWordPool": [
+      "busy",
+      "happy",
+      "school"
+    ],
+    "blankTargets": [
+      "kind"
+    ],
+    "distractorSeeds": {
+      "auxError": "She are not kind to me.",
+      "statementForm": "She is kind to me.",
+      "fragmentForm": "She not kind to me."
+    },
+    "tags": [
+      "be_negative",
+      "feeling"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_008",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "이 책은 쉽지 않다.",
+    "english": "This book is not easy.",
+    "words": [
+      "This",
+      "book",
+      "is",
+      "not",
+      "easy",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This book",
+      "is not",
+      "easy"
+    ],
+    "extraClueWordPool": [
+      "interesting",
+      "difficult",
+      "today"
+    ],
+    "blankTargets": [
+      "easy"
+    ],
+    "distractorSeeds": {
+      "auxError": "This book are not easy.",
+      "statementForm": "This book is easy.",
+      "fragmentForm": "This book not easy."
+    },
+    "tags": [
+      "be_negative",
+      "thing"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_009",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "저 영화는 재미있지 않다.",
+    "english": "That movie is not funny.",
+    "words": [
+      "That",
+      "movie",
+      "is",
+      "not",
+      "funny",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "That movie",
+      "is not",
+      "funny"
+    ],
+    "extraClueWordPool": [
+      "boring",
+      "great",
+      "today"
+    ],
+    "blankTargets": [
+      "funny"
+    ],
+    "distractorSeeds": {
+      "auxError": "That movie are not funny.",
+      "statementForm": "That movie is funny.",
+      "fragmentForm": "That movie not funny."
+    },
+    "tags": [
+      "be_negative",
+      "thing"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_010",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "나의 부모님은 의사가 아니다.",
+    "english": "My parents are not doctors.",
+    "words": [
+      "My",
+      "parents",
+      "are",
+      "not",
+      "doctors",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My parents",
+      "are not",
+      "doctors"
+    ],
+    "extraClueWordPool": [
+      "teachers",
+      "friends",
+      "students"
+    ],
+    "blankTargets": [
+      "doctors"
+    ],
+    "distractorSeeds": {
+      "auxError": "My parents is not doctors.",
+      "statementForm": "My parents are doctors.",
+      "fragmentForm": "My parents not doctors."
+    },
+    "tags": [
+      "be_negative",
+      "family",
+      "identity"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_011",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "오늘 날씨는 춥지 않다.",
+    "english": "The weather is not cold today.",
+    "words": [
+      "The",
+      "weather",
+      "is",
+      "not",
+      "cold",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The weather",
+      "is not",
+      "cold",
+      "today"
+    ],
+    "extraClueWordPool": [
+      "hot",
+      "sunny",
+      "rainy"
+    ],
+    "blankTargets": [
+      "cold"
+    ],
+    "distractorSeeds": {
+      "auxError": "The weather are not cold today.",
+      "statementForm": "The weather is cold today.",
+      "fragmentForm": "The weather not cold today."
+    },
+    "tags": [
+      "be_negative",
+      "weather"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_012",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그 소년들은 아직 준비되지 않았다.",
+    "english": "The boys are not ready yet.",
+    "words": [
+      "The",
+      "boys",
+      "are",
+      "not",
+      "ready",
+      "yet",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The boys",
+      "are not",
+      "ready",
+      "yet"
+    ],
+    "extraClueWordPool": [
+      "busy",
+      "happy",
+      "today"
+    ],
+    "blankTargets": [
+      "ready"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boys is not ready yet.",
+      "statementForm": "The boys are ready yet.",
+      "fragmentForm": "The boys not ready yet."
+    },
+    "tags": [
+      "be_negative",
+      "people"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_013",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그 소녀는 열두 살이 아니다.",
+    "english": "The girl is not twelve years old.",
+    "words": [
+      "The",
+      "girl",
+      "is",
+      "not",
+      "twelve",
+      "years",
+      "old",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The girl",
+      "is not",
+      "twelve years old"
+    ],
+    "extraClueWordPool": [
+      "thirteen",
+      "student",
+      "teacher"
+    ],
+    "blankTargets": [
+      "twelve years old"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl are not twelve years old.",
+      "statementForm": "The girl is twelve years old.",
+      "fragmentForm": "The girl not twelve years old."
+    },
+    "tags": [
+      "be_negative",
+      "age"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_014",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "우리 교실은 깨끗하지 않다.",
+    "english": "Our classroom is not clean.",
+    "words": [
+      "Our",
+      "classroom",
+      "is",
+      "not",
+      "clean",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Our classroom",
+      "is not",
+      "clean"
+    ],
+    "extraClueWordPool": [
+      "dirty",
+      "big",
+      "today"
+    ],
+    "blankTargets": [
+      "clean"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our classroom are not clean.",
+      "statementForm": "Our classroom is clean.",
+      "fragmentForm": "Our classroom not clean."
+    },
+    "tags": [
+      "be_negative",
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_015",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "너의 가방은 책상 위에 있지 않다.",
+    "english": "Your bag is not on the desk.",
+    "words": [
+      "Your",
+      "bag",
+      "is",
+      "not",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Your bag",
+      "is not",
+      "on the desk"
+    ],
+    "extraClueWordPool": [
+      "under",
+      "chair",
+      "book"
+    ],
+    "blankTargets": [
+      "on the desk"
+    ],
+    "distractorSeeds": {
+      "auxError": "Your bag are not on the desk.",
+      "statementForm": "Your bag is on the desk.",
+      "fragmentForm": "Your bag not on the desk."
+    },
+    "tags": [
+      "be_negative",
+      "school",
+      "thing"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_016",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "아이들은 공원에 있지 않다.",
+    "english": "The children are not in the park.",
+    "words": [
+      "The",
+      "children",
+      "are",
+      "not",
+      "in",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The children",
+      "are not",
+      "in the park"
+    ],
+    "extraClueWordPool": [
+      "classroom",
+      "home",
+      "library"
+    ],
+    "blankTargets": [
+      "in the park"
+    ],
+    "distractorSeeds": {
+      "auxError": "The children is not in the park.",
+      "statementForm": "The children are in the park.",
+      "fragmentForm": "The children not in the park."
+    },
+    "tags": [
+      "be_negative",
+      "place"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_017",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "나는 축구 선수가 아니다.",
+    "english": "I am not a soccer player.",
+    "words": [
+      "I",
+      "am",
+      "not",
+      "a",
+      "soccer",
+      "player",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "am not",
+      "a soccer player"
+    ],
+    "extraClueWordPool": [
+      "teacher",
+      "doctor",
+      "friend"
+    ],
+    "blankTargets": [
+      "a soccer player"
+    ],
+    "distractorSeeds": {
+      "auxError": "I is not a soccer player.",
+      "statementForm": "I am a soccer player.",
+      "fragmentForm": "I not a soccer player."
+    },
+    "tags": [
+      "be_negative",
+      "identity",
+      "hobby"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_018",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그녀는 나의 여동생이 아니다.",
+    "english": "She is not my sister.",
+    "words": [
+      "She",
+      "is",
+      "not",
+      "my",
+      "sister",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "is not",
+      "my sister"
+    ],
+    "extraClueWordPool": [
+      "friend",
+      "teacher",
+      "mother"
+    ],
+    "blankTargets": [
+      "my sister"
+    ],
+    "distractorSeeds": {
+      "auxError": "She are not my sister.",
+      "statementForm": "She is my sister.",
+      "fragmentForm": "She not my sister."
+    },
+    "tags": [
+      "be_negative",
+      "family"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_019",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그는 학교 근처에 있지 않다.",
+    "english": "He is not near the school.",
+    "words": [
+      "He",
+      "is",
+      "not",
+      "near",
+      "the",
+      "school",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "is not",
+      "near the school"
+    ],
+    "extraClueWordPool": [
+      "park",
+      "home",
+      "today"
+    ],
+    "blankTargets": [
+      "near the school"
+    ],
+    "distractorSeeds": {
+      "auxError": "He are not near the school.",
+      "statementForm": "He is near the school.",
+      "fragmentForm": "He not near the school."
+    },
+    "tags": [
+      "be_negative",
+      "place",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_020",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "우리는 같은 반이 아니다.",
+    "english": "We are not in the same class.",
+    "words": [
+      "We",
+      "are",
+      "not",
+      "in",
+      "the",
+      "same",
+      "class",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "are not",
+      "in the same class"
+    ],
+    "extraClueWordPool": [
+      "team",
+      "school",
+      "today"
+    ],
+    "blankTargets": [
+      "in the same class"
+    ],
+    "distractorSeeds": {
+      "auxError": "We is not in the same class.",
+      "statementForm": "We are in the same class.",
+      "fragmentForm": "We not in the same class."
+    },
+    "tags": [
+      "be_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_021",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그들은 지금 행복하지 않다.",
+    "english": "They are not happy now.",
+    "words": [
+      "They",
+      "are",
+      "not",
+      "happy",
+      "now",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are not",
+      "happy",
+      "now"
+    ],
+    "extraClueWordPool": [
+      "sad",
+      "busy",
+      "today"
+    ],
+    "blankTargets": [
+      "happy"
+    ],
+    "distractorSeeds": {
+      "auxError": "They is not happy now.",
+      "statementForm": "They are happy now.",
+      "fragmentForm": "They not happy now."
+    },
+    "tags": [
+      "be_negative",
+      "feeling"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_022",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "오늘은 비가 오지 않는다.",
+    "english": "It is not rainy today.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "rainy",
+      "today",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It",
+      "is not",
+      "rainy",
+      "today"
+    ],
+    "extraClueWordPool": [
+      "sunny",
+      "cloudy",
+      "windy"
+    ],
+    "blankTargets": [
+      "rainy"
+    ],
+    "distractorSeeds": {
+      "auxError": "It are not rainy today.",
+      "statementForm": "It is rainy today.",
+      "fragmentForm": "It not rainy today."
+    },
+    "tags": [
+      "be_negative",
+      "weather"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_023",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그 고양이는 의자 아래에 있지 않다.",
+    "english": "The cat is not under the chair.",
+    "words": [
+      "The",
+      "cat",
+      "is",
+      "not",
+      "under",
+      "the",
+      "chair",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The cat",
+      "is not",
+      "under the chair"
+    ],
+    "extraClueWordPool": [
+      "on",
+      "desk",
+      "home"
+    ],
+    "blankTargets": [
+      "under the chair"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cat are not under the chair.",
+      "statementForm": "The cat is under the chair.",
+      "fragmentForm": "The cat not under the chair."
+    },
+    "tags": [
+      "be_negative",
+      "home",
+      "thing"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_024",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그의 휴대폰은 그의 가방 안에 없다.",
+    "english": "His phone is not in his bag.",
+    "words": [
+      "His",
+      "phone",
+      "is",
+      "not",
+      "in",
+      "his",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "His phone",
+      "is not",
+      "in his bag"
+    ],
+    "extraClueWordPool": [
+      "desk",
+      "school",
+      "home"
+    ],
+    "blankTargets": [
+      "in his bag"
+    ],
+    "distractorSeeds": {
+      "auxError": "His phone are not in his bag.",
+      "statementForm": "His phone is in his bag.",
+      "fragmentForm": "His phone not in his bag."
+    },
+    "tags": [
+      "be_negative",
+      "thing"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_025",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그 사과들은 신선하지 않다.",
+    "english": "The apples are not fresh.",
+    "words": [
+      "The",
+      "apples",
+      "are",
+      "not",
+      "fresh",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The apples",
+      "are not",
+      "fresh"
+    ],
+    "extraClueWordPool": [
+      "old",
+      "sweet",
+      "red"
+    ],
+    "blankTargets": [
+      "fresh"
+    ],
+    "distractorSeeds": {
+      "auxError": "The apples is not fresh.",
+      "statementForm": "The apples are fresh.",
+      "fragmentForm": "The apples not fresh."
+    },
+    "tags": [
+      "be_negative",
+      "food"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_026",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "나의 형은 키가 크지 않다.",
+    "english": "My brother is not tall.",
+    "words": [
+      "My",
+      "brother",
+      "is",
+      "not",
+      "tall",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My brother",
+      "is not",
+      "tall"
+    ],
+    "extraClueWordPool": [
+      "short",
+      "student",
+      "today"
+    ],
+    "blankTargets": [
+      "tall"
+    ],
+    "distractorSeeds": {
+      "auxError": "My brother are not tall.",
+      "statementForm": "My brother is tall.",
+      "fragmentForm": "My brother not tall."
+    },
+    "tags": [
+      "be_negative",
+      "family"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_027",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그녀의 손은 차갑지 않다.",
+    "english": "Her hands are not cold.",
+    "words": [
+      "Her",
+      "hands",
+      "are",
+      "not",
+      "cold",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Her hands",
+      "are not",
+      "cold"
+    ],
+    "extraClueWordPool": [
+      "warm",
+      "today",
+      "happy"
+    ],
+    "blankTargets": [
+      "cold"
+    ],
+    "distractorSeeds": {
+      "auxError": "Her hands is not cold.",
+      "statementForm": "Her hands are cold.",
+      "fragmentForm": "Her hands not cold."
+    },
+    "tags": [
+      "be_negative",
+      "body"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_028",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "그 시험은 어렵지 않다.",
+    "english": "The test is not difficult.",
+    "words": [
+      "The",
+      "test",
+      "is",
+      "not",
+      "difficult",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The test",
+      "is not",
+      "difficult"
+    ],
+    "extraClueWordPool": [
+      "easy",
+      "today",
+      "school"
+    ],
+    "blankTargets": [
+      "difficult"
+    ],
+    "distractorSeeds": {
+      "auxError": "The test are not difficult.",
+      "statementForm": "The test is difficult.",
+      "fragmentForm": "The test not difficult."
+    },
+    "tags": [
+      "be_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_029",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "저 학생들은 시끄럽지 않다.",
+    "english": "Those students are not noisy.",
+    "words": [
+      "Those",
+      "students",
+      "are",
+      "not",
+      "noisy",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Those students",
+      "are not",
+      "noisy"
+    ],
+    "extraClueWordPool": [
+      "quiet",
+      "busy",
+      "today"
+    ],
+    "blankTargets": [
+      "noisy"
+    ],
+    "distractorSeeds": {
+      "auxError": "Those students is not noisy.",
+      "statementForm": "Those students are noisy.",
+      "fragmentForm": "Those students not noisy."
+    },
+    "tags": [
+      "be_negative",
+      "school"
+    ]
+  },
+  {
+    "id": "m1_s1_be_negative_030",
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "be_negative",
+    "chapterLabelKo": "be동사 부정문",
+    "korean": "이 식당은 싸지 않다.",
+    "english": "This restaurant is not cheap.",
+    "words": [
+      "This",
+      "restaurant",
+      "is",
+      "not",
+      "cheap",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "be_negative",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This restaurant",
+      "is not",
+      "cheap"
+    ],
+    "extraClueWordPool": [
+      "expensive",
+      "small",
+      "near"
+    ],
+    "blankTargets": [
+      "cheap"
+    ],
+    "distractorSeeds": {
+      "auxError": "This restaurant are not cheap.",
+      "statementForm": "This restaurant is cheap.",
+      "fragmentForm": "This restaurant not cheap."
+    },
+    "tags": [
+      "be_negative",
+      "place"
+    ]
   }
 ]
