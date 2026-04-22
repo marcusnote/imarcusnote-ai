@@ -688,6 +688,37 @@ function pickExtraWord(item) {
   return finalPool[Math.floor(Math.random() * finalPool.length)];
 }
 
+function countMovedPositions(original, shuffled) {
+  const len = Math.min(original.length, shuffled.length);
+  let moved = 0;
+  for (let i = 0; i < len; i += 1) {
+    if (original[i] !== shuffled[i]) moved += 1;
+  }
+  return moved;
+}
+
+function shuffleGuidedChunks(chunks) {
+  const source = Array.isArray(chunks) ? chunks.filter(Boolean) : [];
+  if (source.length <= 1) return source;
+
+  let best = [...source];
+  for (let attempt = 0; attempt < 12; attempt += 1) {
+    const trial = shuffle(source);
+    const moved = countMovedPositions(source, trial);
+    if (moved >= Math.min(2, source.length)) {
+      if (trial[0] !== source[0] || moved >= 2) return trial;
+      best = trial;
+    }
+  }
+
+  if (best.join("|") !== source.join("|")) return best;
+  const fallback = [...source];
+  const a = 0;
+  const b = source.length - 1;
+  [fallback[a], fallback[b]] = [fallback[b], fallback[a]];
+  return fallback;
+}
+
 function buildGuidedClue(item) {
   const units = Array.isArray(item.clueUnits) && item.clueUnits.length
     ? [...item.clueUnits]
@@ -698,7 +729,7 @@ function buildGuidedClue(item) {
 
   const extra = pickExtraWord(item);
   const parts = extra ? [...units, extra] : units;
-  return parts.join(" / ");
+  return shuffleGuidedChunks(parts).join(" / ");
 }
 
 function replaceFirst(text, searchValue, replacement) {
