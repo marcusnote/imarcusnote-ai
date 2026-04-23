@@ -1,0 +1,6543 @@
+[
+  {
+    "id": "m1_when_001",
+    "seedId": "when_habit_001",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그 개가 소리를 들을 때, 나는 따뜻한 차를 마신다.",
+    "english": "I drink warm tea when the dog hears a noise.",
+    "words": [
+      "I",
+      "drink",
+      "warm",
+      "tea",
+      "when",
+      "the",
+      "dog",
+      "hears",
+      "a",
+      "noise",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 따뜻한 차를 마신다",
+        "I drink warm tea"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그 개가 소리를 들을 때",
+        "The dog hears a noise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "drink"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "I drink warm tea when the dog hear a noise.",
+      "statementForm": [
+        "When the dog hears a noise, I drink warm tea.",
+        "I drink warm tea when the dog hears a noise."
+      ],
+      "fragmentForm": "When the dog hearing a noise, I drink warm tea."
+    }
+  },
+  {
+    "id": "m1_when_002",
+    "seedId": "when_habit_002",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 여동생이 시험이 있을 때, 아빠는 신문을 읽는다.",
+    "english": "When my sister has a test, my father reads the newspaper.",
+    "words": [
+      "When",
+      "my",
+      "sister",
+      "has",
+      "a",
+      "test",
+      ",",
+      "my",
+      "father",
+      "reads",
+      "the",
+      "newspaper",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠는 신문을 읽는다",
+        "My father reads the newspaper"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 여동생이 시험이 있을 때",
+        "My sister has a test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "my",
+      "sister"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When my sister has a test, my father read the newspaper.",
+      "statementForm": [
+        "When my sister has a test, my father reads the newspaper.",
+        "My father reads the newspaper when my sister has a test."
+      ],
+      "fragmentForm": "When my sister having a test, my father reads the newspaper."
+    }
+  },
+  {
+    "id": "m1_when_003",
+    "seedId": "when_habit_003",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 잠이 오지 않을 때, 우리는 영화를 본다.",
+    "english": "When I cannot sleep, we watch a movie.",
+    "words": [
+      "When",
+      "I",
+      "cannot",
+      "sleep",
+      ",",
+      "we",
+      "watch",
+      "a",
+      "movie",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 영화를 본다",
+        "We watch a movie"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 잠이 오지 않을 때",
+        "I cannot sleep"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "I",
+      "cannot"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "While I cannot sleep, we watch a movie.",
+      "statementForm": [
+        "When I cannot sleep, we watch a movie.",
+        "We watch a movie when I cannot sleep."
+      ],
+      "fragmentForm": "When I cannot sleep, we watch a movie."
+    }
+  },
+  {
+    "id": "m1_when_004",
+    "seedId": "when_habit_004",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 여동생이 시험이 있을 때, 나는 친구에게 전화한다.",
+    "english": "When my sister has a test, I call my friend.",
+    "words": [
+      "When",
+      "my",
+      "sister",
+      "has",
+      "a",
+      "test",
+      ",",
+      "I",
+      "call",
+      "my",
+      "friend",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 친구에게 전화한다",
+        "I call my friend"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 여동생이 시험이 있을 때",
+        "My sister has a test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "my",
+      "sister"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When my sister have a test, I call my friend.",
+      "statementForm": [
+        "When my sister has a test, I call my friend.",
+        "I call my friend when my sister has a test."
+      ],
+      "fragmentForm": "When my sister having a test, I call my friend."
+    }
+  },
+  {
+    "id": "m1_when_005",
+    "seedId": "when_habit_005",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 시작될 때, 아빠는 신문을 읽는다.",
+    "english": "When the class begins, my father reads the newspaper.",
+    "words": [
+      "When",
+      "the",
+      "class",
+      "begins",
+      ",",
+      "my",
+      "father",
+      "reads",
+      "the",
+      "newspaper",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠는 신문을 읽는다",
+        "My father reads the newspaper"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 시작될 때",
+        "The class begins"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "class"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the class begins, my father read the newspaper.",
+      "statementForm": [
+        "When the class begins, my father reads the newspaper.",
+        "My father reads the newspaper when the class begins."
+      ],
+      "fragmentForm": "When the class beginning, my father reads the newspaper."
+    }
+  },
+  {
+    "id": "m1_when_006",
+    "seedId": "when_habit_006",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 함께 저녁을 먹을 때, 나는 친구에게 전화한다.",
+    "english": "When we eat dinner together, I call my friend.",
+    "words": [
+      "When",
+      "we",
+      "eat",
+      "dinner",
+      "together",
+      ",",
+      "I",
+      "call",
+      "my",
+      "friend",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 친구에게 전화한다",
+        "I call my friend"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 함께 저녁을 먹을 때",
+        "We eat dinner together"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "we",
+      "eat"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "While we eat dinner together, I call my friend.",
+      "statementForm": [
+        "When we eat dinner together, I call my friend.",
+        "I call my friend when we eat dinner together."
+      ],
+      "fragmentForm": "When we eat dinner together, I call my friend."
+    }
+  },
+  {
+    "id": "m1_when_007",
+    "seedId": "when_habit_007",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "아빠가 일찍 일어날 때, 나는 숙제를 한다.",
+    "english": "When my father gets up early, I do my homework.",
+    "words": [
+      "When",
+      "my",
+      "father",
+      "gets",
+      "up",
+      "early",
+      ",",
+      "I",
+      "do",
+      "my",
+      "homework",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 숙제를 한다",
+        "I do my homework"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "아빠가 일찍 일어날 때",
+        "My father gets up early"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "my",
+      "father"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When my father get up early, I do my homework.",
+      "statementForm": [
+        "When my father gets up early, I do my homework.",
+        "I do my homework when my father gets up early."
+      ],
+      "fragmentForm": "When my father getting up early, I do my homework."
+    }
+  },
+  {
+    "id": "m1_when_008",
+    "seedId": "when_habit_008",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 남동생이 배고플 때, 엄마는 커피를 마신다.",
+    "english": "My mother drinks coffee when my brother is hungry.",
+    "words": [
+      "My",
+      "mother",
+      "drinks",
+      "coffee",
+      "when",
+      "my",
+      "brother",
+      "is",
+      "hungry",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "엄마는 커피를 마신다",
+        "My mother drinks coffee"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 남동생이 배고플 때",
+        "My brother is hungry"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "mother"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother drink coffee when my brother is hungry.",
+      "statementForm": [
+        "When my brother is hungry, my mother drinks coffee.",
+        "My mother drinks coffee when my brother is hungry."
+      ],
+      "fragmentForm": "When my brother being hungry, my mother drinks coffee."
+    }
+  },
+  {
+    "id": "m1_when_009",
+    "seedId": "when_habit_009",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 올 때, 내 친구는 집에 머문다.",
+    "english": "My friend stays home when it rains.",
+    "words": [
+      "My",
+      "friend",
+      "stays",
+      "home",
+      "when",
+      "it",
+      "rains",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 집에 머문다",
+        "My friend stays home"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 올 때",
+        "It rains"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend stay home when it rains.",
+      "statementForm": [
+        "When it rains, my friend stays home.",
+        "My friend stays home when it rains."
+      ],
+      "fragmentForm": "When it raining, my friend stays home."
+    }
+  },
+  {
+    "id": "m1_when_010",
+    "seedId": "when_habit_010",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 잠이 오지 않을 때, 나는 친구에게 전화한다.",
+    "english": "I call my friend when I cannot sleep.",
+    "words": [
+      "I",
+      "call",
+      "my",
+      "friend",
+      "when",
+      "I",
+      "cannot",
+      "sleep",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 친구에게 전화한다",
+        "I call my friend"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 잠이 오지 않을 때",
+        "I cannot sleep"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "call"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "I call my friend when I cannot sleep.",
+      "statementForm": [
+        "When I cannot sleep, I call my friend.",
+        "I call my friend when I cannot sleep."
+      ],
+      "fragmentForm": "When I cannot sleep, I call my friend."
+    }
+  },
+  {
+    "id": "m1_when_011",
+    "seedId": "when_habit_011",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 올 때, 선생님은 우리에게 조언을 해 주신다.",
+    "english": "The teacher gives us advice when it rains.",
+    "words": [
+      "The",
+      "teacher",
+      "gives",
+      "us",
+      "advice",
+      "when",
+      "it",
+      "rains",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 우리에게 조언을 해 주신다",
+        "The teacher gives us advice"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 올 때",
+        "It rains"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher give us advice when it rains.",
+      "statementForm": [
+        "When it rains, the teacher gives us advice.",
+        "The teacher gives us advice when it rains."
+      ],
+      "fragmentForm": "When it raining, the teacher gives us advice."
+    }
+  },
+  {
+    "id": "m1_when_012",
+    "seedId": "when_habit_012",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 시작될 때, 내 친구는 집에 머문다.",
+    "english": "My friend stays home when the class begins.",
+    "words": [
+      "My",
+      "friend",
+      "stays",
+      "home",
+      "when",
+      "the",
+      "class",
+      "begins",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 집에 머문다",
+        "My friend stays home"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 시작될 때",
+        "The class begins"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend stay home when the class begins.",
+      "statementForm": [
+        "When the class begins, my friend stays home.",
+        "My friend stays home when the class begins."
+      ],
+      "fragmentForm": "When the class beginning, my friend stays home."
+    }
+  },
+  {
+    "id": "m1_when_013",
+    "seedId": "when_habit_013",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 함께 저녁을 먹을 때, 선생님은 우리에게 조언을 해 주신다.",
+    "english": "When we eat dinner together, the teacher gives us advice.",
+    "words": [
+      "When",
+      "we",
+      "eat",
+      "dinner",
+      "together",
+      ",",
+      "the",
+      "teacher",
+      "gives",
+      "us",
+      "advice",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 우리에게 조언을 해 주신다",
+        "The teacher gives us advice"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 함께 저녁을 먹을 때",
+        "We eat dinner together"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "we",
+      "eat"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When we eat dinner together, the teacher give us advice.",
+      "statementForm": [
+        "When we eat dinner together, the teacher gives us advice.",
+        "The teacher gives us advice when we eat dinner together."
+      ],
+      "fragmentForm": "When we eat dinner together, the teacher gives us advice."
+    }
+  },
+  {
+    "id": "m1_when_014",
+    "seedId": "when_habit_014",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "날씨가 좋을 때, 나는 따뜻한 차를 마신다.",
+    "english": "When the weather is nice, I drink warm tea.",
+    "words": [
+      "When",
+      "the",
+      "weather",
+      "is",
+      "nice",
+      ",",
+      "I",
+      "drink",
+      "warm",
+      "tea",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 따뜻한 차를 마신다",
+        "I drink warm tea"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "날씨가 좋을 때",
+        "The weather is nice"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "weather"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the weather be nice, I drink warm tea.",
+      "statementForm": [
+        "When the weather is nice, I drink warm tea.",
+        "I drink warm tea when the weather is nice."
+      ],
+      "fragmentForm": "When the weather being nice, I drink warm tea."
+    }
+  },
+  {
+    "id": "m1_when_015",
+    "seedId": "when_habit_015",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "아빠가 일찍 일어날 때, 내 친구는 집에 머문다.",
+    "english": "When my father gets up early, my friend stays home.",
+    "words": [
+      "When",
+      "my",
+      "father",
+      "gets",
+      "up",
+      "early",
+      ",",
+      "my",
+      "friend",
+      "stays",
+      "home",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 집에 머문다",
+        "My friend stays home"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "아빠가 일찍 일어날 때",
+        "My father gets up early"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "my",
+      "father"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When my father gets up early, my friend stay home.",
+      "statementForm": [
+        "When my father gets up early, my friend stays home.",
+        "My friend stays home when my father gets up early."
+      ],
+      "fragmentForm": "When my father getting up early, my friend stays home."
+    }
+  },
+  {
+    "id": "m1_when_016",
+    "seedId": "when_habit_016",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 친구가 나를 찾아올 때, 우리는 영화를 본다.",
+    "english": "We watch a movie when my friend visits me.",
+    "words": [
+      "We",
+      "watch",
+      "a",
+      "movie",
+      "when",
+      "my",
+      "friend",
+      "visits",
+      "me",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 영화를 본다",
+        "We watch a movie"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 친구가 나를 찾아올 때",
+        "My friend visits me"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "watch"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watch a movie when my friend visit me.",
+      "statementForm": [
+        "When my friend visits me, we watch a movie.",
+        "We watch a movie when my friend visits me."
+      ],
+      "fragmentForm": "When my friend visiting me, we watch a movie."
+    }
+  },
+  {
+    "id": "m1_when_017",
+    "seedId": "when_habit_017",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 남동생이 배고플 때, 나는 친구에게 전화한다.",
+    "english": "When my brother is hungry, I call my friend.",
+    "words": [
+      "When",
+      "my",
+      "brother",
+      "is",
+      "hungry",
+      ",",
+      "I",
+      "call",
+      "my",
+      "friend",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 친구에게 전화한다",
+        "I call my friend"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 남동생이 배고플 때",
+        "My brother is hungry"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "my",
+      "brother"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When my brother be hungry, I call my friend.",
+      "statementForm": [
+        "When my brother is hungry, I call my friend.",
+        "I call my friend when my brother is hungry."
+      ],
+      "fragmentForm": "When my brother being hungry, I call my friend."
+    }
+  },
+  {
+    "id": "m1_when_018",
+    "seedId": "when_habit_018",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 함께 저녁을 먹을 때, 내 여동생은 음악을 듣는다.",
+    "english": "My sister listens to music when we eat dinner together.",
+    "words": [
+      "My",
+      "sister",
+      "listens",
+      "to",
+      "music",
+      "when",
+      "we",
+      "eat",
+      "dinner",
+      "together",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 여동생은 음악을 듣는다",
+        "My sister listens to music"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 함께 저녁을 먹을 때",
+        "We eat dinner together"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "sister"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "My sister listen to music when we eat dinner together.",
+      "statementForm": [
+        "When we eat dinner together, my sister listens to music.",
+        "My sister listens to music when we eat dinner together."
+      ],
+      "fragmentForm": "When we eat dinner together, my sister listens to music."
+    }
+  },
+  {
+    "id": "m1_when_019",
+    "seedId": "when_habit_019",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "날씨가 좋을 때, 선생님은 우리에게 조언을 해 주신다.",
+    "english": "The teacher gives us advice when the weather is nice.",
+    "words": [
+      "The",
+      "teacher",
+      "gives",
+      "us",
+      "advice",
+      "when",
+      "the",
+      "weather",
+      "is",
+      "nice",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 우리에게 조언을 해 주신다",
+        "The teacher gives us advice"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "날씨가 좋을 때",
+        "The weather is nice"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher give us advice when the weather is nice.",
+      "statementForm": [
+        "When the weather is nice, the teacher gives us advice.",
+        "The teacher gives us advice when the weather is nice."
+      ],
+      "fragmentForm": "When the weather being nice, the teacher gives us advice."
+    }
+  },
+  {
+    "id": "m1_when_020",
+    "seedId": "when_habit_020",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 시작될 때, 우리는 함께 저녁을 먹는다.",
+    "english": "We eat dinner together when the class begins.",
+    "words": [
+      "We",
+      "eat",
+      "dinner",
+      "together",
+      "when",
+      "the",
+      "class",
+      "begins",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 함께 저녁을 먹는다",
+        "We eat dinner together"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 시작될 때",
+        "The class begins"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "eat"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "We eat dinner together when the class begin.",
+      "statementForm": [
+        "When the class begins, we eat dinner together.",
+        "We eat dinner together when the class begins."
+      ],
+      "fragmentForm": "When the class beginning, we eat dinner together."
+    }
+  },
+  {
+    "id": "m1_when_021",
+    "seedId": "when_habit_021",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 올 때, 내 남동생은 비디오 게임을 한다.",
+    "english": "My brother plays video games when it rains.",
+    "words": [
+      "My",
+      "brother",
+      "plays",
+      "video",
+      "games",
+      "when",
+      "it",
+      "rains",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 남동생은 비디오 게임을 한다",
+        "My brother plays video games"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 올 때",
+        "It rains"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "brother"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "My brother play video games when it rains.",
+      "statementForm": [
+        "When it rains, my brother plays video games.",
+        "My brother plays video games when it rains."
+      ],
+      "fragmentForm": "When it raining, my brother plays video games."
+    }
+  },
+  {
+    "id": "m1_when_022",
+    "seedId": "when_habit_022",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 함께 저녁을 먹을 때, 아빠는 신문을 읽는다.",
+    "english": "When we eat dinner together, my father reads the newspaper.",
+    "words": [
+      "When",
+      "we",
+      "eat",
+      "dinner",
+      "together",
+      ",",
+      "my",
+      "father",
+      "reads",
+      "the",
+      "newspaper",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠는 신문을 읽는다",
+        "My father reads the newspaper"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 함께 저녁을 먹을 때",
+        "We eat dinner together"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "we",
+      "eat"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When we eat dinner together, my father read the newspaper.",
+      "statementForm": [
+        "When we eat dinner together, my father reads the newspaper.",
+        "My father reads the newspaper when we eat dinner together."
+      ],
+      "fragmentForm": "When we eat dinner together, my father reads the newspaper."
+    }
+  },
+  {
+    "id": "m1_when_023",
+    "seedId": "when_habit_023",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그 개가 소리를 들을 때, 나는 숙제를 한다.",
+    "english": "When the dog hears a noise, I do my homework.",
+    "words": [
+      "When",
+      "the",
+      "dog",
+      "hears",
+      "a",
+      "noise",
+      ",",
+      "I",
+      "do",
+      "my",
+      "homework",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 숙제를 한다",
+        "I do my homework"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그 개가 소리를 들을 때",
+        "The dog hears a noise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the dog hear a noise, I do my homework.",
+      "statementForm": [
+        "When the dog hears a noise, I do my homework.",
+        "I do my homework when the dog hears a noise."
+      ],
+      "fragmentForm": "When the dog hearing a noise, I do my homework."
+    }
+  },
+  {
+    "id": "m1_when_024",
+    "seedId": "when_habit_024",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 남동생이 배고플 때, 나는 친구에게 전화한다.",
+    "english": "I call my friend when my brother is hungry.",
+    "words": [
+      "I",
+      "call",
+      "my",
+      "friend",
+      "when",
+      "my",
+      "brother",
+      "is",
+      "hungry",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 친구에게 전화한다",
+        "I call my friend"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 남동생이 배고플 때",
+        "My brother is hungry"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "call"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "I call my friend when my brother be hungry.",
+      "statementForm": [
+        "When my brother is hungry, I call my friend.",
+        "I call my friend when my brother is hungry."
+      ],
+      "fragmentForm": "When my brother being hungry, I call my friend."
+    }
+  },
+  {
+    "id": "m1_when_025",
+    "seedId": "when_habit_025",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그 개가 소리를 들을 때, 우리는 영화를 본다.",
+    "english": "When the dog hears a noise, we watch a movie.",
+    "words": [
+      "When",
+      "the",
+      "dog",
+      "hears",
+      "a",
+      "noise",
+      ",",
+      "we",
+      "watch",
+      "a",
+      "movie",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 영화를 본다",
+        "We watch a movie"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그 개가 소리를 들을 때",
+        "The dog hears a noise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the dog hear a noise, we watch a movie.",
+      "statementForm": [
+        "When the dog hears a noise, we watch a movie.",
+        "We watch a movie when the dog hears a noise."
+      ],
+      "fragmentForm": "When the dog hearing a noise, we watch a movie."
+    }
+  },
+  {
+    "id": "m1_when_026",
+    "seedId": "when_habit_026",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "해가 질 때, 내 남동생은 비디오 게임을 한다.",
+    "english": "My brother plays video games when the sun sets.",
+    "words": [
+      "My",
+      "brother",
+      "plays",
+      "video",
+      "games",
+      "when",
+      "the",
+      "sun",
+      "sets",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 남동생은 비디오 게임을 한다",
+        "My brother plays video games"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "해가 질 때",
+        "The sun sets"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "brother"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "My brother play video games when the sun sets.",
+      "statementForm": [
+        "When the sun sets, my brother plays video games.",
+        "My brother plays video games when the sun sets."
+      ],
+      "fragmentForm": "When the sun setting, my brother plays video games."
+    }
+  },
+  {
+    "id": "m1_when_027",
+    "seedId": "when_habit_027",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "아빠가 일찍 일어날 때, 우리는 영화를 본다.",
+    "english": "We watch a movie when my father gets up early.",
+    "words": [
+      "We",
+      "watch",
+      "a",
+      "movie",
+      "when",
+      "my",
+      "father",
+      "gets",
+      "up",
+      "early",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 영화를 본다",
+        "We watch a movie"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "아빠가 일찍 일어날 때",
+        "My father gets up early"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "watch"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watch a movie when my father get up early.",
+      "statementForm": [
+        "When my father gets up early, we watch a movie.",
+        "We watch a movie when my father gets up early."
+      ],
+      "fragmentForm": "When my father getting up early, we watch a movie."
+    }
+  },
+  {
+    "id": "m1_when_028",
+    "seedId": "when_habit_028",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "날씨가 좋을 때, 나는 친구에게 전화한다.",
+    "english": "I call my friend when the weather is nice.",
+    "words": [
+      "I",
+      "call",
+      "my",
+      "friend",
+      "when",
+      "the",
+      "weather",
+      "is",
+      "nice",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 친구에게 전화한다",
+        "I call my friend"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "날씨가 좋을 때",
+        "The weather is nice"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "call"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "I call my friend when the weather be nice.",
+      "statementForm": [
+        "When the weather is nice, I call my friend.",
+        "I call my friend when the weather is nice."
+      ],
+      "fragmentForm": "When the weather being nice, I call my friend."
+    }
+  },
+  {
+    "id": "m1_when_029",
+    "seedId": "when_habit_029",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 남동생이 배고플 때, 내 남동생은 비디오 게임을 한다.",
+    "english": "When my brother is hungry, my brother plays video games.",
+    "words": [
+      "When",
+      "my",
+      "brother",
+      "is",
+      "hungry",
+      ",",
+      "my",
+      "brother",
+      "plays",
+      "video",
+      "games",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 남동생은 비디오 게임을 한다",
+        "My brother plays video games"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 남동생이 배고플 때",
+        "My brother is hungry"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "my",
+      "brother"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When my brother is hungry, my brother play video games.",
+      "statementForm": [
+        "When my brother is hungry, my brother plays video games.",
+        "My brother plays video games when my brother is hungry."
+      ],
+      "fragmentForm": "When my brother being hungry, my brother plays video games."
+    }
+  },
+  {
+    "id": "m1_when_030",
+    "seedId": "when_habit_030",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내게 시간이 있을 때, 우리는 영화를 본다.",
+    "english": "We watch a movie when I have free time.",
+    "words": [
+      "We",
+      "watch",
+      "a",
+      "movie",
+      "when",
+      "I",
+      "have",
+      "free",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 영화를 본다",
+        "We watch a movie"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내게 시간이 있을 때",
+        "I have free time"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "watch"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watch a movie when I have free time.",
+      "statementForm": [
+        "When I have free time, we watch a movie.",
+        "We watch a movie when I have free time."
+      ],
+      "fragmentForm": "When I have free time, we watch a movie."
+    }
+  },
+  {
+    "id": "m1_when_031",
+    "seedId": "when_habit_031",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 함께 저녁을 먹을 때, 우리는 영화를 본다.",
+    "english": "When we eat dinner together, we watch a movie.",
+    "words": [
+      "When",
+      "we",
+      "eat",
+      "dinner",
+      "together",
+      ",",
+      "we",
+      "watch",
+      "a",
+      "movie",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 영화를 본다",
+        "We watch a movie"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 함께 저녁을 먹을 때",
+        "We eat dinner together"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "we",
+      "eat"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "While we eat dinner together, we watch a movie.",
+      "statementForm": [
+        "When we eat dinner together, we watch a movie.",
+        "We watch a movie when we eat dinner together."
+      ],
+      "fragmentForm": "When we eat dinner together, we watch a movie."
+    }
+  },
+  {
+    "id": "m1_when_032",
+    "seedId": "when_habit_032",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 시작될 때, 엄마는 커피를 마신다.",
+    "english": "When the class begins, my mother drinks coffee.",
+    "words": [
+      "When",
+      "the",
+      "class",
+      "begins",
+      ",",
+      "my",
+      "mother",
+      "drinks",
+      "coffee",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "엄마는 커피를 마신다",
+        "My mother drinks coffee"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 시작될 때",
+        "The class begins"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "class"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the class begins, my mother drink coffee.",
+      "statementForm": [
+        "When the class begins, my mother drinks coffee.",
+        "My mother drinks coffee when the class begins."
+      ],
+      "fragmentForm": "When the class beginning, my mother drinks coffee."
+    }
+  },
+  {
+    "id": "m1_when_033",
+    "seedId": "when_habit_033",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 함께 저녁을 먹을 때, 엄마는 커피를 마신다.",
+    "english": "My mother drinks coffee when we eat dinner together.",
+    "words": [
+      "My",
+      "mother",
+      "drinks",
+      "coffee",
+      "when",
+      "we",
+      "eat",
+      "dinner",
+      "together",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "엄마는 커피를 마신다",
+        "My mother drinks coffee"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 함께 저녁을 먹을 때",
+        "We eat dinner together"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "mother"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother drink coffee when we eat dinner together.",
+      "statementForm": [
+        "When we eat dinner together, my mother drinks coffee.",
+        "My mother drinks coffee when we eat dinner together."
+      ],
+      "fragmentForm": "When we eat dinner together, my mother drinks coffee."
+    }
+  },
+  {
+    "id": "m1_when_034",
+    "seedId": "when_habit_034",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 시작될 때, 나는 따뜻한 차를 마신다.",
+    "english": "When the class begins, I drink warm tea.",
+    "words": [
+      "When",
+      "the",
+      "class",
+      "begins",
+      ",",
+      "I",
+      "drink",
+      "warm",
+      "tea",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 따뜻한 차를 마신다",
+        "I drink warm tea"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 시작될 때",
+        "The class begins"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "class"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the class begin, I drink warm tea.",
+      "statementForm": [
+        "When the class begins, I drink warm tea.",
+        "I drink warm tea when the class begins."
+      ],
+      "fragmentForm": "When the class beginning, I drink warm tea."
+    }
+  },
+  {
+    "id": "m1_when_035",
+    "seedId": "when_habit_035",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 친구가 나를 찾아올 때, 아빠는 신문을 읽는다.",
+    "english": "My father reads the newspaper when my friend visits me.",
+    "words": [
+      "My",
+      "father",
+      "reads",
+      "the",
+      "newspaper",
+      "when",
+      "my",
+      "friend",
+      "visits",
+      "me",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠는 신문을 읽는다",
+        "My father reads the newspaper"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 친구가 나를 찾아올 때",
+        "My friend visits me"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "father"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "My father read the newspaper when my friend visits me.",
+      "statementForm": [
+        "When my friend visits me, my father reads the newspaper.",
+        "My father reads the newspaper when my friend visits me."
+      ],
+      "fragmentForm": "When my friend visiting me, my father reads the newspaper."
+    }
+  },
+  {
+    "id": "m1_when_036",
+    "seedId": "when_habit_036",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 잠이 오지 않을 때, 내 여동생은 음악을 듣는다.",
+    "english": "When I cannot sleep, my sister listens to music.",
+    "words": [
+      "When",
+      "I",
+      "cannot",
+      "sleep",
+      ",",
+      "my",
+      "sister",
+      "listens",
+      "to",
+      "music",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 여동생은 음악을 듣는다",
+        "My sister listens to music"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 잠이 오지 않을 때",
+        "I cannot sleep"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "I",
+      "cannot"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When I cannot sleep, my sister listen to music.",
+      "statementForm": [
+        "When I cannot sleep, my sister listens to music.",
+        "My sister listens to music when I cannot sleep."
+      ],
+      "fragmentForm": "When I cannot sleep, my sister listens to music."
+    }
+  },
+  {
+    "id": "m1_when_037",
+    "seedId": "when_habit_037",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그 개가 소리를 들을 때, 우리는 영화를 본다.",
+    "english": "We watch a movie when the dog hears a noise.",
+    "words": [
+      "We",
+      "watch",
+      "a",
+      "movie",
+      "when",
+      "the",
+      "dog",
+      "hears",
+      "a",
+      "noise",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 영화를 본다",
+        "We watch a movie"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그 개가 소리를 들을 때",
+        "The dog hears a noise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "watch"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watch a movie when the dog hear a noise.",
+      "statementForm": [
+        "When the dog hears a noise, we watch a movie.",
+        "We watch a movie when the dog hears a noise."
+      ],
+      "fragmentForm": "When the dog hearing a noise, we watch a movie."
+    }
+  },
+  {
+    "id": "m1_when_038",
+    "seedId": "when_habit_038",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그 개가 소리를 들을 때, 내 여동생은 음악을 듣는다.",
+    "english": "When the dog hears a noise, my sister listens to music.",
+    "words": [
+      "When",
+      "the",
+      "dog",
+      "hears",
+      "a",
+      "noise",
+      ",",
+      "my",
+      "sister",
+      "listens",
+      "to",
+      "music",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_when",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 여동생은 음악을 듣는다",
+        "My sister listens to music"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그 개가 소리를 들을 때",
+        "The dog hears a noise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the dog hears a noise, my sister listen to music.",
+      "statementForm": [
+        "When the dog hears a noise, my sister listens to music.",
+        "My sister listens to music when the dog hears a noise."
+      ],
+      "fragmentForm": "When the dog hearing a noise, my sister listens to music."
+    }
+  },
+  {
+    "id": "m1_when_039",
+    "seedId": "when_habit_039",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 올 때, 내 여동생은 음악을 듣는다.",
+    "english": "When it rains, my sister listens to music.",
+    "words": [
+      "When",
+      "it",
+      "rains",
+      ",",
+      "my",
+      "sister",
+      "listens",
+      "to",
+      "music",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 여동생은 음악을 듣는다",
+        "My sister listens to music"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 올 때",
+        "It rains"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "it",
+      "rains"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "When it rains, my sister listen to music.",
+      "statementForm": [
+        "When it rains, my sister listens to music.",
+        "My sister listens to music when it rains."
+      ],
+      "fragmentForm": "When it raining, my sister listens to music."
+    }
+  },
+  {
+    "id": "m1_when_040",
+    "seedId": "when_habit_040",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "아빠가 일찍 일어날 때, 나는 잠깐 산책한다.",
+    "english": "I take a short walk when my father gets up early.",
+    "words": [
+      "I",
+      "take",
+      "a",
+      "short",
+      "walk",
+      "when",
+      "my",
+      "father",
+      "gets",
+      "up",
+      "early",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_when",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 잠깐 산책한다",
+        "I take a short walk"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "아빠가 일찍 일어날 때",
+        "My father gets up early"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "take"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "I take a short walk when my father get up early.",
+      "statementForm": [
+        "When my father gets up early, I take a short walk.",
+        "I take a short walk when my father gets up early."
+      ],
+      "fragmentForm": "When my father getting up early, I take a short walk."
+    }
+  },
+  {
+    "id": "m1_when_041",
+    "seedId": "when_future_041",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "네가 일을 끝낼 때, 나는 창문을 열 것이다.",
+    "english": "When you finish your work, I will open the window.",
+    "words": [
+      "When",
+      "you",
+      "finish",
+      "your",
+      "work",
+      ",",
+      "I",
+      "will",
+      "open",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 창문을 열 것이다",
+        "I will open the window"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "네가 일을 끝낼 때",
+        "You finish your work"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "you",
+      "finish"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When you finish your work, I open the window.",
+      "statementForm": [
+        "When you finish your work, I will open the window.",
+        "I will open the window when you finish your work."
+      ],
+      "fragmentForm": "When you finish your work, I open the window."
+    }
+  },
+  {
+    "id": "m1_when_042",
+    "seedId": "when_future_042",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그가 나에게 전화할 때, 내 친구는 나를 기다릴 것이다.",
+    "english": "My friend will wait for me when he calls me.",
+    "words": [
+      "My",
+      "friend",
+      "will",
+      "wait",
+      "for",
+      "me",
+      "when",
+      "he",
+      "calls",
+      "me",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 나를 기다릴 것이다",
+        "My friend will wait for me"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그가 나에게 전화할 때",
+        "He calls me"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend wait for me when he calls me.",
+      "statementForm": [
+        "When he calls me, my friend will wait for me.",
+        "My friend will wait for me when he calls me."
+      ],
+      "fragmentForm": "When he calls me, my friend wait for me."
+    }
+  },
+  {
+    "id": "m1_when_043",
+    "seedId": "when_future_043",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "봄이 올 때, 우리는 회의를 시작할 것이다.",
+    "english": "When spring comes, we will start the meeting.",
+    "words": [
+      "When",
+      "spring",
+      "comes",
+      ",",
+      "we",
+      "will",
+      "start",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 회의를 시작할 것이다",
+        "We will start the meeting"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "봄이 올 때",
+        "Spring comes"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "spring",
+      "comes"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When spring comes, we start the meeting.",
+      "statementForm": [
+        "When spring comes, we will start the meeting.",
+        "We will start the meeting when spring comes."
+      ],
+      "fragmentForm": "When spring comes, we start the meeting."
+    }
+  },
+  {
+    "id": "m1_when_044",
+    "seedId": "when_future_044",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 끝날 때, 내 친구는 나를 기다릴 것이다.",
+    "english": "When the class ends, my friend will wait for me.",
+    "words": [
+      "When",
+      "the",
+      "class",
+      "ends",
+      ",",
+      "my",
+      "friend",
+      "will",
+      "wait",
+      "for",
+      "me",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 나를 기다릴 것이다",
+        "My friend will wait for me"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 끝날 때",
+        "The class ends"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "class"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the class ends, my friend wait for me.",
+      "statementForm": [
+        "When the class ends, my friend will wait for me.",
+        "My friend will wait for me when the class ends."
+      ],
+      "fragmentForm": "When the class ends, my friend wait for me."
+    }
+  },
+  {
+    "id": "m1_when_045",
+    "seedId": "when_future_045",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 끝날 때, 선생님은 우리의 숙제를 확인하실 것이다.",
+    "english": "The teacher will check our homework when the class ends.",
+    "words": [
+      "The",
+      "teacher",
+      "will",
+      "check",
+      "our",
+      "homework",
+      "when",
+      "the",
+      "class",
+      "ends",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 우리의 숙제를 확인하실 것이다",
+        "The teacher will check our homework"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 끝날 때",
+        "The class ends"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher check our homework when the class ends.",
+      "statementForm": [
+        "When the class ends, the teacher will check our homework.",
+        "The teacher will check our homework when the class ends."
+      ],
+      "fragmentForm": "When the class ends, the teacher check our homework."
+    }
+  },
+  {
+    "id": "m1_when_046",
+    "seedId": "when_future_046",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "네가 일을 끝낼 때, 나는 너에게 전화할 것이다.",
+    "english": "I will call you when you finish your work.",
+    "words": [
+      "I",
+      "will",
+      "call",
+      "you",
+      "when",
+      "you",
+      "finish",
+      "your",
+      "work",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 너에게 전화할 것이다",
+        "I will call you"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "네가 일을 끝낼 때",
+        "You finish your work"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "I call you when you finish your work.",
+      "statementForm": [
+        "When you finish your work, I will call you.",
+        "I will call you when you finish your work."
+      ],
+      "fragmentForm": "When you finish your work, I call you."
+    }
+  },
+  {
+    "id": "m1_when_047",
+    "seedId": "when_future_047",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 그칠 때, 우리는 회의를 시작할 것이다.",
+    "english": "We will start the meeting when the rain stops.",
+    "words": [
+      "We",
+      "will",
+      "start",
+      "the",
+      "meeting",
+      "when",
+      "the",
+      "rain",
+      "stops",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 회의를 시작할 것이다",
+        "We will start the meeting"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 그칠 때",
+        "The rain stops"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "We start the meeting when the rain stops.",
+      "statementForm": [
+        "When the rain stops, we will start the meeting.",
+        "We will start the meeting when the rain stops."
+      ],
+      "fragmentForm": "When the rain stops, we start the meeting."
+    }
+  },
+  {
+    "id": "m1_when_048",
+    "seedId": "when_future_048",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 도착할 때, 나는 너에게 메시지를 보낼 것이다.",
+    "english": "I will send you a message when I arrive.",
+    "words": [
+      "I",
+      "will",
+      "send",
+      "you",
+      "a",
+      "message",
+      "when",
+      "I",
+      "arrive",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 너에게 메시지를 보낼 것이다",
+        "I will send you a message"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 도착할 때",
+        "I arrive"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "I send you a message when I arrive.",
+      "statementForm": [
+        "When I arrive, I will send you a message.",
+        "I will send you a message when I arrive."
+      ],
+      "fragmentForm": "When I arrive, I send you a message."
+    }
+  },
+  {
+    "id": "m1_when_049",
+    "seedId": "when_future_049",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 끝날 때, 우리는 회의를 시작할 것이다.",
+    "english": "We will start the meeting when the class ends.",
+    "words": [
+      "We",
+      "will",
+      "start",
+      "the",
+      "meeting",
+      "when",
+      "the",
+      "class",
+      "ends",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 회의를 시작할 것이다",
+        "We will start the meeting"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 끝날 때",
+        "The class ends"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "We start the meeting when the class ends.",
+      "statementForm": [
+        "When the class ends, we will start the meeting.",
+        "We will start the meeting when the class ends."
+      ],
+      "fragmentForm": "When the class ends, we start the meeting."
+    }
+  },
+  {
+    "id": "m1_when_050",
+    "seedId": "when_future_050",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 끝날 때, 아빠는 나를 데리러 올 것이다.",
+    "english": "When the class ends, my father will pick me up.",
+    "words": [
+      "When",
+      "the",
+      "class",
+      "ends",
+      ",",
+      "my",
+      "father",
+      "will",
+      "pick",
+      "me",
+      "up",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠는 나를 데리러 올 것이다",
+        "My father will pick me up"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 끝날 때",
+        "The class ends"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "class"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the class ends, my father pick me up.",
+      "statementForm": [
+        "When the class ends, my father will pick me up.",
+        "My father will pick me up when the class ends."
+      ],
+      "fragmentForm": "When the class ends, my father pick me up."
+    }
+  },
+  {
+    "id": "m1_when_051",
+    "seedId": "when_future_051",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그가 나에게 전화할 때, 나는 너에게 메시지를 보낼 것이다.",
+    "english": "I will send you a message when he calls me.",
+    "words": [
+      "I",
+      "will",
+      "send",
+      "you",
+      "a",
+      "message",
+      "when",
+      "he",
+      "calls",
+      "me",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 너에게 메시지를 보낼 것이다",
+        "I will send you a message"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그가 나에게 전화할 때",
+        "He calls me"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "I send you a message when he calls me.",
+      "statementForm": [
+        "When he calls me, I will send you a message.",
+        "I will send you a message when he calls me."
+      ],
+      "fragmentForm": "When he calls me, I send you a message."
+    }
+  },
+  {
+    "id": "m1_when_052",
+    "seedId": "when_future_052",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "수업이 끝날 때, 나는 너에게 메시지를 보낼 것이다.",
+    "english": "When the class ends, I will send you a message.",
+    "words": [
+      "When",
+      "the",
+      "class",
+      "ends",
+      ",",
+      "I",
+      "will",
+      "send",
+      "you",
+      "a",
+      "message",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 너에게 메시지를 보낼 것이다",
+        "I will send you a message"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "수업이 끝날 때",
+        "The class ends"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "class"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the class ends, I send you a message.",
+      "statementForm": [
+        "When the class ends, I will send you a message.",
+        "I will send you a message when the class ends."
+      ],
+      "fragmentForm": "When the class ends, I send you a message."
+    }
+  },
+  {
+    "id": "m1_when_053",
+    "seedId": "when_future_053",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "버스가 올 때, 우리는 회의를 시작할 것이다.",
+    "english": "When the bus comes, we will start the meeting.",
+    "words": [
+      "When",
+      "the",
+      "bus",
+      "comes",
+      ",",
+      "we",
+      "will",
+      "start",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 회의를 시작할 것이다",
+        "We will start the meeting"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "버스가 올 때",
+        "The bus comes"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "bus"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the bus comes, we start the meeting.",
+      "statementForm": [
+        "When the bus comes, we will start the meeting.",
+        "We will start the meeting when the bus comes."
+      ],
+      "fragmentForm": "When the bus comes, we start the meeting."
+    }
+  },
+  {
+    "id": "m1_when_054",
+    "seedId": "when_future_054",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "네가 일을 끝낼 때, 나는 너에게 메시지를 보낼 것이다.",
+    "english": "I will send you a message when you finish your work.",
+    "words": [
+      "I",
+      "will",
+      "send",
+      "you",
+      "a",
+      "message",
+      "when",
+      "you",
+      "finish",
+      "your",
+      "work",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 너에게 메시지를 보낼 것이다",
+        "I will send you a message"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "네가 일을 끝낼 때",
+        "You finish your work"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "I send you a message when you finish your work.",
+      "statementForm": [
+        "When you finish your work, I will send you a message.",
+        "I will send you a message when you finish your work."
+      ],
+      "fragmentForm": "When you finish your work, I send you a message."
+    }
+  },
+  {
+    "id": "m1_when_055",
+    "seedId": "when_future_055",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "버스가 올 때, 우리는 집을 떠날 것이다.",
+    "english": "When the bus comes, we will leave the house.",
+    "words": [
+      "When",
+      "the",
+      "bus",
+      "comes",
+      ",",
+      "we",
+      "will",
+      "leave",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 집을 떠날 것이다",
+        "We will leave the house"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "버스가 올 때",
+        "The bus comes"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "bus"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the bus comes, we leave the house.",
+      "statementForm": [
+        "When the bus comes, we will leave the house.",
+        "We will leave the house when the bus comes."
+      ],
+      "fragmentForm": "When the bus comes, we leave the house."
+    }
+  },
+  {
+    "id": "m1_when_056",
+    "seedId": "when_future_056",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 그칠 때, 나는 너에게 전화할 것이다.",
+    "english": "I will call you when the rain stops.",
+    "words": [
+      "I",
+      "will",
+      "call",
+      "you",
+      "when",
+      "the",
+      "rain",
+      "stops",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 너에게 전화할 것이다",
+        "I will call you"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 그칠 때",
+        "The rain stops"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "I call you when the rain stops.",
+      "statementForm": [
+        "When the rain stops, I will call you.",
+        "I will call you when the rain stops."
+      ],
+      "fragmentForm": "When the rain stops, I call you."
+    }
+  },
+  {
+    "id": "m1_when_057",
+    "seedId": "when_future_057",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "영화가 끝날 때, 선생님은 우리의 숙제를 확인하실 것이다.",
+    "english": "When the movie ends, the teacher will check our homework.",
+    "words": [
+      "When",
+      "the",
+      "movie",
+      "ends",
+      ",",
+      "the",
+      "teacher",
+      "will",
+      "check",
+      "our",
+      "homework",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 우리의 숙제를 확인하실 것이다",
+        "The teacher will check our homework"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "영화가 끝날 때",
+        "The movie ends"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "movie"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the movie ends, the teacher check our homework.",
+      "statementForm": [
+        "When the movie ends, the teacher will check our homework.",
+        "The teacher will check our homework when the movie ends."
+      ],
+      "fragmentForm": "When the movie ends, the teacher check our homework."
+    }
+  },
+  {
+    "id": "m1_when_058",
+    "seedId": "when_future_058",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "봄이 올 때, 나는 너에게 메시지를 보낼 것이다.",
+    "english": "When spring comes, I will send you a message.",
+    "words": [
+      "When",
+      "spring",
+      "comes",
+      ",",
+      "I",
+      "will",
+      "send",
+      "you",
+      "a",
+      "message",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 너에게 메시지를 보낼 것이다",
+        "I will send you a message"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "봄이 올 때",
+        "Spring comes"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "spring",
+      "comes"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When spring comes, I send you a message.",
+      "statementForm": [
+        "When spring comes, I will send you a message.",
+        "I will send you a message when spring comes."
+      ],
+      "fragmentForm": "When spring comes, I send you a message."
+    }
+  },
+  {
+    "id": "m1_when_059",
+    "seedId": "when_future_059",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "버스가 올 때, 나는 너에게 메시지를 보낼 것이다.",
+    "english": "I will send you a message when the bus comes.",
+    "words": [
+      "I",
+      "will",
+      "send",
+      "you",
+      "a",
+      "message",
+      "when",
+      "the",
+      "bus",
+      "comes",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 너에게 메시지를 보낼 것이다",
+        "I will send you a message"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "버스가 올 때",
+        "The bus comes"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "I send you a message when the bus comes.",
+      "statementForm": [
+        "When the bus comes, I will send you a message.",
+        "I will send you a message when the bus comes."
+      ],
+      "fragmentForm": "When the bus comes, I send you a message."
+    }
+  },
+  {
+    "id": "m1_when_060",
+    "seedId": "when_future_060",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 그칠 때, 아빠는 나를 데리러 올 것이다.",
+    "english": "When the rain stops, my father will pick me up.",
+    "words": [
+      "When",
+      "the",
+      "rain",
+      "stops",
+      ",",
+      "my",
+      "father",
+      "will",
+      "pick",
+      "me",
+      "up",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠는 나를 데리러 올 것이다",
+        "My father will pick me up"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 그칠 때",
+        "The rain stops"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "rain"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the rain stops, my father pick me up.",
+      "statementForm": [
+        "When the rain stops, my father will pick me up.",
+        "My father will pick me up when the rain stops."
+      ],
+      "fragmentForm": "When the rain stops, my father pick me up."
+    }
+  },
+  {
+    "id": "m1_when_061",
+    "seedId": "when_future_061",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "네가 일을 끝낼 때, 엄마는 저녁을 준비할 것이다.",
+    "english": "When you finish your work, my mother will make dinner.",
+    "words": [
+      "When",
+      "you",
+      "finish",
+      "your",
+      "work",
+      ",",
+      "my",
+      "mother",
+      "will",
+      "make",
+      "dinner",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "엄마는 저녁을 준비할 것이다",
+        "My mother will make dinner"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "네가 일을 끝낼 때",
+        "You finish your work"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "you",
+      "finish"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When you finish your work, my mother make dinner.",
+      "statementForm": [
+        "When you finish your work, my mother will make dinner.",
+        "My mother will make dinner when you finish your work."
+      ],
+      "fragmentForm": "When you finish your work, my mother make dinner."
+    }
+  },
+  {
+    "id": "m1_when_062",
+    "seedId": "when_future_062",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 도착할 때, 엄마는 저녁을 준비할 것이다.",
+    "english": "When I arrive, my mother will make dinner.",
+    "words": [
+      "When",
+      "I",
+      "arrive",
+      ",",
+      "my",
+      "mother",
+      "will",
+      "make",
+      "dinner",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "엄마는 저녁을 준비할 것이다",
+        "My mother will make dinner"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 도착할 때",
+        "I arrive"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "I",
+      "arrive"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When I arrive, my mother make dinner.",
+      "statementForm": [
+        "When I arrive, my mother will make dinner.",
+        "My mother will make dinner when I arrive."
+      ],
+      "fragmentForm": "When I arrive, my mother make dinner."
+    }
+  },
+  {
+    "id": "m1_when_063",
+    "seedId": "when_future_063",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "네가 일을 끝낼 때, 우리는 밖에 나갈 것이다.",
+    "english": "We will go outside when you finish your work.",
+    "words": [
+      "We",
+      "will",
+      "go",
+      "outside",
+      "when",
+      "you",
+      "finish",
+      "your",
+      "work",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 밖에 나갈 것이다",
+        "We will go outside"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "네가 일을 끝낼 때",
+        "You finish your work"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "We go outside when you finish your work.",
+      "statementForm": [
+        "When you finish your work, we will go outside.",
+        "We will go outside when you finish your work."
+      ],
+      "fragmentForm": "When you finish your work, we go outside."
+    }
+  },
+  {
+    "id": "m1_when_064",
+    "seedId": "when_future_064",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 도착할 때, 내 친구는 나를 기다릴 것이다.",
+    "english": "When I arrive, my friend will wait for me.",
+    "words": [
+      "When",
+      "I",
+      "arrive",
+      ",",
+      "my",
+      "friend",
+      "will",
+      "wait",
+      "for",
+      "me",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 나를 기다릴 것이다",
+        "My friend will wait for me"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 도착할 때",
+        "I arrive"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "I",
+      "arrive"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When I arrive, my friend wait for me.",
+      "statementForm": [
+        "When I arrive, my friend will wait for me.",
+        "My friend will wait for me when I arrive."
+      ],
+      "fragmentForm": "When I arrive, my friend wait for me."
+    }
+  },
+  {
+    "id": "m1_when_065",
+    "seedId": "when_future_065",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "버스가 올 때, 엄마는 저녁을 준비할 것이다.",
+    "english": "My mother will make dinner when the bus comes.",
+    "words": [
+      "My",
+      "mother",
+      "will",
+      "make",
+      "dinner",
+      "when",
+      "the",
+      "bus",
+      "comes",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "엄마는 저녁을 준비할 것이다",
+        "My mother will make dinner"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "버스가 올 때",
+        "The bus comes"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "mother"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother make dinner when the bus comes.",
+      "statementForm": [
+        "When the bus comes, my mother will make dinner.",
+        "My mother will make dinner when the bus comes."
+      ],
+      "fragmentForm": "When the bus comes, my mother make dinner."
+    }
+  },
+  {
+    "id": "m1_when_066",
+    "seedId": "when_future_066",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "봄이 올 때, 선생님은 우리의 숙제를 확인하실 것이다.",
+    "english": "When spring comes, the teacher will check our homework.",
+    "words": [
+      "When",
+      "spring",
+      "comes",
+      ",",
+      "the",
+      "teacher",
+      "will",
+      "check",
+      "our",
+      "homework",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 우리의 숙제를 확인하실 것이다",
+        "The teacher will check our homework"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "봄이 올 때",
+        "Spring comes"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "spring",
+      "comes"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When spring comes, the teacher check our homework.",
+      "statementForm": [
+        "When spring comes, the teacher will check our homework.",
+        "The teacher will check our homework when spring comes."
+      ],
+      "fragmentForm": "When spring comes, the teacher check our homework."
+    }
+  },
+  {
+    "id": "m1_when_067",
+    "seedId": "when_future_067",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내 여동생이 집에 올 때, 선생님은 우리의 숙제를 확인하실 것이다.",
+    "english": "The teacher will check our homework when my sister gets home.",
+    "words": [
+      "The",
+      "teacher",
+      "will",
+      "check",
+      "our",
+      "homework",
+      "when",
+      "my",
+      "sister",
+      "gets",
+      "home",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 우리의 숙제를 확인하실 것이다",
+        "The teacher will check our homework"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내 여동생이 집에 올 때",
+        "My sister gets home"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher check our homework when my sister gets home.",
+      "statementForm": [
+        "When my sister gets home, the teacher will check our homework.",
+        "The teacher will check our homework when my sister gets home."
+      ],
+      "fragmentForm": "When my sister gets home, the teacher check our homework."
+    }
+  },
+  {
+    "id": "m1_when_068",
+    "seedId": "when_future_068",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 그칠 때, 아빠는 나를 데리러 올 것이다.",
+    "english": "My father will pick me up when the rain stops.",
+    "words": [
+      "My",
+      "father",
+      "will",
+      "pick",
+      "me",
+      "up",
+      "when",
+      "the",
+      "rain",
+      "stops",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠는 나를 데리러 올 것이다",
+        "My father will pick me up"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 그칠 때",
+        "The rain stops"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "father"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "My father pick me up when the rain stops.",
+      "statementForm": [
+        "When the rain stops, my father will pick me up.",
+        "My father will pick me up when the rain stops."
+      ],
+      "fragmentForm": "When the rain stops, my father pick me up."
+    }
+  },
+  {
+    "id": "m1_when_069",
+    "seedId": "when_future_069",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그가 나에게 전화할 때, 우리는 집을 떠날 것이다.",
+    "english": "We will leave the house when he calls me.",
+    "words": [
+      "We",
+      "will",
+      "leave",
+      "the",
+      "house",
+      "when",
+      "he",
+      "calls",
+      "me",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 집을 떠날 것이다",
+        "We will leave the house"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그가 나에게 전화할 때",
+        "He calls me"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "will"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "We leave the house when he calls me.",
+      "statementForm": [
+        "When he calls me, we will leave the house.",
+        "We will leave the house when he calls me."
+      ],
+      "fragmentForm": "When he calls me, we leave the house."
+    }
+  },
+  {
+    "id": "m1_when_070",
+    "seedId": "when_future_070",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 그칠 때, 우리는 집을 떠날 것이다.",
+    "english": "When the rain stops, we will leave the house.",
+    "words": [
+      "When",
+      "the",
+      "rain",
+      "stops",
+      ",",
+      "we",
+      "will",
+      "leave",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_future",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 집을 떠날 것이다",
+        "We will leave the house"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 그칠 때",
+        "The rain stops"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "rain"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "future"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the rain stops, we leave the house.",
+      "statementForm": [
+        "When the rain stops, we will leave the house.",
+        "We will leave the house when the rain stops."
+      ],
+      "fragmentForm": "When the rain stops, we leave the house."
+    }
+  },
+  {
+    "id": "m1_when_071",
+    "seedId": "when_past_071",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 방에 들어갔을 때, 내 친구는 나에게 달려왔다.",
+    "english": "My friend ran to me when we entered the room.",
+    "words": [
+      "My",
+      "friend",
+      "ran",
+      "to",
+      "me",
+      "when",
+      "we",
+      "entered",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 나에게 달려왔다",
+        "My friend ran to me"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 방에 들어갔을 때",
+        "We entered the room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend run to me when we entered the room.",
+      "statementForm": [
+        "When we entered the room, my friend ran to me.",
+        "My friend ran to me when we entered the room."
+      ],
+      "fragmentForm": "When we entering the room, my friend ran to me."
+    }
+  },
+  {
+    "id": "m1_when_072",
+    "seedId": "when_past_072",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "불이 꺼졌을 때, 내 친구는 나에게 달려왔다.",
+    "english": "My friend ran to me when the lights went out.",
+    "words": [
+      "My",
+      "friend",
+      "ran",
+      "to",
+      "me",
+      "when",
+      "the",
+      "lights",
+      "went",
+      "out",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 나에게 달려왔다",
+        "My friend ran to me"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "불이 꺼졌을 때",
+        "The lights went out"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend run to me when the lights went out.",
+      "statementForm": [
+        "When the lights went out, my friend ran to me.",
+        "My friend ran to me when the lights went out."
+      ],
+      "fragmentForm": "When the bell ringing, my friend ran to me."
+    }
+  },
+  {
+    "id": "m1_when_073",
+    "seedId": "when_past_073",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "종이 울렸을 때, 나는 놀랐다.",
+    "english": "When the bell rang, I was surprised.",
+    "words": [
+      "When",
+      "the",
+      "bell",
+      "rang",
+      ",",
+      "I",
+      "was",
+      "surprised",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 놀랐다",
+        "I was surprised"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "종이 울렸을 때",
+        "The bell rang"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "bell"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the bell rang, I were surprised.",
+      "statementForm": [
+        "When the bell rang, I was surprised.",
+        "I was surprised when the bell rang."
+      ],
+      "fragmentForm": "When the bell ringing, I was surprised."
+    }
+  },
+  {
+    "id": "m1_when_074",
+    "seedId": "when_past_074",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "불이 꺼졌을 때, 나는 긴장했다.",
+    "english": "When the lights went out, I felt nervous.",
+    "words": [
+      "When",
+      "the",
+      "lights",
+      "went",
+      "out",
+      ",",
+      "I",
+      "felt",
+      "nervous",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 긴장했다",
+        "I felt nervous"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "불이 꺼졌을 때",
+        "The lights went out"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "lights"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the lights went out, I feel nervous.",
+      "statementForm": [
+        "When the lights went out, I felt nervous.",
+        "I felt nervous when the lights went out."
+      ],
+      "fragmentForm": "When the bell ringing, I felt nervous."
+    }
+  },
+  {
+    "id": "m1_when_075",
+    "seedId": "when_past_075",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "아기가 울었을 때, 나는 놀랐다.",
+    "english": "I was surprised when the baby cried.",
+    "words": [
+      "I",
+      "was",
+      "surprised",
+      "when",
+      "the",
+      "baby",
+      "cried",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 놀랐다",
+        "I was surprised"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "아기가 울었을 때",
+        "The baby cried"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "was"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "I were surprised when the baby cried.",
+      "statementForm": [
+        "When the baby cried, I was surprised.",
+        "I was surprised when the baby cried."
+      ],
+      "fragmentForm": "When the baby crying, I was surprised."
+    }
+  },
+  {
+    "id": "m1_when_076",
+    "seedId": "when_past_076",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "경기가 끝났을 때, 나는 긴장했다.",
+    "english": "I felt nervous when the game ended.",
+    "words": [
+      "I",
+      "felt",
+      "nervous",
+      "when",
+      "the",
+      "game",
+      "ended",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 긴장했다",
+        "I felt nervous"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "경기가 끝났을 때",
+        "The game ended"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "felt"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "I feel nervous when the game ended.",
+      "statementForm": [
+        "When the game ended, I felt nervous.",
+        "I felt nervous when the game ended."
+      ],
+      "fragmentForm": "When the bell ringing, I felt nervous."
+    }
+  },
+  {
+    "id": "m1_when_077",
+    "seedId": "when_past_077",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 그 소식을 들었을 때, 선생님은 걱정스러워 보였다.",
+    "english": "The teacher looked worried when I heard the news.",
+    "words": [
+      "The",
+      "teacher",
+      "looked",
+      "worried",
+      "when",
+      "I",
+      "heard",
+      "the",
+      "news",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 걱정스러워 보였다",
+        "The teacher looked worried"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 그 소식을 들었을 때",
+        "I heard the news"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher looked worried when I heard the news.",
+      "statementForm": [
+        "When I heard the news, the teacher looked worried.",
+        "The teacher looked worried when I heard the news."
+      ],
+      "fragmentForm": "When I hearing the news, the teacher looked worried."
+    }
+  },
+  {
+    "id": "m1_when_078",
+    "seedId": "when_past_078",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 내리기 시작했을 때, 내 친구는 나에게 달려왔다.",
+    "english": "My friend ran to me when the rain started.",
+    "words": [
+      "My",
+      "friend",
+      "ran",
+      "to",
+      "me",
+      "when",
+      "the",
+      "rain",
+      "started",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 나에게 달려왔다",
+        "My friend ran to me"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 내리기 시작했을 때",
+        "The rain started"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend run to me when the rain started.",
+      "statementForm": [
+        "When the rain started, my friend ran to me.",
+        "My friend ran to me when the rain started."
+      ],
+      "fragmentForm": "When the rain starting, my friend ran to me."
+    }
+  },
+  {
+    "id": "m1_when_079",
+    "seedId": "when_past_079",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 그를 봤을 때, 나는 가방을 떨어뜨렸다.",
+    "english": "When I saw him, I dropped my bag.",
+    "words": [
+      "When",
+      "I",
+      "saw",
+      "him",
+      ",",
+      "I",
+      "dropped",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 가방을 떨어뜨렸다",
+        "I dropped my bag"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 그를 봤을 때",
+        "I saw him"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "I",
+      "saw"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "While I saw him, I dropped my bag.",
+      "statementForm": [
+        "When I saw him, I dropped my bag.",
+        "I dropped my bag when I saw him."
+      ],
+      "fragmentForm": "When I seeing him, I dropped my bag."
+    }
+  },
+  {
+    "id": "m1_when_080",
+    "seedId": "when_past_080",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그가 내 이름을 말했을 때, 나는 놀랐다.",
+    "english": "I was surprised when he said my name.",
+    "words": [
+      "I",
+      "was",
+      "surprised",
+      "when",
+      "he",
+      "said",
+      "my",
+      "name",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 놀랐다",
+        "I was surprised"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그가 내 이름을 말했을 때",
+        "He said my name"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "was"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "I were surprised when he said my name.",
+      "statementForm": [
+        "When he said my name, I was surprised.",
+        "I was surprised when he said my name."
+      ],
+      "fragmentForm": "When he saying my name, I was surprised."
+    }
+  },
+  {
+    "id": "m1_when_081",
+    "seedId": "when_past_081",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 내리기 시작했을 때, 그 개는 크게 짖었다.",
+    "english": "The dog barked loudly when the rain started.",
+    "words": [
+      "The",
+      "dog",
+      "barked",
+      "loudly",
+      "when",
+      "the",
+      "rain",
+      "started",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개는 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 내리기 시작했을 때",
+        "The rain started"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog bark loudly when the rain started.",
+      "statementForm": [
+        "When the rain started, the dog barked loudly.",
+        "The dog barked loudly when the rain started."
+      ],
+      "fragmentForm": "When the rain starting, the dog barked loudly."
+    }
+  },
+  {
+    "id": "m1_when_082",
+    "seedId": "when_past_082",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "종이 울렸을 때, 나는 긴장했다.",
+    "english": "I felt nervous when the bell rang.",
+    "words": [
+      "I",
+      "felt",
+      "nervous",
+      "when",
+      "the",
+      "bell",
+      "rang",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 긴장했다",
+        "I felt nervous"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "종이 울렸을 때",
+        "The bell rang"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "felt"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "I feel nervous when the bell rang.",
+      "statementForm": [
+        "When the bell rang, I felt nervous.",
+        "I felt nervous when the bell rang."
+      ],
+      "fragmentForm": "When the bell ringing, I felt nervous."
+    }
+  },
+  {
+    "id": "m1_when_083",
+    "seedId": "when_past_083",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 그를 봤을 때, 선생님은 걱정스러워 보였다.",
+    "english": "When I saw him, the teacher looked worried.",
+    "words": [
+      "When",
+      "I",
+      "saw",
+      "him",
+      ",",
+      "the",
+      "teacher",
+      "looked",
+      "worried",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 걱정스러워 보였다",
+        "The teacher looked worried"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 그를 봤을 때",
+        "I saw him"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "I",
+      "saw"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "While I saw him, the teacher looked worried.",
+      "statementForm": [
+        "When I saw him, the teacher looked worried.",
+        "The teacher looked worried when I saw him."
+      ],
+      "fragmentForm": "When I seeing him, the teacher looked worried."
+    }
+  },
+  {
+    "id": "m1_when_084",
+    "seedId": "when_past_084",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 그를 봤을 때, 나는 놀랐다.",
+    "english": "I was surprised when I saw him.",
+    "words": [
+      "I",
+      "was",
+      "surprised",
+      "when",
+      "I",
+      "saw",
+      "him",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 놀랐다",
+        "I was surprised"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 그를 봤을 때",
+        "I saw him"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "I",
+      "was"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "I were surprised when I saw him.",
+      "statementForm": [
+        "When I saw him, I was surprised.",
+        "I was surprised when I saw him."
+      ],
+      "fragmentForm": "When I seeing him, I was surprised."
+    }
+  },
+  {
+    "id": "m1_when_085",
+    "seedId": "when_past_085",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그가 내 이름을 말했을 때, 우리는 조용해졌다.",
+    "english": "When he said my name, we became quiet.",
+    "words": [
+      "When",
+      "he",
+      "said",
+      "my",
+      "name",
+      ",",
+      "we",
+      "became",
+      "quiet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 조용해졌다",
+        "We became quiet"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그가 내 이름을 말했을 때",
+        "He said my name"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "he",
+      "said"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When he said my name, we become quiet.",
+      "statementForm": [
+        "When he said my name, we became quiet.",
+        "We became quiet when he said my name."
+      ],
+      "fragmentForm": "When he saying my name, we became quiet."
+    }
+  },
+  {
+    "id": "m1_when_086",
+    "seedId": "when_past_086",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 내리기 시작했을 때, 선생님은 걱정스러워 보였다.",
+    "english": "The teacher looked worried when the rain started.",
+    "words": [
+      "The",
+      "teacher",
+      "looked",
+      "worried",
+      "when",
+      "the",
+      "rain",
+      "started",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님은 걱정스러워 보였다",
+        "The teacher looked worried"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 내리기 시작했을 때",
+        "The rain started"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher looked worried when the rain started.",
+      "statementForm": [
+        "When the rain started, the teacher looked worried.",
+        "The teacher looked worried when the rain started."
+      ],
+      "fragmentForm": "When the rain starting, the teacher looked worried."
+    }
+  },
+  {
+    "id": "m1_when_087",
+    "seedId": "when_past_087",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 그 소식을 들었을 때, 우리는 웃었다.",
+    "english": "When I heard the news, we laughed.",
+    "words": [
+      "When",
+      "I",
+      "heard",
+      "the",
+      "news",
+      ",",
+      "we",
+      "laughed",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 웃었다",
+        "We laughed"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 그 소식을 들었을 때",
+        "I heard the news"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "I",
+      "heard"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When I heard the news, we laugh.",
+      "statementForm": [
+        "When I heard the news, we laughed.",
+        "We laughed when I heard the news."
+      ],
+      "fragmentForm": "When I hearing the news, we laughed."
+    }
+  },
+  {
+    "id": "m1_when_088",
+    "seedId": "when_past_088",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 방에 들어갔을 때, 그 개는 크게 짖었다.",
+    "english": "When we entered the room, the dog barked loudly.",
+    "words": [
+      "When",
+      "we",
+      "entered",
+      "the",
+      "room",
+      ",",
+      "the",
+      "dog",
+      "barked",
+      "loudly",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개는 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 방에 들어갔을 때",
+        "We entered the room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "we",
+      "entered"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When we entered the room, the dog bark loudly.",
+      "statementForm": [
+        "When we entered the room, the dog barked loudly.",
+        "The dog barked loudly when we entered the room."
+      ],
+      "fragmentForm": "When we entering the room, the dog barked loudly."
+    }
+  },
+  {
+    "id": "m1_when_089",
+    "seedId": "when_past_089",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그가 내 이름을 말했을 때, 우리는 웃었다.",
+    "english": "We laughed when he said my name.",
+    "words": [
+      "We",
+      "laughed",
+      "when",
+      "he",
+      "said",
+      "my",
+      "name",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 웃었다",
+        "We laughed"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그가 내 이름을 말했을 때",
+        "He said my name"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "laughed"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "We laugh when he said my name.",
+      "statementForm": [
+        "When he said my name, we laughed.",
+        "We laughed when he said my name."
+      ],
+      "fragmentForm": "When he saying my name, we laughed."
+    }
+  },
+  {
+    "id": "m1_when_090",
+    "seedId": "when_past_090",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "불이 꺼졌을 때, 그 개는 크게 짖었다.",
+    "english": "The dog barked loudly when the lights went out.",
+    "words": [
+      "The",
+      "dog",
+      "barked",
+      "loudly",
+      "when",
+      "the",
+      "lights",
+      "went",
+      "out",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개는 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "불이 꺼졌을 때",
+        "The lights went out"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog bark loudly when the lights went out.",
+      "statementForm": [
+        "When the lights went out, the dog barked loudly.",
+        "The dog barked loudly when the lights went out."
+      ],
+      "fragmentForm": "When the bell ringing, the dog barked loudly."
+    }
+  },
+  {
+    "id": "m1_when_091",
+    "seedId": "when_past_091",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "종이 울렸을 때, 우리는 웃었다.",
+    "english": "When the bell rang, we laughed.",
+    "words": [
+      "When",
+      "the",
+      "bell",
+      "rang",
+      ",",
+      "we",
+      "laughed",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 웃었다",
+        "We laughed"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "종이 울렸을 때",
+        "The bell rang"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "bell"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the bell rang, we laugh.",
+      "statementForm": [
+        "When the bell rang, we laughed.",
+        "We laughed when the bell rang."
+      ],
+      "fragmentForm": "When the bell ringing, we laughed."
+    }
+  },
+  {
+    "id": "m1_when_092",
+    "seedId": "when_past_092",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 방에 들어갔을 때, 엄마는 미소 지었다.",
+    "english": "When we entered the room, my mother smiled.",
+    "words": [
+      "When",
+      "we",
+      "entered",
+      "the",
+      "room",
+      ",",
+      "my",
+      "mother",
+      "smiled",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "엄마는 미소 지었다",
+        "My mother smiled"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 방에 들어갔을 때",
+        "We entered the room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "we",
+      "entered"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When we entered the room, my mother smile.",
+      "statementForm": [
+        "When we entered the room, my mother smiled.",
+        "My mother smiled when we entered the room."
+      ],
+      "fragmentForm": "When we entering the room, my mother smiled."
+    }
+  },
+  {
+    "id": "m1_when_093",
+    "seedId": "when_past_093",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그가 내 이름을 말했을 때, 내 친구는 나에게 달려왔다.",
+    "english": "When he said my name, my friend ran to me.",
+    "words": [
+      "When",
+      "he",
+      "said",
+      "my",
+      "name",
+      ",",
+      "my",
+      "friend",
+      "ran",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 나에게 달려왔다",
+        "My friend ran to me"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그가 내 이름을 말했을 때",
+        "He said my name"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "he",
+      "said"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When he said my name, my friend run to me.",
+      "statementForm": [
+        "When he said my name, my friend ran to me.",
+        "My friend ran to me when he said my name."
+      ],
+      "fragmentForm": "When he saying my name, my friend ran to me."
+    }
+  },
+  {
+    "id": "m1_when_094",
+    "seedId": "when_past_094",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "경기가 끝났을 때, 엄마는 미소 지었다.",
+    "english": "When the game ended, my mother smiled.",
+    "words": [
+      "When",
+      "the",
+      "game",
+      "ended",
+      ",",
+      "my",
+      "mother",
+      "smiled",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "엄마는 미소 지었다",
+        "My mother smiled"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "경기가 끝났을 때",
+        "The game ended"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "game"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the game ended, my mother smile.",
+      "statementForm": [
+        "When the game ended, my mother smiled.",
+        "My mother smiled when the game ended."
+      ],
+      "fragmentForm": "When the bell ringing, my mother smiled."
+    }
+  },
+  {
+    "id": "m1_when_095",
+    "seedId": "when_past_095",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "그가 내 이름을 말했을 때, 나는 가방을 떨어뜨렸다.",
+    "english": "When he said my name, I dropped my bag.",
+    "words": [
+      "When",
+      "he",
+      "said",
+      "my",
+      "name",
+      ",",
+      "I",
+      "dropped",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 가방을 떨어뜨렸다",
+        "I dropped my bag"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "그가 내 이름을 말했을 때",
+        "He said my name"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "he",
+      "said"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "While he said my name, I dropped my bag.",
+      "statementForm": [
+        "When he said my name, I dropped my bag.",
+        "I dropped my bag when he said my name."
+      ],
+      "fragmentForm": "When he saying my name, I dropped my bag."
+    }
+  },
+  {
+    "id": "m1_when_096",
+    "seedId": "when_past_096",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "내가 그 소식을 들었을 때, 그 개는 크게 짖었다.",
+    "english": "The dog barked loudly when I heard the news.",
+    "words": [
+      "The",
+      "dog",
+      "barked",
+      "loudly",
+      "when",
+      "I",
+      "heard",
+      "the",
+      "news",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개는 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "내가 그 소식을 들었을 때",
+        "I heard the news"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "The",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog bark loudly when I heard the news.",
+      "statementForm": [
+        "When I heard the news, the dog barked loudly.",
+        "The dog barked loudly when I heard the news."
+      ],
+      "fragmentForm": "When I hearing the news, the dog barked loudly."
+    }
+  },
+  {
+    "id": "m1_when_097",
+    "seedId": "when_past_097",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "우리가 방에 들어갔을 때, 우리는 조용해졌다.",
+    "english": "When we entered the room, we became quiet.",
+    "words": [
+      "When",
+      "we",
+      "entered",
+      "the",
+      "room",
+      ",",
+      "we",
+      "became",
+      "quiet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 조용해졌다",
+        "We became quiet"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "우리가 방에 들어갔을 때",
+        "We entered the room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "we",
+      "entered"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When we entered the room, we become quiet.",
+      "statementForm": [
+        "When we entered the room, we became quiet.",
+        "We became quiet when we entered the room."
+      ],
+      "fragmentForm": "When we entering the room, we became quiet."
+    }
+  },
+  {
+    "id": "m1_when_098",
+    "seedId": "when_past_098",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 내리기 시작했을 때, 내 친구는 나에게 달려왔다.",
+    "english": "When the rain started, my friend ran to me.",
+    "words": [
+      "When",
+      "the",
+      "rain",
+      "started",
+      ",",
+      "my",
+      "friend",
+      "ran",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구는 나에게 달려왔다",
+        "My friend ran to me"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 내리기 시작했을 때",
+        "The rain started"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "When",
+      "the",
+      "rain"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the rain started, my friend run to me.",
+      "statementForm": [
+        "When the rain started, my friend ran to me.",
+        "My friend ran to me when the rain started."
+      ],
+      "fragmentForm": "When the rain starting, my friend ran to me."
+    }
+  },
+  {
+    "id": "m1_when_099",
+    "seedId": "when_past_099",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "경기가 끝났을 때, 우리는 웃었다.",
+    "english": "We laughed when the game ended.",
+    "words": [
+      "We",
+      "laughed",
+      "when",
+      "the",
+      "game",
+      "ended",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 웃었다",
+        "We laughed"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "경기가 끝났을 때",
+        "The game ended"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "laughed"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "We laugh when the game ended.",
+      "statementForm": [
+        "When the game ended, we laughed.",
+        "We laughed when the game ended."
+      ],
+      "fragmentForm": "When the bell ringing, we laughed."
+    }
+  },
+  {
+    "id": "m1_when_100",
+    "seedId": "when_past_100",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_when",
+    "chapterLabelKo": "접속사 when",
+    "korean": "비가 내리기 시작했을 때, 우리는 조용해졌다.",
+    "english": "We became quiet when the rain started.",
+    "words": [
+      "We",
+      "became",
+      "quiet",
+      "when",
+      "the",
+      "rain",
+      "started",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_when_past",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 조용해졌다",
+        "We became quiet"
+      ],
+      [
+        "~할 때",
+        "when"
+      ],
+      [
+        "비가 내리기 시작했을 때",
+        "The rain started"
+      ]
+    ],
+    "extraClueWordPool": [
+      "when",
+      "before",
+      "after",
+      "if"
+    ],
+    "blankTargets": [
+      "when",
+      "We",
+      "became"
+    ],
+    "tags": [
+      "conjunction_when",
+      "time",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "We become quiet when the rain started.",
+      "statementForm": [
+        "When the rain started, we became quiet.",
+        "We became quiet when the rain started."
+      ],
+      "fragmentForm": "When the rain starting, we became quiet."
+    }
+  }
+]
