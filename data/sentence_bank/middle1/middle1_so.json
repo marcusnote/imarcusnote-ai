@@ -1,0 +1,6282 @@
+[
+  {
+    "id": "m1_s1_so_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 열심히 공부해서 시험에 합격했다.",
+    "english": "I studied hard, so I passed the test.",
+    "words": [
+      "I",
+      "studied",
+      "hard",
+      "so",
+      "I",
+      "passed",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I studied hard",
+      "so",
+      "I passed the test"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I studied hard, but I passed the test.",
+      "statementForm": "I studied hard, so I passed the test.",
+      "fragmentForm": "I studied hard, so I passed the test?"
+    }
+  },
+  {
+    "id": "m1_s1_so_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 늦게 일어나서 학교에 늦었다.",
+    "english": "He got up late, so he was late for school.",
+    "words": [
+      "He",
+      "got",
+      "up",
+      "late",
+      "so",
+      "he",
+      "was",
+      "late",
+      "for",
+      "school",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He got up late",
+      "so",
+      "he was late for school"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He got up late, but he was late for school.",
+      "statementForm": "He got up late, so he was late for school.",
+      "fragmentForm": "He got up late, so he was late for school?"
+    }
+  },
+  {
+    "id": "m1_s1_so_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "비가 와서 우리는 집에 있었다.",
+    "english": "It rained, so we stayed at home.",
+    "words": [
+      "It",
+      "rained",
+      "so",
+      "we",
+      "stayed",
+      "at",
+      "home",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It rained",
+      "so",
+      "we stayed at home"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It rained, but we stayed at home.",
+      "statementForm": "It rained, so we stayed at home.",
+      "fragmentForm": "It rained, so we stayed at home?"
+    }
+  },
+  {
+    "id": "m1_s1_so_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 배가 고파서 밥을 먹었다.",
+    "english": "I was hungry, so I ate.",
+    "words": [
+      "I",
+      "was",
+      "hungry",
+      "so",
+      "I",
+      "ate",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I was hungry",
+      "so",
+      "I ate"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was hungry, but I ate.",
+      "statementForm": "I was hungry, so I ate.",
+      "fragmentForm": "I was hungry, so I ate?"
+    }
+  },
+  {
+    "id": "m1_s1_so_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 피곤해서 일찍 잤다.",
+    "english": "She was tired, so she went to bed early.",
+    "words": [
+      "She",
+      "was",
+      "tired",
+      "so",
+      "she",
+      "went",
+      "to",
+      "bed",
+      "early",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She was tired",
+      "so",
+      "she went to bed early"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was tired, but she went to bed early.",
+      "statementForm": "She was tired, so she went to bed early.",
+      "fragmentForm": "She was tired, so she went to bed early?"
+    }
+  },
+  {
+    "id": "m1_s1_so_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 많이 연습해서 실력이 늘었다.",
+    "english": "I practiced a lot, so I improved.",
+    "words": [
+      "I",
+      "practiced",
+      "a",
+      "lot",
+      "so",
+      "I",
+      "improved",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I practiced a lot",
+      "so",
+      "I improved"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I practiced a lot, but I improved.",
+      "statementForm": "I practiced a lot, so I improved.",
+      "fragmentForm": "I practiced a lot, so I improved?"
+    }
+  },
+  {
+    "id": "m1_s1_so_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 열심히 일해서 돈을 많이 벌었다.",
+    "english": "He worked hard, so he earned a lot of money.",
+    "words": [
+      "He",
+      "worked",
+      "hard",
+      "so",
+      "he",
+      "earned",
+      "a",
+      "lot",
+      "of",
+      "money",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He worked hard",
+      "so",
+      "he earned a lot of money"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He worked hard, but he earned a lot of money.",
+      "statementForm": "He worked hard, so he earned a lot of money.",
+      "fragmentForm": "He worked hard, so he earned a lot of money?"
+    }
+  },
+  {
+    "id": "m1_s1_so_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "날씨가 좋아서 우리는 공원에 갔다.",
+    "english": "The weather was nice, so we went to the park.",
+    "words": [
+      "The",
+      "weather",
+      "was",
+      "nice",
+      "so",
+      "we",
+      "went",
+      "to",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The weather was nice",
+      "so",
+      "we went to the park"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The weather was nice, but we went to the park.",
+      "statementForm": "The weather was nice, so we went to the park.",
+      "fragmentForm": "The weather was nice, so we went to the park?"
+    }
+  },
+  {
+    "id": "m1_s1_so_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 시간이 없어서 서둘렀다.",
+    "english": "I had no time, so I hurried.",
+    "words": [
+      "I",
+      "had",
+      "no",
+      "time",
+      "so",
+      "I",
+      "hurried",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had no time",
+      "so",
+      "I hurried"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had no time, but I hurried.",
+      "statementForm": "I had no time, so I hurried.",
+      "fragmentForm": "I had no time, so I hurried?"
+    }
+  },
+  {
+    "id": "m1_s1_so_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 아파서 학교에 가지 않았다.",
+    "english": "She was sick, so she didn't go to school.",
+    "words": [
+      "She",
+      "was",
+      "sick",
+      "so",
+      "she",
+      "didn't",
+      "go",
+      "to",
+      "school",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She was sick",
+      "so",
+      "she didn't go to school"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was sick, but she didn't go to school.",
+      "statementForm": "She was sick, so she didn't go to school.",
+      "fragmentForm": "She was sick, so she didn't go to school?"
+    }
+  },
+  {
+    "id": "m1_s1_so_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 버스를 놓쳐서 택시를 탔다.",
+    "english": "I missed the bus, so I took a taxi.",
+    "words": [
+      "I",
+      "missed",
+      "the",
+      "bus",
+      "so",
+      "I",
+      "took",
+      "a",
+      "taxi",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I missed the bus",
+      "so",
+      "I took a taxi"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I missed the bus, but I took a taxi.",
+      "statementForm": "I missed the bus, so I took a taxi.",
+      "fragmentForm": "I missed the bus, so I took a taxi?"
+    }
+  },
+  {
+    "id": "m1_s1_so_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 공부하지 않아서 시험에 떨어졌다.",
+    "english": "He didn't study, so he failed the test.",
+    "words": [
+      "He",
+      "didn't",
+      "study",
+      "so",
+      "he",
+      "failed",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He didn't study",
+      "so",
+      "he failed the test"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He didn't study, but he failed the test.",
+      "statementForm": "He didn't study, so he failed the test.",
+      "fragmentForm": "He didn't study, so he failed the test?"
+    }
+  },
+  {
+    "id": "m1_s1_so_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 너무 더워서 창문을 열었다.",
+    "english": "I was very hot, so I opened the window.",
+    "words": [
+      "I",
+      "was",
+      "very",
+      "hot",
+      "so",
+      "I",
+      "opened",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I was very hot",
+      "so",
+      "I opened the window"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was very hot, but I opened the window.",
+      "statementForm": "I was very hot, so I opened the window.",
+      "fragmentForm": "I was very hot, so I opened the window?"
+    }
+  },
+  {
+    "id": "m1_s1_so_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 배가 불러서 더 먹지 않았다.",
+    "english": "She was full, so she didn't eat more.",
+    "words": [
+      "She",
+      "was",
+      "full",
+      "so",
+      "she",
+      "didn't",
+      "eat",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She was full",
+      "so",
+      "she didn't eat more"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was full, but she didn't eat more.",
+      "statementForm": "She was full, so she didn't eat more.",
+      "fragmentForm": "She was full, so she didn't eat more?"
+    }
+  },
+  {
+    "id": "m1_s1_so_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "우리는 길을 잃어서 도움을 요청했다.",
+    "english": "We got lost, so we asked for help.",
+    "words": [
+      "We",
+      "got",
+      "lost",
+      "so",
+      "we",
+      "asked",
+      "for",
+      "help",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We got lost",
+      "so",
+      "we asked for help"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We got lost, but we asked for help.",
+      "statementForm": "We got lost, so we asked for help.",
+      "fragmentForm": "We got lost, so we asked for help?"
+    }
+  },
+  {
+    "id": "m1_s1_so_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 피곤해서 커피를 마셨다.",
+    "english": "I was tired, so I drank coffee.",
+    "words": [
+      "I",
+      "was",
+      "tired",
+      "so",
+      "I",
+      "drank",
+      "coffee",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I was tired",
+      "so",
+      "I drank coffee"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was tired, but I drank coffee.",
+      "statementForm": "I was tired, so I drank coffee.",
+      "fragmentForm": "I was tired, so I drank coffee?"
+    }
+  },
+  {
+    "id": "m1_s1_so_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 감기에 걸려서 집에 있었다.",
+    "english": "He caught a cold, so he stayed at home.",
+    "words": [
+      "He",
+      "caught",
+      "a",
+      "cold",
+      "so",
+      "he",
+      "stayed",
+      "at",
+      "home",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He caught a cold",
+      "so",
+      "he stayed at home"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He caught a cold, but he stayed at home.",
+      "statementForm": "He caught a cold, so he stayed at home.",
+      "fragmentForm": "He caught a cold, so he stayed at home?"
+    }
+  },
+  {
+    "id": "m1_s1_so_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "눈이 와서 학교 운동장이 하얗다.",
+    "english": "It snowed, so the schoolyard is white.",
+    "words": [
+      "It",
+      "snowed",
+      "so",
+      "the",
+      "schoolyard",
+      "is",
+      "white",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It snowed",
+      "so",
+      "the schoolyard is white"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It snowed, but the schoolyard is white.",
+      "statementForm": "It snowed, so the schoolyard is white.",
+      "fragmentForm": "It snowed, so the schoolyard is white?"
+    }
+  },
+  {
+    "id": "m1_s1_so_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 숙제가 많아서 바빴다.",
+    "english": "I had a lot of homework, so I was busy.",
+    "words": [
+      "I",
+      "had",
+      "a",
+      "lot",
+      "of",
+      "homework",
+      "so",
+      "I",
+      "was",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had a lot of homework",
+      "so",
+      "I was busy"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had a lot of homework, but I was busy.",
+      "statementForm": "I had a lot of homework, so I was busy.",
+      "fragmentForm": "I had a lot of homework, so I was busy?"
+    }
+  },
+  {
+    "id": "m1_s1_so_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 일찍 출발해서 제시간에 도착했다.",
+    "english": "She left early, so she arrived on time.",
+    "words": [
+      "She",
+      "left",
+      "early",
+      "so",
+      "she",
+      "arrived",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She left early",
+      "so",
+      "she arrived on time"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She left early, but she arrived on time.",
+      "statementForm": "She left early, so she arrived on time.",
+      "fragmentForm": "She left early, so she arrived on time?"
+    }
+  },
+  {
+    "id": "m1_s1_so_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 열심히 뛰어서 땀을 많이 흘렸다.",
+    "english": "He ran hard, so he sweated a lot.",
+    "words": [
+      "He",
+      "ran",
+      "hard",
+      "so",
+      "he",
+      "sweated",
+      "a",
+      "lot",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He ran hard",
+      "so",
+      "he sweated a lot"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He ran hard, but he sweated a lot.",
+      "statementForm": "He ran hard, so he sweated a lot.",
+      "fragmentForm": "He ran hard, so he sweated a lot?"
+    }
+  },
+  {
+    "id": "m1_s1_so_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 돈이 없어서 그것을 사지 못했다.",
+    "english": "I had no money, so I couldn't buy it.",
+    "words": [
+      "I",
+      "had",
+      "no",
+      "money",
+      "so",
+      "I",
+      "couldn't",
+      "buy",
+      "it",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had no money",
+      "so",
+      "I couldn't buy it"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had no money, but I couldn't buy it.",
+      "statementForm": "I had no money, so I couldn't buy it.",
+      "fragmentForm": "I had no money, so I couldn't buy it?"
+    }
+  },
+  {
+    "id": "m1_s1_so_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "정전이 되어서 우리는 촛불을 켰다.",
+    "english": "The power went out, so we lit candles.",
+    "words": [
+      "The",
+      "power",
+      "went",
+      "out",
+      "so",
+      "we",
+      "lit",
+      "candles",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The power went out",
+      "so",
+      "we lit candles"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The power went out, but we lit candles.",
+      "statementForm": "The power went out, so we lit candles.",
+      "fragmentForm": "The power went out, so we lit candles?"
+    }
+  },
+  {
+    "id": "m1_s1_so_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 열이 나서 병원에 갔다.",
+    "english": "She had a fever, so she went to the hospital.",
+    "words": [
+      "She",
+      "had",
+      "a",
+      "fever",
+      "so",
+      "she",
+      "went",
+      "to",
+      "the",
+      "hospital",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had a fever",
+      "so",
+      "she went to the hospital"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had a fever, but she went to the hospital.",
+      "statementForm": "She had a fever, so she went to the hospital.",
+      "fragmentForm": "She had a fever, so she went to the hospital?"
+    }
+  },
+  {
+    "id": "m1_s1_so_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 목이 말라서 물을 마셨다.",
+    "english": "I was thirsty, so I drank water.",
+    "words": [
+      "I",
+      "was",
+      "thirsty",
+      "so",
+      "I",
+      "drank",
+      "water",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I was thirsty",
+      "so",
+      "I drank water"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was thirsty, but I drank water.",
+      "statementForm": "I was thirsty, so I drank water.",
+      "fragmentForm": "I was thirsty, so I drank water?"
+    }
+  },
+  {
+    "id": "m1_s1_so_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 길이 막혀서 늦었다.",
+    "english": "The traffic was heavy, so he was late.",
+    "words": [
+      "The",
+      "traffic",
+      "was",
+      "heavy",
+      "so",
+      "he",
+      "was",
+      "late",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The traffic was heavy",
+      "so",
+      "he was late"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The traffic was heavy, but he was late.",
+      "statementForm": "The traffic was heavy, so he was late.",
+      "fragmentForm": "The traffic was heavy, so he was late?"
+    }
+  },
+  {
+    "id": "m1_s1_so_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "비가 많이 와서 강이 불어났다.",
+    "english": "It rained a lot, so the river rose.",
+    "words": [
+      "It",
+      "rained",
+      "a",
+      "lot",
+      "so",
+      "the",
+      "river",
+      "rose",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It rained a lot",
+      "so",
+      "the river rose"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It rained a lot, but the river rose.",
+      "statementForm": "It rained a lot, so the river rose.",
+      "fragmentForm": "It rained a lot, so the river rose?"
+    }
+  },
+  {
+    "id": "m1_s1_so_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 기분이 좋아서 노래를 불렀다.",
+    "english": "I felt good, so I sang.",
+    "words": [
+      "I",
+      "felt",
+      "good",
+      "so",
+      "I",
+      "sang",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I felt good",
+      "so",
+      "I sang"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I felt good, but I sang.",
+      "statementForm": "I felt good, so I sang.",
+      "fragmentForm": "I felt good, so I sang?"
+    }
+  },
+  {
+    "id": "m1_s1_so_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 손이 더러워서 손을 씻었다.",
+    "english": "Her hands were dirty, so she washed them.",
+    "words": [
+      "Her",
+      "hands",
+      "were",
+      "dirty",
+      "so",
+      "she",
+      "washed",
+      "them",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Her hands were dirty",
+      "so",
+      "she washed them"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Her hands were dirty, but she washed them.",
+      "statementForm": "Her hands were dirty, so she washed them.",
+      "fragmentForm": "Her hands were dirty, so she washed them?"
+    }
+  },
+  {
+    "id": "m1_s1_so_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 배가 고파서 샌드위치를 먹었다.",
+    "english": "He was hungry, so he ate a sandwich.",
+    "words": [
+      "He",
+      "was",
+      "hungry",
+      "so",
+      "he",
+      "ate",
+      "a",
+      "sandwich",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He was hungry",
+      "so",
+      "he ate a sandwich"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was hungry, but he ate a sandwich.",
+      "statementForm": "He was hungry, so he ate a sandwich.",
+      "fragmentForm": "He was hungry, so he ate a sandwich?"
+    }
+  },
+  {
+    "id": "m1_s1_so_031",
+    "seedId": 31,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 비를 맞아서 옷이 젖었다.",
+    "english": "I got caught in the rain, so my clothes got wet.",
+    "words": [
+      "I",
+      "got",
+      "caught",
+      "in",
+      "the",
+      "rain",
+      "so",
+      "my",
+      "clothes",
+      "got",
+      "wet",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I got caught in the rain",
+      "so",
+      "my clothes got wet"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I got caught in the rain, but my clothes got wet.",
+      "statementForm": "I got caught in the rain, so my clothes got wet.",
+      "fragmentForm": "I got caught in the rain, so my clothes got wet?"
+    }
+  },
+  {
+    "id": "m1_s1_so_032",
+    "seedId": 32,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 연습을 많이 해서 자신감이 생겼다.",
+    "english": "She practiced a lot, so she became confident.",
+    "words": [
+      "She",
+      "practiced",
+      "a",
+      "lot",
+      "so",
+      "she",
+      "became",
+      "confident",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She practiced a lot",
+      "so",
+      "she became confident"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She practiced a lot, but she became confident.",
+      "statementForm": "She practiced a lot, so she became confident.",
+      "fragmentForm": "She practiced a lot, so she became confident?"
+    }
+  },
+  {
+    "id": "m1_s1_so_033",
+    "seedId": 33,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 너무 졸려서 수업 시간에 하품했다.",
+    "english": "He was very sleepy, so he yawned in class.",
+    "words": [
+      "He",
+      "was",
+      "very",
+      "sleepy",
+      "so",
+      "he",
+      "yawned",
+      "in",
+      "class",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He was very sleepy",
+      "so",
+      "he yawned in class"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was very sleepy, but he yawned in class.",
+      "statementForm": "He was very sleepy, so he yawned in class.",
+      "fragmentForm": "He was very sleepy, so he yawned in class?"
+    }
+  },
+  {
+    "id": "m1_s1_so_034",
+    "seedId": 34,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 감동을 받아서 울었다.",
+    "english": "I was moved, so I cried.",
+    "words": [
+      "I",
+      "was",
+      "moved",
+      "so",
+      "I",
+      "cried",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I was moved",
+      "so",
+      "I cried"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was moved, but I cried.",
+      "statementForm": "I was moved, so I cried.",
+      "fragmentForm": "I was moved, so I cried?"
+    }
+  },
+  {
+    "id": "m1_s1_so_035",
+    "seedId": 35,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 휴대폰을 잃어버려서 슬펐다.",
+    "english": "She lost her phone, so she was sad.",
+    "words": [
+      "She",
+      "lost",
+      "her",
+      "phone",
+      "so",
+      "she",
+      "was",
+      "sad",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She lost her phone",
+      "so",
+      "she was sad"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She lost her phone, but she was sad.",
+      "statementForm": "She lost her phone, so she was sad.",
+      "fragmentForm": "She lost her phone, so she was sad?"
+    }
+  },
+  {
+    "id": "m1_s1_so_036",
+    "seedId": 36,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 길을 잘 알아서 앞장섰다.",
+    "english": "I knew the way well, so I led the group.",
+    "words": [
+      "I",
+      "knew",
+      "the",
+      "way",
+      "well",
+      "so",
+      "I",
+      "led",
+      "the",
+      "group",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I knew the way well",
+      "so",
+      "I led the group"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I knew the way well, but I led the group.",
+      "statementForm": "I knew the way well, so I led the group.",
+      "fragmentForm": "I knew the way well, so I led the group?"
+    }
+  },
+  {
+    "id": "m1_s1_so_037",
+    "seedId": 37,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 시험을 잘 봐서 부모님이 기뻐하셨다.",
+    "english": "He did well on the test, so his parents were happy.",
+    "words": [
+      "He",
+      "did",
+      "well",
+      "on",
+      "the",
+      "test",
+      "so",
+      "his",
+      "parents",
+      "were",
+      "happy",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He did well on the test",
+      "so",
+      "his parents were happy"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did well on the test, but his parents were happy.",
+      "statementForm": "He did well on the test, so his parents were happy.",
+      "fragmentForm": "He did well on the test, so his parents were happy?"
+    }
+  },
+  {
+    "id": "m1_s1_so_038",
+    "seedId": 38,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 손님이 와서 방을 정리했다.",
+    "english": "Guests were coming, so I cleaned my room.",
+    "words": [
+      "Guests",
+      "were",
+      "coming",
+      "so",
+      "I",
+      "cleaned",
+      "my",
+      "room",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Guests were coming",
+      "so",
+      "I cleaned my room"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Guests were coming, but I cleaned my room.",
+      "statementForm": "Guests were coming, so I cleaned my room.",
+      "fragmentForm": "Guests were coming, so I cleaned my room?"
+    }
+  },
+  {
+    "id": "m1_s1_so_039",
+    "seedId": 39,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 우산이 없어서 뛰어갔다.",
+    "english": "She had no umbrella, so she ran.",
+    "words": [
+      "She",
+      "had",
+      "no",
+      "umbrella",
+      "so",
+      "she",
+      "ran",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had no umbrella",
+      "so",
+      "she ran"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had no umbrella, but she ran.",
+      "statementForm": "She had no umbrella, so she ran.",
+      "fragmentForm": "She had no umbrella, so she ran?"
+    }
+  },
+  {
+    "id": "m1_s1_so_040",
+    "seedId": 40,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "수업이 끝나서 우리는 집에 갔다.",
+    "english": "The class ended, so we went home.",
+    "words": [
+      "The",
+      "class",
+      "ended",
+      "so",
+      "we",
+      "went",
+      "home",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The class ended",
+      "so",
+      "we went home"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "cause_result",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The class ended, but we went home.",
+      "statementForm": "The class ended, so we went home.",
+      "fragmentForm": "The class ended, so we went home?"
+    }
+  },
+  {
+    "id": "m1_s1_so_041",
+    "seedId": 41,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 너무 긴장해서 말을 거의 하지 못했다.",
+    "english": "I was very nervous, so I could hardly speak.",
+    "words": [
+      "I",
+      "was",
+      "so",
+      "nervous",
+      "so",
+      "I",
+      "could",
+      "hardly",
+      "speak",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I was so nervous",
+      "so",
+      "I could hardly speak"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was so nervous, but I could hardly speak.",
+      "statementForm": "I was so nervous, so I could hardly speak.",
+      "fragmentForm": "I was so nervous, so I could hardly speak?"
+    }
+  },
+  {
+    "id": "m1_s1_so_042",
+    "seedId": 42,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 목이 아파서 크게 말하지 않았다.",
+    "english": "His throat hurt, so he didn't speak loudly.",
+    "words": [
+      "His",
+      "throat",
+      "hurt",
+      "so",
+      "he",
+      "didn't",
+      "speak",
+      "loudly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "His throat hurt",
+      "so",
+      "he didn't speak loudly"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "His throat hurt, but he didn't speak loudly.",
+      "statementForm": "His throat hurt, so he didn't speak loudly.",
+      "fragmentForm": "His throat hurt, so he didn't speak loudly?"
+    }
+  },
+  {
+    "id": "m1_s1_so_043",
+    "seedId": 43,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 책이 너무 재미있어서 밤늦게까지 읽었다.",
+    "english": "The book was very interesting, so she read until late at night.",
+    "words": [
+      "The",
+      "book",
+      "was",
+      "very",
+      "interesting",
+      "so",
+      "she",
+      "read",
+      "until",
+      "late",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The book was very interesting",
+      "so",
+      "she read until late at night"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book was very interesting, but she read until late at night.",
+      "statementForm": "The book was very interesting, so she read until late at night.",
+      "fragmentForm": "The book was very interesting, so she read until late at night?"
+    }
+  },
+  {
+    "id": "m1_s1_so_044",
+    "seedId": 44,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 숙제를 끝내서 마음이 편했다.",
+    "english": "I finished my homework, so I felt relaxed.",
+    "words": [
+      "I",
+      "finished",
+      "my",
+      "homework",
+      "so",
+      "I",
+      "felt",
+      "relaxed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I finished my homework",
+      "so",
+      "I felt relaxed"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I finished my homework, but I felt relaxed.",
+      "statementForm": "I finished my homework, so I felt relaxed.",
+      "fragmentForm": "I finished my homework, so I felt relaxed?"
+    }
+  },
+  {
+    "id": "m1_s1_so_045",
+    "seedId": 45,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 핸드폰 배터리가 없어서 나에게 전화하지 못했다.",
+    "english": "His phone battery died, so he couldn't call me.",
+    "words": [
+      "His",
+      "phone",
+      "battery",
+      "died",
+      "so",
+      "he",
+      "couldn't",
+      "call",
+      "me",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "His phone battery died",
+      "so",
+      "he couldn't call me"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "His phone battery died, but he couldn't call me.",
+      "statementForm": "His phone battery died, so he couldn't call me.",
+      "fragmentForm": "His phone battery died, so he couldn't call me?"
+    }
+  },
+  {
+    "id": "m1_s1_so_046",
+    "seedId": 46,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 버스를 제시간에 타서 늦지 않았다.",
+    "english": "She caught the bus on time, so she wasn't late.",
+    "words": [
+      "She",
+      "caught",
+      "the",
+      "bus",
+      "on",
+      "time",
+      "so",
+      "she",
+      "wasn't",
+      "late",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She caught the bus on time",
+      "so",
+      "she wasn't late"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She caught the bus on time, but she wasn't late.",
+      "statementForm": "She caught the bus on time, so she wasn't late.",
+      "fragmentForm": "She caught the bus on time, so she wasn't late?"
+    }
+  },
+  {
+    "id": "m1_s1_so_047",
+    "seedId": 47,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 창문을 열어 두어서 방이 시원했다.",
+    "english": "I left the window open, so the room was cool.",
+    "words": [
+      "I",
+      "left",
+      "the",
+      "window",
+      "open",
+      "so",
+      "the",
+      "room",
+      "was",
+      "cool",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I left the window open",
+      "so",
+      "the room was cool"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I left the window open, but the room was cool.",
+      "statementForm": "I left the window open, so the room was cool.",
+      "fragmentForm": "I left the window open, so the room was cool?"
+    }
+  },
+  {
+    "id": "m1_s1_so_048",
+    "seedId": 48,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 열심히 저축해서 새 자전거를 샀다.",
+    "english": "He saved money hard, so he bought a new bike.",
+    "words": [
+      "He",
+      "saved",
+      "money",
+      "hard",
+      "so",
+      "he",
+      "bought",
+      "a",
+      "new",
+      "bike",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He saved money hard",
+      "so",
+      "he bought a new bike"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He saved money hard, but he bought a new bike.",
+      "statementForm": "He saved money hard, so he bought a new bike.",
+      "fragmentForm": "He saved money hard, so he bought a new bike?"
+    }
+  },
+  {
+    "id": "m1_s1_so_049",
+    "seedId": 49,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 설명을 잘 들어서 문제를 쉽게 풀었다.",
+    "english": "She listened carefully, so she solved the problem easily.",
+    "words": [
+      "She",
+      "listened",
+      "carefully",
+      "so",
+      "she",
+      "solved",
+      "the",
+      "problem",
+      "easily",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She listened carefully",
+      "so",
+      "she solved the problem easily"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She listened carefully, but she solved the problem easily.",
+      "statementForm": "She listened carefully, so she solved the problem easily.",
+      "fragmentForm": "She listened carefully, so she solved the problem easily?"
+    }
+  },
+  {
+    "id": "m1_s1_so_050",
+    "seedId": 50,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 신발이 젖어서 양말을 갈아신었다.",
+    "english": "My shoes got wet, so I changed my socks.",
+    "words": [
+      "My",
+      "shoes",
+      "got",
+      "wet",
+      "so",
+      "I",
+      "changed",
+      "my",
+      "socks",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My shoes got wet",
+      "so",
+      "I changed my socks"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My shoes got wet, but I changed my socks.",
+      "statementForm": "My shoes got wet, so I changed my socks.",
+      "fragmentForm": "My shoes got wet, so I changed my socks?"
+    }
+  },
+  {
+    "id": "m1_s1_so_051",
+    "seedId": 51,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 머리가 아파서 잠시 누웠다.",
+    "english": "He had a headache, so he lay down for a while.",
+    "words": [
+      "He",
+      "had",
+      "a",
+      "headache",
+      "so",
+      "he",
+      "lay",
+      "down",
+      "for",
+      "a",
+      "while",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He had a headache",
+      "so",
+      "he lay down for a while"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He had a headache, but he lay down for a while.",
+      "statementForm": "He had a headache, so he lay down for a while.",
+      "fragmentForm": "He had a headache, so he lay down for a while?"
+    }
+  },
+  {
+    "id": "m1_s1_so_052",
+    "seedId": 52,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 친구를 만나서 매우 기뻤다.",
+    "english": "She met her friend, so she was very happy.",
+    "words": [
+      "She",
+      "met",
+      "her",
+      "friend",
+      "so",
+      "she",
+      "was",
+      "very",
+      "happy",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She met her friend",
+      "so",
+      "she was very happy"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She met her friend, but she was very happy.",
+      "statementForm": "She met her friend, so she was very happy.",
+      "fragmentForm": "She met her friend, so she was very happy?"
+    }
+  },
+  {
+    "id": "m1_s1_so_053",
+    "seedId": 53,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 지갑을 집에 두고 와서 점심을 사지 못했다.",
+    "english": "I left my wallet at home, so I couldn't buy lunch.",
+    "words": [
+      "I",
+      "left",
+      "my",
+      "wallet",
+      "at",
+      "home",
+      "so",
+      "I",
+      "couldn't",
+      "buy",
+      "lunch",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I left my wallet at home",
+      "so",
+      "I couldn't buy lunch"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I left my wallet at home, but I couldn't buy lunch.",
+      "statementForm": "I left my wallet at home, so I couldn't buy lunch.",
+      "fragmentForm": "I left my wallet at home, so I couldn't buy lunch?"
+    }
+  },
+  {
+    "id": "m1_s1_so_054",
+    "seedId": 54,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 약속을 잊어버려서 친구를 기다리게 했다.",
+    "english": "He forgot the promise, so he kept his friend waiting.",
+    "words": [
+      "He",
+      "forgot",
+      "the",
+      "promise",
+      "so",
+      "he",
+      "kept",
+      "his",
+      "friend",
+      "waiting",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He forgot the promise",
+      "so",
+      "he kept his friend waiting"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He forgot the promise, but he kept his friend waiting.",
+      "statementForm": "He forgot the promise, so he kept his friend waiting.",
+      "fragmentForm": "He forgot the promise, so he kept his friend waiting?"
+    }
+  },
+  {
+    "id": "m1_s1_so_055",
+    "seedId": 55,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 연필이 없어서 내 것을 빌렸다.",
+    "english": "She had no pencil, so she borrowed mine.",
+    "words": [
+      "She",
+      "had",
+      "no",
+      "pencil",
+      "so",
+      "she",
+      "borrowed",
+      "mine",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had no pencil",
+      "so",
+      "she borrowed mine"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had no pencil, but she borrowed mine.",
+      "statementForm": "She had no pencil, so she borrowed mine.",
+      "fragmentForm": "She had no pencil, so she borrowed mine?"
+    }
+  },
+  {
+    "id": "m1_s1_so_056",
+    "seedId": 56,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 늦잠을 자서 아침을 거를 뻔했다.",
+    "english": "I overslept, so I almost skipped breakfast.",
+    "words": [
+      "I",
+      "overslept",
+      "so",
+      "I",
+      "almost",
+      "skipped",
+      "breakfast",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I overslept",
+      "so",
+      "I almost skipped breakfast"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I overslept, but I almost skipped breakfast.",
+      "statementForm": "I overslept, so I almost skipped breakfast.",
+      "fragmentForm": "I overslept, so I almost skipped breakfast?"
+    }
+  },
+  {
+    "id": "m1_s1_so_057",
+    "seedId": 57,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 비밀을 알게 되어서 놀랐다.",
+    "english": "He learned the secret, so he was surprised.",
+    "words": [
+      "He",
+      "learned",
+      "the",
+      "secret",
+      "so",
+      "he",
+      "was",
+      "surprised",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He learned the secret",
+      "so",
+      "he was surprised"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He learned the secret, but he was surprised.",
+      "statementForm": "He learned the secret, so he was surprised.",
+      "fragmentForm": "He learned the secret, so he was surprised?"
+    }
+  },
+  {
+    "id": "m1_s1_so_058",
+    "seedId": 58,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 많이 걸어서 다리가 아팠다.",
+    "english": "She walked a lot, so her legs hurt.",
+    "words": [
+      "She",
+      "walked",
+      "a",
+      "lot",
+      "so",
+      "her",
+      "legs",
+      "hurt",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She walked a lot",
+      "so",
+      "her legs hurt"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She walked a lot, but her legs hurt.",
+      "statementForm": "She walked a lot, so her legs hurt.",
+      "fragmentForm": "She walked a lot, so her legs hurt?"
+    }
+  },
+  {
+    "id": "m1_s1_so_059",
+    "seedId": 59,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 교실 문이 잠겨 있어서 복도에서 기다렸다.",
+    "english": "The classroom door was locked, so I waited in the hall.",
+    "words": [
+      "The",
+      "classroom",
+      "door",
+      "was",
+      "locked",
+      "so",
+      "I",
+      "waited",
+      "in",
+      "the",
+      "hall",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The classroom door was locked",
+      "so",
+      "I waited in the hall"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The classroom door was locked, but I waited in the hall.",
+      "statementForm": "The classroom door was locked, so I waited in the hall.",
+      "fragmentForm": "The classroom door was locked, so I waited in the hall?"
+    }
+  },
+  {
+    "id": "m1_s1_so_060",
+    "seedId": 60,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 점심을 너무 빨리 먹어서 체했다.",
+    "english": "He ate lunch too quickly, so he felt sick.",
+    "words": [
+      "He",
+      "ate",
+      "lunch",
+      "too",
+      "quickly",
+      "so",
+      "he",
+      "felt",
+      "sick",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He ate lunch too quickly",
+      "so",
+      "he felt sick"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He ate lunch too quickly, but he felt sick.",
+      "statementForm": "He ate lunch too quickly, so he felt sick.",
+      "fragmentForm": "He ate lunch too quickly, so he felt sick?"
+    }
+  },
+  {
+    "id": "m1_s1_so_061",
+    "seedId": 61,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 너무 기뻐서 계속 웃었다.",
+    "english": "She was very happy, so she kept smiling.",
+    "words": [
+      "She",
+      "was",
+      "very",
+      "happy",
+      "so",
+      "she",
+      "kept",
+      "smiling",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She was very happy",
+      "so",
+      "she kept smiling"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was very happy, but she kept smiling.",
+      "statementForm": "She was very happy, so she kept smiling.",
+      "fragmentForm": "She was very happy, so she kept smiling?"
+    }
+  },
+  {
+    "id": "m1_s1_so_062",
+    "seedId": 62,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 지도에 표시해 두어서 길을 쉽게 찾았다.",
+    "english": "I marked it on the map, so I found the way easily.",
+    "words": [
+      "I",
+      "marked",
+      "it",
+      "on",
+      "the",
+      "map",
+      "so",
+      "I",
+      "found",
+      "the",
+      "way",
+      "easily",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I marked it on the map",
+      "so",
+      "I found the way easily"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I marked it on the map, but I found the way easily.",
+      "statementForm": "I marked it on the map, so I found the way easily.",
+      "fragmentForm": "I marked it on the map, so I found the way easily?"
+    }
+  },
+  {
+    "id": "m1_s1_so_063",
+    "seedId": 63,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 목소리가 작아서 모두가 잘 듣지 못했다.",
+    "english": "His voice was low, so everyone couldn't hear well.",
+    "words": [
+      "His",
+      "voice",
+      "was",
+      "low",
+      "so",
+      "everyone",
+      "couldn't",
+      "hear",
+      "well",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "His voice was low",
+      "so",
+      "everyone couldn't hear well"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "His voice was low, but everyone couldn't hear well.",
+      "statementForm": "His voice was low, so everyone couldn't hear well.",
+      "fragmentForm": "His voice was low, so everyone couldn't hear well?"
+    }
+  },
+  {
+    "id": "m1_s1_so_064",
+    "seedId": 64,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 시험 준비를 다 해서 안심했다.",
+    "english": "She finished preparing for the test, so she felt relieved.",
+    "words": [
+      "She",
+      "finished",
+      "preparing",
+      "for",
+      "the",
+      "test",
+      "so",
+      "she",
+      "felt",
+      "relieved",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She finished preparing for the test",
+      "so",
+      "she felt relieved"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She finished preparing for the test, but she felt relieved.",
+      "statementForm": "She finished preparing for the test, so she felt relieved.",
+      "fragmentForm": "She finished preparing for the test, so she felt relieved?"
+    }
+  },
+  {
+    "id": "m1_s1_so_065",
+    "seedId": 65,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 책을 반납해야 해서 도서관에 들렀다.",
+    "english": "I had to return a book, so I stopped by the library.",
+    "words": [
+      "I",
+      "had",
+      "to",
+      "return",
+      "a",
+      "book",
+      "so",
+      "I",
+      "stopped",
+      "by",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had to return a book",
+      "so",
+      "I stopped by the library"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had to return a book, but I stopped by the library.",
+      "statementForm": "I had to return a book, so I stopped by the library.",
+      "fragmentForm": "I had to return a book, so I stopped by the library?"
+    }
+  },
+  {
+    "id": "m1_s1_so_066",
+    "seedId": 66,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 새 신발을 신어서 기분이 좋았다.",
+    "english": "He wore new shoes, so he felt good.",
+    "words": [
+      "He",
+      "wore",
+      "new",
+      "shoes",
+      "so",
+      "he",
+      "felt",
+      "good",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He wore new shoes",
+      "so",
+      "he felt good"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He wore new shoes, but he felt good.",
+      "statementForm": "He wore new shoes, so he felt good.",
+      "fragmentForm": "He wore new shoes, so he felt good?"
+    }
+  },
+  {
+    "id": "m1_s1_so_067",
+    "seedId": 67,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 점수를 확인하고 안도의 한숨을 쉬었다.",
+    "english": "She checked her score, so she sighed with relief.",
+    "words": [
+      "She",
+      "checked",
+      "her",
+      "score",
+      "so",
+      "she",
+      "sighed",
+      "with",
+      "relief",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She checked her score",
+      "so",
+      "she sighed with relief"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She checked her score, but she sighed with relief.",
+      "statementForm": "She checked her score, so she sighed with relief.",
+      "fragmentForm": "She checked her score, so she sighed with relief?"
+    }
+  },
+  {
+    "id": "m1_s1_so_068",
+    "seedId": 68,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 너무 바빠서 점심을 늦게 먹었다.",
+    "english": "I was very busy, so I ate lunch late.",
+    "words": [
+      "I",
+      "was",
+      "very",
+      "busy",
+      "so",
+      "I",
+      "ate",
+      "lunch",
+      "late",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I was very busy",
+      "so",
+      "I ate lunch late"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was very busy, but I ate lunch late.",
+      "statementForm": "I was very busy, so I ate lunch late.",
+      "fragmentForm": "I was very busy, so I ate lunch late?"
+    }
+  },
+  {
+    "id": "m1_s1_so_069",
+    "seedId": 69,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 약속 장소를 잘못 알아서 다른 곳에 갔다.",
+    "english": "He misunderstood the meeting place, so he went to the wrong place.",
+    "words": [
+      "He",
+      "misunderstood",
+      "the",
+      "meeting",
+      "place",
+      "so",
+      "he",
+      "went",
+      "to",
+      "the",
+      "wrong",
+      "place",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He misunderstood the meeting place",
+      "so",
+      "he went to the wrong place"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He misunderstood the meeting place, but he went to the wrong place.",
+      "statementForm": "He misunderstood the meeting place, so he went to the wrong place.",
+      "fragmentForm": "He misunderstood the meeting place, so he went to the wrong place?"
+    }
+  },
+  {
+    "id": "m1_s1_so_070",
+    "seedId": 70,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 창문을 닫아서 방이 조용해졌다.",
+    "english": "She closed the window, so the room became quiet.",
+    "words": [
+      "She",
+      "closed",
+      "the",
+      "window",
+      "so",
+      "the",
+      "room",
+      "became",
+      "quiet",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She closed the window",
+      "so",
+      "the room became quiet"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She closed the window, but the room became quiet.",
+      "statementForm": "She closed the window, so the room became quiet.",
+      "fragmentForm": "She closed the window, so the room became quiet?"
+    }
+  },
+  {
+    "id": "m1_s1_so_071",
+    "seedId": 71,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 발표를 마쳐서 홀가분했다.",
+    "english": "I finished my presentation, so I felt free.",
+    "words": [
+      "I",
+      "finished",
+      "my",
+      "presentation",
+      "so",
+      "I",
+      "felt",
+      "free",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I finished my presentation",
+      "so",
+      "I felt free"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I finished my presentation, but I felt free.",
+      "statementForm": "I finished my presentation, so I felt free.",
+      "fragmentForm": "I finished my presentation, so I felt free?"
+    }
+  },
+  {
+    "id": "m1_s1_so_072",
+    "seedId": 72,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 눈이 아파서 화면을 오래 보지 못했다.",
+    "english": "His eyes hurt, so he couldn't look at the screen long.",
+    "words": [
+      "His",
+      "eyes",
+      "hurt",
+      "so",
+      "he",
+      "couldn't",
+      "look",
+      "at",
+      "the",
+      "screen",
+      "long",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "His eyes hurt",
+      "so",
+      "he couldn't look at the screen long"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "His eyes hurt, but he couldn't look at the screen long.",
+      "statementForm": "His eyes hurt, so he couldn't look at the screen long.",
+      "fragmentForm": "His eyes hurt, so he couldn't look at the screen long?"
+    }
+  },
+  {
+    "id": "m1_s1_so_073",
+    "seedId": 73,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 연습이 부족해서 실수를 했다.",
+    "english": "She didn't practice enough, so she made mistakes.",
+    "words": [
+      "She",
+      "didn't",
+      "practice",
+      "enough",
+      "so",
+      "she",
+      "made",
+      "mistakes",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She didn't practice enough",
+      "so",
+      "she made mistakes"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She didn't practice enough, but she made mistakes.",
+      "statementForm": "She didn't practice enough, so she made mistakes.",
+      "fragmentForm": "She didn't practice enough, so she made mistakes?"
+    }
+  },
+  {
+    "id": "m1_s1_so_074",
+    "seedId": 74,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 메시지를 늦게 봐서 바로 답하지 못했다.",
+    "english": "I saw the message late, so I couldn't reply at once.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "message",
+      "late",
+      "so",
+      "I",
+      "couldn't",
+      "reply",
+      "at",
+      "once",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I saw the message late",
+      "so",
+      "I couldn't reply at once"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the message late, but I couldn't reply at once.",
+      "statementForm": "I saw the message late, so I couldn't reply at once.",
+      "fragmentForm": "I saw the message late, so I couldn't reply at once?"
+    }
+  },
+  {
+    "id": "m1_s1_so_075",
+    "seedId": 75,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 축구공을 세게 차서 담장을 넘겼다.",
+    "english": "He kicked the ball hard, so it went over the fence.",
+    "words": [
+      "He",
+      "kicked",
+      "the",
+      "ball",
+      "hard",
+      "so",
+      "it",
+      "went",
+      "over",
+      "the",
+      "fence",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He kicked the ball hard",
+      "so",
+      "it went over the fence"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He kicked the ball hard, but it went over the fence.",
+      "statementForm": "He kicked the ball hard, so it went over the fence.",
+      "fragmentForm": "He kicked the ball hard, so it went over the fence?"
+    }
+  },
+  {
+    "id": "m1_s1_so_076",
+    "seedId": 76,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 선물을 받아서 얼굴이 밝아졌다.",
+    "english": "She got a present, so her face brightened.",
+    "words": [
+      "She",
+      "got",
+      "a",
+      "present",
+      "so",
+      "her",
+      "face",
+      "brightened",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She got a present",
+      "so",
+      "her face brightened"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She got a present, but her face brightened.",
+      "statementForm": "She got a present, so her face brightened.",
+      "fragmentForm": "She got a present, so her face brightened?"
+    }
+  },
+  {
+    "id": "m1_s1_so_077",
+    "seedId": 77,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 지우개를 잃어버려서 연필 자국을 그대로 두었다.",
+    "english": "I lost my eraser, so I left the pencil marks.",
+    "words": [
+      "I",
+      "lost",
+      "my",
+      "eraser",
+      "so",
+      "I",
+      "left",
+      "the",
+      "pencil",
+      "marks",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I lost my eraser",
+      "so",
+      "I left the pencil marks"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I lost my eraser, but I left the pencil marks.",
+      "statementForm": "I lost my eraser, so I left the pencil marks.",
+      "fragmentForm": "I lost my eraser, so I left the pencil marks?"
+    }
+  },
+  {
+    "id": "m1_s1_so_078",
+    "seedId": 78,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 미리 준비해 두어서 전혀 당황하지 않았다.",
+    "english": "He prepared in advance, so he wasn't embarrassed at all.",
+    "words": [
+      "He",
+      "prepared",
+      "in",
+      "advance",
+      "so",
+      "he",
+      "wasn't",
+      "embarrassed",
+      "at",
+      "all",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He prepared in advance",
+      "so",
+      "he wasn't embarrassed at all"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He prepared in advance, but he wasn't embarrassed at all.",
+      "statementForm": "He prepared in advance, so he wasn't embarrassed at all.",
+      "fragmentForm": "He prepared in advance, so he wasn't embarrassed at all?"
+    }
+  },
+  {
+    "id": "m1_s1_so_079",
+    "seedId": 79,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 햇빛이 강해서 모자를 썼다.",
+    "english": "The sunlight was strong, so she wore a hat.",
+    "words": [
+      "The",
+      "sunlight",
+      "was",
+      "strong",
+      "so",
+      "she",
+      "wore",
+      "a",
+      "hat",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The sunlight was strong",
+      "so",
+      "she wore a hat"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "situation_result",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The sunlight was strong, but she wore a hat.",
+      "statementForm": "The sunlight was strong, so she wore a hat.",
+      "fragmentForm": "The sunlight was strong, so she wore a hat?"
+    }
+  },
+  {
+    "id": "m1_s1_so_080",
+    "seedId": 80,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 너무 조용해서 잠이 왔다.",
+    "english": "It was very quiet, so I got sleepy.",
+    "words": [
+      "It",
+      "was",
+      "very",
+      "quiet",
+      "so",
+      "I",
+      "got",
+      "sleepy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It was very quiet",
+      "so",
+      "I got sleepy"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "emotion_action",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "It was very quiet, but I got sleepy.",
+      "statementForm": "It was very quiet, so I got sleepy.",
+      "fragmentForm": "It was very quiet, so I got sleepy?"
+    }
+  },
+  {
+    "id": "m1_s1_so_081",
+    "seedId": 81,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 준비를 철저히 했기 때문에 예상보다 침착하게 발표를 마쳤다.",
+    "english": "I prepared thoroughly, so I finished my presentation more calmly than I expected.",
+    "words": [
+      "I",
+      "prepared",
+      "thoroughly",
+      "so",
+      "I",
+      "finished",
+      "my",
+      "presentation",
+      "more",
+      "calmly",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I prepared thoroughly",
+      "so",
+      "I finished my presentation more calmly than I expected"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "I prepared thoroughly, but I finished my presentation more calmly than I expected.",
+      "statementForm": "I prepared thoroughly, so I finished my presentation more calmly than I expected.",
+      "fragmentForm": "I prepared thoroughly, so I finished my presentation more calmly than I expected?"
+    }
+  },
+  {
+    "id": "m1_s1_so_082",
+    "seedId": 82,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 문제의 핵심을 빨리 파악했기 때문에 불필요한 실수를 하지 않았다.",
+    "english": "He understood the key point quickly, so he didn't make unnecessary mistakes.",
+    "words": [
+      "He",
+      "understood",
+      "the",
+      "key",
+      "point",
+      "quickly",
+      "so",
+      "he",
+      "didn't",
+      "make",
+      "unnecessary",
+      "mistakes",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He understood the key point quickly",
+      "so",
+      "he didn't make unnecessary mistakes"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "He understood the key point quickly, but he didn't make unnecessary mistakes.",
+      "statementForm": "He understood the key point quickly, so he didn't make unnecessary mistakes.",
+      "fragmentForm": "He understood the key point quickly, so he didn't make unnecessary mistakes?"
+    }
+  },
+  {
+    "id": "m1_s1_so_083",
+    "seedId": 83,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "비가 갑자기 많이 왔기 때문에 우리는 계획을 바꾸고 실내에서 모였다.",
+    "english": "It suddenly rained hard, so we changed our plan and met indoors.",
+    "words": [
+      "It",
+      "suddenly",
+      "rained",
+      "hard",
+      "so",
+      "we",
+      "changed",
+      "our",
+      "plan",
+      "and",
+      "met",
+      "indoors",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It suddenly rained hard",
+      "so",
+      "we changed our plan and met indoors"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "It suddenly rained hard, but we changed our plan and met indoors.",
+      "statementForm": "It suddenly rained hard, so we changed our plan and met indoors.",
+      "fragmentForm": "It suddenly rained hard, so we changed our plan and met indoors?"
+    }
+  },
+  {
+    "id": "m1_s1_so_084",
+    "seedId": 84,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 약속 시간을 잘못 기억했기 때문에 모두보다 먼저 도착했다.",
+    "english": "I remembered the meeting time incorrectly, so I arrived earlier than everyone else.",
+    "words": [
+      "I",
+      "remembered",
+      "the",
+      "meeting",
+      "time",
+      "incorrectly",
+      "so",
+      "I",
+      "arrived",
+      "earlier",
+      "than",
+      "everyone",
+      "else",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I remembered the meeting time incorrectly",
+      "so",
+      "I arrived earlier than everyone else"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "I remembered the meeting time incorrectly, but I arrived earlier than everyone else.",
+      "statementForm": "I remembered the meeting time incorrectly, so I arrived earlier than everyone else.",
+      "fragmentForm": "I remembered the meeting time incorrectly, so I arrived earlier than everyone else?"
+    }
+  },
+  {
+    "id": "m1_s1_so_085",
+    "seedId": 85,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 설명을 여러 번 읽었기 때문에 문제를 풀 때 거의 망설이지 않았다.",
+    "english": "She read the explanation several times, so she hardly hesitated when solving the problem.",
+    "words": [
+      "She",
+      "read",
+      "the",
+      "explanation",
+      "several",
+      "times",
+      "so",
+      "she",
+      "hardly",
+      "hesitated",
+      "when",
+      "solving",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She read the explanation several times",
+      "so",
+      "she hardly hesitated when solving the problem"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "She read the explanation several times, but she hardly hesitated when solving the problem.",
+      "statementForm": "She read the explanation several times, so she hardly hesitated when solving the problem.",
+      "fragmentForm": "She read the explanation several times, so she hardly hesitated when solving the problem?"
+    }
+  },
+  {
+    "id": "m1_s1_so_086",
+    "seedId": 86,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 운동을 꾸준히 했기 때문에 긴 경기 후에도 쉽게 지치지 않았다.",
+    "english": "He exercised consistently, so he didn't get tired easily even after a long game.",
+    "words": [
+      "He",
+      "exercised",
+      "consistently",
+      "so",
+      "he",
+      "didn't",
+      "get",
+      "tired",
+      "easily",
+      "even",
+      "after",
+      "a",
+      "long",
+      "game",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He exercised consistently",
+      "so",
+      "he didn't get tired easily even after a long game"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "He exercised consistently, but he didn't get tired easily even after a long game.",
+      "statementForm": "He exercised consistently, so he didn't get tired easily even after a long game.",
+      "fragmentForm": "He exercised consistently, so he didn't get tired easily even after a long game?"
+    }
+  },
+  {
+    "id": "m1_s1_so_087",
+    "seedId": 87,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 지시를 정확히 들었기 때문에 다른 사람들보다 빨리 움직일 수 있었다.",
+    "english": "I listened to the instructions carefully, so I could move faster than the others.",
+    "words": [
+      "I",
+      "listened",
+      "to",
+      "the",
+      "instructions",
+      "carefully",
+      "so",
+      "I",
+      "could",
+      "move",
+      "faster",
+      "than",
+      "the",
+      "others",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I listened to the instructions carefully",
+      "so",
+      "I could move faster than the others"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "I listened to the instructions carefully, but I could move faster than the others.",
+      "statementForm": "I listened to the instructions carefully, so I could move faster than the others.",
+      "fragmentForm": "I listened to the instructions carefully, so I could move faster than the others?"
+    }
+  },
+  {
+    "id": "m1_s1_so_088",
+    "seedId": 88,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 너무 놀랐기 때문에 한동안 아무 말도 하지 못했다.",
+    "english": "She was so surprised, so she couldn't say anything for a while.",
+    "words": [
+      "She",
+      "was",
+      "so",
+      "surprised",
+      "so",
+      "she",
+      "couldn't",
+      "say",
+      "anything",
+      "for",
+      "a",
+      "while",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She was so surprised",
+      "so",
+      "she couldn't say anything for a while"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was so surprised, but she couldn't say anything for a while.",
+      "statementForm": "She was so surprised, so she couldn't say anything for a while.",
+      "fragmentForm": "She was so surprised, so she couldn't say anything for a while?"
+    }
+  },
+  {
+    "id": "m1_s1_so_089",
+    "seedId": 89,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "우리는 길을 미리 확인했기 때문에 낯선 도시에서도 헤매지 않았다.",
+    "english": "We checked the route in advance, so we didn't get lost even in the unfamiliar city.",
+    "words": [
+      "We",
+      "checked",
+      "the",
+      "route",
+      "in",
+      "advance",
+      "so",
+      "we",
+      "didn't",
+      "get",
+      "lost",
+      "even",
+      "in",
+      "the",
+      "unfamiliar",
+      "city",
+      "."
+    ],
+    "wordCount": 16,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We checked the route in advance",
+      "so",
+      "we didn't get lost even in the unfamiliar city"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "We checked the route in advance, but we didn't get lost even in the unfamiliar city.",
+      "statementForm": "We checked the route in advance, so we didn't get lost even in the unfamiliar city.",
+      "fragmentForm": "We checked the route in advance, so we didn't get lost even in the unfamiliar city?"
+    }
+  },
+  {
+    "id": "m1_s1_so_090",
+    "seedId": 90,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 자료를 충분히 모았기 때문에 보고서를 예상보다 빨리 끝냈다.",
+    "english": "He collected enough material, so he finished the report earlier than expected.",
+    "words": [
+      "He",
+      "collected",
+      "enough",
+      "material",
+      "so",
+      "he",
+      "finished",
+      "the",
+      "report",
+      "earlier",
+      "than",
+      "expected",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He collected enough material",
+      "so",
+      "he finished the report earlier than expected"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "He collected enough material, but he finished the report earlier than expected.",
+      "statementForm": "He collected enough material, so he finished the report earlier than expected.",
+      "fragmentForm": "He collected enough material, so he finished the report earlier than expected?"
+    }
+  },
+  {
+    "id": "m1_s1_so_091",
+    "seedId": 91,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 계속 연습했기 때문에 처음보다 훨씬 자연스럽게 말할 수 있었다.",
+    "english": "I practiced continually, so I could speak much more naturally than before.",
+    "words": [
+      "I",
+      "practiced",
+      "continually",
+      "so",
+      "I",
+      "could",
+      "speak",
+      "much",
+      "more",
+      "naturally",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I practiced continually",
+      "so",
+      "I could speak much more naturally than before"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "I practiced continually, but I could speak much more naturally than before.",
+      "statementForm": "I practiced continually, so I could speak much more naturally than before.",
+      "fragmentForm": "I practiced continually, so I could speak much more naturally than before?"
+    }
+  },
+  {
+    "id": "m1_s1_so_092",
+    "seedId": 92,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 밤새 아팠기 때문에 다음 날 수업에 집중하기 어려웠다.",
+    "english": "She had been sick all night, so it was hard for her to focus in class the next day.",
+    "words": [
+      "She",
+      "had",
+      "been",
+      "sick",
+      "all",
+      "night",
+      "so",
+      "it",
+      "was",
+      "hard",
+      "for",
+      "her",
+      "to",
+      "focus",
+      "in",
+      "class",
+      "the",
+      "next",
+      "day",
+      "."
+    ],
+    "wordCount": 19,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had been sick all night",
+      "so",
+      "it was hard for her to focus in class the next day"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had been sick all night, but it was hard for her to focus in class the next day.",
+      "statementForm": "She had been sick all night, so it was hard for her to focus in class the next day.",
+      "fragmentForm": "She had been sick all night, so it was hard for her to focus in class the next day?"
+    }
+  },
+  {
+    "id": "m1_s1_so_093",
+    "seedId": 93,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 시간을 아끼기 위해 바로 결론부터 말했기 때문에 모두가 쉽게 이해했다.",
+    "english": "He started with the conclusion to save time, so everyone understood easily.",
+    "words": [
+      "He",
+      "started",
+      "with",
+      "the",
+      "conclusion",
+      "to",
+      "save",
+      "time",
+      "so",
+      "everyone",
+      "understood",
+      "easily",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He started with the conclusion to save time",
+      "so",
+      "everyone understood easily"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "He started with the conclusion to save time, but everyone understood easily.",
+      "statementForm": "He started with the conclusion to save time, so everyone understood easily.",
+      "fragmentForm": "He started with the conclusion to save time, so everyone understood easily?"
+    }
+  },
+  {
+    "id": "m1_s1_so_094",
+    "seedId": 94,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 충분히 쉬지 못했기 때문에 작은 일에도 예민하게 반응했다.",
+    "english": "I didn't get enough rest, so I reacted sensitively even to small things.",
+    "words": [
+      "I",
+      "didn't",
+      "get",
+      "enough",
+      "rest",
+      "so",
+      "I",
+      "reacted",
+      "sensitively",
+      "even",
+      "to",
+      "small",
+      "things",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I didn't get enough rest",
+      "so",
+      "I reacted sensitively even to small things"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "I didn't get enough rest, but I reacted sensitively even to small things.",
+      "statementForm": "I didn't get enough rest, so I reacted sensitively even to small things.",
+      "fragmentForm": "I didn't get enough rest, so I reacted sensitively even to small things?"
+    }
+  },
+  {
+    "id": "m1_s1_so_095",
+    "seedId": 95,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 중요한 메모를 남겨 두었기 때문에 나중에 내용을 바로 떠올릴 수 있었다.",
+    "english": "She left important notes, so she could remember the details right away later.",
+    "words": [
+      "She",
+      "left",
+      "important",
+      "notes",
+      "so",
+      "she",
+      "could",
+      "remember",
+      "the",
+      "details",
+      "right",
+      "away",
+      "later",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She left important notes",
+      "so",
+      "she could remember the details right away later"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "She left important notes, but she could remember the details right away later.",
+      "statementForm": "She left important notes, so she could remember the details right away later.",
+      "fragmentForm": "She left important notes, so she could remember the details right away later?"
+    }
+  },
+  {
+    "id": "m1_s1_so_096",
+    "seedId": 96,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 계속 질문을 했기 때문에 결국 모든 과정을 스스로 이해하게 되었다.",
+    "english": "He kept asking questions, so he finally came to understand the whole process by himself.",
+    "words": [
+      "He",
+      "kept",
+      "asking",
+      "questions",
+      "so",
+      "he",
+      "finally",
+      "came",
+      "to",
+      "understand",
+      "the",
+      "whole",
+      "process",
+      "by",
+      "himself",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He kept asking questions",
+      "so",
+      "he finally came to understand the whole process by himself"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "He kept asking questions, but he finally came to understand the whole process by himself.",
+      "statementForm": "He kept asking questions, so he finally came to understand the whole process by himself.",
+      "fragmentForm": "He kept asking questions, so he finally came to understand the whole process by himself?"
+    }
+  },
+  {
+    "id": "m1_s1_so_097",
+    "seedId": 97,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "우리는 일찍 출발했기 때문에 예상치 못한 교통 체증에도 제시간에 도착했다.",
+    "english": "We left early, so we arrived on time despite unexpected traffic.",
+    "words": [
+      "We",
+      "left",
+      "early",
+      "so",
+      "we",
+      "arrived",
+      "on",
+      "time",
+      "despite",
+      "unexpected",
+      "traffic",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We left early",
+      "so",
+      "we arrived on time despite unexpected traffic"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "We left early, but we arrived on time despite unexpected traffic.",
+      "statementForm": "We left early, so we arrived on time despite unexpected traffic.",
+      "fragmentForm": "We left early, so we arrived on time despite unexpected traffic?"
+    }
+  },
+  {
+    "id": "m1_s1_so_098",
+    "seedId": 98,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "나는 실수를 바로 인정했기 때문에 상황이 더 나빠지지 않았다.",
+    "english": "I admitted my mistake at once, so the situation didn't get worse.",
+    "words": [
+      "I",
+      "admitted",
+      "my",
+      "mistake",
+      "at",
+      "once",
+      "so",
+      "the",
+      "situation",
+      "didn't",
+      "get",
+      "worse",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I admitted my mistake at once",
+      "so",
+      "the situation didn't get worse"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "I admitted my mistake at once, but the situation didn't get worse.",
+      "statementForm": "I admitted my mistake at once, so the situation didn't get worse.",
+      "fragmentForm": "I admitted my mistake at once, so the situation didn't get worse?"
+    }
+  },
+  {
+    "id": "m1_s1_so_099",
+    "seedId": 99,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그녀는 목표가 분명했기 때문에 작은 실패에도 쉽게 포기하지 않았다.",
+    "english": "She had a clear goal, so she didn't give up easily even after small failures.",
+    "words": [
+      "She",
+      "had",
+      "a",
+      "clear",
+      "goal",
+      "so",
+      "she",
+      "didn't",
+      "give",
+      "up",
+      "easily",
+      "even",
+      "after",
+      "small",
+      "failures",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had a clear goal",
+      "so",
+      "she didn't give up easily even after small failures"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had a clear goal, but she didn't give up easily even after small failures.",
+      "statementForm": "She had a clear goal, so she didn't give up easily even after small failures.",
+      "fragmentForm": "She had a clear goal, so she didn't give up easily even after small failures?"
+    }
+  },
+  {
+    "id": "m1_s1_so_100",
+    "seedId": 100,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "so_conjunction",
+    "chapterLabelKo": "접속사 so",
+    "korean": "그는 약속을 중요하게 생각했기 때문에 늦지 않으려고 끝까지 뛰었다.",
+    "english": "He took the promise seriously, so he ran all the way so as not to be late.",
+    "words": [
+      "He",
+      "took",
+      "the",
+      "promise",
+      "seriously",
+      "so",
+      "he",
+      "ran",
+      "all",
+      "the",
+      "way",
+      "so",
+      "as",
+      "not",
+      "to",
+      "be",
+      "late",
+      "."
+    ],
+    "wordCount": 17,
+    "grammar": "so_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He took the promise seriously",
+      "so",
+      "he ran all the way so as not to be late"
+    ],
+    "extraClueWordPool": [
+      "so",
+      "because",
+      "but",
+      "therefore",
+      "hungry",
+      "tired",
+      "late",
+      "sick",
+      "happy",
+      "study",
+      "pass",
+      "rain",
+      "stay",
+      "hurry",
+      "rest"
+    ],
+    "blankTargets": [
+      "so"
+    ],
+    "tags": [
+      "so_conjunction",
+      "advanced",
+      "complex"
+    ],
+    "distractorSeeds": {
+      "auxError": "He took the promise seriously, but he ran all the way so as not to be late.",
+      "statementForm": "He took the promise seriously, so he ran all the way so as not to be late.",
+      "fragmentForm": "He took the promise seriously, so he ran all the way so as not to be late?"
+    }
+  }
+]
