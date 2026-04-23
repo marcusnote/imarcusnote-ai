@@ -7,7 +7,7 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
+    "korean": "정말 아름다운 꽃이구나!",
     "english": "What a beautiful flower it is!",
     "words": [
       "What",
@@ -24,7 +24,7 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 아름다운 꽃",
+        "정말 아름다운 꽃이구나!",
         "a beautiful flower"
       ],
       [
@@ -32,7 +32,7 @@
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
@@ -44,8 +44,8 @@
     ],
     "blankTargets": [
       "What",
-      "a",
-      "beautiful"
+      "beautiful",
+      "flower"
     ],
     "tags": [
       "exclamation"
@@ -67,132 +67,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
     "words": [
       "What",
       "a",
       "cute",
-      "puppy",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 귀여운 강아지",
-        "a cute puppy"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "cute",
-      "puppy"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "cute"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
-      "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
-      ],
-      "fragmentForm": "What cute puppy it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_003",
-    "seedId": "ex_003",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
-    "words": [
-      "What",
-      "an",
-      "interesting",
-      "book",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 흥미로운 책",
-        "an interesting book"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "interesting",
-      "book"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "interesting"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
-      "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
-      ],
-      "fragmentForm": "What interesting book it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_004",
-    "seedId": "ex_004",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
-    "words": [
-      "What",
-      "a",
-      "bright",
       "room",
       "it",
       "is",
@@ -204,56 +84,56 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 밝은 방",
-        "a bright room"
+        "정말 귀여운 방이구나!",
+        "a cute room"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "bright",
+      "cute",
       "room"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "bright"
+      "cute",
+      "room"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a bright room is it!",
+      "auxError": "What a cute room is it!",
       "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
+        "What a cute room it is!",
+        "It is a cute room."
       ],
-      "fragmentForm": "What bright room it is!"
+      "fragmentForm": "What cute room it is!"
     }
   },
   {
-    "id": "m1_exclamation_005",
-    "seedId": "ex_005",
+    "id": "m1_exclamation_003",
+    "seedId": "ex_003",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 맛있는 식사구나!",
-    "english": "What a delicious meal it is!",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
     "words": [
       "What",
-      "a",
-      "delicious",
-      "meal",
+      "an",
+      "interesting",
+      "idea",
       "it",
       "is",
       "!"
@@ -264,15 +144,135 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 맛있는 식사",
-        "a delicious meal"
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "interesting",
+      "idea"
+    ],
+    "blankTargets": [
+      "What",
+      "interesting",
+      "idea"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an interesting idea is it!",
+      "statementForm": [
+        "What an interesting idea it is!",
+        "It is an interesting idea."
+      ],
+      "fragmentForm": "What interesting idea it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_004",
+    "seedId": "ex_004",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
+    "words": [
+      "What",
+      "a",
+      "clean",
+      "map",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "clean",
+      "map"
+    ],
+    "blankTargets": [
+      "What",
+      "clean",
+      "map"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a clean map is it!",
+      "statementForm": [
+        "What a clean map it is!",
+        "It is a clean map."
+      ],
+      "fragmentForm": "What clean map it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_005",
+    "seedId": "ex_005",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
+    "words": [
+      "What",
+      "a",
+      "delicious",
+      "book",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 맛있는 책이구나!",
+        "a delicious book"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
         "it is"
       ]
     ],
@@ -280,23 +280,23 @@
       "what",
       "a",
       "delicious",
-      "meal"
+      "book"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "delicious"
+      "delicious",
+      "book"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a delicious meal is it!",
+      "auxError": "What a delicious book is it!",
       "statementForm": [
-        "What a delicious meal it is!",
-        "It is a delicious meal."
+        "What a delicious book it is!",
+        "It is a delicious book."
       ],
-      "fragmentForm": "What delicious meal it is!"
+      "fragmentForm": "What delicious book it is!"
     }
   },
   {
@@ -307,7 +307,7 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 친절한 선생님구나!",
+    "korean": "정말 친절한 선생님이구나!",
     "english": "What a kind teacher it is!",
     "words": [
       "What",
@@ -324,7 +324,7 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 친절한 선생님",
+        "정말 친절한 선생님이구나!",
         "a kind teacher"
       ],
       [
@@ -332,7 +332,7 @@
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
@@ -344,8 +344,8 @@
     ],
     "blankTargets": [
       "What",
-      "a",
-      "kind"
+      "kind",
+      "teacher"
     ],
     "tags": [
       "exclamation"
@@ -367,13 +367,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 멋진 생각구나!",
-    "english": "What a wonderful idea it is!",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
     "words": [
       "What",
       "a",
-      "wonderful",
-      "idea",
+      "great",
+      "day",
       "it",
       "is",
       "!"
@@ -384,39 +384,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 멋진 생각",
-        "a wonderful idea"
+        "정말 멋진 날이구나!",
+        "a great day"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "wonderful",
-      "idea"
+      "great",
+      "day"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "wonderful"
+      "great",
+      "day"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a wonderful idea is it!",
+      "auxError": "What a great day is it!",
       "statementForm": [
-        "What a wonderful idea it is!",
-        "It is a wonderful idea."
+        "What a great day it is!",
+        "It is a great day."
       ],
-      "fragmentForm": "What wonderful idea it is!"
+      "fragmentForm": "What great day it is!"
     }
   },
   {
@@ -427,13 +427,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 시끄러운 거리구나!",
-    "english": "What a noisy street it is!",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
     "words": [
       "What",
       "a",
-      "noisy",
-      "street",
+      "wide",
+      "puppy",
       "it",
       "is",
       "!"
@@ -444,39 +444,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 시끄러운 거리",
-        "a noisy street"
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "noisy",
-      "street"
+      "wide",
+      "puppy"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "noisy"
+      "wide",
+      "puppy"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a noisy street is it!",
+      "auxError": "What a wide puppy is it!",
       "statementForm": [
-        "What a noisy street it is!",
-        "It is a noisy street."
+        "What a wide puppy it is!",
+        "It is a wide puppy."
       ],
-      "fragmentForm": "What noisy street it is!"
+      "fragmentForm": "What wide puppy it is!"
     }
   },
   {
@@ -487,13 +487,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 추운 날구나!",
-    "english": "What a cold day it is!",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
     "words": [
       "What",
       "a",
-      "cold",
-      "day",
+      "sunny",
+      "meal",
       "it",
       "is",
       "!"
@@ -504,39 +504,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 추운 날",
-        "a cold day"
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cold",
-      "day"
+      "sunny",
+      "meal"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cold"
+      "sunny",
+      "meal"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cold day is it!",
+      "auxError": "What a sunny meal is it!",
       "statementForm": [
-        "What a cold day it is!",
-        "It is a cold day."
+        "What a sunny meal it is!",
+        "It is a sunny meal."
       ],
-      "fragmentForm": "What cold day it is!"
+      "fragmentForm": "What sunny meal it is!"
     }
   },
   {
@@ -547,13 +547,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 뜨거운 요리구나!",
-    "english": "What a hot dish it is!",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
     "words": [
       "What",
-      "a",
-      "hot",
-      "dish",
+      "an",
+      "useful",
+      "street",
       "it",
       "is",
       "!"
@@ -564,39 +564,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 뜨거운 요리",
-        "a hot dish"
+        "정말 유용한 거리이구나!",
+        "an useful street"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "hot",
-      "dish"
+      "an",
+      "useful",
+      "street"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "hot"
+      "useful",
+      "street"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a hot dish is it!",
+      "auxError": "What an useful street is it!",
       "statementForm": [
-        "What a hot dish it is!",
-        "It is a hot dish."
+        "What an useful street it is!",
+        "It is an useful street."
       ],
-      "fragmentForm": "What hot dish it is!"
+      "fragmentForm": "What useful street it is!"
     }
   },
   {
@@ -607,13 +607,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 유용한 지도구나!",
-    "english": "What an useful map it is!",
+    "korean": "정말 아름다운 꽃이구나!",
+    "english": "What a beautiful flower it is!",
     "words": [
       "What",
-      "an",
-      "useful",
-      "map",
+      "a",
+      "beautiful",
+      "flower",
       "it",
       "is",
       "!"
@@ -624,39 +624,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 유용한 지도",
-        "an useful map"
+        "정말 아름다운 꽃이구나!",
+        "a beautiful flower"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "useful",
-      "map"
+      "a",
+      "beautiful",
+      "flower"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "useful"
+      "beautiful",
+      "flower"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an useful map is it!",
+      "auxError": "What a beautiful flower is it!",
       "statementForm": [
-        "What an useful map it is!",
-        "It is an useful map."
+        "What a beautiful flower it is!",
+        "It is a beautiful flower."
       ],
-      "fragmentForm": "What useful map it is!"
+      "fragmentForm": "What beautiful flower it is!"
     }
   },
   {
@@ -667,13 +667,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 오래된 그림구나!",
-    "english": "What an old picture it is!",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
     "words": [
       "What",
-      "an",
-      "old",
-      "picture",
+      "a",
+      "cute",
+      "room",
       "it",
       "is",
       "!"
@@ -684,39 +684,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 오래된 그림",
-        "an old picture"
+        "정말 귀여운 방이구나!",
+        "a cute room"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "old",
-      "picture"
+      "a",
+      "cute",
+      "room"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "old"
+      "cute",
+      "room"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an old picture is it!",
+      "auxError": "What a cute room is it!",
       "statementForm": [
-        "What an old picture it is!",
-        "It is an old picture."
+        "What a cute room it is!",
+        "It is a cute room."
       ],
-      "fragmentForm": "What old picture it is!"
+      "fragmentForm": "What cute room it is!"
     }
   },
   {
@@ -727,13 +727,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
-    "english": "What a beautiful flower it is!",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
     "words": [
       "What",
-      "a",
-      "beautiful",
-      "flower",
+      "an",
+      "interesting",
+      "idea",
       "it",
       "is",
       "!"
@@ -744,39 +744,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 아름다운 꽃",
-        "a beautiful flower"
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "beautiful",
-      "flower"
+      "an",
+      "interesting",
+      "idea"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "beautiful"
+      "interesting",
+      "idea"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a beautiful flower is it!",
+      "auxError": "What an interesting idea is it!",
       "statementForm": [
-        "What a beautiful flower it is!",
-        "It is a beautiful flower."
+        "What an interesting idea it is!",
+        "It is an interesting idea."
       ],
-      "fragmentForm": "What beautiful flower it is!"
+      "fragmentForm": "What interesting idea it is!"
     }
   },
   {
@@ -787,13 +787,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
     "words": [
       "What",
       "a",
-      "cute",
-      "puppy",
+      "clean",
+      "map",
       "it",
       "is",
       "!"
@@ -804,39 +804,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 귀여운 강아지",
-        "a cute puppy"
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cute",
-      "puppy"
+      "clean",
+      "map"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cute"
+      "clean",
+      "map"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
+      "auxError": "What a clean map is it!",
       "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
+        "What a clean map it is!",
+        "It is a clean map."
       ],
-      "fragmentForm": "What cute puppy it is!"
+      "fragmentForm": "What clean map it is!"
     }
   },
   {
@@ -847,12 +847,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
     "words": [
       "What",
-      "an",
-      "interesting",
+      "a",
+      "delicious",
       "book",
       "it",
       "is",
@@ -864,39 +864,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 흥미로운 책",
-        "an interesting book"
+        "정말 맛있는 책이구나!",
+        "a delicious book"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "interesting",
+      "a",
+      "delicious",
       "book"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "interesting"
+      "delicious",
+      "book"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
+      "auxError": "What a delicious book is it!",
       "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
+        "What a delicious book it is!",
+        "It is a delicious book."
       ],
-      "fragmentForm": "What interesting book it is!"
+      "fragmentForm": "What delicious book it is!"
     }
   },
   {
@@ -907,13 +907,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
+    "korean": "정말 친절한 선생님이구나!",
+    "english": "What a kind teacher it is!",
     "words": [
       "What",
       "a",
-      "bright",
-      "room",
+      "kind",
+      "teacher",
       "it",
       "is",
       "!"
@@ -924,39 +924,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 밝은 방",
-        "a bright room"
+        "정말 친절한 선생님이구나!",
+        "a kind teacher"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "bright",
-      "room"
+      "kind",
+      "teacher"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "bright"
+      "kind",
+      "teacher"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a bright room is it!",
+      "auxError": "What a kind teacher is it!",
       "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
+        "What a kind teacher it is!",
+        "It is a kind teacher."
       ],
-      "fragmentForm": "What bright room it is!"
+      "fragmentForm": "What kind teacher it is!"
     }
   },
   {
@@ -967,13 +967,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 맛있는 식사구나!",
-    "english": "What a delicious meal it is!",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
     "words": [
       "What",
       "a",
-      "delicious",
-      "meal",
+      "great",
+      "day",
       "it",
       "is",
       "!"
@@ -984,39 +984,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 맛있는 식사",
-        "a delicious meal"
+        "정말 멋진 날이구나!",
+        "a great day"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "delicious",
-      "meal"
+      "great",
+      "day"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "delicious"
+      "great",
+      "day"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a delicious meal is it!",
+      "auxError": "What a great day is it!",
       "statementForm": [
-        "What a delicious meal it is!",
-        "It is a delicious meal."
+        "What a great day it is!",
+        "It is a great day."
       ],
-      "fragmentForm": "What delicious meal it is!"
+      "fragmentForm": "What great day it is!"
     }
   },
   {
@@ -1027,13 +1027,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 친절한 선생님구나!",
-    "english": "What a kind teacher it is!",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
     "words": [
       "What",
       "a",
-      "kind",
-      "teacher",
+      "wide",
+      "puppy",
       "it",
       "is",
       "!"
@@ -1044,39 +1044,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 친절한 선생님",
-        "a kind teacher"
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "kind",
-      "teacher"
+      "wide",
+      "puppy"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "kind"
+      "wide",
+      "puppy"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a kind teacher is it!",
+      "auxError": "What a wide puppy is it!",
       "statementForm": [
-        "What a kind teacher it is!",
-        "It is a kind teacher."
+        "What a wide puppy it is!",
+        "It is a wide puppy."
       ],
-      "fragmentForm": "What kind teacher it is!"
+      "fragmentForm": "What wide puppy it is!"
     }
   },
   {
@@ -1087,13 +1087,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 멋진 생각구나!",
-    "english": "What a wonderful idea it is!",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
     "words": [
       "What",
       "a",
-      "wonderful",
-      "idea",
+      "sunny",
+      "meal",
       "it",
       "is",
       "!"
@@ -1104,39 +1104,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 멋진 생각",
-        "a wonderful idea"
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "wonderful",
-      "idea"
+      "sunny",
+      "meal"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "wonderful"
+      "sunny",
+      "meal"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a wonderful idea is it!",
+      "auxError": "What a sunny meal is it!",
       "statementForm": [
-        "What a wonderful idea it is!",
-        "It is a wonderful idea."
+        "What a sunny meal it is!",
+        "It is a sunny meal."
       ],
-      "fragmentForm": "What wonderful idea it is!"
+      "fragmentForm": "What sunny meal it is!"
     }
   },
   {
@@ -1147,12 +1147,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 시끄러운 거리구나!",
-    "english": "What a noisy street it is!",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
     "words": [
       "What",
-      "a",
-      "noisy",
+      "an",
+      "useful",
       "street",
       "it",
       "is",
@@ -1164,39 +1164,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 시끄러운 거리",
-        "a noisy street"
+        "정말 유용한 거리이구나!",
+        "an useful street"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "noisy",
+      "an",
+      "useful",
       "street"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "noisy"
+      "useful",
+      "street"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a noisy street is it!",
+      "auxError": "What an useful street is it!",
       "statementForm": [
-        "What a noisy street it is!",
-        "It is a noisy street."
+        "What an useful street it is!",
+        "It is an useful street."
       ],
-      "fragmentForm": "What noisy street it is!"
+      "fragmentForm": "What useful street it is!"
     }
   },
   {
@@ -1207,13 +1207,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 추운 날구나!",
-    "english": "What a cold day it is!",
+    "korean": "정말 아름다운 꽃이구나!",
+    "english": "What a beautiful flower it is!",
     "words": [
       "What",
       "a",
-      "cold",
-      "day",
+      "beautiful",
+      "flower",
       "it",
       "is",
       "!"
@@ -1224,39 +1224,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 추운 날",
-        "a cold day"
+        "정말 아름다운 꽃이구나!",
+        "a beautiful flower"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cold",
-      "day"
+      "beautiful",
+      "flower"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cold"
+      "beautiful",
+      "flower"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cold day is it!",
+      "auxError": "What a beautiful flower is it!",
       "statementForm": [
-        "What a cold day it is!",
-        "It is a cold day."
+        "What a beautiful flower it is!",
+        "It is a beautiful flower."
       ],
-      "fragmentForm": "What cold day it is!"
+      "fragmentForm": "What beautiful flower it is!"
     }
   },
   {
@@ -1267,13 +1267,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 뜨거운 요리구나!",
-    "english": "What a hot dish it is!",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
     "words": [
       "What",
       "a",
-      "hot",
-      "dish",
+      "cute",
+      "room",
       "it",
       "is",
       "!"
@@ -1284,39 +1284,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 뜨거운 요리",
-        "a hot dish"
+        "정말 귀여운 방이구나!",
+        "a cute room"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "hot",
-      "dish"
+      "cute",
+      "room"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "hot"
+      "cute",
+      "room"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a hot dish is it!",
+      "auxError": "What a cute room is it!",
       "statementForm": [
-        "What a hot dish it is!",
-        "It is a hot dish."
+        "What a cute room it is!",
+        "It is a cute room."
       ],
-      "fragmentForm": "What hot dish it is!"
+      "fragmentForm": "What cute room it is!"
     }
   },
   {
@@ -1327,13 +1327,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 유용한 지도구나!",
-    "english": "What an useful map it is!",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
     "words": [
       "What",
       "an",
-      "useful",
-      "map",
+      "interesting",
+      "idea",
       "it",
       "is",
       "!"
@@ -1344,39 +1344,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 유용한 지도",
-        "an useful map"
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "an",
-      "useful",
-      "map"
+      "interesting",
+      "idea"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "useful"
+      "interesting",
+      "idea"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an useful map is it!",
+      "auxError": "What an interesting idea is it!",
       "statementForm": [
-        "What an useful map it is!",
-        "It is an useful map."
+        "What an interesting idea it is!",
+        "It is an interesting idea."
       ],
-      "fragmentForm": "What useful map it is!"
+      "fragmentForm": "What interesting idea it is!"
     }
   },
   {
@@ -1387,13 +1387,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 오래된 그림구나!",
-    "english": "What an old picture it is!",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
     "words": [
       "What",
-      "an",
-      "old",
-      "picture",
+      "a",
+      "clean",
+      "map",
       "it",
       "is",
       "!"
@@ -1404,39 +1404,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 오래된 그림",
-        "an old picture"
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "old",
-      "picture"
+      "a",
+      "clean",
+      "map"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "old"
+      "clean",
+      "map"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an old picture is it!",
+      "auxError": "What a clean map is it!",
       "statementForm": [
-        "What an old picture it is!",
-        "It is an old picture."
+        "What a clean map it is!",
+        "It is a clean map."
       ],
-      "fragmentForm": "What old picture it is!"
+      "fragmentForm": "What clean map it is!"
     }
   },
   {
@@ -1447,13 +1447,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
-    "english": "What a beautiful flower it is!",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
     "words": [
       "What",
       "a",
-      "beautiful",
-      "flower",
+      "delicious",
+      "book",
       "it",
       "is",
       "!"
@@ -1464,39 +1464,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 아름다운 꽃",
-        "a beautiful flower"
+        "정말 맛있는 책이구나!",
+        "a delicious book"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "beautiful",
-      "flower"
+      "delicious",
+      "book"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "beautiful"
+      "delicious",
+      "book"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a beautiful flower is it!",
+      "auxError": "What a delicious book is it!",
       "statementForm": [
-        "What a beautiful flower it is!",
-        "It is a beautiful flower."
+        "What a delicious book it is!",
+        "It is a delicious book."
       ],
-      "fragmentForm": "What beautiful flower it is!"
+      "fragmentForm": "What delicious book it is!"
     }
   },
   {
@@ -1507,13 +1507,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
+    "korean": "정말 친절한 선생님이구나!",
+    "english": "What a kind teacher it is!",
     "words": [
       "What",
       "a",
-      "cute",
-      "puppy",
+      "kind",
+      "teacher",
       "it",
       "is",
       "!"
@@ -1524,39 +1524,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 귀여운 강아지",
-        "a cute puppy"
+        "정말 친절한 선생님이구나!",
+        "a kind teacher"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cute",
-      "puppy"
+      "kind",
+      "teacher"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cute"
+      "kind",
+      "teacher"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
+      "auxError": "What a kind teacher is it!",
       "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
+        "What a kind teacher it is!",
+        "It is a kind teacher."
       ],
-      "fragmentForm": "What cute puppy it is!"
+      "fragmentForm": "What kind teacher it is!"
     }
   },
   {
@@ -1567,13 +1567,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
     "words": [
       "What",
-      "an",
-      "interesting",
-      "book",
+      "a",
+      "great",
+      "day",
       "it",
       "is",
       "!"
@@ -1584,39 +1584,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 흥미로운 책",
-        "an interesting book"
+        "정말 멋진 날이구나!",
+        "a great day"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "interesting",
-      "book"
+      "a",
+      "great",
+      "day"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "interesting"
+      "great",
+      "day"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
+      "auxError": "What a great day is it!",
       "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
+        "What a great day it is!",
+        "It is a great day."
       ],
-      "fragmentForm": "What interesting book it is!"
+      "fragmentForm": "What great day it is!"
     }
   },
   {
@@ -1627,13 +1627,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
     "words": [
       "What",
       "a",
-      "bright",
-      "room",
+      "wide",
+      "puppy",
       "it",
       "is",
       "!"
@@ -1644,39 +1644,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 밝은 방",
-        "a bright room"
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "bright",
-      "room"
+      "wide",
+      "puppy"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "bright"
+      "wide",
+      "puppy"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a bright room is it!",
+      "auxError": "What a wide puppy is it!",
       "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
+        "What a wide puppy it is!",
+        "It is a wide puppy."
       ],
-      "fragmentForm": "What bright room it is!"
+      "fragmentForm": "What wide puppy it is!"
     }
   },
   {
@@ -1687,12 +1687,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 맛있는 식사구나!",
-    "english": "What a delicious meal it is!",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
     "words": [
       "What",
       "a",
-      "delicious",
+      "sunny",
       "meal",
       "it",
       "is",
@@ -1704,39 +1704,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 맛있는 식사",
-        "a delicious meal"
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "delicious",
+      "sunny",
       "meal"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "delicious"
+      "sunny",
+      "meal"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a delicious meal is it!",
+      "auxError": "What a sunny meal is it!",
       "statementForm": [
-        "What a delicious meal it is!",
-        "It is a delicious meal."
+        "What a sunny meal it is!",
+        "It is a sunny meal."
       ],
-      "fragmentForm": "What delicious meal it is!"
+      "fragmentForm": "What sunny meal it is!"
     }
   },
   {
@@ -1747,13 +1747,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 친절한 선생님구나!",
-    "english": "What a kind teacher it is!",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
     "words": [
       "What",
-      "a",
-      "kind",
-      "teacher",
+      "an",
+      "useful",
+      "street",
       "it",
       "is",
       "!"
@@ -1764,39 +1764,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 친절한 선생님",
-        "a kind teacher"
+        "정말 유용한 거리이구나!",
+        "an useful street"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "kind",
-      "teacher"
+      "an",
+      "useful",
+      "street"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "kind"
+      "useful",
+      "street"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a kind teacher is it!",
+      "auxError": "What an useful street is it!",
       "statementForm": [
-        "What a kind teacher it is!",
-        "It is a kind teacher."
+        "What an useful street it is!",
+        "It is an useful street."
       ],
-      "fragmentForm": "What kind teacher it is!"
+      "fragmentForm": "What useful street it is!"
     }
   },
   {
@@ -1807,13 +1807,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 멋진 생각구나!",
-    "english": "What a wonderful idea it is!",
+    "korean": "정말 아름다운 꽃이구나!",
+    "english": "What a beautiful flower it is!",
     "words": [
       "What",
       "a",
-      "wonderful",
-      "idea",
+      "beautiful",
+      "flower",
       "it",
       "is",
       "!"
@@ -1824,39 +1824,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 멋진 생각",
-        "a wonderful idea"
+        "정말 아름다운 꽃이구나!",
+        "a beautiful flower"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "wonderful",
-      "idea"
+      "beautiful",
+      "flower"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "wonderful"
+      "beautiful",
+      "flower"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a wonderful idea is it!",
+      "auxError": "What a beautiful flower is it!",
       "statementForm": [
-        "What a wonderful idea it is!",
-        "It is a wonderful idea."
+        "What a beautiful flower it is!",
+        "It is a beautiful flower."
       ],
-      "fragmentForm": "What wonderful idea it is!"
+      "fragmentForm": "What beautiful flower it is!"
     }
   },
   {
@@ -1867,13 +1867,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 시끄러운 거리구나!",
-    "english": "What a noisy street it is!",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
     "words": [
       "What",
       "a",
-      "noisy",
-      "street",
+      "cute",
+      "room",
       "it",
       "is",
       "!"
@@ -1884,39 +1884,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 시끄러운 거리",
-        "a noisy street"
+        "정말 귀여운 방이구나!",
+        "a cute room"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "noisy",
-      "street"
+      "cute",
+      "room"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "noisy"
+      "cute",
+      "room"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a noisy street is it!",
+      "auxError": "What a cute room is it!",
       "statementForm": [
-        "What a noisy street it is!",
-        "It is a noisy street."
+        "What a cute room it is!",
+        "It is a cute room."
       ],
-      "fragmentForm": "What noisy street it is!"
+      "fragmentForm": "What cute room it is!"
     }
   },
   {
@@ -1927,13 +1927,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 추운 날구나!",
-    "english": "What a cold day it is!",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
     "words": [
       "What",
-      "a",
-      "cold",
-      "day",
+      "an",
+      "interesting",
+      "idea",
       "it",
       "is",
       "!"
@@ -1944,39 +1944,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 추운 날",
-        "a cold day"
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "cold",
-      "day"
+      "an",
+      "interesting",
+      "idea"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cold"
+      "interesting",
+      "idea"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cold day is it!",
+      "auxError": "What an interesting idea is it!",
       "statementForm": [
-        "What a cold day it is!",
-        "It is a cold day."
+        "What an interesting idea it is!",
+        "It is an interesting idea."
       ],
-      "fragmentForm": "What cold day it is!"
+      "fragmentForm": "What interesting idea it is!"
     }
   },
   {
@@ -1987,13 +1987,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 뜨거운 요리구나!",
-    "english": "What a hot dish it is!",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
     "words": [
       "What",
       "a",
-      "hot",
-      "dish",
+      "clean",
+      "map",
       "it",
       "is",
       "!"
@@ -2004,39 +2004,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 뜨거운 요리",
-        "a hot dish"
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "hot",
-      "dish"
+      "clean",
+      "map"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "hot"
+      "clean",
+      "map"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a hot dish is it!",
+      "auxError": "What a clean map is it!",
       "statementForm": [
-        "What a hot dish it is!",
-        "It is a hot dish."
+        "What a clean map it is!",
+        "It is a clean map."
       ],
-      "fragmentForm": "What hot dish it is!"
+      "fragmentForm": "What clean map it is!"
     }
   },
   {
@@ -2047,13 +2047,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 유용한 지도구나!",
-    "english": "What an useful map it is!",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
     "words": [
       "What",
-      "an",
-      "useful",
-      "map",
+      "a",
+      "delicious",
+      "book",
       "it",
       "is",
       "!"
@@ -2064,39 +2064,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 유용한 지도",
-        "an useful map"
+        "정말 맛있는 책이구나!",
+        "a delicious book"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "useful",
-      "map"
+      "a",
+      "delicious",
+      "book"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "useful"
+      "delicious",
+      "book"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an useful map is it!",
+      "auxError": "What a delicious book is it!",
       "statementForm": [
-        "What an useful map it is!",
-        "It is an useful map."
+        "What a delicious book it is!",
+        "It is a delicious book."
       ],
-      "fragmentForm": "What useful map it is!"
+      "fragmentForm": "What delicious book it is!"
     }
   },
   {
@@ -2107,13 +2107,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 오래된 그림구나!",
-    "english": "What an old picture it is!",
+    "korean": "정말 친절한 선생님이구나!",
+    "english": "What a kind teacher it is!",
     "words": [
       "What",
-      "an",
-      "old",
-      "picture",
+      "a",
+      "kind",
+      "teacher",
       "it",
       "is",
       "!"
@@ -2124,39 +2124,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 오래된 그림",
-        "an old picture"
+        "정말 친절한 선생님이구나!",
+        "a kind teacher"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "old",
-      "picture"
+      "a",
+      "kind",
+      "teacher"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "old"
+      "kind",
+      "teacher"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an old picture is it!",
+      "auxError": "What a kind teacher is it!",
       "statementForm": [
-        "What an old picture it is!",
-        "It is an old picture."
+        "What a kind teacher it is!",
+        "It is a kind teacher."
       ],
-      "fragmentForm": "What old picture it is!"
+      "fragmentForm": "What kind teacher it is!"
     }
   },
   {
@@ -2167,13 +2167,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
-    "english": "What a beautiful flower it is!",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
     "words": [
       "What",
       "a",
-      "beautiful",
-      "flower",
+      "great",
+      "day",
       "it",
       "is",
       "!"
@@ -2184,39 +2184,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 아름다운 꽃",
-        "a beautiful flower"
+        "정말 멋진 날이구나!",
+        "a great day"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "beautiful",
-      "flower"
+      "great",
+      "day"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "beautiful"
+      "great",
+      "day"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a beautiful flower is it!",
+      "auxError": "What a great day is it!",
       "statementForm": [
-        "What a beautiful flower it is!",
-        "It is a beautiful flower."
+        "What a great day it is!",
+        "It is a great day."
       ],
-      "fragmentForm": "What beautiful flower it is!"
+      "fragmentForm": "What great day it is!"
     }
   },
   {
@@ -2227,12 +2227,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
     "words": [
       "What",
       "a",
-      "cute",
+      "wide",
       "puppy",
       "it",
       "is",
@@ -2244,39 +2244,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 귀여운 강아지",
-        "a cute puppy"
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cute",
+      "wide",
       "puppy"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cute"
+      "wide",
+      "puppy"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
+      "auxError": "What a wide puppy is it!",
       "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
+        "What a wide puppy it is!",
+        "It is a wide puppy."
       ],
-      "fragmentForm": "What cute puppy it is!"
+      "fragmentForm": "What wide puppy it is!"
     }
   },
   {
@@ -2287,132 +2287,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
-    "words": [
-      "What",
-      "an",
-      "interesting",
-      "book",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 흥미로운 책",
-        "an interesting book"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "interesting",
-      "book"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "interesting"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
-      "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
-      ],
-      "fragmentForm": "What interesting book it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_040",
-    "seedId": "ex_040",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
     "words": [
       "What",
       "a",
-      "bright",
-      "room",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 밝은 방",
-        "a bright room"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "bright",
-      "room"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "bright"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a bright room is it!",
-      "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
-      ],
-      "fragmentForm": "What bright room it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_041",
-    "seedId": "ex_041",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 맛있는 식사구나!",
-    "english": "What a delicious meal it is!",
-    "words": [
-      "What",
-      "a",
-      "delicious",
+      "sunny",
       "meal",
       "it",
       "is",
@@ -2424,175 +2304,55 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 맛있는 식사",
-        "a delicious meal"
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "delicious",
+      "sunny",
       "meal"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "delicious"
+      "sunny",
+      "meal"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a delicious meal is it!",
+      "auxError": "What a sunny meal is it!",
       "statementForm": [
-        "What a delicious meal it is!",
-        "It is a delicious meal."
+        "What a sunny meal it is!",
+        "It is a sunny meal."
       ],
-      "fragmentForm": "What delicious meal it is!"
+      "fragmentForm": "What sunny meal it is!"
     }
   },
   {
-    "id": "m1_exclamation_042",
-    "seedId": "ex_042",
+    "id": "m1_exclamation_040",
+    "seedId": "ex_040",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 친절한 선생님구나!",
-    "english": "What a kind teacher it is!",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
     "words": [
       "What",
-      "a",
-      "kind",
-      "teacher",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 친절한 선생님",
-        "a kind teacher"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "kind",
-      "teacher"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "kind"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a kind teacher is it!",
-      "statementForm": [
-        "What a kind teacher it is!",
-        "It is a kind teacher."
-      ],
-      "fragmentForm": "What kind teacher it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_043",
-    "seedId": "ex_043",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 멋진 생각구나!",
-    "english": "What a wonderful idea it is!",
-    "words": [
-      "What",
-      "a",
-      "wonderful",
-      "idea",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 멋진 생각",
-        "a wonderful idea"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "wonderful",
-      "idea"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "wonderful"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a wonderful idea is it!",
-      "statementForm": [
-        "What a wonderful idea it is!",
-        "It is a wonderful idea."
-      ],
-      "fragmentForm": "What wonderful idea it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_044",
-    "seedId": "ex_044",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 시끄러운 거리구나!",
-    "english": "What a noisy street it is!",
-    "words": [
-      "What",
-      "a",
-      "noisy",
+      "an",
+      "useful",
       "street",
       "it",
       "is",
@@ -2604,290 +2364,50 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 시끄러운 거리",
-        "a noisy street"
+        "정말 유용한 거리이구나!",
+        "an useful street"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "noisy",
+      "an",
+      "useful",
       "street"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "noisy"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a noisy street is it!",
-      "statementForm": [
-        "What a noisy street it is!",
-        "It is a noisy street."
-      ],
-      "fragmentForm": "What noisy street it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_045",
-    "seedId": "ex_045",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 추운 날구나!",
-    "english": "What a cold day it is!",
-    "words": [
-      "What",
-      "a",
-      "cold",
-      "day",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 추운 날",
-        "a cold day"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "cold",
-      "day"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "cold"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a cold day is it!",
-      "statementForm": [
-        "What a cold day it is!",
-        "It is a cold day."
-      ],
-      "fragmentForm": "What cold day it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_046",
-    "seedId": "ex_046",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 뜨거운 요리구나!",
-    "english": "What a hot dish it is!",
-    "words": [
-      "What",
-      "a",
-      "hot",
-      "dish",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 뜨거운 요리",
-        "a hot dish"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "hot",
-      "dish"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "hot"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a hot dish is it!",
-      "statementForm": [
-        "What a hot dish it is!",
-        "It is a hot dish."
-      ],
-      "fragmentForm": "What hot dish it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_047",
-    "seedId": "ex_047",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 유용한 지도구나!",
-    "english": "What an useful map it is!",
-    "words": [
-      "What",
-      "an",
       "useful",
-      "map",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 유용한 지도",
-        "an useful map"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "useful",
-      "map"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "useful"
+      "street"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an useful map is it!",
+      "auxError": "What an useful street is it!",
       "statementForm": [
-        "What an useful map it is!",
-        "It is an useful map."
+        "What an useful street it is!",
+        "It is an useful street."
       ],
-      "fragmentForm": "What useful map it is!"
+      "fragmentForm": "What useful street it is!"
     }
   },
   {
-    "id": "m1_exclamation_048",
-    "seedId": "ex_048",
+    "id": "m1_exclamation_041",
+    "seedId": "ex_041",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 오래된 그림구나!",
-    "english": "What an old picture it is!",
-    "words": [
-      "What",
-      "an",
-      "old",
-      "picture",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 오래된 그림",
-        "an old picture"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "old",
-      "picture"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "old"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an old picture is it!",
-      "statementForm": [
-        "What an old picture it is!",
-        "It is an old picture."
-      ],
-      "fragmentForm": "What old picture it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_049",
-    "seedId": "ex_049",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
+    "korean": "정말 아름다운 꽃이구나!",
     "english": "What a beautiful flower it is!",
     "words": [
       "What",
@@ -2904,7 +2424,7 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 아름다운 꽃",
+        "정말 아름다운 꽃이구나!",
         "a beautiful flower"
       ],
       [
@@ -2912,7 +2432,7 @@
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
@@ -2924,8 +2444,8 @@
     ],
     "blankTargets": [
       "What",
-      "a",
-      "beautiful"
+      "beautiful",
+      "flower"
     ],
     "tags": [
       "exclamation"
@@ -2940,139 +2460,19 @@
     }
   },
   {
-    "id": "m1_exclamation_050",
-    "seedId": "ex_050",
+    "id": "m1_exclamation_042",
+    "seedId": "ex_042",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
     "words": [
       "What",
       "a",
       "cute",
-      "puppy",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 귀여운 강아지",
-        "a cute puppy"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "cute",
-      "puppy"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "cute"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
-      "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
-      ],
-      "fragmentForm": "What cute puppy it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_051",
-    "seedId": "ex_051",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
-    "words": [
-      "What",
-      "an",
-      "interesting",
-      "book",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 흥미로운 책",
-        "an interesting book"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "interesting",
-      "book"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "interesting"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
-      "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
-      ],
-      "fragmentForm": "What interesting book it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_052",
-    "seedId": "ex_052",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
-    "words": [
-      "What",
-      "a",
-      "bright",
       "room",
       "it",
       "is",
@@ -3084,56 +2484,56 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 밝은 방",
-        "a bright room"
+        "정말 귀여운 방이구나!",
+        "a cute room"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "bright",
+      "cute",
       "room"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "bright"
+      "cute",
+      "room"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a bright room is it!",
+      "auxError": "What a cute room is it!",
       "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
+        "What a cute room it is!",
+        "It is a cute room."
       ],
-      "fragmentForm": "What bright room it is!"
+      "fragmentForm": "What cute room it is!"
     }
   },
   {
-    "id": "m1_exclamation_053",
-    "seedId": "ex_053",
+    "id": "m1_exclamation_043",
+    "seedId": "ex_043",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 맛있는 식사구나!",
-    "english": "What a delicious meal it is!",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
     "words": [
       "What",
-      "a",
-      "delicious",
-      "meal",
+      "an",
+      "interesting",
+      "idea",
       "it",
       "is",
       "!"
@@ -3144,15 +2544,135 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 맛있는 식사",
-        "a delicious meal"
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "interesting",
+      "idea"
+    ],
+    "blankTargets": [
+      "What",
+      "interesting",
+      "idea"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an interesting idea is it!",
+      "statementForm": [
+        "What an interesting idea it is!",
+        "It is an interesting idea."
+      ],
+      "fragmentForm": "What interesting idea it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_044",
+    "seedId": "ex_044",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
+    "words": [
+      "What",
+      "a",
+      "clean",
+      "map",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "clean",
+      "map"
+    ],
+    "blankTargets": [
+      "What",
+      "clean",
+      "map"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a clean map is it!",
+      "statementForm": [
+        "What a clean map it is!",
+        "It is a clean map."
+      ],
+      "fragmentForm": "What clean map it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_045",
+    "seedId": "ex_045",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
+    "words": [
+      "What",
+      "a",
+      "delicious",
+      "book",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 맛있는 책이구나!",
+        "a delicious book"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
         "it is"
       ]
     ],
@@ -3160,34 +2680,34 @@
       "what",
       "a",
       "delicious",
-      "meal"
+      "book"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "delicious"
+      "delicious",
+      "book"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a delicious meal is it!",
+      "auxError": "What a delicious book is it!",
       "statementForm": [
-        "What a delicious meal it is!",
-        "It is a delicious meal."
+        "What a delicious book it is!",
+        "It is a delicious book."
       ],
-      "fragmentForm": "What delicious meal it is!"
+      "fragmentForm": "What delicious book it is!"
     }
   },
   {
-    "id": "m1_exclamation_054",
-    "seedId": "ex_054",
+    "id": "m1_exclamation_046",
+    "seedId": "ex_046",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 친절한 선생님구나!",
+    "korean": "정말 친절한 선생님이구나!",
     "english": "What a kind teacher it is!",
     "words": [
       "What",
@@ -3204,7 +2724,7 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 친절한 선생님",
+        "정말 친절한 선생님이구나!",
         "a kind teacher"
       ],
       [
@@ -3212,7 +2732,7 @@
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
@@ -3224,8 +2744,8 @@
     ],
     "blankTargets": [
       "What",
-      "a",
-      "kind"
+      "kind",
+      "teacher"
     ],
     "tags": [
       "exclamation"
@@ -3240,139 +2760,19 @@
     }
   },
   {
-    "id": "m1_exclamation_055",
-    "seedId": "ex_055",
+    "id": "m1_exclamation_047",
+    "seedId": "ex_047",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 멋진 생각구나!",
-    "english": "What a wonderful idea it is!",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
     "words": [
       "What",
       "a",
-      "wonderful",
-      "idea",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 멋진 생각",
-        "a wonderful idea"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "wonderful",
-      "idea"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "wonderful"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a wonderful idea is it!",
-      "statementForm": [
-        "What a wonderful idea it is!",
-        "It is a wonderful idea."
-      ],
-      "fragmentForm": "What wonderful idea it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_056",
-    "seedId": "ex_056",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 시끄러운 거리구나!",
-    "english": "What a noisy street it is!",
-    "words": [
-      "What",
-      "a",
-      "noisy",
-      "street",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 시끄러운 거리",
-        "a noisy street"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "noisy",
-      "street"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "noisy"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a noisy street is it!",
-      "statementForm": [
-        "What a noisy street it is!",
-        "It is a noisy street."
-      ],
-      "fragmentForm": "What noisy street it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_057",
-    "seedId": "ex_057",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 추운 날구나!",
-    "english": "What a cold day it is!",
-    "words": [
-      "What",
-      "a",
-      "cold",
+      "great",
       "day",
       "it",
       "is",
@@ -3384,56 +2784,56 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 추운 날",
-        "a cold day"
+        "정말 멋진 날이구나!",
+        "a great day"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cold",
+      "great",
       "day"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cold"
+      "great",
+      "day"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cold day is it!",
+      "auxError": "What a great day is it!",
       "statementForm": [
-        "What a cold day it is!",
-        "It is a cold day."
+        "What a great day it is!",
+        "It is a great day."
       ],
-      "fragmentForm": "What cold day it is!"
+      "fragmentForm": "What great day it is!"
     }
   },
   {
-    "id": "m1_exclamation_058",
-    "seedId": "ex_058",
+    "id": "m1_exclamation_048",
+    "seedId": "ex_048",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 뜨거운 요리구나!",
-    "english": "What a hot dish it is!",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
     "words": [
       "What",
       "a",
-      "hot",
-      "dish",
+      "wide",
+      "puppy",
       "it",
       "is",
       "!"
@@ -3444,56 +2844,116 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 뜨거운 요리",
-        "a hot dish"
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "hot",
-      "dish"
+      "wide",
+      "puppy"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "hot"
+      "wide",
+      "puppy"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a hot dish is it!",
+      "auxError": "What a wide puppy is it!",
       "statementForm": [
-        "What a hot dish it is!",
-        "It is a hot dish."
+        "What a wide puppy it is!",
+        "It is a wide puppy."
       ],
-      "fragmentForm": "What hot dish it is!"
+      "fragmentForm": "What wide puppy it is!"
     }
   },
   {
-    "id": "m1_exclamation_059",
-    "seedId": "ex_059",
+    "id": "m1_exclamation_049",
+    "seedId": "ex_049",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 유용한 지도구나!",
-    "english": "What an useful map it is!",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
+    "words": [
+      "What",
+      "a",
+      "sunny",
+      "meal",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "sunny",
+      "meal"
+    ],
+    "blankTargets": [
+      "What",
+      "sunny",
+      "meal"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a sunny meal is it!",
+      "statementForm": [
+        "What a sunny meal it is!",
+        "It is a sunny meal."
+      ],
+      "fragmentForm": "What sunny meal it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_050",
+    "seedId": "ex_050",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
     "words": [
       "What",
       "an",
       "useful",
-      "map",
+      "street",
       "it",
       "is",
       "!"
@@ -3504,15 +2964,15 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 유용한 지도",
-        "an useful map"
+        "정말 유용한 거리이구나!",
+        "an useful street"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
@@ -3520,94 +2980,34 @@
       "what",
       "an",
       "useful",
-      "map"
+      "street"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "useful"
+      "useful",
+      "street"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an useful map is it!",
+      "auxError": "What an useful street is it!",
       "statementForm": [
-        "What an useful map it is!",
-        "It is an useful map."
+        "What an useful street it is!",
+        "It is an useful street."
       ],
-      "fragmentForm": "What useful map it is!"
+      "fragmentForm": "What useful street it is!"
     }
   },
   {
-    "id": "m1_exclamation_060",
-    "seedId": "ex_060",
+    "id": "m1_exclamation_051",
+    "seedId": "ex_051",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 오래된 그림구나!",
-    "english": "What an old picture it is!",
-    "words": [
-      "What",
-      "an",
-      "old",
-      "picture",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 오래된 그림",
-        "an old picture"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "old",
-      "picture"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "old"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an old picture is it!",
-      "statementForm": [
-        "What an old picture it is!",
-        "It is an old picture."
-      ],
-      "fragmentForm": "What old picture it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_061",
-    "seedId": "ex_061",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
+    "korean": "정말 아름다운 꽃이구나!",
     "english": "What a beautiful flower it is!",
     "words": [
       "What",
@@ -3624,7 +3024,7 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 아름다운 꽃",
+        "정말 아름다운 꽃이구나!",
         "a beautiful flower"
       ],
       [
@@ -3632,7 +3032,7 @@
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
@@ -3644,8 +3044,608 @@
     ],
     "blankTargets": [
       "What",
+      "beautiful",
+      "flower"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a beautiful flower is it!",
+      "statementForm": [
+        "What a beautiful flower it is!",
+        "It is a beautiful flower."
+      ],
+      "fragmentForm": "What beautiful flower it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_052",
+    "seedId": "ex_052",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
+    "words": [
+      "What",
       "a",
-      "beautiful"
+      "cute",
+      "room",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 귀여운 방이구나!",
+        "a cute room"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "cute",
+      "room"
+    ],
+    "blankTargets": [
+      "What",
+      "cute",
+      "room"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a cute room is it!",
+      "statementForm": [
+        "What a cute room it is!",
+        "It is a cute room."
+      ],
+      "fragmentForm": "What cute room it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_053",
+    "seedId": "ex_053",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
+    "words": [
+      "What",
+      "an",
+      "interesting",
+      "idea",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "interesting",
+      "idea"
+    ],
+    "blankTargets": [
+      "What",
+      "interesting",
+      "idea"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an interesting idea is it!",
+      "statementForm": [
+        "What an interesting idea it is!",
+        "It is an interesting idea."
+      ],
+      "fragmentForm": "What interesting idea it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_054",
+    "seedId": "ex_054",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
+    "words": [
+      "What",
+      "a",
+      "clean",
+      "map",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "clean",
+      "map"
+    ],
+    "blankTargets": [
+      "What",
+      "clean",
+      "map"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a clean map is it!",
+      "statementForm": [
+        "What a clean map it is!",
+        "It is a clean map."
+      ],
+      "fragmentForm": "What clean map it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_055",
+    "seedId": "ex_055",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
+    "words": [
+      "What",
+      "a",
+      "delicious",
+      "book",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 맛있는 책이구나!",
+        "a delicious book"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "delicious",
+      "book"
+    ],
+    "blankTargets": [
+      "What",
+      "delicious",
+      "book"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a delicious book is it!",
+      "statementForm": [
+        "What a delicious book it is!",
+        "It is a delicious book."
+      ],
+      "fragmentForm": "What delicious book it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_056",
+    "seedId": "ex_056",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 친절한 선생님이구나!",
+    "english": "What a kind teacher it is!",
+    "words": [
+      "What",
+      "a",
+      "kind",
+      "teacher",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 친절한 선생님이구나!",
+        "a kind teacher"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "kind",
+      "teacher"
+    ],
+    "blankTargets": [
+      "What",
+      "kind",
+      "teacher"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a kind teacher is it!",
+      "statementForm": [
+        "What a kind teacher it is!",
+        "It is a kind teacher."
+      ],
+      "fragmentForm": "What kind teacher it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_057",
+    "seedId": "ex_057",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
+    "words": [
+      "What",
+      "a",
+      "great",
+      "day",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 멋진 날이구나!",
+        "a great day"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "great",
+      "day"
+    ],
+    "blankTargets": [
+      "What",
+      "great",
+      "day"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a great day is it!",
+      "statementForm": [
+        "What a great day it is!",
+        "It is a great day."
+      ],
+      "fragmentForm": "What great day it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_058",
+    "seedId": "ex_058",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
+    "words": [
+      "What",
+      "a",
+      "wide",
+      "puppy",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "wide",
+      "puppy"
+    ],
+    "blankTargets": [
+      "What",
+      "wide",
+      "puppy"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a wide puppy is it!",
+      "statementForm": [
+        "What a wide puppy it is!",
+        "It is a wide puppy."
+      ],
+      "fragmentForm": "What wide puppy it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_059",
+    "seedId": "ex_059",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
+    "words": [
+      "What",
+      "a",
+      "sunny",
+      "meal",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "sunny",
+      "meal"
+    ],
+    "blankTargets": [
+      "What",
+      "sunny",
+      "meal"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a sunny meal is it!",
+      "statementForm": [
+        "What a sunny meal it is!",
+        "It is a sunny meal."
+      ],
+      "fragmentForm": "What sunny meal it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_060",
+    "seedId": "ex_060",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
+    "words": [
+      "What",
+      "an",
+      "useful",
+      "street",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 유용한 거리이구나!",
+        "an useful street"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "useful",
+      "street"
+    ],
+    "blankTargets": [
+      "What",
+      "useful",
+      "street"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an useful street is it!",
+      "statementForm": [
+        "What an useful street it is!",
+        "It is an useful street."
+      ],
+      "fragmentForm": "What useful street it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_061",
+    "seedId": "ex_061",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 아름다운 꽃이구나!",
+    "english": "What a beautiful flower it is!",
+    "words": [
+      "What",
+      "a",
+      "beautiful",
+      "flower",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 아름다운 꽃이구나!",
+        "a beautiful flower"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "beautiful",
+      "flower"
+    ],
+    "blankTargets": [
+      "What",
+      "beautiful",
+      "flower"
     ],
     "tags": [
       "exclamation"
@@ -3667,132 +3667,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
     "words": [
       "What",
       "a",
       "cute",
-      "puppy",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 귀여운 강아지",
-        "a cute puppy"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "cute",
-      "puppy"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "cute"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
-      "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
-      ],
-      "fragmentForm": "What cute puppy it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_063",
-    "seedId": "ex_063",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
-    "words": [
-      "What",
-      "an",
-      "interesting",
-      "book",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 흥미로운 책",
-        "an interesting book"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "interesting",
-      "book"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "interesting"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
-      "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
-      ],
-      "fragmentForm": "What interesting book it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_064",
-    "seedId": "ex_064",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
-    "words": [
-      "What",
-      "a",
-      "bright",
       "room",
       "it",
       "is",
@@ -3804,56 +3684,56 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 밝은 방",
-        "a bright room"
+        "정말 귀여운 방이구나!",
+        "a cute room"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "bright",
+      "cute",
       "room"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "bright"
+      "cute",
+      "room"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a bright room is it!",
+      "auxError": "What a cute room is it!",
       "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
+        "What a cute room it is!",
+        "It is a cute room."
       ],
-      "fragmentForm": "What bright room it is!"
+      "fragmentForm": "What cute room it is!"
     }
   },
   {
-    "id": "m1_exclamation_065",
-    "seedId": "ex_065",
+    "id": "m1_exclamation_063",
+    "seedId": "ex_063",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 맛있는 식사구나!",
-    "english": "What a delicious meal it is!",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
     "words": [
       "What",
-      "a",
-      "delicious",
-      "meal",
+      "an",
+      "interesting",
+      "idea",
       "it",
       "is",
       "!"
@@ -3864,15 +3744,135 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 맛있는 식사",
-        "a delicious meal"
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "interesting",
+      "idea"
+    ],
+    "blankTargets": [
+      "What",
+      "interesting",
+      "idea"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an interesting idea is it!",
+      "statementForm": [
+        "What an interesting idea it is!",
+        "It is an interesting idea."
+      ],
+      "fragmentForm": "What interesting idea it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_064",
+    "seedId": "ex_064",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
+    "words": [
+      "What",
+      "a",
+      "clean",
+      "map",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "clean",
+      "map"
+    ],
+    "blankTargets": [
+      "What",
+      "clean",
+      "map"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a clean map is it!",
+      "statementForm": [
+        "What a clean map it is!",
+        "It is a clean map."
+      ],
+      "fragmentForm": "What clean map it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_065",
+    "seedId": "ex_065",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
+    "words": [
+      "What",
+      "a",
+      "delicious",
+      "book",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 맛있는 책이구나!",
+        "a delicious book"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
         "it is"
       ]
     ],
@@ -3880,23 +3880,23 @@
       "what",
       "a",
       "delicious",
-      "meal"
+      "book"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "delicious"
+      "delicious",
+      "book"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a delicious meal is it!",
+      "auxError": "What a delicious book is it!",
       "statementForm": [
-        "What a delicious meal it is!",
-        "It is a delicious meal."
+        "What a delicious book it is!",
+        "It is a delicious book."
       ],
-      "fragmentForm": "What delicious meal it is!"
+      "fragmentForm": "What delicious book it is!"
     }
   },
   {
@@ -3907,7 +3907,7 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 친절한 선생님구나!",
+    "korean": "정말 친절한 선생님이구나!",
     "english": "What a kind teacher it is!",
     "words": [
       "What",
@@ -3924,7 +3924,7 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 친절한 선생님",
+        "정말 친절한 선생님이구나!",
         "a kind teacher"
       ],
       [
@@ -3932,7 +3932,7 @@
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
@@ -3944,8 +3944,8 @@
     ],
     "blankTargets": [
       "What",
-      "a",
-      "kind"
+      "kind",
+      "teacher"
     ],
     "tags": [
       "exclamation"
@@ -3967,13 +3967,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 멋진 생각구나!",
-    "english": "What a wonderful idea it is!",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
     "words": [
       "What",
       "a",
-      "wonderful",
-      "idea",
+      "great",
+      "day",
       "it",
       "is",
       "!"
@@ -3984,39 +3984,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 멋진 생각",
-        "a wonderful idea"
+        "정말 멋진 날이구나!",
+        "a great day"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "wonderful",
-      "idea"
+      "great",
+      "day"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "wonderful"
+      "great",
+      "day"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a wonderful idea is it!",
+      "auxError": "What a great day is it!",
       "statementForm": [
-        "What a wonderful idea it is!",
-        "It is a wonderful idea."
+        "What a great day it is!",
+        "It is a great day."
       ],
-      "fragmentForm": "What wonderful idea it is!"
+      "fragmentForm": "What great day it is!"
     }
   },
   {
@@ -4027,13 +4027,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 시끄러운 거리구나!",
-    "english": "What a noisy street it is!",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
     "words": [
       "What",
       "a",
-      "noisy",
-      "street",
+      "wide",
+      "puppy",
       "it",
       "is",
       "!"
@@ -4044,39 +4044,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 시끄러운 거리",
-        "a noisy street"
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "noisy",
-      "street"
+      "wide",
+      "puppy"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "noisy"
+      "wide",
+      "puppy"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a noisy street is it!",
+      "auxError": "What a wide puppy is it!",
       "statementForm": [
-        "What a noisy street it is!",
-        "It is a noisy street."
+        "What a wide puppy it is!",
+        "It is a wide puppy."
       ],
-      "fragmentForm": "What noisy street it is!"
+      "fragmentForm": "What wide puppy it is!"
     }
   },
   {
@@ -4087,13 +4087,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 추운 날구나!",
-    "english": "What a cold day it is!",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
     "words": [
       "What",
       "a",
-      "cold",
-      "day",
+      "sunny",
+      "meal",
       "it",
       "is",
       "!"
@@ -4104,39 +4104,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 추운 날",
-        "a cold day"
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cold",
-      "day"
+      "sunny",
+      "meal"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cold"
+      "sunny",
+      "meal"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cold day is it!",
+      "auxError": "What a sunny meal is it!",
       "statementForm": [
-        "What a cold day it is!",
-        "It is a cold day."
+        "What a sunny meal it is!",
+        "It is a sunny meal."
       ],
-      "fragmentForm": "What cold day it is!"
+      "fragmentForm": "What sunny meal it is!"
     }
   },
   {
@@ -4147,13 +4147,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 뜨거운 요리구나!",
-    "english": "What a hot dish it is!",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
     "words": [
       "What",
-      "a",
-      "hot",
-      "dish",
+      "an",
+      "useful",
+      "street",
       "it",
       "is",
       "!"
@@ -4164,39 +4164,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 뜨거운 요리",
-        "a hot dish"
+        "정말 유용한 거리이구나!",
+        "an useful street"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "hot",
-      "dish"
+      "an",
+      "useful",
+      "street"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "hot"
+      "useful",
+      "street"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a hot dish is it!",
+      "auxError": "What an useful street is it!",
       "statementForm": [
-        "What a hot dish it is!",
-        "It is a hot dish."
+        "What an useful street it is!",
+        "It is an useful street."
       ],
-      "fragmentForm": "What hot dish it is!"
+      "fragmentForm": "What useful street it is!"
     }
   },
   {
@@ -4207,13 +4207,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 유용한 지도구나!",
-    "english": "What an useful map it is!",
+    "korean": "정말 아름다운 꽃이구나!",
+    "english": "What a beautiful flower it is!",
     "words": [
       "What",
-      "an",
-      "useful",
-      "map",
+      "a",
+      "beautiful",
+      "flower",
       "it",
       "is",
       "!"
@@ -4224,39 +4224,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 유용한 지도",
-        "an useful map"
+        "정말 아름다운 꽃이구나!",
+        "a beautiful flower"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "useful",
-      "map"
+      "a",
+      "beautiful",
+      "flower"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "useful"
+      "beautiful",
+      "flower"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an useful map is it!",
+      "auxError": "What a beautiful flower is it!",
       "statementForm": [
-        "What an useful map it is!",
-        "It is an useful map."
+        "What a beautiful flower it is!",
+        "It is a beautiful flower."
       ],
-      "fragmentForm": "What useful map it is!"
+      "fragmentForm": "What beautiful flower it is!"
     }
   },
   {
@@ -4267,13 +4267,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 오래된 그림구나!",
-    "english": "What an old picture it is!",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
     "words": [
       "What",
-      "an",
-      "old",
-      "picture",
+      "a",
+      "cute",
+      "room",
       "it",
       "is",
       "!"
@@ -4284,39 +4284,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 오래된 그림",
-        "an old picture"
+        "정말 귀여운 방이구나!",
+        "a cute room"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "old",
-      "picture"
+      "a",
+      "cute",
+      "room"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "old"
+      "cute",
+      "room"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an old picture is it!",
+      "auxError": "What a cute room is it!",
       "statementForm": [
-        "What an old picture it is!",
-        "It is an old picture."
+        "What a cute room it is!",
+        "It is a cute room."
       ],
-      "fragmentForm": "What old picture it is!"
+      "fragmentForm": "What cute room it is!"
     }
   },
   {
@@ -4327,13 +4327,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
-    "english": "What a beautiful flower it is!",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
     "words": [
       "What",
-      "a",
-      "beautiful",
-      "flower",
+      "an",
+      "interesting",
+      "idea",
       "it",
       "is",
       "!"
@@ -4344,39 +4344,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 아름다운 꽃",
-        "a beautiful flower"
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "beautiful",
-      "flower"
+      "an",
+      "interesting",
+      "idea"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "beautiful"
+      "interesting",
+      "idea"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a beautiful flower is it!",
+      "auxError": "What an interesting idea is it!",
       "statementForm": [
-        "What a beautiful flower it is!",
-        "It is a beautiful flower."
+        "What an interesting idea it is!",
+        "It is an interesting idea."
       ],
-      "fragmentForm": "What beautiful flower it is!"
+      "fragmentForm": "What interesting idea it is!"
     }
   },
   {
@@ -4387,13 +4387,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
     "words": [
       "What",
       "a",
-      "cute",
-      "puppy",
+      "clean",
+      "map",
       "it",
       "is",
       "!"
@@ -4404,39 +4404,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 귀여운 강아지",
-        "a cute puppy"
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cute",
-      "puppy"
+      "clean",
+      "map"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cute"
+      "clean",
+      "map"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
+      "auxError": "What a clean map is it!",
       "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
+        "What a clean map it is!",
+        "It is a clean map."
       ],
-      "fragmentForm": "What cute puppy it is!"
+      "fragmentForm": "What clean map it is!"
     }
   },
   {
@@ -4447,12 +4447,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
     "words": [
       "What",
-      "an",
-      "interesting",
+      "a",
+      "delicious",
       "book",
       "it",
       "is",
@@ -4464,39 +4464,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 흥미로운 책",
-        "an interesting book"
+        "정말 맛있는 책이구나!",
+        "a delicious book"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "an",
-      "interesting",
+      "a",
+      "delicious",
       "book"
     ],
     "blankTargets": [
       "What",
-      "an",
-      "interesting"
+      "delicious",
+      "book"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
+      "auxError": "What a delicious book is it!",
       "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
+        "What a delicious book it is!",
+        "It is a delicious book."
       ],
-      "fragmentForm": "What interesting book it is!"
+      "fragmentForm": "What delicious book it is!"
     }
   },
   {
@@ -4507,13 +4507,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
+    "korean": "정말 친절한 선생님이구나!",
+    "english": "What a kind teacher it is!",
     "words": [
       "What",
       "a",
-      "bright",
-      "room",
+      "kind",
+      "teacher",
       "it",
       "is",
       "!"
@@ -4524,39 +4524,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 밝은 방",
-        "a bright room"
+        "정말 친절한 선생님이구나!",
+        "a kind teacher"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "bright",
-      "room"
+      "kind",
+      "teacher"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "bright"
+      "kind",
+      "teacher"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a bright room is it!",
+      "auxError": "What a kind teacher is it!",
       "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
+        "What a kind teacher it is!",
+        "It is a kind teacher."
       ],
-      "fragmentForm": "What bright room it is!"
+      "fragmentForm": "What kind teacher it is!"
     }
   },
   {
@@ -4567,13 +4567,13 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 맛있는 식사구나!",
-    "english": "What a delicious meal it is!",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
     "words": [
       "What",
       "a",
-      "delicious",
-      "meal",
+      "great",
+      "day",
       "it",
       "is",
       "!"
@@ -4584,39 +4584,39 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 맛있는 식사",
-        "a delicious meal"
+        "정말 멋진 날이구나!",
+        "a great day"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "delicious",
-      "meal"
+      "great",
+      "day"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "delicious"
+      "great",
+      "day"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a delicious meal is it!",
+      "auxError": "What a great day is it!",
       "statementForm": [
-        "What a delicious meal it is!",
-        "It is a delicious meal."
+        "What a great day it is!",
+        "It is a great day."
       ],
-      "fragmentForm": "What delicious meal it is!"
+      "fragmentForm": "What great day it is!"
     }
   },
   {
@@ -4627,492 +4627,12 @@
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 친절한 선생님구나!",
-    "english": "What a kind teacher it is!",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
     "words": [
       "What",
       "a",
-      "kind",
-      "teacher",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 친절한 선생님",
-        "a kind teacher"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "kind",
-      "teacher"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "kind"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a kind teacher is it!",
-      "statementForm": [
-        "What a kind teacher it is!",
-        "It is a kind teacher."
-      ],
-      "fragmentForm": "What kind teacher it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_079",
-    "seedId": "ex_079",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 멋진 생각구나!",
-    "english": "What a wonderful idea it is!",
-    "words": [
-      "What",
-      "a",
-      "wonderful",
-      "idea",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 멋진 생각",
-        "a wonderful idea"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "wonderful",
-      "idea"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "wonderful"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a wonderful idea is it!",
-      "statementForm": [
-        "What a wonderful idea it is!",
-        "It is a wonderful idea."
-      ],
-      "fragmentForm": "What wonderful idea it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_080",
-    "seedId": "ex_080",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 시끄러운 거리구나!",
-    "english": "What a noisy street it is!",
-    "words": [
-      "What",
-      "a",
-      "noisy",
-      "street",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 시끄러운 거리",
-        "a noisy street"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "noisy",
-      "street"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "noisy"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a noisy street is it!",
-      "statementForm": [
-        "What a noisy street it is!",
-        "It is a noisy street."
-      ],
-      "fragmentForm": "What noisy street it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_081",
-    "seedId": "ex_081",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 추운 날구나!",
-    "english": "What a cold day it is!",
-    "words": [
-      "What",
-      "a",
-      "cold",
-      "day",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 추운 날",
-        "a cold day"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "cold",
-      "day"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "cold"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a cold day is it!",
-      "statementForm": [
-        "What a cold day it is!",
-        "It is a cold day."
-      ],
-      "fragmentForm": "What cold day it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_082",
-    "seedId": "ex_082",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 뜨거운 요리구나!",
-    "english": "What a hot dish it is!",
-    "words": [
-      "What",
-      "a",
-      "hot",
-      "dish",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 뜨거운 요리",
-        "a hot dish"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "hot",
-      "dish"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "hot"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a hot dish is it!",
-      "statementForm": [
-        "What a hot dish it is!",
-        "It is a hot dish."
-      ],
-      "fragmentForm": "What hot dish it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_083",
-    "seedId": "ex_083",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 유용한 지도구나!",
-    "english": "What an useful map it is!",
-    "words": [
-      "What",
-      "an",
-      "useful",
-      "map",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 유용한 지도",
-        "an useful map"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "useful",
-      "map"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "useful"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an useful map is it!",
-      "statementForm": [
-        "What an useful map it is!",
-        "It is an useful map."
-      ],
-      "fragmentForm": "What useful map it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_084",
-    "seedId": "ex_084",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 오래된 그림구나!",
-    "english": "What an old picture it is!",
-    "words": [
-      "What",
-      "an",
-      "old",
-      "picture",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 오래된 그림",
-        "an old picture"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "old",
-      "picture"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "old"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an old picture is it!",
-      "statementForm": [
-        "What an old picture it is!",
-        "It is an old picture."
-      ],
-      "fragmentForm": "What old picture it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_085",
-    "seedId": "ex_085",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
-    "english": "What a beautiful flower it is!",
-    "words": [
-      "What",
-      "a",
-      "beautiful",
-      "flower",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 아름다운 꽃",
-        "a beautiful flower"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "beautiful",
-      "flower"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "beautiful"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a beautiful flower is it!",
-      "statementForm": [
-        "What a beautiful flower it is!",
-        "It is a beautiful flower."
-      ],
-      "fragmentForm": "What beautiful flower it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_086",
-    "seedId": "ex_086",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
-    "words": [
-      "What",
-      "a",
-      "cute",
+      "wide",
       "puppy",
       "it",
       "is",
@@ -5124,175 +4644,55 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 귀여운 강아지",
-        "a cute puppy"
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "cute",
+      "wide",
       "puppy"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "cute"
+      "wide",
+      "puppy"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
+      "auxError": "What a wide puppy is it!",
       "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
+        "What a wide puppy it is!",
+        "It is a wide puppy."
       ],
-      "fragmentForm": "What cute puppy it is!"
+      "fragmentForm": "What wide puppy it is!"
     }
   },
   {
-    "id": "m1_exclamation_087",
-    "seedId": "ex_087",
+    "id": "m1_exclamation_079",
+    "seedId": "ex_079",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
-    "words": [
-      "What",
-      "an",
-      "interesting",
-      "book",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 흥미로운 책",
-        "an interesting book"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "interesting",
-      "book"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "interesting"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
-      "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
-      ],
-      "fragmentForm": "What interesting book it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_088",
-    "seedId": "ex_088",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
     "words": [
       "What",
       "a",
-      "bright",
-      "room",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 밝은 방",
-        "a bright room"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "bright",
-      "room"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "bright"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a bright room is it!",
-      "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
-      ],
-      "fragmentForm": "What bright room it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_089",
-    "seedId": "ex_089",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 맛있는 식사구나!",
-    "english": "What a delicious meal it is!",
-    "words": [
-      "What",
-      "a",
-      "delicious",
+      "sunny",
       "meal",
       "it",
       "is",
@@ -5304,175 +4704,55 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 맛있는 식사",
-        "a delicious meal"
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "delicious",
+      "sunny",
       "meal"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "delicious"
+      "sunny",
+      "meal"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a delicious meal is it!",
+      "auxError": "What a sunny meal is it!",
       "statementForm": [
-        "What a delicious meal it is!",
-        "It is a delicious meal."
+        "What a sunny meal it is!",
+        "It is a sunny meal."
       ],
-      "fragmentForm": "What delicious meal it is!"
+      "fragmentForm": "What sunny meal it is!"
     }
   },
   {
-    "id": "m1_exclamation_090",
-    "seedId": "ex_090",
+    "id": "m1_exclamation_080",
+    "seedId": "ex_080",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 친절한 선생님구나!",
-    "english": "What a kind teacher it is!",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
     "words": [
       "What",
-      "a",
-      "kind",
-      "teacher",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 친절한 선생님",
-        "a kind teacher"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "kind",
-      "teacher"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "kind"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a kind teacher is it!",
-      "statementForm": [
-        "What a kind teacher it is!",
-        "It is a kind teacher."
-      ],
-      "fragmentForm": "What kind teacher it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_091",
-    "seedId": "ex_091",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 멋진 생각구나!",
-    "english": "What a wonderful idea it is!",
-    "words": [
-      "What",
-      "a",
-      "wonderful",
-      "idea",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 멋진 생각",
-        "a wonderful idea"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "wonderful",
-      "idea"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "wonderful"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a wonderful idea is it!",
-      "statementForm": [
-        "What a wonderful idea it is!",
-        "It is a wonderful idea."
-      ],
-      "fragmentForm": "What wonderful idea it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_092",
-    "seedId": "ex_092",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 시끄러운 거리구나!",
-    "english": "What a noisy street it is!",
-    "words": [
-      "What",
-      "a",
-      "noisy",
+      "an",
+      "useful",
       "street",
       "it",
       "is",
@@ -5484,290 +4764,50 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 시끄러운 거리",
-        "a noisy street"
+        "정말 유용한 거리이구나!",
+        "an useful street"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
-      "a",
-      "noisy",
+      "an",
+      "useful",
       "street"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "noisy"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a noisy street is it!",
-      "statementForm": [
-        "What a noisy street it is!",
-        "It is a noisy street."
-      ],
-      "fragmentForm": "What noisy street it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_093",
-    "seedId": "ex_093",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 추운 날구나!",
-    "english": "What a cold day it is!",
-    "words": [
-      "What",
-      "a",
-      "cold",
-      "day",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 추운 날",
-        "a cold day"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "cold",
-      "day"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "cold"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a cold day is it!",
-      "statementForm": [
-        "What a cold day it is!",
-        "It is a cold day."
-      ],
-      "fragmentForm": "What cold day it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_094",
-    "seedId": "ex_094",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 뜨거운 요리구나!",
-    "english": "What a hot dish it is!",
-    "words": [
-      "What",
-      "a",
-      "hot",
-      "dish",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 뜨거운 요리",
-        "a hot dish"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "hot",
-      "dish"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "hot"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a hot dish is it!",
-      "statementForm": [
-        "What a hot dish it is!",
-        "It is a hot dish."
-      ],
-      "fragmentForm": "What hot dish it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_095",
-    "seedId": "ex_095",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 유용한 지도구나!",
-    "english": "What an useful map it is!",
-    "words": [
-      "What",
-      "an",
       "useful",
-      "map",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 유용한 지도",
-        "an useful map"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "useful",
-      "map"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "useful"
+      "street"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What an useful map is it!",
+      "auxError": "What an useful street is it!",
       "statementForm": [
-        "What an useful map it is!",
-        "It is an useful map."
+        "What an useful street it is!",
+        "It is an useful street."
       ],
-      "fragmentForm": "What useful map it is!"
+      "fragmentForm": "What useful street it is!"
     }
   },
   {
-    "id": "m1_exclamation_096",
-    "seedId": "ex_096",
+    "id": "m1_exclamation_081",
+    "seedId": "ex_081",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 오래된 그림구나!",
-    "english": "What an old picture it is!",
-    "words": [
-      "What",
-      "an",
-      "old",
-      "picture",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 오래된 그림",
-        "an old picture"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "old",
-      "picture"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "old"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an old picture is it!",
-      "statementForm": [
-        "What an old picture it is!",
-        "It is an old picture."
-      ],
-      "fragmentForm": "What old picture it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_097",
-    "seedId": "ex_097",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 아름다운 꽃구나!",
+    "korean": "정말 아름다운 꽃이구나!",
     "english": "What a beautiful flower it is!",
     "words": [
       "What",
@@ -5784,7 +4824,7 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 아름다운 꽃",
+        "정말 아름다운 꽃이구나!",
         "a beautiful flower"
       ],
       [
@@ -5792,7 +4832,7 @@
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
@@ -5804,8 +4844,8 @@
     ],
     "blankTargets": [
       "What",
-      "a",
-      "beautiful"
+      "beautiful",
+      "flower"
     ],
     "tags": [
       "exclamation"
@@ -5820,139 +4860,19 @@
     }
   },
   {
-    "id": "m1_exclamation_098",
-    "seedId": "ex_098",
+    "id": "m1_exclamation_082",
+    "seedId": "ex_082",
     "grade": "middle1",
     "semester": "all",
     "lessonBand": "1-4",
     "chapterKey": "exclamation",
     "chapterLabelKo": "감탄문",
-    "korean": "정말 귀여운 강아지구나!",
-    "english": "What a cute puppy it is!",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
     "words": [
       "What",
       "a",
       "cute",
-      "puppy",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 귀여운 강아지",
-        "a cute puppy"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "a",
-      "cute",
-      "puppy"
-    ],
-    "blankTargets": [
-      "What",
-      "a",
-      "cute"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What a cute puppy is it!",
-      "statementForm": [
-        "What a cute puppy it is!",
-        "It is a cute puppy."
-      ],
-      "fragmentForm": "What cute puppy it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_099",
-    "seedId": "ex_099",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 흥미로운 책구나!",
-    "english": "What an interesting book it is!",
-    "words": [
-      "What",
-      "an",
-      "interesting",
-      "book",
-      "it",
-      "is",
-      "!"
-    ],
-    "wordCount": 6,
-    "grammar": "exclamation",
-    "difficulty": "basic",
-    "sourceType": "db_final",
-    "clueUnits": [
-      [
-        "정말 흥미로운 책",
-        "an interesting book"
-      ],
-      [
-        "What",
-        "What"
-      ],
-      [
-        "~구나",
-        "it is"
-      ]
-    ],
-    "extraClueWordPool": [
-      "what",
-      "an",
-      "interesting",
-      "book"
-    ],
-    "blankTargets": [
-      "What",
-      "an",
-      "interesting"
-    ],
-    "tags": [
-      "exclamation"
-    ],
-    "distractorSeeds": {
-      "auxError": "What an interesting book is it!",
-      "statementForm": [
-        "What an interesting book it is!",
-        "It is an interesting book."
-      ],
-      "fragmentForm": "What interesting book it is!"
-    }
-  },
-  {
-    "id": "m1_exclamation_100",
-    "seedId": "ex_100",
-    "grade": "middle1",
-    "semester": "all",
-    "lessonBand": "1-4",
-    "chapterKey": "exclamation",
-    "chapterLabelKo": "감탄문",
-    "korean": "정말 밝은 방구나!",
-    "english": "What a bright room it is!",
-    "words": [
-      "What",
-      "a",
-      "bright",
       "room",
       "it",
       "is",
@@ -5964,39 +4884,1119 @@
     "sourceType": "db_final",
     "clueUnits": [
       [
-        "정말 밝은 방",
-        "a bright room"
+        "정말 귀여운 방이구나!",
+        "a cute room"
       ],
       [
         "What",
         "What"
       ],
       [
-        "~구나",
+        "~이구나",
         "it is"
       ]
     ],
     "extraClueWordPool": [
       "what",
       "a",
-      "bright",
+      "cute",
       "room"
     ],
     "blankTargets": [
       "What",
-      "a",
-      "bright"
+      "cute",
+      "room"
     ],
     "tags": [
       "exclamation"
     ],
     "distractorSeeds": {
-      "auxError": "What a bright room is it!",
+      "auxError": "What a cute room is it!",
       "statementForm": [
-        "What a bright room it is!",
-        "It is a bright room."
+        "What a cute room it is!",
+        "It is a cute room."
       ],
-      "fragmentForm": "What bright room it is!"
+      "fragmentForm": "What cute room it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_083",
+    "seedId": "ex_083",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
+    "words": [
+      "What",
+      "an",
+      "interesting",
+      "idea",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "interesting",
+      "idea"
+    ],
+    "blankTargets": [
+      "What",
+      "interesting",
+      "idea"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an interesting idea is it!",
+      "statementForm": [
+        "What an interesting idea it is!",
+        "It is an interesting idea."
+      ],
+      "fragmentForm": "What interesting idea it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_084",
+    "seedId": "ex_084",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
+    "words": [
+      "What",
+      "a",
+      "clean",
+      "map",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "clean",
+      "map"
+    ],
+    "blankTargets": [
+      "What",
+      "clean",
+      "map"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a clean map is it!",
+      "statementForm": [
+        "What a clean map it is!",
+        "It is a clean map."
+      ],
+      "fragmentForm": "What clean map it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_085",
+    "seedId": "ex_085",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
+    "words": [
+      "What",
+      "a",
+      "delicious",
+      "book",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 맛있는 책이구나!",
+        "a delicious book"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "delicious",
+      "book"
+    ],
+    "blankTargets": [
+      "What",
+      "delicious",
+      "book"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a delicious book is it!",
+      "statementForm": [
+        "What a delicious book it is!",
+        "It is a delicious book."
+      ],
+      "fragmentForm": "What delicious book it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_086",
+    "seedId": "ex_086",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 친절한 선생님이구나!",
+    "english": "What a kind teacher it is!",
+    "words": [
+      "What",
+      "a",
+      "kind",
+      "teacher",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 친절한 선생님이구나!",
+        "a kind teacher"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "kind",
+      "teacher"
+    ],
+    "blankTargets": [
+      "What",
+      "kind",
+      "teacher"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a kind teacher is it!",
+      "statementForm": [
+        "What a kind teacher it is!",
+        "It is a kind teacher."
+      ],
+      "fragmentForm": "What kind teacher it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_087",
+    "seedId": "ex_087",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
+    "words": [
+      "What",
+      "a",
+      "great",
+      "day",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 멋진 날이구나!",
+        "a great day"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "great",
+      "day"
+    ],
+    "blankTargets": [
+      "What",
+      "great",
+      "day"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a great day is it!",
+      "statementForm": [
+        "What a great day it is!",
+        "It is a great day."
+      ],
+      "fragmentForm": "What great day it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_088",
+    "seedId": "ex_088",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
+    "words": [
+      "What",
+      "a",
+      "wide",
+      "puppy",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "wide",
+      "puppy"
+    ],
+    "blankTargets": [
+      "What",
+      "wide",
+      "puppy"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a wide puppy is it!",
+      "statementForm": [
+        "What a wide puppy it is!",
+        "It is a wide puppy."
+      ],
+      "fragmentForm": "What wide puppy it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_089",
+    "seedId": "ex_089",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
+    "words": [
+      "What",
+      "a",
+      "sunny",
+      "meal",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "sunny",
+      "meal"
+    ],
+    "blankTargets": [
+      "What",
+      "sunny",
+      "meal"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a sunny meal is it!",
+      "statementForm": [
+        "What a sunny meal it is!",
+        "It is a sunny meal."
+      ],
+      "fragmentForm": "What sunny meal it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_090",
+    "seedId": "ex_090",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
+    "words": [
+      "What",
+      "an",
+      "useful",
+      "street",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 유용한 거리이구나!",
+        "an useful street"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "useful",
+      "street"
+    ],
+    "blankTargets": [
+      "What",
+      "useful",
+      "street"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an useful street is it!",
+      "statementForm": [
+        "What an useful street it is!",
+        "It is an useful street."
+      ],
+      "fragmentForm": "What useful street it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_091",
+    "seedId": "ex_091",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 아름다운 꽃이구나!",
+    "english": "What a beautiful flower it is!",
+    "words": [
+      "What",
+      "a",
+      "beautiful",
+      "flower",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 아름다운 꽃이구나!",
+        "a beautiful flower"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "beautiful",
+      "flower"
+    ],
+    "blankTargets": [
+      "What",
+      "beautiful",
+      "flower"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a beautiful flower is it!",
+      "statementForm": [
+        "What a beautiful flower it is!",
+        "It is a beautiful flower."
+      ],
+      "fragmentForm": "What beautiful flower it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_092",
+    "seedId": "ex_092",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 귀여운 방이구나!",
+    "english": "What a cute room it is!",
+    "words": [
+      "What",
+      "a",
+      "cute",
+      "room",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 귀여운 방이구나!",
+        "a cute room"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "cute",
+      "room"
+    ],
+    "blankTargets": [
+      "What",
+      "cute",
+      "room"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a cute room is it!",
+      "statementForm": [
+        "What a cute room it is!",
+        "It is a cute room."
+      ],
+      "fragmentForm": "What cute room it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_093",
+    "seedId": "ex_093",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 흥미로운 아이디어이구나!",
+    "english": "What an interesting idea it is!",
+    "words": [
+      "What",
+      "an",
+      "interesting",
+      "idea",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 흥미로운 아이디어이구나!",
+        "an interesting idea"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "interesting",
+      "idea"
+    ],
+    "blankTargets": [
+      "What",
+      "interesting",
+      "idea"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an interesting idea is it!",
+      "statementForm": [
+        "What an interesting idea it is!",
+        "It is an interesting idea."
+      ],
+      "fragmentForm": "What interesting idea it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_094",
+    "seedId": "ex_094",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 깨끗한 지도이구나!",
+    "english": "What a clean map it is!",
+    "words": [
+      "What",
+      "a",
+      "clean",
+      "map",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 깨끗한 지도이구나!",
+        "a clean map"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "clean",
+      "map"
+    ],
+    "blankTargets": [
+      "What",
+      "clean",
+      "map"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a clean map is it!",
+      "statementForm": [
+        "What a clean map it is!",
+        "It is a clean map."
+      ],
+      "fragmentForm": "What clean map it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_095",
+    "seedId": "ex_095",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 맛있는 책이구나!",
+    "english": "What a delicious book it is!",
+    "words": [
+      "What",
+      "a",
+      "delicious",
+      "book",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 맛있는 책이구나!",
+        "a delicious book"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "delicious",
+      "book"
+    ],
+    "blankTargets": [
+      "What",
+      "delicious",
+      "book"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a delicious book is it!",
+      "statementForm": [
+        "What a delicious book it is!",
+        "It is a delicious book."
+      ],
+      "fragmentForm": "What delicious book it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_096",
+    "seedId": "ex_096",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 친절한 선생님이구나!",
+    "english": "What a kind teacher it is!",
+    "words": [
+      "What",
+      "a",
+      "kind",
+      "teacher",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 친절한 선생님이구나!",
+        "a kind teacher"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "kind",
+      "teacher"
+    ],
+    "blankTargets": [
+      "What",
+      "kind",
+      "teacher"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a kind teacher is it!",
+      "statementForm": [
+        "What a kind teacher it is!",
+        "It is a kind teacher."
+      ],
+      "fragmentForm": "What kind teacher it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_097",
+    "seedId": "ex_097",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 멋진 날이구나!",
+    "english": "What a great day it is!",
+    "words": [
+      "What",
+      "a",
+      "great",
+      "day",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 멋진 날이구나!",
+        "a great day"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "great",
+      "day"
+    ],
+    "blankTargets": [
+      "What",
+      "great",
+      "day"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a great day is it!",
+      "statementForm": [
+        "What a great day it is!",
+        "It is a great day."
+      ],
+      "fragmentForm": "What great day it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_098",
+    "seedId": "ex_098",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 넓은 강아지이구나!",
+    "english": "What a wide puppy it is!",
+    "words": [
+      "What",
+      "a",
+      "wide",
+      "puppy",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 넓은 강아지이구나!",
+        "a wide puppy"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "wide",
+      "puppy"
+    ],
+    "blankTargets": [
+      "What",
+      "wide",
+      "puppy"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a wide puppy is it!",
+      "statementForm": [
+        "What a wide puppy it is!",
+        "It is a wide puppy."
+      ],
+      "fragmentForm": "What wide puppy it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_099",
+    "seedId": "ex_099",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 화창한 식사이구나!",
+    "english": "What a sunny meal it is!",
+    "words": [
+      "What",
+      "a",
+      "sunny",
+      "meal",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 화창한 식사이구나!",
+        "a sunny meal"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "a",
+      "sunny",
+      "meal"
+    ],
+    "blankTargets": [
+      "What",
+      "sunny",
+      "meal"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What a sunny meal is it!",
+      "statementForm": [
+        "What a sunny meal it is!",
+        "It is a sunny meal."
+      ],
+      "fragmentForm": "What sunny meal it is!"
+    }
+  },
+  {
+    "id": "m1_exclamation_100",
+    "seedId": "ex_100",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "exclamation",
+    "chapterLabelKo": "감탄문",
+    "korean": "정말 유용한 거리이구나!",
+    "english": "What an useful street it is!",
+    "words": [
+      "What",
+      "an",
+      "useful",
+      "street",
+      "it",
+      "is",
+      "!"
+    ],
+    "wordCount": 6,
+    "grammar": "exclamation",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "정말 유용한 거리이구나!",
+        "an useful street"
+      ],
+      [
+        "What",
+        "What"
+      ],
+      [
+        "~이구나",
+        "it is"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "an",
+      "useful",
+      "street"
+    ],
+    "blankTargets": [
+      "What",
+      "useful",
+      "street"
+    ],
+    "tags": [
+      "exclamation"
+    ],
+    "distractorSeeds": {
+      "auxError": "What an useful street is it!",
+      "statementForm": [
+        "What an useful street it is!",
+        "It is an useful street."
+      ],
+      "fragmentForm": "What useful street it is!"
     }
   }
 ]
