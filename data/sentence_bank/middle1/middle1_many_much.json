@@ -1,0 +1,6100 @@
+[
+  {
+    "id": "m1_s1_many_much_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "나는 책이 많다.",
+    "english": "I have many books.",
+    "words": [
+      "I",
+      "have",
+      "many",
+      "books",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "have",
+      "many books"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "I have much books.",
+      "statementForm": "I have many books.",
+      "fragmentForm": "I have many books?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 친구가 많다.",
+    "english": "He has many friends.",
+    "words": [
+      "He",
+      "has",
+      "many",
+      "friends",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has",
+      "many friends"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has much friends.",
+      "statementForm": "He has many friends.",
+      "fragmentForm": "He has many friends?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 숙제가 많다.",
+    "english": "She has much homework.",
+    "words": [
+      "She",
+      "has",
+      "much",
+      "homework",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "has",
+      "much homework"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "She has many homework.",
+      "statementForm": "She has much homework.",
+      "fragmentForm": "She has much homework?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "나는 시간이 많지 않다.",
+    "english": "I do not have much time.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "have",
+      "much",
+      "time",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "do not have",
+      "much time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "I do not have many time.",
+      "statementForm": "I do not have much time.",
+      "fragmentForm": "I do not have much time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 반에는 학생이 많다.",
+    "english": "There are many students in our class.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "students",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many students",
+      "in our class"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much students in our class.",
+      "statementForm": "There are many students in our class.",
+      "fragmentForm": "There are many students in our class?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "냉장고에는 우유가 많다.",
+    "english": "There is much milk in the refrigerator.",
+    "words": [
+      "There",
+      "is",
+      "much",
+      "milk",
+      "in",
+      "the",
+      "refrigerator",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is",
+      "much milk",
+      "in the refrigerator"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many milk in the refrigerator.",
+      "statementForm": "There is much milk in the refrigerator.",
+      "fragmentForm": "There is much milk in the refrigerator?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그 가게에는 손님이 많다.",
+    "english": "There are many customers in the store.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "customers",
+      "in",
+      "the",
+      "store",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many customers",
+      "in the store"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much customers in the store.",
+      "statementForm": "There are many customers in the store.",
+      "fragmentForm": "There are many customers in the store?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 돈이 많다.",
+    "english": "He has much money.",
+    "words": [
+      "He",
+      "has",
+      "much",
+      "money",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has",
+      "much money"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has many money.",
+      "statementForm": "He has much money.",
+      "fragmentForm": "He has much money?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 집에는 창문이 많다.",
+    "english": "There are many windows in our house.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "windows",
+      "in",
+      "our",
+      "house",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many windows",
+      "in our house"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much windows in our house.",
+      "statementForm": "There are many windows in our house.",
+      "fragmentForm": "There are many windows in our house?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 책에는 정보가 많다.",
+    "english": "There is much information in this book.",
+    "words": [
+      "There",
+      "is",
+      "much",
+      "information",
+      "in",
+      "this",
+      "book",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is",
+      "much information",
+      "in this book"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many information in this book.",
+      "statementForm": "There is much information in this book.",
+      "fragmentForm": "There is much information in this book?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그 학교에는 나무가 많다.",
+    "english": "There are many trees in that school.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "trees",
+      "in",
+      "that",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many trees",
+      "in that school"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much trees in that school.",
+      "statementForm": "There are many trees in that school.",
+      "fragmentForm": "There are many trees in that school?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 병에는 물이 많다.",
+    "english": "There is much water in this bottle.",
+    "words": [
+      "There",
+      "is",
+      "much",
+      "water",
+      "in",
+      "this",
+      "bottle",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is",
+      "much water",
+      "in this bottle"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many water in this bottle.",
+      "statementForm": "There is much water in this bottle.",
+      "fragmentForm": "There is much water in this bottle?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 문제점이 많다.",
+    "english": "He has many problems.",
+    "words": [
+      "He",
+      "has",
+      "many",
+      "problems",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has",
+      "many problems"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has much problems.",
+      "statementForm": "He has many problems.",
+      "fragmentForm": "He has many problems?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "나는 해야 할 일이 많다.",
+    "english": "I have much work to do.",
+    "words": [
+      "I",
+      "have",
+      "much",
+      "work",
+      "to",
+      "do",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "have",
+      "much work to do"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "I have many work to do.",
+      "statementForm": "I have much work to do.",
+      "fragmentForm": "I have much work to do?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "도서관에는 책이 많다.",
+    "english": "There are many books in the library.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "books",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many books",
+      "in the library"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much books in the library.",
+      "statementForm": "There are many books in the library.",
+      "fragmentForm": "There are many books in the library?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 지역에는 비가 많다.",
+    "english": "There is much rain in this area.",
+    "words": [
+      "There",
+      "is",
+      "much",
+      "rain",
+      "in",
+      "this",
+      "area",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is",
+      "much rain",
+      "in this area"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many rain in this area.",
+      "statementForm": "There is much rain in this area.",
+      "fragmentForm": "There is much rain in this area?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 질문이 많다.",
+    "english": "She has many questions.",
+    "words": [
+      "She",
+      "has",
+      "many",
+      "questions",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "has",
+      "many questions"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "She has much questions.",
+      "statementForm": "She has many questions.",
+      "fragmentForm": "She has many questions?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "나는 요즘 걱정이 많다.",
+    "english": "I have much worry these days.",
+    "words": [
+      "I",
+      "have",
+      "much",
+      "worry",
+      "these",
+      "days",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "have",
+      "much worry",
+      "these days"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "I have many worry these days.",
+      "statementForm": "I have much worry these days.",
+      "fragmentForm": "I have much worry these days?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "공원에는 꽃이 많다.",
+    "english": "There are many flowers in the park.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "flowers",
+      "in",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many flowers",
+      "in the park"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much flowers in the park.",
+      "statementForm": "There are many flowers in the park.",
+      "fragmentForm": "There are many flowers in the park?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 경험이 많다.",
+    "english": "He has much experience.",
+    "words": [
+      "He",
+      "has",
+      "much",
+      "experience",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "many_much",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has",
+      "much experience"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has many experience.",
+      "statementForm": "He has much experience.",
+      "fragmentForm": "He has much experience?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 반에는 의자가 많다.",
+    "english": "There are many chairs in our classroom.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "chairs",
+      "in",
+      "our",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many chairs",
+      "in our classroom"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much chairs in our classroom.",
+      "statementForm": "There are many chairs in our classroom.",
+      "fragmentForm": "There are many chairs in our classroom?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "내 가방에는 종이가 많다.",
+    "english": "There is much paper in my bag.",
+    "words": [
+      "There",
+      "is",
+      "much",
+      "paper",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is",
+      "much paper",
+      "in my bag"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many paper in my bag.",
+      "statementForm": "There is much paper in my bag.",
+      "fragmentForm": "There is much paper in my bag?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 시험이 많다.",
+    "english": "He has many tests this month.",
+    "words": [
+      "He",
+      "has",
+      "many",
+      "tests",
+      "this",
+      "month",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has",
+      "many tests",
+      "this month"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has much tests this month.",
+      "statementForm": "He has many tests this month.",
+      "fragmentForm": "He has many tests this month?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 자유 시간이 많지 않다.",
+    "english": "She does not have much free time.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "have",
+      "much",
+      "free",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not have",
+      "much free time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "She does not have many free time.",
+      "statementForm": "She does not have much free time.",
+      "fragmentForm": "She does not have much free time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 동네에는 공원이 많다.",
+    "english": "There are many parks in our neighborhood.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "parks",
+      "in",
+      "our",
+      "neighborhood",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many parks",
+      "in our neighborhood"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "affirmative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much parks in our neighborhood.",
+      "statementForm": "There are many parks in our neighborhood.",
+      "fragmentForm": "There are many parks in our neighborhood?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "너는 책이 많니?",
+    "english": "Do you have many books?",
+    "words": [
+      "Do",
+      "you",
+      "have",
+      "many",
+      "books",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you have",
+      "many books"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you have many books?",
+      "statementForm": "You have many books.",
+      "fragmentForm": "You have many books?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 시간이 많니?",
+    "english": "Does he have much time?",
+    "words": [
+      "Does",
+      "he",
+      "have",
+      "much",
+      "time",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "he have",
+      "much time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do he have much time?",
+      "statementForm": "He has much time.",
+      "fragmentForm": "He have much time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "교실에는 학생이 많니?",
+    "english": "Are there many students in the classroom?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "students",
+      "in",
+      "the",
+      "classroom",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are there",
+      "many students",
+      "in the classroom"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many students in the classroom?",
+      "statementForm": "There are many students in the classroom.",
+      "fragmentForm": "many students in the classroom?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "병 안에 물이 많니?",
+    "english": "Is there much water in the bottle?",
+    "words": [
+      "Is",
+      "there",
+      "much",
+      "water",
+      "in",
+      "the",
+      "bottle",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is there",
+      "much water",
+      "in the bottle"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there much water in the bottle?",
+      "statementForm": "There is much water in the bottle.",
+      "fragmentForm": "much water in the bottle?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 친구가 많니?",
+    "english": "Does she have many friends?",
+    "words": [
+      "Does",
+      "she",
+      "have",
+      "many",
+      "friends",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "she have",
+      "many friends"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do she have many friends?",
+      "statementForm": "She has many friends.",
+      "fragmentForm": "She have many friends?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_031",
+    "seedId": 31,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "냉장고에는 우유가 많니?",
+    "english": "Is there much milk in the refrigerator?",
+    "words": [
+      "Is",
+      "there",
+      "much",
+      "milk",
+      "in",
+      "the",
+      "refrigerator",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is there",
+      "much milk",
+      "in the refrigerator"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there much milk in the refrigerator?",
+      "statementForm": "There is much milk in the refrigerator.",
+      "fragmentForm": "much milk in the refrigerator?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_032",
+    "seedId": 32,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그 학교에는 선생님이 많니?",
+    "english": "Are there many teachers in that school?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "teachers",
+      "in",
+      "that",
+      "school",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are there",
+      "many teachers",
+      "in that school"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many teachers in that school?",
+      "statementForm": "There are many teachers in that school.",
+      "fragmentForm": "many teachers in that school?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_033",
+    "seedId": 33,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "너는 돈이 많니?",
+    "english": "Do you have much money?",
+    "words": [
+      "Do",
+      "you",
+      "have",
+      "much",
+      "money",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you have",
+      "much money"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does you have much money?",
+      "statementForm": "You have much money.",
+      "fragmentForm": "You have much money?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_034",
+    "seedId": 34,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "공원에는 나무가 많니?",
+    "english": "Are there many trees in the park?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "trees",
+      "in",
+      "the",
+      "park",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are there",
+      "many trees",
+      "in the park"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many trees in the park?",
+      "statementForm": "There are many trees in the park.",
+      "fragmentForm": "many trees in the park?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_035",
+    "seedId": 35,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 책에는 정보가 많니?",
+    "english": "Is there much information in this book?",
+    "words": [
+      "Is",
+      "there",
+      "much",
+      "information",
+      "in",
+      "this",
+      "book",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is there",
+      "much information",
+      "in this book"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are there much information in this book?",
+      "statementForm": "There is much information in this book.",
+      "fragmentForm": "much information in this book?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_036",
+    "seedId": 36,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 집에는 방이 많지 않다.",
+    "english": "There are not many rooms in our house.",
+    "words": [
+      "There",
+      "are",
+      "not",
+      "many",
+      "rooms",
+      "in",
+      "our",
+      "house",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are not",
+      "many rooms",
+      "in our house"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are not much rooms in our house.",
+      "statementForm": "There are not many rooms in our house.",
+      "fragmentForm": "There are not many rooms in our house?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_037",
+    "seedId": 37,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 컵에는 물이 많지 않다.",
+    "english": "There is not much water in this cup.",
+    "words": [
+      "There",
+      "is",
+      "not",
+      "much",
+      "water",
+      "in",
+      "this",
+      "cup",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is not",
+      "much water",
+      "in this cup"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is not many water in this cup.",
+      "statementForm": "There is not much water in this cup.",
+      "fragmentForm": "There is not much water in this cup?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_038",
+    "seedId": 38,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 친구가 많지 않다.",
+    "english": "He does not have many friends.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "have",
+      "many",
+      "friends",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not have",
+      "many friends"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He does not have much friends.",
+      "statementForm": "He does not have many friends.",
+      "fragmentForm": "He does not have many friends?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_039",
+    "seedId": 39,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "나는 시간이 많지 않다.",
+    "english": "I do not have much time.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "have",
+      "much",
+      "time",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "do not have",
+      "much time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "I do not have many time.",
+      "statementForm": "I do not have much time.",
+      "fragmentForm": "I do not have much time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_040",
+    "seedId": 40,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 거리에는 차가 많지 않다.",
+    "english": "There are not many cars on this street.",
+    "words": [
+      "There",
+      "are",
+      "not",
+      "many",
+      "cars",
+      "on",
+      "this",
+      "street",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are not",
+      "many cars",
+      "on this street"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are not much cars on this street.",
+      "statementForm": "There are not many cars on this street.",
+      "fragmentForm": "There are not many cars on this street?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_041",
+    "seedId": 41,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 인내심이 많지 않다.",
+    "english": "She does not have much patience.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "have",
+      "much",
+      "patience",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not have",
+      "much patience"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "She does not have many patience.",
+      "statementForm": "She does not have much patience.",
+      "fragmentForm": "She does not have much patience?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_042",
+    "seedId": 42,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "가방 안에는 책이 많지 않다.",
+    "english": "There are not many books in the bag.",
+    "words": [
+      "There",
+      "are",
+      "not",
+      "many",
+      "books",
+      "in",
+      "the",
+      "bag",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are not",
+      "many books",
+      "in the bag"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are not much books in the bag.",
+      "statementForm": "There are not many books in the bag.",
+      "fragmentForm": "There are not many books in the bag?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_043",
+    "seedId": 43,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "병 안에는 우유가 많지 않다.",
+    "english": "There is not much milk in the bottle.",
+    "words": [
+      "There",
+      "is",
+      "not",
+      "much",
+      "milk",
+      "in",
+      "the",
+      "bottle",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is not",
+      "much milk",
+      "in the bottle"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is not many milk in the bottle.",
+      "statementForm": "There is not much milk in the bottle.",
+      "fragmentForm": "There is not much milk in the bottle?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_044",
+    "seedId": 44,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 시험이 많지 않다.",
+    "english": "He does not have many tests.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "have",
+      "many",
+      "tests",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not have",
+      "many tests"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He does not have much tests.",
+      "statementForm": "He does not have many tests.",
+      "fragmentForm": "He does not have many tests?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_045",
+    "seedId": 45,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 문제에는 시간이 많이 필요하지 않다.",
+    "english": "This problem does not need much time.",
+    "words": [
+      "This",
+      "problem",
+      "does",
+      "not",
+      "need",
+      "much",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This problem",
+      "does not need",
+      "much time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "negative",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem does not need many time.",
+      "statementForm": "This problem does not need much time.",
+      "fragmentForm": "This problem does not need much time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_046",
+    "seedId": 46,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "네 가방에는 책이 몇 권 있니?",
+    "english": "How many books are there in your bag?",
+    "words": [
+      "How",
+      "many",
+      "books",
+      "are",
+      "there",
+      "in",
+      "your",
+      "bag",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many books",
+      "are there",
+      "in your bag"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many books"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much books are there in your bag?",
+      "statementForm": "There are many books in your bag.",
+      "fragmentForm": "How many books are there in your bag?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_047",
+    "seedId": 47,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "교실에는 학생이 몇 명 있니?",
+    "english": "How many students are there in the classroom?",
+    "words": [
+      "How",
+      "many",
+      "students",
+      "are",
+      "there",
+      "in",
+      "the",
+      "classroom",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many students",
+      "are there",
+      "in the classroom"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many students"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much students are there in the classroom?",
+      "statementForm": "There are many students in the classroom.",
+      "fragmentForm": "How many students are there in the classroom?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_048",
+    "seedId": 48,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "상자 안에는 공이 몇 개 있니?",
+    "english": "How many balls are there in the box?",
+    "words": [
+      "How",
+      "many",
+      "balls",
+      "are",
+      "there",
+      "in",
+      "the",
+      "box",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many balls",
+      "are there",
+      "in the box"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many balls"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much balls are there in the box?",
+      "statementForm": "There are many balls in the box.",
+      "fragmentForm": "How many balls are there in the box?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_049",
+    "seedId": 49,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "네 가족에는 사람이 몇 명 있니?",
+    "english": "How many people are there in your family?",
+    "words": [
+      "How",
+      "many",
+      "people",
+      "are",
+      "there",
+      "in",
+      "your",
+      "family",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many people",
+      "are there",
+      "in your family"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many people"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much people are there in your family?",
+      "statementForm": "There are many people in your family.",
+      "fragmentForm": "How many people are there in your family?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_050",
+    "seedId": 50,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 학교에는 나무가 몇 그루 있니?",
+    "english": "How many trees are there in our school?",
+    "words": [
+      "How",
+      "many",
+      "trees",
+      "are",
+      "there",
+      "in",
+      "our",
+      "school",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many trees",
+      "are there",
+      "in our school"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many trees"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much trees are there in our school?",
+      "statementForm": "There are many trees in our school.",
+      "fragmentForm": "How many trees are there in our school?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_051",
+    "seedId": 51,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 병에는 물이 얼마나 있니?",
+    "english": "How much water is there in this bottle?",
+    "words": [
+      "How",
+      "much",
+      "water",
+      "is",
+      "there",
+      "in",
+      "this",
+      "bottle",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much water",
+      "is there",
+      "in this bottle"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much water"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many water is there in this bottle?",
+      "statementForm": "There is much water in this bottle.",
+      "fragmentForm": "How much water is there in this bottle?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_052",
+    "seedId": 52,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 시간이 얼마나 있니?",
+    "english": "How much time does he have?",
+    "words": [
+      "How",
+      "much",
+      "time",
+      "does",
+      "he",
+      "have",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much time",
+      "does he have"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much time"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many time does he have?",
+      "statementForm": "He has much time.",
+      "fragmentForm": "How much time does he have?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_053",
+    "seedId": 53,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "네 지갑에는 돈이 얼마나 있니?",
+    "english": "How much money is there in your wallet?",
+    "words": [
+      "How",
+      "much",
+      "money",
+      "is",
+      "there",
+      "in",
+      "your",
+      "wallet",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much money",
+      "is there",
+      "in your wallet"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much money"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many money is there in your wallet?",
+      "statementForm": "There is much money in your wallet.",
+      "fragmentForm": "How much money is there in your wallet?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_054",
+    "seedId": 54,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 숙제에는 시간이 얼마나 필요하니?",
+    "english": "How much time does this homework need?",
+    "words": [
+      "How",
+      "much",
+      "time",
+      "does",
+      "this",
+      "homework",
+      "need",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "many_much",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much time",
+      "does this homework need"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much time"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many time does this homework need?",
+      "statementForm": "How much time does this homework need.",
+      "fragmentForm": "How much time does this homework need?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_055",
+    "seedId": 55,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "냉장고에는 우유가 얼마나 있니?",
+    "english": "How much milk is there in the refrigerator?",
+    "words": [
+      "How",
+      "much",
+      "milk",
+      "is",
+      "there",
+      "in",
+      "the",
+      "refrigerator",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much milk",
+      "is there",
+      "in the refrigerator"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much milk"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many milk is there in the refrigerator?",
+      "statementForm": "There is much milk in the refrigerator.",
+      "fragmentForm": "How much milk is there in the refrigerator?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_056",
+    "seedId": 56,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 방에는 의자가 몇 개 있니?",
+    "english": "How many chairs are there in this room?",
+    "words": [
+      "How",
+      "many",
+      "chairs",
+      "are",
+      "there",
+      "in",
+      "this",
+      "room",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many chairs",
+      "are there",
+      "in this room"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many chairs"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much chairs are there in this room?",
+      "statementForm": "There are many chairs in this room.",
+      "fragmentForm": "How many chairs are there in this room?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_057",
+    "seedId": 57,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 친구가 몇 명 있니?",
+    "english": "How many friends does he have?",
+    "words": [
+      "How",
+      "many",
+      "friends",
+      "does",
+      "he",
+      "have",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many friends",
+      "does he have"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many friends"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much friends does he have?",
+      "statementForm": "He has many friends.",
+      "fragmentForm": "How many friends does he have?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_058",
+    "seedId": 58,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "네 도시에는 공원이 몇 개 있니?",
+    "english": "How many parks are there in your city?",
+    "words": [
+      "How",
+      "many",
+      "parks",
+      "are",
+      "there",
+      "in",
+      "your",
+      "city",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many parks",
+      "are there",
+      "in your city"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many parks"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much parks are there in your city?",
+      "statementForm": "There are many parks in your city.",
+      "fragmentForm": "How many parks are there in your city?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_059",
+    "seedId": 59,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 컵에는 차가 얼마나 있니?",
+    "english": "How much tea is there in this cup?",
+    "words": [
+      "How",
+      "much",
+      "tea",
+      "is",
+      "there",
+      "in",
+      "this",
+      "cup",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much tea",
+      "is there",
+      "in this cup"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much tea"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many tea is there in this cup?",
+      "statementForm": "There is much tea in this cup.",
+      "fragmentForm": "How much tea is there in this cup?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_060",
+    "seedId": 60,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 숙제가 얼마나 있니?",
+    "english": "How much homework does she have?",
+    "words": [
+      "How",
+      "much",
+      "homework",
+      "does",
+      "she",
+      "have",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much homework",
+      "does she have"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much homework"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many homework does she have?",
+      "statementForm": "She has much homework.",
+      "fragmentForm": "How much homework does she have?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_061",
+    "seedId": 61,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 마을에는 집이 몇 채 있니?",
+    "english": "How many houses are there in this village?",
+    "words": [
+      "How",
+      "many",
+      "houses",
+      "are",
+      "there",
+      "in",
+      "this",
+      "village",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many houses",
+      "are there",
+      "in this village"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many houses"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much houses are there in this village?",
+      "statementForm": "There are many houses in this village.",
+      "fragmentForm": "How many houses are there in this village?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_062",
+    "seedId": 62,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 병에는 주스가 얼마나 있니?",
+    "english": "How much juice is there in the bottle?",
+    "words": [
+      "How",
+      "much",
+      "juice",
+      "is",
+      "there",
+      "in",
+      "the",
+      "bottle",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much juice",
+      "is there",
+      "in the bottle"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much juice"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many juice is there in the bottle?",
+      "statementForm": "There is much juice in the bottle.",
+      "fragmentForm": "How much juice is there in the bottle?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_063",
+    "seedId": 63,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 문제점이 몇 개 있니?",
+    "english": "How many problems does he have?",
+    "words": [
+      "How",
+      "many",
+      "problems",
+      "does",
+      "he",
+      "have",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many problems",
+      "does he have"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many problems"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much problems does he have?",
+      "statementForm": "He has many problems.",
+      "fragmentForm": "How many problems does he have?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_064",
+    "seedId": 64,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "네 책상에는 연필이 몇 자루 있니?",
+    "english": "How many pencils are there on your desk?",
+    "words": [
+      "How",
+      "many",
+      "pencils",
+      "are",
+      "there",
+      "on",
+      "your",
+      "desk",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How many pencils",
+      "are there",
+      "on your desk"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How many pencils"
+    ],
+    "tags": [
+      "many_much",
+      "how_many",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How much pencils are there on your desk?",
+      "statementForm": "There are many pencils on your desk.",
+      "fragmentForm": "How many pencils are there on your desk?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_065",
+    "seedId": 65,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 책에는 정보가 얼마나 있니?",
+    "english": "How much information is there in this book?",
+    "words": [
+      "How",
+      "much",
+      "information",
+      "is",
+      "there",
+      "in",
+      "this",
+      "book",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "many_much",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "How much information",
+      "is there",
+      "in this book"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "How much information"
+    ],
+    "tags": [
+      "many_much",
+      "how_much",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "How many information is there in this book?",
+      "statementForm": "There is much information in this book.",
+      "fragmentForm": "How much information is there in this book?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_066",
+    "seedId": 66,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 친구는 많지만 시간은 많지 않다.",
+    "english": "He has many friends, but he does not have much time.",
+    "words": [
+      "He",
+      "has",
+      "many",
+      "friends,",
+      "but",
+      "he",
+      "does",
+      "not",
+      "have",
+      "much",
+      "time",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has many friends",
+      "but",
+      "does not have much time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has much friends, but he does not have much time.",
+      "statementForm": "He has many friends, but he does not have much time.",
+      "fragmentForm": "He has many friends, but he does not have much time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_067",
+    "seedId": 67,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 학교에는 학생은 많지만 공간은 많지 않다.",
+    "english": "There are many students in our school, but there is not much space.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "students",
+      "in",
+      "our",
+      "school,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "space",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many students in our school",
+      "but",
+      "there is not much space"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much students in our school, but there is not much space.",
+      "statementForm": "There are many students in our school, but there is not much space.",
+      "fragmentForm": "There are many students in our school, but there is not much space?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_068",
+    "seedId": 68,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 책은 많지만 돈은 많지 않다.",
+    "english": "She has many books, but she does not have much money.",
+    "words": [
+      "She",
+      "has",
+      "many",
+      "books,",
+      "but",
+      "she",
+      "does",
+      "not",
+      "have",
+      "much",
+      "money",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "has many books",
+      "but",
+      "does not have much money"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "She has much books, but she does not have much money.",
+      "statementForm": "She has many books, but she does not have much money.",
+      "fragmentForm": "She has many books, but she does not have much money?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_069",
+    "seedId": 69,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 식당에는 손님은 많지만 음식은 많지 않다.",
+    "english": "There are many customers in this restaurant, but there is not much food.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "customers",
+      "in",
+      "this",
+      "restaurant,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "food",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many customers in this restaurant",
+      "but",
+      "there is not much food"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much customers in this restaurant, but there is not much food.",
+      "statementForm": "There are many customers in this restaurant, but there is not much food.",
+      "fragmentForm": "There are many customers in this restaurant, but there is not much food?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_070",
+    "seedId": 70,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "나는 질문은 많지만 자신감은 많지 않다.",
+    "english": "I have many questions, but I do not have much confidence.",
+    "words": [
+      "I",
+      "have",
+      "many",
+      "questions,",
+      "but",
+      "I",
+      "do",
+      "not",
+      "have",
+      "much",
+      "confidence",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "have many questions",
+      "but",
+      "do not have much confidence"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "I have much questions, but I do not have much confidence.",
+      "statementForm": "I have many questions, but I do not have much confidence.",
+      "fragmentForm": "I have many questions, but I do not have much confidence?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_071",
+    "seedId": 71,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 시험은 많지만 자유 시간은 많지 않다.",
+    "english": "He has many tests, but he does not have much free time.",
+    "words": [
+      "He",
+      "has",
+      "many",
+      "tests,",
+      "but",
+      "he",
+      "does",
+      "not",
+      "have",
+      "much",
+      "free",
+      "time",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has many tests",
+      "but",
+      "does not have much free time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has much tests, but he does not have much free time.",
+      "statementForm": "He has many tests, but he does not have much free time.",
+      "fragmentForm": "He has many tests, but he does not have much free time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_072",
+    "seedId": 72,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 공원에는 나무는 많지만 그늘은 많지 않다.",
+    "english": "There are many trees in this park, but there is not much shade.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "trees",
+      "in",
+      "this",
+      "park,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "shade",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many trees in this park",
+      "but",
+      "there is not much shade"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much trees in this park, but there is not much shade.",
+      "statementForm": "There are many trees in this park, but there is not much shade.",
+      "fragmentForm": "There are many trees in this park, but there is not much shade?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_073",
+    "seedId": 73,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 아이디어는 많지만 경험은 많지 않다.",
+    "english": "She has many ideas, but she does not have much experience.",
+    "words": [
+      "She",
+      "has",
+      "many",
+      "ideas,",
+      "but",
+      "she",
+      "does",
+      "not",
+      "have",
+      "much",
+      "experience",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "has many ideas",
+      "but",
+      "does not have much experience"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "She has much ideas, but she does not have much experience.",
+      "statementForm": "She has many ideas, but she does not have much experience.",
+      "fragmentForm": "She has many ideas, but she does not have much experience?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_074",
+    "seedId": 74,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 집에는 방은 많지만 가구는 많지 않다.",
+    "english": "There are many rooms in our house, but there is not much furniture.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "rooms",
+      "in",
+      "our",
+      "house,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "furniture",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many rooms in our house",
+      "but",
+      "there is not much furniture"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much rooms in our house, but there is not much furniture.",
+      "statementForm": "There are many rooms in our house, but there is not much furniture.",
+      "fragmentForm": "There are many rooms in our house, but there is not much furniture?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_075",
+    "seedId": 75,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 실수는 많지만 후회는 많지 않다.",
+    "english": "He has many mistakes, but he does not have much regret.",
+    "words": [
+      "He",
+      "has",
+      "many",
+      "mistakes,",
+      "but",
+      "he",
+      "does",
+      "not",
+      "have",
+      "much",
+      "regret",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has many mistakes",
+      "but",
+      "does not have much regret"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has much mistakes, but he does not have much regret.",
+      "statementForm": "He has many mistakes, but he does not have much regret.",
+      "fragmentForm": "He has many mistakes, but he does not have much regret?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_076",
+    "seedId": 76,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "네 가방에는 책이 많니, 아니면 종이가 많니?",
+    "english": "Are there many books in your bag, or is there much paper?",
+    "words": [
+      "Are",
+      "there",
+      "many",
+      "books",
+      "in",
+      "your",
+      "bag,",
+      "or",
+      "is",
+      "there",
+      "much",
+      "paper",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are there",
+      "many books in your bag",
+      "or",
+      "is there much paper"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "question",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is there many books in your bag, or is there much paper?",
+      "statementForm": "There are many books in your bag, or is there much paper.",
+      "fragmentForm": "many books in your bag, or is there much paper?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_077",
+    "seedId": 77,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 친구가 많지만 대화할 시간은 별로 없다.",
+    "english": "She has many friends, but she does not have much time to talk.",
+    "words": [
+      "She",
+      "has",
+      "many",
+      "friends,",
+      "but",
+      "she",
+      "does",
+      "not",
+      "have",
+      "much",
+      "time",
+      "to",
+      "talk",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "has many friends",
+      "but",
+      "does not have much time to talk"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "She has much friends, but she does not have much time to talk.",
+      "statementForm": "She has many friends, but she does not have much time to talk.",
+      "fragmentForm": "She has many friends, but she does not have much time to talk?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_078",
+    "seedId": 78,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 도시에는 건물은 많지만 깨끗한 공기는 많지 않다.",
+    "english": "There are many buildings in this city, but there is not much clean air.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "buildings",
+      "in",
+      "this",
+      "city,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "clean",
+      "air",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many buildings in this city",
+      "but",
+      "there is not much clean air"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much buildings in this city, but there is not much clean air.",
+      "statementForm": "There are many buildings in this city, but there is not much clean air.",
+      "fragmentForm": "There are many buildings in this city, but there is not much clean air?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_079",
+    "seedId": 79,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 계획은 많지만 인내심은 많지 않다.",
+    "english": "He has many plans, but he does not have much patience.",
+    "words": [
+      "He",
+      "has",
+      "many",
+      "plans,",
+      "but",
+      "he",
+      "does",
+      "not",
+      "have",
+      "much",
+      "patience",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has many plans",
+      "but",
+      "does not have much patience"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has much plans, but he does not have much patience.",
+      "statementForm": "He has many plans, but he does not have much patience.",
+      "fragmentForm": "He has many plans, but he does not have much patience?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_080",
+    "seedId": 80,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 반에는 질문은 많지만 수업 시간은 많지 않다.",
+    "english": "There are many questions in our class, but there is not much class time.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "questions",
+      "in",
+      "our",
+      "class,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "class",
+      "time",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many questions in our class",
+      "but",
+      "there is not much class time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much questions in our class, but there is not much class time.",
+      "statementForm": "There are many questions in our class, but there is not much class time.",
+      "fragmentForm": "There are many questions in our class, but there is not much class time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_081",
+    "seedId": 81,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 상자에는 사과는 많지만 주스는 많지 않다.",
+    "english": "There are many apples in this box, but there is not much juice.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "apples",
+      "in",
+      "this",
+      "box,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "juice",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many apples in this box",
+      "but",
+      "there is not much juice"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much apples in this box, but there is not much juice.",
+      "statementForm": "There are many apples in this box, but there is not much juice.",
+      "fragmentForm": "There are many apples in this box, but there is not much juice?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_082",
+    "seedId": 82,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 의무는 많지만 에너지는 많지 않다.",
+    "english": "She has many duties, but she does not have much energy.",
+    "words": [
+      "She",
+      "has",
+      "many",
+      "duties,",
+      "but",
+      "she",
+      "does",
+      "not",
+      "have",
+      "much",
+      "energy",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "has many duties",
+      "but",
+      "does not have much energy"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "She has much duties, but she does not have much energy.",
+      "statementForm": "She has many duties, but she does not have much energy.",
+      "fragmentForm": "She has many duties, but she does not have much energy?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_083",
+    "seedId": 83,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 학교에는 규칙은 많지만 설명은 많지 않다.",
+    "english": "There are many rules in this school, but there is not much explanation.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "rules",
+      "in",
+      "this",
+      "school,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "explanation",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many rules in this school",
+      "but",
+      "there is not much explanation"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much rules in this school, but there is not much explanation.",
+      "statementForm": "There are many rules in this school, but there is not much explanation.",
+      "fragmentForm": "There are many rules in this school, but there is not much explanation?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_084",
+    "seedId": 84,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 지식은 많지만 실제 경험은 많지 않다.",
+    "english": "He has much knowledge, but he does not have much real experience.",
+    "words": [
+      "He",
+      "has",
+      "much",
+      "knowledge,",
+      "but",
+      "he",
+      "does",
+      "not",
+      "have",
+      "much",
+      "real",
+      "experience",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has much knowledge",
+      "but",
+      "he does not have much real experience"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has many knowledge, but he does not have much real experience.",
+      "statementForm": "He has much knowledge, but he does not have much real experience.",
+      "fragmentForm": "He has much knowledge, but he does not have much real experience?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_085",
+    "seedId": 85,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리에게 선택지는 많지만 시간이 많지 않다.",
+    "english": "We have many choices, but we do not have much time.",
+    "words": [
+      "We",
+      "have",
+      "many",
+      "choices,",
+      "but",
+      "we",
+      "do",
+      "not",
+      "have",
+      "much",
+      "time",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "have many choices",
+      "but",
+      "do not have much time"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "contrast",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "We have much choices, but we do not have much time.",
+      "statementForm": "We have many choices, but we do not have much time.",
+      "fragmentForm": "We have many choices, but we do not have much time?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_086",
+    "seedId": 86,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 반에는 학생이 많아서 의자가 많이 필요하다.",
+    "english": "There are many students in our class, so we need many chairs.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "students",
+      "in",
+      "our",
+      "class,",
+      "so",
+      "we",
+      "need",
+      "many",
+      "chairs",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many students in our class",
+      "so",
+      "we need many chairs"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much students in our class, so we need many chairs.",
+      "statementForm": "There are many students in our class, so we need many chairs.",
+      "fragmentForm": "There are many students in our class, so we need many chairs?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_087",
+    "seedId": 87,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 프로젝트에는 시간이 많이 걸리지만 돈은 많이 들지 않는다.",
+    "english": "This project takes much time, but it does not cost much money.",
+    "words": [
+      "This",
+      "project",
+      "takes",
+      "much",
+      "time,",
+      "but",
+      "it",
+      "does",
+      "not",
+      "cost",
+      "much",
+      "money",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This project",
+      "takes much time",
+      "but",
+      "it does not cost much money"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "This project takes many time, but it does not cost much money.",
+      "statementForm": "This project takes much time, but it does not cost much money.",
+      "fragmentForm": "This project takes much time, but it does not cost much money?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_088",
+    "seedId": 88,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 책을 많이 읽기 때문에 질문도 많다.",
+    "english": "She reads many books, so she has many questions.",
+    "words": [
+      "She",
+      "reads",
+      "many",
+      "books,",
+      "so",
+      "she",
+      "has",
+      "many",
+      "questions",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "reads many books",
+      "so",
+      "she has many questions"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "She reads much books, so she has many questions.",
+      "statementForm": "She reads many books, so she has many questions.",
+      "fragmentForm": "She reads many books, so she has many questions?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_089",
+    "seedId": 89,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 책에는 정보가 많아서 공부에 많은 도움이 된다.",
+    "english": "There is much information in this book, so it is much help for study.",
+    "words": [
+      "There",
+      "is",
+      "much",
+      "information",
+      "in",
+      "this",
+      "book,",
+      "so",
+      "it",
+      "is",
+      "much",
+      "help",
+      "for",
+      "study",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is",
+      "much information in this book",
+      "so",
+      "it is much help for study"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is many information in this book, so it is much help for study.",
+      "statementForm": "There is much information in this book, so it is much help for study.",
+      "fragmentForm": "There is much information in this book, so it is much help for study?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_090",
+    "seedId": 90,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "도시에 차가 많아서 공기가 많이 좋지 않다.",
+    "english": "There are many cars in the city, so the air is not very good.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "cars",
+      "in",
+      "the",
+      "city,",
+      "so",
+      "the",
+      "air",
+      "is",
+      "not",
+      "very",
+      "good",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many cars in the city",
+      "so",
+      "the air is not very good"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much cars in the city, so the air is not very good.",
+      "statementForm": "There are many cars in the city, so the air is not very good.",
+      "fragmentForm": "There are many cars in the city, so the air is not very good?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_091",
+    "seedId": 91,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리 가족에는 사람이 많지만 각자 쓸 시간은 많지 않다.",
+    "english": "There are many people in my family, but there is not much time for each person.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "people",
+      "in",
+      "my",
+      "family,",
+      "but",
+      "there",
+      "is",
+      "not",
+      "much",
+      "time",
+      "for",
+      "each",
+      "person",
+      "."
+    ],
+    "wordCount": 16,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many people in my family",
+      "but",
+      "there is not much time for each person"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much people in my family, but there is not much time for each person.",
+      "statementForm": "There are many people in my family, but there is not much time for each person.",
+      "fragmentForm": "There are many people in my family, but there is not much time for each person?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_092",
+    "seedId": 92,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 관심사가 많아서 할 말도 많다.",
+    "english": "He has many interests, so he has many things to say.",
+    "words": [
+      "He",
+      "has",
+      "many",
+      "interests,",
+      "so",
+      "he",
+      "has",
+      "many",
+      "things",
+      "to",
+      "say",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "has many interests",
+      "so",
+      "he has many things to say"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has much interests, so he has many things to say.",
+      "statementForm": "He has many interests, so he has many things to say.",
+      "fragmentForm": "He has many interests, so he has many things to say?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_093",
+    "seedId": 93,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 식당은 손님이 많아서 물이 많이 필요하다.",
+    "english": "This restaurant has many customers, so it needs much water.",
+    "words": [
+      "This",
+      "restaurant",
+      "has",
+      "many",
+      "customers,",
+      "so",
+      "it",
+      "needs",
+      "much",
+      "water",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This restaurant",
+      "has many customers",
+      "so",
+      "it needs much water"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "This restaurant has much customers, so it needs much water.",
+      "statementForm": "This restaurant has many customers, so it needs much water.",
+      "fragmentForm": "This restaurant has many customers, so it needs much water?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_094",
+    "seedId": 94,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 시간이 많지 않지만 해야 할 일은 많다.",
+    "english": "She does not have much time, but she has many things to do.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "have",
+      "much",
+      "time,",
+      "but",
+      "she",
+      "has",
+      "many",
+      "things",
+      "to",
+      "do",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "does not have much time",
+      "but",
+      "she has many things to do"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "She does not have much time, but she has much things to do.",
+      "statementForm": "She does not have much time, but she has many things to do.",
+      "fragmentForm": "She does not have much time, but she has many things to do?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_095",
+    "seedId": 95,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "교실에는 학생이 많을수록 공간은 더 적게 느껴진다.",
+    "english": "The more students there are in the classroom, the less space there seems to be.",
+    "words": [
+      "The",
+      "more",
+      "students",
+      "there",
+      "are",
+      "in",
+      "the",
+      "classroom,",
+      "the",
+      "less",
+      "space",
+      "there",
+      "seems",
+      "to",
+      "be",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The more students",
+      "there are in the classroom",
+      "the less space",
+      "there seems to be"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "more students"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The more students there are in the classroom, the less space there seems to be.",
+      "statementForm": "The more students there are in the classroom, the less space there seems to be.",
+      "fragmentForm": "The more students there are in the classroom, the less space there seems to be?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_096",
+    "seedId": 96,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그는 경험이 많지 않지만 열정은 많다.",
+    "english": "He does not have much experience, but he has much passion.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "have",
+      "much",
+      "experience,",
+      "but",
+      "he",
+      "has",
+      "much",
+      "passion",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "does not have much experience",
+      "but",
+      "he has much passion"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "uncountable"
+    ],
+    "distractorSeeds": {
+      "auxError": "He does not have many experience, but he has much passion.",
+      "statementForm": "He does not have much experience, but he has much passion.",
+      "fragmentForm": "He does not have much experience, but he has much passion?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_097",
+    "seedId": 97,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 학교에는 규칙이 많아서 학생들이 기억해야 할 것이 많다.",
+    "english": "There are many rules in this school, so students have many things to remember.",
+    "words": [
+      "There",
+      "are",
+      "many",
+      "rules",
+      "in",
+      "this",
+      "school,",
+      "so",
+      "students",
+      "have",
+      "many",
+      "things",
+      "to",
+      "remember",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There are",
+      "many rules in this school",
+      "so",
+      "students have many things to remember"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "countable"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are much rules in this school, so students have many things to remember.",
+      "statementForm": "There are many rules in this school, so students have many things to remember.",
+      "fragmentForm": "There are many rules in this school, so students have many things to remember?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_098",
+    "seedId": 98,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "이 문제에는 정보가 많지 않아서 힌트가 많이 필요하다.",
+    "english": "There is not much information in this problem, so we need many hints.",
+    "words": [
+      "There",
+      "is",
+      "not",
+      "much",
+      "information",
+      "in",
+      "this",
+      "problem,",
+      "so",
+      "we",
+      "need",
+      "many",
+      "hints",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "There is not",
+      "much information in this problem",
+      "so",
+      "we need many hints"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "much"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is not much information in this problem, so we need much hints.",
+      "statementForm": "There is not much information in this problem, so we need many hints.",
+      "fragmentForm": "There is not much information in this problem, so we need many hints?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_099",
+    "seedId": 99,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "우리에게는 선택권이 많지 않지만 해야 할 일은 많다.",
+    "english": "We do not have many choices, but we have much work to do.",
+    "words": [
+      "We",
+      "do",
+      "not",
+      "have",
+      "many",
+      "choices,",
+      "but",
+      "we",
+      "have",
+      "much",
+      "work",
+      "to",
+      "do",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "do not have many choices",
+      "but",
+      "we have much work to do"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "We do not have much choices, but we have much work to do.",
+      "statementForm": "We do not have many choices, but we have much work to do.",
+      "fragmentForm": "We do not have many choices, but we have much work to do?"
+    }
+  },
+  {
+    "id": "m1_s1_many_much_100",
+    "seedId": 100,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "many_much",
+    "chapterLabelKo": "many와 much",
+    "korean": "그녀는 친구가 많고 에너지도 많아서 항상 바쁘다.",
+    "english": "She has many friends and much energy, so she is always busy.",
+    "words": [
+      "She",
+      "has",
+      "many",
+      "friends",
+      "and",
+      "much",
+      "energy,",
+      "so",
+      "she",
+      "is",
+      "always",
+      "busy",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "many_much",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "has many friends and much energy",
+      "so",
+      "she is always busy"
+    ],
+    "extraClueWordPool": [
+      "many",
+      "much",
+      "how many",
+      "how much",
+      "books",
+      "students",
+      "cars",
+      "friends",
+      "water",
+      "milk",
+      "time",
+      "money",
+      "homework",
+      "information"
+    ],
+    "blankTargets": [
+      "many"
+    ],
+    "tags": [
+      "many_much",
+      "complex",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "She has much friends and much energy, so she is always busy.",
+      "statementForm": "She has many friends and much energy, so she is always busy.",
+      "fragmentForm": "She has many friends and much energy, so she is always busy?"
+    }
+  }
+]
