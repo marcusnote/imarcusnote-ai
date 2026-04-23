@@ -1,0 +1,2768 @@
+[
+  {
+    "id": "m1_causative_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 웃게 만들었다.",
+    "english": "I made him laugh.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "laugh",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him laugh"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to laugh.",
+      "statementForm": "I caused him laugh.",
+      "fragmentForm": "I made him laugh?"
+    }
+  },
+  {
+    "id": "m1_causative_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 울게 만들었다.",
+    "english": "She made me cry.",
+    "words": [
+      "She",
+      "made",
+      "me",
+      "cry",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "me cry"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made me to cry.",
+      "statementForm": "She caused me cry.",
+      "fragmentForm": "She made me cry?"
+    }
+  },
+  {
+    "id": "m1_causative_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 공부하게 했다.",
+    "english": "I made him study.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "study",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him study"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to study.",
+      "statementForm": "I caused him study.",
+      "fragmentForm": "I made him study?"
+    }
+  },
+  {
+    "id": "m1_causative_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그를 뛰게 했다.",
+    "english": "She made him run.",
+    "words": [
+      "She",
+      "made",
+      "him",
+      "run",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "him run"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made him to run.",
+      "statementForm": "She caused him run.",
+      "fragmentForm": "She made him run?"
+    }
+  },
+  {
+    "id": "m1_causative_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 방을 청소하게 했다.",
+    "english": "I made him clean the room.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "clean",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him clean the room"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to clean the room.",
+      "statementForm": "I caused him clean the room.",
+      "fragmentForm": "I made him clean the room?"
+    }
+  },
+  {
+    "id": "m1_causative_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 기다리게 했다.",
+    "english": "She made me wait.",
+    "words": [
+      "She",
+      "made",
+      "me",
+      "wait",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "me wait"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made me to wait.",
+      "statementForm": "She caused me wait.",
+      "fragmentForm": "She made me wait?"
+    }
+  },
+  {
+    "id": "m1_causative_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 문제를 풀게 했다.",
+    "english": "I made him solve the problem.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him solve the problem"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to solve the problem.",
+      "statementForm": "I caused him solve the problem.",
+      "fragmentForm": "I made him solve the problem?"
+    }
+  },
+  {
+    "id": "m1_causative_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그를 책을 읽게 했다.",
+    "english": "She made him read a book.",
+    "words": [
+      "She",
+      "made",
+      "him",
+      "read",
+      "a",
+      "book",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "him read a book"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made him to read a book.",
+      "statementForm": "She caused him read a book.",
+      "fragmentForm": "She made him read a book?"
+    }
+  },
+  {
+    "id": "m1_causative_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 일찍 일어나게 했다.",
+    "english": "I made him wake up early.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "wake",
+      "up",
+      "early",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him wake up early"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to wake up early.",
+      "statementForm": "I caused him wake up early.",
+      "fragmentForm": "I made him wake up early?"
+    }
+  },
+  {
+    "id": "m1_causative_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그를 조용히 있게 했다.",
+    "english": "She made him stay quiet.",
+    "words": [
+      "She",
+      "made",
+      "him",
+      "stay",
+      "quiet",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "him stay quiet"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made him to stay quiet.",
+      "statementForm": "She caused him stay quiet.",
+      "fragmentForm": "She made him stay quiet?"
+    }
+  },
+  {
+    "id": "m1_causative_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 다시 시도하게 했다.",
+    "english": "I made him try again.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "try",
+      "again",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him try again"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to try again.",
+      "statementForm": "I caused him try again.",
+      "fragmentForm": "I made him try again?"
+    }
+  },
+  {
+    "id": "m1_causative_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 집중하게 했다.",
+    "english": "She made me focus.",
+    "words": [
+      "She",
+      "made",
+      "me",
+      "focus",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "me focus"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made me to focus.",
+      "statementForm": "She caused me focus.",
+      "fragmentForm": "She made me focus?"
+    }
+  },
+  {
+    "id": "m1_causative_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 미소 짓게 했다.",
+    "english": "I made him smile.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "smile",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him smile"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to smile.",
+      "statementForm": "I caused him smile.",
+      "fragmentForm": "I made him smile?"
+    }
+  },
+  {
+    "id": "m1_causative_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 생각하게 했다.",
+    "english": "She made me think.",
+    "words": [
+      "She",
+      "made",
+      "me",
+      "think",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "me think"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made me to think.",
+      "statementForm": "She caused me think.",
+      "fragmentForm": "She made me think?"
+    }
+  },
+  {
+    "id": "m1_causative_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 비교하게 했다.",
+    "english": "I made him compare the two pictures.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "compare",
+      "the",
+      "two",
+      "pictures",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him compare the two pictures"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to compare the two pictures.",
+      "statementForm": "I caused him compare the two pictures.",
+      "fragmentForm": "I made him compare the two pictures?"
+    }
+  },
+  {
+    "id": "m1_causative_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그를 발표하게 했다.",
+    "english": "She made him give a presentation.",
+    "words": [
+      "She",
+      "made",
+      "him",
+      "give",
+      "a",
+      "presentation",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "him give a presentation"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made him to give a presentation.",
+      "statementForm": "She caused him give a presentation.",
+      "fragmentForm": "She made him give a presentation?"
+    }
+  },
+  {
+    "id": "m1_causative_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 메모하게 했다.",
+    "english": "I made him take notes.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "take",
+      "notes",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him take notes"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to take notes.",
+      "statementForm": "I caused him take notes.",
+      "fragmentForm": "I made him take notes?"
+    }
+  },
+  {
+    "id": "m1_causative_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 다시 읽게 했다.",
+    "english": "She made me read it again.",
+    "words": [
+      "She",
+      "made",
+      "me",
+      "read",
+      "it",
+      "again",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "me read it again"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made me to read it again.",
+      "statementForm": "She caused me read it again.",
+      "fragmentForm": "She made me read it again?"
+    }
+  },
+  {
+    "id": "m1_causative_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 사실을 말하게 했다.",
+    "english": "I made him tell the truth.",
+    "words": [
+      "I",
+      "made",
+      "him",
+      "tell",
+      "the",
+      "truth",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I made",
+      "him tell the truth"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made him to tell the truth.",
+      "statementForm": "I caused him tell the truth.",
+      "fragmentForm": "I made him tell the truth?"
+    }
+  },
+  {
+    "id": "m1_causative_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 규칙을 따르게 했다.",
+    "english": "She made me follow the rules.",
+    "words": [
+      "She",
+      "made",
+      "me",
+      "follow",
+      "the",
+      "rules",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She made",
+      "me follow the rules"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She made me to follow the rules.",
+      "statementForm": "She caused me follow the rules.",
+      "fragmentForm": "She made me follow the rules?"
+    }
+  },
+  {
+    "id": "m1_causative_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그에게 숙제를 하게 했다.",
+    "english": "I had him do his homework.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "do",
+      "his",
+      "homework",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had",
+      "him do his homework"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to do his homework.",
+      "statementForm": "I asked him do his homework.",
+      "fragmentForm": "I had him do his homework?"
+    }
+  },
+  {
+    "id": "m1_causative_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나에게 편지를 쓰게 했다.",
+    "english": "She had me write a letter.",
+    "words": [
+      "She",
+      "had",
+      "me",
+      "write",
+      "a",
+      "letter",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had",
+      "me write a letter"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had me to write a letter.",
+      "statementForm": "She asked me write a letter.",
+      "fragmentForm": "She had me write a letter?"
+    }
+  },
+  {
+    "id": "m1_causative_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그에게 문을 열게 했다.",
+    "english": "I had him open the door.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "open",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had",
+      "him open the door"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to open the door.",
+      "statementForm": "I asked him open the door.",
+      "fragmentForm": "I had him open the door?"
+    }
+  },
+  {
+    "id": "m1_causative_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그에게 방을 정리하게 했다.",
+    "english": "She had him organize the room.",
+    "words": [
+      "She",
+      "had",
+      "him",
+      "organize",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had",
+      "him organize the room"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had him to organize the room.",
+      "statementForm": "She asked him organize the room.",
+      "fragmentForm": "She had him organize the room?"
+    }
+  },
+  {
+    "id": "m1_causative_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그에게 전화를 하게 했다.",
+    "english": "I had him make a call.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "make",
+      "a",
+      "call",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had",
+      "him make a call"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to make a call.",
+      "statementForm": "I asked him make a call.",
+      "fragmentForm": "I had him make a call?"
+    }
+  },
+  {
+    "id": "m1_causative_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나에게 물을 가져오게 했다.",
+    "english": "She had me bring water.",
+    "words": [
+      "She",
+      "had",
+      "me",
+      "bring",
+      "water",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had",
+      "me bring water"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had me to bring water.",
+      "statementForm": "She asked me bring water.",
+      "fragmentForm": "She had me bring water?"
+    }
+  },
+  {
+    "id": "m1_causative_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그에게 책상을 닦게 했다.",
+    "english": "I had him wipe the desk.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "wipe",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had",
+      "him wipe the desk"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to wipe the desk.",
+      "statementForm": "I asked him wipe the desk.",
+      "fragmentForm": "I had him wipe the desk?"
+    }
+  },
+  {
+    "id": "m1_causative_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그에게 이메일을 보내게 했다.",
+    "english": "She had him send an email.",
+    "words": [
+      "She",
+      "had",
+      "him",
+      "send",
+      "an",
+      "email",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had",
+      "him send an email"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had him to send an email.",
+      "statementForm": "She asked him send an email.",
+      "fragmentForm": "She had him send an email?"
+    }
+  },
+  {
+    "id": "m1_causative_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그에게 창문을 닫게 했다.",
+    "english": "I had him close the window.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "close",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had",
+      "him close the window"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to close the window.",
+      "statementForm": "I asked him close the window.",
+      "fragmentForm": "I had him close the window?"
+    }
+  },
+  {
+    "id": "m1_causative_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나에게 문제를 설명하게 했다.",
+    "english": "She had me explain the problem.",
+    "words": [
+      "She",
+      "had",
+      "me",
+      "explain",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had",
+      "me explain the problem"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had me to explain the problem.",
+      "statementForm": "She asked me explain the problem.",
+      "fragmentForm": "She had me explain the problem?"
+    }
+  },
+  {
+    "id": "m1_causative_031",
+    "seedId": 31,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그에게 가방을 옮기게 했다.",
+    "english": "I had him carry the bag.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "carry",
+      "the",
+      "bag",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had",
+      "him carry the bag"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to carry the bag.",
+      "statementForm": "I asked him carry the bag.",
+      "fragmentForm": "I had him carry the bag?"
+    }
+  },
+  {
+    "id": "m1_causative_032",
+    "seedId": 32,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그에게 보고서를 확인하게 했다.",
+    "english": "She had him check the report.",
+    "words": [
+      "She",
+      "had",
+      "him",
+      "check",
+      "the",
+      "report",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had",
+      "him check the report"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had him to check the report.",
+      "statementForm": "She asked him check the report.",
+      "fragmentForm": "She had him check the report?"
+    }
+  },
+  {
+    "id": "m1_causative_033",
+    "seedId": 33,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그에게 사진을 찍게 했다.",
+    "english": "I had him take pictures.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "take",
+      "pictures",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had",
+      "him take pictures"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to take pictures.",
+      "statementForm": "I asked him take pictures.",
+      "fragmentForm": "I had him take pictures?"
+    }
+  },
+  {
+    "id": "m1_causative_034",
+    "seedId": 34,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나에게 문장을 완성하게 했다.",
+    "english": "She had me complete the sentence.",
+    "words": [
+      "She",
+      "had",
+      "me",
+      "complete",
+      "the",
+      "sentence",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had",
+      "me complete the sentence"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had me to complete the sentence.",
+      "statementForm": "She asked me complete the sentence.",
+      "fragmentForm": "She had me complete the sentence?"
+    }
+  },
+  {
+    "id": "m1_causative_035",
+    "seedId": 35,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그에게 일정을 정리하게 했다.",
+    "english": "I had him organize the schedule.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "organize",
+      "the",
+      "schedule",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I had",
+      "him organize the schedule"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to organize the schedule.",
+      "statementForm": "I asked him organize the schedule.",
+      "fragmentForm": "I had him organize the schedule?"
+    }
+  },
+  {
+    "id": "m1_causative_036",
+    "seedId": 36,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그에게 준비하게 했다.",
+    "english": "She had him prepare for the meeting.",
+    "words": [
+      "She",
+      "had",
+      "him",
+      "prepare",
+      "for",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She had",
+      "him prepare for the meeting"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had him to prepare for the meeting.",
+      "statementForm": "She asked him prepare for the meeting.",
+      "fragmentForm": "She had him prepare for the meeting?"
+    }
+  },
+  {
+    "id": "m1_causative_037",
+    "seedId": 37,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 집에 가게 했다.",
+    "english": "I let him go home.",
+    "words": [
+      "I",
+      "let",
+      "him",
+      "go",
+      "home",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I let",
+      "him go home"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I let him to go home.",
+      "statementForm": "I allowed him go home.",
+      "fragmentForm": "I let him go home?"
+    }
+  },
+  {
+    "id": "m1_causative_038",
+    "seedId": 38,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 들어오게 했다.",
+    "english": "She let me come in.",
+    "words": [
+      "She",
+      "let",
+      "me",
+      "come",
+      "in",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She let",
+      "me come in"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let me to come in.",
+      "statementForm": "She allowed me come in.",
+      "fragmentForm": "She let me come in?"
+    }
+  },
+  {
+    "id": "m1_causative_039",
+    "seedId": 39,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 놀게 했다.",
+    "english": "I let him play outside.",
+    "words": [
+      "I",
+      "let",
+      "him",
+      "play",
+      "outside",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I let",
+      "him play outside"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I let him to play outside.",
+      "statementForm": "I allowed him play outside.",
+      "fragmentForm": "I let him play outside?"
+    }
+  },
+  {
+    "id": "m1_causative_040",
+    "seedId": 40,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그를 쉬게 했다.",
+    "english": "She let him rest.",
+    "words": [
+      "She",
+      "let",
+      "him",
+      "rest",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She let",
+      "him rest"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let him to rest.",
+      "statementForm": "She allowed him rest.",
+      "fragmentForm": "She let him rest?"
+    }
+  },
+  {
+    "id": "m1_causative_041",
+    "seedId": 41,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 선택하게 했다.",
+    "english": "I let him choose.",
+    "words": [
+      "I",
+      "let",
+      "him",
+      "choose",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I let",
+      "him choose"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I let him to choose.",
+      "statementForm": "I allowed him choose.",
+      "fragmentForm": "I let him choose?"
+    }
+  },
+  {
+    "id": "m1_causative_042",
+    "seedId": 42,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 말하게 했다.",
+    "english": "She let me speak.",
+    "words": [
+      "She",
+      "let",
+      "me",
+      "speak",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She let",
+      "me speak"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let me to speak.",
+      "statementForm": "She allowed me speak.",
+      "fragmentForm": "She let me speak?"
+    }
+  },
+  {
+    "id": "m1_causative_043",
+    "seedId": 43,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 참여하게 했다.",
+    "english": "I let him join the team.",
+    "words": [
+      "I",
+      "let",
+      "him",
+      "join",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I let",
+      "him join the team"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I let him to join the team.",
+      "statementForm": "I allowed him join the team.",
+      "fragmentForm": "I let him join the team?"
+    }
+  },
+  {
+    "id": "m1_causative_044",
+    "seedId": 44,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 결정하게 했다.",
+    "english": "She let me decide.",
+    "words": [
+      "She",
+      "let",
+      "me",
+      "decide",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She let",
+      "me decide"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let me to decide.",
+      "statementForm": "She allowed me decide.",
+      "fragmentForm": "She let me decide?"
+    }
+  },
+  {
+    "id": "m1_causative_045",
+    "seedId": 45,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 머물게 했다.",
+    "english": "I let him stay.",
+    "words": [
+      "I",
+      "let",
+      "him",
+      "stay",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I let",
+      "him stay"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I let him to stay.",
+      "statementForm": "I allowed him stay.",
+      "fragmentForm": "I let him stay?"
+    }
+  },
+  {
+    "id": "m1_causative_046",
+    "seedId": 46,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 먼저 나가게 했다.",
+    "english": "She let me leave first.",
+    "words": [
+      "She",
+      "let",
+      "me",
+      "leave",
+      "first",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She let",
+      "me leave first"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let me to leave first.",
+      "statementForm": "She allowed me leave first.",
+      "fragmentForm": "She let me leave first?"
+    }
+  },
+  {
+    "id": "m1_causative_047",
+    "seedId": 47,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 질문하게 했다.",
+    "english": "I let him ask questions.",
+    "words": [
+      "I",
+      "let",
+      "him",
+      "ask",
+      "questions",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I let",
+      "him ask questions"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I let him to ask questions.",
+      "statementForm": "I allowed him ask questions.",
+      "fragmentForm": "I let him ask questions?"
+    }
+  },
+  {
+    "id": "m1_causative_048",
+    "seedId": 48,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 나를 창가에 앉게 했다.",
+    "english": "She let me sit by the window.",
+    "words": [
+      "She",
+      "let",
+      "me",
+      "sit",
+      "by",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She let",
+      "me sit by the window"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let me to sit by the window.",
+      "statementForm": "She allowed me sit by the window.",
+      "fragmentForm": "She let me sit by the window?"
+    }
+  },
+  {
+    "id": "m1_causative_049",
+    "seedId": 49,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그를 다시 도전하게 했다.",
+    "english": "I let him try again.",
+    "words": [
+      "I",
+      "let",
+      "him",
+      "try",
+      "again",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I let",
+      "him try again"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I let him to try again.",
+      "statementForm": "I allowed him try again.",
+      "fragmentForm": "I let him try again?"
+    }
+  },
+  {
+    "id": "m1_causative_050",
+    "seedId": 50,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 그를 직접 말하게 했다.",
+    "english": "She let him speak for himself.",
+    "words": [
+      "She",
+      "let",
+      "him",
+      "speak",
+      "for",
+      "himself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She let",
+      "him speak for himself"
+    ],
+    "extraClueWordPool": [
+      "make",
+      "have",
+      "let",
+      "laugh",
+      "cry",
+      "study",
+      "run",
+      "go",
+      "clean",
+      "read",
+      "write",
+      "open",
+      "close"
+    ],
+    "blankTargets": [
+      "verb_base"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let him to speak for himself.",
+      "statementForm": "She allowed him speak for himself.",
+      "fragmentForm": "She let him speak for himself?"
+    }
+  }
+]
