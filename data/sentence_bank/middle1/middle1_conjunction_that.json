@@ -1,0 +1,4933 @@
+[
+  {
+    "id": "m1_conjunction_that_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 친절하다고 생각한다.",
+    "english": "I think that he is kind.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "he",
+      "is",
+      "kind",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that he is kind"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if he is kind.",
+      "statementForm": "He is kind. I think so.",
+      "fragmentForm": "I think that he kind"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀는 우리가 이길 것이라고 믿는다.",
+    "english": "She believes that we will win.",
+    "words": [
+      "She",
+      "believes",
+      "that",
+      "we",
+      "will",
+      "win",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She believes",
+      "that we will win"
+    ],
+    "extraClueWordPool": [
+      "who",
+      "if",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She believes what we will win.",
+      "statementForm": "We will win. She believes.",
+      "fragmentForm": "She believes that we win"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 네가 바쁘다는 것을 안다.",
+    "english": "I know that you are busy.",
+    "words": [
+      "I",
+      "know",
+      "that",
+      "you",
+      "are",
+      "busy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I know",
+      "that you are busy"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "what",
+      "where"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know if you are busy.",
+      "statementForm": "You are busy. I know it.",
+      "fragmentForm": "I know that you busy"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그는 나에게 그가 배가 고프다고 말한다.",
+    "english": "He tells me that he is hungry.",
+    "words": [
+      "He",
+      "tells",
+      "me",
+      "that",
+      "he",
+      "is",
+      "hungry",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He tells me",
+      "that he is hungry"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "if",
+      "whose"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "tell",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He tells me if he is hungry.",
+      "statementForm": "He is hungry. He tells me so.",
+      "fragmentForm": "He tells me that he hungry"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "내일 비가 올 것 같다.",
+    "english": "It is likely that it will rain tomorrow.",
+    "words": [
+      "It",
+      "is",
+      "likely",
+      "that",
+      "it",
+      "will",
+      "rain",
+      "tomorrow",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is likely",
+      "that it will rain tomorrow"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "who",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is likely what it will rain tomorrow.",
+      "statementForm": "It will rain tomorrow. It is likely.",
+      "fragmentForm": "It is likely that it rain tomorrow"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그들은 영어가 쉽다고 생각한다.",
+    "english": "They think that English is easy.",
+    "words": [
+      "They",
+      "think",
+      "that",
+      "English",
+      "is",
+      "easy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They think",
+      "that English is easy"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "where",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "They think what English is easy.",
+      "statementForm": "English is easy. They think.",
+      "fragmentForm": "They think that English easy"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀는 그녀의 엄마가 요리사라고 말한다.",
+    "english": "She says that her mother is a cook.",
+    "words": [
+      "She",
+      "says",
+      "that",
+      "her",
+      "mother",
+      "is",
+      "a",
+      "cook",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She says",
+      "that her mother is a cook"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She says if her mother is a cook.",
+      "statementForm": "Her mother is a cook. She says so.",
+      "fragmentForm": "She says that her mother a cook"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 시간이 많지 않다는 것을 안다.",
+    "english": "I know that we don't have much time.",
+    "words": [
+      "I",
+      "know",
+      "that",
+      "we",
+      "don't",
+      "have",
+      "much",
+      "time",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I know",
+      "that we don't have much time"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "if",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know if we don't have much time.",
+      "statementForm": "We don't have much time. I know it.",
+      "fragmentForm": "I know that we don't much time"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그가 정직하다는 것은 사실이다.",
+    "english": "It is true that he is honest.",
+    "words": [
+      "It",
+      "is",
+      "true",
+      "that",
+      "he",
+      "is",
+      "honest",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is true",
+      "that he is honest"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is true what he is honest.",
+      "statementForm": "He is honest. It is true.",
+      "fragmentForm": "It is true that he honest"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 탐이 학교에 있다고 믿는다.",
+    "english": "I believe that Tom is at school.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "Tom",
+      "is",
+      "at",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that Tom is at school"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if Tom is at school.",
+      "statementForm": "Tom is at school. I believe so.",
+      "fragmentForm": "I believe that Tom at school"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "선생님은 우리가 시험을 치를 것이라고 말씀하신다.",
+    "english": "The teacher says that we will have a test.",
+    "words": [
+      "The",
+      "teacher",
+      "says",
+      "that",
+      "we",
+      "will",
+      "have",
+      "a",
+      "test",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The teacher says",
+      "that we will have a test"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher says if we will have a test.",
+      "statementForm": "We will have a test. The says so.",
+      "fragmentForm": "The teacher says that we have a test"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그 영화가 매우 지루하다고 생각한다.",
+    "english": "I think that the movie is very boring.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "the",
+      "movie",
+      "is",
+      "very",
+      "boring",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that the movie is very boring"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "if",
+      "what"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if the movie is very boring.",
+      "statementForm": "The movie is very boring. I think so.",
+      "fragmentForm": "I think that the movie very boring"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지구가 둥글다는 것을 안다.",
+    "english": "We know that the Earth is round.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "the",
+      "Earth",
+      "is",
+      "round",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that the Earth is round"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if the Earth is round.",
+      "statementForm": "The Earth is round. We know it.",
+      "fragmentForm": "We know that the Earth round"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "네가 여기에 있다는 것은 확실하다.",
+    "english": "It is certain that you are here.",
+    "words": [
+      "It",
+      "is",
+      "certain",
+      "that",
+      "you",
+      "are",
+      "here",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is certain",
+      "that you are here"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is certain what you are here.",
+      "statementForm": "You are here. It is certain.",
+      "fragmentForm": "It is certain that you here"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 우유를 좋아한다고 들었다.",
+    "english": "I hear that he likes milk.",
+    "words": [
+      "I",
+      "hear",
+      "that",
+      "he",
+      "likes",
+      "milk",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I hear",
+      "that he likes milk"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "hear",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I hear if he likes milk.",
+      "statementForm": "He likes milk. I hear it.",
+      "fragmentForm": "I hear that he like milk"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "민수는 그가 축구 선수라고 말한다.",
+    "english": "Minsu says that he is a soccer player.",
+    "words": [
+      "Minsu",
+      "says",
+      "that",
+      "he",
+      "is",
+      "a",
+      "soccer",
+      "player",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Minsu says",
+      "that he is a soccer player"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Minsu says what he is a soccer player.",
+      "statementForm": "He is a soccer player. Minsu says so.",
+      "fragmentForm": "Minsu says that he a soccer player"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 네가 개를 좋아한다고 믿는다.",
+    "english": "I believe that you love dogs.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "you",
+      "love",
+      "dogs",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that you love dogs"
+    ],
+    "extraClueWordPool": [
+      "who",
+      "which",
+      "what"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if you love dogs.",
+      "statementForm": "You love dogs. I believe so.",
+      "fragmentForm": "I believe that you love dog"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "오늘 날씨가 춥다는 것은 분명하다.",
+    "english": "It is clear that it is cold today.",
+    "words": [
+      "It",
+      "is",
+      "clear",
+      "that",
+      "it",
+      "is",
+      "cold",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is clear",
+      "that it is cold today"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "who",
+      "what"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is clear what it is cold today.",
+      "statementForm": "It is cold today. It is clear.",
+      "fragmentForm": "It is clear that it cold today"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "엄마는 내가 일찍 일어나야 한다고 말씀하신다.",
+    "english": "Mom says that I should get up early.",
+    "words": [
+      "Mom",
+      "says",
+      "that",
+      "I",
+      "should",
+      "get",
+      "up",
+      "early",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Mom says",
+      "that I should get up early"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Mom says if I should get up early.",
+      "statementForm": "I should get up early. Mom says so.",
+      "fragmentForm": "Mom says that I get up early"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 정답을 안다고 생각한다.",
+    "english": "I think that he knows the answer.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "he",
+      "knows",
+      "the",
+      "answer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that he knows the answer"
+    ],
+    "extraClueWordPool": [
+      "who",
+      "which",
+      "if"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if he knows the answer.",
+      "statementForm": "He knows the answer. I think so.",
+      "fragmentForm": "I think that he know the answer"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "수미는 그녀가 사과를 좋아한다고 나에게 말한다.",
+    "english": "Sumi tells me that she likes apples.",
+    "words": [
+      "Sumi",
+      "tells",
+      "me",
+      "that",
+      "she",
+      "likes",
+      "apples",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Sumi tells me",
+      "that she likes apples"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "tell",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Sumi tells me if she likes apples.",
+      "statementForm": "She likes apples. Sumi tells me so.",
+      "fragmentForm": "Sumi tells me that she like apples"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 네가 수영을 잘한다고 믿는다.",
+    "english": "I believe that you are good at swimming.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "you",
+      "are",
+      "good",
+      "at",
+      "swimming",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that you are good at swimming"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "where"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if you are good at swimming.",
+      "statementForm": "You are good at swimming. I believe so.",
+      "fragmentForm": "I believe that you good at swimming"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "지민이가 노래를 잘한다는 것은 사실이다.",
+    "english": "It is true that Jimin sings well.",
+    "words": [
+      "It",
+      "is",
+      "true",
+      "that",
+      "Jimin",
+      "sings",
+      "well",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is true",
+      "that Jimin sings well"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is true what Jimin sings well.",
+      "statementForm": "Jimin sings well. It is true.",
+      "fragmentForm": "It is true that Jimin sing well"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 그가 아프다는 소식을 들었다.",
+    "english": "We hear that he is sick.",
+    "words": [
+      "We",
+      "hear",
+      "that",
+      "he",
+      "is",
+      "sick",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We hear",
+      "that he is sick"
+    ],
+    "extraClueWordPool": [
+      "who",
+      "which",
+      "what"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "hear",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We hear if he is sick.",
+      "statementForm": "He is sick. We hear it.",
+      "fragmentForm": "We hear that he sick"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "아빠는 그가 새 차를 샀다고 말씀하신다.",
+    "english": "Dad says that he bought a new car.",
+    "words": [
+      "Dad",
+      "says",
+      "that",
+      "he",
+      "bought",
+      "a",
+      "new",
+      "car",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Dad says",
+      "that he bought a new car"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Dad says if he bought a new car.",
+      "statementForm": "He bought a new car. Dad says so.",
+      "fragmentForm": "Dad says that he bought a new car"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그 이야기가 사실이라고 생각한다.",
+    "english": "I think that the story is true.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "the",
+      "story",
+      "is",
+      "true",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that the story is true"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "if",
+      "what"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if the story is true.",
+      "statementForm": "The story is true. I think so.",
+      "fragmentForm": "I think that the story true"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 우리가 열심히 공부해야 한다는 것을 안다.",
+    "english": "We know that we must study hard.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "we",
+      "must",
+      "study",
+      "hard",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that we must study hard"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if we must study hard.",
+      "statementForm": "We must study hard. We know it.",
+      "fragmentForm": "We know that we study hard"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀가 똑똑하다는 것은 분명하다.",
+    "english": "It is clear that she is smart.",
+    "words": [
+      "It",
+      "is",
+      "clear",
+      "that",
+      "she",
+      "is",
+      "smart",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is clear",
+      "that she is smart"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is clear what she is smart.",
+      "statementForm": "She is smart. It is clear.",
+      "fragmentForm": "It is clear that she smart"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 내일 올 것이라고 믿는다.",
+    "english": "I believe that he will come tomorrow.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "he",
+      "will",
+      "come",
+      "tomorrow",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that he will come tomorrow"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if he will come tomorrow.",
+      "statementForm": "He will come tomorrow. I believe so.",
+      "fragmentForm": "I believe that he come tomorrow"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "선생님은 지구가 태양 주위를 돈다고 말씀하신다.",
+    "english": "The teacher says that the Earth goes around the Sun.",
+    "words": [
+      "The",
+      "teacher",
+      "says",
+      "that",
+      "the",
+      "Earth",
+      "goes",
+      "around",
+      "the",
+      "Sun",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The teacher says",
+      "that the Earth goes around the Sun"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher says if the Earth goes around the Sun.",
+      "statementForm": "The Earth goes around the Sun. The says so.",
+      "fragmentForm": "The teacher says that the Earth goe around the Sun"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_031",
+    "seedId": 31,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 정각에 도착할 것이라고 생각한다.",
+    "english": "I think that we will arrive on time.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "we",
+      "will",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that we will arrive on time"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "where",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if we will arrive on time.",
+      "statementForm": "We will arrive on time. I think so.",
+      "fragmentForm": "I think that we arrive on time"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_032",
+    "seedId": 32,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 네가 수학을 좋아한다는 것을 안다.",
+    "english": "I know that you like math.",
+    "words": [
+      "I",
+      "know",
+      "that",
+      "you",
+      "like",
+      "math",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I know",
+      "that you like math"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "who",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know if you like math.",
+      "statementForm": "You like math. I know it.",
+      "fragmentForm": "I know that you like math"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_033",
+    "seedId": 33,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그가 좋은 친구라는 것은 확실하다.",
+    "english": "It is certain that he is a good friend.",
+    "words": [
+      "It",
+      "is",
+      "certain",
+      "that",
+      "he",
+      "is",
+      "a",
+      "good",
+      "friend",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is certain",
+      "that he is a good friend"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is certain what he is a good friend.",
+      "statementForm": "He is a good friend. It is certain.",
+      "fragmentForm": "It is certain that he a good friend"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_034",
+    "seedId": 34,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀는 그녀의 열쇠를 찾았다고 말한다.",
+    "english": "She says that she found her keys.",
+    "words": [
+      "She",
+      "says",
+      "that",
+      "she",
+      "found",
+      "her",
+      "keys",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She says",
+      "that she found her keys"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She says if she found her keys.",
+      "statementForm": "She found her keys. She says so.",
+      "fragmentForm": "She says that she found her key"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_035",
+    "seedId": 35,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그녀가 요리를 매우 잘한다고 믿는다.",
+    "english": "I believe that she cooks very well.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "she",
+      "cooks",
+      "very",
+      "well",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that she cooks very well"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if she cooks very well.",
+      "statementForm": "She cooks very well. I believe so.",
+      "fragmentForm": "I believe that she cook very well"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_036",
+    "seedId": 36,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지민이가 아침을 먹지 않았다고 들었다.",
+    "english": "We hear that Jimin didn't have breakfast.",
+    "words": [
+      "We",
+      "hear",
+      "that",
+      "Jimin",
+      "didn't",
+      "have",
+      "breakfast",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We hear",
+      "that Jimin didn't have breakfast"
+    ],
+    "extraClueWordPool": [
+      "who",
+      "which",
+      "what"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "hear",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We hear if Jimin didn't have breakfast.",
+      "statementForm": "Jimin didn't have breakfast. We hear it.",
+      "fragmentForm": "We hear that Jimin didn't breakfast"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_037",
+    "seedId": 37,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 영수가 새 컴퓨터를 갖고 싶어 한다고 생각한다.",
+    "english": "I think that Youngsu wants a new computer.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "Youngsu",
+      "wants",
+      "a",
+      "new",
+      "computer",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that Youngsu wants a new computer"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "where",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if Youngsu wants a new computer.",
+      "statementForm": "Youngsu wants a new computer. I think so.",
+      "fragmentForm": "I think that Youngsu want a new computer"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_038",
+    "seedId": 38,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그는 그가 피아노를 칠 수 있다고 말한다.",
+    "english": "He says that he can play the piano.",
+    "words": [
+      "He",
+      "says",
+      "that",
+      "he",
+      "can",
+      "play",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He says",
+      "that he can play the piano"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He says if he can play the piano.",
+      "statementForm": "He can play the piano. He says so.",
+      "fragmentForm": "He says that he play the piano"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_039",
+    "seedId": 39,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 그 게임이 재미있다는 것을 안다.",
+    "english": "We know that the game is fun.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "the",
+      "game",
+      "is",
+      "fun",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that the game is fun"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if the game is fun.",
+      "statementForm": "The game is fun. We know it.",
+      "fragmentForm": "We know that the game fun"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_040",
+    "seedId": 40,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "내일 날씨가 좋을 것이라는 것은 사실이다.",
+    "english": "It is true that the weather will be fine tomorrow.",
+    "words": [
+      "It",
+      "is",
+      "true",
+      "that",
+      "the",
+      "weather",
+      "will",
+      "be",
+      "fine",
+      "tomorrow",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is true",
+      "that the weather will be fine tomorrow"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is true what the weather will be fine tomorrow.",
+      "statementForm": "The weather will be fine tomorrow. It is true.",
+      "fragmentForm": "It is true that the weather be fine tomorrow"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_041",
+    "seedId": 41,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 비밀을 지킬 수 있다고 생각한다.",
+    "english": "I think that he can keep a secret.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "he",
+      "can",
+      "keep",
+      "a",
+      "secret",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that he can keep a secret"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if he can keep a secret.",
+      "statementForm": "He can keep a secret. I think so.",
+      "fragmentForm": "I think that he keep a secret"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_042",
+    "seedId": 42,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀는 그녀의 아빠가 곧 집에 오실 것이라고 말한다.",
+    "english": "She says that her dad will come home soon.",
+    "words": [
+      "She",
+      "says",
+      "that",
+      "her",
+      "dad",
+      "will",
+      "come",
+      "home",
+      "soon",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She says",
+      "that her dad will come home soon"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She says if her dad will come home soon.",
+      "statementForm": "Her dad will come home soon. She says so.",
+      "fragmentForm": "She says that her dad come home soon"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_043",
+    "seedId": 43,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 시험을 위해 열심히 공부했다고 믿는다.",
+    "english": "I believe that he studied hard for the exam.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "he",
+      "studied",
+      "hard",
+      "for",
+      "the",
+      "exam",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that he studied hard for the exam"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if he studied hard for the exam.",
+      "statementForm": "He studied hard for the exam. I believe so.",
+      "fragmentForm": "I believe that he studied hard for the exam"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_044",
+    "seedId": 44,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "지구가 달보다 훨씬 더 크다는 것은 확실하다.",
+    "english": "It is certain that the Earth is much bigger than the Moon.",
+    "words": [
+      "It",
+      "is",
+      "certain",
+      "that",
+      "the",
+      "Earth",
+      "is",
+      "much",
+      "bigger",
+      "than",
+      "the",
+      "Moon",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is certain",
+      "that the Earth is much bigger than the Moon"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is certain what the Earth is much bigger than the Moon.",
+      "statementForm": "The Earth is much bigger than the Moon. It is certain.",
+      "fragmentForm": "It is certain that the Earth much bigger than the Moon"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_045",
+    "seedId": 45,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지호가 지난밤에 늦게 잤다는 것을 안다.",
+    "english": "We know that Jiho went to bed late last night.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "Jiho",
+      "went",
+      "to",
+      "bed",
+      "late",
+      "last",
+      "night",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that Jiho went to bed late last night"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if Jiho went to bed late last night.",
+      "statementForm": "Jiho went to bed late last night. We know it.",
+      "fragmentForm": "We know that Jiho went to bed late last night"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_046",
+    "seedId": 46,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그 영화가 아이들에게 좋지 않다고 들었다.",
+    "english": "I hear that the movie is not good for children.",
+    "words": [
+      "I",
+      "hear",
+      "that",
+      "the",
+      "movie",
+      "is",
+      "not",
+      "good",
+      "for",
+      "children",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I hear",
+      "that the movie is not good for children"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "hear",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I hear if the movie is not good for children.",
+      "statementForm": "The movie is not good for children. I hear it.",
+      "fragmentForm": "I hear that the movie not good for children"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_047",
+    "seedId": 47,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "아빠는 우리가 주말에 캠핑을 갈 것이라고 말씀하신다.",
+    "english": "Dad says that we will go camping this weekend.",
+    "words": [
+      "Dad",
+      "says",
+      "that",
+      "we",
+      "will",
+      "go",
+      "camping",
+      "this",
+      "weekend",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Dad says",
+      "that we will go camping this weekend"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Dad says if we will go camping this weekend.",
+      "statementForm": "We will go camping this weekend. Dad says so.",
+      "fragmentForm": "Dad says that we go camping this weekend"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_048",
+    "seedId": 48,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 네가 이 문제를 혼자 풀 수 있다고 생각한다.",
+    "english": "I think that you can solve this problem by yourself.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "you",
+      "can",
+      "solve",
+      "this",
+      "problem",
+      "by",
+      "yourself",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that you can solve this problem by yourself"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if you can solve this problem by yourself.",
+      "statementForm": "You can solve this problem by yourself. I think so.",
+      "fragmentForm": "I think that you solve this problem by yourself"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_049",
+    "seedId": 49,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀가 아침을 거르는 것은 좋지 않다.",
+    "english": "It is not good that she skips breakfast.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "good",
+      "that",
+      "she",
+      "skips",
+      "breakfast",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is not good",
+      "that she skips breakfast"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is not good what she skips breakfast.",
+      "statementForm": "She skips breakfast. It is not good.",
+      "fragmentForm": "It is not good that she skip breakfast"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_050",
+    "seedId": 50,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 정직이 최선의 방책이라고 믿는다.",
+    "english": "I believe that honesty is the best policy.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "honesty",
+      "is",
+      "the",
+      "best",
+      "policy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that honesty is the best policy"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if honesty is the best policy.",
+      "statementForm": "Honesty is the best policy. I believe so.",
+      "fragmentForm": "I believe that honesty the best policy"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_051",
+    "seedId": 51,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "선생님은 우리가 서로를 도와야 한다고 말씀하신다.",
+    "english": "The teacher says that we should help each other.",
+    "words": [
+      "The",
+      "teacher",
+      "says",
+      "that",
+      "we",
+      "should",
+      "help",
+      "each",
+      "other",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The teacher says",
+      "that we should help each other"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher says if we should help each other.",
+      "statementForm": "We should help each other. The says so.",
+      "fragmentForm": "The teacher says that we help each other"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_052",
+    "seedId": 52,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 물을 절약하는 것이 중요하다고 생각한다.",
+    "english": "I think that it is important to save water.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "it",
+      "is",
+      "important",
+      "to",
+      "save",
+      "water",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that it is important to save water"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "where",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if it is important to save water.",
+      "statementForm": "It is important to save water. I think so.",
+      "fragmentForm": "I think that it important to save water"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_053",
+    "seedId": 53,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지구가 태양으로부터 매우 멀다는 것을 안다.",
+    "english": "We know that the Earth is very far from the Sun.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "the",
+      "Earth",
+      "is",
+      "very",
+      "far",
+      "from",
+      "the",
+      "Sun",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that the Earth is very far from the Sun"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if the Earth is very far from the Sun.",
+      "statementForm": "The Earth is very far from the Sun. We know it.",
+      "fragmentForm": "We know that the Earth very far from the Sun"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_054",
+    "seedId": 54,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그는 그의 팀이 내일 경기에서 이길 것이라고 말한다.",
+    "english": "He says that his team will win the game tomorrow.",
+    "words": [
+      "He",
+      "says",
+      "that",
+      "his",
+      "team",
+      "will",
+      "win",
+      "the",
+      "game",
+      "tomorrow",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He says",
+      "that his team will win the game tomorrow"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He says if his team will win the game tomorrow.",
+      "statementForm": "His team will win the game tomorrow. He says so.",
+      "fragmentForm": "He says that his team win the game tomorrow"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_055",
+    "seedId": 55,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 영어가 전 세계에서 사용된다고 믿는다.",
+    "english": "I believe that English is spoken all over the world.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "English",
+      "is",
+      "spoken",
+      "all",
+      "over",
+      "the",
+      "world",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that English is spoken all over the world"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if English is spoken all over the world.",
+      "statementForm": "English is spoken all over the world. I believe so.",
+      "fragmentForm": "I believe that English spoken all over the world"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_056",
+    "seedId": 56,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그가 우리 학교에서 가장 인기 있는 소년이라는 것은 분명하다.",
+    "english": "It is clear that he is the most popular boy in our school.",
+    "words": [
+      "It",
+      "is",
+      "clear",
+      "that",
+      "he",
+      "is",
+      "the",
+      "most",
+      "popular",
+      "boy",
+      "in",
+      "our",
+      "school",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is clear",
+      "that he is the most popular boy in our school"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is clear what he is the most popular boy in our school.",
+      "statementForm": "He is the most popular boy in our school. It is clear.",
+      "fragmentForm": "It is clear that he the most popular boy in our school"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_057",
+    "seedId": 57,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 동물들이 우리의 친구라는 것을 안다.",
+    "english": "We know that animals are our friends.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "animals",
+      "are",
+      "our",
+      "friends",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that animals are our friends"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if animals are our friends.",
+      "statementForm": "Animals are our friends. We know it.",
+      "fragmentForm": "We know that animals our friends"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_058",
+    "seedId": 58,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 아침마다 조깅을 한다고 들었다.",
+    "english": "I hear that he goes jogging every morning.",
+    "words": [
+      "I",
+      "hear",
+      "that",
+      "he",
+      "goes",
+      "jogging",
+      "every",
+      "morning",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I hear",
+      "that he goes jogging every morning"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "hear",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I hear if he goes jogging every morning.",
+      "statementForm": "He goes jogging every morning. I hear it.",
+      "fragmentForm": "I hear that he goe jogging every morning"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_059",
+    "seedId": 59,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "엄마는 내가 채소를 더 많이 먹어야 한다고 말씀하신다.",
+    "english": "Mom says that I should eat more vegetables.",
+    "words": [
+      "Mom",
+      "says",
+      "that",
+      "I",
+      "should",
+      "eat",
+      "more",
+      "vegetables",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Mom says",
+      "that I should eat more vegetables"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Mom says if I should eat more vegetables.",
+      "statementForm": "I should eat more vegetables. Mom says so.",
+      "fragmentForm": "Mom says that I eat more vegetables"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_060",
+    "seedId": 60,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그 이야기가 어린이들에게 흥미롭다고 생각한다.",
+    "english": "I think that the story is interesting to children.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "the",
+      "story",
+      "is",
+      "interesting",
+      "to",
+      "children",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that the story is interesting to children"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if the story is interesting to children.",
+      "statementForm": "The story is interesting to children. I think so.",
+      "fragmentForm": "I think that the story interesting to children"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_061",
+    "seedId": 61,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그가 곧 나을 것이라는 것은 확실하다.",
+    "english": "It is certain that he will get well soon.",
+    "words": [
+      "It",
+      "is",
+      "certain",
+      "that",
+      "he",
+      "will",
+      "get",
+      "well",
+      "soon",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is certain",
+      "that he will get well soon"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is certain what he will get well soon.",
+      "statementForm": "He will get well soon. It is certain.",
+      "fragmentForm": "It is certain that he get well soon"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_062",
+    "seedId": 62,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 지수가 도서관에 갔다고 믿는다.",
+    "english": "I believe that Jisu went to the library.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "Jisu",
+      "went",
+      "to",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that Jisu went to the library"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if Jisu went to the library.",
+      "statementForm": "Jisu went to the library. I believe so.",
+      "fragmentForm": "I believe that Jisu went to the library"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_063",
+    "seedId": 63,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "선생님은 우리가 규칙을 지켜야 한다고 말씀하신다.",
+    "english": "The teacher says that we must follow the rules.",
+    "words": [
+      "The",
+      "teacher",
+      "says",
+      "that",
+      "we",
+      "must",
+      "follow",
+      "the",
+      "rules",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The teacher says",
+      "that we must follow the rules"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher says if we must follow the rules.",
+      "statementForm": "We must follow the rules. The says so.",
+      "fragmentForm": "The teacher says that we follow the rules"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_064",
+    "seedId": 64,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 네가 이 책을 좋아할 것이라고 생각한다.",
+    "english": "I think that you will like this book.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "you",
+      "will",
+      "like",
+      "this",
+      "book",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that you will like this book"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "where",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if you will like this book.",
+      "statementForm": "You will like this book. I think so.",
+      "fragmentForm": "I think that you like this book"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_065",
+    "seedId": 65,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 건강이 재산보다 더 중요하다는 것을 안다.",
+    "english": "We know that health is more important than wealth.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "health",
+      "is",
+      "more",
+      "important",
+      "than",
+      "wealth",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that health is more important than wealth"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if health is more important than wealth.",
+      "statementForm": "Health is more important than wealth. We know it.",
+      "fragmentForm": "We know that health more important than wealth"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_066",
+    "seedId": 66,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀가 친절한 소녀라는 것은 사실이다.",
+    "english": "It is true that she is a kind girl.",
+    "words": [
+      "It",
+      "is",
+      "true",
+      "that",
+      "she",
+      "is",
+      "a",
+      "kind",
+      "girl",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is true",
+      "that she is a kind girl"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is true what she is a kind girl.",
+      "statementForm": "She is a kind girl. It is true.",
+      "fragmentForm": "It is true that she a kind girl"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_067",
+    "seedId": 67,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 수학 문제를 풀 수 있다고 들었다.",
+    "english": "I hear that he can solve the math problem.",
+    "words": [
+      "I",
+      "hear",
+      "that",
+      "he",
+      "can",
+      "solve",
+      "the",
+      "math",
+      "problem",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I hear",
+      "that he can solve the math problem"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "hear",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I hear if he can solve the math problem.",
+      "statementForm": "He can solve the math problem. I hear it.",
+      "fragmentForm": "I hear that he solve the math problem"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_068",
+    "seedId": 68,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "아빠는 우리가 공원에 갈 것이라고 말씀하신다.",
+    "english": "Dad says that we will go to the park.",
+    "words": [
+      "Dad",
+      "says",
+      "that",
+      "we",
+      "will",
+      "go",
+      "to",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Dad says",
+      "that we will go to the park"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Dad says if we will go to the park.",
+      "statementForm": "We will go to the park. Dad says so.",
+      "fragmentForm": "Dad says that we go to the park"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_069",
+    "seedId": 69,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 매일 아침을 먹는 것이 필요하다고 생각한다.",
+    "english": "I think that it is necessary to eat breakfast every day.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "it",
+      "is",
+      "necessary",
+      "to",
+      "eat",
+      "breakfast",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that it is necessary to eat breakfast every day"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if it is necessary to eat breakfast every day.",
+      "statementForm": "It is necessary to eat breakfast every day. I think so.",
+      "fragmentForm": "I think that it necessary to eat breakfast every day"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_070",
+    "seedId": 70,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지구가 둥글다는 사실을 안다.",
+    "english": "We know that the Earth is round like a ball.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "the",
+      "Earth",
+      "is",
+      "round",
+      "like",
+      "a",
+      "ball",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that the Earth is round like a ball"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if the Earth is round like a ball.",
+      "statementForm": "The Earth is round like a ball. We know it.",
+      "fragmentForm": "We know that the Earth round like a ball"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_071",
+    "seedId": 71,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그는 그의 친구가 병원에 있다고 말한다.",
+    "english": "He says that his friend is in the hospital.",
+    "words": [
+      "He",
+      "says",
+      "that",
+      "his",
+      "friend",
+      "is",
+      "in",
+      "the",
+      "hospital",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He says",
+      "that his friend is in the hospital"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He says if his friend is in the hospital.",
+      "statementForm": "His friend is in the hospital. He says so.",
+      "fragmentForm": "He says that his friend in the hospital"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_072",
+    "seedId": 72,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 함께 시간을 보내는 것이 즐겁다고 믿는다.",
+    "english": "I believe that it is fun to spend time together.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "it",
+      "is",
+      "fun",
+      "to",
+      "spend",
+      "time",
+      "together",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that it is fun to spend time together"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if it is fun to spend time together.",
+      "statementForm": "It is fun to spend time together. I believe so.",
+      "fragmentForm": "I believe that it fun to spend time together"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_073",
+    "seedId": 73,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "오늘 우리가 학교에 가야 한다는 것은 분명하다.",
+    "english": "It is clear that we have to go to school today.",
+    "words": [
+      "It",
+      "is",
+      "clear",
+      "that",
+      "we",
+      "have",
+      "to",
+      "go",
+      "to",
+      "school",
+      "today",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is clear",
+      "that we have to go to school today"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is clear what we have to go to school today.",
+      "statementForm": "We have to go to school today. It is clear.",
+      "fragmentForm": "It is clear that we to go to school today"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_074",
+    "seedId": 74,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 시험 결과를 곧 알게 될 것이라고 생각한다.",
+    "english": "I think that we will know the test results soon.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "we",
+      "will",
+      "know",
+      "the",
+      "test",
+      "results",
+      "soon",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that we will know the test results soon"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "where",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if we will know the test results soon.",
+      "statementForm": "We will know the test results soon. I think so.",
+      "fragmentForm": "I think that we know the test results soon"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_075",
+    "seedId": 75,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지민이가 피아노를 아주 잘 친다는 것을 안다.",
+    "english": "We know that Jimin plays the piano very well.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "Jimin",
+      "plays",
+      "the",
+      "piano",
+      "very",
+      "well",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_that",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that Jimin plays the piano very well"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if Jimin plays the piano very well.",
+      "statementForm": "Jimin plays the piano very well. We know it.",
+      "fragmentForm": "We know that Jimin play the piano very well"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_076",
+    "seedId": 76,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그가 자신의 꿈을 이루기 위해 최선을 다할 것이라고 믿는다.",
+    "english": "I believe that he will do his best to achieve his dream.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "he",
+      "will",
+      "do",
+      "his",
+      "best",
+      "to",
+      "achieve",
+      "his",
+      "dream",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that he will do his best to achieve his dream"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if he will do his best to achieve his dream.",
+      "statementForm": "He will do his best to achieve his dream. I believe so.",
+      "fragmentForm": "I believe that he do his best to achieve his dream"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_077",
+    "seedId": 77,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "선생님은 우리가 환경을 보호하는 것이 매우 중요하다고 말씀하신다.",
+    "english": "The teacher says that it is very important to protect the environment.",
+    "words": [
+      "The",
+      "teacher",
+      "says",
+      "that",
+      "it",
+      "is",
+      "very",
+      "important",
+      "to",
+      "protect",
+      "the",
+      "environment",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The teacher says",
+      "that it is very important to protect the environment"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher says if it is very important to protect the environment.",
+      "statementForm": "It is very important to protect the environment. The says so.",
+      "fragmentForm": "The teacher says that it very important to protect the environment"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_078",
+    "seedId": 78,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리가 건강을 유지하기 위해 매일 운동하는 것이 필요하다는 것은 사실이다.",
+    "english": "It is true that it is necessary to exercise every day to stay healthy.",
+    "words": [
+      "It",
+      "is",
+      "true",
+      "that",
+      "it",
+      "is",
+      "necessary",
+      "to",
+      "exercise",
+      "every",
+      "day",
+      "to",
+      "stay",
+      "healthy",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is true",
+      "that it is necessary to exercise every day to stay healthy"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is true what it is necessary to exercise every day to stay healthy.",
+      "statementForm": "It is necessary to exercise every day to stay healthy. It is true.",
+      "fragmentForm": "It is true that it necessary to exercise every day to stay healthy"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_079",
+    "seedId": 79,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 이번 프로젝트에서 좋은 결과를 얻을 것이라고 확신한다.",
+    "english": "I am sure that we will get a good result in this project.",
+    "words": [
+      "I",
+      "am",
+      "sure",
+      "that",
+      "we",
+      "will",
+      "get",
+      "a",
+      "good",
+      "result",
+      "in",
+      "this",
+      "project",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I am sure",
+      "that we will get a good result in this project"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am sure if we will get a good result in this project.",
+      "statementForm": "We will get a good result in this project. I am sure.",
+      "fragmentForm": "I am sure that we get a good result in this project"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_080",
+    "seedId": 80,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀는 그녀의 남동생이 수학 경시대회에서 1등을 했다고 말한다.",
+    "english": "She says that her brother won first prize in the math contest.",
+    "words": [
+      "She",
+      "says",
+      "that",
+      "her",
+      "brother",
+      "won",
+      "first",
+      "prize",
+      "in",
+      "the",
+      "math",
+      "contest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She says",
+      "that her brother won first prize in the math contest"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She says if her brother won first prize in the math contest.",
+      "statementForm": "Her brother won first prize in the math contest. She says so.",
+      "fragmentForm": "She says that her brother won first prize in the math contest"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_081",
+    "seedId": 81,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 다른 사람의 의견을 존중하는 것이 필수적이라고 생각한다.",
+    "english": "I think that it is essential to respect other people's opinions.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "it",
+      "is",
+      "essential",
+      "to",
+      "respect",
+      "other",
+      "people's",
+      "opinions",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that it is essential to respect other people's opinions"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "where",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if it is essential to respect other people's opinions.",
+      "statementForm": "It is essential to respect other people's opinions. I think so.",
+      "fragmentForm": "I think that it essential to respect other people's opinions"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_082",
+    "seedId": 82,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그가 전 세계를 여행했다는 소식은 정말 놀랍다.",
+    "english": "It is amazing that he has traveled all around the world.",
+    "words": [
+      "It",
+      "is",
+      "amazing",
+      "that",
+      "he",
+      "has",
+      "traveled",
+      "all",
+      "around",
+      "the",
+      "world",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is amazing",
+      "that he has traveled all around the world"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is amazing what he has traveled all around the world.",
+      "statementForm": "He has traveled all around the world. It is amazing.",
+      "fragmentForm": "It is amazing that he traveled all around the world"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_083",
+    "seedId": 83,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 규칙적인 운동을 통해 건강을 지킬 수 있다고 믿는다.",
+    "english": "I believe that we can stay healthy through regular exercise.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "we",
+      "can",
+      "stay",
+      "healthy",
+      "through",
+      "regular",
+      "exercise",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that we can stay healthy through regular exercise"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if we can stay healthy through regular exercise.",
+      "statementForm": "We can stay healthy through regular exercise. I believe so.",
+      "fragmentForm": "I believe that we stay healthy through regular exercise"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_084",
+    "seedId": 84,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지민이가 작년에 쓴 그 소설이 베스트셀러가 되었다고 들었다.",
+    "english": "We hear that the novel Jimin wrote last year became a bestseller.",
+    "words": [
+      "We",
+      "hear",
+      "that",
+      "the",
+      "novel",
+      "Jimin",
+      "wrote",
+      "last",
+      "year",
+      "became",
+      "a",
+      "bestseller",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We hear",
+      "that the novel Jimin wrote last year became a bestseller"
+    ],
+    "extraClueWordPool": [
+      "who",
+      "which",
+      "what"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "hear",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "We hear if the novel Jimin wrote last year became a bestseller.",
+      "statementForm": "The novel Jimin wrote last year became a bestseller. We hear it.",
+      "fragmentForm": "We hear that the novel Jimin wrote last year became a bestseller"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_085",
+    "seedId": 85,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "아빠는 우리가 다음 달에 제주도로 여행을 갈 수 있을 것이라고 말씀하신다.",
+    "english": "Dad says that we will be able to travel to Jeju next month.",
+    "words": [
+      "Dad",
+      "says",
+      "that",
+      "we",
+      "will",
+      "be",
+      "able",
+      "to",
+      "travel",
+      "to",
+      "Jeju",
+      "next",
+      "month",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Dad says",
+      "that we will be able to travel to Jeju next month"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Dad says if we will be able to travel to Jeju next month.",
+      "statementForm": "We will be able to travel to Jeju next month. Dad says so.",
+      "fragmentForm": "Dad says that we be able to travel to Jeju next month"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_086",
+    "seedId": 86,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그가 어려운 상황에서도 결코 포기하지 않았다는 것은 분명하다.",
+    "english": "It is clear that he never gave up even in difficult situations.",
+    "words": [
+      "It",
+      "is",
+      "clear",
+      "that",
+      "he",
+      "never",
+      "gave",
+      "up",
+      "even",
+      "in",
+      "difficult",
+      "situations",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is clear",
+      "that he never gave up even in difficult situations"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is clear what he never gave up even in difficult situations.",
+      "statementForm": "He never gave up even in difficult situations. It is clear.",
+      "fragmentForm": "It is clear that he never gave up even in difficult situation"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_087",
+    "seedId": 87,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 정각에 기차를 타는 것이 불가능하다고 생각했다.",
+    "english": "I thought that it was impossible to catch the train on time.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "it",
+      "was",
+      "impossible",
+      "to",
+      "catch",
+      "the",
+      "train",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I thought",
+      "that it was impossible to catch the train on time"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought what it was impossible to catch the train on time.",
+      "statementForm": "It was impossible to catch the train on time. I thought.",
+      "fragmentForm": "I thought that it impossible to catch the train on time"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_088",
+    "seedId": 88,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지구가 우리 태양계의 유일한 행성이 아니라는 것을 안다.",
+    "english": "We know that the Earth is not the only planet in our solar system.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "the",
+      "Earth",
+      "is",
+      "not",
+      "the",
+      "only",
+      "planet",
+      "in",
+      "our",
+      "solar",
+      "system",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that the Earth is not the only planet in our solar system"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if the Earth is not the only planet in our solar system.",
+      "statementForm": "The Earth is not the only planet in our solar system. We know it.",
+      "fragmentForm": "We know that the Earth not the only planet in our solar system"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_089",
+    "seedId": 89,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 그녀가 우리 학교에서 가장 똑똑한 학생 중 한 명이라고 믿는다.",
+    "english": "I believe that she is one of the smartest students in our school.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "she",
+      "is",
+      "one",
+      "of",
+      "the",
+      "smartest",
+      "students",
+      "in",
+      "our",
+      "school",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that she is one of the smartest students in our school"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if she is one of the smartest students in our school.",
+      "statementForm": "She is one of the smartest students in our school. I believe so.",
+      "fragmentForm": "I believe that she one of the smartest students in our school"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_090",
+    "seedId": 90,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀가 아침 일찍 조깅을 함으로써 건강을 유지한다는 것은 사실이다.",
+    "english": "It is true that she stays healthy by jogging early in the morning.",
+    "words": [
+      "It",
+      "is",
+      "true",
+      "that",
+      "she",
+      "stays",
+      "healthy",
+      "by",
+      "jogging",
+      "early",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is true",
+      "that she stays healthy by jogging early in the morning"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is true what she stays healthy by jogging early in the morning.",
+      "statementForm": "She stays healthy by jogging early in the morning. It is true.",
+      "fragmentForm": "It is true that she stay healthy by jogging early in the morning"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_091",
+    "seedId": 91,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 함께 협력한다면 그 문제를 해결할 수 있다고 생각한다.",
+    "english": "I think that we can solve the problem if we work together.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "we",
+      "can",
+      "solve",
+      "the",
+      "problem",
+      "if",
+      "we",
+      "work",
+      "together",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that we can solve the problem if we work together"
+    ],
+    "extraClueWordPool": [
+      "whom",
+      "where",
+      "which"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if we can solve the problem if we work together.",
+      "statementForm": "We can solve the problem if we work together. I think so.",
+      "fragmentForm": "I think that we solve the problem if we work together"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_092",
+    "seedId": 92,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그는 우리가 매일 새로운 것을 배울 수 있다는 사실이 즐겁다고 말한다.",
+    "english": "He says that it is joyful that we can learn something new every day.",
+    "words": [
+      "He",
+      "says",
+      "that",
+      "it",
+      "is",
+      "joyful",
+      "that",
+      "we",
+      "can",
+      "learn",
+      "something",
+      "new",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He says",
+      "that it is joyful that we can learn something new every day"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "He says if it is joyful that we can learn something new every day.",
+      "statementForm": "It is joyful that we can learn something new every day. He says so.",
+      "fragmentForm": "He says that it joyful that we can learn something new every day"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_093",
+    "seedId": 93,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 이번 학기에 영어 실력을 많이 향상시킬 것이라고 믿는다.",
+    "english": "I believe that we will improve our English skills a lot this semester.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "we",
+      "will",
+      "improve",
+      "our",
+      "English",
+      "skills",
+      "a",
+      "lot",
+      "this",
+      "semester",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that we will improve our English skills a lot this semester"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if we will improve our English skills a lot this semester.",
+      "statementForm": "We will improve our English skills a lot this semester. I believe so.",
+      "fragmentForm": "I believe that we improve our English skills a lot this semester"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_094",
+    "seedId": 94,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 영수가 작년에 해외에서 살았다는 것을 그의 친구로부터 들었다.",
+    "english": "We hear from his friend that Youngsu lived abroad last year.",
+    "words": [
+      "We",
+      "hear",
+      "from",
+      "his",
+      "friend",
+      "that",
+      "Youngsu",
+      "lived",
+      "abroad",
+      "last",
+      "year",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We hear from his friend",
+      "that Youngsu lived abroad last year"
+    ],
+    "extraClueWordPool": [
+      "who",
+      "which",
+      "what"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "hear",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "We hear from his friend if Youngsu lived abroad last year.",
+      "statementForm": "Youngsu lived abroad last year. We hear it.",
+      "fragmentForm": "We hear from his friend that Youngsu lived abroad last year"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_095",
+    "seedId": 95,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "아빠는 우리가 주말에 조부모님 댁을 방문하는 것이 좋을 것이라고 말씀하신다.",
+    "english": "Dad says that it will be good to visit our grandparents this weekend.",
+    "words": [
+      "Dad",
+      "says",
+      "that",
+      "it",
+      "will",
+      "be",
+      "good",
+      "to",
+      "visit",
+      "our",
+      "grandparents",
+      "this",
+      "weekend",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Dad says",
+      "that it will be good to visit our grandparents this weekend"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "say",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Dad says if it will be good to visit our grandparents this weekend.",
+      "statementForm": "It will be good to visit our grandparents this weekend. Dad says so.",
+      "fragmentForm": "Dad says that it be good to visit our grandparents this weekend"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_096",
+    "seedId": 96,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "지민이가 그 어려운 수학 경시대회에서 우승했다는 소식은 정말 놀랍다.",
+    "english": "It is amazing that Jimin won the difficult math contest.",
+    "words": [
+      "It",
+      "is",
+      "amazing",
+      "that",
+      "Jimin",
+      "won",
+      "the",
+      "difficult",
+      "math",
+      "contest",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is amazing",
+      "that Jimin won the difficult math contest"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is amazing what Jimin won the difficult math contest.",
+      "statementForm": "Jimin won the difficult math contest. It is amazing.",
+      "fragmentForm": "It is amazing that Jimin won the difficult math contest"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_097",
+    "seedId": 97,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 매일 책을 읽는 습관을 기르는 것이 중요하다고 생각한다.",
+    "english": "I think that it is important to develop a habit of reading books every day.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "it",
+      "is",
+      "important",
+      "to",
+      "develop",
+      "a",
+      "habit",
+      "of",
+      "reading",
+      "books",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I think",
+      "that it is important to develop a habit of reading books every day"
+    ],
+    "extraClueWordPool": [
+      "if",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "think",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think if it is important to develop a habit of reading books every day.",
+      "statementForm": "It is important to develop a habit of reading books every day. I think so.",
+      "fragmentForm": "I think that it important to develop a habit of reading books every day"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_098",
+    "seedId": 98,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "우리는 지구가 우리 태양계에서 생명체가 있는 유일한 행성이라는 것을 안다.",
+    "english": "We know that the Earth is the only planet with life in our solar system.",
+    "words": [
+      "We",
+      "know",
+      "that",
+      "the",
+      "Earth",
+      "is",
+      "the",
+      "only",
+      "planet",
+      "with",
+      "life",
+      "in",
+      "our",
+      "solar",
+      "system",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We know",
+      "that the Earth is the only planet with life in our solar system"
+    ],
+    "extraClueWordPool": [
+      "which",
+      "what",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "know",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know if the Earth is the only planet with life in our solar system.",
+      "statementForm": "The Earth is the only planet with life in our solar system. We know it.",
+      "fragmentForm": "We know that the Earth the only planet with life in our solar system"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_099",
+    "seedId": 99,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "나는 우리가 인내심을 갖고 노력한다면 무엇이든 할 수 있다고 믿는다.",
+    "english": "I believe that we can do anything if we try with patience.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "we",
+      "can",
+      "do",
+      "anything",
+      "if",
+      "we",
+      "try",
+      "with",
+      "patience",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I believe",
+      "that we can do anything if we try with patience"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "whom"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "believe",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe if we can do anything if we try with patience.",
+      "statementForm": "We can do anything if we try with patience. I believe so.",
+      "fragmentForm": "I believe that we do anything if we try with patience"
+    }
+  },
+  {
+    "id": "m1_conjunction_that_100",
+    "seedId": 100,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_that",
+    "chapterLabelKo": "접속사 that",
+    "korean": "그녀가 자신의 잘못을 인정하고 사과했다는 소식은 정말 다행이다.",
+    "english": "It is a relief that she admitted her mistake and apologized.",
+    "words": [
+      "It",
+      "is",
+      "a",
+      "relief",
+      "that",
+      "she",
+      "admitted",
+      "her",
+      "mistake",
+      "and",
+      "apologized",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_that",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "It is a relief",
+      "that she admitted her mistake and apologized"
+    ],
+    "extraClueWordPool": [
+      "what",
+      "which",
+      "who"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "conjunction_that",
+      "it_adjective",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is a relief what she admitted her mistake and apologized.",
+      "statementForm": "She admitted her mistake and apologized. It is a relief.",
+      "fragmentForm": "It is a relief that she admitted her mistake and apologized"
+    }
+  }
+]
