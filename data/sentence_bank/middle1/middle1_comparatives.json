@@ -1,0 +1,5750 @@
+[
+  {
+    "id": "m1_s1_comparatives_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "Tom은 Jake보다 키가 더 크다.",
+    "english": "Tom is taller than Jake.",
+    "words": [
+      "Tom",
+      "is",
+      "taller",
+      "than",
+      "Jake",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Tom",
+      "is taller",
+      "than Jake"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "taller"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Tom is tall Jake.",
+      "statementForm": "Tom is taller than Jake.",
+      "fragmentForm": "Tom is taller than Jake?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 상자는 저 상자보다 더 크다.",
+    "english": "This box is bigger than that box.",
+    "words": [
+      "This",
+      "box",
+      "is",
+      "bigger",
+      "than",
+      "that",
+      "box",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This box",
+      "is bigger",
+      "than that box"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "bigger"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This box is more big that box.",
+      "statementForm": "This box is bigger than that box.",
+      "fragmentForm": "This box is bigger than that box?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "내 방은 네 방보다 더 작다.",
+    "english": "My room is smaller than your room.",
+    "words": [
+      "My",
+      "room",
+      "is",
+      "smaller",
+      "than",
+      "your",
+      "room",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My room",
+      "is smaller",
+      "than your room"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "smaller"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "My room is more small your room.",
+      "statementForm": "My room is smaller than your room.",
+      "fragmentForm": "My room is smaller than your room?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "치타는 말보다 더 빠르다.",
+    "english": "A cheetah is faster than a horse.",
+    "words": [
+      "A",
+      "cheetah",
+      "is",
+      "faster",
+      "than",
+      "a",
+      "horse",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "A cheetah",
+      "is faster",
+      "than a horse"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "faster"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "A cheetah is more fast a horse.",
+      "statementForm": "A cheetah is faster than a horse.",
+      "fragmentForm": "A cheetah is faster than a horse?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "거북이는 토끼보다 더 느리다.",
+    "english": "A turtle is slower than a rabbit.",
+    "words": [
+      "A",
+      "turtle",
+      "is",
+      "slower",
+      "than",
+      "a",
+      "rabbit",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "A turtle",
+      "is slower",
+      "than a rabbit"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "slower"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "A turtle is more slow a rabbit.",
+      "statementForm": "A turtle is slower than a rabbit.",
+      "fragmentForm": "A turtle is slower than a rabbit?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "오늘은 어제보다 더 춥다.",
+    "english": "Today is colder than yesterday.",
+    "words": [
+      "Today",
+      "is",
+      "colder",
+      "than",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Today",
+      "is colder",
+      "than yesterday"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "colder"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Today is colder yesterday.",
+      "statementForm": "Today is colder than yesterday.",
+      "fragmentForm": "Today is colder than yesterday?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "여름은 봄보다 더 덥다.",
+    "english": "Summer is hotter than spring.",
+    "words": [
+      "Summer",
+      "is",
+      "hotter",
+      "than",
+      "spring",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Summer",
+      "is hotter",
+      "than spring"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "hotter"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Summer is hotter spring.",
+      "statementForm": "Summer is hotter than spring.",
+      "fragmentForm": "Summer is hotter than spring?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 길은 저 길보다 더 길다.",
+    "english": "This road is longer than that road.",
+    "words": [
+      "This",
+      "road",
+      "is",
+      "longer",
+      "than",
+      "that",
+      "road",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This road",
+      "is longer",
+      "than that road"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "longer"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This road is longer that road.",
+      "statementForm": "This road is longer than that road.",
+      "fragmentForm": "This road is longer than that road?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 문제는 저 문제보다 더 쉽다.",
+    "english": "This problem is easier than that one.",
+    "words": [
+      "This",
+      "problem",
+      "is",
+      "easier",
+      "than",
+      "that",
+      "one",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This problem",
+      "is easier",
+      "than that one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "easier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem is more easy that one.",
+      "statementForm": "This problem is easier than that one.",
+      "fragmentForm": "This problem is easier than that one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 소녀는 동생보다 더 행복하다.",
+    "english": "The girl is happier than her brother.",
+    "words": [
+      "The",
+      "girl",
+      "is",
+      "happier",
+      "than",
+      "her",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The girl",
+      "is happier",
+      "than her brother"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "happier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl is more happy her brother.",
+      "statementForm": "The girl is happier than her brother.",
+      "fragmentForm": "The girl is happier than her brother?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "도시는 시골보다 더 시끄럽다.",
+    "english": "The city is noisier than the countryside.",
+    "words": [
+      "The",
+      "city",
+      "is",
+      "noisier",
+      "than",
+      "the",
+      "countryside",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The city",
+      "is noisier",
+      "than the countryside"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "noisier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The city is noisier the countryside.",
+      "statementForm": "The city is noisier than the countryside.",
+      "fragmentForm": "The city is noisier than the countryside?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그는 나보다 더 바쁘다.",
+    "english": "He is busier than I am.",
+    "words": [
+      "He",
+      "is",
+      "busier",
+      "than",
+      "I",
+      "am",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "is busier",
+      "than I am"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "busier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is more busy I am.",
+      "statementForm": "He is busier than I am.",
+      "fragmentForm": "He is busier than I am?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 가방은 저 가방보다 더 무겁다.",
+    "english": "This bag is heavier than that bag.",
+    "words": [
+      "This",
+      "bag",
+      "is",
+      "heavier",
+      "than",
+      "that",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This bag",
+      "is heavier",
+      "than that bag"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "heavier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This bag is heavier that bag.",
+      "statementForm": "This bag is heavier than that bag.",
+      "fragmentForm": "This bag is heavier than that bag?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "겨울은 가을보다 더 건조하다.",
+    "english": "Winter is drier than fall.",
+    "words": [
+      "Winter",
+      "is",
+      "drier",
+      "than",
+      "fall",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Winter",
+      "is drier",
+      "than fall"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "drier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Winter is drier fall.",
+      "statementForm": "Winter is drier than fall.",
+      "fragmentForm": "Winter is drier than fall?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 시험은 지난 시험보다 더 어렵다.",
+    "english": "This test is harder than the last test.",
+    "words": [
+      "This",
+      "test",
+      "is",
+      "harder",
+      "than",
+      "the",
+      "last",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This test",
+      "is harder",
+      "than the last test"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "harder"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This test is harder the last test.",
+      "statementForm": "This test is harder than the last test.",
+      "fragmentForm": "This test is harder than the last test?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 영화는 책보다 더 재미있다.",
+    "english": "The movie is funnier than the book.",
+    "words": [
+      "The",
+      "movie",
+      "is",
+      "funnier",
+      "than",
+      "the",
+      "book",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The movie",
+      "is funnier",
+      "than the book"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "funnier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The movie is funnier the book.",
+      "statementForm": "The movie is funnier than the book.",
+      "fragmentForm": "The movie is funnier than the book?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "내 개는 네 개보다 더 친근하다.",
+    "english": "My dog is friendlier than yours.",
+    "words": [
+      "My",
+      "dog",
+      "is",
+      "friendlier",
+      "than",
+      "yours",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My dog",
+      "is friendlier",
+      "than yours"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "friendlier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "My dog is friendlier yours.",
+      "statementForm": "My dog is friendlier than yours.",
+      "fragmentForm": "My dog is friendlier than yours?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 의자는 저 의자보다 더 낮다.",
+    "english": "This chair is lower than that chair.",
+    "words": [
+      "This",
+      "chair",
+      "is",
+      "lower",
+      "than",
+      "that",
+      "chair",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This chair",
+      "is lower",
+      "than that chair"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "lower"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This chair is lower that chair.",
+      "statementForm": "This chair is lower than that chair.",
+      "fragmentForm": "This chair is lower than that chair?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "내 형은 나보다 더 강하다.",
+    "english": "My brother is stronger than I am.",
+    "words": [
+      "My",
+      "brother",
+      "is",
+      "stronger",
+      "than",
+      "I",
+      "am",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My brother",
+      "is stronger",
+      "than I am"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "stronger"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "My brother is stronger I am.",
+      "statementForm": "My brother is stronger than I am.",
+      "fragmentForm": "My brother is stronger than I am?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "기차는 버스보다 더 빠르다.",
+    "english": "A train is faster than a bus.",
+    "words": [
+      "A",
+      "train",
+      "is",
+      "faster",
+      "than",
+      "a",
+      "bus",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "A train",
+      "is faster",
+      "than a bus"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "faster"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "A train is more fast a bus.",
+      "statementForm": "A train is faster than a bus.",
+      "fragmentForm": "A train is faster than a bus?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 집은 저 집보다 더 새것이다.",
+    "english": "This house is newer than that house.",
+    "words": [
+      "This",
+      "house",
+      "is",
+      "newer",
+      "than",
+      "that",
+      "house",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This house",
+      "is newer",
+      "than that house"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "newer"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This house is newer that house.",
+      "statementForm": "This house is newer than that house.",
+      "fragmentForm": "This house is newer than that house?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 강은 이 개울보다 더 깊다.",
+    "english": "That river is deeper than this stream.",
+    "words": [
+      "That",
+      "river",
+      "is",
+      "deeper",
+      "than",
+      "this",
+      "stream",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "That river",
+      "is deeper",
+      "than this stream"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "deeper"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "That river is deeper this stream.",
+      "statementForm": "That river is deeper than this stream.",
+      "fragmentForm": "That river is deeper than this stream?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "우리 학교는 그 학교보다 더 깨끗하다.",
+    "english": "Our school is cleaner than that school.",
+    "words": [
+      "Our",
+      "school",
+      "is",
+      "cleaner",
+      "than",
+      "that",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Our school",
+      "is cleaner",
+      "than that school"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "cleaner"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our school is cleaner that school.",
+      "statementForm": "Our school is cleaner than that school.",
+      "fragmentForm": "Our school is cleaner than that school?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 아이는 형보다 더 어리다.",
+    "english": "The child is younger than his brother.",
+    "words": [
+      "The",
+      "child",
+      "is",
+      "younger",
+      "than",
+      "his",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The child",
+      "is younger",
+      "than his brother"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "younger"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child is younger his brother.",
+      "statementForm": "The child is younger than his brother.",
+      "fragmentForm": "The child is younger than his brother?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "오늘 아침은 어제 아침보다 더 밝다.",
+    "english": "This morning is brighter than yesterday morning.",
+    "words": [
+      "This",
+      "morning",
+      "is",
+      "brighter",
+      "than",
+      "yesterday",
+      "morning",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This morning",
+      "is brighter",
+      "than yesterday morning"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "brighter"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This morning is brighter yesterday morning.",
+      "statementForm": "This morning is brighter than yesterday morning.",
+      "fragmentForm": "This morning is brighter than yesterday morning?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "검은 가방이 갈색 가방보다 더 싸다.",
+    "english": "The black bag is cheaper than the brown bag.",
+    "words": [
+      "The",
+      "black",
+      "bag",
+      "is",
+      "cheaper",
+      "than",
+      "the",
+      "brown",
+      "bag",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The black bag",
+      "is cheaper",
+      "than the brown bag"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "cheaper"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The black bag is cheaper the brown bag.",
+      "statementForm": "The black bag is cheaper than the brown bag.",
+      "fragmentForm": "The black bag is cheaper than the brown bag?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "영어는 나에게 수학보다 더 쉽다.",
+    "english": "English is easier for me than math.",
+    "words": [
+      "English",
+      "is",
+      "easier",
+      "for",
+      "me",
+      "than",
+      "math",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "English",
+      "is easier for me",
+      "than math"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "easier"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "English is more easy for me math.",
+      "statementForm": "English is easier for me than math.",
+      "fragmentForm": "English is easier for me than math?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 문장은 저 문장보다 더 짧다.",
+    "english": "This sentence is shorter than that sentence.",
+    "words": [
+      "This",
+      "sentence",
+      "is",
+      "shorter",
+      "than",
+      "that",
+      "sentence",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This sentence",
+      "is shorter",
+      "than that sentence"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "shorter"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This sentence is short that sentence.",
+      "statementForm": "This sentence is shorter than that sentence.",
+      "fragmentForm": "This sentence is shorter than that sentence?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "토끼는 오리보다 더 빠르다.",
+    "english": "A rabbit is faster than a duck.",
+    "words": [
+      "A",
+      "rabbit",
+      "is",
+      "faster",
+      "than",
+      "a",
+      "duck",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "A rabbit",
+      "is faster",
+      "than a duck"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "faster"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "A rabbit is more fast a duck.",
+      "statementForm": "A rabbit is faster than a duck.",
+      "fragmentForm": "A rabbit is faster than a duck?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "내 노트북은 네 노트북보다 더 가볍다.",
+    "english": "My laptop is lighter than yours.",
+    "words": [
+      "My",
+      "laptop",
+      "is",
+      "lighter",
+      "than",
+      "yours",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My laptop",
+      "is lighter",
+      "than yours"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "lighter"
+    ],
+    "tags": [
+      "comparatives",
+      "er",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "My laptop is lighter yours.",
+      "statementForm": "My laptop is lighter than yours.",
+      "fragmentForm": "My laptop is lighter than yours?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_031",
+    "seedId": 31,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 꽃은 저 꽃보다 더 아름답다.",
+    "english": "This flower is more beautiful than that flower.",
+    "words": [
+      "This",
+      "flower",
+      "is",
+      "more",
+      "beautiful",
+      "than",
+      "that",
+      "flower",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This flower",
+      "is more beautiful",
+      "than that flower"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more beautiful"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This flower is more beautiful that flower.",
+      "statementForm": "This flower is more beautiful than that flower.",
+      "fragmentForm": "This flower is more beautiful than that flower?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_032",
+    "seedId": 32,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 책은 이 책보다 더 흥미롭다.",
+    "english": "That book is more interesting than this one.",
+    "words": [
+      "That",
+      "book",
+      "is",
+      "more",
+      "interesting",
+      "than",
+      "this",
+      "one",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "That book",
+      "is more interesting",
+      "than this one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more interesting"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "That book is more interesting this one.",
+      "statementForm": "That book is more interesting than this one.",
+      "fragmentForm": "That book is more interesting than this one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_033",
+    "seedId": 33,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "과학은 나에게 역사보다 더 중요하다.",
+    "english": "Science is more important to me than history.",
+    "words": [
+      "Science",
+      "is",
+      "more",
+      "important",
+      "to",
+      "me",
+      "than",
+      "history",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Science",
+      "is more important to me",
+      "than history"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more important"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Science is more important to me history.",
+      "statementForm": "Science is more important to me than history.",
+      "fragmentForm": "Science is more important to me than history?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_034",
+    "seedId": 34,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 질문은 내가 생각한 것보다 더 어려웠다.",
+    "english": "The question was more difficult than I thought.",
+    "words": [
+      "The",
+      "question",
+      "was",
+      "more",
+      "difficult",
+      "than",
+      "I",
+      "thought",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The question",
+      "was more difficult",
+      "than I thought"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more difficult"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question was more difficult I thought.",
+      "statementForm": "The question was more difficult than I thought.",
+      "fragmentForm": "The question was more difficult than I thought?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_035",
+    "seedId": 35,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 장소는 우리가 기대한 것보다 더 유명하다.",
+    "english": "The place is more famous than we expected.",
+    "words": [
+      "The",
+      "place",
+      "is",
+      "more",
+      "famous",
+      "than",
+      "we",
+      "expected",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The place",
+      "is more famous",
+      "than we expected"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more famous"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The place is more famous we expected.",
+      "statementForm": "The place is more famous than we expected.",
+      "fragmentForm": "The place is more famous than we expected?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_036",
+    "seedId": 36,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 영화는 그 드라마보다 더 exciting하다.",
+    "english": "The movie is more exciting than the drama.",
+    "words": [
+      "The",
+      "movie",
+      "is",
+      "more",
+      "exciting",
+      "than",
+      "the",
+      "drama",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The movie",
+      "is more exciting",
+      "than the drama"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more exciting"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The movie is more exciting the drama.",
+      "statementForm": "The movie is more exciting than the drama.",
+      "fragmentForm": "The movie is more exciting than the drama?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_037",
+    "seedId": 37,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 가수는 저 가수보다 더 popular하다.",
+    "english": "This singer is more popular than that singer.",
+    "words": [
+      "This",
+      "singer",
+      "is",
+      "more",
+      "popular",
+      "than",
+      "that",
+      "singer",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This singer",
+      "is more popular",
+      "than that singer"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more popular"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This singer is more popular that singer.",
+      "statementForm": "This singer is more popular than that singer.",
+      "fragmentForm": "This singer is more popular than that singer?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_038",
+    "seedId": 38,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 설명은 교과서보다 더 useful하다.",
+    "english": "The explanation is more useful than the textbook.",
+    "words": [
+      "The",
+      "explanation",
+      "is",
+      "more",
+      "useful",
+      "than",
+      "the",
+      "textbook",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The explanation",
+      "is more useful",
+      "than the textbook"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more useful"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation is more useful the textbook.",
+      "statementForm": "The explanation is more useful than the textbook.",
+      "fragmentForm": "The explanation is more useful than the textbook?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_039",
+    "seedId": 39,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 앱은 저 앱보다 더 convenient하다.",
+    "english": "This app is more convenient than that app.",
+    "words": [
+      "This",
+      "app",
+      "is",
+      "more",
+      "convenient",
+      "than",
+      "that",
+      "app",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This app",
+      "is more convenient",
+      "than that app"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more convenient"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This app is more convenient that app.",
+      "statementForm": "This app is more convenient than that app.",
+      "fragmentForm": "This app is more convenient than that app?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_040",
+    "seedId": 40,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 그림은 내가 본 다른 그림보다 더 colorful하다.",
+    "english": "The picture is more colorful than the others I saw.",
+    "words": [
+      "The",
+      "picture",
+      "is",
+      "more",
+      "colorful",
+      "than",
+      "the",
+      "others",
+      "I",
+      "saw",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "comparatives",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The picture",
+      "is more colorful",
+      "than the others I saw"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more colorful"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The picture is more colorful the others I saw.",
+      "statementForm": "The picture is more colorful than the others I saw.",
+      "fragmentForm": "The picture is more colorful than the others I saw?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_041",
+    "seedId": 41,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 수업은 작년 수업보다 더 boring하다.",
+    "english": "The class is more boring than last year's class.",
+    "words": [
+      "The",
+      "class",
+      "is",
+      "more",
+      "boring",
+      "than",
+      "last",
+      "year's",
+      "class",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The class",
+      "is more boring",
+      "than last year's class"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more boring"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The class is more boring last year's class.",
+      "statementForm": "The class is more boring than last year's class.",
+      "fragmentForm": "The class is more boring than last year's class?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_042",
+    "seedId": 42,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 식당은 이 식당보다 더 expensive하다.",
+    "english": "That restaurant is more expensive than this one.",
+    "words": [
+      "That",
+      "restaurant",
+      "is",
+      "more",
+      "expensive",
+      "than",
+      "this",
+      "one",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "That restaurant",
+      "is more expensive",
+      "than this one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more expensive"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "That restaurant is more expensive this one.",
+      "statementForm": "That restaurant is more expensive than this one.",
+      "fragmentForm": "That restaurant is more expensive than this one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_043",
+    "seedId": 43,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 계획은 이전 계획보다 더 practical하다.",
+    "english": "The plan is more practical than the old one.",
+    "words": [
+      "The",
+      "plan",
+      "is",
+      "more",
+      "practical",
+      "than",
+      "the",
+      "old",
+      "one",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The plan",
+      "is more practical",
+      "than the old one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more practical"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan is more practical the old one.",
+      "statementForm": "The plan is more practical than the old one.",
+      "fragmentForm": "The plan is more practical than the old one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_044",
+    "seedId": 44,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 숙제는 어제 숙제보다 더 complicated하다.",
+    "english": "This homework is more complicated than yesterday's homework.",
+    "words": [
+      "This",
+      "homework",
+      "is",
+      "more",
+      "complicated",
+      "than",
+      "yesterday's",
+      "homework",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This homework",
+      "is more complicated",
+      "than yesterday's homework"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more complicated"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This homework is more complicated yesterday's homework.",
+      "statementForm": "This homework is more complicated than yesterday's homework.",
+      "fragmentForm": "This homework is more complicated than yesterday's homework?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_045",
+    "seedId": 45,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 주제는 내게 음악보다 더 interesting하다.",
+    "english": "The topic is more interesting to me than music.",
+    "words": [
+      "The",
+      "topic",
+      "is",
+      "more",
+      "interesting",
+      "to",
+      "me",
+      "than",
+      "music",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The topic",
+      "is more interesting to me",
+      "than music"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more interesting"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The topic is more interesting to me music.",
+      "statementForm": "The topic is more interesting to me than music.",
+      "fragmentForm": "The topic is more interesting to me than music?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_046",
+    "seedId": 46,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 문제는 첫 번째 문제보다 더 serious하다.",
+    "english": "This issue is more serious than the first one.",
+    "words": [
+      "This",
+      "issue",
+      "is",
+      "more",
+      "serious",
+      "than",
+      "the",
+      "first",
+      "one",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This issue",
+      "is more serious",
+      "than the first one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more serious"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This issue is more serious the first one.",
+      "statementForm": "This issue is more serious than the first one.",
+      "fragmentForm": "This issue is more serious than the first one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_047",
+    "seedId": 47,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 박물관은 내가 생각한 것보다 더 educational하다.",
+    "english": "The museum is more educational than I thought.",
+    "words": [
+      "The",
+      "museum",
+      "is",
+      "more",
+      "educational",
+      "than",
+      "I",
+      "thought",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The museum",
+      "is more educational",
+      "than I thought"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more educational"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The museum is more educational I thought.",
+      "statementForm": "The museum is more educational than I thought.",
+      "fragmentForm": "The museum is more educational than I thought?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_048",
+    "seedId": 48,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 노래는 저 노래보다 더 emotional하다.",
+    "english": "This song is more emotional than that song.",
+    "words": [
+      "This",
+      "song",
+      "is",
+      "more",
+      "emotional",
+      "than",
+      "that",
+      "song",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This song",
+      "is more emotional",
+      "than that song"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more emotional"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This song is more emotional that song.",
+      "statementForm": "This song is more emotional than that song.",
+      "fragmentForm": "This song is more emotional than that song?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_049",
+    "seedId": 49,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 시험은 모의고사보다 더 confusing하다.",
+    "english": "The test is more confusing than the mock exam.",
+    "words": [
+      "The",
+      "test",
+      "is",
+      "more",
+      "confusing",
+      "than",
+      "the",
+      "mock",
+      "exam",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The test",
+      "is more confusing",
+      "than the mock exam"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more confusing"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The test is more confusing the mock exam.",
+      "statementForm": "The test is more confusing than the mock exam.",
+      "fragmentForm": "The test is more confusing than the mock exam?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_050",
+    "seedId": 50,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 장소는 사진보다 더 beautiful하다.",
+    "english": "This place is more beautiful than in the picture.",
+    "words": [
+      "This",
+      "place",
+      "is",
+      "more",
+      "beautiful",
+      "than",
+      "in",
+      "the",
+      "picture",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This place",
+      "is more beautiful",
+      "than in the picture"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more beautiful"
+    ],
+    "tags": [
+      "comparatives",
+      "more",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This place is more beautiful in the picture.",
+      "statementForm": "This place is more beautiful than in the picture.",
+      "fragmentForm": "This place is more beautiful than in the picture?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_051",
+    "seedId": 51,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "오늘은 어제보다 더 좋다.",
+    "english": "Today is better than yesterday.",
+    "words": [
+      "Today",
+      "is",
+      "better",
+      "than",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Today",
+      "is better",
+      "than yesterday"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Today is gooder yesterday.",
+      "statementForm": "Today is better than yesterday.",
+      "fragmentForm": "Today is better than yesterday?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_052",
+    "seedId": 52,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 결과는 저 결과보다 더 나쁘다.",
+    "english": "This result is worse than that result.",
+    "words": [
+      "This",
+      "result",
+      "is",
+      "worse",
+      "than",
+      "that",
+      "result",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This result",
+      "is worse",
+      "than that result"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This result is badder that result.",
+      "statementForm": "This result is worse than that result.",
+      "fragmentForm": "This result is worse than that result?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_053",
+    "seedId": 53,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "내 기분은 아침보다 지금이 더 좋다.",
+    "english": "My mood is better now than in the morning.",
+    "words": [
+      "My",
+      "mood",
+      "is",
+      "better",
+      "now",
+      "than",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My mood",
+      "is better now",
+      "than in the morning"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mood is gooder now in the morning.",
+      "statementForm": "My mood is better now than in the morning.",
+      "fragmentForm": "My mood is better now than in the morning?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_054",
+    "seedId": 54,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그의 상태는 어제보다 더 나쁘다.",
+    "english": "His condition is worse than yesterday.",
+    "words": [
+      "His",
+      "condition",
+      "is",
+      "worse",
+      "than",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "His condition",
+      "is worse",
+      "than yesterday"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "His condition is badder yesterday.",
+      "statementForm": "His condition is worse than yesterday.",
+      "fragmentForm": "His condition is worse than yesterday?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_055",
+    "seedId": 55,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 식당은 저 식당보다 더 좋다.",
+    "english": "This restaurant is better than that one.",
+    "words": [
+      "This",
+      "restaurant",
+      "is",
+      "better",
+      "than",
+      "that",
+      "one",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This restaurant",
+      "is better",
+      "than that one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This restaurant is gooder that one.",
+      "statementForm": "This restaurant is better than that one.",
+      "fragmentForm": "This restaurant is better than that one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_056",
+    "seedId": 56,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "오늘 날씨는 지난주보다 더 나쁘다.",
+    "english": "The weather today is worse than last week.",
+    "words": [
+      "The",
+      "weather",
+      "today",
+      "is",
+      "worse",
+      "than",
+      "last",
+      "week",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The weather today",
+      "is worse",
+      "than last week"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The weather today is badder last week.",
+      "statementForm": "The weather today is worse than last week.",
+      "fragmentForm": "The weather today is worse than last week?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_057",
+    "seedId": 57,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "내 영어 실력은 작년보다 더 좋다.",
+    "english": "My English is better than last year.",
+    "words": [
+      "My",
+      "English",
+      "is",
+      "better",
+      "than",
+      "last",
+      "year",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My English",
+      "is better",
+      "than last year"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "My English is gooder last year.",
+      "statementForm": "My English is better than last year.",
+      "fragmentForm": "My English is better than last year?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_058",
+    "seedId": 58,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 소식은 내가 들은 다른 소식보다 더 나쁘다.",
+    "english": "The news is worse than the other news I heard.",
+    "words": [
+      "The",
+      "news",
+      "is",
+      "worse",
+      "than",
+      "the",
+      "other",
+      "news",
+      "I",
+      "heard",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "comparatives",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The news",
+      "is worse",
+      "than the other news I heard"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news is badder the other news I heard.",
+      "statementForm": "The news is worse than the other news I heard.",
+      "fragmentForm": "The news is worse than the other news I heard?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_059",
+    "seedId": 59,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 선택이 다른 선택보다 더 좋다.",
+    "english": "This choice is better than the other one.",
+    "words": [
+      "This",
+      "choice",
+      "is",
+      "better",
+      "than",
+      "the",
+      "other",
+      "one",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This choice",
+      "is better",
+      "than the other one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This choice is gooder the other one.",
+      "statementForm": "This choice is better than the other one.",
+      "fragmentForm": "This choice is better than the other one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_060",
+    "seedId": 60,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 영화의 결말은 내가 예상한 것보다 더 나쁘다.",
+    "english": "The ending is worse than I expected.",
+    "words": [
+      "The",
+      "ending",
+      "is",
+      "worse",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "intermediate",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The ending",
+      "is worse",
+      "than I expected"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The ending is badder I expected.",
+      "statementForm": "The ending is worse than I expected.",
+      "fragmentForm": "The ending is worse than I expected?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_061",
+    "seedId": 61,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "지금이 어제보다 더 낫다.",
+    "english": "Now is better than yesterday.",
+    "words": [
+      "Now",
+      "is",
+      "better",
+      "than",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Now",
+      "is better",
+      "than yesterday"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Now is gooder yesterday.",
+      "statementForm": "Now is better than yesterday.",
+      "fragmentForm": "Now is better than yesterday?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_062",
+    "seedId": 62,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그의 성적은 지난 시험보다 더 나쁘다.",
+    "english": "His score is worse than on the last test.",
+    "words": [
+      "His",
+      "score",
+      "is",
+      "worse",
+      "than",
+      "on",
+      "the",
+      "last",
+      "test",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "His score",
+      "is worse",
+      "than on the last test"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "His score is badder on the last test.",
+      "statementForm": "His score is worse than on the last test.",
+      "fragmentForm": "His score is worse than on the last test?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_063",
+    "seedId": 63,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "우리 팀은 지난번보다 더 좋다.",
+    "english": "Our team is better than last time.",
+    "words": [
+      "Our",
+      "team",
+      "is",
+      "better",
+      "than",
+      "last",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Our team",
+      "is better",
+      "than last time"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our team is gooder last time.",
+      "statementForm": "Our team is better than last time.",
+      "fragmentForm": "Our team is better than last time?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_064",
+    "seedId": 64,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 상황은 처음보다 더 나쁘다.",
+    "english": "The situation is worse than at first.",
+    "words": [
+      "The",
+      "situation",
+      "is",
+      "worse",
+      "than",
+      "at",
+      "first",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The situation",
+      "is worse",
+      "than at first"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "The situation is badder at first.",
+      "statementForm": "The situation is worse than at first.",
+      "fragmentForm": "The situation is worse than at first?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_065",
+    "seedId": 65,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 계획은 저 계획보다 더 좋다.",
+    "english": "This plan is better than that plan.",
+    "words": [
+      "This",
+      "plan",
+      "is",
+      "better",
+      "than",
+      "that",
+      "plan",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This plan",
+      "is better",
+      "than that plan"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "irregular",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This plan is gooder that plan.",
+      "statementForm": "This plan is better than that plan.",
+      "fragmentForm": "This plan is better than that plan?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_066",
+    "seedId": 66,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "Tom은 Jake보다 더 크니?",
+    "english": "Is Tom taller than Jake?",
+    "words": [
+      "Is",
+      "Tom",
+      "taller",
+      "than",
+      "Jake",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "Tom taller",
+      "than Jake"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "taller"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is Tom tall Jake?",
+      "statementForm": "Is Tom taller than Jake.",
+      "fragmentForm": "Is Tom taller than Jake?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_067",
+    "seedId": 67,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 상자는 저 상자보다 더 크니?",
+    "english": "Is this box bigger than that box?",
+    "words": [
+      "Is",
+      "this",
+      "box",
+      "bigger",
+      "than",
+      "that",
+      "box",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "this box bigger",
+      "than that box"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "bigger"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this box more big that box?",
+      "statementForm": "Is this box bigger than that box.",
+      "fragmentForm": "Is this box bigger than that box?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_068",
+    "seedId": 68,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그녀는 너보다 더 바쁘니?",
+    "english": "Is she busier than you?",
+    "words": [
+      "Is",
+      "she",
+      "busier",
+      "than",
+      "you",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "she busier",
+      "than you"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "busier"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is she more busy you?",
+      "statementForm": "Is she busier than you.",
+      "fragmentForm": "Is she busier than you?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_069",
+    "seedId": 69,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "기차는 버스보다 더 빠르니?",
+    "english": "Is a train faster than a bus?",
+    "words": [
+      "Is",
+      "a",
+      "train",
+      "faster",
+      "than",
+      "a",
+      "bus",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "a train faster",
+      "than a bus"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "faster"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is a train more fast a bus?",
+      "statementForm": "Is a train faster than a bus.",
+      "fragmentForm": "Is a train faster than a bus?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_070",
+    "seedId": 70,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 문제는 저 문제보다 더 쉽니?",
+    "english": "Is this problem easier than that one?",
+    "words": [
+      "Is",
+      "this",
+      "problem",
+      "easier",
+      "than",
+      "that",
+      "one",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "this problem easier",
+      "than that one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "easier"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this problem more easy that one?",
+      "statementForm": "Is this problem easier than that one.",
+      "fragmentForm": "Is this problem easier than that one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_071",
+    "seedId": 71,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 책은 이 책보다 더 흥미롭니?",
+    "english": "Is that book more interesting than this one?",
+    "words": [
+      "Is",
+      "that",
+      "book",
+      "more",
+      "interesting",
+      "than",
+      "this",
+      "one",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "that book more interesting",
+      "than this one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more interesting"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is that book more interesting this one?",
+      "statementForm": "Is that book more interesting than this one.",
+      "fragmentForm": "Is that book more interesting than this one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_072",
+    "seedId": 72,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "과학은 역사보다 더 중요하니?",
+    "english": "Is science more important than history?",
+    "words": [
+      "Is",
+      "science",
+      "more",
+      "important",
+      "than",
+      "history",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "science more important",
+      "than history"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more important"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is science more important history?",
+      "statementForm": "Is science more important than history.",
+      "fragmentForm": "Is science more important than history?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_073",
+    "seedId": 73,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 식당은 저 식당보다 더 좋니?",
+    "english": "Is this restaurant better than that one?",
+    "words": [
+      "Is",
+      "this",
+      "restaurant",
+      "better",
+      "than",
+      "that",
+      "one",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "this restaurant better",
+      "than that one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this restaurant gooder that one?",
+      "statementForm": "Is this restaurant better than that one.",
+      "fragmentForm": "Is this restaurant better than that one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_074",
+    "seedId": 74,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "오늘 날씨는 어제보다 더 나쁘니?",
+    "english": "Is the weather today worse than yesterday?",
+    "words": [
+      "Is",
+      "the",
+      "weather",
+      "today",
+      "worse",
+      "than",
+      "yesterday",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the weather today worse",
+      "than yesterday"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the weather today badder yesterday?",
+      "statementForm": "Is the weather today worse than yesterday.",
+      "fragmentForm": "Is the weather today worse than yesterday?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_075",
+    "seedId": 75,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "네 방은 내 방보다 더 작니?",
+    "english": "Is your room smaller than my room?",
+    "words": [
+      "Is",
+      "your",
+      "room",
+      "smaller",
+      "than",
+      "my",
+      "room",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "your room smaller",
+      "than my room"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "smaller"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is your room more small my room?",
+      "statementForm": "Is your room smaller than my room.",
+      "fragmentForm": "Is your room smaller than my room?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_076",
+    "seedId": 76,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "영어는 수학보다 더 쉽니?",
+    "english": "Is English easier than math?",
+    "words": [
+      "Is",
+      "English",
+      "easier",
+      "than",
+      "math",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "English easier",
+      "than math"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "easier"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is English more easy math?",
+      "statementForm": "Is English easier than math.",
+      "fragmentForm": "Is English easier than math?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_077",
+    "seedId": 77,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 앱은 저 앱보다 더 편리하니?",
+    "english": "Is this app more convenient than that app?",
+    "words": [
+      "Is",
+      "this",
+      "app",
+      "more",
+      "convenient",
+      "than",
+      "that",
+      "app",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "this app more convenient",
+      "than that app"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more convenient"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this app more convenient that app?",
+      "statementForm": "Is this app more convenient than that app.",
+      "fragmentForm": "Is this app more convenient than that app?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_078",
+    "seedId": 78,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 문제는 첫 번째 문제보다 더 어렵니?",
+    "english": "Is that problem harder than the first one?",
+    "words": [
+      "Is",
+      "that",
+      "problem",
+      "harder",
+      "than",
+      "the",
+      "first",
+      "one",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "that problem harder",
+      "than the first one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "harder"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is that problem harder the first one?",
+      "statementForm": "Is that problem harder than the first one.",
+      "fragmentForm": "Is that problem harder than the first one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_079",
+    "seedId": 79,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "네 개는 우리 개보다 더 친근하니?",
+    "english": "Is your dog friendlier than ours?",
+    "words": [
+      "Is",
+      "your",
+      "dog",
+      "friendlier",
+      "than",
+      "ours",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "your dog friendlier",
+      "than ours"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "friendlier"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is your dog friendlier ours?",
+      "statementForm": "Is your dog friendlier than ours.",
+      "fragmentForm": "Is your dog friendlier than ours?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_080",
+    "seedId": 80,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "겨울은 가을보다 더 건조하니?",
+    "english": "Is winter drier than fall?",
+    "words": [
+      "Is",
+      "winter",
+      "drier",
+      "than",
+      "fall",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "comparatives",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "winter drier",
+      "than fall"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "drier"
+    ],
+    "tags": [
+      "comparatives",
+      "question",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is winter drier fall?",
+      "statementForm": "Is winter drier than fall.",
+      "fragmentForm": "Is winter drier than fall?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_081",
+    "seedId": 81,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "Tom은 Jake보다 더 크지만 Ben보다는 작다.",
+    "english": "Tom is taller than Jake, but shorter than Ben.",
+    "words": [
+      "Tom",
+      "is",
+      "taller",
+      "than",
+      "Jake,",
+      "but",
+      "shorter",
+      "than",
+      "Ben",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Tom",
+      "is taller than Jake",
+      "but",
+      "shorter than Ben"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "taller"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Tom is tall Jake, but shorter than Ben.",
+      "statementForm": "Tom is taller than Jake, but shorter than Ben.",
+      "fragmentForm": "Tom is taller than Jake, but shorter than Ben?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_082",
+    "seedId": 82,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 상자는 저 상자보다 더 크지만 더 무겁지는 않다.",
+    "english": "This box is bigger than that box, but it is not heavier.",
+    "words": [
+      "This",
+      "box",
+      "is",
+      "bigger",
+      "than",
+      "that",
+      "box,",
+      "but",
+      "it",
+      "is",
+      "not",
+      "heavier",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This box",
+      "is bigger than that box",
+      "but",
+      "it is not heavier"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "bigger"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This box is more big that box, but it is not heavier.",
+      "statementForm": "This box is bigger than that box, but it is not heavier.",
+      "fragmentForm": "This box is bigger than that box, but it is not heavier?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_083",
+    "seedId": 83,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "과학은 역사보다 더 중요하지만 나에게는 영어가 가장 중요하다.",
+    "english": "Science is more important than history, but English is the most important to me.",
+    "words": [
+      "Science",
+      "is",
+      "more",
+      "important",
+      "than",
+      "history,",
+      "but",
+      "English",
+      "is",
+      "the",
+      "most",
+      "important",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Science",
+      "is more important than history",
+      "but",
+      "English is the most important to me"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more important"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "more"
+    ],
+    "distractorSeeds": {
+      "auxError": "Science is more important history, but English is the most important to me.",
+      "statementForm": "Science is more important than history, but English is the most important to me.",
+      "fragmentForm": "Science is more important than history, but English is the most important to me?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_084",
+    "seedId": 84,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "오늘은 어제보다 더 좋지만 지난주보다는 나쁘다.",
+    "english": "Today is better than yesterday, but worse than last week.",
+    "words": [
+      "Today",
+      "is",
+      "better",
+      "than",
+      "yesterday,",
+      "but",
+      "worse",
+      "than",
+      "last",
+      "week",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Today",
+      "is better than yesterday",
+      "but",
+      "worse than last week"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "Today is gooder yesterday, but worse than last week.",
+      "statementForm": "Today is better than yesterday, but worse than last week.",
+      "fragmentForm": "Today is better than yesterday, but worse than last week?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_085",
+    "seedId": 85,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그녀는 나보다 더 바쁘지만 오빠보다는 덜 바쁘다.",
+    "english": "She is busier than I am, but less busy than her brother.",
+    "words": [
+      "She",
+      "is",
+      "busier",
+      "than",
+      "I",
+      "am,",
+      "but",
+      "less",
+      "busy",
+      "than",
+      "her",
+      "brother",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "is busier than I am",
+      "but",
+      "less busy than her brother"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "busier"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is more busy I am, but less busy than her brother.",
+      "statementForm": "She is busier than I am, but less busy than her brother.",
+      "fragmentForm": "She is busier than I am, but less busy than her brother?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_086",
+    "seedId": 86,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 영화는 그 책보다 더 재미있고 그림도 더 아름답다.",
+    "english": "This movie is more interesting than the book, and the pictures are more beautiful too.",
+    "words": [
+      "This",
+      "movie",
+      "is",
+      "more",
+      "interesting",
+      "than",
+      "the",
+      "book,",
+      "and",
+      "the",
+      "pictures",
+      "are",
+      "more",
+      "beautiful",
+      "too",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This movie",
+      "is more interesting than the book",
+      "and",
+      "the pictures are more beautiful too"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more interesting"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "more"
+    ],
+    "distractorSeeds": {
+      "auxError": "This movie is more interesting the book, and the pictures are more beautiful too.",
+      "statementForm": "This movie is more interesting than the book, and the pictures are more beautiful too.",
+      "fragmentForm": "This movie is more interesting than the book, and the pictures are more beautiful too?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_087",
+    "seedId": 87,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "기차는 버스보다 더 빠르지만 비행기보다 느리다.",
+    "english": "A train is faster than a bus, but slower than a plane.",
+    "words": [
+      "A",
+      "train",
+      "is",
+      "faster",
+      "than",
+      "a",
+      "bus,",
+      "but",
+      "slower",
+      "than",
+      "a",
+      "plane",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "A train",
+      "is faster than a bus",
+      "but",
+      "slower than a plane"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "faster"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "A train is more fast a bus, but slower than a plane.",
+      "statementForm": "A train is faster than a bus, but slower than a plane.",
+      "fragmentForm": "A train is faster than a bus, but slower than a plane?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_088",
+    "seedId": 88,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 문제는 저 문제보다 더 쉽지만 마지막 문제보다는 어렵다.",
+    "english": "This problem is easier than that one, but harder than the last one.",
+    "words": [
+      "This",
+      "problem",
+      "is",
+      "easier",
+      "than",
+      "that",
+      "one,",
+      "but",
+      "harder",
+      "than",
+      "the",
+      "last",
+      "one",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This problem",
+      "is easier than that one",
+      "but",
+      "harder than the last one"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "easier"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem is more easy that one, but harder than the last one.",
+      "statementForm": "This problem is easier than that one, but harder than the last one.",
+      "fragmentForm": "This problem is easier than that one, but harder than the last one?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_089",
+    "seedId": 89,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "내 영어 실력은 작년보다 더 좋고 지금은 수학보다도 자신 있다.",
+    "english": "My English is better than last year, and now I am more confident in it than in math.",
+    "words": [
+      "My",
+      "English",
+      "is",
+      "better",
+      "than",
+      "last",
+      "year,",
+      "and",
+      "now",
+      "I",
+      "am",
+      "more",
+      "confident",
+      "in",
+      "it",
+      "than",
+      "in",
+      "math",
+      "."
+    ],
+    "wordCount": 18,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My English",
+      "is better than last year",
+      "and",
+      "now I am more confident in it than in math"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "better"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "My English is gooder last year, and now I am more confident in it than in math.",
+      "statementForm": "My English is better than last year, and now I am more confident in it than in math.",
+      "fragmentForm": "My English is better than last year, and now I am more confident in it than in math?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_090",
+    "seedId": 90,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 공원은 우리가 생각한 것보다 더 크고 더 조용하다.",
+    "english": "This park is bigger and quieter than we thought.",
+    "words": [
+      "This",
+      "park",
+      "is",
+      "bigger",
+      "and",
+      "quieter",
+      "than",
+      "we",
+      "thought",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This park",
+      "is bigger and quieter",
+      "than we thought"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "bigger"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This park is more big and quieter we thought.",
+      "statementForm": "This park is bigger and quieter than we thought.",
+      "fragmentForm": "This park is bigger and quieter than we thought?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_091",
+    "seedId": 91,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 식당은 저 식당보다 더 비싸지만 음식은 더 좋다.",
+    "english": "That restaurant is more expensive than this one, but the food is better.",
+    "words": [
+      "That",
+      "restaurant",
+      "is",
+      "more",
+      "expensive",
+      "than",
+      "this",
+      "one,",
+      "but",
+      "the",
+      "food",
+      "is",
+      "better",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "That restaurant",
+      "is more expensive than this one",
+      "but",
+      "the food is better"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more expensive"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "more"
+    ],
+    "distractorSeeds": {
+      "auxError": "That restaurant is more expensive this one, but the food is better.",
+      "statementForm": "That restaurant is more expensive than this one, but the food is better.",
+      "fragmentForm": "That restaurant is more expensive than this one, but the food is better?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_092",
+    "seedId": 92,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 앱은 저 앱보다 더 편리하고 사용법도 더 쉽다.",
+    "english": "This app is more convenient than that app, and it is easier to use.",
+    "words": [
+      "This",
+      "app",
+      "is",
+      "more",
+      "convenient",
+      "than",
+      "that",
+      "app,",
+      "and",
+      "it",
+      "is",
+      "easier",
+      "to",
+      "use",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This app",
+      "is more convenient than that app",
+      "and",
+      "it is easier to use"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more convenient"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "more"
+    ],
+    "distractorSeeds": {
+      "auxError": "This app is more convenient that app, and it is more easy to use.",
+      "statementForm": "This app is more convenient than that app, and it is easier to use.",
+      "fragmentForm": "This app is more convenient than that app, and it is easier to use?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_093",
+    "seedId": 93,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그의 상태는 어제보다 더 나쁘지만 지난주보다는 낫다.",
+    "english": "His condition is worse than yesterday, but better than last week.",
+    "words": [
+      "His",
+      "condition",
+      "is",
+      "worse",
+      "than",
+      "yesterday,",
+      "but",
+      "better",
+      "than",
+      "last",
+      "week",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "His condition",
+      "is worse than yesterday",
+      "but",
+      "better than last week"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "His condition is worse yesterday, but gooder than last week.",
+      "statementForm": "His condition is worse than yesterday, but better than last week.",
+      "fragmentForm": "His condition is worse than yesterday, but better than last week?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_094",
+    "seedId": 94,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "우리 학교는 그 학교보다 더 깨끗하고 교실도 더 크다.",
+    "english": "Our school is cleaner than that school, and the classrooms are bigger too.",
+    "words": [
+      "Our",
+      "school",
+      "is",
+      "cleaner",
+      "than",
+      "that",
+      "school,",
+      "and",
+      "the",
+      "classrooms",
+      "are",
+      "bigger",
+      "too",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Our school",
+      "is cleaner than that school",
+      "and",
+      "the classrooms are bigger too"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "cleaner"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our school is cleaner that school, and the classrooms are more big too.",
+      "statementForm": "Our school is cleaner than that school, and the classrooms are bigger too.",
+      "fragmentForm": "Our school is cleaner than that school, and the classrooms are bigger too?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_095",
+    "seedId": 95,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 책은 이 책보다 더 흥미롭지 않지만 설명은 더 자세하다.",
+    "english": "That book is not more interesting than this one, but the explanations are more detailed.",
+    "words": [
+      "That",
+      "book",
+      "is",
+      "not",
+      "more",
+      "interesting",
+      "than",
+      "this",
+      "one,",
+      "but",
+      "the",
+      "explanations",
+      "are",
+      "more",
+      "detailed",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "That book",
+      "is not more interesting than this one",
+      "but",
+      "the explanations are more detailed"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "more interesting"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "That book is not more interesting this one, but the explanations are more detailed.",
+      "statementForm": "That book is not more interesting than this one, but the explanations are more detailed.",
+      "fragmentForm": "That book is not more interesting than this one, but the explanations are more detailed?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_096",
+    "seedId": 96,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "오늘 아침은 어제 아침보다 더 춥고 바람도 더 강하다.",
+    "english": "This morning is colder than yesterday morning, and the wind is stronger too.",
+    "words": [
+      "This",
+      "morning",
+      "is",
+      "colder",
+      "than",
+      "yesterday",
+      "morning,",
+      "and",
+      "the",
+      "wind",
+      "is",
+      "stronger",
+      "too",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This morning",
+      "is colder than yesterday morning",
+      "and",
+      "the wind is stronger too"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "colder"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "This morning is colder yesterday morning, and the wind is stronger too.",
+      "statementForm": "This morning is colder than yesterday morning, and the wind is stronger too.",
+      "fragmentForm": "This morning is colder than yesterday morning, and the wind is stronger too?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_097",
+    "seedId": 97,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "도시는 시골보다 더 시끄럽지만 더 편리하다.",
+    "english": "The city is noisier than the countryside, but it is more convenient.",
+    "words": [
+      "The",
+      "city",
+      "is",
+      "noisier",
+      "than",
+      "the",
+      "countryside,",
+      "but",
+      "it",
+      "is",
+      "more",
+      "convenient",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The city",
+      "is noisier than the countryside",
+      "but",
+      "it is more convenient"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "noisier"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "more"
+    ],
+    "distractorSeeds": {
+      "auxError": "The city is noisier the countryside, but it is more convenient.",
+      "statementForm": "The city is noisier than the countryside, but it is more convenient.",
+      "fragmentForm": "The city is noisier than the countryside, but it is more convenient?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_098",
+    "seedId": 98,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "이 시험은 지난 시험보다 더 어렵고 질문도 더 복잡하다.",
+    "english": "This test is harder than the last test, and the questions are more complicated too.",
+    "words": [
+      "This",
+      "test",
+      "is",
+      "harder",
+      "than",
+      "the",
+      "last",
+      "test,",
+      "and",
+      "the",
+      "questions",
+      "are",
+      "more",
+      "complicated",
+      "too",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "This test",
+      "is harder than the last test",
+      "and",
+      "the questions are more complicated too"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "harder"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "more"
+    ],
+    "distractorSeeds": {
+      "auxError": "This test is harder the last test, and the questions are more complicated too.",
+      "statementForm": "This test is harder than the last test, and the questions are more complicated too.",
+      "fragmentForm": "This test is harder than the last test, and the questions are more complicated too?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_099",
+    "seedId": 99,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그녀의 방은 내 방보다 더 작지만 훨씬 더 깨끗하다.",
+    "english": "Her room is smaller than mine, but much cleaner.",
+    "words": [
+      "Her",
+      "room",
+      "is",
+      "smaller",
+      "than",
+      "mine,",
+      "but",
+      "much",
+      "cleaner",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Her room",
+      "is smaller than mine",
+      "but",
+      "much cleaner"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "smaller"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "than"
+    ],
+    "distractorSeeds": {
+      "auxError": "Her room is more small mine, but much cleaner.",
+      "statementForm": "Her room is smaller than mine, but much cleaner.",
+      "fragmentForm": "Her room is smaller than mine, but much cleaner?"
+    }
+  },
+  {
+    "id": "m1_s1_comparatives_100",
+    "seedId": 100,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "comparatives",
+    "chapterLabelKo": "비교급",
+    "korean": "그 영화의 결말은 내가 예상한 것보다 더 나빴지만 이야기 전체는 더 좋았다.",
+    "english": "The ending was worse than I expected, but the whole story was better.",
+    "words": [
+      "The",
+      "ending",
+      "was",
+      "worse",
+      "than",
+      "I",
+      "expected,",
+      "but",
+      "the",
+      "whole",
+      "story",
+      "was",
+      "better",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "comparatives",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The ending",
+      "was worse than I expected",
+      "but",
+      "the whole story was better"
+    ],
+    "extraClueWordPool": [
+      "taller",
+      "shorter",
+      "bigger",
+      "smaller",
+      "faster",
+      "slower",
+      "more beautiful",
+      "more interesting",
+      "better",
+      "worse",
+      "than"
+    ],
+    "blankTargets": [
+      "worse"
+    ],
+    "tags": [
+      "comparatives",
+      "complex",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "The ending was badder I expected, but the whole story was better.",
+      "statementForm": "The ending was worse than I expected, but the whole story was better.",
+      "fragmentForm": "The ending was worse than I expected, but the whole story was better?"
+    }
+  }
+]
