@@ -1,0 +1,5762 @@
+[
+  {
+    "id": "m1_s1_prepositions_basic_001",
+    "seedId": 1,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 아침에 물을 마신다.",
+    "english": "I drink water in the morning.",
+    "words": [
+      "I",
+      "drink",
+      "water",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "drink water",
+      "in the morning"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the morning"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "do_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "I drink water on the morning.",
+      "statementForm": "I drink water in the morning.",
+      "fragmentForm": "I drink water in the morning?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_002",
+    "seedId": 2,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 월요일에 학교에 간다.",
+    "english": "She goes to school on Monday.",
+    "words": [
+      "She",
+      "goes",
+      "to",
+      "school",
+      "on",
+      "Monday",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "goes to school",
+      "on Monday"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on Monday"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "She goes to school in Monday.",
+      "statementForm": "She goes to school on Monday.",
+      "fragmentForm": "She goes to school on Monday?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_003",
+    "seedId": 3,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 밤에 TV를 본다.",
+    "english": "He watches TV at night.",
+    "words": [
+      "He",
+      "watches",
+      "TV",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "watches TV",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at night"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "He watches TV in night.",
+      "statementForm": "He watches TV at night.",
+      "fragmentForm": "He watches TV at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_004",
+    "seedId": 4,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 오후에 영어를 공부한다.",
+    "english": "We study English in the afternoon.",
+    "words": [
+      "We",
+      "study",
+      "English",
+      "in",
+      "the",
+      "afternoon",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "study English",
+      "in the afternoon"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the afternoon"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "We study English on the afternoon.",
+      "statementForm": "We study English in the afternoon.",
+      "fragmentForm": "We study English in the afternoon?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_005",
+    "seedId": 5,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 토요일에 축구를 한다.",
+    "english": "They play soccer on Saturday.",
+    "words": [
+      "They",
+      "play",
+      "soccer",
+      "on",
+      "Saturday",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "play soccer",
+      "on Saturday"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on Saturday"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "hobby"
+    ],
+    "distractorSeeds": {
+      "auxError": "They play soccer in Saturday.",
+      "statementForm": "They play soccer on Saturday.",
+      "fragmentForm": "They play soccer on Saturday?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_006",
+    "seedId": 6,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 저녁에 일기를 쓴다.",
+    "english": "I write in my diary in the evening.",
+    "words": [
+      "I",
+      "write",
+      "in",
+      "my",
+      "diary",
+      "in",
+      "the",
+      "evening",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "write in my diary",
+      "in the evening"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the evening"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "I write in my diary on the evening.",
+      "statementForm": "I write in my diary in the evening.",
+      "fragmentForm": "I write in my diary in the evening?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_007",
+    "seedId": 7,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 밤에 책을 읽는다.",
+    "english": "She reads books at night.",
+    "words": [
+      "She",
+      "reads",
+      "books",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "reads books",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at night"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "She reads books in night.",
+      "statementForm": "She reads books at night.",
+      "fragmentForm": "She reads books at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_008",
+    "seedId": 8,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 아침에 항상 바쁘다.",
+    "english": "He is always busy in the morning.",
+    "words": [
+      "He",
+      "is",
+      "always",
+      "busy",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "is always busy",
+      "in the morning"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the morning"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is always busy on the morning.",
+      "statementForm": "He is always busy in the morning.",
+      "fragmentForm": "He is always busy in the morning?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_009",
+    "seedId": 9,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 금요일에 체육 수업이 있다.",
+    "english": "We have PE class on Friday.",
+    "words": [
+      "We",
+      "have",
+      "PE",
+      "class",
+      "on",
+      "Friday",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "have PE class",
+      "on Friday"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on Friday"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "We have PE class in Friday.",
+      "statementForm": "We have PE class on Friday.",
+      "fragmentForm": "We have PE class on Friday?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_010",
+    "seedId": 10,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 밤에 도서관에 있지 않다.",
+    "english": "They are not in the library at night.",
+    "words": [
+      "They",
+      "are",
+      "not",
+      "in",
+      "the",
+      "library",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are not in the library",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at night"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They are not in the library in night.",
+      "statementForm": "They are not in the library at night.",
+      "fragmentForm": "They are not in the library at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_011",
+    "seedId": 11,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "너는 아침에 운동하니?",
+    "english": "Do you exercise in the morning?",
+    "words": [
+      "Do",
+      "you",
+      "exercise",
+      "in",
+      "the",
+      "morning",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Do",
+      "you exercise",
+      "in the morning"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the morning"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you exercise on the morning?",
+      "statementForm": "You exercise in the morning.",
+      "fragmentForm": "You exercise in the morning?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_012",
+    "seedId": 12,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 화요일에 피아노를 연습하니?",
+    "english": "Does she practice the piano on Tuesday?",
+    "words": [
+      "Does",
+      "she",
+      "practice",
+      "the",
+      "piano",
+      "on",
+      "Tuesday",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "she practice the piano",
+      "on Tuesday"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on Tuesday"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does she practice the piano in Tuesday?",
+      "statementForm": "She practices the piano on Tuesday.",
+      "fragmentForm": "She practices the piano on Tuesday?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_013",
+    "seedId": 13,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 밤에 집에 있니?",
+    "english": "Is he at home at night?",
+    "words": [
+      "Is",
+      "he",
+      "at",
+      "home",
+      "at",
+      "night",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "he at home",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at night"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is he at home in night?",
+      "statementForm": "He is at home at night.",
+      "fragmentForm": "He is at home at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_014",
+    "seedId": 14,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 주말에 공원에 간다.",
+    "english": "We go to the park on weekends.",
+    "words": [
+      "We",
+      "go",
+      "to",
+      "the",
+      "park",
+      "on",
+      "weekends",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "go to the park",
+      "on weekends"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on weekends"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "We go to the park in weekends.",
+      "statementForm": "We go to the park on weekends.",
+      "fragmentForm": "We go to the park on weekends?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_015",
+    "seedId": 15,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 점심시간에 친구를 만난다.",
+    "english": "I meet my friend at lunch time.",
+    "words": [
+      "I",
+      "meet",
+      "my",
+      "friend",
+      "at",
+      "lunch",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "meet my friend",
+      "at lunch time"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at lunch time"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "I meet my friend in lunch time.",
+      "statementForm": "I meet my friend at lunch time.",
+      "fragmentForm": "I meet my friend at lunch time?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_016",
+    "seedId": 16,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 겨울에 스키를 탄다.",
+    "english": "She goes skiing in winter.",
+    "words": [
+      "She",
+      "goes",
+      "skiing",
+      "in",
+      "winter",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "goes skiing",
+      "in winter"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in winter"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "hobby"
+    ],
+    "distractorSeeds": {
+      "auxError": "She goes skiing on winter.",
+      "statementForm": "She goes skiing in winter.",
+      "fragmentForm": "She goes skiing in winter?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_017",
+    "seedId": 17,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 일요일에 교회에 간다.",
+    "english": "He goes to church on Sunday.",
+    "words": [
+      "He",
+      "goes",
+      "to",
+      "church",
+      "on",
+      "Sunday",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "goes to church",
+      "on Sunday"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on Sunday"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "He goes to church in Sunday.",
+      "statementForm": "He goes to church on Sunday.",
+      "fragmentForm": "He goes to church on Sunday?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_018",
+    "seedId": 18,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 저녁에 함께 숙제를 한다.",
+    "english": "We do homework together in the evening.",
+    "words": [
+      "We",
+      "do",
+      "homework",
+      "together",
+      "in",
+      "the",
+      "evening",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "do homework together",
+      "in the evening"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the evening"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "We do homework together on the evening.",
+      "statementForm": "We do homework together in the evening.",
+      "fragmentForm": "We do homework together in the evening?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_019",
+    "seedId": 19,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 밤에 시끄럽지 않다.",
+    "english": "They are not noisy at night.",
+    "words": [
+      "They",
+      "are",
+      "not",
+      "noisy",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are not noisy",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at night"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They are not noisy in night.",
+      "statementForm": "They are not noisy at night.",
+      "fragmentForm": "They are not noisy at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_020",
+    "seedId": 20,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "너는 월요일에 바쁘니?",
+    "english": "Are you busy on Monday?",
+    "words": [
+      "Are",
+      "you",
+      "busy",
+      "on",
+      "Monday",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you busy",
+      "on Monday"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on Monday"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "time",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are you busy in Monday?",
+      "statementForm": "You are busy on Monday.",
+      "fragmentForm": "You are busy on Monday?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_021",
+    "seedId": 21,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 학교에 있다.",
+    "english": "I am at school.",
+    "words": [
+      "I",
+      "am",
+      "at",
+      "school",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "am",
+      "at school"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at school"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am in school.",
+      "statementForm": "I am at school.",
+      "fragmentForm": "I am at school?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_022",
+    "seedId": 22,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 방에 있다.",
+    "english": "She is in the room.",
+    "words": [
+      "She",
+      "is",
+      "in",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "is",
+      "in the room"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the room"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is on the room.",
+      "statementForm": "She is in the room.",
+      "fragmentForm": "She is in the room?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_023",
+    "seedId": 23,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 탁자 위에 있는 책을 본다.",
+    "english": "He looks at the book on the table.",
+    "words": [
+      "He",
+      "looks",
+      "at",
+      "the",
+      "book",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "looks at the book",
+      "on the table"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on the table"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "do_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He looks at the book in the table.",
+      "statementForm": "He looks at the book on the table.",
+      "fragmentForm": "He looks at the book on the table?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_024",
+    "seedId": 24,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 공원에 있다.",
+    "english": "We are in the park.",
+    "words": [
+      "We",
+      "are",
+      "in",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "are",
+      "in the park"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the park"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "We are at the park.",
+      "statementForm": "We are in the park.",
+      "fragmentForm": "We are in the park?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_025",
+    "seedId": 25,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 버스 정류장에 있다.",
+    "english": "They are at the bus stop.",
+    "words": [
+      "They",
+      "are",
+      "at",
+      "the",
+      "bus",
+      "stop",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are",
+      "at the bus stop"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at the bus stop"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "They are in the bus stop.",
+      "statementForm": "They are at the bus stop.",
+      "fragmentForm": "They are at the bus stop?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_026",
+    "seedId": 26,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 도서관에서 공부한다.",
+    "english": "I study in the library.",
+    "words": [
+      "I",
+      "study",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "study",
+      "in the library"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the library"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "I study on the library.",
+      "statementForm": "I study in the library.",
+      "fragmentForm": "I study in the library?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_027",
+    "seedId": 27,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 벽에 그림을 건다.",
+    "english": "She puts a picture on the wall.",
+    "words": [
+      "She",
+      "puts",
+      "a",
+      "picture",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "puts a picture",
+      "on the wall"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on the wall"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "do_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She puts a picture in the wall.",
+      "statementForm": "She puts a picture on the wall.",
+      "fragmentForm": "She puts a picture on the wall?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_028",
+    "seedId": 28,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 역에서 기차를 기다린다.",
+    "english": "He waits for the train at the station.",
+    "words": [
+      "He",
+      "waits",
+      "for",
+      "the",
+      "train",
+      "at",
+      "the",
+      "station",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "waits for the train",
+      "at the station"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at the station"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "He waits for the train in the station.",
+      "statementForm": "He waits for the train at the station.",
+      "fragmentForm": "He waits for the train at the station?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_029",
+    "seedId": 29,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 교실에 앉아 있다.",
+    "english": "We are in the classroom.",
+    "words": [
+      "We",
+      "are",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "are",
+      "in the classroom"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the classroom"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "We are on the classroom.",
+      "statementForm": "We are in the classroom.",
+      "fragmentForm": "We are in the classroom?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_030",
+    "seedId": 30,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 침대 위에 있다.",
+    "english": "They are on the bed.",
+    "words": [
+      "They",
+      "are",
+      "on",
+      "the",
+      "bed",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are",
+      "on the bed"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on the bed"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "They are in the bed.",
+      "statementForm": "They are on the bed.",
+      "fragmentForm": "They are on the bed?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_031",
+    "seedId": 31,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "너는 학교에 있니?",
+    "english": "Are you at school?",
+    "words": [
+      "Are",
+      "you",
+      "at",
+      "school",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "you",
+      "at school"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at school"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are you in school?",
+      "statementForm": "You are at school.",
+      "fragmentForm": "You are at school?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_032",
+    "seedId": 32,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 공원에 있니?",
+    "english": "Is she in the park?",
+    "words": [
+      "Is",
+      "she",
+      "in",
+      "the",
+      "park",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "she",
+      "in the park"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the park"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is she at the park?",
+      "statementForm": "She is in the park.",
+      "fragmentForm": "She is in the park?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_033",
+    "seedId": 33,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 벽에 달력을 붙이니?",
+    "english": "Does he put the calendar on the wall?",
+    "words": [
+      "Does",
+      "he",
+      "put",
+      "the",
+      "calendar",
+      "on",
+      "the",
+      "wall",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Does",
+      "he put the calendar",
+      "on the wall"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on the wall"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does he put the calendar in the wall?",
+      "statementForm": "He puts the calendar on the wall.",
+      "fragmentForm": "He puts the calendar on the wall?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_034",
+    "seedId": 34,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 집에 있다.",
+    "english": "We are at home.",
+    "words": [
+      "We",
+      "are",
+      "at",
+      "home",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "are",
+      "at home"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at home"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "We are in home.",
+      "statementForm": "We are at home.",
+      "fragmentForm": "We are at home?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_035",
+    "seedId": 35,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 수영장에 있다.",
+    "english": "They are at the pool.",
+    "words": [
+      "They",
+      "are",
+      "at",
+      "the",
+      "pool",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are",
+      "at the pool"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at the pool"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "They are in the pool.",
+      "statementForm": "They are at the pool.",
+      "fragmentForm": "They are at the pool?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_036",
+    "seedId": 36,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 책상 위에 펜을 둔다.",
+    "english": "I put my pen on the desk.",
+    "words": [
+      "I",
+      "put",
+      "my",
+      "pen",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "put my pen",
+      "on the desk"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on the desk"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "do_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "I put my pen in the desk.",
+      "statementForm": "I put my pen on the desk.",
+      "fragmentForm": "I put my pen on the desk?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_037",
+    "seedId": 37,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 상자 안에 공을 넣는다.",
+    "english": "She puts the ball in the box.",
+    "words": [
+      "She",
+      "puts",
+      "the",
+      "ball",
+      "in",
+      "the",
+      "box",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "puts the ball",
+      "in the box"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the box"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "do_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She puts the ball on the box.",
+      "statementForm": "She puts the ball in the box.",
+      "fragmentForm": "She puts the ball in the box?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_038",
+    "seedId": 38,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 문 앞에 서 있다.",
+    "english": "He is at the door.",
+    "words": [
+      "He",
+      "is",
+      "at",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "is",
+      "at the door"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at the door"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is in the door.",
+      "statementForm": "He is at the door.",
+      "fragmentForm": "He is at the door?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_039",
+    "seedId": 39,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 식당에 있다.",
+    "english": "We are at the restaurant.",
+    "words": [
+      "We",
+      "are",
+      "at",
+      "the",
+      "restaurant",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "are",
+      "at the restaurant"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at the restaurant"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "We are in the restaurant.",
+      "statementForm": "We are at the restaurant.",
+      "fragmentForm": "We are at the restaurant?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_040",
+    "seedId": 40,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 교실 안에 없다.",
+    "english": "They are not in the classroom.",
+    "words": [
+      "They",
+      "are",
+      "not",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are not",
+      "in the classroom"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the classroom"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They are not on the classroom.",
+      "statementForm": "They are not in the classroom.",
+      "fragmentForm": "They are not in the classroom?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_041",
+    "seedId": 41,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 병원에 있다.",
+    "english": "I am at the hospital.",
+    "words": [
+      "I",
+      "am",
+      "at",
+      "the",
+      "hospital",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "am",
+      "at the hospital"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at the hospital"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am in the hospital.",
+      "statementForm": "I am at the hospital.",
+      "fragmentForm": "I am at the hospital?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_042",
+    "seedId": 42,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 종이를 책상 위에 놓는다.",
+    "english": "She puts the paper on the desk.",
+    "words": [
+      "She",
+      "puts",
+      "the",
+      "paper",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "puts the paper",
+      "on the desk"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on the desk"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "do_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She puts the paper in the desk.",
+      "statementForm": "She puts the paper on the desk.",
+      "fragmentForm": "She puts the paper on the desk?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_043",
+    "seedId": 43,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 공을 가방 안에 넣는다.",
+    "english": "He puts the ball in the bag.",
+    "words": [
+      "He",
+      "puts",
+      "the",
+      "ball",
+      "in",
+      "the",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "puts the ball",
+      "in the bag"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the bag"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "do_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He puts the ball on the bag.",
+      "statementForm": "He puts the ball in the bag.",
+      "fragmentForm": "He puts the ball in the bag?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_044",
+    "seedId": 44,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 운동장에 있다.",
+    "english": "We are on the playground.",
+    "words": [
+      "We",
+      "are",
+      "on",
+      "the",
+      "playground",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "are",
+      "on the playground"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on the playground"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "We are in the playground.",
+      "statementForm": "We are on the playground.",
+      "fragmentForm": "We are on the playground?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_045",
+    "seedId": 45,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 책상에 없다.",
+    "english": "They are not at the desk.",
+    "words": [
+      "They",
+      "are",
+      "not",
+      "at",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "are not",
+      "at the desk"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at the desk"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "place",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They are not in the desk.",
+      "statementForm": "They are not at the desk.",
+      "fragmentForm": "They are not at the desk?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_046",
+    "seedId": 46,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "고양이는 탁자 아래에 있다.",
+    "english": "The cat is under the table.",
+    "words": [
+      "The",
+      "cat",
+      "is",
+      "under",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The cat",
+      "is",
+      "under the table"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the table"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cat is on the table.",
+      "statementForm": "The cat is under the table.",
+      "fragmentForm": "The cat is under the table?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_047",
+    "seedId": 47,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "신발은 의자 아래에 있다.",
+    "english": "The shoes are under the chair.",
+    "words": [
+      "The",
+      "shoes",
+      "are",
+      "under",
+      "the",
+      "chair",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The shoes",
+      "are",
+      "under the chair"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the chair"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shoes are on the chair.",
+      "statementForm": "The shoes are under the chair.",
+      "fragmentForm": "The shoes are under the chair?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_048",
+    "seedId": 48,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "자전거는 집 앞에 있다.",
+    "english": "The bike is in front of the house.",
+    "words": [
+      "The",
+      "bike",
+      "is",
+      "in",
+      "front",
+      "of",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The bike",
+      "is",
+      "in front of the house"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the house"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "be_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bike is behind the house.",
+      "statementForm": "The bike is in front of the house.",
+      "fragmentForm": "The bike is in front of the house?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_049",
+    "seedId": 49,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "버스 정류장은 은행 옆에 있다.",
+    "english": "The bus stop is next to the bank.",
+    "words": [
+      "The",
+      "bus",
+      "stop",
+      "is",
+      "next",
+      "to",
+      "the",
+      "bank",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The bus stop",
+      "is",
+      "next to the bank"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the bank"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus stop is in the bank.",
+      "statementForm": "The bus stop is next to the bank.",
+      "fragmentForm": "The bus stop is next to the bank?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_050",
+    "seedId": 50,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "개는 의자 뒤에 있다.",
+    "english": "The dog is behind the chair.",
+    "words": [
+      "The",
+      "dog",
+      "is",
+      "behind",
+      "the",
+      "chair",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The dog",
+      "is",
+      "behind the chair"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "behind the chair"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog is in the chair.",
+      "statementForm": "The dog is behind the chair.",
+      "fragmentForm": "The dog is behind the chair?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_051",
+    "seedId": 51,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "소년은 두 나무 사이에 서 있다.",
+    "english": "The boy is standing between the two trees.",
+    "words": [
+      "The",
+      "boy",
+      "is",
+      "standing",
+      "between",
+      "the",
+      "two",
+      "trees",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The boy",
+      "is standing",
+      "between the two trees"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "between the two trees"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy is standing among the two trees.",
+      "statementForm": "The boy is standing between the two trees.",
+      "fragmentForm": "The boy is standing between the two trees?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_052",
+    "seedId": 52,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "공은 상자 아래에 있다.",
+    "english": "The ball is under the box.",
+    "words": [
+      "The",
+      "ball",
+      "is",
+      "under",
+      "the",
+      "box",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The ball",
+      "is",
+      "under the box"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the box"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The ball is under the box now.",
+      "statementForm": "The ball is under the box.",
+      "fragmentForm": "The ball is under the box?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_053",
+    "seedId": 53,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우체국은 학교 옆에 있다.",
+    "english": "The post office is next to the school.",
+    "words": [
+      "The",
+      "post",
+      "office",
+      "is",
+      "next",
+      "to",
+      "the",
+      "school",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The post office",
+      "is",
+      "next to the school"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the school"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The post office is in the school.",
+      "statementForm": "The post office is next to the school.",
+      "fragmentForm": "The post office is next to the school?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_054",
+    "seedId": 54,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "자동차는 집 앞에 있다.",
+    "english": "The car is in front of the house.",
+    "words": [
+      "The",
+      "car",
+      "is",
+      "in",
+      "front",
+      "of",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The car",
+      "is",
+      "in front of the house"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the house"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The car is behind the house.",
+      "statementForm": "The car is in front of the house.",
+      "fragmentForm": "The car is in front of the house?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_055",
+    "seedId": 55,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "가방은 문 뒤에 있다.",
+    "english": "The bag is behind the door.",
+    "words": [
+      "The",
+      "bag",
+      "is",
+      "behind",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The bag",
+      "is",
+      "behind the door"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "behind the door"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bag is in the door.",
+      "statementForm": "The bag is behind the door.",
+      "fragmentForm": "The bag is behind the door?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_056",
+    "seedId": 56,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "강아지는 침대 아래에 있니?",
+    "english": "Is the puppy under the bed?",
+    "words": [
+      "Is",
+      "the",
+      "puppy",
+      "under",
+      "the",
+      "bed",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the puppy",
+      "under the bed"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the bed"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the puppy on the bed?",
+      "statementForm": "the puppy under the bed.",
+      "fragmentForm": "the puppy under the bed?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_057",
+    "seedId": 57,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "서점은 은행 옆에 있니?",
+    "english": "Is the bookstore next to the bank?",
+    "words": [
+      "Is",
+      "the",
+      "bookstore",
+      "next",
+      "to",
+      "the",
+      "bank",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the bookstore",
+      "next to the bank"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the bank"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the bookstore in the bank?",
+      "statementForm": "the bookstore next to the bank.",
+      "fragmentForm": "the bookstore next to the bank?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_058",
+    "seedId": 58,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "자전거는 집 앞에 있니?",
+    "english": "Is the bike in front of the house?",
+    "words": [
+      "Is",
+      "the",
+      "bike",
+      "in",
+      "front",
+      "of",
+      "the",
+      "house",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the bike",
+      "in front of the house"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the house"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the bike behind the house?",
+      "statementForm": "the bike in front of the house.",
+      "fragmentForm": "the bike in front of the house?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_059",
+    "seedId": 59,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "개는 의자 뒤에 있니?",
+    "english": "Is the dog behind the chair?",
+    "words": [
+      "Is",
+      "the",
+      "dog",
+      "behind",
+      "the",
+      "chair",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the dog",
+      "behind the chair"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "behind the chair"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the dog in the chair?",
+      "statementForm": "the dog behind the chair.",
+      "fragmentForm": "the dog behind the chair?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_060",
+    "seedId": 60,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "소년들은 두 나무 사이에 있니?",
+    "english": "Are the boys between the two trees?",
+    "words": [
+      "Are",
+      "the",
+      "boys",
+      "between",
+      "the",
+      "two",
+      "trees",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Are",
+      "the boys",
+      "between the two trees"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "between the two trees"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are the boys among the two trees?",
+      "statementForm": "Are the boys between the two trees.",
+      "fragmentForm": "Are the boys between the two trees?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_061",
+    "seedId": 61,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "고양이는 탁자 아래에 없다.",
+    "english": "The cat is not under the table.",
+    "words": [
+      "The",
+      "cat",
+      "is",
+      "not",
+      "under",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The cat",
+      "is not",
+      "under the table"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the table"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cat is not on the table.",
+      "statementForm": "The cat is not under the table.",
+      "fragmentForm": "The cat is not under the table?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_062",
+    "seedId": 62,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우체국은 학교 옆에 없다.",
+    "english": "The post office is not next to the school.",
+    "words": [
+      "The",
+      "post",
+      "office",
+      "is",
+      "not",
+      "next",
+      "to",
+      "the",
+      "school",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The post office",
+      "is not",
+      "next to the school"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the school"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The post office is not in the school.",
+      "statementForm": "The post office is not next to the school.",
+      "fragmentForm": "The post office is not next to the school?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_063",
+    "seedId": 63,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "자동차는 집 앞에 없다.",
+    "english": "The car is not in front of the house.",
+    "words": [
+      "The",
+      "car",
+      "is",
+      "not",
+      "in",
+      "front",
+      "of",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The car",
+      "is not",
+      "in front of the house"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the house"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The car is not behind the house.",
+      "statementForm": "The car is not in front of the house.",
+      "fragmentForm": "The car is not in front of the house?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_064",
+    "seedId": 64,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "가방은 문 뒤에 없다.",
+    "english": "The bag is not behind the door.",
+    "words": [
+      "The",
+      "bag",
+      "is",
+      "not",
+      "behind",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The bag",
+      "is not",
+      "behind the door"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "behind the door"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bag is not in the door.",
+      "statementForm": "The bag is not behind the door.",
+      "fragmentForm": "The bag is not behind the door?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_065",
+    "seedId": 65,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "소년은 두 의자 사이에 없다.",
+    "english": "The boy is not between the two chairs.",
+    "words": [
+      "The",
+      "boy",
+      "is",
+      "not",
+      "between",
+      "the",
+      "two",
+      "chairs",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The boy",
+      "is not",
+      "between the two chairs"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "between the two chairs"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy is not among the two chairs.",
+      "statementForm": "The boy is not between the two chairs.",
+      "fragmentForm": "The boy is not between the two chairs?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_066",
+    "seedId": 66,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나의 신발은 침대 아래에 있다.",
+    "english": "My shoes are under the bed.",
+    "words": [
+      "My",
+      "shoes",
+      "are",
+      "under",
+      "the",
+      "bed",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My shoes",
+      "are",
+      "under the bed"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the bed"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "My shoes are on the bed.",
+      "statementForm": "My shoes are under the bed.",
+      "fragmentForm": "My shoes are under the bed?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_067",
+    "seedId": 67,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리 집은 학교 옆에 있다.",
+    "english": "Our house is next to the school.",
+    "words": [
+      "Our",
+      "house",
+      "is",
+      "next",
+      "to",
+      "the",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Our house",
+      "is",
+      "next to the school"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the school"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our house is in the school.",
+      "statementForm": "Our house is next to the school.",
+      "fragmentForm": "Our house is next to the school?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_068",
+    "seedId": 68,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "버스는 역 앞에 있다.",
+    "english": "The bus is in front of the station.",
+    "words": [
+      "The",
+      "bus",
+      "is",
+      "in",
+      "front",
+      "of",
+      "the",
+      "station",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The bus",
+      "is",
+      "in front of the station"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the station"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus is on front of the station.",
+      "statementForm": "The bus is in front of the station.",
+      "fragmentForm": "The bus is in front of the station?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_069",
+    "seedId": 69,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "쓰레기통은 책상 뒤에 있다.",
+    "english": "The trash can is behind the desk.",
+    "words": [
+      "The",
+      "trash",
+      "can",
+      "is",
+      "behind",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The trash can",
+      "is",
+      "behind the desk"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "behind the desk"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The trash can is behind the desk now.",
+      "statementForm": "The trash can is behind the desk.",
+      "fragmentForm": "The trash can is behind the desk?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_070",
+    "seedId": 70,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "소녀는 두 친구 사이에 앉아 있다.",
+    "english": "The girl is sitting between her two friends.",
+    "words": [
+      "The",
+      "girl",
+      "is",
+      "sitting",
+      "between",
+      "her",
+      "two",
+      "friends",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The girl",
+      "is sitting",
+      "between her two friends"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "between her two friends"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "person"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl is sitting between her two friends now.",
+      "statementForm": "The girl is sitting between her two friends.",
+      "fragmentForm": "The girl is sitting between her two friends?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_071",
+    "seedId": 71,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "검은 고양이는 탁자 아래에서 자고 있다.",
+    "english": "The black cat is sleeping under the table.",
+    "words": [
+      "The",
+      "black",
+      "cat",
+      "is",
+      "sleeping",
+      "under",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The black cat",
+      "is sleeping",
+      "under the table"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the table"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "The black cat is sleeping on the table.",
+      "statementForm": "The black cat is sleeping under the table.",
+      "fragmentForm": "The black cat is sleeping under the table?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_072",
+    "seedId": 72,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "작은 카페는 은행 옆에 있다.",
+    "english": "The small cafe is next to the bank.",
+    "words": [
+      "The",
+      "small",
+      "cafe",
+      "is",
+      "next",
+      "to",
+      "the",
+      "bank",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The small cafe",
+      "is",
+      "next to the bank"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the bank"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The small cafe is in the bank.",
+      "statementForm": "The small cafe is next to the bank.",
+      "fragmentForm": "The small cafe is next to the bank?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_073",
+    "seedId": 73,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "빨간 차는 우리 집 앞에 있다.",
+    "english": "The red car is in front of our house.",
+    "words": [
+      "The",
+      "red",
+      "car",
+      "is",
+      "in",
+      "front",
+      "of",
+      "our",
+      "house",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The red car",
+      "is",
+      "in front of our house"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of our house"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The red car is behind our house.",
+      "statementForm": "The red car is in front of our house.",
+      "fragmentForm": "The red car is in front of our house?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_074",
+    "seedId": 74,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "내 가방은 내 의자 뒤에 있다.",
+    "english": "My bag is behind my chair.",
+    "words": [
+      "My",
+      "bag",
+      "is",
+      "behind",
+      "my",
+      "chair",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My bag",
+      "is",
+      "behind my chair"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "behind my chair"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "object"
+    ],
+    "distractorSeeds": {
+      "auxError": "My bag is behind my chair now.",
+      "statementForm": "My bag is behind my chair.",
+      "fragmentForm": "My bag is behind my chair?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_075",
+    "seedId": 75,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리 선생님은 두 학생 사이에 서 계신다.",
+    "english": "Our teacher is standing between the two students.",
+    "words": [
+      "Our",
+      "teacher",
+      "is",
+      "standing",
+      "between",
+      "the",
+      "two",
+      "students",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Our teacher",
+      "is standing",
+      "between the two students"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "between the two students"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our teacher is standing between the two students now.",
+      "statementForm": "Our teacher is standing between the two students.",
+      "fragmentForm": "Our teacher is standing between the two students?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_076",
+    "seedId": 76,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "연필은 책상 아래에 있니?",
+    "english": "Is the pencil under the desk?",
+    "words": [
+      "Is",
+      "the",
+      "pencil",
+      "under",
+      "the",
+      "desk",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the pencil",
+      "under the desk"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the desk"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the pencil under the desk now.",
+      "statementForm": "the pencil under the desk.",
+      "fragmentForm": "the pencil under the desk?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_077",
+    "seedId": 77,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "약국은 병원 옆에 있니?",
+    "english": "Is the drugstore next to the hospital?",
+    "words": [
+      "Is",
+      "the",
+      "drugstore",
+      "next",
+      "to",
+      "the",
+      "hospital",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the drugstore",
+      "next to the hospital"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the hospital"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the drugstore in the hospital?",
+      "statementForm": "the drugstore next to the hospital.",
+      "fragmentForm": "the drugstore next to the hospital?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_078",
+    "seedId": 78,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "택시는 호텔 앞에 있니?",
+    "english": "Is the taxi in front of the hotel?",
+    "words": [
+      "Is",
+      "the",
+      "taxi",
+      "in",
+      "front",
+      "of",
+      "the",
+      "hotel",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the taxi",
+      "in front of the hotel"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the hotel"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the taxi on front of the hotel?",
+      "statementForm": "the taxi in front of the hotel.",
+      "fragmentForm": "the taxi in front of the hotel?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_079",
+    "seedId": 79,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "공은 소파 뒤에 있니?",
+    "english": "Is the ball behind the sofa?",
+    "words": [
+      "Is",
+      "the",
+      "ball",
+      "behind",
+      "the",
+      "sofa",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the ball",
+      "behind the sofa"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "behind the sofa"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the ball in the sofa?",
+      "statementForm": "the ball behind the sofa.",
+      "fragmentForm": "the ball behind the sofa?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_080",
+    "seedId": 80,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "고양이는 두 상자 사이에 있니?",
+    "english": "Is the cat between the two boxes?",
+    "words": [
+      "Is",
+      "the",
+      "cat",
+      "between",
+      "the",
+      "two",
+      "boxes",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "prepositions_basic",
+    "difficulty": "basic",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Is",
+      "the cat",
+      "between the two boxes"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "between the two boxes"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "location",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the cat among the two boxes?",
+      "statementForm": "the cat between the two boxes.",
+      "fragmentForm": "the cat between the two boxes?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_081",
+    "seedId": 81,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 아침에 학교에 가기 전에 내 가방을 문 옆에 둔다.",
+    "english": "I put my bag next to the door before going to school in the morning.",
+    "words": [
+      "I",
+      "put",
+      "my",
+      "bag",
+      "next",
+      "to",
+      "the",
+      "door",
+      "before",
+      "going",
+      "to",
+      "school",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "put my bag",
+      "next to the door",
+      "before going to school in the morning"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the door"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "I put my bag next to the door before going to school on the morning.",
+      "statementForm": "I put my bag next to the door before going to school in the morning.",
+      "fragmentForm": "I put my bag next to the door before going to school in the morning?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_082",
+    "seedId": 82,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 월요일에 도서관에서 공부한 후 공원 앞에서 친구를 만난다.",
+    "english": "She meets her friend in front of the park after studying in the library on Monday.",
+    "words": [
+      "She",
+      "meets",
+      "her",
+      "friend",
+      "in",
+      "front",
+      "of",
+      "the",
+      "park",
+      "after",
+      "studying",
+      "in",
+      "the",
+      "library",
+      "on",
+      "Monday",
+      "."
+    ],
+    "wordCount": 16,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "meets her friend",
+      "in front of the park",
+      "after studying in the library on Monday"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the park"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "She meets her friend in front of the park after studying in the library in Monday.",
+      "statementForm": "She meets her friend in front of the park after studying in the library on Monday.",
+      "fragmentForm": "She meets her friend in front of the park after studying in the library on Monday?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_083",
+    "seedId": 83,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 밤에 침대 아래에 있는 상자를 자주 찾는다.",
+    "english": "He often looks for the box under the bed at night.",
+    "words": [
+      "He",
+      "often",
+      "looks",
+      "for",
+      "the",
+      "box",
+      "under",
+      "the",
+      "bed",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "often looks for the box",
+      "under the bed",
+      "at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the bed"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "He often looks for the box under the bed in night.",
+      "statementForm": "He often looks for the box under the bed at night.",
+      "fragmentForm": "He often looks for the box under the bed at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_084",
+    "seedId": 84,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 토요일에 학교 옆 카페에서 점심을 먹는다.",
+    "english": "We eat lunch at the cafe next to the school on Saturday.",
+    "words": [
+      "We",
+      "eat",
+      "lunch",
+      "at",
+      "the",
+      "cafe",
+      "next",
+      "to",
+      "the",
+      "school",
+      "on",
+      "Saturday",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "eat lunch",
+      "at the cafe next to the school",
+      "on Saturday"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the school"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "We eat lunch at the cafe next to the school in Saturday.",
+      "statementForm": "We eat lunch at the cafe next to the school on Saturday.",
+      "fragmentForm": "We eat lunch at the cafe next to the school on Saturday?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_085",
+    "seedId": 85,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 오후에 집 앞에서 농구를 하지만 밤에는 공원에 가지 않는다.",
+    "english": "They play basketball in front of the house in the afternoon, but they do not go to the park at night.",
+    "words": [
+      "They",
+      "play",
+      "basketball",
+      "in",
+      "front",
+      "of",
+      "the",
+      "house",
+      "in",
+      "the",
+      "afternoon,",
+      "but",
+      "they",
+      "do",
+      "not",
+      "go",
+      "to",
+      "the",
+      "park",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 21,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "play basketball",
+      "in front of the house in the afternoon",
+      "but do not go to the park at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the house"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They play basketball in front of the house on the afternoon, but they do not go to the park at night.",
+      "statementForm": "They play basketball in front of the house in the afternoon, but they do not go to the park at night.",
+      "fragmentForm": "They play basketball in front of the house in the afternoon, but they do not go to the park at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_086",
+    "seedId": 86,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "내 책은 보통 책상 위에 있지만 오늘은 가방 안에 있다.",
+    "english": "My book is usually on the desk, but today it is in the bag.",
+    "words": [
+      "My",
+      "book",
+      "is",
+      "usually",
+      "on",
+      "the",
+      "desk,",
+      "but",
+      "today",
+      "it",
+      "is",
+      "in",
+      "the",
+      "bag",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "My book",
+      "is usually on the desk",
+      "but today",
+      "it is in the bag"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "on the desk"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "My book is usually in the desk, but today it is in the bag.",
+      "statementForm": "My book is usually on the desk, but today it is in the bag.",
+      "fragmentForm": "My book is usually on the desk, but today it is in the bag?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_087",
+    "seedId": 87,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀의 강아지는 종종 탁자 아래에서 자고, 고양이는 의자 뒤에 숨는다.",
+    "english": "Her puppy often sleeps under the table, and the cat hides behind the chair.",
+    "words": [
+      "Her",
+      "puppy",
+      "often",
+      "sleeps",
+      "under",
+      "the",
+      "table,",
+      "and",
+      "the",
+      "cat",
+      "hides",
+      "behind",
+      "the",
+      "chair",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "Her puppy",
+      "often sleeps under the table",
+      "and",
+      "the cat hides behind the chair"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the table"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "Her puppy often sleeps on the table, and the cat hides behind the chair.",
+      "statementForm": "Her puppy often sleeps under the table, and the cat hides behind the chair.",
+      "fragmentForm": "Her puppy often sleeps under the table, and the cat hides behind the chair?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_088",
+    "seedId": 88,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "소년들은 두 나무 사이에서 놀고, 선생님은 그들 앞에 서 있다.",
+    "english": "The boys are playing between the two trees, and the teacher is standing in front of them.",
+    "words": [
+      "The",
+      "boys",
+      "are",
+      "playing",
+      "between",
+      "the",
+      "two",
+      "trees,",
+      "and",
+      "the",
+      "teacher",
+      "is",
+      "standing",
+      "in",
+      "front",
+      "of",
+      "them",
+      "."
+    ],
+    "wordCount": 17,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The boys",
+      "are playing between the two trees",
+      "and",
+      "the teacher is standing in front of them"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "between the two trees"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boys are playing among the two trees, and the teacher is standing in front of them.",
+      "statementForm": "The boys are playing between the two trees, and the teacher is standing in front of them.",
+      "fragmentForm": "The boys are playing between the two trees, and the teacher is standing in front of them?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_089",
+    "seedId": 89,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 아침에 병원 앞 버스 정류장에서 버스를 기다린다.",
+    "english": "I wait for the bus at the bus stop in front of the hospital in the morning.",
+    "words": [
+      "I",
+      "wait",
+      "for",
+      "the",
+      "bus",
+      "at",
+      "the",
+      "bus",
+      "stop",
+      "in",
+      "front",
+      "of",
+      "the",
+      "hospital",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 17,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "wait for the bus",
+      "at the bus stop in front of the hospital",
+      "in the morning"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at the bus stop"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "I wait for the bus at the bus stop in front of the hospital on the morning.",
+      "statementForm": "I wait for the bus at the bus stop in front of the hospital in the morning.",
+      "fragmentForm": "I wait for the bus at the bus stop in front of the hospital in the morning?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_090",
+    "seedId": 90,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 수업 후에 도서관 안에서 공부하고 집에서는 밤에 숙제를 한다.",
+    "english": "He studies in the library after class, and he does his homework at home at night.",
+    "words": [
+      "He",
+      "studies",
+      "in",
+      "the",
+      "library",
+      "after",
+      "class,",
+      "and",
+      "he",
+      "does",
+      "his",
+      "homework",
+      "at",
+      "home",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 16,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "studies in the library after class",
+      "and",
+      "does his homework at home at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the library"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "He studies in the library after class, and he does his homework at home in night.",
+      "statementForm": "He studies in the library after class, and he does his homework at home at night.",
+      "fragmentForm": "He studies in the library after class, and he does his homework at home at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_091",
+    "seedId": 91,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 교실 안에 있지만 가방은 아직 문 밖에 있다.",
+    "english": "We are in the classroom, but the bags are still outside the door.",
+    "words": [
+      "We",
+      "are",
+      "in",
+      "the",
+      "classroom,",
+      "but",
+      "the",
+      "bags",
+      "are",
+      "still",
+      "outside",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "are in the classroom",
+      "but",
+      "the bags are still outside the door"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the classroom"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "We are on the classroom, but the bags are still outside the door.",
+      "statementForm": "We are in the classroom, but the bags are still outside the door.",
+      "fragmentForm": "We are in the classroom, but the bags are still outside the door?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_092",
+    "seedId": 92,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 아침에 거울 앞에서 머리를 빗고 밤에는 침대 옆에서 책을 읽는다.",
+    "english": "She brushes her hair in front of the mirror in the morning and reads a book next to the bed at night.",
+    "words": [
+      "She",
+      "brushes",
+      "her",
+      "hair",
+      "in",
+      "front",
+      "of",
+      "the",
+      "mirror",
+      "in",
+      "the",
+      "morning",
+      "and",
+      "reads",
+      "a",
+      "book",
+      "next",
+      "to",
+      "the",
+      "bed",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 22,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "brushes her hair in front of the mirror in the morning",
+      "and",
+      "reads a book next to the bed at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in front of the mirror"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "She brushes her hair in front of the mirror on the morning and reads a book next to the bed at night.",
+      "statementForm": "She brushes her hair in front of the mirror in the morning and reads a book next to the bed at night.",
+      "fragmentForm": "She brushes her hair in front of the mirror in the morning and reads a book next to the bed at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_093",
+    "seedId": 93,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "고양이는 소파 뒤에 있고 개는 두 의자 사이에 있다.",
+    "english": "The cat is behind the sofa, and the dog is between the two chairs.",
+    "words": [
+      "The",
+      "cat",
+      "is",
+      "behind",
+      "the",
+      "sofa,",
+      "and",
+      "the",
+      "dog",
+      "is",
+      "between",
+      "the",
+      "two",
+      "chairs",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "The cat",
+      "is behind the sofa",
+      "and",
+      "the dog is between the two chairs"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "behind the sofa"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "animal"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cat is in the sofa, and the dog is between the two chairs.",
+      "statementForm": "The cat is behind the sofa, and the dog is between the two chairs.",
+      "fragmentForm": "The cat is behind the sofa, and the dog is between the two chairs?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_094",
+    "seedId": 94,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 월요일 아침에 학교에 있고 오후에는 집에 있다.",
+    "english": "I am at school on Monday morning, and I am at home in the afternoon.",
+    "words": [
+      "I",
+      "am",
+      "at",
+      "school",
+      "on",
+      "Monday",
+      "morning,",
+      "and",
+      "I",
+      "am",
+      "at",
+      "home",
+      "in",
+      "the",
+      "afternoon",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "am at school on Monday morning",
+      "and",
+      "am at home in the afternoon"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at school"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am at school on Monday morning, and I am at home on the afternoon.",
+      "statementForm": "I am at school on Monday morning, and I am at home in the afternoon.",
+      "fragmentForm": "I am at school on Monday morning, and I am at home in the afternoon?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_095",
+    "seedId": 95,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 주말에 공원 옆 식당에서 만나고 집 앞에서 헤어진다.",
+    "english": "They meet at the restaurant next to the park on weekends and say goodbye in front of the house.",
+    "words": [
+      "They",
+      "meet",
+      "at",
+      "the",
+      "restaurant",
+      "next",
+      "to",
+      "the",
+      "park",
+      "on",
+      "weekends",
+      "and",
+      "say",
+      "goodbye",
+      "in",
+      "front",
+      "of",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 19,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "meet at the restaurant next to the park on weekends",
+      "and",
+      "say goodbye in front of the house"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the park"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "They meet at the restaurant next to the park in weekends and say goodbye in front of the house.",
+      "statementForm": "They meet at the restaurant next to the park on weekends and say goodbye in front of the house.",
+      "fragmentForm": "They meet at the restaurant next to the park on weekends and say goodbye in front of the house?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_096",
+    "seedId": 96,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "나는 학교에서 오후에 공부하고 밤에는 집에서 쉰다.",
+    "english": "I study at school in the afternoon and rest at home at night.",
+    "words": [
+      "I",
+      "study",
+      "at",
+      "school",
+      "in",
+      "the",
+      "afternoon",
+      "and",
+      "rest",
+      "at",
+      "home",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "I",
+      "study at school in the afternoon",
+      "and",
+      "rest at home at night"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "at school"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "I study at school on the afternoon and rest at home at night.",
+      "statementForm": "I study at school in the afternoon and rest at home at night.",
+      "fragmentForm": "I study at school in the afternoon and rest at home at night?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_097",
+    "seedId": 97,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그녀는 토요일에 친구와 공원 안에서 걷고 카페 앞에서 사진을 찍는다.",
+    "english": "She walks with her friend in the park on Saturday and takes pictures in front of the cafe.",
+    "words": [
+      "She",
+      "walks",
+      "with",
+      "her",
+      "friend",
+      "in",
+      "the",
+      "park",
+      "on",
+      "Saturday",
+      "and",
+      "takes",
+      "pictures",
+      "in",
+      "front",
+      "of",
+      "the",
+      "cafe",
+      "."
+    ],
+    "wordCount": 18,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "She",
+      "walks with her friend in the park on Saturday",
+      "and",
+      "takes pictures in front of the cafe"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the park"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "hobby"
+    ],
+    "distractorSeeds": {
+      "auxError": "She walks with her friend in the park in Saturday and takes pictures in front of the cafe.",
+      "statementForm": "She walks with her friend in the park on Saturday and takes pictures in front of the cafe.",
+      "fragmentForm": "She walks with her friend in the park on Saturday and takes pictures in front of the cafe?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_098",
+    "seedId": 98,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그는 아침에 병원 옆 약국에 들르고 저녁에는 집 앞에서 강아지를 산책시킨다.",
+    "english": "He stops by the drugstore next to the hospital in the morning and walks his dog in front of the house in the evening.",
+    "words": [
+      "He",
+      "stops",
+      "by",
+      "the",
+      "drugstore",
+      "next",
+      "to",
+      "the",
+      "hospital",
+      "in",
+      "the",
+      "morning",
+      "and",
+      "walks",
+      "his",
+      "dog",
+      "in",
+      "front",
+      "of",
+      "the",
+      "house",
+      "in",
+      "the",
+      "evening",
+      "."
+    ],
+    "wordCount": 24,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "He",
+      "stops by the drugstore next to the hospital in the morning",
+      "and",
+      "walks his dog in front of the house in the evening"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "next to the hospital"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "He stops by the drugstore next to the hospital on the morning and walks his dog in front of the house in the evening.",
+      "statementForm": "He stops by the drugstore next to the hospital in the morning and walks his dog in front of the house in the evening.",
+      "fragmentForm": "He stops by the drugstore next to the hospital in the morning and walks his dog in front of the house in the evening?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_099",
+    "seedId": 99,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "우리는 교실 안에서 공부하지만 점심시간에는 운동장 위에서 논다.",
+    "english": "We study in the classroom, but we play on the playground at lunch time.",
+    "words": [
+      "We",
+      "study",
+      "in",
+      "the",
+      "classroom,",
+      "but",
+      "we",
+      "play",
+      "on",
+      "the",
+      "playground",
+      "at",
+      "lunch",
+      "time",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "We",
+      "study in the classroom",
+      "but",
+      "play on the playground at lunch time"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "in the classroom"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "We study in the classroom, but we play on the playground in lunch time.",
+      "statementForm": "We study in the classroom, but we play on the playground at lunch time.",
+      "fragmentForm": "We study in the classroom, but we play on the playground at lunch time?"
+    }
+  },
+  {
+    "id": "m1_s1_prepositions_basic_100",
+    "seedId": 100,
+    "grade": "middle1",
+    "semester": 1,
+    "lessonBand": "1-4",
+    "chapterKey": "prepositions_basic",
+    "chapterLabelKo": "기초 전치사",
+    "korean": "그들은 밤에 침대 아래를 확인하고 문 뒤에 가방을 둔다.",
+    "english": "They check under the bed at night and put the bag behind the door.",
+    "words": [
+      "They",
+      "check",
+      "under",
+      "the",
+      "bed",
+      "at",
+      "night",
+      "and",
+      "put",
+      "the",
+      "bag",
+      "behind",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "prepositions_basic",
+    "difficulty": "advanced",
+    "sourceType": "db_seed",
+    "clueUnits": [
+      "They",
+      "check under the bed at night",
+      "and",
+      "put the bag behind the door"
+    ],
+    "extraClueWordPool": [
+      "at",
+      "on",
+      "in",
+      "under",
+      "behind",
+      "next to",
+      "in front of",
+      "between",
+      "at night",
+      "on Monday",
+      "in the morning"
+    ],
+    "blankTargets": [
+      "under the bed"
+    ],
+    "tags": [
+      "prepositions_basic",
+      "complex",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "They check under the bed in night and put the bag behind the door.",
+      "statementForm": "They check under the bed at night and put the bag behind the door.",
+      "fragmentForm": "They check under the bed at night and put the bag behind the door?"
+    }
+  }
+]
