@@ -1,0 +1,6697 @@
+[
+  {
+    "id": "m1_while_001",
+    "seedId": "while_final_001",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 내 친구가 나에게 메시지를 보냈다.",
+    "english": "While Tom was cleaning his room, my friend sent me a message.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "my",
+      "friend",
+      "sent",
+      "me",
+      "a",
+      "message",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구가 나에게 메시지를 보냈다",
+        "My friend sent me a message"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, my friend send me a message.",
+      "statementForm": [
+        "While Tom was cleaning his room, my friend sent me a message.",
+        "My friend sent me a message while Tom was cleaning his room."
+      ],
+      "fragmentForm": "My friend sent me a message while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_002",
+    "seedId": "while_final_002",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 갑자기 비가 내리기 시작했다.",
+    "english": "It suddenly started to rain while my aunt was watering the flowers.",
+    "words": [
+      "It",
+      "suddenly",
+      "started",
+      "to",
+      "rain",
+      "while",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "갑자기 비가 내리기 시작했다",
+        "It suddenly started to rain"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "It",
+      "suddenly"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "It suddenly start to rain while my aunt was watering the flowers.",
+      "statementForm": [
+        "While my aunt was watering the flowers, it suddenly started to rain.",
+        "It suddenly started to rain while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "It suddenly started to rain while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_003",
+    "seedId": "while_final_003",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "학생들이 시험을 보고 있는 동안, 창문이 열렸다.",
+    "english": "While the students were taking a test, the window opened.",
+    "words": [
+      "While",
+      "the",
+      "students",
+      "were",
+      "taking",
+      "a",
+      "test",
+      ",",
+      "the",
+      "window",
+      "opened",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "창문이 열렸다",
+        "The window opened"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "학생들이 시험을 보고 있는 동안",
+        "The students were taking a test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "the",
+      "students"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While the students were taking a test, the window open.",
+      "statementForm": [
+        "While the students were taking a test, the window opened.",
+        "The window opened while the students were taking a test."
+      ],
+      "fragmentForm": "The window opened while the students taking a test."
+    }
+  },
+  {
+    "id": "m1_while_004",
+    "seedId": "while_final_004",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 경기가 끝났다.",
+    "english": "The game ended while my uncle was fixing the window.",
+    "words": [
+      "The",
+      "game",
+      "ended",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "경기가 끝났다",
+        "The game ended"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "game"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The game end while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, the game ended.",
+        "The game ended while my uncle was fixing the window."
+      ],
+      "fragmentForm": "The game ended while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_005",
+    "seedId": "while_final_005",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "우리가 공원에서 걷고 있는 동안, 불이 꺼졌다.",
+    "english": "While we were walking in the park, the lights went out.",
+    "words": [
+      "While",
+      "we",
+      "were",
+      "walking",
+      "in",
+      "the",
+      "park",
+      ",",
+      "the",
+      "lights",
+      "went",
+      "out",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "불이 꺼졌다",
+        "The lights went out"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "우리가 공원에서 걷고 있는 동안",
+        "We were walking in the park"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "we",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While we were walking in the park, the lights go out.",
+      "statementForm": [
+        "While we were walking in the park, the lights went out.",
+        "The lights went out while we were walking in the park."
+      ],
+      "fragmentForm": "The lights went out while we walking in the park."
+    }
+  },
+  {
+    "id": "m1_while_006",
+    "seedId": "while_final_006",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 내 휴대전화가 울렸다.",
+    "english": "My phone rang while my aunt was watering the flowers.",
+    "words": [
+      "My",
+      "phone",
+      "rang",
+      "while",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 휴대전화가 울렸다",
+        "My phone rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "phone"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My phone ring while my aunt was watering the flowers.",
+      "statementForm": [
+        "While my aunt was watering the flowers, my phone rang.",
+        "My phone rang while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "My phone rang while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_007",
+    "seedId": "while_final_007",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 갑자기 비가 내리기 시작했다.",
+    "english": "While my sister was reading a book, it suddenly started to rain.",
+    "words": [
+      "While",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      ",",
+      "it",
+      "suddenly",
+      "started",
+      "to",
+      "rain",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "갑자기 비가 내리기 시작했다",
+        "It suddenly started to rain"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "sister"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my sister was reading a book, it suddenly start to rain.",
+      "statementForm": [
+        "While my sister was reading a book, it suddenly started to rain.",
+        "It suddenly started to rain while my sister was reading a book."
+      ],
+      "fragmentForm": "It suddenly started to rain while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_008",
+    "seedId": "while_final_008",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그가 도서관에서 공부하고 있는 동안, 불이 꺼졌다.",
+    "english": "While he was studying in the library, the lights went out.",
+    "words": [
+      "While",
+      "he",
+      "was",
+      "studying",
+      "in",
+      "the",
+      "library",
+      ",",
+      "the",
+      "lights",
+      "went",
+      "out",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "불이 꺼졌다",
+        "The lights went out"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그가 도서관에서 공부하고 있는 동안",
+        "He was studying in the library"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "he",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While he was studying in the library, the lights go out.",
+      "statementForm": [
+        "While he was studying in the library, the lights went out.",
+        "The lights went out while he was studying in the library."
+      ],
+      "fragmentForm": "The lights went out while he studying in the library."
+    }
+  },
+  {
+    "id": "m1_while_009",
+    "seedId": "while_final_009",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 남동생이 피아노를 치고 있는 동안, 우리는 큰 소리를 들었다.",
+    "english": "We heard a loud noise while my brother was playing the piano.",
+    "words": [
+      "We",
+      "heard",
+      "a",
+      "loud",
+      "noise",
+      "while",
+      "my",
+      "brother",
+      "was",
+      "playing",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 큰 소리를 들었다",
+        "We heard a loud noise"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 남동생이 피아노를 치고 있는 동안",
+        "My brother was playing the piano"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "We",
+      "heard"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "We hear a loud noise while my brother was playing the piano.",
+      "statementForm": [
+        "While my brother was playing the piano, we heard a loud noise.",
+        "We heard a loud noise while my brother was playing the piano."
+      ],
+      "fragmentForm": "We heard a loud noise while my brother playing the piano."
+    }
+  },
+  {
+    "id": "m1_while_010",
+    "seedId": "while_final_010",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 갑자기 비가 내리기 시작했다.",
+    "english": "It suddenly started to rain while Tom was cleaning his room.",
+    "words": [
+      "It",
+      "suddenly",
+      "started",
+      "to",
+      "rain",
+      "while",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "갑자기 비가 내리기 시작했다",
+        "It suddenly started to rain"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "It",
+      "suddenly"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "It suddenly start to rain while Tom was cleaning his room.",
+      "statementForm": [
+        "While Tom was cleaning his room, it suddenly started to rain.",
+        "It suddenly started to rain while Tom was cleaning his room."
+      ],
+      "fragmentForm": "It suddenly started to rain while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_011",
+    "seedId": "while_final_011",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 갑자기 비가 내리기 시작했다.",
+    "english": "It suddenly started to rain while my uncle was fixing the window.",
+    "words": [
+      "It",
+      "suddenly",
+      "started",
+      "to",
+      "rain",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "갑자기 비가 내리기 시작했다",
+        "It suddenly started to rain"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "It",
+      "suddenly"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "It suddenly start to rain while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, it suddenly started to rain.",
+        "It suddenly started to rain while my uncle was fixing the window."
+      ],
+      "fragmentForm": "It suddenly started to rain while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_012",
+    "seedId": "while_final_012",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Jina가 전화로 이야기하고 있는 동안, 아기가 울었다.",
+    "english": "While Jina was talking on the phone, the baby cried.",
+    "words": [
+      "While",
+      "Jina",
+      "was",
+      "talking",
+      "on",
+      "the",
+      "phone",
+      ",",
+      "the",
+      "baby",
+      "cried",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아기가 울었다",
+        "The baby cried"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Jina가 전화로 이야기하고 있는 동안",
+        "Jina was talking on the phone"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Jina",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Jina was talking on the phone, the baby cry.",
+      "statementForm": [
+        "While Jina was talking on the phone, the baby cried.",
+        "The baby cried while Jina was talking on the phone."
+      ],
+      "fragmentForm": "The baby cried while Jina talking on the phone."
+    }
+  },
+  {
+    "id": "m1_while_013",
+    "seedId": "while_final_013",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 창문이 열렸다.",
+    "english": "While Tom was cleaning his room, the window opened.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "the",
+      "window",
+      "opened",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "창문이 열렸다",
+        "The window opened"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, the window open.",
+      "statementForm": [
+        "While Tom was cleaning his room, the window opened.",
+        "The window opened while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The window opened while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_014",
+    "seedId": "while_final_014",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 누군가 문을 두드렸다.",
+    "english": "While my uncle was fixing the window, someone knocked on the door.",
+    "words": [
+      "While",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      ",",
+      "someone",
+      "knocked",
+      "on",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "누군가 문을 두드렸다",
+        "Someone knocked on the door"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "uncle"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my uncle was fixing the window, someone knock on the door.",
+      "statementForm": [
+        "While my uncle was fixing the window, someone knocked on the door.",
+        "Someone knocked on the door while my uncle was fixing the window."
+      ],
+      "fragmentForm": "Someone knocked on the door while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_015",
+    "seedId": "while_final_015",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Jina가 전화로 이야기하고 있는 동안, 그 개가 크게 짖었다.",
+    "english": "The dog barked loudly while Jina was talking on the phone.",
+    "words": [
+      "The",
+      "dog",
+      "barked",
+      "loudly",
+      "while",
+      "Jina",
+      "was",
+      "talking",
+      "on",
+      "the",
+      "phone",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개가 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Jina가 전화로 이야기하고 있는 동안",
+        "Jina was talking on the phone"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog bark loudly while Jina was talking on the phone.",
+      "statementForm": [
+        "While Jina was talking on the phone, the dog barked loudly.",
+        "The dog barked loudly while Jina was talking on the phone."
+      ],
+      "fragmentForm": "The dog barked loudly while Jina talking on the phone."
+    }
+  },
+  {
+    "id": "m1_while_016",
+    "seedId": "while_final_016",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그들이 농구를 하고 있는 동안, 불이 꺼졌다.",
+    "english": "While they were playing basketball, the lights went out.",
+    "words": [
+      "While",
+      "they",
+      "were",
+      "playing",
+      "basketball",
+      ",",
+      "the",
+      "lights",
+      "went",
+      "out",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "불이 꺼졌다",
+        "The lights went out"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그들이 농구를 하고 있는 동안",
+        "They were playing basketball"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "they",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While they were playing basketball, the lights go out.",
+      "statementForm": [
+        "While they were playing basketball, the lights went out.",
+        "The lights went out while they were playing basketball."
+      ],
+      "fragmentForm": "The lights went out while they playing basketball."
+    }
+  },
+  {
+    "id": "m1_while_017",
+    "seedId": "while_final_017",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 내 휴대전화가 울렸다.",
+    "english": "While my sister was reading a book, my phone rang.",
+    "words": [
+      "While",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      ",",
+      "my",
+      "phone",
+      "rang",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 휴대전화가 울렸다",
+        "My phone rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "sister"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my sister was reading a book, my phone ring.",
+      "statementForm": [
+        "While my sister was reading a book, my phone rang.",
+        "My phone rang while my sister was reading a book."
+      ],
+      "fragmentForm": "My phone rang while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_018",
+    "seedId": "while_final_018",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그가 도서관에서 공부하고 있는 동안, 경기가 끝났다.",
+    "english": "The game ended while he was studying in the library.",
+    "words": [
+      "The",
+      "game",
+      "ended",
+      "while",
+      "he",
+      "was",
+      "studying",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "경기가 끝났다",
+        "The game ended"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그가 도서관에서 공부하고 있는 동안",
+        "He was studying in the library"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "game"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The game end while he was studying in the library.",
+      "statementForm": [
+        "While he was studying in the library, the game ended.",
+        "The game ended while he was studying in the library."
+      ],
+      "fragmentForm": "The game ended while he studying in the library."
+    }
+  },
+  {
+    "id": "m1_while_019",
+    "seedId": "while_final_019",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 불이 꺼졌다.",
+    "english": "While Tom was cleaning his room, the lights went out.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "the",
+      "lights",
+      "went",
+      "out",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "불이 꺼졌다",
+        "The lights went out"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, the lights go out.",
+      "statementForm": [
+        "While Tom was cleaning his room, the lights went out.",
+        "The lights went out while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The lights went out while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_020",
+    "seedId": "while_final_020",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 아기가 울었다.",
+    "english": "While Tom was cleaning his room, the baby cried.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "the",
+      "baby",
+      "cried",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아기가 울었다",
+        "The baby cried"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, the baby cry.",
+      "statementForm": [
+        "While Tom was cleaning his room, the baby cried.",
+        "The baby cried while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The baby cried while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_021",
+    "seedId": "while_final_021",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그들이 농구를 하고 있는 동안, 아빠가 집에 오셨다.",
+    "english": "My father came home while they were playing basketball.",
+    "words": [
+      "My",
+      "father",
+      "came",
+      "home",
+      "while",
+      "they",
+      "were",
+      "playing",
+      "basketball",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠가 집에 오셨다",
+        "My father came home"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그들이 농구를 하고 있는 동안",
+        "They were playing basketball"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "father"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My father come home while they were playing basketball.",
+      "statementForm": [
+        "While they were playing basketball, my father came home.",
+        "My father came home while they were playing basketball."
+      ],
+      "fragmentForm": "My father came home while they playing basketball."
+    }
+  },
+  {
+    "id": "m1_while_022",
+    "seedId": "while_final_022",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 선생님이 미소 지었다.",
+    "english": "The teacher smiled while my uncle was fixing the window.",
+    "words": [
+      "The",
+      "teacher",
+      "smiled",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님이 미소 지었다",
+        "The teacher smiled"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher smile while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, the teacher smiled.",
+        "The teacher smiled while my uncle was fixing the window."
+      ],
+      "fragmentForm": "The teacher smiled while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_023",
+    "seedId": "while_final_023",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Jina가 전화로 이야기하고 있는 동안, 내 휴대전화가 울렸다.",
+    "english": "While Jina was talking on the phone, my phone rang.",
+    "words": [
+      "While",
+      "Jina",
+      "was",
+      "talking",
+      "on",
+      "the",
+      "phone",
+      ",",
+      "my",
+      "phone",
+      "rang",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 휴대전화가 울렸다",
+        "My phone rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Jina가 전화로 이야기하고 있는 동안",
+        "Jina was talking on the phone"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Jina",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Jina was talking on the phone, my phone ring.",
+      "statementForm": [
+        "While Jina was talking on the phone, my phone rang.",
+        "My phone rang while Jina was talking on the phone."
+      ],
+      "fragmentForm": "My phone rang while Jina talking on the phone."
+    }
+  },
+  {
+    "id": "m1_while_024",
+    "seedId": "while_final_024",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 나는 주스를 쏟았다.",
+    "english": "While my aunt was watering the flowers, I spilled my juice.",
+    "words": [
+      "While",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      ",",
+      "I",
+      "spilled",
+      "my",
+      "juice",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 주스를 쏟았다",
+        "I spilled my juice"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "aunt"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my aunt was watering the flowers, I spill my juice.",
+      "statementForm": [
+        "While my aunt was watering the flowers, I spilled my juice.",
+        "I spilled my juice while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "I spilled my juice while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_025",
+    "seedId": "while_final_025",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 내 친구가 나에게 메시지를 보냈다.",
+    "english": "My friend sent me a message while Tom was cleaning his room.",
+    "words": [
+      "My",
+      "friend",
+      "sent",
+      "me",
+      "a",
+      "message",
+      "while",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구가 나에게 메시지를 보냈다",
+        "My friend sent me a message"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend send me a message while Tom was cleaning his room.",
+      "statementForm": [
+        "While Tom was cleaning his room, my friend sent me a message.",
+        "My friend sent me a message while Tom was cleaning his room."
+      ],
+      "fragmentForm": "My friend sent me a message while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_026",
+    "seedId": "while_final_026",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 비가 그쳤다.",
+    "english": "The rain stopped while my uncle was fixing the window.",
+    "words": [
+      "The",
+      "rain",
+      "stopped",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "비가 그쳤다",
+        "The rain stopped"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "rain"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rain stop while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, the rain stopped.",
+        "The rain stopped while my uncle was fixing the window."
+      ],
+      "fragmentForm": "The rain stopped while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_027",
+    "seedId": "while_final_027",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 나는 주스를 쏟았다.",
+    "english": "I spilled my juice while my uncle was fixing the window.",
+    "words": [
+      "I",
+      "spilled",
+      "my",
+      "juice",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 주스를 쏟았다",
+        "I spilled my juice"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "I",
+      "spilled"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "I spill my juice while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, I spilled my juice.",
+        "I spilled my juice while my uncle was fixing the window."
+      ],
+      "fragmentForm": "I spilled my juice while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_028",
+    "seedId": "while_final_028",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "학생들이 시험을 보고 있는 동안, 나는 주스를 쏟았다.",
+    "english": "I spilled my juice while the students were taking a test.",
+    "words": [
+      "I",
+      "spilled",
+      "my",
+      "juice",
+      "while",
+      "the",
+      "students",
+      "were",
+      "taking",
+      "a",
+      "test",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 주스를 쏟았다",
+        "I spilled my juice"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "학생들이 시험을 보고 있는 동안",
+        "The students were taking a test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "I",
+      "spilled"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "I spill my juice while the students were taking a test.",
+      "statementForm": [
+        "While the students were taking a test, I spilled my juice.",
+        "I spilled my juice while the students were taking a test."
+      ],
+      "fragmentForm": "I spilled my juice while the students taking a test."
+    }
+  },
+  {
+    "id": "m1_while_029",
+    "seedId": "while_final_029",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내가 숙제를 하고 있는 동안, 내 휴대전화가 울렸다.",
+    "english": "While I was doing my homework, my phone rang.",
+    "words": [
+      "While",
+      "I",
+      "was",
+      "doing",
+      "my",
+      "homework",
+      ",",
+      "my",
+      "phone",
+      "rang",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 휴대전화가 울렸다",
+        "My phone rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내가 숙제를 하고 있는 동안",
+        "I was doing my homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "I",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While I was doing my homework, my phone ring.",
+      "statementForm": [
+        "While I was doing my homework, my phone rang.",
+        "My phone rang while I was doing my homework."
+      ],
+      "fragmentForm": "My phone rang while I doing my homework."
+    }
+  },
+  {
+    "id": "m1_while_030",
+    "seedId": "while_final_030",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 남동생이 피아노를 치고 있는 동안, 그 개가 크게 짖었다.",
+    "english": "The dog barked loudly while my brother was playing the piano.",
+    "words": [
+      "The",
+      "dog",
+      "barked",
+      "loudly",
+      "while",
+      "my",
+      "brother",
+      "was",
+      "playing",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개가 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 남동생이 피아노를 치고 있는 동안",
+        "My brother was playing the piano"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog bark loudly while my brother was playing the piano.",
+      "statementForm": [
+        "While my brother was playing the piano, the dog barked loudly.",
+        "The dog barked loudly while my brother was playing the piano."
+      ],
+      "fragmentForm": "The dog barked loudly while my brother playing the piano."
+    }
+  },
+  {
+    "id": "m1_while_031",
+    "seedId": "while_final_031",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내가 숙제를 하고 있는 동안, 버스가 도착했다.",
+    "english": "While I was doing my homework, the bus arrived.",
+    "words": [
+      "While",
+      "I",
+      "was",
+      "doing",
+      "my",
+      "homework",
+      ",",
+      "the",
+      "bus",
+      "arrived",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "버스가 도착했다",
+        "The bus arrived"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내가 숙제를 하고 있는 동안",
+        "I was doing my homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "I",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While I was doing my homework, the bus arrive.",
+      "statementForm": [
+        "While I was doing my homework, the bus arrived.",
+        "The bus arrived while I was doing my homework."
+      ],
+      "fragmentForm": "The bus arrived while I doing my homework."
+    }
+  },
+  {
+    "id": "m1_while_032",
+    "seedId": "while_final_032",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 경기가 끝났다.",
+    "english": "The game ended while my aunt was watering the flowers.",
+    "words": [
+      "The",
+      "game",
+      "ended",
+      "while",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "경기가 끝났다",
+        "The game ended"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "game"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The game end while my aunt was watering the flowers.",
+      "statementForm": [
+        "While my aunt was watering the flowers, the game ended.",
+        "The game ended while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "The game ended while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_033",
+    "seedId": "while_final_033",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 친구가 버스를 기다리고 있는 동안, 창문이 열렸다.",
+    "english": "While my friend was waiting for the bus, the window opened.",
+    "words": [
+      "While",
+      "my",
+      "friend",
+      "was",
+      "waiting",
+      "for",
+      "the",
+      "bus",
+      ",",
+      "the",
+      "window",
+      "opened",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "창문이 열렸다",
+        "The window opened"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 친구가 버스를 기다리고 있는 동안",
+        "My friend was waiting for the bus"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my friend was waiting for the bus, the window open.",
+      "statementForm": [
+        "While my friend was waiting for the bus, the window opened.",
+        "The window opened while my friend was waiting for the bus."
+      ],
+      "fragmentForm": "The window opened while my friend waiting for the bus."
+    }
+  },
+  {
+    "id": "m1_while_034",
+    "seedId": "while_final_034",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "우리가 공원에서 걷고 있는 동안, 초인종이 울렸다.",
+    "english": "The doorbell rang while we were walking in the park.",
+    "words": [
+      "The",
+      "doorbell",
+      "rang",
+      "while",
+      "we",
+      "were",
+      "walking",
+      "in",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "초인종이 울렸다",
+        "The doorbell rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "우리가 공원에서 걷고 있는 동안",
+        "We were walking in the park"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "doorbell"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The doorbell ring while we were walking in the park.",
+      "statementForm": [
+        "While we were walking in the park, the doorbell rang.",
+        "The doorbell rang while we were walking in the park."
+      ],
+      "fragmentForm": "The doorbell rang while we walking in the park."
+    }
+  },
+  {
+    "id": "m1_while_035",
+    "seedId": "while_final_035",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 선생님이 미소 지었다.",
+    "english": "While Tom was cleaning his room, the teacher smiled.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "the",
+      "teacher",
+      "smiled",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님이 미소 지었다",
+        "The teacher smiled"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, the teacher smile.",
+      "statementForm": [
+        "While Tom was cleaning his room, the teacher smiled.",
+        "The teacher smiled while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The teacher smiled while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_036",
+    "seedId": "while_final_036",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 아빠가 집에 오셨다.",
+    "english": "While Tom was cleaning his room, my father came home.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "my",
+      "father",
+      "came",
+      "home",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠가 집에 오셨다",
+        "My father came home"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, my father come home.",
+      "statementForm": [
+        "While Tom was cleaning his room, my father came home.",
+        "My father came home while Tom was cleaning his room."
+      ],
+      "fragmentForm": "My father came home while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_037",
+    "seedId": "while_final_037",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 비가 그쳤다.",
+    "english": "The rain stopped while my sister was reading a book.",
+    "words": [
+      "The",
+      "rain",
+      "stopped",
+      "while",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "비가 그쳤다",
+        "The rain stopped"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "rain"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rain stop while my sister was reading a book.",
+      "statementForm": [
+        "While my sister was reading a book, the rain stopped.",
+        "The rain stopped while my sister was reading a book."
+      ],
+      "fragmentForm": "The rain stopped while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_038",
+    "seedId": "while_final_038",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내가 숙제를 하고 있는 동안, 내 친구가 나에게 메시지를 보냈다.",
+    "english": "My friend sent me a message while I was doing my homework.",
+    "words": [
+      "My",
+      "friend",
+      "sent",
+      "me",
+      "a",
+      "message",
+      "while",
+      "I",
+      "was",
+      "doing",
+      "my",
+      "homework",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구가 나에게 메시지를 보냈다",
+        "My friend sent me a message"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내가 숙제를 하고 있는 동안",
+        "I was doing my homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend send me a message while I was doing my homework.",
+      "statementForm": [
+        "While I was doing my homework, my friend sent me a message.",
+        "My friend sent me a message while I was doing my homework."
+      ],
+      "fragmentForm": "My friend sent me a message while I doing my homework."
+    }
+  },
+  {
+    "id": "m1_while_039",
+    "seedId": "while_final_039",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 버스가 도착했다.",
+    "english": "The bus arrived while my aunt was watering the flowers.",
+    "words": [
+      "The",
+      "bus",
+      "arrived",
+      "while",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "버스가 도착했다",
+        "The bus arrived"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "bus"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus arrive while my aunt was watering the flowers.",
+      "statementForm": [
+        "While my aunt was watering the flowers, the bus arrived.",
+        "The bus arrived while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "The bus arrived while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_040",
+    "seedId": "while_final_040",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 그 개가 크게 짖었다.",
+    "english": "The dog barked loudly while my sister was reading a book.",
+    "words": [
+      "The",
+      "dog",
+      "barked",
+      "loudly",
+      "while",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개가 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog bark loudly while my sister was reading a book.",
+      "statementForm": [
+        "While my sister was reading a book, the dog barked loudly.",
+        "The dog barked loudly while my sister was reading a book."
+      ],
+      "fragmentForm": "The dog barked loudly while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_041",
+    "seedId": "while_final_041",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그들이 농구를 하고 있는 동안, 나는 주스를 쏟았다.",
+    "english": "I spilled my juice while they were playing basketball.",
+    "words": [
+      "I",
+      "spilled",
+      "my",
+      "juice",
+      "while",
+      "they",
+      "were",
+      "playing",
+      "basketball",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 주스를 쏟았다",
+        "I spilled my juice"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그들이 농구를 하고 있는 동안",
+        "They were playing basketball"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "I",
+      "spilled"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "I spill my juice while they were playing basketball.",
+      "statementForm": [
+        "While they were playing basketball, I spilled my juice.",
+        "I spilled my juice while they were playing basketball."
+      ],
+      "fragmentForm": "I spilled my juice while they playing basketball."
+    }
+  },
+  {
+    "id": "m1_while_042",
+    "seedId": "while_final_042",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내가 숙제를 하고 있는 동안, 초인종이 울렸다.",
+    "english": "While I was doing my homework, the doorbell rang.",
+    "words": [
+      "While",
+      "I",
+      "was",
+      "doing",
+      "my",
+      "homework",
+      ",",
+      "the",
+      "doorbell",
+      "rang",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "초인종이 울렸다",
+        "The doorbell rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내가 숙제를 하고 있는 동안",
+        "I was doing my homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "I",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While I was doing my homework, the doorbell ring.",
+      "statementForm": [
+        "While I was doing my homework, the doorbell rang.",
+        "The doorbell rang while I was doing my homework."
+      ],
+      "fragmentForm": "The doorbell rang while I doing my homework."
+    }
+  },
+  {
+    "id": "m1_while_043",
+    "seedId": "while_final_043",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 남동생이 피아노를 치고 있는 동안, 경기가 끝났다.",
+    "english": "While my brother was playing the piano, the game ended.",
+    "words": [
+      "While",
+      "my",
+      "brother",
+      "was",
+      "playing",
+      "the",
+      "piano",
+      ",",
+      "the",
+      "game",
+      "ended",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "경기가 끝났다",
+        "The game ended"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 남동생이 피아노를 치고 있는 동안",
+        "My brother was playing the piano"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "brother"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my brother was playing the piano, the game end.",
+      "statementForm": [
+        "While my brother was playing the piano, the game ended.",
+        "The game ended while my brother was playing the piano."
+      ],
+      "fragmentForm": "The game ended while my brother playing the piano."
+    }
+  },
+  {
+    "id": "m1_while_044",
+    "seedId": "while_final_044",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 남동생이 피아노를 치고 있는 동안, 내 친구가 나에게 메시지를 보냈다.",
+    "english": "My friend sent me a message while my brother was playing the piano.",
+    "words": [
+      "My",
+      "friend",
+      "sent",
+      "me",
+      "a",
+      "message",
+      "while",
+      "my",
+      "brother",
+      "was",
+      "playing",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구가 나에게 메시지를 보냈다",
+        "My friend sent me a message"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 남동생이 피아노를 치고 있는 동안",
+        "My brother was playing the piano"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend send me a message while my brother was playing the piano.",
+      "statementForm": [
+        "While my brother was playing the piano, my friend sent me a message.",
+        "My friend sent me a message while my brother was playing the piano."
+      ],
+      "fragmentForm": "My friend sent me a message while my brother playing the piano."
+    }
+  },
+  {
+    "id": "m1_while_045",
+    "seedId": "while_final_045",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 초인종이 울렸다.",
+    "english": "While Tom was cleaning his room, the doorbell rang.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "the",
+      "doorbell",
+      "rang",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "초인종이 울렸다",
+        "The doorbell rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, the doorbell ring.",
+      "statementForm": [
+        "While Tom was cleaning his room, the doorbell rang.",
+        "The doorbell rang while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The doorbell rang while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_046",
+    "seedId": "while_final_046",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그가 도서관에서 공부하고 있는 동안, 초인종이 울렸다.",
+    "english": "The doorbell rang while he was studying in the library.",
+    "words": [
+      "The",
+      "doorbell",
+      "rang",
+      "while",
+      "he",
+      "was",
+      "studying",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "초인종이 울렸다",
+        "The doorbell rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그가 도서관에서 공부하고 있는 동안",
+        "He was studying in the library"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "doorbell"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The doorbell ring while he was studying in the library.",
+      "statementForm": [
+        "While he was studying in the library, the doorbell rang.",
+        "The doorbell rang while he was studying in the library."
+      ],
+      "fragmentForm": "The doorbell rang while he studying in the library."
+    }
+  },
+  {
+    "id": "m1_while_047",
+    "seedId": "while_final_047",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 누군가 문을 두드렸다.",
+    "english": "Someone knocked on the door while my uncle was fixing the window.",
+    "words": [
+      "Someone",
+      "knocked",
+      "on",
+      "the",
+      "door",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "누군가 문을 두드렸다",
+        "Someone knocked on the door"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "Someone",
+      "knocked"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "Someone knock on the door while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, someone knocked on the door.",
+        "Someone knocked on the door while my uncle was fixing the window."
+      ],
+      "fragmentForm": "Someone knocked on the door while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_048",
+    "seedId": "while_final_048",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 친구가 버스를 기다리고 있는 동안, 우리는 큰 소리를 들었다.",
+    "english": "We heard a loud noise while my friend was waiting for the bus.",
+    "words": [
+      "We",
+      "heard",
+      "a",
+      "loud",
+      "noise",
+      "while",
+      "my",
+      "friend",
+      "was",
+      "waiting",
+      "for",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 큰 소리를 들었다",
+        "We heard a loud noise"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 친구가 버스를 기다리고 있는 동안",
+        "My friend was waiting for the bus"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "We",
+      "heard"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "We hear a loud noise while my friend was waiting for the bus.",
+      "statementForm": [
+        "While my friend was waiting for the bus, we heard a loud noise.",
+        "We heard a loud noise while my friend was waiting for the bus."
+      ],
+      "fragmentForm": "We heard a loud noise while my friend waiting for the bus."
+    }
+  },
+  {
+    "id": "m1_while_049",
+    "seedId": "while_final_049",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 남동생이 피아노를 치고 있는 동안, 내 휴대전화가 울렸다.",
+    "english": "My phone rang while my brother was playing the piano.",
+    "words": [
+      "My",
+      "phone",
+      "rang",
+      "while",
+      "my",
+      "brother",
+      "was",
+      "playing",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 휴대전화가 울렸다",
+        "My phone rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 남동생이 피아노를 치고 있는 동안",
+        "My brother was playing the piano"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "phone"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My phone ring while my brother was playing the piano.",
+      "statementForm": [
+        "While my brother was playing the piano, my phone rang.",
+        "My phone rang while my brother was playing the piano."
+      ],
+      "fragmentForm": "My phone rang while my brother playing the piano."
+    }
+  },
+  {
+    "id": "m1_while_050",
+    "seedId": "while_final_050",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내가 숙제를 하고 있는 동안, 나는 주스를 쏟았다.",
+    "english": "While I was doing my homework, I spilled my juice.",
+    "words": [
+      "While",
+      "I",
+      "was",
+      "doing",
+      "my",
+      "homework",
+      ",",
+      "I",
+      "spilled",
+      "my",
+      "juice",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "basic",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 주스를 쏟았다",
+        "I spilled my juice"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내가 숙제를 하고 있는 동안",
+        "I was doing my homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "I",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While I was doing my homework, I spill my juice.",
+      "statementForm": [
+        "While I was doing my homework, I spilled my juice.",
+        "I spilled my juice while I was doing my homework."
+      ],
+      "fragmentForm": "I spilled my juice while I doing my homework."
+    }
+  },
+  {
+    "id": "m1_while_051",
+    "seedId": "while_final_051",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내가 숙제를 하고 있는 동안, 경기가 끝났다.",
+    "english": "The game ended while I was doing my homework.",
+    "words": [
+      "The",
+      "game",
+      "ended",
+      "while",
+      "I",
+      "was",
+      "doing",
+      "my",
+      "homework",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "경기가 끝났다",
+        "The game ended"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내가 숙제를 하고 있는 동안",
+        "I was doing my homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "game"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The game end while I was doing my homework.",
+      "statementForm": [
+        "While I was doing my homework, the game ended.",
+        "The game ended while I was doing my homework."
+      ],
+      "fragmentForm": "The game ended while I doing my homework."
+    }
+  },
+  {
+    "id": "m1_while_052",
+    "seedId": "while_final_052",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 아빠가 집에 오셨다.",
+    "english": "My father came home while my sister was reading a book.",
+    "words": [
+      "My",
+      "father",
+      "came",
+      "home",
+      "while",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠가 집에 오셨다",
+        "My father came home"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "father"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My father come home while my sister was reading a book.",
+      "statementForm": [
+        "While my sister was reading a book, my father came home.",
+        "My father came home while my sister was reading a book."
+      ],
+      "fragmentForm": "My father came home while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_053",
+    "seedId": "while_final_053",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 내 휴대전화가 울렸다.",
+    "english": "My phone rang while my uncle was fixing the window.",
+    "words": [
+      "My",
+      "phone",
+      "rang",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 휴대전화가 울렸다",
+        "My phone rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "phone"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My phone ring while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, my phone rang.",
+        "My phone rang while my uncle was fixing the window."
+      ],
+      "fragmentForm": "My phone rang while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_054",
+    "seedId": "while_final_054",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내가 숙제를 하고 있는 동안, 아빠가 집에 오셨다.",
+    "english": "While I was doing my homework, my father came home.",
+    "words": [
+      "While",
+      "I",
+      "was",
+      "doing",
+      "my",
+      "homework",
+      ",",
+      "my",
+      "father",
+      "came",
+      "home",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠가 집에 오셨다",
+        "My father came home"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내가 숙제를 하고 있는 동안",
+        "I was doing my homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "I",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While I was doing my homework, my father come home.",
+      "statementForm": [
+        "While I was doing my homework, my father came home.",
+        "My father came home while I was doing my homework."
+      ],
+      "fragmentForm": "My father came home while I doing my homework."
+    }
+  },
+  {
+    "id": "m1_while_055",
+    "seedId": "while_final_055",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 친구가 버스를 기다리고 있는 동안, 버스가 도착했다.",
+    "english": "The bus arrived while my friend was waiting for the bus.",
+    "words": [
+      "The",
+      "bus",
+      "arrived",
+      "while",
+      "my",
+      "friend",
+      "was",
+      "waiting",
+      "for",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "버스가 도착했다",
+        "The bus arrived"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 친구가 버스를 기다리고 있는 동안",
+        "My friend was waiting for the bus"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "bus"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus arrive while my friend was waiting for the bus.",
+      "statementForm": [
+        "While my friend was waiting for the bus, the bus arrived.",
+        "The bus arrived while my friend was waiting for the bus."
+      ],
+      "fragmentForm": "The bus arrived while my friend waiting for the bus."
+    }
+  },
+  {
+    "id": "m1_while_056",
+    "seedId": "while_final_056",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "우리가 공원에서 걷고 있는 동안, 나는 주스를 쏟았다.",
+    "english": "While we were walking in the park, I spilled my juice.",
+    "words": [
+      "While",
+      "we",
+      "were",
+      "walking",
+      "in",
+      "the",
+      "park",
+      ",",
+      "I",
+      "spilled",
+      "my",
+      "juice",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 주스를 쏟았다",
+        "I spilled my juice"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "우리가 공원에서 걷고 있는 동안",
+        "We were walking in the park"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "we",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While we were walking in the park, I spill my juice.",
+      "statementForm": [
+        "While we were walking in the park, I spilled my juice.",
+        "I spilled my juice while we were walking in the park."
+      ],
+      "fragmentForm": "I spilled my juice while we walking in the park."
+    }
+  },
+  {
+    "id": "m1_while_057",
+    "seedId": "while_final_057",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그가 도서관에서 공부하고 있는 동안, 초인종이 울렸다.",
+    "english": "While he was studying in the library, the doorbell rang.",
+    "words": [
+      "While",
+      "he",
+      "was",
+      "studying",
+      "in",
+      "the",
+      "library",
+      ",",
+      "the",
+      "doorbell",
+      "rang",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "초인종이 울렸다",
+        "The doorbell rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그가 도서관에서 공부하고 있는 동안",
+        "He was studying in the library"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "he",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While he was studying in the library, the doorbell ring.",
+      "statementForm": [
+        "While he was studying in the library, the doorbell rang.",
+        "The doorbell rang while he was studying in the library."
+      ],
+      "fragmentForm": "The doorbell rang while he studying in the library."
+    }
+  },
+  {
+    "id": "m1_while_058",
+    "seedId": "while_final_058",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "우리가 공원에서 걷고 있는 동안, 우리는 큰 소리를 들었다.",
+    "english": "While we were walking in the park, we heard a loud noise.",
+    "words": [
+      "While",
+      "we",
+      "were",
+      "walking",
+      "in",
+      "the",
+      "park",
+      ",",
+      "we",
+      "heard",
+      "a",
+      "loud",
+      "noise",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 큰 소리를 들었다",
+        "We heard a loud noise"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "우리가 공원에서 걷고 있는 동안",
+        "We were walking in the park"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "we",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While we were walking in the park, we hear a loud noise.",
+      "statementForm": [
+        "While we were walking in the park, we heard a loud noise.",
+        "We heard a loud noise while we were walking in the park."
+      ],
+      "fragmentForm": "We heard a loud noise while we walking in the park."
+    }
+  },
+  {
+    "id": "m1_while_059",
+    "seedId": "while_final_059",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 창문이 열렸다.",
+    "english": "While my uncle was fixing the window, the window opened.",
+    "words": [
+      "While",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      ",",
+      "the",
+      "window",
+      "opened",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "창문이 열렸다",
+        "The window opened"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "uncle"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my uncle was fixing the window, the window open.",
+      "statementForm": [
+        "While my uncle was fixing the window, the window opened.",
+        "The window opened while my uncle was fixing the window."
+      ],
+      "fragmentForm": "The window opened while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_060",
+    "seedId": "while_final_060",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "우리가 공원에서 걷고 있는 동안, 그 개가 크게 짖었다.",
+    "english": "While we were walking in the park, the dog barked loudly.",
+    "words": [
+      "While",
+      "we",
+      "were",
+      "walking",
+      "in",
+      "the",
+      "park",
+      ",",
+      "the",
+      "dog",
+      "barked",
+      "loudly",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개가 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "우리가 공원에서 걷고 있는 동안",
+        "We were walking in the park"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "we",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While we were walking in the park, the dog bark loudly.",
+      "statementForm": [
+        "While we were walking in the park, the dog barked loudly.",
+        "The dog barked loudly while we were walking in the park."
+      ],
+      "fragmentForm": "The dog barked loudly while we walking in the park."
+    }
+  },
+  {
+    "id": "m1_while_061",
+    "seedId": "while_final_061",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Jina가 전화로 이야기하고 있는 동안, 초인종이 울렸다.",
+    "english": "While Jina was talking on the phone, the doorbell rang.",
+    "words": [
+      "While",
+      "Jina",
+      "was",
+      "talking",
+      "on",
+      "the",
+      "phone",
+      ",",
+      "the",
+      "doorbell",
+      "rang",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "초인종이 울렸다",
+        "The doorbell rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Jina가 전화로 이야기하고 있는 동안",
+        "Jina was talking on the phone"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Jina",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Jina was talking on the phone, the doorbell ring.",
+      "statementForm": [
+        "While Jina was talking on the phone, the doorbell rang.",
+        "The doorbell rang while Jina was talking on the phone."
+      ],
+      "fragmentForm": "The doorbell rang while Jina talking on the phone."
+    }
+  },
+  {
+    "id": "m1_while_062",
+    "seedId": "while_final_062",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "학생들이 시험을 보고 있는 동안, 선생님이 미소 지었다.",
+    "english": "The teacher smiled while the students were taking a test.",
+    "words": [
+      "The",
+      "teacher",
+      "smiled",
+      "while",
+      "the",
+      "students",
+      "were",
+      "taking",
+      "a",
+      "test",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님이 미소 지었다",
+        "The teacher smiled"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "학생들이 시험을 보고 있는 동안",
+        "The students were taking a test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher smile while the students were taking a test.",
+      "statementForm": [
+        "While the students were taking a test, the teacher smiled.",
+        "The teacher smiled while the students were taking a test."
+      ],
+      "fragmentForm": "The teacher smiled while the students taking a test."
+    }
+  },
+  {
+    "id": "m1_while_063",
+    "seedId": "while_final_063",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 친구가 버스를 기다리고 있는 동안, 그 개가 크게 짖었다.",
+    "english": "The dog barked loudly while my friend was waiting for the bus.",
+    "words": [
+      "The",
+      "dog",
+      "barked",
+      "loudly",
+      "while",
+      "my",
+      "friend",
+      "was",
+      "waiting",
+      "for",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개가 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 친구가 버스를 기다리고 있는 동안",
+        "My friend was waiting for the bus"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "dog"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog bark loudly while my friend was waiting for the bus.",
+      "statementForm": [
+        "While my friend was waiting for the bus, the dog barked loudly.",
+        "The dog barked loudly while my friend was waiting for the bus."
+      ],
+      "fragmentForm": "The dog barked loudly while my friend waiting for the bus."
+    }
+  },
+  {
+    "id": "m1_while_064",
+    "seedId": "while_final_064",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 친구가 버스를 기다리고 있는 동안, 아기가 울었다.",
+    "english": "While my friend was waiting for the bus, the baby cried.",
+    "words": [
+      "While",
+      "my",
+      "friend",
+      "was",
+      "waiting",
+      "for",
+      "the",
+      "bus",
+      ",",
+      "the",
+      "baby",
+      "cried",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아기가 울었다",
+        "The baby cried"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 친구가 버스를 기다리고 있는 동안",
+        "My friend was waiting for the bus"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my friend was waiting for the bus, the baby cry.",
+      "statementForm": [
+        "While my friend was waiting for the bus, the baby cried.",
+        "The baby cried while my friend was waiting for the bus."
+      ],
+      "fragmentForm": "The baby cried while my friend waiting for the bus."
+    }
+  },
+  {
+    "id": "m1_while_065",
+    "seedId": "while_final_065",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "우리가 공원에서 걷고 있는 동안, 아기가 울었다.",
+    "english": "The baby cried while we were walking in the park.",
+    "words": [
+      "The",
+      "baby",
+      "cried",
+      "while",
+      "we",
+      "were",
+      "walking",
+      "in",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아기가 울었다",
+        "The baby cried"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "우리가 공원에서 걷고 있는 동안",
+        "We were walking in the park"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "baby"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The baby cry while we were walking in the park.",
+      "statementForm": [
+        "While we were walking in the park, the baby cried.",
+        "The baby cried while we were walking in the park."
+      ],
+      "fragmentForm": "The baby cried while we walking in the park."
+    }
+  },
+  {
+    "id": "m1_while_066",
+    "seedId": "while_final_066",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그들이 농구를 하고 있는 동안, 누군가 문을 두드렸다.",
+    "english": "While they were playing basketball, someone knocked on the door.",
+    "words": [
+      "While",
+      "they",
+      "were",
+      "playing",
+      "basketball",
+      ",",
+      "someone",
+      "knocked",
+      "on",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "누군가 문을 두드렸다",
+        "Someone knocked on the door"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그들이 농구를 하고 있는 동안",
+        "They were playing basketball"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "they",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While they were playing basketball, someone knock on the door.",
+      "statementForm": [
+        "While they were playing basketball, someone knocked on the door.",
+        "Someone knocked on the door while they were playing basketball."
+      ],
+      "fragmentForm": "Someone knocked on the door while they playing basketball."
+    }
+  },
+  {
+    "id": "m1_while_067",
+    "seedId": "while_final_067",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 우리는 큰 소리를 들었다.",
+    "english": "We heard a loud noise while my sister was reading a book.",
+    "words": [
+      "We",
+      "heard",
+      "a",
+      "loud",
+      "noise",
+      "while",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 큰 소리를 들었다",
+        "We heard a loud noise"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "We",
+      "heard"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "We hear a loud noise while my sister was reading a book.",
+      "statementForm": [
+        "While my sister was reading a book, we heard a loud noise.",
+        "We heard a loud noise while my sister was reading a book."
+      ],
+      "fragmentForm": "We heard a loud noise while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_068",
+    "seedId": "while_final_068",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 선생님이 미소 지었다.",
+    "english": "The teacher smiled while my aunt was watering the flowers.",
+    "words": [
+      "The",
+      "teacher",
+      "smiled",
+      "while",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님이 미소 지었다",
+        "The teacher smiled"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "teacher"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher smile while my aunt was watering the flowers.",
+      "statementForm": [
+        "While my aunt was watering the flowers, the teacher smiled.",
+        "The teacher smiled while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "The teacher smiled while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_069",
+    "seedId": "while_final_069",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 아빠가 집에 오셨다.",
+    "english": "While my aunt was watering the flowers, my father came home.",
+    "words": [
+      "While",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      ",",
+      "my",
+      "father",
+      "came",
+      "home",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠가 집에 오셨다",
+        "My father came home"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "aunt"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my aunt was watering the flowers, my father come home.",
+      "statementForm": [
+        "While my aunt was watering the flowers, my father came home.",
+        "My father came home while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "My father came home while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_070",
+    "seedId": "while_final_070",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 버스가 도착했다.",
+    "english": "While my aunt was watering the flowers, the bus arrived.",
+    "words": [
+      "While",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      ",",
+      "the",
+      "bus",
+      "arrived",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "버스가 도착했다",
+        "The bus arrived"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "aunt"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my aunt was watering the flowers, the bus arrive.",
+      "statementForm": [
+        "While my aunt was watering the flowers, the bus arrived.",
+        "The bus arrived while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "The bus arrived while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_071",
+    "seedId": "while_final_071",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "우리가 공원에서 걷고 있는 동안, 아기가 울었다.",
+    "english": "While we were walking in the park, the baby cried.",
+    "words": [
+      "While",
+      "we",
+      "were",
+      "walking",
+      "in",
+      "the",
+      "park",
+      ",",
+      "the",
+      "baby",
+      "cried",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아기가 울었다",
+        "The baby cried"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "우리가 공원에서 걷고 있는 동안",
+        "We were walking in the park"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "we",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While we were walking in the park, the baby cry.",
+      "statementForm": [
+        "While we were walking in the park, the baby cried.",
+        "The baby cried while we were walking in the park."
+      ],
+      "fragmentForm": "The baby cried while we walking in the park."
+    }
+  },
+  {
+    "id": "m1_while_072",
+    "seedId": "while_final_072",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그들이 농구를 하고 있는 동안, 비가 그쳤다.",
+    "english": "The rain stopped while they were playing basketball.",
+    "words": [
+      "The",
+      "rain",
+      "stopped",
+      "while",
+      "they",
+      "were",
+      "playing",
+      "basketball",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "비가 그쳤다",
+        "The rain stopped"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그들이 농구를 하고 있는 동안",
+        "They were playing basketball"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "rain"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rain stop while they were playing basketball.",
+      "statementForm": [
+        "While they were playing basketball, the rain stopped.",
+        "The rain stopped while they were playing basketball."
+      ],
+      "fragmentForm": "The rain stopped while they playing basketball."
+    }
+  },
+  {
+    "id": "m1_while_073",
+    "seedId": "while_final_073",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Jina가 전화로 이야기하고 있는 동안, 선생님이 미소 지었다.",
+    "english": "While Jina was talking on the phone, the teacher smiled.",
+    "words": [
+      "While",
+      "Jina",
+      "was",
+      "talking",
+      "on",
+      "the",
+      "phone",
+      ",",
+      "the",
+      "teacher",
+      "smiled",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님이 미소 지었다",
+        "The teacher smiled"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Jina가 전화로 이야기하고 있는 동안",
+        "Jina was talking on the phone"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Jina",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Jina was talking on the phone, the teacher smile.",
+      "statementForm": [
+        "While Jina was talking on the phone, the teacher smiled.",
+        "The teacher smiled while Jina was talking on the phone."
+      ],
+      "fragmentForm": "The teacher smiled while Jina talking on the phone."
+    }
+  },
+  {
+    "id": "m1_while_074",
+    "seedId": "while_final_074",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그가 도서관에서 공부하고 있는 동안, 갑자기 비가 내리기 시작했다.",
+    "english": "It suddenly started to rain while he was studying in the library.",
+    "words": [
+      "It",
+      "suddenly",
+      "started",
+      "to",
+      "rain",
+      "while",
+      "he",
+      "was",
+      "studying",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "갑자기 비가 내리기 시작했다",
+        "It suddenly started to rain"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그가 도서관에서 공부하고 있는 동안",
+        "He was studying in the library"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "It",
+      "suddenly"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "It suddenly start to rain while he was studying in the library.",
+      "statementForm": [
+        "While he was studying in the library, it suddenly started to rain.",
+        "It suddenly started to rain while he was studying in the library."
+      ],
+      "fragmentForm": "It suddenly started to rain while he studying in the library."
+    }
+  },
+  {
+    "id": "m1_while_075",
+    "seedId": "while_final_075",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 그 개가 크게 짖었다.",
+    "english": "While Tom was cleaning his room, the dog barked loudly.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "the",
+      "dog",
+      "barked",
+      "loudly",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "그 개가 크게 짖었다",
+        "The dog barked loudly"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, the dog bark loudly.",
+      "statementForm": [
+        "While Tom was cleaning his room, the dog barked loudly.",
+        "The dog barked loudly while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The dog barked loudly while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_076",
+    "seedId": "while_final_076",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그가 도서관에서 공부하고 있는 동안, 선생님이 미소 지었다.",
+    "english": "While he was studying in the library, the teacher smiled.",
+    "words": [
+      "While",
+      "he",
+      "was",
+      "studying",
+      "in",
+      "the",
+      "library",
+      ",",
+      "the",
+      "teacher",
+      "smiled",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님이 미소 지었다",
+        "The teacher smiled"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그가 도서관에서 공부하고 있는 동안",
+        "He was studying in the library"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "he",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While he was studying in the library, the teacher smile.",
+      "statementForm": [
+        "While he was studying in the library, the teacher smiled.",
+        "The teacher smiled while he was studying in the library."
+      ],
+      "fragmentForm": "The teacher smiled while he studying in the library."
+    }
+  },
+  {
+    "id": "m1_while_077",
+    "seedId": "while_final_077",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Jina가 전화로 이야기하고 있는 동안, 불이 꺼졌다.",
+    "english": "While Jina was talking on the phone, the lights went out.",
+    "words": [
+      "While",
+      "Jina",
+      "was",
+      "talking",
+      "on",
+      "the",
+      "phone",
+      ",",
+      "the",
+      "lights",
+      "went",
+      "out",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "불이 꺼졌다",
+        "The lights went out"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Jina가 전화로 이야기하고 있는 동안",
+        "Jina was talking on the phone"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Jina",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Jina was talking on the phone, the lights go out.",
+      "statementForm": [
+        "While Jina was talking on the phone, the lights went out.",
+        "The lights went out while Jina was talking on the phone."
+      ],
+      "fragmentForm": "The lights went out while Jina talking on the phone."
+    }
+  },
+  {
+    "id": "m1_while_078",
+    "seedId": "while_final_078",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그들이 농구를 하고 있는 동안, 비가 그쳤다.",
+    "english": "While they were playing basketball, the rain stopped.",
+    "words": [
+      "While",
+      "they",
+      "were",
+      "playing",
+      "basketball",
+      ",",
+      "the",
+      "rain",
+      "stopped",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "비가 그쳤다",
+        "The rain stopped"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그들이 농구를 하고 있는 동안",
+        "They were playing basketball"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "they",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While they were playing basketball, the rain stop.",
+      "statementForm": [
+        "While they were playing basketball, the rain stopped.",
+        "The rain stopped while they were playing basketball."
+      ],
+      "fragmentForm": "The rain stopped while they playing basketball."
+    }
+  },
+  {
+    "id": "m1_while_079",
+    "seedId": "while_final_079",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 아기가 울었다.",
+    "english": "The baby cried while Tom was cleaning his room.",
+    "words": [
+      "The",
+      "baby",
+      "cried",
+      "while",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아기가 울었다",
+        "The baby cried"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "baby"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The baby cry while Tom was cleaning his room.",
+      "statementForm": [
+        "While Tom was cleaning his room, the baby cried.",
+        "The baby cried while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The baby cried while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_080",
+    "seedId": "while_final_080",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 친구가 버스를 기다리고 있는 동안, 나는 주스를 쏟았다.",
+    "english": "I spilled my juice while my friend was waiting for the bus.",
+    "words": [
+      "I",
+      "spilled",
+      "my",
+      "juice",
+      "while",
+      "my",
+      "friend",
+      "was",
+      "waiting",
+      "for",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "나는 주스를 쏟았다",
+        "I spilled my juice"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 친구가 버스를 기다리고 있는 동안",
+        "My friend was waiting for the bus"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "I",
+      "spilled"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "I spill my juice while my friend was waiting for the bus.",
+      "statementForm": [
+        "While my friend was waiting for the bus, I spilled my juice.",
+        "I spilled my juice while my friend was waiting for the bus."
+      ],
+      "fragmentForm": "I spilled my juice while my friend waiting for the bus."
+    }
+  },
+  {
+    "id": "m1_while_081",
+    "seedId": "while_final_081",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 남동생이 피아노를 치고 있는 동안, 내 친구가 나에게 메시지를 보냈다.",
+    "english": "While my brother was playing the piano, my friend sent me a message.",
+    "words": [
+      "While",
+      "my",
+      "brother",
+      "was",
+      "playing",
+      "the",
+      "piano",
+      ",",
+      "my",
+      "friend",
+      "sent",
+      "me",
+      "a",
+      "message",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 친구가 나에게 메시지를 보냈다",
+        "My friend sent me a message"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 남동생이 피아노를 치고 있는 동안",
+        "My brother was playing the piano"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "brother"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my brother was playing the piano, my friend send me a message.",
+      "statementForm": [
+        "While my brother was playing the piano, my friend sent me a message.",
+        "My friend sent me a message while my brother was playing the piano."
+      ],
+      "fragmentForm": "My friend sent me a message while my brother playing the piano."
+    }
+  },
+  {
+    "id": "m1_while_082",
+    "seedId": "while_final_082",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그가 도서관에서 공부하고 있는 동안, 누군가 문을 두드렸다.",
+    "english": "While he was studying in the library, someone knocked on the door.",
+    "words": [
+      "While",
+      "he",
+      "was",
+      "studying",
+      "in",
+      "the",
+      "library",
+      ",",
+      "someone",
+      "knocked",
+      "on",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "누군가 문을 두드렸다",
+        "Someone knocked on the door"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그가 도서관에서 공부하고 있는 동안",
+        "He was studying in the library"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "he",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While he was studying in the library, someone knock on the door.",
+      "statementForm": [
+        "While he was studying in the library, someone knocked on the door.",
+        "Someone knocked on the door while he was studying in the library."
+      ],
+      "fragmentForm": "Someone knocked on the door while he studying in the library."
+    }
+  },
+  {
+    "id": "m1_while_083",
+    "seedId": "while_final_083",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "이모가 꽃에 물을 주고 있는 동안, 아빠가 집에 오셨다.",
+    "english": "My father came home while my aunt was watering the flowers.",
+    "words": [
+      "My",
+      "father",
+      "came",
+      "home",
+      "while",
+      "my",
+      "aunt",
+      "was",
+      "watering",
+      "the",
+      "flowers",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠가 집에 오셨다",
+        "My father came home"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "이모가 꽃에 물을 주고 있는 동안",
+        "My aunt was watering the flowers"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "father"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My father come home while my aunt was watering the flowers.",
+      "statementForm": [
+        "While my aunt was watering the flowers, my father came home.",
+        "My father came home while my aunt was watering the flowers."
+      ],
+      "fragmentForm": "My father came home while my aunt watering the flowers."
+    }
+  },
+  {
+    "id": "m1_while_084",
+    "seedId": "while_final_084",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그가 도서관에서 공부하고 있는 동안, 버스가 도착했다.",
+    "english": "The bus arrived while he was studying in the library.",
+    "words": [
+      "The",
+      "bus",
+      "arrived",
+      "while",
+      "he",
+      "was",
+      "studying",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "버스가 도착했다",
+        "The bus arrived"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그가 도서관에서 공부하고 있는 동안",
+        "He was studying in the library"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "bus"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus arrive while he was studying in the library.",
+      "statementForm": [
+        "While he was studying in the library, the bus arrived.",
+        "The bus arrived while he was studying in the library."
+      ],
+      "fragmentForm": "The bus arrived while he studying in the library."
+    }
+  },
+  {
+    "id": "m1_while_085",
+    "seedId": "while_final_085",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "학생들이 시험을 보고 있는 동안, 누군가 문을 두드렸다.",
+    "english": "Someone knocked on the door while the students were taking a test.",
+    "words": [
+      "Someone",
+      "knocked",
+      "on",
+      "the",
+      "door",
+      "while",
+      "the",
+      "students",
+      "were",
+      "taking",
+      "a",
+      "test",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "누군가 문을 두드렸다",
+        "Someone knocked on the door"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "학생들이 시험을 보고 있는 동안",
+        "The students were taking a test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "Someone",
+      "knocked"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "Someone knock on the door while the students were taking a test.",
+      "statementForm": [
+        "While the students were taking a test, someone knocked on the door.",
+        "Someone knocked on the door while the students were taking a test."
+      ],
+      "fragmentForm": "Someone knocked on the door while the students taking a test."
+    }
+  },
+  {
+    "id": "m1_while_086",
+    "seedId": "while_final_086",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "우리가 공원에서 걷고 있는 동안, 비가 그쳤다.",
+    "english": "While we were walking in the park, the rain stopped.",
+    "words": [
+      "While",
+      "we",
+      "were",
+      "walking",
+      "in",
+      "the",
+      "park",
+      ",",
+      "the",
+      "rain",
+      "stopped",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "비가 그쳤다",
+        "The rain stopped"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "우리가 공원에서 걷고 있는 동안",
+        "We were walking in the park"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "we",
+      "were"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While we were walking in the park, the rain stop.",
+      "statementForm": [
+        "While we were walking in the park, the rain stopped.",
+        "The rain stopped while we were walking in the park."
+      ],
+      "fragmentForm": "The rain stopped while we walking in the park."
+    }
+  },
+  {
+    "id": "m1_while_087",
+    "seedId": "while_final_087",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 친구가 버스를 기다리고 있는 동안, 선생님이 미소 지었다.",
+    "english": "While my friend was waiting for the bus, the teacher smiled.",
+    "words": [
+      "While",
+      "my",
+      "friend",
+      "was",
+      "waiting",
+      "for",
+      "the",
+      "bus",
+      ",",
+      "the",
+      "teacher",
+      "smiled",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "선생님이 미소 지었다",
+        "The teacher smiled"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 친구가 버스를 기다리고 있는 동안",
+        "My friend was waiting for the bus"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "friend"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my friend was waiting for the bus, the teacher smile.",
+      "statementForm": [
+        "While my friend was waiting for the bus, the teacher smiled.",
+        "The teacher smiled while my friend was waiting for the bus."
+      ],
+      "fragmentForm": "The teacher smiled while my friend waiting for the bus."
+    }
+  },
+  {
+    "id": "m1_while_088",
+    "seedId": "while_final_088",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 아빠가 집에 오셨다.",
+    "english": "While my sister was reading a book, my father came home.",
+    "words": [
+      "While",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      ",",
+      "my",
+      "father",
+      "came",
+      "home",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아빠가 집에 오셨다",
+        "My father came home"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "sister"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my sister was reading a book, my father come home.",
+      "statementForm": [
+        "While my sister was reading a book, my father came home.",
+        "My father came home while my sister was reading a book."
+      ],
+      "fragmentForm": "My father came home while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_089",
+    "seedId": "while_final_089",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 누군가 문을 두드렸다.",
+    "english": "Someone knocked on the door while my sister was reading a book.",
+    "words": [
+      "Someone",
+      "knocked",
+      "on",
+      "the",
+      "door",
+      "while",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "누군가 문을 두드렸다",
+        "Someone knocked on the door"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "Someone",
+      "knocked"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "Someone knock on the door while my sister was reading a book.",
+      "statementForm": [
+        "While my sister was reading a book, someone knocked on the door.",
+        "Someone knocked on the door while my sister was reading a book."
+      ],
+      "fragmentForm": "Someone knocked on the door while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_090",
+    "seedId": "while_final_090",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 초인종이 울렸다.",
+    "english": "The doorbell rang while my uncle was fixing the window.",
+    "words": [
+      "The",
+      "doorbell",
+      "rang",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "초인종이 울렸다",
+        "The doorbell rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "doorbell"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The doorbell ring while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, the doorbell rang.",
+        "The doorbell rang while my uncle was fixing the window."
+      ],
+      "fragmentForm": "The doorbell rang while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_091",
+    "seedId": "while_final_091",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 비가 그쳤다.",
+    "english": "The rain stopped while Tom was cleaning his room.",
+    "words": [
+      "The",
+      "rain",
+      "stopped",
+      "while",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "비가 그쳤다",
+        "The rain stopped"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "rain"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rain stop while Tom was cleaning his room.",
+      "statementForm": [
+        "While Tom was cleaning his room, the rain stopped.",
+        "The rain stopped while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The rain stopped while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_092",
+    "seedId": "while_final_092",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 남동생이 피아노를 치고 있는 동안, 아기가 울었다.",
+    "english": "While my brother was playing the piano, the baby cried.",
+    "words": [
+      "While",
+      "my",
+      "brother",
+      "was",
+      "playing",
+      "the",
+      "piano",
+      ",",
+      "the",
+      "baby",
+      "cried",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아기가 울었다",
+        "The baby cried"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 남동생이 피아노를 치고 있는 동안",
+        "My brother was playing the piano"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "my",
+      "brother"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While my brother was playing the piano, the baby cry.",
+      "statementForm": [
+        "While my brother was playing the piano, the baby cried.",
+        "The baby cried while my brother was playing the piano."
+      ],
+      "fragmentForm": "The baby cried while my brother playing the piano."
+    }
+  },
+  {
+    "id": "m1_while_093",
+    "seedId": "while_final_093",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 여동생이 책을 읽고 있는 동안, 갑자기 비가 내리기 시작했다.",
+    "english": "It suddenly started to rain while my sister was reading a book.",
+    "words": [
+      "It",
+      "suddenly",
+      "started",
+      "to",
+      "rain",
+      "while",
+      "my",
+      "sister",
+      "was",
+      "reading",
+      "a",
+      "book",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "갑자기 비가 내리기 시작했다",
+        "It suddenly started to rain"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 여동생이 책을 읽고 있는 동안",
+        "My sister was reading a book"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "It",
+      "suddenly"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "It suddenly start to rain while my sister was reading a book.",
+      "statementForm": [
+        "While my sister was reading a book, it suddenly started to rain.",
+        "It suddenly started to rain while my sister was reading a book."
+      ],
+      "fragmentForm": "It suddenly started to rain while my sister reading a book."
+    }
+  },
+  {
+    "id": "m1_while_094",
+    "seedId": "while_final_094",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "삼촌이 창문을 고치고 있는 동안, 창문이 열렸다.",
+    "english": "The window opened while my uncle was fixing the window.",
+    "words": [
+      "The",
+      "window",
+      "opened",
+      "while",
+      "my",
+      "uncle",
+      "was",
+      "fixing",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "창문이 열렸다",
+        "The window opened"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "삼촌이 창문을 고치고 있는 동안",
+        "My uncle was fixing the window"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "window"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The window open while my uncle was fixing the window.",
+      "statementForm": [
+        "While my uncle was fixing the window, the window opened.",
+        "The window opened while my uncle was fixing the window."
+      ],
+      "fragmentForm": "The window opened while my uncle fixing the window."
+    }
+  },
+  {
+    "id": "m1_while_095",
+    "seedId": "while_final_095",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Jina가 전화로 이야기하고 있는 동안, 내 휴대전화가 울렸다.",
+    "english": "My phone rang while Jina was talking on the phone.",
+    "words": [
+      "My",
+      "phone",
+      "rang",
+      "while",
+      "Jina",
+      "was",
+      "talking",
+      "on",
+      "the",
+      "phone",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "내 휴대전화가 울렸다",
+        "My phone rang"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Jina가 전화로 이야기하고 있는 동안",
+        "Jina was talking on the phone"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "My",
+      "phone"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "My phone ring while Jina was talking on the phone.",
+      "statementForm": [
+        "While Jina was talking on the phone, my phone rang.",
+        "My phone rang while Jina was talking on the phone."
+      ],
+      "fragmentForm": "My phone rang while Jina talking on the phone."
+    }
+  },
+  {
+    "id": "m1_while_096",
+    "seedId": "while_final_096",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내가 숙제를 하고 있는 동안, 아기가 울었다.",
+    "english": "The baby cried while I was doing my homework.",
+    "words": [
+      "The",
+      "baby",
+      "cried",
+      "while",
+      "I",
+      "was",
+      "doing",
+      "my",
+      "homework",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "아기가 울었다",
+        "The baby cried"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내가 숙제를 하고 있는 동안",
+        "I was doing my homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "baby"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The baby cry while I was doing my homework.",
+      "statementForm": [
+        "While I was doing my homework, the baby cried.",
+        "The baby cried while I was doing my homework."
+      ],
+      "fragmentForm": "The baby cried while I doing my homework."
+    }
+  },
+  {
+    "id": "m1_while_097",
+    "seedId": "while_final_097",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 비가 그쳤다.",
+    "english": "While Tom was cleaning his room, the rain stopped.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "the",
+      "rain",
+      "stopped",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "비가 그쳤다",
+        "The rain stopped"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, the rain stop.",
+      "statementForm": [
+        "While Tom was cleaning his room, the rain stopped.",
+        "The rain stopped while Tom was cleaning his room."
+      ],
+      "fragmentForm": "The rain stopped while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_098",
+    "seedId": "while_final_098",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "Tom이 자기 방을 청소하고 있는 동안, 누군가 문을 두드렸다.",
+    "english": "While Tom was cleaning his room, someone knocked on the door.",
+    "words": [
+      "While",
+      "Tom",
+      "was",
+      "cleaning",
+      "his",
+      "room",
+      ",",
+      "someone",
+      "knocked",
+      "on",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "누군가 문을 두드렸다",
+        "Someone knocked on the door"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "Tom이 자기 방을 청소하고 있는 동안",
+        "Tom was cleaning his room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "While",
+      "Tom",
+      "was"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "While Tom was cleaning his room, someone knock on the door.",
+      "statementForm": [
+        "While Tom was cleaning his room, someone knocked on the door.",
+        "Someone knocked on the door while Tom was cleaning his room."
+      ],
+      "fragmentForm": "Someone knocked on the door while Tom cleaning his room."
+    }
+  },
+  {
+    "id": "m1_while_099",
+    "seedId": "while_final_099",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "그들이 농구를 하고 있는 동안, 우리는 큰 소리를 들었다.",
+    "english": "We heard a loud noise while they were playing basketball.",
+    "words": [
+      "We",
+      "heard",
+      "a",
+      "loud",
+      "noise",
+      "while",
+      "they",
+      "were",
+      "playing",
+      "basketball",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "우리는 큰 소리를 들었다",
+        "We heard a loud noise"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "그들이 농구를 하고 있는 동안",
+        "They were playing basketball"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "We",
+      "heard"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "We hear a loud noise while they were playing basketball.",
+      "statementForm": [
+        "While they were playing basketball, we heard a loud noise.",
+        "We heard a loud noise while they were playing basketball."
+      ],
+      "fragmentForm": "We heard a loud noise while they playing basketball."
+    }
+  },
+  {
+    "id": "m1_while_100",
+    "seedId": "while_final_100",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "conjunction_while",
+    "chapterLabelKo": "접속사 while",
+    "korean": "내 남동생이 피아노를 치고 있는 동안, 비가 그쳤다.",
+    "english": "The rain stopped while my brother was playing the piano.",
+    "words": [
+      "The",
+      "rain",
+      "stopped",
+      "while",
+      "my",
+      "brother",
+      "was",
+      "playing",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "conjunction_while",
+    "difficulty": "medium",
+    "sourceType": "db_final",
+    "clueUnits": [
+      [
+        "비가 그쳤다",
+        "The rain stopped"
+      ],
+      [
+        "~하는 동안",
+        "while"
+      ],
+      [
+        "내 남동생이 피아노를 치고 있는 동안",
+        "My brother was playing the piano"
+      ]
+    ],
+    "extraClueWordPool": [
+      "while",
+      "when",
+      "was",
+      "were"
+    ],
+    "blankTargets": [
+      "while",
+      "The",
+      "rain"
+    ],
+    "tags": [
+      "conjunction_while",
+      "time",
+      "simultaneous"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rain stop while my brother was playing the piano.",
+      "statementForm": [
+        "While my brother was playing the piano, the rain stopped.",
+        "The rain stopped while my brother was playing the piano."
+      ],
+      "fragmentForm": "The rain stopped while my brother playing the piano."
+    }
+  }
+]
