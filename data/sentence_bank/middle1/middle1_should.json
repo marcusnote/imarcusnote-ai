@@ -1,0 +1,4219 @@
+[
+  {
+    "id": "m1_should_001",
+    "seedId": "should_001",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "나는 물을 더 많이 마시는 것이 좋다.",
+    "english": "I should drink more water.",
+    "words": [
+      "I",
+      "should",
+      "drink",
+      "more",
+      "water",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "물을 마시다",
+        "drink water"
+      ],
+      [
+        "더 많이",
+        "more"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "drink",
+      "water",
+      "more"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I should drinks more water.",
+      "statementForm": [
+        "I should drink more water.",
+        "I should drink more water"
+      ],
+      "fragmentForm": "I should more water."
+    }
+  },
+  {
+    "id": "m1_should_002",
+    "seedId": "should_002",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "너는 일찍 자는 것이 좋다.",
+    "english": "You should go to bed early.",
+    "words": [
+      "You",
+      "should",
+      "go",
+      "to",
+      "bed",
+      "early",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "자러 가다",
+        "go to bed"
+      ],
+      [
+        "일찍",
+        "early"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "go",
+      "to",
+      "bed",
+      "early"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should gos to bed early.",
+      "statementForm": [
+        "You should go to bed early.",
+        "You should go to bed early"
+      ],
+      "fragmentForm": "You should to bed early."
+    }
+  },
+  {
+    "id": "m1_should_003",
+    "seedId": "should_003",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그는 친구에게 사과하는 것이 좋다.",
+    "english": "He should say sorry to his friend.",
+    "words": [
+      "He",
+      "should",
+      "say",
+      "sorry",
+      "to",
+      "his",
+      "friend",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "사과하다",
+        "say sorry"
+      ],
+      [
+        "친구에게",
+        "to his friend"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "say",
+      "sorry",
+      "to",
+      "his",
+      "friend"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He should says sorry to his friend.",
+      "statementForm": [
+        "He should say sorry to his friend.",
+        "He should say sorry to his friend"
+      ],
+      "fragmentForm": "He should sorry to his friend."
+    }
+  },
+  {
+    "id": "m1_should_004",
+    "seedId": "should_004",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그녀는 너무 걱정하지 않는 것이 좋다.",
+    "english": "She should not worry too much.",
+    "words": [
+      "She",
+      "should",
+      "not",
+      "worry",
+      "too",
+      "much",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "걱정하다",
+        "worry"
+      ],
+      [
+        "너무 많이",
+        "too much"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "worry",
+      "too",
+      "much"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She should not worrys too much.",
+      "statementForm": [
+        "She should not worry too much.",
+        "She should not worry too much"
+      ],
+      "fragmentForm": "She should not too much."
+    }
+  },
+  {
+    "id": "m1_should_005",
+    "seedId": "should_005",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "우리는 서로의 말을 잘 들어야 한다.",
+    "english": "We should listen to each other.",
+    "words": [
+      "We",
+      "should",
+      "listen",
+      "to",
+      "each",
+      "other",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "듣다",
+        "listen to"
+      ],
+      [
+        "서로",
+        "each other"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "listen",
+      "to",
+      "each",
+      "other"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We should listens to each other.",
+      "statementForm": [
+        "We should listen to each other.",
+        "We should listen to each other"
+      ],
+      "fragmentForm": "We should to each other."
+    }
+  },
+  {
+    "id": "m1_should_006",
+    "seedId": "should_006",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그들은 더 천천히 운전하는 것이 좋다.",
+    "english": "They should drive more slowly.",
+    "words": [
+      "They",
+      "should",
+      "drive",
+      "more",
+      "slowly",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "운전하다",
+        "drive"
+      ],
+      [
+        "더 천천히",
+        "more slowly"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "drive",
+      "more",
+      "slowly"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "They should drives more slowly.",
+      "statementForm": [
+        "They should drive more slowly.",
+        "They should drive more slowly"
+      ],
+      "fragmentForm": "They should more slowly."
+    }
+  },
+  {
+    "id": "m1_should_007",
+    "seedId": "should_007",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 소년은 매일 조금씩 읽는 것이 좋다.",
+    "english": "The boy should read a little every day.",
+    "words": [
+      "The",
+      "boy",
+      "should",
+      "read",
+      "a",
+      "little",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "조금씩 읽다",
+        "read a little"
+      ],
+      [
+        "매일",
+        "every day"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "read",
+      "a",
+      "little",
+      "every",
+      "day"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy should reads a little every day.",
+      "statementForm": [
+        "The boy should read a little every day.",
+        "The boy should read a little every day"
+      ],
+      "fragmentForm": "The boy should a little every day."
+    }
+  },
+  {
+    "id": "m1_should_008",
+    "seedId": "should_008",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 소녀는 자신의 생각을 말하는 것이 좋다.",
+    "english": "The girl should share her ideas.",
+    "words": [
+      "The",
+      "girl",
+      "should",
+      "share",
+      "her",
+      "ideas",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "생각을 나누다",
+        "share her ideas"
+      ],
+      [
+        "자신의 생각",
+        "her ideas"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "share",
+      "her",
+      "ideas"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl should shares her ideas.",
+      "statementForm": [
+        "The girl should share her ideas.",
+        "The girl should share her ideas"
+      ],
+      "fragmentForm": "The girl should her ideas."
+    }
+  },
+  {
+    "id": "m1_should_009",
+    "seedId": "should_009",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "아빠는 좀 쉬는 것이 좋다.",
+    "english": "My dad should take a rest.",
+    "words": [
+      "My",
+      "dad",
+      "should",
+      "take",
+      "a",
+      "rest",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "쉬다",
+        "take a rest"
+      ],
+      [
+        "좀",
+        "a rest"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "take",
+      "a",
+      "rest"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "My dad should takes a rest.",
+      "statementForm": [
+        "My dad should take a rest.",
+        "My dad should take a rest"
+      ],
+      "fragmentForm": "My dad should a rest."
+    }
+  },
+  {
+    "id": "m1_should_010",
+    "seedId": "should_010",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "엄마는 병원에 가보는 것이 좋다.",
+    "english": "My mom should see a doctor.",
+    "words": [
+      "My",
+      "mom",
+      "should",
+      "see",
+      "a",
+      "doctor",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "진찰받다",
+        "see a doctor"
+      ],
+      [
+        "의사",
+        "doctor"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "see",
+      "a",
+      "doctor"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mom should sees a doctor.",
+      "statementForm": [
+        "My mom should see a doctor.",
+        "My mom should see a doctor"
+      ],
+      "fragmentForm": "My mom should a doctor."
+    }
+  },
+  {
+    "id": "m1_should_011",
+    "seedId": "should_011",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "학생들은 복도에서 뛰지 않는 것이 좋다.",
+    "english": "The students should not run in the hall.",
+    "words": [
+      "The",
+      "students",
+      "should",
+      "not",
+      "run",
+      "in",
+      "the",
+      "hall",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "뛰다",
+        "run"
+      ],
+      [
+        "복도에서",
+        "in the hall"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "run",
+      "in",
+      "the",
+      "hall"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students should not runs in the hall.",
+      "statementForm": [
+        "The students should not run in the hall.",
+        "The students should not run in the hall"
+      ],
+      "fragmentForm": "The students should not in the hall."
+    }
+  },
+  {
+    "id": "m1_should_012",
+    "seedId": "should_012",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "나는 영어 일기를 써보는 것이 좋다.",
+    "english": "I should write an English diary.",
+    "words": [
+      "I",
+      "should",
+      "write",
+      "an",
+      "English",
+      "diary",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "쓰다",
+        "write"
+      ],
+      [
+        "영어 일기",
+        "English diary"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "write",
+      "English",
+      "diary"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I should writes an English diary.",
+      "statementForm": [
+        "I should write an English diary.",
+        "I should write an English diary"
+      ],
+      "fragmentForm": "I should an English diary."
+    }
+  },
+  {
+    "id": "m1_should_013",
+    "seedId": "should_013",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "너는 그에게 다시 전화하는 것이 좋다.",
+    "english": "You should call him back.",
+    "words": [
+      "You",
+      "should",
+      "call",
+      "him",
+      "back",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "전화하다",
+        "call him back"
+      ],
+      [
+        "다시",
+        "back"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "call",
+      "him",
+      "back"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should calls him back.",
+      "statementForm": [
+        "You should call him back.",
+        "You should call him back"
+      ],
+      "fragmentForm": "You should him back."
+    }
+  },
+  {
+    "id": "m1_should_014",
+    "seedId": "should_014",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그는 늦은 밤에 게임을 하지 않는 것이 좋다.",
+    "english": "He should not play games late at night.",
+    "words": [
+      "He",
+      "should",
+      "not",
+      "play",
+      "games",
+      "late",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "게임하다",
+        "play games"
+      ],
+      [
+        "늦은 밤에",
+        "late at night"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "play",
+      "games",
+      "late",
+      "at",
+      "night"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He should not plays games late at night.",
+      "statementForm": [
+        "He should not play games late at night.",
+        "He should not play games late at night"
+      ],
+      "fragmentForm": "He should not games late at night."
+    }
+  },
+  {
+    "id": "m1_should_015",
+    "seedId": "should_015",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그녀는 더 자신감을 가지는 것이 좋다.",
+    "english": "She should be more confident.",
+    "words": [
+      "She",
+      "should",
+      "be",
+      "more",
+      "confident",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "자신감을 가지다",
+        "be confident"
+      ],
+      [
+        "더",
+        "more"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "be",
+      "confident",
+      "more"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She should bes more confident.",
+      "statementForm": [
+        "She should be more confident.",
+        "She should be more confident"
+      ],
+      "fragmentForm": "She should more confident."
+    }
+  },
+  {
+    "id": "m1_should_016",
+    "seedId": "should_016",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "우리는 매일 조금씩 운동하는 것이 좋다.",
+    "english": "We should exercise a little every day.",
+    "words": [
+      "We",
+      "should",
+      "exercise",
+      "a",
+      "little",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "운동하다",
+        "exercise"
+      ],
+      [
+        "매일 조금씩",
+        "a little every day"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "exercise",
+      "a",
+      "little",
+      "every",
+      "day"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We should exercises a little every day.",
+      "statementForm": [
+        "We should exercise a little every day.",
+        "We should exercise a little every day"
+      ],
+      "fragmentForm": "We should a little every day."
+    }
+  },
+  {
+    "id": "m1_should_017",
+    "seedId": "should_017",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그들은 약속 시간을 지키는 것이 좋다.",
+    "english": "They should be on time.",
+    "words": [
+      "They",
+      "should",
+      "be",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "제시간에 있다",
+        "be on time"
+      ],
+      [
+        "약속 시간",
+        "time"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "be",
+      "on",
+      "time"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "They should bes on time.",
+      "statementForm": [
+        "They should be on time.",
+        "They should be on time"
+      ],
+      "fragmentForm": "They should on time."
+    }
+  },
+  {
+    "id": "m1_should_018",
+    "seedId": "should_018",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 학생은 질문을 더 많이 하는 것이 좋다.",
+    "english": "The student should ask more questions.",
+    "words": [
+      "The",
+      "student",
+      "should",
+      "ask",
+      "more",
+      "questions",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "질문하다",
+        "ask questions"
+      ],
+      [
+        "더 많이",
+        "more"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "ask",
+      "questions",
+      "more"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student should asks more questions.",
+      "statementForm": [
+        "The student should ask more questions.",
+        "The student should ask more questions"
+      ],
+      "fragmentForm": "The student should more questions."
+    }
+  },
+  {
+    "id": "m1_should_019",
+    "seedId": "should_019",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 팀은 서로 도와야 한다.",
+    "english": "The team should help each other.",
+    "words": [
+      "The",
+      "team",
+      "should",
+      "help",
+      "each",
+      "other",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "서로 돕다",
+        "help each other"
+      ],
+      [
+        "서로",
+        "each other"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "help",
+      "each",
+      "other"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team should helps each other.",
+      "statementForm": [
+        "The team should help each other.",
+        "The team should help each other"
+      ],
+      "fragmentForm": "The team should each other."
+    }
+  },
+  {
+    "id": "m1_should_020",
+    "seedId": "should_020",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 가족은 더 자주 이야기하는 것이 좋다.",
+    "english": "The family should talk more often.",
+    "words": [
+      "The",
+      "family",
+      "should",
+      "talk",
+      "more",
+      "often",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "이야기하다",
+        "talk"
+      ],
+      [
+        "더 자주",
+        "more often"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "talk",
+      "more",
+      "often"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The family should talks more often.",
+      "statementForm": [
+        "The family should talk more often.",
+        "The family should talk more often"
+      ],
+      "fragmentForm": "The family should more often."
+    }
+  },
+  {
+    "id": "m1_should_021",
+    "seedId": "should_021",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "나는 이 단어들을 다시 복습하는 것이 좋다.",
+    "english": "I should review these words again.",
+    "words": [
+      "I",
+      "should",
+      "review",
+      "these",
+      "words",
+      "again",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "복습하다",
+        "review"
+      ],
+      [
+        "이 단어들",
+        "these words"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "review",
+      "these",
+      "words"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I should reviews these words again.",
+      "statementForm": [
+        "I should review these words again.",
+        "I should review these words again"
+      ],
+      "fragmentForm": "I should these words again."
+    }
+  },
+  {
+    "id": "m1_should_022",
+    "seedId": "should_022",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "너는 더 조심스럽게 듣는 것이 좋다.",
+    "english": "You should listen more carefully.",
+    "words": [
+      "You",
+      "should",
+      "listen",
+      "more",
+      "carefully",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "듣다",
+        "listen"
+      ],
+      [
+        "더 조심스럽게",
+        "more carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "listen",
+      "more",
+      "carefully"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should listens more carefully.",
+      "statementForm": [
+        "You should listen more carefully.",
+        "You should listen more carefully"
+      ],
+      "fragmentForm": "You should more carefully."
+    }
+  },
+  {
+    "id": "m1_should_023",
+    "seedId": "should_023",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그는 너무 빨리 먹지 않는 것이 좋다.",
+    "english": "He should not eat too fast.",
+    "words": [
+      "He",
+      "should",
+      "not",
+      "eat",
+      "too",
+      "fast",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "먹다",
+        "eat"
+      ],
+      [
+        "너무 빨리",
+        "too fast"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "eat",
+      "too",
+      "fast"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He should not eats too fast.",
+      "statementForm": [
+        "He should not eat too fast.",
+        "He should not eat too fast"
+      ],
+      "fragmentForm": "He should not too fast."
+    }
+  },
+  {
+    "id": "m1_should_024",
+    "seedId": "should_024",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그녀는 자신의 방을 정리하는 것이 좋다.",
+    "english": "She should clean her room.",
+    "words": [
+      "She",
+      "should",
+      "clean",
+      "her",
+      "room",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "방을 청소하다",
+        "clean her room"
+      ],
+      [
+        "자신의 방",
+        "her room"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "clean",
+      "her",
+      "room"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She should cleans her room.",
+      "statementForm": [
+        "She should clean her room.",
+        "She should clean her room"
+      ],
+      "fragmentForm": "She should her room."
+    }
+  },
+  {
+    "id": "m1_should_025",
+    "seedId": "should_025",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "우리는 플라스틱을 덜 쓰는 것이 좋다.",
+    "english": "We should use less plastic.",
+    "words": [
+      "We",
+      "should",
+      "use",
+      "less",
+      "plastic",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "덜 쓰다",
+        "use less"
+      ],
+      [
+        "플라스틱",
+        "plastic"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "use",
+      "less",
+      "plastic"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We should uses less plastic.",
+      "statementForm": [
+        "We should use less plastic.",
+        "We should use less plastic"
+      ],
+      "fragmentForm": "We should less plastic."
+    }
+  },
+  {
+    "id": "m1_should_026",
+    "seedId": "should_026",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그들은 거짓말하지 않는 것이 좋다.",
+    "english": "They should not tell lies.",
+    "words": [
+      "They",
+      "should",
+      "not",
+      "tell",
+      "lies",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "거짓말하다",
+        "tell lies"
+      ],
+      [
+        "거짓말",
+        "lies"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "tell",
+      "lies"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They should not tells lies.",
+      "statementForm": [
+        "They should not tell lies.",
+        "They should not tell lies"
+      ],
+      "fragmentForm": "They should not lies."
+    }
+  },
+  {
+    "id": "m1_should_027",
+    "seedId": "should_027",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 아이는 채소를 더 먹는 것이 좋다.",
+    "english": "The child should eat more vegetables.",
+    "words": [
+      "The",
+      "child",
+      "should",
+      "eat",
+      "more",
+      "vegetables",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "채소를 먹다",
+        "eat vegetables"
+      ],
+      [
+        "더",
+        "more"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "eat",
+      "vegetables",
+      "more"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child should eats more vegetables.",
+      "statementForm": [
+        "The child should eat more vegetables.",
+        "The child should eat more vegetables"
+      ],
+      "fragmentForm": "The child should more vegetables."
+    }
+  },
+  {
+    "id": "m1_should_028",
+    "seedId": "should_028",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 운전자는 천천히 가는 것이 좋다.",
+    "english": "The driver should go slowly.",
+    "words": [
+      "The",
+      "driver",
+      "should",
+      "go",
+      "slowly",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "천천히 가다",
+        "go slowly"
+      ],
+      [
+        "천천히",
+        "slowly"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "go",
+      "slowly"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The driver should gos slowly.",
+      "statementForm": [
+        "The driver should go slowly.",
+        "The driver should go slowly"
+      ],
+      "fragmentForm": "The driver should slowly."
+    }
+  },
+  {
+    "id": "m1_should_029",
+    "seedId": "should_029",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "우리 반은 규칙을 함께 정하는 것이 좋다.",
+    "english": "Our class should make rules together.",
+    "words": [
+      "Our",
+      "class",
+      "should",
+      "make",
+      "rules",
+      "together",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "규칙을 만들다",
+        "make rules"
+      ],
+      [
+        "함께",
+        "together"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "make",
+      "rules",
+      "together"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our class should makes rules together.",
+      "statementForm": [
+        "Our class should make rules together.",
+        "Our class should make rules together"
+      ],
+      "fragmentForm": "Our class should rules together."
+    }
+  },
+  {
+    "id": "m1_should_030",
+    "seedId": "should_030",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 가게는 가격을 명확히 표시하는 것이 좋다.",
+    "english": "The store should show the prices clearly.",
+    "words": [
+      "The",
+      "store",
+      "should",
+      "show",
+      "the",
+      "prices",
+      "clearly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "보여주다",
+        "show the prices"
+      ],
+      [
+        "명확히",
+        "clearly"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "show",
+      "the",
+      "prices",
+      "clearly"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The store should shows the prices clearly.",
+      "statementForm": [
+        "The store should show the prices clearly.",
+        "The store should show the prices clearly"
+      ],
+      "fragmentForm": "The store should the prices clearly."
+    }
+  },
+  {
+    "id": "m1_should_031",
+    "seedId": "should_031",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "나는 매일 연습하는 것이 좋다.",
+    "english": "I should practice every day.",
+    "words": [
+      "I",
+      "should",
+      "practice",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "연습하다",
+        "practice"
+      ],
+      [
+        "매일",
+        "every day"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "practice",
+      "every",
+      "day"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I should practices every day.",
+      "statementForm": [
+        "I should practice every day.",
+        "I should practice every day"
+      ],
+      "fragmentForm": "I should every day."
+    }
+  },
+  {
+    "id": "m1_should_032",
+    "seedId": "should_032",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "너는 책을 더 많이 읽는 것이 좋다.",
+    "english": "You should read more books.",
+    "words": [
+      "You",
+      "should",
+      "read",
+      "more",
+      "books",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "읽다",
+        "read"
+      ],
+      [
+        "더 많은 책",
+        "more books"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "read",
+      "more",
+      "books"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should reads more books.",
+      "statementForm": [
+        "You should read more books.",
+        "You should read more books"
+      ],
+      "fragmentForm": "You should more books."
+    }
+  },
+  {
+    "id": "m1_should_033",
+    "seedId": "should_033",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그는 오늘 밤 일찍 자는 것이 좋다.",
+    "english": "He should sleep early tonight.",
+    "words": [
+      "He",
+      "should",
+      "sleep",
+      "early",
+      "tonight",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "자다",
+        "sleep"
+      ],
+      [
+        "오늘 밤 일찍",
+        "early tonight"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "sleep",
+      "early",
+      "tonight"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He should sleeps early tonight.",
+      "statementForm": [
+        "He should sleep early tonight.",
+        "He should sleep early tonight"
+      ],
+      "fragmentForm": "He should early tonight."
+    }
+  },
+  {
+    "id": "m1_should_034",
+    "seedId": "should_034",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그녀는 더 분명하게 말하는 것이 좋다.",
+    "english": "She should speak more clearly.",
+    "words": [
+      "She",
+      "should",
+      "speak",
+      "more",
+      "clearly",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "말하다",
+        "speak"
+      ],
+      [
+        "더 분명하게",
+        "more clearly"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "speak",
+      "more",
+      "clearly"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She should speaks more clearly.",
+      "statementForm": [
+        "She should speak more clearly.",
+        "She should speak more clearly"
+      ],
+      "fragmentForm": "She should more clearly."
+    }
+  },
+  {
+    "id": "m1_should_035",
+    "seedId": "should_035",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "우리는 답을 다시 확인하는 것이 좋다.",
+    "english": "We should check the answer again.",
+    "words": [
+      "We",
+      "should",
+      "check",
+      "the",
+      "answer",
+      "again",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "확인하다",
+        "check the answer"
+      ],
+      [
+        "다시",
+        "again"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "check",
+      "the",
+      "answer",
+      "again"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We should checks the answer again.",
+      "statementForm": [
+        "We should check the answer again.",
+        "We should check the answer again"
+      ],
+      "fragmentForm": "We should the answer again."
+    }
+  },
+  {
+    "id": "m1_should_036",
+    "seedId": "should_036",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그들은 돈을 아끼는 것이 좋다.",
+    "english": "They should save your money.",
+    "words": [
+      "They",
+      "should",
+      "save",
+      "your",
+      "money",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "아끼다",
+        "save"
+      ],
+      [
+        "돈",
+        "money"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "save",
+      "money"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "They should saves your money.",
+      "statementForm": [
+        "They should save your money.",
+        "They should save your money"
+      ],
+      "fragmentForm": "They should your money."
+    }
+  },
+  {
+    "id": "m1_should_037",
+    "seedId": "should_037",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 학생은 수업 중에 필기하는 것이 좋다.",
+    "english": "The student should take notes in class.",
+    "words": [
+      "The",
+      "student",
+      "should",
+      "take",
+      "notes",
+      "in",
+      "class",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "필기하다",
+        "take notes"
+      ],
+      [
+        "수업 중에",
+        "in class"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "take",
+      "notes",
+      "in",
+      "class"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student should takes notes in class.",
+      "statementForm": [
+        "The student should take notes in class.",
+        "The student should take notes in class"
+      ],
+      "fragmentForm": "The student should notes in class."
+    }
+  },
+  {
+    "id": "m1_should_038",
+    "seedId": "should_038",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 선생님은 도움을 요청하는 것이 좋다.",
+    "english": "The teacher should ask for help.",
+    "words": [
+      "The",
+      "teacher",
+      "should",
+      "ask",
+      "for",
+      "help",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "요청하다",
+        "ask for help"
+      ],
+      [
+        "도움",
+        "help"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "ask",
+      "for",
+      "help"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher should asks for help.",
+      "statementForm": [
+        "The teacher should ask for help.",
+        "The teacher should ask for help"
+      ],
+      "fragmentForm": "The teacher should for help."
+    }
+  },
+  {
+    "id": "m1_should_039",
+    "seedId": "should_039",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 팀은 친구들에게 정직한 것이 좋다.",
+    "english": "The team should be honest with your friends.",
+    "words": [
+      "The",
+      "team",
+      "should",
+      "be",
+      "honest",
+      "with",
+      "your",
+      "friends",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "정직하다",
+        "be honest"
+      ],
+      [
+        "친구들에게",
+        "with your friends"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "be",
+      "honest",
+      "with",
+      "your",
+      "friends"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team should bes honest with your friends.",
+      "statementForm": [
+        "The team should be honest with your friends.",
+        "The team should be honest with your friends"
+      ],
+      "fragmentForm": "The team should honest with your friends."
+    }
+  },
+  {
+    "id": "m1_should_040",
+    "seedId": "should_040",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "내 친구는 회의 전에 준비하는 것이 좋다.",
+    "english": "My friend should prepare before the meeting.",
+    "words": [
+      "My",
+      "friend",
+      "should",
+      "prepare",
+      "before",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "준비하다",
+        "prepare"
+      ],
+      [
+        "회의 전에",
+        "before the meeting"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "prepare",
+      "before",
+      "the",
+      "meeting"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend should prepares before the meeting.",
+      "statementForm": [
+        "My friend should prepare before the meeting.",
+        "My friend should prepare before the meeting"
+      ],
+      "fragmentForm": "My friend should before the meeting."
+    }
+  },
+  {
+    "id": "m1_should_041",
+    "seedId": "should_041",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "나는 내일 다시 시도하는 것이 좋다.",
+    "english": "I should try again tomorrow.",
+    "words": [
+      "I",
+      "should",
+      "try",
+      "again",
+      "tomorrow",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "시도하다",
+        "try again"
+      ],
+      [
+        "내일",
+        "tomorrow"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "try",
+      "again",
+      "tomorrow"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I should trys again tomorrow.",
+      "statementForm": [
+        "I should try again tomorrow.",
+        "I should try again tomorrow"
+      ],
+      "fragmentForm": "I should again tomorrow."
+    }
+  },
+  {
+    "id": "m1_should_042",
+    "seedId": "should_042",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "너는 책상을 깨끗하게 유지하는 것이 좋다.",
+    "english": "You should keep your desk clean.",
+    "words": [
+      "You",
+      "should",
+      "keep",
+      "your",
+      "desk",
+      "clean",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "유지하다",
+        "keep clean"
+      ],
+      [
+        "책상",
+        "your desk"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "keep",
+      "clean",
+      "your",
+      "desk"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should keeps your desk clean.",
+      "statementForm": [
+        "You should keep your desk clean.",
+        "You should keep your desk clean"
+      ],
+      "fragmentForm": "You should your desk clean."
+    }
+  },
+  {
+    "id": "m1_should_043",
+    "seedId": "should_043",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그는 조용한 곳에서 공부하는 것이 좋다.",
+    "english": "He should study in a quiet place.",
+    "words": [
+      "He",
+      "should",
+      "study",
+      "in",
+      "a",
+      "quiet",
+      "place",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "공부하다",
+        "study"
+      ],
+      [
+        "조용한 곳에서",
+        "in a quiet place"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "study",
+      "in",
+      "a",
+      "quiet",
+      "place"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He should studys in a quiet place.",
+      "statementForm": [
+        "He should study in a quiet place.",
+        "He should study in a quiet place"
+      ],
+      "fragmentForm": "He should in a quiet place."
+    }
+  },
+  {
+    "id": "m1_should_044",
+    "seedId": "should_044",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그녀는 학교까지 걸어가는 것이 좋다.",
+    "english": "She should walk to school.",
+    "words": [
+      "She",
+      "should",
+      "walk",
+      "to",
+      "school",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "걸어가다",
+        "walk"
+      ],
+      [
+        "학교까지",
+        "to school"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "walk",
+      "to",
+      "school"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She should walks to school.",
+      "statementForm": [
+        "She should walk to school.",
+        "She should walk to school"
+      ],
+      "fragmentForm": "She should to school."
+    }
+  },
+  {
+    "id": "m1_should_045",
+    "seedId": "should_045",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "우리는 따뜻한 물을 마시는 것이 좋다.",
+    "english": "We should drink warm water.",
+    "words": [
+      "We",
+      "should",
+      "drink",
+      "warm",
+      "water",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "마시다",
+        "drink"
+      ],
+      [
+        "따뜻한 물",
+        "warm water"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "drink",
+      "warm",
+      "water"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We should drinks warm water.",
+      "statementForm": [
+        "We should drink warm water.",
+        "We should drink warm water"
+      ],
+      "fragmentForm": "We should warm water."
+    }
+  },
+  {
+    "id": "m1_should_046",
+    "seedId": "should_046",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그들은 그 동아리에 가입하는 것이 좋다.",
+    "english": "They should join the club.",
+    "words": [
+      "They",
+      "should",
+      "join",
+      "the",
+      "club",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "가입하다",
+        "join"
+      ],
+      [
+        "동아리",
+        "the club"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "join",
+      "the",
+      "club"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They should joins the club.",
+      "statementForm": [
+        "They should join the club.",
+        "They should join the club"
+      ],
+      "fragmentForm": "They should the club."
+    }
+  },
+  {
+    "id": "m1_should_047",
+    "seedId": "should_047",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 학생은 먼저 계획을 쓰는 것이 좋다.",
+    "english": "The student should write your plan first.",
+    "words": [
+      "The",
+      "student",
+      "should",
+      "write",
+      "your",
+      "plan",
+      "first",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "쓰다",
+        "write"
+      ],
+      [
+        "먼저 계획",
+        "your plan first"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "write",
+      "your",
+      "plan",
+      "first"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student should writes your plan first.",
+      "statementForm": [
+        "The student should write your plan first.",
+        "The student should write your plan first"
+      ],
+      "fragmentForm": "The student should your plan first."
+    }
+  },
+  {
+    "id": "m1_should_048",
+    "seedId": "should_048",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 선생님은 생각을 나누는 것이 좋다.",
+    "english": "The teacher should share your idea.",
+    "words": [
+      "The",
+      "teacher",
+      "should",
+      "share",
+      "your",
+      "idea",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "나누다",
+        "share"
+      ],
+      [
+        "생각",
+        "your idea"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "share",
+      "your",
+      "idea"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher should shares your idea.",
+      "statementForm": [
+        "The teacher should share your idea.",
+        "The teacher should share your idea"
+      ],
+      "fragmentForm": "The teacher should your idea."
+    }
+  },
+  {
+    "id": "m1_should_049",
+    "seedId": "should_049",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 팀은 지도를 보는 것이 좋다.",
+    "english": "The team should look at the map.",
+    "words": [
+      "The",
+      "team",
+      "should",
+      "look",
+      "at",
+      "the",
+      "map",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "보다",
+        "look at"
+      ],
+      [
+        "지도",
+        "the map"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "look",
+      "at",
+      "the",
+      "map"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team should looks at the map.",
+      "statementForm": [
+        "The team should look at the map.",
+        "The team should look at the map"
+      ],
+      "fragmentForm": "The team should at the map."
+    }
+  },
+  {
+    "id": "m1_should_050",
+    "seedId": "should_050",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "내 친구는 부모님께 감사하는 것이 좋다.",
+    "english": "My friend should thank your parents.",
+    "words": [
+      "My",
+      "friend",
+      "should",
+      "thank",
+      "your",
+      "parents",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하는 것이 좋다",
+        "should"
+      ],
+      [
+        "감사하다",
+        "thank"
+      ],
+      [
+        "부모님",
+        "your parents"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "thank",
+      "your",
+      "parents"
+    ],
+    "blankTargets": [
+      "should"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend should thanks your parents.",
+      "statementForm": [
+        "My friend should thank your parents.",
+        "My friend should thank your parents"
+      ],
+      "fragmentForm": "My friend should your parents."
+    }
+  },
+  {
+    "id": "m1_should_051",
+    "seedId": "should_051",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "나는 아침을 거르지 않는 것이 좋다.",
+    "english": "I should not skip breakfast.",
+    "words": [
+      "I",
+      "should",
+      "not",
+      "skip",
+      "breakfast",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "거르다",
+        "skip"
+      ],
+      [
+        "아침",
+        "breakfast"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "skip",
+      "breakfast"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I should not skips breakfast.",
+      "statementForm": [
+        "I should not skip breakfast.",
+        "I should not skip breakfast"
+      ],
+      "fragmentForm": "I should not breakfast."
+    }
+  },
+  {
+    "id": "m1_should_052",
+    "seedId": "should_052",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "너는 TV를 너무 많이 보지 않는 것이 좋다.",
+    "english": "You should not watch too much TV.",
+    "words": [
+      "You",
+      "should",
+      "not",
+      "watch",
+      "too",
+      "much",
+      "TV",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "보다",
+        "watch"
+      ],
+      [
+        "너무 많은 TV",
+        "too much TV"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "watch",
+      "too",
+      "much",
+      "TV"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should not watchs too much TV.",
+      "statementForm": [
+        "You should not watch too much TV.",
+        "You should not watch too much TV"
+      ],
+      "fragmentForm": "You should not too much TV."
+    }
+  },
+  {
+    "id": "m1_should_053",
+    "seedId": "should_053",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그는 수업 중에 휴대전화를 쓰지 않는 것이 좋다.",
+    "english": "He should not use your phone in class.",
+    "words": [
+      "He",
+      "should",
+      "not",
+      "use",
+      "your",
+      "phone",
+      "in",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "사용하다",
+        "use"
+      ],
+      [
+        "수업 중에",
+        "in class"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "use",
+      "in",
+      "class"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He should not uses your phone in class.",
+      "statementForm": [
+        "He should not use your phone in class.",
+        "He should not use your phone in class"
+      ],
+      "fragmentForm": "He should not your phone in class."
+    }
+  },
+  {
+    "id": "m1_should_054",
+    "seedId": "should_054",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그녀는 설탕을 너무 많이 먹지 않는 것이 좋다.",
+    "english": "She should not eat too much sugar.",
+    "words": [
+      "She",
+      "should",
+      "not",
+      "eat",
+      "too",
+      "much",
+      "sugar",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "먹다",
+        "eat"
+      ],
+      [
+        "너무 많은 설탕",
+        "too much sugar"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "eat",
+      "too",
+      "much",
+      "sugar"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She should not eats too much sugar.",
+      "statementForm": [
+        "She should not eat too much sugar.",
+        "She should not eat too much sugar"
+      ],
+      "fragmentForm": "She should not too much sugar."
+    }
+  },
+  {
+    "id": "m1_should_055",
+    "seedId": "should_055",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "우리는 숙제를 잊지 않는 것이 좋다.",
+    "english": "We should not forget your homework.",
+    "words": [
+      "We",
+      "should",
+      "not",
+      "forget",
+      "your",
+      "homework",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "잊다",
+        "forget"
+      ],
+      [
+        "숙제",
+        "homework"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "forget",
+      "homework"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We should not forgets your homework.",
+      "statementForm": [
+        "We should not forget your homework.",
+        "We should not forget your homework"
+      ],
+      "fragmentForm": "We should not your homework."
+    }
+  },
+  {
+    "id": "m1_should_056",
+    "seedId": "should_056",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그들은 다시 늦지 않는 것이 좋다.",
+    "english": "They should not be late again.",
+    "words": [
+      "They",
+      "should",
+      "not",
+      "be",
+      "late",
+      "again",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "늦다",
+        "be late"
+      ],
+      [
+        "다시",
+        "again"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "be",
+      "late",
+      "again"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They should not bes late again.",
+      "statementForm": [
+        "They should not be late again.",
+        "They should not be late again"
+      ],
+      "fragmentForm": "They should not late again."
+    }
+  },
+  {
+    "id": "m1_should_057",
+    "seedId": "should_057",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 학생은 친구에게 소리치지 않는 것이 좋다.",
+    "english": "The student should not shout at your friend.",
+    "words": [
+      "The",
+      "student",
+      "should",
+      "not",
+      "shout",
+      "at",
+      "your",
+      "friend",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "소리치다",
+        "shout"
+      ],
+      [
+        "친구에게",
+        "at your friend"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "shout",
+      "at",
+      "your",
+      "friend"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student should not shouts at your friend.",
+      "statementForm": [
+        "The student should not shout at your friend.",
+        "The student should not shout at your friend"
+      ],
+      "fragmentForm": "The student should not at your friend."
+    }
+  },
+  {
+    "id": "m1_should_058",
+    "seedId": "should_058",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 선생님은 같은 실수를 하지 않는 것이 좋다.",
+    "english": "The teacher should not make the same mistake.",
+    "words": [
+      "The",
+      "teacher",
+      "should",
+      "not",
+      "make",
+      "the",
+      "same",
+      "mistake",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "실수하다",
+        "make a mistake"
+      ],
+      [
+        "같은",
+        "same"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "make",
+      "a",
+      "mistake",
+      "same"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher should not makes the same mistake.",
+      "statementForm": [
+        "The teacher should not make the same mistake.",
+        "The teacher should not make the same mistake"
+      ],
+      "fragmentForm": "The teacher should not the same mistake."
+    }
+  },
+  {
+    "id": "m1_should_059",
+    "seedId": "should_059",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 팀은 늦게까지 깨어 있지 않는 것이 좋다.",
+    "english": "The team should not stay up late.",
+    "words": [
+      "The",
+      "team",
+      "should",
+      "not",
+      "stay",
+      "up",
+      "late",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "깨어 있다",
+        "stay up"
+      ],
+      [
+        "늦게",
+        "late"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "stay",
+      "up",
+      "late"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team should not stays up late.",
+      "statementForm": [
+        "The team should not stay up late.",
+        "The team should not stay up late"
+      ],
+      "fragmentForm": "The team should not up late."
+    }
+  },
+  {
+    "id": "m1_should_060",
+    "seedId": "should_060",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "내 친구는 너무 빨리 포기하지 않는 것이 좋다.",
+    "english": "My friend should not give up too quickly.",
+    "words": [
+      "My",
+      "friend",
+      "should",
+      "not",
+      "give",
+      "up",
+      "too",
+      "quickly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "포기하다",
+        "give up"
+      ],
+      [
+        "너무 빨리",
+        "too quickly"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "give",
+      "up",
+      "too",
+      "quickly"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend should not gives up too quickly.",
+      "statementForm": [
+        "My friend should not give up too quickly.",
+        "My friend should not give up too quickly"
+      ],
+      "fragmentForm": "My friend should not up too quickly."
+    }
+  },
+  {
+    "id": "m1_should_061",
+    "seedId": "should_061",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "나는 아침을 거르지 않는 것이 좋다 오늘.",
+    "english": "I should not skip breakfast today.",
+    "words": [
+      "I",
+      "should",
+      "not",
+      "skip",
+      "breakfast",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "거르다",
+        "skip"
+      ],
+      [
+        "아침",
+        "breakfast today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "skip",
+      "breakfast",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I should not skips breakfast today.",
+      "statementForm": [
+        "I should not skip breakfast today.",
+        "I should not skip breakfast today"
+      ],
+      "fragmentForm": "I should not breakfast today."
+    }
+  },
+  {
+    "id": "m1_should_062",
+    "seedId": "should_062",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "너는 TV를 너무 많이 보지 않는 것이 좋다 오늘.",
+    "english": "You should not watch too much TV today.",
+    "words": [
+      "You",
+      "should",
+      "not",
+      "watch",
+      "too",
+      "much",
+      "TV",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "보다",
+        "watch"
+      ],
+      [
+        "너무 많은 TV",
+        "too much TV today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "watch",
+      "too",
+      "much",
+      "TV",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should not watchs too much TV today.",
+      "statementForm": [
+        "You should not watch too much TV today.",
+        "You should not watch too much TV today"
+      ],
+      "fragmentForm": "You should not too much TV today."
+    }
+  },
+  {
+    "id": "m1_should_063",
+    "seedId": "should_063",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그는 수업 중에 휴대전화를 쓰지 않는 것이 좋다 오늘.",
+    "english": "He should not use your phone in class today.",
+    "words": [
+      "He",
+      "should",
+      "not",
+      "use",
+      "your",
+      "phone",
+      "in",
+      "class",
+      "today",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "사용하다",
+        "use"
+      ],
+      [
+        "수업 중에",
+        "in class today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "use",
+      "in",
+      "class",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He should not uses your phone in class today.",
+      "statementForm": [
+        "He should not use your phone in class today.",
+        "He should not use your phone in class today"
+      ],
+      "fragmentForm": "He should not your phone in class today."
+    }
+  },
+  {
+    "id": "m1_should_064",
+    "seedId": "should_064",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그녀는 설탕을 너무 많이 먹지 않는 것이 좋다 오늘.",
+    "english": "She should not eat too much sugar today.",
+    "words": [
+      "She",
+      "should",
+      "not",
+      "eat",
+      "too",
+      "much",
+      "sugar",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "먹다",
+        "eat"
+      ],
+      [
+        "너무 많은 설탕",
+        "too much sugar today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "eat",
+      "too",
+      "much",
+      "sugar",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She should not eats too much sugar today.",
+      "statementForm": [
+        "She should not eat too much sugar today.",
+        "She should not eat too much sugar today"
+      ],
+      "fragmentForm": "She should not too much sugar today."
+    }
+  },
+  {
+    "id": "m1_should_065",
+    "seedId": "should_065",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "우리는 숙제를 잊지 않는 것이 좋다 오늘.",
+    "english": "We should not forget your homework today.",
+    "words": [
+      "We",
+      "should",
+      "not",
+      "forget",
+      "your",
+      "homework",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "잊다",
+        "forget"
+      ],
+      [
+        "숙제",
+        "homework today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "forget",
+      "homework",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We should not forgets your homework today.",
+      "statementForm": [
+        "We should not forget your homework today.",
+        "We should not forget your homework today"
+      ],
+      "fragmentForm": "We should not your homework today."
+    }
+  },
+  {
+    "id": "m1_should_066",
+    "seedId": "should_066",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그들은 다시 늦지 않는 것이 좋다 오늘.",
+    "english": "They should not be late again today.",
+    "words": [
+      "They",
+      "should",
+      "not",
+      "be",
+      "late",
+      "again",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "늦다",
+        "be late"
+      ],
+      [
+        "다시",
+        "again today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "be",
+      "late",
+      "again",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They should not bes late again today.",
+      "statementForm": [
+        "They should not be late again today.",
+        "They should not be late again today"
+      ],
+      "fragmentForm": "They should not late again today."
+    }
+  },
+  {
+    "id": "m1_should_067",
+    "seedId": "should_067",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 학생은 친구에게 소리치지 않는 것이 좋다 오늘.",
+    "english": "The student should not shout at your friend today.",
+    "words": [
+      "The",
+      "student",
+      "should",
+      "not",
+      "shout",
+      "at",
+      "your",
+      "friend",
+      "today",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "소리치다",
+        "shout"
+      ],
+      [
+        "친구에게",
+        "at your friend today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "shout",
+      "at",
+      "your",
+      "friend",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student should not shouts at your friend today.",
+      "statementForm": [
+        "The student should not shout at your friend today.",
+        "The student should not shout at your friend today"
+      ],
+      "fragmentForm": "The student should not at your friend today."
+    }
+  },
+  {
+    "id": "m1_should_068",
+    "seedId": "should_068",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 선생님은 같은 실수를 하지 않는 것이 좋다 오늘.",
+    "english": "The teacher should not make the same mistake today.",
+    "words": [
+      "The",
+      "teacher",
+      "should",
+      "not",
+      "make",
+      "the",
+      "same",
+      "mistake",
+      "today",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "실수하다",
+        "make a mistake"
+      ],
+      [
+        "같은",
+        "same today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "make",
+      "a",
+      "mistake",
+      "same",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher should not makes the same mistake today.",
+      "statementForm": [
+        "The teacher should not make the same mistake today.",
+        "The teacher should not make the same mistake today"
+      ],
+      "fragmentForm": "The teacher should not the same mistake today."
+    }
+  },
+  {
+    "id": "m1_should_069",
+    "seedId": "should_069",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "그 팀은 늦게까지 깨어 있지 않는 것이 좋다 오늘.",
+    "english": "The team should not stay up late today.",
+    "words": [
+      "The",
+      "team",
+      "should",
+      "not",
+      "stay",
+      "up",
+      "late",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "깨어 있다",
+        "stay up"
+      ],
+      [
+        "늦게",
+        "late today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "stay",
+      "up",
+      "late",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team should not stays up late today.",
+      "statementForm": [
+        "The team should not stay up late today.",
+        "The team should not stay up late today"
+      ],
+      "fragmentForm": "The team should not up late today."
+    }
+  },
+  {
+    "id": "m1_should_070",
+    "seedId": "should_070",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "should",
+    "chapterLabelKo": "조동사 should",
+    "korean": "내 친구는 너무 빨리 포기하지 않는 것이 좋다 오늘.",
+    "english": "My friend should not give up too quickly today.",
+    "words": [
+      "My",
+      "friend",
+      "should",
+      "not",
+      "give",
+      "up",
+      "too",
+      "quickly",
+      "today",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "should",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하지 않는 것이 좋다",
+        "should not"
+      ],
+      [
+        "포기하다",
+        "give up"
+      ],
+      [
+        "너무 빨리",
+        "too quickly today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should",
+      "not",
+      "give",
+      "up",
+      "too",
+      "quickly",
+      "today"
+    ],
+    "blankTargets": [
+      "should not"
+    ],
+    "tags": [
+      "should",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My friend should not gives up too quickly today.",
+      "statementForm": [
+        "My friend should not give up too quickly today.",
+        "My friend should not give up too quickly today"
+      ],
+      "fragmentForm": "My friend should not up too quickly today."
+    }
+  }
+]
