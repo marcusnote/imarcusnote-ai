@@ -125,6 +125,8 @@ const SENTENCE_BANK_FILE_MAP = {
 };
 
 const CHAPTER_ALIAS_PATTERNS = [
+  // S56: high-priority exact chapter names must be checked before modal keywords.
+  { key: "there_is_are", patterns: [/there\s+is\s*\(?\s*are\s*\)?/i, /there\s+is\s*\/?\s*are/i, /there is are/i, /there\s+is/i, /there\s+are/i, /there\s+is\s*\(\s*are\s*\)/i] },
   { key: "be_question", patterns: [/be동사\s*의문문/i, /be동사.*의문문/i, /be-?verb question/i, /am\/is\/are/i] },
   { key: "be_negative", patterns: [/be동사\s*부정문/i, /be동사.*부정문/i, /be-?verb negative/i] },
   { key: "be_verb", patterns: [/be동사(?!\s*(의문문|부정문))/i, /\bbe verb\b/i] },
@@ -511,7 +513,20 @@ function normalizeInput(body = {}) {
   const examType = sanitizeString(body.examType || body.exam || "");
   const count = sanitizeCount(body.count || body.itemCount || body.questionCount || 25);
   const gradeLabel = sanitizeString(body.gradeLabel || "") || inferGradeLabel(mergedText, level);
-  const grammarFocus = detectGrammarFocus(`${mergedText} ${topic}`);
+
+  // S56 emergency chapter-lock fix:
+  // Prefer the user-visible request/title over hidden or stale frontend topic values.
+  // This prevents cases like visible "there is(are)" being overridden by a stale hidden "must" topic.
+  const primaryChapterText = [
+    userPrompt,
+    sanitizeString(body.worksheetTitle || body.title || ""),
+    sanitizeString(body.rawBody?.worksheetTitle || body.rawBody?.title || ""),
+  ].filter(Boolean).join("\n");
+  const primaryGrammarFocus = detectGrammarFocus(primaryChapterText);
+  const mergedGrammarFocus = detectGrammarFocus(`${mergedText} ${topic}`);
+  const grammarFocus = primaryGrammarFocus.chapterKey && primaryGrammarFocus.chapterKey !== "general"
+    ? primaryGrammarFocus
+    : mergedGrammarFocus;
 
   const requestedWorkbookType = sanitizeString(
     body.workbookType || body.worksheetType || body.rawBody?.workbookType || ""
