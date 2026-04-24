@@ -1,0 +1,4230 @@
+[
+  {
+    "id": "m1_must_001",
+    "seedId": "must_001",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "나는 지금 바로 떠나야 한다.",
+    "english": "I must leave right now.",
+    "words": [
+      "I",
+      "must",
+      "leave",
+      "right",
+      "now",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "떠나다",
+        "leave"
+      ],
+      [
+        "지금 바로",
+        "right now"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "leave",
+      "right",
+      "now"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I must to leave right now.",
+      "statementForm": [
+        "I must leave right now.",
+        "I must leave right now"
+      ],
+      "fragmentForm": "I must right now."
+    }
+  },
+  {
+    "id": "m1_must_002",
+    "seedId": "must_002",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "너는 이 문을 잠가야 한다.",
+    "english": "You must lock this door.",
+    "words": [
+      "You",
+      "must",
+      "lock",
+      "this",
+      "door",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "잠그다",
+        "lock"
+      ],
+      [
+        "이 문",
+        "this door"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "lock",
+      "this",
+      "door"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must to lock this door.",
+      "statementForm": [
+        "You must lock this door.",
+        "You must lock this door"
+      ],
+      "fragmentForm": "You must this door."
+    }
+  },
+  {
+    "id": "m1_must_003",
+    "seedId": "must_003",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그는 진실을 말해야 한다.",
+    "english": "He must tell the truth.",
+    "words": [
+      "He",
+      "must",
+      "tell",
+      "the",
+      "truth",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "진실을 말하다",
+        "tell the truth"
+      ],
+      [
+        "진실",
+        "truth"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "tell",
+      "the",
+      "truth"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He must to tell the truth.",
+      "statementForm": [
+        "He must tell the truth.",
+        "He must tell the truth"
+      ],
+      "fragmentForm": "He must the truth."
+    }
+  },
+  {
+    "id": "m1_must_004",
+    "seedId": "must_004",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그녀는 약속을 지켜야 한다.",
+    "english": "She must keep her promise.",
+    "words": [
+      "She",
+      "must",
+      "keep",
+      "her",
+      "promise",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "약속을 지키다",
+        "keep her promise"
+      ],
+      [
+        "약속",
+        "promise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "keep",
+      "her",
+      "promise"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She must to keep her promise.",
+      "statementForm": [
+        "She must keep her promise.",
+        "She must keep her promise"
+      ],
+      "fragmentForm": "She must her promise."
+    }
+  },
+  {
+    "id": "m1_must_005",
+    "seedId": "must_005",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "우리는 교통 신호를 지켜야 한다.",
+    "english": "We must follow traffic lights.",
+    "words": [
+      "We",
+      "must",
+      "follow",
+      "traffic",
+      "lights",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "교통 신호를 따르다",
+        "follow traffic lights"
+      ],
+      [
+        "교통 신호",
+        "traffic lights"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "follow",
+      "traffic",
+      "lights"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We must to follow traffic lights.",
+      "statementForm": [
+        "We must follow traffic lights.",
+        "We must follow traffic lights"
+      ],
+      "fragmentForm": "We must traffic lights."
+    }
+  },
+  {
+    "id": "m1_must_006",
+    "seedId": "must_006",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그들은 여기에 쓰레기를 버리면 안 된다.",
+    "english": "They must not throw trash here.",
+    "words": [
+      "They",
+      "must",
+      "not",
+      "throw",
+      "trash",
+      "here",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "쓰레기를 버리다",
+        "throw trash"
+      ],
+      [
+        "여기에",
+        "here"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "throw",
+      "trash",
+      "here"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They must not throws trash here.",
+      "statementForm": [
+        "They must not throw trash here.",
+        "They must not throw trash here"
+      ],
+      "fragmentForm": "They must not trash here."
+    }
+  },
+  {
+    "id": "m1_must_007",
+    "seedId": "must_007",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 소년은 길에서 뛰면 안 된다.",
+    "english": "The boy must not run in the street.",
+    "words": [
+      "The",
+      "boy",
+      "must",
+      "not",
+      "run",
+      "in",
+      "the",
+      "street",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "뛰다",
+        "run"
+      ],
+      [
+        "길에서",
+        "in the street"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "run",
+      "in",
+      "the",
+      "street"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy must not runs in the street.",
+      "statementForm": [
+        "The boy must not run in the street.",
+        "The boy must not run in the street"
+      ],
+      "fragmentForm": "The boy must not in the street."
+    }
+  },
+  {
+    "id": "m1_must_008",
+    "seedId": "must_008",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 소녀는 박물관에서 사진을 찍으면 안 된다.",
+    "english": "The girl must not take pictures in the museum.",
+    "words": [
+      "The",
+      "girl",
+      "must",
+      "not",
+      "take",
+      "pictures",
+      "in",
+      "the",
+      "museum",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "사진을 찍다",
+        "take pictures"
+      ],
+      [
+        "박물관에서",
+        "in the museum"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "take",
+      "pictures",
+      "in",
+      "the",
+      "museum"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl must not takes pictures in the museum.",
+      "statementForm": [
+        "The girl must not take pictures in the museum.",
+        "The girl must not take pictures in the museum"
+      ],
+      "fragmentForm": "The girl must not pictures in the museum."
+    }
+  },
+  {
+    "id": "m1_must_009",
+    "seedId": "must_009",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "아빠는 안전모를 써야 한다.",
+    "english": "My dad must wear a helmet.",
+    "words": [
+      "My",
+      "dad",
+      "must",
+      "wear",
+      "a",
+      "helmet",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "안전모를 쓰다",
+        "wear a helmet"
+      ],
+      [
+        "안전모",
+        "helmet"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "wear",
+      "a",
+      "helmet"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "My dad must to wear a helmet.",
+      "statementForm": [
+        "My dad must wear a helmet.",
+        "My dad must wear a helmet"
+      ],
+      "fragmentForm": "My dad must a helmet."
+    }
+  },
+  {
+    "id": "m1_must_010",
+    "seedId": "must_010",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "엄마는 중요한 이메일에 답장해야 한다.",
+    "english": "My mom must reply to the important email.",
+    "words": [
+      "My",
+      "mom",
+      "must",
+      "reply",
+      "to",
+      "the",
+      "important",
+      "email",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "답장하다",
+        "reply to"
+      ],
+      [
+        "중요한 이메일",
+        "important email"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "reply",
+      "to",
+      "important",
+      "email"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mom must to reply to the important email.",
+      "statementForm": [
+        "My mom must reply to the important email.",
+        "My mom must reply to the important email"
+      ],
+      "fragmentForm": "My mom must to the important email."
+    }
+  },
+  {
+    "id": "m1_must_011",
+    "seedId": "must_011",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "학생들은 시험 중에 말하면 안 된다.",
+    "english": "The students must not talk during the test.",
+    "words": [
+      "The",
+      "students",
+      "must",
+      "not",
+      "talk",
+      "during",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "말하다",
+        "talk"
+      ],
+      [
+        "시험 중에",
+        "during the test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "talk",
+      "during",
+      "the",
+      "test"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students must not talks during the test.",
+      "statementForm": [
+        "The students must not talk during the test.",
+        "The students must not talk during the test"
+      ],
+      "fragmentForm": "The students must not during the test."
+    }
+  },
+  {
+    "id": "m1_must_012",
+    "seedId": "must_012",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "나는 이 일을 오늘 끝내야 한다.",
+    "english": "I must finish this work today.",
+    "words": [
+      "I",
+      "must",
+      "finish",
+      "this",
+      "work",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "끝내다",
+        "finish this work"
+      ],
+      [
+        "오늘",
+        "today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "finish",
+      "this",
+      "work",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I must to finish this work today.",
+      "statementForm": [
+        "I must finish this work today.",
+        "I must finish this work today"
+      ],
+      "fragmentForm": "I must this work today."
+    }
+  },
+  {
+    "id": "m1_must_013",
+    "seedId": "must_013",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "너는 이 비밀번호를 다른 사람에게 말하면 안 된다.",
+    "english": "You must not tell this password to others.",
+    "words": [
+      "You",
+      "must",
+      "not",
+      "tell",
+      "this",
+      "password",
+      "to",
+      "others",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "말하다",
+        "tell"
+      ],
+      [
+        "비밀번호",
+        "this password"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "tell",
+      "this",
+      "password"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must not tells this password to others.",
+      "statementForm": [
+        "You must not tell this password to others.",
+        "You must not tell this password to others"
+      ],
+      "fragmentForm": "You must not this password to others."
+    }
+  },
+  {
+    "id": "m1_must_014",
+    "seedId": "must_014",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그는 규칙을 기억해야 한다.",
+    "english": "He must remember the rules.",
+    "words": [
+      "He",
+      "must",
+      "remember",
+      "the",
+      "rules",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "기억하다",
+        "remember"
+      ],
+      [
+        "규칙",
+        "the rules"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "remember",
+      "the",
+      "rules"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He must to remember the rules.",
+      "statementForm": [
+        "He must remember the rules.",
+        "He must remember the rules"
+      ],
+      "fragmentForm": "He must the rules."
+    }
+  },
+  {
+    "id": "m1_must_015",
+    "seedId": "must_015",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그녀는 지금 의사에게 가야 한다.",
+    "english": "She must see a doctor now.",
+    "words": [
+      "She",
+      "must",
+      "see",
+      "a",
+      "doctor",
+      "now",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "진찰받다",
+        "see a doctor"
+      ],
+      [
+        "지금",
+        "now"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "see",
+      "a",
+      "doctor",
+      "now"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She must to see a doctor now.",
+      "statementForm": [
+        "She must see a doctor now.",
+        "She must see a doctor now"
+      ],
+      "fragmentForm": "She must a doctor now."
+    }
+  },
+  {
+    "id": "m1_must_016",
+    "seedId": "must_016",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "우리는 이 문제를 해결해야 한다.",
+    "english": "We must solve this problem.",
+    "words": [
+      "We",
+      "must",
+      "solve",
+      "this",
+      "problem",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "해결하다",
+        "solve"
+      ],
+      [
+        "이 문제",
+        "this problem"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "solve",
+      "this",
+      "problem"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We must to solve this problem.",
+      "statementForm": [
+        "We must solve this problem.",
+        "We must solve this problem"
+      ],
+      "fragmentForm": "We must this problem."
+    }
+  },
+  {
+    "id": "m1_must_017",
+    "seedId": "must_017",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그들은 안전벨트를 매야 한다.",
+    "english": "They must wear seat belts.",
+    "words": [
+      "They",
+      "must",
+      "wear",
+      "seat",
+      "belts",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "매다",
+        "wear"
+      ],
+      [
+        "안전벨트",
+        "seat belts"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "wear",
+      "seat",
+      "belts"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "They must to wear seat belts.",
+      "statementForm": [
+        "They must wear seat belts.",
+        "They must wear seat belts"
+      ],
+      "fragmentForm": "They must seat belts."
+    }
+  },
+  {
+    "id": "m1_must_018",
+    "seedId": "must_018",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 아이는 뜨거운 물을 만지면 안 된다.",
+    "english": "The child must not touch hot water.",
+    "words": [
+      "The",
+      "child",
+      "must",
+      "not",
+      "touch",
+      "hot",
+      "water",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "만지다",
+        "touch"
+      ],
+      [
+        "뜨거운 물",
+        "hot water"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "touch",
+      "hot",
+      "water"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child must not touchs hot water.",
+      "statementForm": [
+        "The child must not touch hot water.",
+        "The child must not touch hot water"
+      ],
+      "fragmentForm": "The child must not hot water."
+    }
+  },
+  {
+    "id": "m1_must_019",
+    "seedId": "must_019",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 학생은 답을 베끼면 안 된다.",
+    "english": "The student must not copy the answer.",
+    "words": [
+      "The",
+      "student",
+      "must",
+      "not",
+      "copy",
+      "the",
+      "answer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "베끼다",
+        "copy"
+      ],
+      [
+        "답",
+        "the answer"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "copy",
+      "the",
+      "answer"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student must not copys the answer.",
+      "statementForm": [
+        "The student must not copy the answer.",
+        "The student must not copy the answer"
+      ],
+      "fragmentForm": "The student must not the answer."
+    }
+  },
+  {
+    "id": "m1_must_020",
+    "seedId": "must_020",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 운전자는 빨간불에 멈춰야 한다.",
+    "english": "The driver must stop at the red light.",
+    "words": [
+      "The",
+      "driver",
+      "must",
+      "stop",
+      "at",
+      "the",
+      "red",
+      "light",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "멈추다",
+        "stop"
+      ],
+      [
+        "빨간불에",
+        "at the red light"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "stop",
+      "at",
+      "the",
+      "red",
+      "light"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The driver must to stop at the red light.",
+      "statementForm": [
+        "The driver must stop at the red light.",
+        "The driver must stop at the red light"
+      ],
+      "fragmentForm": "The driver must at the red light."
+    }
+  },
+  {
+    "id": "m1_must_021",
+    "seedId": "must_021",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "나는 네 말을 꼭 들어야 한다.",
+    "english": "I must listen to you.",
+    "words": [
+      "I",
+      "must",
+      "listen",
+      "to",
+      "you",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "듣다",
+        "listen to you"
+      ],
+      [
+        "너에게",
+        "you"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "listen",
+      "to",
+      "you"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I must to listen to you.",
+      "statementForm": [
+        "I must listen to you.",
+        "I must listen to you"
+      ],
+      "fragmentForm": "I must to you."
+    }
+  },
+  {
+    "id": "m1_must_022",
+    "seedId": "must_022",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "너는 이 사실을 받아들여야 한다.",
+    "english": "You must accept this fact.",
+    "words": [
+      "You",
+      "must",
+      "accept",
+      "this",
+      "fact",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "받아들이다",
+        "accept"
+      ],
+      [
+        "이 사실",
+        "this fact"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "accept",
+      "this",
+      "fact"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must to accept this fact.",
+      "statementForm": [
+        "You must accept this fact.",
+        "You must accept this fact"
+      ],
+      "fragmentForm": "You must this fact."
+    }
+  },
+  {
+    "id": "m1_must_023",
+    "seedId": "must_023",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그는 늦기 전에 출발해야 한다.",
+    "english": "He must start before it is too late.",
+    "words": [
+      "He",
+      "must",
+      "start",
+      "before",
+      "it",
+      "is",
+      "too",
+      "late",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "출발하다",
+        "start"
+      ],
+      [
+        "늦기 전에",
+        "before it is too late"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "start",
+      "before",
+      "it",
+      "is",
+      "too",
+      "late"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He must to start before it is too late.",
+      "statementForm": [
+        "He must start before it is too late.",
+        "He must start before it is too late"
+      ],
+      "fragmentForm": "He must before it is too late."
+    }
+  },
+  {
+    "id": "m1_must_024",
+    "seedId": "must_024",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그녀는 불을 꺼야 한다.",
+    "english": "She must turn off the light.",
+    "words": [
+      "She",
+      "must",
+      "turn",
+      "off",
+      "the",
+      "light",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "불을 끄다",
+        "turn off the light"
+      ],
+      [
+        "불",
+        "the light"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "turn",
+      "off",
+      "the",
+      "light"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She must to turn off the light.",
+      "statementForm": [
+        "She must turn off the light.",
+        "She must turn off the light"
+      ],
+      "fragmentForm": "She must off the light."
+    }
+  },
+  {
+    "id": "m1_must_025",
+    "seedId": "must_025",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "우리는 자연을 보호해야 한다.",
+    "english": "We must protect nature.",
+    "words": [
+      "We",
+      "must",
+      "protect",
+      "nature",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "보호하다",
+        "protect"
+      ],
+      [
+        "자연",
+        "nature"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "protect",
+      "nature"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We must to protect nature.",
+      "statementForm": [
+        "We must protect nature.",
+        "We must protect nature"
+      ],
+      "fragmentForm": "We must nature."
+    }
+  },
+  {
+    "id": "m1_must_026",
+    "seedId": "must_026",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그들은 소음을 내면 안 된다.",
+    "english": "They must not make noise.",
+    "words": [
+      "They",
+      "must",
+      "not",
+      "make",
+      "noise",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "소음을 내다",
+        "make noise"
+      ],
+      [
+        "소음",
+        "noise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "make",
+      "noise"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They must not makes noise.",
+      "statementForm": [
+        "They must not make noise.",
+        "They must not make noise"
+      ],
+      "fragmentForm": "They must not noise."
+    }
+  },
+  {
+    "id": "m1_must_027",
+    "seedId": "must_027",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 남자는 여기에서 담배를 피우면 안 된다.",
+    "english": "The man must not smoke here.",
+    "words": [
+      "The",
+      "man",
+      "must",
+      "not",
+      "smoke",
+      "here",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "담배를 피우다",
+        "smoke"
+      ],
+      [
+        "여기에서",
+        "here"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "smoke",
+      "here"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The man must not smokes here.",
+      "statementForm": [
+        "The man must not smoke here.",
+        "The man must not smoke here"
+      ],
+      "fragmentForm": "The man must not here."
+    }
+  },
+  {
+    "id": "m1_must_028",
+    "seedId": "must_028",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 여자는 기차 시간을 확인해야 한다.",
+    "english": "The woman must check the train time.",
+    "words": [
+      "The",
+      "woman",
+      "must",
+      "check",
+      "the",
+      "train",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "확인하다",
+        "check"
+      ],
+      [
+        "기차 시간",
+        "train time"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "check",
+      "train",
+      "time"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The woman must to check the train time.",
+      "statementForm": [
+        "The woman must check the train time.",
+        "The woman must check the train time"
+      ],
+      "fragmentForm": "The woman must the train time."
+    }
+  },
+  {
+    "id": "m1_must_029",
+    "seedId": "must_029",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "우리 팀은 마지막까지 집중해야 한다.",
+    "english": "Our team must focus until the end.",
+    "words": [
+      "Our",
+      "team",
+      "must",
+      "focus",
+      "until",
+      "the",
+      "end",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "집중하다",
+        "focus"
+      ],
+      [
+        "마지막까지",
+        "until the end"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "focus",
+      "until",
+      "the",
+      "end"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our team must to focus until the end.",
+      "statementForm": [
+        "Our team must focus until the end.",
+        "Our team must focus until the end"
+      ],
+      "fragmentForm": "Our team must until the end."
+    }
+  },
+  {
+    "id": "m1_must_030",
+    "seedId": "must_030",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 회사는 고객 정보를 보호해야 한다.",
+    "english": "The company must protect customer information.",
+    "words": [
+      "The",
+      "company",
+      "must",
+      "protect",
+      "customer",
+      "information",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "보호하다",
+        "protect"
+      ],
+      [
+        "고객 정보",
+        "customer information"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "protect",
+      "customer",
+      "information"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The company must to protect customer information.",
+      "statementForm": [
+        "The company must protect customer information.",
+        "The company must protect customer information"
+      ],
+      "fragmentForm": "The company must customer information."
+    }
+  },
+  {
+    "id": "m1_must_031",
+    "seedId": "must_031",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "나는 물을 아껴야 한다.",
+    "english": "I must save water.",
+    "words": [
+      "I",
+      "must",
+      "save",
+      "water",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "물을 아끼다",
+        "save water"
+      ],
+      [
+        "물",
+        "water"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "save",
+      "water"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I must to save water.",
+      "statementForm": [
+        "I must save water.",
+        "I must save water"
+      ],
+      "fragmentForm": "I must water."
+    }
+  },
+  {
+    "id": "m1_must_032",
+    "seedId": "must_032",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "너는 손을 씻어야 한다.",
+    "english": "You must wash your hands.",
+    "words": [
+      "You",
+      "must",
+      "wash",
+      "your",
+      "hands",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "손을 씻다",
+        "wash your hands"
+      ],
+      [
+        "손",
+        "hands"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "wash",
+      "your",
+      "hands"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must to wash your hands.",
+      "statementForm": [
+        "You must wash your hands.",
+        "You must wash your hands"
+      ],
+      "fragmentForm": "You must your hands."
+    }
+  },
+  {
+    "id": "m1_must_033",
+    "seedId": "must_033",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그는 다른 사람들을 존중해야 한다.",
+    "english": "He must respect other people.",
+    "words": [
+      "He",
+      "must",
+      "respect",
+      "other",
+      "people",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "존중하다",
+        "respect other people"
+      ],
+      [
+        "다른 사람들",
+        "other people"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "respect",
+      "other",
+      "people"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He must to respect other people.",
+      "statementForm": [
+        "He must respect other people.",
+        "He must respect other people"
+      ],
+      "fragmentForm": "He must other people."
+    }
+  },
+  {
+    "id": "m1_must_034",
+    "seedId": "must_034",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그녀는 교실을 깨끗하게 유지해야 한다.",
+    "english": "She must keep the classroom clean.",
+    "words": [
+      "She",
+      "must",
+      "keep",
+      "the",
+      "classroom",
+      "clean",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "유지하다",
+        "keep the classroom clean"
+      ],
+      [
+        "교실",
+        "classroom"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "keep",
+      "the",
+      "classroom",
+      "clean"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She must to keep the classroom clean.",
+      "statementForm": [
+        "She must keep the classroom clean.",
+        "She must keep the classroom clean"
+      ],
+      "fragmentForm": "She must the classroom clean."
+    }
+  },
+  {
+    "id": "m1_must_035",
+    "seedId": "must_035",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "우리는 학생증을 가져와야 한다.",
+    "english": "We must bring your student card.",
+    "words": [
+      "We",
+      "must",
+      "bring",
+      "your",
+      "student",
+      "card",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "가져오다",
+        "bring your student card"
+      ],
+      [
+        "학생증",
+        "student card"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "bring",
+      "your",
+      "student",
+      "card"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "We must to bring your student card.",
+      "statementForm": [
+        "We must bring your student card.",
+        "We must bring your student card"
+      ],
+      "fragmentForm": "We must your student card."
+    }
+  },
+  {
+    "id": "m1_must_036",
+    "seedId": "must_036",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그들은 주소를 확인해야 한다.",
+    "english": "They must check the address.",
+    "words": [
+      "They",
+      "must",
+      "check",
+      "the",
+      "address",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "확인하다",
+        "check the address"
+      ],
+      [
+        "주소",
+        "address"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "check",
+      "the",
+      "address"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "They must to check the address.",
+      "statementForm": [
+        "They must check the address.",
+        "They must check the address"
+      ],
+      "fragmentForm": "They must the address."
+    }
+  },
+  {
+    "id": "m1_must_037",
+    "seedId": "must_037",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 학생은 양식을 끝내야 한다.",
+    "english": "The student must finish the form.",
+    "words": [
+      "The",
+      "student",
+      "must",
+      "finish",
+      "the",
+      "form",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "끝내다",
+        "finish the form"
+      ],
+      [
+        "양식",
+        "form"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "finish",
+      "the",
+      "form"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student must to finish the form.",
+      "statementForm": [
+        "The student must finish the form.",
+        "The student must finish the form"
+      ],
+      "fragmentForm": "The student must the form."
+    }
+  },
+  {
+    "id": "m1_must_038",
+    "seedId": "must_038",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 선생님은 정직하게 대답해야 한다.",
+    "english": "The teacher must answer honestly.",
+    "words": [
+      "The",
+      "teacher",
+      "must",
+      "answer",
+      "honestly",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "대답하다",
+        "answer honestly"
+      ],
+      [
+        "정직하게",
+        "honestly"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "answer",
+      "honestly"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher must to answer honestly.",
+      "statementForm": [
+        "The teacher must answer honestly.",
+        "The teacher must answer honestly"
+      ],
+      "fragmentForm": "The teacher must honestly."
+    }
+  },
+  {
+    "id": "m1_must_039",
+    "seedId": "must_039",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 팀은 시험을 준비해야 한다.",
+    "english": "The team must prepare for the test.",
+    "words": [
+      "The",
+      "team",
+      "must",
+      "prepare",
+      "for",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "준비하다",
+        "prepare for the test"
+      ],
+      [
+        "시험",
+        "test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "prepare",
+      "for",
+      "the",
+      "test"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team must to prepare for the test.",
+      "statementForm": [
+        "The team must prepare for the test.",
+        "The team must prepare for the test"
+      ],
+      "fragmentForm": "The team must for the test."
+    }
+  },
+  {
+    "id": "m1_must_040",
+    "seedId": "must_040",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 가족은 온라인에서 조심해야 한다.",
+    "english": "The family must be careful online.",
+    "words": [
+      "The",
+      "family",
+      "must",
+      "be",
+      "careful",
+      "online",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "조심하다",
+        "be careful"
+      ],
+      [
+        "온라인에서",
+        "online"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "be",
+      "careful",
+      "online"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The family must to be careful online.",
+      "statementForm": [
+        "The family must be careful online.",
+        "The family must be careful online"
+      ],
+      "fragmentForm": "The family must careful online."
+    }
+  },
+  {
+    "id": "m1_must_041",
+    "seedId": "must_041",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "나는 물을 아껴야 한다 오늘.",
+    "english": "I must save water today.",
+    "words": [
+      "I",
+      "must",
+      "save",
+      "water",
+      "today",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "물을 아끼다",
+        "save water"
+      ],
+      [
+        "물/오늘",
+        "water today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "save",
+      "water",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I must to save water today.",
+      "statementForm": [
+        "I must save water today.",
+        "I must save water today"
+      ],
+      "fragmentForm": "I must water today."
+    }
+  },
+  {
+    "id": "m1_must_042",
+    "seedId": "must_042",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "너는 손을 씻어야 한다 오늘.",
+    "english": "You must wash your hands today.",
+    "words": [
+      "You",
+      "must",
+      "wash",
+      "your",
+      "hands",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "손을 씻다",
+        "wash your hands"
+      ],
+      [
+        "손/오늘",
+        "hands today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "wash",
+      "your",
+      "hands",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must to wash your hands today.",
+      "statementForm": [
+        "You must wash your hands today.",
+        "You must wash your hands today"
+      ],
+      "fragmentForm": "You must your hands today."
+    }
+  },
+  {
+    "id": "m1_must_043",
+    "seedId": "must_043",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그는 다른 사람들을 존중해야 한다 오늘.",
+    "english": "He must respect other people today.",
+    "words": [
+      "He",
+      "must",
+      "respect",
+      "other",
+      "people",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "존중하다",
+        "respect other people"
+      ],
+      [
+        "다른 사람들/오늘",
+        "other people today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "respect",
+      "other",
+      "people",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He must to respect other people today.",
+      "statementForm": [
+        "He must respect other people today.",
+        "He must respect other people today"
+      ],
+      "fragmentForm": "He must other people today."
+    }
+  },
+  {
+    "id": "m1_must_044",
+    "seedId": "must_044",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그녀는 교실을 깨끗하게 유지해야 한다 오늘.",
+    "english": "She must keep the classroom clean today.",
+    "words": [
+      "She",
+      "must",
+      "keep",
+      "the",
+      "classroom",
+      "clean",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "유지하다",
+        "keep the classroom clean"
+      ],
+      [
+        "교실/오늘",
+        "classroom today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "keep",
+      "the",
+      "classroom",
+      "clean",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She must to keep the classroom clean today.",
+      "statementForm": [
+        "She must keep the classroom clean today.",
+        "She must keep the classroom clean today"
+      ],
+      "fragmentForm": "She must the classroom clean today."
+    }
+  },
+  {
+    "id": "m1_must_045",
+    "seedId": "must_045",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "우리는 학생증을 가져와야 한다 오늘.",
+    "english": "We must bring your student card today.",
+    "words": [
+      "We",
+      "must",
+      "bring",
+      "your",
+      "student",
+      "card",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "가져오다",
+        "bring your student card"
+      ],
+      [
+        "학생증/오늘",
+        "student card today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "bring",
+      "your",
+      "student",
+      "card",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We must to bring your student card today.",
+      "statementForm": [
+        "We must bring your student card today.",
+        "We must bring your student card today"
+      ],
+      "fragmentForm": "We must your student card today."
+    }
+  },
+  {
+    "id": "m1_must_046",
+    "seedId": "must_046",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그들은 주소를 확인해야 한다 오늘.",
+    "english": "They must check the address today.",
+    "words": [
+      "They",
+      "must",
+      "check",
+      "the",
+      "address",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "확인하다",
+        "check the address"
+      ],
+      [
+        "주소/오늘",
+        "address today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "check",
+      "the",
+      "address",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They must to check the address today.",
+      "statementForm": [
+        "They must check the address today.",
+        "They must check the address today"
+      ],
+      "fragmentForm": "They must the address today."
+    }
+  },
+  {
+    "id": "m1_must_047",
+    "seedId": "must_047",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 학생은 양식을 끝내야 한다 오늘.",
+    "english": "The student must finish the form today.",
+    "words": [
+      "The",
+      "student",
+      "must",
+      "finish",
+      "the",
+      "form",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "끝내다",
+        "finish the form"
+      ],
+      [
+        "양식/오늘",
+        "form today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "finish",
+      "the",
+      "form",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student must to finish the form today.",
+      "statementForm": [
+        "The student must finish the form today.",
+        "The student must finish the form today"
+      ],
+      "fragmentForm": "The student must the form today."
+    }
+  },
+  {
+    "id": "m1_must_048",
+    "seedId": "must_048",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 선생님은 정직하게 대답해야 한다 오늘.",
+    "english": "The teacher must answer honestly today.",
+    "words": [
+      "The",
+      "teacher",
+      "must",
+      "answer",
+      "honestly",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "대답하다",
+        "answer honestly"
+      ],
+      [
+        "정직하게/오늘",
+        "honestly today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "answer",
+      "honestly",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher must to answer honestly today.",
+      "statementForm": [
+        "The teacher must answer honestly today.",
+        "The teacher must answer honestly today"
+      ],
+      "fragmentForm": "The teacher must honestly today."
+    }
+  },
+  {
+    "id": "m1_must_049",
+    "seedId": "must_049",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 팀은 시험을 준비해야 한다 오늘.",
+    "english": "The team must prepare for the test today.",
+    "words": [
+      "The",
+      "team",
+      "must",
+      "prepare",
+      "for",
+      "the",
+      "test",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "준비하다",
+        "prepare for the test"
+      ],
+      [
+        "시험/오늘",
+        "test today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "prepare",
+      "for",
+      "the",
+      "test",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team must to prepare for the test today.",
+      "statementForm": [
+        "The team must prepare for the test today.",
+        "The team must prepare for the test today"
+      ],
+      "fragmentForm": "The team must for the test today."
+    }
+  },
+  {
+    "id": "m1_must_050",
+    "seedId": "must_050",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 가족은 온라인에서 조심해야 한다 오늘.",
+    "english": "The family must be careful online today.",
+    "words": [
+      "The",
+      "family",
+      "must",
+      "be",
+      "careful",
+      "online",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "반드시 해야 한다",
+        "must"
+      ],
+      [
+        "조심하다",
+        "be careful"
+      ],
+      [
+        "온라인에서/오늘",
+        "online today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "be",
+      "careful",
+      "online",
+      "today"
+    ],
+    "blankTargets": [
+      "must"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The family must to be careful online today.",
+      "statementForm": [
+        "The family must be careful online today.",
+        "The family must be careful online today"
+      ],
+      "fragmentForm": "The family must careful online today."
+    }
+  },
+  {
+    "id": "m1_must_051",
+    "seedId": "must_051",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "나는 여기에서 휴대전화를 사용하면 안 된다.",
+    "english": "I must not use your phone here.",
+    "words": [
+      "I",
+      "must",
+      "not",
+      "use",
+      "your",
+      "phone",
+      "here",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "사용하다",
+        "use your phone"
+      ],
+      [
+        "여기에서",
+        "here"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "use",
+      "your",
+      "phone",
+      "here"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I must not uses your phone here.",
+      "statementForm": [
+        "I must not use your phone here.",
+        "I must not use your phone here"
+      ],
+      "fragmentForm": "I must not your phone here."
+    }
+  },
+  {
+    "id": "m1_must_052",
+    "seedId": "must_052",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "너는 실험실에서 먹으면 안 된다.",
+    "english": "You must not eat in the lab.",
+    "words": [
+      "You",
+      "must",
+      "not",
+      "eat",
+      "in",
+      "the",
+      "lab",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "먹다",
+        "eat"
+      ],
+      [
+        "실험실에서",
+        "in the lab"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "eat",
+      "in",
+      "the",
+      "lab"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must not eats in the lab.",
+      "statementForm": [
+        "You must not eat in the lab.",
+        "You must not eat in the lab"
+      ],
+      "fragmentForm": "You must not in the lab."
+    }
+  },
+  {
+    "id": "m1_must_053",
+    "seedId": "must_053",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그는 이 상자를 열면 안 된다.",
+    "english": "He must not open this box.",
+    "words": [
+      "He",
+      "must",
+      "not",
+      "open",
+      "this",
+      "box",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "열다",
+        "open this box"
+      ],
+      [
+        "이 상자",
+        "this box"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "open",
+      "this",
+      "box"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He must not opens this box.",
+      "statementForm": [
+        "He must not open this box.",
+        "He must not open this box"
+      ],
+      "fragmentForm": "He must not this box."
+    }
+  },
+  {
+    "id": "m1_must_054",
+    "seedId": "must_054",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그녀는 지금 길을 건너면 안 된다.",
+    "english": "She must not cross the street now.",
+    "words": [
+      "She",
+      "must",
+      "not",
+      "cross",
+      "the",
+      "street",
+      "now",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "건너다",
+        "cross the street"
+      ],
+      [
+        "지금",
+        "now"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "cross",
+      "the",
+      "street",
+      "now"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She must not crosss the street now.",
+      "statementForm": [
+        "She must not cross the street now.",
+        "She must not cross the street now"
+      ],
+      "fragmentForm": "She must not the street now."
+    }
+  },
+  {
+    "id": "m1_must_055",
+    "seedId": "must_055",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "우리는 이 사진을 공유하면 안 된다.",
+    "english": "We must not share this photo.",
+    "words": [
+      "We",
+      "must",
+      "not",
+      "share",
+      "this",
+      "photo",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "공유하다",
+        "share this photo"
+      ],
+      [
+        "이 사진",
+        "this photo"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "share",
+      "this",
+      "photo"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We must not shares this photo.",
+      "statementForm": [
+        "We must not share this photo.",
+        "We must not share this photo"
+      ],
+      "fragmentForm": "We must not this photo."
+    }
+  },
+  {
+    "id": "m1_must_056",
+    "seedId": "must_056",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그들은 그 기계를 만지면 안 된다.",
+    "english": "They must not touch the machine.",
+    "words": [
+      "They",
+      "must",
+      "not",
+      "touch",
+      "the",
+      "machine",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "만지다",
+        "touch the machine"
+      ],
+      [
+        "기계",
+        "machine"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "touch",
+      "the",
+      "machine"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They must not touchs the machine.",
+      "statementForm": [
+        "They must not touch the machine.",
+        "They must not touch the machine"
+      ],
+      "fragmentForm": "They must not the machine."
+    }
+  },
+  {
+    "id": "m1_must_057",
+    "seedId": "must_057",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 학생은 약속을 잊으면 안 된다.",
+    "english": "The student must not forget your promise.",
+    "words": [
+      "The",
+      "student",
+      "must",
+      "not",
+      "forget",
+      "your",
+      "promise",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "잊다",
+        "forget your promise"
+      ],
+      [
+        "약속",
+        "promise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "forget",
+      "your",
+      "promise"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student must not forgets your promise.",
+      "statementForm": [
+        "The student must not forget your promise.",
+        "The student must not forget your promise"
+      ],
+      "fragmentForm": "The student must not your promise."
+    }
+  },
+  {
+    "id": "m1_must_058",
+    "seedId": "must_058",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 선생님은 음식을 낭비하면 안 된다.",
+    "english": "The teacher must not waste food.",
+    "words": [
+      "The",
+      "teacher",
+      "must",
+      "not",
+      "waste",
+      "food",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "낭비하다",
+        "waste food"
+      ],
+      [
+        "음식",
+        "food"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "waste",
+      "food"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher must not wastes food.",
+      "statementForm": [
+        "The teacher must not waste food.",
+        "The teacher must not waste food"
+      ],
+      "fragmentForm": "The teacher must not food."
+    }
+  },
+  {
+    "id": "m1_must_059",
+    "seedId": "must_059",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 팀은 복도에서 소리치면 안 된다.",
+    "english": "The team must not shout in the hall.",
+    "words": [
+      "The",
+      "team",
+      "must",
+      "not",
+      "shout",
+      "in",
+      "the",
+      "hall",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "소리치다",
+        "shout"
+      ],
+      [
+        "복도에서",
+        "in the hall"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "shout",
+      "in",
+      "the",
+      "hall"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team must not shouts in the hall.",
+      "statementForm": [
+        "The team must not shout in the hall.",
+        "The team must not shout in the hall"
+      ],
+      "fragmentForm": "The team must not in the hall."
+    }
+  },
+  {
+    "id": "m1_must_060",
+    "seedId": "must_060",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 가족은 규칙을 어기면 안 된다.",
+    "english": "The family must not break the rule.",
+    "words": [
+      "The",
+      "family",
+      "must",
+      "not",
+      "break",
+      "the",
+      "rule",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "어기다",
+        "break the rule"
+      ],
+      [
+        "규칙",
+        "rule"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "break",
+      "the",
+      "rule"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The family must not breaks the rule.",
+      "statementForm": [
+        "The family must not break the rule.",
+        "The family must not break the rule"
+      ],
+      "fragmentForm": "The family must not the rule."
+    }
+  },
+  {
+    "id": "m1_must_061",
+    "seedId": "must_061",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "나는 여기에서 휴대전화를 사용하면 안 된다 오늘.",
+    "english": "I must not use your phone here today.",
+    "words": [
+      "I",
+      "must",
+      "not",
+      "use",
+      "your",
+      "phone",
+      "here",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "사용하다",
+        "use your phone"
+      ],
+      [
+        "여기에서/오늘",
+        "here today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "use",
+      "your",
+      "phone",
+      "here",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I must not uses your phone here today.",
+      "statementForm": [
+        "I must not use your phone here today.",
+        "I must not use your phone here today"
+      ],
+      "fragmentForm": "I must not your phone here today."
+    }
+  },
+  {
+    "id": "m1_must_062",
+    "seedId": "must_062",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "너는 실험실에서 먹으면 안 된다 오늘.",
+    "english": "You must not eat in the lab today.",
+    "words": [
+      "You",
+      "must",
+      "not",
+      "eat",
+      "in",
+      "the",
+      "lab",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "먹다",
+        "eat"
+      ],
+      [
+        "실험실에서/오늘",
+        "in the lab today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "eat",
+      "in",
+      "the",
+      "lab",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must not eats in the lab today.",
+      "statementForm": [
+        "You must not eat in the lab today.",
+        "You must not eat in the lab today"
+      ],
+      "fragmentForm": "You must not in the lab today."
+    }
+  },
+  {
+    "id": "m1_must_063",
+    "seedId": "must_063",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그는 이 상자를 열면 안 된다 오늘.",
+    "english": "He must not open this box today.",
+    "words": [
+      "He",
+      "must",
+      "not",
+      "open",
+      "this",
+      "box",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "열다",
+        "open this box"
+      ],
+      [
+        "이 상자/오늘",
+        "this box today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "open",
+      "this",
+      "box",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "He must not opens this box today.",
+      "statementForm": [
+        "He must not open this box today.",
+        "He must not open this box today"
+      ],
+      "fragmentForm": "He must not this box today."
+    }
+  },
+  {
+    "id": "m1_must_064",
+    "seedId": "must_064",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그녀는 지금 길을 건너면 안 된다 오늘.",
+    "english": "She must not cross the street now today.",
+    "words": [
+      "She",
+      "must",
+      "not",
+      "cross",
+      "the",
+      "street",
+      "now",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "건너다",
+        "cross the street"
+      ],
+      [
+        "지금/오늘",
+        "now today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "cross",
+      "the",
+      "street",
+      "now",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She must not crosss the street now today.",
+      "statementForm": [
+        "She must not cross the street now today.",
+        "She must not cross the street now today"
+      ],
+      "fragmentForm": "She must not the street now today."
+    }
+  },
+  {
+    "id": "m1_must_065",
+    "seedId": "must_065",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "우리는 이 사진을 공유하면 안 된다 오늘.",
+    "english": "We must not share this photo today.",
+    "words": [
+      "We",
+      "must",
+      "not",
+      "share",
+      "this",
+      "photo",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "공유하다",
+        "share this photo"
+      ],
+      [
+        "이 사진/오늘",
+        "this photo today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "share",
+      "this",
+      "photo",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We must not shares this photo today.",
+      "statementForm": [
+        "We must not share this photo today.",
+        "We must not share this photo today"
+      ],
+      "fragmentForm": "We must not this photo today."
+    }
+  },
+  {
+    "id": "m1_must_066",
+    "seedId": "must_066",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그들은 그 기계를 만지면 안 된다 오늘.",
+    "english": "They must not touch the machine today.",
+    "words": [
+      "They",
+      "must",
+      "not",
+      "touch",
+      "the",
+      "machine",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "만지다",
+        "touch the machine"
+      ],
+      [
+        "기계/오늘",
+        "machine today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "touch",
+      "the",
+      "machine",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "They must not touchs the machine today.",
+      "statementForm": [
+        "They must not touch the machine today.",
+        "They must not touch the machine today"
+      ],
+      "fragmentForm": "They must not the machine today."
+    }
+  },
+  {
+    "id": "m1_must_067",
+    "seedId": "must_067",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 학생은 약속을 잊으면 안 된다 오늘.",
+    "english": "The student must not forget your promise today.",
+    "words": [
+      "The",
+      "student",
+      "must",
+      "not",
+      "forget",
+      "your",
+      "promise",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "잊다",
+        "forget your promise"
+      ],
+      [
+        "약속/오늘",
+        "promise today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "forget",
+      "your",
+      "promise",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student must not forgets your promise today.",
+      "statementForm": [
+        "The student must not forget your promise today.",
+        "The student must not forget your promise today"
+      ],
+      "fragmentForm": "The student must not your promise today."
+    }
+  },
+  {
+    "id": "m1_must_068",
+    "seedId": "must_068",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 선생님은 음식을 낭비하면 안 된다 오늘.",
+    "english": "The teacher must not waste food today.",
+    "words": [
+      "The",
+      "teacher",
+      "must",
+      "not",
+      "waste",
+      "food",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "낭비하다",
+        "waste food"
+      ],
+      [
+        "음식/오늘",
+        "food today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "waste",
+      "food",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher must not wastes food today.",
+      "statementForm": [
+        "The teacher must not waste food today.",
+        "The teacher must not waste food today"
+      ],
+      "fragmentForm": "The teacher must not food today."
+    }
+  },
+  {
+    "id": "m1_must_069",
+    "seedId": "must_069",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 팀은 복도에서 소리치면 안 된다 오늘.",
+    "english": "The team must not shout in the hall today.",
+    "words": [
+      "The",
+      "team",
+      "must",
+      "not",
+      "shout",
+      "in",
+      "the",
+      "hall",
+      "today",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "소리치다",
+        "shout"
+      ],
+      [
+        "복도에서/오늘",
+        "in the hall today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "shout",
+      "in",
+      "the",
+      "hall",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team must not shouts in the hall today.",
+      "statementForm": [
+        "The team must not shout in the hall today.",
+        "The team must not shout in the hall today"
+      ],
+      "fragmentForm": "The team must not in the hall today."
+    }
+  },
+  {
+    "id": "m1_must_070",
+    "seedId": "must_070",
+    "grade": "middle1",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "must",
+    "chapterLabelKo": "조동사 must",
+    "korean": "그 가족은 규칙을 어기면 안 된다 오늘.",
+    "english": "The family must not break the rule today.",
+    "words": [
+      "The",
+      "family",
+      "must",
+      "not",
+      "break",
+      "the",
+      "rule",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "must",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_70",
+    "clueUnits": [
+      [
+        "~하면 안 된다",
+        "must not"
+      ],
+      [
+        "어기다",
+        "break the rule"
+      ],
+      [
+        "규칙/오늘",
+        "rule today"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must",
+      "not",
+      "break",
+      "the",
+      "rule",
+      "today"
+    ],
+    "blankTargets": [
+      "must not"
+    ],
+    "tags": [
+      "must",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The family must not breaks the rule today.",
+      "statementForm": [
+        "The family must not break the rule today.",
+        "The family must not break the rule today"
+      ],
+      "fragmentForm": "The family must not the rule today."
+    }
+  }
+]
