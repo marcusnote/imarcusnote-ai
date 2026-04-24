@@ -114,6 +114,13 @@ const SENTENCE_BANK_FILE_MAP = {
     reflexive_pronoun: "middle1_reflexive_pronoun.json",
     five_form: "middle1_five_form.json",
     passive: "middle1_passive.json",
+    passive_advanced: "middle1_passive_advanced.json",
+    sensory_verb: "middle1_sensory_verb.json",
+    past: "middle1_past.json",
+    must: "middle1_must.json",
+    have_to: "middle1_have_to.json",
+    may: "middle1_may.json",
+    should: "middle1_should.json",
   },
 };
 
@@ -126,9 +133,15 @@ const CHAPTER_ALIAS_PATTERNS = [
   { key: "do_verb", patterns: [/일반동사(?!\s*(의문문|부정문))/i, /\bgeneral verb\b/i] },
   { key: "present_continuous", patterns: [/현재진행형/i, /present continuous/i, /be \w+ing/i] },
   { key: "modal_will", patterns: [/조동사\s*will/i, /\bwill\b/i] },
+  { key: "must", patterns: [/조동사\s*must/i, /\bmust\b/i] },
+  { key: "have_to", patterns: [/조동사\s*have\s*to/i, /\bhave\s+to\b/i, /\bhas\s+to\b/i] },
+  { key: "may", patterns: [/조동사\s*may/i, /\bmay\b/i] },
+  { key: "should", patterns: [/조동사\s*should/i, /\bshould\b/i] },
   { key: "there_is_are", patterns: [/there\s+is\s*\/?\s*are/i, /there is are/i, /there\s+is/i, /there\s+are/i] },
   { key: "wh_question", patterns: [/의문사\s*의문문/i, /wh-?\s*question/i, /\bwho\b|\bwhat\b|\bwhen\b|\bwhere\b|\bwhy\b|\bhow\b/i] },
   { key: "frequency_adverbs", patterns: [/빈도부사/i, /frequency adverb/i] },
+  { key: "sensory_verb", patterns: [/감각동사/i, /sensory verb/i, /sense verb/i, /look\s*sound\s*feel\s*taste\s*smell/i] },
+  { key: "past", patterns: [/과거시제/i, /일반동사\s*과거/i, /be동사\s*과거/i, /past tense/i] },
   { key: "can", patterns: [/\bcan\b/i, /조동사\s*can/i] },
   { key: "conjunction_when", patterns: [/접속사\s*when/i, /conjunction\s*when/i] },
   { key: "conjunction_while", patterns: [/접속사\s*while/i, /conjunction\s*while/i] },
@@ -154,6 +167,7 @@ const CHAPTER_ALIAS_PATTERNS = [
   { key: "exclamation", patterns: [/감탄문/i, /exclamation/i] },
   { key: "reflexive_pronoun", patterns: [/재귀대명사/i, /reflexive pronoun/i] },
   { key: "five_form", patterns: [/5형식/i, /오형식/i, /five form/i] },
+  { key: "passive_advanced", patterns: [/수동태\s*심화/i, /passive\s*advanced/i] },
   { key: "passive", patterns: [/수동태/i, /passive/i] },
 ];
 
