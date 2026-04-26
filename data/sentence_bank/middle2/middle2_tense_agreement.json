@@ -1,0 +1,6594 @@
+[
+  {
+    "id": "m2_tense_001",
+    "seedId": "tense_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 정직하다고 생각한다.",
+    "english": "I think that he is honest.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "he",
+      "is",
+      "honest",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 정직하다고 생각한다.",
+        "I"
+      ],
+      [
+        "main present + present clause",
+        "think + is"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "think",
+      "is",
+      "honest",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "think",
+      "is",
+      "honest"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think that he was honest.",
+      "statementForm": [
+        "I think that he is honest.",
+        "I think that he is honest"
+      ],
+      "fragmentForm": "I think that he is.",
+      "wormholeVariants": [
+        "I think that he was honest.",
+        "I think he is honest.",
+        "I think that he is honest?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_002",
+    "seedId": "tense_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 정직하지 않다고 생각한다.",
+    "english": "I do not think that he is honest.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "think",
+      "that",
+      "he",
+      "is",
+      "honest",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 정직하지 않다고 생각한다.",
+        "I"
+      ],
+      [
+        "present negative + present clause",
+        "do not think + is"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "do not think",
+      "is",
+      "honest",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "do not think",
+      "is",
+      "honest"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I do not think that he was honest.",
+      "statementForm": [
+        "I do not think that he is honest.",
+        "I do not think that he is honest"
+      ],
+      "fragmentForm": "I do not think that.",
+      "wormholeVariants": [
+        "I do not think that he was honest.",
+        "I did not think that he is honest.",
+        "I do not think he is honest.",
+        "I do not think that he is honest?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_003",
+    "seedId": "tense_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그가 정직하다고 생각하니?",
+    "english": "Do you think that he is honest?",
+    "words": [
+      "Do",
+      "you",
+      "think",
+      "that",
+      "he",
+      "is",
+      "honest",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 정직하다고 생각하니?",
+        "Do"
+      ],
+      [
+        "present question + present clause",
+        "Do you think + is"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Do",
+      "think",
+      "is",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Do",
+      "think",
+      "is"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you think that he was honest?",
+      "statementForm": [
+        "Do you think that he is honest?",
+        "Do you think that he is honest"
+      ],
+      "fragmentForm": "Do you think that he.",
+      "wormholeVariants": [
+        "Do you think that he was honest?",
+        "Did you think that he is honest?",
+        "Do you think he is honest?",
+        "Do you think that he is honest."
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_004",
+    "seedId": "tense_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그녀가 어제 늦었다고 생각한다.",
+    "english": "I think that she was late yesterday.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "she",
+      "was",
+      "late",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 어제 늦었다고 생각한다.",
+        "I"
+      ],
+      [
+        "main present + past clause",
+        "think + was"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "think",
+      "was",
+      "yesterday",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "think",
+      "was",
+      "yesterday"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "past_clause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think that she is late yesterday.",
+      "statementForm": [
+        "I think that she was late yesterday.",
+        "I think that she was late yesterday"
+      ],
+      "fragmentForm": "I think that she was.",
+      "wormholeVariants": [
+        "I think that she is late yesterday.",
+        "I think she was late yesterday.",
+        "I think that she was late yesterday?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_005",
+    "seedId": "tense_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그들이 곧 도착할 것이라고 믿는다.",
+    "english": "I believe that they will arrive soon.",
+    "words": [
+      "I",
+      "believe",
+      "that",
+      "they",
+      "will",
+      "arrive",
+      "soon",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 곧 도착할 것이라고 믿는다.",
+        "I"
+      ],
+      [
+        "main present + future clause",
+        "believe + will arrive"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believe",
+      "will arrive",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believe",
+      "will arrive"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "future_clause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believe that they would arrive soon.",
+      "statementForm": [
+        "I believe that they will arrive soon.",
+        "I believe that they will arrive soon"
+      ],
+      "fragmentForm": "I believe that they will.",
+      "wormholeVariants": [
+        "I believe that they would arrive soon.",
+        "I believe that they will arrived soon.",
+        "I believe they will arrive soon.",
+        "I believe that they will arrive soon?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_006",
+    "seedId": "tense_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그들이 곧 도착할 것이라고 믿니?",
+    "english": "Do you believe that they will arrive soon?",
+    "words": [
+      "Do",
+      "you",
+      "believe",
+      "that",
+      "they",
+      "will",
+      "arrive",
+      "soon",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그들이 곧 도착할 것이라고 믿니?",
+        "Do"
+      ],
+      [
+        "present question + future clause",
+        "Do you believe + will"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Do",
+      "believe",
+      "will arrive",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Do",
+      "believe",
+      "will arrive"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "future_clause",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you believe that they would arrive soon?",
+      "statementForm": [
+        "Do you believe that they will arrive soon?",
+        "Do you believe that they will arrive soon"
+      ],
+      "fragmentForm": "Do you believe that they.",
+      "wormholeVariants": [
+        "Do you believe that they would arrive soon?",
+        "Do you believe that they will arrived soon?",
+        "Did you believe that they will arrive soon?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_007",
+    "seedId": "tense_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 어제 실수했다고 말한다.",
+    "english": "She says that I made a mistake yesterday.",
+    "words": [
+      "She",
+      "says",
+      "that",
+      "I",
+      "made",
+      "a",
+      "mistake",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 어제 실수했다고 말한다.",
+        "She"
+      ],
+      [
+        "main present + past clause",
+        "says + made"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "says",
+      "made",
+      "yesterday",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "says",
+      "made",
+      "yesterday"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "past_clause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She says I made a mistake yesterday.",
+      "statementForm": [
+        "She says that I made a mistake yesterday.",
+        "She says that I made a mistake yesterday"
+      ],
+      "fragmentForm": "She says that I made.",
+      "wormholeVariants": [
+        "She says I made a mistake yesterday.",
+        "She says that I made a mistake yesterday?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_008",
+    "seedId": "tense_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 그 기차가 6시에 출발한다고 안다.",
+    "english": "He knows that the train leaves at six.",
+    "words": [
+      "He",
+      "knows",
+      "that",
+      "the",
+      "train",
+      "leaves",
+      "at",
+      "six",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 기차가 6시에 출발한다고 안다.",
+        "He"
+      ],
+      [
+        "main present + schedule present",
+        "knows + leaves"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "knows",
+      "leaves",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "knows",
+      "leaves"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "habit_schedule"
+    ],
+    "distractorSeeds": {
+      "auxError": "He knows the train leaves at six.",
+      "statementForm": [
+        "He knows that the train leaves at six.",
+        "He knows that the train leaves at six"
+      ],
+      "fragmentForm": "He knows that the train.",
+      "wormholeVariants": [
+        "He knows the train leaves at six.",
+        "He knows that the train leaves at six?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_009",
+    "seedId": "tense_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 시험에 합격할 수 있다고 생각한다.",
+    "english": "I think that he can pass the test.",
+    "words": [
+      "I",
+      "think",
+      "that",
+      "he",
+      "can",
+      "pass",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 시험에 합격할 수 있다고 생각한다.",
+        "I"
+      ],
+      [
+        "main present + modal can",
+        "think + can pass"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "think",
+      "can pass",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "think",
+      "can pass"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "I think that he could pass the test.",
+      "statementForm": [
+        "I think that he can pass the test.",
+        "I think that he can pass the test"
+      ],
+      "fragmentForm": "I think that he can.",
+      "wormholeVariants": [
+        "I think that he could pass the test.",
+        "I think he can pass the test.",
+        "I think that he can pass the test?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_010",
+    "seedId": "tense_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 내가 그 답을 알고 있다고 생각하니?",
+    "english": "Do you think that I know the answer?",
+    "words": [
+      "Do",
+      "you",
+      "think",
+      "that",
+      "I",
+      "know",
+      "the",
+      "answer",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 내가 그 답을 알고 있다고 생각하니?",
+        "Do"
+      ],
+      [
+        "present question + present clause",
+        "Do you think + know"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Do",
+      "think",
+      "know",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Do",
+      "think",
+      "know"
+    ],
+    "tags": [
+      "tense_agreement",
+      "present_main",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you think that I know the answer?",
+      "statementForm": [
+        "Do you think that I know the answer?",
+        "Do you think that I know the answer"
+      ],
+      "fragmentForm": "Do you think that I.",
+      "wormholeVariants": [
+        "Did you think that I know the answer?",
+        "Do you think I know the answer?",
+        "Do you think that I know the answer."
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_011",
+    "seedId": "tense_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 정직하다고 생각했다.",
+    "english": "I thought that he was honest.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "he",
+      "was",
+      "honest",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 정직하다고 생각했다.",
+        "I"
+      ],
+      [
+        "main past + past clause",
+        "thought + was"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "was",
+      "honest",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "was",
+      "honest"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that he is honest.",
+      "statementForm": [
+        "I thought that he was honest.",
+        "I thought that he was honest"
+      ],
+      "fragmentForm": "I thought that he was.",
+      "wormholeVariants": [
+        "I thought that he is honest.",
+        "I thought he was honest.",
+        "I thought that he was honest?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_012",
+    "seedId": "tense_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 준비되지 않았다고 생각했다.",
+    "english": "I thought that he was not ready.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "he",
+      "was",
+      "not",
+      "ready",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 준비되지 않았다고 생각했다.",
+        "I"
+      ],
+      [
+        "main past + negative past clause",
+        "thought + was not"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "was not",
+      "ready",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "was not",
+      "ready"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that he is not ready.",
+      "statementForm": [
+        "I thought that he was not ready.",
+        "I thought that he was not ready"
+      ],
+      "fragmentForm": "I thought that he was.",
+      "wormholeVariants": [
+        "I thought that he is not ready.",
+        "I thought he was not ready.",
+        "I thought that he was not ready?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_013",
+    "seedId": "tense_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그가 준비되었다고 생각했니?",
+    "english": "Did you think that he was ready?",
+    "words": [
+      "Did",
+      "you",
+      "think",
+      "that",
+      "he",
+      "was",
+      "ready",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 준비되었다고 생각했니?",
+        "Did"
+      ],
+      [
+        "past question + past clause",
+        "Did you think + was"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "think",
+      "was",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "think",
+      "was"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you think that he is ready?",
+      "statementForm": [
+        "Did you think that he was ready?",
+        "Did you think that he was ready"
+      ],
+      "fragmentForm": "Did you think that he.",
+      "wormholeVariants": [
+        "Did you think that he is ready?",
+        "Do you think that he was ready?",
+        "Did you thinked that he was ready?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_014",
+    "seedId": "tense_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 피곤하다고 말했다.",
+    "english": "She said that I was tired.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "I",
+      "was",
+      "tired",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 피곤하다고 말했다.",
+        "She"
+      ],
+      [
+        "main past + past clause",
+        "said + was"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "was",
+      "tired",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "was",
+      "tired"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that I is tired.",
+      "statementForm": [
+        "She said that I was tired.",
+        "She said that I was tired"
+      ],
+      "fragmentForm": "She said that I was.",
+      "wormholeVariants": [
+        "She said that I is tired.",
+        "She said I was tired.",
+        "She said that I was tired?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_015",
+    "seedId": "tense_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 피곤하지 않다고 말했다.",
+    "english": "She said that I was not tired.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "I",
+      "was",
+      "not",
+      "tired",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 피곤하지 않다고 말했다.",
+        "She"
+      ],
+      [
+        "main past + negative past clause",
+        "said + was not"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "was not",
+      "tired",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "was not",
+      "tired"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that I is not tired.",
+      "statementForm": [
+        "She said that I was not tired.",
+        "She said that I was not tired"
+      ],
+      "fragmentForm": "She said that I was.",
+      "wormholeVariants": [
+        "She said that I is not tired.",
+        "She said I was not tired.",
+        "She said that I was not tired?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_016",
+    "seedId": "tense_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀가 네가 피곤하다고 말했니?",
+    "english": "Did she say that you were tired?",
+    "words": [
+      "Did",
+      "she",
+      "say",
+      "that",
+      "you",
+      "were",
+      "tired",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 네가 피곤하다고 말했니?",
+        "Did"
+      ],
+      [
+        "past question + past clause",
+        "Did she say + were"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "say",
+      "were",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "say",
+      "were"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she say that you are tired?",
+      "statementForm": [
+        "Did she say that you were tired?",
+        "Did she say that you were tired"
+      ],
+      "fragmentForm": "Did she say that you.",
+      "wormholeVariants": [
+        "Did she say that you are tired?",
+        "Do she say that you were tired?",
+        "Did she sayed that you were tired?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_017",
+    "seedId": "tense_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "우리는 그 계획이 위험하다고 믿었다.",
+    "english": "We believed that the plan was dangerous.",
+    "words": [
+      "We",
+      "believed",
+      "that",
+      "the",
+      "plan",
+      "was",
+      "dangerous",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 계획이 위험하다고 믿었다.",
+        "We"
+      ],
+      [
+        "main past + past clause",
+        "believed + was"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "was",
+      "dangerous",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "was",
+      "dangerous"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We believed that the plan is dangerous.",
+      "statementForm": [
+        "We believed that the plan was dangerous.",
+        "We believed that the plan was dangerous"
+      ],
+      "fragmentForm": "We believed that the plan.",
+      "wormholeVariants": [
+        "We believed that the plan is dangerous.",
+        "We believed the plan was dangerous.",
+        "We believed that the plan was dangerous?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_018",
+    "seedId": "tense_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "우리는 그 계획이 위험하지 않다고 믿었다.",
+    "english": "We believed that the plan was not dangerous.",
+    "words": [
+      "We",
+      "believed",
+      "that",
+      "the",
+      "plan",
+      "was",
+      "not",
+      "dangerous",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 계획이 위험하지 않다고 믿었다.",
+        "We"
+      ],
+      [
+        "main past + negative past clause",
+        "believed + was not"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "was not",
+      "dangerous",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "was not",
+      "dangerous"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We believed that the plan is not dangerous.",
+      "statementForm": [
+        "We believed that the plan was not dangerous.",
+        "We believed that the plan was not dangerous"
+      ],
+      "fragmentForm": "We believed that the plan.",
+      "wormholeVariants": [
+        "We believed that the plan is not dangerous.",
+        "We believed the plan was not dangerous.",
+        "We believed that the plan was not dangerous?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_019",
+    "seedId": "tense_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너희는 그 계획이 위험하다고 믿었니?",
+    "english": "Did you believe that the plan was dangerous?",
+    "words": [
+      "Did",
+      "you",
+      "believe",
+      "that",
+      "the",
+      "plan",
+      "was",
+      "dangerous",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 그 계획이 위험하다고 믿었니?",
+        "Did"
+      ],
+      [
+        "past question + past clause",
+        "Did you believe + was"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "believe",
+      "was",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "believe",
+      "was"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you believe that the plan is dangerous?",
+      "statementForm": [
+        "Did you believe that the plan was dangerous?",
+        "Did you believe that the plan was dangerous"
+      ],
+      "fragmentForm": "Did you believe that the.",
+      "wormholeVariants": [
+        "Did you believe that the plan is dangerous?",
+        "Do you believe that the plan was dangerous?",
+        "Did you believeed that the plan was dangerous?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_020",
+    "seedId": "tense_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 자신이 틀렸다는 것을 깨달았다.",
+    "english": "He realized that he was wrong.",
+    "words": [
+      "He",
+      "realized",
+      "that",
+      "he",
+      "was",
+      "wrong",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 자신이 틀렸다는 것을 깨달았다.",
+        "He"
+      ],
+      [
+        "main past + past clause",
+        "realized + was"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "realized",
+      "was",
+      "wrong",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "realized",
+      "was",
+      "wrong"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He realized that he is wrong.",
+      "statementForm": [
+        "He realized that he was wrong.",
+        "He realized that he was wrong"
+      ],
+      "fragmentForm": "He realized that he was.",
+      "wormholeVariants": [
+        "He realized that he is wrong.",
+        "He realized he was wrong.",
+        "He realized that he was wrong?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_021",
+    "seedId": "tense_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 다음 날 올 것이라고 생각했다.",
+    "english": "I thought that he would come the next day.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "he",
+      "would",
+      "come",
+      "the",
+      "next",
+      "day",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 다음 날 올 것이라고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + would",
+        "thought + would come"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "would come",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "would come"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that he will come the next day.",
+      "statementForm": [
+        "I thought that he would come the next day.",
+        "I thought that he would come the next day"
+      ],
+      "fragmentForm": "I thought that he would.",
+      "wormholeVariants": [
+        "I thought that he will come the next day.",
+        "I thought that he would came the next day.",
+        "I thought he would come the next day.",
+        "I thought that he would come the next day?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_022",
+    "seedId": "tense_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 다음 날 오지 않을 것이라고 생각했다.",
+    "english": "I thought that he would not come the next day.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "he",
+      "would",
+      "not",
+      "come",
+      "the",
+      "next",
+      "day",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 다음 날 오지 않을 것이라고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + would not",
+        "thought + would not come"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "would not come",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "would not come"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that he will not come the next day.",
+      "statementForm": [
+        "I thought that he would not come the next day.",
+        "I thought that he would not come the next day"
+      ],
+      "fragmentForm": "I thought that he would.",
+      "wormholeVariants": [
+        "I thought that he will not come the next day.",
+        "I thought he would not come the next day.",
+        "I thought that he would not come the next day?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_023",
+    "seedId": "tense_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그가 다음 날 올 것이라고 생각했니?",
+    "english": "Did you think that he would come the next day?",
+    "words": [
+      "Did",
+      "you",
+      "think",
+      "that",
+      "he",
+      "would",
+      "come",
+      "the",
+      "next",
+      "day",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 다음 날 올 것이라고 생각했니?",
+        "Did"
+      ],
+      [
+        "past question + would",
+        "Did you think + would"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "think",
+      "would come",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "think",
+      "would come"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you think that he will come the next day?",
+      "statementForm": [
+        "Did you think that he would come the next day?",
+        "Did you think that he would come the next day"
+      ],
+      "fragmentForm": "Did you think that he.",
+      "wormholeVariants": [
+        "Did you think that he will come the next day?",
+        "Did you think that he would came the next day?",
+        "Do you think that he would come the next day?",
+        "Did you thinked that he would come the next day?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_024",
+    "seedId": "tense_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 그들이 경기에 이길 것이라고 말했다.",
+    "english": "She said that they would win the game.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "they",
+      "would",
+      "win",
+      "the",
+      "game",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그들이 경기에 이길 것이라고 말했다.",
+        "She"
+      ],
+      [
+        "past main + would",
+        "said + would win"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "would win",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "would win"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that they will win the game.",
+      "statementForm": [
+        "She said that they would win the game.",
+        "She said that they would win the game"
+      ],
+      "fragmentForm": "She said that they would.",
+      "wormholeVariants": [
+        "She said that they will win the game.",
+        "She said they would win the game.",
+        "She said that they would win the game?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_025",
+    "seedId": "tense_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 그들이 경기에 이기지 못할 것이라고 말했다.",
+    "english": "She said that they would not win the game.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "they",
+      "would",
+      "not",
+      "win",
+      "the",
+      "game",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그들이 경기에 이기지 못할 것이라고 말했다.",
+        "She"
+      ],
+      [
+        "past main + would not",
+        "said + would not win"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "would not win",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "would not win"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that they will not win the game.",
+      "statementForm": [
+        "She said that they would not win the game.",
+        "She said that they would not win the game"
+      ],
+      "fragmentForm": "She said that they would.",
+      "wormholeVariants": [
+        "She said that they will not win the game.",
+        "She said they would not win the game.",
+        "She said that they would not win the game?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_026",
+    "seedId": "tense_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀가 그들이 경기에 이길 것이라고 말했니?",
+    "english": "Did she say that they would win the game?",
+    "words": [
+      "Did",
+      "she",
+      "say",
+      "that",
+      "they",
+      "would",
+      "win",
+      "the",
+      "game",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 그들이 경기에 이길 것이라고 말했니?",
+        "Did"
+      ],
+      [
+        "past question + would",
+        "Did she say + would"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "say",
+      "would win",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "say",
+      "would win"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she say that they will win the game?",
+      "statementForm": [
+        "Did she say that they would win the game?",
+        "Did she say that they would win the game"
+      ],
+      "fragmentForm": "Did she say that they.",
+      "wormholeVariants": [
+        "Did she say that they will win the game?",
+        "Do she say that they would win the game?",
+        "Did she sayed that they would win the game?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_027",
+    "seedId": "tense_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "우리는 그 버스가 곧 도착할 것이라고 믿었다.",
+    "english": "We believed that the bus would arrive soon.",
+    "words": [
+      "We",
+      "believed",
+      "that",
+      "the",
+      "bus",
+      "would",
+      "arrive",
+      "soon",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 버스가 곧 도착할 것이라고 믿었다.",
+        "We"
+      ],
+      [
+        "past main + would",
+        "believed + would arrive"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "would arrive",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "would arrive"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We believed that the bus will arrive soon.",
+      "statementForm": [
+        "We believed that the bus would arrive soon.",
+        "We believed that the bus would arrive soon"
+      ],
+      "fragmentForm": "We believed that the bus.",
+      "wormholeVariants": [
+        "We believed that the bus will arrive soon.",
+        "We believed the bus would arrive soon.",
+        "We believed that the bus would arrive soon?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_028",
+    "seedId": "tense_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 내 친구가 내 생일 파티에 올 것이라고 생각했다.",
+    "english": "I thought that my friend would come to my birthday party.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "my",
+      "friend",
+      "would",
+      "come",
+      "to",
+      "my",
+      "birthday",
+      "party",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 내 친구가 내 생일 파티에 올 것이라고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + would",
+        "thought + would come"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "would come",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "would come"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that my friend will come to my birthday party.",
+      "statementForm": [
+        "I thought that my friend would come to my birthday party.",
+        "I thought that my friend would come to my birthday party"
+      ],
+      "fragmentForm": "I thought that my friend.",
+      "wormholeVariants": [
+        "I thought that my friend will come to my birthday party.",
+        "I thought that my friend would came to my birthday party.",
+        "I thought my friend would come to my birthday party.",
+        "I thought that my friend would come to my birthday party?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_029",
+    "seedId": "tense_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 우리가 그 문제를 해결할 수 있을 것이라고 믿었다.",
+    "english": "He believed that we could solve the problem.",
+    "words": [
+      "He",
+      "believed",
+      "that",
+      "we",
+      "could",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리가 그 문제를 해결할 수 있을 것이라고 믿었다.",
+        "He"
+      ],
+      [
+        "past main + could",
+        "believed + could solve"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "could solve",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "could solve"
+    ],
+    "tags": [
+      "tense_agreement",
+      "modal_past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He believed that we can solve the problem.",
+      "statementForm": [
+        "He believed that we could solve the problem.",
+        "He believed that we could solve the problem"
+      ],
+      "fragmentForm": "He believed that we could.",
+      "wormholeVariants": [
+        "He believed that we can solve the problem.",
+        "He believed that we could solved the problem.",
+        "He believed we could solve the problem.",
+        "He believed that we could solve the problem?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_030",
+    "seedId": "tense_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 우리가 그 문제를 해결할 수 없을 것이라고 믿었다.",
+    "english": "He believed that we could not solve the problem.",
+    "words": [
+      "He",
+      "believed",
+      "that",
+      "we",
+      "could",
+      "not",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리가 그 문제를 해결할 수 없을 것이라고 믿었다.",
+        "He"
+      ],
+      [
+        "past main + could not",
+        "believed + could not solve"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "could not solve",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "could not solve"
+    ],
+    "tags": [
+      "tense_agreement",
+      "modal_past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He believed that we can not solve the problem.",
+      "statementForm": [
+        "He believed that we could not solve the problem.",
+        "He believed that we could not solve the problem"
+      ],
+      "fragmentForm": "He believed that we could.",
+      "wormholeVariants": [
+        "He believed that we can not solve the problem.",
+        "He believed we could not solve the problem.",
+        "He believed that we could not solve the problem?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_031",
+    "seedId": "tense_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 이미 떠났다고 생각했다.",
+    "english": "I thought that he had already left.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "he",
+      "had",
+      "already",
+      "left",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 이미 떠났다고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + past perfect",
+        "thought + had left"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "had left",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "had left"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that he has already left.",
+      "statementForm": [
+        "I thought that he had already left.",
+        "I thought that he had already left"
+      ],
+      "fragmentForm": "I thought that he had.",
+      "wormholeVariants": [
+        "I thought that he has already left.",
+        "I thought that he had already leaves.",
+        "I thought he had already left.",
+        "I thought that he had already left?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_032",
+    "seedId": "tense_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 아직 떠나지 않았다고 생각했다.",
+    "english": "I thought that he had not left yet.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "he",
+      "had",
+      "not",
+      "left",
+      "yet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 아직 떠나지 않았다고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + negative past perfect",
+        "thought + had not left"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "had not left",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "had not left"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "negative",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that he has not left yet.",
+      "statementForm": [
+        "I thought that he had not left yet.",
+        "I thought that he had not left yet"
+      ],
+      "fragmentForm": "I thought that he had.",
+      "wormholeVariants": [
+        "I thought that he has not left yet.",
+        "I thought that he did not left yet.",
+        "I thought he had not left yet.",
+        "I thought that he had not left yet?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_033",
+    "seedId": "tense_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그가 이미 떠났다고 생각했니?",
+    "english": "Did you think that he had already left?",
+    "words": [
+      "Did",
+      "you",
+      "think",
+      "that",
+      "he",
+      "had",
+      "already",
+      "left",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 이미 떠났다고 생각했니?",
+        "Did"
+      ],
+      [
+        "past question + past perfect",
+        "Did you think + had left"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "think",
+      "had left",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "think",
+      "had left"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "question",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you think that he has already left?",
+      "statementForm": [
+        "Did you think that he had already left?",
+        "Did you think that he had already left"
+      ],
+      "fragmentForm": "Did you think that he.",
+      "wormholeVariants": [
+        "Did you think that he has already left?",
+        "Did you think that he had already leaves?",
+        "Do you think that he had already left?",
+        "Did you thinked that he had already left?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_034",
+    "seedId": "tense_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 그가 숙제를 끝냈다고 말했다.",
+    "english": "She said that he had finished his homework.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "he",
+      "had",
+      "finished",
+      "his",
+      "homework",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 숙제를 끝냈다고 말했다.",
+        "She"
+      ],
+      [
+        "past main + past perfect",
+        "said + had finished"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "had finished",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "had finished"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that he has finished his homework.",
+      "statementForm": [
+        "She said that he had finished his homework.",
+        "She said that he had finished his homework"
+      ],
+      "fragmentForm": "She said that he had.",
+      "wormholeVariants": [
+        "She said that he has finished his homework.",
+        "She said that he had finish his homework.",
+        "She said he had finished his homework.",
+        "She said that he had finished his homework?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_035",
+    "seedId": "tense_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 그가 숙제를 끝내지 않았다고 말했다.",
+    "english": "She said that he had not finished his homework.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "he",
+      "had",
+      "not",
+      "finished",
+      "his",
+      "homework",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 숙제를 끝내지 않았다고 말했다.",
+        "She"
+      ],
+      [
+        "past main + negative past perfect",
+        "said + had not finished"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "had not finished",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "had not finished"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "negative",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that he has not finished his homework.",
+      "statementForm": [
+        "She said that he had not finished his homework.",
+        "She said that he had not finished his homework"
+      ],
+      "fragmentForm": "She said that he had.",
+      "wormholeVariants": [
+        "She said that he has not finished his homework.",
+        "She said that he did not finished his homework.",
+        "She said he had not finished his homework.",
+        "She said that he had not finished his homework?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_036",
+    "seedId": "tense_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀가 그가 숙제를 끝냈다고 말했니?",
+    "english": "Did she say that he had finished his homework?",
+    "words": [
+      "Did",
+      "she",
+      "say",
+      "that",
+      "he",
+      "had",
+      "finished",
+      "his",
+      "homework",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 그가 숙제를 끝냈다고 말했니?",
+        "Did"
+      ],
+      [
+        "past question + past perfect",
+        "Did she say + had finished"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "say",
+      "had finished",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "say",
+      "had finished"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "question",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she say that he has finished his homework?",
+      "statementForm": [
+        "Did she say that he had finished his homework?",
+        "Did she say that he had finished his homework"
+      ],
+      "fragmentForm": "Did she say that he.",
+      "wormholeVariants": [
+        "Did she say that he has finished his homework?",
+        "Did she say that he had finish his homework?",
+        "Do she say that he had finished his homework?",
+        "Did she sayed that he had finished his homework?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_037",
+    "seedId": "tense_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그녀가 전에 그 책을 읽었다는 것을 알았다.",
+    "english": "I knew that she had read the book before.",
+    "words": [
+      "I",
+      "knew",
+      "that",
+      "she",
+      "had",
+      "read",
+      "the",
+      "book",
+      "before",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 전에 그 책을 읽었다는 것을 알았다.",
+        "I"
+      ],
+      [
+        "past main + past perfect",
+        "knew + had read"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "knew",
+      "had read",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "knew",
+      "had read"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I knew that she has read the book before.",
+      "statementForm": [
+        "I knew that she had read the book before.",
+        "I knew that she had read the book before"
+      ],
+      "fragmentForm": "I knew that she had.",
+      "wormholeVariants": [
+        "I knew that she has read the book before.",
+        "I knew that she had reads the book before.",
+        "I knew she had read the book before.",
+        "I knew that she had read the book before?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_038",
+    "seedId": "tense_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그녀가 전에 그 책을 읽지 않았다는 것을 알았다.",
+    "english": "I knew that she had not read the book before.",
+    "words": [
+      "I",
+      "knew",
+      "that",
+      "she",
+      "had",
+      "not",
+      "read",
+      "the",
+      "book",
+      "before",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 전에 그 책을 읽지 않았다는 것을 알았다.",
+        "I"
+      ],
+      [
+        "past main + negative past perfect",
+        "knew + had not read"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "knew",
+      "had not read",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "knew",
+      "had not read"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "negative",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "I knew that she has not read the book before.",
+      "statementForm": [
+        "I knew that she had not read the book before.",
+        "I knew that she had not read the book before"
+      ],
+      "fragmentForm": "I knew that she had.",
+      "wormholeVariants": [
+        "I knew that she has not read the book before.",
+        "I knew that she did not read the book before.",
+        "I knew she had not read the book before.",
+        "I knew that she had not read the book before?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_039",
+    "seedId": "tense_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그녀가 전에 그 책을 읽었다는 것을 알았니?",
+    "english": "Did you know that she had read the book before?",
+    "words": [
+      "Did",
+      "you",
+      "know",
+      "that",
+      "she",
+      "had",
+      "read",
+      "the",
+      "book",
+      "before",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그녀가 전에 그 책을 읽었다는 것을 알았니?",
+        "Did"
+      ],
+      [
+        "past question + past perfect",
+        "Did you know + had read"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "know",
+      "had read",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "know",
+      "had read"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "question",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you know that she has read the book before?",
+      "statementForm": [
+        "Did you know that she had read the book before?",
+        "Did you know that she had read the book before"
+      ],
+      "fragmentForm": "Did you know that she.",
+      "wormholeVariants": [
+        "Did you know that she has read the book before?",
+        "Did you know that she had reads the book before?",
+        "Do you know that she had read the book before?",
+        "Did you knowed that she had read the book before?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_040",
+    "seedId": "tense_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 자신이 큰 실수를 했다는 것을 깨달았다.",
+    "english": "He realized that he had made a big mistake.",
+    "words": [
+      "He",
+      "realized",
+      "that",
+      "he",
+      "had",
+      "made",
+      "a",
+      "big",
+      "mistake",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 자신이 큰 실수를 했다는 것을 깨달았다.",
+        "He"
+      ],
+      [
+        "past main + past perfect",
+        "realized + had made"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "realized",
+      "had made",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "realized",
+      "had made"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "He realized that he has made a big mistake.",
+      "statementForm": [
+        "He realized that he had made a big mistake.",
+        "He realized that he had made a big mistake"
+      ],
+      "fragmentForm": "He realized that he had.",
+      "wormholeVariants": [
+        "He realized that he has made a big mistake.",
+        "He realized that he had make a big mistake.",
+        "He realized he had made a big mistake.",
+        "He realized that he had made a big mistake?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_041",
+    "seedId": "tense_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "선생님은 지구가 태양 주위를 돈다고 말했다.",
+    "english": "The teacher said that the earth moves around the sun.",
+    "words": [
+      "The",
+      "teacher",
+      "said",
+      "that",
+      "the",
+      "earth",
+      "moves",
+      "around",
+      "the",
+      "sun",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님은 지구가 태양 주위를 돈다고 말했다.",
+        "The"
+      ],
+      [
+        "past main + truth exception",
+        "said + moves"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "moves",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "moves"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "truth"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher said that the earth moved around the sun.",
+      "statementForm": [
+        "The teacher said that the earth moves around the sun.",
+        "The teacher said that the earth moves around the sun"
+      ],
+      "fragmentForm": "The teacher said that the.",
+      "wormholeVariants": [
+        "The teacher said that the earth moved around the sun.",
+        "The teacher said the earth moves around the sun.",
+        "The teacher said that the earth moves around the sun?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_042",
+    "seedId": "tense_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 물이 100도에서 끓는다는 것을 배웠다.",
+    "english": "I learned that water boils at 100 degrees.",
+    "words": [
+      "I",
+      "learned",
+      "that",
+      "water",
+      "boils",
+      "at",
+      "100",
+      "degrees",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 물이 100도에서 끓는다는 것을 배웠다.",
+        "I"
+      ],
+      [
+        "past main + scientific truth",
+        "learned + boils"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "learned",
+      "boils",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "learned",
+      "boils"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "truth"
+    ],
+    "distractorSeeds": {
+      "auxError": "I learned that water boiled at 100 degrees.",
+      "statementForm": [
+        "I learned that water boils at 100 degrees.",
+        "I learned that water boils at 100 degrees"
+      ],
+      "fragmentForm": "I learned that water boils.",
+      "wormholeVariants": [
+        "I learned that water boiled at 100 degrees.",
+        "I learned water boils at 100 degrees.",
+        "I learned that water boils at 100 degrees?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_043",
+    "seedId": "tense_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 해가 동쪽에서 뜬다고 말했다.",
+    "english": "He said that the sun rises in the east.",
+    "words": [
+      "He",
+      "said",
+      "that",
+      "the",
+      "sun",
+      "rises",
+      "in",
+      "the",
+      "east",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 해가 동쪽에서 뜬다고 말했다.",
+        "He"
+      ],
+      [
+        "past main + natural truth",
+        "said + rises"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "rises",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "rises"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "truth"
+    ],
+    "distractorSeeds": {
+      "auxError": "He said that the sun rose in the east.",
+      "statementForm": [
+        "He said that the sun rises in the east.",
+        "He said that the sun rises in the east"
+      ],
+      "fragmentForm": "He said that the sun.",
+      "wormholeVariants": [
+        "He said that the sun rose in the east.",
+        "He said the sun rises in the east.",
+        "He said that the sun rises in the east?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_044",
+    "seedId": "tense_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 그가 매일 조깅한다고 말했다.",
+    "english": "She said that he goes jogging every day.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "he",
+      "goes",
+      "jogging",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 매일 조깅한다고 말했다.",
+        "She"
+      ],
+      [
+        "past main + habit exception",
+        "said + goes"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "goes",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "goes"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "habit"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that he went jogging every day.",
+      "statementForm": [
+        "She said that he goes jogging every day.",
+        "She said that he goes jogging every day"
+      ],
+      "fragmentForm": "She said that he goes.",
+      "wormholeVariants": [
+        "She said that he went jogging every day.",
+        "She said he goes jogging every day.",
+        "She said that he goes jogging every day?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_045",
+    "seedId": "tense_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 그가 매일 조깅하지 않는다고 말했다.",
+    "english": "She said that he does not go jogging every day.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "he",
+      "does",
+      "not",
+      "go",
+      "jogging",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 매일 조깅하지 않는다고 말했다.",
+        "She"
+      ],
+      [
+        "past main + habit negative exception",
+        "said + does not go"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "does not go",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "does not go"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "habit",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that he did not go jogging every day.",
+      "statementForm": [
+        "She said that he does not go jogging every day.",
+        "She said that he does not go jogging every day"
+      ],
+      "fragmentForm": "She said that he does.",
+      "wormholeVariants": [
+        "She said that he did not go jogging every day.",
+        "She said he does not go jogging every day.",
+        "She said that he does not go jogging every day?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_046",
+    "seedId": "tense_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀가 그가 매일 조깅한다고 말했니?",
+    "english": "Did she say that he goes jogging every day?",
+    "words": [
+      "Did",
+      "she",
+      "say",
+      "that",
+      "he",
+      "goes",
+      "jogging",
+      "every",
+      "day",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 그가 매일 조깅한다고 말했니?",
+        "Did"
+      ],
+      [
+        "past question + habit exception",
+        "Did she say + goes"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "say",
+      "goes",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "say",
+      "goes"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "habit",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do she say that he goes jogging every day?",
+      "statementForm": [
+        "Did she say that he goes jogging every day?",
+        "Did she say that he goes jogging every day"
+      ],
+      "fragmentForm": "Did she say that he.",
+      "wormholeVariants": [
+        "Do she say that he goes jogging every day?",
+        "Did she sayed that he goes jogging every day?",
+        "Did she say that he went jogging every day?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_047",
+    "seedId": "tense_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그 전쟁이 1950년에 시작되었다고 알았다.",
+    "english": "I knew that the war started in 1950.",
+    "words": [
+      "I",
+      "knew",
+      "that",
+      "the",
+      "war",
+      "started",
+      "in",
+      "1950",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 전쟁이 1950년에 시작되었다고 알았다.",
+        "I"
+      ],
+      [
+        "past main + historical fact",
+        "knew + started"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "knew",
+      "started",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "knew",
+      "started"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "history"
+    ],
+    "distractorSeeds": {
+      "auxError": "I knew the war started in 1950.",
+      "statementForm": [
+        "I knew that the war started in 1950.",
+        "I knew that the war started in 1950"
+      ],
+      "fragmentForm": "I knew that the war.",
+      "wormholeVariants": [
+        "I knew the war started in 1950.",
+        "I knew that the war started in 1950?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_048",
+    "seedId": "tense_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그들은 2차 세계대전이 1939년에 발발했다고 배웠다.",
+    "english": "They learned that World War Two broke out in 1939.",
+    "words": [
+      "They",
+      "learned",
+      "that",
+      "World",
+      "War",
+      "Two",
+      "broke",
+      "out",
+      "in",
+      "1939",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 2차 세계대전이 1939년에 발발했다고 배웠다.",
+        "They"
+      ],
+      [
+        "past main + historical fact",
+        "learned + broke out"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "learned",
+      "broke out",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "learned",
+      "broke out"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "history"
+    ],
+    "distractorSeeds": {
+      "auxError": "They learned World War Two broke out in 1939.",
+      "statementForm": [
+        "They learned that World War Two broke out in 1939.",
+        "They learned that World War Two broke out in 1939"
+      ],
+      "fragmentForm": "They learned that World War.",
+      "wormholeVariants": [
+        "They learned World War Two broke out in 1939.",
+        "They learned that World War Two broke out in 1939?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_049",
+    "seedId": "tense_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 그 속담이 여전히 맞다고 말했다.",
+    "english": "He said that the proverb is still true.",
+    "words": [
+      "He",
+      "said",
+      "that",
+      "the",
+      "proverb",
+      "is",
+      "still",
+      "true",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 속담이 여전히 맞다고 말했다.",
+        "He"
+      ],
+      [
+        "past main + proverb/truth",
+        "said + is"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "is",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "is"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "proverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He said that the proverb was still true.",
+      "statementForm": [
+        "He said that the proverb is still true.",
+        "He said that the proverb is still true"
+      ],
+      "fragmentForm": "He said that the proverb.",
+      "wormholeVariants": [
+        "He said that the proverb was still true.",
+        "He said the proverb is still true.",
+        "He said that the proverb is still true?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_050",
+    "seedId": "tense_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "선생님은 좋은 습관이 성공을 만든다고 말했다.",
+    "english": "The teacher said that good habits make success.",
+    "words": [
+      "The",
+      "teacher",
+      "said",
+      "that",
+      "good",
+      "habits",
+      "make",
+      "success",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님은 좋은 습관이 성공을 만든다고 말했다.",
+        "The"
+      ],
+      [
+        "past main + general truth",
+        "said + make"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "make",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "make"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "truth"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher said good habits make success.",
+      "statementForm": [
+        "The teacher said that good habits make success.",
+        "The teacher said that good habits make success"
+      ],
+      "fragmentForm": "The teacher said that good.",
+      "wormholeVariants": [
+        "The teacher said good habits make success.",
+        "The teacher said that good habits make success?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_051",
+    "seedId": "tense_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 내가 점심을 먹었는지 물었다.",
+    "english": "He asked if I had eaten lunch.",
+    "words": [
+      "He",
+      "asked",
+      "if",
+      "I",
+      "had",
+      "eaten",
+      "lunch",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 내가 점심을 먹었는지 물었다.",
+        "He"
+      ],
+      [
+        "past question report + past perfect",
+        "asked if + had eaten"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "asked",
+      "had eaten",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "asked",
+      "had eaten"
+    ],
+    "tags": [
+      "tense_agreement",
+      "if_clause",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "He asked if I has eaten lunch.",
+      "statementForm": [
+        "He asked if I had eaten lunch.",
+        "He asked if I had eaten lunch"
+      ],
+      "fragmentForm": "He asked if I had.",
+      "wormholeVariants": [
+        "He asked if I has eaten lunch.",
+        "He asked if I had ate lunch.",
+        "He asked if I had eaten lunch?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_052",
+    "seedId": "tense_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 내가 점심을 먹지 않았는지 물었다.",
+    "english": "He asked if I had not eaten lunch.",
+    "words": [
+      "He",
+      "asked",
+      "if",
+      "I",
+      "had",
+      "not",
+      "eaten",
+      "lunch",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 내가 점심을 먹지 않았는지 물었다.",
+        "He"
+      ],
+      [
+        "past report + negative past perfect",
+        "asked if + had not eaten"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "asked",
+      "had not eaten",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "asked",
+      "had not eaten"
+    ],
+    "tags": [
+      "tense_agreement",
+      "if_clause",
+      "negative",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "He asked if I has not eaten lunch.",
+      "statementForm": [
+        "He asked if I had not eaten lunch.",
+        "He asked if I had not eaten lunch"
+      ],
+      "fragmentForm": "He asked if I had.",
+      "wormholeVariants": [
+        "He asked if I has not eaten lunch.",
+        "He asked if I had not eaten lunch?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_053",
+    "seedId": "tense_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그가 내가 점심을 먹었는지 물었니?",
+    "english": "Did he ask if I had eaten lunch?",
+    "words": [
+      "Did",
+      "he",
+      "ask",
+      "if",
+      "I",
+      "had",
+      "eaten",
+      "lunch",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 내가 점심을 먹었는지 물었니?",
+        "Did"
+      ],
+      [
+        "question report + past perfect",
+        "Did he ask if + had eaten"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "ask",
+      "had eaten",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "ask",
+      "had eaten"
+    ],
+    "tags": [
+      "tense_agreement",
+      "if_clause",
+      "question",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he ask if I has eaten lunch?",
+      "statementForm": [
+        "Did he ask if I had eaten lunch?",
+        "Did he ask if I had eaten lunch"
+      ],
+      "fragmentForm": "Did he ask if I.",
+      "wormholeVariants": [
+        "Did he ask if I has eaten lunch?",
+        "Did he ask if I had ate lunch?",
+        "Do he ask if I had eaten lunch?",
+        "Did he asked if I had eaten lunch?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_054",
+    "seedId": "tense_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 우산을 가져왔는지 물었다.",
+    "english": "She asked whether I had brought an umbrella.",
+    "words": [
+      "She",
+      "asked",
+      "whether",
+      "I",
+      "had",
+      "brought",
+      "an",
+      "umbrella",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 우산을 가져왔는지 물었다.",
+        "She"
+      ],
+      [
+        "past report + whether + past perfect",
+        "asked whether + had brought"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "asked",
+      "had brought",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "asked",
+      "had brought"
+    ],
+    "tags": [
+      "tense_agreement",
+      "whether_clause",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked whether I has brought an umbrella.",
+      "statementForm": [
+        "She asked whether I had brought an umbrella.",
+        "She asked whether I had brought an umbrella"
+      ],
+      "fragmentForm": "She asked whether I had.",
+      "wormholeVariants": [
+        "She asked whether I has brought an umbrella.",
+        "She asked whether I had bring an umbrella.",
+        "She asked whether I had brought an umbrella?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_055",
+    "seedId": "tense_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 우산을 가져오지 않았는지 물었다.",
+    "english": "She asked whether I had not brought an umbrella.",
+    "words": [
+      "She",
+      "asked",
+      "whether",
+      "I",
+      "had",
+      "not",
+      "brought",
+      "an",
+      "umbrella",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 우산을 가져오지 않았는지 물었다.",
+        "She"
+      ],
+      [
+        "past report + whether + negative past perfect",
+        "asked whether + had not brought"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "asked",
+      "had not brought",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "asked",
+      "had not brought"
+    ],
+    "tags": [
+      "tense_agreement",
+      "whether_clause",
+      "negative",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked whether I has not brought an umbrella.",
+      "statementForm": [
+        "She asked whether I had not brought an umbrella.",
+        "She asked whether I had not brought an umbrella"
+      ],
+      "fragmentForm": "She asked whether I had.",
+      "wormholeVariants": [
+        "She asked whether I has not brought an umbrella.",
+        "She asked whether I had not brought an umbrella?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_056",
+    "seedId": "tense_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀가 내가 우산을 가져왔는지 물었니?",
+    "english": "Did she ask whether I had brought an umbrella?",
+    "words": [
+      "Did",
+      "she",
+      "ask",
+      "whether",
+      "I",
+      "had",
+      "brought",
+      "an",
+      "umbrella",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 내가 우산을 가져왔는지 물었니?",
+        "Did"
+      ],
+      [
+        "question report + whether + past perfect",
+        "Did she ask whether + had brought"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "ask",
+      "had brought",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "ask",
+      "had brought"
+    ],
+    "tags": [
+      "tense_agreement",
+      "whether_clause",
+      "question",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she ask whether I has brought an umbrella?",
+      "statementForm": [
+        "Did she ask whether I had brought an umbrella?",
+        "Did she ask whether I had brought an umbrella"
+      ],
+      "fragmentForm": "Did she ask whether I.",
+      "wormholeVariants": [
+        "Did she ask whether I has brought an umbrella?",
+        "Did she ask whether I had bring an umbrella?",
+        "Do she ask whether I had brought an umbrella?",
+        "Did she asked whether I had brought an umbrella?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_057",
+    "seedId": "tense_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그 선생님은 우리가 휴대전화를 껐는지 물었다.",
+    "english": "The teacher asked if we had turned off our phones.",
+    "words": [
+      "The",
+      "teacher",
+      "asked",
+      "if",
+      "we",
+      "had",
+      "turned",
+      "off",
+      "our",
+      "phones",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 우리가 휴대전화를 껐는지 물었다.",
+        "The"
+      ],
+      [
+        "past report + if + past perfect",
+        "asked if + had turned off"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "asked",
+      "had turned off",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "asked",
+      "had turned off"
+    ],
+    "tags": [
+      "tense_agreement",
+      "if_clause",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher asked if we has turned off our phones.",
+      "statementForm": [
+        "The teacher asked if we had turned off our phones.",
+        "The teacher asked if we had turned off our phones"
+      ],
+      "fragmentForm": "The teacher asked if we.",
+      "wormholeVariants": [
+        "The teacher asked if we has turned off our phones.",
+        "The teacher asked if we had turn off our phones.",
+        "The teacher asked if we had turned off our phones?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_058",
+    "seedId": "tense_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그 선생님은 우리가 휴대전화를 끄지 않았는지 물었다.",
+    "english": "The teacher asked if we had not turned off our phones.",
+    "words": [
+      "The",
+      "teacher",
+      "asked",
+      "if",
+      "we",
+      "had",
+      "not",
+      "turned",
+      "off",
+      "our",
+      "phones",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 우리가 휴대전화를 끄지 않았는지 물었다.",
+        "The"
+      ],
+      [
+        "past report + if + negative past perfect",
+        "asked if + had not turned off"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "asked",
+      "had not turned off",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "asked",
+      "had not turned off"
+    ],
+    "tags": [
+      "tense_agreement",
+      "if_clause",
+      "negative",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher asked if we has not turned off our phones.",
+      "statementForm": [
+        "The teacher asked if we had not turned off our phones.",
+        "The teacher asked if we had not turned off our phones"
+      ],
+      "fragmentForm": "The teacher asked if we.",
+      "wormholeVariants": [
+        "The teacher asked if we has not turned off our phones.",
+        "The teacher asked if we had not turned off our phones?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_059",
+    "seedId": "tense_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 그들이 숙제를 끝냈는지 물었다.",
+    "english": "He asked whether they had finished their homework.",
+    "words": [
+      "He",
+      "asked",
+      "whether",
+      "they",
+      "had",
+      "finished",
+      "their",
+      "homework",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그들이 숙제를 끝냈는지 물었다.",
+        "He"
+      ],
+      [
+        "past report + whether + past perfect",
+        "asked whether + had finished"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "asked",
+      "had finished",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "asked",
+      "had finished"
+    ],
+    "tags": [
+      "tense_agreement",
+      "whether_clause",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "He asked whether they has finished their homework.",
+      "statementForm": [
+        "He asked whether they had finished their homework.",
+        "He asked whether they had finished their homework"
+      ],
+      "fragmentForm": "He asked whether they had.",
+      "wormholeVariants": [
+        "He asked whether they has finished their homework.",
+        "He asked whether they had finish their homework.",
+        "He asked whether they had finished their homework?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_060",
+    "seedId": "tense_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그가 그들이 숙제를 끝냈는지 물었니?",
+    "english": "Did he ask whether they had finished their homework?",
+    "words": [
+      "Did",
+      "he",
+      "ask",
+      "whether",
+      "they",
+      "had",
+      "finished",
+      "their",
+      "homework",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 그들이 숙제를 끝냈는지 물었니?",
+        "Did"
+      ],
+      [
+        "question report + whether + past perfect",
+        "Did he ask whether + had finished"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "ask",
+      "had finished",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "ask",
+      "had finished"
+    ],
+    "tags": [
+      "tense_agreement",
+      "whether_clause",
+      "question",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he ask whether they has finished their homework?",
+      "statementForm": [
+        "Did he ask whether they had finished their homework?",
+        "Did he ask whether they had finished their homework"
+      ],
+      "fragmentForm": "Did he ask whether they.",
+      "wormholeVariants": [
+        "Did he ask whether they has finished their homework?",
+        "Did he ask whether they had finish their homework?",
+        "Do he ask whether they had finished their homework?",
+        "Did he asked whether they had finished their homework?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_061",
+    "seedId": "tense_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그녀가 음악을 좋아한다고 생각했다.",
+    "english": "I thought that she liked music.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "she",
+      "liked",
+      "music",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 음악을 좋아한다고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + past simple",
+        "thought + liked"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "liked",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "liked"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought she liked music.",
+      "statementForm": [
+        "I thought that she liked music.",
+        "I thought that she liked music"
+      ],
+      "fragmentForm": "I thought that she liked.",
+      "wormholeVariants": [
+        "I thought she liked music.",
+        "I thought that she liked music?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_062",
+    "seedId": "tense_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그녀가 음악을 좋아하지 않는다고 생각했다.",
+    "english": "I thought that she did not like music.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "she",
+      "did",
+      "not",
+      "like",
+      "music",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 음악을 좋아하지 않는다고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + negative past simple",
+        "thought + did not like"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "did not like",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "did not like"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that she does not like music.",
+      "statementForm": [
+        "I thought that she did not like music.",
+        "I thought that she did not like music"
+      ],
+      "fragmentForm": "I thought that she did.",
+      "wormholeVariants": [
+        "I thought that she does not like music.",
+        "I thought she did not like music.",
+        "I thought that she did not like music?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_063",
+    "seedId": "tense_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그녀가 음악을 좋아한다고 생각했니?",
+    "english": "Did you think that she liked music?",
+    "words": [
+      "Did",
+      "you",
+      "think",
+      "that",
+      "she",
+      "liked",
+      "music",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그녀가 음악을 좋아한다고 생각했니?",
+        "Did"
+      ],
+      [
+        "past question + past simple",
+        "Did you think + liked"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "think",
+      "liked",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "think",
+      "liked"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you think that she liked music?",
+      "statementForm": [
+        "Did you think that she liked music?",
+        "Did you think that she liked music"
+      ],
+      "fragmentForm": "Did you think that she.",
+      "wormholeVariants": [
+        "Do you think that she liked music?",
+        "Did you thinked that she liked music?",
+        "Did you think she liked music?",
+        "Did you think that she liked music."
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_064",
+    "seedId": "tense_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 내가 그 열쇠를 잃어버렸다고 알았다.",
+    "english": "He knew that I had lost the key.",
+    "words": [
+      "He",
+      "knew",
+      "that",
+      "I",
+      "had",
+      "lost",
+      "the",
+      "key",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 내가 그 열쇠를 잃어버렸다고 알았다.",
+        "He"
+      ],
+      [
+        "past main + past perfect",
+        "knew + had lost"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "knew",
+      "had lost",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "knew",
+      "had lost"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "He knew that I has lost the key.",
+      "statementForm": [
+        "He knew that I had lost the key.",
+        "He knew that I had lost the key"
+      ],
+      "fragmentForm": "He knew that I had.",
+      "wormholeVariants": [
+        "He knew that I has lost the key.",
+        "He knew I had lost the key.",
+        "He knew that I had lost the key?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_065",
+    "seedId": "tense_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 내가 그 열쇠를 잃어버리지 않았다고 알았다.",
+    "english": "He knew that I had not lost the key.",
+    "words": [
+      "He",
+      "knew",
+      "that",
+      "I",
+      "had",
+      "not",
+      "lost",
+      "the",
+      "key",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 내가 그 열쇠를 잃어버리지 않았다고 알았다.",
+        "He"
+      ],
+      [
+        "past main + negative past perfect",
+        "knew + had not lost"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "knew",
+      "had not lost",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "knew",
+      "had not lost"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He knew that I has not lost the key.",
+      "statementForm": [
+        "He knew that I had not lost the key.",
+        "He knew that I had not lost the key"
+      ],
+      "fragmentForm": "He knew that I had.",
+      "wormholeVariants": [
+        "He knew that I has not lost the key.",
+        "He knew I had not lost the key.",
+        "He knew that I had not lost the key?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_066",
+    "seedId": "tense_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그가 내가 그 열쇠를 잃어버렸다고 알았니?",
+    "english": "Did he know that I had lost the key?",
+    "words": [
+      "Did",
+      "he",
+      "know",
+      "that",
+      "I",
+      "had",
+      "lost",
+      "the",
+      "key",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 내가 그 열쇠를 잃어버렸다고 알았니?",
+        "Did"
+      ],
+      [
+        "past question + past perfect",
+        "Did he know + had lost"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "know",
+      "had lost",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "know",
+      "had lost"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he know that I has lost the key?",
+      "statementForm": [
+        "Did he know that I had lost the key?",
+        "Did he know that I had lost the key"
+      ],
+      "fragmentForm": "Did he know that I.",
+      "wormholeVariants": [
+        "Did he know that I has lost the key?",
+        "Do he know that I had lost the key?",
+        "Did he knowed that I had lost the key?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_067",
+    "seedId": "tense_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그들은 우리가 제시간에 도착할 것이라고 믿었다.",
+    "english": "They believed that we would arrive on time.",
+    "words": [
+      "They",
+      "believed",
+      "that",
+      "we",
+      "would",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리가 제시간에 도착할 것이라고 믿었다.",
+        "They"
+      ],
+      [
+        "past main + would",
+        "believed + would arrive"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "would arrive",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "would arrive"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past"
+    ],
+    "distractorSeeds": {
+      "auxError": "They believed that we will arrive on time.",
+      "statementForm": [
+        "They believed that we would arrive on time.",
+        "They believed that we would arrive on time"
+      ],
+      "fragmentForm": "They believed that we would.",
+      "wormholeVariants": [
+        "They believed that we will arrive on time.",
+        "They believed we would arrive on time.",
+        "They believed that we would arrive on time?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_068",
+    "seedId": "tense_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그들은 우리가 제시간에 도착하지 못할 것이라고 믿었다.",
+    "english": "They believed that we would not arrive on time.",
+    "words": [
+      "They",
+      "believed",
+      "that",
+      "we",
+      "would",
+      "not",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리가 제시간에 도착하지 못할 것이라고 믿었다.",
+        "They"
+      ],
+      [
+        "past main + would not",
+        "believed + would not arrive"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "would not arrive",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "would not arrive"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They believed that we will not arrive on time.",
+      "statementForm": [
+        "They believed that we would not arrive on time.",
+        "They believed that we would not arrive on time"
+      ],
+      "fragmentForm": "They believed that we would.",
+      "wormholeVariants": [
+        "They believed that we will not arrive on time.",
+        "They believed we would not arrive on time.",
+        "They believed that we would not arrive on time?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_069",
+    "seedId": "tense_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그들이 우리가 제시간에 도착할 것이라고 믿었니?",
+    "english": "Did they believe that we would arrive on time?",
+    "words": [
+      "Did",
+      "they",
+      "believe",
+      "that",
+      "we",
+      "would",
+      "arrive",
+      "on",
+      "time",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 우리가 제시간에 도착할 것이라고 믿었니?",
+        "Did"
+      ],
+      [
+        "past question + would",
+        "Did they believe + would arrive"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "believe",
+      "would arrive",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "believe",
+      "would arrive"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did they believe that we will arrive on time?",
+      "statementForm": [
+        "Did they believe that we would arrive on time?",
+        "Did they believe that we would arrive on time"
+      ],
+      "fragmentForm": "Did they believe that we.",
+      "wormholeVariants": [
+        "Did they believe that we will arrive on time?",
+        "Do they believe that we would arrive on time?",
+        "Did they believeed that we would arrive on time?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_070",
+    "seedId": "tense_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 그 편지를 썼다고 말했다.",
+    "english": "She said that I had written the letter.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "I",
+      "had",
+      "written",
+      "the",
+      "letter",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 그 편지를 썼다고 말했다.",
+        "She"
+      ],
+      [
+        "past main + past perfect",
+        "said + had written"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "had written",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "had written"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that I has written the letter.",
+      "statementForm": [
+        "She said that I had written the letter.",
+        "She said that I had written the letter"
+      ],
+      "fragmentForm": "She said that I had.",
+      "wormholeVariants": [
+        "She said that I has written the letter.",
+        "She said I had written the letter.",
+        "She said that I had written the letter?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_071",
+    "seedId": "tense_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 그 편지를 쓰지 않았다고 말했다.",
+    "english": "She said that I had not written the letter.",
+    "words": [
+      "She",
+      "said",
+      "that",
+      "I",
+      "had",
+      "not",
+      "written",
+      "the",
+      "letter",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 그 편지를 쓰지 않았다고 말했다.",
+        "She"
+      ],
+      [
+        "past main + negative past perfect",
+        "said + had not written"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "had not written",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "had not written"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She said that I has not written the letter.",
+      "statementForm": [
+        "She said that I had not written the letter.",
+        "She said that I had not written the letter"
+      ],
+      "fragmentForm": "She said that I had.",
+      "wormholeVariants": [
+        "She said that I has not written the letter.",
+        "She said I had not written the letter.",
+        "She said that I had not written the letter?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_072",
+    "seedId": "tense_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀가 내가 그 편지를 썼다고 말했니?",
+    "english": "Did she say that I had written the letter?",
+    "words": [
+      "Did",
+      "she",
+      "say",
+      "that",
+      "I",
+      "had",
+      "written",
+      "the",
+      "letter",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 내가 그 편지를 썼다고 말했니?",
+        "Did"
+      ],
+      [
+        "past question + past perfect",
+        "Did she say + had written"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "say",
+      "had written",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "say",
+      "had written"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she say that I has written the letter?",
+      "statementForm": [
+        "Did she say that I had written the letter?",
+        "Did she say that I had written the letter"
+      ],
+      "fragmentForm": "Did she say that I.",
+      "wormholeVariants": [
+        "Did she say that I has written the letter?",
+        "Do she say that I had written the letter?",
+        "Did she sayed that I had written the letter?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_073",
+    "seedId": "tense_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그들이 그곳에 살았다고 생각했다.",
+    "english": "I thought that they lived there.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "they",
+      "lived",
+      "there",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 그곳에 살았다고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + past simple",
+        "thought + lived"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "lived",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "lived"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought they lived there.",
+      "statementForm": [
+        "I thought that they lived there.",
+        "I thought that they lived there"
+      ],
+      "fragmentForm": "I thought that they lived.",
+      "wormholeVariants": [
+        "I thought they lived there.",
+        "I thought that they lived there?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_074",
+    "seedId": "tense_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그들이 그곳에 살지 않았다고 생각했다.",
+    "english": "I thought that they did not live there.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "they",
+      "did",
+      "not",
+      "live",
+      "there",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 그곳에 살지 않았다고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + negative past simple",
+        "thought + did not live"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "did not live",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "did not live"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that they does not live there.",
+      "statementForm": [
+        "I thought that they did not live there.",
+        "I thought that they did not live there"
+      ],
+      "fragmentForm": "I thought that they did.",
+      "wormholeVariants": [
+        "I thought that they does not live there.",
+        "I thought they did not live there.",
+        "I thought that they did not live there?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_075",
+    "seedId": "tense_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그들이 그곳에 살았다고 생각했니?",
+    "english": "Did you think that they lived there?",
+    "words": [
+      "Did",
+      "you",
+      "think",
+      "that",
+      "they",
+      "lived",
+      "there",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그들이 그곳에 살았다고 생각했니?",
+        "Did"
+      ],
+      [
+        "past question + past simple",
+        "Did you think + lived"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "think",
+      "lived",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "think",
+      "lived"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you think that they lived there?",
+      "statementForm": [
+        "Did you think that they lived there?",
+        "Did you think that they lived there"
+      ],
+      "fragmentForm": "Did you think that they.",
+      "wormholeVariants": [
+        "Do you think that they lived there?",
+        "Did you thinked that they lived there?",
+        "Did you think they lived there?",
+        "Did you think that they lived there."
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_076",
+    "seedId": "tense_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 캔버라가 호주의 수도라고 알았다.",
+    "english": "She knew that Canberra is the capital of Australia.",
+    "words": [
+      "She",
+      "knew",
+      "that",
+      "Canberra",
+      "is",
+      "the",
+      "capital",
+      "of",
+      "Australia",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 캔버라가 호주의 수도라고 알았다.",
+        "She"
+      ],
+      [
+        "past main + fact exception",
+        "knew + is"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "knew",
+      "is",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "knew",
+      "is"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "fact"
+    ],
+    "distractorSeeds": {
+      "auxError": "She knew that Canberra was the capital of Australia.",
+      "statementForm": [
+        "She knew that Canberra is the capital of Australia.",
+        "She knew that Canberra is the capital of Australia"
+      ],
+      "fragmentForm": "She knew that Canberra is.",
+      "wormholeVariants": [
+        "She knew that Canberra was the capital of Australia.",
+        "She knew Canberra is the capital of Australia.",
+        "She knew that Canberra is the capital of Australia?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_077",
+    "seedId": "tense_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 캔버라가 호주의 수도가 아니라고 생각했다.",
+    "english": "He thought that Canberra was not the capital of Canada.",
+    "words": [
+      "He",
+      "thought",
+      "that",
+      "Canberra",
+      "was",
+      "not",
+      "the",
+      "capital",
+      "of",
+      "Canada",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 캔버라가 호주의 수도가 아니라고 생각했다.",
+        "He"
+      ],
+      [
+        "past main + negative fact",
+        "thought + was not"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "was not",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "was not"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He thought that Canberra is not the capital of Canada.",
+      "statementForm": [
+        "He thought that Canberra was not the capital of Canada.",
+        "He thought that Canberra was not the capital of Canada"
+      ],
+      "fragmentForm": "He thought that Canberra was.",
+      "wormholeVariants": [
+        "He thought that Canberra is not the capital of Canada.",
+        "He thought Canberra was not the capital of Canada.",
+        "He thought that Canberra was not the capital of Canada?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_078",
+    "seedId": "tense_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 캔버라가 호주의 수도라고 알았니?",
+    "english": "Did he know that Canberra is the capital of Australia?",
+    "words": [
+      "Did",
+      "he",
+      "know",
+      "that",
+      "Canberra",
+      "is",
+      "the",
+      "capital",
+      "of",
+      "Australia",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 캔버라가 호주의 수도라고 알았니?",
+        "Did"
+      ],
+      [
+        "past question + fact exception",
+        "Did he know + is"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "know",
+      "is",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "know",
+      "is"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "question",
+      "fact"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he know that Canberra was the capital of Australia?",
+      "statementForm": [
+        "Did he know that Canberra is the capital of Australia?",
+        "Did he know that Canberra is the capital of Australia"
+      ],
+      "fragmentForm": "Did he know that Canberra.",
+      "wormholeVariants": [
+        "Did he know that Canberra was the capital of Australia?",
+        "Do he know that Canberra is the capital of Australia?",
+        "Did he knowed that Canberra is the capital of Australia?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_079",
+    "seedId": "tense_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 내 말을 이해했다고 믿었다.",
+    "english": "I believed that he had understood my words.",
+    "words": [
+      "I",
+      "believed",
+      "that",
+      "he",
+      "had",
+      "understood",
+      "my",
+      "words",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 내 말을 이해했다고 믿었다.",
+        "I"
+      ],
+      [
+        "past main + past perfect",
+        "believed + had understood"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "had understood",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "had understood"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believed that he has understood my words.",
+      "statementForm": [
+        "I believed that he had understood my words.",
+        "I believed that he had understood my words"
+      ],
+      "fragmentForm": "I believed that he had.",
+      "wormholeVariants": [
+        "I believed that he has understood my words.",
+        "I believed he had understood my words.",
+        "I believed that he had understood my words?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_080",
+    "seedId": "tense_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 내 말을 이해하지 못했다고 믿었다.",
+    "english": "I believed that he had not understood my words.",
+    "words": [
+      "I",
+      "believed",
+      "that",
+      "he",
+      "had",
+      "not",
+      "understood",
+      "my",
+      "words",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 내 말을 이해하지 못했다고 믿었다.",
+        "I"
+      ],
+      [
+        "past main + negative past perfect",
+        "believed + had not understood"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "believed",
+      "had not understood",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "believed",
+      "had not understood"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I believed that he has not understood my words.",
+      "statementForm": [
+        "I believed that he had not understood my words.",
+        "I believed that he had not understood my words"
+      ],
+      "fragmentForm": "I believed that he had.",
+      "wormholeVariants": [
+        "I believed that he has not understood my words.",
+        "I believed he had not understood my words.",
+        "I believed that he had not understood my words?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_081",
+    "seedId": "tense_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그가 내 말을 이해했다고 믿었니?",
+    "english": "Did you believe that he had understood my words?",
+    "words": [
+      "Did",
+      "you",
+      "believe",
+      "that",
+      "he",
+      "had",
+      "understood",
+      "my",
+      "words",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 내 말을 이해했다고 믿었니?",
+        "Did"
+      ],
+      [
+        "past question + past perfect",
+        "Did you believe + had understood"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "believe",
+      "had understood",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "believe",
+      "had understood"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you believe that he has understood my words?",
+      "statementForm": [
+        "Did you believe that he had understood my words?",
+        "Did you believe that he had understood my words"
+      ],
+      "fragmentForm": "Did you believe that he.",
+      "wormholeVariants": [
+        "Did you believe that he has understood my words?",
+        "Do you believe that he had understood my words?",
+        "Did you believeed that he had understood my words?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_082",
+    "seedId": "tense_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그는 우리가 밤새 공부해서는 안 된다고 말했다.",
+    "english": "He said that we should not study all night.",
+    "words": [
+      "He",
+      "said",
+      "that",
+      "we",
+      "should",
+      "not",
+      "study",
+      "all",
+      "night",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리가 밤새 공부해서는 안 된다고 말했다.",
+        "He"
+      ],
+      [
+        "past main + should not",
+        "said + should not study"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "should not study",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "should not study"
+    ],
+    "tags": [
+      "tense_agreement",
+      "modal",
+      "negative",
+      "should"
+    ],
+    "distractorSeeds": {
+      "auxError": "He said we should not study all night.",
+      "statementForm": [
+        "He said that we should not study all night.",
+        "He said that we should not study all night"
+      ],
+      "fragmentForm": "He said that we should.",
+      "wormholeVariants": [
+        "He said we should not study all night.",
+        "He said that we should not study all night?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_083",
+    "seedId": "tense_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그가 우리가 더 열심히 공부해야 한다고 말했니?",
+    "english": "Did he say that we should study harder?",
+    "words": [
+      "Did",
+      "he",
+      "say",
+      "that",
+      "we",
+      "should",
+      "study",
+      "harder",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 우리가 더 열심히 공부해야 한다고 말했니?",
+        "Did"
+      ],
+      [
+        "past question + should",
+        "Did he say + should study"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "say",
+      "should study",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "say",
+      "should study"
+    ],
+    "tags": [
+      "tense_agreement",
+      "modal",
+      "question",
+      "should"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he say that we should studied harder?",
+      "statementForm": [
+        "Did he say that we should study harder?",
+        "Did he say that we should study harder"
+      ],
+      "fragmentForm": "Did he say that we.",
+      "wormholeVariants": [
+        "Did he say that we should studied harder?",
+        "Do he say that we should study harder?",
+        "Did he sayed that we should study harder?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_084",
+    "seedId": "tense_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그녀가 피아노를 좋아하지 않는다고 생각했다.",
+    "english": "I thought that she did not like playing the piano.",
+    "words": [
+      "I",
+      "thought",
+      "that",
+      "she",
+      "did",
+      "not",
+      "like",
+      "playing",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 피아노를 좋아하지 않는다고 생각했다.",
+        "I"
+      ],
+      [
+        "past main + negative past simple",
+        "thought + did not like"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "did not like",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "did not like"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I thought that she does not like playing the piano.",
+      "statementForm": [
+        "I thought that she did not like playing the piano.",
+        "I thought that she did not like playing the piano"
+      ],
+      "fragmentForm": "I thought that she did.",
+      "wormholeVariants": [
+        "I thought that she does not like playing the piano.",
+        "I thought she did not like playing the piano.",
+        "I thought that she did not like playing the piano?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_085",
+    "seedId": "tense_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그녀가 피아노를 좋아한다고 생각했니?",
+    "english": "Did you think that she liked playing the piano?",
+    "words": [
+      "Did",
+      "you",
+      "think",
+      "that",
+      "she",
+      "liked",
+      "playing",
+      "the",
+      "piano",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그녀가 피아노를 좋아한다고 생각했니?",
+        "Did"
+      ],
+      [
+        "past question + past simple",
+        "Did you think + liked"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "think",
+      "liked",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "think",
+      "liked"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_main",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you think that she liked playing the piano?",
+      "statementForm": [
+        "Did you think that she liked playing the piano?",
+        "Did you think that she liked playing the piano"
+      ],
+      "fragmentForm": "Did you think that she.",
+      "wormholeVariants": [
+        "Do you think that she liked playing the piano?",
+        "Did you thinked that she liked playing the piano?",
+        "Did you think she liked playing the piano?",
+        "Did you think that she liked playing the piano."
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_086",
+    "seedId": "tense_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그들은 우리가 초대받을 것이라고 생각했다.",
+    "english": "They thought that we would be invited.",
+    "words": [
+      "They",
+      "thought",
+      "that",
+      "we",
+      "would",
+      "be",
+      "invited",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리가 초대받을 것이라고 생각했다.",
+        "They"
+      ],
+      [
+        "past main + would passive",
+        "thought + would be invited"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "would be invited",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "would be invited"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "passive"
+    ],
+    "distractorSeeds": {
+      "auxError": "They thought that we will be invited.",
+      "statementForm": [
+        "They thought that we would be invited.",
+        "They thought that we would be invited"
+      ],
+      "fragmentForm": "They thought that we would.",
+      "wormholeVariants": [
+        "They thought that we will be invited.",
+        "They thought we would be invited.",
+        "They thought that we would be invited?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_087",
+    "seedId": "tense_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그들은 우리가 초대받지 못할 것이라고 생각했다.",
+    "english": "They thought that we would not be invited.",
+    "words": [
+      "They",
+      "thought",
+      "that",
+      "we",
+      "would",
+      "not",
+      "be",
+      "invited",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리가 초대받지 못할 것이라고 생각했다.",
+        "They"
+      ],
+      [
+        "past main + would not passive",
+        "thought + would not be invited"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "would not be invited",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "would not be invited"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "negative",
+      "passive"
+    ],
+    "distractorSeeds": {
+      "auxError": "They thought that we will not be invited.",
+      "statementForm": [
+        "They thought that we would not be invited.",
+        "They thought that we would not be invited"
+      ],
+      "fragmentForm": "They thought that we would.",
+      "wormholeVariants": [
+        "They thought that we will not be invited.",
+        "They thought we would not be invited.",
+        "They thought that we would not be invited?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_088",
+    "seedId": "tense_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그들이 우리가 초대받을 것이라고 생각했니?",
+    "english": "Did they think that we would be invited?",
+    "words": [
+      "Did",
+      "they",
+      "think",
+      "that",
+      "we",
+      "would",
+      "be",
+      "invited",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 우리가 초대받을 것이라고 생각했니?",
+        "Did"
+      ],
+      [
+        "past question + would passive",
+        "Did they think + would be invited"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "think",
+      "would be invited",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "think",
+      "would be invited"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "question",
+      "passive"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did they think that we will be invited?",
+      "statementForm": [
+        "Did they think that we would be invited?",
+        "Did they think that we would be invited"
+      ],
+      "fragmentForm": "Did they think that we.",
+      "wormholeVariants": [
+        "Did they think that we will be invited?",
+        "Do they think that we would be invited?",
+        "Did they thinked that we would be invited?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_089",
+    "seedId": "tense_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 약을 먹을 것이라고 생각했다.",
+    "english": "She thought that I would take medicine.",
+    "words": [
+      "She",
+      "thought",
+      "that",
+      "I",
+      "would",
+      "take",
+      "medicine",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 약을 먹을 것이라고 생각했다.",
+        "She"
+      ],
+      [
+        "past main + would",
+        "thought + would take"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "would take",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "would take"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past"
+    ],
+    "distractorSeeds": {
+      "auxError": "She thought that I will take medicine.",
+      "statementForm": [
+        "She thought that I would take medicine.",
+        "She thought that I would take medicine"
+      ],
+      "fragmentForm": "She thought that I would.",
+      "wormholeVariants": [
+        "She thought that I will take medicine.",
+        "She thought I would take medicine.",
+        "She thought that I would take medicine?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_090",
+    "seedId": "tense_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀는 내가 약을 먹지 않을 것이라고 생각했다.",
+    "english": "She thought that I would not take medicine.",
+    "words": [
+      "She",
+      "thought",
+      "that",
+      "I",
+      "would",
+      "not",
+      "take",
+      "medicine",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 약을 먹지 않을 것이라고 생각했다.",
+        "She"
+      ],
+      [
+        "past main + would not",
+        "thought + would not take"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "thought",
+      "would not take",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "thought",
+      "would not take"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She thought that I will not take medicine.",
+      "statementForm": [
+        "She thought that I would not take medicine.",
+        "She thought that I would not take medicine"
+      ],
+      "fragmentForm": "She thought that I would.",
+      "wormholeVariants": [
+        "She thought that I will not take medicine.",
+        "She thought I would not take medicine.",
+        "She thought that I would not take medicine?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_091",
+    "seedId": "tense_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그녀가 내가 약을 먹을 것이라고 생각했니?",
+    "english": "Did she think that I would take medicine?",
+    "words": [
+      "Did",
+      "she",
+      "think",
+      "that",
+      "I",
+      "would",
+      "take",
+      "medicine",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 내가 약을 먹을 것이라고 생각했니?",
+        "Did"
+      ],
+      [
+        "past question + would",
+        "Did she think + would take"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "think",
+      "would take",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "think",
+      "would take"
+    ],
+    "tags": [
+      "tense_agreement",
+      "future_in_past",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she think that I will take medicine?",
+      "statementForm": [
+        "Did she think that I would take medicine?",
+        "Did she think that I would take medicine"
+      ],
+      "fragmentForm": "Did she think that I.",
+      "wormholeVariants": [
+        "Did she think that I will take medicine?",
+        "Do she think that I would take medicine?",
+        "Did she thinked that I would take medicine?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_092",
+    "seedId": "tense_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 거짓말을 했다는 것을 나중에 알았다.",
+    "english": "I learned later that he had lied.",
+    "words": [
+      "I",
+      "learned",
+      "later",
+      "that",
+      "he",
+      "had",
+      "lied",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 거짓말을 했다는 것을 나중에 알았다.",
+        "I"
+      ],
+      [
+        "past main + past perfect",
+        "learned + had lied"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "learned",
+      "had lied",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "learned",
+      "had lied"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect"
+    ],
+    "distractorSeeds": {
+      "auxError": "I learned later that he has lied.",
+      "statementForm": [
+        "I learned later that he had lied.",
+        "I learned later that he had lied"
+      ],
+      "fragmentForm": "I learned later that he.",
+      "wormholeVariants": [
+        "I learned later that he has lied.",
+        "I learned later that he had lie.",
+        "I learned later he had lied.",
+        "I learned later that he had lied?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_093",
+    "seedId": "tense_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "나는 그가 거짓말을 하지 않았다는 것을 나중에 알았다.",
+    "english": "I learned later that he had not lied.",
+    "words": [
+      "I",
+      "learned",
+      "later",
+      "that",
+      "he",
+      "had",
+      "not",
+      "lied",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 거짓말을 하지 않았다는 것을 나중에 알았다.",
+        "I"
+      ],
+      [
+        "past main + negative past perfect",
+        "learned + had not lied"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "learned",
+      "had not lied",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "learned",
+      "had not lied"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I learned later that he has not lied.",
+      "statementForm": [
+        "I learned later that he had not lied.",
+        "I learned later that he had not lied"
+      ],
+      "fragmentForm": "I learned later that he.",
+      "wormholeVariants": [
+        "I learned later that he has not lied.",
+        "I learned later he had not lied.",
+        "I learned later that he had not lied?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_094",
+    "seedId": "tense_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "너는 그가 거짓말을 했다는 것을 나중에 알았니?",
+    "english": "Did you learn later that he had lied?",
+    "words": [
+      "Did",
+      "you",
+      "learn",
+      "later",
+      "that",
+      "he",
+      "had",
+      "lied",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 거짓말을 했다는 것을 나중에 알았니?",
+        "Did"
+      ],
+      [
+        "past question + past perfect",
+        "Did you learn + had lied"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Did",
+      "learn",
+      "had lied",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "Did",
+      "learn",
+      "had lied"
+    ],
+    "tags": [
+      "tense_agreement",
+      "past_perfect",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you learn later that he has lied?",
+      "statementForm": [
+        "Did you learn later that he had lied?",
+        "Did you learn later that he had lied"
+      ],
+      "fragmentForm": "Did you learn later that.",
+      "wormholeVariants": [
+        "Did you learn later that he has lied?",
+        "Did you learn later that he had lie?",
+        "Do you learn later that he had lied?",
+        "Did you learned later that he had lied?"
+      ]
+    }
+  },
+  {
+    "id": "m2_tense_095",
+    "seedId": "tense_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "tense_agreement",
+    "chapterLabelKo": "시제일치",
+    "korean": "그 선생님은 모든 학생이 고유한 재능을 가지고 있다고 말했다.",
+    "english": "The teacher said that every student has a unique talent.",
+    "words": [
+      "The",
+      "teacher",
+      "said",
+      "that",
+      "every",
+      "student",
+      "has",
+      "a",
+      "unique",
+      "talent",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "tense_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 모든 학생이 고유한 재능을 가지고 있다고 말했다.",
+        "The"
+      ],
+      [
+        "past main + general fact exception",
+        "said + has"
+      ],
+      [
+        "주의",
+        "match the tense in the that-clause carefully"
+      ]
+    ],
+    "extraClueWordPool": [
+      "said",
+      "has",
+      "really",
+      "already"
+    ],
+    "blankTargets": [
+      "said",
+      "has"
+    ],
+    "tags": [
+      "tense_agreement",
+      "exception",
+      "general_fact"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher said that every student had a unique talent.",
+      "statementForm": [
+        "The teacher said that every student has a unique talent.",
+        "The teacher said that every student has a unique talent"
+      ],
+      "fragmentForm": "The teacher said that every.",
+      "wormholeVariants": [
+        "The teacher said that every student had a unique talent.",
+        "The teacher said every student has a unique talent.",
+        "The teacher said that every student has a unique talent?"
+      ]
+    }
+  }
+]
