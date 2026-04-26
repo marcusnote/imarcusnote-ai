@@ -1,0 +1,8416 @@
+[
+  {
+    "id": "m2_reflexive_pronouns_001",
+    "seedId": "reflexive_pronouns_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 거울 속의 나 자신을 보았다.",
+    "english": "I saw myself in the mirror.",
+    "words": [
+      "I",
+      "saw",
+      "myself",
+      "in",
+      "the",
+      "mirror",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 거울 속의 나 자신을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw me in the mirror.",
+      "statementForm": [
+        "I saw myself in the mirror.",
+        "I saw myself in the mirror"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I saw me in the mirror.",
+        "I saw yourself in the mirror."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_002",
+    "seedId": "reflexive_pronouns_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 먼저 네 자신을 믿어야 한다.",
+    "english": "You should trust yourself first.",
+    "words": [
+      "You",
+      "should",
+      "trust",
+      "yourself",
+      "first",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 먼저 네 자신을 믿어야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should trust you first.",
+      "statementForm": [
+        "You should trust yourself first.",
+        "You should trust yourself first"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "You should trust you first.",
+        "You should trust myself first."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_003",
+    "seedId": "reflexive_pronouns_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 경기 중에 자기 자신을 다치게 했다.",
+    "english": "He hurt himself during the game.",
+    "words": [
+      "He",
+      "hurt",
+      "himself",
+      "during",
+      "the",
+      "game",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 경기 중에 자기 자신을 다치게 했다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He hurt him during the game.",
+      "statementForm": [
+        "He hurt himself during the game.",
+        "He hurt himself during the game"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "He hurt him during the game.",
+        "He hurt herself during the game."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_004",
+    "seedId": "reflexive_pronouns_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 새 학교에 자기 자신을 소개했다.",
+    "english": "She introduced herself at the new school.",
+    "words": [
+      "She",
+      "introduced",
+      "herself",
+      "at",
+      "the",
+      "new",
+      "school",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 새 학교에 자기 자신을 소개했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She introduced her at the new school.",
+      "statementForm": [
+        "She introduced herself at the new school.",
+        "She introduced herself at the new school"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She introduced her at the new school.",
+        "She introduced himself at the new school."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_005",
+    "seedId": "reflexive_pronouns_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 기계는 자동으로 꺼졌다.",
+    "english": "The machine turned itself off.",
+    "words": [
+      "The",
+      "machine",
+      "turned",
+      "itself",
+      "off",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 기계는 자동으로 꺼졌다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The machine turned it off.",
+      "statementForm": [
+        "The machine turned itself off.",
+        "The machine turned itself off"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The machine turned it off.",
+        "The machine turned himself off."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_006",
+    "seedId": "reflexive_pronouns_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 사진 속의 우리 자신들을 발견했다.",
+    "english": "We found ourselves in the photo.",
+    "words": [
+      "We",
+      "found",
+      "ourselves",
+      "in",
+      "the",
+      "photo",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 사진 속의 우리 자신들을 발견했다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We found us in the photo.",
+      "statementForm": [
+        "We found ourselves in the photo.",
+        "We found ourselves in the photo"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We found us in the photo.",
+        "We found themselves in the photo."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_007",
+    "seedId": "reflexive_pronouns_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희는 스스로를 더 잘 돌봐야 한다.",
+    "english": "You should take better care of yourselves.",
+    "words": [
+      "You",
+      "should",
+      "take",
+      "better",
+      "care",
+      "of",
+      "yourselves",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 스스로를 더 잘 돌봐야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should take better care of you.",
+      "statementForm": [
+        "You should take better care of yourselves.",
+        "You should take better care of yourselves"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "You should take better care of you.",
+        "You should take better care of ourselves."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_008",
+    "seedId": "reflexive_pronouns_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 학생들은 공연 전에 자기 자신들을 준비시켰다.",
+    "english": "The students prepared themselves before the performance.",
+    "words": [
+      "The",
+      "students",
+      "prepared",
+      "themselves",
+      "before",
+      "the",
+      "performance",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생들은 공연 전에 자기 자신들을 준비시켰다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students prepared them before the performance.",
+      "statementForm": [
+        "The students prepared themselves before the performance.",
+        "The students prepared themselves before the performance"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "The students prepared them before the performance.",
+        "The students prepared ourselves before the performance."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_009",
+    "seedId": "reflexive_pronouns_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 실수에 대해 나 자신을 탓했다.",
+    "english": "I blamed myself for the mistake.",
+    "words": [
+      "I",
+      "blamed",
+      "myself",
+      "for",
+      "the",
+      "mistake",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 실수에 대해 나 자신을 탓했다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I blamed me for the mistake.",
+      "statementForm": [
+        "I blamed myself for the mistake.",
+        "I blamed myself for the mistake"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I blamed me for the mistake.",
+        "I blamed yourself for the mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_010",
+    "seedId": "reflexive_pronouns_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 소년은 차가운 물로 자기 자신을 씻었다.",
+    "english": "The boy washed himself with cold water.",
+    "words": [
+      "The",
+      "boy",
+      "washed",
+      "himself",
+      "with",
+      "cold",
+      "water",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소년은 차가운 물로 자기 자신을 씻었다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy washed him with cold water.",
+      "statementForm": [
+        "The boy washed himself with cold water.",
+        "The boy washed himself with cold water"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "The boy washed him with cold water.",
+        "The boy washed herself with cold water."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_011",
+    "seedId": "reflexive_pronouns_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 힘든 상황에서도 자기 자신을 진정시켰다.",
+    "english": "She calmed herself in the difficult situation.",
+    "words": [
+      "She",
+      "calmed",
+      "herself",
+      "in",
+      "the",
+      "difficult",
+      "situation",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 힘든 상황에서도 자기 자신을 진정시켰다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She calmed her in the difficult situation.",
+      "statementForm": [
+        "She calmed herself in the difficult situation.",
+        "She calmed herself in the difficult situation"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She calmed her in the difficult situation.",
+        "She calmed himself in the difficult situation."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_012",
+    "seedId": "reflexive_pronouns_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 토론 전에 우리 자신들을 소개했다.",
+    "english": "We introduced ourselves before the discussion.",
+    "words": [
+      "We",
+      "introduced",
+      "ourselves",
+      "before",
+      "the",
+      "discussion",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 토론 전에 우리 자신들을 소개했다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We introduced us before the discussion.",
+      "statementForm": [
+        "We introduced ourselves before the discussion.",
+        "We introduced ourselves before the discussion"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We introduced us before the discussion.",
+        "We introduced themselves before the discussion."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_013",
+    "seedId": "reflexive_pronouns_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 낯선 도시에서 자기 자신들을 보호했다.",
+    "english": "They protected themselves in the strange city.",
+    "words": [
+      "They",
+      "protected",
+      "themselves",
+      "in",
+      "the",
+      "strange",
+      "city",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 낯선 도시에서 자기 자신들을 보호했다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They protected them in the strange city.",
+      "statementForm": [
+        "They protected themselves in the strange city.",
+        "They protected themselves in the strange city"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "They protected them in the strange city.",
+        "They protected ourselves in the strange city."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_014",
+    "seedId": "reflexive_pronouns_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 면접 전에 네 자신을 준비해야 한다.",
+    "english": "You must prepare yourself before the interview.",
+    "words": [
+      "You",
+      "must",
+      "prepare",
+      "yourself",
+      "before",
+      "the",
+      "interview",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 면접 전에 네 자신을 준비해야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must prepare you before the interview.",
+      "statementForm": [
+        "You must prepare yourself before the interview.",
+        "You must prepare yourself before the interview"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "You must prepare you before the interview.",
+        "You must prepare myself before the interview."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_015",
+    "seedId": "reflexive_pronouns_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 고양이는 창문에 비친 자기 자신을 보았다.",
+    "english": "The cat saw itself in the window.",
+    "words": [
+      "The",
+      "cat",
+      "saw",
+      "itself",
+      "in",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 고양이는 창문에 비친 자기 자신을 보았다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cat saw it in the window.",
+      "statementForm": [
+        "The cat saw itself in the window.",
+        "The cat saw itself in the window"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The cat saw it in the window.",
+        "The cat saw himself in the window."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_016",
+    "seedId": "reflexive_pronouns_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 그 문제를 풀면서 나 자신에게 질문했다.",
+    "english": "I asked myself a question while solving the problem.",
+    "words": [
+      "I",
+      "asked",
+      "myself",
+      "a",
+      "question",
+      "while",
+      "solving",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 문제를 풀면서 나 자신에게 질문했다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I asked me a question while solving the problem.",
+      "statementForm": [
+        "I asked myself a question while solving the problem.",
+        "I asked myself a question while solving the problem"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I asked me a question while solving the problem.",
+        "I asked yourself a question while solving the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_017",
+    "seedId": "reflexive_pronouns_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 중요한 결정을 내리기 전에 자기 자신에게 말했다.",
+    "english": "He told himself to stay calm before the decision.",
+    "words": [
+      "He",
+      "told",
+      "himself",
+      "to",
+      "stay",
+      "calm",
+      "before",
+      "the",
+      "decision",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 중요한 결정을 내리기 전에 자기 자신에게 말했다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He told him to stay calm before the decision.",
+      "statementForm": [
+        "He told himself to stay calm before the decision.",
+        "He told himself to stay calm before the decision"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "He told him to stay calm before the decision.",
+        "He told herself to stay calm before the decision."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_018",
+    "seedId": "reflexive_pronouns_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 무대 위에서 자기 자신을 표현했다.",
+    "english": "She expressed herself on the stage.",
+    "words": [
+      "She",
+      "expressed",
+      "herself",
+      "on",
+      "the",
+      "stage",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 무대 위에서 자기 자신을 표현했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She expressed her on the stage.",
+      "statementForm": [
+        "She expressed herself on the stage.",
+        "She expressed herself on the stage"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She expressed her on the stage.",
+        "She expressed himself on the stage."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_019",
+    "seedId": "reflexive_pronouns_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 어려운 경험을 통해 우리 자신들을 이해했다.",
+    "english": "We understood ourselves through the difficult experience.",
+    "words": [
+      "We",
+      "understood",
+      "ourselves",
+      "through",
+      "the",
+      "difficult",
+      "experience",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 어려운 경험을 통해 우리 자신들을 이해했다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We understood us through the difficult experience.",
+      "statementForm": [
+        "We understood ourselves through the difficult experience.",
+        "We understood ourselves through the difficult experience"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We understood us through the difficult experience.",
+        "We understood themselves through the difficult experience."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_020",
+    "seedId": "reflexive_pronouns_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 위기 속에서 자기 자신들을 지켜 냈다.",
+    "english": "They saved themselves during the crisis.",
+    "words": [
+      "They",
+      "saved",
+      "themselves",
+      "during",
+      "the",
+      "crisis",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 위기 속에서 자기 자신들을 지켜 냈다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They saved them during the crisis.",
+      "statementForm": [
+        "They saved themselves during the crisis.",
+        "They saved themselves during the crisis"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "They saved them during the crisis.",
+        "They saved ourselves during the crisis."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_021",
+    "seedId": "reflexive_pronouns_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 시험 전에 나 자신을 격려했다.",
+    "english": "I encouraged myself before the test.",
+    "words": [
+      "I",
+      "encouraged",
+      "myself",
+      "before",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 시험 전에 나 자신을 격려했다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I encouraged me before the test.",
+      "statementForm": [
+        "I encouraged myself before the test.",
+        "I encouraged myself before the test"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I encouraged me before the test.",
+        "I encouraged yourself before the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_022",
+    "seedId": "reflexive_pronouns_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 그 결과에 대해 네 자신을 용서해야 한다.",
+    "english": "You should forgive yourself for the result.",
+    "words": [
+      "You",
+      "should",
+      "forgive",
+      "yourself",
+      "for",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그 결과에 대해 네 자신을 용서해야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should forgive you for the result.",
+      "statementForm": [
+        "You should forgive yourself for the result.",
+        "You should forgive yourself for the result"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "You should forgive you for the result.",
+        "You should forgive myself for the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_023",
+    "seedId": "reflexive_pronouns_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 긴 발표 전에 자기 자신을 안정시켰다.",
+    "english": "He steadied himself before the long presentation.",
+    "words": [
+      "He",
+      "steadied",
+      "himself",
+      "before",
+      "the",
+      "long",
+      "presentation",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 긴 발표 전에 자기 자신을 안정시켰다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He steadied him before the long presentation.",
+      "statementForm": [
+        "He steadied himself before the long presentation.",
+        "He steadied himself before the long presentation"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "He steadied him before the long presentation.",
+        "He steadied herself before the long presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_024",
+    "seedId": "reflexive_pronouns_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 낯선 환경에 자기 자신을 적응시켰다.",
+    "english": "She adapted herself to the unfamiliar environment.",
+    "words": [
+      "She",
+      "adapted",
+      "herself",
+      "to",
+      "the",
+      "unfamiliar",
+      "environment",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 낯선 환경에 자기 자신을 적응시켰다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She adapted her to the unfamiliar environment.",
+      "statementForm": [
+        "She adapted herself to the unfamiliar environment.",
+        "She adapted herself to the unfamiliar environment"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She adapted her to the unfamiliar environment.",
+        "She adapted himself to the unfamiliar environment."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_025",
+    "seedId": "reflexive_pronouns_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 프로그램은 오류가 나면 자기 자신을 다시 시작한다.",
+    "english": "The program restarts itself when an error occurs.",
+    "words": [
+      "The",
+      "program",
+      "restarts",
+      "itself",
+      "when",
+      "an",
+      "error",
+      "occurs",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 프로그램은 오류가 나면 자기 자신을 다시 시작한다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The program restarts it when an error occurs.",
+      "statementForm": [
+        "The program restarts itself when an error occurs.",
+        "The program restarts itself when an error occurs"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The program restarts it when an error occurs.",
+        "The program restarts himself when an error occurs."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_026",
+    "seedId": "reflexive_pronouns_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 새로운 규칙에 우리 자신들을 맞추었다.",
+    "english": "We adjusted ourselves to the new rules.",
+    "words": [
+      "We",
+      "adjusted",
+      "ourselves",
+      "to",
+      "the",
+      "new",
+      "rules",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 새로운 규칙에 우리 자신들을 맞추었다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We adjusted us to the new rules.",
+      "statementForm": [
+        "We adjusted ourselves to the new rules.",
+        "We adjusted ourselves to the new rules"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We adjusted us to the new rules.",
+        "We adjusted themselves to the new rules."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_027",
+    "seedId": "reflexive_pronouns_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희는 위험한 상황에서 스스로를 보호해야 한다.",
+    "english": "You should protect yourselves in dangerous situations.",
+    "words": [
+      "You",
+      "should",
+      "protect",
+      "yourselves",
+      "in",
+      "dangerous",
+      "situations",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 위험한 상황에서 스스로를 보호해야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should protect you in dangerous situations.",
+      "statementForm": [
+        "You should protect yourselves in dangerous situations.",
+        "You should protect yourselves in dangerous situations"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "You should protect you in dangerous situations.",
+        "You should protect ourselves in dangerous situations."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_028",
+    "seedId": "reflexive_pronouns_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 선수들은 패배 후 자기 자신들을 다시 훈련시켰다.",
+    "english": "The players trained themselves again after the loss.",
+    "words": [
+      "The",
+      "players",
+      "trained",
+      "themselves",
+      "again",
+      "after",
+      "the",
+      "loss",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선수들은 패배 후 자기 자신들을 다시 훈련시켰다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The players trained them again after the loss.",
+      "statementForm": [
+        "The players trained themselves again after the loss.",
+        "The players trained themselves again after the loss"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "The players trained them again after the loss.",
+        "The players trained ourselves again after the loss."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_029",
+    "seedId": "reflexive_pronouns_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 그 말을 듣고 나 자신을 돌아보았다.",
+    "english": "I examined myself after hearing those words.",
+    "words": [
+      "I",
+      "examined",
+      "myself",
+      "after",
+      "hearing",
+      "those",
+      "words",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 말을 듣고 나 자신을 돌아보았다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I examined me after hearing those words.",
+      "statementForm": [
+        "I examined myself after hearing those words.",
+        "I examined myself after hearing those words"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I examined me after hearing those words.",
+        "I examined yourself after hearing those words."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_030",
+    "seedId": "reflexive_pronouns_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 거울 앞에서 자기 자신을 확인했다.",
+    "english": "She checked herself in front of the mirror.",
+    "words": [
+      "She",
+      "checked",
+      "herself",
+      "in",
+      "front",
+      "of",
+      "the",
+      "mirror",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 거울 앞에서 자기 자신을 확인했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She checked her in front of the mirror.",
+      "statementForm": [
+        "She checked herself in front of the mirror.",
+        "She checked herself in front of the mirror"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She checked her in front of the mirror.",
+        "She checked himself in front of the mirror."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_031",
+    "seedId": "reflexive_pronouns_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 혼자서 저녁을 만들었다.",
+    "english": "I made dinner by myself.",
+    "words": [
+      "I",
+      "made",
+      "dinner",
+      "by",
+      "myself",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 혼자서 저녁을 만들었다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "by myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made dinner by me.",
+      "statementForm": [
+        "I made dinner by myself.",
+        "I made dinner by myself"
+      ],
+      "fragmentForm": "by myself",
+      "wormholeVariants": [
+        "I made dinner by me.",
+        "I made dinner by yourself.",
+        "I made dinner with me."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_032",
+    "seedId": "reflexive_pronouns_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 혼자서 이 문제를 풀 수 있다.",
+    "english": "You can solve this problem by yourself.",
+    "words": [
+      "You",
+      "can",
+      "solve",
+      "this",
+      "problem",
+      "by",
+      "yourself",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 혼자서 이 문제를 풀 수 있다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "by yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You can solve this problem by you.",
+      "statementForm": [
+        "You can solve this problem by yourself.",
+        "You can solve this problem by yourself"
+      ],
+      "fragmentForm": "by yourself",
+      "wormholeVariants": [
+        "You can solve this problem by you.",
+        "You can solve this problem by myself.",
+        "You can solve this problem with you."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_033",
+    "seedId": "reflexive_pronouns_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 혼자서 그 무거운 상자를 옮겼다.",
+    "english": "He moved the heavy box by himself.",
+    "words": [
+      "He",
+      "moved",
+      "the",
+      "heavy",
+      "box",
+      "by",
+      "himself",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 혼자서 그 무거운 상자를 옮겼다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "by himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He moved the heavy box by him.",
+      "statementForm": [
+        "He moved the heavy box by himself.",
+        "He moved the heavy box by himself"
+      ],
+      "fragmentForm": "by himself",
+      "wormholeVariants": [
+        "He moved the heavy box by him.",
+        "He moved the heavy box by herself.",
+        "He moved the heavy box with him."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_034",
+    "seedId": "reflexive_pronouns_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 혼자서 서울로 여행했다.",
+    "english": "She traveled to Seoul by herself.",
+    "words": [
+      "She",
+      "traveled",
+      "to",
+      "Seoul",
+      "by",
+      "herself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 혼자서 서울로 여행했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "by herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She traveled to Seoul by her.",
+      "statementForm": [
+        "She traveled to Seoul by herself.",
+        "She traveled to Seoul by herself"
+      ],
+      "fragmentForm": "by herself",
+      "wormholeVariants": [
+        "She traveled to Seoul by her.",
+        "She traveled to Seoul by himself.",
+        "She traveled to Seoul with her."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_035",
+    "seedId": "reflexive_pronouns_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 문은 저절로 닫혔다.",
+    "english": "The door closed by itself.",
+    "words": [
+      "The",
+      "door",
+      "closed",
+      "by",
+      "itself",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문은 저절로 닫혔다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "by itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The door closed by it.",
+      "statementForm": [
+        "The door closed by itself.",
+        "The door closed by itself"
+      ],
+      "fragmentForm": "by itself",
+      "wormholeVariants": [
+        "The door closed by it.",
+        "The door closed by himself.",
+        "The door closed with it."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_036",
+    "seedId": "reflexive_pronouns_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 우리끼리 그 일을 끝냈다.",
+    "english": "We finished the work by ourselves.",
+    "words": [
+      "We",
+      "finished",
+      "the",
+      "work",
+      "by",
+      "ourselves",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 우리끼리 그 일을 끝냈다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "by ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We finished the work by us.",
+      "statementForm": [
+        "We finished the work by ourselves.",
+        "We finished the work by ourselves"
+      ],
+      "fragmentForm": "by ourselves",
+      "wormholeVariants": [
+        "We finished the work by us.",
+        "We finished the work by themselves.",
+        "We finished the work with us."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_037",
+    "seedId": "reflexive_pronouns_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희는 너희끼리 방을 청소해야 한다.",
+    "english": "You should clean the room by yourselves.",
+    "words": [
+      "You",
+      "should",
+      "clean",
+      "the",
+      "room",
+      "by",
+      "yourselves",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 너희끼리 방을 청소해야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "by yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should clean the room by you.",
+      "statementForm": [
+        "You should clean the room by yourselves.",
+        "You should clean the room by yourselves"
+      ],
+      "fragmentForm": "by yourselves",
+      "wormholeVariants": [
+        "You should clean the room by you.",
+        "You should clean the room by ourselves.",
+        "You should clean the room with you."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_038",
+    "seedId": "reflexive_pronouns_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 아이들은 자기들끼리 모형을 만들었다.",
+    "english": "The children built the model by themselves.",
+    "words": [
+      "The",
+      "children",
+      "built",
+      "the",
+      "model",
+      "by",
+      "themselves",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 아이들은 자기들끼리 모형을 만들었다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "by themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The children built the model by them.",
+      "statementForm": [
+        "The children built the model by themselves.",
+        "The children built the model by themselves"
+      ],
+      "fragmentForm": "by themselves",
+      "wormholeVariants": [
+        "The children built the model by them.",
+        "The children built the model by ourselves.",
+        "The children built the model with them."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_039",
+    "seedId": "reflexive_pronouns_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 도움 없이 그 보고서를 썼다.",
+    "english": "I wrote the report by myself.",
+    "words": [
+      "I",
+      "wrote",
+      "the",
+      "report",
+      "by",
+      "myself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 도움 없이 그 보고서를 썼다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "by myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I wrote the report by me.",
+      "statementForm": [
+        "I wrote the report by myself.",
+        "I wrote the report by myself"
+      ],
+      "fragmentForm": "by myself",
+      "wormholeVariants": [
+        "I wrote the report by me.",
+        "I wrote the report by yourself.",
+        "I wrote the report with me."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_040",
+    "seedId": "reflexive_pronouns_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 안내 없이 박물관을 둘러보았다.",
+    "english": "He looked around the museum by himself.",
+    "words": [
+      "He",
+      "looked",
+      "around",
+      "the",
+      "museum",
+      "by",
+      "himself",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 안내 없이 박물관을 둘러보았다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "by himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He looked around the museum by him.",
+      "statementForm": [
+        "He looked around the museum by himself.",
+        "He looked around the museum by himself"
+      ],
+      "fragmentForm": "by himself",
+      "wormholeVariants": [
+        "He looked around the museum by him.",
+        "He looked around the museum by herself.",
+        "He looked around the museum with him."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_041",
+    "seedId": "reflexive_pronouns_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 선생님 도움 없이 대본을 고쳤다.",
+    "english": "She revised the script by herself.",
+    "words": [
+      "She",
+      "revised",
+      "the",
+      "script",
+      "by",
+      "herself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 선생님 도움 없이 대본을 고쳤다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "by herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She revised the script by her.",
+      "statementForm": [
+        "She revised the script by herself.",
+        "She revised the script by herself"
+      ],
+      "fragmentForm": "by herself",
+      "wormholeVariants": [
+        "She revised the script by her.",
+        "She revised the script by himself.",
+        "She revised the script with her."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_042",
+    "seedId": "reflexive_pronouns_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 기계는 저절로 다시 켜졌다.",
+    "english": "The machine turned on by itself.",
+    "words": [
+      "The",
+      "machine",
+      "turned",
+      "on",
+      "by",
+      "itself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 기계는 저절로 다시 켜졌다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "by itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The machine turned on by it.",
+      "statementForm": [
+        "The machine turned on by itself.",
+        "The machine turned on by itself"
+      ],
+      "fragmentForm": "by itself",
+      "wormholeVariants": [
+        "The machine turned on by it.",
+        "The machine turned on by himself.",
+        "The machine turned on with it."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_043",
+    "seedId": "reflexive_pronouns_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 우리끼리 여행 계획을 세웠다.",
+    "english": "We planned the trip by ourselves.",
+    "words": [
+      "We",
+      "planned",
+      "the",
+      "trip",
+      "by",
+      "ourselves",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 우리끼리 여행 계획을 세웠다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "by ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We planned the trip by us.",
+      "statementForm": [
+        "We planned the trip by ourselves.",
+        "We planned the trip by ourselves"
+      ],
+      "fragmentForm": "by ourselves",
+      "wormholeVariants": [
+        "We planned the trip by us.",
+        "We planned the trip by themselves.",
+        "We planned the trip with us."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_044",
+    "seedId": "reflexive_pronouns_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 어른 도움 없이 캠프를 준비했다.",
+    "english": "They prepared the camp by themselves.",
+    "words": [
+      "They",
+      "prepared",
+      "the",
+      "camp",
+      "by",
+      "themselves",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 어른 도움 없이 캠프를 준비했다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "by themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They prepared the camp by them.",
+      "statementForm": [
+        "They prepared the camp by themselves.",
+        "They prepared the camp by themselves"
+      ],
+      "fragmentForm": "by themselves",
+      "wormholeVariants": [
+        "They prepared the camp by them.",
+        "They prepared the camp by ourselves.",
+        "They prepared the camp with them."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_045",
+    "seedId": "reflexive_pronouns_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 혼자서 복잡한 지도를 읽었다.",
+    "english": "I read the complicated map by myself.",
+    "words": [
+      "I",
+      "read",
+      "the",
+      "complicated",
+      "map",
+      "by",
+      "myself",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 혼자서 복잡한 지도를 읽었다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "by myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I read the complicated map by me.",
+      "statementForm": [
+        "I read the complicated map by myself.",
+        "I read the complicated map by myself"
+      ],
+      "fragmentForm": "by myself",
+      "wormholeVariants": [
+        "I read the complicated map by me.",
+        "I read the complicated map by yourself.",
+        "I read the complicated map with me."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_046",
+    "seedId": "reflexive_pronouns_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 혼자서 까다로운 고객을 설득했다.",
+    "english": "She persuaded the difficult customer by herself.",
+    "words": [
+      "She",
+      "persuaded",
+      "the",
+      "difficult",
+      "customer",
+      "by",
+      "herself",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 혼자서 까다로운 고객을 설득했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "by herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She persuaded the difficult customer by her.",
+      "statementForm": [
+        "She persuaded the difficult customer by herself.",
+        "She persuaded the difficult customer by herself"
+      ],
+      "fragmentForm": "by herself",
+      "wormholeVariants": [
+        "She persuaded the difficult customer by her.",
+        "She persuaded the difficult customer by himself.",
+        "She persuaded the difficult customer with her."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_047",
+    "seedId": "reflexive_pronouns_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 우리끼리 예산 문제를 해결했다.",
+    "english": "We solved the budget problem by ourselves.",
+    "words": [
+      "We",
+      "solved",
+      "the",
+      "budget",
+      "problem",
+      "by",
+      "ourselves",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 우리끼리 예산 문제를 해결했다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "by ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We solved the budget problem by us.",
+      "statementForm": [
+        "We solved the budget problem by ourselves.",
+        "We solved the budget problem by ourselves"
+      ],
+      "fragmentForm": "by ourselves",
+      "wormholeVariants": [
+        "We solved the budget problem by us.",
+        "We solved the budget problem by themselves.",
+        "We solved the budget problem with us."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_048",
+    "seedId": "reflexive_pronouns_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 자기들끼리 새로운 규칙을 정했다.",
+    "english": "They set the new rules by themselves.",
+    "words": [
+      "They",
+      "set",
+      "the",
+      "new",
+      "rules",
+      "by",
+      "themselves",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 자기들끼리 새로운 규칙을 정했다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "by themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They set the new rules by them.",
+      "statementForm": [
+        "They set the new rules by themselves.",
+        "They set the new rules by themselves"
+      ],
+      "fragmentForm": "by themselves",
+      "wormholeVariants": [
+        "They set the new rules by them.",
+        "They set the new rules by ourselves.",
+        "They set the new rules with them."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_049",
+    "seedId": "reflexive_pronouns_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 혼자서 결론을 내려야 한다.",
+    "english": "You must reach the conclusion by yourself.",
+    "words": [
+      "You",
+      "must",
+      "reach",
+      "the",
+      "conclusion",
+      "by",
+      "yourself",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 혼자서 결론을 내려야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "by yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You must reach the conclusion by you.",
+      "statementForm": [
+        "You must reach the conclusion by yourself.",
+        "You must reach the conclusion by yourself"
+      ],
+      "fragmentForm": "by yourself",
+      "wormholeVariants": [
+        "You must reach the conclusion by you.",
+        "You must reach the conclusion by myself.",
+        "You must reach the conclusion with you."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_050",
+    "seedId": "reflexive_pronouns_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 장치는 배터리가 부족하면 저절로 멈춘다.",
+    "english": "The device stops by itself when the battery is low.",
+    "words": [
+      "The",
+      "device",
+      "stops",
+      "by",
+      "itself",
+      "when",
+      "the",
+      "battery",
+      "is",
+      "low",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 장치는 배터리가 부족하면 저절로 멈춘다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "by itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The device stops by it when the battery is low.",
+      "statementForm": [
+        "The device stops by itself when the battery is low.",
+        "The device stops by itself when the battery is low"
+      ],
+      "fragmentForm": "by itself",
+      "wormholeVariants": [
+        "The device stops by it when the battery is low.",
+        "The device stops by himself when the battery is low.",
+        "The device stops with it when the battery is low."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_051",
+    "seedId": "reflexive_pronouns_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 그 편지를 직접 썼다.",
+    "english": "I wrote the letter myself.",
+    "words": [
+      "I",
+      "wrote",
+      "the",
+      "letter",
+      "myself",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 편지를 직접 썼다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I wrote the letter me.",
+      "statementForm": [
+        "I wrote the letter myself.",
+        "I wrote the letter myself"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I wrote the letter me.",
+        "I wrote the letter yourself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_052",
+    "seedId": "reflexive_pronouns_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 그 사실을 직접 확인해야 한다.",
+    "english": "You should check the fact yourself.",
+    "words": [
+      "You",
+      "should",
+      "check",
+      "the",
+      "fact",
+      "yourself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그 사실을 직접 확인해야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should check the fact you.",
+      "statementForm": [
+        "You should check the fact yourself.",
+        "You should check the fact yourself"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "You should check the fact you.",
+        "You should check the fact myself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_053",
+    "seedId": "reflexive_pronouns_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 시장이 직접 학교를 방문했다.",
+    "english": "The mayor visited the school himself.",
+    "words": [
+      "The",
+      "mayor",
+      "visited",
+      "the",
+      "school",
+      "himself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 시장이 직접 학교를 방문했다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The mayor visited the school him.",
+      "statementForm": [
+        "The mayor visited the school himself.",
+        "The mayor visited the school himself"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "The mayor visited the school him.",
+        "The mayor visited the school herself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_054",
+    "seedId": "reflexive_pronouns_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 여왕은 직접 그 결정을 발표했다.",
+    "english": "The queen announced the decision herself.",
+    "words": [
+      "The",
+      "queen",
+      "announced",
+      "the",
+      "decision",
+      "herself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 여왕은 직접 그 결정을 발표했다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The queen announced the decision her.",
+      "statementForm": [
+        "The queen announced the decision herself.",
+        "The queen announced the decision herself"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "The queen announced the decision her.",
+        "The queen announced the decision himself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_055",
+    "seedId": "reflexive_pronouns_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 집 자체는 오래되었지만 튼튼했다.",
+    "english": "The house itself was old but strong.",
+    "words": [
+      "The",
+      "house",
+      "itself",
+      "was",
+      "old",
+      "but",
+      "strong",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 집 자체는 오래되었지만 튼튼했다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The house it was old but strong.",
+      "statementForm": [
+        "The house itself was old but strong.",
+        "The house itself was old but strong"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The house it was old but strong.",
+        "The house himself was old but strong."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_056",
+    "seedId": "reflexive_pronouns_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 그 결과를 직접 확인했다.",
+    "english": "We checked the result ourselves.",
+    "words": [
+      "We",
+      "checked",
+      "the",
+      "result",
+      "ourselves",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 결과를 직접 확인했다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We checked the result us.",
+      "statementForm": [
+        "We checked the result ourselves.",
+        "We checked the result ourselves"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We checked the result us.",
+        "We checked the result themselves."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_057",
+    "seedId": "reflexive_pronouns_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희가 직접 규칙을 정했다.",
+    "english": "You made the rules yourselves.",
+    "words": [
+      "You",
+      "made",
+      "the",
+      "rules",
+      "yourselves",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희가 직접 규칙을 정했다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You made the rules you.",
+      "statementForm": [
+        "You made the rules yourselves.",
+        "You made the rules yourselves"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "You made the rules you.",
+        "You made the rules ourselves."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_058",
+    "seedId": "reflexive_pronouns_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 작가들이 직접 삽화를 그렸다.",
+    "english": "The writers drew the pictures themselves.",
+    "words": [
+      "The",
+      "writers",
+      "drew",
+      "the",
+      "pictures",
+      "themselves",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 작가들이 직접 삽화를 그렸다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The writers drew the pictures them.",
+      "statementForm": [
+        "The writers drew the pictures themselves.",
+        "The writers drew the pictures themselves"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "The writers drew the pictures them.",
+        "The writers drew the pictures ourselves."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_059",
+    "seedId": "reflexive_pronouns_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 그 오류를 직접 고쳤다.",
+    "english": "I fixed the error myself.",
+    "words": [
+      "I",
+      "fixed",
+      "the",
+      "error",
+      "myself",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 오류를 직접 고쳤다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I fixed the error me.",
+      "statementForm": [
+        "I fixed the error myself.",
+        "I fixed the error myself"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I fixed the error me.",
+        "I fixed the error yourself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_060",
+    "seedId": "reflexive_pronouns_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 직접 모든 손님을 맞이했다.",
+    "english": "He welcomed every guest himself.",
+    "words": [
+      "He",
+      "welcomed",
+      "every",
+      "guest",
+      "himself",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 직접 모든 손님을 맞이했다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He welcomed every guest him.",
+      "statementForm": [
+        "He welcomed every guest himself.",
+        "He welcomed every guest himself"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "He welcomed every guest him.",
+        "He welcomed every guest herself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_061",
+    "seedId": "reflexive_pronouns_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 직접 마지막 장면을 촬영했다.",
+    "english": "She filmed the final scene herself.",
+    "words": [
+      "She",
+      "filmed",
+      "the",
+      "final",
+      "scene",
+      "herself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 직접 마지막 장면을 촬영했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She filmed the final scene her.",
+      "statementForm": [
+        "She filmed the final scene herself.",
+        "She filmed the final scene herself"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She filmed the final scene her.",
+        "She filmed the final scene himself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_062",
+    "seedId": "reflexive_pronouns_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 문제 자체는 어렵지 않았다.",
+    "english": "The problem itself was not difficult.",
+    "words": [
+      "The",
+      "problem",
+      "itself",
+      "was",
+      "not",
+      "difficult",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제 자체는 어렵지 않았다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem it was not difficult.",
+      "statementForm": [
+        "The problem itself was not difficult.",
+        "The problem itself was not difficult"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The problem it was not difficult.",
+        "The problem himself was not difficult."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_063",
+    "seedId": "reflexive_pronouns_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 직접 그 자료를 수집했다.",
+    "english": "We collected the data ourselves.",
+    "words": [
+      "We",
+      "collected",
+      "the",
+      "data",
+      "ourselves",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 직접 그 자료를 수집했다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We collected the data us.",
+      "statementForm": [
+        "We collected the data ourselves.",
+        "We collected the data ourselves"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We collected the data us.",
+        "We collected the data themselves."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_064",
+    "seedId": "reflexive_pronouns_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 직접 새로운 방법을 설계했다.",
+    "english": "They designed the new method themselves.",
+    "words": [
+      "They",
+      "designed",
+      "the",
+      "new",
+      "method",
+      "themselves",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 직접 새로운 방법을 설계했다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They designed the new method them.",
+      "statementForm": [
+        "They designed the new method themselves.",
+        "They designed the new method themselves"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "They designed the new method them.",
+        "They designed the new method ourselves."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_065",
+    "seedId": "reflexive_pronouns_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 직접 그 차이를 설명할 수 있다.",
+    "english": "You can explain the difference yourself.",
+    "words": [
+      "You",
+      "can",
+      "explain",
+      "the",
+      "difference",
+      "yourself",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 직접 그 차이를 설명할 수 있다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You can explain the difference you.",
+      "statementForm": [
+        "You can explain the difference yourself.",
+        "You can explain the difference yourself"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "You can explain the difference you.",
+        "You can explain the difference myself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_066",
+    "seedId": "reflexive_pronouns_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 계획 자체는 훌륭했지만 실행이 약했다.",
+    "english": "The plan itself was excellent, but the action was weak.",
+    "words": [
+      "The",
+      "plan",
+      "itself",
+      "was",
+      "excellent",
+      ",",
+      "but",
+      "the",
+      "action",
+      "was",
+      "weak",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획 자체는 훌륭했지만 실행이 약했다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan it was excellent, but the action was weak.",
+      "statementForm": [
+        "The plan itself was excellent, but the action was weak.",
+        "The plan itself was excellent, but the action was weak"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The plan it was excellent, but the action was weak.",
+        "The plan himself was excellent, but the action was weak."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_067",
+    "seedId": "reflexive_pronouns_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 직접 그 계약서를 검토했다.",
+    "english": "I reviewed the contract myself.",
+    "words": [
+      "I",
+      "reviewed",
+      "the",
+      "contract",
+      "myself",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 직접 그 계약서를 검토했다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I reviewed the contract me.",
+      "statementForm": [
+        "I reviewed the contract myself.",
+        "I reviewed the contract myself"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I reviewed the contract me.",
+        "I reviewed the contract yourself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_068",
+    "seedId": "reflexive_pronouns_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 학생들 자신이 해결책을 제안했다.",
+    "english": "The students themselves suggested the solution.",
+    "words": [
+      "The",
+      "students",
+      "themselves",
+      "suggested",
+      "the",
+      "solution",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생들 자신이 해결책을 제안했다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students them suggested the solution.",
+      "statementForm": [
+        "The students themselves suggested the solution.",
+        "The students themselves suggested the solution"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "The students them suggested the solution.",
+        "The students ourselves suggested the solution."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_069",
+    "seedId": "reflexive_pronouns_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리 자신이 그 기준을 바꾸었다.",
+    "english": "We ourselves changed the standard.",
+    "words": [
+      "We",
+      "ourselves",
+      "changed",
+      "the",
+      "standard",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 자신이 그 기준을 바꾸었다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We us changed the standard.",
+      "statementForm": [
+        "We ourselves changed the standard.",
+        "We ourselves changed the standard"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We us changed the standard.",
+        "We themselves changed the standard."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_070",
+    "seedId": "reflexive_pronouns_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희 자신이 그 선택의 책임을 져야 한다.",
+    "english": "You yourselves must take responsibility for the choice.",
+    "words": [
+      "You",
+      "yourselves",
+      "must",
+      "take",
+      "responsibility",
+      "for",
+      "the",
+      "choice",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희 자신이 그 선택의 책임을 져야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "emphatic_reflexive",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You you must take responsibility for the choice.",
+      "statementForm": [
+        "You yourselves must take responsibility for the choice.",
+        "You yourselves must take responsibility for the choice"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "You you must take responsibility for the choice.",
+        "You ourselves must take responsibility for the choice."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_071",
+    "seedId": "reflexive_pronouns_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 파티에서 즐거운 시간을 보냈다.",
+    "english": "I enjoyed myself at the party.",
+    "words": [
+      "I",
+      "enjoyed",
+      "myself",
+      "at",
+      "the",
+      "party",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 파티에서 즐거운 시간을 보냈다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I enjoyed me at the party.",
+      "statementForm": [
+        "I enjoyed myself at the party.",
+        "I enjoyed myself at the party"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I enjoyed me at the party.",
+        "I enjoyed yourself at the party."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_072",
+    "seedId": "reflexive_pronouns_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 여행 중에 즐거운 시간을 보냈니?",
+    "english": "Did you enjoy yourself during the trip?",
+    "words": [
+      "Did",
+      "you",
+      "enjoy",
+      "yourself",
+      "during",
+      "the",
+      "trip",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 여행 중에 즐거운 시간을 보냈니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you enjoy you during the trip?",
+      "statementForm": [
+        "Did you enjoy yourself during the trip?",
+        "Did you enjoy yourself during the trip"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "Did you enjoy you during the trip?",
+        "Did you enjoy myself during the trip?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_073",
+    "seedId": "reflexive_pronouns_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 도서관에서 영어를 독학했다.",
+    "english": "He taught himself English in the library.",
+    "words": [
+      "He",
+      "taught",
+      "himself",
+      "English",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 도서관에서 영어를 독학했다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He taught him English in the library.",
+      "statementForm": [
+        "He taught himself English in the library.",
+        "He taught himself English in the library"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "He taught him English in the library.",
+        "He taught herself English in the library."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_074",
+    "seedId": "reflexive_pronouns_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 기타 치는 법을 독학했다.",
+    "english": "She taught herself how to play the guitar.",
+    "words": [
+      "She",
+      "taught",
+      "herself",
+      "how",
+      "to",
+      "play",
+      "the",
+      "guitar",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 기타 치는 법을 독학했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She taught her how to play the guitar.",
+      "statementForm": [
+        "She taught herself how to play the guitar.",
+        "She taught herself how to play the guitar"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She taught her how to play the guitar.",
+        "She taught himself how to play the guitar."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_075",
+    "seedId": "reflexive_pronouns_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 축제에서 즐거운 시간을 보냈다.",
+    "english": "We enjoyed ourselves at the festival.",
+    "words": [
+      "We",
+      "enjoyed",
+      "ourselves",
+      "at",
+      "the",
+      "festival",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 축제에서 즐거운 시간을 보냈다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We enjoyed us at the festival.",
+      "statementForm": [
+        "We enjoyed ourselves at the festival.",
+        "We enjoyed ourselves at the festival"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We enjoyed us at the festival.",
+        "We enjoyed themselves at the festival."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_076",
+    "seedId": "reflexive_pronouns_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 경기 후에 스스로를 자랑스러워했다.",
+    "english": "They were proud of themselves after the game.",
+    "words": [
+      "They",
+      "were",
+      "proud",
+      "of",
+      "themselves",
+      "after",
+      "the",
+      "game",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 경기 후에 스스로를 자랑스러워했다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They were proud of them after the game.",
+      "statementForm": [
+        "They were proud of themselves after the game.",
+        "They were proud of themselves after the game"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "They were proud of them after the game.",
+        "They were proud of ourselves after the game."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_077",
+    "seedId": "reflexive_pronouns_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 강아지는 물속에서 몸을 흔들었다.",
+    "english": "The puppy shook itself in the water.",
+    "words": [
+      "The",
+      "puppy",
+      "shook",
+      "itself",
+      "in",
+      "the",
+      "water",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 강아지는 물속에서 몸을 흔들었다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The puppy shook it in the water.",
+      "statementForm": [
+        "The puppy shook itself in the water.",
+        "The puppy shook itself in the water"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The puppy shook it in the water.",
+        "The puppy shook himself in the water."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_078",
+    "seedId": "reflexive_pronouns_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희는 서로 도우면서 스스로를 발전시켰다.",
+    "english": "You improved yourselves by helping one another.",
+    "words": [
+      "You",
+      "improved",
+      "yourselves",
+      "by",
+      "helping",
+      "one",
+      "another",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 서로 도우면서 스스로를 발전시켰다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You improved you by helping one another.",
+      "statementForm": [
+        "You improved yourselves by helping one another.",
+        "You improved yourselves by helping one another"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "You improved you by helping one another.",
+        "You improved ourselves by helping one another."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_079",
+    "seedId": "reflexive_pronouns_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 새 기술을 독학했다.",
+    "english": "I taught myself a new skill.",
+    "words": [
+      "I",
+      "taught",
+      "myself",
+      "a",
+      "new",
+      "skill",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 새 기술을 독학했다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I taught me a new skill.",
+      "statementForm": [
+        "I taught myself a new skill.",
+        "I taught myself a new skill"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I taught me a new skill.",
+        "I taught yourself a new skill."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_080",
+    "seedId": "reflexive_pronouns_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 어려운 순간에 스스로에게 의지했다.",
+    "english": "She depended on herself in the hard moment.",
+    "words": [
+      "She",
+      "depended",
+      "on",
+      "herself",
+      "in",
+      "the",
+      "hard",
+      "moment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 어려운 순간에 스스로에게 의지했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "common_reflexive_expression",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She depended on her in the hard moment.",
+      "statementForm": [
+        "She depended on herself in the hard moment.",
+        "She depended on herself in the hard moment"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She depended on her in the hard moment.",
+        "She depended on himself in the hard moment."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_081",
+    "seedId": "reflexive_pronouns_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 아침마다 나 자신에게 작은 목표를 준다.",
+    "english": "I give myself a small goal every morning.",
+    "words": [
+      "I",
+      "give",
+      "myself",
+      "a",
+      "small",
+      "goal",
+      "every",
+      "morning",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아침마다 나 자신에게 작은 목표를 준다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I give me a small goal every morning.",
+      "statementForm": [
+        "I give myself a small goal every morning.",
+        "I give myself a small goal every morning"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I give me a small goal every morning.",
+        "I give yourself a small goal every morning."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_082",
+    "seedId": "reflexive_pronouns_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 새 환경에서 네 자신에게 시간을 주어야 한다.",
+    "english": "You should give yourself time in a new environment.",
+    "words": [
+      "You",
+      "should",
+      "give",
+      "yourself",
+      "time",
+      "in",
+      "a",
+      "new",
+      "environment",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 새 환경에서 네 자신에게 시간을 주어야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should give you time in a new environment.",
+      "statementForm": [
+        "You should give yourself time in a new environment.",
+        "You should give yourself time in a new environment"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "You should give you time in a new environment.",
+        "You should give myself time in a new environment."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_083",
+    "seedId": "reflexive_pronouns_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 시합 전에 자기 자신에게 약속했다.",
+    "english": "He promised himself before the match.",
+    "words": [
+      "He",
+      "promised",
+      "himself",
+      "before",
+      "the",
+      "match",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 시합 전에 자기 자신에게 약속했다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He promised him before the match.",
+      "statementForm": [
+        "He promised himself before the match.",
+        "He promised himself before the match"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "He promised him before the match.",
+        "He promised herself before the match."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_084",
+    "seedId": "reflexive_pronouns_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 어려운 책에 자기 자신을 도전시켰다.",
+    "english": "She challenged herself with a difficult book.",
+    "words": [
+      "She",
+      "challenged",
+      "herself",
+      "with",
+      "a",
+      "difficult",
+      "book",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 어려운 책에 자기 자신을 도전시켰다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She challenged her with a difficult book.",
+      "statementForm": [
+        "She challenged herself with a difficult book.",
+        "She challenged herself with a difficult book"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She challenged her with a difficult book.",
+        "She challenged himself with a difficult book."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_085",
+    "seedId": "reflexive_pronouns_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 식물은 햇빛 쪽으로 스스로를 돌렸다.",
+    "english": "The plant turned itself toward the sunlight.",
+    "words": [
+      "The",
+      "plant",
+      "turned",
+      "itself",
+      "toward",
+      "the",
+      "sunlight",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 식물은 햇빛 쪽으로 스스로를 돌렸다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plant turned it toward the sunlight.",
+      "statementForm": [
+        "The plant turned itself toward the sunlight.",
+        "The plant turned itself toward the sunlight"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The plant turned it toward the sunlight.",
+        "The plant turned himself toward the sunlight."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_086",
+    "seedId": "reflexive_pronouns_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 활동 후 우리 자신들에게 휴식을 주었다.",
+    "english": "We gave ourselves a break after the activity.",
+    "words": [
+      "We",
+      "gave",
+      "ourselves",
+      "a",
+      "break",
+      "after",
+      "the",
+      "activity",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 활동 후 우리 자신들에게 휴식을 주었다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We gave us a break after the activity.",
+      "statementForm": [
+        "We gave ourselves a break after the activity.",
+        "We gave ourselves a break after the activity"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We gave us a break after the activity.",
+        "We gave themselves a break after the activity."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_087",
+    "seedId": "reflexive_pronouns_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희는 발표 전에 스스로에게 연습 시간을 주었다.",
+    "english": "You gave yourselves time to practice before the presentation.",
+    "words": [
+      "You",
+      "gave",
+      "yourselves",
+      "time",
+      "to",
+      "practice",
+      "before",
+      "the",
+      "presentation",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 발표 전에 스스로에게 연습 시간을 주었다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You gave you time to practice before the presentation.",
+      "statementForm": [
+        "You gave yourselves time to practice before the presentation.",
+        "You gave yourselves time to practice before the presentation"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "You gave you time to practice before the presentation.",
+        "You gave ourselves time to practice before the presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_088",
+    "seedId": "reflexive_pronouns_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 긴 여행 후 자기 자신들에게 휴식을 허락했다.",
+    "english": "They allowed themselves a rest after the long trip.",
+    "words": [
+      "They",
+      "allowed",
+      "themselves",
+      "a",
+      "rest",
+      "after",
+      "the",
+      "long",
+      "trip",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 긴 여행 후 자기 자신들에게 휴식을 허락했다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They allowed them a rest after the long trip.",
+      "statementForm": [
+        "They allowed themselves a rest after the long trip.",
+        "They allowed themselves a rest after the long trip"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "They allowed them a rest after the long trip.",
+        "They allowed ourselves a rest after the long trip."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_089",
+    "seedId": "reflexive_pronouns_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 새 도전을 통해 나 자신을 시험했다.",
+    "english": "I tested myself through a new challenge.",
+    "words": [
+      "I",
+      "tested",
+      "myself",
+      "through",
+      "a",
+      "new",
+      "challenge",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 새 도전을 통해 나 자신을 시험했다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I tested me through a new challenge.",
+      "statementForm": [
+        "I tested myself through a new challenge.",
+        "I tested myself through a new challenge"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I tested me through a new challenge.",
+        "I tested yourself through a new challenge."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_090",
+    "seedId": "reflexive_pronouns_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 침착한 태도로 자기 자신을 통제했다.",
+    "english": "She controlled herself with a calm attitude.",
+    "words": [
+      "She",
+      "controlled",
+      "herself",
+      "with",
+      "a",
+      "calm",
+      "attitude",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 침착한 태도로 자기 자신을 통제했다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_object",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She controlled her with a calm attitude.",
+      "statementForm": [
+        "She controlled herself with a calm attitude.",
+        "She controlled herself with a calm attitude"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She controlled her with a calm attitude.",
+        "She controlled himself with a calm attitude."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_091",
+    "seedId": "reflexive_pronouns_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 그 일에 대해 나 자신을 속이지 않았다.",
+    "english": "I did not fool myself about the matter.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "fool",
+      "myself",
+      "about",
+      "the",
+      "matter",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 일에 대해 나 자신을 속이지 않았다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not fool me about the matter.",
+      "statementForm": [
+        "I did not fool myself about the matter.",
+        "I did not fool myself about the matter"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I did not fool me about the matter.",
+        "I did not fool yourself about the matter."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_092",
+    "seedId": "reflexive_pronouns_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 그 실수 때문에 네 자신을 탓하지 말아야 한다.",
+    "english": "You should not blame yourself for the mistake.",
+    "words": [
+      "You",
+      "should",
+      "not",
+      "blame",
+      "yourself",
+      "for",
+      "the",
+      "mistake",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그 실수 때문에 네 자신을 탓하지 말아야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should not blame you for the mistake.",
+      "statementForm": [
+        "You should not blame yourself for the mistake.",
+        "You should not blame yourself for the mistake"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "You should not blame you for the mistake.",
+        "You should not blame myself for the mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_093",
+    "seedId": "reflexive_pronouns_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 넘어졌지만 자기 자신을 다치게 하지 않았다.",
+    "english": "He fell down, but he did not hurt himself.",
+    "words": [
+      "He",
+      "fell",
+      "down",
+      ",",
+      "but",
+      "he",
+      "did",
+      "not",
+      "hurt",
+      "himself",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 넘어졌지만 자기 자신을 다치게 하지 않았다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He fell down, but he did not hurt him.",
+      "statementForm": [
+        "He fell down, but he did not hurt himself.",
+        "He fell down, but he did not hurt himself"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "He fell down, but he did not hurt him.",
+        "He fell down, but he did not hurt herself."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_094",
+    "seedId": "reflexive_pronouns_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 발표 중에 자기 자신을 잃지 않았다.",
+    "english": "She did not lose herself during the presentation.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "lose",
+      "herself",
+      "during",
+      "the",
+      "presentation",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 발표 중에 자기 자신을 잃지 않았다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not lose her during the presentation.",
+      "statementForm": [
+        "She did not lose herself during the presentation.",
+        "She did not lose herself during the presentation"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She did not lose her during the presentation.",
+        "She did not lose himself during the presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_095",
+    "seedId": "reflexive_pronouns_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 문은 저절로 열리지 않았다.",
+    "english": "The door did not open by itself.",
+    "words": [
+      "The",
+      "door",
+      "did",
+      "not",
+      "open",
+      "by",
+      "itself",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문은 저절로 열리지 않았다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "by itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The door did not open by it.",
+      "statementForm": [
+        "The door did not open by itself.",
+        "The door did not open by itself"
+      ],
+      "fragmentForm": "by itself",
+      "wormholeVariants": [
+        "The door did not open by it.",
+        "The door did not open by himself.",
+        "The door did not open with it."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_096",
+    "seedId": "reflexive_pronouns_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 그 결과에 대해 우리 자신을 변명하지 않았다.",
+    "english": "We did not excuse ourselves for the result.",
+    "words": [
+      "We",
+      "did",
+      "not",
+      "excuse",
+      "ourselves",
+      "for",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 결과에 대해 우리 자신을 변명하지 않았다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We did not excuse us for the result.",
+      "statementForm": [
+        "We did not excuse ourselves for the result.",
+        "We did not excuse ourselves for the result"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "We did not excuse us for the result.",
+        "We did not excuse themselves for the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_097",
+    "seedId": "reflexive_pronouns_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희는 위험 앞에서 스스로를 포기하지 않았다.",
+    "english": "You did not give up on yourselves in danger.",
+    "words": [
+      "You",
+      "did",
+      "not",
+      "give",
+      "up",
+      "on",
+      "yourselves",
+      "in",
+      "danger",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 위험 앞에서 스스로를 포기하지 않았다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "You did not give up on you in danger.",
+      "statementForm": [
+        "You did not give up on yourselves in danger.",
+        "You did not give up on yourselves in danger"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "You did not give up on you in danger.",
+        "You did not give up on ourselves in danger."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_098",
+    "seedId": "reflexive_pronouns_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 실수 후에도 자기 자신들을 숨기지 않았다.",
+    "english": "They did not hide themselves after the mistake.",
+    "words": [
+      "They",
+      "did",
+      "not",
+      "hide",
+      "themselves",
+      "after",
+      "the",
+      "mistake",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 실수 후에도 자기 자신들을 숨기지 않았다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They did not hide them after the mistake.",
+      "statementForm": [
+        "They did not hide themselves after the mistake.",
+        "They did not hide themselves after the mistake"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "They did not hide them after the mistake.",
+        "They did not hide ourselves after the mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_099",
+    "seedId": "reflexive_pronouns_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 혼자서 그 결정을 내리지 않았다.",
+    "english": "I did not make the decision by myself.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "make",
+      "the",
+      "decision",
+      "by",
+      "myself",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 혼자서 그 결정을 내리지 않았다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "by myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not make the decision by me.",
+      "statementForm": [
+        "I did not make the decision by myself.",
+        "I did not make the decision by myself"
+      ],
+      "fragmentForm": "by myself",
+      "wormholeVariants": [
+        "I did not make the decision by me.",
+        "I did not make the decision by yourself.",
+        "I did not make the decision with me."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_100",
+    "seedId": "reflexive_pronouns_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 혼자서 모든 책임을 지지 않았다.",
+    "english": "She did not take all the responsibility by herself.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "take",
+      "all",
+      "the",
+      "responsibility",
+      "by",
+      "herself",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 혼자서 모든 책임을 지지 않았다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "by herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not take all the responsibility by her.",
+      "statementForm": [
+        "She did not take all the responsibility by herself.",
+        "She did not take all the responsibility by herself"
+      ],
+      "fragmentForm": "by herself",
+      "wormholeVariants": [
+        "She did not take all the responsibility by her.",
+        "She did not take all the responsibility by himself.",
+        "She did not take all the responsibility with her."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_101",
+    "seedId": "reflexive_pronouns_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 자기 자신을 충분히 설명하지 못했다.",
+    "english": "He could not explain himself clearly.",
+    "words": [
+      "He",
+      "could",
+      "not",
+      "explain",
+      "himself",
+      "clearly",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 자기 자신을 충분히 설명하지 못했다.",
+        "He"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He could not explain him clearly.",
+      "statementForm": [
+        "He could not explain himself clearly.",
+        "He could not explain himself clearly"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "He could not explain him clearly.",
+        "He could not explain herself clearly."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_102",
+    "seedId": "reflexive_pronouns_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 학생들은 스스로를 공정하게 평가하지 못했다.",
+    "english": "The students could not judge themselves fairly.",
+    "words": [
+      "The",
+      "students",
+      "could",
+      "not",
+      "judge",
+      "themselves",
+      "fairly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생들은 스스로를 공정하게 평가하지 못했다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students could not judge them fairly.",
+      "statementForm": [
+        "The students could not judge themselves fairly.",
+        "The students could not judge themselves fairly"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "The students could not judge them fairly.",
+        "The students could not judge ourselves fairly."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_103",
+    "seedId": "reflexive_pronouns_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 기계는 저절로 멈추지 않았다.",
+    "english": "The machine did not stop by itself.",
+    "words": [
+      "The",
+      "machine",
+      "did",
+      "not",
+      "stop",
+      "by",
+      "itself",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 기계는 저절로 멈추지 않았다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "by itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The machine did not stop by it.",
+      "statementForm": [
+        "The machine did not stop by itself.",
+        "The machine did not stop by itself"
+      ],
+      "fragmentForm": "by itself",
+      "wormholeVariants": [
+        "The machine did not stop by it.",
+        "The machine did not stop by himself.",
+        "The machine did not stop with it."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_104",
+    "seedId": "reflexive_pronouns_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 혼자서 그 문제를 해결하지 못했다.",
+    "english": "We could not solve the problem by ourselves.",
+    "words": [
+      "We",
+      "could",
+      "not",
+      "solve",
+      "the",
+      "problem",
+      "by",
+      "ourselves",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 혼자서 그 문제를 해결하지 못했다.",
+        "We"
+      ],
+      [
+        "핵심 표현",
+        "by ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We could not solve the problem by us.",
+      "statementForm": [
+        "We could not solve the problem by ourselves.",
+        "We could not solve the problem by ourselves"
+      ],
+      "fragmentForm": "by ourselves",
+      "wormholeVariants": [
+        "We could not solve the problem by us.",
+        "We could not solve the problem by themselves.",
+        "We could not solve the problem with us."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_105",
+    "seedId": "reflexive_pronouns_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 그 논쟁 속에서 네 자신을 잃지 말아야 한다.",
+    "english": "You should not lose yourself in that argument.",
+    "words": [
+      "You",
+      "should",
+      "not",
+      "lose",
+      "yourself",
+      "in",
+      "that",
+      "argument",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그 논쟁 속에서 네 자신을 잃지 말아야 한다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "You should not lose you in that argument.",
+      "statementForm": [
+        "You should not lose yourself in that argument.",
+        "You should not lose yourself in that argument"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "You should not lose you in that argument.",
+        "You should not lose myself in that argument."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_106",
+    "seedId": "reflexive_pronouns_106",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "나는 그 실패 때문에 나 자신을 미워하지 않았다.",
+    "english": "I did not hate myself because of the failure.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "hate",
+      "myself",
+      "because",
+      "of",
+      "the",
+      "failure",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 실패 때문에 나 자신을 미워하지 않았다.",
+        "I"
+      ],
+      [
+        "핵심 표현",
+        "myself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "myself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "myself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not hate me because of the failure.",
+      "statementForm": [
+        "I did not hate myself because of the failure.",
+        "I did not hate myself because of the failure"
+      ],
+      "fragmentForm": "myself",
+      "wormholeVariants": [
+        "I did not hate me because of the failure.",
+        "I did not hate yourself because of the failure."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_107",
+    "seedId": "reflexive_pronouns_107",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 낯선 사람들에게 자기 자신을 소개하지 않았다.",
+    "english": "She did not introduce herself to strangers.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "introduce",
+      "herself",
+      "to",
+      "strangers",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 낯선 사람들에게 자기 자신을 소개하지 않았다.",
+        "She"
+      ],
+      [
+        "핵심 표현",
+        "herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not introduce her to strangers.",
+      "statementForm": [
+        "She did not introduce herself to strangers.",
+        "She did not introduce herself to strangers"
+      ],
+      "fragmentForm": "herself",
+      "wormholeVariants": [
+        "She did not introduce her to strangers.",
+        "She did not introduce himself to strangers."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_108",
+    "seedId": "reflexive_pronouns_108",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 회의에서 스스로를 대변하지 않았다.",
+    "english": "They did not speak for themselves at the meeting.",
+    "words": [
+      "They",
+      "did",
+      "not",
+      "speak",
+      "for",
+      "themselves",
+      "at",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 회의에서 스스로를 대변하지 않았다.",
+        "They"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They did not speak for them at the meeting.",
+      "statementForm": [
+        "They did not speak for themselves at the meeting.",
+        "They did not speak for themselves at the meeting"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "They did not speak for them at the meeting.",
+        "They did not speak for ourselves at the meeting."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_109",
+    "seedId": "reflexive_pronouns_109",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 장치 자체는 문제를 일으키지 않았다.",
+    "english": "The device itself did not cause the problem.",
+    "words": [
+      "The",
+      "device",
+      "itself",
+      "did",
+      "not",
+      "cause",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 장치 자체는 문제를 일으키지 않았다.",
+        "The"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The device it did not cause the problem.",
+      "statementForm": [
+        "The device itself did not cause the problem.",
+        "The device itself did not cause the problem"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "The device it did not cause the problem.",
+        "The device himself did not cause the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_110",
+    "seedId": "reflexive_pronouns_110",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희는 그 책임에서 스스로를 제외하지 않았다.",
+    "english": "You did not exclude yourselves from the responsibility.",
+    "words": [
+      "You",
+      "did",
+      "not",
+      "exclude",
+      "yourselves",
+      "from",
+      "the",
+      "responsibility",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 그 책임에서 스스로를 제외하지 않았다.",
+        "You"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "You did not exclude you from the responsibility.",
+      "statementForm": [
+        "You did not exclude yourselves from the responsibility.",
+        "You did not exclude yourselves from the responsibility"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "You did not exclude you from the responsibility.",
+        "You did not exclude ourselves from the responsibility."
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_111",
+    "seedId": "reflexive_pronouns_111",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 네 자신을 믿니?",
+    "english": "Do you believe in yourself?",
+    "words": [
+      "Do",
+      "you",
+      "believe",
+      "in",
+      "yourself",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 네 자신을 믿니?",
+        "Do"
+      ],
+      [
+        "핵심 표현",
+        "yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you believe in you?",
+      "statementForm": [
+        "Do you believe in yourself?",
+        "Do you believe in yourself"
+      ],
+      "fragmentForm": "yourself",
+      "wormholeVariants": [
+        "Do you believe in you?",
+        "Do you believe in myself?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_112",
+    "seedId": "reflexive_pronouns_112",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그는 거울 속의 자기 자신을 보았니?",
+    "english": "Did he see himself in the mirror?",
+    "words": [
+      "Did",
+      "he",
+      "see",
+      "himself",
+      "in",
+      "the",
+      "mirror",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 거울 속의 자기 자신을 보았니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he see him in the mirror?",
+      "statementForm": [
+        "Did he see himself in the mirror?",
+        "Did he see himself in the mirror"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "Did he see him in the mirror?",
+        "Did he see herself in the mirror?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_113",
+    "seedId": "reflexive_pronouns_113",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그녀는 혼자서 그 문제를 해결했니?",
+    "english": "Did she solve the problem by herself?",
+    "words": [
+      "Did",
+      "she",
+      "solve",
+      "the",
+      "problem",
+      "by",
+      "herself",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 혼자서 그 문제를 해결했니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "by herself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by herself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by herself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she solve the problem by her?",
+      "statementForm": [
+        "Did she solve the problem by herself?",
+        "Did she solve the problem by herself"
+      ],
+      "fragmentForm": "by herself",
+      "wormholeVariants": [
+        "Did she solve the problem by her?",
+        "Did she solve the problem by himself?",
+        "Did she solve the problem with her?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_114",
+    "seedId": "reflexive_pronouns_114",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 문은 저절로 닫혔니?",
+    "english": "Did the door close by itself?",
+    "words": [
+      "Did",
+      "the",
+      "door",
+      "close",
+      "by",
+      "itself",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문은 저절로 닫혔니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "by itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the door close by it?",
+      "statementForm": [
+        "Did the door close by itself?",
+        "Did the door close by itself"
+      ],
+      "fragmentForm": "by itself",
+      "wormholeVariants": [
+        "Did the door close by it?",
+        "Did the door close by himself?",
+        "Did the door close with it?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_115",
+    "seedId": "reflexive_pronouns_115",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너희는 직접 그 규칙을 만들었니?",
+    "english": "Did you make the rules yourselves?",
+    "words": [
+      "Did",
+      "you",
+      "make",
+      "the",
+      "rules",
+      "yourselves",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 직접 그 규칙을 만들었니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "yourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "yourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "yourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you make the rules you?",
+      "statementForm": [
+        "Did you make the rules yourselves?",
+        "Did you make the rules yourselves"
+      ],
+      "fragmentForm": "yourselves",
+      "wormholeVariants": [
+        "Did you make the rules you?",
+        "Did you make the rules ourselves?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_116",
+    "seedId": "reflexive_pronouns_116",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그들은 자기 자신들을 충분히 준비했니?",
+    "english": "Did they prepare themselves enough?",
+    "words": [
+      "Did",
+      "they",
+      "prepare",
+      "themselves",
+      "enough",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 자기 자신들을 충분히 준비했니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "themselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "themselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "themselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did they prepare them enough?",
+      "statementForm": [
+        "Did they prepare themselves enough?",
+        "Did they prepare themselves enough"
+      ],
+      "fragmentForm": "themselves",
+      "wormholeVariants": [
+        "Did they prepare them enough?",
+        "Did they prepare ourselves enough?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_117",
+    "seedId": "reflexive_pronouns_117",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "우리는 스스로를 너무 심하게 비판하고 있니?",
+    "english": "Are we criticizing ourselves too harshly?",
+    "words": [
+      "Are",
+      "we",
+      "criticizing",
+      "ourselves",
+      "too",
+      "harshly",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 스스로를 너무 심하게 비판하고 있니?",
+        "Are"
+      ],
+      [
+        "핵심 표현",
+        "ourselves"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "ourselves",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "ourselves"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are we criticizing us too harshly?",
+      "statementForm": [
+        "Are we criticizing ourselves too harshly?",
+        "Are we criticizing ourselves too harshly"
+      ],
+      "fragmentForm": "ourselves",
+      "wormholeVariants": [
+        "Are we criticizing us too harshly?",
+        "Are we criticizing themselves too harshly?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_118",
+    "seedId": "reflexive_pronouns_118",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 학생 자신이 그 답을 설명했니?",
+    "english": "Did the student himself explain the answer?",
+    "words": [
+      "Did",
+      "the",
+      "student",
+      "himself",
+      "explain",
+      "the",
+      "answer",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생 자신이 그 답을 설명했니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "himself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "himself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "himself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the student him explain the answer?",
+      "statementForm": [
+        "Did the student himself explain the answer?",
+        "Did the student himself explain the answer"
+      ],
+      "fragmentForm": "himself",
+      "wormholeVariants": [
+        "Did the student him explain the answer?",
+        "Did the student herself explain the answer?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_119",
+    "seedId": "reflexive_pronouns_119",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "너는 혼자서 그 결론에 도달했니?",
+    "english": "Did you reach the conclusion by yourself?",
+    "words": [
+      "Did",
+      "you",
+      "reach",
+      "the",
+      "conclusion",
+      "by",
+      "yourself",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 혼자서 그 결론에 도달했니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "by yourself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by yourself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "by yourself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "by_oneself_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you reach the conclusion by you?",
+      "statementForm": [
+        "Did you reach the conclusion by yourself?",
+        "Did you reach the conclusion by yourself"
+      ],
+      "fragmentForm": "by yourself",
+      "wormholeVariants": [
+        "Did you reach the conclusion by you?",
+        "Did you reach the conclusion by myself?",
+        "Did you reach the conclusion with you?"
+      ]
+    }
+  },
+  {
+    "id": "m2_reflexive_pronouns_120",
+    "seedId": "reflexive_pronouns_120",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "reflexive_pronouns",
+    "chapterLabelKo": "재귀대명사",
+    "korean": "그 문제 자체가 다시 나타났니?",
+    "english": "Did the problem itself appear again?",
+    "words": [
+      "Did",
+      "the",
+      "problem",
+      "itself",
+      "appear",
+      "again",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "reflexive_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제 자체가 다시 나타났니?",
+        "Did"
+      ],
+      [
+        "핵심 표현",
+        "itself"
+      ],
+      [
+        "주의",
+        "주어와 목적어가 같은 대상이면 재귀대명사를 쓰고, by oneself는 '혼자서'라는 뜻이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "itself",
+      "myself",
+      "yourself",
+      "himself",
+      "herself",
+      "itself",
+      "ourselves",
+      "yourselves",
+      "themselves"
+    ],
+    "blankTargets": [
+      "itself"
+    ],
+    "tags": [
+      "reflexive_pronouns",
+      "reflexive_question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the problem it appear again?",
+      "statementForm": [
+        "Did the problem itself appear again?",
+        "Did the problem itself appear again"
+      ],
+      "fragmentForm": "itself",
+      "wormholeVariants": [
+        "Did the problem it appear again?",
+        "Did the problem himself appear again?"
+      ]
+    }
+  }
+]
