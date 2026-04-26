@@ -1,0 +1,7692 @@
+[
+  {
+    "id": "m2_because_001",
+    "seedId": "because_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 아파서 집에 있었다.",
+    "english": "I stayed home because I was sick.",
+    "words": [
+      "I",
+      "stayed",
+      "home",
+      "because",
+      "I",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아파서 집에 있었다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed home since I was sick.",
+      "statementForm": [
+        "I stayed home because I was sick.",
+        "I stayed home because I was sick",
+        "Because I was sick, I stayed home.",
+        "Because I was sick, I stayed home"
+      ],
+      "fragmentForm": "I stayed home because I was",
+      "wormholeVariants": [
+        "I stayed home since I was sick.",
+        "I stayed home as I was sick.",
+        "I stayed home for I was sick.",
+        "I stayed home because of I was sick.",
+        "I stayed home because that I was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_002",
+    "seedId": "because_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 버스가 늦어서 지각했다.",
+    "english": "She was late because the bus was delayed.",
+    "words": [
+      "She",
+      "was",
+      "late",
+      "because",
+      "the",
+      "bus",
+      "was",
+      "delayed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 버스가 늦어서 지각했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was late since the bus was delayed.",
+      "statementForm": [
+        "She was late because the bus was delayed.",
+        "She was late because the bus was delayed",
+        "Because the bus was delayed, She was late.",
+        "Because the bus was delayed, She was late"
+      ],
+      "fragmentForm": "She was late because the bus was",
+      "wormholeVariants": [
+        "She was late since the bus was delayed.",
+        "She was late as the bus was delayed.",
+        "She was late for the bus was delayed.",
+        "She was late because of the bus was delayed.",
+        "She was late because that the bus was delayed."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_003",
+    "seedId": "because_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 좋은 점수를 원해서 열심히 공부했다.",
+    "english": "He studied hard because he wanted good grades.",
+    "words": [
+      "He",
+      "studied",
+      "hard",
+      "because",
+      "he",
+      "wanted",
+      "good",
+      "grades",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 좋은 점수를 원해서 열심히 공부했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He studied hard since he wanted good grades.",
+      "statementForm": [
+        "He studied hard because he wanted good grades.",
+        "He studied hard because he wanted good grades",
+        "Because he wanted good grades, He studied hard.",
+        "Because he wanted good grades, He studied hard"
+      ],
+      "fragmentForm": "He studied hard because he wanted good",
+      "wormholeVariants": [
+        "He studied hard since he wanted good grades.",
+        "He studied hard as he wanted good grades.",
+        "He studied hard for he wanted good grades.",
+        "He studied hard because of he wanted good grades.",
+        "He studied hard because that he wanted good grades."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_004",
+    "seedId": "because_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 아기가 자고 있어서 조용했다.",
+    "english": "We were quiet because the baby was sleeping.",
+    "words": [
+      "We",
+      "were",
+      "quiet",
+      "because",
+      "the",
+      "baby",
+      "was",
+      "sleeping",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아기가 자고 있어서 조용했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were quiet since the baby was sleeping.",
+      "statementForm": [
+        "We were quiet because the baby was sleeping.",
+        "We were quiet because the baby was sleeping",
+        "Because the baby was sleeping, We were quiet.",
+        "Because the baby was sleeping, We were quiet"
+      ],
+      "fragmentForm": "We were quiet because the baby was",
+      "wormholeVariants": [
+        "We were quiet since the baby was sleeping.",
+        "We were quiet as the baby was sleeping.",
+        "We were quiet for the baby was sleeping.",
+        "We were quiet because of the baby was sleeping.",
+        "We were quiet because that the baby was sleeping."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_005",
+    "seedId": "because_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 날씨가 추워서 코트를 입었다.",
+    "english": "They wore coats because it was cold.",
+    "words": [
+      "They",
+      "wore",
+      "coats",
+      "because",
+      "it",
+      "was",
+      "cold",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 날씨가 추워서 코트를 입었다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They wore coats since it was cold.",
+      "statementForm": [
+        "They wore coats because it was cold.",
+        "They wore coats because it was cold",
+        "Because it was cold, They wore coats.",
+        "Because it was cold, They wore coats"
+      ],
+      "fragmentForm": "They wore coats because it was",
+      "wormholeVariants": [
+        "They wore coats since it was cold.",
+        "They wore coats as it was cold.",
+        "They wore coats for it was cold.",
+        "They wore coats because of it was cold.",
+        "They wore coats because that it was cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_006",
+    "seedId": "because_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 네가 보고 싶어서 전화했다.",
+    "english": "I called you because I missed you.",
+    "words": [
+      "I",
+      "called",
+      "you",
+      "because",
+      "I",
+      "missed",
+      "you",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 보고 싶어서 전화했다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I called you since I missed you.",
+      "statementForm": [
+        "I called you because I missed you.",
+        "I called you because I missed you",
+        "Because I missed you, I called you.",
+        "Because I missed you, I called you"
+      ],
+      "fragmentForm": "I called you because I missed",
+      "wormholeVariants": [
+        "I called you since I missed you.",
+        "I called you as I missed you.",
+        "I called you for I missed you.",
+        "I called you because of I missed you.",
+        "I called you because that I missed you."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_007",
+    "seedId": "because_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 목이 말라서 물을 마셨다.",
+    "english": "She drank water because she was thirsty.",
+    "words": [
+      "She",
+      "drank",
+      "water",
+      "because",
+      "she",
+      "was",
+      "thirsty",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 목이 말라서 물을 마셨다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She drank water since she was thirsty.",
+      "statementForm": [
+        "She drank water because she was thirsty.",
+        "She drank water because she was thirsty",
+        "Because she was thirsty, She drank water.",
+        "Because she was thirsty, She drank water"
+      ],
+      "fragmentForm": "She drank water because she was",
+      "wormholeVariants": [
+        "She drank water since she was thirsty.",
+        "She drank water as she was thirsty.",
+        "She drank water for she was thirsty.",
+        "She drank water because of she was thirsty.",
+        "She drank water because that she was thirsty."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_008",
+    "seedId": "because_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 도움이 필요해서 말했니?",
+    "english": "Do I need help because I am confused?",
+    "words": [
+      "Do",
+      "I",
+      "need",
+      "help",
+      "because",
+      "I",
+      "am",
+      "confused",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 도움이 필요해서 말했니?",
+        "Do"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I need help since I am confused?",
+      "statementForm": [
+        "Do I need help because I am confused?",
+        "Do I need help because I am confused"
+      ],
+      "fragmentForm": "Do I need help because I am",
+      "wormholeVariants": [
+        "Do I need help since I am confused?",
+        "Do I need help as I am confused?",
+        "Do I need help for I am confused?",
+        "Do I need help because of I am confused?",
+        "Do I need help because that I am confused?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_009",
+    "seedId": "because_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 비가 와서 밖에 나가지 않았다.",
+    "english": "He did not go outside because it was raining.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "go",
+      "outside",
+      "because",
+      "it",
+      "was",
+      "raining",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 비가 와서 밖에 나가지 않았다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not go outside since it was raining.",
+      "statementForm": [
+        "He did not go outside because it was raining.",
+        "He did not go outside because it was raining",
+        "Because it was raining, He did not go outside.",
+        "Because it was raining, He did not go outside"
+      ],
+      "fragmentForm": "He did not go outside because it was",
+      "wormholeVariants": [
+        "He did not go outside since it was raining.",
+        "He did not go outside as it was raining.",
+        "He did not go outside for it was raining.",
+        "He did not go outside because of it was raining.",
+        "He did not go outside because that it was raining."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_010",
+    "seedId": "because_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 바닥이 젖어서 조심했다.",
+    "english": "I was careful because the floor was wet.",
+    "words": [
+      "I",
+      "was",
+      "careful",
+      "because",
+      "the",
+      "floor",
+      "was",
+      "wet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 바닥이 젖어서 조심했다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was careful since the floor was wet.",
+      "statementForm": [
+        "I was careful because the floor was wet.",
+        "I was careful because the floor was wet",
+        "Because the floor was wet, I was careful.",
+        "Because the floor was wet, I was careful"
+      ],
+      "fragmentForm": "I was careful because the floor was",
+      "wormholeVariants": [
+        "I was careful since the floor was wet.",
+        "I was careful as the floor was wet.",
+        "I was careful for the floor was wet.",
+        "I was careful because of the floor was wet.",
+        "I was careful because that the floor was wet."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_011",
+    "seedId": "because_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 친구가 도와줘서 웃었다.",
+    "english": "She smiled because her friend helped her.",
+    "words": [
+      "She",
+      "smiled",
+      "because",
+      "her",
+      "friend",
+      "helped",
+      "her",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 친구가 도와줘서 웃었다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She smiled since her friend helped her.",
+      "statementForm": [
+        "She smiled because her friend helped her.",
+        "She smiled because her friend helped her",
+        "Because her friend helped her, She smiled.",
+        "Because her friend helped her, She smiled"
+      ],
+      "fragmentForm": "She smiled because her friend helped",
+      "wormholeVariants": [
+        "She smiled since her friend helped her.",
+        "She smiled as her friend helped her.",
+        "She smiled for her friend helped her.",
+        "She smiled because of her friend helped her.",
+        "She smiled because that her friend helped her."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_012",
+    "seedId": "because_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 비가 와서 우산을 썼다.",
+    "english": "We used umbrellas because it was rainy.",
+    "words": [
+      "We",
+      "used",
+      "umbrellas",
+      "because",
+      "it",
+      "was",
+      "rainy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 비가 와서 우산을 썼다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We used umbrellas since it was rainy.",
+      "statementForm": [
+        "We used umbrellas because it was rainy.",
+        "We used umbrellas because it was rainy",
+        "Because it was rainy, We used umbrellas.",
+        "Because it was rainy, We used umbrellas"
+      ],
+      "fragmentForm": "We used umbrellas because it was",
+      "wormholeVariants": [
+        "We used umbrellas since it was rainy.",
+        "We used umbrellas as it was rainy.",
+        "We used umbrellas for it was rainy.",
+        "We used umbrellas because of it was rainy.",
+        "We used umbrellas because that it was rainy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_013",
+    "seedId": "because_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 급해서 택시를 탔다.",
+    "english": "He took a taxi because he was in a hurry.",
+    "words": [
+      "He",
+      "took",
+      "a",
+      "taxi",
+      "because",
+      "he",
+      "was",
+      "in",
+      "a",
+      "hurry",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 급해서 택시를 탔다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He took a taxi since he was in a hurry.",
+      "statementForm": [
+        "He took a taxi because he was in a hurry.",
+        "He took a taxi because he was in a hurry",
+        "Because he was in a hurry, He took a taxi.",
+        "Because he was in a hurry, He took a taxi"
+      ],
+      "fragmentForm": "He took a taxi because he was in a",
+      "wormholeVariants": [
+        "He took a taxi since he was in a hurry.",
+        "He took a taxi as he was in a hurry.",
+        "He took a taxi for he was in a hurry.",
+        "He took a taxi because of he was in a hurry.",
+        "He took a taxi because that he was in a hurry."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_014",
+    "seedId": "because_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 시험에 합격해서 행복했다.",
+    "english": "He was happy because he passed the test.",
+    "words": [
+      "He",
+      "was",
+      "happy",
+      "because",
+      "he",
+      "passed",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 시험에 합격해서 행복했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was happy since he passed the test.",
+      "statementForm": [
+        "He was happy because he passed the test.",
+        "He was happy because he passed the test",
+        "Because he passed the test, He was happy.",
+        "Because he passed the test, He was happy"
+      ],
+      "fragmentForm": "He was happy because he passed the",
+      "wormholeVariants": [
+        "He was happy since he passed the test.",
+        "He was happy as he passed the test.",
+        "He was happy for he passed the test.",
+        "He was happy because of he passed the test.",
+        "He was happy because that he passed the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_015",
+    "seedId": "because_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 많이 걸어서 피곤했다.",
+    "english": "We were tired because we walked a lot.",
+    "words": [
+      "We",
+      "were",
+      "tired",
+      "because",
+      "we",
+      "walked",
+      "a",
+      "lot",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 많이 걸어서 피곤했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were tired since we walked a lot.",
+      "statementForm": [
+        "We were tired because we walked a lot.",
+        "We were tired because we walked a lot",
+        "Because we walked a lot, We were tired.",
+        "Because we walked a lot, We were tired"
+      ],
+      "fragmentForm": "We were tired because we walked a",
+      "wormholeVariants": [
+        "We were tired since we walked a lot.",
+        "We were tired as we walked a lot.",
+        "We were tired for we walked a lot.",
+        "We were tired because of we walked a lot.",
+        "We were tired because that we walked a lot."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_016",
+    "seedId": "because_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 수업을 이해하지 못해서 필기를 다시 확인했다.",
+    "english": "He checked the notes because he did not understand the lesson.",
+    "words": [
+      "He",
+      "checked",
+      "the",
+      "notes",
+      "because",
+      "he",
+      "did",
+      "not",
+      "understand",
+      "the",
+      "lesson",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 수업을 이해하지 못해서 필기를 다시 확인했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He checked the notes since he did not understand the lesson.",
+      "statementForm": [
+        "He checked the notes because he did not understand the lesson.",
+        "He checked the notes because he did not understand the lesson",
+        "Because he did not understand the lesson, He checked the notes.",
+        "Because he did not understand the lesson, He checked the notes"
+      ],
+      "fragmentForm": "He checked the notes because he did not understand the",
+      "wormholeVariants": [
+        "He checked the notes since he did not understand the lesson.",
+        "He checked the notes as he did not understand the lesson.",
+        "He checked the notes for he did not understand the lesson.",
+        "He checked the notes because of he did not understand the lesson.",
+        "He checked the notes because that he did not understand the lesson."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_017",
+    "seedId": "because_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 다른 약속이 있어서 일찍 떠났다.",
+    "english": "I left early because I had another appointment.",
+    "words": [
+      "I",
+      "left",
+      "early",
+      "because",
+      "I",
+      "had",
+      "another",
+      "appointment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 다른 약속이 있어서 일찍 떠났다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I left early since I had another appointment.",
+      "statementForm": [
+        "I left early because I had another appointment.",
+        "I left early because I had another appointment",
+        "Because I had another appointment, I left early.",
+        "Because I had another appointment, I left early"
+      ],
+      "fragmentForm": "I left early because I had another",
+      "wormholeVariants": [
+        "I left early since I had another appointment.",
+        "I left early as I had another appointment.",
+        "I left early for I had another appointment.",
+        "I left early because of I had another appointment.",
+        "I left early because that I had another appointment."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_018",
+    "seedId": "because_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 바빠서 프로젝트에 참여하지 못했다.",
+    "english": "She could not join the project because she was busy.",
+    "words": [
+      "She",
+      "could",
+      "not",
+      "join",
+      "the",
+      "project",
+      "because",
+      "she",
+      "was",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 바빠서 프로젝트에 참여하지 못했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She could not join the project since she was busy.",
+      "statementForm": [
+        "She could not join the project because she was busy.",
+        "She could not join the project because she was busy",
+        "Because she was busy, She could not join the project.",
+        "Because she was busy, She could not join the project"
+      ],
+      "fragmentForm": "She could not join the project because she was",
+      "wormholeVariants": [
+        "She could not join the project since she was busy.",
+        "She could not join the project as she was busy.",
+        "She could not join the project for she was busy.",
+        "She could not join the project because of she was busy.",
+        "She could not join the project because that she was busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_019",
+    "seedId": "because_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 결과를 설명하고 싶어서 자료를 발표했다.",
+    "english": "We presented the data because we wanted to explain the result.",
+    "words": [
+      "We",
+      "presented",
+      "the",
+      "data",
+      "because",
+      "we",
+      "wanted",
+      "to",
+      "explain",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 결과를 설명하고 싶어서 자료를 발표했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We presented the data since we wanted to explain the result.",
+      "statementForm": [
+        "We presented the data because we wanted to explain the result.",
+        "We presented the data because we wanted to explain the result",
+        "Because we wanted to explain the result, We presented the data.",
+        "Because we wanted to explain the result, We presented the data"
+      ],
+      "fragmentForm": "We presented the data because we wanted to explain the",
+      "wormholeVariants": [
+        "We presented the data since we wanted to explain the result.",
+        "We presented the data as we wanted to explain the result.",
+        "We presented the data for we wanted to explain the result.",
+        "We presented the data because of we wanted to explain the result.",
+        "We presented the data because that we wanted to explain the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_020",
+    "seedId": "because_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "너는 어제 늦게 자서 피곤하니?",
+    "english": "Do you feel tired because you stayed up late?",
+    "words": [
+      "Do",
+      "you",
+      "feel",
+      "tired",
+      "because",
+      "you",
+      "stayed",
+      "up",
+      "late",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 어제 늦게 자서 피곤하니?",
+        "Do"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you feel tired since you stayed up late?",
+      "statementForm": [
+        "Do you feel tired because you stayed up late?",
+        "Do you feel tired because you stayed up late"
+      ],
+      "fragmentForm": "Do you feel tired because you stayed up",
+      "wormholeVariants": [
+        "Do you feel tired since you stayed up late?",
+        "Do you feel tired as you stayed up late?",
+        "Do you feel tired for you stayed up late?",
+        "Do you feel tired because of you stayed up late?",
+        "Do you feel tired because that you stayed up late?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_021",
+    "seedId": "because_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 팀이 발전해서 자랑스러웠다.",
+    "english": "She was proud because her team improved.",
+    "words": [
+      "She",
+      "was",
+      "proud",
+      "because",
+      "her",
+      "team",
+      "improved",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 팀이 발전해서 자랑스러웠다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was proud since her team improved.",
+      "statementForm": [
+        "She was proud because her team improved.",
+        "She was proud because her team improved",
+        "Because her team improved, She was proud.",
+        "Because her team improved, She was proud"
+      ],
+      "fragmentForm": "She was proud because her team",
+      "wormholeVariants": [
+        "She was proud since her team improved.",
+        "She was proud as her team improved.",
+        "She was proud for her team improved.",
+        "She was proud because of her team improved.",
+        "She was proud because that her team improved."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_022",
+    "seedId": "because_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 이야기가 재미있어서 웃었다.",
+    "english": "We laughed because the story was funny.",
+    "words": [
+      "We",
+      "laughed",
+      "because",
+      "the",
+      "story",
+      "was",
+      "funny",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 이야기가 재미있어서 웃었다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We laughed since the story was funny.",
+      "statementForm": [
+        "We laughed because the story was funny.",
+        "We laughed because the story was funny",
+        "Because the story was funny, We laughed.",
+        "Because the story was funny, We laughed"
+      ],
+      "fragmentForm": "We laughed because the story was",
+      "wormholeVariants": [
+        "We laughed since the story was funny.",
+        "We laughed as the story was funny.",
+        "We laughed for the story was funny.",
+        "We laughed because of the story was funny.",
+        "We laughed because that the story was funny."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_023",
+    "seedId": "because_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 너무 바빠서 점심을 먹지 못했다.",
+    "english": "He did not eat lunch because he was too busy.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "eat",
+      "lunch",
+      "because",
+      "he",
+      "was",
+      "too",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 너무 바빠서 점심을 먹지 못했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not eat lunch since he was too busy.",
+      "statementForm": [
+        "He did not eat lunch because he was too busy.",
+        "He did not eat lunch because he was too busy",
+        "Because he was too busy, He did not eat lunch.",
+        "Because he was too busy, He did not eat lunch"
+      ],
+      "fragmentForm": "He did not eat lunch because he was too",
+      "wormholeVariants": [
+        "He did not eat lunch since he was too busy.",
+        "He did not eat lunch as he was too busy.",
+        "He did not eat lunch for he was too busy.",
+        "He did not eat lunch because of he was too busy.",
+        "He did not eat lunch because that he was too busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_024",
+    "seedId": "because_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 학교에 늦어서 택시를 불렀다.",
+    "english": "She called a taxi because she was late for school.",
+    "words": [
+      "She",
+      "called",
+      "a",
+      "taxi",
+      "because",
+      "she",
+      "was",
+      "late",
+      "for",
+      "school",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 학교에 늦어서 택시를 불렀다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She called a taxi since she was late for school.",
+      "statementForm": [
+        "She called a taxi because she was late for school.",
+        "She called a taxi because she was late for school",
+        "Because she was late for school, She called a taxi.",
+        "Because she was late for school, She called a taxi"
+      ],
+      "fragmentForm": "She called a taxi because she was late for",
+      "wormholeVariants": [
+        "She called a taxi since she was late for school.",
+        "She called a taxi as she was late for school.",
+        "She called a taxi for she was late for school.",
+        "She called a taxi because of she was late for school.",
+        "She called a taxi because that she was late for school."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_025",
+    "seedId": "because_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 바닥이 미끄러워서 조심하고 있다.",
+    "english": "I am moving carefully because the floor is slippery?",
+    "words": [
+      "I",
+      "am",
+      "moving",
+      "carefully",
+      "because",
+      "the",
+      "floor",
+      "is",
+      "slippery",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 바닥이 미끄러워서 조심하고 있다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am moving carefully since the floor is slippery?",
+      "statementForm": [
+        "I am moving carefully because the floor is slippery?",
+        "I am moving carefully because the floor is slippery"
+      ],
+      "fragmentForm": "I am moving carefully because the floor is",
+      "wormholeVariants": [
+        "I am moving carefully since the floor is slippery?",
+        "I am moving carefully as the floor is slippery?",
+        "I am moving carefully for the floor is slippery?",
+        "I am moving carefully because of the floor is slippery?",
+        "I am moving carefully because that the floor is slippery?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_026",
+    "seedId": "because_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 숙제가 쉬워서 책을 덜 읽었다.",
+    "english": "They read less because their homework was easy.",
+    "words": [
+      "They",
+      "read",
+      "less",
+      "because",
+      "their",
+      "homework",
+      "was",
+      "easy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 숙제가 쉬워서 책을 덜 읽었다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They read less since their homework was easy.",
+      "statementForm": [
+        "They read less because their homework was easy.",
+        "They read less because their homework was easy",
+        "Because their homework was easy, They read less.",
+        "Because their homework was easy, They read less"
+      ],
+      "fragmentForm": "They read less because their homework was",
+      "wormholeVariants": [
+        "They read less since their homework was easy.",
+        "They read less as their homework was easy.",
+        "They read less for their homework was easy.",
+        "They read less because of their homework was easy.",
+        "They read less because that their homework was easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_027",
+    "seedId": "because_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 날씨가 나빠져서 계획을 바꿨다.",
+    "english": "He changed the plan because the weather got worse.",
+    "words": [
+      "He",
+      "changed",
+      "the",
+      "plan",
+      "because",
+      "the",
+      "weather",
+      "got",
+      "worse",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 날씨가 나빠져서 계획을 바꿨다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He changed the plan since the weather got worse.",
+      "statementForm": [
+        "He changed the plan because the weather got worse.",
+        "He changed the plan because the weather got worse",
+        "Because the weather got worse, He changed the plan.",
+        "Because the weather got worse, He changed the plan"
+      ],
+      "fragmentForm": "He changed the plan because the weather got",
+      "wormholeVariants": [
+        "He changed the plan since the weather got worse.",
+        "He changed the plan as the weather got worse.",
+        "He changed the plan for the weather got worse.",
+        "He changed the plan because of the weather got worse.",
+        "He changed the plan because that the weather got worse."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_028",
+    "seedId": "because_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 전화가 크게 울려서 놀랐다.",
+    "english": "I was shocked because the phone rang loudly.",
+    "words": [
+      "I",
+      "was",
+      "shocked",
+      "because",
+      "the",
+      "phone",
+      "rang",
+      "loudly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 전화가 크게 울려서 놀랐다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was shocked since the phone rang loudly.",
+      "statementForm": [
+        "I was shocked because the phone rang loudly.",
+        "I was shocked because the phone rang loudly",
+        "Because the phone rang loudly, I was shocked.",
+        "Because the phone rang loudly, I was shocked"
+      ],
+      "fragmentForm": "I was shocked because the phone rang",
+      "wormholeVariants": [
+        "I was shocked since the phone rang loudly.",
+        "I was shocked as the phone rang loudly.",
+        "I was shocked for the phone rang loudly.",
+        "I was shocked because of the phone rang loudly.",
+        "I was shocked because that the phone rang loudly."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_029",
+    "seedId": "because_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 실수해서 사과했다.",
+    "english": "She apologized because she made a mistake.",
+    "words": [
+      "She",
+      "apologized",
+      "because",
+      "she",
+      "made",
+      "a",
+      "mistake",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 실수해서 사과했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She apologized since she made a mistake.",
+      "statementForm": [
+        "She apologized because she made a mistake.",
+        "She apologized because she made a mistake",
+        "Because she made a mistake, She apologized.",
+        "Because she made a mistake, She apologized"
+      ],
+      "fragmentForm": "She apologized because she made a",
+      "wormholeVariants": [
+        "She apologized since she made a mistake.",
+        "She apologized as she made a mistake.",
+        "She apologized for she made a mistake.",
+        "She apologized because of she made a mistake.",
+        "She apologized because that she made a mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_030",
+    "seedId": "because_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 비가 올 것 같아서 우산이 필요하니?",
+    "english": "We need an umbrella because it is going to rain?",
+    "words": [
+      "We",
+      "need",
+      "an",
+      "umbrella",
+      "because",
+      "it",
+      "is",
+      "going",
+      "to",
+      "rain",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 비가 올 것 같아서 우산이 필요하니?",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We need an umbrella since it is going to rain?",
+      "statementForm": [
+        "We need an umbrella because it is going to rain?",
+        "We need an umbrella because it is going to rain"
+      ],
+      "fragmentForm": "We need an umbrella because it is going to",
+      "wormholeVariants": [
+        "We need an umbrella since it is going to rain?",
+        "We need an umbrella as it is going to rain?",
+        "We need an umbrella for it is going to rain?",
+        "We need an umbrella because of it is going to rain?",
+        "We need an umbrella because that it is going to rain?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_031",
+    "seedId": "because_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 부모님이 오셔서 방을 청소했다.",
+    "english": "He cleaned the room because his parents were coming.",
+    "words": [
+      "He",
+      "cleaned",
+      "the",
+      "room",
+      "because",
+      "his",
+      "parents",
+      "were",
+      "coming",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 부모님이 오셔서 방을 청소했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He cleaned the room since his parents were coming.",
+      "statementForm": [
+        "He cleaned the room because his parents were coming.",
+        "He cleaned the room because his parents were coming",
+        "Because his parents were coming, He cleaned the room.",
+        "Because his parents were coming, He cleaned the room"
+      ],
+      "fragmentForm": "He cleaned the room because his parents were",
+      "wormholeVariants": [
+        "He cleaned the room since his parents were coming.",
+        "He cleaned the room as his parents were coming.",
+        "He cleaned the room for his parents were coming.",
+        "He cleaned the room because of his parents were coming.",
+        "He cleaned the room because that his parents were coming."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_032",
+    "seedId": "because_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 매니저가 없어서 회의를 취소했다.",
+    "english": "He canceled the meeting because the manager was absent.",
+    "words": [
+      "He",
+      "canceled",
+      "the",
+      "meeting",
+      "because",
+      "the",
+      "manager",
+      "was",
+      "absent",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 매니저가 없어서 회의를 취소했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He canceled the meeting since the manager was absent.",
+      "statementForm": [
+        "He canceled the meeting because the manager was absent.",
+        "He canceled the meeting because the manager was absent",
+        "Because the manager was absent, He canceled the meeting.",
+        "Because the manager was absent, He canceled the meeting"
+      ],
+      "fragmentForm": "He canceled the meeting because the manager was",
+      "wormholeVariants": [
+        "He canceled the meeting since the manager was absent.",
+        "He canceled the meeting as the manager was absent.",
+        "He canceled the meeting for the manager was absent.",
+        "He canceled the meeting because of the manager was absent.",
+        "He canceled the meeting because that the manager was absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_033",
+    "seedId": "because_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 아르바이트가 있어서 동아리에 가입하지 않았다.",
+    "english": "I did not join the club because I had a part-time job.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "join",
+      "the",
+      "club",
+      "because",
+      "I",
+      "had",
+      "a",
+      "part",
+      "time",
+      "job",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아르바이트가 있어서 동아리에 가입하지 않았다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not join the club since I had a part-time job.",
+      "statementForm": [
+        "I did not join the club because I had a part-time job.",
+        "I did not join the club because I had a part-time job",
+        "Because I had a part-time job, I did not join the club.",
+        "Because I had a part-time job, I did not join the club"
+      ],
+      "fragmentForm": "I did not join the club because I had a part-time",
+      "wormholeVariants": [
+        "I did not join the club since I had a part-time job.",
+        "I did not join the club as I had a part-time job.",
+        "I did not join the club for I had a part-time job.",
+        "I did not join the club because of I had a part-time job.",
+        "I did not join the club because that I had a part-time job."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_034",
+    "seedId": "because_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 점수를 높이고 싶어서 더 열심히 연습했다.",
+    "english": "She practiced harder because she wanted to improve her score.",
+    "words": [
+      "She",
+      "practiced",
+      "harder",
+      "because",
+      "she",
+      "wanted",
+      "to",
+      "improve",
+      "her",
+      "score",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 점수를 높이고 싶어서 더 열심히 연습했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She practiced harder since she wanted to improve her score.",
+      "statementForm": [
+        "She practiced harder because she wanted to improve her score.",
+        "She practiced harder because she wanted to improve her score",
+        "Because she wanted to improve her score, She practiced harder.",
+        "Because she wanted to improve her score, She practiced harder"
+      ],
+      "fragmentForm": "She practiced harder because she wanted to improve her",
+      "wormholeVariants": [
+        "She practiced harder since she wanted to improve her score.",
+        "She practiced harder as she wanted to improve her score.",
+        "She practiced harder for she wanted to improve her score.",
+        "She practiced harder because of she wanted to improve her score.",
+        "She practiced harder because that she wanted to improve her score."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_035",
+    "seedId": "because_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 바람이 강해서 실내에 머물렀다.",
+    "english": "We stayed indoors because the wind was strong.",
+    "words": [
+      "We",
+      "stayed",
+      "indoors",
+      "because",
+      "the",
+      "wind",
+      "was",
+      "strong",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 바람이 강해서 실내에 머물렀다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We stayed indoors since the wind was strong.",
+      "statementForm": [
+        "We stayed indoors because the wind was strong.",
+        "We stayed indoors because the wind was strong",
+        "Because the wind was strong, We stayed indoors.",
+        "Because the wind was strong, We stayed indoors"
+      ],
+      "fragmentForm": "We stayed indoors because the wind was",
+      "wormholeVariants": [
+        "We stayed indoors since the wind was strong.",
+        "We stayed indoors as the wind was strong.",
+        "We stayed indoors for the wind was strong.",
+        "We stayed indoors because of the wind was strong.",
+        "We stayed indoors because that the wind was strong."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_036",
+    "seedId": "because_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 지갑을 잃어버려서 불안해졌다.",
+    "english": "He became anxious because he lost his wallet.",
+    "words": [
+      "He",
+      "became",
+      "anxious",
+      "because",
+      "he",
+      "lost",
+      "his",
+      "wallet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 지갑을 잃어버려서 불안해졌다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He became anxious since he lost his wallet.",
+      "statementForm": [
+        "He became anxious because he lost his wallet.",
+        "He became anxious because he lost his wallet",
+        "Because he lost his wallet, He became anxious.",
+        "Because he lost his wallet, He became anxious"
+      ],
+      "fragmentForm": "He became anxious because he lost his",
+      "wormholeVariants": [
+        "He became anxious since he lost his wallet.",
+        "He became anxious as he lost his wallet.",
+        "He became anxious for he lost his wallet.",
+        "He became anxious because of he lost his wallet.",
+        "He became anxious because that he lost his wallet."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_037",
+    "seedId": "because_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 장소를 사용할 수 없어서 일정을 바꿨다.",
+    "english": "They moved the schedule because the venue was unavailable.",
+    "words": [
+      "They",
+      "moved",
+      "the",
+      "schedule",
+      "because",
+      "the",
+      "venue",
+      "was",
+      "unavailable",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 장소를 사용할 수 없어서 일정을 바꿨다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They moved the schedule since the venue was unavailable.",
+      "statementForm": [
+        "They moved the schedule because the venue was unavailable.",
+        "They moved the schedule because the venue was unavailable",
+        "Because the venue was unavailable, They moved the schedule.",
+        "Because the venue was unavailable, They moved the schedule"
+      ],
+      "fragmentForm": "They moved the schedule because the venue was",
+      "wormholeVariants": [
+        "They moved the schedule since the venue was unavailable.",
+        "They moved the schedule as the venue was unavailable.",
+        "They moved the schedule for the venue was unavailable.",
+        "They moved the schedule because of the venue was unavailable.",
+        "They moved the schedule because that the venue was unavailable."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_038",
+    "seedId": "because_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 생각 중이어서 조용히 있었다.",
+    "english": "I stayed silent because I was thinking.",
+    "words": [
+      "I",
+      "stayed",
+      "silent",
+      "because",
+      "I",
+      "was",
+      "thinking",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 생각 중이어서 조용히 있었다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed silent since I was thinking.",
+      "statementForm": [
+        "I stayed silent because I was thinking.",
+        "I stayed silent because I was thinking",
+        "Because I was thinking, I stayed silent.",
+        "Because I was thinking, I stayed silent"
+      ],
+      "fragmentForm": "I stayed silent because I was",
+      "wormholeVariants": [
+        "I stayed silent since I was thinking.",
+        "I stayed silent as I was thinking.",
+        "I stayed silent for I was thinking.",
+        "I stayed silent because of I was thinking.",
+        "I stayed silent because that I was thinking."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_039",
+    "seedId": "because_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 컴퓨터가 불안정해서 파일을 백업했다.",
+    "english": "She backed up the files because the computer was unstable.",
+    "words": [
+      "She",
+      "backed",
+      "up",
+      "the",
+      "files",
+      "because",
+      "the",
+      "computer",
+      "was",
+      "unstable",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 컴퓨터가 불안정해서 파일을 백업했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She backed up the files since the computer was unstable.",
+      "statementForm": [
+        "She backed up the files because the computer was unstable.",
+        "She backed up the files because the computer was unstable",
+        "Because the computer was unstable, She backed up the files.",
+        "Because the computer was unstable, She backed up the files"
+      ],
+      "fragmentForm": "She backed up the files because the computer was",
+      "wormholeVariants": [
+        "She backed up the files since the computer was unstable.",
+        "She backed up the files as the computer was unstable.",
+        "She backed up the files for the computer was unstable.",
+        "She backed up the files because of the computer was unstable.",
+        "She backed up the files because that the computer was unstable."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_040",
+    "seedId": "because_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 교통이 심해서 늦게 도착했다.",
+    "english": "We arrived late because traffic was heavy.",
+    "words": [
+      "We",
+      "arrived",
+      "late",
+      "because",
+      "traffic",
+      "was",
+      "heavy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 교통이 심해서 늦게 도착했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We arrived late since traffic was heavy.",
+      "statementForm": [
+        "We arrived late because traffic was heavy.",
+        "We arrived late because traffic was heavy",
+        "Because traffic was heavy, We arrived late.",
+        "Because traffic was heavy, We arrived late"
+      ],
+      "fragmentForm": "We arrived late because traffic was",
+      "wormholeVariants": [
+        "We arrived late since traffic was heavy.",
+        "We arrived late as traffic was heavy.",
+        "We arrived late for traffic was heavy.",
+        "We arrived late because of traffic was heavy.",
+        "We arrived late because that traffic was heavy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_041",
+    "seedId": "because_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 행사가 취소돼서 속상했다.",
+    "english": "He was upset because the event was canceled.",
+    "words": [
+      "He",
+      "was",
+      "upset",
+      "because",
+      "the",
+      "event",
+      "was",
+      "canceled",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 행사가 취소돼서 속상했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was upset since the event was canceled.",
+      "statementForm": [
+        "He was upset because the event was canceled.",
+        "He was upset because the event was canceled",
+        "Because the event was canceled, He was upset.",
+        "Because the event was canceled, He was upset"
+      ],
+      "fragmentForm": "He was upset because the event was",
+      "wormholeVariants": [
+        "He was upset since the event was canceled.",
+        "He was upset as the event was canceled.",
+        "He was upset for the event was canceled.",
+        "He was upset because of the event was canceled.",
+        "He was upset because that the event was canceled."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_042",
+    "seedId": "because_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 도로가 막혀서 일찍 떠났다.",
+    "english": "They left early because the road was closed.",
+    "words": [
+      "They",
+      "left",
+      "early",
+      "because",
+      "the",
+      "road",
+      "was",
+      "closed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 도로가 막혀서 일찍 떠났다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They left early since the road was closed.",
+      "statementForm": [
+        "They left early because the road was closed.",
+        "They left early because the road was closed",
+        "Because the road was closed, They left early.",
+        "Because the road was closed, They left early"
+      ],
+      "fragmentForm": "They left early because the road was",
+      "wormholeVariants": [
+        "They left early since the road was closed.",
+        "They left early as the road was closed.",
+        "They left early for the road was closed.",
+        "They left early because of the road was closed.",
+        "They left early because that the road was closed."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_043",
+    "seedId": "because_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 표면이 젖어서 조심해야 하니?",
+    "english": "I am careful because the surface is wet?",
+    "words": [
+      "I",
+      "am",
+      "careful",
+      "because",
+      "the",
+      "surface",
+      "is",
+      "wet",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 표면이 젖어서 조심해야 하니?",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am careful since the surface is wet?",
+      "statementForm": [
+        "I am careful because the surface is wet?",
+        "I am careful because the surface is wet"
+      ],
+      "fragmentForm": "I am careful because the surface is",
+      "wormholeVariants": [
+        "I am careful since the surface is wet?",
+        "I am careful as the surface is wet?",
+        "I am careful for the surface is wet?",
+        "I am careful because of the surface is wet?",
+        "I am careful because that the surface is wet?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_044",
+    "seedId": "because_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 규칙을 이해해서 정확히 대답했다.",
+    "english": "He answered correctly because he understood the rule.",
+    "words": [
+      "He",
+      "answered",
+      "correctly",
+      "because",
+      "he",
+      "understood",
+      "the",
+      "rule",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 규칙을 이해해서 정확히 대답했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He answered correctly since he understood the rule.",
+      "statementForm": [
+        "He answered correctly because he understood the rule.",
+        "He answered correctly because he understood the rule",
+        "Because he understood the rule, He answered correctly.",
+        "Because he understood the rule, He answered correctly"
+      ],
+      "fragmentForm": "He answered correctly because he understood the",
+      "wormholeVariants": [
+        "He answered correctly since he understood the rule.",
+        "He answered correctly as he understood the rule.",
+        "He answered correctly for he understood the rule.",
+        "He answered correctly because of he understood the rule.",
+        "He answered correctly because that he understood the rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_045",
+    "seedId": "because_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 여행하고 싶어서 돈을 모았다.",
+    "english": "She saved money because she wanted to travel.",
+    "words": [
+      "She",
+      "saved",
+      "money",
+      "because",
+      "she",
+      "wanted",
+      "to",
+      "travel",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 여행하고 싶어서 돈을 모았다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She saved money since she wanted to travel.",
+      "statementForm": [
+        "She saved money because she wanted to travel.",
+        "She saved money because she wanted to travel",
+        "Because she wanted to travel, She saved money.",
+        "Because she wanted to travel, She saved money"
+      ],
+      "fragmentForm": "She saved money because she wanted to",
+      "wormholeVariants": [
+        "She saved money since she wanted to travel.",
+        "She saved money as she wanted to travel.",
+        "She saved money for she wanted to travel.",
+        "She saved money because of she wanted to travel.",
+        "She saved money because that she wanted to travel."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_046",
+    "seedId": "because_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 언덕을 올라서 몹시 지쳤다.",
+    "english": "We were exhausted because we climbed the hill.",
+    "words": [
+      "We",
+      "were",
+      "exhausted",
+      "because",
+      "we",
+      "climbed",
+      "the",
+      "hill",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 언덕을 올라서 몹시 지쳤다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were exhausted since we climbed the hill.",
+      "statementForm": [
+        "We were exhausted because we climbed the hill.",
+        "We were exhausted because we climbed the hill",
+        "Because we climbed the hill, We were exhausted.",
+        "Because we climbed the hill, We were exhausted"
+      ],
+      "fragmentForm": "We were exhausted because we climbed the",
+      "wormholeVariants": [
+        "We were exhausted since we climbed the hill.",
+        "We were exhausted as we climbed the hill.",
+        "We were exhausted for we climbed the hill.",
+        "We were exhausted because of we climbed the hill.",
+        "We were exhausted because that we climbed the hill."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_047",
+    "seedId": "because_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 팀이 자기 없이 이겨서 빠져 있었다.",
+    "english": "He is missing because the team won without him.",
+    "words": [
+      "He",
+      "is",
+      "missing",
+      "because",
+      "the",
+      "team",
+      "won",
+      "without",
+      "him",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 팀이 자기 없이 이겨서 빠져 있었다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is missing since the team won without him.",
+      "statementForm": [
+        "He is missing because the team won without him.",
+        "He is missing because the team won without him",
+        "Because the team won without him, He is missing.",
+        "Because the team won without him, He is missing"
+      ],
+      "fragmentForm": "He is missing because the team won without",
+      "wormholeVariants": [
+        "He is missing since the team won without him.",
+        "He is missing as the team won without him.",
+        "He is missing for the team won without him.",
+        "He is missing because of the team won without him.",
+        "He is missing because that the team won without him."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_048",
+    "seedId": "because_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 아이들이 밖에 나가지 못하게 울타리를 세웠다.",
+    "english": "They built a fence because the children would not go out.",
+    "words": [
+      "They",
+      "built",
+      "a",
+      "fence",
+      "because",
+      "the",
+      "children",
+      "would",
+      "not",
+      "go",
+      "out",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 아이들이 밖에 나가지 못하게 울타리를 세웠다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They built a fence since the children would not go out.",
+      "statementForm": [
+        "They built a fence because the children would not go out.",
+        "They built a fence because the children would not go out",
+        "Because the children would not go out, They built a fence.",
+        "Because the children would not go out, They built a fence"
+      ],
+      "fragmentForm": "They built a fence because the children would not go",
+      "wormholeVariants": [
+        "They built a fence since the children would not go out.",
+        "They built a fence as the children would not go out.",
+        "They built a fence for the children would not go out.",
+        "They built a fence because of the children would not go out.",
+        "They built a fence because that the children would not go out."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_049",
+    "seedId": "because_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 아파서 집에 있었다.",
+    "english": "I stayed home because I was sick.",
+    "words": [
+      "I",
+      "stayed",
+      "home",
+      "because",
+      "I",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아파서 집에 있었다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed home since I was sick.",
+      "statementForm": [
+        "I stayed home because I was sick.",
+        "I stayed home because I was sick",
+        "Because I was sick, I stayed home.",
+        "Because I was sick, I stayed home"
+      ],
+      "fragmentForm": "I stayed home because I was",
+      "wormholeVariants": [
+        "I stayed home since I was sick.",
+        "I stayed home as I was sick.",
+        "I stayed home for I was sick.",
+        "I stayed home because of I was sick.",
+        "I stayed home because that I was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_050",
+    "seedId": "because_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 버스가 늦어서 지각했다.",
+    "english": "She was late because the bus was delayed.",
+    "words": [
+      "She",
+      "was",
+      "late",
+      "because",
+      "the",
+      "bus",
+      "was",
+      "delayed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 버스가 늦어서 지각했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was late since the bus was delayed.",
+      "statementForm": [
+        "She was late because the bus was delayed.",
+        "She was late because the bus was delayed",
+        "Because the bus was delayed, She was late.",
+        "Because the bus was delayed, She was late"
+      ],
+      "fragmentForm": "She was late because the bus was",
+      "wormholeVariants": [
+        "She was late since the bus was delayed.",
+        "She was late as the bus was delayed.",
+        "She was late for the bus was delayed.",
+        "She was late because of the bus was delayed.",
+        "She was late because that the bus was delayed."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_051",
+    "seedId": "because_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 좋은 점수를 원해서 열심히 공부했다.",
+    "english": "He studied hard because he wanted good grades.",
+    "words": [
+      "He",
+      "studied",
+      "hard",
+      "because",
+      "he",
+      "wanted",
+      "good",
+      "grades",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 좋은 점수를 원해서 열심히 공부했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He studied hard since he wanted good grades.",
+      "statementForm": [
+        "He studied hard because he wanted good grades.",
+        "He studied hard because he wanted good grades",
+        "Because he wanted good grades, He studied hard.",
+        "Because he wanted good grades, He studied hard"
+      ],
+      "fragmentForm": "He studied hard because he wanted good",
+      "wormholeVariants": [
+        "He studied hard since he wanted good grades.",
+        "He studied hard as he wanted good grades.",
+        "He studied hard for he wanted good grades.",
+        "He studied hard because of he wanted good grades.",
+        "He studied hard because that he wanted good grades."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_052",
+    "seedId": "because_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 아기가 자고 있어서 조용했다.",
+    "english": "We were quiet because the baby was sleeping.",
+    "words": [
+      "We",
+      "were",
+      "quiet",
+      "because",
+      "the",
+      "baby",
+      "was",
+      "sleeping",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아기가 자고 있어서 조용했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were quiet since the baby was sleeping.",
+      "statementForm": [
+        "We were quiet because the baby was sleeping.",
+        "We were quiet because the baby was sleeping",
+        "Because the baby was sleeping, We were quiet.",
+        "Because the baby was sleeping, We were quiet"
+      ],
+      "fragmentForm": "We were quiet because the baby was",
+      "wormholeVariants": [
+        "We were quiet since the baby was sleeping.",
+        "We were quiet as the baby was sleeping.",
+        "We were quiet for the baby was sleeping.",
+        "We were quiet because of the baby was sleeping.",
+        "We were quiet because that the baby was sleeping."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_053",
+    "seedId": "because_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 날씨가 추워서 코트를 입었다.",
+    "english": "They wore coats because it was cold.",
+    "words": [
+      "They",
+      "wore",
+      "coats",
+      "because",
+      "it",
+      "was",
+      "cold",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 날씨가 추워서 코트를 입었다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They wore coats since it was cold.",
+      "statementForm": [
+        "They wore coats because it was cold.",
+        "They wore coats because it was cold",
+        "Because it was cold, They wore coats.",
+        "Because it was cold, They wore coats"
+      ],
+      "fragmentForm": "They wore coats because it was",
+      "wormholeVariants": [
+        "They wore coats since it was cold.",
+        "They wore coats as it was cold.",
+        "They wore coats for it was cold.",
+        "They wore coats because of it was cold.",
+        "They wore coats because that it was cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_054",
+    "seedId": "because_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 네가 보고 싶어서 전화했다.",
+    "english": "I called you because I missed you.",
+    "words": [
+      "I",
+      "called",
+      "you",
+      "because",
+      "I",
+      "missed",
+      "you",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 보고 싶어서 전화했다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I called you since I missed you.",
+      "statementForm": [
+        "I called you because I missed you.",
+        "I called you because I missed you",
+        "Because I missed you, I called you.",
+        "Because I missed you, I called you"
+      ],
+      "fragmentForm": "I called you because I missed",
+      "wormholeVariants": [
+        "I called you since I missed you.",
+        "I called you as I missed you.",
+        "I called you for I missed you.",
+        "I called you because of I missed you.",
+        "I called you because that I missed you."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_055",
+    "seedId": "because_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 목이 말라서 물을 마셨다.",
+    "english": "She drank water because she was thirsty.",
+    "words": [
+      "She",
+      "drank",
+      "water",
+      "because",
+      "she",
+      "was",
+      "thirsty",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 목이 말라서 물을 마셨다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She drank water since she was thirsty.",
+      "statementForm": [
+        "She drank water because she was thirsty.",
+        "She drank water because she was thirsty",
+        "Because she was thirsty, She drank water.",
+        "Because she was thirsty, She drank water"
+      ],
+      "fragmentForm": "She drank water because she was",
+      "wormholeVariants": [
+        "She drank water since she was thirsty.",
+        "She drank water as she was thirsty.",
+        "She drank water for she was thirsty.",
+        "She drank water because of she was thirsty.",
+        "She drank water because that she was thirsty."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_056",
+    "seedId": "because_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 도움이 필요해서 말했니?",
+    "english": "Do I need help because I am confused?",
+    "words": [
+      "Do",
+      "I",
+      "need",
+      "help",
+      "because",
+      "I",
+      "am",
+      "confused",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 도움이 필요해서 말했니?",
+        "Do"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I need help since I am confused?",
+      "statementForm": [
+        "Do I need help because I am confused?",
+        "Do I need help because I am confused"
+      ],
+      "fragmentForm": "Do I need help because I am",
+      "wormholeVariants": [
+        "Do I need help since I am confused?",
+        "Do I need help as I am confused?",
+        "Do I need help for I am confused?",
+        "Do I need help because of I am confused?",
+        "Do I need help because that I am confused?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_057",
+    "seedId": "because_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 비가 와서 밖에 나가지 않았다.",
+    "english": "He did not go outside because it was raining.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "go",
+      "outside",
+      "because",
+      "it",
+      "was",
+      "raining",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 비가 와서 밖에 나가지 않았다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not go outside since it was raining.",
+      "statementForm": [
+        "He did not go outside because it was raining.",
+        "He did not go outside because it was raining",
+        "Because it was raining, He did not go outside.",
+        "Because it was raining, He did not go outside"
+      ],
+      "fragmentForm": "He did not go outside because it was",
+      "wormholeVariants": [
+        "He did not go outside since it was raining.",
+        "He did not go outside as it was raining.",
+        "He did not go outside for it was raining.",
+        "He did not go outside because of it was raining.",
+        "He did not go outside because that it was raining."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_058",
+    "seedId": "because_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 바닥이 젖어서 조심했다.",
+    "english": "I was careful because the floor was wet.",
+    "words": [
+      "I",
+      "was",
+      "careful",
+      "because",
+      "the",
+      "floor",
+      "was",
+      "wet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 바닥이 젖어서 조심했다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was careful since the floor was wet.",
+      "statementForm": [
+        "I was careful because the floor was wet.",
+        "I was careful because the floor was wet",
+        "Because the floor was wet, I was careful.",
+        "Because the floor was wet, I was careful"
+      ],
+      "fragmentForm": "I was careful because the floor was",
+      "wormholeVariants": [
+        "I was careful since the floor was wet.",
+        "I was careful as the floor was wet.",
+        "I was careful for the floor was wet.",
+        "I was careful because of the floor was wet.",
+        "I was careful because that the floor was wet."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_059",
+    "seedId": "because_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 친구가 도와줘서 웃었다.",
+    "english": "She smiled because her friend helped her.",
+    "words": [
+      "She",
+      "smiled",
+      "because",
+      "her",
+      "friend",
+      "helped",
+      "her",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 친구가 도와줘서 웃었다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She smiled since her friend helped her.",
+      "statementForm": [
+        "She smiled because her friend helped her.",
+        "She smiled because her friend helped her",
+        "Because her friend helped her, She smiled.",
+        "Because her friend helped her, She smiled"
+      ],
+      "fragmentForm": "She smiled because her friend helped",
+      "wormholeVariants": [
+        "She smiled since her friend helped her.",
+        "She smiled as her friend helped her.",
+        "She smiled for her friend helped her.",
+        "She smiled because of her friend helped her.",
+        "She smiled because that her friend helped her."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_060",
+    "seedId": "because_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 비가 와서 우산을 썼다.",
+    "english": "We used umbrellas because it was rainy.",
+    "words": [
+      "We",
+      "used",
+      "umbrellas",
+      "because",
+      "it",
+      "was",
+      "rainy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 비가 와서 우산을 썼다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We used umbrellas since it was rainy.",
+      "statementForm": [
+        "We used umbrellas because it was rainy.",
+        "We used umbrellas because it was rainy",
+        "Because it was rainy, We used umbrellas.",
+        "Because it was rainy, We used umbrellas"
+      ],
+      "fragmentForm": "We used umbrellas because it was",
+      "wormholeVariants": [
+        "We used umbrellas since it was rainy.",
+        "We used umbrellas as it was rainy.",
+        "We used umbrellas for it was rainy.",
+        "We used umbrellas because of it was rainy.",
+        "We used umbrellas because that it was rainy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_061",
+    "seedId": "because_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 급해서 택시를 탔다.",
+    "english": "He took a taxi because he was in a hurry.",
+    "words": [
+      "He",
+      "took",
+      "a",
+      "taxi",
+      "because",
+      "he",
+      "was",
+      "in",
+      "a",
+      "hurry",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 급해서 택시를 탔다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He took a taxi since he was in a hurry.",
+      "statementForm": [
+        "He took a taxi because he was in a hurry.",
+        "He took a taxi because he was in a hurry",
+        "Because he was in a hurry, He took a taxi.",
+        "Because he was in a hurry, He took a taxi"
+      ],
+      "fragmentForm": "He took a taxi because he was in a",
+      "wormholeVariants": [
+        "He took a taxi since he was in a hurry.",
+        "He took a taxi as he was in a hurry.",
+        "He took a taxi for he was in a hurry.",
+        "He took a taxi because of he was in a hurry.",
+        "He took a taxi because that he was in a hurry."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_062",
+    "seedId": "because_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 시험에 합격해서 행복했다.",
+    "english": "He was happy because he passed the test.",
+    "words": [
+      "He",
+      "was",
+      "happy",
+      "because",
+      "he",
+      "passed",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 시험에 합격해서 행복했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was happy since he passed the test.",
+      "statementForm": [
+        "He was happy because he passed the test.",
+        "He was happy because he passed the test",
+        "Because he passed the test, He was happy.",
+        "Because he passed the test, He was happy"
+      ],
+      "fragmentForm": "He was happy because he passed the",
+      "wormholeVariants": [
+        "He was happy since he passed the test.",
+        "He was happy as he passed the test.",
+        "He was happy for he passed the test.",
+        "He was happy because of he passed the test.",
+        "He was happy because that he passed the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_063",
+    "seedId": "because_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 많이 걸어서 피곤했다.",
+    "english": "We were tired because we walked a lot.",
+    "words": [
+      "We",
+      "were",
+      "tired",
+      "because",
+      "we",
+      "walked",
+      "a",
+      "lot",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 많이 걸어서 피곤했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were tired since we walked a lot.",
+      "statementForm": [
+        "We were tired because we walked a lot.",
+        "We were tired because we walked a lot",
+        "Because we walked a lot, We were tired.",
+        "Because we walked a lot, We were tired"
+      ],
+      "fragmentForm": "We were tired because we walked a",
+      "wormholeVariants": [
+        "We were tired since we walked a lot.",
+        "We were tired as we walked a lot.",
+        "We were tired for we walked a lot.",
+        "We were tired because of we walked a lot.",
+        "We were tired because that we walked a lot."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_064",
+    "seedId": "because_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 수업을 이해하지 못해서 필기를 다시 확인했다.",
+    "english": "He checked the notes because he did not understand the lesson.",
+    "words": [
+      "He",
+      "checked",
+      "the",
+      "notes",
+      "because",
+      "he",
+      "did",
+      "not",
+      "understand",
+      "the",
+      "lesson",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 수업을 이해하지 못해서 필기를 다시 확인했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He checked the notes since he did not understand the lesson.",
+      "statementForm": [
+        "He checked the notes because he did not understand the lesson.",
+        "He checked the notes because he did not understand the lesson",
+        "Because he did not understand the lesson, He checked the notes.",
+        "Because he did not understand the lesson, He checked the notes"
+      ],
+      "fragmentForm": "He checked the notes because he did not understand the",
+      "wormholeVariants": [
+        "He checked the notes since he did not understand the lesson.",
+        "He checked the notes as he did not understand the lesson.",
+        "He checked the notes for he did not understand the lesson.",
+        "He checked the notes because of he did not understand the lesson.",
+        "He checked the notes because that he did not understand the lesson."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_065",
+    "seedId": "because_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 다른 약속이 있어서 일찍 떠났다.",
+    "english": "I left early because I had another appointment.",
+    "words": [
+      "I",
+      "left",
+      "early",
+      "because",
+      "I",
+      "had",
+      "another",
+      "appointment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 다른 약속이 있어서 일찍 떠났다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I left early since I had another appointment.",
+      "statementForm": [
+        "I left early because I had another appointment.",
+        "I left early because I had another appointment",
+        "Because I had another appointment, I left early.",
+        "Because I had another appointment, I left early"
+      ],
+      "fragmentForm": "I left early because I had another",
+      "wormholeVariants": [
+        "I left early since I had another appointment.",
+        "I left early as I had another appointment.",
+        "I left early for I had another appointment.",
+        "I left early because of I had another appointment.",
+        "I left early because that I had another appointment."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_066",
+    "seedId": "because_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 바빠서 프로젝트에 참여하지 못했다.",
+    "english": "She could not join the project because she was busy.",
+    "words": [
+      "She",
+      "could",
+      "not",
+      "join",
+      "the",
+      "project",
+      "because",
+      "she",
+      "was",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 바빠서 프로젝트에 참여하지 못했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She could not join the project since she was busy.",
+      "statementForm": [
+        "She could not join the project because she was busy.",
+        "She could not join the project because she was busy",
+        "Because she was busy, She could not join the project.",
+        "Because she was busy, She could not join the project"
+      ],
+      "fragmentForm": "She could not join the project because she was",
+      "wormholeVariants": [
+        "She could not join the project since she was busy.",
+        "She could not join the project as she was busy.",
+        "She could not join the project for she was busy.",
+        "She could not join the project because of she was busy.",
+        "She could not join the project because that she was busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_067",
+    "seedId": "because_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 결과를 설명하고 싶어서 자료를 발표했다.",
+    "english": "We presented the data because we wanted to explain the result.",
+    "words": [
+      "We",
+      "presented",
+      "the",
+      "data",
+      "because",
+      "we",
+      "wanted",
+      "to",
+      "explain",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 결과를 설명하고 싶어서 자료를 발표했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We presented the data since we wanted to explain the result.",
+      "statementForm": [
+        "We presented the data because we wanted to explain the result.",
+        "We presented the data because we wanted to explain the result",
+        "Because we wanted to explain the result, We presented the data.",
+        "Because we wanted to explain the result, We presented the data"
+      ],
+      "fragmentForm": "We presented the data because we wanted to explain the",
+      "wormholeVariants": [
+        "We presented the data since we wanted to explain the result.",
+        "We presented the data as we wanted to explain the result.",
+        "We presented the data for we wanted to explain the result.",
+        "We presented the data because of we wanted to explain the result.",
+        "We presented the data because that we wanted to explain the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_068",
+    "seedId": "because_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "너는 어제 늦게 자서 피곤하니?",
+    "english": "Do you feel tired because you stayed up late?",
+    "words": [
+      "Do",
+      "you",
+      "feel",
+      "tired",
+      "because",
+      "you",
+      "stayed",
+      "up",
+      "late",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 어제 늦게 자서 피곤하니?",
+        "Do"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you feel tired since you stayed up late?",
+      "statementForm": [
+        "Do you feel tired because you stayed up late?",
+        "Do you feel tired because you stayed up late"
+      ],
+      "fragmentForm": "Do you feel tired because you stayed up",
+      "wormholeVariants": [
+        "Do you feel tired since you stayed up late?",
+        "Do you feel tired as you stayed up late?",
+        "Do you feel tired for you stayed up late?",
+        "Do you feel tired because of you stayed up late?",
+        "Do you feel tired because that you stayed up late?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_069",
+    "seedId": "because_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 팀이 발전해서 자랑스러웠다.",
+    "english": "She was proud because her team improved.",
+    "words": [
+      "She",
+      "was",
+      "proud",
+      "because",
+      "her",
+      "team",
+      "improved",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 팀이 발전해서 자랑스러웠다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was proud since her team improved.",
+      "statementForm": [
+        "She was proud because her team improved.",
+        "She was proud because her team improved",
+        "Because her team improved, She was proud.",
+        "Because her team improved, She was proud"
+      ],
+      "fragmentForm": "She was proud because her team",
+      "wormholeVariants": [
+        "She was proud since her team improved.",
+        "She was proud as her team improved.",
+        "She was proud for her team improved.",
+        "She was proud because of her team improved.",
+        "She was proud because that her team improved."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_070",
+    "seedId": "because_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 이야기가 재미있어서 웃었다.",
+    "english": "We laughed because the story was funny.",
+    "words": [
+      "We",
+      "laughed",
+      "because",
+      "the",
+      "story",
+      "was",
+      "funny",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 이야기가 재미있어서 웃었다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We laughed since the story was funny.",
+      "statementForm": [
+        "We laughed because the story was funny.",
+        "We laughed because the story was funny",
+        "Because the story was funny, We laughed.",
+        "Because the story was funny, We laughed"
+      ],
+      "fragmentForm": "We laughed because the story was",
+      "wormholeVariants": [
+        "We laughed since the story was funny.",
+        "We laughed as the story was funny.",
+        "We laughed for the story was funny.",
+        "We laughed because of the story was funny.",
+        "We laughed because that the story was funny."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_071",
+    "seedId": "because_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 너무 바빠서 점심을 먹지 못했다.",
+    "english": "He did not eat lunch because he was too busy.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "eat",
+      "lunch",
+      "because",
+      "he",
+      "was",
+      "too",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 너무 바빠서 점심을 먹지 못했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not eat lunch since he was too busy.",
+      "statementForm": [
+        "He did not eat lunch because he was too busy.",
+        "He did not eat lunch because he was too busy",
+        "Because he was too busy, He did not eat lunch.",
+        "Because he was too busy, He did not eat lunch"
+      ],
+      "fragmentForm": "He did not eat lunch because he was too",
+      "wormholeVariants": [
+        "He did not eat lunch since he was too busy.",
+        "He did not eat lunch as he was too busy.",
+        "He did not eat lunch for he was too busy.",
+        "He did not eat lunch because of he was too busy.",
+        "He did not eat lunch because that he was too busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_072",
+    "seedId": "because_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 학교에 늦어서 택시를 불렀다.",
+    "english": "She called a taxi because she was late for school.",
+    "words": [
+      "She",
+      "called",
+      "a",
+      "taxi",
+      "because",
+      "she",
+      "was",
+      "late",
+      "for",
+      "school",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 학교에 늦어서 택시를 불렀다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She called a taxi since she was late for school.",
+      "statementForm": [
+        "She called a taxi because she was late for school.",
+        "She called a taxi because she was late for school",
+        "Because she was late for school, She called a taxi.",
+        "Because she was late for school, She called a taxi"
+      ],
+      "fragmentForm": "She called a taxi because she was late for",
+      "wormholeVariants": [
+        "She called a taxi since she was late for school.",
+        "She called a taxi as she was late for school.",
+        "She called a taxi for she was late for school.",
+        "She called a taxi because of she was late for school.",
+        "She called a taxi because that she was late for school."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_073",
+    "seedId": "because_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 바닥이 미끄러워서 조심하고 있다.",
+    "english": "I am moving carefully because the floor is slippery?",
+    "words": [
+      "I",
+      "am",
+      "moving",
+      "carefully",
+      "because",
+      "the",
+      "floor",
+      "is",
+      "slippery",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 바닥이 미끄러워서 조심하고 있다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am moving carefully since the floor is slippery?",
+      "statementForm": [
+        "I am moving carefully because the floor is slippery?",
+        "I am moving carefully because the floor is slippery"
+      ],
+      "fragmentForm": "I am moving carefully because the floor is",
+      "wormholeVariants": [
+        "I am moving carefully since the floor is slippery?",
+        "I am moving carefully as the floor is slippery?",
+        "I am moving carefully for the floor is slippery?",
+        "I am moving carefully because of the floor is slippery?",
+        "I am moving carefully because that the floor is slippery?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_074",
+    "seedId": "because_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 숙제가 쉬워서 책을 덜 읽었다.",
+    "english": "They read less because their homework was easy.",
+    "words": [
+      "They",
+      "read",
+      "less",
+      "because",
+      "their",
+      "homework",
+      "was",
+      "easy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 숙제가 쉬워서 책을 덜 읽었다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They read less since their homework was easy.",
+      "statementForm": [
+        "They read less because their homework was easy.",
+        "They read less because their homework was easy",
+        "Because their homework was easy, They read less.",
+        "Because their homework was easy, They read less"
+      ],
+      "fragmentForm": "They read less because their homework was",
+      "wormholeVariants": [
+        "They read less since their homework was easy.",
+        "They read less as their homework was easy.",
+        "They read less for their homework was easy.",
+        "They read less because of their homework was easy.",
+        "They read less because that their homework was easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_075",
+    "seedId": "because_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 날씨가 나빠져서 계획을 바꿨다.",
+    "english": "He changed the plan because the weather got worse.",
+    "words": [
+      "He",
+      "changed",
+      "the",
+      "plan",
+      "because",
+      "the",
+      "weather",
+      "got",
+      "worse",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 날씨가 나빠져서 계획을 바꿨다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He changed the plan since the weather got worse.",
+      "statementForm": [
+        "He changed the plan because the weather got worse.",
+        "He changed the plan because the weather got worse",
+        "Because the weather got worse, He changed the plan.",
+        "Because the weather got worse, He changed the plan"
+      ],
+      "fragmentForm": "He changed the plan because the weather got",
+      "wormholeVariants": [
+        "He changed the plan since the weather got worse.",
+        "He changed the plan as the weather got worse.",
+        "He changed the plan for the weather got worse.",
+        "He changed the plan because of the weather got worse.",
+        "He changed the plan because that the weather got worse."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_076",
+    "seedId": "because_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 전화가 크게 울려서 놀랐다.",
+    "english": "I was shocked because the phone rang loudly.",
+    "words": [
+      "I",
+      "was",
+      "shocked",
+      "because",
+      "the",
+      "phone",
+      "rang",
+      "loudly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 전화가 크게 울려서 놀랐다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was shocked since the phone rang loudly.",
+      "statementForm": [
+        "I was shocked because the phone rang loudly.",
+        "I was shocked because the phone rang loudly",
+        "Because the phone rang loudly, I was shocked.",
+        "Because the phone rang loudly, I was shocked"
+      ],
+      "fragmentForm": "I was shocked because the phone rang",
+      "wormholeVariants": [
+        "I was shocked since the phone rang loudly.",
+        "I was shocked as the phone rang loudly.",
+        "I was shocked for the phone rang loudly.",
+        "I was shocked because of the phone rang loudly.",
+        "I was shocked because that the phone rang loudly."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_077",
+    "seedId": "because_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 실수해서 사과했다.",
+    "english": "She apologized because she made a mistake.",
+    "words": [
+      "She",
+      "apologized",
+      "because",
+      "she",
+      "made",
+      "a",
+      "mistake",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 실수해서 사과했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She apologized since she made a mistake.",
+      "statementForm": [
+        "She apologized because she made a mistake.",
+        "She apologized because she made a mistake",
+        "Because she made a mistake, She apologized.",
+        "Because she made a mistake, She apologized"
+      ],
+      "fragmentForm": "She apologized because she made a",
+      "wormholeVariants": [
+        "She apologized since she made a mistake.",
+        "She apologized as she made a mistake.",
+        "She apologized for she made a mistake.",
+        "She apologized because of she made a mistake.",
+        "She apologized because that she made a mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_078",
+    "seedId": "because_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 비가 올 것 같아서 우산이 필요하니?",
+    "english": "We need an umbrella because it is going to rain?",
+    "words": [
+      "We",
+      "need",
+      "an",
+      "umbrella",
+      "because",
+      "it",
+      "is",
+      "going",
+      "to",
+      "rain",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 비가 올 것 같아서 우산이 필요하니?",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We need an umbrella since it is going to rain?",
+      "statementForm": [
+        "We need an umbrella because it is going to rain?",
+        "We need an umbrella because it is going to rain"
+      ],
+      "fragmentForm": "We need an umbrella because it is going to",
+      "wormholeVariants": [
+        "We need an umbrella since it is going to rain?",
+        "We need an umbrella as it is going to rain?",
+        "We need an umbrella for it is going to rain?",
+        "We need an umbrella because of it is going to rain?",
+        "We need an umbrella because that it is going to rain?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_079",
+    "seedId": "because_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 부모님이 오셔서 방을 청소했다.",
+    "english": "He cleaned the room because his parents were coming.",
+    "words": [
+      "He",
+      "cleaned",
+      "the",
+      "room",
+      "because",
+      "his",
+      "parents",
+      "were",
+      "coming",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 부모님이 오셔서 방을 청소했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He cleaned the room since his parents were coming.",
+      "statementForm": [
+        "He cleaned the room because his parents were coming.",
+        "He cleaned the room because his parents were coming",
+        "Because his parents were coming, He cleaned the room.",
+        "Because his parents were coming, He cleaned the room"
+      ],
+      "fragmentForm": "He cleaned the room because his parents were",
+      "wormholeVariants": [
+        "He cleaned the room since his parents were coming.",
+        "He cleaned the room as his parents were coming.",
+        "He cleaned the room for his parents were coming.",
+        "He cleaned the room because of his parents were coming.",
+        "He cleaned the room because that his parents were coming."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_080",
+    "seedId": "because_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 매니저가 없어서 회의를 취소했다.",
+    "english": "He canceled the meeting because the manager was absent.",
+    "words": [
+      "He",
+      "canceled",
+      "the",
+      "meeting",
+      "because",
+      "the",
+      "manager",
+      "was",
+      "absent",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 매니저가 없어서 회의를 취소했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He canceled the meeting since the manager was absent.",
+      "statementForm": [
+        "He canceled the meeting because the manager was absent.",
+        "He canceled the meeting because the manager was absent",
+        "Because the manager was absent, He canceled the meeting.",
+        "Because the manager was absent, He canceled the meeting"
+      ],
+      "fragmentForm": "He canceled the meeting because the manager was",
+      "wormholeVariants": [
+        "He canceled the meeting since the manager was absent.",
+        "He canceled the meeting as the manager was absent.",
+        "He canceled the meeting for the manager was absent.",
+        "He canceled the meeting because of the manager was absent.",
+        "He canceled the meeting because that the manager was absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_081",
+    "seedId": "because_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 아르바이트가 있어서 동아리에 가입하지 않았다.",
+    "english": "I did not join the club because I had a part-time job.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "join",
+      "the",
+      "club",
+      "because",
+      "I",
+      "had",
+      "a",
+      "part",
+      "time",
+      "job",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아르바이트가 있어서 동아리에 가입하지 않았다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not join the club since I had a part-time job.",
+      "statementForm": [
+        "I did not join the club because I had a part-time job.",
+        "I did not join the club because I had a part-time job",
+        "Because I had a part-time job, I did not join the club.",
+        "Because I had a part-time job, I did not join the club"
+      ],
+      "fragmentForm": "I did not join the club because I had a part-time",
+      "wormholeVariants": [
+        "I did not join the club since I had a part-time job.",
+        "I did not join the club as I had a part-time job.",
+        "I did not join the club for I had a part-time job.",
+        "I did not join the club because of I had a part-time job.",
+        "I did not join the club because that I had a part-time job."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_082",
+    "seedId": "because_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 점수를 높이고 싶어서 더 열심히 연습했다.",
+    "english": "She practiced harder because she wanted to improve her score.",
+    "words": [
+      "She",
+      "practiced",
+      "harder",
+      "because",
+      "she",
+      "wanted",
+      "to",
+      "improve",
+      "her",
+      "score",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 점수를 높이고 싶어서 더 열심히 연습했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She practiced harder since she wanted to improve her score.",
+      "statementForm": [
+        "She practiced harder because she wanted to improve her score.",
+        "She practiced harder because she wanted to improve her score",
+        "Because she wanted to improve her score, She practiced harder.",
+        "Because she wanted to improve her score, She practiced harder"
+      ],
+      "fragmentForm": "She practiced harder because she wanted to improve her",
+      "wormholeVariants": [
+        "She practiced harder since she wanted to improve her score.",
+        "She practiced harder as she wanted to improve her score.",
+        "She practiced harder for she wanted to improve her score.",
+        "She practiced harder because of she wanted to improve her score.",
+        "She practiced harder because that she wanted to improve her score."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_083",
+    "seedId": "because_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 바람이 강해서 실내에 머물렀다.",
+    "english": "We stayed indoors because the wind was strong.",
+    "words": [
+      "We",
+      "stayed",
+      "indoors",
+      "because",
+      "the",
+      "wind",
+      "was",
+      "strong",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 바람이 강해서 실내에 머물렀다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We stayed indoors since the wind was strong.",
+      "statementForm": [
+        "We stayed indoors because the wind was strong.",
+        "We stayed indoors because the wind was strong",
+        "Because the wind was strong, We stayed indoors.",
+        "Because the wind was strong, We stayed indoors"
+      ],
+      "fragmentForm": "We stayed indoors because the wind was",
+      "wormholeVariants": [
+        "We stayed indoors since the wind was strong.",
+        "We stayed indoors as the wind was strong.",
+        "We stayed indoors for the wind was strong.",
+        "We stayed indoors because of the wind was strong.",
+        "We stayed indoors because that the wind was strong."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_084",
+    "seedId": "because_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 지갑을 잃어버려서 불안해졌다.",
+    "english": "He became anxious because he lost his wallet.",
+    "words": [
+      "He",
+      "became",
+      "anxious",
+      "because",
+      "he",
+      "lost",
+      "his",
+      "wallet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 지갑을 잃어버려서 불안해졌다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He became anxious since he lost his wallet.",
+      "statementForm": [
+        "He became anxious because he lost his wallet.",
+        "He became anxious because he lost his wallet",
+        "Because he lost his wallet, He became anxious.",
+        "Because he lost his wallet, He became anxious"
+      ],
+      "fragmentForm": "He became anxious because he lost his",
+      "wormholeVariants": [
+        "He became anxious since he lost his wallet.",
+        "He became anxious as he lost his wallet.",
+        "He became anxious for he lost his wallet.",
+        "He became anxious because of he lost his wallet.",
+        "He became anxious because that he lost his wallet."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_085",
+    "seedId": "because_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 장소를 사용할 수 없어서 일정을 바꿨다.",
+    "english": "They moved the schedule because the venue was unavailable.",
+    "words": [
+      "They",
+      "moved",
+      "the",
+      "schedule",
+      "because",
+      "the",
+      "venue",
+      "was",
+      "unavailable",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 장소를 사용할 수 없어서 일정을 바꿨다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They moved the schedule since the venue was unavailable.",
+      "statementForm": [
+        "They moved the schedule because the venue was unavailable.",
+        "They moved the schedule because the venue was unavailable",
+        "Because the venue was unavailable, They moved the schedule.",
+        "Because the venue was unavailable, They moved the schedule"
+      ],
+      "fragmentForm": "They moved the schedule because the venue was",
+      "wormholeVariants": [
+        "They moved the schedule since the venue was unavailable.",
+        "They moved the schedule as the venue was unavailable.",
+        "They moved the schedule for the venue was unavailable.",
+        "They moved the schedule because of the venue was unavailable.",
+        "They moved the schedule because that the venue was unavailable."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_086",
+    "seedId": "because_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 생각 중이어서 조용히 있었다.",
+    "english": "I stayed silent because I was thinking.",
+    "words": [
+      "I",
+      "stayed",
+      "silent",
+      "because",
+      "I",
+      "was",
+      "thinking",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 생각 중이어서 조용히 있었다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed silent since I was thinking.",
+      "statementForm": [
+        "I stayed silent because I was thinking.",
+        "I stayed silent because I was thinking",
+        "Because I was thinking, I stayed silent.",
+        "Because I was thinking, I stayed silent"
+      ],
+      "fragmentForm": "I stayed silent because I was",
+      "wormholeVariants": [
+        "I stayed silent since I was thinking.",
+        "I stayed silent as I was thinking.",
+        "I stayed silent for I was thinking.",
+        "I stayed silent because of I was thinking.",
+        "I stayed silent because that I was thinking."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_087",
+    "seedId": "because_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 컴퓨터가 불안정해서 파일을 백업했다.",
+    "english": "She backed up the files because the computer was unstable.",
+    "words": [
+      "She",
+      "backed",
+      "up",
+      "the",
+      "files",
+      "because",
+      "the",
+      "computer",
+      "was",
+      "unstable",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 컴퓨터가 불안정해서 파일을 백업했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She backed up the files since the computer was unstable.",
+      "statementForm": [
+        "She backed up the files because the computer was unstable.",
+        "She backed up the files because the computer was unstable",
+        "Because the computer was unstable, She backed up the files.",
+        "Because the computer was unstable, She backed up the files"
+      ],
+      "fragmentForm": "She backed up the files because the computer was",
+      "wormholeVariants": [
+        "She backed up the files since the computer was unstable.",
+        "She backed up the files as the computer was unstable.",
+        "She backed up the files for the computer was unstable.",
+        "She backed up the files because of the computer was unstable.",
+        "She backed up the files because that the computer was unstable."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_088",
+    "seedId": "because_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 교통이 심해서 늦게 도착했다.",
+    "english": "We arrived late because traffic was heavy.",
+    "words": [
+      "We",
+      "arrived",
+      "late",
+      "because",
+      "traffic",
+      "was",
+      "heavy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 교통이 심해서 늦게 도착했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We arrived late since traffic was heavy.",
+      "statementForm": [
+        "We arrived late because traffic was heavy.",
+        "We arrived late because traffic was heavy",
+        "Because traffic was heavy, We arrived late.",
+        "Because traffic was heavy, We arrived late"
+      ],
+      "fragmentForm": "We arrived late because traffic was",
+      "wormholeVariants": [
+        "We arrived late since traffic was heavy.",
+        "We arrived late as traffic was heavy.",
+        "We arrived late for traffic was heavy.",
+        "We arrived late because of traffic was heavy.",
+        "We arrived late because that traffic was heavy."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_089",
+    "seedId": "because_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 행사가 취소돼서 속상했다.",
+    "english": "He was upset because the event was canceled.",
+    "words": [
+      "He",
+      "was",
+      "upset",
+      "because",
+      "the",
+      "event",
+      "was",
+      "canceled",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 행사가 취소돼서 속상했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was upset since the event was canceled.",
+      "statementForm": [
+        "He was upset because the event was canceled.",
+        "He was upset because the event was canceled",
+        "Because the event was canceled, He was upset.",
+        "Because the event was canceled, He was upset"
+      ],
+      "fragmentForm": "He was upset because the event was",
+      "wormholeVariants": [
+        "He was upset since the event was canceled.",
+        "He was upset as the event was canceled.",
+        "He was upset for the event was canceled.",
+        "He was upset because of the event was canceled.",
+        "He was upset because that the event was canceled."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_090",
+    "seedId": "because_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 도로가 막혀서 일찍 떠났다.",
+    "english": "They left early because the road was closed.",
+    "words": [
+      "They",
+      "left",
+      "early",
+      "because",
+      "the",
+      "road",
+      "was",
+      "closed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 도로가 막혀서 일찍 떠났다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They left early since the road was closed.",
+      "statementForm": [
+        "They left early because the road was closed.",
+        "They left early because the road was closed",
+        "Because the road was closed, They left early.",
+        "Because the road was closed, They left early"
+      ],
+      "fragmentForm": "They left early because the road was",
+      "wormholeVariants": [
+        "They left early since the road was closed.",
+        "They left early as the road was closed.",
+        "They left early for the road was closed.",
+        "They left early because of the road was closed.",
+        "They left early because that the road was closed."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_091",
+    "seedId": "because_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 표면이 젖어서 조심해야 하니?",
+    "english": "I am careful because the surface is wet?",
+    "words": [
+      "I",
+      "am",
+      "careful",
+      "because",
+      "the",
+      "surface",
+      "is",
+      "wet",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 표면이 젖어서 조심해야 하니?",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am careful since the surface is wet?",
+      "statementForm": [
+        "I am careful because the surface is wet?",
+        "I am careful because the surface is wet"
+      ],
+      "fragmentForm": "I am careful because the surface is",
+      "wormholeVariants": [
+        "I am careful since the surface is wet?",
+        "I am careful as the surface is wet?",
+        "I am careful for the surface is wet?",
+        "I am careful because of the surface is wet?",
+        "I am careful because that the surface is wet?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_092",
+    "seedId": "because_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 규칙을 이해해서 정확히 대답했다.",
+    "english": "He answered correctly because he understood the rule.",
+    "words": [
+      "He",
+      "answered",
+      "correctly",
+      "because",
+      "he",
+      "understood",
+      "the",
+      "rule",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 규칙을 이해해서 정확히 대답했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He answered correctly since he understood the rule.",
+      "statementForm": [
+        "He answered correctly because he understood the rule.",
+        "He answered correctly because he understood the rule",
+        "Because he understood the rule, He answered correctly.",
+        "Because he understood the rule, He answered correctly"
+      ],
+      "fragmentForm": "He answered correctly because he understood the",
+      "wormholeVariants": [
+        "He answered correctly since he understood the rule.",
+        "He answered correctly as he understood the rule.",
+        "He answered correctly for he understood the rule.",
+        "He answered correctly because of he understood the rule.",
+        "He answered correctly because that he understood the rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_093",
+    "seedId": "because_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 여행하고 싶어서 돈을 모았다.",
+    "english": "She saved money because she wanted to travel.",
+    "words": [
+      "She",
+      "saved",
+      "money",
+      "because",
+      "she",
+      "wanted",
+      "to",
+      "travel",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 여행하고 싶어서 돈을 모았다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She saved money since she wanted to travel.",
+      "statementForm": [
+        "She saved money because she wanted to travel.",
+        "She saved money because she wanted to travel",
+        "Because she wanted to travel, She saved money.",
+        "Because she wanted to travel, She saved money"
+      ],
+      "fragmentForm": "She saved money because she wanted to",
+      "wormholeVariants": [
+        "She saved money since she wanted to travel.",
+        "She saved money as she wanted to travel.",
+        "She saved money for she wanted to travel.",
+        "She saved money because of she wanted to travel.",
+        "She saved money because that she wanted to travel."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_094",
+    "seedId": "because_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 언덕을 올라서 몹시 지쳤다.",
+    "english": "We were exhausted because we climbed the hill.",
+    "words": [
+      "We",
+      "were",
+      "exhausted",
+      "because",
+      "we",
+      "climbed",
+      "the",
+      "hill",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 언덕을 올라서 몹시 지쳤다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were exhausted since we climbed the hill.",
+      "statementForm": [
+        "We were exhausted because we climbed the hill.",
+        "We were exhausted because we climbed the hill",
+        "Because we climbed the hill, We were exhausted.",
+        "Because we climbed the hill, We were exhausted"
+      ],
+      "fragmentForm": "We were exhausted because we climbed the",
+      "wormholeVariants": [
+        "We were exhausted since we climbed the hill.",
+        "We were exhausted as we climbed the hill.",
+        "We were exhausted for we climbed the hill.",
+        "We were exhausted because of we climbed the hill.",
+        "We were exhausted because that we climbed the hill."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_095",
+    "seedId": "because_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 팀이 자기 없이 이겨서 빠져 있었다.",
+    "english": "He is missing because the team won without him.",
+    "words": [
+      "He",
+      "is",
+      "missing",
+      "because",
+      "the",
+      "team",
+      "won",
+      "without",
+      "him",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 팀이 자기 없이 이겨서 빠져 있었다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is missing since the team won without him.",
+      "statementForm": [
+        "He is missing because the team won without him.",
+        "He is missing because the team won without him",
+        "Because the team won without him, He is missing.",
+        "Because the team won without him, He is missing"
+      ],
+      "fragmentForm": "He is missing because the team won without",
+      "wormholeVariants": [
+        "He is missing since the team won without him.",
+        "He is missing as the team won without him.",
+        "He is missing for the team won without him.",
+        "He is missing because of the team won without him.",
+        "He is missing because that the team won without him."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_096",
+    "seedId": "because_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 아이들이 밖에 나가지 못하게 울타리를 세웠다.",
+    "english": "They built a fence because the children would not go out.",
+    "words": [
+      "They",
+      "built",
+      "a",
+      "fence",
+      "because",
+      "the",
+      "children",
+      "would",
+      "not",
+      "go",
+      "out",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 아이들이 밖에 나가지 못하게 울타리를 세웠다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They built a fence since the children would not go out.",
+      "statementForm": [
+        "They built a fence because the children would not go out.",
+        "They built a fence because the children would not go out",
+        "Because the children would not go out, They built a fence.",
+        "Because the children would not go out, They built a fence"
+      ],
+      "fragmentForm": "They built a fence because the children would not go",
+      "wormholeVariants": [
+        "They built a fence since the children would not go out.",
+        "They built a fence as the children would not go out.",
+        "They built a fence for the children would not go out.",
+        "They built a fence because of the children would not go out.",
+        "They built a fence because that the children would not go out."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_097",
+    "seedId": "because_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 아파서 집에 있었다.",
+    "english": "I stayed home because I was sick.",
+    "words": [
+      "I",
+      "stayed",
+      "home",
+      "because",
+      "I",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아파서 집에 있었다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed home since I was sick.",
+      "statementForm": [
+        "I stayed home because I was sick.",
+        "I stayed home because I was sick",
+        "Because I was sick, I stayed home.",
+        "Because I was sick, I stayed home"
+      ],
+      "fragmentForm": "I stayed home because I was",
+      "wormholeVariants": [
+        "I stayed home since I was sick.",
+        "I stayed home as I was sick.",
+        "I stayed home for I was sick.",
+        "I stayed home because of I was sick.",
+        "I stayed home because that I was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_098",
+    "seedId": "because_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 버스가 늦어서 지각했다.",
+    "english": "She was late because the bus was delayed.",
+    "words": [
+      "She",
+      "was",
+      "late",
+      "because",
+      "the",
+      "bus",
+      "was",
+      "delayed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 버스가 늦어서 지각했다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was late since the bus was delayed.",
+      "statementForm": [
+        "She was late because the bus was delayed.",
+        "She was late because the bus was delayed",
+        "Because the bus was delayed, She was late.",
+        "Because the bus was delayed, She was late"
+      ],
+      "fragmentForm": "She was late because the bus was",
+      "wormholeVariants": [
+        "She was late since the bus was delayed.",
+        "She was late as the bus was delayed.",
+        "She was late for the bus was delayed.",
+        "She was late because of the bus was delayed.",
+        "She was late because that the bus was delayed."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_099",
+    "seedId": "because_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 좋은 점수를 원해서 열심히 공부했다.",
+    "english": "He studied hard because he wanted good grades.",
+    "words": [
+      "He",
+      "studied",
+      "hard",
+      "because",
+      "he",
+      "wanted",
+      "good",
+      "grades",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 좋은 점수를 원해서 열심히 공부했다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He studied hard since he wanted good grades.",
+      "statementForm": [
+        "He studied hard because he wanted good grades.",
+        "He studied hard because he wanted good grades",
+        "Because he wanted good grades, He studied hard.",
+        "Because he wanted good grades, He studied hard"
+      ],
+      "fragmentForm": "He studied hard because he wanted good",
+      "wormholeVariants": [
+        "He studied hard since he wanted good grades.",
+        "He studied hard as he wanted good grades.",
+        "He studied hard for he wanted good grades.",
+        "He studied hard because of he wanted good grades.",
+        "He studied hard because that he wanted good grades."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_100",
+    "seedId": "because_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "우리는 아기가 자고 있어서 조용했다.",
+    "english": "We were quiet because the baby was sleeping.",
+    "words": [
+      "We",
+      "were",
+      "quiet",
+      "because",
+      "the",
+      "baby",
+      "was",
+      "sleeping",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아기가 자고 있어서 조용했다.",
+        "We"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were quiet since the baby was sleeping.",
+      "statementForm": [
+        "We were quiet because the baby was sleeping.",
+        "We were quiet because the baby was sleeping",
+        "Because the baby was sleeping, We were quiet.",
+        "Because the baby was sleeping, We were quiet"
+      ],
+      "fragmentForm": "We were quiet because the baby was",
+      "wormholeVariants": [
+        "We were quiet since the baby was sleeping.",
+        "We were quiet as the baby was sleeping.",
+        "We were quiet for the baby was sleeping.",
+        "We were quiet because of the baby was sleeping.",
+        "We were quiet because that the baby was sleeping."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_101",
+    "seedId": "because_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그들은 날씨가 추워서 코트를 입었다.",
+    "english": "They wore coats because it was cold.",
+    "words": [
+      "They",
+      "wore",
+      "coats",
+      "because",
+      "it",
+      "was",
+      "cold",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 날씨가 추워서 코트를 입었다.",
+        "They"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They wore coats since it was cold.",
+      "statementForm": [
+        "They wore coats because it was cold.",
+        "They wore coats because it was cold",
+        "Because it was cold, They wore coats.",
+        "Because it was cold, They wore coats"
+      ],
+      "fragmentForm": "They wore coats because it was",
+      "wormholeVariants": [
+        "They wore coats since it was cold.",
+        "They wore coats as it was cold.",
+        "They wore coats for it was cold.",
+        "They wore coats because of it was cold.",
+        "They wore coats because that it was cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_102",
+    "seedId": "because_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 네가 보고 싶어서 전화했다.",
+    "english": "I called you because I missed you.",
+    "words": [
+      "I",
+      "called",
+      "you",
+      "because",
+      "I",
+      "missed",
+      "you",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 보고 싶어서 전화했다.",
+        "I"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I called you since I missed you.",
+      "statementForm": [
+        "I called you because I missed you.",
+        "I called you because I missed you",
+        "Because I missed you, I called you.",
+        "Because I missed you, I called you"
+      ],
+      "fragmentForm": "I called you because I missed",
+      "wormholeVariants": [
+        "I called you since I missed you.",
+        "I called you as I missed you.",
+        "I called you for I missed you.",
+        "I called you because of I missed you.",
+        "I called you because that I missed you."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_103",
+    "seedId": "because_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그녀는 목이 말라서 물을 마셨다.",
+    "english": "She drank water because she was thirsty.",
+    "words": [
+      "She",
+      "drank",
+      "water",
+      "because",
+      "she",
+      "was",
+      "thirsty",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 목이 말라서 물을 마셨다.",
+        "She"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "affirm",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She drank water since she was thirsty.",
+      "statementForm": [
+        "She drank water because she was thirsty.",
+        "She drank water because she was thirsty",
+        "Because she was thirsty, She drank water.",
+        "Because she was thirsty, She drank water"
+      ],
+      "fragmentForm": "She drank water because she was",
+      "wormholeVariants": [
+        "She drank water since she was thirsty.",
+        "She drank water as she was thirsty.",
+        "She drank water for she was thirsty.",
+        "She drank water because of she was thirsty.",
+        "She drank water because that she was thirsty."
+      ]
+    }
+  },
+  {
+    "id": "m2_because_104",
+    "seedId": "because_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "나는 도움이 필요해서 말했니?",
+    "english": "Do I need help because I am confused?",
+    "words": [
+      "Do",
+      "I",
+      "need",
+      "help",
+      "because",
+      "I",
+      "am",
+      "confused",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 도움이 필요해서 말했니?",
+        "Do"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "question",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I need help since I am confused?",
+      "statementForm": [
+        "Do I need help because I am confused?",
+        "Do I need help because I am confused"
+      ],
+      "fragmentForm": "Do I need help because I am",
+      "wormholeVariants": [
+        "Do I need help since I am confused?",
+        "Do I need help as I am confused?",
+        "Do I need help for I am confused?",
+        "Do I need help because of I am confused?",
+        "Do I need help because that I am confused?"
+      ]
+    }
+  },
+  {
+    "id": "m2_because_105",
+    "seedId": "because_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "because_conjunction",
+    "chapterLabelKo": "접속사 because",
+    "korean": "그는 비가 와서 밖에 나가지 않았다.",
+    "english": "He did not go outside because it was raining.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "go",
+      "outside",
+      "because",
+      "it",
+      "was",
+      "raining",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "because_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 비가 와서 밖에 나가지 않았다.",
+        "He"
+      ],
+      [
+        "because",
+        "because"
+      ],
+      [
+        "주의",
+        "because + clause"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "since",
+      "as",
+      "for",
+      "so"
+    ],
+    "blankTargets": [
+      "because"
+    ],
+    "tags": [
+      "because_conjunction",
+      "negative",
+      "because",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not go outside since it was raining.",
+      "statementForm": [
+        "He did not go outside because it was raining.",
+        "He did not go outside because it was raining",
+        "Because it was raining, He did not go outside.",
+        "Because it was raining, He did not go outside"
+      ],
+      "fragmentForm": "He did not go outside because it was",
+      "wormholeVariants": [
+        "He did not go outside since it was raining.",
+        "He did not go outside as it was raining.",
+        "He did not go outside for it was raining.",
+        "He did not go outside because of it was raining.",
+        "He did not go outside because that it was raining."
+      ]
+    }
+  }
+]
