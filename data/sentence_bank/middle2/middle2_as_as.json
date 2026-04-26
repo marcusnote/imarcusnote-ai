@@ -1,0 +1,6370 @@
+[
+  {
+    "id": "m2_asas_001",
+    "seedId": "asas_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 책은 그 책만큼 재미있다.",
+    "english": "This book is as interesting as that book.",
+    "words": [
+      "This",
+      "book",
+      "is",
+      "as",
+      "interesting",
+      "as",
+      "that",
+      "book",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 책은 그 책만큼 재미있다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This book is than interesting as that book.",
+      "statementForm": [
+        "This book is as interesting as that book.",
+        "This book is as interesting as that book"
+      ],
+      "fragmentForm": "This book is as interesting as",
+      "wormholeVariants": [
+        "This book is so interesting as that book.",
+        "This book is more interesting as that book.",
+        "This book is than interesting as that book."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_002",
+    "seedId": "asas_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 나만큼 키가 크다.",
+    "english": "He is as tall as I am.",
+    "words": [
+      "He",
+      "is",
+      "as",
+      "tall",
+      "as",
+      "I",
+      "am",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나만큼 키가 크다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is than tall as I am.",
+      "statementForm": [
+        "He is as tall as I am.",
+        "He is as tall as I am"
+      ],
+      "fragmentForm": "He is as tall as I",
+      "wormholeVariants": [
+        "He is so tall as I am.",
+        "He is more tall as I am.",
+        "He is than tall as I am."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_003",
+    "seedId": "asas_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 나만큼 빨리 달린다.",
+    "english": "She runs as fast as I do.",
+    "words": [
+      "She",
+      "runs",
+      "as",
+      "fast",
+      "as",
+      "I",
+      "do",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나만큼 빨리 달린다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She runs than fast as I do.",
+      "statementForm": [
+        "She runs as fast as I do.",
+        "She runs as fast as I do"
+      ],
+      "fragmentForm": "She runs as fast as I",
+      "wormholeVariants": [
+        "She runs so fast as I do.",
+        "She runs more fast as I do.",
+        "She runs than fast as I do."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_004",
+    "seedId": "asas_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 문제는 저 문제만큼 어렵다.",
+    "english": "This problem is as difficult as that one.",
+    "words": [
+      "This",
+      "problem",
+      "is",
+      "as",
+      "difficult",
+      "as",
+      "that",
+      "one",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문제는 저 문제만큼 어렵다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem is than difficult as that one.",
+      "statementForm": [
+        "This problem is as difficult as that one.",
+        "This problem is as difficult as that one"
+      ],
+      "fragmentForm": "This problem is as difficult as",
+      "wormholeVariants": [
+        "This problem is so difficult as that one.",
+        "This problem is more difficult as that one.",
+        "This problem is than difficult as that one."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_005",
+    "seedId": "asas_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "오늘은 어제만큼 춥다.",
+    "english": "Today is as cold as yesterday.",
+    "words": [
+      "Today",
+      "is",
+      "as",
+      "cold",
+      "as",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "오늘은 어제만큼 춥다.",
+        "Today"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Today is than cold as yesterday.",
+      "statementForm": [
+        "Today is as cold as yesterday.",
+        "Today is as cold as yesterday"
+      ],
+      "fragmentForm": "Today is as cold as yesterday",
+      "wormholeVariants": [
+        "Today is so cold as yesterday.",
+        "Today is more cold as yesterday.",
+        "Today is than cold as yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_006",
+    "seedId": "asas_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 아버지만큼 열심히 일한다.",
+    "english": "He works as hard as his father.",
+    "words": [
+      "He",
+      "works",
+      "as",
+      "hard",
+      "as",
+      "his",
+      "father",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 아버지만큼 열심히 일한다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He works than hard as his father.",
+      "statementForm": [
+        "He works as hard as his father.",
+        "He works as hard as his father"
+      ],
+      "fragmentForm": "He works as hard as his",
+      "wormholeVariants": [
+        "He works so hard as his father.",
+        "He works more hard as his father.",
+        "He works than hard as his father."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_007",
+    "seedId": "asas_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 가방은 내 가방만큼 무겁다.",
+    "english": "This bag is as heavy as my bag.",
+    "words": [
+      "This",
+      "bag",
+      "is",
+      "as",
+      "heavy",
+      "as",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 가방은 내 가방만큼 무겁다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This bag is than heavy as my bag.",
+      "statementForm": [
+        "This bag is as heavy as my bag.",
+        "This bag is as heavy as my bag"
+      ],
+      "fragmentForm": "This bag is as heavy as",
+      "wormholeVariants": [
+        "This bag is so heavy as my bag.",
+        "This bag is more heavy as my bag.",
+        "This bag is than heavy as my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_008",
+    "seedId": "asas_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 영화는 그 영화만큼 흥미롭다.",
+    "english": "This movie is as exciting as that movie.",
+    "words": [
+      "This",
+      "movie",
+      "is",
+      "as",
+      "exciting",
+      "as",
+      "that",
+      "movie",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 영화는 그 영화만큼 흥미롭다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This movie is than exciting as that movie.",
+      "statementForm": [
+        "This movie is as exciting as that movie.",
+        "This movie is as exciting as that movie"
+      ],
+      "fragmentForm": "This movie is as exciting as",
+      "wormholeVariants": [
+        "This movie is so exciting as that movie.",
+        "This movie is more exciting as that movie.",
+        "This movie is than exciting as that movie."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_009",
+    "seedId": "asas_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 가수만큼 노래를 잘 부른다.",
+    "english": "She sings as well as a singer.",
+    "words": [
+      "She",
+      "sings",
+      "as",
+      "well",
+      "as",
+      "a",
+      "singer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 가수만큼 노래를 잘 부른다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She sings than well as a singer.",
+      "statementForm": [
+        "She sings as well as a singer.",
+        "She sings as well as a singer"
+      ],
+      "fragmentForm": "She sings as well as a",
+      "wormholeVariants": [
+        "She sings so well as a singer.",
+        "She sings more well as a singer.",
+        "She sings than well as a singer."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_010",
+    "seedId": "asas_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 시험은 지난 시험만큼 어렵다.",
+    "english": "This test is as difficult as the last test.",
+    "words": [
+      "This",
+      "test",
+      "is",
+      "as",
+      "difficult",
+      "as",
+      "the",
+      "last",
+      "test",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 시험은 지난 시험만큼 어렵다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This test is than difficult as the last test.",
+      "statementForm": [
+        "This test is as difficult as the last test.",
+        "This test is as difficult as the last test"
+      ],
+      "fragmentForm": "This test is as difficult as",
+      "wormholeVariants": [
+        "This test is so difficult as the last test.",
+        "This test is more difficult as the last test.",
+        "This test is than difficult as the last test."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_011",
+    "seedId": "asas_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 친구만큼 친절하다.",
+    "english": "He is as kind as his friend.",
+    "words": [
+      "He",
+      "is",
+      "as",
+      "kind",
+      "as",
+      "his",
+      "friend",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 친구만큼 친절하다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is than kind as his friend.",
+      "statementForm": [
+        "He is as kind as his friend.",
+        "He is as kind as his friend"
+      ],
+      "fragmentForm": "He is as kind as his",
+      "wormholeVariants": [
+        "He is so kind as his friend.",
+        "He is more kind as his friend.",
+        "He is than kind as his friend."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_012",
+    "seedId": "asas_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 강아지는 저 강아지만큼 귀엽다.",
+    "english": "This puppy is as cute as that puppy.",
+    "words": [
+      "This",
+      "puppy",
+      "is",
+      "as",
+      "cute",
+      "as",
+      "that",
+      "puppy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 강아지는 저 강아지만큼 귀엽다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This puppy is than cute as that puppy.",
+      "statementForm": [
+        "This puppy is as cute as that puppy.",
+        "This puppy is as cute as that puppy"
+      ],
+      "fragmentForm": "This puppy is as cute as",
+      "wormholeVariants": [
+        "This puppy is so cute as that puppy.",
+        "This puppy is more cute as that puppy.",
+        "This puppy is than cute as that puppy."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_013",
+    "seedId": "asas_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 언니만큼 요리를 잘한다.",
+    "english": "She cooks as well as her sister.",
+    "words": [
+      "She",
+      "cooks",
+      "as",
+      "well",
+      "as",
+      "her",
+      "sister",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 언니만큼 요리를 잘한다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She cooks than well as her sister.",
+      "statementForm": [
+        "She cooks as well as her sister.",
+        "She cooks as well as her sister"
+      ],
+      "fragmentForm": "She cooks as well as her",
+      "wormholeVariants": [
+        "She cooks so well as her sister.",
+        "She cooks more well as her sister.",
+        "She cooks than well as her sister."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_014",
+    "seedId": "asas_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "나는 너만큼 바쁘다.",
+    "english": "I am as busy as you are.",
+    "words": [
+      "I",
+      "am",
+      "as",
+      "busy",
+      "as",
+      "you",
+      "are",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 너만큼 바쁘다.",
+        "I"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am than busy as you are.",
+      "statementForm": [
+        "I am as busy as you are.",
+        "I am as busy as you are"
+      ],
+      "fragmentForm": "I am as busy as you",
+      "wormholeVariants": [
+        "I am so busy as you are.",
+        "I am more busy as you are.",
+        "I am than busy as you are."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_015",
+    "seedId": "asas_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 방은 거실만큼 넓다.",
+    "english": "This room is as large as the living room.",
+    "words": [
+      "This",
+      "room",
+      "is",
+      "as",
+      "large",
+      "as",
+      "the",
+      "living",
+      "room",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 방은 거실만큼 넓다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This room is than large as the living room.",
+      "statementForm": [
+        "This room is as large as the living room.",
+        "This room is as large as the living room"
+      ],
+      "fragmentForm": "This room is as large as",
+      "wormholeVariants": [
+        "This room is so large as the living room.",
+        "This room is more large as the living room.",
+        "This room is than large as the living room."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_016",
+    "seedId": "asas_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 선생님만큼 영어를 잘한다.",
+    "english": "He speaks English as well as the teacher.",
+    "words": [
+      "He",
+      "speaks",
+      "English",
+      "as",
+      "well",
+      "as",
+      "the",
+      "teacher",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 선생님만큼 영어를 잘한다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He speaks English than well as the teacher.",
+      "statementForm": [
+        "He speaks English as well as the teacher.",
+        "He speaks English as well as the teacher"
+      ],
+      "fragmentForm": "He speaks English as well as",
+      "wormholeVariants": [
+        "He speaks English so well as the teacher.",
+        "He speaks English more well as the teacher.",
+        "He speaks English than well as the teacher."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_017",
+    "seedId": "asas_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 차는 그 차만큼 빠르다.",
+    "english": "This car is as fast as that car.",
+    "words": [
+      "This",
+      "car",
+      "is",
+      "as",
+      "fast",
+      "as",
+      "that",
+      "car",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 차는 그 차만큼 빠르다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This car is than fast as that car.",
+      "statementForm": [
+        "This car is as fast as that car.",
+        "This car is as fast as that car"
+      ],
+      "fragmentForm": "This car is as fast as",
+      "wormholeVariants": [
+        "This car is so fast as that car.",
+        "This car is more fast as that car.",
+        "This car is than fast as that car."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_018",
+    "seedId": "asas_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 나만큼 피곤하다.",
+    "english": "He is as tired as I am.",
+    "words": [
+      "He",
+      "is",
+      "as",
+      "tired",
+      "as",
+      "I",
+      "am",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나만큼 피곤하다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is than tired as I am.",
+      "statementForm": [
+        "He is as tired as I am.",
+        "He is as tired as I am"
+      ],
+      "fragmentForm": "He is as tired as I",
+      "wormholeVariants": [
+        "He is so tired as I am.",
+        "He is more tired as I am.",
+        "He is than tired as I am."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_019",
+    "seedId": "asas_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 도시는 서울만큼 크다.",
+    "english": "This city is as large as Seoul.",
+    "words": [
+      "This",
+      "city",
+      "is",
+      "as",
+      "large",
+      "as",
+      "Seoul",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 도시는 서울만큼 크다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This city is than large as Seoul.",
+      "statementForm": [
+        "This city is as large as Seoul.",
+        "This city is as large as Seoul"
+      ],
+      "fragmentForm": "This city is as large as",
+      "wormholeVariants": [
+        "This city is so large as Seoul.",
+        "This city is more large as Seoul.",
+        "This city is than large as Seoul."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_020",
+    "seedId": "asas_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 나만큼 조심스럽다.",
+    "english": "She is as careful as I am.",
+    "words": [
+      "She",
+      "is",
+      "as",
+      "careful",
+      "as",
+      "I",
+      "am",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나만큼 조심스럽다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is than careful as I am.",
+      "statementForm": [
+        "She is as careful as I am.",
+        "She is as careful as I am"
+      ],
+      "fragmentForm": "She is as careful as I",
+      "wormholeVariants": [
+        "She is so careful as I am.",
+        "She is more careful as I am.",
+        "She is than careful as I am."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_021",
+    "seedId": "asas_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 사과는 설탕만큼 달다.",
+    "english": "This apple is as sweet as sugar.",
+    "words": [
+      "This",
+      "apple",
+      "is",
+      "as",
+      "sweet",
+      "as",
+      "sugar",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 사과는 설탕만큼 달다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This apple is than sweet as sugar.",
+      "statementForm": [
+        "This apple is as sweet as sugar.",
+        "This apple is as sweet as sugar"
+      ],
+      "fragmentForm": "This apple is as sweet as",
+      "wormholeVariants": [
+        "This apple is so sweet as sugar.",
+        "This apple is more sweet as sugar.",
+        "This apple is than sweet as sugar."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_022",
+    "seedId": "asas_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 소년은 어른만큼 말을 잘한다.",
+    "english": "The boy speaks as well as an adult.",
+    "words": [
+      "The",
+      "boy",
+      "speaks",
+      "as",
+      "well",
+      "as",
+      "an",
+      "adult",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소년은 어른만큼 말을 잘한다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy speaks than well as an adult.",
+      "statementForm": [
+        "The boy speaks as well as an adult.",
+        "The boy speaks as well as an adult"
+      ],
+      "fragmentForm": "The boy speaks as well as",
+      "wormholeVariants": [
+        "The boy speaks so well as an adult.",
+        "The boy speaks more well as an adult.",
+        "The boy speaks than well as an adult."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_023",
+    "seedId": "asas_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 형만큼 수영을 잘한다.",
+    "english": "He swims as well as his older brother.",
+    "words": [
+      "He",
+      "swims",
+      "as",
+      "well",
+      "as",
+      "his",
+      "older",
+      "brother",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 형만큼 수영을 잘한다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He swims than well as his older brother.",
+      "statementForm": [
+        "He swims as well as his older brother.",
+        "He swims as well as his older brother"
+      ],
+      "fragmentForm": "He swims as well as his",
+      "wormholeVariants": [
+        "He swims so well as his older brother.",
+        "He swims more well as his older brother.",
+        "He swims than well as his older brother."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_024",
+    "seedId": "asas_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 호수는 거울만큼 맑다.",
+    "english": "This lake is as clear as a mirror.",
+    "words": [
+      "This",
+      "lake",
+      "is",
+      "as",
+      "clear",
+      "as",
+      "a",
+      "mirror",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 호수는 거울만큼 맑다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This lake is than clear as a mirror.",
+      "statementForm": [
+        "This lake is as clear as a mirror.",
+        "This lake is as clear as a mirror"
+      ],
+      "fragmentForm": "This lake is as clear as",
+      "wormholeVariants": [
+        "This lake is so clear as a mirror.",
+        "This lake is more clear as a mirror.",
+        "This lake is than clear as a mirror."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_025",
+    "seedId": "asas_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 길은 저 길만큼 안전하다.",
+    "english": "This road is as safe as that road.",
+    "words": [
+      "This",
+      "road",
+      "is",
+      "as",
+      "safe",
+      "as",
+      "that",
+      "road",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 길은 저 길만큼 안전하다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This road is than safe as that road.",
+      "statementForm": [
+        "This road is as safe as that road.",
+        "This road is as safe as that road"
+      ],
+      "fragmentForm": "This road is as safe as",
+      "wormholeVariants": [
+        "This road is so safe as that road.",
+        "This road is more safe as that road.",
+        "This road is than safe as that road."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_026",
+    "seedId": "asas_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "과학은 역사만큼 중요하다.",
+    "english": "Science is as important as history.",
+    "words": [
+      "Science",
+      "is",
+      "as",
+      "important",
+      "as",
+      "history",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "과학은 역사만큼 중요하다.",
+        "Science"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Science is than important as history.",
+      "statementForm": [
+        "Science is as important as history.",
+        "Science is as important as history"
+      ],
+      "fragmentForm": "Science is as important as history",
+      "wormholeVariants": [
+        "Science is so important as history.",
+        "Science is more important as history.",
+        "Science is than important as history."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_027",
+    "seedId": "asas_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 스마트폰은 내 노트북만큼 유용하다.",
+    "english": "This smartphone is as useful as my laptop.",
+    "words": [
+      "This",
+      "smartphone",
+      "is",
+      "as",
+      "useful",
+      "as",
+      "my",
+      "laptop",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 스마트폰은 내 노트북만큼 유용하다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This smartphone is than useful as my laptop.",
+      "statementForm": [
+        "This smartphone is as useful as my laptop.",
+        "This smartphone is as useful as my laptop"
+      ],
+      "fragmentForm": "This smartphone is as useful as",
+      "wormholeVariants": [
+        "This smartphone is so useful as my laptop.",
+        "This smartphone is more useful as my laptop.",
+        "This smartphone is than useful as my laptop."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_028",
+    "seedId": "asas_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 민수만큼 자주 도서관에 간다.",
+    "english": "He goes to the library as often as Minsu.",
+    "words": [
+      "He",
+      "goes",
+      "to",
+      "the",
+      "library",
+      "as",
+      "often",
+      "as",
+      "Minsu",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 민수만큼 자주 도서관에 간다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He goes to the library than often as Minsu.",
+      "statementForm": [
+        "He goes to the library as often as Minsu.",
+        "He goes to the library as often as Minsu"
+      ],
+      "fragmentForm": "He goes to the library as",
+      "wormholeVariants": [
+        "He goes to the library so often as Minsu.",
+        "He goes to the library more often as Minsu.",
+        "He goes to the library than often as Minsu."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_029",
+    "seedId": "asas_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 셔츠는 저 셔츠만큼 비싸다.",
+    "english": "This shirt is as expensive as that shirt.",
+    "words": [
+      "This",
+      "shirt",
+      "is",
+      "as",
+      "expensive",
+      "as",
+      "that",
+      "shirt",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 셔츠는 저 셔츠만큼 비싸다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This shirt is than expensive as that shirt.",
+      "statementForm": [
+        "This shirt is as expensive as that shirt.",
+        "This shirt is as expensive as that shirt"
+      ],
+      "fragmentForm": "This shirt is as expensive as",
+      "wormholeVariants": [
+        "This shirt is so expensive as that shirt.",
+        "This shirt is more expensive as that shirt.",
+        "This shirt is than expensive as that shirt."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_030",
+    "seedId": "asas_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 친구만큼 차분하게 말한다.",
+    "english": "She speaks as calmly as her friend.",
+    "words": [
+      "She",
+      "speaks",
+      "as",
+      "calmly",
+      "as",
+      "her",
+      "friend",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 친구만큼 차분하게 말한다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She speaks than calmly as her friend.",
+      "statementForm": [
+        "She speaks as calmly as her friend.",
+        "She speaks as calmly as her friend"
+      ],
+      "fragmentForm": "She speaks as calmly as her",
+      "wormholeVariants": [
+        "She speaks so calmly as her friend.",
+        "She speaks more calmly as her friend.",
+        "She speaks than calmly as her friend."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_031",
+    "seedId": "asas_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 책은 그 책만큼 재미있지 않다.",
+    "english": "This book is not as interesting as that book.",
+    "words": [
+      "This",
+      "book",
+      "is",
+      "not",
+      "as",
+      "interesting",
+      "as",
+      "that",
+      "book",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 책은 그 책만큼 재미있지 않다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This book is not so interesting as that book.",
+      "statementForm": [
+        "This book is not as interesting as that book.",
+        "This book is not as interesting as that book"
+      ],
+      "fragmentForm": "This book is not as interesting",
+      "wormholeVariants": [
+        "This book is not than interesting as that book.",
+        "This book is not more interesting as that book."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_032",
+    "seedId": "asas_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 나만큼 키가 크지 않다.",
+    "english": "He is not as tall as I am.",
+    "words": [
+      "He",
+      "is",
+      "not",
+      "as",
+      "tall",
+      "as",
+      "I",
+      "am",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나만큼 키가 크지 않다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is not so tall as I am.",
+      "statementForm": [
+        "He is not as tall as I am.",
+        "He is not as tall as I am"
+      ],
+      "fragmentForm": "He is not as tall as",
+      "wormholeVariants": [
+        "He is not than tall as I am.",
+        "He is not more tall as I am."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_033",
+    "seedId": "asas_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 나만큼 빨리 달리지 않는다.",
+    "english": "She does not run as fast as I do.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "run",
+      "as",
+      "fast",
+      "as",
+      "I",
+      "do",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나만큼 빨리 달리지 않는다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She does not run than fast as I do.",
+      "statementForm": [
+        "She does not run as fast as I do.",
+        "She does not run as fast as I do"
+      ],
+      "fragmentForm": "She does not run as fast",
+      "wormholeVariants": [
+        "She does not run so fast as I do.",
+        "She does not run more fast as I do.",
+        "She does not run than fast as I do."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_034",
+    "seedId": "asas_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 문제는 저 문제만큼 어렵지 않다.",
+    "english": "This problem is not as difficult as that one.",
+    "words": [
+      "This",
+      "problem",
+      "is",
+      "not",
+      "as",
+      "difficult",
+      "as",
+      "that",
+      "one",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문제는 저 문제만큼 어렵지 않다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem is not so difficult as that one.",
+      "statementForm": [
+        "This problem is not as difficult as that one.",
+        "This problem is not as difficult as that one"
+      ],
+      "fragmentForm": "This problem is not as difficult",
+      "wormholeVariants": [
+        "This problem is not than difficult as that one.",
+        "This problem is not more difficult as that one."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_035",
+    "seedId": "asas_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "오늘은 어제만큼 춥지 않다.",
+    "english": "Today is not as cold as yesterday.",
+    "words": [
+      "Today",
+      "is",
+      "not",
+      "as",
+      "cold",
+      "as",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "오늘은 어제만큼 춥지 않다.",
+        "Today"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Today is not so cold as yesterday.",
+      "statementForm": [
+        "Today is not as cold as yesterday.",
+        "Today is not as cold as yesterday"
+      ],
+      "fragmentForm": "Today is not as cold as",
+      "wormholeVariants": [
+        "Today is not than cold as yesterday.",
+        "Today is not more cold as yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_036",
+    "seedId": "asas_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 아버지만큼 열심히 일하지 않는다.",
+    "english": "He does not work as hard as his father.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "work",
+      "as",
+      "hard",
+      "as",
+      "his",
+      "father",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 아버지만큼 열심히 일하지 않는다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He does not work than hard as his father.",
+      "statementForm": [
+        "He does not work as hard as his father.",
+        "He does not work as hard as his father"
+      ],
+      "fragmentForm": "He does not work as hard",
+      "wormholeVariants": [
+        "He does not work so hard as his father.",
+        "He does not work more hard as his father.",
+        "He does not work than hard as his father."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_037",
+    "seedId": "asas_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 가방은 내 가방만큼 무겁지 않다.",
+    "english": "This bag is not as heavy as my bag.",
+    "words": [
+      "This",
+      "bag",
+      "is",
+      "not",
+      "as",
+      "heavy",
+      "as",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 가방은 내 가방만큼 무겁지 않다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This bag is not so heavy as my bag.",
+      "statementForm": [
+        "This bag is not as heavy as my bag.",
+        "This bag is not as heavy as my bag"
+      ],
+      "fragmentForm": "This bag is not as heavy",
+      "wormholeVariants": [
+        "This bag is not than heavy as my bag.",
+        "This bag is not more heavy as my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_038",
+    "seedId": "asas_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 영화는 그 영화만큼 흥미롭지 않다.",
+    "english": "This movie is not as exciting as that movie.",
+    "words": [
+      "This",
+      "movie",
+      "is",
+      "not",
+      "as",
+      "exciting",
+      "as",
+      "that",
+      "movie",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 영화는 그 영화만큼 흥미롭지 않다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This movie is not so exciting as that movie.",
+      "statementForm": [
+        "This movie is not as exciting as that movie.",
+        "This movie is not as exciting as that movie"
+      ],
+      "fragmentForm": "This movie is not as exciting",
+      "wormholeVariants": [
+        "This movie is not than exciting as that movie.",
+        "This movie is not more exciting as that movie."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_039",
+    "seedId": "asas_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 가수만큼 노래를 잘 부르지 않는다.",
+    "english": "She does not sing as well as a singer.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "sing",
+      "as",
+      "well",
+      "as",
+      "a",
+      "singer",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 가수만큼 노래를 잘 부르지 않는다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She does not sing than well as a singer.",
+      "statementForm": [
+        "She does not sing as well as a singer.",
+        "She does not sing as well as a singer"
+      ],
+      "fragmentForm": "She does not sing as well",
+      "wormholeVariants": [
+        "She does not sing so well as a singer.",
+        "She does not sing more well as a singer.",
+        "She does not sing than well as a singer."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_040",
+    "seedId": "asas_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 시험은 지난 시험만큼 어렵지 않다.",
+    "english": "This test is not as difficult as the last test.",
+    "words": [
+      "This",
+      "test",
+      "is",
+      "not",
+      "as",
+      "difficult",
+      "as",
+      "the",
+      "last",
+      "test",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 시험은 지난 시험만큼 어렵지 않다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This test is not so difficult as the last test.",
+      "statementForm": [
+        "This test is not as difficult as the last test.",
+        "This test is not as difficult as the last test"
+      ],
+      "fragmentForm": "This test is not as difficult",
+      "wormholeVariants": [
+        "This test is not than difficult as the last test.",
+        "This test is not more difficult as the last test."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_041",
+    "seedId": "asas_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 나만큼 키가 크니?",
+    "english": "Is he as tall as I am?",
+    "words": [
+      "Is",
+      "he",
+      "as",
+      "tall",
+      "as",
+      "I",
+      "am",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나만큼 키가 크니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is he than tall as I am?",
+      "statementForm": [
+        "Is he as tall as I am?",
+        "Is he as tall as I am"
+      ],
+      "fragmentForm": "Is he as tall as I",
+      "wormholeVariants": [
+        "Is he so tall as I am?",
+        "Is he more tall as I am?",
+        "Is he than tall as I am?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_042",
+    "seedId": "asas_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 나만큼 빨리 달리니?",
+    "english": "Does she run as fast as I do?",
+    "words": [
+      "Does",
+      "she",
+      "run",
+      "as",
+      "fast",
+      "as",
+      "I",
+      "do",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나만큼 빨리 달리니?",
+        "Does"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does she run than fast as I do?",
+      "statementForm": [
+        "Does she run as fast as I do?",
+        "Does she run as fast as I do"
+      ],
+      "fragmentForm": "Does she run as fast as",
+      "wormholeVariants": [
+        "Does she run so fast as I do?",
+        "Does she run more fast as I do?",
+        "Does she run than fast as I do?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_043",
+    "seedId": "asas_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 문제는 저 문제만큼 어렵니?",
+    "english": "Is this problem as difficult as that one?",
+    "words": [
+      "Is",
+      "this",
+      "problem",
+      "as",
+      "difficult",
+      "as",
+      "that",
+      "one",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문제는 저 문제만큼 어렵니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this problem than difficult as that one?",
+      "statementForm": [
+        "Is this problem as difficult as that one?",
+        "Is this problem as difficult as that one"
+      ],
+      "fragmentForm": "Is this problem as difficult as",
+      "wormholeVariants": [
+        "Is this problem so difficult as that one?",
+        "Is this problem more difficult as that one?",
+        "Is this problem than difficult as that one?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_044",
+    "seedId": "asas_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "오늘은 어제만큼 춥니?",
+    "english": "Is today as cold as yesterday?",
+    "words": [
+      "Is",
+      "today",
+      "as",
+      "cold",
+      "as",
+      "yesterday",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "오늘은 어제만큼 춥니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is today than cold as yesterday?",
+      "statementForm": [
+        "Is today as cold as yesterday?",
+        "Is today as cold as yesterday"
+      ],
+      "fragmentForm": "Is today as cold as yesterday",
+      "wormholeVariants": [
+        "Is today so cold as yesterday?",
+        "Is today more cold as yesterday?",
+        "Is today than cold as yesterday?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_045",
+    "seedId": "asas_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 아버지만큼 열심히 일하니?",
+    "english": "Does he work as hard as his father?",
+    "words": [
+      "Does",
+      "he",
+      "work",
+      "as",
+      "hard",
+      "as",
+      "his",
+      "father",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 아버지만큼 열심히 일하니?",
+        "Does"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does he work than hard as his father?",
+      "statementForm": [
+        "Does he work as hard as his father?",
+        "Does he work as hard as his father"
+      ],
+      "fragmentForm": "Does he work as hard as",
+      "wormholeVariants": [
+        "Does he work so hard as his father?",
+        "Does he work more hard as his father?",
+        "Does he work than hard as his father?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_046",
+    "seedId": "asas_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 가방은 내 가방만큼 무겁니?",
+    "english": "Is this bag as heavy as my bag?",
+    "words": [
+      "Is",
+      "this",
+      "bag",
+      "as",
+      "heavy",
+      "as",
+      "my",
+      "bag",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 가방은 내 가방만큼 무겁니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this bag than heavy as my bag?",
+      "statementForm": [
+        "Is this bag as heavy as my bag?",
+        "Is this bag as heavy as my bag"
+      ],
+      "fragmentForm": "Is this bag as heavy as",
+      "wormholeVariants": [
+        "Is this bag so heavy as my bag?",
+        "Is this bag more heavy as my bag?",
+        "Is this bag than heavy as my bag?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_047",
+    "seedId": "asas_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 영화는 그 영화만큼 흥미롭니?",
+    "english": "Is this movie as exciting as that movie?",
+    "words": [
+      "Is",
+      "this",
+      "movie",
+      "as",
+      "exciting",
+      "as",
+      "that",
+      "movie",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 영화는 그 영화만큼 흥미롭니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this movie than exciting as that movie?",
+      "statementForm": [
+        "Is this movie as exciting as that movie?",
+        "Is this movie as exciting as that movie"
+      ],
+      "fragmentForm": "Is this movie as exciting as",
+      "wormholeVariants": [
+        "Is this movie so exciting as that movie?",
+        "Is this movie more exciting as that movie?",
+        "Is this movie than exciting as that movie?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_048",
+    "seedId": "asas_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 가수만큼 노래를 잘 부르니?",
+    "english": "Does she sing as well as a singer?",
+    "words": [
+      "Does",
+      "she",
+      "sing",
+      "as",
+      "well",
+      "as",
+      "a",
+      "singer",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 가수만큼 노래를 잘 부르니?",
+        "Does"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does she sing than well as a singer?",
+      "statementForm": [
+        "Does she sing as well as a singer?",
+        "Does she sing as well as a singer"
+      ],
+      "fragmentForm": "Does she sing as well as",
+      "wormholeVariants": [
+        "Does she sing so well as a singer?",
+        "Does she sing more well as a singer?",
+        "Does she sing than well as a singer?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_049",
+    "seedId": "asas_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 음식은 저 음식만큼 맛있니?",
+    "english": "Is this food as delicious as that food?",
+    "words": [
+      "Is",
+      "this",
+      "food",
+      "as",
+      "delicious",
+      "as",
+      "that",
+      "food",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 음식은 저 음식만큼 맛있니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this food than delicious as that food?",
+      "statementForm": [
+        "Is this food as delicious as that food?",
+        "Is this food as delicious as that food"
+      ],
+      "fragmentForm": "Is this food as delicious as",
+      "wormholeVariants": [
+        "Is this food so delicious as that food?",
+        "Is this food more delicious as that food?",
+        "Is this food than delicious as that food?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_050",
+    "seedId": "asas_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 민수만큼 자주 도서관에 가니?",
+    "english": "Does he go to the library as often as Minsu?",
+    "words": [
+      "Does",
+      "he",
+      "go",
+      "to",
+      "the",
+      "library",
+      "as",
+      "often",
+      "as",
+      "Minsu",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 민수만큼 자주 도서관에 가니?",
+        "Does"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does he go to the library than often as Minsu?",
+      "statementForm": [
+        "Does he go to the library as often as Minsu?",
+        "Does he go to the library as often as Minsu"
+      ],
+      "fragmentForm": "Does he go to the library",
+      "wormholeVariants": [
+        "Does he go to the library so often as Minsu?",
+        "Does he go to the library more often as Minsu?",
+        "Does he go to the library than often as Minsu?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_051",
+    "seedId": "asas_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "자전거를 타는 것은 걷는 것만큼 쉽다.",
+    "english": "Riding a bike is as easy as walking.",
+    "words": [
+      "Riding",
+      "a",
+      "bike",
+      "is",
+      "as",
+      "easy",
+      "as",
+      "walking",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "자전거를 타는 것은 걷는 것만큼 쉽다.",
+        "Riding"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "gerund"
+    ],
+    "distractorSeeds": {
+      "auxError": "Riding a bike is than easy as walking.",
+      "statementForm": [
+        "Riding a bike is as easy as walking.",
+        "Riding a bike is as easy as walking"
+      ],
+      "fragmentForm": "Riding a bike is as easy",
+      "wormholeVariants": [
+        "Riding a bike is so easy as walking.",
+        "Riding a bike is more easy as walking.",
+        "Riding a bike is than easy as walking."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_052",
+    "seedId": "asas_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "피자는 햄버거만큼 맛있다.",
+    "english": "Pizza is as delicious as a hamburger.",
+    "words": [
+      "Pizza",
+      "is",
+      "as",
+      "delicious",
+      "as",
+      "a",
+      "hamburger",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "피자는 햄버거만큼 맛있다.",
+        "Pizza"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Pizza is than delicious as a hamburger.",
+      "statementForm": [
+        "Pizza is as delicious as a hamburger.",
+        "Pizza is as delicious as a hamburger"
+      ],
+      "fragmentForm": "Pizza is as delicious as a",
+      "wormholeVariants": [
+        "Pizza is so delicious as a hamburger.",
+        "Pizza is more delicious as a hamburger.",
+        "Pizza is than delicious as a hamburger."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_053",
+    "seedId": "asas_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 강은 저 강만큼 깊다.",
+    "english": "This river is as deep as that river.",
+    "words": [
+      "This",
+      "river",
+      "is",
+      "as",
+      "deep",
+      "as",
+      "that",
+      "river",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 강은 저 강만큼 깊다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This river is than deep as that river.",
+      "statementForm": [
+        "This river is as deep as that river.",
+        "This river is as deep as that river"
+      ],
+      "fragmentForm": "This river is as deep as",
+      "wormholeVariants": [
+        "This river is so deep as that river.",
+        "This river is more deep as that river.",
+        "This river is than deep as that river."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_054",
+    "seedId": "asas_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "우리 교실은 음악실만큼 조용하다.",
+    "english": "Our classroom is as quiet as the music room.",
+    "words": [
+      "Our",
+      "classroom",
+      "is",
+      "as",
+      "quiet",
+      "as",
+      "the",
+      "music",
+      "room",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 교실은 음악실만큼 조용하다.",
+        "Our"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our classroom is than quiet as the music room.",
+      "statementForm": [
+        "Our classroom is as quiet as the music room.",
+        "Our classroom is as quiet as the music room"
+      ],
+      "fragmentForm": "Our classroom is as quiet as",
+      "wormholeVariants": [
+        "Our classroom is so quiet as the music room.",
+        "Our classroom is more quiet as the music room.",
+        "Our classroom is than quiet as the music room."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_055",
+    "seedId": "asas_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 뉴스는 영화만큼 놀라웠다.",
+    "english": "The news was as surprising as a movie.",
+    "words": [
+      "The",
+      "news",
+      "was",
+      "as",
+      "surprising",
+      "as",
+      "a",
+      "movie",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 뉴스는 영화만큼 놀라웠다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news was than surprising as a movie.",
+      "statementForm": [
+        "The news was as surprising as a movie.",
+        "The news was as surprising as a movie"
+      ],
+      "fragmentForm": "The news was as surprising as",
+      "wormholeVariants": [
+        "The news was so surprising as a movie.",
+        "The news was more surprising as a movie.",
+        "The news was than surprising as a movie."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_056",
+    "seedId": "asas_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀의 목소리는 종소리만큼 맑다.",
+    "english": "Her voice is as clear as a bell.",
+    "words": [
+      "Her",
+      "voice",
+      "is",
+      "as",
+      "clear",
+      "as",
+      "a",
+      "bell",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀의 목소리는 종소리만큼 맑다.",
+        "Her"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Her voice is than clear as a bell.",
+      "statementForm": [
+        "Her voice is as clear as a bell.",
+        "Her voice is as clear as a bell"
+      ],
+      "fragmentForm": "Her voice is as clear as",
+      "wormholeVariants": [
+        "Her voice is so clear as a bell.",
+        "Her voice is more clear as a bell.",
+        "Her voice is than clear as a bell."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_057",
+    "seedId": "asas_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 코치만큼 경기 규칙을 잘 안다.",
+    "english": "He knows the rules as well as the coach.",
+    "words": [
+      "He",
+      "knows",
+      "the",
+      "rules",
+      "as",
+      "well",
+      "as",
+      "the",
+      "coach",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 코치만큼 경기 규칙을 잘 안다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He knows the rules than well as the coach.",
+      "statementForm": [
+        "He knows the rules as well as the coach.",
+        "He knows the rules as well as the coach"
+      ],
+      "fragmentForm": "He knows the rules as well",
+      "wormholeVariants": [
+        "He knows the rules so well as the coach.",
+        "He knows the rules more well as the coach.",
+        "He knows the rules than well as the coach."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_058",
+    "seedId": "asas_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 문장은 저 문장만큼 길다.",
+    "english": "This sentence is as long as that sentence.",
+    "words": [
+      "This",
+      "sentence",
+      "is",
+      "as",
+      "long",
+      "as",
+      "that",
+      "sentence",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문장은 저 문장만큼 길다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This sentence is than long as that sentence.",
+      "statementForm": [
+        "This sentence is as long as that sentence.",
+        "This sentence is as long as that sentence"
+      ],
+      "fragmentForm": "This sentence is as long as",
+      "wormholeVariants": [
+        "This sentence is so long as that sentence.",
+        "This sentence is more long as that sentence.",
+        "This sentence is than long as that sentence."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_059",
+    "seedId": "asas_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 의자는 저 의자만큼 편안하다.",
+    "english": "This chair is as comfortable as that chair.",
+    "words": [
+      "This",
+      "chair",
+      "is",
+      "as",
+      "comfortable",
+      "as",
+      "that",
+      "chair",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 의자는 저 의자만큼 편안하다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This chair is than comfortable as that chair.",
+      "statementForm": [
+        "This chair is as comfortable as that chair.",
+        "This chair is as comfortable as that chair"
+      ],
+      "fragmentForm": "This chair is as comfortable as",
+      "wormholeVariants": [
+        "This chair is so comfortable as that chair.",
+        "This chair is more comfortable as that chair.",
+        "This chair is than comfortable as that chair."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_060",
+    "seedId": "asas_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "우리 팀은 상대 팀만큼 강하다.",
+    "english": "Our team is as strong as the other team.",
+    "words": [
+      "Our",
+      "team",
+      "is",
+      "as",
+      "strong",
+      "as",
+      "the",
+      "other",
+      "team",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 팀은 상대 팀만큼 강하다.",
+        "Our"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our team is than strong as the other team.",
+      "statementForm": [
+        "Our team is as strong as the other team.",
+        "Our team is as strong as the other team"
+      ],
+      "fragmentForm": "Our team is as strong as",
+      "wormholeVariants": [
+        "Our team is so strong as the other team.",
+        "Our team is more strong as the other team.",
+        "Our team is than strong as the other team."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_061",
+    "seedId": "asas_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 연필은 네 연필만큼 길지 않다.",
+    "english": "This pencil is not as long as your pencil.",
+    "words": [
+      "This",
+      "pencil",
+      "is",
+      "not",
+      "as",
+      "long",
+      "as",
+      "your",
+      "pencil",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 연필은 네 연필만큼 길지 않다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This pencil is not so long as your pencil.",
+      "statementForm": [
+        "This pencil is not as long as your pencil.",
+        "This pencil is not as long as your pencil"
+      ],
+      "fragmentForm": "This pencil is not as long",
+      "wormholeVariants": [
+        "This pencil is not than long as your pencil.",
+        "This pencil is not more long as your pencil."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_062",
+    "seedId": "asas_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "기차는 비행기만큼 빠르지 않다.",
+    "english": "The train is not as fast as the airplane.",
+    "words": [
+      "The",
+      "train",
+      "is",
+      "not",
+      "as",
+      "fast",
+      "as",
+      "the",
+      "airplane",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "기차는 비행기만큼 빠르지 않다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The train is not so fast as the airplane.",
+      "statementForm": [
+        "The train is not as fast as the airplane.",
+        "The train is not as fast as the airplane"
+      ],
+      "fragmentForm": "The train is not as fast",
+      "wormholeVariants": [
+        "The train is not than fast as the airplane.",
+        "The train is not more fast as the airplane."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_063",
+    "seedId": "asas_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "겨울은 여름만큼 습하지 않다.",
+    "english": "Winter is not as humid as summer.",
+    "words": [
+      "Winter",
+      "is",
+      "not",
+      "as",
+      "humid",
+      "as",
+      "summer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "겨울은 여름만큼 습하지 않다.",
+        "Winter"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Winter is not so humid as summer.",
+      "statementForm": [
+        "Winter is not as humid as summer.",
+        "Winter is not as humid as summer"
+      ],
+      "fragmentForm": "Winter is not as humid as",
+      "wormholeVariants": [
+        "Winter is not than humid as summer.",
+        "Winter is not more humid as summer."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_064",
+    "seedId": "asas_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 스마트폰은 최신 모델만큼 비싸지 않다.",
+    "english": "This smartphone is not as expensive as the latest model.",
+    "words": [
+      "This",
+      "smartphone",
+      "is",
+      "not",
+      "as",
+      "expensive",
+      "as",
+      "the",
+      "latest",
+      "model",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 스마트폰은 최신 모델만큼 비싸지 않다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This smartphone is not so expensive as the latest model.",
+      "statementForm": [
+        "This smartphone is not as expensive as the latest model.",
+        "This smartphone is not as expensive as the latest model"
+      ],
+      "fragmentForm": "This smartphone is not as expensive",
+      "wormholeVariants": [
+        "This smartphone is not than expensive as the latest model.",
+        "This smartphone is not more expensive as the latest model."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_065",
+    "seedId": "asas_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "내 성적은 친구의 성적만큼 좋지 않다.",
+    "english": "My grades are not as good as my friend's grades.",
+    "words": [
+      "My",
+      "grades",
+      "are",
+      "not",
+      "as",
+      "good",
+      "as",
+      "my",
+      "friend's",
+      "grades",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 성적은 친구의 성적만큼 좋지 않다.",
+        "My"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "My grades are not so good as my friend's grades.",
+      "statementForm": [
+        "My grades are not as good as my friend's grades.",
+        "My grades are not as good as my friend's grades"
+      ],
+      "fragmentForm": "My grades are not as good",
+      "wormholeVariants": [
+        "My grades are not than good as my friend's grades.",
+        "My grades are not more good as my friend's grades."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_066",
+    "seedId": "asas_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 영화는 예고편만큼 흥미롭지 않았다.",
+    "english": "This movie was not as interesting as the trailer.",
+    "words": [
+      "This",
+      "movie",
+      "was",
+      "not",
+      "as",
+      "interesting",
+      "as",
+      "the",
+      "trailer",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 영화는 예고편만큼 흥미롭지 않았다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This movie was not so interesting as the trailer.",
+      "statementForm": [
+        "This movie was not as interesting as the trailer.",
+        "This movie was not as interesting as the trailer"
+      ],
+      "fragmentForm": "This movie was not as interesting",
+      "wormholeVariants": [
+        "This movie was not than interesting as the trailer.",
+        "This movie wmore not as interesting as the trailer."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_067",
+    "seedId": "asas_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 예전만큼 자주 운동하지 않는다.",
+    "english": "He does not exercise as often as before.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "exercise",
+      "as",
+      "often",
+      "as",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 예전만큼 자주 운동하지 않는다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He does not exercise than often as before.",
+      "statementForm": [
+        "He does not exercise as often as before.",
+        "He does not exercise as often as before"
+      ],
+      "fragmentForm": "He does not exercise as often",
+      "wormholeVariants": [
+        "He does not exercise so often as before.",
+        "He does not exercise more often as before.",
+        "He does not exercise than often as before."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_068",
+    "seedId": "asas_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "나는 어제만큼 열심히 공부하지 않았다.",
+    "english": "I did not study as hard as I did yesterday.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "study",
+      "as",
+      "hard",
+      "as",
+      "I",
+      "did",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 어제만큼 열심히 공부하지 않았다.",
+        "I"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not study than hard as I did yesterday.",
+      "statementForm": [
+        "I did not study as hard as I did yesterday.",
+        "I did not study as hard as I did yesterday"
+      ],
+      "fragmentForm": "I did not study as hard",
+      "wormholeVariants": [
+        "I did not study so hard as I did yesterday.",
+        "I did not study more hard as I did yesterday.",
+        "I did not study than hard as I did yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_069",
+    "seedId": "asas_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 방은 거실만큼 깨끗하지 않다.",
+    "english": "This room is not as clean as the living room.",
+    "words": [
+      "This",
+      "room",
+      "is",
+      "not",
+      "as",
+      "clean",
+      "as",
+      "the",
+      "living",
+      "room",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 방은 거실만큼 깨끗하지 않다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This room is not so clean as the living room.",
+      "statementForm": [
+        "This room is not as clean as the living room.",
+        "This room is not as clean as the living room"
+      ],
+      "fragmentForm": "This room is not as clean",
+      "wormholeVariants": [
+        "This room is not than clean as the living room.",
+        "This room is not more clean as the living room."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_070",
+    "seedId": "asas_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 수프는 어제 먹은 수프만큼 뜨겁지 않다.",
+    "english": "The soup is not as hot as the soup I ate yesterday.",
+    "words": [
+      "The",
+      "soup",
+      "is",
+      "not",
+      "as",
+      "hot",
+      "as",
+      "the",
+      "soup",
+      "I",
+      "ate",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 수프는 어제 먹은 수프만큼 뜨겁지 않다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The soup is not so hot as the soup I ate yesterday.",
+      "statementForm": [
+        "The soup is not as hot as the soup I ate yesterday.",
+        "The soup is not as hot as the soup I ate yesterday"
+      ],
+      "fragmentForm": "The soup is not as hot",
+      "wormholeVariants": [
+        "The soup is not than hot as the soup I ate yesterday.",
+        "The soup is not more hot as the soup I ate yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_071",
+    "seedId": "asas_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 책은 그 책만큼 두껍니?",
+    "english": "Is this book as thick as that book?",
+    "words": [
+      "Is",
+      "this",
+      "book",
+      "as",
+      "thick",
+      "as",
+      "that",
+      "book",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 책은 그 책만큼 두껍니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this book than thick as that book?",
+      "statementForm": [
+        "Is this book as thick as that book?",
+        "Is this book as thick as that book"
+      ],
+      "fragmentForm": "Is this book as thick as",
+      "wormholeVariants": [
+        "Is this book so thick as that book?",
+        "Is this book more thick as that book?",
+        "Is this book than thick as that book?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_072",
+    "seedId": "asas_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 형만큼 수영을 잘하니?",
+    "english": "Does he swim as well as his older brother?",
+    "words": [
+      "Does",
+      "he",
+      "swim",
+      "as",
+      "well",
+      "as",
+      "his",
+      "older",
+      "brother",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 형만큼 수영을 잘하니?",
+        "Does"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does he swim than well as his older brother?",
+      "statementForm": [
+        "Does he swim as well as his older brother?",
+        "Does he swim as well as his older brother"
+      ],
+      "fragmentForm": "Does he swim as well as",
+      "wormholeVariants": [
+        "Does he swim so well as his older brother?",
+        "Does he swim more well as his older brother?",
+        "Does he swim than well as his older brother?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_073",
+    "seedId": "asas_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 길은 저 길만큼 안전하니?",
+    "english": "Is this road as safe as that road?",
+    "words": [
+      "Is",
+      "this",
+      "road",
+      "as",
+      "safe",
+      "as",
+      "that",
+      "road",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 길은 저 길만큼 안전하니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this road than safe as that road?",
+      "statementForm": [
+        "Is this road as safe as that road?",
+        "Is this road as safe as that road"
+      ],
+      "fragmentForm": "Is this road as safe as",
+      "wormholeVariants": [
+        "Is this road so safe as that road?",
+        "Is this road more safe as that road?",
+        "Is this road than safe as that road?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_074",
+    "seedId": "asas_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "과학은 역사만큼 중요하니?",
+    "english": "Is science as important as history?",
+    "words": [
+      "Is",
+      "science",
+      "as",
+      "important",
+      "as",
+      "history",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "과학은 역사만큼 중요하니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is science than important as history?",
+      "statementForm": [
+        "Is science as important as history?",
+        "Is science as important as history"
+      ],
+      "fragmentForm": "Is science as important as history",
+      "wormholeVariants": [
+        "Is science so important as history?",
+        "Is science more important as history?",
+        "Is science than important as history?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_075",
+    "seedId": "asas_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 셔츠는 저 셔츠만큼 비싸니?",
+    "english": "Is this shirt as expensive as that shirt?",
+    "words": [
+      "Is",
+      "this",
+      "shirt",
+      "as",
+      "expensive",
+      "as",
+      "that",
+      "shirt",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 셔츠는 저 셔츠만큼 비싸니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this shirt than expensive as that shirt?",
+      "statementForm": [
+        "Is this shirt as expensive as that shirt?",
+        "Is this shirt as expensive as that shirt"
+      ],
+      "fragmentForm": "Is this shirt as expensive as",
+      "wormholeVariants": [
+        "Is this shirt so expensive as that shirt?",
+        "Is this shirt more expensive as that shirt?",
+        "Is this shirt than expensive as that shirt?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_076",
+    "seedId": "asas_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 친구만큼 차분하게 말하니?",
+    "english": "Does she speak as calmly as her friend?",
+    "words": [
+      "Does",
+      "she",
+      "speak",
+      "as",
+      "calmly",
+      "as",
+      "her",
+      "friend",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 친구만큼 차분하게 말하니?",
+        "Does"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does she speak than calmly as her friend?",
+      "statementForm": [
+        "Does she speak as calmly as her friend?",
+        "Does she speak as calmly as her friend"
+      ],
+      "fragmentForm": "Does she speak as calmly as",
+      "wormholeVariants": [
+        "Does she speak so calmly as her friend?",
+        "Does she speak more calmly as her friend?",
+        "Does she speak than calmly as her friend?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_077",
+    "seedId": "asas_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "우리 팀은 상대 팀만큼 강하니?",
+    "english": "Is our team as strong as the other team?",
+    "words": [
+      "Is",
+      "our",
+      "team",
+      "as",
+      "strong",
+      "as",
+      "the",
+      "other",
+      "team",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 팀은 상대 팀만큼 강하니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is our team than strong as the other team?",
+      "statementForm": [
+        "Is our team as strong as the other team?",
+        "Is our team as strong as the other team"
+      ],
+      "fragmentForm": "Is our team as strong as",
+      "wormholeVariants": [
+        "Is our team so strong as the other team?",
+        "Is our team more strong as the other team?",
+        "Is our team than strong as the other team?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_078",
+    "seedId": "asas_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 의자는 저 의자만큼 편안하니?",
+    "english": "Is this chair as comfortable as that chair?",
+    "words": [
+      "Is",
+      "this",
+      "chair",
+      "as",
+      "comfortable",
+      "as",
+      "that",
+      "chair",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 의자는 저 의자만큼 편안하니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this chair than comfortable as that chair?",
+      "statementForm": [
+        "Is this chair as comfortable as that chair?",
+        "Is this chair as comfortable as that chair"
+      ],
+      "fragmentForm": "Is this chair as comfortable as",
+      "wormholeVariants": [
+        "Is this chair so comfortable as that chair?",
+        "Is this chair more comfortable as that chair?",
+        "Is this chair than comfortable as that chair?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_079",
+    "seedId": "asas_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 코치만큼 경기 규칙을 잘 아니?",
+    "english": "Does he know the rules as well as the coach?",
+    "words": [
+      "Does",
+      "he",
+      "know",
+      "the",
+      "rules",
+      "as",
+      "well",
+      "as",
+      "the",
+      "coach",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 코치만큼 경기 규칙을 잘 아니?",
+        "Does"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does he know the rules than well as the coach?",
+      "statementForm": [
+        "Does he know the rules as well as the coach?",
+        "Does he know the rules as well as the coach"
+      ],
+      "fragmentForm": "Does he know the rules as",
+      "wormholeVariants": [
+        "Does he know the rules so well as the coach?",
+        "Does he know the rules more well as the coach?",
+        "Does he know the rules than well as the coach?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_080",
+    "seedId": "asas_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 도시는 서울만큼 크니?",
+    "english": "Is this city as large as Seoul?",
+    "words": [
+      "Is",
+      "this",
+      "city",
+      "as",
+      "large",
+      "as",
+      "Seoul",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 도시는 서울만큼 크니?",
+        "Is"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "question",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this city than large as Seoul?",
+      "statementForm": [
+        "Is this city as large as Seoul?",
+        "Is this city as large as Seoul"
+      ],
+      "fragmentForm": "Is this city as large as",
+      "wormholeVariants": [
+        "Is this city so large as Seoul?",
+        "Is this city more large as Seoul?",
+        "Is this city than large as Seoul?"
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_081",
+    "seedId": "asas_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 가게는 시장만큼 붐빈다.",
+    "english": "The store is as crowded as the market.",
+    "words": [
+      "The",
+      "store",
+      "is",
+      "as",
+      "crowded",
+      "as",
+      "the",
+      "market",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가게는 시장만큼 붐빈다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The store is than crowded as the market.",
+      "statementForm": [
+        "The store is as crowded as the market.",
+        "The store is as crowded as the market"
+      ],
+      "fragmentForm": "The store is as crowded as",
+      "wormholeVariants": [
+        "The store is so crowded as the market.",
+        "The store is more crowded as the market.",
+        "The store is than crowded as the market."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_082",
+    "seedId": "asas_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 다리는 저 다리만큼 길다.",
+    "english": "This bridge is as long as that bridge.",
+    "words": [
+      "This",
+      "bridge",
+      "is",
+      "as",
+      "long",
+      "as",
+      "that",
+      "bridge",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 다리는 저 다리만큼 길다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This bridge is than long as that bridge.",
+      "statementForm": [
+        "This bridge is as long as that bridge.",
+        "This bridge is as long as that bridge"
+      ],
+      "fragmentForm": "This bridge is as long as",
+      "wormholeVariants": [
+        "This bridge is so long as that bridge.",
+        "This bridge is more long as that bridge.",
+        "This bridge is than long as that bridge."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_083",
+    "seedId": "asas_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 계획은 이전 계획만큼 현실적이다.",
+    "english": "The plan is as realistic as the previous plan.",
+    "words": [
+      "The",
+      "plan",
+      "is",
+      "as",
+      "realistic",
+      "as",
+      "the",
+      "previous",
+      "plan",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획은 이전 계획만큼 현실적이다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan is than realistic as the previous plan.",
+      "statementForm": [
+        "The plan is as realistic as the previous plan.",
+        "The plan is as realistic as the previous plan"
+      ],
+      "fragmentForm": "The plan is as realistic as",
+      "wormholeVariants": [
+        "The plan is so realistic as the previous plan.",
+        "The plan is more realistic as the previous plan.",
+        "The plan is than realistic as the previous plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_084",
+    "seedId": "asas_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 설명은 선생님의 설명만큼 명확하다.",
+    "english": "The explanation is as clear as the teacher's explanation.",
+    "words": [
+      "The",
+      "explanation",
+      "is",
+      "as",
+      "clear",
+      "as",
+      "the",
+      "teacher's",
+      "explanation",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 선생님의 설명만큼 명확하다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation is than clear as the teacher's explanation.",
+      "statementForm": [
+        "The explanation is as clear as the teacher's explanation.",
+        "The explanation is as clear as the teacher's explanation"
+      ],
+      "fragmentForm": "The explanation is as clear as",
+      "wormholeVariants": [
+        "The explanation is so clear as the teacher's explanation.",
+        "The explanation is more clear as the teacher's explanation.",
+        "The explanation is than clear as the teacher's explanation."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_085",
+    "seedId": "asas_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 반 친구들만큼 책임감이 있다.",
+    "english": "He is as responsible as his classmates.",
+    "words": [
+      "He",
+      "is",
+      "as",
+      "responsible",
+      "as",
+      "his",
+      "classmates",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 반 친구들만큼 책임감이 있다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is than responsible as his classmates.",
+      "statementForm": [
+        "He is as responsible as his classmates.",
+        "He is as responsible as his classmates"
+      ],
+      "fragmentForm": "He is as responsible as his",
+      "wormholeVariants": [
+        "He is so responsible as his classmates.",
+        "He is more responsible as his classmates.",
+        "He is than responsible as his classmates."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_086",
+    "seedId": "asas_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 연습은 실제 시험만큼 유용하다.",
+    "english": "This practice is as useful as a real test.",
+    "words": [
+      "This",
+      "practice",
+      "is",
+      "as",
+      "useful",
+      "as",
+      "a",
+      "real",
+      "test",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 연습은 실제 시험만큼 유용하다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This practice is than useful as a real test.",
+      "statementForm": [
+        "This practice is as useful as a real test.",
+        "This practice is as useful as a real test"
+      ],
+      "fragmentForm": "This practice is as useful as",
+      "wormholeVariants": [
+        "This practice is so useful as a real test.",
+        "This practice is more useful as a real test.",
+        "This practice is than useful as a real test."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_087",
+    "seedId": "asas_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 선생님만큼 세심하게 글을 읽는다.",
+    "english": "She reads the text as carefully as the teacher.",
+    "words": [
+      "She",
+      "reads",
+      "the",
+      "text",
+      "as",
+      "carefully",
+      "as",
+      "the",
+      "teacher",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 선생님만큼 세심하게 글을 읽는다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She reads the text than carefully as the teacher.",
+      "statementForm": [
+        "She reads the text as carefully as the teacher.",
+        "She reads the text as carefully as the teacher"
+      ],
+      "fragmentForm": "She reads the text as carefully",
+      "wormholeVariants": [
+        "She reads the text so carefully as the teacher.",
+        "She reads the text more carefully as the teacher.",
+        "She reads the text than carefully as the teacher."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_088",
+    "seedId": "asas_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 도시는 부산만큼 활기차다.",
+    "english": "This city is as lively as Busan.",
+    "words": [
+      "This",
+      "city",
+      "is",
+      "as",
+      "lively",
+      "as",
+      "Busan",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 도시는 부산만큼 활기차다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This city is than lively as Busan.",
+      "statementForm": [
+        "This city is as lively as Busan.",
+        "This city is as lively as Busan"
+      ],
+      "fragmentForm": "This city is as lively as",
+      "wormholeVariants": [
+        "This city is so lively as Busan.",
+        "This city is more lively as Busan.",
+        "This city is than lively as Busan."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_089",
+    "seedId": "asas_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 문제는 내가 예상한 것만큼 복잡하다.",
+    "english": "The problem is as complex as I expected.",
+    "words": [
+      "The",
+      "problem",
+      "is",
+      "as",
+      "complex",
+      "as",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 내가 예상한 것만큼 복잡하다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem is than complex as I expected.",
+      "statementForm": [
+        "The problem is as complex as I expected.",
+        "The problem is as complex as I expected"
+      ],
+      "fragmentForm": "The problem is as complex as",
+      "wormholeVariants": [
+        "The problem is so complex as I expected.",
+        "The problem is more complex as I expected.",
+        "The problem is than complex as I expected."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_090",
+    "seedId": "asas_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "이 노래는 지난 노래만큼 인기가 있다.",
+    "english": "This song is as popular as the last song.",
+    "words": [
+      "This",
+      "song",
+      "is",
+      "as",
+      "popular",
+      "as",
+      "the",
+      "last",
+      "song",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 노래는 지난 노래만큼 인기가 있다.",
+        "This"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "This song is than popular as the last song.",
+      "statementForm": [
+        "This song is as popular as the last song.",
+        "This song is as popular as the last song"
+      ],
+      "fragmentForm": "This song is as popular as",
+      "wormholeVariants": [
+        "This song is so popular as the last song.",
+        "This song is more popular as the last song.",
+        "This song is than popular as the last song."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_091",
+    "seedId": "asas_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 가게는 시장만큼 붐비지 않는다.",
+    "english": "The store is not as crowded as the market.",
+    "words": [
+      "The",
+      "store",
+      "is",
+      "not",
+      "as",
+      "crowded",
+      "as",
+      "the",
+      "market",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_as",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가게는 시장만큼 붐비지 않는다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The store is not so crowded as the market.",
+      "statementForm": [
+        "The store is not as crowded as the market.",
+        "The store is not as crowded as the market"
+      ],
+      "fragmentForm": "The store is not as crowded",
+      "wormholeVariants": [
+        "The store is not than crowded as the market.",
+        "The store is not more crowded as the market."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_092",
+    "seedId": "asas_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 계획은 이전 계획만큼 현실적이지 않다.",
+    "english": "The plan is not as realistic as the previous plan.",
+    "words": [
+      "The",
+      "plan",
+      "is",
+      "not",
+      "as",
+      "realistic",
+      "as",
+      "the",
+      "previous",
+      "plan",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획은 이전 계획만큼 현실적이지 않다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan is not so realistic as the previous plan.",
+      "statementForm": [
+        "The plan is not as realistic as the previous plan.",
+        "The plan is not as realistic as the previous plan"
+      ],
+      "fragmentForm": "The plan is not as realistic",
+      "wormholeVariants": [
+        "The plan is not than realistic as the previous plan.",
+        "The plan is not more realistic as the previous plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_093",
+    "seedId": "asas_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그 설명은 선생님의 설명만큼 명확하지 않다.",
+    "english": "The explanation is not as clear as the teacher's explanation.",
+    "words": [
+      "The",
+      "explanation",
+      "is",
+      "not",
+      "as",
+      "clear",
+      "as",
+      "the",
+      "teacher's",
+      "explanation",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 선생님의 설명만큼 명확하지 않다.",
+        "The"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation is not so clear as the teacher's explanation.",
+      "statementForm": [
+        "The explanation is not as clear as the teacher's explanation.",
+        "The explanation is not as clear as the teacher's explanation"
+      ],
+      "fragmentForm": "The explanation is not as clear",
+      "wormholeVariants": [
+        "The explanation is not than clear as the teacher's explanation.",
+        "The explanation is not more clear as the teacher's explanation."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_094",
+    "seedId": "asas_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그는 반 친구들만큼 책임감이 있지 않다.",
+    "english": "He is not as responsible as his classmates.",
+    "words": [
+      "He",
+      "is",
+      "not",
+      "as",
+      "responsible",
+      "as",
+      "his",
+      "classmates",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 반 친구들만큼 책임감이 있지 않다.",
+        "He"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "negative",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is not so responsible as his classmates.",
+      "statementForm": [
+        "He is not as responsible as his classmates.",
+        "He is not as responsible as his classmates"
+      ],
+      "fragmentForm": "He is not as responsible as",
+      "wormholeVariants": [
+        "He is not than responsible as his classmates.",
+        "He is not more responsible as his classmates."
+      ]
+    }
+  },
+  {
+    "id": "m2_asas_095",
+    "seedId": "asas_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "as_as",
+    "chapterLabelKo": "원급 비교",
+    "korean": "그녀는 선생님만큼 세심하게 글을 읽지 않는다.",
+    "english": "She does not read the text as carefully as the teacher.",
+    "words": [
+      "She",
+      "does",
+      "not",
+      "read",
+      "the",
+      "text",
+      "as",
+      "carefully",
+      "as",
+      "the",
+      "teacher",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "as_as",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 선생님만큼 세심하게 글을 읽지 않는다.",
+        "She"
+      ],
+      [
+        "as ~ as",
+        "as + adjective/adverb + as"
+      ],
+      [
+        "주의",
+        "use as + adjective/adverb + as; use not as ~ as for negative comparison"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "not",
+      "than"
+    ],
+    "blankTargets": [
+      "as",
+      "as"
+    ],
+    "tags": [
+      "as_as",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She does not read the text than carefully as the teacher.",
+      "statementForm": [
+        "She does not read the text as carefully as the teacher.",
+        "She does not read the text as carefully as the teacher"
+      ],
+      "fragmentForm": "She does not read the text",
+      "wormholeVariants": [
+        "She does not read the text so carefully as the teacher.",
+        "She does not read the text more carefully as the teacher.",
+        "She does not read the text than carefully as the teacher."
+      ]
+    }
+  }
+]
