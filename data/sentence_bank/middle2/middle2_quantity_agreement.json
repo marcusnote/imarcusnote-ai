@@ -1,0 +1,7005 @@
+[
+  {
+    "id": "m2_quantity_agreement_001",
+    "seedId": "quantity_agreement_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 학생은 사물함이 하나씩 있다.",
+    "english": "Each student has a locker.",
+    "words": [
+      "Each",
+      "student",
+      "has",
+      "a",
+      "locker",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 학생은 사물함이 하나씩 있다.",
+        "each / student / has / a / locker"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the students have a locker.",
+      "statementForm": [
+        "Each student has a locker.",
+        "Each student has a locker"
+      ],
+      "fragmentForm": "each / student / has / a / locker",
+      "wormholeVariants": [
+        "Each of the students have a locker.",
+        "Each student have a locker."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_002",
+    "seedId": "quantity_agreement_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "학생들 각각은 사물함이 하나씩 있다.",
+    "english": "Each of the students has a locker.",
+    "words": [
+      "Each",
+      "of",
+      "the",
+      "students",
+      "has",
+      "a",
+      "locker",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들 각각은 사물함이 하나씩 있다.",
+        "each / of / the / students / has / a / locker"
+      ],
+      [
+        "Each of the",
+        "each of the"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the students have a locker.",
+      "statementForm": [
+        "Each of the students has a locker.",
+        "Each of the students has a locker"
+      ],
+      "fragmentForm": "each / of / the / students / has / a / locker",
+      "wormholeVariants": [
+        "Each of the students have a locker.",
+        "Each of the student have a locker."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_003",
+    "seedId": "quantity_agreement_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 아이는 도시락을 가져온다.",
+    "english": "Each child brings a lunch box.",
+    "words": [
+      "Each",
+      "child",
+      "brings",
+      "a",
+      "lunch",
+      "box",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 아이는 도시락을 가져온다.",
+        "each / child / brings / a / lunch / box"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each child bring a lunch box.",
+      "statementForm": [
+        "Each child brings a lunch box.",
+        "Each child brings a lunch box"
+      ],
+      "fragmentForm": "each / child / brings / a / lunch / box",
+      "wormholeVariants": [
+        "Each child bring a lunch box.",
+        "Each of the children bring a lunch box.",
+        "Each of the children have a lunch box."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_004",
+    "seedId": "quantity_agreement_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 방에는 창문이 하나씩 있다.",
+    "english": "Each room has a window.",
+    "words": [
+      "Each",
+      "room",
+      "has",
+      "a",
+      "window",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 방에는 창문이 하나씩 있다.",
+        "each / room / has / a / window"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the rooms have a window.",
+      "statementForm": [
+        "Each room has a window.",
+        "Each room has a window"
+      ],
+      "fragmentForm": "each / room / has / a / window",
+      "wormholeVariants": [
+        "Each of the rooms have a window.",
+        "Each room have a window."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_005",
+    "seedId": "quantity_agreement_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 구성원은 역할이 있다.",
+    "english": "Each member has a role.",
+    "words": [
+      "Each",
+      "member",
+      "has",
+      "a",
+      "role",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 구성원은 역할이 있다.",
+        "each / member / has / a / role"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the members have a role.",
+      "statementForm": [
+        "Each member has a role.",
+        "Each member has a role"
+      ],
+      "fragmentForm": "each / member / has / a / role",
+      "wormholeVariants": [
+        "Each of the members have a role.",
+        "Each member have a role."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_006",
+    "seedId": "quantity_agreement_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 문제에는 정답이 하나씩 있다.",
+    "english": "Each question has one clear answer.",
+    "words": [
+      "Each",
+      "question",
+      "has",
+      "one",
+      "clear",
+      "answer",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 문제에는 정답이 하나씩 있다.",
+        "each / question / has / one / clear / answer"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the questions have one clear answer.",
+      "statementForm": [
+        "Each question has one clear answer.",
+        "Each question has one clear answer"
+      ],
+      "fragmentForm": "each / question / has / one / clear / answer",
+      "wormholeVariants": [
+        "Each of the questions have one clear answer.",
+        "Each question have one clear answer."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_007",
+    "seedId": "quantity_agreement_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 책은 새것이다.",
+    "english": "Each book is new.",
+    "words": [
+      "Each",
+      "book",
+      "is",
+      "new",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 책은 새것이다.",
+        "each / book / is / new"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the books are new.",
+      "statementForm": [
+        "Each book is new.",
+        "Each book is new"
+      ],
+      "fragmentForm": "each / book / is / new",
+      "wormholeVariants": [
+        "Each of the books are new.",
+        "Each book are new."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_008",
+    "seedId": "quantity_agreement_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 학생은 공책이 있나요?",
+    "english": "Does each student have a notebook?",
+    "words": [
+      "Does",
+      "each",
+      "student",
+      "have",
+      "a",
+      "notebook",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 학생은 공책이 있나요?",
+        "does / each / student / have / a / notebook"
+      ],
+      [
+        "each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "question",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do each student have a notebook?",
+      "statementForm": [
+        "Does each student have a notebook?",
+        "Does each student have a notebook"
+      ],
+      "fragmentForm": "does / each / student / have / a / notebook",
+      "wormholeVariants": [
+        "Do each student have a notebook?",
+        "Does each student has a notebook?",
+        "Do each student has a notebook?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_009",
+    "seedId": "quantity_agreement_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 선수는 유니폼이 있나요?",
+    "english": "Does each player have a uniform?",
+    "words": [
+      "Does",
+      "each",
+      "player",
+      "have",
+      "a",
+      "uniform",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 선수는 유니폼이 있나요?",
+        "does / each / player / have / a / uniform"
+      ],
+      [
+        "each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "question",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do each player have a uniform?",
+      "statementForm": [
+        "Does each player have a uniform?",
+        "Does each player have a uniform"
+      ],
+      "fragmentForm": "does / each / player / have / a / uniform",
+      "wormholeVariants": [
+        "Do each player have a uniform?",
+        "Does each player has a uniform?",
+        "Do each player has a uniform?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_010",
+    "seedId": "quantity_agreement_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 학생이 졸린 것은 아니다.",
+    "english": "Not every student is sleepy.",
+    "words": [
+      "Not",
+      "every",
+      "student",
+      "is",
+      "sleepy",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 학생이 졸린 것은 아니다.",
+        "not / every / student / is / sleepy"
+      ],
+      [
+        "every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Not every student are sleepy.",
+      "statementForm": [
+        "Not every student is sleepy.",
+        "Not every student is sleepy"
+      ],
+      "fragmentForm": "not / every / student / is / sleepy",
+      "wormholeVariants": [
+        "Not every student are sleepy.",
+        "Not every one of the students are sleepy."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_011",
+    "seedId": "quantity_agreement_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 창문은 닫혀 있다.",
+    "english": "Each window is closed.",
+    "words": [
+      "Each",
+      "window",
+      "is",
+      "closed",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 창문은 닫혀 있다.",
+        "each / window / is / closed"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the windows are closed.",
+      "statementForm": [
+        "Each window is closed.",
+        "Each window is closed"
+      ],
+      "fragmentForm": "each / window / is / closed",
+      "wormholeVariants": [
+        "Each of the windows are closed.",
+        "Each window are closed."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_012",
+    "seedId": "quantity_agreement_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 소녀는 준비가 되었다.",
+    "english": "Each girl is ready.",
+    "words": [
+      "Each",
+      "girl",
+      "is",
+      "ready",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 소녀는 준비가 되었다.",
+        "each / girl / is / ready"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the girls are ready.",
+      "statementForm": [
+        "Each girl is ready.",
+        "Each girl is ready"
+      ],
+      "fragmentForm": "each / girl / is / ready",
+      "wormholeVariants": [
+        "Each of the girls are ready.",
+        "Each girl are ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_013",
+    "seedId": "quantity_agreement_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "각 연습 시간은 중요하다.",
+    "english": "Each practice session is important.",
+    "words": [
+      "Each",
+      "practice",
+      "session",
+      "is",
+      "important",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "각 연습 시간은 중요하다.",
+        "each / practice / session / is / important"
+      ],
+      [
+        "Each",
+        "each"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "each",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "blankTargets": [
+      "Each"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "each",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_each"
+    ],
+    "distractorSeeds": {
+      "auxError": "Each of the practice sessions are important.",
+      "statementForm": [
+        "Each practice session is important.",
+        "Each practice session is important"
+      ],
+      "fragmentForm": "each / practice / session / is / important",
+      "wormholeVariants": [
+        "Each of the practice sessions are important.",
+        "Each practice session are important."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_014",
+    "seedId": "quantity_agreement_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 학생은 일정표가 있다.",
+    "english": "Every student has a schedule.",
+    "words": [
+      "Every",
+      "student",
+      "has",
+      "a",
+      "schedule",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 학생은 일정표가 있다.",
+        "every / student / has / a / schedule"
+      ],
+      [
+        "Every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every one of the students have a schedule.",
+      "statementForm": [
+        "Every student has a schedule.",
+        "Every student has a schedule"
+      ],
+      "fragmentForm": "every / student / has / a / schedule",
+      "wormholeVariants": [
+        "Every one of the students have a schedule.",
+        "Every student have a schedule."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_015",
+    "seedId": "quantity_agreement_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "책장 위의 모든 책은 깨끗하다.",
+    "english": "Every book on the shelf is clean.",
+    "words": [
+      "Every",
+      "book",
+      "on",
+      "the",
+      "shelf",
+      "is",
+      "clean",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책장 위의 모든 책은 깨끗하다.",
+        "every / book / on / the / shelf / is / clean"
+      ],
+      [
+        "Every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every one of the books on the shelf are clean.",
+      "statementForm": [
+        "Every book on the shelf is clean.",
+        "Every book on the shelf is clean"
+      ],
+      "fragmentForm": "every / book / on / the / shelf / is / clean",
+      "wormholeVariants": [
+        "Every one of the books on the shelf are clean.",
+        "Every book on the shelf are clean."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_016",
+    "seedId": "quantity_agreement_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 아이는 가끔 도움이 필요하다.",
+    "english": "Every child needs help sometimes.",
+    "words": [
+      "Every",
+      "child",
+      "needs",
+      "help",
+      "sometimes",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 아이는 가끔 도움이 필요하다.",
+        "every / child / needs / help / sometimes"
+      ],
+      [
+        "Every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every one of the children need help sometimes.",
+      "statementForm": [
+        "Every child needs help sometimes.",
+        "Every child needs help sometimes"
+      ],
+      "fragmentForm": "every / child / needs / help / sometimes",
+      "wormholeVariants": [
+        "Every one of the children need help sometimes.",
+        "Every children need help sometimes.",
+        "Every child need help sometimes."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_017",
+    "seedId": "quantity_agreement_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 학생들 각각은 준비되어 있다.",
+    "english": "Every one of the students is ready.",
+    "words": [
+      "Every",
+      "one",
+      "of",
+      "the",
+      "students",
+      "is",
+      "ready",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생들 각각은 준비되어 있다.",
+        "every / one / of / the / students / is / ready"
+      ],
+      [
+        "Every one of the",
+        "every one of the"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every one of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every one of the students are ready.",
+      "statementForm": [
+        "Every one of the students is ready.",
+        "Every one of the students is ready"
+      ],
+      "fragmentForm": "every / one / of / the / students / is / ready",
+      "wormholeVariants": [
+        "Every one of the students are ready.",
+        "Every one of the student are ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_018",
+    "seedId": "quantity_agreement_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 방에는 창문이 하나씩 있다.",
+    "english": "Every room has a window.",
+    "words": [
+      "Every",
+      "room",
+      "has",
+      "a",
+      "window",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 방에는 창문이 하나씩 있다.",
+        "every / room / has / a / window"
+      ],
+      [
+        "Every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every one of the rooms have a window.",
+      "statementForm": [
+        "Every room has a window.",
+        "Every room has a window"
+      ],
+      "fragmentForm": "every / room / has / a / window",
+      "wormholeVariants": [
+        "Every one of the rooms have a window.",
+        "Every room have a window."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_019",
+    "seedId": "quantity_agreement_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 학생은 카드를 가지고 있나요?",
+    "english": "Does every student have a card?",
+    "words": [
+      "Does",
+      "every",
+      "student",
+      "have",
+      "a",
+      "card",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 학생은 카드를 가지고 있나요?",
+        "does / every / student / have / a / card"
+      ],
+      [
+        "every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "question",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do every student have a card?",
+      "statementForm": [
+        "Does every student have a card?",
+        "Does every student have a card"
+      ],
+      "fragmentForm": "does / every / student / have / a / card",
+      "wormholeVariants": [
+        "Do every student have a card?",
+        "Does every student has a card?",
+        "Do every student has a card?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_020",
+    "seedId": "quantity_agreement_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "책장 위의 모든 책은 새것인가요?",
+    "english": "Is every book on the shelf new?",
+    "words": [
+      "Is",
+      "every",
+      "book",
+      "on",
+      "the",
+      "shelf",
+      "new",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책장 위의 모든 책은 새것인가요?",
+        "is / every / book / on / the / shelf / new"
+      ],
+      [
+        "every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "question",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are every book on the shelf new?",
+      "statementForm": [
+        "Is every book on the shelf new?",
+        "Is every book on the shelf new"
+      ],
+      "fragmentForm": "is / every / book / on / the / shelf / new",
+      "wormholeVariants": [
+        "Are every book on the shelf new?",
+        "Are every one of the books new?",
+        "Is every one of the books are new?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_021",
+    "seedId": "quantity_agreement_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 학생이 늘 조용한 것은 아니다.",
+    "english": "Not every student is quiet.",
+    "words": [
+      "Not",
+      "every",
+      "student",
+      "is",
+      "quiet",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 학생이 늘 조용한 것은 아니다.",
+        "not / every / student / is / quiet"
+      ],
+      [
+        "every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Not every student are quiet.",
+      "statementForm": [
+        "Not every student is quiet.",
+        "Not every student is quiet"
+      ],
+      "fragmentForm": "not / every / student / is / quiet",
+      "wormholeVariants": [
+        "Not every student are quiet.",
+        "Not every one of the students are quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_022",
+    "seedId": "quantity_agreement_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 선수는 헬멧을 써야 한다.",
+    "english": "Every player must wear a helmet.",
+    "words": [
+      "Every",
+      "player",
+      "must",
+      "wear",
+      "a",
+      "helmet",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 선수는 헬멧을 써야 한다.",
+        "every / player / must / wear / a / helmet"
+      ],
+      [
+        "Every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every player must wears a helmet.",
+      "statementForm": [
+        "Every player must wear a helmet.",
+        "Every player must wear a helmet"
+      ],
+      "fragmentForm": "every / player / must / wear / a / helmet",
+      "wormholeVariants": [
+        "Every player must wears a helmet.",
+        "Every one of the players must wears a helmet."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_023",
+    "seedId": "quantity_agreement_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "매일이 바쁘게 느껴진다.",
+    "english": "Every day feels busy.",
+    "words": [
+      "Every",
+      "day",
+      "feels",
+      "busy",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "매일이 바쁘게 느껴진다.",
+        "every / day / feels / busy"
+      ],
+      [
+        "Every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every day feel busy.",
+      "statementForm": [
+        "Every day feels busy.",
+        "Every day feels busy"
+      ],
+      "fragmentForm": "every / day / feels / busy",
+      "wormholeVariants": [
+        "Every day feel busy.",
+        "Every one of the days feels busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_024",
+    "seedId": "quantity_agreement_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 교사는 숙제를 확인한다.",
+    "english": "Every teacher checks the homework.",
+    "words": [
+      "Every",
+      "teacher",
+      "checks",
+      "the",
+      "homework",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 교사는 숙제를 확인한다.",
+        "every / teacher / checks / the / homework"
+      ],
+      [
+        "Every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every one of the teachers check the homework.",
+      "statementForm": [
+        "Every teacher checks the homework.",
+        "Every teacher checks the homework"
+      ],
+      "fragmentForm": "every / teacher / checks / the / homework",
+      "wormholeVariants": [
+        "Every one of the teachers check the homework.",
+        "Every teacher check the homework."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_025",
+    "seedId": "quantity_agreement_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 팀원은 중요하다.",
+    "english": "Every team member is important.",
+    "words": [
+      "Every",
+      "team",
+      "member",
+      "is",
+      "important",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 팀원은 중요하다.",
+        "every / team / member / is / important"
+      ],
+      [
+        "Every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "Every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Every one of the team members are important.",
+      "statementForm": [
+        "Every team member is important.",
+        "Every team member is important"
+      ],
+      "fragmentForm": "every / team / member / is / important",
+      "wormholeVariants": [
+        "Every one of the team members are important.",
+        "Every team member are important."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_026",
+    "seedId": "quantity_agreement_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 답이 늘 맞는 것은 아니다.",
+    "english": "Not every answer is correct.",
+    "words": [
+      "Not",
+      "every",
+      "answer",
+      "is",
+      "correct",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 답이 늘 맞는 것은 아니다.",
+        "not / every / answer / is / correct"
+      ],
+      [
+        "every",
+        "every"
+      ],
+      [
+        "주의",
+        "each, every 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "every",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "blankTargets": [
+      "every"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "every",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_every"
+    ],
+    "distractorSeeds": {
+      "auxError": "Not every answer are correct.",
+      "statementForm": [
+        "Not every answer is correct.",
+        "Not every answer is correct"
+      ],
+      "fragmentForm": "not / every / answer / is / correct",
+      "wormholeVariants": [
+        "Not every answer are correct.",
+        "Not every one of the answers are correct."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_027",
+    "seedId": "quantity_agreement_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 학생은 준비되어 있다.",
+    "english": "All students are ready.",
+    "words": [
+      "All",
+      "students",
+      "are",
+      "ready",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 학생은 준비되어 있다.",
+        "all / students / are / ready"
+      ],
+      [
+        "All",
+        "all"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All student is ready.",
+      "statementForm": [
+        "All students are ready.",
+        "All students are ready"
+      ],
+      "fragmentForm": "all / students / are / ready",
+      "wormholeVariants": [
+        "All student is ready.",
+        "All students is ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_028",
+    "seedId": "quantity_agreement_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 학생들 모두는 준비되어 있다.",
+    "english": "All of the students are ready.",
+    "words": [
+      "All",
+      "of",
+      "the",
+      "students",
+      "are",
+      "ready",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생들 모두는 준비되어 있다.",
+        "all / of / the / students / are / ready"
+      ],
+      [
+        "All of the",
+        "all of the"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All of the student is ready.",
+      "statementForm": [
+        "All of the students are ready.",
+        "All of the students are ready"
+      ],
+      "fragmentForm": "all / of / the / students / are / ready",
+      "wormholeVariants": [
+        "All of the student is ready.",
+        "All of the students is ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_029",
+    "seedId": "quantity_agreement_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 책은 새것이다.",
+    "english": "All books are new.",
+    "words": [
+      "All",
+      "books",
+      "are",
+      "new",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 책은 새것이다.",
+        "all / books / are / new"
+      ],
+      [
+        "All",
+        "all"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All book is new.",
+      "statementForm": [
+        "All books are new.",
+        "All books are new"
+      ],
+      "fragmentForm": "all / books / are / new",
+      "wormholeVariants": [
+        "All book is new.",
+        "All books is new."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_030",
+    "seedId": "quantity_agreement_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 물은 모두 없어졌다.",
+    "english": "All of the water is gone.",
+    "words": [
+      "All",
+      "of",
+      "the",
+      "water",
+      "is",
+      "gone",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 물은 모두 없어졌다.",
+        "all / of / the / water / is / gone"
+      ],
+      [
+        "All of the",
+        "all of the"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "singular",
+      "uncountable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "singular",
+      "uncountable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All of the water are gone.",
+      "statementForm": [
+        "All of the water is gone.",
+        "All of the water is gone"
+      ],
+      "fragmentForm": "all / of / the / water / is / gone",
+      "wormholeVariants": [
+        "All of the water are gone."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_031",
+    "seedId": "quantity_agreement_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 우유는 모두 차갑다.",
+    "english": "All the milk is cold.",
+    "words": [
+      "All",
+      "the",
+      "milk",
+      "is",
+      "cold",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 우유는 모두 차갑다.",
+        "all / the / milk / is / cold"
+      ],
+      [
+        "All the",
+        "all the"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "singular",
+      "uncountable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "singular",
+      "uncountable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All the milk are cold.",
+      "statementForm": [
+        "All the milk is cold.",
+        "All the milk is cold"
+      ],
+      "fragmentForm": "all / the / milk / is / cold",
+      "wormholeVariants": [
+        "All the milk are cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_032",
+    "seedId": "quantity_agreement_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 창문이 열려 있나요?",
+    "english": "Are all the windows open?",
+    "words": [
+      "Are",
+      "all",
+      "the",
+      "windows",
+      "open",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 창문이 열려 있나요?",
+        "are / all / the / windows / open"
+      ],
+      [
+        "all",
+        "all"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "all"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "question",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is all the windows open?",
+      "statementForm": [
+        "Are all the windows open?",
+        "Are all the windows open"
+      ],
+      "fragmentForm": "are / all / the / windows / open",
+      "wormholeVariants": [
+        "Is all the windows open?",
+        "Are all the window open?",
+        "Is all the window open?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_033",
+    "seedId": "quantity_agreement_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "선수들 모두가 도착했나요?",
+    "english": "Are all of the players here?",
+    "words": [
+      "Are",
+      "all",
+      "of",
+      "the",
+      "players",
+      "here",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선수들 모두가 도착했나요?",
+        "are / all / of / the / players / here"
+      ],
+      [
+        "all of the",
+        "all of the"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "all of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "question",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is all of the players here?",
+      "statementForm": [
+        "Are all of the players here?",
+        "Are all of the players here"
+      ],
+      "fragmentForm": "are / all / of / the / players / here",
+      "wormholeVariants": [
+        "Is all of the players here?",
+        "Are all of the player here?",
+        "Is all of the player here?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_034",
+    "seedId": "quantity_agreement_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 학생이 전부 조용한 것은 아니다.",
+    "english": "Not all students are quiet.",
+    "words": [
+      "Not",
+      "all",
+      "students",
+      "are",
+      "quiet",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 학생이 전부 조용한 것은 아니다.",
+        "not / all / students / are / quiet"
+      ],
+      [
+        "all",
+        "all"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "all"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "negative",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "Not all student is quiet.",
+      "statementForm": [
+        "Not all students are quiet.",
+        "Not all students are quiet"
+      ],
+      "fragmentForm": "not / all / students / are / quiet",
+      "wormholeVariants": [
+        "Not all student is quiet.",
+        "Not all students is quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_035",
+    "seedId": "quantity_agreement_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 답들 모두가 맞는 것은 아니다.",
+    "english": "Not all of the answers are correct.",
+    "words": [
+      "Not",
+      "all",
+      "of",
+      "the",
+      "answers",
+      "are",
+      "correct",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 답들 모두가 맞는 것은 아니다.",
+        "not / all / of / the / answers / are / correct"
+      ],
+      [
+        "all of the",
+        "all of the"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "all of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "negative",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "Not all of the answer are correct.",
+      "statementForm": [
+        "Not all of the answers are correct.",
+        "Not all of the answers are correct"
+      ],
+      "fragmentForm": "not / all / of / the / answers / are / correct",
+      "wormholeVariants": [
+        "Not all of the answer are correct.",
+        "Not all of the answers is correct.",
+        "All of the answers is correct."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_036",
+    "seedId": "quantity_agreement_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 과자들은 모두 없어졌다.",
+    "english": "All the cookies are gone.",
+    "words": [
+      "All",
+      "the",
+      "cookies",
+      "are",
+      "gone",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 과자들은 모두 없어졌다.",
+        "all / the / cookies / are / gone"
+      ],
+      [
+        "All the",
+        "all the"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All the cookie is gone.",
+      "statementForm": [
+        "All the cookies are gone.",
+        "All the cookies are gone"
+      ],
+      "fragmentForm": "all / the / cookies / are / gone",
+      "wormholeVariants": [
+        "All the cookie is gone.",
+        "All the cookies is gone."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_037",
+    "seedId": "quantity_agreement_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "모든 팀원은 여기에 있다.",
+    "english": "All team members are here.",
+    "words": [
+      "All",
+      "team",
+      "members",
+      "are",
+      "here",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모든 팀원은 여기에 있다.",
+        "all / team / members / are / here"
+      ],
+      [
+        "All",
+        "all"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All team member is here.",
+      "statementForm": [
+        "All team members are here.",
+        "All team members are here"
+      ],
+      "fragmentForm": "all / team / members / are / here",
+      "wormholeVariants": [
+        "All team member is here.",
+        "All team members is here."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_038",
+    "seedId": "quantity_agreement_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 정보는 모두 유용하다.",
+    "english": "All of the information is useful.",
+    "words": [
+      "All",
+      "of",
+      "the",
+      "information",
+      "is",
+      "useful",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 정보는 모두 유용하다.",
+        "all / of / the / information / is / useful"
+      ],
+      [
+        "All of the",
+        "all of the"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "singular",
+      "uncountable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "singular",
+      "uncountable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All of the information are useful.",
+      "statementForm": [
+        "All of the information is useful.",
+        "All of the information is useful"
+      ],
+      "fragmentForm": "all / of / the / information / is / useful",
+      "wormholeVariants": [
+        "All of the information are useful."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_039",
+    "seedId": "quantity_agreement_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "세 권의 책이 모두 책상 위에 있다.",
+    "english": "All three books are on the desk.",
+    "words": [
+      "All",
+      "three",
+      "books",
+      "are",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "세 권의 책이 모두 책상 위에 있다.",
+        "all / three / books / are / on / the / desk"
+      ],
+      [
+        "All",
+        "all"
+      ],
+      [
+        "주의",
+        "all 뒤에는 복수명사면 are, 불가산명사면 is를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "all",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "blankTargets": [
+      "All"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "all",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_all"
+    ],
+    "distractorSeeds": {
+      "auxError": "All three book is on the desk.",
+      "statementForm": [
+        "All three books are on the desk.",
+        "All three books are on the desk"
+      ],
+      "fragmentForm": "all / three / books / are / on / the / desk",
+      "wormholeVariants": [
+        "All three book is on the desk.",
+        "All three books is on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_040",
+    "seedId": "quantity_agreement_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 문 모두 열려 있다.",
+    "english": "Both of the doors are open.",
+    "words": [
+      "Both",
+      "of",
+      "the",
+      "doors",
+      "are",
+      "open",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 문 모두 열려 있다.",
+        "both / of / the / doors / are / open"
+      ],
+      [
+        "Both of the",
+        "both of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both of the door is open.",
+      "statementForm": [
+        "Both of the doors are open.",
+        "Both of the doors are open"
+      ],
+      "fragmentForm": "both / of / the / doors / are / open",
+      "wormholeVariants": [
+        "Both of the door is open.",
+        "Both of the doors is open."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_041",
+    "seedId": "quantity_agreement_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 학생 모두 준비되어 있다.",
+    "english": "Both students are ready.",
+    "words": [
+      "Both",
+      "students",
+      "are",
+      "ready",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 학생 모두 준비되어 있다.",
+        "both / students / are / ready"
+      ],
+      [
+        "Both",
+        "both"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both student is ready.",
+      "statementForm": [
+        "Both students are ready.",
+        "Both students are ready"
+      ],
+      "fragmentForm": "both / students / are / ready",
+      "wormholeVariants": [
+        "Both student is ready.",
+        "Both students is ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_042",
+    "seedId": "quantity_agreement_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "내 부모님 두 분 모두 일하신다.",
+    "english": "Both of my parents work.",
+    "words": [
+      "Both",
+      "of",
+      "my",
+      "parents",
+      "work",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 부모님 두 분 모두 일하신다.",
+        "both / of / my / parents / work"
+      ],
+      [
+        "Both of",
+        "both of"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both of"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both of my parent works.",
+      "statementForm": [
+        "Both of my parents work.",
+        "Both of my parents work"
+      ],
+      "fragmentForm": "both / of / my / parents / work",
+      "wormholeVariants": [
+        "Both of my parent works.",
+        "Both of my parents works."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_043",
+    "seedId": "quantity_agreement_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 답 모두 맞다.",
+    "english": "Both answers are correct.",
+    "words": [
+      "Both",
+      "answers",
+      "are",
+      "correct",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 답 모두 맞다.",
+        "both / answers / are / correct"
+      ],
+      [
+        "Both",
+        "both"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both answer are correct.",
+      "statementForm": [
+        "Both answers are correct.",
+        "Both answers are correct"
+      ],
+      "fragmentForm": "both / answers / are / correct",
+      "wormholeVariants": [
+        "Both answer are correct.",
+        "Both answers is correct.",
+        "Both of the answers is correct."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_044",
+    "seedId": "quantity_agreement_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 창문 모두 닫혀 있다.",
+    "english": "Both of the windows are closed.",
+    "words": [
+      "Both",
+      "of",
+      "the",
+      "windows",
+      "are",
+      "closed",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 창문 모두 닫혀 있다.",
+        "both / of / the / windows / are / closed"
+      ],
+      [
+        "Both of the",
+        "both of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both of the window is closed.",
+      "statementForm": [
+        "Both of the windows are closed.",
+        "Both of the windows are closed"
+      ],
+      "fragmentForm": "both / of / the / windows / are / closed",
+      "wormholeVariants": [
+        "Both of the window is closed.",
+        "Both of the windows is closed."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_045",
+    "seedId": "quantity_agreement_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 팀 모두 준비되어 있나요?",
+    "english": "Are both teams ready?",
+    "words": [
+      "Are",
+      "both",
+      "teams",
+      "ready",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 팀 모두 준비되어 있나요?",
+        "are / both / teams / ready"
+      ],
+      [
+        "both",
+        "both"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "both"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "question",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is both teams ready?",
+      "statementForm": [
+        "Are both teams ready?",
+        "Are both teams ready"
+      ],
+      "fragmentForm": "are / both / teams / ready",
+      "wormholeVariants": [
+        "Is both teams ready?",
+        "Are both team ready?",
+        "Is both team ready?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_046",
+    "seedId": "quantity_agreement_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 부모님 모두 집에 계신가요?",
+    "english": "Are both of your parents at home?",
+    "words": [
+      "Are",
+      "both",
+      "of",
+      "your",
+      "parents",
+      "at",
+      "home",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 부모님 모두 집에 계신가요?",
+        "are / both / of / your / parents / at / home"
+      ],
+      [
+        "both of your",
+        "both of your"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "both of your"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "question",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is both of your parents at home?",
+      "statementForm": [
+        "Are both of your parents at home?",
+        "Are both of your parents at home"
+      ],
+      "fragmentForm": "are / both / of / your / parents / at / home",
+      "wormholeVariants": [
+        "Is both of your parents at home?",
+        "Are both of your parent at home?",
+        "Is both of your parent at home?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_047",
+    "seedId": "quantity_agreement_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 학생 모두 결석한 것은 아니다.",
+    "english": "Not both students are absent.",
+    "words": [
+      "Not",
+      "both",
+      "students",
+      "are",
+      "absent",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 학생 모두 결석한 것은 아니다.",
+        "not / both / students / are / absent"
+      ],
+      [
+        "both",
+        "both"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "both"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "negative",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Not both student is absent.",
+      "statementForm": [
+        "Not both students are absent.",
+        "Not both students are absent"
+      ],
+      "fragmentForm": "not / both / students / are / absent",
+      "wormholeVariants": [
+        "Not both student is absent.",
+        "Not both students is absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_048",
+    "seedId": "quantity_agreement_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 계획 모두 좋다.",
+    "english": "Both plans are good.",
+    "words": [
+      "Both",
+      "plans",
+      "are",
+      "good",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 계획 모두 좋다.",
+        "both / plans / are / good"
+      ],
+      [
+        "Both",
+        "both"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both plan is good.",
+      "statementForm": [
+        "Both plans are good.",
+        "Both plans are good"
+      ],
+      "fragmentForm": "both / plans / are / good",
+      "wormholeVariants": [
+        "Both plan is good.",
+        "Both plans is good."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_049",
+    "seedId": "quantity_agreement_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 쪽 모두 조용하다.",
+    "english": "Both sides are quiet.",
+    "words": [
+      "Both",
+      "sides",
+      "are",
+      "quiet",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 쪽 모두 조용하다.",
+        "both / sides / are / quiet"
+      ],
+      [
+        "Both",
+        "both"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both side is quiet.",
+      "statementForm": [
+        "Both sides are quiet.",
+        "Both sides are quiet"
+      ],
+      "fragmentForm": "both / sides / are / quiet",
+      "wormholeVariants": [
+        "Both side is quiet.",
+        "Both sides is quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_050",
+    "seedId": "quantity_agreement_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 책 모두 유용하다.",
+    "english": "Both of the books are useful.",
+    "words": [
+      "Both",
+      "of",
+      "the",
+      "books",
+      "are",
+      "useful",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 책 모두 유용하다.",
+        "both / of / the / books / are / useful"
+      ],
+      [
+        "Both of the",
+        "both of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both of the book is useful.",
+      "statementForm": [
+        "Both of the books are useful.",
+        "Both of the books are useful"
+      ],
+      "fragmentForm": "both / of / the / books / are / useful",
+      "wormholeVariants": [
+        "Both of the book is useful.",
+        "Both of the books is useful."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_051",
+    "seedId": "quantity_agreement_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "둘 다 같은 의견이다.",
+    "english": "Both students have the same opinion.",
+    "words": [
+      "Both",
+      "students",
+      "have",
+      "the",
+      "same",
+      "opinion",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "둘 다 같은 의견이다.",
+        "both / students / have / the / same / opinion"
+      ],
+      [
+        "Both",
+        "both"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both student has the same opinion.",
+      "statementForm": [
+        "Both students have the same opinion.",
+        "Both students have the same opinion"
+      ],
+      "fragmentForm": "both / students / have / the / same / opinion",
+      "wormholeVariants": [
+        "Both student has the same opinion.",
+        "Both students has the same opinion."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_052",
+    "seedId": "quantity_agreement_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 손이 모두 깨끗하다.",
+    "english": "Both hands are clean.",
+    "words": [
+      "Both",
+      "hands",
+      "are",
+      "clean",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 손이 모두 깨끗하다.",
+        "both / hands / are / clean"
+      ],
+      [
+        "Both",
+        "both"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "both",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "blankTargets": [
+      "Both"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "both",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_both"
+    ],
+    "distractorSeeds": {
+      "auxError": "Both hand is clean.",
+      "statementForm": [
+        "Both hands are clean.",
+        "Both hands are clean"
+      ],
+      "fragmentForm": "both / hands / are / clean",
+      "wormholeVariants": [
+        "Both hand is clean.",
+        "Both hands is clean."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_053",
+    "seedId": "quantity_agreement_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 문 중 어느 것도 열려 있지 않다.",
+    "english": "Neither of the doors is open.",
+    "words": [
+      "Neither",
+      "of",
+      "the",
+      "doors",
+      "is",
+      "open",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 문 중 어느 것도 열려 있지 않다.",
+        "neither / of / the / doors / is / open"
+      ],
+      [
+        "Neither of the",
+        "neither of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of the doors are open.",
+      "statementForm": [
+        "Neither of the doors is open.",
+        "Neither of the doors is open"
+      ],
+      "fragmentForm": "neither / of / the / doors / is / open",
+      "wormholeVariants": [
+        "Neither of the doors are open.",
+        "Neither of the door are open."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_054",
+    "seedId": "quantity_agreement_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 소년 중 어느 누구도 늦지 않았다.",
+    "english": "Neither of the boys is late.",
+    "words": [
+      "Neither",
+      "of",
+      "the",
+      "boys",
+      "is",
+      "late",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 소년 중 어느 누구도 늦지 않았다.",
+        "neither / of / the / boys / is / late"
+      ],
+      [
+        "Neither of the",
+        "neither of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of the boys are late.",
+      "statementForm": [
+        "Neither of the boys is late.",
+        "Neither of the boys is late"
+      ],
+      "fragmentForm": "neither / of / the / boys / is / late",
+      "wormholeVariants": [
+        "Neither of the boys are late.",
+        "Neither of the boy are late."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_055",
+    "seedId": "quantity_agreement_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 답 중 어느 것도 맞지 않다.",
+    "english": "Neither answer is correct.",
+    "words": [
+      "Neither",
+      "answer",
+      "is",
+      "correct",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 답 중 어느 것도 맞지 않다.",
+        "neither / answer / is / correct"
+      ],
+      [
+        "Neither",
+        "neither"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither answer are correct.",
+      "statementForm": [
+        "Neither answer is correct.",
+        "Neither answer is correct"
+      ],
+      "fragmentForm": "neither / answer / is / correct",
+      "wormholeVariants": [
+        "Neither answer are correct.",
+        "Neither of the answers are correct."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_056",
+    "seedId": "quantity_agreement_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "부모님 두 분 모두 집에 안 계신다.",
+    "english": "Neither of my parents is at home.",
+    "words": [
+      "Neither",
+      "of",
+      "my",
+      "parents",
+      "is",
+      "at",
+      "home",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "부모님 두 분 모두 집에 안 계신다.",
+        "neither / of / my / parents / is / at / home"
+      ],
+      [
+        "Neither of my",
+        "neither of my"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of my"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of my parents are at home.",
+      "statementForm": [
+        "Neither of my parents is at home.",
+        "Neither of my parents is at home"
+      ],
+      "fragmentForm": "neither / of / my / parents / is / at / home",
+      "wormholeVariants": [
+        "Neither of my parents are at home.",
+        "Neither of my parent are at home."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_057",
+    "seedId": "quantity_agreement_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 계획 중 어느 것도 쉽지 않다.",
+    "english": "Neither of the plans works easily.",
+    "words": [
+      "Neither",
+      "of",
+      "the",
+      "plans",
+      "works",
+      "easily",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 계획 중 어느 것도 쉽지 않다.",
+        "neither / of / the / plans / works / easily"
+      ],
+      [
+        "Neither of the",
+        "neither of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of the plans work easily.",
+      "statementForm": [
+        "Neither of the plans works easily.",
+        "Neither of the plans works easily"
+      ],
+      "fragmentForm": "neither / of / the / plans / works / easily",
+      "wormholeVariants": [
+        "Neither of the plans work easily.",
+        "Neither of the plan work easily."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_058",
+    "seedId": "quantity_agreement_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "상자 두 개 중 어느 것도 무겁지 않다.",
+    "english": "Neither of the boxes is heavy.",
+    "words": [
+      "Neither",
+      "of",
+      "the",
+      "boxes",
+      "is",
+      "heavy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "상자 두 개 중 어느 것도 무겁지 않다.",
+        "neither / of / the / boxes / is / heavy"
+      ],
+      [
+        "Neither of the",
+        "neither of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of the boxes are heavy.",
+      "statementForm": [
+        "Neither of the boxes is heavy.",
+        "Neither of the boxes is heavy"
+      ],
+      "fragmentForm": "neither / of / the / boxes / is / heavy",
+      "wormholeVariants": [
+        "Neither of the boxes are heavy.",
+        "Neither of the box are heavy."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_059",
+    "seedId": "quantity_agreement_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 학생 중 누구도 결석하지 않았다.",
+    "english": "Neither of the students was absent.",
+    "words": [
+      "Neither",
+      "of",
+      "the",
+      "students",
+      "was",
+      "absent",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 학생 중 누구도 결석하지 않았다.",
+        "neither / of / the / students / was / absent"
+      ],
+      [
+        "Neither of the",
+        "neither of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of the students were absent.",
+      "statementForm": [
+        "Neither of the students was absent.",
+        "Neither of the students was absent"
+      ],
+      "fragmentForm": "neither / of / the / students / was / absent",
+      "wormholeVariants": [
+        "Neither of the students were absent.",
+        "Neither of the student were absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_060",
+    "seedId": "quantity_agreement_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 선택지 중 어느 것도 간단하지 않다.",
+    "english": "Neither choice is simple.",
+    "words": [
+      "Neither",
+      "choice",
+      "is",
+      "simple",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 선택지 중 어느 것도 간단하지 않다.",
+        "neither / choice / is / simple"
+      ],
+      [
+        "Neither",
+        "neither"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither choice are simple.",
+      "statementForm": [
+        "Neither choice is simple.",
+        "Neither choice is simple"
+      ],
+      "fragmentForm": "neither / choice / is / simple",
+      "wormholeVariants": [
+        "Neither choice are simple.",
+        "Neither of the choices are simple."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_061",
+    "seedId": "quantity_agreement_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 창문 중 어느 것도 깨지지 않았다.",
+    "english": "Neither of the windows is broken.",
+    "words": [
+      "Neither",
+      "of",
+      "the",
+      "windows",
+      "is",
+      "broken",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 창문 중 어느 것도 깨지지 않았다.",
+        "neither / of / the / windows / is / broken"
+      ],
+      [
+        "Neither of the",
+        "neither of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of the windows are broken.",
+      "statementForm": [
+        "Neither of the windows is broken.",
+        "Neither of the windows is broken"
+      ],
+      "fragmentForm": "neither / of / the / windows / is / broken",
+      "wormholeVariants": [
+        "Neither of the windows are broken.",
+        "Neither of the window are broken."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_062",
+    "seedId": "quantity_agreement_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 팀 모두 준비되지 않았다.",
+    "english": "Neither team is ready.",
+    "words": [
+      "Neither",
+      "team",
+      "is",
+      "ready",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 팀 모두 준비되지 않았다.",
+        "neither / team / is / ready"
+      ],
+      [
+        "Neither",
+        "neither"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither team are ready.",
+      "statementForm": [
+        "Neither team is ready.",
+        "Neither team is ready"
+      ],
+      "fragmentForm": "neither / team / is / ready",
+      "wormholeVariants": [
+        "Neither team are ready.",
+        "Neither of the teams are ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_063",
+    "seedId": "quantity_agreement_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 형제 중 어느 누구도 비밀을 모른다.",
+    "english": "Neither of the brothers knows the secret.",
+    "words": [
+      "Neither",
+      "of",
+      "the",
+      "brothers",
+      "knows",
+      "the",
+      "secret",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 형제 중 어느 누구도 비밀을 모른다.",
+        "neither / of / the / brothers / knows / the / secret"
+      ],
+      [
+        "Neither of the",
+        "neither of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of the brothers know the secret.",
+      "statementForm": [
+        "Neither of the brothers knows the secret.",
+        "Neither of the brothers knows the secret"
+      ],
+      "fragmentForm": "neither / of / the / brothers / knows / the / secret",
+      "wormholeVariants": [
+        "Neither of the brothers know the secret.",
+        "Neither of the brother know the secret."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_064",
+    "seedId": "quantity_agreement_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 길 모두 안전하지 않다.",
+    "english": "Neither path is safe.",
+    "words": [
+      "Neither",
+      "path",
+      "is",
+      "safe",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 길 모두 안전하지 않다.",
+        "neither / path / is / safe"
+      ],
+      [
+        "Neither",
+        "neither"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither path are safe.",
+      "statementForm": [
+        "Neither path is safe.",
+        "Neither path is safe"
+      ],
+      "fragmentForm": "neither / path / is / safe",
+      "wormholeVariants": [
+        "Neither path are safe.",
+        "Neither of the paths are safe."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_065",
+    "seedId": "quantity_agreement_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 소녀 중 어느 누구도 전화가 없다.",
+    "english": "Neither of the girls has a phone.",
+    "words": [
+      "Neither",
+      "of",
+      "the",
+      "girls",
+      "has",
+      "a",
+      "phone",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 소녀 중 어느 누구도 전화가 없다.",
+        "neither / of / the / girls / has / a / phone"
+      ],
+      [
+        "Neither of the",
+        "neither of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "neither_of",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "blankTargets": [
+      "Neither of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "neither_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_neither_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Neither of the girls have a phone.",
+      "statementForm": [
+        "Neither of the girls has a phone.",
+        "Neither of the girls has a phone"
+      ],
+      "fragmentForm": "neither / of / the / girls / has / a / phone",
+      "wormholeVariants": [
+        "Neither of the girls have a phone.",
+        "Neither of the girl have a phone."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_066",
+    "seedId": "quantity_agreement_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 문 중 어느 쪽이든 괜찮다.",
+    "english": "Either of the doors is fine.",
+    "words": [
+      "Either",
+      "of",
+      "the",
+      "doors",
+      "is",
+      "fine",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 문 중 어느 쪽이든 괜찮다.",
+        "either / of / the / doors / is / fine"
+      ],
+      [
+        "Either of the",
+        "either of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either of the doors are fine.",
+      "statementForm": [
+        "Either of the doors is fine.",
+        "Either of the doors is fine"
+      ],
+      "fragmentForm": "either / of / the / doors / is / fine",
+      "wormholeVariants": [
+        "Either of the doors are fine.",
+        "Either of the door are fine."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_067",
+    "seedId": "quantity_agreement_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 답 중 어느 쪽이든 괜찮다.",
+    "english": "Either answer is okay.",
+    "words": [
+      "Either",
+      "answer",
+      "is",
+      "okay",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 답 중 어느 쪽이든 괜찮다.",
+        "either / answer / is / okay"
+      ],
+      [
+        "Either",
+        "either"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either answer are okay.",
+      "statementForm": [
+        "Either answer is okay.",
+        "Either answer is okay"
+      ],
+      "fragmentForm": "either / answer / is / okay",
+      "wormholeVariants": [
+        "Either answer are okay.",
+        "Either of the answers are okay."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_068",
+    "seedId": "quantity_agreement_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "내 부모님 두 분 중 어느 한 분이 도울 수 있다.",
+    "english": "Either of my parents can help.",
+    "words": [
+      "Either",
+      "of",
+      "my",
+      "parents",
+      "can",
+      "help",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 부모님 두 분 중 어느 한 분이 도울 수 있다.",
+        "either / of / my / parents / can / help"
+      ],
+      [
+        "Either of my",
+        "either of my"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either of my"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either of my parents can helps.",
+      "statementForm": [
+        "Either of my parents can help.",
+        "Either of my parents can help"
+      ],
+      "fragmentForm": "either / of / my / parents / can / help",
+      "wormholeVariants": [
+        "Either of my parents can helps.",
+        "Either of my parent can helps."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_069",
+    "seedId": "quantity_agreement_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 학생 중 어느 한 명이 맞다.",
+    "english": "Either of the students is correct.",
+    "words": [
+      "Either",
+      "of",
+      "the",
+      "students",
+      "is",
+      "correct",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 학생 중 어느 한 명이 맞다.",
+        "either / of / the / students / is / correct"
+      ],
+      [
+        "Either of the",
+        "either of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either of the students are correct.",
+      "statementForm": [
+        "Either of the students is correct.",
+        "Either of the students is correct"
+      ],
+      "fragmentForm": "either / of / the / students / is / correct",
+      "wormholeVariants": [
+        "Either of the students are correct.",
+        "Either of the student are correct."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_070",
+    "seedId": "quantity_agreement_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 계획 중 어느 쪽이든 가능하다.",
+    "english": "Either plan works.",
+    "words": [
+      "Either",
+      "plan",
+      "works",
+      "."
+    ],
+    "wordCount": 3,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 계획 중 어느 쪽이든 가능하다.",
+        "either / plan / works"
+      ],
+      [
+        "Either",
+        "either"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either plan work.",
+      "statementForm": [
+        "Either plan works.",
+        "Either plan works"
+      ],
+      "fragmentForm": "either / plan / works",
+      "wormholeVariants": [
+        "Either plan work.",
+        "Either of the plans work."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_071",
+    "seedId": "quantity_agreement_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 상자 중 어느 쪽이 열려 있나요?",
+    "english": "Is either of the boxes open?",
+    "words": [
+      "Is",
+      "either",
+      "of",
+      "the",
+      "boxes",
+      "open",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 상자 중 어느 쪽이 열려 있나요?",
+        "is / either / of / the / boxes / open"
+      ],
+      [
+        "either of the",
+        "either of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "either of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "question",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are either of the boxes open?",
+      "statementForm": [
+        "Is either of the boxes open?",
+        "Is either of the boxes open"
+      ],
+      "fragmentForm": "is / either / of / the / boxes / open",
+      "wormholeVariants": [
+        "Are either of the boxes open?",
+        "Is either of the boxes opens?",
+        "Are either of the boxes opens?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_072",
+    "seedId": "quantity_agreement_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 소녀 중 어느 한 명이 준비되어 있다.",
+    "english": "Either of the girls is ready.",
+    "words": [
+      "Either",
+      "of",
+      "the",
+      "girls",
+      "is",
+      "ready",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 소녀 중 어느 한 명이 준비되어 있다.",
+        "either / of / the / girls / is / ready"
+      ],
+      [
+        "Either of the",
+        "either of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either of the girls are ready.",
+      "statementForm": [
+        "Either of the girls is ready.",
+        "Either of the girls is ready"
+      ],
+      "fragmentForm": "either / of / the / girls / is / ready",
+      "wormholeVariants": [
+        "Either of the girls are ready.",
+        "Either of the girl are ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_073",
+    "seedId": "quantity_agreement_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 책 중 어느 것이든 고를 수 있다.",
+    "english": "I can choose either of the two books.",
+    "words": [
+      "I",
+      "can",
+      "choose",
+      "either",
+      "of",
+      "the",
+      "two",
+      "books",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 책 중 어느 것이든 고를 수 있다.",
+        "I / can / choose / either / of / the / two"
+      ],
+      [
+        "either of the",
+        "either of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "either of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "I can choose either of the two book.",
+      "statementForm": [
+        "I can choose either of the two books.",
+        "I can choose either of the two books"
+      ],
+      "fragmentForm": "I / can / choose / either / of / the / two",
+      "wormholeVariants": [
+        "I can choose either of the two book."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_074",
+    "seedId": "quantity_agreement_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 팀 중 어느 쪽이든 이길 수 있다.",
+    "english": "Either team can win.",
+    "words": [
+      "Either",
+      "team",
+      "can",
+      "win",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 팀 중 어느 쪽이든 이길 수 있다.",
+        "either / team / can / win"
+      ],
+      [
+        "Either",
+        "either"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either team can wins.",
+      "statementForm": [
+        "Either team can win.",
+        "Either team can win"
+      ],
+      "fragmentForm": "either / team / can / win",
+      "wormholeVariants": [
+        "Either team can wins.",
+        "Either of the teams can wins."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_075",
+    "seedId": "quantity_agreement_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 길 중 어느 쪽이 막혀 있다.",
+    "english": "Either of the roads is blocked.",
+    "words": [
+      "Either",
+      "of",
+      "the",
+      "roads",
+      "is",
+      "blocked",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 길 중 어느 쪽이 막혀 있다.",
+        "either / of / the / roads / is / blocked"
+      ],
+      [
+        "Either of the",
+        "either of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either of the roads are blocked.",
+      "statementForm": [
+        "Either of the roads is blocked.",
+        "Either of the roads is blocked"
+      ],
+      "fragmentForm": "either / of / the / roads / is / blocked",
+      "wormholeVariants": [
+        "Either of the roads are blocked.",
+        "Either of the road are blocked."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_076",
+    "seedId": "quantity_agreement_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 선택지 중 어느 쪽이 좋아 보인다.",
+    "english": "Either of the options looks good.",
+    "words": [
+      "Either",
+      "of",
+      "the",
+      "options",
+      "looks",
+      "good",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 선택지 중 어느 쪽이 좋아 보인다.",
+        "either / of / the / options / looks / good"
+      ],
+      [
+        "Either of the",
+        "either of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either of the options look good.",
+      "statementForm": [
+        "Either of the options looks good.",
+        "Either of the options looks good"
+      ],
+      "fragmentForm": "either / of / the / options / looks / good",
+      "wormholeVariants": [
+        "Either of the options look good.",
+        "Either of the option look good."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_077",
+    "seedId": "quantity_agreement_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "두 소년 중 어느 한 명이 결석했다.",
+    "english": "Either of the boys was absent.",
+    "words": [
+      "Either",
+      "of",
+      "the",
+      "boys",
+      "was",
+      "absent",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "두 소년 중 어느 한 명이 결석했다.",
+        "either / of / the / boys / was / absent"
+      ],
+      [
+        "Either of the",
+        "either of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either of the boys were absent.",
+      "statementForm": [
+        "Either of the boys was absent.",
+        "Either of the boys was absent"
+      ],
+      "fragmentForm": "either / of / the / boys / was / absent",
+      "wormholeVariants": [
+        "Either of the boys were absent.",
+        "Either of the boy were absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_078",
+    "seedId": "quantity_agreement_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "어느 쪽이든 가능하다.",
+    "english": "Either choice is possible.",
+    "words": [
+      "Either",
+      "choice",
+      "is",
+      "possible",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "어느 쪽이든 가능하다.",
+        "either / choice / is / possible"
+      ],
+      [
+        "Either",
+        "either"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "either_of",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "blankTargets": [
+      "Either"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "either_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_either_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Either choice are possible.",
+      "statementForm": [
+        "Either choice is possible.",
+        "Either choice is possible"
+      ],
+      "fragmentForm": "either / choice / is / possible",
+      "wormholeVariants": [
+        "Either choice are possible.",
+        "Either of the choices are possible."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_079",
+    "seedId": "quantity_agreement_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 학생들은 결석했다.",
+    "english": "Some of the students are absent.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "students",
+      "are",
+      "absent",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 학생들은 결석했다.",
+        "some / of / the / students / are / absent"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the student is absent.",
+      "statementForm": [
+        "Some of the students are absent.",
+        "Some of the students are absent"
+      ],
+      "fragmentForm": "some / of / the / students / are / absent",
+      "wormholeVariants": [
+        "Some of the student is absent.",
+        "Some of the students is absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_080",
+    "seedId": "quantity_agreement_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 책은 오래됐다.",
+    "english": "Some of the books are old.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "books",
+      "are",
+      "old",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 책은 오래됐다.",
+        "some / of / the / books / are / old"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the book is old.",
+      "statementForm": [
+        "Some of the books are old.",
+        "Some of the books are old"
+      ],
+      "fragmentForm": "some / of / the / books / are / old",
+      "wormholeVariants": [
+        "Some of the book is old.",
+        "Some of the books is old."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_081",
+    "seedId": "quantity_agreement_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 물은 부족하다.",
+    "english": "Some of the water is missing.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "water",
+      "is",
+      "missing",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 물은 부족하다.",
+        "some / of / the / water / is / missing"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "singular",
+      "uncountable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "singular",
+      "uncountable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the water are missing.",
+      "statementForm": [
+        "Some of the water is missing.",
+        "Some of the water is missing"
+      ],
+      "fragmentForm": "some / of / the / water / is / missing",
+      "wormholeVariants": [
+        "Some of the water are missing."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_082",
+    "seedId": "quantity_agreement_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "내 친구들 중 일부는 온다.",
+    "english": "Some of my friends are coming.",
+    "words": [
+      "Some",
+      "of",
+      "my",
+      "friends",
+      "are",
+      "coming",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 친구들 중 일부는 온다.",
+        "some / of / my / friends / are / coming"
+      ],
+      [
+        "Some of my",
+        "some of my"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of my"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of my friend is coming.",
+      "statementForm": [
+        "Some of my friends are coming.",
+        "Some of my friends are coming"
+      ],
+      "fragmentForm": "some / of / my / friends / are / coming",
+      "wormholeVariants": [
+        "Some of my friend is coming.",
+        "Some of my friends is coming."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_083",
+    "seedId": "quantity_agreement_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 답은 틀렸다.",
+    "english": "Some of the answers are wrong.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "answers",
+      "are",
+      "wrong",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 답은 틀렸다.",
+        "some / of / the / answers / are / wrong"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the answer are wrong.",
+      "statementForm": [
+        "Some of the answers are wrong.",
+        "Some of the answers are wrong"
+      ],
+      "fragmentForm": "some / of / the / answers / are / wrong",
+      "wormholeVariants": [
+        "Some of the answer are wrong.",
+        "Some of the answers is wrong.",
+        "Some answer are wrong."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_084",
+    "seedId": "quantity_agreement_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 서류가 없어졌나요?",
+    "english": "Are some of the papers missing?",
+    "words": [
+      "Are",
+      "some",
+      "of",
+      "the",
+      "papers",
+      "missing",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 서류가 없어졌나요?",
+        "are / some / of / the / papers / missing"
+      ],
+      [
+        "some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "question",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is some of the papers missing?",
+      "statementForm": [
+        "Are some of the papers missing?",
+        "Are some of the papers missing"
+      ],
+      "fragmentForm": "are / some / of / the / papers / missing",
+      "wormholeVariants": [
+        "Is some of the papers missing?",
+        "Are some of the paper missing?",
+        "Is some of the paper missing?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_085",
+    "seedId": "quantity_agreement_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 학생들은 늦었다.",
+    "english": "Some of the students were late.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "students",
+      "were",
+      "late",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 학생들은 늦었다.",
+        "some / of / the / students / were / late"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the student was late.",
+      "statementForm": [
+        "Some of the students were late.",
+        "Some of the students were late"
+      ],
+      "fragmentForm": "some / of / the / students / were / late",
+      "wormholeVariants": [
+        "Some of the student was late.",
+        "Some of the students was late."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_086",
+    "seedId": "quantity_agreement_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 정보는 유용하다.",
+    "english": "Some of the information is useful.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "information",
+      "is",
+      "useful",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 정보는 유용하다.",
+        "some / of / the / information / is / useful"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "singular",
+      "uncountable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "singular",
+      "uncountable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the information are useful.",
+      "statementForm": [
+        "Some of the information is useful.",
+        "Some of the information is useful"
+      ],
+      "fragmentForm": "some / of / the / information / is / useful",
+      "wormholeVariants": [
+        "Some of the information are useful."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_087",
+    "seedId": "quantity_agreement_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 과자는 없어졌다.",
+    "english": "Some of the cookies are gone.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "cookies",
+      "are",
+      "gone",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 과자는 없어졌다.",
+        "some / of / the / cookies / are / gone"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the cookie is gone.",
+      "statementForm": [
+        "Some of the cookies are gone.",
+        "Some of the cookies are gone"
+      ],
+      "fragmentForm": "some / of / the / cookies / are / gone",
+      "wormholeVariants": [
+        "Some of the cookie is gone.",
+        "Some of the cookies is gone."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_088",
+    "seedId": "quantity_agreement_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 학생들은 아직 준비되지 않았다.",
+    "english": "Some of the students are not ready.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "students",
+      "are",
+      "not",
+      "ready",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 학생들은 아직 준비되지 않았다.",
+        "some / of / the / students / are / not / ready"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "negative",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the student is not ready.",
+      "statementForm": [
+        "Some of the students are not ready.",
+        "Some of the students are not ready"
+      ],
+      "fragmentForm": "some / of / the / students / are / not / ready",
+      "wormholeVariants": [
+        "Some of the student is not ready.",
+        "Some of the students is not ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_089",
+    "seedId": "quantity_agreement_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 방은 조용하다.",
+    "english": "Some of the rooms are quiet.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "rooms",
+      "are",
+      "quiet",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 방은 조용하다.",
+        "some / of / the / rooms / are / quiet"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the room is quiet.",
+      "statementForm": [
+        "Some of the rooms are quiet.",
+        "Some of the rooms are quiet"
+      ],
+      "fragmentForm": "some / of / the / rooms / are / quiet",
+      "wormholeVariants": [
+        "Some of the room is quiet.",
+        "Some of the rooms is quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_090",
+    "seedId": "quantity_agreement_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 선수들은 피곤하다.",
+    "english": "Some of the players are tired.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "players",
+      "are",
+      "tired",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 선수들은 피곤하다.",
+        "some / of / the / players / are / tired"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the player is tired.",
+      "statementForm": [
+        "Some of the players are tired.",
+        "Some of the players are tired"
+      ],
+      "fragmentForm": "some / of / the / players / are / tired",
+      "wormholeVariants": [
+        "Some of the player is tired.",
+        "Some of the players is tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_091",
+    "seedId": "quantity_agreement_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "일부 꽃은 빨갛다.",
+    "english": "Some of the flowers are red.",
+    "words": [
+      "Some",
+      "of",
+      "the",
+      "flowers",
+      "are",
+      "red",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "일부 꽃은 빨갛다.",
+        "some / of / the / flowers / are / red"
+      ],
+      [
+        "Some of the",
+        "some of the"
+      ],
+      [
+        "주의",
+        "both, some of 뒤에는 보통 복수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "some_of",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "blankTargets": [
+      "Some of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "some_of",
+      "affirm",
+      "plural",
+      "countable",
+      "pattern_type_some_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Some of the flower is red.",
+      "statementForm": [
+        "Some of the flowers are red.",
+        "Some of the flowers are red"
+      ],
+      "fragmentForm": "some / of / the / flowers / are / red",
+      "wormholeVariants": [
+        "Some of the flower is red.",
+        "Some of the flowers is red."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_092",
+    "seedId": "quantity_agreement_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 학생들 중 한 명은 결석했다.",
+    "english": "One of the students is absent.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "students",
+      "is",
+      "absent",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생들 중 한 명은 결석했다.",
+        "one / of / the / students / is / absent"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the students are absent.",
+      "statementForm": [
+        "One of the students is absent.",
+        "One of the students is absent"
+      ],
+      "fragmentForm": "one / of / the / students / is / absent",
+      "wormholeVariants": [
+        "One of the students are absent.",
+        "One of the student are absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_093",
+    "seedId": "quantity_agreement_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 책들 중 한 권은 없어졌다.",
+    "english": "One of the books is missing.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "books",
+      "is",
+      "missing",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 책들 중 한 권은 없어졌다.",
+        "one / of / the / books / is / missing"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the books are missing.",
+      "statementForm": [
+        "One of the books is missing.",
+        "One of the books is missing"
+      ],
+      "fragmentForm": "one / of / the / books / is / missing",
+      "wormholeVariants": [
+        "One of the books are missing.",
+        "One of the book are missing."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_094",
+    "seedId": "quantity_agreement_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "내 친구들 중 한 명은 의사다.",
+    "english": "One of my friends is a doctor.",
+    "words": [
+      "One",
+      "of",
+      "my",
+      "friends",
+      "is",
+      "a",
+      "doctor",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 친구들 중 한 명은 의사다.",
+        "one / of / my / friends / is / a / doctor"
+      ],
+      [
+        "One of my",
+        "one of my"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of my"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of my friends are a doctor.",
+      "statementForm": [
+        "One of my friends is a doctor.",
+        "One of my friends is a doctor"
+      ],
+      "fragmentForm": "one / of / my / friends / is / a / doctor",
+      "wormholeVariants": [
+        "One of my friends are a doctor.",
+        "One of my friend are a doctor."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_095",
+    "seedId": "quantity_agreement_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "문 두 개 중 한 개는 고장났다.",
+    "english": "One of the doors is broken.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "doors",
+      "is",
+      "broken",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "문 두 개 중 한 개는 고장났다.",
+        "one / of / the / doors / is / broken"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the doors are broken.",
+      "statementForm": [
+        "One of the doors is broken.",
+        "One of the doors is broken"
+      ],
+      "fragmentForm": "one / of / the / doors / is / broken",
+      "wormholeVariants": [
+        "One of the doors are broken.",
+        "One of the door are broken."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_096",
+    "seedId": "quantity_agreement_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "답들 중 하나는 맞다.",
+    "english": "One of the answers is correct.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "answers",
+      "is",
+      "correct",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "답들 중 하나는 맞다.",
+        "one / of / the / answers / is / correct"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the answers are correct.",
+      "statementForm": [
+        "One of the answers is correct.",
+        "One of the answers is correct"
+      ],
+      "fragmentForm": "one / of / the / answers / is / correct",
+      "wormholeVariants": [
+        "One of the answers are correct.",
+        "One of the answer is correct."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_097",
+    "seedId": "quantity_agreement_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 소녀들 중 한 명은 캐나다 출신이다.",
+    "english": "One of the girls is from Canada.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "girls",
+      "is",
+      "from",
+      "Canada",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소녀들 중 한 명은 캐나다 출신이다.",
+        "one / of / the / girls / is / from / canada"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the girls are from Canada.",
+      "statementForm": [
+        "One of the girls is from Canada.",
+        "One of the girls is from Canada"
+      ],
+      "fragmentForm": "one / of / the / girls / is / from / canada",
+      "wormholeVariants": [
+        "One of the girls are from Canada.",
+        "One of the girl are from Canada."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_098",
+    "seedId": "quantity_agreement_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "창문들 중 하나는 열려 있다.",
+    "english": "One of the windows is open.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "windows",
+      "is",
+      "open",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "창문들 중 하나는 열려 있다.",
+        "one / of / the / windows / is / open"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the windows are open.",
+      "statementForm": [
+        "One of the windows is open.",
+        "One of the windows is open"
+      ],
+      "fragmentForm": "one / of / the / windows / is / open",
+      "wormholeVariants": [
+        "One of the windows are open.",
+        "One of the window are open."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_099",
+    "seedId": "quantity_agreement_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 소년들 중 한 명은 늦었다.",
+    "english": "One of the boys is late.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "boys",
+      "is",
+      "late",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소년들 중 한 명은 늦었다.",
+        "one / of / the / boys / is / late"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the boys are late.",
+      "statementForm": [
+        "One of the boys is late.",
+        "One of the boys is late"
+      ],
+      "fragmentForm": "one / of / the / boys / is / late",
+      "wormholeVariants": [
+        "One of the boys are late.",
+        "One of the boy are late."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_100",
+    "seedId": "quantity_agreement_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "과자들 중 하나는 이미 먹혔다.",
+    "english": "One of the cookies was eaten.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "cookies",
+      "was",
+      "eaten",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "과자들 중 하나는 이미 먹혔다.",
+        "one / of / the / cookies / was / eaten"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the cookies were eaten.",
+      "statementForm": [
+        "One of the cookies was eaten.",
+        "One of the cookies was eaten"
+      ],
+      "fragmentForm": "one / of / the / cookies / was / eaten",
+      "wormholeVariants": [
+        "One of the cookies were eaten.",
+        "One of the cookie were eaten."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_101",
+    "seedId": "quantity_agreement_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "그 학생들 중 한 명이 준비되었나요?",
+    "english": "Is one of the students ready?",
+    "words": [
+      "Is",
+      "one",
+      "of",
+      "the",
+      "students",
+      "ready",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생들 중 한 명이 준비되었나요?",
+        "is / one / of / the / students / ready"
+      ],
+      [
+        "one of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "one of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "question",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Are one of the students ready?",
+      "statementForm": [
+        "Is one of the students ready?",
+        "Is one of the students ready"
+      ],
+      "fragmentForm": "is / one / of / the / students / ready",
+      "wormholeVariants": [
+        "Are one of the students ready?",
+        "Is one of the student ready?",
+        "Are one of the student ready?"
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_102",
+    "seedId": "quantity_agreement_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "팀원들 중 한 명은 계획을 안다.",
+    "english": "One of the team members knows the plan.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "team",
+      "members",
+      "knows",
+      "the",
+      "plan",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "팀원들 중 한 명은 계획을 안다.",
+        "one / of / the / team / members / knows / the"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the team members know the plan.",
+      "statementForm": [
+        "One of the team members knows the plan.",
+        "One of the team members knows the plan"
+      ],
+      "fragmentForm": "one / of / the / team / members / knows / the",
+      "wormholeVariants": [
+        "One of the team members know the plan.",
+        "One of the team member know the plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_103",
+    "seedId": "quantity_agreement_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "이유들 중 하나는 분명하다.",
+    "english": "One of the reasons is clear.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "reasons",
+      "is",
+      "clear",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이유들 중 하나는 분명하다.",
+        "one / of / the / reasons / is / clear"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the reasons are clear.",
+      "statementForm": [
+        "One of the reasons is clear.",
+        "One of the reasons is clear"
+      ],
+      "fragmentForm": "one / of / the / reasons / is / clear",
+      "wormholeVariants": [
+        "One of the reasons are clear.",
+        "One of the reason are clear."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_104",
+    "seedId": "quantity_agreement_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "선택지들 중 어느 하나도 쉽지 않다.",
+    "english": "Not one of the options is easy.",
+    "words": [
+      "Not",
+      "one",
+      "of",
+      "the",
+      "options",
+      "is",
+      "easy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "quantity_agreement",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선택지들 중 어느 하나도 쉽지 않다.",
+        "not / one / of / the / options / is / easy"
+      ],
+      [
+        "one of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "one of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "negative",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Not one of the options are easy.",
+      "statementForm": [
+        "Not one of the options is easy.",
+        "Not one of the options is easy"
+      ],
+      "fragmentForm": "not / one / of / the / options / is / easy",
+      "wormholeVariants": [
+        "Not one of the options are easy.",
+        "Not one of the option are easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_quantity_agreement_105",
+    "seedId": "quantity_agreement_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "quantity_agreement",
+    "chapterLabelKo": "수의 일치",
+    "korean": "교사들 중 한 명은 결석했다.",
+    "english": "One of the teachers is absent.",
+    "words": [
+      "One",
+      "of",
+      "the",
+      "teachers",
+      "is",
+      "absent",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "quantity_agreement",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교사들 중 한 명은 결석했다.",
+        "one / of / the / teachers / is / absent"
+      ],
+      [
+        "One of the",
+        "one of the"
+      ],
+      [
+        "주의",
+        "neither of, either of, one of 뒤에는 보통 단수 동사를 씁니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one_of",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "blankTargets": [
+      "One of the"
+    ],
+    "tags": [
+      "quantity_agreement",
+      "one_of",
+      "affirm",
+      "singular",
+      "countable",
+      "pattern_type_one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "One of the teachers are absent.",
+      "statementForm": [
+        "One of the teachers is absent.",
+        "One of the teachers is absent"
+      ],
+      "fragmentForm": "one / of / the / teachers / is / absent",
+      "wormholeVariants": [
+        "One of the teachers are absent.",
+        "One of the teacher are absent."
+      ]
+    }
+  }
+]
