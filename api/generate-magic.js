@@ -305,31 +305,67 @@ const CHAPTER_ALIAS_PATTERNS = [
 ];
 
 function detectGradeBucket(input = {}) {
-  const merged = [input.gradeLabel || "", input.level || "", input.userPrompt || "", input.topic || "", input.worksheetTitle || "", input.rawBody?.profile || ""].join("\n").toLowerCase();
-  if (/중1|middle1|middle 1/.test(merged)) return "middle1";
-  if (/중2|middle2|middle 2/.test(merged)) return "middle2";
-  if (/중3|middle3|middle 3/.test(merged)) return "middle3";
-  if (/고1|high1|high 1/.test(merged)) return "high1";
-  if (/고2|high2|high 2/.test(merged)) return "high2";
-  if (/고3|high3|high 3/.test(merged)) return "high3";
+  const rawBody = input.rawBody || {};
+  const merged = [
+    input.grade || "",
+    input.gradeLabel || "",
+    input.level || "",
+    input.userPrompt || "",
+    input.topic || "",
+    input.worksheetTitle || "",
+    rawBody.profile || "",
+    rawBody.grade || "",
+    rawBody.gradeLabel || "",
+    rawBody.level || "",
+    rawBody.userPrompt || "",
+    rawBody.topic || "",
+  ].join("\n").toLowerCase();
+
+  if (/(중\s*1|중1|middle\s*1|middle1|m1\b|grade\s*7)/i.test(merged)) return "middle1";
+  if (/(중\s*2|중2|middle\s*2|middle2|m2\b|grade\s*8)/i.test(merged)) return "middle2";
+  if (/(중\s*3|중3|middle\s*3|middle3|m3\b|grade\s*9)/i.test(merged)) return "middle3";
+  if (/(고\s*1|고1|high\s*1|high1|h1\b|grade\s*10)/i.test(merged)) return "high1";
+  if (/(고\s*2|고2|high\s*2|high2|h2\b|grade\s*11)/i.test(merged)) return "high2";
+  if (/(고\s*3|고3|high\s*3|high3|h3\b|grade\s*12)/i.test(merged)) return "high3";
   return "";
 }
 
 function resolveChapterAlias(text = "") {
   const raw = String(text || "");
+  const normalized = raw.toLowerCase();
+
+  if (/현재\s*완료\s*(진행|계속)|present\s+perfect\s*(continuous|progressive)/i.test(raw)) return "present_perfect_progressive";
+  if (/과거\s*완료|past\s+perfect/i.test(raw)) return "past_perfect";
+  if (/현재\s*완료|present\s+perfect/i.test(raw)) return "present_perfect";
+  if (/with\s*\+?\s*object\s*\+?\s*participle|with\s+object\s+participle|with\s*목적어\s*분사|with\s*\+?\s*목적어\s*\+?\s*분사|with 목적어 분사/i.test(raw)) return "with_object_participle";
+  if (/분사\s*구문|participial\s+construction/i.test(raw)) return "participial_construction";
+  if (/동명사.*관용|관용.*동명사|gerund\s+idiomatic|idiomatic\s+gerund/i.test(raw)) return "gerund_idiomatic_expressions";
+
   for (const entry of CHAPTER_ALIAS_PATTERNS) {
-    if (entry.patterns.some((pattern) => pattern.test(raw))) return entry.key;
+    if (entry.patterns.some((pattern) => pattern.test(raw) || pattern.test(normalized))) return entry.key;
   }
   return "";
 }
 
-function resolveSentenceBankFile(input = {}, chapterKey = "") {
+function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   const bucket = detectGradeBucket(input);
-  if (!bucket || !chapterKey) return null;
   const bucketMap = SENTENCE_BANK_FILE_MAP[bucket] || {};
-  const filename = bucketMap[chapterKey] || `${bucket}_${chapterKey}.json`;
-  const filePath = path.join(SENTENCE_BANK_ROOT, bucket, filename);
-  return fs.existsSync(filePath) ? filePath : null;
+  const expectedFile = bucket && chapterKey ? (bucketMap[chapterKey] || `${bucket}_${chapterKey}.json`) : "";
+  const expectedPath = bucket && chapterKey ? path.join(SENTENCE_BANK_ROOT, bucket, expectedFile) : "";
+  const fileExists = Boolean(expectedPath && fs.existsSync(expectedPath));
+
+  return {
+    bucket,
+    chapterKey,
+    expectedFile,
+    expectedPath,
+    filePath: fileExists ? expectedPath : "",
+    fileExists,
+  };
+}
+
+function resolveSentenceBankFile(input = {}, chapterKey = "") {
+  return getSentenceBankPathInfo(input, chapterKey).filePath || null;
 }
 
 function safeReadJson(filePath) {
@@ -431,15 +467,6 @@ function loadSentenceBank(input = {}) {
     if (normalized.length) {
       return { chapterKey, filePath, source: "json_file", items: normalized };
     }
-  }
-
-  if (detectGradeBucket(input) === "middle1" && Array.isArray(MIDDLE1_SENTENCE_BANK[chapterKey]) && MIDDLE1_SENTENCE_BANK[chapterKey].length) {
-    return {
-      chapterKey,
-      filePath: null,
-      source: "embedded_fallback",
-      items: normalizeSentenceBankEntries(MIDDLE1_SENTENCE_BANK[chapterKey], chapterKey),
-    };
   }
 
   return { chapterKey, filePath: null, source: "none", items: [] };
@@ -771,10 +798,6 @@ function buildPrompt(input) {
     ? `Do NOT mix grammar types such as do/does, past, perfect, or continuous unless they are part of "${focus}".`
     : `${focus} 외의 문법(do/does, 과거, 완료, 진행형 등)을 절대 섞지 말 것.`;
 
-  const dbHardlockActive = shouldUseDbFirst(input);
-  const dbOnlyRule = input.language === "en"
-    ? `DB-FIRST ABSOLUTE RULE: For this request, use only the approved sentence bank. Do not invent, paraphrase, expand, or mix in GPT-generated grammar patterns.`
-    : `DB-FIRST 절대 규칙: 이번 요청은 승인된 sentence bank만 사용해야 한다. GPT가 문법 패턴을 새로 만들거나 바꾸거나 섞어서는 안 된다.`;
 
   return (input.language === "en"
     ? `Generate a MARCUS Magic worksheet.\nTitle: ${title}\nGrade: ${input.gradeLabel}\nLevel: ${input.level}\nMode: ${input.mode}\nWorkbookType: ${input.workbookType}\nTopic: ${input.topic}\nDifficulty: ${input.difficulty}\nItemCount: ${input.count}\nTask: ${buildTaskGuide(input)}\n\nRules:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[User Request]\n${input.userPrompt || "(none)"}`
@@ -1264,7 +1287,7 @@ function buildDbFirstWorksheet(input) {
       const choiceBundle = buildChoiceOptionsFromSeed(seed, answer, input, i + 1);
       questions.push({
         number: i + 1,
-        type: "binary_choice",
+        type: "choice",
         prompt: promptKo,
         options: choiceBundle.options,
         answerIndex: choiceBundle.answerIndex,
@@ -1299,19 +1322,13 @@ function buildDbFirstWorksheet(input) {
       dbSource: bankInfo.source,
       dbFilePath: bankInfo.filePath || "",
       dbItemCount: bank.length,
-      dbDebug: {
-        grade: detectGradeBucket(input),
-        chapterKey: input?.grammarFocus?.chapterKey,
-        requestedWorkbookType: input?.requestedWorkbookType,
-        workbookType: input?.workbookType,
-        dbSource: bankInfo?.source || "none",
-        dbFilePath: bankInfo?.filePath || "",
-        dbItemCount: Array.isArray(bankInfo?.items) ? bankInfo.items.length : 0,
-      },
+      dbDebug: getDbDebugInfo(input, bankInfo),
     },
   };
 
   return Object.assign(worksheet, createWorkbookRenderBundle(worksheet, input), {
+    questions,
+    answers,
     dbMode: true,
     dbForced: true,
     gptFallbackBlocked: true,
@@ -1321,31 +1338,18 @@ function buildDbFirstWorksheet(input) {
       dbSource: bankInfo.source,
       dbFilePath: bankInfo.filePath || "",
       dbItemCount: bank.length,
-      dbDebug: {
-        grade: detectGradeBucket(input),
-        chapterKey: input?.grammarFocus?.chapterKey,
-        requestedWorkbookType: input?.requestedWorkbookType,
-        workbookType: input?.workbookType,
-        dbSource: bankInfo?.source || "none",
-        dbFilePath: bankInfo?.filePath || "",
-        dbItemCount: Array.isArray(bankInfo?.items) ? bankInfo.items.length : 0,
-      },
+      dbDebug: getDbDebugInfo(input, bankInfo),
     }),
   });
 }
 
 
 
-function getDbDebugInfo(input = {}) {
+function getDbDebugInfo(input = {}, bankInfo = null) {
   const grade = detectGradeBucket(input);
   const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
-  const bucketMap = SENTENCE_BANK_FILE_MAP[grade] || {};
-  const expectedFile = bucketMap[chapterKey] || `${grade}_${chapterKey}.json`;
-  const expectedPath = grade && chapterKey
-    ? path.join(SENTENCE_BANK_ROOT, grade, expectedFile)
-    : "";
-
-  const bankInfo = loadSentenceBank(input);
+  const pathInfo = getSentenceBankPathInfo(input, chapterKey);
+  const resolvedBankInfo = bankInfo || loadSentenceBank(input);
 
   return {
     grade,
@@ -1353,12 +1357,12 @@ function getDbDebugInfo(input = {}) {
     requestedWorkbookType: input?.requestedWorkbookType,
     workbookType: input?.workbookType,
     mode: input?.mode,
-    dbSource: bankInfo?.source || "none",
-    dbFilePath: bankInfo?.filePath || "",
-    dbItemCount: Array.isArray(bankInfo?.items) ? bankInfo.items.length : 0,
-    expectedFile,
-    expectedPath,
-    fileExists: expectedPath ? fs.existsSync(expectedPath) : false,
+    dbSource: resolvedBankInfo?.source || "none",
+    dbFilePath: resolvedBankInfo?.filePath || "",
+    dbItemCount: Array.isArray(resolvedBankInfo?.items) ? resolvedBankInfo.items.length : 0,
+    expectedFile: pathInfo.expectedFile,
+    expectedPath: pathInfo.expectedPath,
+    fileExists: pathInfo.fileExists,
   };
 }
 function shouldUseDbFirst(input = {}) {
@@ -1385,8 +1389,6 @@ function shouldUseDbFirst(input = {}) {
     "magic-card",
     "writing_lab",
   ].includes(String(input?.mode || "").trim().toLowerCase());
-
-  const bankInfo = loadSentenceBank(input);
 
   return supportedMode && supportedType;
 }
@@ -1563,25 +1565,23 @@ async function handler(req, res) {
 
   try {
     const input = normalizeInput(req.body || {});
-    const dbDebug = getDbDebugInfo(input);
-    const dbReadyInfo = loadSentenceBank(input);
-    const dbReady =
-      shouldUseDbFirst(input) &&
-      Array.isArray(dbReadyInfo?.items) &&
-      dbReadyInfo.items.length > 0;
+    const shouldTryDbFirst = shouldUseDbFirst(input);
+    let worksheet = null;
 
-    let worksheet;
-
-    if (dbReady) {
+    if (shouldTryDbFirst) {
       worksheet = buildDbFirstWorksheet(input);
-    } else {
+    }
+
+    if (!worksheet) {
       worksheet = await generateWithOpenAI(input);
-      worksheet.meta = Object.assign({}, worksheet.meta || {}, {
-        dbFirst: false,
-        dbFallback: true,
-        dbSource: "gpt_fallback",
-        dbDebug,
-      });
+      if (shouldTryDbFirst) {
+        worksheet.meta = Object.assign({}, worksheet.meta || {}, {
+          dbFirst: false,
+          dbFallback: true,
+          dbSource: "gpt_fallback",
+          dbDebug: getDbDebugInfo(input),
+        });
+      }
     }
     const renderBundle = createWorkbookRenderBundle(worksheet, input) || {};
     const mp = await consumeMpIfNeeded(input);
