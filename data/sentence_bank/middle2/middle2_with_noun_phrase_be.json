@@ -1,0 +1,4654 @@
+[
+  {
+    "id": "m2_with_noun_phrase_be_001",
+    "seedId": "with_noun_phrase_be_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "안경 쓴 소년은 내 동생이다.",
+    "english": "The boy with glasses is my brother.",
+    "words": [
+      "The",
+      "boy",
+      "with",
+      "glasses",
+      "is",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "안경 쓴 소년은 내 동생이다.",
+        "the / boy / with / glasses / is / my / brother"
+      ],
+      [
+        "with glasses",
+        "with glasses"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with glasses"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boys with glasses are my brother.",
+      "statementForm": [
+        "The boy with glasses is my brother.",
+        "The boy with glasses is my brother"
+      ],
+      "fragmentForm": "the / boy / with / glasses / is / my / brother",
+      "wormholeVariants": [
+        "The boys with glasses is my brother.",
+        "The boy with glasses are my brother."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_002",
+    "seedId": "with_noun_phrase_be_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "안경 쓴 소년들은 내 동생들이다.",
+    "english": "The boys with glasses are my brothers.",
+    "words": [
+      "The",
+      "boys",
+      "with",
+      "glasses",
+      "are",
+      "my",
+      "brothers",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "안경 쓴 소년들은 내 동생들이다.",
+        "the / boys / with / glasses / are / my / brothers"
+      ],
+      [
+        "with glasses",
+        "with glasses"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with glasses"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy with glasses is my brothers.",
+      "statementForm": [
+        "The boys with glasses are my brothers.",
+        "The boys with glasses are my brothers"
+      ],
+      "fragmentForm": "the / boys / with / glasses / are / my / brothers",
+      "wormholeVariants": [
+        "The boy with glasses are my brothers.",
+        "The boys with glasses is my brothers."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_003",
+    "seedId": "with_noun_phrase_be_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "안경 쓴 소년은 작년에는 내 동생이었다.",
+    "english": "The boy with glasses was my brother last year.",
+    "words": [
+      "The",
+      "boy",
+      "with",
+      "glasses",
+      "was",
+      "my",
+      "brother",
+      "last",
+      "year",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "안경 쓴 소년은 작년에는 내 동생이었다.",
+        "the / boy / with / glasses / was / my / brother / last / year"
+      ],
+      [
+        "with glasses",
+        "with glasses"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with glasses"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boys with glasses were my brother last year.",
+      "statementForm": [
+        "The boy with glasses was my brother last year.",
+        "The boy with glasses was my brother last year"
+      ],
+      "fragmentForm": "the / boy / with / glasses / was / my / brother / last / year",
+      "wormholeVariants": [
+        "The boys with glasses was my brother last year.",
+        "The boy with glasses were my brother last year."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_004",
+    "seedId": "with_noun_phrase_be_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "안경 쓴 소년들은 작년에는 내 동생들이었다.",
+    "english": "The boys with glasses were my brothers last year.",
+    "words": [
+      "The",
+      "boys",
+      "with",
+      "glasses",
+      "were",
+      "my",
+      "brothers",
+      "last",
+      "year",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "안경 쓴 소년들은 작년에는 내 동생들이었다.",
+        "the / boys / with / glasses / were / my / brothers / last / year"
+      ],
+      [
+        "with glasses",
+        "with glasses"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with glasses"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy with glasses was my brothers last year.",
+      "statementForm": [
+        "The boys with glasses were my brothers last year.",
+        "The boys with glasses were my brothers last year"
+      ],
+      "fragmentForm": "the / boys / with / glasses / were / my / brothers / last / year",
+      "wormholeVariants": [
+        "The boy with glasses were my brothers last year.",
+        "The boys with glasses was my brothers last year."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_005",
+    "seedId": "with_noun_phrase_be_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "빨간 가방을 든 소녀는 내 동생이다.",
+    "english": "The girl with a red bag is my sister.",
+    "words": [
+      "The",
+      "girl",
+      "with",
+      "a",
+      "red",
+      "bag",
+      "is",
+      "my",
+      "sister",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "빨간 가방을 든 소녀는 내 동생이다.",
+        "the / girl / with / a / red / bag / is / my / sister"
+      ],
+      [
+        "with a red bag",
+        "with a red bag"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a red bag"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girls with red bags are my sister.",
+      "statementForm": [
+        "The girl with a red bag is my sister.",
+        "The girl with a red bag is my sister"
+      ],
+      "fragmentForm": "the / girl / with / a / red / bag / is / my / sister",
+      "wormholeVariants": [
+        "The girls with a red bag is my sister.",
+        "The girl with a red bag are my sister."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_006",
+    "seedId": "with_noun_phrase_be_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "빨간 가방을 든 소녀들은 내 동생들이다.",
+    "english": "The girls with red bags are my sisters.",
+    "words": [
+      "The",
+      "girls",
+      "with",
+      "red",
+      "bags",
+      "are",
+      "my",
+      "sisters",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "빨간 가방을 든 소녀들은 내 동생들이다.",
+        "the / girls / with / red / bags / are / my / sisters"
+      ],
+      [
+        "with red bags",
+        "with red bags"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with red bags"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl with a red bag is my sisters.",
+      "statementForm": [
+        "The girls with red bags are my sisters.",
+        "The girls with red bags are my sisters"
+      ],
+      "fragmentForm": "the / girls / with / red / bags / are / my / sisters",
+      "wormholeVariants": [
+        "The girl with red bags are my sisters.",
+        "The girls with red bags is my sisters."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_007",
+    "seedId": "with_noun_phrase_be_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "빨간 가방을 든 소녀는 어제는 내 동생이었다.",
+    "english": "The girl with a red bag was my sister yesterday.",
+    "words": [
+      "The",
+      "girl",
+      "with",
+      "a",
+      "red",
+      "bag",
+      "was",
+      "my",
+      "sister",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "빨간 가방을 든 소녀는 어제는 내 동생이었다.",
+        "the / girl / with / a / red / bag / was / my / sister / yesterday"
+      ],
+      [
+        "with a red bag",
+        "with a red bag"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a red bag"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girls with red bags were my sister yesterday.",
+      "statementForm": [
+        "The girl with a red bag was my sister yesterday.",
+        "The girl with a red bag was my sister yesterday"
+      ],
+      "fragmentForm": "the / girl / with / a / red / bag / was / my / sister / yesterday",
+      "wormholeVariants": [
+        "The girls with a red bag was my sister yesterday.",
+        "The girl with a red bag were my sister yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_008",
+    "seedId": "with_noun_phrase_be_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "빨간 가방을 든 소녀들은 어제는 내 동생들이었다.",
+    "english": "The girls with red bags were my sisters yesterday.",
+    "words": [
+      "The",
+      "girls",
+      "with",
+      "red",
+      "bags",
+      "were",
+      "my",
+      "sisters",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "빨간 가방을 든 소녀들은 어제는 내 동생들이었다.",
+        "the / girls / with / red / bags / were / my / sisters / yesterday"
+      ],
+      [
+        "with red bags",
+        "with red bags"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with red bags"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl with a red bag was my sisters yesterday.",
+      "statementForm": [
+        "The girls with red bags were my sisters yesterday.",
+        "The girls with red bags were my sisters yesterday"
+      ],
+      "fragmentForm": "the / girls / with / red / bags / were / my / sisters / yesterday",
+      "wormholeVariants": [
+        "The girl with red bags were my sisters yesterday.",
+        "The girls with red bags was my sisters yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_009",
+    "seedId": "with_noun_phrase_be_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "질문이 있는 학생은 우리 반에 있다.",
+    "english": "The student with a question is in my class.",
+    "words": [
+      "The",
+      "student",
+      "with",
+      "a",
+      "question",
+      "is",
+      "in",
+      "my",
+      "class",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "질문이 있는 학생은 우리 반에 있다.",
+        "the / student / with / a / question / is / in / my / class"
+      ],
+      [
+        "with a question",
+        "with a question"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a question"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students with questions are in my class.",
+      "statementForm": [
+        "The student with a question is in my class.",
+        "The student with a question is in my class"
+      ],
+      "fragmentForm": "the / student / with / a / question / is / in / my / class",
+      "wormholeVariants": [
+        "The students with a question is in my class.",
+        "The student with a question are in my class."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_010",
+    "seedId": "with_noun_phrase_be_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "질문이 있는 학생들은 우리 반에 있다.",
+    "english": "The students with questions are in my class.",
+    "words": [
+      "The",
+      "students",
+      "with",
+      "questions",
+      "are",
+      "in",
+      "my",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "질문이 있는 학생들은 우리 반에 있다.",
+        "the / students / with / questions / are / in / my / class"
+      ],
+      [
+        "with questions",
+        "with questions"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with questions"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student with a question is in my class.",
+      "statementForm": [
+        "The students with questions are in my class.",
+        "The students with questions are in my class"
+      ],
+      "fragmentForm": "the / students / with / questions / are / in / my / class",
+      "wormholeVariants": [
+        "The student with questions are in my class.",
+        "The students with questions is in my class."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_011",
+    "seedId": "with_noun_phrase_be_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "질문이 있는 학생은 예전에는 우리 반에 있었다.",
+    "english": "The student with a question was in my class before.",
+    "words": [
+      "The",
+      "student",
+      "with",
+      "a",
+      "question",
+      "was",
+      "in",
+      "my",
+      "class",
+      "before",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "질문이 있는 학생은 예전에는 우리 반에 있었다.",
+        "the / student / with / a / question / was / in / my / class / before"
+      ],
+      [
+        "with a question",
+        "with a question"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a question"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students with questions were in my class before.",
+      "statementForm": [
+        "The student with a question was in my class before.",
+        "The student with a question was in my class before"
+      ],
+      "fragmentForm": "the / student / with / a / question / was / in / my / class / before",
+      "wormholeVariants": [
+        "The students with a question was in my class before.",
+        "The student with a question were in my class before."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_012",
+    "seedId": "with_noun_phrase_be_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "질문이 있는 학생들은 예전에는 우리 반에 있었다.",
+    "english": "The students with questions were in my class before.",
+    "words": [
+      "The",
+      "students",
+      "with",
+      "questions",
+      "were",
+      "in",
+      "my",
+      "class",
+      "before",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "질문이 있는 학생들은 예전에는 우리 반에 있었다.",
+        "the / students / with / questions / were / in / my / class / before"
+      ],
+      [
+        "with questions",
+        "with questions"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with questions"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student with a question was in my class before.",
+      "statementForm": [
+        "The students with questions were in my class before.",
+        "The students with questions were in my class before"
+      ],
+      "fragmentForm": "the / students / with / questions / were / in / my / class / before",
+      "wormholeVariants": [
+        "The student with questions were in my class before.",
+        "The students with questions was in my class before."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_013",
+    "seedId": "with_noun_phrase_be_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "노트가 있는 선생님은 도서관에 있다.",
+    "english": "The teacher with a notebook is in the library.",
+    "words": [
+      "The",
+      "teacher",
+      "with",
+      "a",
+      "notebook",
+      "is",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "노트가 있는 선생님은 도서관에 있다.",
+        "the / teacher / with / a / notebook / is / in / the / library"
+      ],
+      [
+        "with a notebook",
+        "with a notebook"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a notebook"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teachers with notebooks are in the library.",
+      "statementForm": [
+        "The teacher with a notebook is in the library.",
+        "The teacher with a notebook is in the library"
+      ],
+      "fragmentForm": "the / teacher / with / a / notebook / is / in / the / library",
+      "wormholeVariants": [
+        "The teachers with a notebook is in the library.",
+        "The teacher with a notebook are in the library."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_014",
+    "seedId": "with_noun_phrase_be_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "노트가 있는 선생님들은 도서관에 있다.",
+    "english": "The teachers with notebooks are in the library.",
+    "words": [
+      "The",
+      "teachers",
+      "with",
+      "notebooks",
+      "are",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "노트가 있는 선생님들은 도서관에 있다.",
+        "the / teachers / with / notebooks / are / in / the / library"
+      ],
+      [
+        "with notebooks",
+        "with notebooks"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with notebooks"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher with a notebook is in the library.",
+      "statementForm": [
+        "The teachers with notebooks are in the library.",
+        "The teachers with notebooks are in the library"
+      ],
+      "fragmentForm": "the / teachers / with / notebooks / are / in / the / library",
+      "wormholeVariants": [
+        "The teacher with notebooks are in the library.",
+        "The teachers with notebooks is in the library."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_015",
+    "seedId": "with_noun_phrase_be_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "노트가 있는 선생님은 어제는 도서관에 있었다.",
+    "english": "The teacher with a notebook was in the library yesterday.",
+    "words": [
+      "The",
+      "teacher",
+      "with",
+      "a",
+      "notebook",
+      "was",
+      "in",
+      "the",
+      "library",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "노트가 있는 선생님은 어제는 도서관에 있었다.",
+        "the / teacher / with / a / notebook / was / in / the / library / yesterday"
+      ],
+      [
+        "with a notebook",
+        "with a notebook"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a notebook"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teachers with notebooks were in the library yesterday.",
+      "statementForm": [
+        "The teacher with a notebook was in the library yesterday.",
+        "The teacher with a notebook was in the library yesterday"
+      ],
+      "fragmentForm": "the / teacher / with / a / notebook / was / in / the / library / yesterday",
+      "wormholeVariants": [
+        "The teachers with a notebook was in the library yesterday.",
+        "The teacher with a notebook were in the library yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_016",
+    "seedId": "with_noun_phrase_be_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "노트가 있는 선생님들은 어제는 도서관에 있었다.",
+    "english": "The teachers with notebooks were in the library yesterday.",
+    "words": [
+      "The",
+      "teachers",
+      "with",
+      "notebooks",
+      "were",
+      "in",
+      "the",
+      "library",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "노트가 있는 선생님들은 어제는 도서관에 있었다.",
+        "the / teachers / with / notebooks / were / in / the / library / yesterday"
+      ],
+      [
+        "with notebooks",
+        "with notebooks"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with notebooks"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher with a notebook was in the library yesterday.",
+      "statementForm": [
+        "The teachers with notebooks were in the library yesterday.",
+        "The teachers with notebooks were in the library yesterday"
+      ],
+      "fragmentForm": "the / teachers / with / notebooks / were / in / the / library / yesterday",
+      "wormholeVariants": [
+        "The teacher with notebooks were in the library yesterday.",
+        "The teachers with notebooks was in the library yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_017",
+    "seedId": "with_noun_phrase_be_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "카메라를 든 남자는 기자이다.",
+    "english": "The man with a camera is a reporter.",
+    "words": [
+      "The",
+      "man",
+      "with",
+      "a",
+      "camera",
+      "is",
+      "a",
+      "reporter",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카메라를 든 남자는 기자이다.",
+        "the / man / with / a / camera / is / a / reporter"
+      ],
+      [
+        "with a camera",
+        "with a camera"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a camera"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The men with cameras are a reporter.",
+      "statementForm": [
+        "The man with a camera is a reporter.",
+        "The man with a camera is a reporter"
+      ],
+      "fragmentForm": "the / man / with / a / camera / is / a / reporter",
+      "wormholeVariants": [
+        "The men with a camera is a reporter.",
+        "The man with a camera are a reporter."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_018",
+    "seedId": "with_noun_phrase_be_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "카메라를 든 남자들은 기자들이다.",
+    "english": "The men with cameras are reporters.",
+    "words": [
+      "The",
+      "men",
+      "with",
+      "cameras",
+      "are",
+      "reporters",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카메라를 든 남자들은 기자들이다.",
+        "the / men / with / cameras / are / reporters"
+      ],
+      [
+        "with cameras",
+        "with cameras"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with cameras"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The man with a camera is reporters.",
+      "statementForm": [
+        "The men with cameras are reporters.",
+        "The men with cameras are reporters"
+      ],
+      "fragmentForm": "the / men / with / cameras / are / reporters",
+      "wormholeVariants": [
+        "The man with cameras are reporters.",
+        "The men with cameras is reporters."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_019",
+    "seedId": "with_noun_phrase_be_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "카메라를 든 남자는 그때는 기자였다.",
+    "english": "The man with a camera was a reporter then.",
+    "words": [
+      "The",
+      "man",
+      "with",
+      "a",
+      "camera",
+      "was",
+      "a",
+      "reporter",
+      "then",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카메라를 든 남자는 그때는 기자였다.",
+        "the / man / with / a / camera / was / a / reporter / then"
+      ],
+      [
+        "with a camera",
+        "with a camera"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a camera"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The men with cameras were a reporter then.",
+      "statementForm": [
+        "The man with a camera was a reporter then.",
+        "The man with a camera was a reporter then"
+      ],
+      "fragmentForm": "the / man / with / a / camera / was / a / reporter / then",
+      "wormholeVariants": [
+        "The men with a camera was a reporter then.",
+        "The man with a camera were a reporter then."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_020",
+    "seedId": "with_noun_phrase_be_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "카메라를 든 남자들은 그때는 기자들이었다.",
+    "english": "The men with cameras were reporters then.",
+    "words": [
+      "The",
+      "men",
+      "with",
+      "cameras",
+      "were",
+      "reporters",
+      "then",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카메라를 든 남자들은 그때는 기자들이었다.",
+        "the / men / with / cameras / were / reporters / then"
+      ],
+      [
+        "with cameras",
+        "with cameras"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with cameras"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The man with a camera was reporters then.",
+      "statementForm": [
+        "The men with cameras were reporters then.",
+        "The men with cameras were reporters then"
+      ],
+      "fragmentForm": "the / men / with / cameras / were / reporters / then",
+      "wormholeVariants": [
+        "The man with cameras were reporters then.",
+        "The men with cameras was reporters then."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_021",
+    "seedId": "with_noun_phrase_be_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "지도를 가진 여자는 관광객이다.",
+    "english": "The woman with a map is a tourist.",
+    "words": [
+      "The",
+      "woman",
+      "with",
+      "a",
+      "map",
+      "is",
+      "a",
+      "tourist",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지도를 가진 여자는 관광객이다.",
+        "the / woman / with / a / map / is / a / tourist"
+      ],
+      [
+        "with a map",
+        "with a map"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a map"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The women with maps are a tourist.",
+      "statementForm": [
+        "The woman with a map is a tourist.",
+        "The woman with a map is a tourist"
+      ],
+      "fragmentForm": "the / woman / with / a / map / is / a / tourist",
+      "wormholeVariants": [
+        "The women with a map is a tourist.",
+        "The woman with a map are a tourist."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_022",
+    "seedId": "with_noun_phrase_be_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "지도를 가진 여자들은 관광객들이다.",
+    "english": "The women with maps are tourists.",
+    "words": [
+      "The",
+      "women",
+      "with",
+      "maps",
+      "are",
+      "tourists",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지도를 가진 여자들은 관광객들이다.",
+        "the / women / with / maps / are / tourists"
+      ],
+      [
+        "with maps",
+        "with maps"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with maps"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The woman with a map is tourists.",
+      "statementForm": [
+        "The women with maps are tourists.",
+        "The women with maps are tourists"
+      ],
+      "fragmentForm": "the / women / with / maps / are / tourists",
+      "wormholeVariants": [
+        "The woman with maps are tourists.",
+        "The women with maps is tourists."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_023",
+    "seedId": "with_noun_phrase_be_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "지도를 가진 여자는 작년에는 관광객이었다.",
+    "english": "The woman with a map was a tourist last year.",
+    "words": [
+      "The",
+      "woman",
+      "with",
+      "a",
+      "map",
+      "was",
+      "a",
+      "tourist",
+      "last",
+      "year",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지도를 가진 여자는 작년에는 관광객이었다.",
+        "the / woman / with / a / map / was / a / tourist / last / year"
+      ],
+      [
+        "with a map",
+        "with a map"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a map"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The women with maps were a tourist last year.",
+      "statementForm": [
+        "The woman with a map was a tourist last year.",
+        "The woman with a map was a tourist last year"
+      ],
+      "fragmentForm": "the / woman / with / a / map / was / a / tourist / last / year",
+      "wormholeVariants": [
+        "The women with a map was a tourist last year.",
+        "The woman with a map were a tourist last year."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_024",
+    "seedId": "with_noun_phrase_be_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "지도를 가진 여자들은 작년에는 관광객들이었다.",
+    "english": "The women with maps were tourists last year.",
+    "words": [
+      "The",
+      "women",
+      "with",
+      "maps",
+      "were",
+      "tourists",
+      "last",
+      "year",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지도를 가진 여자들은 작년에는 관광객들이었다.",
+        "the / women / with / maps / were / tourists / last / year"
+      ],
+      [
+        "with maps",
+        "with maps"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with maps"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The woman with a map was tourists last year.",
+      "statementForm": [
+        "The women with maps were tourists last year.",
+        "The women with maps were tourists last year"
+      ],
+      "fragmentForm": "the / women / with / maps / were / tourists / last / year",
+      "wormholeVariants": [
+        "The woman with maps were tourists last year.",
+        "The women with maps was tourists last year."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_025",
+    "seedId": "with_noun_phrase_be_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "모자를 쓴 아이는 내 사촌이다.",
+    "english": "The child with a hat is my cousin.",
+    "words": [
+      "The",
+      "child",
+      "with",
+      "a",
+      "hat",
+      "is",
+      "my",
+      "cousin",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모자를 쓴 아이는 내 사촌이다.",
+        "the / child / with / a / hat / is / my / cousin"
+      ],
+      [
+        "with a hat",
+        "with a hat"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a hat"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The children with hats are my cousin.",
+      "statementForm": [
+        "The child with a hat is my cousin.",
+        "The child with a hat is my cousin"
+      ],
+      "fragmentForm": "the / child / with / a / hat / is / my / cousin",
+      "wormholeVariants": [
+        "The children with a hat is my cousin.",
+        "The child with a hat are my cousin."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_026",
+    "seedId": "with_noun_phrase_be_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "모자를 쓴 아이들은 내 사촌들이다.",
+    "english": "The children with hats are my cousins.",
+    "words": [
+      "The",
+      "children",
+      "with",
+      "hats",
+      "are",
+      "my",
+      "cousins",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모자를 쓴 아이들은 내 사촌들이다.",
+        "the / children / with / hats / are / my / cousins"
+      ],
+      [
+        "with hats",
+        "with hats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with hats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child with a hat is my cousins.",
+      "statementForm": [
+        "The children with hats are my cousins.",
+        "The children with hats are my cousins"
+      ],
+      "fragmentForm": "the / children / with / hats / are / my / cousins",
+      "wormholeVariants": [
+        "The child with hats are my cousins.",
+        "The children with hats is my cousins."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_027",
+    "seedId": "with_noun_phrase_be_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "모자를 쓴 아이는 그때는 내 사촌이었다.",
+    "english": "The child with a hat was my cousin then.",
+    "words": [
+      "The",
+      "child",
+      "with",
+      "a",
+      "hat",
+      "was",
+      "my",
+      "cousin",
+      "then",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모자를 쓴 아이는 그때는 내 사촌이었다.",
+        "the / child / with / a / hat / was / my / cousin / then"
+      ],
+      [
+        "with a hat",
+        "with a hat"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a hat"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The children with hats were my cousin then.",
+      "statementForm": [
+        "The child with a hat was my cousin then.",
+        "The child with a hat was my cousin then"
+      ],
+      "fragmentForm": "the / child / with / a / hat / was / my / cousin / then",
+      "wormholeVariants": [
+        "The children with a hat was my cousin then.",
+        "The child with a hat were my cousin then."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_028",
+    "seedId": "with_noun_phrase_be_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "모자를 쓴 아이들은 그때는 내 사촌들이었다.",
+    "english": "The children with hats were my cousins then.",
+    "words": [
+      "The",
+      "children",
+      "with",
+      "hats",
+      "were",
+      "my",
+      "cousins",
+      "then",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모자를 쓴 아이들은 그때는 내 사촌들이었다.",
+        "the / children / with / hats / were / my / cousins / then"
+      ],
+      [
+        "with hats",
+        "with hats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with hats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child with a hat was my cousins then.",
+      "statementForm": [
+        "The children with hats were my cousins then.",
+        "The children with hats were my cousins then"
+      ],
+      "fragmentForm": "the / children / with / hats / were / my / cousins / then",
+      "wormholeVariants": [
+        "The child with hats were my cousins then.",
+        "The children with hats was my cousins then."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_029",
+    "seedId": "with_noun_phrase_be_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "목걸이를 한 개는 친근하다.",
+    "english": "The dog with a collar is friendly.",
+    "words": [
+      "The",
+      "dog",
+      "with",
+      "a",
+      "collar",
+      "is",
+      "friendly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목걸이를 한 개는 친근하다.",
+        "the / dog / with / a / collar / is / friendly"
+      ],
+      [
+        "with a collar",
+        "with a collar"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a collar"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dogs with collars are friendly.",
+      "statementForm": [
+        "The dog with a collar is friendly.",
+        "The dog with a collar is friendly"
+      ],
+      "fragmentForm": "the / dog / with / a / collar / is / friendly",
+      "wormholeVariants": [
+        "The dogs with a collar is friendly.",
+        "The dog with a collar are friendly."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_030",
+    "seedId": "with_noun_phrase_be_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "목걸이를 한 개들은 친근하다.",
+    "english": "The dogs with collars are friendly.",
+    "words": [
+      "The",
+      "dogs",
+      "with",
+      "collars",
+      "are",
+      "friendly",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목걸이를 한 개들은 친근하다.",
+        "the / dogs / with / collars / are / friendly"
+      ],
+      [
+        "with collars",
+        "with collars"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with collars"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog with a collar is friendly.",
+      "statementForm": [
+        "The dogs with collars are friendly.",
+        "The dogs with collars are friendly"
+      ],
+      "fragmentForm": "the / dogs / with / collars / are / friendly",
+      "wormholeVariants": [
+        "The dog with collars are friendly.",
+        "The dogs with collars is friendly."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_031",
+    "seedId": "with_noun_phrase_be_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "목걸이를 한 개는 어제는 친근했다.",
+    "english": "The dog with a collar was friendly yesterday.",
+    "words": [
+      "The",
+      "dog",
+      "with",
+      "a",
+      "collar",
+      "was",
+      "friendly",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목걸이를 한 개는 어제는 친근했다.",
+        "the / dog / with / a / collar / was / friendly / yesterday"
+      ],
+      [
+        "with a collar",
+        "with a collar"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a collar"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dogs with collars were friendly yesterday.",
+      "statementForm": [
+        "The dog with a collar was friendly yesterday.",
+        "The dog with a collar was friendly yesterday"
+      ],
+      "fragmentForm": "the / dog / with / a / collar / was / friendly / yesterday",
+      "wormholeVariants": [
+        "The dogs with a collar was friendly yesterday.",
+        "The dog with a collar were friendly yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_032",
+    "seedId": "with_noun_phrase_be_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "목걸이를 한 개들은 어제는 친근했다.",
+    "english": "The dogs with collars were friendly yesterday.",
+    "words": [
+      "The",
+      "dogs",
+      "with",
+      "collars",
+      "were",
+      "friendly",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목걸이를 한 개들은 어제는 친근했다.",
+        "the / dogs / with / collars / were / friendly / yesterday"
+      ],
+      [
+        "with collars",
+        "with collars"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with collars"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog with a collar was friendly yesterday.",
+      "statementForm": [
+        "The dogs with collars were friendly yesterday.",
+        "The dogs with collars were friendly yesterday"
+      ],
+      "fragmentForm": "the / dogs / with / collars / were / friendly / yesterday",
+      "wormholeVariants": [
+        "The dog with collars were friendly yesterday.",
+        "The dogs with collars was friendly yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_033",
+    "seedId": "with_noun_phrase_be_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "고장 난 불이 있는 차는 차고 안에 있다.",
+    "english": "The car with a broken light is in the garage.",
+    "words": [
+      "The",
+      "car",
+      "with",
+      "a",
+      "broken",
+      "light",
+      "is",
+      "in",
+      "the",
+      "garage",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "고장 난 불이 있는 차는 차고 안에 있다.",
+        "the / car / with / a / broken / light / is / in / the / garage"
+      ],
+      [
+        "with a broken light",
+        "with a broken light"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a broken light"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cars with broken lights are in the garage.",
+      "statementForm": [
+        "The car with a broken light is in the garage.",
+        "The car with a broken light is in the garage"
+      ],
+      "fragmentForm": "the / car / with / a / broken / light / is / in / the / garage",
+      "wormholeVariants": [
+        "The cars with a broken light is in the garage.",
+        "The car with a broken light are in the garage."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_034",
+    "seedId": "with_noun_phrase_be_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "고장 난 불이 있는 차들은 차고 안에 있다.",
+    "english": "The cars with broken lights are in the garage.",
+    "words": [
+      "The",
+      "cars",
+      "with",
+      "broken",
+      "lights",
+      "are",
+      "in",
+      "the",
+      "garage",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "고장 난 불이 있는 차들은 차고 안에 있다.",
+        "the / cars / with / broken / lights / are / in / the / garage"
+      ],
+      [
+        "with broken lights",
+        "with broken lights"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with broken lights"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The car with a broken light is in the garage.",
+      "statementForm": [
+        "The cars with broken lights are in the garage.",
+        "The cars with broken lights are in the garage"
+      ],
+      "fragmentForm": "the / cars / with / broken / lights / are / in / the / garage",
+      "wormholeVariants": [
+        "The car with broken lights are in the garage.",
+        "The cars with broken lights is in the garage."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_035",
+    "seedId": "with_noun_phrase_be_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "고장 난 불이 있는 차는 어제는 차고 안에 있었다.",
+    "english": "The car with a broken light was in the garage yesterday.",
+    "words": [
+      "The",
+      "car",
+      "with",
+      "a",
+      "broken",
+      "light",
+      "was",
+      "in",
+      "the",
+      "garage",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "고장 난 불이 있는 차는 어제는 차고 안에 있었다.",
+        "the / car / with / a / broken / light / was / in / the / garage / yesterday"
+      ],
+      [
+        "with a broken light",
+        "with a broken light"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a broken light"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cars with broken lights were in the garage yesterday.",
+      "statementForm": [
+        "The car with a broken light was in the garage yesterday.",
+        "The car with a broken light was in the garage yesterday"
+      ],
+      "fragmentForm": "the / car / with / a / broken / light / was / in / the / garage / yesterday",
+      "wormholeVariants": [
+        "The cars with a broken light was in the garage yesterday.",
+        "The car with a broken light were in the garage yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_036",
+    "seedId": "with_noun_phrase_be_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "고장 난 불이 있는 차들은 어제는 차고 안에 있었다.",
+    "english": "The cars with broken lights were in the garage yesterday.",
+    "words": [
+      "The",
+      "cars",
+      "with",
+      "broken",
+      "lights",
+      "were",
+      "in",
+      "the",
+      "garage",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "고장 난 불이 있는 차들은 어제는 차고 안에 있었다.",
+        "the / cars / with / broken / lights / were / in / the / garage / yesterday"
+      ],
+      [
+        "with broken lights",
+        "with broken lights"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with broken lights"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The car with a broken light was in the garage yesterday.",
+      "statementForm": [
+        "The cars with broken lights were in the garage yesterday.",
+        "The cars with broken lights were in the garage yesterday"
+      ],
+      "fragmentForm": "the / cars / with / broken / lights / were / in / the / garage / yesterday",
+      "wormholeVariants": [
+        "The car with broken lights were in the garage yesterday.",
+        "The cars with broken lights was in the garage yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_037",
+    "seedId": "with_noun_phrase_be_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "파란 문이 있는 집은 공원 근처에 있다.",
+    "english": "The house with a blue door is near the park.",
+    "words": [
+      "The",
+      "house",
+      "with",
+      "a",
+      "blue",
+      "door",
+      "is",
+      "near",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 문이 있는 집은 공원 근처에 있다.",
+        "the / house / with / a / blue / door / is / near / the / park"
+      ],
+      [
+        "with a blue door",
+        "with a blue door"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a blue door"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The houses with blue doors are near the park.",
+      "statementForm": [
+        "The house with a blue door is near the park.",
+        "The house with a blue door is near the park"
+      ],
+      "fragmentForm": "the / house / with / a / blue / door / is / near / the / park",
+      "wormholeVariants": [
+        "The houses with a blue door is near the park.",
+        "The house with a blue door are near the park."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_038",
+    "seedId": "with_noun_phrase_be_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "파란 문이 있는 집들은 공원 근처에 있다.",
+    "english": "The houses with blue doors are near the park.",
+    "words": [
+      "The",
+      "houses",
+      "with",
+      "blue",
+      "doors",
+      "are",
+      "near",
+      "the",
+      "park",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 문이 있는 집들은 공원 근처에 있다.",
+        "the / houses / with / blue / doors / are / near / the / park"
+      ],
+      [
+        "with blue doors",
+        "with blue doors"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with blue doors"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The house with a blue door is near the park.",
+      "statementForm": [
+        "The houses with blue doors are near the park.",
+        "The houses with blue doors are near the park"
+      ],
+      "fragmentForm": "the / houses / with / blue / doors / are / near / the / park",
+      "wormholeVariants": [
+        "The house with blue doors are near the park.",
+        "The houses with blue doors is near the park."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_039",
+    "seedId": "with_noun_phrase_be_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "파란 문이 있는 집은 어제는 공원 근처에 있었다.",
+    "english": "The house with a blue door was near the park yesterday.",
+    "words": [
+      "The",
+      "house",
+      "with",
+      "a",
+      "blue",
+      "door",
+      "was",
+      "near",
+      "the",
+      "park",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 문이 있는 집은 어제는 공원 근처에 있었다.",
+        "the / house / with / a / blue / door / was / near / the / park / yesterday"
+      ],
+      [
+        "with a blue door",
+        "with a blue door"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a blue door"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The houses with blue doors were near the park yesterday.",
+      "statementForm": [
+        "The house with a blue door was near the park yesterday.",
+        "The house with a blue door was near the park yesterday"
+      ],
+      "fragmentForm": "the / house / with / a / blue / door / was / near / the / park / yesterday",
+      "wormholeVariants": [
+        "The houses with a blue door was near the park yesterday.",
+        "The house with a blue door were near the park yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_040",
+    "seedId": "with_noun_phrase_be_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "파란 문이 있는 집들은 어제는 공원 근처에 있었다.",
+    "english": "The houses with blue doors were near the park yesterday.",
+    "words": [
+      "The",
+      "houses",
+      "with",
+      "blue",
+      "doors",
+      "were",
+      "near",
+      "the",
+      "park",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 문이 있는 집들은 어제는 공원 근처에 있었다.",
+        "the / houses / with / blue / doors / were / near / the / park / yesterday"
+      ],
+      [
+        "with blue doors",
+        "with blue doors"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with blue doors"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The house with a blue door was near the park yesterday.",
+      "statementForm": [
+        "The houses with blue doors were near the park yesterday.",
+        "The houses with blue doors were near the park yesterday"
+      ],
+      "fragmentForm": "the / houses / with / blue / doors / were / near / the / park / yesterday",
+      "wormholeVariants": [
+        "The house with blue doors were near the park yesterday.",
+        "The houses with blue doors was near the park yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_041",
+    "seedId": "with_noun_phrase_be_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "큰 창문이 있는 방은 밝다.",
+    "english": "The room with large windows is bright.",
+    "words": [
+      "The",
+      "room",
+      "with",
+      "large",
+      "windows",
+      "is",
+      "bright",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "큰 창문이 있는 방은 밝다.",
+        "the / room / with / large / windows / is / bright"
+      ],
+      [
+        "with large windows",
+        "with large windows"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with large windows"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rooms with large windows are bright.",
+      "statementForm": [
+        "The room with large windows is bright.",
+        "The room with large windows is bright"
+      ],
+      "fragmentForm": "the / room / with / large / windows / is / bright",
+      "wormholeVariants": [
+        "The rooms with large windows is bright.",
+        "The room with large windows are bright."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_042",
+    "seedId": "with_noun_phrase_be_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "큰 창문이 있는 방들은 밝다.",
+    "english": "The rooms with large windows are bright.",
+    "words": [
+      "The",
+      "rooms",
+      "with",
+      "large",
+      "windows",
+      "are",
+      "bright",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "큰 창문이 있는 방들은 밝다.",
+        "the / rooms / with / large / windows / are / bright"
+      ],
+      [
+        "with large windows",
+        "with large windows"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with large windows"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room with large windows is bright.",
+      "statementForm": [
+        "The rooms with large windows are bright.",
+        "The rooms with large windows are bright"
+      ],
+      "fragmentForm": "the / rooms / with / large / windows / are / bright",
+      "wormholeVariants": [
+        "The room with large windows are bright.",
+        "The rooms with large windows is bright."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_043",
+    "seedId": "with_noun_phrase_be_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "큰 창문이 있는 방은 어제는 밝았다.",
+    "english": "The room with large windows was bright yesterday.",
+    "words": [
+      "The",
+      "room",
+      "with",
+      "large",
+      "windows",
+      "was",
+      "bright",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "큰 창문이 있는 방은 어제는 밝았다.",
+        "the / room / with / large / windows / was / bright / yesterday"
+      ],
+      [
+        "with large windows",
+        "with large windows"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with large windows"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rooms with large windows were bright yesterday.",
+      "statementForm": [
+        "The room with large windows was bright yesterday.",
+        "The room with large windows was bright yesterday"
+      ],
+      "fragmentForm": "the / room / with / large / windows / was / bright / yesterday",
+      "wormholeVariants": [
+        "The rooms with large windows was bright yesterday.",
+        "The room with large windows were bright yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_044",
+    "seedId": "with_noun_phrase_be_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "큰 창문이 있는 방들은 어제는 밝았다.",
+    "english": "The rooms with large windows were bright yesterday.",
+    "words": [
+      "The",
+      "rooms",
+      "with",
+      "large",
+      "windows",
+      "were",
+      "bright",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "큰 창문이 있는 방들은 어제는 밝았다.",
+        "the / rooms / with / large / windows / were / bright / yesterday"
+      ],
+      [
+        "with large windows",
+        "with large windows"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with large windows"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room with large windows was bright yesterday.",
+      "statementForm": [
+        "The rooms with large windows were bright yesterday.",
+        "The rooms with large windows were bright yesterday"
+      ],
+      "fragmentForm": "the / rooms / with / large / windows / were / bright / yesterday",
+      "wormholeVariants": [
+        "The room with large windows were bright yesterday.",
+        "The rooms with large windows was bright yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_045",
+    "seedId": "with_noun_phrase_be_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "파란 표지가 있는 책은 내 것이다.",
+    "english": "The book with a blue cover is mine.",
+    "words": [
+      "The",
+      "book",
+      "with",
+      "a",
+      "blue",
+      "cover",
+      "is",
+      "mine",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 표지가 있는 책은 내 것이다.",
+        "the / book / with / a / blue / cover / is / mine"
+      ],
+      [
+        "with a blue cover",
+        "with a blue cover"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a blue cover"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The books with blue covers are mine.",
+      "statementForm": [
+        "The book with a blue cover is mine.",
+        "The book with a blue cover is mine"
+      ],
+      "fragmentForm": "the / book / with / a / blue / cover / is / mine",
+      "wormholeVariants": [
+        "The books with a blue cover is mine.",
+        "The book with a blue cover are mine."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_046",
+    "seedId": "with_noun_phrase_be_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "파란 표지가 있는 책들은 내 것이다.",
+    "english": "The books with blue covers are mine.",
+    "words": [
+      "The",
+      "books",
+      "with",
+      "blue",
+      "covers",
+      "are",
+      "mine",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 표지가 있는 책들은 내 것이다.",
+        "the / books / with / blue / covers / are / mine"
+      ],
+      [
+        "with blue covers",
+        "with blue covers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with blue covers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book with a blue cover is mine.",
+      "statementForm": [
+        "The books with blue covers are mine.",
+        "The books with blue covers are mine"
+      ],
+      "fragmentForm": "the / books / with / blue / covers / are / mine",
+      "wormholeVariants": [
+        "The book with blue covers are mine.",
+        "The books with blue covers is mine."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_047",
+    "seedId": "with_noun_phrase_be_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "파란 표지가 있는 책은 그때는 내 것이었다.",
+    "english": "The book with a blue cover was mine then.",
+    "words": [
+      "The",
+      "book",
+      "with",
+      "a",
+      "blue",
+      "cover",
+      "was",
+      "mine",
+      "then",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 표지가 있는 책은 그때는 내 것이었다.",
+        "the / book / with / a / blue / cover / was / mine / then"
+      ],
+      [
+        "with a blue cover",
+        "with a blue cover"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a blue cover"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The books with blue covers were mine then.",
+      "statementForm": [
+        "The book with a blue cover was mine then.",
+        "The book with a blue cover was mine then"
+      ],
+      "fragmentForm": "the / book / with / a / blue / cover / was / mine / then",
+      "wormholeVariants": [
+        "The books with a blue cover was mine then.",
+        "The book with a blue cover were mine then."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_048",
+    "seedId": "with_noun_phrase_be_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "파란 표지가 있는 책들은 그때는 내 것이었다.",
+    "english": "The books with blue covers were mine then.",
+    "words": [
+      "The",
+      "books",
+      "with",
+      "blue",
+      "covers",
+      "were",
+      "mine",
+      "then",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 표지가 있는 책들은 그때는 내 것이었다.",
+        "the / books / with / blue / covers / were / mine / then"
+      ],
+      [
+        "with blue covers",
+        "with blue covers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with blue covers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book with a blue cover was mine then.",
+      "statementForm": [
+        "The books with blue covers were mine then.",
+        "The books with blue covers were mine then"
+      ],
+      "fragmentForm": "the / books / with / blue / covers / were / mine / then",
+      "wormholeVariants": [
+        "The book with blue covers were mine then.",
+        "The books with blue covers was mine then."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_049",
+    "seedId": "with_noun_phrase_be_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "서랍 두 개가 있는 탁자는 벽 옆에 있다.",
+    "english": "The table with two drawers is by the wall.",
+    "words": [
+      "The",
+      "table",
+      "with",
+      "two",
+      "drawers",
+      "is",
+      "by",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 두 개가 있는 탁자는 벽 옆에 있다.",
+        "the / table / with / two / drawers / is / by / the / wall"
+      ],
+      [
+        "with two drawers",
+        "with two drawers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with two drawers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tables with two drawers are by the wall.",
+      "statementForm": [
+        "The table with two drawers is by the wall.",
+        "The table with two drawers is by the wall"
+      ],
+      "fragmentForm": "the / table / with / two / drawers / is / by / the / wall",
+      "wormholeVariants": [
+        "The tables with two drawers is by the wall.",
+        "The table with two drawers are by the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_050",
+    "seedId": "with_noun_phrase_be_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "서랍 두 개가 있는 탁자들은 벽 옆에 있다.",
+    "english": "The tables with two drawers are by the wall.",
+    "words": [
+      "The",
+      "tables",
+      "with",
+      "two",
+      "drawers",
+      "are",
+      "by",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 두 개가 있는 탁자들은 벽 옆에 있다.",
+        "the / tables / with / two / drawers / are / by / the / wall"
+      ],
+      [
+        "with two drawers",
+        "with two drawers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with two drawers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The table with two drawers is by the wall.",
+      "statementForm": [
+        "The tables with two drawers are by the wall.",
+        "The tables with two drawers are by the wall"
+      ],
+      "fragmentForm": "the / tables / with / two / drawers / are / by / the / wall",
+      "wormholeVariants": [
+        "The table with two drawers are by the wall.",
+        "The tables with two drawers is by the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_051",
+    "seedId": "with_noun_phrase_be_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "서랍 두 개가 있는 탁자는 어제는 벽 옆에 있었다.",
+    "english": "The table with two drawers was by the wall yesterday.",
+    "words": [
+      "The",
+      "table",
+      "with",
+      "two",
+      "drawers",
+      "was",
+      "by",
+      "the",
+      "wall",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 두 개가 있는 탁자는 어제는 벽 옆에 있었다.",
+        "the / table / with / two / drawers / was / by / the / wall / yesterday"
+      ],
+      [
+        "with two drawers",
+        "with two drawers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with two drawers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tables with two drawers were by the wall yesterday.",
+      "statementForm": [
+        "The table with two drawers was by the wall yesterday.",
+        "The table with two drawers was by the wall yesterday"
+      ],
+      "fragmentForm": "the / table / with / two / drawers / was / by / the / wall / yesterday",
+      "wormholeVariants": [
+        "The tables with two drawers was by the wall yesterday.",
+        "The table with two drawers were by the wall yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_052",
+    "seedId": "with_noun_phrase_be_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "서랍 두 개가 있는 탁자들은 어제는 벽 옆에 있었다.",
+    "english": "The tables with two drawers were by the wall yesterday.",
+    "words": [
+      "The",
+      "tables",
+      "with",
+      "two",
+      "drawers",
+      "were",
+      "by",
+      "the",
+      "wall",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 두 개가 있는 탁자들은 어제는 벽 옆에 있었다.",
+        "the / tables / with / two / drawers / were / by / the / wall / yesterday"
+      ],
+      [
+        "with two drawers",
+        "with two drawers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with two drawers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The table with two drawers was by the wall yesterday.",
+      "statementForm": [
+        "The tables with two drawers were by the wall yesterday.",
+        "The tables with two drawers were by the wall yesterday"
+      ],
+      "fragmentForm": "the / tables / with / two / drawers / were / by / the / wall / yesterday",
+      "wormholeVariants": [
+        "The table with two drawers were by the wall yesterday.",
+        "The tables with two drawers was by the wall yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_053",
+    "seedId": "with_noun_phrase_be_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "작은 간판이 있는 가게는 오늘 문을 열었다.",
+    "english": "The shop with a small sign is open today.",
+    "words": [
+      "The",
+      "shop",
+      "with",
+      "a",
+      "small",
+      "sign",
+      "is",
+      "open",
+      "today",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "작은 간판이 있는 가게는 오늘 문을 열었다.",
+        "the / shop / with / a / small / sign / is / open / today"
+      ],
+      [
+        "with a small sign",
+        "with a small sign"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a small sign"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shops with small signs are open today.",
+      "statementForm": [
+        "The shop with a small sign is open today.",
+        "The shop with a small sign is open today"
+      ],
+      "fragmentForm": "the / shop / with / a / small / sign / is / open / today",
+      "wormholeVariants": [
+        "The shops with a small sign is open today.",
+        "The shop with a small sign are open today."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_054",
+    "seedId": "with_noun_phrase_be_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "작은 간판이 있는 가게들은 오늘 문을 열었다.",
+    "english": "The shops with small signs are open today.",
+    "words": [
+      "The",
+      "shops",
+      "with",
+      "small",
+      "signs",
+      "are",
+      "open",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "작은 간판이 있는 가게들은 오늘 문을 열었다.",
+        "the / shops / with / small / signs / are / open / today"
+      ],
+      [
+        "with small signs",
+        "with small signs"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with small signs"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shop with a small sign is open today.",
+      "statementForm": [
+        "The shops with small signs are open today.",
+        "The shops with small signs are open today"
+      ],
+      "fragmentForm": "the / shops / with / small / signs / are / open / today",
+      "wormholeVariants": [
+        "The shop with small signs are open today.",
+        "The shops with small signs is open today."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_055",
+    "seedId": "with_noun_phrase_be_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "작은 간판이 있는 가게는 어제는 문을 열고 있었다.",
+    "english": "The shop with a small sign was open yesterday.",
+    "words": [
+      "The",
+      "shop",
+      "with",
+      "a",
+      "small",
+      "sign",
+      "was",
+      "open",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "작은 간판이 있는 가게는 어제는 문을 열고 있었다.",
+        "the / shop / with / a / small / sign / was / open / yesterday"
+      ],
+      [
+        "with a small sign",
+        "with a small sign"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with a small sign"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shops with small signs were open yesterday.",
+      "statementForm": [
+        "The shop with a small sign was open yesterday.",
+        "The shop with a small sign was open yesterday"
+      ],
+      "fragmentForm": "the / shop / with / a / small / sign / was / open / yesterday",
+      "wormholeVariants": [
+        "The shops with a small sign was open yesterday.",
+        "The shop with a small sign were open yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_056",
+    "seedId": "with_noun_phrase_be_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "작은 간판이 있는 가게들은 어제는 문을 열고 있었다.",
+    "english": "The shops with small signs were open yesterday.",
+    "words": [
+      "The",
+      "shops",
+      "with",
+      "small",
+      "signs",
+      "were",
+      "open",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "작은 간판이 있는 가게들은 어제는 문을 열고 있었다.",
+        "the / shops / with / small / signs / were / open / yesterday"
+      ],
+      [
+        "with small signs",
+        "with small signs"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with small signs"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shop with a small sign was open yesterday.",
+      "statementForm": [
+        "The shops with small signs were open yesterday.",
+        "The shops with small signs were open yesterday"
+      ],
+      "fragmentForm": "the / shops / with / small / signs / were / open / yesterday",
+      "wormholeVariants": [
+        "The shop with small signs were open yesterday.",
+        "The shops with small signs was open yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_057",
+    "seedId": "with_noun_phrase_be_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "잎이 무성한 나무는 문 가까이에 있다.",
+    "english": "The tree with thick leaves is near the gate.",
+    "words": [
+      "The",
+      "tree",
+      "with",
+      "thick",
+      "leaves",
+      "is",
+      "near",
+      "the",
+      "gate",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "잎이 무성한 나무는 문 가까이에 있다.",
+        "the / tree / with / thick / leaves / is / near / the / gate"
+      ],
+      [
+        "with thick leaves",
+        "with thick leaves"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with thick leaves"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The trees with thick leaves are near the gate.",
+      "statementForm": [
+        "The tree with thick leaves is near the gate.",
+        "The tree with thick leaves is near the gate"
+      ],
+      "fragmentForm": "the / tree / with / thick / leaves / is / near / the / gate",
+      "wormholeVariants": [
+        "The trees with thick leaves is near the gate.",
+        "The tree with thick leaves are near the gate."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_058",
+    "seedId": "with_noun_phrase_be_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "잎이 무성한 나무들은 문 가까이에 있다.",
+    "english": "The trees with thick leaves are near the gate.",
+    "words": [
+      "The",
+      "trees",
+      "with",
+      "thick",
+      "leaves",
+      "are",
+      "near",
+      "the",
+      "gate",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "잎이 무성한 나무들은 문 가까이에 있다.",
+        "the / trees / with / thick / leaves / are / near / the / gate"
+      ],
+      [
+        "with thick leaves",
+        "with thick leaves"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with thick leaves"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tree with thick leaves is near the gate.",
+      "statementForm": [
+        "The trees with thick leaves are near the gate.",
+        "The trees with thick leaves are near the gate"
+      ],
+      "fragmentForm": "the / trees / with / thick / leaves / are / near / the / gate",
+      "wormholeVariants": [
+        "The tree with thick leaves are near the gate.",
+        "The trees with thick leaves is near the gate."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_059",
+    "seedId": "with_noun_phrase_be_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "잎이 무성한 나무는 어제는 문 가까이에 있었다.",
+    "english": "The tree with thick leaves was near the gate yesterday.",
+    "words": [
+      "The",
+      "tree",
+      "with",
+      "thick",
+      "leaves",
+      "was",
+      "near",
+      "the",
+      "gate",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "잎이 무성한 나무는 어제는 문 가까이에 있었다.",
+        "the / tree / with / thick / leaves / was / near / the / gate / yesterday"
+      ],
+      [
+        "with thick leaves",
+        "with thick leaves"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with thick leaves"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The trees with thick leaves were near the gate yesterday.",
+      "statementForm": [
+        "The tree with thick leaves was near the gate yesterday.",
+        "The tree with thick leaves was near the gate yesterday"
+      ],
+      "fragmentForm": "the / tree / with / thick / leaves / was / near / the / gate / yesterday",
+      "wormholeVariants": [
+        "The trees with thick leaves was near the gate yesterday.",
+        "The tree with thick leaves were near the gate yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_060",
+    "seedId": "with_noun_phrase_be_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "잎이 무성한 나무들은 어제는 문 가까이에 있었다.",
+    "english": "The trees with thick leaves were near the gate yesterday.",
+    "words": [
+      "The",
+      "trees",
+      "with",
+      "thick",
+      "leaves",
+      "were",
+      "near",
+      "the",
+      "gate",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "잎이 무성한 나무들은 어제는 문 가까이에 있었다.",
+        "the / trees / with / thick / leaves / were / near / the / gate / yesterday"
+      ],
+      [
+        "with thick leaves",
+        "with thick leaves"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with thick leaves"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tree with thick leaves was near the gate yesterday.",
+      "statementForm": [
+        "The trees with thick leaves were near the gate yesterday.",
+        "The trees with thick leaves were near the gate yesterday"
+      ],
+      "fragmentForm": "the / trees / with / thick / leaves / were / near / the / gate / yesterday",
+      "wormholeVariants": [
+        "The tree with thick leaves were near the gate yesterday.",
+        "The trees with thick leaves was near the gate yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_061",
+    "seedId": "with_noun_phrase_be_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "추가 좌석이 있는 버스는 여행 준비가 되어 있다.",
+    "english": "The bus with extra seats is ready for the trip.",
+    "words": [
+      "The",
+      "bus",
+      "with",
+      "extra",
+      "seats",
+      "is",
+      "ready",
+      "for",
+      "the",
+      "trip",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "추가 좌석이 있는 버스는 여행 준비가 되어 있다.",
+        "the / bus / with / extra / seats / is / ready / for / the / trip"
+      ],
+      [
+        "with extra seats",
+        "with extra seats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with extra seats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The buses with extra seats are ready for the trip.",
+      "statementForm": [
+        "The bus with extra seats is ready for the trip.",
+        "The bus with extra seats is ready for the trip"
+      ],
+      "fragmentForm": "the / bus / with / extra / seats / is / ready / for / the / trip",
+      "wormholeVariants": [
+        "The buses with extra seats is ready for the trip.",
+        "The bus with extra seats are ready for the trip."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_062",
+    "seedId": "with_noun_phrase_be_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "추가 좌석이 있는 버스들은 여행 준비가 되어 있다.",
+    "english": "The buses with extra seats are ready for the trip.",
+    "words": [
+      "The",
+      "buses",
+      "with",
+      "extra",
+      "seats",
+      "are",
+      "ready",
+      "for",
+      "the",
+      "trip",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "추가 좌석이 있는 버스들은 여행 준비가 되어 있다.",
+        "the / buses / with / extra / seats / are / ready / for / the / trip"
+      ],
+      [
+        "with extra seats",
+        "with extra seats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with extra seats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus with extra seats is ready for the trip.",
+      "statementForm": [
+        "The buses with extra seats are ready for the trip.",
+        "The buses with extra seats are ready for the trip"
+      ],
+      "fragmentForm": "the / buses / with / extra / seats / are / ready / for / the / trip",
+      "wormholeVariants": [
+        "The bus with extra seats are ready for the trip.",
+        "The buses with extra seats is ready for the trip."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_063",
+    "seedId": "with_noun_phrase_be_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "추가 좌석이 있는 버스는 어제는 여행 준비가 되어 있었다.",
+    "english": "The bus with extra seats was ready for the trip yesterday.",
+    "words": [
+      "The",
+      "bus",
+      "with",
+      "extra",
+      "seats",
+      "was",
+      "ready",
+      "for",
+      "the",
+      "trip",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "추가 좌석이 있는 버스는 어제는 여행 준비가 되어 있었다.",
+        "the / bus / with / extra / seats / was / ready / for / the / trip / yesterday"
+      ],
+      [
+        "with extra seats",
+        "with extra seats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with extra seats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The buses with extra seats were ready for the trip yesterday.",
+      "statementForm": [
+        "The bus with extra seats was ready for the trip yesterday.",
+        "The bus with extra seats was ready for the trip yesterday"
+      ],
+      "fragmentForm": "the / bus / with / extra / seats / was / ready / for / the / trip / yesterday",
+      "wormholeVariants": [
+        "The buses with extra seats was ready for the trip yesterday.",
+        "The bus with extra seats were ready for the trip yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_be_064",
+    "seedId": "with_noun_phrase_be_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_be",
+    "chapterLabelKo": "with + 명사 구문 (be 동사)",
+    "korean": "추가 좌석이 있는 버스들은 어제는 여행 준비가 되어 있었다.",
+    "english": "The buses with extra seats were ready for the trip yesterday.",
+    "words": [
+      "The",
+      "buses",
+      "with",
+      "extra",
+      "seats",
+      "were",
+      "ready",
+      "for",
+      "the",
+      "trip",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_be",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "추가 좌석이 있는 버스들은 어제는 여행 준비가 되어 있었다.",
+        "the / buses / with / extra / seats / were / ready / for / the / trip / yesterday"
+      ],
+      [
+        "with extra seats",
+        "with extra seats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "blankTargets": [
+      "with extra seats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "be_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus with extra seats was ready for the trip yesterday.",
+      "statementForm": [
+        "The buses with extra seats were ready for the trip yesterday.",
+        "The buses with extra seats were ready for the trip yesterday"
+      ],
+      "fragmentForm": "the / buses / with / extra / seats / were / ready / for / the / trip / yesterday",
+      "wormholeVariants": [
+        "The bus with extra seats were ready for the trip yesterday.",
+        "The buses with extra seats was ready for the trip yesterday."
+      ]
+    }
+  }
+]
