@@ -1,0 +1,7259 @@
+[
+  {
+    "id": "m2_passive_001",
+    "seedId": "passive_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 문은 매일 아침 관리인에 의해 열린다.",
+    "english": "The door is opened by the guard every morning.",
+    "words": [
+      "The",
+      "door",
+      "is",
+      "opened",
+      "by",
+      "the",
+      "guard",
+      "every",
+      "morning",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문은 매일 아침 관리인에 의해 열린다.",
+        "The"
+      ],
+      [
+        "present passive with by-agent",
+        "is opened by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is opened",
+      "by the guard",
+      "every morning",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is opened",
+      "by the guard",
+      "every morning"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "affirm",
+      "by_agent"
+    ],
+    "distractorSeeds": {
+      "auxError": "The door opens by the guard every morning.",
+      "statementForm": [
+        "The door is opened by the guard every morning.",
+        "The door is opened by the guard every morning"
+      ],
+      "fragmentForm": "is opened",
+      "wormholeVariants": [
+        "The door opens by the guard every morning.",
+        "The door is opening by the guard every morning.",
+        "The door was opened by the guard every morning.",
+        "The door is open by the guard every morning."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_002",
+    "seedId": "passive_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 문은 밤에는 관리인에 의해 열리지 않는다.",
+    "english": "The door is not opened by the guard at night.",
+    "words": [
+      "The",
+      "door",
+      "is",
+      "not",
+      "opened",
+      "by",
+      "the",
+      "guard",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문은 밤에는 관리인에 의해 열리지 않는다.",
+        "The"
+      ],
+      [
+        "present passive negative with by-agent",
+        "is not opened by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is not opened",
+      "by the guard",
+      "at night",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is not opened",
+      "by the guard",
+      "at night"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "negative",
+      "by_agent"
+    ],
+    "distractorSeeds": {
+      "auxError": "The door does not opened by the guard at night.",
+      "statementForm": [
+        "The door is not opened by the guard at night.",
+        "The door is not opened by the guard at night"
+      ],
+      "fragmentForm": "is not opened",
+      "wormholeVariants": [
+        "The door does not opened by the guard at night.",
+        "The door is not open by the guard at night.",
+        "The door was not opened by the guard at night.",
+        "The door is not opening by the guard at night."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_003",
+    "seedId": "passive_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 문은 매일 아침 관리인에 의해 열리니?",
+    "english": "Is the door opened by the guard every morning?",
+    "words": [
+      "Is",
+      "the",
+      "door",
+      "opened",
+      "by",
+      "the",
+      "guard",
+      "every",
+      "morning",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문은 매일 아침 관리인에 의해 열리니?",
+        "Is"
+      ],
+      [
+        "present passive question with by-agent",
+        "Is opened by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Is",
+      "opened",
+      "by the guard",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Is",
+      "opened",
+      "by the guard"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "question",
+      "by_agent"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does the door opened by the guard every morning?",
+      "statementForm": [
+        "Is the door opened by the guard every morning?",
+        "Is the door opened by the guard every morning"
+      ],
+      "fragmentForm": "Is",
+      "wormholeVariants": [
+        "Does the door opened by the guard every morning?",
+        "Is the door open by the guard every morning?",
+        "Is opened the door by the guard every morning?",
+        "Was the door opened by the guard every morning?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_004",
+    "seedId": "passive_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 교실은 매일 청소된다.",
+    "english": "This classroom is cleaned every day.",
+    "words": [
+      "This",
+      "classroom",
+      "is",
+      "cleaned",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 교실은 매일 청소된다.",
+        "This"
+      ],
+      [
+        "present passive",
+        "is cleaned"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is cleaned",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is cleaned"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "This classroom cleans every day.",
+      "statementForm": [
+        "This classroom is cleaned every day.",
+        "This classroom is cleaned every day"
+      ],
+      "fragmentForm": "is cleaned",
+      "wormholeVariants": [
+        "This classroom cleans every day.",
+        "This classroom was cleaned every day.",
+        "This classroom cleaned every day.",
+        "This classroom is clean every day."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_005",
+    "seedId": "passive_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 교실은 주말에는 청소되지 않는다.",
+    "english": "This classroom is not cleaned on weekends.",
+    "words": [
+      "This",
+      "classroom",
+      "is",
+      "not",
+      "cleaned",
+      "on",
+      "weekends",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 교실은 주말에는 청소되지 않는다.",
+        "This"
+      ],
+      [
+        "present passive negative",
+        "is not cleaned"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is not cleaned",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is not cleaned"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This classroom does not cleaned on weekends.",
+      "statementForm": [
+        "This classroom is not cleaned on weekends.",
+        "This classroom is not cleaned on weekends"
+      ],
+      "fragmentForm": "is not cleaned",
+      "wormholeVariants": [
+        "This classroom does not cleaned on weekends.",
+        "This classroom is not clean on weekends.",
+        "This classroom not is cleaned on weekends.",
+        "This classroom are not cleaned on weekends."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_006",
+    "seedId": "passive_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 교실은 매일 청소되니?",
+    "english": "Is this classroom cleaned every day?",
+    "words": [
+      "Is",
+      "this",
+      "classroom",
+      "cleaned",
+      "every",
+      "day",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 교실은 매일 청소되니?",
+        "Is"
+      ],
+      [
+        "present passive question",
+        "Is cleaned"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Is",
+      "cleaned",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Is",
+      "cleaned"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does this classroom cleaned every day?",
+      "statementForm": [
+        "Is this classroom cleaned every day?",
+        "Is this classroom cleaned every day"
+      ],
+      "fragmentForm": "Is",
+      "wormholeVariants": [
+        "Does this classroom cleaned every day?",
+        "Is this classroom clean every day?",
+        "Is cleaned this classroom every day?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_007",
+    "seedId": "passive_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "영어는 많은 나라에서 사용된다.",
+    "english": "English is used in many countries.",
+    "words": [
+      "English",
+      "is",
+      "used",
+      "in",
+      "many",
+      "countries",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "영어는 많은 나라에서 사용된다.",
+        "English"
+      ],
+      [
+        "present passive",
+        "is used"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is used",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is used"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "English uses in many countries.",
+      "statementForm": [
+        "English is used in many countries.",
+        "English is used in many countries"
+      ],
+      "fragmentForm": "is used",
+      "wormholeVariants": [
+        "English uses in many countries.",
+        "English is use in many countries.",
+        "English used in many countries.",
+        "English are used in many countries."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_008",
+    "seedId": "passive_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 규칙은 모든 학생에게 적용된다.",
+    "english": "This rule is applied to all students.",
+    "words": [
+      "This",
+      "rule",
+      "is",
+      "applied",
+      "to",
+      "all",
+      "students",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 규칙은 모든 학생에게 적용된다.",
+        "This"
+      ],
+      [
+        "present passive",
+        "is applied"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is applied",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is applied"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "This rule applies to all students by.",
+      "statementForm": [
+        "This rule is applied to all students.",
+        "This rule is applied to all students"
+      ],
+      "fragmentForm": "is applied",
+      "wormholeVariants": [
+        "This rule applies to all students by.",
+        "This rule is apply to all students.",
+        "This rule applied to all students.",
+        "This rule are applied to all students."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_009",
+    "seedId": "passive_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 정보는 외부에 공유되지 않는다.",
+    "english": "This information is not shared outside.",
+    "words": [
+      "This",
+      "information",
+      "is",
+      "not",
+      "shared",
+      "outside",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 정보는 외부에 공유되지 않는다.",
+        "This"
+      ],
+      [
+        "present passive negative",
+        "is not shared"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is not shared",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is not shared"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This information does not shared outside.",
+      "statementForm": [
+        "This information is not shared outside.",
+        "This information is not shared outside"
+      ],
+      "fragmentForm": "is not shared",
+      "wormholeVariants": [
+        "This information does not shared outside.",
+        "This information is not share outside.",
+        "This information not is shared outside.",
+        "This information are not shared outside."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_010",
+    "seedId": "passive_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 정보는 선생님들과 공유되니?",
+    "english": "Is this information shared with teachers?",
+    "words": [
+      "Is",
+      "this",
+      "information",
+      "shared",
+      "with",
+      "teachers",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 정보는 선생님들과 공유되니?",
+        "Is"
+      ],
+      [
+        "present passive question",
+        "Is shared"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Is",
+      "shared",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Is",
+      "shared"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does this information shared with teachers?",
+      "statementForm": [
+        "Is this information shared with teachers?",
+        "Is this information shared with teachers"
+      ],
+      "fragmentForm": "Is",
+      "wormholeVariants": [
+        "Does this information shared with teachers?",
+        "Is this information share with teachers?",
+        "Is shared this information with teachers?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_011",
+    "seedId": "passive_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 창문은 어제 깨졌다.",
+    "english": "The window was broken yesterday.",
+    "words": [
+      "The",
+      "window",
+      "was",
+      "broken",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 창문은 어제 깨졌다.",
+        "The"
+      ],
+      [
+        "past passive",
+        "was broken"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was broken",
+      "yesterday",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was broken",
+      "yesterday"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The window was broke yesterday.",
+      "statementForm": [
+        "The window was broken yesterday.",
+        "The window was broken yesterday"
+      ],
+      "fragmentForm": "was broken",
+      "wormholeVariants": [
+        "The window was broke yesterday.",
+        "The window is broken yesterday.",
+        "The window did broken yesterday.",
+        "The window is breaking yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_012",
+    "seedId": "passive_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 창문은 어제 깨지지 않았다.",
+    "english": "The window was not broken yesterday.",
+    "words": [
+      "The",
+      "window",
+      "was",
+      "not",
+      "broken",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 창문은 어제 깨지지 않았다.",
+        "The"
+      ],
+      [
+        "past passive negative",
+        "was not broken"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was not broken",
+      "yesterday",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was not broken",
+      "yesterday"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The window did not broken yesterday.",
+      "statementForm": [
+        "The window was not broken yesterday.",
+        "The window was not broken yesterday"
+      ],
+      "fragmentForm": "was not broken",
+      "wormholeVariants": [
+        "The window did not broken yesterday.",
+        "The window was not broke yesterday.",
+        "The window is not broken yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_013",
+    "seedId": "passive_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 창문은 어제 깨졌니?",
+    "english": "Was the window broken yesterday?",
+    "words": [
+      "Was",
+      "the",
+      "window",
+      "broken",
+      "yesterday",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 창문은 어제 깨졌니?",
+        "Was"
+      ],
+      [
+        "past passive question",
+        "Was broken"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Was",
+      "broken",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Was",
+      "broken"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the window broken yesterday?",
+      "statementForm": [
+        "Was the window broken yesterday?",
+        "Was the window broken yesterday"
+      ],
+      "fragmentForm": "Was",
+      "wormholeVariants": [
+        "Did the window broken yesterday?",
+        "Was the window broke yesterday?",
+        "Was broken the window yesterday?",
+        "Is the window broken yesterday?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_014",
+    "seedId": "passive_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 편지는 지난주에 보내졌다.",
+    "english": "The letter was sent last week.",
+    "words": [
+      "The",
+      "letter",
+      "was",
+      "sent",
+      "last",
+      "week",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 편지는 지난주에 보내졌다.",
+        "The"
+      ],
+      [
+        "past passive",
+        "was sent"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was sent",
+      "last week",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was sent",
+      "last week"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The letter sent by last week.",
+      "statementForm": [
+        "The letter was sent last week.",
+        "The letter was sent last week"
+      ],
+      "fragmentForm": "was sent",
+      "wormholeVariants": [
+        "The letter sent by last week.",
+        "The letter was send last week.",
+        "The letter is sent last week."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_015",
+    "seedId": "passive_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 편지는 지난주에 보내지지 않았다.",
+    "english": "The letter was not sent last week.",
+    "words": [
+      "The",
+      "letter",
+      "was",
+      "not",
+      "sent",
+      "last",
+      "week",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 편지는 지난주에 보내지지 않았다.",
+        "The"
+      ],
+      [
+        "past passive negative",
+        "was not sent"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was not sent",
+      "last week",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was not sent",
+      "last week"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The letter did not sent last week.",
+      "statementForm": [
+        "The letter was not sent last week.",
+        "The letter was not sent last week"
+      ],
+      "fragmentForm": "was not sent",
+      "wormholeVariants": [
+        "The letter did not sent last week.",
+        "The letter was not send last week.",
+        "The letter is not sent last week."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_016",
+    "seedId": "passive_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 편지는 지난주에 보내졌니?",
+    "english": "Was the letter sent last week?",
+    "words": [
+      "Was",
+      "the",
+      "letter",
+      "sent",
+      "last",
+      "week",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 편지는 지난주에 보내졌니?",
+        "Was"
+      ],
+      [
+        "past passive question",
+        "Was sent"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Was",
+      "sent",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Was",
+      "sent"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the letter sent last week?",
+      "statementForm": [
+        "Was the letter sent last week?",
+        "Was the letter sent last week"
+      ],
+      "fragmentForm": "Was",
+      "wormholeVariants": [
+        "Did the letter sent last week?",
+        "Was the letter send last week?",
+        "Was sent the letter last week?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_017",
+    "seedId": "passive_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 다리는 1990년에 지어졌다.",
+    "english": "The bridge was built in 1990.",
+    "words": [
+      "The",
+      "bridge",
+      "was",
+      "built",
+      "in",
+      "1990",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 다리는 1990년에 지어졌다.",
+        "The"
+      ],
+      [
+        "past passive",
+        "was built"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was built",
+      "in 1990",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was built",
+      "in 1990"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bridge built in 1990 by.",
+      "statementForm": [
+        "The bridge was built in 1990.",
+        "The bridge was built in 1990"
+      ],
+      "fragmentForm": "was built",
+      "wormholeVariants": [
+        "The bridge built in 1990 by.",
+        "The bridge was build in 1990.",
+        "The bridge is built in 1990."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_018",
+    "seedId": "passive_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 박물관은 많은 사람들에게 방문되었다.",
+    "english": "The museum was visited by many people.",
+    "words": [
+      "The",
+      "museum",
+      "was",
+      "visited",
+      "by",
+      "many",
+      "people",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 박물관은 많은 사람들에게 방문되었다.",
+        "The"
+      ],
+      [
+        "past passive by-agent",
+        "was visited by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was visited",
+      "by many people",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was visited",
+      "by many people"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "by_agent"
+    ],
+    "distractorSeeds": {
+      "auxError": "The museum visited by many people.",
+      "statementForm": [
+        "The museum was visited by many people.",
+        "The museum was visited by many people"
+      ],
+      "fragmentForm": "was visited",
+      "wormholeVariants": [
+        "The museum visited by many people.",
+        "The museum was visit by many people.",
+        "The museum is visited by many people yesterday.",
+        "The museum is visited by many people."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_019",
+    "seedId": "passive_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 문제는 회의에서 논의되었다.",
+    "english": "The problem was discussed at the meeting.",
+    "words": [
+      "The",
+      "problem",
+      "was",
+      "discussed",
+      "at",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 회의에서 논의되었다.",
+        "The"
+      ],
+      [
+        "past passive",
+        "was discussed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was discussed",
+      "at the meeting",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was discussed",
+      "at the meeting"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem discussed at the meeting by.",
+      "statementForm": [
+        "The problem was discussed at the meeting.",
+        "The problem was discussed at the meeting"
+      ],
+      "fragmentForm": "was discussed",
+      "wormholeVariants": [
+        "The problem discussed at the meeting by.",
+        "The problem was discuss at the meeting.",
+        "The problem is discussed at the meeting yesterday.",
+        "The problem is discussed at the meeting."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_020",
+    "seedId": "passive_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 계획은 결국 받아들여지지 않았다.",
+    "english": "The plan was not accepted in the end.",
+    "words": [
+      "The",
+      "plan",
+      "was",
+      "not",
+      "accepted",
+      "in",
+      "the",
+      "end",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획은 결국 받아들여지지 않았다.",
+        "The"
+      ],
+      [
+        "past passive negative",
+        "was not accepted"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was not accepted",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was not accepted"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan did not accepted in the end.",
+      "statementForm": [
+        "The plan was not accepted in the end.",
+        "The plan was not accepted in the end"
+      ],
+      "fragmentForm": "was not accepted",
+      "wormholeVariants": [
+        "The plan did not accepted in the end.",
+        "The plan was not accept in the end.",
+        "The plan not was accepted in the end.",
+        "The plan is not accepted in the end."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_021",
+    "seedId": "passive_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 그림은 유명한 화가에 의해 그려졌다.",
+    "english": "The painting was painted by a famous artist.",
+    "words": [
+      "The",
+      "painting",
+      "was",
+      "painted",
+      "by",
+      "a",
+      "famous",
+      "artist",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 그림은 유명한 화가에 의해 그려졌다.",
+        "The"
+      ],
+      [
+        "past passive by-agent",
+        "was painted by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was painted",
+      "by a famous artist",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was painted",
+      "by a famous artist"
+    ],
+    "tags": [
+      "passive",
+      "by_agent",
+      "past"
+    ],
+    "distractorSeeds": {
+      "auxError": "The painting painted by a famous artist.",
+      "statementForm": [
+        "The painting was painted by a famous artist.",
+        "The painting was painted by a famous artist"
+      ],
+      "fragmentForm": "was painted",
+      "wormholeVariants": [
+        "The painting painted by a famous artist.",
+        "The painting was paint by a famous artist.",
+        "A famous artist was painted the painting.",
+        "The painting is painted by a famous artist."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_022",
+    "seedId": "passive_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 소설은 많은 학생들에게 읽힌다.",
+    "english": "The novel is read by many students.",
+    "words": [
+      "The",
+      "novel",
+      "is",
+      "read",
+      "by",
+      "many",
+      "students",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소설은 많은 학생들에게 읽힌다.",
+        "The"
+      ],
+      [
+        "present passive by-agent",
+        "is read by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is read",
+      "by many students",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is read",
+      "by many students"
+    ],
+    "tags": [
+      "passive",
+      "by_agent",
+      "present"
+    ],
+    "distractorSeeds": {
+      "auxError": "The novel reads by many students.",
+      "statementForm": [
+        "The novel is read by many students.",
+        "The novel is read by many students"
+      ],
+      "fragmentForm": "is read",
+      "wormholeVariants": [
+        "The novel reads by many students.",
+        "The novel is readed by many students.",
+        "Many students are read the novel."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_023",
+    "seedId": "passive_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 노래는 전 세계에서 불린다.",
+    "english": "The song is sung around the world.",
+    "words": [
+      "The",
+      "song",
+      "is",
+      "sung",
+      "around",
+      "the",
+      "world",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 노래는 전 세계에서 불린다.",
+        "The"
+      ],
+      [
+        "present passive no-agent",
+        "is sung"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is sung",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is sung"
+    ],
+    "tags": [
+      "passive",
+      "no_agent",
+      "present"
+    ],
+    "distractorSeeds": {
+      "auxError": "The song sings around the world.",
+      "statementForm": [
+        "The song is sung around the world.",
+        "The song is sung around the world"
+      ],
+      "fragmentForm": "is sung",
+      "wormholeVariants": [
+        "The song sings around the world.",
+        "The song is sing around the world.",
+        "The song sung around the world."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_024",
+    "seedId": "passive_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 언어는 그 지역에서 더 이상 쓰이지 않는다.",
+    "english": "This language is no longer used in the area.",
+    "words": [
+      "This",
+      "language",
+      "is",
+      "no",
+      "longer",
+      "used",
+      "in",
+      "the",
+      "area",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 언어는 그 지역에서 더 이상 쓰이지 않는다.",
+        "This"
+      ],
+      [
+        "present passive negative",
+        "is no longer used"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is no longer used",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is no longer used"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This language no longer uses in the area.",
+      "statementForm": [
+        "This language is no longer used in the area.",
+        "This language is no longer used in the area"
+      ],
+      "fragmentForm": "is no longer used",
+      "wormholeVariants": [
+        "This language no longer uses in the area.",
+        "This language is no longer use in the area.",
+        "This language used no longer in the area.",
+        "This language are no longer used in the area."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_025",
+    "seedId": "passive_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 규칙은 누가 만들었니?",
+    "english": "Who was the rule made by?",
+    "words": [
+      "Who",
+      "was",
+      "the",
+      "rule",
+      "made",
+      "by",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 누가 만들었니?",
+        "Who"
+      ],
+      [
+        "wh-question passive",
+        "Who was made by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "was made by",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Who",
+      "was",
+      "made by"
+    ],
+    "tags": [
+      "passive",
+      "wh_question",
+      "by_agent"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who did the rule made by?",
+      "statementForm": [
+        "Who was the rule made by?",
+        "Who was the rule made by"
+      ],
+      "fragmentForm": "Who",
+      "wormholeVariants": [
+        "Who did the rule made by?",
+        "Who was the rule make by?",
+        "Who made by the rule?",
+        "Who is the rule made by?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_026",
+    "seedId": "passive_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 책은 누가 썼니?",
+    "english": "Who was the book written by?",
+    "words": [
+      "Who",
+      "was",
+      "the",
+      "book",
+      "written",
+      "by",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 책은 누가 썼니?",
+        "Who"
+      ],
+      [
+        "wh-question passive",
+        "Who was written by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "was written by",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Who",
+      "was",
+      "written by"
+    ],
+    "tags": [
+      "passive",
+      "wh_question",
+      "by_agent"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who did the book written by?",
+      "statementForm": [
+        "Who was the book written by?",
+        "Who was the book written by"
+      ],
+      "fragmentForm": "Who",
+      "wormholeVariants": [
+        "Who did the book written by?",
+        "Who was the book wrote by?",
+        "Who wrote by the book?",
+        "Who is the book written by?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_027",
+    "seedId": "passive_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 케이크는 엄마에 의해 만들어졌다.",
+    "english": "The cake was made by my mom.",
+    "words": [
+      "The",
+      "cake",
+      "was",
+      "made",
+      "by",
+      "my",
+      "mom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 케이크는 엄마에 의해 만들어졌다.",
+        "The"
+      ],
+      [
+        "past passive by-agent",
+        "was made by"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made",
+      "by my mom",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was made",
+      "by my mom"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "by_agent"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cake made by my mom.",
+      "statementForm": [
+        "The cake was made by my mom.",
+        "The cake was made by my mom"
+      ],
+      "fragmentForm": "was made",
+      "wormholeVariants": [
+        "The cake made by my mom.",
+        "The cake was make by my mom.",
+        "My mom was made the cake.",
+        "The cake is made by my mom."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_028",
+    "seedId": "passive_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 가방은 가죽으로 만들어졌다.",
+    "english": "The bag was made of leather.",
+    "words": [
+      "The",
+      "bag",
+      "was",
+      "made",
+      "of",
+      "leather",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가방은 가죽으로 만들어졌다.",
+        "The"
+      ],
+      [
+        "be made of",
+        "was made of"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made of",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was made of"
+    ],
+    "tags": [
+      "passive",
+      "made_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bag was made from leather.",
+      "statementForm": [
+        "The bag was made of leather.",
+        "The bag was made of leather"
+      ],
+      "fragmentForm": "was made of",
+      "wormholeVariants": [
+        "The bag was made from leather.",
+        "The bag made of leather.",
+        "The bag was make of leather.",
+        "The bag is made of leather."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_029",
+    "seedId": "passive_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "종이는 나무로 만들어진다.",
+    "english": "Paper is made from wood.",
+    "words": [
+      "Paper",
+      "is",
+      "made",
+      "from",
+      "wood",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "종이는 나무로 만들어진다.",
+        "Paper"
+      ],
+      [
+        "be made from",
+        "is made from"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is made from",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is made from"
+    ],
+    "tags": [
+      "passive",
+      "made_from"
+    ],
+    "distractorSeeds": {
+      "auxError": "Paper makes from wood.",
+      "statementForm": [
+        "Paper is made from wood.",
+        "Paper is made from wood"
+      ],
+      "fragmentForm": "is made from",
+      "wormholeVariants": [
+        "Paper makes from wood.",
+        "Paper is make from wood.",
+        "Paper is made by wood.",
+        "Paper made from wood."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_030",
+    "seedId": "passive_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 책상은 나무로 만들어졌다.",
+    "english": "The desk was made of wood.",
+    "words": [
+      "The",
+      "desk",
+      "was",
+      "made",
+      "of",
+      "wood",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 책상은 나무로 만들어졌다.",
+        "The"
+      ],
+      [
+        "be made of",
+        "was made of"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made of",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was made of"
+    ],
+    "tags": [
+      "passive",
+      "made_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "The desk was made from wood.",
+      "statementForm": [
+        "The desk was made of wood.",
+        "The desk was made of wood"
+      ],
+      "fragmentForm": "was made of",
+      "wormholeVariants": [
+        "The desk was made from wood.",
+        "The desk made of wood.",
+        "The desk was make of wood.",
+        "The desk is made of wood."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_031",
+    "seedId": "passive_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 일은 오늘 끝내져야 한다.",
+    "english": "The work must be finished today.",
+    "words": [
+      "The",
+      "work",
+      "must",
+      "be",
+      "finished",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 일은 오늘 끝내져야 한다.",
+        "The"
+      ],
+      [
+        "modal passive",
+        "must be finished"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must be finished",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "must be finished"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The work must finish today.",
+      "statementForm": [
+        "The work must be finished today.",
+        "The work must be finished today"
+      ],
+      "fragmentForm": "must be finished",
+      "wormholeVariants": [
+        "The work must finish today.",
+        "The work must be finish today.",
+        "The work must finished today."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_032",
+    "seedId": "passive_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 일은 오늘 끝내질 필요가 없다.",
+    "english": "The work does not have to be finished today.",
+    "words": [
+      "The",
+      "work",
+      "does",
+      "not",
+      "have",
+      "to",
+      "be",
+      "finished",
+      "today",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 일은 오늘 끝내질 필요가 없다.",
+        "The"
+      ],
+      [
+        "modal passive negative",
+        "does not have to be finished"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "does not have to be finished",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "does not have to be finished"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The work does not have to finish today.",
+      "statementForm": [
+        "The work does not have to be finished today.",
+        "The work does not have to be finished today"
+      ],
+      "fragmentForm": "does not have to be finished",
+      "wormholeVariants": [
+        "The work does not have to finish today.",
+        "The work does not have to be finish today.",
+        "The work is not have to be finished today."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_033",
+    "seedId": "passive_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 일은 오늘 끝내져야 하니?",
+    "english": "Must the work be finished today?",
+    "words": [
+      "Must",
+      "the",
+      "work",
+      "be",
+      "finished",
+      "today",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 일은 오늘 끝내져야 하니?",
+        "Must"
+      ],
+      [
+        "modal passive question",
+        "Must be finished"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Must",
+      "be finished",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Must",
+      "be finished"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Must the work finished today?",
+      "statementForm": [
+        "Must the work be finished today?",
+        "Must the work be finished today"
+      ],
+      "fragmentForm": "Must",
+      "wormholeVariants": [
+        "Must the work finished today?",
+        "Must be the work finished today?",
+        "Does the work must be finished today?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_034",
+    "seedId": "passive_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 양식은 온라인으로 제출되어야 한다.",
+    "english": "This form should be submitted online.",
+    "words": [
+      "This",
+      "form",
+      "should",
+      "be",
+      "submitted",
+      "online",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 양식은 온라인으로 제출되어야 한다.",
+        "This"
+      ],
+      [
+        "modal passive",
+        "should be submitted"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should be submitted",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "should be submitted"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "This form should submit online.",
+      "statementForm": [
+        "This form should be submitted online.",
+        "This form should be submitted online"
+      ],
+      "fragmentForm": "should be submitted",
+      "wormholeVariants": [
+        "This form should submit online.",
+        "This form should be submit online.",
+        "This form should submitted online."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_035",
+    "seedId": "passive_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 양식은 손으로 작성되면 안 된다.",
+    "english": "This form should not be written by hand.",
+    "words": [
+      "This",
+      "form",
+      "should",
+      "not",
+      "be",
+      "written",
+      "by",
+      "hand",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 양식은 손으로 작성되면 안 된다.",
+        "This"
+      ],
+      [
+        "modal passive negative",
+        "should not be written"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should not be written",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "should not be written"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This form should not write by hand.",
+      "statementForm": [
+        "This form should not be written by hand.",
+        "This form should not be written by hand"
+      ],
+      "fragmentForm": "should not be written",
+      "wormholeVariants": [
+        "This form should not write by hand.",
+        "This form should not be wrote by hand.",
+        "This form should not written by hand."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_036",
+    "seedId": "passive_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 양식은 온라인으로 제출되어야 하니?",
+    "english": "Should this form be submitted online?",
+    "words": [
+      "Should",
+      "this",
+      "form",
+      "be",
+      "submitted",
+      "online",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 양식은 온라인으로 제출되어야 하니?",
+        "Should"
+      ],
+      [
+        "modal passive question",
+        "Should be submitted"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Should",
+      "be submitted",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Should",
+      "be submitted"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Should this form submitted online?",
+      "statementForm": [
+        "Should this form be submitted online?",
+        "Should this form be submitted online"
+      ],
+      "fragmentForm": "Should",
+      "wormholeVariants": [
+        "Should this form submitted online?",
+        "Should be this form submitted online?",
+        "Does this form should be submitted online?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_037",
+    "seedId": "passive_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 규칙은 반드시 따라져야 한다.",
+    "english": "The rule must be followed.",
+    "words": [
+      "The",
+      "rule",
+      "must",
+      "be",
+      "followed",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 반드시 따라져야 한다.",
+        "The"
+      ],
+      [
+        "modal passive",
+        "must be followed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must be followed",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "must be followed"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule must follow.",
+      "statementForm": [
+        "The rule must be followed.",
+        "The rule must be followed"
+      ],
+      "fragmentForm": "must be followed",
+      "wormholeVariants": [
+        "The rule must follow.",
+        "The rule must be follow.",
+        "The rule must followed.",
+        "The rule is must be followed."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_038",
+    "seedId": "passive_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 규칙은 무시되어서는 안 된다.",
+    "english": "The rule must not be ignored.",
+    "words": [
+      "The",
+      "rule",
+      "must",
+      "not",
+      "be",
+      "ignored",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 무시되어서는 안 된다.",
+        "The"
+      ],
+      [
+        "modal passive negative",
+        "must not be ignored"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must not be ignored",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "must not be ignored"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule must not ignore.",
+      "statementForm": [
+        "The rule must not be ignored.",
+        "The rule must not be ignored"
+      ],
+      "fragmentForm": "must not be ignored",
+      "wormholeVariants": [
+        "The rule must not ignore.",
+        "The rule must not be ignore.",
+        "The rule must not ignored."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_039",
+    "seedId": "passive_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 문제는 쉽게 해결될 수 있다.",
+    "english": "This problem can be solved easily.",
+    "words": [
+      "This",
+      "problem",
+      "can",
+      "be",
+      "solved",
+      "easily",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문제는 쉽게 해결될 수 있다.",
+        "This"
+      ],
+      [
+        "modal passive",
+        "can be solved"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "can be solved",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "can be solved"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem can solve easily.",
+      "statementForm": [
+        "This problem can be solved easily.",
+        "This problem can be solved easily"
+      ],
+      "fragmentForm": "can be solved",
+      "wormholeVariants": [
+        "This problem can solve easily.",
+        "This problem can be solve easily.",
+        "This problem can solved easily."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_040",
+    "seedId": "passive_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 문제는 혼자 해결될 수 없다.",
+    "english": "This problem cannot be solved alone.",
+    "words": [
+      "This",
+      "problem",
+      "cannot",
+      "be",
+      "solved",
+      "alone",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문제는 혼자 해결될 수 없다.",
+        "This"
+      ],
+      [
+        "modal passive negative",
+        "cannot be solved"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "cannot be solved",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "cannot be solved"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem cannot solve alone.",
+      "statementForm": [
+        "This problem cannot be solved alone.",
+        "This problem cannot be solved alone"
+      ],
+      "fragmentForm": "cannot be solved",
+      "wormholeVariants": [
+        "This problem cannot solve alone.",
+        "This problem cannot be solve alone.",
+        "This problem cannot solved alone."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_041",
+    "seedId": "passive_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 행사는 다음 주에 열릴 것이다.",
+    "english": "The event will be held next week.",
+    "words": [
+      "The",
+      "event",
+      "will",
+      "be",
+      "held",
+      "next",
+      "week",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 행사는 다음 주에 열릴 것이다.",
+        "The"
+      ],
+      [
+        "future passive",
+        "will be held"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will be held",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will be held"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The event will hold next week.",
+      "statementForm": [
+        "The event will be held next week.",
+        "The event will be held next week"
+      ],
+      "fragmentForm": "will be held",
+      "wormholeVariants": [
+        "The event will hold next week.",
+        "The event will be hold next week.",
+        "The event will held next week."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_042",
+    "seedId": "passive_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 행사는 다음 주에 열리지 않을 것이다.",
+    "english": "The event will not be held next week.",
+    "words": [
+      "The",
+      "event",
+      "will",
+      "not",
+      "be",
+      "held",
+      "next",
+      "week",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 행사는 다음 주에 열리지 않을 것이다.",
+        "The"
+      ],
+      [
+        "future passive negative",
+        "will not be held"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will not be held",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will not be held"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The event will not hold next week.",
+      "statementForm": [
+        "The event will not be held next week.",
+        "The event will not be held next week"
+      ],
+      "fragmentForm": "will not be held",
+      "wormholeVariants": [
+        "The event will not hold next week.",
+        "The event will not be hold next week.",
+        "The event will not held next week."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_043",
+    "seedId": "passive_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 행사는 다음 주에 열릴까?",
+    "english": "Will the event be held next week?",
+    "words": [
+      "Will",
+      "the",
+      "event",
+      "be",
+      "held",
+      "next",
+      "week",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 행사는 다음 주에 열릴까?",
+        "Will"
+      ],
+      [
+        "future passive question",
+        "Will be held"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Will",
+      "be held",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Will",
+      "be held"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Will the event held next week?",
+      "statementForm": [
+        "Will the event be held next week?",
+        "Will the event be held next week"
+      ],
+      "fragmentForm": "Will",
+      "wormholeVariants": [
+        "Will the event held next week?",
+        "Will be the event held next week?",
+        "Does the event will be held next week?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_044",
+    "seedId": "passive_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "새 도서관은 내년에 지어질 것이다.",
+    "english": "A new library will be built next year.",
+    "words": [
+      "A",
+      "new",
+      "library",
+      "will",
+      "be",
+      "built",
+      "next",
+      "year",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "새 도서관은 내년에 지어질 것이다.",
+        "A"
+      ],
+      [
+        "future passive",
+        "will be built"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will be built",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will be built"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "A new library will build next year.",
+      "statementForm": [
+        "A new library will be built next year.",
+        "A new library will be built next year"
+      ],
+      "fragmentForm": "will be built",
+      "wormholeVariants": [
+        "A new library will build next year.",
+        "A new library will be build next year.",
+        "A new library will built next year."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_045",
+    "seedId": "passive_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "새 도서관은 올해 지어지지 않을 것이다.",
+    "english": "A new library will not be built this year.",
+    "words": [
+      "A",
+      "new",
+      "library",
+      "will",
+      "not",
+      "be",
+      "built",
+      "this",
+      "year",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "새 도서관은 올해 지어지지 않을 것이다.",
+        "A"
+      ],
+      [
+        "future passive negative",
+        "will not be built"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will not be built",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will not be built"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "A new library will not build this year.",
+      "statementForm": [
+        "A new library will not be built this year.",
+        "A new library will not be built this year"
+      ],
+      "fragmentForm": "will not be built",
+      "wormholeVariants": [
+        "A new library will not build this year.",
+        "A new library will not be build this year.",
+        "A new library will not built this year."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_046",
+    "seedId": "passive_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "새 도서관은 내년에 지어질까?",
+    "english": "Will a new library be built next year?",
+    "words": [
+      "Will",
+      "a",
+      "new",
+      "library",
+      "be",
+      "built",
+      "next",
+      "year",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "새 도서관은 내년에 지어질까?",
+        "Will"
+      ],
+      [
+        "future passive question",
+        "Will be built"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Will",
+      "be built",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Will",
+      "be built"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Will a new library built next year?",
+      "statementForm": [
+        "Will a new library be built next year?",
+        "Will a new library be built next year"
+      ],
+      "fragmentForm": "Will",
+      "wormholeVariants": [
+        "Will a new library built next year?",
+        "Will be a new library built next year?",
+        "Does a new library will be built next year?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_047",
+    "seedId": "passive_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 결과는 곧 발표될 것이다.",
+    "english": "The results will be announced soon.",
+    "words": [
+      "The",
+      "results",
+      "will",
+      "be",
+      "announced",
+      "soon",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결과는 곧 발표될 것이다.",
+        "The"
+      ],
+      [
+        "future passive",
+        "will be announced"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will be announced",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will be announced"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The results will announce soon.",
+      "statementForm": [
+        "The results will be announced soon.",
+        "The results will be announced soon"
+      ],
+      "fragmentForm": "will be announced",
+      "wormholeVariants": [
+        "The results will announce soon.",
+        "The results will be announce soon.",
+        "The results will announced soon.",
+        "The results will be announc soon."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_048",
+    "seedId": "passive_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 결과는 오늘 발표되지 않을 것이다.",
+    "english": "The results will not be announced today.",
+    "words": [
+      "The",
+      "results",
+      "will",
+      "not",
+      "be",
+      "announced",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결과는 오늘 발표되지 않을 것이다.",
+        "The"
+      ],
+      [
+        "future passive negative",
+        "will not be announced"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will not be announced",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will not be announced"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The results will not announce today.",
+      "statementForm": [
+        "The results will not be announced today.",
+        "The results will not be announced today"
+      ],
+      "fragmentForm": "will not be announced",
+      "wormholeVariants": [
+        "The results will not announce today.",
+        "The results will not be announce today.",
+        "The results will not announced today."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_049",
+    "seedId": "passive_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 결과는 곧 발표될까?",
+    "english": "Will the results be announced soon?",
+    "words": [
+      "Will",
+      "the",
+      "results",
+      "be",
+      "announced",
+      "soon",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결과는 곧 발표될까?",
+        "Will"
+      ],
+      [
+        "future passive question",
+        "Will be announced"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Will",
+      "be announced",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Will",
+      "be announced"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Will the results announced soon?",
+      "statementForm": [
+        "Will the results be announced soon?",
+        "Will the results be announced soon"
+      ],
+      "fragmentForm": "Will",
+      "wormholeVariants": [
+        "Will the results announced soon?",
+        "Will be the results announced soon?",
+        "Does the results will be announced soon?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_050",
+    "seedId": "passive_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 앱은 다음 달에 업데이트될 것이다.",
+    "english": "This app will be updated next month.",
+    "words": [
+      "This",
+      "app",
+      "will",
+      "be",
+      "updated",
+      "next",
+      "month",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 앱은 다음 달에 업데이트될 것이다.",
+        "This"
+      ],
+      [
+        "future passive",
+        "will be updated"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will be updated",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will be updated"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "This app will update next month.",
+      "statementForm": [
+        "This app will be updated next month.",
+        "This app will be updated next month"
+      ],
+      "fragmentForm": "will be updated",
+      "wormholeVariants": [
+        "This app will update next month.",
+        "This app will be update next month.",
+        "This app will updated next month.",
+        "This app will be updat next month."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_051",
+    "seedId": "passive_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 방은 이미 청소되었다.",
+    "english": "The room has already been cleaned.",
+    "words": [
+      "The",
+      "room",
+      "has",
+      "already",
+      "been",
+      "cleaned",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방은 이미 청소되었다.",
+        "The"
+      ],
+      [
+        "present perfect passive",
+        "has already been cleaned"
+      ],
+      [
+        "주의",
+        "use have/has + been + past participle"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has been cleaned",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "has already been cleaned"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room has already cleaned.",
+      "statementForm": [
+        "The room has already been cleaned.",
+        "The room has already been cleaned"
+      ],
+      "fragmentForm": "has already been cleaned",
+      "wormholeVariants": [
+        "The room has already cleaned.",
+        "The room has already been clean.",
+        "The room was already been cleaned.",
+        "The room have already been cleaned."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_052",
+    "seedId": "passive_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 방은 아직 청소되지 않았다.",
+    "english": "The room has not been cleaned yet.",
+    "words": [
+      "The",
+      "room",
+      "has",
+      "not",
+      "been",
+      "cleaned",
+      "yet",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방은 아직 청소되지 않았다.",
+        "The"
+      ],
+      [
+        "present perfect passive negative",
+        "has not been cleaned"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has not been cleaned",
+      "yet",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "has not been cleaned",
+      "yet"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room has not cleaned yet.",
+      "statementForm": [
+        "The room has not been cleaned yet.",
+        "The room has not been cleaned yet"
+      ],
+      "fragmentForm": "has not been cleaned",
+      "wormholeVariants": [
+        "The room has not cleaned yet.",
+        "The room has not been clean yet.",
+        "The room was not been cleaned yet.",
+        "The room have not been cleaned yet."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_053",
+    "seedId": "passive_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 방은 벌써 청소되었니?",
+    "english": "Has the room been cleaned yet?",
+    "words": [
+      "Has",
+      "the",
+      "room",
+      "been",
+      "cleaned",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방은 벌써 청소되었니?",
+        "Has"
+      ],
+      [
+        "present perfect passive question",
+        "Has been cleaned"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Has",
+      "been cleaned",
+      "yet",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Has",
+      "been cleaned",
+      "yet"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Has the room cleaned yet?",
+      "statementForm": [
+        "Has the room been cleaned yet?",
+        "Has the room been cleaned yet"
+      ],
+      "fragmentForm": "Has",
+      "wormholeVariants": [
+        "Has the room cleaned yet?",
+        "Has the room been clean yet?",
+        "Did the room been cleaned yet?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_054",
+    "seedId": "passive_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 문제는 아직 해결되지 않았다.",
+    "english": "The problem has not been solved yet.",
+    "words": [
+      "The",
+      "problem",
+      "has",
+      "not",
+      "been",
+      "solved",
+      "yet",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 아직 해결되지 않았다.",
+        "The"
+      ],
+      [
+        "present perfect passive negative",
+        "has not been solved"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has not been solved",
+      "yet",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "has not been solved",
+      "yet"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem has not solved yet.",
+      "statementForm": [
+        "The problem has not been solved yet.",
+        "The problem has not been solved yet"
+      ],
+      "fragmentForm": "has not been solved",
+      "wormholeVariants": [
+        "The problem has not solved yet.",
+        "The problem has not been solve yet.",
+        "The problem was not been solved yet.",
+        "The problem have not been solved yet."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_055",
+    "seedId": "passive_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 문제는 이미 해결되었다.",
+    "english": "The problem has already been solved.",
+    "words": [
+      "The",
+      "problem",
+      "has",
+      "already",
+      "been",
+      "solved",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 이미 해결되었다.",
+        "The"
+      ],
+      [
+        "present perfect passive",
+        "has already been solved"
+      ],
+      [
+        "주의",
+        "use have/has + been + past participle"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has been solved",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "has already been solved"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem has already solved.",
+      "statementForm": [
+        "The problem has already been solved.",
+        "The problem has already been solved"
+      ],
+      "fragmentForm": "has already been solved",
+      "wormholeVariants": [
+        "The problem has already solved.",
+        "The problem has already been solve.",
+        "The problem was already been solved.",
+        "The problem have already been solved."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_056",
+    "seedId": "passive_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 문제는 벌써 해결되었니?",
+    "english": "Has the problem been solved yet?",
+    "words": [
+      "Has",
+      "the",
+      "problem",
+      "been",
+      "solved",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 벌써 해결되었니?",
+        "Has"
+      ],
+      [
+        "present perfect passive question",
+        "Has been solved"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Has",
+      "been solved",
+      "yet",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Has",
+      "been solved",
+      "yet"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Has the problem solved yet?",
+      "statementForm": [
+        "Has the problem been solved yet?",
+        "Has the problem been solved yet"
+      ],
+      "fragmentForm": "Has",
+      "wormholeVariants": [
+        "Has the problem solved yet?",
+        "Has the problem been solve yet?",
+        "Did the problem been solved yet?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_057",
+    "seedId": "passive_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 건물은 최근에 보수되었다.",
+    "english": "The building has recently been repaired.",
+    "words": [
+      "The",
+      "building",
+      "has",
+      "recently",
+      "been",
+      "repaired",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 건물은 최근에 보수되었다.",
+        "The"
+      ],
+      [
+        "present perfect passive",
+        "has recently been repaired"
+      ],
+      [
+        "주의",
+        "use have/has + been + past participle"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has been repaired",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "has recently been repaired"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The building has recently repaired.",
+      "statementForm": [
+        "The building has recently been repaired.",
+        "The building has recently been repaired"
+      ],
+      "fragmentForm": "has recently been repaired",
+      "wormholeVariants": [
+        "The building has recently repaired.",
+        "The building has recently been repair.",
+        "The building was recently been repaired.",
+        "The building have recently been repaired."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_058",
+    "seedId": "passive_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 결정은 아직 설명되지 않았다.",
+    "english": "The decision has not been explained yet.",
+    "words": [
+      "The",
+      "decision",
+      "has",
+      "not",
+      "been",
+      "explained",
+      "yet",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결정은 아직 설명되지 않았다.",
+        "The"
+      ],
+      [
+        "present perfect passive negative",
+        "has not been explained"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has not been explained",
+      "yet",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "has not been explained",
+      "yet"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The decision has not explained yet.",
+      "statementForm": [
+        "The decision has not been explained yet.",
+        "The decision has not been explained yet"
+      ],
+      "fragmentForm": "has not been explained",
+      "wormholeVariants": [
+        "The decision has not explained yet.",
+        "The decision has not been explain yet.",
+        "The decision was not been explained yet.",
+        "The decision have not been explained yet."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_059",
+    "seedId": "passive_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 결정은 이미 발표되었니?",
+    "english": "Has the decision been announced yet?",
+    "words": [
+      "Has",
+      "the",
+      "decision",
+      "been",
+      "announced",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결정은 이미 발표되었니?",
+        "Has"
+      ],
+      [
+        "present perfect passive question",
+        "Has been announced"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Has",
+      "been announced",
+      "yet",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Has",
+      "been announced",
+      "yet"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Has the decision announced yet?",
+      "statementForm": [
+        "Has the decision been announced yet?",
+        "Has the decision been announced yet"
+      ],
+      "fragmentForm": "Has",
+      "wormholeVariants": [
+        "Has the decision announced yet?",
+        "Has the decision been announce yet?",
+        "Did the decision been announced yet?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_060",
+    "seedId": "passive_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 파일은 이미 업로드되었다.",
+    "english": "The file has already been uploaded.",
+    "words": [
+      "The",
+      "file",
+      "has",
+      "already",
+      "been",
+      "uploaded",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 파일은 이미 업로드되었다.",
+        "The"
+      ],
+      [
+        "present perfect passive",
+        "has already been uploaded"
+      ],
+      [
+        "주의",
+        "use have/has + been + past participle"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has been uploaded",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "has already been uploaded"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The file has already uploaded.",
+      "statementForm": [
+        "The file has already been uploaded.",
+        "The file has already been uploaded"
+      ],
+      "fragmentForm": "has already been uploaded",
+      "wormholeVariants": [
+        "The file has already uploaded.",
+        "The file has already been upload.",
+        "The file was already been uploaded.",
+        "The file have already been uploaded."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_061",
+    "seedId": "passive_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "나는 선물을 받았다.",
+    "english": "I was given a present.",
+    "words": [
+      "I",
+      "was",
+      "given",
+      "a",
+      "present",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 선물을 받았다.",
+        "I"
+      ],
+      [
+        "ditransitive passive",
+        "was given"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was given",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was given"
+    ],
+    "tags": [
+      "passive",
+      "ditransitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was gave a present.",
+      "statementForm": [
+        "I was given a present.",
+        "I was given a present"
+      ],
+      "fragmentForm": "was given",
+      "wormholeVariants": [
+        "I was gave a present.",
+        "I gave a present by.",
+        "I was given to a present.",
+        "I is given a present."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_062",
+    "seedId": "passive_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그는 좋은 기회를 받았다.",
+    "english": "He was given a good chance.",
+    "words": [
+      "He",
+      "was",
+      "given",
+      "a",
+      "good",
+      "chance",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 좋은 기회를 받았다.",
+        "He"
+      ],
+      [
+        "ditransitive passive",
+        "was given"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was given",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was given"
+    ],
+    "tags": [
+      "passive",
+      "ditransitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was gave a good chance.",
+      "statementForm": [
+        "He was given a good chance.",
+        "He was given a good chance"
+      ],
+      "fragmentForm": "was given",
+      "wormholeVariants": [
+        "He was gave a good chance.",
+        "He gave a good chance by.",
+        "He was given to a good chance.",
+        "He is given a good chance."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_063",
+    "seedId": "passive_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "우리는 어려운 질문을 받았다.",
+    "english": "We were asked a difficult question.",
+    "words": [
+      "We",
+      "were",
+      "asked",
+      "a",
+      "difficult",
+      "question",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 어려운 질문을 받았다.",
+        "We"
+      ],
+      [
+        "ditransitive passive",
+        "were asked"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "were asked",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "were asked"
+    ],
+    "tags": [
+      "passive",
+      "ditransitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were ask a difficult question.",
+      "statementForm": [
+        "We were asked a difficult question.",
+        "We were asked a difficult question"
+      ],
+      "fragmentForm": "were asked",
+      "wormholeVariants": [
+        "We were ask a difficult question.",
+        "We asked a difficult question by.",
+        "We was asked a difficult question."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_064",
+    "seedId": "passive_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그녀는 새로운 이름으로 불렸다.",
+    "english": "She was called a new name.",
+    "words": [
+      "She",
+      "was",
+      "called",
+      "a",
+      "new",
+      "name",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 새로운 이름으로 불렸다.",
+        "She"
+      ],
+      [
+        "call passive",
+        "was called"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was called",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was called"
+    ],
+    "tags": [
+      "passive",
+      "call"
+    ],
+    "distractorSeeds": {
+      "auxError": "She called a new name.",
+      "statementForm": [
+        "She was called a new name.",
+        "She was called a new name"
+      ],
+      "fragmentForm": "was called",
+      "wormholeVariants": [
+        "She called a new name.",
+        "She was call a new name.",
+        "She was called by a new name.",
+        "She is called a new name yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_065",
+    "seedId": "passive_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그는 팀의 리더로 선택되었다.",
+    "english": "He was chosen as the leader of the team.",
+    "words": [
+      "He",
+      "was",
+      "chosen",
+      "as",
+      "the",
+      "leader",
+      "of",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 팀의 리더로 선택되었다.",
+        "He"
+      ],
+      [
+        "passive + as complement",
+        "was chosen as"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was chosen",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was chosen"
+    ],
+    "tags": [
+      "passive",
+      "as_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was chose as the leader of the team.",
+      "statementForm": [
+        "He was chosen as the leader of the team.",
+        "He was chosen as the leader of the team"
+      ],
+      "fragmentForm": "was chosen",
+      "wormholeVariants": [
+        "He was chose as the leader of the team.",
+        "He chose as the leader of the team.",
+        "He was chosen the leader by.",
+        "He is chosen as the leader of the team."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_066",
+    "seedId": "passive_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그녀는 훌륭한 학생으로 여겨진다.",
+    "english": "She is considered a good student.",
+    "words": [
+      "She",
+      "is",
+      "considered",
+      "a",
+      "good",
+      "student",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 훌륭한 학생으로 여겨진다.",
+        "She"
+      ],
+      [
+        "consider passive",
+        "is considered"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is considered",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is considered"
+    ],
+    "tags": [
+      "passive",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "She considers a good student.",
+      "statementForm": [
+        "She is considered a good student.",
+        "She is considered a good student"
+      ],
+      "fragmentForm": "is considered",
+      "wormholeVariants": [
+        "She considers a good student.",
+        "She is consider a good student.",
+        "She is considered as by a good student.",
+        "She are considered a good student."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_067",
+    "seedId": "passive_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 책은 읽기 쉽다고 여겨진다.",
+    "english": "The book is considered easy to read.",
+    "words": [
+      "The",
+      "book",
+      "is",
+      "considered",
+      "easy",
+      "to",
+      "read",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 책은 읽기 쉽다고 여겨진다.",
+        "The"
+      ],
+      [
+        "consider passive + adj",
+        "is considered easy"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is considered",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is considered"
+    ],
+    "tags": [
+      "passive",
+      "consider",
+      "adjective"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book considers easy to read.",
+      "statementForm": [
+        "The book is considered easy to read.",
+        "The book is considered easy to read"
+      ],
+      "fragmentForm": "is considered",
+      "wormholeVariants": [
+        "The book considers easy to read.",
+        "The book is consider easy to read.",
+        "The book is considered easily to read.",
+        "The book are considered easy to read."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_068",
+    "seedId": "passive_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 소식은 모두에게 알려졌다.",
+    "english": "The news was known to everyone.",
+    "words": [
+      "The",
+      "news",
+      "was",
+      "known",
+      "to",
+      "everyone",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소식은 모두에게 알려졌다.",
+        "The"
+      ],
+      [
+        "be known to",
+        "was known to"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was known to",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was known to"
+    ],
+    "tags": [
+      "passive",
+      "known_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news knew to everyone.",
+      "statementForm": [
+        "The news was known to everyone.",
+        "The news was known to everyone"
+      ],
+      "fragmentForm": "was known to",
+      "wormholeVariants": [
+        "The news knew to everyone.",
+        "The news was knew to everyone.",
+        "The news was known by everyone only.",
+        "The news is known to everyone."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_069",
+    "seedId": "passive_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 마을은 아름다운 호수로 유명하다.",
+    "english": "The town is known for its beautiful lake.",
+    "words": [
+      "The",
+      "town",
+      "is",
+      "known",
+      "for",
+      "its",
+      "beautiful",
+      "lake",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 마을은 아름다운 호수로 유명하다.",
+        "The"
+      ],
+      [
+        "be known for",
+        "is known for"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is known for",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is known for"
+    ],
+    "tags": [
+      "passive",
+      "known_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "The town knows for its beautiful lake.",
+      "statementForm": [
+        "The town is known for its beautiful lake.",
+        "The town is known for its beautiful lake"
+      ],
+      "fragmentForm": "is known for",
+      "wormholeVariants": [
+        "The town knows for its beautiful lake.",
+        "The town is knew for its beautiful lake.",
+        "The town is known to its beautiful lake."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_070",
+    "seedId": "passive_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "나는 그 결과에 놀랐다.",
+    "english": "I was surprised at the result.",
+    "words": [
+      "I",
+      "was",
+      "surprised",
+      "at",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 결과에 놀랐다.",
+        "I"
+      ],
+      [
+        "be surprised at",
+        "was surprised at"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was surprised at",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was surprised at"
+    ],
+    "tags": [
+      "passive",
+      "emotion"
+    ],
+    "distractorSeeds": {
+      "auxError": "I surprised at the result.",
+      "statementForm": [
+        "I was surprised at the result.",
+        "I was surprised at the result"
+      ],
+      "fragmentForm": "was surprised at",
+      "wormholeVariants": [
+        "I surprised at the result.",
+        "I was surprise at the result.",
+        "I was surprised by the result only.",
+        "I is surprised at the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_071",
+    "seedId": "passive_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그녀는 그 소식에 만족했다.",
+    "english": "She was pleased with the news.",
+    "words": [
+      "She",
+      "was",
+      "pleased",
+      "with",
+      "the",
+      "news",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 소식에 만족했다.",
+        "She"
+      ],
+      [
+        "be pleased with",
+        "was pleased with"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was pleased with",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was pleased with"
+    ],
+    "tags": [
+      "passive",
+      "emotion"
+    ],
+    "distractorSeeds": {
+      "auxError": "She pleased with the news.",
+      "statementForm": [
+        "She was pleased with the news.",
+        "She was pleased with the news"
+      ],
+      "fragmentForm": "was pleased with",
+      "wormholeVariants": [
+        "She pleased with the news.",
+        "She was please with the news.",
+        "She was pleased at the news.",
+        "She is pleased with the news."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_072",
+    "seedId": "passive_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그는 그의 성공으로 알려져 있다.",
+    "english": "He is known for his success.",
+    "words": [
+      "He",
+      "is",
+      "known",
+      "for",
+      "his",
+      "success",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그의 성공으로 알려져 있다.",
+        "He"
+      ],
+      [
+        "be known for",
+        "is known for"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is known for",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is known for"
+    ],
+    "tags": [
+      "passive",
+      "known_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "He knows for his success.",
+      "statementForm": [
+        "He is known for his success.",
+        "He is known for his success"
+      ],
+      "fragmentForm": "is known for",
+      "wormholeVariants": [
+        "He knows for his success.",
+        "He is knew for his success.",
+        "He is known to his success."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_073",
+    "seedId": "passive_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 상자는 책들로 가득 차 있다.",
+    "english": "The box is filled with books.",
+    "words": [
+      "The",
+      "box",
+      "is",
+      "filled",
+      "with",
+      "books",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 상자는 책들로 가득 차 있다.",
+        "The"
+      ],
+      [
+        "be filled with",
+        "is filled with"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is filled with",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is filled with"
+    ],
+    "tags": [
+      "passive",
+      "filled_with"
+    ],
+    "distractorSeeds": {
+      "auxError": "The box fills with books.",
+      "statementForm": [
+        "The box is filled with books.",
+        "The box is filled with books"
+      ],
+      "fragmentForm": "is filled with",
+      "wormholeVariants": [
+        "The box fills with books.",
+        "The box is fill with books.",
+        "The box is filled by books.",
+        "The box are filled with books."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_074",
+    "seedId": "passive_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 도시는 관광객들로 붐빈다.",
+    "english": "The city is crowded with tourists.",
+    "words": [
+      "The",
+      "city",
+      "is",
+      "crowded",
+      "with",
+      "tourists",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 도시는 관광객들로 붐빈다.",
+        "The"
+      ],
+      [
+        "be crowded with",
+        "is crowded with"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is crowded with",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is crowded with"
+    ],
+    "tags": [
+      "passive",
+      "crowded_with"
+    ],
+    "distractorSeeds": {
+      "auxError": "The city crowds with tourists.",
+      "statementForm": [
+        "The city is crowded with tourists.",
+        "The city is crowded with tourists"
+      ],
+      "fragmentForm": "is crowded with",
+      "wormholeVariants": [
+        "The city crowds with tourists.",
+        "The city is crowd with tourists.",
+        "The city is crowded by tourists.",
+        "The city are crowded with tourists."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_075",
+    "seedId": "passive_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그는 그 문제에 관심이 있다.",
+    "english": "He is interested in the problem.",
+    "words": [
+      "He",
+      "is",
+      "interested",
+      "in",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 문제에 관심이 있다.",
+        "He"
+      ],
+      [
+        "be interested in",
+        "is interested in"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is interested in",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is interested in"
+    ],
+    "tags": [
+      "passive",
+      "emotion"
+    ],
+    "distractorSeeds": {
+      "auxError": "He interests in the problem.",
+      "statementForm": [
+        "He is interested in the problem.",
+        "He is interested in the problem"
+      ],
+      "fragmentForm": "is interested in",
+      "wormholeVariants": [
+        "He interests in the problem.",
+        "He is interest in the problem.",
+        "He is interested at the problem.",
+        "He are interested in the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_076",
+    "seedId": "passive_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그녀는 그 결과에 실망했다.",
+    "english": "She was disappointed with the result.",
+    "words": [
+      "She",
+      "was",
+      "disappointed",
+      "with",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 결과에 실망했다.",
+        "She"
+      ],
+      [
+        "be disappointed with",
+        "was disappointed with"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was disappointed with",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was disappointed with"
+    ],
+    "tags": [
+      "passive",
+      "emotion"
+    ],
+    "distractorSeeds": {
+      "auxError": "She disappointed with the result.",
+      "statementForm": [
+        "She was disappointed with the result.",
+        "She was disappointed with the result"
+      ],
+      "fragmentForm": "was disappointed with",
+      "wormholeVariants": [
+        "She disappointed with the result.",
+        "She was disappoint with the result.",
+        "She was disappointed at the result only.",
+        "She is disappointed with the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_077",
+    "seedId": "passive_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 음식은 신선하게 보관되어야 한다.",
+    "english": "This food must be kept fresh.",
+    "words": [
+      "This",
+      "food",
+      "must",
+      "be",
+      "kept",
+      "fresh",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 음식은 신선하게 보관되어야 한다.",
+        "This"
+      ],
+      [
+        "modal passive + complement",
+        "must be kept fresh"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must be kept",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "must be kept"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "This food must keep fresh.",
+      "statementForm": [
+        "This food must be kept fresh.",
+        "This food must be kept fresh"
+      ],
+      "fragmentForm": "must be kept",
+      "wormholeVariants": [
+        "This food must keep fresh.",
+        "This food must be keep fresh.",
+        "This food must kept fresh."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_078",
+    "seedId": "passive_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 음식은 너무 오래 보관되어서는 안 된다.",
+    "english": "This food should not be kept too long.",
+    "words": [
+      "This",
+      "food",
+      "should",
+      "not",
+      "be",
+      "kept",
+      "too",
+      "long",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 음식은 너무 오래 보관되어서는 안 된다.",
+        "This"
+      ],
+      [
+        "modal passive negative",
+        "should not be kept"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should not be kept",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "should not be kept"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This food should not keep too long.",
+      "statementForm": [
+        "This food should not be kept too long.",
+        "This food should not be kept too long"
+      ],
+      "fragmentForm": "should not be kept",
+      "wormholeVariants": [
+        "This food should not keep too long.",
+        "This food should not be keep too long.",
+        "This food should not kept too long."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_079",
+    "seedId": "passive_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 음식은 냉장고에 보관되어야 하니?",
+    "english": "Should this food be kept in the fridge?",
+    "words": [
+      "Should",
+      "this",
+      "food",
+      "be",
+      "kept",
+      "in",
+      "the",
+      "fridge",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 음식은 냉장고에 보관되어야 하니?",
+        "Should"
+      ],
+      [
+        "modal passive question",
+        "Should be kept"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Should",
+      "be kept",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Should",
+      "be kept"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Should this food kept in the fridge?",
+      "statementForm": [
+        "Should this food be kept in the fridge?",
+        "Should this food be kept in the fridge"
+      ],
+      "fragmentForm": "Should",
+      "wormholeVariants": [
+        "Should this food kept in the fridge?",
+        "Should be this food kept in the fridge?",
+        "Does this food should be kept in the fridge?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_080",
+    "seedId": "passive_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 메시지는 잘못 이해되었다.",
+    "english": "The message was misunderstood.",
+    "words": [
+      "The",
+      "message",
+      "was",
+      "misunderstood",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 메시지는 잘못 이해되었다.",
+        "The"
+      ],
+      [
+        "past passive irregular",
+        "was misunderstood"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was misunderstood",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was misunderstood"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "The message was misunderstanded.",
+      "statementForm": [
+        "The message was misunderstood.",
+        "The message was misunderstood"
+      ],
+      "fragmentForm": "was misunderstood",
+      "wormholeVariants": [
+        "The message was misunderstanded.",
+        "The message misunderstood by.",
+        "The message is misunderstood yesterday.",
+        "The message is misunderstood."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_081",
+    "seedId": "passive_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 메시지는 잘못 이해되지 않았다.",
+    "english": "The message was not misunderstood.",
+    "words": [
+      "The",
+      "message",
+      "was",
+      "not",
+      "misunderstood",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 메시지는 잘못 이해되지 않았다.",
+        "The"
+      ],
+      [
+        "past passive negative",
+        "was not misunderstood"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was not misunderstood",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was not misunderstood"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "negative",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "The message did not misunderstood.",
+      "statementForm": [
+        "The message was not misunderstood.",
+        "The message was not misunderstood"
+      ],
+      "fragmentForm": "was not misunderstood",
+      "wormholeVariants": [
+        "The message did not misunderstood.",
+        "The message was not misunderstand.",
+        "The message not was misunderstood.",
+        "The message is not misunderstood."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_082",
+    "seedId": "passive_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 메시지는 잘못 이해되었니?",
+    "english": "Was the message misunderstood?",
+    "words": [
+      "Was",
+      "the",
+      "message",
+      "misunderstood",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 메시지는 잘못 이해되었니?",
+        "Was"
+      ],
+      [
+        "past passive question",
+        "Was misunderstood"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Was",
+      "misunderstood",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Was",
+      "misunderstood"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "question",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the message misunderstood?",
+      "statementForm": [
+        "Was the message misunderstood?",
+        "Was the message misunderstood"
+      ],
+      "fragmentForm": "Was",
+      "wormholeVariants": [
+        "Did the message misunderstood?",
+        "Was the message misunderstand?",
+        "Was misunderstood the message?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_083",
+    "seedId": "passive_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 아이디어는 회의에서 지지받았다.",
+    "english": "The idea was supported at the meeting.",
+    "words": [
+      "The",
+      "idea",
+      "was",
+      "supported",
+      "at",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 아이디어는 회의에서 지지받았다.",
+        "The"
+      ],
+      [
+        "past passive",
+        "was supported"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was supported",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was supported"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The idea supported at the meeting by.",
+      "statementForm": [
+        "The idea was supported at the meeting.",
+        "The idea was supported at the meeting"
+      ],
+      "fragmentForm": "was supported",
+      "wormholeVariants": [
+        "The idea supported at the meeting by.",
+        "The idea was support at the meeting.",
+        "The idea is supported at the meeting yesterday.",
+        "The idea is supported at the meeting."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_084",
+    "seedId": "passive_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 아이디어는 회의에서 거절되었다.",
+    "english": "The idea was rejected at the meeting.",
+    "words": [
+      "The",
+      "idea",
+      "was",
+      "rejected",
+      "at",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 아이디어는 회의에서 거절되었다.",
+        "The"
+      ],
+      [
+        "past passive",
+        "was rejected"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was rejected",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was rejected"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The idea rejected at the meeting by.",
+      "statementForm": [
+        "The idea was rejected at the meeting.",
+        "The idea was rejected at the meeting"
+      ],
+      "fragmentForm": "was rejected",
+      "wormholeVariants": [
+        "The idea rejected at the meeting by.",
+        "The idea was reject at the meeting.",
+        "The idea is rejected at the meeting yesterday.",
+        "The idea is rejected at the meeting."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_085",
+    "seedId": "passive_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 신청서는 오늘 검토될 것이다.",
+    "english": "The application will be reviewed today.",
+    "words": [
+      "The",
+      "application",
+      "will",
+      "be",
+      "reviewed",
+      "today",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 신청서는 오늘 검토될 것이다.",
+        "The"
+      ],
+      [
+        "future passive",
+        "will be reviewed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will be reviewed",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will be reviewed"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The application will review today.",
+      "statementForm": [
+        "The application will be reviewed today.",
+        "The application will be reviewed today"
+      ],
+      "fragmentForm": "will be reviewed",
+      "wormholeVariants": [
+        "The application will review today.",
+        "The application will be review today.",
+        "The application will reviewed today."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_086",
+    "seedId": "passive_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 신청서는 오늘 검토되지 않을 것이다.",
+    "english": "The application will not be reviewed today.",
+    "words": [
+      "The",
+      "application",
+      "will",
+      "not",
+      "be",
+      "reviewed",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 신청서는 오늘 검토되지 않을 것이다.",
+        "The"
+      ],
+      [
+        "future passive negative",
+        "will not be reviewed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will not be reviewed",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will not be reviewed"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The application will not review today.",
+      "statementForm": [
+        "The application will not be reviewed today.",
+        "The application will not be reviewed today"
+      ],
+      "fragmentForm": "will not be reviewed",
+      "wormholeVariants": [
+        "The application will not review today.",
+        "The application will not be review today.",
+        "The application will not reviewed today."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_087",
+    "seedId": "passive_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 신청서는 오늘 검토될까?",
+    "english": "Will the application be reviewed today?",
+    "words": [
+      "Will",
+      "the",
+      "application",
+      "be",
+      "reviewed",
+      "today",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 신청서는 오늘 검토될까?",
+        "Will"
+      ],
+      [
+        "future passive question",
+        "Will be reviewed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Will",
+      "be reviewed",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Will",
+      "be reviewed"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Will the application reviewed today?",
+      "statementForm": [
+        "Will the application be reviewed today?",
+        "Will the application be reviewed today"
+      ],
+      "fragmentForm": "Will",
+      "wormholeVariants": [
+        "Will the application reviewed today?",
+        "Will be the application reviewed today?",
+        "Does the application will be reviewed today?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_088",
+    "seedId": "passive_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 상자는 조심스럽게 옮겨졌다.",
+    "english": "The box was moved carefully.",
+    "words": [
+      "The",
+      "box",
+      "was",
+      "moved",
+      "carefully",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 상자는 조심스럽게 옮겨졌다.",
+        "The"
+      ],
+      [
+        "past passive adverb",
+        "was moved"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was moved",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was moved"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The box moved carefully by.",
+      "statementForm": [
+        "The box was moved carefully.",
+        "The box was moved carefully"
+      ],
+      "fragmentForm": "was moved",
+      "wormholeVariants": [
+        "The box moved carefully by.",
+        "The box was move carefully.",
+        "The box is moved carefully yesterday.",
+        "The box is moved carefully."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_089",
+    "seedId": "passive_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 상자는 조심스럽게 옮겨지지 않았다.",
+    "english": "The box was not moved carefully.",
+    "words": [
+      "The",
+      "box",
+      "was",
+      "not",
+      "moved",
+      "carefully",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 상자는 조심스럽게 옮겨지지 않았다.",
+        "The"
+      ],
+      [
+        "past passive negative",
+        "was not moved"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was not moved",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "was not moved"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The box did not moved carefully.",
+      "statementForm": [
+        "The box was not moved carefully.",
+        "The box was not moved carefully"
+      ],
+      "fragmentForm": "was not moved",
+      "wormholeVariants": [
+        "The box did not moved carefully.",
+        "The box was not move carefully.",
+        "The box not was moved carefully.",
+        "The box is not moved carefully."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_090",
+    "seedId": "passive_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 상자는 조심스럽게 옮겨졌니?",
+    "english": "Was the box moved carefully?",
+    "words": [
+      "Was",
+      "the",
+      "box",
+      "moved",
+      "carefully",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 상자는 조심스럽게 옮겨졌니?",
+        "Was"
+      ],
+      [
+        "past passive question",
+        "Was moved"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Was",
+      "moved",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Was",
+      "moved"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the box moved carefully?",
+      "statementForm": [
+        "Was the box moved carefully?",
+        "Was the box moved carefully"
+      ],
+      "fragmentForm": "Was",
+      "wormholeVariants": [
+        "Did the box moved carefully?",
+        "Was the box move carefully?",
+        "Was moved the box carefully?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_091",
+    "seedId": "passive_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 질문은 자주 제기된다.",
+    "english": "The question is often asked.",
+    "words": [
+      "The",
+      "question",
+      "is",
+      "often",
+      "asked",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 질문은 자주 제기된다.",
+        "The"
+      ],
+      [
+        "present passive frequency",
+        "is often asked"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is often asked",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is often asked"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "frequency"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question often asks.",
+      "statementForm": [
+        "The question is often asked.",
+        "The question is often asked"
+      ],
+      "fragmentForm": "is often asked",
+      "wormholeVariants": [
+        "The question often asks.",
+        "The question is often ask.",
+        "The question asked often.",
+        "The question are often asked."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_092",
+    "seedId": "passive_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 질문은 자주 제기되지 않는다.",
+    "english": "The question is not often asked.",
+    "words": [
+      "The",
+      "question",
+      "is",
+      "not",
+      "often",
+      "asked",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 질문은 자주 제기되지 않는다.",
+        "The"
+      ],
+      [
+        "present passive negative frequency",
+        "is not often asked"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is not often asked",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "is not often asked"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question does not often asked.",
+      "statementForm": [
+        "The question is not often asked.",
+        "The question is not often asked"
+      ],
+      "fragmentForm": "is not often asked",
+      "wormholeVariants": [
+        "The question does not often asked.",
+        "The question is not often ask.",
+        "The question not is often asked.",
+        "The question are not often asked."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_093",
+    "seedId": "passive_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 초대장은 이메일로 보내질 것이다.",
+    "english": "The invitation will be sent by email.",
+    "words": [
+      "The",
+      "invitation",
+      "will",
+      "be",
+      "sent",
+      "by",
+      "email",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 초대장은 이메일로 보내질 것이다.",
+        "The"
+      ],
+      [
+        "future passive",
+        "will be sent"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will be sent",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will be sent"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The invitation will send by email.",
+      "statementForm": [
+        "The invitation will be sent by email.",
+        "The invitation will be sent by email"
+      ],
+      "fragmentForm": "will be sent",
+      "wormholeVariants": [
+        "The invitation will send by email.",
+        "The invitation will be send by email.",
+        "The invitation will sent by email."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_094",
+    "seedId": "passive_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 초대장은 이메일로 보내지지 않을 것이다.",
+    "english": "The invitation will not be sent by email.",
+    "words": [
+      "The",
+      "invitation",
+      "will",
+      "not",
+      "be",
+      "sent",
+      "by",
+      "email",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 초대장은 이메일로 보내지지 않을 것이다.",
+        "The"
+      ],
+      [
+        "future passive negative",
+        "will not be sent"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will not be sent",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "will not be sent"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The invitation will not send by email.",
+      "statementForm": [
+        "The invitation will not be sent by email.",
+        "The invitation will not be sent by email"
+      ],
+      "fragmentForm": "will not be sent",
+      "wormholeVariants": [
+        "The invitation will not send by email.",
+        "The invitation will not be send by email.",
+        "The invitation will not sent by email."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_095",
+    "seedId": "passive_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 초대장은 이메일로 보내질까?",
+    "english": "Will the invitation be sent by email?",
+    "words": [
+      "Will",
+      "the",
+      "invitation",
+      "be",
+      "sent",
+      "by",
+      "email",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 초대장은 이메일로 보내질까?",
+        "Will"
+      ],
+      [
+        "future passive question",
+        "Will be sent"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Will",
+      "be sent",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "Will",
+      "be sent"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Will the invitation sent by email?",
+      "statementForm": [
+        "Will the invitation be sent by email?",
+        "Will the invitation be sent by email"
+      ],
+      "fragmentForm": "Will",
+      "wormholeVariants": [
+        "Will the invitation sent by email?",
+        "Will be the invitation sent by email?",
+        "Does the invitation will be sent by email?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_096",
+    "seedId": "passive_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 자료는 수업 전에 준비되어야 한다.",
+    "english": "The materials should be prepared before class.",
+    "words": [
+      "The",
+      "materials",
+      "should",
+      "be",
+      "prepared",
+      "before",
+      "class",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 자료는 수업 전에 준비되어야 한다.",
+        "The"
+      ],
+      [
+        "modal passive",
+        "should be prepared"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should be prepared",
+      "by",
+      "carefully"
+    ],
+    "blankTargets": [
+      "should be prepared"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The materials should prepare before class.",
+      "statementForm": [
+        "The materials should be prepared before class.",
+        "The materials should be prepared before class"
+      ],
+      "fragmentForm": "should be prepared",
+      "wormholeVariants": [
+        "The materials should prepare before class.",
+        "The materials should be prepare before class.",
+        "The materials should prepared before class."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_097",
+    "seedId": "passive_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 이메일은 아침마다 확인된다.",
+    "english": "The email is checked every morning.",
+    "words": [
+      "The",
+      "email",
+      "is",
+      "checked",
+      "every",
+      "morning",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이메일은 아침마다 확인된다.",
+        "The"
+      ],
+      [
+        "present passive",
+        "is checked"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is checked",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "is checked"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The email checks every morning.",
+      "statementForm": [
+        "The email is checked every morning.",
+        "The email is checked every morning"
+      ],
+      "fragmentForm": "is checked",
+      "wormholeVariants": [
+        "The email checks every morning.",
+        "The email is check every morning.",
+        "The email was checked every morning."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_098",
+    "seedId": "passive_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 이메일은 주말에는 확인되지 않는다.",
+    "english": "The email is not checked on weekends.",
+    "words": [
+      "The",
+      "email",
+      "is",
+      "not",
+      "checked",
+      "on",
+      "weekends",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이메일은 주말에는 확인되지 않는다.",
+        "The"
+      ],
+      [
+        "present passive negative",
+        "is not checked"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "is not checked",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "is not checked"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The email does not checked on weekends.",
+      "statementForm": [
+        "The email is not checked on weekends.",
+        "The email is not checked on weekends"
+      ],
+      "fragmentForm": "is not checked",
+      "wormholeVariants": [
+        "The email does not checked on weekends.",
+        "The email is not check on weekends.",
+        "The email are not checked on weekends."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_099",
+    "seedId": "passive_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 이메일은 매일 확인되니?",
+    "english": "Is the email checked every day?",
+    "words": [
+      "Is",
+      "the",
+      "email",
+      "checked",
+      "every",
+      "day",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이메일은 매일 확인되니?",
+        "Is"
+      ],
+      [
+        "present passive question",
+        "Is the email checked"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Is the email checked",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "Is",
+      "checked"
+    ],
+    "tags": [
+      "passive",
+      "present",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does the email checked every day?",
+      "statementForm": [
+        "Is the email checked every day?",
+        "Is the email checked every day"
+      ],
+      "fragmentForm": "Is",
+      "wormholeVariants": [
+        "Does the email checked every day?",
+        "Is the email check every day?",
+        "Is checked the email every day?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_100",
+    "seedId": "passive_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 창고는 지난달에 닫혔다.",
+    "english": "The warehouse was closed last month.",
+    "words": [
+      "The",
+      "warehouse",
+      "was",
+      "closed",
+      "last",
+      "month",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 창고는 지난달에 닫혔다.",
+        "The"
+      ],
+      [
+        "past passive",
+        "was closed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was closed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "was closed"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The warehouse closed last month.",
+      "statementForm": [
+        "The warehouse was closed last month.",
+        "The warehouse was closed last month"
+      ],
+      "fragmentForm": "was closed",
+      "wormholeVariants": [
+        "The warehouse closed last month.",
+        "The warehouse was close last month.",
+        "The warehouse is closed last month."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_101",
+    "seedId": "passive_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 창고는 지난달에 닫히지 않았다.",
+    "english": "The warehouse was not closed last month.",
+    "words": [
+      "The",
+      "warehouse",
+      "was",
+      "not",
+      "closed",
+      "last",
+      "month",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 창고는 지난달에 닫히지 않았다.",
+        "The"
+      ],
+      [
+        "past passive negative",
+        "was not closed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "was not closed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "was not closed"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The warehouse did not closed last month.",
+      "statementForm": [
+        "The warehouse was not closed last month.",
+        "The warehouse was not closed last month"
+      ],
+      "fragmentForm": "was not closed",
+      "wormholeVariants": [
+        "The warehouse did not closed last month.",
+        "The warehouse was not close last month.",
+        "The warehouse is not closed last month."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_102",
+    "seedId": "passive_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 창고는 지난달에 닫혔니?",
+    "english": "Was the warehouse closed last month?",
+    "words": [
+      "Was",
+      "the",
+      "warehouse",
+      "closed",
+      "last",
+      "month",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 창고는 지난달에 닫혔니?",
+        "Was"
+      ],
+      [
+        "past passive question",
+        "Was the warehouse closed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Was the warehouse closed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "Was",
+      "closed"
+    ],
+    "tags": [
+      "passive",
+      "past",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the warehouse closed last month?",
+      "statementForm": [
+        "Was the warehouse closed last month?",
+        "Was the warehouse closed last month"
+      ],
+      "fragmentForm": "Was",
+      "wormholeVariants": [
+        "Did the warehouse closed last month?",
+        "Was the warehouse close last month?",
+        "Was closed the warehouse last month?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_103",
+    "seedId": "passive_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 표는 행사 전에 인쇄되어야 한다.",
+    "english": "These tickets should be printed before the event.",
+    "words": [
+      "These",
+      "tickets",
+      "should",
+      "be",
+      "printed",
+      "before",
+      "the",
+      "event",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 표는 행사 전에 인쇄되어야 한다.",
+        "These"
+      ],
+      [
+        "modal passive",
+        "should be printed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "should be printed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "should be printed"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "These tickets should print before the event.",
+      "statementForm": [
+        "These tickets should be printed before the event.",
+        "These tickets should be printed before the event"
+      ],
+      "fragmentForm": "should be printed",
+      "wormholeVariants": [
+        "These tickets should print before the event.",
+        "These tickets should be print before the event.",
+        "These tickets should printed before the event."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_104",
+    "seedId": "passive_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "이 표는 행사 전에 잃어버려져서는 안 된다.",
+    "english": "These tickets must not be lost before the event.",
+    "words": [
+      "These",
+      "tickets",
+      "must",
+      "not",
+      "be",
+      "lost",
+      "before",
+      "the",
+      "event",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 표는 행사 전에 잃어버려져서는 안 된다.",
+        "These"
+      ],
+      [
+        "modal passive negative",
+        "must not be lost"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "must not be lost",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "must not be lost"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "These tickets must not lose before the event.",
+      "statementForm": [
+        "These tickets must not be lost before the event.",
+        "These tickets must not be lost before the event"
+      ],
+      "fragmentForm": "must not be lost",
+      "wormholeVariants": [
+        "These tickets must not lose before the event.",
+        "These tickets must not be lose before the event.",
+        "These tickets must not lost before the event."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_105",
+    "seedId": "passive_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 문서는 내일까지 제출되어야 하니?",
+    "english": "Should the document be submitted by tomorrow?",
+    "words": [
+      "Should",
+      "the",
+      "document",
+      "be",
+      "submitted",
+      "by",
+      "tomorrow",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문서는 내일까지 제출되어야 하니?",
+        "Should"
+      ],
+      [
+        "modal passive question",
+        "Should the document be submitted"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Should the document be submitted",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "Should",
+      "be submitted"
+    ],
+    "tags": [
+      "passive",
+      "modal",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Should the document submitted by tomorrow?",
+      "statementForm": [
+        "Should the document be submitted by tomorrow?",
+        "Should the document be submitted by tomorrow"
+      ],
+      "fragmentForm": "Should",
+      "wormholeVariants": [
+        "Should the document submitted by tomorrow?",
+        "Should be the document submitted by tomorrow?",
+        "Does the document should be submitted by tomorrow?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_106",
+    "seedId": "passive_106",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 다리는 내년에 완성될 것이다.",
+    "english": "The bridge will be completed next year.",
+    "words": [
+      "The",
+      "bridge",
+      "will",
+      "be",
+      "completed",
+      "next",
+      "year",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 다리는 내년에 완성될 것이다.",
+        "The"
+      ],
+      [
+        "future passive",
+        "will be completed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will be completed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "will be completed"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bridge will complete next year.",
+      "statementForm": [
+        "The bridge will be completed next year.",
+        "The bridge will be completed next year"
+      ],
+      "fragmentForm": "will be completed",
+      "wormholeVariants": [
+        "The bridge will complete next year.",
+        "The bridge will be complete next year.",
+        "The bridge will completed next year."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_107",
+    "seedId": "passive_107",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 다리는 올해 완성되지 않을 것이다.",
+    "english": "The bridge will not be completed this year.",
+    "words": [
+      "The",
+      "bridge",
+      "will",
+      "not",
+      "be",
+      "completed",
+      "this",
+      "year",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 다리는 올해 완성되지 않을 것이다.",
+        "The"
+      ],
+      [
+        "future passive negative",
+        "will not be completed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "will not be completed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "will not be completed"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bridge will not complete this year.",
+      "statementForm": [
+        "The bridge will not be completed this year.",
+        "The bridge will not be completed this year"
+      ],
+      "fragmentForm": "will not be completed",
+      "wormholeVariants": [
+        "The bridge will not complete this year.",
+        "The bridge will not be complete this year.",
+        "The bridge will not completed this year."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_108",
+    "seedId": "passive_108",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 다리는 내년에 완성될까?",
+    "english": "Will the bridge be completed next year?",
+    "words": [
+      "Will",
+      "the",
+      "bridge",
+      "be",
+      "completed",
+      "next",
+      "year",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 다리는 내년에 완성될까?",
+        "Will"
+      ],
+      [
+        "future passive question",
+        "Will the bridge be completed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Will the bridge be completed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "Will",
+      "be completed"
+    ],
+    "tags": [
+      "passive",
+      "future",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Will the bridge completed next year?",
+      "statementForm": [
+        "Will the bridge be completed next year?",
+        "Will the bridge be completed next year"
+      ],
+      "fragmentForm": "Will",
+      "wormholeVariants": [
+        "Will the bridge completed next year?",
+        "Will be the bridge completed next year?",
+        "Does the bridge will be completed next year?"
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_109",
+    "seedId": "passive_109",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 결과는 이미 확인되었다.",
+    "english": "The result has already been confirmed.",
+    "words": [
+      "The",
+      "result",
+      "has",
+      "already",
+      "been",
+      "confirmed",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결과는 이미 확인되었다.",
+        "The"
+      ],
+      [
+        "present perfect passive",
+        "has already been confirmed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has already been confirmed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "has already been confirmed"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The result has already confirmed.",
+      "statementForm": [
+        "The result has already been confirmed.",
+        "The result has already been confirmed"
+      ],
+      "fragmentForm": "has already been confirmed",
+      "wormholeVariants": [
+        "The result has already confirmed.",
+        "The result has already been confirm.",
+        "The result was already been confirmed."
+      ]
+    }
+  },
+  {
+    "id": "m2_passive_110",
+    "seedId": "passive_110",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 결과는 아직 확인되지 않았다.",
+    "english": "The result has not been confirmed yet.",
+    "words": [
+      "The",
+      "result",
+      "has",
+      "not",
+      "been",
+      "confirmed",
+      "yet",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결과는 아직 확인되지 않았다.",
+        "The"
+      ],
+      [
+        "present perfect passive negative",
+        "has not been confirmed"
+      ],
+      [
+        "주의",
+        "use be + past participle and the correct tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "has not been confirmed",
+      "be + p.p.",
+      "by",
+      "tense",
+      "not active"
+    ],
+    "blankTargets": [
+      "has not been confirmed",
+      "yet"
+    ],
+    "tags": [
+      "passive",
+      "present_perfect",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The result has not confirmed yet.",
+      "statementForm": [
+        "The result has not been confirmed yet.",
+        "The result has not been confirmed yet"
+      ],
+      "fragmentForm": "has not been confirmed",
+      "wormholeVariants": [
+        "The result has not confirmed yet.",
+        "The result has not been confirm yet.",
+        "The result was not been confirmed yet."
+      ]
+    }
+  }
+]
