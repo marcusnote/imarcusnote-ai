@@ -1,0 +1,8039 @@
+[
+  {
+    "id": "m2_wh_questions_001",
+    "seedId": "wh_questions_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 어디에 사니?",
+    "english": "Where do you live?",
+    "words": [
+      "Where",
+      "do",
+      "you",
+      "live",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 어디에 사니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where you live?",
+      "statementForm": [
+        "Where do you live?",
+        "Where do you live"
+      ],
+      "fragmentForm": "Where do you live",
+      "wormholeVariants": [
+        "Where you live?",
+        "Where do you live."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_002",
+    "seedId": "wh_questions_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 무엇을 하고 있니?",
+    "english": "What are you doing?",
+    "words": [
+      "What",
+      "are",
+      "you",
+      "doing",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 무엇을 하고 있니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "What you doing?",
+      "statementForm": [
+        "What are you doing?",
+        "What are you doing"
+      ],
+      "fragmentForm": "What are you doing",
+      "wormholeVariants": [
+        "What you doing?",
+        "What are you doing.",
+        "What is you doing?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_003",
+    "seedId": "wh_questions_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 왜 떠났니?",
+    "english": "Why did she leave?",
+    "words": [
+      "Why",
+      "did",
+      "she",
+      "leave",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 왜 떠났니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why she leave?",
+      "statementForm": [
+        "Why did she leave?",
+        "Why did she leave"
+      ],
+      "fragmentForm": "Why did she leave",
+      "wormholeVariants": [
+        "Why she leave?",
+        "Why did she leave.",
+        "Why do she leave?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_004",
+    "seedId": "wh_questions_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 언제 도착할 예정이니?",
+    "english": "When will they arrive?",
+    "words": [
+      "When",
+      "will",
+      "they",
+      "arrive",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 언제 도착할 예정이니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "When they arrive?",
+      "statementForm": [
+        "When will they arrive?",
+        "When will they arrive"
+      ],
+      "fragmentForm": "When will they arrive",
+      "wormholeVariants": [
+        "When they arrive?",
+        "When will they arrive."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_005",
+    "seedId": "wh_questions_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너의 선생님은 누구니?",
+    "english": "Who is your teacher?",
+    "words": [
+      "Who",
+      "is",
+      "your",
+      "teacher",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너의 선생님은 누구니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who your teacher?",
+      "statementForm": [
+        "Who is your teacher?",
+        "Who is your teacher"
+      ],
+      "fragmentForm": "Who is your teacher",
+      "wormholeVariants": [
+        "Who your teacher?",
+        "Who is your teacher."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_006",
+    "seedId": "wh_questions_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 이 문제를 어떻게 풀 수 있니?",
+    "english": "How can you solve this problem?",
+    "words": [
+      "How",
+      "can",
+      "you",
+      "solve",
+      "this",
+      "problem",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 이 문제를 어떻게 풀 수 있니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "How you solve this problem?",
+      "statementForm": [
+        "How can you solve this problem?",
+        "How can you solve this problem"
+      ],
+      "fragmentForm": "How can you solve",
+      "wormholeVariants": [
+        "How you solve this problem?",
+        "How can you solve this problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_007",
+    "seedId": "wh_questions_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 어디에서 일하니?",
+    "english": "Where does he work?",
+    "words": [
+      "Where",
+      "does",
+      "he",
+      "work",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 어디에서 일하니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_does"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where he work?",
+      "statementForm": [
+        "Where does he work?",
+        "Where does he work"
+      ],
+      "fragmentForm": "Where does he work",
+      "wormholeVariants": [
+        "Where he work?",
+        "Where does he work.",
+        "Where do he work?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_008",
+    "seedId": "wh_questions_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 무엇을 먹었니?",
+    "english": "What did you eat?",
+    "words": [
+      "What",
+      "did",
+      "you",
+      "eat",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 무엇을 먹었니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "What you eat?",
+      "statementForm": [
+        "What did you eat?",
+        "What did you eat"
+      ],
+      "fragmentForm": "What did you eat",
+      "wormholeVariants": [
+        "What you eat?",
+        "What did you eat.",
+        "What do you eat?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_009",
+    "seedId": "wh_questions_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 왜 늦었니?",
+    "english": "Why are you late?",
+    "words": [
+      "Why",
+      "are",
+      "you",
+      "late",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 왜 늦었니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why you late?",
+      "statementForm": [
+        "Why are you late?",
+        "Why are you late"
+      ],
+      "fragmentForm": "Why are you late",
+      "wormholeVariants": [
+        "Why you late?",
+        "Why are you late.",
+        "Why is you late?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_010",
+    "seedId": "wh_questions_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 언제 공부하니?",
+    "english": "When do you study?",
+    "words": [
+      "When",
+      "do",
+      "you",
+      "study",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 언제 공부하니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "When you study?",
+      "statementForm": [
+        "When do you study?",
+        "When do you study"
+      ],
+      "fragmentForm": "When do you study",
+      "wormholeVariants": [
+        "When you study?",
+        "When do you study."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_011",
+    "seedId": "wh_questions_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 누구를 만났니?",
+    "english": "Who did she meet?",
+    "words": [
+      "Who",
+      "did",
+      "she",
+      "meet",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 누구를 만났니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who she meet?",
+      "statementForm": [
+        "Who did she meet?",
+        "Who did she meet"
+      ],
+      "fragmentForm": "Who did she meet",
+      "wormholeVariants": [
+        "Who she meet?",
+        "Who did she meet.",
+        "Who do she meet?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_012",
+    "seedId": "wh_questions_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 그것을 어떻게 끝냈니?",
+    "english": "How did you finish it?",
+    "words": [
+      "How",
+      "did",
+      "you",
+      "finish",
+      "it",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그것을 어떻게 끝냈니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "How you finish it?",
+      "statementForm": [
+        "How did you finish it?",
+        "How did you finish it"
+      ],
+      "fragmentForm": "How did you finish",
+      "wormholeVariants": [
+        "How you finish it?",
+        "How did you finish it.",
+        "How do you finish it?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_013",
+    "seedId": "wh_questions_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 어디로 가고 있니?",
+    "english": "Where are they going?",
+    "words": [
+      "Where",
+      "are",
+      "they",
+      "going",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 어디로 가고 있니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where they going?",
+      "statementForm": [
+        "Where are they going?",
+        "Where are they going"
+      ],
+      "fragmentForm": "Where are they going",
+      "wormholeVariants": [
+        "Where they going?",
+        "Where are they going.",
+        "Where is they going?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_014",
+    "seedId": "wh_questions_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 무엇을 원하니?",
+    "english": "What does he want?",
+    "words": [
+      "What",
+      "does",
+      "he",
+      "want",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 무엇을 원하니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_does"
+    ],
+    "distractorSeeds": {
+      "auxError": "What he want?",
+      "statementForm": [
+        "What does he want?",
+        "What does he want"
+      ],
+      "fragmentForm": "What does he want",
+      "wormholeVariants": [
+        "What he want?",
+        "What does he want.",
+        "What do he want?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_015",
+    "seedId": "wh_questions_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 왜 울고 있니?",
+    "english": "Why is she crying?",
+    "words": [
+      "Why",
+      "is",
+      "she",
+      "crying",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 왜 울고 있니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why she crying?",
+      "statementForm": [
+        "Why is she crying?",
+        "Why is she crying"
+      ],
+      "fragmentForm": "Why is she crying",
+      "wormholeVariants": [
+        "Why she crying?",
+        "Why is she crying."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_016",
+    "seedId": "wh_questions_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 방과 후에 어디에 가니?",
+    "english": "Where do you go after school?",
+    "words": [
+      "Where",
+      "do",
+      "you",
+      "go",
+      "after",
+      "school",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 방과 후에 어디에 가니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where you go after school?",
+      "statementForm": [
+        "Where do you go after school?",
+        "Where do you go after school"
+      ],
+      "fragmentForm": "Where do you go",
+      "wormholeVariants": [
+        "Where you go after school?",
+        "Where do you go after school."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_017",
+    "seedId": "wh_questions_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "미나는 수업에 무엇이 필요하니?",
+    "english": "What does Mina need for class?",
+    "words": [
+      "What",
+      "does",
+      "Mina",
+      "need",
+      "for",
+      "class",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "미나는 수업에 무엇이 필요하니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what"
+    ],
+    "distractorSeeds": {
+      "auxError": "What Mina need for class?",
+      "statementForm": [
+        "What does Mina need for class?",
+        "What does Mina need for class"
+      ],
+      "fragmentForm": "What does Mina need",
+      "wormholeVariants": [
+        "What Mina need for class?",
+        "What does Mina need for class.",
+        "What do Mina need for class?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_018",
+    "seedId": "wh_questions_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 언제 프로젝트를 시작했니?",
+    "english": "When did they start the project?",
+    "words": [
+      "When",
+      "did",
+      "they",
+      "start",
+      "the",
+      "project",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 언제 프로젝트를 시작했니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when"
+    ],
+    "distractorSeeds": {
+      "auxError": "When they start the project?",
+      "statementForm": [
+        "When did they start the project?",
+        "When did they start the project"
+      ],
+      "fragmentForm": "When did they start",
+      "wormholeVariants": [
+        "When they start the project?",
+        "When did they start the project.",
+        "When do they start the project?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_019",
+    "seedId": "wh_questions_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 왜 걱정스러워 보이니?",
+    "english": "Why does he look worried?",
+    "words": [
+      "Why",
+      "does",
+      "he",
+      "look",
+      "worried",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 왜 걱정스러워 보이니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why he look worried?",
+      "statementForm": [
+        "Why does he look worried?",
+        "Why does he look worried"
+      ],
+      "fragmentForm": "Why does he look",
+      "wormholeVariants": [
+        "Why he look worried?",
+        "Why does he look worried.",
+        "Why do he look worried?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_020",
+    "seedId": "wh_questions_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 이 단어의 철자를 어떻게 쓰니?",
+    "english": "How do you spell this word?",
+    "words": [
+      "How",
+      "do",
+      "you",
+      "spell",
+      "this",
+      "word",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 이 단어의 철자를 어떻게 쓰니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how"
+    ],
+    "distractorSeeds": {
+      "auxError": "How you spell this word?",
+      "statementForm": [
+        "How do you spell this word?",
+        "How do you spell this word"
+      ],
+      "fragmentForm": "How do you spell",
+      "wormholeVariants": [
+        "How you spell this word?",
+        "How do you spell this word."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_021",
+    "seedId": "wh_questions_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 파티에 누구를 초대할 거니?",
+    "english": "Who will you invite to the party?",
+    "words": [
+      "Who",
+      "will",
+      "you",
+      "invite",
+      "to",
+      "the",
+      "party",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 파티에 누구를 초대할 거니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who you invite to the party?",
+      "statementForm": [
+        "Who will you invite to the party?",
+        "Who will you invite to the party"
+      ],
+      "fragmentForm": "Who will you invite",
+      "wormholeVariants": [
+        "Who you invite to the party?",
+        "Who will you invite to the party."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_022",
+    "seedId": "wh_questions_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "우리는 어디에서 답을 찾을 수 있니?",
+    "english": "Where can we find the answer?",
+    "words": [
+      "Where",
+      "can",
+      "we",
+      "find",
+      "the",
+      "answer",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 어디에서 답을 찾을 수 있니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where we find the answer?",
+      "statementForm": [
+        "Where can we find the answer?",
+        "Where can we find the answer"
+      ],
+      "fragmentForm": "Where can we find",
+      "wormholeVariants": [
+        "Where we find the answer?",
+        "Where can we find the answer."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_023",
+    "seedId": "wh_questions_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 무엇에 대해 이야기하고 있니?",
+    "english": "What are they talking about?",
+    "words": [
+      "What",
+      "are",
+      "they",
+      "talking",
+      "about",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 무엇에 대해 이야기하고 있니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what"
+    ],
+    "distractorSeeds": {
+      "auxError": "What they talking about?",
+      "statementForm": [
+        "What are they talking about?",
+        "What are they talking about"
+      ],
+      "fragmentForm": "What are they talking",
+      "wormholeVariants": [
+        "What they talking about?",
+        "What are they talking about.",
+        "What is they talking about?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_024",
+    "seedId": "wh_questions_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "시험은 언제 시작할 예정이니?",
+    "english": "When is the test going to begin?",
+    "words": [
+      "When",
+      "is",
+      "the",
+      "test",
+      "going",
+      "to",
+      "begin",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "시험은 언제 시작할 예정이니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the test going to begin?",
+      "statementForm": [
+        "When is the test going to begin?",
+        "When is the test going to begin"
+      ],
+      "fragmentForm": "When is the test",
+      "wormholeVariants": [
+        "When the test going to begin?",
+        "When is the test going to begin."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_025",
+    "seedId": "wh_questions_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 왜 이 답을 골랐니?",
+    "english": "Why did you choose this answer?",
+    "words": [
+      "Why",
+      "did",
+      "you",
+      "choose",
+      "this",
+      "answer",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 왜 이 답을 골랐니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why you choose this answer?",
+      "statementForm": [
+        "Why did you choose this answer?",
+        "Why did you choose this answer"
+      ],
+      "fragmentForm": "Why did you choose",
+      "wormholeVariants": [
+        "Why you choose this answer?",
+        "Why did you choose this answer.",
+        "Why do you choose this answer?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_026",
+    "seedId": "wh_questions_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 어떻게 글쓰기를 향상시킬 수 있니?",
+    "english": "How can she improve her writing?",
+    "words": [
+      "How",
+      "can",
+      "she",
+      "improve",
+      "her",
+      "writing",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 어떻게 글쓰기를 향상시킬 수 있니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how"
+    ],
+    "distractorSeeds": {
+      "auxError": "How she improve her writing?",
+      "statementForm": [
+        "How can she improve her writing?",
+        "How can she improve her writing"
+      ],
+      "fragmentForm": "How can she improve",
+      "wormholeVariants": [
+        "How she improve her writing?",
+        "How can she improve her writing."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_027",
+    "seedId": "wh_questions_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "문 근처에 서 있는 저 소년은 누구니?",
+    "english": "Who is that boy standing near the door?",
+    "words": [
+      "Who",
+      "is",
+      "that",
+      "boy",
+      "standing",
+      "near",
+      "the",
+      "door",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "문 근처에 서 있는 저 소년은 누구니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who that boy standing near the door?",
+      "statementForm": [
+        "Who is that boy standing near the door?",
+        "Who is that boy standing near the door"
+      ],
+      "fragmentForm": "Who is that boy",
+      "wormholeVariants": [
+        "Who that boy standing near the door?",
+        "Who is that boy standing near the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_028",
+    "seedId": "wh_questions_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 점심 후에 어디에 갔니?",
+    "english": "Where has he gone after lunch?",
+    "words": [
+      "Where",
+      "has",
+      "he",
+      "gone",
+      "after",
+      "lunch",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 점심 후에 어디에 갔니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where he gone after lunch?",
+      "statementForm": [
+        "Where has he gone after lunch?",
+        "Where has he gone after lunch"
+      ],
+      "fragmentForm": "Where has he gone",
+      "wormholeVariants": [
+        "Where he gone after lunch?",
+        "Where has he gone after lunch."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_029",
+    "seedId": "wh_questions_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 오늘 무엇을 배웠니?",
+    "english": "What have you learned today?",
+    "words": [
+      "What",
+      "have",
+      "you",
+      "learned",
+      "today",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 오늘 무엇을 배웠니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what"
+    ],
+    "distractorSeeds": {
+      "auxError": "What you learned today?",
+      "statementForm": [
+        "What have you learned today?",
+        "What have you learned today"
+      ],
+      "fragmentForm": "What have you learned",
+      "wormholeVariants": [
+        "What you learned today?",
+        "What have you learned today."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_030",
+    "seedId": "wh_questions_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 언제 박물관을 방문했니?",
+    "english": "When have they visited the museum?",
+    "words": [
+      "When",
+      "have",
+      "they",
+      "visited",
+      "the",
+      "museum",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 언제 박물관을 방문했니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when"
+    ],
+    "distractorSeeds": {
+      "auxError": "When they visited the museum?",
+      "statementForm": [
+        "When have they visited the museum?",
+        "When have they visited the museum"
+      ],
+      "fragmentForm": "When have they visited",
+      "wormholeVariants": [
+        "When they visited the museum?",
+        "When have they visited the museum."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_031",
+    "seedId": "wh_questions_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 왜 계획을 바꿨니?",
+    "english": "Why has she changed her plan?",
+    "words": [
+      "Why",
+      "has",
+      "she",
+      "changed",
+      "her",
+      "plan",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 왜 계획을 바꿨니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why she changed her plan?",
+      "statementForm": [
+        "Why has she changed her plan?",
+        "Why has she changed her plan"
+      ],
+      "fragmentForm": "Why has she changed",
+      "wormholeVariants": [
+        "Why she changed her plan?",
+        "Why has she changed her plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_032",
+    "seedId": "wh_questions_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 어떻게 그 문제를 해결했니?",
+    "english": "How has he solved the problem?",
+    "words": [
+      "How",
+      "has",
+      "he",
+      "solved",
+      "the",
+      "problem",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 어떻게 그 문제를 해결했니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how"
+    ],
+    "distractorSeeds": {
+      "auxError": "How he solved the problem?",
+      "statementForm": [
+        "How has he solved the problem?",
+        "How has he solved the problem"
+      ],
+      "fragmentForm": "How has he solved",
+      "wormholeVariants": [
+        "How he solved the problem?",
+        "How has he solved the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_033",
+    "seedId": "wh_questions_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "누가 숙제를 먼저 끝냈니?",
+    "english": "Who has finished the homework first?",
+    "words": [
+      "Who",
+      "has",
+      "finished",
+      "the",
+      "homework",
+      "first",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "누가 숙제를 먼저 끝냈니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who finished the homework first?",
+      "statementForm": [
+        "Who has finished the homework first?",
+        "Who has finished the homework first"
+      ],
+      "fragmentForm": "Who has finished the",
+      "wormholeVariants": [
+        "Who finished the homework first?",
+        "Who has finished the homework first."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_034",
+    "seedId": "wh_questions_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 왜 그 이야기를 좋아하니?",
+    "english": "Why do you like the story?",
+    "words": [
+      "Why",
+      "do",
+      "you",
+      "like",
+      "the",
+      "story",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 왜 그 이야기를 좋아하니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why you like the story?",
+      "statementForm": [
+        "Why do you like the story?",
+        "Why do you like the story"
+      ],
+      "fragmentForm": "Why do you like",
+      "wormholeVariants": [
+        "Why you like the story?",
+        "Why do you like the story."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_035",
+    "seedId": "wh_questions_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 언제 집에 돌아오니?",
+    "english": "When does she come home?",
+    "words": [
+      "When",
+      "does",
+      "she",
+      "come",
+      "home",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 언제 집에 돌아오니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_does"
+    ],
+    "distractorSeeds": {
+      "auxError": "When she come home?",
+      "statementForm": [
+        "When does she come home?",
+        "When does she come home"
+      ],
+      "fragmentForm": "When does she come",
+      "wormholeVariants": [
+        "When she come home?",
+        "When does she come home.",
+        "When do she come home?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_036",
+    "seedId": "wh_questions_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 무엇을 만들고 있니?",
+    "english": "What are they making?",
+    "words": [
+      "What",
+      "are",
+      "they",
+      "making",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 무엇을 만들고 있니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "What they making?",
+      "statementForm": [
+        "What are they making?",
+        "What are they making"
+      ],
+      "fragmentForm": "What are they making",
+      "wormholeVariants": [
+        "What they making?",
+        "What are they making.",
+        "What is they making?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_037",
+    "seedId": "wh_questions_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 어떻게 학교에 가니?",
+    "english": "How does he get to school?",
+    "words": [
+      "How",
+      "does",
+      "he",
+      "get",
+      "to",
+      "school",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 어떻게 학교에 가니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_does"
+    ],
+    "distractorSeeds": {
+      "auxError": "How he get to school?",
+      "statementForm": [
+        "How does he get to school?",
+        "How does he get to school"
+      ],
+      "fragmentForm": "How does he get",
+      "wormholeVariants": [
+        "How he get to school?",
+        "How does he get to school.",
+        "How do he get to school?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_038",
+    "seedId": "wh_questions_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "누가 창문을 열었니?",
+    "english": "Who opened the window?",
+    "words": [
+      "Who",
+      "opened",
+      "the",
+      "window",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "누가 창문을 열었니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_subject"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who the window?",
+      "statementForm": [
+        "Who opened the window?",
+        "Who opened the window"
+      ],
+      "fragmentForm": "Who opened the window",
+      "wormholeVariants": [
+        "Who the window?",
+        "Who opened the window."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_039",
+    "seedId": "wh_questions_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "어느 책이 네 것이니?",
+    "english": "Which book is yours?",
+    "words": [
+      "Which",
+      "book",
+      "is",
+      "yours",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "어느 책이 네 것이니?",
+        "Which"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Which",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Which"
+    ],
+    "tags": [
+      "wh_questions",
+      "which_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Which is yours?",
+      "statementForm": [
+        "Which book is yours?",
+        "Which book is yours"
+      ],
+      "fragmentForm": "Which book is yours",
+      "wormholeVariants": [
+        "Which is yours?",
+        "Which book is yours."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_040",
+    "seedId": "wh_questions_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "얼마나 많은 학생들이 여기에 있니?",
+    "english": "How many students are here?",
+    "words": [
+      "How",
+      "many",
+      "students",
+      "are",
+      "here",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "얼마나 많은 학생들이 여기에 있니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "howmany_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "How students are here?",
+      "statementForm": [
+        "How many students are here?",
+        "How many students are here"
+      ],
+      "fragmentForm": "How many students are",
+      "wormholeVariants": [
+        "How students are here?",
+        "How many students are here.",
+        "How many students is here?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_041",
+    "seedId": "wh_questions_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "얼마나 자주 너는 운동하니?",
+    "english": "How often do you exercise?",
+    "words": [
+      "How",
+      "often",
+      "do",
+      "you",
+      "exercise",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "얼마나 자주 너는 운동하니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "howoften_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "How do you exercise?",
+      "statementForm": [
+        "How often do you exercise?",
+        "How often do you exercise"
+      ],
+      "fragmentForm": "How often do you",
+      "wormholeVariants": [
+        "How do you exercise?",
+        "How often do you exercise."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_042",
+    "seedId": "wh_questions_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 왜 영어를 공부하니?",
+    "english": "Why do you study English?",
+    "words": [
+      "Why",
+      "do",
+      "you",
+      "study",
+      "English",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 왜 영어를 공부하니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why you study English?",
+      "statementForm": [
+        "Why do you study English?",
+        "Why do you study English"
+      ],
+      "fragmentForm": "Why do you study",
+      "wormholeVariants": [
+        "Why you study English?",
+        "Why do you study English."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_043",
+    "seedId": "wh_questions_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 무엇을 읽고 있니?",
+    "english": "What is he reading?",
+    "words": [
+      "What",
+      "is",
+      "he",
+      "reading",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 무엇을 읽고 있니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "What he reading?",
+      "statementForm": [
+        "What is he reading?",
+        "What is he reading"
+      ],
+      "fragmentForm": "What is he reading",
+      "wormholeVariants": [
+        "What he reading?",
+        "What is he reading."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_044",
+    "seedId": "wh_questions_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 어디에 앉아 있니?",
+    "english": "Where is she sitting?",
+    "words": [
+      "Where",
+      "is",
+      "she",
+      "sitting",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 어디에 앉아 있니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where she sitting?",
+      "statementForm": [
+        "Where is she sitting?",
+        "Where is she sitting"
+      ],
+      "fragmentForm": "Where is she sitting",
+      "wormholeVariants": [
+        "Where she sitting?",
+        "Where is she sitting."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_045",
+    "seedId": "wh_questions_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 언제 그를 만났니?",
+    "english": "When did you meet him?",
+    "words": [
+      "When",
+      "did",
+      "you",
+      "meet",
+      "him",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 언제 그를 만났니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "When you meet him?",
+      "statementForm": [
+        "When did you meet him?",
+        "When did you meet him"
+      ],
+      "fragmentForm": "When did you meet",
+      "wormholeVariants": [
+        "When you meet him?",
+        "When did you meet him.",
+        "When do you meet him?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_046",
+    "seedId": "wh_questions_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 어떻게 그 소식을 들었니?",
+    "english": "How did you hear the news?",
+    "words": [
+      "How",
+      "did",
+      "you",
+      "hear",
+      "the",
+      "news",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 어떻게 그 소식을 들었니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "How you hear the news?",
+      "statementForm": [
+        "How did you hear the news?",
+        "How did you hear the news"
+      ],
+      "fragmentForm": "How did you hear",
+      "wormholeVariants": [
+        "How you hear the news?",
+        "How did you hear the news.",
+        "How do you hear the news?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_047",
+    "seedId": "wh_questions_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 왜 회의를 취소했니?",
+    "english": "Why did they cancel the meeting?",
+    "words": [
+      "Why",
+      "did",
+      "they",
+      "cancel",
+      "the",
+      "meeting",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 왜 회의를 취소했니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why they cancel the meeting?",
+      "statementForm": [
+        "Why did they cancel the meeting?",
+        "Why did they cancel the meeting"
+      ],
+      "fragmentForm": "Why did they cancel",
+      "wormholeVariants": [
+        "Why they cancel the meeting?",
+        "Why did they cancel the meeting.",
+        "Why do they cancel the meeting?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_048",
+    "seedId": "wh_questions_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "누가 너를 도와줄 수 있니?",
+    "english": "Who can help you?",
+    "words": [
+      "Who",
+      "can",
+      "help",
+      "you",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "누가 너를 도와줄 수 있니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who help you?",
+      "statementForm": [
+        "Who can help you?",
+        "Who can help you"
+      ],
+      "fragmentForm": "Who can help you",
+      "wormholeVariants": [
+        "Who help you?",
+        "Who can help you."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_049",
+    "seedId": "wh_questions_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 무엇을 가져와야 하니?",
+    "english": "What should you bring?",
+    "words": [
+      "What",
+      "should",
+      "you",
+      "bring",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 무엇을 가져와야 하니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "What you bring?",
+      "statementForm": [
+        "What should you bring?",
+        "What should you bring"
+      ],
+      "fragmentForm": "What should you bring",
+      "wormholeVariants": [
+        "What you bring?",
+        "What should you bring."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_050",
+    "seedId": "wh_questions_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "우리는 어디에서 기다려야 하니?",
+    "english": "Where should we wait?",
+    "words": [
+      "Where",
+      "should",
+      "we",
+      "wait",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 어디에서 기다려야 하니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where we wait?",
+      "statementForm": [
+        "Where should we wait?",
+        "Where should we wait"
+      ],
+      "fragmentForm": "Where should we wait",
+      "wormholeVariants": [
+        "Where we wait?",
+        "Where should we wait."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_051",
+    "seedId": "wh_questions_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 언제 떠날 거니?",
+    "english": "When will they leave?",
+    "words": [
+      "When",
+      "will",
+      "they",
+      "leave",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 언제 떠날 거니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "When they leave?",
+      "statementForm": [
+        "When will they leave?",
+        "When will they leave"
+      ],
+      "fragmentForm": "When will they leave",
+      "wormholeVariants": [
+        "When they leave?",
+        "When will they leave."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_052",
+    "seedId": "wh_questions_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 왜 전화를 하지 않았니?",
+    "english": "Why didn’t she call?",
+    "words": [
+      "Why",
+      "didn’t",
+      "she",
+      "call",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 왜 전화를 하지 않았니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why she call?",
+      "statementForm": [
+        "Why didn’t she call?",
+        "Why didn’t she call"
+      ],
+      "fragmentForm": "Why didn’t she call",
+      "wormholeVariants": [
+        "Why she call?",
+        "Why didn’t she call."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_053",
+    "seedId": "wh_questions_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 무엇을 잊었니?",
+    "english": "What did you forget?",
+    "words": [
+      "What",
+      "did",
+      "you",
+      "forget",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 무엇을 잊었니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "What you forget?",
+      "statementForm": [
+        "What did you forget?",
+        "What did you forget"
+      ],
+      "fragmentForm": "What did you forget",
+      "wormholeVariants": [
+        "What you forget?",
+        "What did you forget.",
+        "What do you forget?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_054",
+    "seedId": "wh_questions_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 어디에서 태어났니?",
+    "english": "Where was he born?",
+    "words": [
+      "Where",
+      "was",
+      "he",
+      "born",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 어디에서 태어났니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where he born?",
+      "statementForm": [
+        "Where was he born?",
+        "Where was he born"
+      ],
+      "fragmentForm": "Where was he born",
+      "wormholeVariants": [
+        "Where he born?",
+        "Where was he born."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_055",
+    "seedId": "wh_questions_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그 행사는 언제 열렸니?",
+    "english": "When was the event held?",
+    "words": [
+      "When",
+      "was",
+      "the",
+      "event",
+      "held",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 행사는 언제 열렸니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "When the event held?",
+      "statementForm": [
+        "When was the event held?",
+        "When was the event held"
+      ],
+      "fragmentForm": "When was the event",
+      "wormholeVariants": [
+        "When the event held?",
+        "When was the event held."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_056",
+    "seedId": "wh_questions_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 왜 그렇게 생각하니?",
+    "english": "Why do you think so?",
+    "words": [
+      "Why",
+      "do",
+      "you",
+      "think",
+      "so",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 왜 그렇게 생각하니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why you think so?",
+      "statementForm": [
+        "Why do you think so?",
+        "Why do you think so"
+      ],
+      "fragmentForm": "Why do you think",
+      "wormholeVariants": [
+        "Why you think so?",
+        "Why do you think so."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_057",
+    "seedId": "wh_questions_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 어떻게 그렇게 빨리 달리니?",
+    "english": "How does she run so fast?",
+    "words": [
+      "How",
+      "does",
+      "she",
+      "run",
+      "so",
+      "fast",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 어떻게 그렇게 빨리 달리니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_does"
+    ],
+    "distractorSeeds": {
+      "auxError": "How she run so fast?",
+      "statementForm": [
+        "How does she run so fast?",
+        "How does she run so fast"
+      ],
+      "fragmentForm": "How does she run",
+      "wormholeVariants": [
+        "How she run so fast?",
+        "How does she run so fast.",
+        "How do she run so fast?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_058",
+    "seedId": "wh_questions_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "누가 이 문제를 풀었니?",
+    "english": "Who solved this problem?",
+    "words": [
+      "Who",
+      "solved",
+      "this",
+      "problem",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "누가 이 문제를 풀었니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_subject"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who this problem?",
+      "statementForm": [
+        "Who solved this problem?",
+        "Who solved this problem"
+      ],
+      "fragmentForm": "Who solved this problem",
+      "wormholeVariants": [
+        "Who this problem?",
+        "Who solved this problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_059",
+    "seedId": "wh_questions_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 무엇에 관심이 있니?",
+    "english": "What are you interested in?",
+    "words": [
+      "What",
+      "are",
+      "you",
+      "interested",
+      "in",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 무엇에 관심이 있니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "What you interested in?",
+      "statementForm": [
+        "What are you interested in?",
+        "What are you interested in"
+      ],
+      "fragmentForm": "What are you interested",
+      "wormholeVariants": [
+        "What you interested in?",
+        "What are you interested in.",
+        "What is you interested in?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_060",
+    "seedId": "wh_questions_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 누구와 이야기하고 있니?",
+    "english": "Who is he talking to?",
+    "words": [
+      "Who",
+      "is",
+      "he",
+      "talking",
+      "to",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 누구와 이야기하고 있니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who he talking to?",
+      "statementForm": [
+        "Who is he talking to?",
+        "Who is he talking to"
+      ],
+      "fragmentForm": "Who is he talking",
+      "wormholeVariants": [
+        "Who he talking to?",
+        "Who is he talking to."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_061",
+    "seedId": "wh_questions_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 어디에 숨었니?",
+    "english": "Where did they hide?",
+    "words": [
+      "Where",
+      "did",
+      "they",
+      "hide",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 어디에 숨었니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where they hide?",
+      "statementForm": [
+        "Where did they hide?",
+        "Where did they hide"
+      ],
+      "fragmentForm": "Where did they hide",
+      "wormholeVariants": [
+        "Where they hide?",
+        "Where did they hide.",
+        "Where do they hide?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_062",
+    "seedId": "wh_questions_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 언제 일어나니?",
+    "english": "When do you get up?",
+    "words": [
+      "When",
+      "do",
+      "you",
+      "get",
+      "up",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 언제 일어나니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "When you get up?",
+      "statementForm": [
+        "When do you get up?",
+        "When do you get up"
+      ],
+      "fragmentForm": "When do you get",
+      "wormholeVariants": [
+        "When you get up?",
+        "When do you get up."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_063",
+    "seedId": "wh_questions_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 왜 웃고 있니?",
+    "english": "Why is he smiling?",
+    "words": [
+      "Why",
+      "is",
+      "he",
+      "smiling",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 왜 웃고 있니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why he smiling?",
+      "statementForm": [
+        "Why is he smiling?",
+        "Why is he smiling"
+      ],
+      "fragmentForm": "Why is he smiling",
+      "wormholeVariants": [
+        "Why he smiling?",
+        "Why is he smiling."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_064",
+    "seedId": "wh_questions_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 이것을 어떻게 사용하니?",
+    "english": "How do you use this?",
+    "words": [
+      "How",
+      "do",
+      "you",
+      "use",
+      "this",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 이것을 어떻게 사용하니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "How you use this?",
+      "statementForm": [
+        "How do you use this?",
+        "How do you use this"
+      ],
+      "fragmentForm": "How do you use",
+      "wormholeVariants": [
+        "How you use this?",
+        "How do you use this."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_065",
+    "seedId": "wh_questions_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "무엇이 너를 행복하게 하니?",
+    "english": "What makes you happy?",
+    "words": [
+      "What",
+      "makes",
+      "you",
+      "happy",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "무엇이 너를 행복하게 하니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_subject"
+    ],
+    "distractorSeeds": {
+      "auxError": "What you happy?",
+      "statementForm": [
+        "What makes you happy?",
+        "What makes you happy"
+      ],
+      "fragmentForm": "What makes you happy",
+      "wormholeVariants": [
+        "What you happy?",
+        "What makes you happy."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_066",
+    "seedId": "wh_questions_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "누구의 가방이 이것이니?",
+    "english": "Whose bag is this?",
+    "words": [
+      "Whose",
+      "bag",
+      "is",
+      "this",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "누구의 가방이 이것이니?",
+        "Whose"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Whose",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Whose"
+    ],
+    "tags": [
+      "wh_questions",
+      "whose_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Whose is this?",
+      "statementForm": [
+        "Whose bag is this?",
+        "Whose bag is this"
+      ],
+      "fragmentForm": "Whose bag is this",
+      "wormholeVariants": [
+        "Whose is this?",
+        "Whose bag is this."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_067",
+    "seedId": "wh_questions_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "어느 색을 너는 더 좋아하니?",
+    "english": "Which color do you prefer?",
+    "words": [
+      "Which",
+      "color",
+      "do",
+      "you",
+      "prefer",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "어느 색을 너는 더 좋아하니?",
+        "Which"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Which",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Which"
+    ],
+    "tags": [
+      "wh_questions",
+      "which_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "Which do you prefer?",
+      "statementForm": [
+        "Which color do you prefer?",
+        "Which color do you prefer"
+      ],
+      "fragmentForm": "Which color do you",
+      "wormholeVariants": [
+        "Which do you prefer?",
+        "Which color do you prefer."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_068",
+    "seedId": "wh_questions_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "얼마나 멀리 그 역이 있니?",
+    "english": "How far is the station?",
+    "words": [
+      "How",
+      "far",
+      "is",
+      "the",
+      "station",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "얼마나 멀리 그 역이 있니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "howfar_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "How is the station?",
+      "statementForm": [
+        "How far is the station?",
+        "How far is the station"
+      ],
+      "fragmentForm": "How far is the",
+      "wormholeVariants": [
+        "How is the station?",
+        "How far is the station."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_069",
+    "seedId": "wh_questions_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "얼마나 오래 너는 기다렸니?",
+    "english": "How long did you wait?",
+    "words": [
+      "How",
+      "long",
+      "did",
+      "you",
+      "wait",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "얼마나 오래 너는 기다렸니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "howlong_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "How did you wait?",
+      "statementForm": [
+        "How long did you wait?",
+        "How long did you wait"
+      ],
+      "fragmentForm": "How long did you",
+      "wormholeVariants": [
+        "How did you wait?",
+        "How long did you wait.",
+        "How long do you wait?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_070",
+    "seedId": "wh_questions_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 얼마를 지불했니?",
+    "english": "How much did you pay?",
+    "words": [
+      "How",
+      "much",
+      "did",
+      "you",
+      "pay",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 얼마를 지불했니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "howmuch_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "How did you pay?",
+      "statementForm": [
+        "How much did you pay?",
+        "How much did you pay"
+      ],
+      "fragmentForm": "How much did you",
+      "wormholeVariants": [
+        "How did you pay?",
+        "How much did you pay.",
+        "How much do you pay?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_071",
+    "seedId": "wh_questions_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 무엇을 찾고 있니?",
+    "english": "What is she looking for?",
+    "words": [
+      "What",
+      "is",
+      "she",
+      "looking",
+      "for",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 무엇을 찾고 있니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "What she looking for?",
+      "statementForm": [
+        "What is she looking for?",
+        "What is she looking for"
+      ],
+      "fragmentForm": "What is she looking",
+      "wormholeVariants": [
+        "What she looking for?",
+        "What is she looking for."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_072",
+    "seedId": "wh_questions_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 왜 규칙을 어겼니?",
+    "english": "Why did he break the rule?",
+    "words": [
+      "Why",
+      "did",
+      "he",
+      "break",
+      "the",
+      "rule",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 왜 규칙을 어겼니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why he break the rule?",
+      "statementForm": [
+        "Why did he break the rule?",
+        "Why did he break the rule"
+      ],
+      "fragmentForm": "Why did he break",
+      "wormholeVariants": [
+        "Why he break the rule?",
+        "Why did he break the rule.",
+        "Why do he break the rule?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_073",
+    "seedId": "wh_questions_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너희는 어디에서 점심을 먹었니?",
+    "english": "Where did you have lunch?",
+    "words": [
+      "Where",
+      "did",
+      "you",
+      "have",
+      "lunch",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너희는 어디에서 점심을 먹었니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where you have lunch?",
+      "statementForm": [
+        "Where did you have lunch?",
+        "Where did you have lunch"
+      ],
+      "fragmentForm": "Where did you have",
+      "wormholeVariants": [
+        "Where you have lunch?",
+        "Where did you have lunch.",
+        "Where do you have lunch?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_074",
+    "seedId": "wh_questions_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 어떻게 그곳에 도착했니?",
+    "english": "How did they get there?",
+    "words": [
+      "How",
+      "did",
+      "they",
+      "get",
+      "there",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 어떻게 그곳에 도착했니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "How they get there?",
+      "statementForm": [
+        "How did they get there?",
+        "How did they get there"
+      ],
+      "fragmentForm": "How did they get",
+      "wormholeVariants": [
+        "How they get there?",
+        "How did they get there.",
+        "How do they get there?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_075",
+    "seedId": "wh_questions_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 언제 그 책을 끝냈니?",
+    "english": "When did you finish the book?",
+    "words": [
+      "When",
+      "did",
+      "you",
+      "finish",
+      "the",
+      "book",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 언제 그 책을 끝냈니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "When you finish the book?",
+      "statementForm": [
+        "When did you finish the book?",
+        "When did you finish the book"
+      ],
+      "fragmentForm": "When did you finish",
+      "wormholeVariants": [
+        "When you finish the book?",
+        "When did you finish the book.",
+        "When do you finish the book?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_076",
+    "seedId": "wh_questions_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "누가 문을 닫았니?",
+    "english": "Who closed the door?",
+    "words": [
+      "Who",
+      "closed",
+      "the",
+      "door",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "누가 문을 닫았니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_subject"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who the door?",
+      "statementForm": [
+        "Who closed the door?",
+        "Who closed the door"
+      ],
+      "fragmentForm": "Who closed the door",
+      "wormholeVariants": [
+        "Who the door?",
+        "Who closed the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_077",
+    "seedId": "wh_questions_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 무엇을 설명했니?",
+    "english": "What did she explain?",
+    "words": [
+      "What",
+      "did",
+      "she",
+      "explain",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 무엇을 설명했니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "What she explain?",
+      "statementForm": [
+        "What did she explain?",
+        "What did she explain"
+      ],
+      "fragmentForm": "What did she explain",
+      "wormholeVariants": [
+        "What she explain?",
+        "What did she explain.",
+        "What do she explain?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_078",
+    "seedId": "wh_questions_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 어디에 살고 있니?",
+    "english": "Where does he live?",
+    "words": [
+      "Where",
+      "does",
+      "he",
+      "live",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 어디에 살고 있니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_does"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where he live?",
+      "statementForm": [
+        "Where does he live?",
+        "Where does he live"
+      ],
+      "fragmentForm": "Where does he live",
+      "wormholeVariants": [
+        "Where he live?",
+        "Where does he live.",
+        "Where do he live?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_079",
+    "seedId": "wh_questions_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 왜 숙제를 하지 않았니?",
+    "english": "Why didn’t you do your homework?",
+    "words": [
+      "Why",
+      "didn’t",
+      "you",
+      "do",
+      "your",
+      "homework",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 왜 숙제를 하지 않았니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why you do your homework?",
+      "statementForm": [
+        "Why didn’t you do your homework?",
+        "Why didn’t you do your homework"
+      ],
+      "fragmentForm": "Why didn’t you do",
+      "wormholeVariants": [
+        "Why you do your homework?",
+        "Why didn’t you do your homework."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_080",
+    "seedId": "wh_questions_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 무엇을 기다리고 있니?",
+    "english": "What are they waiting for?",
+    "words": [
+      "What",
+      "are",
+      "they",
+      "waiting",
+      "for",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 무엇을 기다리고 있니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "What they waiting for?",
+      "statementForm": [
+        "What are they waiting for?",
+        "What are they waiting for"
+      ],
+      "fragmentForm": "What are they waiting",
+      "wormholeVariants": [
+        "What they waiting for?",
+        "What are they waiting for.",
+        "What is they waiting for?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_081",
+    "seedId": "wh_questions_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 어떻게 네 생각을 표현하니?",
+    "english": "How do you express your idea?",
+    "words": [
+      "How",
+      "do",
+      "you",
+      "express",
+      "your",
+      "idea",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 어떻게 네 생각을 표현하니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "How you express your idea?",
+      "statementForm": [
+        "How do you express your idea?",
+        "How do you express your idea"
+      ],
+      "fragmentForm": "How do you express",
+      "wormholeVariants": [
+        "How you express your idea?",
+        "How do you express your idea."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_082",
+    "seedId": "wh_questions_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "누가 그 답을 알고 있니?",
+    "english": "Who knows the answer?",
+    "words": [
+      "Who",
+      "knows",
+      "the",
+      "answer",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "누가 그 답을 알고 있니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_subject"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who the answer?",
+      "statementForm": [
+        "Who knows the answer?",
+        "Who knows the answer"
+      ],
+      "fragmentForm": "Who knows the answer",
+      "wormholeVariants": [
+        "Who the answer?",
+        "Who knows the answer."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_083",
+    "seedId": "wh_questions_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "어느 버스가 역으로 가니?",
+    "english": "Which bus goes to the station?",
+    "words": [
+      "Which",
+      "bus",
+      "goes",
+      "to",
+      "the",
+      "station",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "어느 버스가 역으로 가니?",
+        "Which"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Which",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Which"
+    ],
+    "tags": [
+      "wh_questions",
+      "which_subject"
+    ],
+    "distractorSeeds": {
+      "auxError": "Which goes to the station?",
+      "statementForm": [
+        "Which bus goes to the station?",
+        "Which bus goes to the station"
+      ],
+      "fragmentForm": "Which bus goes to",
+      "wormholeVariants": [
+        "Which goes to the station?",
+        "Which bus goes to the station."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_084",
+    "seedId": "wh_questions_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 언제 돌아올 거니?",
+    "english": "When will he come back?",
+    "words": [
+      "When",
+      "will",
+      "he",
+      "come",
+      "back",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 언제 돌아올 거니?",
+        "When"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "When",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "When"
+    ],
+    "tags": [
+      "wh_questions",
+      "when_modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "When he come back?",
+      "statementForm": [
+        "When will he come back?",
+        "When will he come back"
+      ],
+      "fragmentForm": "When will he come",
+      "wormholeVariants": [
+        "When he come back?",
+        "When will he come back."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_085",
+    "seedId": "wh_questions_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 왜 여기에 없니?",
+    "english": "Why isn’t she here?",
+    "words": [
+      "Why",
+      "isn’t",
+      "she",
+      "here",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 왜 여기에 없니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why she here?",
+      "statementForm": [
+        "Why isn’t she here?",
+        "Why isn’t she here"
+      ],
+      "fragmentForm": "Why isn’t she here",
+      "wormholeVariants": [
+        "Why she here?",
+        "Why isn’t she here."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_086",
+    "seedId": "wh_questions_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 어디에서 태어났니?",
+    "english": "Where were you born?",
+    "words": [
+      "Where",
+      "were",
+      "you",
+      "born",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 어디에서 태어났니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where you born?",
+      "statementForm": [
+        "Where were you born?",
+        "Where were you born"
+      ],
+      "fragmentForm": "Where were you born",
+      "wormholeVariants": [
+        "Where you born?",
+        "Where were you born."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_087",
+    "seedId": "wh_questions_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "무엇이 문제가 되었니?",
+    "english": "What was the problem?",
+    "words": [
+      "What",
+      "was",
+      "the",
+      "problem",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "무엇이 문제가 되었니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "What the problem?",
+      "statementForm": [
+        "What was the problem?",
+        "What was the problem"
+      ],
+      "fragmentForm": "What was the problem",
+      "wormholeVariants": [
+        "What the problem?",
+        "What was the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_088",
+    "seedId": "wh_questions_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 어떻게 이 문장을 바꿀 수 있니?",
+    "english": "How can you change this sentence?",
+    "words": [
+      "How",
+      "can",
+      "you",
+      "change",
+      "this",
+      "sentence",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 어떻게 이 문장을 바꿀 수 있니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "how_modal"
+    ],
+    "distractorSeeds": {
+      "auxError": "How you change this sentence?",
+      "statementForm": [
+        "How can you change this sentence?",
+        "How can you change this sentence"
+      ],
+      "fragmentForm": "How can you change",
+      "wormholeVariants": [
+        "How you change this sentence?",
+        "How can you change this sentence."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_089",
+    "seedId": "wh_questions_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 누구를 초대했니?",
+    "english": "Who did he invite?",
+    "words": [
+      "Who",
+      "did",
+      "he",
+      "invite",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 누구를 초대했니?",
+        "Who"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Who",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Who"
+    ],
+    "tags": [
+      "wh_questions",
+      "who_did"
+    ],
+    "distractorSeeds": {
+      "auxError": "Who he invite?",
+      "statementForm": [
+        "Who did he invite?",
+        "Who did he invite"
+      ],
+      "fragmentForm": "Who did he invite",
+      "wormholeVariants": [
+        "Who he invite?",
+        "Who did he invite.",
+        "Who do he invite?"
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_090",
+    "seedId": "wh_questions_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 어느 언어를 배우고 있니?",
+    "english": "Which language is she learning?",
+    "words": [
+      "Which",
+      "language",
+      "is",
+      "she",
+      "learning",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 어느 언어를 배우고 있니?",
+        "Which"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Which",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Which"
+    ],
+    "tags": [
+      "wh_questions",
+      "which_be"
+    ],
+    "distractorSeeds": {
+      "auxError": "Which is she learning?",
+      "statementForm": [
+        "Which language is she learning?",
+        "Which language is she learning"
+      ],
+      "fragmentForm": "Which language is she",
+      "wormholeVariants": [
+        "Which is she learning?",
+        "Which language is she learning."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_091",
+    "seedId": "wh_questions_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 얼마나 자주 책을 읽니?",
+    "english": "How often do you read books?",
+    "words": [
+      "How",
+      "often",
+      "do",
+      "you",
+      "read",
+      "books",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 얼마나 자주 책을 읽니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "howoften_do"
+    ],
+    "distractorSeeds": {
+      "auxError": "How do you read books?",
+      "statementForm": [
+        "How often do you read books?",
+        "How often do you read books"
+      ],
+      "fragmentForm": "How often do you",
+      "wormholeVariants": [
+        "How do you read books?",
+        "How often do you read books."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_092",
+    "seedId": "wh_questions_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 얼마나 오래 여기에서 살았니?",
+    "english": "How long has he lived here?",
+    "words": [
+      "How",
+      "long",
+      "has",
+      "he",
+      "lived",
+      "here",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 얼마나 오래 여기에서 살았니?",
+        "How"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "How",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "How"
+    ],
+    "tags": [
+      "wh_questions",
+      "howlong_has"
+    ],
+    "distractorSeeds": {
+      "auxError": "How has he lived here?",
+      "statementForm": [
+        "How long has he lived here?",
+        "How long has he lived here"
+      ],
+      "fragmentForm": "How long has he",
+      "wormholeVariants": [
+        "How has he lived here?",
+        "How long has he lived here."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_093",
+    "seedId": "wh_questions_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "너는 무엇을 이미 끝냈니?",
+    "english": "What have you already finished?",
+    "words": [
+      "What",
+      "have",
+      "you",
+      "already",
+      "finished",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 무엇을 이미 끝냈니?",
+        "What"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "What",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "What"
+    ],
+    "tags": [
+      "wh_questions",
+      "what_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "What you already finished?",
+      "statementForm": [
+        "What have you already finished?",
+        "What have you already finished"
+      ],
+      "fragmentForm": "What have you already",
+      "wormholeVariants": [
+        "What you already finished?",
+        "What have you already finished."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_094",
+    "seedId": "wh_questions_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 어디에 가 본 적이 있니?",
+    "english": "Where has she been?",
+    "words": [
+      "Where",
+      "has",
+      "she",
+      "been",
+      "?"
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 어디에 가 본 적이 있니?",
+        "Where"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Where",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Where"
+    ],
+    "tags": [
+      "wh_questions",
+      "where_has"
+    ],
+    "distractorSeeds": {
+      "auxError": "Where she been?",
+      "statementForm": [
+        "Where has she been?",
+        "Where has she been"
+      ],
+      "fragmentForm": "Where has she been",
+      "wormholeVariants": [
+        "Where she been?",
+        "Where has she been."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_095",
+    "seedId": "wh_questions_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 왜 아직 도착하지 않았니?",
+    "english": "Why haven’t they arrived yet?",
+    "words": [
+      "Why",
+      "haven’t",
+      "they",
+      "arrived",
+      "yet",
+      "?"
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 왜 아직 도착하지 않았니?",
+        "Why"
+      ],
+      [
+        "WH question",
+        "WH + auxiliary/be/modal + subject + verb"
+      ],
+      [
+        "주의",
+        "keep question word order; do not use statement word order"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Why",
+      "do",
+      "does",
+      "did",
+      "is",
+      "are",
+      "was",
+      "were",
+      "can",
+      "will",
+      "should",
+      "have",
+      "has"
+    ],
+    "blankTargets": [
+      "Why"
+    ],
+    "tags": [
+      "wh_questions",
+      "why_negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why they arrived yet?",
+      "statementForm": [
+        "Why haven’t they arrived yet?",
+        "Why haven’t they arrived yet"
+      ],
+      "fragmentForm": "Why haven’t they arrived",
+      "wormholeVariants": [
+        "Why they arrived yet?",
+        "Why haven’t they arrived yet."
+      ]
+    }
+  },
+  {
+    "id": "m2_wh_questions_096",
+    "seedId": "wh_questions_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 서울에 산다.",
+    "english": "He lives in Seoul.",
+    "words": [
+      "He",
+      "lives",
+      "in",
+      "Seoul",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그는 서울에 산다.",
+        "He"
+      ],
+      [
+        "short answer to a WH question",
+        "place"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "He"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "He lives in Seoul?",
+      "statementForm": [
+        "He lives in Seoul.",
+        "He lives in Seoul"
+      ],
+      "fragmentForm": "He lives in Seoul",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_097",
+    "seedId": "wh_questions_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 학교에 있다.",
+    "english": "She is at school.",
+    "words": [
+      "She",
+      "is",
+      "at",
+      "school",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그녀는 학교에 있다.",
+        "She"
+      ],
+      [
+        "short answer to a WH question",
+        "place"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "She"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is at school?",
+      "statementForm": [
+        "She is at school.",
+        "She is at school"
+      ],
+      "fragmentForm": "She is at school",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_098",
+    "seedId": "wh_questions_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "나는 7시에 일어났다.",
+    "english": "I woke up at seven.",
+    "words": [
+      "I",
+      "woke",
+      "up",
+      "at",
+      "seven",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "나는 7시에 일어났다.",
+        "I"
+      ],
+      [
+        "short answer to a WH question",
+        "time"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "I"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I woke up at seven?",
+      "statementForm": [
+        "I woke up at seven.",
+        "I woke up at seven"
+      ],
+      "fragmentForm": "I woke up at",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_099",
+    "seedId": "wh_questions_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "우리는 내일 만날 것이다.",
+    "english": "We will meet tomorrow.",
+    "words": [
+      "We",
+      "will",
+      "meet",
+      "tomorrow",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "우리는 내일 만날 것이다.",
+        "We"
+      ],
+      [
+        "short answer to a WH question",
+        "time"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "We"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We will meet tomorrow?",
+      "statementForm": [
+        "We will meet tomorrow.",
+        "We will meet tomorrow"
+      ],
+      "fragmentForm": "We will meet tomorrow",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_100",
+    "seedId": "wh_questions_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "내가 피곤했기 때문이다.",
+    "english": "Because I was tired.",
+    "words": [
+      "Because",
+      "I",
+      "was",
+      "tired",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "내가 피곤했기 때문이다.",
+        "Because"
+      ],
+      [
+        "short answer to a WH question",
+        "reason"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "Because"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Because I was tired?",
+      "statementForm": [
+        "Because I was tired.",
+        "Because I was tired"
+      ],
+      "fragmentForm": "Because I was tired",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_101",
+    "seedId": "wh_questions_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀가 아팠기 때문이다.",
+    "english": "Because she was sick.",
+    "words": [
+      "Because",
+      "she",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그녀가 아팠기 때문이다.",
+        "Because"
+      ],
+      [
+        "short answer to a WH question",
+        "reason"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "Because"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Because she was sick?",
+      "statementForm": [
+        "Because she was sick.",
+        "Because she was sick"
+      ],
+      "fragmentForm": "Because she was sick",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_102",
+    "seedId": "wh_questions_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "나는 책 한 권을 샀다.",
+    "english": "I bought a book.",
+    "words": [
+      "I",
+      "bought",
+      "a",
+      "book",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "나는 책 한 권을 샀다.",
+        "I"
+      ],
+      [
+        "short answer to a WH question",
+        "content"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "I"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "content"
+    ],
+    "distractorSeeds": {
+      "auxError": "I bought a book?",
+      "statementForm": [
+        "I bought a book.",
+        "I bought a book"
+      ],
+      "fragmentForm": "I bought a book",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_103",
+    "seedId": "wh_questions_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 소설을 읽고 있다.",
+    "english": "She is reading a novel.",
+    "words": [
+      "She",
+      "is",
+      "reading",
+      "a",
+      "novel",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그녀는 소설을 읽고 있다.",
+        "She"
+      ],
+      [
+        "short answer to a WH question",
+        "content"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "She"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "content"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is reading a novel?",
+      "statementForm": [
+        "She is reading a novel.",
+        "She is reading a novel"
+      ],
+      "fragmentForm": "She is reading a",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_104",
+    "seedId": "wh_questions_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 도서관에 있다.",
+    "english": "They are in the library.",
+    "words": [
+      "They",
+      "are",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그들은 도서관에 있다.",
+        "They"
+      ],
+      [
+        "short answer to a WH question",
+        "place"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "They"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "They are in the library?",
+      "statementForm": [
+        "They are in the library.",
+        "They are in the library"
+      ],
+      "fragmentForm": "They are in the",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_105",
+    "seedId": "wh_questions_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 오늘 아침 일찍 떠났다.",
+    "english": "He left early this morning.",
+    "words": [
+      "He",
+      "left",
+      "early",
+      "this",
+      "morning",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그는 오늘 아침 일찍 떠났다.",
+        "He"
+      ],
+      [
+        "short answer to a WH question",
+        "time"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "He"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He left early this morning?",
+      "statementForm": [
+        "He left early this morning.",
+        "He left early this morning"
+      ],
+      "fragmentForm": "He left early this",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_106",
+    "seedId": "wh_questions_106",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "비가 오고 있었기 때문이다.",
+    "english": "Because it was raining.",
+    "words": [
+      "Because",
+      "it",
+      "was",
+      "raining",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "비가 오고 있었기 때문이다.",
+        "Because"
+      ],
+      [
+        "short answer to a WH question",
+        "reason"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "Because"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Because it was raining?",
+      "statementForm": [
+        "Because it was raining.",
+        "Because it was raining"
+      ],
+      "fragmentForm": "Because it was raining",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_107",
+    "seedId": "wh_questions_107",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "나는 내 친구를 만났다.",
+    "english": "I met my friend.",
+    "words": [
+      "I",
+      "met",
+      "my",
+      "friend",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "나는 내 친구를 만났다.",
+        "I"
+      ],
+      [
+        "short answer to a WH question",
+        "content"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "I"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "content"
+    ],
+    "distractorSeeds": {
+      "auxError": "I met my friend?",
+      "statementForm": [
+        "I met my friend.",
+        "I met my friend"
+      ],
+      "fragmentForm": "I met my friend",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_108",
+    "seedId": "wh_questions_108",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 밤에 공부한다.",
+    "english": "She studies at night.",
+    "words": [
+      "She",
+      "studies",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그녀는 밤에 공부한다.",
+        "She"
+      ],
+      [
+        "short answer to a WH question",
+        "time"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "She"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She studies at night?",
+      "statementForm": [
+        "She studies at night.",
+        "She studies at night"
+      ],
+      "fragmentForm": "She studies at night",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_109",
+    "seedId": "wh_questions_109",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그는 사무실에서 일한다.",
+    "english": "He works in an office.",
+    "words": [
+      "He",
+      "works",
+      "in",
+      "an",
+      "office",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그는 사무실에서 일한다.",
+        "He"
+      ],
+      [
+        "short answer to a WH question",
+        "place"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "He"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "He works in an office?",
+      "statementForm": [
+        "He works in an office.",
+        "He works in an office"
+      ],
+      "fragmentForm": "He works in an",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_110",
+    "seedId": "wh_questions_110",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그가 바빴기 때문이다.",
+    "english": "Because he was busy.",
+    "words": [
+      "Because",
+      "he",
+      "was",
+      "busy",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그가 바빴기 때문이다.",
+        "Because"
+      ],
+      [
+        "short answer to a WH question",
+        "reason"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "Because"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Because he was busy?",
+      "statementForm": [
+        "Because he was busy.",
+        "Because he was busy"
+      ],
+      "fragmentForm": "Because he was busy",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_111",
+    "seedId": "wh_questions_111",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "우리는 축구를 했다.",
+    "english": "We played soccer.",
+    "words": [
+      "We",
+      "played",
+      "soccer",
+      "."
+    ],
+    "wordCount": 3,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "우리는 축구를 했다.",
+        "We"
+      ],
+      [
+        "short answer to a WH question",
+        "content"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "We"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "content"
+    ],
+    "distractorSeeds": {
+      "auxError": "We played soccer?",
+      "statementForm": [
+        "We played soccer.",
+        "We played soccer"
+      ],
+      "fragmentForm": "We played soccer .",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_112",
+    "seedId": "wh_questions_112",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그들은 늦게 도착했다.",
+    "english": "They arrived late.",
+    "words": [
+      "They",
+      "arrived",
+      "late",
+      "."
+    ],
+    "wordCount": 3,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그들은 늦게 도착했다.",
+        "They"
+      ],
+      [
+        "short answer to a WH question",
+        "time"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "They"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "They arrived late?",
+      "statementForm": [
+        "They arrived late.",
+        "They arrived late"
+      ],
+      "fragmentForm": "They arrived late .",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_113",
+    "seedId": "wh_questions_113",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "그녀는 집에 머물렀다.",
+    "english": "She stayed at home.",
+    "words": [
+      "She",
+      "stayed",
+      "at",
+      "home",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "그녀는 집에 머물렀다.",
+        "She"
+      ],
+      [
+        "short answer to a WH question",
+        "place"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "She"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "She stayed at home?",
+      "statementForm": [
+        "She stayed at home.",
+        "She stayed at home"
+      ],
+      "fragmentForm": "She stayed at home",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_114",
+    "seedId": "wh_questions_114",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "내가 도움이 필요했기 때문이다.",
+    "english": "Because I needed help.",
+    "words": [
+      "Because",
+      "I",
+      "needed",
+      "help",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "내가 도움이 필요했기 때문이다.",
+        "Because"
+      ],
+      [
+        "short answer to a WH question",
+        "reason"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "Because"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Because I needed help?",
+      "statementForm": [
+        "Because I needed help.",
+        "Because I needed help"
+      ],
+      "fragmentForm": "Because I needed help",
+      "wormholeVariants": []
+    }
+  },
+  {
+    "id": "m2_wh_questions_115",
+    "seedId": "wh_questions_115",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "wh_questions",
+    "chapterLabelKo": "WH 의문문",
+    "korean": "나는 숙제를 끝냈다.",
+    "english": "I finished my homework.",
+    "words": [
+      "I",
+      "finished",
+      "my",
+      "homework",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "wh_questions",
+    "difficulty": "basic",
+    "sourceType": "db_answer_extension_integrated",
+    "clueUnits": [
+      [
+        "나는 숙제를 끝냈다.",
+        "I"
+      ],
+      [
+        "short answer to a WH question",
+        "content"
+      ],
+      [
+        "주의",
+        "answer with a natural statement or because-clause according to the WH word"
+      ]
+    ],
+    "extraClueWordPool": [
+      "because",
+      "in",
+      "at",
+      "tomorrow",
+      "school",
+      "Seoul",
+      "tired",
+      "busy"
+    ],
+    "blankTargets": [
+      "I"
+    ],
+    "tags": [
+      "wh_questions",
+      "answer",
+      "content"
+    ],
+    "distractorSeeds": {
+      "auxError": "I finished my homework?",
+      "statementForm": [
+        "I finished my homework.",
+        "I finished my homework"
+      ],
+      "fragmentForm": "I finished my homework",
+      "wormholeVariants": []
+    }
+  }
+]
