@@ -1,0 +1,7699 @@
+[
+  {
+    "id": "m2_since_001",
+    "seedId": "since_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아파서 집에 있었다.",
+    "english": "I stayed home since I was sick.",
+    "words": [
+      "I",
+      "stayed",
+      "home",
+      "since",
+      "I",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아파서 집에 있었다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed home that I was sick.",
+      "statementForm": [
+        "I stayed home since I was sick.",
+        "I stayed home since I was sick",
+        "Since I was sick, I stayed home.",
+        "Since I was sick, I stayed home"
+      ],
+      "fragmentForm": "I stayed home since I was",
+      "wormholeVariants": [
+        "I stayed home that I was sick.",
+        "I stayed home as I was sick.",
+        "I stayed home for I was sick.",
+        "I stayed home because of I was sick.",
+        "I stayed home from I was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_002",
+    "seedId": "since_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "버스가 늦어서 그녀는 지각했다.",
+    "english": "She was late since the bus was delayed.",
+    "words": [
+      "She",
+      "was",
+      "late",
+      "since",
+      "the",
+      "bus",
+      "was",
+      "delayed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "버스가 늦어서 그녀는 지각했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was late that the bus was delayed.",
+      "statementForm": [
+        "She was late since the bus was delayed.",
+        "She was late since the bus was delayed",
+        "Since the bus was delayed, She was late.",
+        "Since the bus was delayed, She was late"
+      ],
+      "fragmentForm": "She was late since the bus was",
+      "wormholeVariants": [
+        "She was late that the bus was delayed.",
+        "She was late as the bus was delayed.",
+        "She was late for the bus was delayed.",
+        "She was late because of the bus was delayed.",
+        "She was late from the bus was delayed."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_003",
+    "seedId": "since_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "좋은 점수가 필요해서 그는 열심히 공부했다.",
+    "english": "He studied hard since he wanted good grades.",
+    "words": [
+      "He",
+      "studied",
+      "hard",
+      "since",
+      "he",
+      "wanted",
+      "good",
+      "grades",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "좋은 점수가 필요해서 그는 열심히 공부했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He studied hard that he wanted good grades.",
+      "statementForm": [
+        "He studied hard since he wanted good grades.",
+        "He studied hard since he wanted good grades",
+        "Since he wanted good grades, He studied hard.",
+        "Since he wanted good grades, He studied hard"
+      ],
+      "fragmentForm": "He studied hard since he wanted good",
+      "wormholeVariants": [
+        "He studied hard that he wanted good grades.",
+        "He studied hard as he wanted good grades.",
+        "He studied hard for he wanted good grades.",
+        "He studied hard because of he wanted good grades.",
+        "He studied hard from he wanted good grades."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_004",
+    "seedId": "since_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아기가 자고 있어서 우리는 조용했다.",
+    "english": "We were quiet since the baby was sleeping.",
+    "words": [
+      "We",
+      "were",
+      "quiet",
+      "since",
+      "the",
+      "baby",
+      "was",
+      "sleeping",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아기가 자고 있어서 우리는 조용했다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were quiet that the baby was sleeping.",
+      "statementForm": [
+        "We were quiet since the baby was sleeping.",
+        "We were quiet since the baby was sleeping",
+        "Since the baby was sleeping, We were quiet.",
+        "Since the baby was sleeping, We were quiet"
+      ],
+      "fragmentForm": "We were quiet since the baby was",
+      "wormholeVariants": [
+        "We were quiet that the baby was sleeping.",
+        "We were quiet as the baby was sleeping.",
+        "We were quiet for the baby was sleeping.",
+        "We were quiet because of the baby was sleeping.",
+        "We were quiet from the baby was sleeping."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_005",
+    "seedId": "since_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "날씨가 추워서 그들은 코트를 입었다.",
+    "english": "They wore coats since it was cold.",
+    "words": [
+      "They",
+      "wore",
+      "coats",
+      "since",
+      "it",
+      "was",
+      "cold",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "날씨가 추워서 그들은 코트를 입었다.",
+        "They"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They wore coats that it was cold.",
+      "statementForm": [
+        "They wore coats since it was cold.",
+        "They wore coats since it was cold",
+        "Since it was cold, They wore coats.",
+        "Since it was cold, They wore coats"
+      ],
+      "fragmentForm": "They wore coats since it was",
+      "wormholeVariants": [
+        "They wore coats that it was cold.",
+        "They wore coats as it was cold.",
+        "They wore coats for it was cold.",
+        "They wore coats because of it was cold.",
+        "They wore coats from it was cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_006",
+    "seedId": "since_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "네가 보고 싶어서 나는 전화했다.",
+    "english": "I called you since I missed you.",
+    "words": [
+      "I",
+      "called",
+      "you",
+      "since",
+      "I",
+      "missed",
+      "you",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 보고 싶어서 나는 전화했다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I called you that I missed you.",
+      "statementForm": [
+        "I called you since I missed you.",
+        "I called you since I missed you",
+        "Since I missed you, I called you.",
+        "Since I missed you, I called you"
+      ],
+      "fragmentForm": "I called you since I missed",
+      "wormholeVariants": [
+        "I called you that I missed you.",
+        "I called you as I missed you.",
+        "I called you for I missed you.",
+        "I called you because of I missed you.",
+        "I called you from I missed you."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_007",
+    "seedId": "since_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "목이 말라서 그녀는 물을 마셨다.",
+    "english": "She drank water since she was thirsty.",
+    "words": [
+      "She",
+      "drank",
+      "water",
+      "since",
+      "she",
+      "was",
+      "thirsty",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목이 말라서 그녀는 물을 마셨다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She drank water that she was thirsty.",
+      "statementForm": [
+        "She drank water since she was thirsty.",
+        "She drank water since she was thirsty",
+        "Since she was thirsty, She drank water.",
+        "Since she was thirsty, She drank water"
+      ],
+      "fragmentForm": "She drank water since she was",
+      "wormholeVariants": [
+        "She drank water that she was thirsty.",
+        "She drank water as she was thirsty.",
+        "She drank water for she was thirsty.",
+        "She drank water because of she was thirsty.",
+        "She drank water from she was thirsty."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_008",
+    "seedId": "since_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "도움이 필요해서 내가 말했니?",
+    "english": "Do I need help since I am confused?",
+    "words": [
+      "Do",
+      "I",
+      "need",
+      "help",
+      "since",
+      "I",
+      "am",
+      "confused",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "도움이 필요해서 내가 말했니?",
+        "Do"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I need help that I am confused?",
+      "statementForm": [
+        "Do I need help since I am confused?",
+        "Do I need help since I am confused"
+      ],
+      "fragmentForm": "Do I need help since I am",
+      "wormholeVariants": [
+        "Do I need help that I am confused?",
+        "Do I need help as I am confused?",
+        "Do I need help for I am confused?",
+        "Do I need help because of I am confused?",
+        "Do I need help from I am confused?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_009",
+    "seedId": "since_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "비가 와서 그는 밖에 나가지 않았니?",
+    "english": "He did not go outside since it was raining?",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "go",
+      "outside",
+      "since",
+      "it",
+      "was",
+      "raining",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "비가 와서 그는 밖에 나가지 않았니?",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not go outside that it was raining?",
+      "statementForm": [
+        "He did not go outside since it was raining?",
+        "He did not go outside since it was raining"
+      ],
+      "fragmentForm": "He did not go outside since it was",
+      "wormholeVariants": [
+        "He did not go outside that it was raining?",
+        "He did not go outside as it was raining?",
+        "He did not go outside for it was raining?",
+        "He did not go outside because of it was raining?",
+        "He did not go outside from it was raining?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_010",
+    "seedId": "since_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "바닥이 젖어서 나는 조심했다.",
+    "english": "I was careful since the floor was wet.",
+    "words": [
+      "I",
+      "was",
+      "careful",
+      "since",
+      "the",
+      "floor",
+      "was",
+      "wet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "바닥이 젖어서 나는 조심했다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was careful that the floor was wet.",
+      "statementForm": [
+        "I was careful since the floor was wet.",
+        "I was careful since the floor was wet",
+        "Since the floor was wet, I was careful.",
+        "Since the floor was wet, I was careful"
+      ],
+      "fragmentForm": "I was careful since the floor was",
+      "wormholeVariants": [
+        "I was careful that the floor was wet.",
+        "I was careful as the floor was wet.",
+        "I was careful for the floor was wet.",
+        "I was careful because of the floor was wet.",
+        "I was careful from the floor was wet."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_011",
+    "seedId": "since_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "친구가 도와줘서 그녀는 웃었다.",
+    "english": "She smiled since her friend helped her.",
+    "words": [
+      "She",
+      "smiled",
+      "since",
+      "her",
+      "friend",
+      "helped",
+      "her",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "친구가 도와줘서 그녀는 웃었다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She smiled that her friend helped her.",
+      "statementForm": [
+        "She smiled since her friend helped her.",
+        "She smiled since her friend helped her",
+        "Since her friend helped her, She smiled.",
+        "Since her friend helped her, She smiled"
+      ],
+      "fragmentForm": "She smiled since her friend helped",
+      "wormholeVariants": [
+        "She smiled that her friend helped her.",
+        "She smiled as her friend helped her.",
+        "She smiled for her friend helped her.",
+        "She smiled because of her friend helped her.",
+        "She smiled from her friend helped her."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_012",
+    "seedId": "since_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "비가 와서 우리는 우산을 썼다.",
+    "english": "We used umbrellas since it was rainy.",
+    "words": [
+      "We",
+      "used",
+      "umbrellas",
+      "since",
+      "it",
+      "was",
+      "rainy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "비가 와서 우리는 우산을 썼다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We used umbrellas that it was rainy.",
+      "statementForm": [
+        "We used umbrellas since it was rainy.",
+        "We used umbrellas since it was rainy",
+        "Since it was rainy, We used umbrellas.",
+        "Since it was rainy, We used umbrellas"
+      ],
+      "fragmentForm": "We used umbrellas since it was",
+      "wormholeVariants": [
+        "We used umbrellas that it was rainy.",
+        "We used umbrellas as it was rainy.",
+        "We used umbrellas for it was rainy.",
+        "We used umbrellas because of it was rainy.",
+        "We used umbrellas from it was rainy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_013",
+    "seedId": "since_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "급해서 그는 택시를 탔다.",
+    "english": "He took a taxi since he was in a hurry.",
+    "words": [
+      "He",
+      "took",
+      "a",
+      "taxi",
+      "since",
+      "he",
+      "was",
+      "in",
+      "a",
+      "hurry",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "급해서 그는 택시를 탔다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He took a taxi that he was in a hurry.",
+      "statementForm": [
+        "He took a taxi since he was in a hurry.",
+        "He took a taxi since he was in a hurry",
+        "Since he was in a hurry, He took a taxi.",
+        "Since he was in a hurry, He took a taxi"
+      ],
+      "fragmentForm": "He took a taxi since he was in a",
+      "wormholeVariants": [
+        "He took a taxi that he was in a hurry.",
+        "He took a taxi as he was in a hurry.",
+        "He took a taxi for he was in a hurry.",
+        "He took a taxi because of he was in a hurry.",
+        "He took a taxi from he was in a hurry."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_014",
+    "seedId": "since_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "시험에 합격해서 그는 행복했다.",
+    "english": "He was happy since he passed the test.",
+    "words": [
+      "He",
+      "was",
+      "happy",
+      "since",
+      "he",
+      "passed",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "시험에 합격해서 그는 행복했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was happy that he passed the test.",
+      "statementForm": [
+        "He was happy since he passed the test.",
+        "He was happy since he passed the test",
+        "Since he passed the test, He was happy.",
+        "Since he passed the test, He was happy"
+      ],
+      "fragmentForm": "He was happy since he passed the",
+      "wormholeVariants": [
+        "He was happy that he passed the test.",
+        "He was happy as he passed the test.",
+        "He was happy for he passed the test.",
+        "He was happy because of he passed the test.",
+        "He was happy from he passed the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_015",
+    "seedId": "since_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "많이 걸어서 우리는 피곤했다.",
+    "english": "We were tired since we walked a lot.",
+    "words": [
+      "We",
+      "were",
+      "tired",
+      "since",
+      "we",
+      "walked",
+      "a",
+      "lot",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "많이 걸어서 우리는 피곤했다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were tired that we walked a lot.",
+      "statementForm": [
+        "We were tired since we walked a lot.",
+        "We were tired since we walked a lot",
+        "Since we walked a lot, We were tired.",
+        "Since we walked a lot, We were tired"
+      ],
+      "fragmentForm": "We were tired since we walked a",
+      "wormholeVariants": [
+        "We were tired that we walked a lot.",
+        "We were tired as we walked a lot.",
+        "We were tired for we walked a lot.",
+        "We were tired because of we walked a lot.",
+        "We were tired from we walked a lot."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_016",
+    "seedId": "since_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아프고 피곤해서 나는 집에 남았다.",
+    "english": "I stayed home since I was sick and tired.",
+    "words": [
+      "I",
+      "stayed",
+      "home",
+      "since",
+      "I",
+      "was",
+      "sick",
+      "and",
+      "tired",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아프고 피곤해서 나는 집에 남았다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed home that I was sick and tired.",
+      "statementForm": [
+        "I stayed home since I was sick and tired.",
+        "I stayed home since I was sick and tired",
+        "Since I was sick and tired, I stayed home.",
+        "Since I was sick and tired, I stayed home"
+      ],
+      "fragmentForm": "I stayed home since I was sick and",
+      "wormholeVariants": [
+        "I stayed home that I was sick and tired.",
+        "I stayed home as I was sick and tired.",
+        "I stayed home for I was sick and tired.",
+        "I stayed home because of I was sick and tired.",
+        "I stayed home from I was sick and tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_017",
+    "seedId": "since_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "지하철이 늦어서 그녀는 결국 걸어갔다.",
+    "english": "She walked home since the subway was late.",
+    "words": [
+      "She",
+      "walked",
+      "home",
+      "since",
+      "the",
+      "subway",
+      "was",
+      "late",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지하철이 늦어서 그녀는 결국 걸어갔다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She walked home that the subway was late.",
+      "statementForm": [
+        "She walked home since the subway was late.",
+        "She walked home since the subway was late",
+        "Since the subway was late, She walked home.",
+        "Since the subway was late, She walked home"
+      ],
+      "fragmentForm": "She walked home since the subway was",
+      "wormholeVariants": [
+        "She walked home that the subway was late.",
+        "She walked home as the subway was late.",
+        "She walked home for the subway was late.",
+        "She walked home because of the subway was late.",
+        "She walked home from the subway was late."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_018",
+    "seedId": "since_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "공기가 답답해서 창문을 열었다.",
+    "english": "I opened the window since the room felt stuffy.",
+    "words": [
+      "I",
+      "opened",
+      "the",
+      "window",
+      "since",
+      "the",
+      "room",
+      "felt",
+      "stuffy",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "공기가 답답해서 창문을 열었다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I opened the window that the room felt stuffy.",
+      "statementForm": [
+        "I opened the window since the room felt stuffy.",
+        "I opened the window since the room felt stuffy",
+        "Since the room felt stuffy, I opened the window.",
+        "Since the room felt stuffy, I opened the window"
+      ],
+      "fragmentForm": "I opened the window since the room felt",
+      "wormholeVariants": [
+        "I opened the window that the room felt stuffy.",
+        "I opened the window as the room felt stuffy.",
+        "I opened the window for the room felt stuffy.",
+        "I opened the window because of the room felt stuffy.",
+        "I opened the window from the room felt stuffy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_019",
+    "seedId": "since_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "소음이 너무 커서 그는 집중하지 못했다.",
+    "english": "He could not focus since the noise was too loud.",
+    "words": [
+      "He",
+      "could",
+      "not",
+      "focus",
+      "since",
+      "the",
+      "noise",
+      "was",
+      "too",
+      "loud",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "소음이 너무 커서 그는 집중하지 못했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He could not focus that the noise was too loud.",
+      "statementForm": [
+        "He could not focus since the noise was too loud.",
+        "He could not focus since the noise was too loud",
+        "Since the noise was too loud, He could not focus.",
+        "Since the noise was too loud, He could not focus"
+      ],
+      "fragmentForm": "He could not focus since the noise was too",
+      "wormholeVariants": [
+        "He could not focus that the noise was too loud.",
+        "He could not focus as the noise was too loud.",
+        "He could not focus for the noise was too loud.",
+        "He could not focus because of the noise was too loud.",
+        "He could not focus from the noise was too loud."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_020",
+    "seedId": "since_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "배가 고파서 우리는 일찍 저녁을 먹었다.",
+    "english": "We ate dinner early since we were hungry.",
+    "words": [
+      "We",
+      "ate",
+      "dinner",
+      "early",
+      "since",
+      "we",
+      "were",
+      "hungry",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "배가 고파서 우리는 일찍 저녁을 먹었다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We ate dinner early that we were hungry.",
+      "statementForm": [
+        "We ate dinner early since we were hungry.",
+        "We ate dinner early since we were hungry",
+        "Since we were hungry, We ate dinner early.",
+        "Since we were hungry, We ate dinner early"
+      ],
+      "fragmentForm": "We ate dinner early since we were",
+      "wormholeVariants": [
+        "We ate dinner early that we were hungry.",
+        "We ate dinner early as we were hungry.",
+        "We ate dinner early for we were hungry.",
+        "We ate dinner early because of we were hungry.",
+        "We ate dinner early from we were hungry."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_021",
+    "seedId": "since_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "수업을 이해하지 못해서 그는 필기를 다시 확인했다.",
+    "english": "He checked the notes since he did not understand the lesson.",
+    "words": [
+      "He",
+      "checked",
+      "the",
+      "notes",
+      "since",
+      "he",
+      "did",
+      "not",
+      "understand",
+      "the",
+      "lesson",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "수업을 이해하지 못해서 그는 필기를 다시 확인했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He checked the notes that he did not understand the lesson.",
+      "statementForm": [
+        "He checked the notes since he did not understand the lesson.",
+        "He checked the notes since he did not understand the lesson",
+        "Since he did not understand the lesson, He checked the notes.",
+        "Since he did not understand the lesson, He checked the notes"
+      ],
+      "fragmentForm": "He checked the notes since he did not understand the",
+      "wormholeVariants": [
+        "He checked the notes that he did not understand the lesson.",
+        "He checked the notes as he did not understand the lesson.",
+        "He checked the notes for he did not understand the lesson.",
+        "He checked the notes because of he did not understand the lesson.",
+        "He checked the notes from he did not understand the lesson."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_022",
+    "seedId": "since_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "다른 약속이 있어서 나는 일찍 떠났다.",
+    "english": "I left early since I had another appointment.",
+    "words": [
+      "I",
+      "left",
+      "early",
+      "since",
+      "I",
+      "had",
+      "another",
+      "appointment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "다른 약속이 있어서 나는 일찍 떠났다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I left early that I had another appointment.",
+      "statementForm": [
+        "I left early since I had another appointment.",
+        "I left early since I had another appointment",
+        "Since I had another appointment, I left early.",
+        "Since I had another appointment, I left early"
+      ],
+      "fragmentForm": "I left early since I had another",
+      "wormholeVariants": [
+        "I left early that I had another appointment.",
+        "I left early as I had another appointment.",
+        "I left early for I had another appointment.",
+        "I left early because of I had another appointment.",
+        "I left early from I had another appointment."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_023",
+    "seedId": "since_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "바빠서 그녀는 프로젝트에 참여하지 못했다.",
+    "english": "She could not join the project since she was busy.",
+    "words": [
+      "She",
+      "could",
+      "not",
+      "join",
+      "the",
+      "project",
+      "since",
+      "she",
+      "was",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "바빠서 그녀는 프로젝트에 참여하지 못했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She could not join the project that she was busy.",
+      "statementForm": [
+        "She could not join the project since she was busy.",
+        "She could not join the project since she was busy",
+        "Since she was busy, She could not join the project.",
+        "Since she was busy, She could not join the project"
+      ],
+      "fragmentForm": "She could not join the project since she was",
+      "wormholeVariants": [
+        "She could not join the project that she was busy.",
+        "She could not join the project as she was busy.",
+        "She could not join the project for she was busy.",
+        "She could not join the project because of she was busy.",
+        "She could not join the project from she was busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_024",
+    "seedId": "since_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "결과를 설명하고 싶어서 우리는 자료를 발표했다.",
+    "english": "We presented the data since we wanted to explain the result.",
+    "words": [
+      "We",
+      "presented",
+      "the",
+      "data",
+      "since",
+      "we",
+      "wanted",
+      "to",
+      "explain",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "결과를 설명하고 싶어서 우리는 자료를 발표했다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We presented the data that we wanted to explain the result.",
+      "statementForm": [
+        "We presented the data since we wanted to explain the result.",
+        "We presented the data since we wanted to explain the result",
+        "Since we wanted to explain the result, We presented the data.",
+        "Since we wanted to explain the result, We presented the data"
+      ],
+      "fragmentForm": "We presented the data since we wanted to explain the",
+      "wormholeVariants": [
+        "We presented the data that we wanted to explain the result.",
+        "We presented the data as we wanted to explain the result.",
+        "We presented the data for we wanted to explain the result.",
+        "We presented the data because of we wanted to explain the result.",
+        "We presented the data from we wanted to explain the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_025",
+    "seedId": "since_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "어제 늦게 자서 너는 피곤하니?",
+    "english": "Do you feel tired since you stayed up late?",
+    "words": [
+      "Do",
+      "you",
+      "feel",
+      "tired",
+      "since",
+      "you",
+      "stayed",
+      "up",
+      "late",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "어제 늦게 자서 너는 피곤하니?",
+        "Do"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you feel tired that you stayed up late?",
+      "statementForm": [
+        "Do you feel tired since you stayed up late?",
+        "Do you feel tired since you stayed up late"
+      ],
+      "fragmentForm": "Do you feel tired since you stayed up",
+      "wormholeVariants": [
+        "Do you feel tired that you stayed up late?",
+        "Do you feel tired as you stayed up late?",
+        "Do you feel tired for you stayed up late?",
+        "Do you feel tired because of you stayed up late?",
+        "Do you feel tired from you stayed up late?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_026",
+    "seedId": "since_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "팀이 발전해서 그녀는 자랑스러웠다.",
+    "english": "She was proud since her team improved.",
+    "words": [
+      "She",
+      "was",
+      "proud",
+      "since",
+      "her",
+      "team",
+      "improved",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "팀이 발전해서 그녀는 자랑스러웠다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was proud that her team improved.",
+      "statementForm": [
+        "She was proud since her team improved.",
+        "She was proud since her team improved",
+        "Since her team improved, She was proud.",
+        "Since her team improved, She was proud"
+      ],
+      "fragmentForm": "She was proud since her team",
+      "wormholeVariants": [
+        "She was proud that her team improved.",
+        "She was proud as her team improved.",
+        "She was proud for her team improved.",
+        "She was proud because of her team improved.",
+        "She was proud from her team improved."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_027",
+    "seedId": "since_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "이야기가 재미있어서 우리는 웃었다.",
+    "english": "We laughed since the story was funny.",
+    "words": [
+      "We",
+      "laughed",
+      "since",
+      "the",
+      "story",
+      "was",
+      "funny",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이야기가 재미있어서 우리는 웃었다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We laughed that the story was funny.",
+      "statementForm": [
+        "We laughed since the story was funny.",
+        "We laughed since the story was funny",
+        "Since the story was funny, We laughed.",
+        "Since the story was funny, We laughed"
+      ],
+      "fragmentForm": "We laughed since the story was",
+      "wormholeVariants": [
+        "We laughed that the story was funny.",
+        "We laughed as the story was funny.",
+        "We laughed for the story was funny.",
+        "We laughed because of the story was funny.",
+        "We laughed from the story was funny."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_028",
+    "seedId": "since_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "너무 바빠서 그는 점심을 먹지 못했다.",
+    "english": "He did not eat lunch since he was too busy.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "eat",
+      "lunch",
+      "since",
+      "he",
+      "was",
+      "too",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너무 바빠서 그는 점심을 먹지 못했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not eat lunch that he was too busy.",
+      "statementForm": [
+        "He did not eat lunch since he was too busy.",
+        "He did not eat lunch since he was too busy",
+        "Since he was too busy, He did not eat lunch.",
+        "Since he was too busy, He did not eat lunch"
+      ],
+      "fragmentForm": "He did not eat lunch since he was too",
+      "wormholeVariants": [
+        "He did not eat lunch that he was too busy.",
+        "He did not eat lunch as he was too busy.",
+        "He did not eat lunch for he was too busy.",
+        "He did not eat lunch because of he was too busy.",
+        "He did not eat lunch from he was too busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_029",
+    "seedId": "since_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "학교에 늦어서 그녀는 택시를 불렀다.",
+    "english": "She called a taxi since she was late for school.",
+    "words": [
+      "She",
+      "called",
+      "a",
+      "taxi",
+      "since",
+      "she",
+      "was",
+      "late",
+      "for",
+      "school",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학교에 늦어서 그녀는 택시를 불렀다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She called a taxi that she was late for school.",
+      "statementForm": [
+        "She called a taxi since she was late for school.",
+        "She called a taxi since she was late for school",
+        "Since she was late for school, She called a taxi.",
+        "Since she was late for school, She called a taxi"
+      ],
+      "fragmentForm": "She called a taxi since she was late for",
+      "wormholeVariants": [
+        "She called a taxi that she was late for school.",
+        "She called a taxi as she was late for school.",
+        "She called a taxi for she was late for school.",
+        "She called a taxi because of she was late for school.",
+        "She called a taxi from she was late for school."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_030",
+    "seedId": "since_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "바닥이 미끄러워서 나는 조심하고 있다.",
+    "english": "I am moving carefully since the floor is slippery?",
+    "words": [
+      "I",
+      "am",
+      "moving",
+      "carefully",
+      "since",
+      "the",
+      "floor",
+      "is",
+      "slippery",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "바닥이 미끄러워서 나는 조심하고 있다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am moving carefully that the floor is slippery?",
+      "statementForm": [
+        "I am moving carefully since the floor is slippery?",
+        "I am moving carefully since the floor is slippery"
+      ],
+      "fragmentForm": "I am moving carefully since the floor is",
+      "wormholeVariants": [
+        "I am moving carefully that the floor is slippery?",
+        "I am moving carefully as the floor is slippery?",
+        "I am moving carefully for the floor is slippery?",
+        "I am moving carefully because of the floor is slippery?",
+        "I am moving carefully from the floor is slippery?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_031",
+    "seedId": "since_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "숙제가 쉬워서 그들은 책을 덜 읽었다.",
+    "english": "They read less since their homework was easy.",
+    "words": [
+      "They",
+      "read",
+      "less",
+      "since",
+      "their",
+      "homework",
+      "was",
+      "easy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "숙제가 쉬워서 그들은 책을 덜 읽었다.",
+        "They"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They read less that their homework was easy.",
+      "statementForm": [
+        "They read less since their homework was easy.",
+        "They read less since their homework was easy",
+        "Since their homework was easy, They read less.",
+        "Since their homework was easy, They read less"
+      ],
+      "fragmentForm": "They read less since their homework was",
+      "wormholeVariants": [
+        "They read less that their homework was easy.",
+        "They read less as their homework was easy.",
+        "They read less for their homework was easy.",
+        "They read less because of their homework was easy.",
+        "They read less from their homework was easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_032",
+    "seedId": "since_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "날씨가 나빠져서 그는 계획을 바꿨다.",
+    "english": "He changed the plan since the weather got worse.",
+    "words": [
+      "He",
+      "changed",
+      "the",
+      "plan",
+      "since",
+      "the",
+      "weather",
+      "got",
+      "worse",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "날씨가 나빠져서 그는 계획을 바꿨다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He changed the plan that the weather got worse.",
+      "statementForm": [
+        "He changed the plan since the weather got worse.",
+        "He changed the plan since the weather got worse",
+        "Since the weather got worse, He changed the plan.",
+        "Since the weather got worse, He changed the plan"
+      ],
+      "fragmentForm": "He changed the plan since the weather got",
+      "wormholeVariants": [
+        "He changed the plan that the weather got worse.",
+        "He changed the plan as the weather got worse.",
+        "He changed the plan for the weather got worse.",
+        "He changed the plan because of the weather got worse.",
+        "He changed the plan from the weather got worse."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_033",
+    "seedId": "since_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "전화가 크게 울려서 나는 놀랐다.",
+    "english": "I was shocked since the phone rang loudly.",
+    "words": [
+      "I",
+      "was",
+      "shocked",
+      "since",
+      "the",
+      "phone",
+      "rang",
+      "loudly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "전화가 크게 울려서 나는 놀랐다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was shocked that the phone rang loudly.",
+      "statementForm": [
+        "I was shocked since the phone rang loudly.",
+        "I was shocked since the phone rang loudly",
+        "Since the phone rang loudly, I was shocked.",
+        "Since the phone rang loudly, I was shocked"
+      ],
+      "fragmentForm": "I was shocked since the phone rang",
+      "wormholeVariants": [
+        "I was shocked that the phone rang loudly.",
+        "I was shocked as the phone rang loudly.",
+        "I was shocked for the phone rang loudly.",
+        "I was shocked because of the phone rang loudly.",
+        "I was shocked from the phone rang loudly."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_034",
+    "seedId": "since_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "실수해서 그녀는 사과했다.",
+    "english": "She apologized since she made a mistake.",
+    "words": [
+      "She",
+      "apologized",
+      "since",
+      "she",
+      "made",
+      "a",
+      "mistake",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "실수해서 그녀는 사과했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She apologized that she made a mistake.",
+      "statementForm": [
+        "She apologized since she made a mistake.",
+        "She apologized since she made a mistake",
+        "Since she made a mistake, She apologized.",
+        "Since she made a mistake, She apologized"
+      ],
+      "fragmentForm": "She apologized since she made a",
+      "wormholeVariants": [
+        "She apologized that she made a mistake.",
+        "She apologized as she made a mistake.",
+        "She apologized for she made a mistake.",
+        "She apologized because of she made a mistake.",
+        "She apologized from she made a mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_035",
+    "seedId": "since_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "비가 올 것 같아서 우리는 우산이 필요하니?",
+    "english": "We need an umbrella since it is going to rain?",
+    "words": [
+      "We",
+      "need",
+      "an",
+      "umbrella",
+      "since",
+      "it",
+      "is",
+      "going",
+      "to",
+      "rain",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "비가 올 것 같아서 우리는 우산이 필요하니?",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We need an umbrella that it is going to rain?",
+      "statementForm": [
+        "We need an umbrella since it is going to rain?",
+        "We need an umbrella since it is going to rain"
+      ],
+      "fragmentForm": "We need an umbrella since it is going to",
+      "wormholeVariants": [
+        "We need an umbrella that it is going to rain?",
+        "We need an umbrella as it is going to rain?",
+        "We need an umbrella for it is going to rain?",
+        "We need an umbrella because of it is going to rain?",
+        "We need an umbrella from it is going to rain?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_036",
+    "seedId": "since_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "부모님이 오셔서 그는 방을 청소했다.",
+    "english": "He cleaned the room since his parents were coming.",
+    "words": [
+      "He",
+      "cleaned",
+      "the",
+      "room",
+      "since",
+      "his",
+      "parents",
+      "were",
+      "coming",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "부모님이 오셔서 그는 방을 청소했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He cleaned the room that his parents were coming.",
+      "statementForm": [
+        "He cleaned the room since his parents were coming.",
+        "He cleaned the room since his parents were coming",
+        "Since his parents were coming, He cleaned the room.",
+        "Since his parents were coming, He cleaned the room"
+      ],
+      "fragmentForm": "He cleaned the room since his parents were",
+      "wormholeVariants": [
+        "He cleaned the room that his parents were coming.",
+        "He cleaned the room as his parents were coming.",
+        "He cleaned the room for his parents were coming.",
+        "He cleaned the room because of his parents were coming.",
+        "He cleaned the room from his parents were coming."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_037",
+    "seedId": "since_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "선생님이 칭찬해서 그는 자신감이 생겼다.",
+    "english": "He became confident since the teacher praised him.",
+    "words": [
+      "He",
+      "became",
+      "confident",
+      "since",
+      "the",
+      "teacher",
+      "praised",
+      "him",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님이 칭찬해서 그는 자신감이 생겼다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He became confident that the teacher praised him.",
+      "statementForm": [
+        "He became confident since the teacher praised him.",
+        "He became confident since the teacher praised him",
+        "Since the teacher praised him, He became confident.",
+        "Since the teacher praised him, He became confident"
+      ],
+      "fragmentForm": "He became confident since the teacher praised",
+      "wormholeVariants": [
+        "He became confident that the teacher praised him.",
+        "He became confident as the teacher praised him.",
+        "He became confident for the teacher praised him.",
+        "He became confident because of the teacher praised him.",
+        "He became confident from the teacher praised him."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_038",
+    "seedId": "since_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "기분이 좋아서 그녀는 노래를 불렀다.",
+    "english": "She sang a song since she felt happy.",
+    "words": [
+      "She",
+      "sang",
+      "a",
+      "song",
+      "since",
+      "she",
+      "felt",
+      "happy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "기분이 좋아서 그녀는 노래를 불렀다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She sang a song that she felt happy.",
+      "statementForm": [
+        "She sang a song since she felt happy.",
+        "She sang a song since she felt happy",
+        "Since she felt happy, She sang a song.",
+        "Since she felt happy, She sang a song"
+      ],
+      "fragmentForm": "She sang a song since she felt",
+      "wormholeVariants": [
+        "She sang a song that she felt happy.",
+        "She sang a song as she felt happy.",
+        "She sang a song for she felt happy.",
+        "She sang a song because of she felt happy.",
+        "She sang a song from she felt happy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_039",
+    "seedId": "since_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "시간이 없어서 우리는 계획을 줄였다.",
+    "english": "We reduced the plan since we had little time.",
+    "words": [
+      "We",
+      "reduced",
+      "the",
+      "plan",
+      "since",
+      "we",
+      "had",
+      "little",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "시간이 없어서 우리는 계획을 줄였다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We reduced the plan that we had little time.",
+      "statementForm": [
+        "We reduced the plan since we had little time.",
+        "We reduced the plan since we had little time",
+        "Since we had little time, We reduced the plan.",
+        "Since we had little time, We reduced the plan"
+      ],
+      "fragmentForm": "We reduced the plan since we had little",
+      "wormholeVariants": [
+        "We reduced the plan that we had little time.",
+        "We reduced the plan as we had little time.",
+        "We reduced the plan for we had little time.",
+        "We reduced the plan because of we had little time.",
+        "We reduced the plan from we had little time."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_040",
+    "seedId": "since_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "문제가 생겨서 그는 바로 연락했니?",
+    "english": "He contacted me since a problem came up?",
+    "words": [
+      "He",
+      "contacted",
+      "me",
+      "since",
+      "a",
+      "problem",
+      "came",
+      "up",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "문제가 생겨서 그는 바로 연락했니?",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He contacted me that a problem came up?",
+      "statementForm": [
+        "He contacted me since a problem came up?",
+        "He contacted me since a problem came up"
+      ],
+      "fragmentForm": "He contacted me since a problem came",
+      "wormholeVariants": [
+        "He contacted me that a problem came up?",
+        "He contacted me as a problem came up?",
+        "He contacted me for a problem came up?",
+        "He contacted me because of a problem came up?",
+        "He contacted me from a problem came up?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_041",
+    "seedId": "since_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "매니저가 없어서 그는 회의를 취소했다.",
+    "english": "He canceled the meeting since the manager was absent.",
+    "words": [
+      "He",
+      "canceled",
+      "the",
+      "meeting",
+      "since",
+      "the",
+      "manager",
+      "was",
+      "absent",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "매니저가 없어서 그는 회의를 취소했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He canceled the meeting that the manager was absent.",
+      "statementForm": [
+        "He canceled the meeting since the manager was absent.",
+        "He canceled the meeting since the manager was absent",
+        "Since the manager was absent, He canceled the meeting.",
+        "Since the manager was absent, He canceled the meeting"
+      ],
+      "fragmentForm": "He canceled the meeting since the manager was",
+      "wormholeVariants": [
+        "He canceled the meeting that the manager was absent.",
+        "He canceled the meeting as the manager was absent.",
+        "He canceled the meeting for the manager was absent.",
+        "He canceled the meeting because of the manager was absent.",
+        "He canceled the meeting from the manager was absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_042",
+    "seedId": "since_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아르바이트가 있어서 나는 동아리에 가입하지 않았다.",
+    "english": "I did not join the club since I had a part-time job.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "join",
+      "the",
+      "club",
+      "since",
+      "I",
+      "had",
+      "a",
+      "part",
+      "time",
+      "job",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아르바이트가 있어서 나는 동아리에 가입하지 않았다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not join the club that I had a part-time job.",
+      "statementForm": [
+        "I did not join the club since I had a part-time job.",
+        "I did not join the club since I had a part-time job",
+        "Since I had a part-time job, I did not join the club.",
+        "Since I had a part-time job, I did not join the club"
+      ],
+      "fragmentForm": "I did not join the club since I had a part-time",
+      "wormholeVariants": [
+        "I did not join the club that I had a part-time job.",
+        "I did not join the club as I had a part-time job.",
+        "I did not join the club for I had a part-time job.",
+        "I did not join the club because of I had a part-time job.",
+        "I did not join the club from I had a part-time job."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_043",
+    "seedId": "since_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "점수를 높이고 싶어서 그녀는 더 열심히 연습했다.",
+    "english": "She practiced harder since she wanted to improve her score.",
+    "words": [
+      "She",
+      "practiced",
+      "harder",
+      "since",
+      "she",
+      "wanted",
+      "to",
+      "improve",
+      "her",
+      "score",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "점수를 높이고 싶어서 그녀는 더 열심히 연습했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She practiced harder that she wanted to improve her score.",
+      "statementForm": [
+        "She practiced harder since she wanted to improve her score.",
+        "She practiced harder since she wanted to improve her score",
+        "Since she wanted to improve her score, She practiced harder.",
+        "Since she wanted to improve her score, She practiced harder"
+      ],
+      "fragmentForm": "She practiced harder since she wanted to improve her",
+      "wormholeVariants": [
+        "She practiced harder that she wanted to improve her score.",
+        "She practiced harder as she wanted to improve her score.",
+        "She practiced harder for she wanted to improve her score.",
+        "She practiced harder because of she wanted to improve her score.",
+        "She practiced harder from she wanted to improve her score."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_044",
+    "seedId": "since_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "바람이 강해서 우리는 실내에 머물렀다.",
+    "english": "We stayed indoors since the wind was strong.",
+    "words": [
+      "We",
+      "stayed",
+      "indoors",
+      "since",
+      "the",
+      "wind",
+      "was",
+      "strong",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "바람이 강해서 우리는 실내에 머물렀다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We stayed indoors that the wind was strong.",
+      "statementForm": [
+        "We stayed indoors since the wind was strong.",
+        "We stayed indoors since the wind was strong",
+        "Since the wind was strong, We stayed indoors.",
+        "Since the wind was strong, We stayed indoors"
+      ],
+      "fragmentForm": "We stayed indoors since the wind was",
+      "wormholeVariants": [
+        "We stayed indoors that the wind was strong.",
+        "We stayed indoors as the wind was strong.",
+        "We stayed indoors for the wind was strong.",
+        "We stayed indoors because of the wind was strong.",
+        "We stayed indoors from the wind was strong."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_045",
+    "seedId": "since_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "지갑을 잃어버려서 그는 불안해졌다.",
+    "english": "He became anxious since he lost his wallet.",
+    "words": [
+      "He",
+      "became",
+      "anxious",
+      "since",
+      "he",
+      "lost",
+      "his",
+      "wallet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지갑을 잃어버려서 그는 불안해졌다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He became anxious that he lost his wallet.",
+      "statementForm": [
+        "He became anxious since he lost his wallet.",
+        "He became anxious since he lost his wallet",
+        "Since he lost his wallet, He became anxious.",
+        "Since he lost his wallet, He became anxious"
+      ],
+      "fragmentForm": "He became anxious since he lost his",
+      "wormholeVariants": [
+        "He became anxious that he lost his wallet.",
+        "He became anxious as he lost his wallet.",
+        "He became anxious for he lost his wallet.",
+        "He became anxious because of he lost his wallet.",
+        "He became anxious from he lost his wallet."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_046",
+    "seedId": "since_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "장소를 사용할 수 없어서 그들은 일정을 바꿨다.",
+    "english": "They moved the schedule since the venue was unavailable.",
+    "words": [
+      "They",
+      "moved",
+      "the",
+      "schedule",
+      "since",
+      "the",
+      "venue",
+      "was",
+      "unavailable",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "장소를 사용할 수 없어서 그들은 일정을 바꿨다.",
+        "They"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They moved the schedule that the venue was unavailable.",
+      "statementForm": [
+        "They moved the schedule since the venue was unavailable.",
+        "They moved the schedule since the venue was unavailable",
+        "Since the venue was unavailable, They moved the schedule.",
+        "Since the venue was unavailable, They moved the schedule"
+      ],
+      "fragmentForm": "They moved the schedule since the venue was",
+      "wormholeVariants": [
+        "They moved the schedule that the venue was unavailable.",
+        "They moved the schedule as the venue was unavailable.",
+        "They moved the schedule for the venue was unavailable.",
+        "They moved the schedule because of the venue was unavailable.",
+        "They moved the schedule from the venue was unavailable."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_047",
+    "seedId": "since_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "생각 중이어서 나는 조용히 있었다.",
+    "english": "I stayed silent since I was thinking.",
+    "words": [
+      "I",
+      "stayed",
+      "silent",
+      "since",
+      "I",
+      "was",
+      "thinking",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "생각 중이어서 나는 조용히 있었다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed silent that I was thinking.",
+      "statementForm": [
+        "I stayed silent since I was thinking.",
+        "I stayed silent since I was thinking",
+        "Since I was thinking, I stayed silent.",
+        "Since I was thinking, I stayed silent"
+      ],
+      "fragmentForm": "I stayed silent since I was",
+      "wormholeVariants": [
+        "I stayed silent that I was thinking.",
+        "I stayed silent as I was thinking.",
+        "I stayed silent for I was thinking.",
+        "I stayed silent because of I was thinking.",
+        "I stayed silent from I was thinking."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_048",
+    "seedId": "since_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "컴퓨터가 불안정해서 그녀는 파일을 백업했다.",
+    "english": "She backed up the files since the computer was unstable.",
+    "words": [
+      "She",
+      "backed",
+      "up",
+      "the",
+      "files",
+      "since",
+      "the",
+      "computer",
+      "was",
+      "unstable",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "컴퓨터가 불안정해서 그녀는 파일을 백업했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She backed up the files that the computer was unstable.",
+      "statementForm": [
+        "She backed up the files since the computer was unstable.",
+        "She backed up the files since the computer was unstable",
+        "Since the computer was unstable, She backed up the files.",
+        "Since the computer was unstable, She backed up the files"
+      ],
+      "fragmentForm": "She backed up the files since the computer was",
+      "wormholeVariants": [
+        "She backed up the files that the computer was unstable.",
+        "She backed up the files as the computer was unstable.",
+        "She backed up the files for the computer was unstable.",
+        "She backed up the files because of the computer was unstable.",
+        "She backed up the files from the computer was unstable."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_049",
+    "seedId": "since_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "교통이 심해서 우리는 늦게 도착했다.",
+    "english": "We arrived late since traffic was heavy.",
+    "words": [
+      "We",
+      "arrived",
+      "late",
+      "since",
+      "traffic",
+      "was",
+      "heavy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교통이 심해서 우리는 늦게 도착했다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We arrived late that traffic was heavy.",
+      "statementForm": [
+        "We arrived late since traffic was heavy.",
+        "We arrived late since traffic was heavy",
+        "Since traffic was heavy, We arrived late.",
+        "Since traffic was heavy, We arrived late"
+      ],
+      "fragmentForm": "We arrived late since traffic was",
+      "wormholeVariants": [
+        "We arrived late that traffic was heavy.",
+        "We arrived late as traffic was heavy.",
+        "We arrived late for traffic was heavy.",
+        "We arrived late because of traffic was heavy.",
+        "We arrived late from traffic was heavy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_050",
+    "seedId": "since_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "행사가 취소돼서 그는 속상했다.",
+    "english": "He was upset since the event was canceled.",
+    "words": [
+      "He",
+      "was",
+      "upset",
+      "since",
+      "the",
+      "event",
+      "was",
+      "canceled",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "행사가 취소돼서 그는 속상했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was upset that the event was canceled.",
+      "statementForm": [
+        "He was upset since the event was canceled.",
+        "He was upset since the event was canceled",
+        "Since the event was canceled, He was upset.",
+        "Since the event was canceled, He was upset"
+      ],
+      "fragmentForm": "He was upset since the event was",
+      "wormholeVariants": [
+        "He was upset that the event was canceled.",
+        "He was upset as the event was canceled.",
+        "He was upset for the event was canceled.",
+        "He was upset because of the event was canceled.",
+        "He was upset from the event was canceled."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_051",
+    "seedId": "since_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "도로가 막혀서 그들은 일찍 떠났다.",
+    "english": "They left early since the road was closed.",
+    "words": [
+      "They",
+      "left",
+      "early",
+      "since",
+      "the",
+      "road",
+      "was",
+      "closed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "도로가 막혀서 그들은 일찍 떠났다.",
+        "They"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They left early that the road was closed.",
+      "statementForm": [
+        "They left early since the road was closed.",
+        "They left early since the road was closed",
+        "Since the road was closed, They left early.",
+        "Since the road was closed, They left early"
+      ],
+      "fragmentForm": "They left early since the road was",
+      "wormholeVariants": [
+        "They left early that the road was closed.",
+        "They left early as the road was closed.",
+        "They left early for the road was closed.",
+        "They left early because of the road was closed.",
+        "They left early from the road was closed."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_052",
+    "seedId": "since_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "표면이 젖어서 나는 조심해야 하니?",
+    "english": "I am careful since the surface is wet?",
+    "words": [
+      "I",
+      "am",
+      "careful",
+      "since",
+      "the",
+      "surface",
+      "is",
+      "wet",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "표면이 젖어서 나는 조심해야 하니?",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am careful that the surface is wet?",
+      "statementForm": [
+        "I am careful since the surface is wet?",
+        "I am careful since the surface is wet"
+      ],
+      "fragmentForm": "I am careful since the surface is",
+      "wormholeVariants": [
+        "I am careful that the surface is wet?",
+        "I am careful as the surface is wet?",
+        "I am careful for the surface is wet?",
+        "I am careful because of the surface is wet?",
+        "I am careful from the surface is wet?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_053",
+    "seedId": "since_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "규칙을 이해해서 그는 정확히 대답했다.",
+    "english": "He answered correctly since he understood the rule.",
+    "words": [
+      "He",
+      "answered",
+      "correctly",
+      "since",
+      "he",
+      "understood",
+      "the",
+      "rule",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "규칙을 이해해서 그는 정확히 대답했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He answered correctly that he understood the rule.",
+      "statementForm": [
+        "He answered correctly since he understood the rule.",
+        "He answered correctly since he understood the rule",
+        "Since he understood the rule, He answered correctly.",
+        "Since he understood the rule, He answered correctly"
+      ],
+      "fragmentForm": "He answered correctly since he understood the",
+      "wormholeVariants": [
+        "He answered correctly that he understood the rule.",
+        "He answered correctly as he understood the rule.",
+        "He answered correctly for he understood the rule.",
+        "He answered correctly because of he understood the rule.",
+        "He answered correctly from he understood the rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_054",
+    "seedId": "since_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "여행하고 싶어서 그녀는 돈을 모았다.",
+    "english": "She saved money since she wanted to travel.",
+    "words": [
+      "She",
+      "saved",
+      "money",
+      "since",
+      "she",
+      "wanted",
+      "to",
+      "travel",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "여행하고 싶어서 그녀는 돈을 모았다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She saved money that she wanted to travel.",
+      "statementForm": [
+        "She saved money since she wanted to travel.",
+        "She saved money since she wanted to travel",
+        "Since she wanted to travel, She saved money.",
+        "Since she wanted to travel, She saved money"
+      ],
+      "fragmentForm": "She saved money since she wanted to",
+      "wormholeVariants": [
+        "She saved money that she wanted to travel.",
+        "She saved money as she wanted to travel.",
+        "She saved money for she wanted to travel.",
+        "She saved money because of she wanted to travel.",
+        "She saved money from she wanted to travel."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_055",
+    "seedId": "since_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "언덕을 올라서 우리는 몹시 지쳤다.",
+    "english": "We were exhausted since we climbed the hill.",
+    "words": [
+      "We",
+      "were",
+      "exhausted",
+      "since",
+      "we",
+      "climbed",
+      "the",
+      "hill",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "언덕을 올라서 우리는 몹시 지쳤다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were exhausted that we climbed the hill.",
+      "statementForm": [
+        "We were exhausted since we climbed the hill.",
+        "We were exhausted since we climbed the hill",
+        "Since we climbed the hill, We were exhausted.",
+        "Since we climbed the hill, We were exhausted"
+      ],
+      "fragmentForm": "We were exhausted since we climbed the",
+      "wormholeVariants": [
+        "We were exhausted that we climbed the hill.",
+        "We were exhausted as we climbed the hill.",
+        "We were exhausted for we climbed the hill.",
+        "We were exhausted because of we climbed the hill.",
+        "We were exhausted from we climbed the hill."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_056",
+    "seedId": "since_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "팀이 자기 없이 이겨서 그는 빠져 있었다.",
+    "english": "He is missing since the team won without him.",
+    "words": [
+      "He",
+      "is",
+      "missing",
+      "since",
+      "the",
+      "team",
+      "won",
+      "without",
+      "him",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "팀이 자기 없이 이겨서 그는 빠져 있었다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is missing that the team won without him.",
+      "statementForm": [
+        "He is missing since the team won without him.",
+        "He is missing since the team won without him",
+        "Since the team won without him, He is missing.",
+        "Since the team won without him, He is missing"
+      ],
+      "fragmentForm": "He is missing since the team won without",
+      "wormholeVariants": [
+        "He is missing that the team won without him.",
+        "He is missing as the team won without him.",
+        "He is missing for the team won without him.",
+        "He is missing because of the team won without him.",
+        "He is missing from the team won without him."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_057",
+    "seedId": "since_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아이들이 밖에 나가지 못하게 그들은 울타리를 세웠다.",
+    "english": "They built a fence since the children would not go out.",
+    "words": [
+      "They",
+      "built",
+      "a",
+      "fence",
+      "since",
+      "the",
+      "children",
+      "would",
+      "not",
+      "go",
+      "out",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아이들이 밖에 나가지 못하게 그들은 울타리를 세웠다.",
+        "They"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They built a fence that the children would not go out.",
+      "statementForm": [
+        "They built a fence since the children would not go out.",
+        "They built a fence since the children would not go out",
+        "Since the children would not go out, They built a fence.",
+        "Since the children would not go out, They built a fence"
+      ],
+      "fragmentForm": "They built a fence since the children would not go",
+      "wormholeVariants": [
+        "They built a fence that the children would not go out.",
+        "They built a fence as the children would not go out.",
+        "They built a fence for the children would not go out.",
+        "They built a fence because of the children would not go out.",
+        "They built a fence from the children would not go out."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_058",
+    "seedId": "since_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "너무 늦어서 우리는 지하철을 놓쳤다.",
+    "english": "We missed the subway since it was too late.",
+    "words": [
+      "We",
+      "missed",
+      "the",
+      "subway",
+      "since",
+      "it",
+      "was",
+      "too",
+      "late",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너무 늦어서 우리는 지하철을 놓쳤다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We missed the subway that it was too late.",
+      "statementForm": [
+        "We missed the subway since it was too late.",
+        "We missed the subway since it was too late",
+        "Since it was too late, We missed the subway.",
+        "Since it was too late, We missed the subway"
+      ],
+      "fragmentForm": "We missed the subway since it was too",
+      "wormholeVariants": [
+        "We missed the subway that it was too late.",
+        "We missed the subway as it was too late.",
+        "We missed the subway for it was too late.",
+        "We missed the subway because of it was too late.",
+        "We missed the subway from it was too late."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_059",
+    "seedId": "since_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "회의가 길어서 그녀는 중간에 나갔니?",
+    "english": "She left in the middle since the meeting was long?",
+    "words": [
+      "She",
+      "left",
+      "in",
+      "the",
+      "middle",
+      "since",
+      "the",
+      "meeting",
+      "was",
+      "long",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "회의가 길어서 그녀는 중간에 나갔니?",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She left in the middle that the meeting was long?",
+      "statementForm": [
+        "She left in the middle since the meeting was long?",
+        "She left in the middle since the meeting was long"
+      ],
+      "fragmentForm": "She left in the middle since the meeting was",
+      "wormholeVariants": [
+        "She left in the middle that the meeting was long?",
+        "She left in the middle as the meeting was long?",
+        "She left in the middle for the meeting was long?",
+        "She left in the middle because of the meeting was long?",
+        "She left in the middle from the meeting was long?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_060",
+    "seedId": "since_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "문이 잠겨 있어서 그는 들어가지 못했다.",
+    "english": "He could not get in since the door was locked.",
+    "words": [
+      "He",
+      "could",
+      "not",
+      "get",
+      "in",
+      "since",
+      "the",
+      "door",
+      "was",
+      "locked",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "문이 잠겨 있어서 그는 들어가지 못했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He could not get in that the door was locked.",
+      "statementForm": [
+        "He could not get in since the door was locked.",
+        "He could not get in since the door was locked",
+        "Since the door was locked, He could not get in.",
+        "Since the door was locked, He could not get in"
+      ],
+      "fragmentForm": "He could not get in since the door was",
+      "wormholeVariants": [
+        "He could not get in that the door was locked.",
+        "He could not get in as the door was locked.",
+        "He could not get in for the door was locked.",
+        "He could not get in because of the door was locked.",
+        "He could not get in from the door was locked."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_061",
+    "seedId": "since_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아파서 집에 있었다.",
+    "english": "I stayed home since I was sick.",
+    "words": [
+      "I",
+      "stayed",
+      "home",
+      "since",
+      "I",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아파서 집에 있었다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed home that I was sick.",
+      "statementForm": [
+        "I stayed home since I was sick.",
+        "I stayed home since I was sick",
+        "Since I was sick, I stayed home.",
+        "Since I was sick, I stayed home"
+      ],
+      "fragmentForm": "I stayed home since I was",
+      "wormholeVariants": [
+        "I stayed home that I was sick.",
+        "I stayed home as I was sick.",
+        "I stayed home for I was sick.",
+        "I stayed home because of I was sick.",
+        "I stayed home from I was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_062",
+    "seedId": "since_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "버스가 늦어서 그녀는 지각했다.",
+    "english": "She was late since the bus was delayed.",
+    "words": [
+      "She",
+      "was",
+      "late",
+      "since",
+      "the",
+      "bus",
+      "was",
+      "delayed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "버스가 늦어서 그녀는 지각했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was late that the bus was delayed.",
+      "statementForm": [
+        "She was late since the bus was delayed.",
+        "She was late since the bus was delayed",
+        "Since the bus was delayed, She was late.",
+        "Since the bus was delayed, She was late"
+      ],
+      "fragmentForm": "She was late since the bus was",
+      "wormholeVariants": [
+        "She was late that the bus was delayed.",
+        "She was late as the bus was delayed.",
+        "She was late for the bus was delayed.",
+        "She was late because of the bus was delayed.",
+        "She was late from the bus was delayed."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_063",
+    "seedId": "since_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "좋은 점수가 필요해서 그는 열심히 공부했다.",
+    "english": "He studied hard since he wanted good grades.",
+    "words": [
+      "He",
+      "studied",
+      "hard",
+      "since",
+      "he",
+      "wanted",
+      "good",
+      "grades",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "좋은 점수가 필요해서 그는 열심히 공부했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He studied hard that he wanted good grades.",
+      "statementForm": [
+        "He studied hard since he wanted good grades.",
+        "He studied hard since he wanted good grades",
+        "Since he wanted good grades, He studied hard.",
+        "Since he wanted good grades, He studied hard"
+      ],
+      "fragmentForm": "He studied hard since he wanted good",
+      "wormholeVariants": [
+        "He studied hard that he wanted good grades.",
+        "He studied hard as he wanted good grades.",
+        "He studied hard for he wanted good grades.",
+        "He studied hard because of he wanted good grades.",
+        "He studied hard from he wanted good grades."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_064",
+    "seedId": "since_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아기가 자고 있어서 우리는 조용했다.",
+    "english": "We were quiet since the baby was sleeping.",
+    "words": [
+      "We",
+      "were",
+      "quiet",
+      "since",
+      "the",
+      "baby",
+      "was",
+      "sleeping",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아기가 자고 있어서 우리는 조용했다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were quiet that the baby was sleeping.",
+      "statementForm": [
+        "We were quiet since the baby was sleeping.",
+        "We were quiet since the baby was sleeping",
+        "Since the baby was sleeping, We were quiet.",
+        "Since the baby was sleeping, We were quiet"
+      ],
+      "fragmentForm": "We were quiet since the baby was",
+      "wormholeVariants": [
+        "We were quiet that the baby was sleeping.",
+        "We were quiet as the baby was sleeping.",
+        "We were quiet for the baby was sleeping.",
+        "We were quiet because of the baby was sleeping.",
+        "We were quiet from the baby was sleeping."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_065",
+    "seedId": "since_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "날씨가 추워서 그들은 코트를 입었다.",
+    "english": "They wore coats since it was cold.",
+    "words": [
+      "They",
+      "wore",
+      "coats",
+      "since",
+      "it",
+      "was",
+      "cold",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "날씨가 추워서 그들은 코트를 입었다.",
+        "They"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They wore coats that it was cold.",
+      "statementForm": [
+        "They wore coats since it was cold.",
+        "They wore coats since it was cold",
+        "Since it was cold, They wore coats.",
+        "Since it was cold, They wore coats"
+      ],
+      "fragmentForm": "They wore coats since it was",
+      "wormholeVariants": [
+        "They wore coats that it was cold.",
+        "They wore coats as it was cold.",
+        "They wore coats for it was cold.",
+        "They wore coats because of it was cold.",
+        "They wore coats from it was cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_066",
+    "seedId": "since_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "네가 보고 싶어서 나는 전화했다.",
+    "english": "I called you since I missed you.",
+    "words": [
+      "I",
+      "called",
+      "you",
+      "since",
+      "I",
+      "missed",
+      "you",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 보고 싶어서 나는 전화했다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I called you that I missed you.",
+      "statementForm": [
+        "I called you since I missed you.",
+        "I called you since I missed you",
+        "Since I missed you, I called you.",
+        "Since I missed you, I called you"
+      ],
+      "fragmentForm": "I called you since I missed",
+      "wormholeVariants": [
+        "I called you that I missed you.",
+        "I called you as I missed you.",
+        "I called you for I missed you.",
+        "I called you because of I missed you.",
+        "I called you from I missed you."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_067",
+    "seedId": "since_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "목이 말라서 그녀는 물을 마셨다.",
+    "english": "She drank water since she was thirsty.",
+    "words": [
+      "She",
+      "drank",
+      "water",
+      "since",
+      "she",
+      "was",
+      "thirsty",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목이 말라서 그녀는 물을 마셨다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She drank water that she was thirsty.",
+      "statementForm": [
+        "She drank water since she was thirsty.",
+        "She drank water since she was thirsty",
+        "Since she was thirsty, She drank water.",
+        "Since she was thirsty, She drank water"
+      ],
+      "fragmentForm": "She drank water since she was",
+      "wormholeVariants": [
+        "She drank water that she was thirsty.",
+        "She drank water as she was thirsty.",
+        "She drank water for she was thirsty.",
+        "She drank water because of she was thirsty.",
+        "She drank water from she was thirsty."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_068",
+    "seedId": "since_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "도움이 필요해서 내가 말했니?",
+    "english": "Do I need help since I am confused?",
+    "words": [
+      "Do",
+      "I",
+      "need",
+      "help",
+      "since",
+      "I",
+      "am",
+      "confused",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "도움이 필요해서 내가 말했니?",
+        "Do"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I need help that I am confused?",
+      "statementForm": [
+        "Do I need help since I am confused?",
+        "Do I need help since I am confused"
+      ],
+      "fragmentForm": "Do I need help since I am",
+      "wormholeVariants": [
+        "Do I need help that I am confused?",
+        "Do I need help as I am confused?",
+        "Do I need help for I am confused?",
+        "Do I need help because of I am confused?",
+        "Do I need help from I am confused?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_069",
+    "seedId": "since_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "비가 와서 그는 밖에 나가지 않았니?",
+    "english": "He did not go outside since it was raining?",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "go",
+      "outside",
+      "since",
+      "it",
+      "was",
+      "raining",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "비가 와서 그는 밖에 나가지 않았니?",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not go outside that it was raining?",
+      "statementForm": [
+        "He did not go outside since it was raining?",
+        "He did not go outside since it was raining"
+      ],
+      "fragmentForm": "He did not go outside since it was",
+      "wormholeVariants": [
+        "He did not go outside that it was raining?",
+        "He did not go outside as it was raining?",
+        "He did not go outside for it was raining?",
+        "He did not go outside because of it was raining?",
+        "He did not go outside from it was raining?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_070",
+    "seedId": "since_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "바닥이 젖어서 나는 조심했다.",
+    "english": "I was careful since the floor was wet.",
+    "words": [
+      "I",
+      "was",
+      "careful",
+      "since",
+      "the",
+      "floor",
+      "was",
+      "wet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "바닥이 젖어서 나는 조심했다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was careful that the floor was wet.",
+      "statementForm": [
+        "I was careful since the floor was wet.",
+        "I was careful since the floor was wet",
+        "Since the floor was wet, I was careful.",
+        "Since the floor was wet, I was careful"
+      ],
+      "fragmentForm": "I was careful since the floor was",
+      "wormholeVariants": [
+        "I was careful that the floor was wet.",
+        "I was careful as the floor was wet.",
+        "I was careful for the floor was wet.",
+        "I was careful because of the floor was wet.",
+        "I was careful from the floor was wet."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_071",
+    "seedId": "since_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "친구가 도와줘서 그녀는 웃었다.",
+    "english": "She smiled since her friend helped her.",
+    "words": [
+      "She",
+      "smiled",
+      "since",
+      "her",
+      "friend",
+      "helped",
+      "her",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "친구가 도와줘서 그녀는 웃었다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She smiled that her friend helped her.",
+      "statementForm": [
+        "She smiled since her friend helped her.",
+        "She smiled since her friend helped her",
+        "Since her friend helped her, She smiled.",
+        "Since her friend helped her, She smiled"
+      ],
+      "fragmentForm": "She smiled since her friend helped",
+      "wormholeVariants": [
+        "She smiled that her friend helped her.",
+        "She smiled as her friend helped her.",
+        "She smiled for her friend helped her.",
+        "She smiled because of her friend helped her.",
+        "She smiled from her friend helped her."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_072",
+    "seedId": "since_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "비가 와서 우리는 우산을 썼다.",
+    "english": "We used umbrellas since it was rainy.",
+    "words": [
+      "We",
+      "used",
+      "umbrellas",
+      "since",
+      "it",
+      "was",
+      "rainy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "비가 와서 우리는 우산을 썼다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We used umbrellas that it was rainy.",
+      "statementForm": [
+        "We used umbrellas since it was rainy.",
+        "We used umbrellas since it was rainy",
+        "Since it was rainy, We used umbrellas.",
+        "Since it was rainy, We used umbrellas"
+      ],
+      "fragmentForm": "We used umbrellas since it was",
+      "wormholeVariants": [
+        "We used umbrellas that it was rainy.",
+        "We used umbrellas as it was rainy.",
+        "We used umbrellas for it was rainy.",
+        "We used umbrellas because of it was rainy.",
+        "We used umbrellas from it was rainy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_073",
+    "seedId": "since_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "급해서 그는 택시를 탔다.",
+    "english": "He took a taxi since he was in a hurry.",
+    "words": [
+      "He",
+      "took",
+      "a",
+      "taxi",
+      "since",
+      "he",
+      "was",
+      "in",
+      "a",
+      "hurry",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "급해서 그는 택시를 탔다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He took a taxi that he was in a hurry.",
+      "statementForm": [
+        "He took a taxi since he was in a hurry.",
+        "He took a taxi since he was in a hurry",
+        "Since he was in a hurry, He took a taxi.",
+        "Since he was in a hurry, He took a taxi"
+      ],
+      "fragmentForm": "He took a taxi since he was in a",
+      "wormholeVariants": [
+        "He took a taxi that he was in a hurry.",
+        "He took a taxi as he was in a hurry.",
+        "He took a taxi for he was in a hurry.",
+        "He took a taxi because of he was in a hurry.",
+        "He took a taxi from he was in a hurry."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_074",
+    "seedId": "since_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "시험에 합격해서 그는 행복했다.",
+    "english": "He was happy since he passed the test.",
+    "words": [
+      "He",
+      "was",
+      "happy",
+      "since",
+      "he",
+      "passed",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "시험에 합격해서 그는 행복했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was happy that he passed the test.",
+      "statementForm": [
+        "He was happy since he passed the test.",
+        "He was happy since he passed the test",
+        "Since he passed the test, He was happy.",
+        "Since he passed the test, He was happy"
+      ],
+      "fragmentForm": "He was happy since he passed the",
+      "wormholeVariants": [
+        "He was happy that he passed the test.",
+        "He was happy as he passed the test.",
+        "He was happy for he passed the test.",
+        "He was happy because of he passed the test.",
+        "He was happy from he passed the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_075",
+    "seedId": "since_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "많이 걸어서 우리는 피곤했다.",
+    "english": "We were tired since we walked a lot.",
+    "words": [
+      "We",
+      "were",
+      "tired",
+      "since",
+      "we",
+      "walked",
+      "a",
+      "lot",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "많이 걸어서 우리는 피곤했다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were tired that we walked a lot.",
+      "statementForm": [
+        "We were tired since we walked a lot.",
+        "We were tired since we walked a lot",
+        "Since we walked a lot, We were tired.",
+        "Since we walked a lot, We were tired"
+      ],
+      "fragmentForm": "We were tired since we walked a",
+      "wormholeVariants": [
+        "We were tired that we walked a lot.",
+        "We were tired as we walked a lot.",
+        "We were tired for we walked a lot.",
+        "We were tired because of we walked a lot.",
+        "We were tired from we walked a lot."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_076",
+    "seedId": "since_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아프고 피곤해서 나는 집에 남았다.",
+    "english": "I stayed home since I was sick and tired.",
+    "words": [
+      "I",
+      "stayed",
+      "home",
+      "since",
+      "I",
+      "was",
+      "sick",
+      "and",
+      "tired",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아프고 피곤해서 나는 집에 남았다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I stayed home that I was sick and tired.",
+      "statementForm": [
+        "I stayed home since I was sick and tired.",
+        "I stayed home since I was sick and tired",
+        "Since I was sick and tired, I stayed home.",
+        "Since I was sick and tired, I stayed home"
+      ],
+      "fragmentForm": "I stayed home since I was sick and",
+      "wormholeVariants": [
+        "I stayed home that I was sick and tired.",
+        "I stayed home as I was sick and tired.",
+        "I stayed home for I was sick and tired.",
+        "I stayed home because of I was sick and tired.",
+        "I stayed home from I was sick and tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_077",
+    "seedId": "since_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "지하철이 늦어서 그녀는 결국 걸어갔다.",
+    "english": "She walked home since the subway was late.",
+    "words": [
+      "She",
+      "walked",
+      "home",
+      "since",
+      "the",
+      "subway",
+      "was",
+      "late",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지하철이 늦어서 그녀는 결국 걸어갔다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She walked home that the subway was late.",
+      "statementForm": [
+        "She walked home since the subway was late.",
+        "She walked home since the subway was late",
+        "Since the subway was late, She walked home.",
+        "Since the subway was late, She walked home"
+      ],
+      "fragmentForm": "She walked home since the subway was",
+      "wormholeVariants": [
+        "She walked home that the subway was late.",
+        "She walked home as the subway was late.",
+        "She walked home for the subway was late.",
+        "She walked home because of the subway was late.",
+        "She walked home from the subway was late."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_078",
+    "seedId": "since_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "공기가 답답해서 창문을 열었다.",
+    "english": "I opened the window since the room felt stuffy.",
+    "words": [
+      "I",
+      "opened",
+      "the",
+      "window",
+      "since",
+      "the",
+      "room",
+      "felt",
+      "stuffy",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "공기가 답답해서 창문을 열었다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I opened the window that the room felt stuffy.",
+      "statementForm": [
+        "I opened the window since the room felt stuffy.",
+        "I opened the window since the room felt stuffy",
+        "Since the room felt stuffy, I opened the window.",
+        "Since the room felt stuffy, I opened the window"
+      ],
+      "fragmentForm": "I opened the window since the room felt",
+      "wormholeVariants": [
+        "I opened the window that the room felt stuffy.",
+        "I opened the window as the room felt stuffy.",
+        "I opened the window for the room felt stuffy.",
+        "I opened the window because of the room felt stuffy.",
+        "I opened the window from the room felt stuffy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_079",
+    "seedId": "since_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "소음이 너무 커서 그는 집중하지 못했다.",
+    "english": "He could not focus since the noise was too loud.",
+    "words": [
+      "He",
+      "could",
+      "not",
+      "focus",
+      "since",
+      "the",
+      "noise",
+      "was",
+      "too",
+      "loud",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "소음이 너무 커서 그는 집중하지 못했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He could not focus that the noise was too loud.",
+      "statementForm": [
+        "He could not focus since the noise was too loud.",
+        "He could not focus since the noise was too loud",
+        "Since the noise was too loud, He could not focus.",
+        "Since the noise was too loud, He could not focus"
+      ],
+      "fragmentForm": "He could not focus since the noise was too",
+      "wormholeVariants": [
+        "He could not focus that the noise was too loud.",
+        "He could not focus as the noise was too loud.",
+        "He could not focus for the noise was too loud.",
+        "He could not focus because of the noise was too loud.",
+        "He could not focus from the noise was too loud."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_080",
+    "seedId": "since_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "배가 고파서 우리는 일찍 저녁을 먹었다.",
+    "english": "We ate dinner early since we were hungry.",
+    "words": [
+      "We",
+      "ate",
+      "dinner",
+      "early",
+      "since",
+      "we",
+      "were",
+      "hungry",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "배가 고파서 우리는 일찍 저녁을 먹었다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We ate dinner early that we were hungry.",
+      "statementForm": [
+        "We ate dinner early since we were hungry.",
+        "We ate dinner early since we were hungry",
+        "Since we were hungry, We ate dinner early.",
+        "Since we were hungry, We ate dinner early"
+      ],
+      "fragmentForm": "We ate dinner early since we were",
+      "wormholeVariants": [
+        "We ate dinner early that we were hungry.",
+        "We ate dinner early as we were hungry.",
+        "We ate dinner early for we were hungry.",
+        "We ate dinner early because of we were hungry.",
+        "We ate dinner early from we were hungry."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_081",
+    "seedId": "since_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "수업을 이해하지 못해서 그는 필기를 다시 확인했다.",
+    "english": "He checked the notes since he did not understand the lesson.",
+    "words": [
+      "He",
+      "checked",
+      "the",
+      "notes",
+      "since",
+      "he",
+      "did",
+      "not",
+      "understand",
+      "the",
+      "lesson",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "수업을 이해하지 못해서 그는 필기를 다시 확인했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He checked the notes that he did not understand the lesson.",
+      "statementForm": [
+        "He checked the notes since he did not understand the lesson.",
+        "He checked the notes since he did not understand the lesson",
+        "Since he did not understand the lesson, He checked the notes.",
+        "Since he did not understand the lesson, He checked the notes"
+      ],
+      "fragmentForm": "He checked the notes since he did not understand the",
+      "wormholeVariants": [
+        "He checked the notes that he did not understand the lesson.",
+        "He checked the notes as he did not understand the lesson.",
+        "He checked the notes for he did not understand the lesson.",
+        "He checked the notes because of he did not understand the lesson.",
+        "He checked the notes from he did not understand the lesson."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_082",
+    "seedId": "since_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "다른 약속이 있어서 나는 일찍 떠났다.",
+    "english": "I left early since I had another appointment.",
+    "words": [
+      "I",
+      "left",
+      "early",
+      "since",
+      "I",
+      "had",
+      "another",
+      "appointment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "다른 약속이 있어서 나는 일찍 떠났다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I left early that I had another appointment.",
+      "statementForm": [
+        "I left early since I had another appointment.",
+        "I left early since I had another appointment",
+        "Since I had another appointment, I left early.",
+        "Since I had another appointment, I left early"
+      ],
+      "fragmentForm": "I left early since I had another",
+      "wormholeVariants": [
+        "I left early that I had another appointment.",
+        "I left early as I had another appointment.",
+        "I left early for I had another appointment.",
+        "I left early because of I had another appointment.",
+        "I left early from I had another appointment."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_083",
+    "seedId": "since_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "바빠서 그녀는 프로젝트에 참여하지 못했다.",
+    "english": "She could not join the project since she was busy.",
+    "words": [
+      "She",
+      "could",
+      "not",
+      "join",
+      "the",
+      "project",
+      "since",
+      "she",
+      "was",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "바빠서 그녀는 프로젝트에 참여하지 못했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She could not join the project that she was busy.",
+      "statementForm": [
+        "She could not join the project since she was busy.",
+        "She could not join the project since she was busy",
+        "Since she was busy, She could not join the project.",
+        "Since she was busy, She could not join the project"
+      ],
+      "fragmentForm": "She could not join the project since she was",
+      "wormholeVariants": [
+        "She could not join the project that she was busy.",
+        "She could not join the project as she was busy.",
+        "She could not join the project for she was busy.",
+        "She could not join the project because of she was busy.",
+        "She could not join the project from she was busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_084",
+    "seedId": "since_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "결과를 설명하고 싶어서 우리는 자료를 발표했다.",
+    "english": "We presented the data since we wanted to explain the result.",
+    "words": [
+      "We",
+      "presented",
+      "the",
+      "data",
+      "since",
+      "we",
+      "wanted",
+      "to",
+      "explain",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "결과를 설명하고 싶어서 우리는 자료를 발표했다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We presented the data that we wanted to explain the result.",
+      "statementForm": [
+        "We presented the data since we wanted to explain the result.",
+        "We presented the data since we wanted to explain the result",
+        "Since we wanted to explain the result, We presented the data.",
+        "Since we wanted to explain the result, We presented the data"
+      ],
+      "fragmentForm": "We presented the data since we wanted to explain the",
+      "wormholeVariants": [
+        "We presented the data that we wanted to explain the result.",
+        "We presented the data as we wanted to explain the result.",
+        "We presented the data for we wanted to explain the result.",
+        "We presented the data because of we wanted to explain the result.",
+        "We presented the data from we wanted to explain the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_085",
+    "seedId": "since_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "어제 늦게 자서 너는 피곤하니?",
+    "english": "Do you feel tired since you stayed up late?",
+    "words": [
+      "Do",
+      "you",
+      "feel",
+      "tired",
+      "since",
+      "you",
+      "stayed",
+      "up",
+      "late",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "어제 늦게 자서 너는 피곤하니?",
+        "Do"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you feel tired that you stayed up late?",
+      "statementForm": [
+        "Do you feel tired since you stayed up late?",
+        "Do you feel tired since you stayed up late"
+      ],
+      "fragmentForm": "Do you feel tired since you stayed up",
+      "wormholeVariants": [
+        "Do you feel tired that you stayed up late?",
+        "Do you feel tired as you stayed up late?",
+        "Do you feel tired for you stayed up late?",
+        "Do you feel tired because of you stayed up late?",
+        "Do you feel tired from you stayed up late?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_086",
+    "seedId": "since_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "팀이 발전해서 그녀는 자랑스러웠다.",
+    "english": "She was proud since her team improved.",
+    "words": [
+      "She",
+      "was",
+      "proud",
+      "since",
+      "her",
+      "team",
+      "improved",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "팀이 발전해서 그녀는 자랑스러웠다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was proud that her team improved.",
+      "statementForm": [
+        "She was proud since her team improved.",
+        "She was proud since her team improved",
+        "Since her team improved, She was proud.",
+        "Since her team improved, She was proud"
+      ],
+      "fragmentForm": "She was proud since her team",
+      "wormholeVariants": [
+        "She was proud that her team improved.",
+        "She was proud as her team improved.",
+        "She was proud for her team improved.",
+        "She was proud because of her team improved.",
+        "She was proud from her team improved."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_087",
+    "seedId": "since_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "이야기가 재미있어서 우리는 웃었다.",
+    "english": "We laughed since the story was funny.",
+    "words": [
+      "We",
+      "laughed",
+      "since",
+      "the",
+      "story",
+      "was",
+      "funny",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이야기가 재미있어서 우리는 웃었다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We laughed that the story was funny.",
+      "statementForm": [
+        "We laughed since the story was funny.",
+        "We laughed since the story was funny",
+        "Since the story was funny, We laughed.",
+        "Since the story was funny, We laughed"
+      ],
+      "fragmentForm": "We laughed since the story was",
+      "wormholeVariants": [
+        "We laughed that the story was funny.",
+        "We laughed as the story was funny.",
+        "We laughed for the story was funny.",
+        "We laughed because of the story was funny.",
+        "We laughed from the story was funny."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_088",
+    "seedId": "since_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "너무 바빠서 그는 점심을 먹지 못했다.",
+    "english": "He did not eat lunch since he was too busy.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "eat",
+      "lunch",
+      "since",
+      "he",
+      "was",
+      "too",
+      "busy",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너무 바빠서 그는 점심을 먹지 못했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not eat lunch that he was too busy.",
+      "statementForm": [
+        "He did not eat lunch since he was too busy.",
+        "He did not eat lunch since he was too busy",
+        "Since he was too busy, He did not eat lunch.",
+        "Since he was too busy, He did not eat lunch"
+      ],
+      "fragmentForm": "He did not eat lunch since he was too",
+      "wormholeVariants": [
+        "He did not eat lunch that he was too busy.",
+        "He did not eat lunch as he was too busy.",
+        "He did not eat lunch for he was too busy.",
+        "He did not eat lunch because of he was too busy.",
+        "He did not eat lunch from he was too busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_089",
+    "seedId": "since_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "학교에 늦어서 그녀는 택시를 불렀다.",
+    "english": "She called a taxi since she was late for school.",
+    "words": [
+      "She",
+      "called",
+      "a",
+      "taxi",
+      "since",
+      "she",
+      "was",
+      "late",
+      "for",
+      "school",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학교에 늦어서 그녀는 택시를 불렀다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She called a taxi that she was late for school.",
+      "statementForm": [
+        "She called a taxi since she was late for school.",
+        "She called a taxi since she was late for school",
+        "Since she was late for school, She called a taxi.",
+        "Since she was late for school, She called a taxi"
+      ],
+      "fragmentForm": "She called a taxi since she was late for",
+      "wormholeVariants": [
+        "She called a taxi that she was late for school.",
+        "She called a taxi as she was late for school.",
+        "She called a taxi for she was late for school.",
+        "She called a taxi because of she was late for school.",
+        "She called a taxi from she was late for school."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_090",
+    "seedId": "since_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "바닥이 미끄러워서 나는 조심하고 있다.",
+    "english": "I am moving carefully since the floor is slippery?",
+    "words": [
+      "I",
+      "am",
+      "moving",
+      "carefully",
+      "since",
+      "the",
+      "floor",
+      "is",
+      "slippery",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "바닥이 미끄러워서 나는 조심하고 있다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am moving carefully that the floor is slippery?",
+      "statementForm": [
+        "I am moving carefully since the floor is slippery?",
+        "I am moving carefully since the floor is slippery"
+      ],
+      "fragmentForm": "I am moving carefully since the floor is",
+      "wormholeVariants": [
+        "I am moving carefully that the floor is slippery?",
+        "I am moving carefully as the floor is slippery?",
+        "I am moving carefully for the floor is slippery?",
+        "I am moving carefully because of the floor is slippery?",
+        "I am moving carefully from the floor is slippery?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_091",
+    "seedId": "since_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "숙제가 쉬워서 그들은 책을 덜 읽었다.",
+    "english": "They read less since their homework was easy.",
+    "words": [
+      "They",
+      "read",
+      "less",
+      "since",
+      "their",
+      "homework",
+      "was",
+      "easy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "숙제가 쉬워서 그들은 책을 덜 읽었다.",
+        "They"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "They read less that their homework was easy.",
+      "statementForm": [
+        "They read less since their homework was easy.",
+        "They read less since their homework was easy",
+        "Since their homework was easy, They read less.",
+        "Since their homework was easy, They read less"
+      ],
+      "fragmentForm": "They read less since their homework was",
+      "wormholeVariants": [
+        "They read less that their homework was easy.",
+        "They read less as their homework was easy.",
+        "They read less for their homework was easy.",
+        "They read less because of their homework was easy.",
+        "They read less from their homework was easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_092",
+    "seedId": "since_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "날씨가 나빠져서 그는 계획을 바꿨다.",
+    "english": "He changed the plan since the weather got worse.",
+    "words": [
+      "He",
+      "changed",
+      "the",
+      "plan",
+      "since",
+      "the",
+      "weather",
+      "got",
+      "worse",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "날씨가 나빠져서 그는 계획을 바꿨다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He changed the plan that the weather got worse.",
+      "statementForm": [
+        "He changed the plan since the weather got worse.",
+        "He changed the plan since the weather got worse",
+        "Since the weather got worse, He changed the plan.",
+        "Since the weather got worse, He changed the plan"
+      ],
+      "fragmentForm": "He changed the plan since the weather got",
+      "wormholeVariants": [
+        "He changed the plan that the weather got worse.",
+        "He changed the plan as the weather got worse.",
+        "He changed the plan for the weather got worse.",
+        "He changed the plan because of the weather got worse.",
+        "He changed the plan from the weather got worse."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_093",
+    "seedId": "since_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "전화가 크게 울려서 나는 놀랐다.",
+    "english": "I was shocked since the phone rang loudly.",
+    "words": [
+      "I",
+      "was",
+      "shocked",
+      "since",
+      "the",
+      "phone",
+      "rang",
+      "loudly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "전화가 크게 울려서 나는 놀랐다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was shocked that the phone rang loudly.",
+      "statementForm": [
+        "I was shocked since the phone rang loudly.",
+        "I was shocked since the phone rang loudly",
+        "Since the phone rang loudly, I was shocked.",
+        "Since the phone rang loudly, I was shocked"
+      ],
+      "fragmentForm": "I was shocked since the phone rang",
+      "wormholeVariants": [
+        "I was shocked that the phone rang loudly.",
+        "I was shocked as the phone rang loudly.",
+        "I was shocked for the phone rang loudly.",
+        "I was shocked because of the phone rang loudly.",
+        "I was shocked from the phone rang loudly."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_094",
+    "seedId": "since_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "실수해서 그녀는 사과했다.",
+    "english": "She apologized since she made a mistake.",
+    "words": [
+      "She",
+      "apologized",
+      "since",
+      "she",
+      "made",
+      "a",
+      "mistake",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "실수해서 그녀는 사과했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She apologized that she made a mistake.",
+      "statementForm": [
+        "She apologized since she made a mistake.",
+        "She apologized since she made a mistake",
+        "Since she made a mistake, She apologized.",
+        "Since she made a mistake, She apologized"
+      ],
+      "fragmentForm": "She apologized since she made a",
+      "wormholeVariants": [
+        "She apologized that she made a mistake.",
+        "She apologized as she made a mistake.",
+        "She apologized for she made a mistake.",
+        "She apologized because of she made a mistake.",
+        "She apologized from she made a mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_095",
+    "seedId": "since_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "비가 올 것 같아서 우리는 우산이 필요하니?",
+    "english": "We need an umbrella since it is going to rain?",
+    "words": [
+      "We",
+      "need",
+      "an",
+      "umbrella",
+      "since",
+      "it",
+      "is",
+      "going",
+      "to",
+      "rain",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "비가 올 것 같아서 우리는 우산이 필요하니?",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We need an umbrella that it is going to rain?",
+      "statementForm": [
+        "We need an umbrella since it is going to rain?",
+        "We need an umbrella since it is going to rain"
+      ],
+      "fragmentForm": "We need an umbrella since it is going to",
+      "wormholeVariants": [
+        "We need an umbrella that it is going to rain?",
+        "We need an umbrella as it is going to rain?",
+        "We need an umbrella for it is going to rain?",
+        "We need an umbrella because of it is going to rain?",
+        "We need an umbrella from it is going to rain?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_096",
+    "seedId": "since_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "부모님이 오셔서 그는 방을 청소했다.",
+    "english": "He cleaned the room since his parents were coming.",
+    "words": [
+      "He",
+      "cleaned",
+      "the",
+      "room",
+      "since",
+      "his",
+      "parents",
+      "were",
+      "coming",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "부모님이 오셔서 그는 방을 청소했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He cleaned the room that his parents were coming.",
+      "statementForm": [
+        "He cleaned the room since his parents were coming.",
+        "He cleaned the room since his parents were coming",
+        "Since his parents were coming, He cleaned the room.",
+        "Since his parents were coming, He cleaned the room"
+      ],
+      "fragmentForm": "He cleaned the room since his parents were",
+      "wormholeVariants": [
+        "He cleaned the room that his parents were coming.",
+        "He cleaned the room as his parents were coming.",
+        "He cleaned the room for his parents were coming.",
+        "He cleaned the room because of his parents were coming.",
+        "He cleaned the room from his parents were coming."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_097",
+    "seedId": "since_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "선생님이 칭찬해서 그는 자신감이 생겼다.",
+    "english": "He became confident since the teacher praised him.",
+    "words": [
+      "He",
+      "became",
+      "confident",
+      "since",
+      "the",
+      "teacher",
+      "praised",
+      "him",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님이 칭찬해서 그는 자신감이 생겼다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He became confident that the teacher praised him.",
+      "statementForm": [
+        "He became confident since the teacher praised him.",
+        "He became confident since the teacher praised him",
+        "Since the teacher praised him, He became confident.",
+        "Since the teacher praised him, He became confident"
+      ],
+      "fragmentForm": "He became confident since the teacher praised",
+      "wormholeVariants": [
+        "He became confident that the teacher praised him.",
+        "He became confident as the teacher praised him.",
+        "He became confident for the teacher praised him.",
+        "He became confident because of the teacher praised him.",
+        "He became confident from the teacher praised him."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_098",
+    "seedId": "since_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "기분이 좋아서 그녀는 노래를 불렀다.",
+    "english": "She sang a song since she felt happy.",
+    "words": [
+      "She",
+      "sang",
+      "a",
+      "song",
+      "since",
+      "she",
+      "felt",
+      "happy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "기분이 좋아서 그녀는 노래를 불렀다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She sang a song that she felt happy.",
+      "statementForm": [
+        "She sang a song since she felt happy.",
+        "She sang a song since she felt happy",
+        "Since she felt happy, She sang a song.",
+        "Since she felt happy, She sang a song"
+      ],
+      "fragmentForm": "She sang a song since she felt",
+      "wormholeVariants": [
+        "She sang a song that she felt happy.",
+        "She sang a song as she felt happy.",
+        "She sang a song for she felt happy.",
+        "She sang a song because of she felt happy.",
+        "She sang a song from she felt happy."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_099",
+    "seedId": "since_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "시간이 없어서 우리는 계획을 줄였다.",
+    "english": "We reduced the plan since we had little time.",
+    "words": [
+      "We",
+      "reduced",
+      "the",
+      "plan",
+      "since",
+      "we",
+      "had",
+      "little",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "시간이 없어서 우리는 계획을 줄였다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We reduced the plan that we had little time.",
+      "statementForm": [
+        "We reduced the plan since we had little time.",
+        "We reduced the plan since we had little time",
+        "Since we had little time, We reduced the plan.",
+        "Since we had little time, We reduced the plan"
+      ],
+      "fragmentForm": "We reduced the plan since we had little",
+      "wormholeVariants": [
+        "We reduced the plan that we had little time.",
+        "We reduced the plan as we had little time.",
+        "We reduced the plan for we had little time.",
+        "We reduced the plan because of we had little time.",
+        "We reduced the plan from we had little time."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_100",
+    "seedId": "since_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "문제가 생겨서 그는 바로 연락했니?",
+    "english": "He contacted me since a problem came up?",
+    "words": [
+      "He",
+      "contacted",
+      "me",
+      "since",
+      "a",
+      "problem",
+      "came",
+      "up",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "문제가 생겨서 그는 바로 연락했니?",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "question",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He contacted me that a problem came up?",
+      "statementForm": [
+        "He contacted me since a problem came up?",
+        "He contacted me since a problem came up"
+      ],
+      "fragmentForm": "He contacted me since a problem came",
+      "wormholeVariants": [
+        "He contacted me that a problem came up?",
+        "He contacted me as a problem came up?",
+        "He contacted me for a problem came up?",
+        "He contacted me because of a problem came up?",
+        "He contacted me from a problem came up?"
+      ]
+    }
+  },
+  {
+    "id": "m2_since_101",
+    "seedId": "since_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "매니저가 없어서 그는 회의를 취소했다.",
+    "english": "He canceled the meeting since the manager was absent.",
+    "words": [
+      "He",
+      "canceled",
+      "the",
+      "meeting",
+      "since",
+      "the",
+      "manager",
+      "was",
+      "absent",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "매니저가 없어서 그는 회의를 취소했다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He canceled the meeting that the manager was absent.",
+      "statementForm": [
+        "He canceled the meeting since the manager was absent.",
+        "He canceled the meeting since the manager was absent",
+        "Since the manager was absent, He canceled the meeting.",
+        "Since the manager was absent, He canceled the meeting"
+      ],
+      "fragmentForm": "He canceled the meeting since the manager was",
+      "wormholeVariants": [
+        "He canceled the meeting that the manager was absent.",
+        "He canceled the meeting as the manager was absent.",
+        "He canceled the meeting for the manager was absent.",
+        "He canceled the meeting because of the manager was absent.",
+        "He canceled the meeting from the manager was absent."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_102",
+    "seedId": "since_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "아르바이트가 있어서 나는 동아리에 가입하지 않았다.",
+    "english": "I did not join the club since I had a part-time job.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "join",
+      "the",
+      "club",
+      "since",
+      "I",
+      "had",
+      "a",
+      "part",
+      "time",
+      "job",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아르바이트가 있어서 나는 동아리에 가입하지 않았다.",
+        "I"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "negative",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not join the club that I had a part-time job.",
+      "statementForm": [
+        "I did not join the club since I had a part-time job.",
+        "I did not join the club since I had a part-time job",
+        "Since I had a part-time job, I did not join the club.",
+        "Since I had a part-time job, I did not join the club"
+      ],
+      "fragmentForm": "I did not join the club since I had a part-time",
+      "wormholeVariants": [
+        "I did not join the club that I had a part-time job.",
+        "I did not join the club as I had a part-time job.",
+        "I did not join the club for I had a part-time job.",
+        "I did not join the club because of I had a part-time job.",
+        "I did not join the club from I had a part-time job."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_103",
+    "seedId": "since_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "점수를 높이고 싶어서 그녀는 더 열심히 연습했다.",
+    "english": "She practiced harder since she wanted to improve her score.",
+    "words": [
+      "She",
+      "practiced",
+      "harder",
+      "since",
+      "she",
+      "wanted",
+      "to",
+      "improve",
+      "her",
+      "score",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "점수를 높이고 싶어서 그녀는 더 열심히 연습했다.",
+        "She"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She practiced harder that she wanted to improve her score.",
+      "statementForm": [
+        "She practiced harder since she wanted to improve her score.",
+        "She practiced harder since she wanted to improve her score",
+        "Since she wanted to improve her score, She practiced harder.",
+        "Since she wanted to improve her score, She practiced harder"
+      ],
+      "fragmentForm": "She practiced harder since she wanted to improve her",
+      "wormholeVariants": [
+        "She practiced harder that she wanted to improve her score.",
+        "She practiced harder as she wanted to improve her score.",
+        "She practiced harder for she wanted to improve her score.",
+        "She practiced harder because of she wanted to improve her score.",
+        "She practiced harder from she wanted to improve her score."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_104",
+    "seedId": "since_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "바람이 강해서 우리는 실내에 머물렀다.",
+    "english": "We stayed indoors since the wind was strong.",
+    "words": [
+      "We",
+      "stayed",
+      "indoors",
+      "since",
+      "the",
+      "wind",
+      "was",
+      "strong",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "바람이 강해서 우리는 실내에 머물렀다.",
+        "We"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We stayed indoors that the wind was strong.",
+      "statementForm": [
+        "We stayed indoors since the wind was strong.",
+        "We stayed indoors since the wind was strong",
+        "Since the wind was strong, We stayed indoors.",
+        "Since the wind was strong, We stayed indoors"
+      ],
+      "fragmentForm": "We stayed indoors since the wind was",
+      "wormholeVariants": [
+        "We stayed indoors that the wind was strong.",
+        "We stayed indoors as the wind was strong.",
+        "We stayed indoors for the wind was strong.",
+        "We stayed indoors because of the wind was strong.",
+        "We stayed indoors from the wind was strong."
+      ]
+    }
+  },
+  {
+    "id": "m2_since_105",
+    "seedId": "since_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "since_conjunction",
+    "chapterLabelKo": "접속사 since",
+    "korean": "지갑을 잃어버려서 그는 불안해졌다.",
+    "english": "He became anxious since he lost his wallet.",
+    "words": [
+      "He",
+      "became",
+      "anxious",
+      "since",
+      "he",
+      "lost",
+      "his",
+      "wallet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "since_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지갑을 잃어버려서 그는 불안해졌다.",
+        "He"
+      ],
+      [
+        "since",
+        "since"
+      ],
+      [
+        "주의",
+        "since + clause for reason"
+      ]
+    ],
+    "extraClueWordPool": [
+      "since",
+      "that",
+      "for",
+      "because of",
+      "as"
+    ],
+    "blankTargets": [
+      "since"
+    ],
+    "tags": [
+      "since_conjunction",
+      "affirm",
+      "since",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He became anxious that he lost his wallet.",
+      "statementForm": [
+        "He became anxious since he lost his wallet.",
+        "He became anxious since he lost his wallet",
+        "Since he lost his wallet, He became anxious.",
+        "Since he lost his wallet, He became anxious"
+      ],
+      "fragmentForm": "He became anxious since he lost his",
+      "wormholeVariants": [
+        "He became anxious that he lost his wallet.",
+        "He became anxious as he lost his wallet.",
+        "He became anxious for he lost his wallet.",
+        "He became anxious because of he lost his wallet.",
+        "He became anxious from he lost his wallet."
+      ]
+    }
+  }
+]
