@@ -1,0 +1,6626 @@
+[
+  {
+    "id": "m2_object_complement_adj_001",
+    "seedId": "object_complement_adj_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 소식은 나를 기쁘게 했다.",
+    "english": "The news made me happy.",
+    "words": [
+      "The",
+      "news",
+      "made",
+      "me",
+      "happy",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소식은 나를 기쁘게 했다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + me + happy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "news",
+      "made",
+      "me",
+      "happy",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "me",
+      "happy"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news made me happily.",
+      "statementForm": [
+        "The news made me happy.",
+        "The news made me happy"
+      ],
+      "fragmentForm": "The news made me.",
+      "wormholeVariants": [
+        "The news made me happily.",
+        "The news made me to happy.",
+        "The news made I happy."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_002",
+    "seedId": "object_complement_adj_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 긴 여행은 그들을 피곤하게 했다.",
+    "english": "The long trip made them tired.",
+    "words": [
+      "The",
+      "long",
+      "trip",
+      "made",
+      "them",
+      "tired",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 긴 여행은 그들을 피곤하게 했다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + them + tired"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "long",
+      "trip",
+      "made",
+      "them",
+      "tired",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "them",
+      "tired"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The long trip made them tiredly.",
+      "statementForm": [
+        "The long trip made them tired.",
+        "The long trip made them tired"
+      ],
+      "fragmentForm": "The long trip made.",
+      "wormholeVariants": [
+        "The long trip made them tiredly.",
+        "The long trip made they tired.",
+        "The long trip made them to be tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_003",
+    "seedId": "object_complement_adj_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 문제는 학생들을 혼란스럽게 했다.",
+    "english": "The problem made the students confused.",
+    "words": [
+      "The",
+      "problem",
+      "made",
+      "the",
+      "students",
+      "confused",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 학생들을 혼란스럽게 했다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + the students + confused"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "problem",
+      "made",
+      "the",
+      "students",
+      "confused",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the students",
+      "confused"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem made the students confusingly.",
+      "statementForm": [
+        "The problem made the students confused.",
+        "The problem made the students confused"
+      ],
+      "fragmentForm": "The problem made the.",
+      "wormholeVariants": [
+        "The problem made the students confusingly.",
+        "The problem made the students to confuse.",
+        "The problem made the students confusing."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_004",
+    "seedId": "object_complement_adj_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 설명은 어려운 개념을 명확하게 만들었다.",
+    "english": "The explanation made the difficult idea clear.",
+    "words": [
+      "The",
+      "explanation",
+      "made",
+      "the",
+      "difficult",
+      "idea",
+      "clear",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 어려운 개념을 명확하게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + the difficult idea + clear"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "explanation",
+      "made",
+      "the",
+      "difficult",
+      "idea",
+      "clear",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the difficult idea",
+      "clear"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation made the difficult idea clearly.",
+      "statementForm": [
+        "The explanation made the difficult idea clear.",
+        "The explanation made the difficult idea clear"
+      ],
+      "fragmentForm": "The explanation made the.",
+      "wormholeVariants": [
+        "The explanation made the difficult idea clearly.",
+        "The explanation made the difficult idea to clear.",
+        "The explanation made clear the difficult idea."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_005",
+    "seedId": "object_complement_adj_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 경험은 그를 더 자신감 있게 만들었다.",
+    "english": "The experience made him more confident.",
+    "words": [
+      "The",
+      "experience",
+      "made",
+      "him",
+      "more",
+      "confident",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 경험은 그를 더 자신감 있게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + him + confident"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "experience",
+      "made",
+      "him",
+      "more",
+      "confident",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "him",
+      "more confident"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The experience made him more confidently.",
+      "statementForm": [
+        "The experience made him more confident.",
+        "The experience made him more confident"
+      ],
+      "fragmentForm": "The experience made him.",
+      "wormholeVariants": [
+        "The experience made him more confidently.",
+        "The experience made he more confident.",
+        "The experience made him to be more confident."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_006",
+    "seedId": "object_complement_adj_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 규칙은 교실을 더 안전하게 만들었다.",
+    "english": "The rule made the classroom safer.",
+    "words": [
+      "The",
+      "rule",
+      "made",
+      "the",
+      "classroom",
+      "safer",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 교실을 더 안전하게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + the classroom + safer"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "rule",
+      "made",
+      "the",
+      "classroom",
+      "safer",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the classroom",
+      "safer"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule made the classroom safely.",
+      "statementForm": [
+        "The rule made the classroom safer.",
+        "The rule made the classroom safer"
+      ],
+      "fragmentForm": "The rule made the.",
+      "wormholeVariants": [
+        "The rule made the classroom safely.",
+        "The rule made the classroom more safer.",
+        "The rule made the classroom to safe."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_007",
+    "seedId": "object_complement_adj_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 결정은 우리 팀을 불안하게 만들지 않았다.",
+    "english": "The decision did not make our team nervous.",
+    "words": [
+      "The",
+      "decision",
+      "did",
+      "not",
+      "make",
+      "our",
+      "team",
+      "nervous",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결정은 우리 팀을 불안하게 만들지 않았다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + our team + nervous"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "decision",
+      "did",
+      "not",
+      "make",
+      "our",
+      "team",
+      "quickly"
+    ],
+    "blankTargets": [
+      "make",
+      "our team",
+      "nervous"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The decision did not made our team nervous.",
+      "statementForm": [
+        "The decision did not make our team nervous.",
+        "The decision did not make our team nervous"
+      ],
+      "fragmentForm": "The decision did not.",
+      "wormholeVariants": [
+        "The decision did not made our team nervous.",
+        "The decision did not make our team nervously.",
+        "The decision did not make we nervous."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_008",
+    "seedId": "object_complement_adj_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 질문은 그 학생을 당황하게 만들었다.",
+    "english": "The question made the student embarrassed.",
+    "words": [
+      "The",
+      "question",
+      "made",
+      "the",
+      "student",
+      "embarrassed",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 질문은 그 학생을 당황하게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + the student + embarrassed"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "question",
+      "made",
+      "the",
+      "student",
+      "embarrassed",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the student",
+      "embarrassed"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question made the student embarrassedly.",
+      "statementForm": [
+        "The question made the student embarrassed.",
+        "The question made the student embarrassed"
+      ],
+      "fragmentForm": "The question made the.",
+      "wormholeVariants": [
+        "The question made the student embarrassedly.",
+        "The question made the student embarrassing.",
+        "The question made the student to embarrass."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_009",
+    "seedId": "object_complement_adj_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 작은 성공은 그들을 더 적극적으로 만들었다.",
+    "english": "The small success made them more active.",
+    "words": [
+      "The",
+      "small",
+      "success",
+      "made",
+      "them",
+      "more",
+      "active",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 작은 성공은 그들을 더 적극적으로 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + them + more active"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "small",
+      "success",
+      "made",
+      "them",
+      "more",
+      "active",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "them",
+      "more active"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The small success made them more actively.",
+      "statementForm": [
+        "The small success made them more active.",
+        "The small success made them more active"
+      ],
+      "fragmentForm": "The small success made.",
+      "wormholeVariants": [
+        "The small success made them more actively.",
+        "The small success made they more active.",
+        "The small success made them to active."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_010",
+    "seedId": "object_complement_adj_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 편지는 그녀를 다시 희망적으로 만들었다.",
+    "english": "The letter made her hopeful again.",
+    "words": [
+      "The",
+      "letter",
+      "made",
+      "her",
+      "hopeful",
+      "again",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 편지는 그녀를 다시 희망적으로 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + her + hopeful"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "letter",
+      "made",
+      "her",
+      "hopeful",
+      "again",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "her",
+      "hopeful"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The letter made her hopefully again.",
+      "statementForm": [
+        "The letter made her hopeful again.",
+        "The letter made her hopeful again"
+      ],
+      "fragmentForm": "The letter made her.",
+      "wormholeVariants": [
+        "The letter made her hopefully again.",
+        "The letter made she hopeful again.",
+        "The letter made her to hope again."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_011",
+    "seedId": "object_complement_adj_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 선생님은 학생들을 조용히 하게 만들었다.",
+    "english": "The teacher made the students quiet.",
+    "words": [
+      "The",
+      "teacher",
+      "made",
+      "the",
+      "students",
+      "quiet",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 학생들을 조용히 하게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + the students + quiet"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "made",
+      "the",
+      "students",
+      "quiet",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the students",
+      "quiet"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher made the students quietly.",
+      "statementForm": [
+        "The teacher made the students quiet.",
+        "The teacher made the students quiet"
+      ],
+      "fragmentForm": "The teacher made the.",
+      "wormholeVariants": [
+        "The teacher made the students quietly.",
+        "The teacher made the students to quiet.",
+        "The teacher made the students be quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_012",
+    "seedId": "object_complement_adj_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 농담은 어색한 분위기를 편안하게 만들었다.",
+    "english": "The joke made the awkward mood relaxed.",
+    "words": [
+      "The",
+      "joke",
+      "made",
+      "the",
+      "awkward",
+      "mood",
+      "relaxed",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 농담은 어색한 분위기를 편안하게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + the mood + relaxed"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "joke",
+      "made",
+      "the",
+      "awkward",
+      "mood",
+      "relaxed",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the awkward mood",
+      "relaxed"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The joke made the awkward mood relaxingly.",
+      "statementForm": [
+        "The joke made the awkward mood relaxed.",
+        "The joke made the awkward mood relaxed"
+      ],
+      "fragmentForm": "The joke made the.",
+      "wormholeVariants": [
+        "The joke made the awkward mood relaxingly.",
+        "The joke made the awkward mood relax.",
+        "The joke made the awkward mood to relaxed."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_013",
+    "seedId": "object_complement_adj_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 실패는 그를 더 조심스럽게 만들었다.",
+    "english": "The failure made him more careful.",
+    "words": [
+      "The",
+      "failure",
+      "made",
+      "him",
+      "more",
+      "careful",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 실패는 그를 더 조심스럽게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + him + more careful"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "failure",
+      "made",
+      "him",
+      "more",
+      "careful",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "him",
+      "more careful"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The failure made him more carefully.",
+      "statementForm": [
+        "The failure made him more careful.",
+        "The failure made him more careful"
+      ],
+      "fragmentForm": "The failure made him.",
+      "wormholeVariants": [
+        "The failure made him more carefully.",
+        "The failure made he more careful.",
+        "The failure made him to be careful."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_014",
+    "seedId": "object_complement_adj_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 소음은 수업을 불가능하게 만들었다.",
+    "english": "The noise made the class impossible.",
+    "words": [
+      "The",
+      "noise",
+      "made",
+      "the",
+      "class",
+      "impossible",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소음은 수업을 불가능하게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective",
+        "make + the class + impossible"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "noise",
+      "made",
+      "the",
+      "class",
+      "impossible",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the class",
+      "impossible"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The noise made the class impossibly.",
+      "statementForm": [
+        "The noise made the class impossible.",
+        "The noise made the class impossible"
+      ],
+      "fragmentForm": "The noise made the.",
+      "wormholeVariants": [
+        "The noise made the class impossibly.",
+        "The noise made the class to impossible.",
+        "The noise made the class impossiblely."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_015",
+    "seedId": "object_complement_adj_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 안내문은 절차를 이해하기 쉽게 만들었다.",
+    "english": "The notice made the process easy to understand.",
+    "words": [
+      "The",
+      "notice",
+      "made",
+      "the",
+      "process",
+      "easy",
+      "to",
+      "understand",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 안내문은 절차를 이해하기 쉽게 만들었다.",
+        "The"
+      ],
+      [
+        "make + O + adjective + to V",
+        "make + the process + easy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "notice",
+      "made",
+      "the",
+      "process",
+      "easy",
+      "to",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the process",
+      "easy"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make",
+      "to_infinitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "The notice made the process easily to understand.",
+      "statementForm": [
+        "The notice made the process easy to understand.",
+        "The notice made the process easy to understand"
+      ],
+      "fragmentForm": "The notice made the.",
+      "wormholeVariants": [
+        "The notice made the process easily to understand.",
+        "The notice made the process easy understand.",
+        "The notice made the process to easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_016",
+    "seedId": "object_complement_adj_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 자기 방을 깨끗하게 유지한다.",
+    "english": "He keeps his room clean.",
+    "words": [
+      "He",
+      "keeps",
+      "his",
+      "room",
+      "clean",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 자기 방을 깨끗하게 유지한다.",
+        "He"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + his room + clean"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "keeps",
+      "his",
+      "room",
+      "clean",
+      "quickly"
+    ],
+    "blankTargets": [
+      "keeps",
+      "his room",
+      "clean"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "He keeps his room cleanly.",
+      "statementForm": [
+        "He keeps his room clean.",
+        "He keeps his room clean"
+      ],
+      "fragmentForm": "He keeps his room.",
+      "wormholeVariants": [
+        "He keeps his room cleanly.",
+        "He keep his room clean.",
+        "He keeps his room to clean."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_017",
+    "seedId": "object_complement_adj_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 코트는 나를 따뜻하게 해 주었다.",
+    "english": "The coat kept me warm.",
+    "words": [
+      "The",
+      "coat",
+      "kept",
+      "me",
+      "warm",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 코트는 나를 따뜻하게 해 주었다.",
+        "The"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + me + warm"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "coat",
+      "kept",
+      "me",
+      "warm",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "me",
+      "warm"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "The coat kept me warmly.",
+      "statementForm": [
+        "The coat kept me warm.",
+        "The coat kept me warm"
+      ],
+      "fragmentForm": "The coat kept me.",
+      "wormholeVariants": [
+        "The coat kept me warmly.",
+        "The coat kept I warm.",
+        "The coat kept me to warm."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_018",
+    "seedId": "object_complement_adj_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 소음은 우리를 밤새 깨어 있게 했다.",
+    "english": "The noise kept us awake all night.",
+    "words": [
+      "The",
+      "noise",
+      "kept",
+      "us",
+      "awake",
+      "all",
+      "night",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소음은 우리를 밤새 깨어 있게 했다.",
+        "The"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + us + awake"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "noise",
+      "kept",
+      "us",
+      "awake",
+      "all",
+      "night",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "us",
+      "awake"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "The noise kept us awakely all night.",
+      "statementForm": [
+        "The noise kept us awake all night.",
+        "The noise kept us awake all night"
+      ],
+      "fragmentForm": "The noise kept us.",
+      "wormholeVariants": [
+        "The noise kept us awakely all night.",
+        "The noise kept we awake all night.",
+        "The noise kept us to awake all night."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_019",
+    "seedId": "object_complement_adj_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 문을 열어 둔 채로 두었다.",
+    "english": "They kept the door open.",
+    "words": [
+      "They",
+      "kept",
+      "the",
+      "door",
+      "open",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 문을 열어 둔 채로 두었다.",
+        "They"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + the door + open"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "kept",
+      "the",
+      "door",
+      "open",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "the door",
+      "open"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "They kept the door openly.",
+      "statementForm": [
+        "They kept the door open.",
+        "They kept the door open"
+      ],
+      "fragmentForm": "They kept the door.",
+      "wormholeVariants": [
+        "They kept the door openly.",
+        "They keeped the door open.",
+        "They kept the door to open."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_020",
+    "seedId": "object_complement_adj_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 소식은 모두를 걱정하게 했다.",
+    "english": "The news kept everyone worried.",
+    "words": [
+      "The",
+      "news",
+      "kept",
+      "everyone",
+      "worried",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소식은 모두를 걱정하게 했다.",
+        "The"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + everyone + worried"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "news",
+      "kept",
+      "everyone",
+      "worried",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "everyone",
+      "worried"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news kept everyone worriedly.",
+      "statementForm": [
+        "The news kept everyone worried.",
+        "The news kept everyone worried"
+      ],
+      "fragmentForm": "The news kept everyone.",
+      "wormholeVariants": [
+        "The news kept everyone worriedly.",
+        "The news kept everyone worrying.",
+        "The news kept everyone to worry."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_021",
+    "seedId": "object_complement_adj_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 선생님은 학생들을 조용하게 유지했다.",
+    "english": "The teacher kept the students quiet.",
+    "words": [
+      "The",
+      "teacher",
+      "kept",
+      "the",
+      "students",
+      "quiet",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 학생들을 조용하게 유지했다.",
+        "The"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + the students + quiet"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "kept",
+      "the",
+      "students",
+      "quiet",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "the students",
+      "quiet"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher kept the students quietly.",
+      "statementForm": [
+        "The teacher kept the students quiet.",
+        "The teacher kept the students quiet"
+      ],
+      "fragmentForm": "The teacher kept the.",
+      "wormholeVariants": [
+        "The teacher kept the students quietly.",
+        "The teacher kept the students to quiet.",
+        "The teacher keep the students quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_022",
+    "seedId": "object_complement_adj_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 상자는 음식을 신선하게 유지했다.",
+    "english": "The box kept the food fresh.",
+    "words": [
+      "The",
+      "box",
+      "kept",
+      "the",
+      "food",
+      "fresh",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 상자는 음식을 신선하게 유지했다.",
+        "The"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + the food + fresh"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "box",
+      "kept",
+      "the",
+      "food",
+      "fresh",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "the food",
+      "fresh"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "The box kept the food freshly.",
+      "statementForm": [
+        "The box kept the food fresh.",
+        "The box kept the food fresh"
+      ],
+      "fragmentForm": "The box kept the.",
+      "wormholeVariants": [
+        "The box kept the food freshly.",
+        "The box keeped the food fresh.",
+        "The box kept the food to fresh."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_023",
+    "seedId": "object_complement_adj_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 창문을 닫아 두지 않았다.",
+    "english": "They did not keep the windows closed.",
+    "words": [
+      "They",
+      "did",
+      "not",
+      "keep",
+      "the",
+      "windows",
+      "closed",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 창문을 닫아 두지 않았다.",
+        "They"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + the windows + closed"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "did",
+      "not",
+      "keep",
+      "the",
+      "windows",
+      "closed",
+      "quickly"
+    ],
+    "blankTargets": [
+      "keep",
+      "the windows",
+      "closed"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They did not kept the windows closed.",
+      "statementForm": [
+        "They did not keep the windows closed.",
+        "They did not keep the windows closed"
+      ],
+      "fragmentForm": "They did not keep.",
+      "wormholeVariants": [
+        "They did not kept the windows closed.",
+        "They did not keep the windows closely.",
+        "They did not keep the windows to close."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_024",
+    "seedId": "object_complement_adj_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 습관은 그의 생각을 긍정적으로 유지했다.",
+    "english": "The habit kept his mind positive.",
+    "words": [
+      "The",
+      "habit",
+      "kept",
+      "his",
+      "mind",
+      "positive",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 습관은 그의 생각을 긍정적으로 유지했다.",
+        "The"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + his mind + positive"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "habit",
+      "kept",
+      "his",
+      "mind",
+      "positive",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "his mind",
+      "positive"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "The habit kept his mind positively.",
+      "statementForm": [
+        "The habit kept his mind positive.",
+        "The habit kept his mind positive"
+      ],
+      "fragmentForm": "The habit kept his.",
+      "wormholeVariants": [
+        "The habit kept his mind positively.",
+        "The habit kept him mind positive.",
+        "The habit kept his mind to positive."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_025",
+    "seedId": "object_complement_adj_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 규칙은 복도를 안전하게 유지했다.",
+    "english": "The rule kept the hallway safe.",
+    "words": [
+      "The",
+      "rule",
+      "kept",
+      "the",
+      "hallway",
+      "safe",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 복도를 안전하게 유지했다.",
+        "The"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + the hallway + safe"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "rule",
+      "kept",
+      "the",
+      "hallway",
+      "safe",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "the hallway",
+      "safe"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule kept the hallway safely.",
+      "statementForm": [
+        "The rule kept the hallway safe.",
+        "The rule kept the hallway safe"
+      ],
+      "fragmentForm": "The rule kept the.",
+      "wormholeVariants": [
+        "The rule kept the hallway safely.",
+        "The rule keeped the hallway safe.",
+        "The rule kept the hallway to safe."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_026",
+    "seedId": "object_complement_adj_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 알림은 우리를 집중하게 유지했다.",
+    "english": "The reminder kept us focused.",
+    "words": [
+      "The",
+      "reminder",
+      "kept",
+      "us",
+      "focused",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 알림은 우리를 집중하게 유지했다.",
+        "The"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + us + focused"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "reminder",
+      "kept",
+      "us",
+      "focused",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "us",
+      "focused"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reminder kept us focusedly.",
+      "statementForm": [
+        "The reminder kept us focused.",
+        "The reminder kept us focused"
+      ],
+      "fragmentForm": "The reminder kept us.",
+      "wormholeVariants": [
+        "The reminder kept us focusedly.",
+        "The reminder kept we focused.",
+        "The reminder kept us to focus."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_027",
+    "seedId": "object_complement_adj_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 회의 중에 목소리를 낮게 유지했다.",
+    "english": "He kept his voice low during the meeting.",
+    "words": [
+      "He",
+      "kept",
+      "his",
+      "voice",
+      "low",
+      "during",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 회의 중에 목소리를 낮게 유지했다.",
+        "He"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + his voice + low"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "kept",
+      "his",
+      "voice",
+      "low",
+      "during",
+      "the",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "his voice",
+      "low"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "He kept his voice lowly during the meeting.",
+      "statementForm": [
+        "He kept his voice low during the meeting.",
+        "He kept his voice low during the meeting"
+      ],
+      "fragmentForm": "He kept his voice.",
+      "wormholeVariants": [
+        "He kept his voice lowly during the meeting.",
+        "He keep his voice low during the meeting.",
+        "He kept his voice to low."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_028",
+    "seedId": "object_complement_adj_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 기계를 계속 작동하게 했다.",
+    "english": "They kept the machine running.",
+    "words": [
+      "They",
+      "kept",
+      "the",
+      "machine",
+      "running",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 기계를 계속 작동하게 했다.",
+        "They"
+      ],
+      [
+        "keep + O + V-ing",
+        "keep + the machine + running"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "kept",
+      "the",
+      "machine",
+      "running",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "the machine",
+      "running"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep",
+      "ving"
+    ],
+    "distractorSeeds": {
+      "auxError": "They kept the machine run.",
+      "statementForm": [
+        "They kept the machine running.",
+        "They kept the machine running"
+      ],
+      "fragmentForm": "They kept the machine.",
+      "wormholeVariants": [
+        "They kept the machine run.",
+        "They kept the machine to run.",
+        "They keeped the machine running."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_029",
+    "seedId": "object_complement_adj_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 메시지는 우리를 계속 생각하게 했다.",
+    "english": "The message kept us thinking.",
+    "words": [
+      "The",
+      "message",
+      "kept",
+      "us",
+      "thinking",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 메시지는 우리를 계속 생각하게 했다.",
+        "The"
+      ],
+      [
+        "keep + O + V-ing",
+        "keep + us + thinking"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "message",
+      "kept",
+      "us",
+      "thinking",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "us",
+      "thinking"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep",
+      "ving"
+    ],
+    "distractorSeeds": {
+      "auxError": "The message kept us think.",
+      "statementForm": [
+        "The message kept us thinking.",
+        "The message kept us thinking"
+      ],
+      "fragmentForm": "The message kept us.",
+      "wormholeVariants": [
+        "The message kept us think.",
+        "The message kept we thinking.",
+        "The message kept us to think."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_030",
+    "seedId": "object_complement_adj_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 아이들을 안전하게 안에 있게 했다.",
+    "english": "They kept the children safe inside.",
+    "words": [
+      "They",
+      "kept",
+      "the",
+      "children",
+      "safe",
+      "inside",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 아이들을 안전하게 안에 있게 했다.",
+        "They"
+      ],
+      [
+        "keep + O + adjective",
+        "keep + the children + safe"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "kept",
+      "the",
+      "children",
+      "safe",
+      "inside",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "the children",
+      "safe"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep"
+    ],
+    "distractorSeeds": {
+      "auxError": "They kept the children safely inside.",
+      "statementForm": [
+        "They kept the children safe inside.",
+        "They kept the children safe inside"
+      ],
+      "fragmentForm": "They kept the children.",
+      "wormholeVariants": [
+        "They kept the children safely inside.",
+        "They keeped the children safe inside.",
+        "They kept the children to safe inside."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_031",
+    "seedId": "object_complement_adj_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 책이 유용하다는 것을 알았다.",
+    "english": "I found the book useful.",
+    "words": [
+      "I",
+      "found",
+      "the",
+      "book",
+      "useful",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 책이 유용하다는 것을 알았다.",
+        "I"
+      ],
+      [
+        "find + O + adjective",
+        "find + the book + useful"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "found",
+      "the",
+      "book",
+      "useful",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the book",
+      "useful"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find"
+    ],
+    "distractorSeeds": {
+      "auxError": "I found the book usefully.",
+      "statementForm": [
+        "I found the book useful.",
+        "I found the book useful"
+      ],
+      "fragmentForm": "I found the book.",
+      "wormholeVariants": [
+        "I found the book usefully.",
+        "I found the book to useful.",
+        "I found the book was useful."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_032",
+    "seedId": "object_complement_adj_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그 문제가 어렵다는 것을 알았다.",
+    "english": "We found the problem difficult.",
+    "words": [
+      "We",
+      "found",
+      "the",
+      "problem",
+      "difficult",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 문제가 어렵다는 것을 알았다.",
+        "We"
+      ],
+      [
+        "find + O + adjective",
+        "find + the problem + difficult"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "found",
+      "the",
+      "problem",
+      "difficult",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the problem",
+      "difficult"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find"
+    ],
+    "distractorSeeds": {
+      "auxError": "We found the problem difficultly.",
+      "statementForm": [
+        "We found the problem difficult.",
+        "We found the problem difficult"
+      ],
+      "fragmentForm": "We found the problem.",
+      "wormholeVariants": [
+        "We found the problem difficultly.",
+        "We found the problem to difficult.",
+        "We found the problem was difficult."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_033",
+    "seedId": "object_complement_adj_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그녀는 그 이야기가 흥미롭다는 것을 알았다.",
+    "english": "She found the story interesting.",
+    "words": [
+      "She",
+      "found",
+      "the",
+      "story",
+      "interesting",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 이야기가 흥미롭다는 것을 알았다.",
+        "She"
+      ],
+      [
+        "find + O + adjective",
+        "find + the story + interesting"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "found",
+      "the",
+      "story",
+      "interesting",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the story",
+      "interesting"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find"
+    ],
+    "distractorSeeds": {
+      "auxError": "She found the story interestingly.",
+      "statementForm": [
+        "She found the story interesting.",
+        "She found the story interesting"
+      ],
+      "fragmentForm": "She found the story.",
+      "wormholeVariants": [
+        "She found the story interestingly.",
+        "She found the story to interesting.",
+        "She found the story was interesting."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_034",
+    "seedId": "object_complement_adj_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 규칙이 공정하다는 것을 알았다.",
+    "english": "They found the rule fair.",
+    "words": [
+      "They",
+      "found",
+      "the",
+      "rule",
+      "fair",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 규칙이 공정하다는 것을 알았다.",
+        "They"
+      ],
+      [
+        "find + O + adjective",
+        "find + the rule + fair"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "found",
+      "the",
+      "rule",
+      "fair",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the rule",
+      "fair"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find"
+    ],
+    "distractorSeeds": {
+      "auxError": "They found the rule fairly.",
+      "statementForm": [
+        "They found the rule fair.",
+        "They found the rule fair"
+      ],
+      "fragmentForm": "They found the rule.",
+      "wormholeVariants": [
+        "They found the rule fairly.",
+        "They found the rule to fair.",
+        "They found the rule was fair."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_035",
+    "seedId": "object_complement_adj_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 설명이 충분히 명확하지 않다는 것을 알았다.",
+    "english": "I found the explanation not clear enough.",
+    "words": [
+      "I",
+      "found",
+      "the",
+      "explanation",
+      "not",
+      "clear",
+      "enough",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 설명이 충분히 명확하지 않다는 것을 알았다.",
+        "I"
+      ],
+      [
+        "find + O + adjective",
+        "find + the explanation + not clear enough"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "found",
+      "the",
+      "explanation",
+      "not",
+      "clear",
+      "enough",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the explanation",
+      "not clear enough"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find",
+      "enough"
+    ],
+    "distractorSeeds": {
+      "auxError": "I found the explanation not clearly enough.",
+      "statementForm": [
+        "I found the explanation not clear enough.",
+        "I found the explanation not clear enough"
+      ],
+      "fragmentForm": "I found the explanation.",
+      "wormholeVariants": [
+        "I found the explanation not clearly enough.",
+        "I found the explanation not enough clear.",
+        "I found the explanation was not clear enough."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_036",
+    "seedId": "object_complement_adj_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그 계획이 현실적이라는 것을 알았다.",
+    "english": "We found the plan realistic.",
+    "words": [
+      "We",
+      "found",
+      "the",
+      "plan",
+      "realistic",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 계획이 현실적이라는 것을 알았다.",
+        "We"
+      ],
+      [
+        "find + O + adjective",
+        "find + the plan + realistic"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "found",
+      "the",
+      "plan",
+      "realistic",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the plan",
+      "realistic"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find"
+    ],
+    "distractorSeeds": {
+      "auxError": "We found the plan realistically.",
+      "statementForm": [
+        "We found the plan realistic.",
+        "We found the plan realistic"
+      ],
+      "fragmentForm": "We found the plan.",
+      "wormholeVariants": [
+        "We found the plan realistically.",
+        "We found the plan to realistic.",
+        "We found the plan was realistic."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_037",
+    "seedId": "object_complement_adj_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 답이 처음에는 이상하다고 생각했다.",
+    "english": "I found the answer strange at first.",
+    "words": [
+      "I",
+      "found",
+      "the",
+      "answer",
+      "strange",
+      "at",
+      "first",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 답이 처음에는 이상하다고 생각했다.",
+        "I"
+      ],
+      [
+        "find + O + adjective",
+        "find + the answer + strange"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "found",
+      "the",
+      "answer",
+      "strange",
+      "at",
+      "first",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the answer",
+      "strange"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find"
+    ],
+    "distractorSeeds": {
+      "auxError": "I found the answer strangely at first.",
+      "statementForm": [
+        "I found the answer strange at first.",
+        "I found the answer strange at first"
+      ],
+      "fragmentForm": "I found the answer.",
+      "wormholeVariants": [
+        "I found the answer strangely at first.",
+        "I found the answer to strange at first.",
+        "I found the answer was strange at first."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_038",
+    "seedId": "object_complement_adj_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그녀는 그 일을 혼자 하기 어렵다고 느꼈다.",
+    "english": "She found the work hard to do alone.",
+    "words": [
+      "She",
+      "found",
+      "the",
+      "work",
+      "hard",
+      "to",
+      "do",
+      "alone",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 일을 혼자 하기 어렵다고 느꼈다.",
+        "She"
+      ],
+      [
+        "find + O + adjective + to V",
+        "find + the work + hard"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "found",
+      "the",
+      "work",
+      "hard",
+      "to",
+      "do",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the work",
+      "hard"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find",
+      "to_infinitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "She found the work hardly to do alone.",
+      "statementForm": [
+        "She found the work hard to do alone.",
+        "She found the work hard to do alone"
+      ],
+      "fragmentForm": "She found the work.",
+      "wormholeVariants": [
+        "She found the work hardly to do alone.",
+        "She found the work hard doing alone.",
+        "She found the work was hard to do alone."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_039",
+    "seedId": "object_complement_adj_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그 앱이 사용하기 쉽다는 것을 알았다.",
+    "english": "We found the app easy to use.",
+    "words": [
+      "We",
+      "found",
+      "the",
+      "app",
+      "easy",
+      "to",
+      "use",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 앱이 사용하기 쉽다는 것을 알았다.",
+        "We"
+      ],
+      [
+        "find + O + adjective + to V",
+        "find + the app + easy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "found",
+      "the",
+      "app",
+      "easy",
+      "to",
+      "use",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the app",
+      "easy"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find",
+      "to_infinitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "We found the app easily to use.",
+      "statementForm": [
+        "We found the app easy to use.",
+        "We found the app easy to use"
+      ],
+      "fragmentForm": "We found the app.",
+      "wormholeVariants": [
+        "We found the app easily to use.",
+        "We found the app easy using.",
+        "We found the app was easy to use."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_040",
+    "seedId": "object_complement_adj_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 질문이 대답하기 어렵다고 생각했다.",
+    "english": "I found the question difficult to answer.",
+    "words": [
+      "I",
+      "found",
+      "the",
+      "question",
+      "difficult",
+      "to",
+      "answer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 질문이 대답하기 어렵다고 생각했다.",
+        "I"
+      ],
+      [
+        "find + O + adjective + to V",
+        "find + the question + difficult"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "found",
+      "the",
+      "question",
+      "difficult",
+      "to",
+      "answer",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the question",
+      "difficult"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find",
+      "to_infinitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "I found the question difficultly to answer.",
+      "statementForm": [
+        "I found the question difficult to answer.",
+        "I found the question difficult to answer"
+      ],
+      "fragmentForm": "I found the question.",
+      "wormholeVariants": [
+        "I found the question difficultly to answer.",
+        "I found the question difficult answering.",
+        "I found the question was difficult to answer."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_041",
+    "seedId": "object_complement_adj_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 그 시험이 예상보다 쉽다고 생각했다.",
+    "english": "He found the test easier than expected.",
+    "words": [
+      "He",
+      "found",
+      "the",
+      "test",
+      "easier",
+      "than",
+      "expected",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 시험이 예상보다 쉽다고 생각했다.",
+        "He"
+      ],
+      [
+        "find + O + comparative",
+        "find + the test + easier"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "found",
+      "the",
+      "test",
+      "easier",
+      "than",
+      "expected",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the test",
+      "easier"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "He found the test more easier than expected.",
+      "statementForm": [
+        "He found the test easier than expected.",
+        "He found the test easier than expected"
+      ],
+      "fragmentForm": "He found the test.",
+      "wormholeVariants": [
+        "He found the test more easier than expected.",
+        "He found the test easily than expected.",
+        "He found the test was easier than expected."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_042",
+    "seedId": "object_complement_adj_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 문법 규칙이 기억하기 쉽다는 것을 알았다.",
+    "english": "I found the grammar rule easy to remember.",
+    "words": [
+      "I",
+      "found",
+      "the",
+      "grammar",
+      "rule",
+      "easy",
+      "to",
+      "remember",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 문법 규칙이 기억하기 쉽다는 것을 알았다.",
+        "I"
+      ],
+      [
+        "find + O + adjective + to V",
+        "find + the grammar rule + easy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "found",
+      "the",
+      "grammar",
+      "rule",
+      "easy",
+      "to",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the grammar rule",
+      "easy"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find",
+      "to_infinitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "I found the grammar rule easily to remember.",
+      "statementForm": [
+        "I found the grammar rule easy to remember.",
+        "I found the grammar rule easy to remember"
+      ],
+      "fragmentForm": "I found the grammar.",
+      "wormholeVariants": [
+        "I found the grammar rule easily to remember.",
+        "I found the grammar rule easy remembering.",
+        "I found the grammar rule was easy to remember."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_043",
+    "seedId": "object_complement_adj_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그녀는 그 의자가 오래 앉기에는 불편하다고 느꼈다.",
+    "english": "She found the chair uncomfortable to sit on.",
+    "words": [
+      "She",
+      "found",
+      "the",
+      "chair",
+      "uncomfortable",
+      "to",
+      "sit",
+      "on",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 의자가 오래 앉기에는 불편하다고 느꼈다.",
+        "She"
+      ],
+      [
+        "find + O + adjective + to V",
+        "find + the chair + uncomfortable"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "found",
+      "the",
+      "chair",
+      "uncomfortable",
+      "to",
+      "sit",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the chair",
+      "uncomfortable"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find",
+      "to_infinitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "She found the chair uncomfortably to sit on.",
+      "statementForm": [
+        "She found the chair uncomfortable to sit on.",
+        "She found the chair uncomfortable to sit on"
+      ],
+      "fragmentForm": "She found the chair.",
+      "wormholeVariants": [
+        "She found the chair uncomfortably to sit on.",
+        "She found the chair uncomfortable sitting on.",
+        "She found the chair was uncomfortable to sit on."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_044",
+    "seedId": "object_complement_adj_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 충고가 별로 도움이 되지 않는다고 생각했다.",
+    "english": "I did not find the advice very helpful.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "find",
+      "the",
+      "advice",
+      "very",
+      "helpful",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 충고가 별로 도움이 되지 않는다고 생각했다.",
+        "I"
+      ],
+      [
+        "find + O + adjective",
+        "find + the advice + helpful"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "did",
+      "not",
+      "find",
+      "the",
+      "advice",
+      "very",
+      "quickly"
+    ],
+    "blankTargets": [
+      "find",
+      "the advice",
+      "helpful"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not found the advice very helpful.",
+      "statementForm": [
+        "I did not find the advice very helpful.",
+        "I did not find the advice very helpful"
+      ],
+      "fragmentForm": "I did not find.",
+      "wormholeVariants": [
+        "I did not found the advice very helpful.",
+        "I did not find the advice very helpfully.",
+        "I did not find the advice was very helpful."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_045",
+    "seedId": "object_complement_adj_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 길이 밤에는 위험하다고 생각했다.",
+    "english": "They found the road dangerous at night.",
+    "words": [
+      "They",
+      "found",
+      "the",
+      "road",
+      "dangerous",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 길이 밤에는 위험하다고 생각했다.",
+        "They"
+      ],
+      [
+        "find + O + adjective",
+        "find + the road + dangerous"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "found",
+      "the",
+      "road",
+      "dangerous",
+      "at",
+      "night",
+      "quickly"
+    ],
+    "blankTargets": [
+      "found",
+      "the road",
+      "dangerous"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "find"
+    ],
+    "distractorSeeds": {
+      "auxError": "They found the road dangerously at night.",
+      "statementForm": [
+        "They found the road dangerous at night.",
+        "They found the road dangerous at night"
+      ],
+      "fragmentForm": "They found the road.",
+      "wormholeVariants": [
+        "They found the road dangerously at night.",
+        "They found the road to dangerous at night.",
+        "They found the road was dangerous at night."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_046",
+    "seedId": "object_complement_adj_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 이 문제를 중요하다고 여긴다.",
+    "english": "We consider this issue important.",
+    "words": [
+      "We",
+      "consider",
+      "this",
+      "issue",
+      "important",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 이 문제를 중요하다고 여긴다.",
+        "We"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + this issue + important"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "consider",
+      "this",
+      "issue",
+      "important",
+      "quickly"
+    ],
+    "blankTargets": [
+      "consider",
+      "this issue",
+      "important"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "We consider this issue importantly.",
+      "statementForm": [
+        "We consider this issue important.",
+        "We consider this issue important"
+      ],
+      "fragmentForm": "We consider this issue.",
+      "wormholeVariants": [
+        "We consider this issue importantly.",
+        "We consider this issue to important.",
+        "We consider this issue is important."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_047",
+    "seedId": "object_complement_adj_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 결정을 현명하다고 여겼다.",
+    "english": "They considered the decision wise.",
+    "words": [
+      "They",
+      "considered",
+      "the",
+      "decision",
+      "wise",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 결정을 현명하다고 여겼다.",
+        "They"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the decision + wise"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "considered",
+      "the",
+      "decision",
+      "wise",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the decision",
+      "wise"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "They considered the decision wisely.",
+      "statementForm": [
+        "They considered the decision wise.",
+        "They considered the decision wise"
+      ],
+      "fragmentForm": "They considered the decision.",
+      "wormholeVariants": [
+        "They considered the decision wisely.",
+        "They considered the decision to wise.",
+        "They considered the decision was wise."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_048",
+    "seedId": "object_complement_adj_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 계획을 위험하다고 생각하지 않는다.",
+    "english": "I do not consider the plan dangerous.",
+    "words": [
+      "I",
+      "do",
+      "not",
+      "consider",
+      "the",
+      "plan",
+      "dangerous",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 계획을 위험하다고 생각하지 않는다.",
+        "I"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the plan + dangerous"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "do",
+      "not",
+      "consider",
+      "the",
+      "plan",
+      "dangerous",
+      "quickly"
+    ],
+    "blankTargets": [
+      "consider",
+      "the plan",
+      "dangerous"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I do not considered the plan dangerous.",
+      "statementForm": [
+        "I do not consider the plan dangerous.",
+        "I do not consider the plan dangerous"
+      ],
+      "fragmentForm": "I do not consider.",
+      "wormholeVariants": [
+        "I do not considered the plan dangerous.",
+        "I do not consider the plan dangerously.",
+        "I do not consider the plan is dangerous."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_049",
+    "seedId": "object_complement_adj_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "선생님은 그 학생을 책임감 있다고 여겼다.",
+    "english": "The teacher considered the student responsible.",
+    "words": [
+      "The",
+      "teacher",
+      "considered",
+      "the",
+      "student",
+      "responsible",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님은 그 학생을 책임감 있다고 여겼다.",
+        "The"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the student + responsible"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "considered",
+      "the",
+      "student",
+      "responsible",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the student",
+      "responsible"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher considered the student responsibly.",
+      "statementForm": [
+        "The teacher considered the student responsible.",
+        "The teacher considered the student responsible"
+      ],
+      "fragmentForm": "The teacher considered the.",
+      "wormholeVariants": [
+        "The teacher considered the student responsibly.",
+        "The teacher considered the student to responsible.",
+        "The teacher considered the student was responsible."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_050",
+    "seedId": "object_complement_adj_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그 목표를 현실적이라고 여겼다.",
+    "english": "We considered the goal realistic.",
+    "words": [
+      "We",
+      "considered",
+      "the",
+      "goal",
+      "realistic",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 목표를 현실적이라고 여겼다.",
+        "We"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the goal + realistic"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "considered",
+      "the",
+      "goal",
+      "realistic",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the goal",
+      "realistic"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "We considered the goal realistically.",
+      "statementForm": [
+        "We considered the goal realistic.",
+        "We considered the goal realistic"
+      ],
+      "fragmentForm": "We considered the goal.",
+      "wormholeVariants": [
+        "We considered the goal realistically.",
+        "We considered the goal to realistic.",
+        "We considered the goal was realistic."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_051",
+    "seedId": "object_complement_adj_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 행동을 무례하다고 여겼다.",
+    "english": "They considered the behavior rude.",
+    "words": [
+      "They",
+      "considered",
+      "the",
+      "behavior",
+      "rude",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 행동을 무례하다고 여겼다.",
+        "They"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the behavior + rude"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "considered",
+      "the",
+      "behavior",
+      "rude",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the behavior",
+      "rude"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "They considered the behavior rudely.",
+      "statementForm": [
+        "They considered the behavior rude.",
+        "They considered the behavior rude"
+      ],
+      "fragmentForm": "They considered the behavior.",
+      "wormholeVariants": [
+        "They considered the behavior rudely.",
+        "They considered the behavior to rude.",
+        "They considered the behavior was rude."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_052",
+    "seedId": "object_complement_adj_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 선택을 필요하다고 생각했다.",
+    "english": "I considered the choice necessary.",
+    "words": [
+      "I",
+      "considered",
+      "the",
+      "choice",
+      "necessary",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 선택을 필요하다고 생각했다.",
+        "I"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the choice + necessary"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "considered",
+      "the",
+      "choice",
+      "necessary",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the choice",
+      "necessary"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "I considered the choice necessarily.",
+      "statementForm": [
+        "I considered the choice necessary.",
+        "I considered the choice necessary"
+      ],
+      "fragmentForm": "I considered the choice.",
+      "wormholeVariants": [
+        "I considered the choice necessarily.",
+        "I considered the choice to necessary.",
+        "I considered the choice was necessary."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_053",
+    "seedId": "object_complement_adj_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 회사는 그 프로젝트를 성공적이라고 여겼다.",
+    "english": "The company considered the project successful.",
+    "words": [
+      "The",
+      "company",
+      "considered",
+      "the",
+      "project",
+      "successful",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 회사는 그 프로젝트를 성공적이라고 여겼다.",
+        "The"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the project + successful"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "company",
+      "considered",
+      "the",
+      "project",
+      "successful",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the project",
+      "successful"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "The company considered the project successfully.",
+      "statementForm": [
+        "The company considered the project successful.",
+        "The company considered the project successful"
+      ],
+      "fragmentForm": "The company considered the.",
+      "wormholeVariants": [
+        "The company considered the project successfully.",
+        "The company considered the project to successful.",
+        "The company considered the project was successful."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_054",
+    "seedId": "object_complement_adj_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그 정보를 믿을 만하다고 여기지 않았다.",
+    "english": "We did not consider the information reliable.",
+    "words": [
+      "We",
+      "did",
+      "not",
+      "consider",
+      "the",
+      "information",
+      "reliable",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 정보를 믿을 만하다고 여기지 않았다.",
+        "We"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the information + reliable"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "did",
+      "not",
+      "consider",
+      "the",
+      "information",
+      "reliable",
+      "quickly"
+    ],
+    "blankTargets": [
+      "consider",
+      "the information",
+      "reliable"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We did not considered the information reliable.",
+      "statementForm": [
+        "We did not consider the information reliable.",
+        "We did not consider the information reliable"
+      ],
+      "fragmentForm": "We did not consider.",
+      "wormholeVariants": [
+        "We did not considered the information reliable.",
+        "We did not consider the information reliably.",
+        "We did not consider the information was reliable."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_055",
+    "seedId": "object_complement_adj_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "많은 사람들은 그 생각을 창의적이라고 여겼다.",
+    "english": "Many people considered the idea creative.",
+    "words": [
+      "Many",
+      "people",
+      "considered",
+      "the",
+      "idea",
+      "creative",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "많은 사람들은 그 생각을 창의적이라고 여겼다.",
+        "Many"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the idea + creative"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Many",
+      "people",
+      "considered",
+      "the",
+      "idea",
+      "creative",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the idea",
+      "creative"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "Many people considered the idea creatively.",
+      "statementForm": [
+        "Many people considered the idea creative.",
+        "Many people considered the idea creative"
+      ],
+      "fragmentForm": "Many people considered the.",
+      "wormholeVariants": [
+        "Many people considered the idea creatively.",
+        "Many people considered the idea to creative.",
+        "Many people considered the idea was creative."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_056",
+    "seedId": "object_complement_adj_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 그 실수를 좋은 교훈이라고 여겼다.",
+    "english": "He considered the mistake a good lesson.",
+    "words": [
+      "He",
+      "considered",
+      "the",
+      "mistake",
+      "a",
+      "good",
+      "lesson",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 실수를 좋은 교훈이라고 여겼다.",
+        "He"
+      ],
+      [
+        "consider + O + noun",
+        "consider + the mistake + a lesson"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "considered",
+      "the",
+      "mistake",
+      "a",
+      "good",
+      "lesson",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the mistake",
+      "a good lesson"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "He considered the mistake goodly lesson.",
+      "statementForm": [
+        "He considered the mistake a good lesson.",
+        "He considered the mistake a good lesson"
+      ],
+      "fragmentForm": "He considered the mistake.",
+      "wormholeVariants": [
+        "He considered the mistake goodly lesson.",
+        "He considered the mistake to a good lesson.",
+        "He considered the mistake was a good lesson."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_057",
+    "seedId": "object_complement_adj_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그녀를 훌륭한 리더라고 여겼다.",
+    "english": "We considered her a great leader.",
+    "words": [
+      "We",
+      "considered",
+      "her",
+      "a",
+      "great",
+      "leader",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그녀를 훌륭한 리더라고 여겼다.",
+        "We"
+      ],
+      [
+        "consider + O + noun",
+        "consider + her + a leader"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "considered",
+      "her",
+      "a",
+      "great",
+      "leader",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "her",
+      "a great leader"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "We considered her greatly leader.",
+      "statementForm": [
+        "We considered her a great leader.",
+        "We considered her a great leader"
+      ],
+      "fragmentForm": "We considered her a.",
+      "wormholeVariants": [
+        "We considered her greatly leader.",
+        "We considered she a great leader.",
+        "We considered her was a great leader."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_058",
+    "seedId": "object_complement_adj_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 문제를 기회라고 생각했다.",
+    "english": "They considered the problem an opportunity.",
+    "words": [
+      "They",
+      "considered",
+      "the",
+      "problem",
+      "an",
+      "opportunity",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 문제를 기회라고 생각했다.",
+        "They"
+      ],
+      [
+        "consider + O + noun",
+        "consider + the problem + an opportunity"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "considered",
+      "the",
+      "problem",
+      "an",
+      "opportunity",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the problem",
+      "an opportunity"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "They considered the problem opportunely.",
+      "statementForm": [
+        "They considered the problem an opportunity.",
+        "They considered the problem an opportunity"
+      ],
+      "fragmentForm": "They considered the problem.",
+      "wormholeVariants": [
+        "They considered the problem opportunely.",
+        "They considered the problem to an opportunity.",
+        "They considered the problem was an opportunity."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_059",
+    "seedId": "object_complement_adj_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "나는 그 규칙을 모두에게 공정하다고 여겼다.",
+    "english": "I considered the rule fair to everyone.",
+    "words": [
+      "I",
+      "considered",
+      "the",
+      "rule",
+      "fair",
+      "to",
+      "everyone",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 규칙을 모두에게 공정하다고 여겼다.",
+        "I"
+      ],
+      [
+        "consider + O + adjective",
+        "consider + the rule + fair"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "considered",
+      "the",
+      "rule",
+      "fair",
+      "to",
+      "everyone",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "the rule",
+      "fair"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider"
+    ],
+    "distractorSeeds": {
+      "auxError": "I considered the rule fairly to everyone.",
+      "statementForm": [
+        "I considered the rule fair to everyone.",
+        "I considered the rule fair to everyone"
+      ],
+      "fragmentForm": "I considered the rule.",
+      "wormholeVariants": [
+        "I considered the rule fairly to everyone.",
+        "I considered the rule to fair to everyone.",
+        "I considered the rule was fair to everyone."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_060",
+    "seedId": "object_complement_adj_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 침묵을 더 안전한 선택이라고 여겼다.",
+    "english": "He considered silence the safer choice.",
+    "words": [
+      "He",
+      "considered",
+      "silence",
+      "the",
+      "safer",
+      "choice",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 침묵을 더 안전한 선택이라고 여겼다.",
+        "He"
+      ],
+      [
+        "consider + O + noun",
+        "consider + silence + choice"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "considered",
+      "silence",
+      "the",
+      "safer",
+      "choice",
+      "quickly"
+    ],
+    "blankTargets": [
+      "considered",
+      "silence",
+      "the safer choice"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "consider",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "He considered silence safely choice.",
+      "statementForm": [
+        "He considered silence the safer choice.",
+        "He considered silence the safer choice"
+      ],
+      "fragmentForm": "He considered silence the.",
+      "wormholeVariants": [
+        "He considered silence safely choice.",
+        "He considered silence to the safer choice.",
+        "He considered silence was the safer choice."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_061",
+    "seedId": "object_complement_adj_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그를 천재라고 불렀다.",
+    "english": "They called him a genius.",
+    "words": [
+      "They",
+      "called",
+      "him",
+      "a",
+      "genius",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그를 천재라고 불렀다.",
+        "They"
+      ],
+      [
+        "call + O + noun",
+        "call + him + a genius"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "called",
+      "him",
+      "a",
+      "genius",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "him",
+      "a genius"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "They called him geniusly.",
+      "statementForm": [
+        "They called him a genius.",
+        "They called him a genius"
+      ],
+      "fragmentForm": "They called him a.",
+      "wormholeVariants": [
+        "They called him geniusly.",
+        "They called he a genius.",
+        "They called him to a genius."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_062",
+    "seedId": "object_complement_adj_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그 강아지를 Lucky라고 이름 지었다.",
+    "english": "We named the puppy Lucky.",
+    "words": [
+      "We",
+      "named",
+      "the",
+      "puppy",
+      "Lucky",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 강아지를 Lucky라고 이름 지었다.",
+        "We"
+      ],
+      [
+        "name + O + noun/name",
+        "name + the puppy + Lucky"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "named",
+      "the",
+      "puppy",
+      "Lucky",
+      "quickly"
+    ],
+    "blankTargets": [
+      "named",
+      "the puppy",
+      "Lucky"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "name"
+    ],
+    "distractorSeeds": {
+      "auxError": "We named the puppy luckily.",
+      "statementForm": [
+        "We named the puppy Lucky.",
+        "We named the puppy Lucky"
+      ],
+      "fragmentForm": "We named the puppy.",
+      "wormholeVariants": [
+        "We named the puppy luckily.",
+        "We named the puppy to Lucky.",
+        "We named it the puppy Lucky."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_063",
+    "seedId": "object_complement_adj_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "친구들은 그녀를 팀의 영웅이라고 불렀다.",
+    "english": "Her friends called her the hero of the team.",
+    "words": [
+      "Her",
+      "friends",
+      "called",
+      "her",
+      "the",
+      "hero",
+      "of",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "친구들은 그녀를 팀의 영웅이라고 불렀다.",
+        "Her"
+      ],
+      [
+        "call + O + noun",
+        "call + her + the hero"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Her",
+      "friends",
+      "called",
+      "her",
+      "the",
+      "hero",
+      "of",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "her",
+      "the hero"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "Her friends called she the hero of the team.",
+      "statementForm": [
+        "Her friends called her the hero of the team.",
+        "Her friends called her the hero of the team"
+      ],
+      "fragmentForm": "Her friends called her.",
+      "wormholeVariants": [
+        "Her friends called she the hero of the team.",
+        "Her friends called her heroically.",
+        "Her friends called her to the hero."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_064",
+    "seedId": "object_complement_adj_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 장소를 평화의 정원이라고 불렀다.",
+    "english": "They called the place the Garden of Peace.",
+    "words": [
+      "They",
+      "called",
+      "the",
+      "place",
+      "the",
+      "Garden",
+      "of",
+      "Peace",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 장소를 평화의 정원이라고 불렀다.",
+        "They"
+      ],
+      [
+        "call + O + noun",
+        "call + the place + the Garden"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "called",
+      "the",
+      "place",
+      "the",
+      "Garden",
+      "of",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "the place",
+      "the Garden of Peace"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "They called the place peacefully Garden.",
+      "statementForm": [
+        "They called the place the Garden of Peace.",
+        "They called the place the Garden of Peace"
+      ],
+      "fragmentForm": "They called the place.",
+      "wormholeVariants": [
+        "They called the place peacefully Garden.",
+        "They called the place to the Garden of Peace.",
+        "They called the place was the Garden of Peace."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_065",
+    "seedId": "object_complement_adj_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 선생님은 그 답을 완벽하다고 불렀다.",
+    "english": "The teacher called the answer perfect.",
+    "words": [
+      "The",
+      "teacher",
+      "called",
+      "the",
+      "answer",
+      "perfect",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 그 답을 완벽하다고 불렀다.",
+        "The"
+      ],
+      [
+        "call + O + adjective",
+        "call + the answer + perfect"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "called",
+      "the",
+      "answer",
+      "perfect",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "the answer",
+      "perfect"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher called the answer perfectly.",
+      "statementForm": [
+        "The teacher called the answer perfect.",
+        "The teacher called the answer perfect"
+      ],
+      "fragmentForm": "The teacher called the.",
+      "wormholeVariants": [
+        "The teacher called the answer perfectly.",
+        "The teacher called the answer to perfect.",
+        "The teacher called the answer was perfect."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_066",
+    "seedId": "object_complement_adj_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 행동을 용감하다고 불렀다.",
+    "english": "They called the action brave.",
+    "words": [
+      "They",
+      "called",
+      "the",
+      "action",
+      "brave",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 행동을 용감하다고 불렀다.",
+        "They"
+      ],
+      [
+        "call + O + adjective",
+        "call + the action + brave"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "called",
+      "the",
+      "action",
+      "brave",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "the action",
+      "brave"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call"
+    ],
+    "distractorSeeds": {
+      "auxError": "They called the action bravely.",
+      "statementForm": [
+        "They called the action brave.",
+        "They called the action brave"
+      ],
+      "fragmentForm": "They called the action.",
+      "wormholeVariants": [
+        "They called the action bravely.",
+        "They called the action to brave.",
+        "They called the action was brave."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_067",
+    "seedId": "object_complement_adj_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 그 경험을 인생의 전환점이라고 불렀다.",
+    "english": "He called the experience a turning point in his life.",
+    "words": [
+      "He",
+      "called",
+      "the",
+      "experience",
+      "a",
+      "turning",
+      "point",
+      "in",
+      "his",
+      "life",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 경험을 인생의 전환점이라고 불렀다.",
+        "He"
+      ],
+      [
+        "call + O + noun",
+        "call + the experience + a turning point"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "called",
+      "the",
+      "experience",
+      "a",
+      "turning",
+      "point",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "the experience",
+      "a turning point"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "He called the experience turningly point.",
+      "statementForm": [
+        "He called the experience a turning point in his life.",
+        "He called the experience a turning point in his life"
+      ],
+      "fragmentForm": "He called the experience.",
+      "wormholeVariants": [
+        "He called the experience turningly point.",
+        "He called the experience to a turning point.",
+        "He called the experience was a turning point."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_068",
+    "seedId": "object_complement_adj_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그 프로젝트를 작은 성공이라고 불렀다.",
+    "english": "We called the project a small success.",
+    "words": [
+      "We",
+      "called",
+      "the",
+      "project",
+      "a",
+      "small",
+      "success",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 프로젝트를 작은 성공이라고 불렀다.",
+        "We"
+      ],
+      [
+        "call + O + noun",
+        "call + the project + a success"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "called",
+      "the",
+      "project",
+      "a",
+      "small",
+      "success",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "the project",
+      "a small success"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "We called the project successfully.",
+      "statementForm": [
+        "We called the project a small success.",
+        "We called the project a small success"
+      ],
+      "fragmentForm": "We called the project.",
+      "wormholeVariants": [
+        "We called the project successfully.",
+        "We called the project to a small success.",
+        "We called the project was a small success."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_069",
+    "seedId": "object_complement_adj_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 실수를 단순한 사고라고 부르지 않았다.",
+    "english": "They did not call the mistake a simple accident.",
+    "words": [
+      "They",
+      "did",
+      "not",
+      "call",
+      "the",
+      "mistake",
+      "a",
+      "simple",
+      "accident",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 실수를 단순한 사고라고 부르지 않았다.",
+        "They"
+      ],
+      [
+        "call + O + noun",
+        "call + the mistake + an accident"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "did",
+      "not",
+      "call",
+      "the",
+      "mistake",
+      "a",
+      "quickly"
+    ],
+    "blankTargets": [
+      "call",
+      "the mistake",
+      "a simple accident"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They did not called the mistake a simple accident.",
+      "statementForm": [
+        "They did not call the mistake a simple accident.",
+        "They did not call the mistake a simple accident"
+      ],
+      "fragmentForm": "They did not call.",
+      "wormholeVariants": [
+        "They did not called the mistake a simple accident.",
+        "They did not call the mistake simply accident.",
+        "They did not call the mistake was an accident."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_070",
+    "seedId": "object_complement_adj_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그녀는 그 노트를 비밀 일기라고 불렀다.",
+    "english": "She called the notebook her secret diary.",
+    "words": [
+      "She",
+      "called",
+      "the",
+      "notebook",
+      "her",
+      "secret",
+      "diary",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 노트를 비밀 일기라고 불렀다.",
+        "She"
+      ],
+      [
+        "call + O + noun",
+        "call + the notebook + diary"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "called",
+      "the",
+      "notebook",
+      "her",
+      "secret",
+      "diary",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "the notebook",
+      "her secret diary"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "She called the notebook secretly diary.",
+      "statementForm": [
+        "She called the notebook her secret diary.",
+        "She called the notebook her secret diary"
+      ],
+      "fragmentForm": "She called the notebook.",
+      "wormholeVariants": [
+        "She called the notebook secretly diary.",
+        "She called the notebook to her secret diary.",
+        "She called the notebook was her secret diary."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_071",
+    "seedId": "object_complement_adj_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 고양이를 Shadow라고 이름 지었다.",
+    "english": "They named the cat Shadow.",
+    "words": [
+      "They",
+      "named",
+      "the",
+      "cat",
+      "Shadow",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 고양이를 Shadow라고 이름 지었다.",
+        "They"
+      ],
+      [
+        "name + O + name",
+        "name + the cat + Shadow"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "named",
+      "the",
+      "cat",
+      "Shadow",
+      "quickly"
+    ],
+    "blankTargets": [
+      "named",
+      "the cat",
+      "Shadow"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "name"
+    ],
+    "distractorSeeds": {
+      "auxError": "They named the cat shadowly.",
+      "statementForm": [
+        "They named the cat Shadow.",
+        "They named the cat Shadow"
+      ],
+      "fragmentForm": "They named the cat.",
+      "wormholeVariants": [
+        "They named the cat shadowly.",
+        "They named the cat to Shadow.",
+        "They named it the cat Shadow."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_072",
+    "seedId": "object_complement_adj_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 그 그림을 Hope라고 이름 붙였다.",
+    "english": "He named the painting Hope.",
+    "words": [
+      "He",
+      "named",
+      "the",
+      "painting",
+      "Hope",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 그림을 Hope라고 이름 붙였다.",
+        "He"
+      ],
+      [
+        "name + O + name",
+        "name + the painting + Hope"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "named",
+      "the",
+      "painting",
+      "Hope",
+      "quickly"
+    ],
+    "blankTargets": [
+      "named",
+      "the painting",
+      "Hope"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "name"
+    ],
+    "distractorSeeds": {
+      "auxError": "He named the painting hopefully.",
+      "statementForm": [
+        "He named the painting Hope.",
+        "He named the painting Hope"
+      ],
+      "fragmentForm": "He named the painting.",
+      "wormholeVariants": [
+        "He named the painting hopefully.",
+        "He named the painting to Hope.",
+        "He named it the painting Hope."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_073",
+    "seedId": "object_complement_adj_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "우리는 그 행사를 새로운 시작이라고 불렀다.",
+    "english": "We called the event a new beginning.",
+    "words": [
+      "We",
+      "called",
+      "the",
+      "event",
+      "a",
+      "new",
+      "beginning",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 행사를 새로운 시작이라고 불렀다.",
+        "We"
+      ],
+      [
+        "call + O + noun",
+        "call + the event + a beginning"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "called",
+      "the",
+      "event",
+      "a",
+      "new",
+      "beginning",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "the event",
+      "a new beginning"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "We called the event newly beginning.",
+      "statementForm": [
+        "We called the event a new beginning.",
+        "We called the event a new beginning"
+      ],
+      "fragmentForm": "We called the event.",
+      "wormholeVariants": [
+        "We called the event newly beginning.",
+        "We called the event to a new beginning.",
+        "We called the event was a new beginning."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_074",
+    "seedId": "object_complement_adj_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 계획을 실패라고 부르지 않았다.",
+    "english": "They did not call the plan a failure.",
+    "words": [
+      "They",
+      "did",
+      "not",
+      "call",
+      "the",
+      "plan",
+      "a",
+      "failure",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 계획을 실패라고 부르지 않았다.",
+        "They"
+      ],
+      [
+        "call + O + noun",
+        "call + the plan + a failure"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "did",
+      "not",
+      "call",
+      "the",
+      "plan",
+      "a",
+      "quickly"
+    ],
+    "blankTargets": [
+      "call",
+      "the plan",
+      "a failure"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They did not called the plan a failure.",
+      "statementForm": [
+        "They did not call the plan a failure.",
+        "They did not call the plan a failure"
+      ],
+      "fragmentForm": "They did not call.",
+      "wormholeVariants": [
+        "They did not called the plan a failure.",
+        "They did not call the plan failingly.",
+        "They did not call the plan was a failure."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_075",
+    "seedId": "object_complement_adj_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 그 답을 최선의 선택이라고 불렀다.",
+    "english": "He called the answer the best choice.",
+    "words": [
+      "He",
+      "called",
+      "the",
+      "answer",
+      "the",
+      "best",
+      "choice",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 답을 최선의 선택이라고 불렀다.",
+        "He"
+      ],
+      [
+        "call + O + noun",
+        "call + the answer + the best choice"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "called",
+      "the",
+      "answer",
+      "the",
+      "best",
+      "choice",
+      "quickly"
+    ],
+    "blankTargets": [
+      "called",
+      "the answer",
+      "the best choice"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "call",
+      "noun_complement"
+    ],
+    "distractorSeeds": {
+      "auxError": "He called the answer bestly choice.",
+      "statementForm": [
+        "He called the answer the best choice.",
+        "He called the answer the best choice"
+      ],
+      "fragmentForm": "He called the answer.",
+      "wormholeVariants": [
+        "He called the answer bestly choice.",
+        "He called the answer to the best choice.",
+        "He called the answer was the best choice."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_076",
+    "seedId": "object_complement_adj_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 문을 열린 채로 두었다.",
+    "english": "He left the door open.",
+    "words": [
+      "He",
+      "left",
+      "the",
+      "door",
+      "open",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 문을 열린 채로 두었다.",
+        "He"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + the door + open"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "left",
+      "the",
+      "door",
+      "open",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "the door",
+      "open"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "He left the door openly.",
+      "statementForm": [
+        "He left the door open.",
+        "He left the door open"
+      ],
+      "fragmentForm": "He left the door.",
+      "wormholeVariants": [
+        "He left the door openly.",
+        "He leaved the door open.",
+        "He left the door to open."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_077",
+    "seedId": "object_complement_adj_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그녀는 창문을 닫힌 채로 두었다.",
+    "english": "She left the window closed.",
+    "words": [
+      "She",
+      "left",
+      "the",
+      "window",
+      "closed",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 창문을 닫힌 채로 두었다.",
+        "She"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + the window + closed"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "left",
+      "the",
+      "window",
+      "closed",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "the window",
+      "closed"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "She left the window closely.",
+      "statementForm": [
+        "She left the window closed.",
+        "She left the window closed"
+      ],
+      "fragmentForm": "She left the window.",
+      "wormholeVariants": [
+        "She left the window closely.",
+        "She leaved the window closed.",
+        "She left the window to close."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_078",
+    "seedId": "object_complement_adj_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 뉴스는 모두를 말없이 남겨 두었다.",
+    "english": "The news left everyone silent.",
+    "words": [
+      "The",
+      "news",
+      "left",
+      "everyone",
+      "silent",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 뉴스는 모두를 말없이 남겨 두었다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + everyone + silent"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "news",
+      "left",
+      "everyone",
+      "silent",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "everyone",
+      "silent"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news left everyone silently.",
+      "statementForm": [
+        "The news left everyone silent.",
+        "The news left everyone silent"
+      ],
+      "fragmentForm": "The news left everyone.",
+      "wormholeVariants": [
+        "The news left everyone silently.",
+        "The news leaved everyone silent.",
+        "The news left everyone to silent."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_079",
+    "seedId": "object_complement_adj_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 사고는 그를 무섭게 만들었다.",
+    "english": "The accident left him scared.",
+    "words": [
+      "The",
+      "accident",
+      "left",
+      "him",
+      "scared",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 사고는 그를 무섭게 만들었다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + him + scared"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "accident",
+      "left",
+      "him",
+      "scared",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "him",
+      "scared"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "The accident left him scaredly.",
+      "statementForm": [
+        "The accident left him scared.",
+        "The accident left him scared"
+      ],
+      "fragmentForm": "The accident left him.",
+      "wormholeVariants": [
+        "The accident left him scaredly.",
+        "The accident left he scared.",
+        "The accident left him to scare."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_080",
+    "seedId": "object_complement_adj_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 발표는 청중을 감동한 상태로 남겼다.",
+    "english": "The speech left the audience impressed.",
+    "words": [
+      "The",
+      "speech",
+      "left",
+      "the",
+      "audience",
+      "impressed",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 발표는 청중을 감동한 상태로 남겼다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + the audience + impressed"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "speech",
+      "left",
+      "the",
+      "audience",
+      "impressed",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "the audience",
+      "impressed"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "The speech left the audience impressedly.",
+      "statementForm": [
+        "The speech left the audience impressed.",
+        "The speech left the audience impressed"
+      ],
+      "fragmentForm": "The speech left the.",
+      "wormholeVariants": [
+        "The speech left the audience impressedly.",
+        "The speech left the audience impressing.",
+        "The speech left the audience to impress."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_081",
+    "seedId": "object_complement_adj_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 설명은 나를 더 혼란스럽게 만들었다.",
+    "english": "The explanation left me more confused.",
+    "words": [
+      "The",
+      "explanation",
+      "left",
+      "me",
+      "more",
+      "confused",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 나를 더 혼란스럽게 만들었다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + me + confused"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "explanation",
+      "left",
+      "me",
+      "more",
+      "confused",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "me",
+      "more confused"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation left me more confusedly.",
+      "statementForm": [
+        "The explanation left me more confused.",
+        "The explanation left me more confused"
+      ],
+      "fragmentForm": "The explanation left me.",
+      "wormholeVariants": [
+        "The explanation left me more confusedly.",
+        "The explanation left I more confused.",
+        "The explanation left me to confuse."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_082",
+    "seedId": "object_complement_adj_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 그 문제를 해결되지 않은 채로 두었다.",
+    "english": "They left the problem unsolved.",
+    "words": [
+      "They",
+      "left",
+      "the",
+      "problem",
+      "unsolved",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 문제를 해결되지 않은 채로 두었다.",
+        "They"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + the problem + unsolved"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "left",
+      "the",
+      "problem",
+      "unsolved",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "the problem",
+      "unsolved"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "They left the problem unsolvedly.",
+      "statementForm": [
+        "They left the problem unsolved.",
+        "They left the problem unsolved"
+      ],
+      "fragmentForm": "They left the problem.",
+      "wormholeVariants": [
+        "They left the problem unsolvedly.",
+        "They leaved the problem unsolved.",
+        "They left the problem to unsolve."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_083",
+    "seedId": "object_complement_adj_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그는 불을 켜 둔 채로 두지 않았다.",
+    "english": "He did not leave the light on.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "leave",
+      "the",
+      "light",
+      "on",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 불을 켜 둔 채로 두지 않았다.",
+        "He"
+      ],
+      [
+        "leave + O + adjective/particle",
+        "leave + the light + on"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "did",
+      "not",
+      "leave",
+      "the",
+      "light",
+      "on",
+      "quickly"
+    ],
+    "blankTargets": [
+      "leave",
+      "the light",
+      "on"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not left the light on.",
+      "statementForm": [
+        "He did not leave the light on.",
+        "He did not leave the light on"
+      ],
+      "fragmentForm": "He did not leave.",
+      "wormholeVariants": [
+        "He did not left the light on.",
+        "He did not leave the light oning.",
+        "He did not leave the light to on."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_084",
+    "seedId": "object_complement_adj_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 결정은 우리를 만족스럽지 못하게 했다.",
+    "english": "The decision left us unsatisfied.",
+    "words": [
+      "The",
+      "decision",
+      "left",
+      "us",
+      "unsatisfied",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결정은 우리를 만족스럽지 못하게 했다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + us + unsatisfied"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "decision",
+      "left",
+      "us",
+      "unsatisfied",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "us",
+      "unsatisfied"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "The decision left us unsatisfiedly.",
+      "statementForm": [
+        "The decision left us unsatisfied.",
+        "The decision left us unsatisfied"
+      ],
+      "fragmentForm": "The decision left us.",
+      "wormholeVariants": [
+        "The decision left us unsatisfiedly.",
+        "The decision left we unsatisfied.",
+        "The decision left us to unsatisfy."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_085",
+    "seedId": "object_complement_adj_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 이야기는 아이들을 궁금하게 만들었다.",
+    "english": "The story left the children curious.",
+    "words": [
+      "The",
+      "story",
+      "left",
+      "the",
+      "children",
+      "curious",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이야기는 아이들을 궁금하게 만들었다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + the children + curious"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "story",
+      "left",
+      "the",
+      "children",
+      "curious",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "the children",
+      "curious"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "The story left the children curiously.",
+      "statementForm": [
+        "The story left the children curious.",
+        "The story left the children curious"
+      ],
+      "fragmentForm": "The story left the.",
+      "wormholeVariants": [
+        "The story left the children curiously.",
+        "The story leaved the children curious.",
+        "The story left the children to curious."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_086",
+    "seedId": "object_complement_adj_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 사고는 도로를 막힌 채로 남겨 두었다.",
+    "english": "The accident left the road blocked.",
+    "words": [
+      "The",
+      "accident",
+      "left",
+      "the",
+      "road",
+      "blocked",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 사고는 도로를 막힌 채로 남겨 두었다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + the road + blocked"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "accident",
+      "left",
+      "the",
+      "road",
+      "blocked",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "the road",
+      "blocked"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "The accident left the road blockedly.",
+      "statementForm": [
+        "The accident left the road blocked.",
+        "The accident left the road blocked"
+      ],
+      "fragmentForm": "The accident left the.",
+      "wormholeVariants": [
+        "The accident left the road blockedly.",
+        "The accident left the road blocking.",
+        "The accident left the road to block."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_087",
+    "seedId": "object_complement_adj_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 비밀은 그를 불안한 상태로 남겼다.",
+    "english": "The secret left him uneasy.",
+    "words": [
+      "The",
+      "secret",
+      "left",
+      "him",
+      "uneasy",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 비밀은 그를 불안한 상태로 남겼다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + him + uneasy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "secret",
+      "left",
+      "him",
+      "uneasy",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "him",
+      "uneasy"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "The secret left him uneasily.",
+      "statementForm": [
+        "The secret left him uneasy.",
+        "The secret left him uneasy"
+      ],
+      "fragmentForm": "The secret left him.",
+      "wormholeVariants": [
+        "The secret left him uneasily.",
+        "The secret left he uneasy.",
+        "The secret left him to uneasy."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_088",
+    "seedId": "object_complement_adj_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 빈 의자는 방을 더 쓸쓸하게 만들었다.",
+    "english": "The empty chair left the room lonelier.",
+    "words": [
+      "The",
+      "empty",
+      "chair",
+      "left",
+      "the",
+      "room",
+      "lonelier",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 빈 의자는 방을 더 쓸쓸하게 만들었다.",
+        "The"
+      ],
+      [
+        "leave + O + comparative",
+        "leave + the room + lonelier"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "empty",
+      "chair",
+      "left",
+      "the",
+      "room",
+      "lonelier",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "the room",
+      "lonelier"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The empty chair left the room more lonelier.",
+      "statementForm": [
+        "The empty chair left the room lonelier.",
+        "The empty chair left the room lonelier"
+      ],
+      "fragmentForm": "The empty chair left.",
+      "wormholeVariants": [
+        "The empty chair left the room more lonelier.",
+        "The empty chair left the room lonelyly.",
+        "The empty chair left the room to lonely."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_089",
+    "seedId": "object_complement_adj_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 실패는 우리를 낙담하게 두지 않았다.",
+    "english": "The failure did not leave us discouraged.",
+    "words": [
+      "The",
+      "failure",
+      "did",
+      "not",
+      "leave",
+      "us",
+      "discouraged",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 실패는 우리를 낙담하게 두지 않았다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + us + discouraged"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "failure",
+      "did",
+      "not",
+      "leave",
+      "us",
+      "discouraged",
+      "quickly"
+    ],
+    "blankTargets": [
+      "leave",
+      "us",
+      "discouraged"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The failure did not left us discouraged.",
+      "statementForm": [
+        "The failure did not leave us discouraged.",
+        "The failure did not leave us discouraged"
+      ],
+      "fragmentForm": "The failure did not.",
+      "wormholeVariants": [
+        "The failure did not left us discouraged.",
+        "The failure did not leave us discouragedly.",
+        "The failure did not leave we discouraged."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_090",
+    "seedId": "object_complement_adj_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 메시지는 나를 생각에 잠긴 상태로 남겼다.",
+    "english": "The message left me thoughtful.",
+    "words": [
+      "The",
+      "message",
+      "left",
+      "me",
+      "thoughtful",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 메시지는 나를 생각에 잠긴 상태로 남겼다.",
+        "The"
+      ],
+      [
+        "leave + O + adjective",
+        "leave + me + thoughtful"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "message",
+      "left",
+      "me",
+      "thoughtful",
+      "quickly"
+    ],
+    "blankTargets": [
+      "left",
+      "me",
+      "thoughtful"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "leave"
+    ],
+    "distractorSeeds": {
+      "auxError": "The message left me thoughtfully.",
+      "statementForm": [
+        "The message left me thoughtful.",
+        "The message left me thoughtful"
+      ],
+      "fragmentForm": "The message left me.",
+      "wormholeVariants": [
+        "The message left me thoughtfully.",
+        "The message left I thoughtful.",
+        "The message left me to think."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_091",
+    "seedId": "object_complement_adj_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 선생님은 학생들이 다시 쓰게 했다.",
+    "english": "The teacher made the students rewrite the paragraph.",
+    "words": [
+      "The",
+      "teacher",
+      "made",
+      "the",
+      "students",
+      "rewrite",
+      "the",
+      "paragraph",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 학생들이 다시 쓰게 했다.",
+        "The"
+      ],
+      [
+        "make + O + bare verb",
+        "make + students + rewrite"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "made",
+      "the",
+      "students",
+      "rewrite",
+      "the",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the students",
+      "rewrite"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make",
+      "bare_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher made the students to rewrite the paragraph.",
+      "statementForm": [
+        "The teacher made the students rewrite the paragraph.",
+        "The teacher made the students rewrite the paragraph"
+      ],
+      "fragmentForm": "The teacher made the.",
+      "wormholeVariants": [
+        "The teacher made the students to rewrite the paragraph.",
+        "The teacher made the students rewriting the paragraph.",
+        "The teacher made the students rewrote the paragraph."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_092",
+    "seedId": "object_complement_adj_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 코치는 선수들이 더 열심히 뛰게 했다.",
+    "english": "The coach made the players run harder.",
+    "words": [
+      "The",
+      "coach",
+      "made",
+      "the",
+      "players",
+      "run",
+      "harder",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 코치는 선수들이 더 열심히 뛰게 했다.",
+        "The"
+      ],
+      [
+        "make + O + bare verb",
+        "make + players + run"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "coach",
+      "made",
+      "the",
+      "players",
+      "run",
+      "harder",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "the players",
+      "run"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make",
+      "bare_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The coach made the players to run harder.",
+      "statementForm": [
+        "The coach made the players run harder.",
+        "The coach made the players run harder"
+      ],
+      "fragmentForm": "The coach made the.",
+      "wormholeVariants": [
+        "The coach made the players to run harder.",
+        "The coach made the players running harder.",
+        "The coach made the players ran harder."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_093",
+    "seedId": "object_complement_adj_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 소식은 우리가 계획을 바꾸게 했다.",
+    "english": "The news made us change the plan.",
+    "words": [
+      "The",
+      "news",
+      "made",
+      "us",
+      "change",
+      "the",
+      "plan",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소식은 우리가 계획을 바꾸게 했다.",
+        "The"
+      ],
+      [
+        "make + O + bare verb",
+        "make + us + change"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "news",
+      "made",
+      "us",
+      "change",
+      "the",
+      "plan",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "us",
+      "change"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make",
+      "bare_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news made us to change the plan.",
+      "statementForm": [
+        "The news made us change the plan.",
+        "The news made us change the plan"
+      ],
+      "fragmentForm": "The news made us.",
+      "wormholeVariants": [
+        "The news made us to change the plan.",
+        "The news made we change the plan.",
+        "The news made us changing the plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_094",
+    "seedId": "object_complement_adj_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그 질문은 그가 자신의 실수를 깨닫게 했다.",
+    "english": "The question made him realize his mistake.",
+    "words": [
+      "The",
+      "question",
+      "made",
+      "him",
+      "realize",
+      "his",
+      "mistake",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 질문은 그가 자신의 실수를 깨닫게 했다.",
+        "The"
+      ],
+      [
+        "make + O + bare verb",
+        "make + him + realize"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "question",
+      "made",
+      "him",
+      "realize",
+      "his",
+      "mistake",
+      "quickly"
+    ],
+    "blankTargets": [
+      "made",
+      "him",
+      "realize"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "make",
+      "bare_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question made him to realize his mistake.",
+      "statementForm": [
+        "The question made him realize his mistake.",
+        "The question made him realize his mistake"
+      ],
+      "fragmentForm": "The question made him.",
+      "wormholeVariants": [
+        "The question made him to realize his mistake.",
+        "The question made he realize his mistake.",
+        "The question made him realizing his mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_object_complement_adj_095",
+    "seedId": "object_complement_adj_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "object_complement_adj",
+    "chapterLabelKo": "5형식 목적격 보어",
+    "korean": "그들은 아이들이 계속 기다리게 했다.",
+    "english": "They kept the children waiting.",
+    "words": [
+      "They",
+      "kept",
+      "the",
+      "children",
+      "waiting",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "object_complement_adj",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 아이들이 계속 기다리게 했다.",
+        "They"
+      ],
+      [
+        "keep + O + V-ing",
+        "keep + children + waiting"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "kept",
+      "the",
+      "children",
+      "waiting",
+      "quickly"
+    ],
+    "blankTargets": [
+      "kept",
+      "the children",
+      "waiting"
+    ],
+    "tags": [
+      "object_complement_adj",
+      "keep",
+      "ving"
+    ],
+    "distractorSeeds": {
+      "auxError": "They kept the children wait.",
+      "statementForm": [
+        "They kept the children waiting.",
+        "They kept the children waiting"
+      ],
+      "fragmentForm": "They kept the children.",
+      "wormholeVariants": [
+        "They kept the children wait.",
+        "They kept the children to wait.",
+        "They keeped the children waiting."
+      ]
+    }
+  }
+]
