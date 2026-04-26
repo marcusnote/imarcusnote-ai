@@ -1,0 +1,7286 @@
+[
+  {
+    "id": "m2_here_there_inversion_001",
+    "seedId": "here_there_inversion_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "책상 위에 책 한 권이 있다.",
+    "english": "Here is a book on the desk.",
+    "words": [
+      "Here",
+      "is",
+      "a",
+      "book",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책상 위에 책 한 권이 있다.",
+        "here / is / a / book / on / the / desk"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are books on the desk.",
+      "statementForm": [
+        "A book is on the desk.",
+        "A book is on the desk"
+      ],
+      "fragmentForm": "here / is / a / book / on / the",
+      "wormholeVariants": [
+        "Here are books on the desk.",
+        "Here is books on the desk.",
+        "Here is a books on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_021",
+    "seedId": "here_there_inversion_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "책상 위에 책 한 권이 있다.",
+    "english": "There is a book on the desk.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "book",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책상 위에 책 한 권이 있다.",
+        "there / is / a / book / on / the / desk"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are books on the desk.",
+      "statementForm": [
+        "A book is on the desk.",
+        "A book is on the desk"
+      ],
+      "fragmentForm": "there / is / a / book / on / the",
+      "wormholeVariants": [
+        "There are books on the desk.",
+        "There is books on the desk.",
+        "There is a books on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_011",
+    "seedId": "here_there_inversion_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "책상 위에 책 몇 권이 있다.",
+    "english": "Here are some books on the desk.",
+    "words": [
+      "Here",
+      "are",
+      "some",
+      "books",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책상 위에 책 몇 권이 있다.",
+        "here / are / some / books / on / the / desk"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a book on the desk.",
+      "statementForm": [
+        "Some books are on the desk.",
+        "Some books are on the desk"
+      ],
+      "fragmentForm": "here / are / some / books / on / the",
+      "wormholeVariants": [
+        "Here is a book on the desk.",
+        "Here is some book on the desk.",
+        "Here are a book on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_031",
+    "seedId": "here_there_inversion_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "책상 위에 책 몇 권이 있다.",
+    "english": "There are some books on the desk.",
+    "words": [
+      "There",
+      "are",
+      "some",
+      "books",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책상 위에 책 몇 권이 있다.",
+        "there / are / some / books / on / the / desk"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a book on the desk.",
+      "statementForm": [
+        "Some books are on the desk.",
+        "Some books are on the desk"
+      ],
+      "fragmentForm": "there / are / some / books / on / the",
+      "wormholeVariants": [
+        "There is a book on the desk.",
+        "There is some book on the desk.",
+        "There are a book on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_041",
+    "seedId": "here_there_inversion_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "책상 위에 책 한 권이 있었다.",
+    "english": "Here was a book on the desk.",
+    "words": [
+      "Here",
+      "was",
+      "a",
+      "book",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책상 위에 책 한 권이 있었다.",
+        "here / was / a / book / on / the / desk"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were books on the desk.",
+      "statementForm": [
+        "A book was on the desk.",
+        "A book was on the desk"
+      ],
+      "fragmentForm": "here / was / a / book / on / the",
+      "wormholeVariants": [
+        "Here were books on the desk.",
+        "Here was books on the desk.",
+        "Here was a books on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_061",
+    "seedId": "here_there_inversion_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "책상 위에 책 한 권이 있었다.",
+    "english": "There was a book on the desk.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "book",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책상 위에 책 한 권이 있었다.",
+        "there / was / a / book / on / the / desk"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were books on the desk.",
+      "statementForm": [
+        "A book was on the desk.",
+        "A book was on the desk"
+      ],
+      "fragmentForm": "there / was / a / book / on / the",
+      "wormholeVariants": [
+        "There were books on the desk.",
+        "There was books on the desk.",
+        "There was a books on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_051",
+    "seedId": "here_there_inversion_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "책상 위에 책 몇 권이 있었다.",
+    "english": "Here were some books on the desk.",
+    "words": [
+      "Here",
+      "were",
+      "some",
+      "books",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책상 위에 책 몇 권이 있었다.",
+        "here / were / some / books / on / the / desk"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a book on the desk.",
+      "statementForm": [
+        "Some books were on the desk.",
+        "Some books were on the desk"
+      ],
+      "fragmentForm": "here / were / some / books / on / the",
+      "wormholeVariants": [
+        "Here was a book on the desk.",
+        "Here was some book on the desk.",
+        "Here were a book on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_071",
+    "seedId": "here_there_inversion_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "책상 위에 책 몇 권이 있었다.",
+    "english": "There were some books on the desk.",
+    "words": [
+      "There",
+      "were",
+      "some",
+      "books",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "책상 위에 책 몇 권이 있었다.",
+        "there / were / some / books / on / the / desk"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a book on the desk.",
+      "statementForm": [
+        "Some books were on the desk.",
+        "Some books were on the desk"
+      ],
+      "fragmentForm": "there / were / some / books / on / the",
+      "wormholeVariants": [
+        "There was a book on the desk.",
+        "There was some book on the desk.",
+        "There were a book on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_081",
+    "seedId": "here_there_inversion_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "버스가 온다.",
+    "english": "Here comes the bus.",
+    "words": [
+      "Here",
+      "comes",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "버스가 온다.",
+        "here / comes / the / bus"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come the bus.",
+      "statementForm": [
+        "The bus comes here.",
+        "The bus comes here"
+      ],
+      "fragmentForm": "here / comes / the / bus",
+      "wormholeVariants": [
+        "Here come the bus.",
+        "Here comes buses.",
+        "Here come buses."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_091",
+    "seedId": "here_there_inversion_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "버스가 간다.",
+    "english": "There goes the bus.",
+    "words": [
+      "There",
+      "goes",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "버스가 간다.",
+        "there / goes / the / bus"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes the bus.",
+      "statementForm": [
+        "The bus goes there.",
+        "The bus goes there"
+      ],
+      "fragmentForm": "there / goes / the / bus",
+      "wormholeVariants": [
+        "There comes the bus.",
+        "There goes buses.",
+        "There comes buses."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_002",
+    "seedId": "here_there_inversion_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 가방 안에 열쇠 한 개가 있다.",
+    "english": "Here is a key in my bag.",
+    "words": [
+      "Here",
+      "is",
+      "a",
+      "key",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 가방 안에 열쇠 한 개가 있다.",
+        "here / is / a / key / in / my / bag"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are keys in my bag.",
+      "statementForm": [
+        "A key is in my bag.",
+        "A key is in my bag"
+      ],
+      "fragmentForm": "here / is / a / key / in / my",
+      "wormholeVariants": [
+        "Here are keys in my bag.",
+        "Here is keys in my bag.",
+        "Here is a keys in my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_022",
+    "seedId": "here_there_inversion_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 가방 안에 열쇠 한 개가 있다.",
+    "english": "There is a key in my bag.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "key",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 가방 안에 열쇠 한 개가 있다.",
+        "there / is / a / key / in / my / bag"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are keys in my bag.",
+      "statementForm": [
+        "A key is in my bag.",
+        "A key is in my bag"
+      ],
+      "fragmentForm": "there / is / a / key / in / my",
+      "wormholeVariants": [
+        "There are keys in my bag.",
+        "There is keys in my bag.",
+        "There is a keys in my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_012",
+    "seedId": "here_there_inversion_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 가방 안에 열쇠 두 개가 있다.",
+    "english": "Here are two keys in my bag.",
+    "words": [
+      "Here",
+      "are",
+      "two",
+      "keys",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 가방 안에 열쇠 두 개가 있다.",
+        "here / are / two / keys / in / my / bag"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a key in my bag.",
+      "statementForm": [
+        "Two keys are in my bag.",
+        "Two keys are in my bag"
+      ],
+      "fragmentForm": "here / are / two / keys / in / my",
+      "wormholeVariants": [
+        "Here is a key in my bag.",
+        "Here is some key in my bag.",
+        "Here are a key in my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_032",
+    "seedId": "here_there_inversion_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 가방 안에 열쇠 두 개가 있다.",
+    "english": "There are two keys in my bag.",
+    "words": [
+      "There",
+      "are",
+      "two",
+      "keys",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 가방 안에 열쇠 두 개가 있다.",
+        "there / are / two / keys / in / my / bag"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a key in my bag.",
+      "statementForm": [
+        "Two keys are in my bag.",
+        "Two keys are in my bag"
+      ],
+      "fragmentForm": "there / are / two / keys / in / my",
+      "wormholeVariants": [
+        "There is a key in my bag.",
+        "There is some key in my bag.",
+        "There are a key in my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_042",
+    "seedId": "here_there_inversion_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 가방 안에 열쇠 한 개가 있었다.",
+    "english": "Here was a key in my bag.",
+    "words": [
+      "Here",
+      "was",
+      "a",
+      "key",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 가방 안에 열쇠 한 개가 있었다.",
+        "here / was / a / key / in / my / bag"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were keys in my bag.",
+      "statementForm": [
+        "A key was in my bag.",
+        "A key was in my bag"
+      ],
+      "fragmentForm": "here / was / a / key / in / my",
+      "wormholeVariants": [
+        "Here were keys in my bag.",
+        "Here was keys in my bag.",
+        "Here was a keys in my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_062",
+    "seedId": "here_there_inversion_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 가방 안에 열쇠 한 개가 있었다.",
+    "english": "There was a key in my bag.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "key",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 가방 안에 열쇠 한 개가 있었다.",
+        "there / was / a / key / in / my / bag"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were keys in my bag.",
+      "statementForm": [
+        "A key was in my bag.",
+        "A key was in my bag"
+      ],
+      "fragmentForm": "there / was / a / key / in / my",
+      "wormholeVariants": [
+        "There were keys in my bag.",
+        "There was keys in my bag.",
+        "There was a keys in my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_052",
+    "seedId": "here_there_inversion_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 가방 안에 열쇠 두 개가 있었다.",
+    "english": "Here were two keys in my bag.",
+    "words": [
+      "Here",
+      "were",
+      "two",
+      "keys",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 가방 안에 열쇠 두 개가 있었다.",
+        "here / were / two / keys / in / my / bag"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a key in my bag.",
+      "statementForm": [
+        "Two keys were in my bag.",
+        "Two keys were in my bag"
+      ],
+      "fragmentForm": "here / were / two / keys / in / my",
+      "wormholeVariants": [
+        "Here was a key in my bag.",
+        "Here was some key in my bag.",
+        "Here were a key in my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_072",
+    "seedId": "here_there_inversion_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 가방 안에 열쇠 두 개가 있었다.",
+    "english": "There were two keys in my bag.",
+    "words": [
+      "There",
+      "were",
+      "two",
+      "keys",
+      "in",
+      "my",
+      "bag",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 가방 안에 열쇠 두 개가 있었다.",
+        "there / were / two / keys / in / my / bag"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a key in my bag.",
+      "statementForm": [
+        "Two keys were in my bag.",
+        "Two keys were in my bag"
+      ],
+      "fragmentForm": "there / were / two / keys / in / my",
+      "wormholeVariants": [
+        "There was a key in my bag.",
+        "There was some key in my bag.",
+        "There were a key in my bag."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_082",
+    "seedId": "here_there_inversion_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 친구가 온다.",
+    "english": "Here comes my friend.",
+    "words": [
+      "Here",
+      "comes",
+      "my",
+      "friend",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 친구가 온다.",
+        "here / comes / my / friend"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come my friend.",
+      "statementForm": [
+        "My friend comes here.",
+        "My friend comes here"
+      ],
+      "fragmentForm": "here / comes / my / friend",
+      "wormholeVariants": [
+        "Here come my friend.",
+        "Here comes friends.",
+        "Here come friends."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_092",
+    "seedId": "here_there_inversion_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "내 친구가 간다.",
+    "english": "There goes my friend.",
+    "words": [
+      "There",
+      "goes",
+      "my",
+      "friend",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 친구가 간다.",
+        "there / goes / my / friend"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes my friend.",
+      "statementForm": [
+        "My friend goes there.",
+        "My friend goes there"
+      ],
+      "fragmentForm": "there / goes / my / friend",
+      "wormholeVariants": [
+        "There comes my friend.",
+        "There goes friends.",
+        "There comes friends."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_003",
+    "seedId": "here_there_inversion_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "병 안에 물이 있다.",
+    "english": "Here is some water in the bottle.",
+    "words": [
+      "Here",
+      "is",
+      "some",
+      "water",
+      "in",
+      "the",
+      "bottle",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "병 안에 물이 있다.",
+        "here / is / some / water / in / the / bottle"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "uncountable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are some waters in the bottle.",
+      "statementForm": [
+        "Some water is in the bottle.",
+        "Some water is in the bottle"
+      ],
+      "fragmentForm": "here / is / some / water / in / the",
+      "wormholeVariants": [
+        "Here are some waters in the bottle.",
+        "Here is some waters in the bottle.",
+        "Here are waters in the bottle."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_023",
+    "seedId": "here_there_inversion_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "병 안에 물이 있다.",
+    "english": "There is some water in the bottle.",
+    "words": [
+      "There",
+      "is",
+      "some",
+      "water",
+      "in",
+      "the",
+      "bottle",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "병 안에 물이 있다.",
+        "there / is / some / water / in / the / bottle"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "uncountable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are some waters in the bottle.",
+      "statementForm": [
+        "Some water is in the bottle.",
+        "Some water is in the bottle"
+      ],
+      "fragmentForm": "there / is / some / water / in / the",
+      "wormholeVariants": [
+        "There are some waters in the bottle.",
+        "There is some waters in the bottle.",
+        "There are waters in the bottle."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_013",
+    "seedId": "here_there_inversion_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "탁자 위에 메모 세 장이 있다.",
+    "english": "Here are three notes on the table.",
+    "words": [
+      "Here",
+      "are",
+      "three",
+      "notes",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "탁자 위에 메모 세 장이 있다.",
+        "here / are / three / notes / on / the / table"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a note on the table.",
+      "statementForm": [
+        "Three notes are on the table.",
+        "Three notes are on the table"
+      ],
+      "fragmentForm": "here / are / three / notes / on / the",
+      "wormholeVariants": [
+        "Here is a note on the table.",
+        "Here is some note on the table.",
+        "Here are a note on the table."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_033",
+    "seedId": "here_there_inversion_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "탁자 위에 메모 세 장이 있다.",
+    "english": "There are three notes on the table.",
+    "words": [
+      "There",
+      "are",
+      "three",
+      "notes",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "탁자 위에 메모 세 장이 있다.",
+        "there / are / three / notes / on / the / table"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a note on the table.",
+      "statementForm": [
+        "Three notes are on the table.",
+        "Three notes are on the table"
+      ],
+      "fragmentForm": "there / are / three / notes / on / the",
+      "wormholeVariants": [
+        "There is a note on the table.",
+        "There is some note on the table.",
+        "There are a note on the table."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_043",
+    "seedId": "here_there_inversion_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "병 안에 물이 있었다.",
+    "english": "Here was some water in the bottle.",
+    "words": [
+      "Here",
+      "was",
+      "some",
+      "water",
+      "in",
+      "the",
+      "bottle",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "병 안에 물이 있었다.",
+        "here / was / some / water / in / the / bottle"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "uncountable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were some waters in the bottle.",
+      "statementForm": [
+        "Some water was in the bottle.",
+        "Some water was in the bottle"
+      ],
+      "fragmentForm": "here / was / some / water / in / the",
+      "wormholeVariants": [
+        "Here were some waters in the bottle.",
+        "Here was some waters in the bottle.",
+        "Here were waters in the bottle."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_063",
+    "seedId": "here_there_inversion_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "병 안에 물이 있었다.",
+    "english": "There was some water in the bottle.",
+    "words": [
+      "There",
+      "was",
+      "some",
+      "water",
+      "in",
+      "the",
+      "bottle",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "병 안에 물이 있었다.",
+        "there / was / some / water / in / the / bottle"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "uncountable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were some waters in the bottle.",
+      "statementForm": [
+        "Some water was in the bottle.",
+        "Some water was in the bottle"
+      ],
+      "fragmentForm": "there / was / some / water / in / the",
+      "wormholeVariants": [
+        "There were some waters in the bottle.",
+        "There was some waters in the bottle.",
+        "There were waters in the bottle."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_053",
+    "seedId": "here_there_inversion_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "탁자 위에 메모 세 장이 있었다.",
+    "english": "Here were three notes on the table.",
+    "words": [
+      "Here",
+      "were",
+      "three",
+      "notes",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "탁자 위에 메모 세 장이 있었다.",
+        "here / were / three / notes / on / the / table"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a note on the table.",
+      "statementForm": [
+        "Three notes were on the table.",
+        "Three notes were on the table"
+      ],
+      "fragmentForm": "here / were / three / notes / on / the",
+      "wormholeVariants": [
+        "Here was a note on the table.",
+        "Here was some note on the table.",
+        "Here were a note on the table."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_073",
+    "seedId": "here_there_inversion_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "탁자 위에 메모 세 장이 있었다.",
+    "english": "There were three notes on the table.",
+    "words": [
+      "There",
+      "were",
+      "three",
+      "notes",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "탁자 위에 메모 세 장이 있었다.",
+        "there / were / three / notes / on / the / table"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a note on the table.",
+      "statementForm": [
+        "Three notes were on the table.",
+        "Three notes were on the table"
+      ],
+      "fragmentForm": "there / were / three / notes / on / the",
+      "wormholeVariants": [
+        "There was a note on the table.",
+        "There was some note on the table.",
+        "There were a note on the table."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_083",
+    "seedId": "here_there_inversion_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "선생님이 온다.",
+    "english": "Here comes the teacher.",
+    "words": [
+      "Here",
+      "comes",
+      "the",
+      "teacher",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님이 온다.",
+        "here / comes / the / teacher"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come the teacher.",
+      "statementForm": [
+        "The teacher comes here.",
+        "The teacher comes here"
+      ],
+      "fragmentForm": "here / comes / the / teacher",
+      "wormholeVariants": [
+        "Here come the teacher.",
+        "Here comes teachers.",
+        "Here come teachers."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_093",
+    "seedId": "here_there_inversion_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "선생님이 간다.",
+    "english": "There goes the teacher.",
+    "words": [
+      "There",
+      "goes",
+      "the",
+      "teacher",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님이 간다.",
+        "there / goes / the / teacher"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes the teacher.",
+      "statementForm": [
+        "The teacher goes there.",
+        "The teacher goes there"
+      ],
+      "fragmentForm": "there / goes / the / teacher",
+      "wormholeVariants": [
+        "There comes the teacher.",
+        "There goes teachers.",
+        "There comes teachers."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_004",
+    "seedId": "here_there_inversion_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "탁자 위에 메모 한 장이 있다.",
+    "english": "Here is a note on the table.",
+    "words": [
+      "Here",
+      "is",
+      "a",
+      "note",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "탁자 위에 메모 한 장이 있다.",
+        "here / is / a / note / on / the / table"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are notes on the table.",
+      "statementForm": [
+        "A note is on the table.",
+        "A note is on the table"
+      ],
+      "fragmentForm": "here / is / a / note / on / the",
+      "wormholeVariants": [
+        "Here are notes on the table.",
+        "Here is notes on the table.",
+        "Here is a notes on the table."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_024",
+    "seedId": "here_there_inversion_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "탁자 위에 메모 한 장이 있다.",
+    "english": "There is a note on the table.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "note",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "탁자 위에 메모 한 장이 있다.",
+        "there / is / a / note / on / the / table"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are notes on the table.",
+      "statementForm": [
+        "A note is on the table.",
+        "A note is on the table"
+      ],
+      "fragmentForm": "there / is / a / note / on / the",
+      "wormholeVariants": [
+        "There are notes on the table.",
+        "There is notes on the table.",
+        "There is a notes on the table."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_014",
+    "seedId": "here_there_inversion_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "서랍 안에 휴대폰 몇 대가 있다.",
+    "english": "Here are a few phones in the drawer.",
+    "words": [
+      "Here",
+      "are",
+      "a",
+      "few",
+      "phones",
+      "in",
+      "the",
+      "drawer",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 안에 휴대폰 몇 대가 있다.",
+        "here / are / a / few / phones / in / the / drawer"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a few phones in the drawer.",
+      "statementForm": [
+        "A few phones are in the drawer.",
+        "A few phones are in the drawer"
+      ],
+      "fragmentForm": "here / are / a / few / phones / in",
+      "wormholeVariants": [
+        "Here is a few phones in the drawer.",
+        "Here is some fews phones in the drawer."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_034",
+    "seedId": "here_there_inversion_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "서랍 안에 휴대폰 몇 대가 있다.",
+    "english": "There are a few phones in the drawer.",
+    "words": [
+      "There",
+      "are",
+      "a",
+      "few",
+      "phones",
+      "in",
+      "the",
+      "drawer",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 안에 휴대폰 몇 대가 있다.",
+        "there / are / a / few / phones / in / the / drawer"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a few phones in the drawer.",
+      "statementForm": [
+        "A few phones are in the drawer.",
+        "A few phones are in the drawer"
+      ],
+      "fragmentForm": "there / are / a / few / phones / in",
+      "wormholeVariants": [
+        "There is a few phones in the drawer.",
+        "There is some fews phones in the drawer."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_044",
+    "seedId": "here_there_inversion_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "탁자 위에 메모 한 장이 있었다.",
+    "english": "Here was a note on the table.",
+    "words": [
+      "Here",
+      "was",
+      "a",
+      "note",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "탁자 위에 메모 한 장이 있었다.",
+        "here / was / a / note / on / the / table"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were notes on the table.",
+      "statementForm": [
+        "A note was on the table.",
+        "A note was on the table"
+      ],
+      "fragmentForm": "here / was / a / note / on / the",
+      "wormholeVariants": [
+        "Here were notes on the table.",
+        "Here was notes on the table.",
+        "Here was a notes on the table."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_064",
+    "seedId": "here_there_inversion_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "탁자 위에 메모 한 장이 있었다.",
+    "english": "There was a note on the table.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "note",
+      "on",
+      "the",
+      "table",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "탁자 위에 메모 한 장이 있었다.",
+        "there / was / a / note / on / the / table"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were notes on the table.",
+      "statementForm": [
+        "A note was on the table.",
+        "A note was on the table"
+      ],
+      "fragmentForm": "there / was / a / note / on / the",
+      "wormholeVariants": [
+        "There were notes on the table.",
+        "There was notes on the table.",
+        "There was a notes on the table."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_054",
+    "seedId": "here_there_inversion_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "서랍 안에 휴대폰 몇 대가 있었다.",
+    "english": "Here were a few phones in the drawer.",
+    "words": [
+      "Here",
+      "were",
+      "a",
+      "few",
+      "phones",
+      "in",
+      "the",
+      "drawer",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 안에 휴대폰 몇 대가 있었다.",
+        "here / were / a / few / phones / in / the / drawer"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a few phones in the drawer.",
+      "statementForm": [
+        "A few phones were in the drawer.",
+        "A few phones were in the drawer"
+      ],
+      "fragmentForm": "here / were / a / few / phones / in",
+      "wormholeVariants": [
+        "Here was a few phones in the drawer.",
+        "Here was some fews phones in the drawer."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_074",
+    "seedId": "here_there_inversion_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "서랍 안에 휴대폰 몇 대가 있었다.",
+    "english": "There were a few phones in the drawer.",
+    "words": [
+      "There",
+      "were",
+      "a",
+      "few",
+      "phones",
+      "in",
+      "the",
+      "drawer",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 안에 휴대폰 몇 대가 있었다.",
+        "there / were / a / few / phones / in / the / drawer"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a few phones in the drawer.",
+      "statementForm": [
+        "A few phones were in the drawer.",
+        "A few phones were in the drawer"
+      ],
+      "fragmentForm": "there / were / a / few / phones / in",
+      "wormholeVariants": [
+        "There was a few phones in the drawer.",
+        "There was some fews phones in the drawer."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_084",
+    "seedId": "here_there_inversion_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "기차가 온다.",
+    "english": "Here comes the train.",
+    "words": [
+      "Here",
+      "comes",
+      "the",
+      "train",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "기차가 온다.",
+        "here / comes / the / train"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come the train.",
+      "statementForm": [
+        "The train comes here.",
+        "The train comes here"
+      ],
+      "fragmentForm": "here / comes / the / train",
+      "wormholeVariants": [
+        "Here come the train.",
+        "Here comes trains.",
+        "Here come trains."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_094",
+    "seedId": "here_there_inversion_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "기차가 간다.",
+    "english": "There goes the train.",
+    "words": [
+      "There",
+      "goes",
+      "the",
+      "train",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "기차가 간다.",
+        "there / goes / the / train"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes the train.",
+      "statementForm": [
+        "The train goes there.",
+        "The train goes there"
+      ],
+      "fragmentForm": "there / goes / the / train",
+      "wormholeVariants": [
+        "There comes the train.",
+        "There goes trains.",
+        "There comes trains."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_005",
+    "seedId": "here_there_inversion_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "컵 안에 우유가 있다.",
+    "english": "Here is some milk in the glass.",
+    "words": [
+      "Here",
+      "is",
+      "some",
+      "milk",
+      "in",
+      "the",
+      "glass",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "컵 안에 우유가 있다.",
+        "here / is / some / milk / in / the / glass"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "uncountable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are some milks in the glass.",
+      "statementForm": [
+        "Some milk is in the glass.",
+        "Some milk is in the glass"
+      ],
+      "fragmentForm": "here / is / some / milk / in / the",
+      "wormholeVariants": [
+        "Here are some milks in the glass.",
+        "Here is some milks in the glass.",
+        "Here are milks in the glass."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_025",
+    "seedId": "here_there_inversion_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "컵 안에 우유가 있다.",
+    "english": "There is some milk in the glass.",
+    "words": [
+      "There",
+      "is",
+      "some",
+      "milk",
+      "in",
+      "the",
+      "glass",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "컵 안에 우유가 있다.",
+        "there / is / some / milk / in / the / glass"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "uncountable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are some milks in the glass.",
+      "statementForm": [
+        "Some milk is in the glass.",
+        "Some milk is in the glass"
+      ],
+      "fragmentForm": "there / is / some / milk / in / the",
+      "wormholeVariants": [
+        "There are some milks in the glass.",
+        "There is some milks in the glass.",
+        "There are milks in the glass."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_015",
+    "seedId": "here_there_inversion_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "벽에 우리 가족 사진들이 있다.",
+    "english": "Here are the pictures of my family on the wall.",
+    "words": [
+      "Here",
+      "are",
+      "the",
+      "pictures",
+      "of",
+      "my",
+      "family",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "벽에 우리 가족 사진들이 있다.",
+        "here / are / the / pictures / of / my / family / on / the / wall"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a picture of my family on the wall.",
+      "statementForm": [
+        "The pictures of my family are on the wall.",
+        "The pictures of my family are on the wall"
+      ],
+      "fragmentForm": "here / are / the / pictures / of / my",
+      "wormholeVariants": [
+        "Here is a picture of my family on the wall.",
+        "Here is some picture of my family on the wall.",
+        "Here are a picture of my family on the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_035",
+    "seedId": "here_there_inversion_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "벽에 우리 가족 사진들이 있다.",
+    "english": "There are the pictures of my family on the wall.",
+    "words": [
+      "There",
+      "are",
+      "the",
+      "pictures",
+      "of",
+      "my",
+      "family",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "벽에 우리 가족 사진들이 있다.",
+        "there / are / the / pictures / of / my / family / on / the / wall"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a picture of my family on the wall.",
+      "statementForm": [
+        "The pictures of my family are on the wall.",
+        "The pictures of my family are on the wall"
+      ],
+      "fragmentForm": "there / are / the / pictures / of / my",
+      "wormholeVariants": [
+        "There is a picture of my family on the wall.",
+        "There is some picture of my family on the wall.",
+        "There are a picture of my family on the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_045",
+    "seedId": "here_there_inversion_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "컵 안에 우유가 있었다.",
+    "english": "Here was some milk in the glass.",
+    "words": [
+      "Here",
+      "was",
+      "some",
+      "milk",
+      "in",
+      "the",
+      "glass",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "컵 안에 우유가 있었다.",
+        "here / was / some / milk / in / the / glass"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "uncountable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were some milks in the glass.",
+      "statementForm": [
+        "Some milk was in the glass.",
+        "Some milk was in the glass"
+      ],
+      "fragmentForm": "here / was / some / milk / in / the",
+      "wormholeVariants": [
+        "Here were some milks in the glass.",
+        "Here was some milks in the glass.",
+        "Here were milks in the glass."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_065",
+    "seedId": "here_there_inversion_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "컵 안에 우유가 있었다.",
+    "english": "There was some milk in the glass.",
+    "words": [
+      "There",
+      "was",
+      "some",
+      "milk",
+      "in",
+      "the",
+      "glass",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "컵 안에 우유가 있었다.",
+        "there / was / some / milk / in / the / glass"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "uncountable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were some milks in the glass.",
+      "statementForm": [
+        "Some milk was in the glass.",
+        "Some milk was in the glass"
+      ],
+      "fragmentForm": "there / was / some / milk / in / the",
+      "wormholeVariants": [
+        "There were some milks in the glass.",
+        "There was some milks in the glass.",
+        "There were milks in the glass."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_055",
+    "seedId": "here_there_inversion_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "벽에 우리 가족 사진들이 있었다.",
+    "english": "Here were the pictures of my family on the wall.",
+    "words": [
+      "Here",
+      "were",
+      "the",
+      "pictures",
+      "of",
+      "my",
+      "family",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "벽에 우리 가족 사진들이 있었다.",
+        "here / were / the / pictures / of / my / family / on / the / wall"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a picture of my family on the wall.",
+      "statementForm": [
+        "The pictures of my family were on the wall.",
+        "The pictures of my family were on the wall"
+      ],
+      "fragmentForm": "here / were / the / pictures / of / my",
+      "wormholeVariants": [
+        "Here was a picture of my family on the wall.",
+        "Here was some picture of my family on the wall.",
+        "Here were a picture of my family on the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_075",
+    "seedId": "here_there_inversion_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "벽에 우리 가족 사진들이 있었다.",
+    "english": "There were the pictures of my family on the wall.",
+    "words": [
+      "There",
+      "were",
+      "the",
+      "pictures",
+      "of",
+      "my",
+      "family",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "벽에 우리 가족 사진들이 있었다.",
+        "there / were / the / pictures / of / my / family / on / the / wall"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a picture of my family on the wall.",
+      "statementForm": [
+        "The pictures of my family were on the wall.",
+        "The pictures of my family were on the wall"
+      ],
+      "fragmentForm": "there / were / the / pictures / of / my",
+      "wormholeVariants": [
+        "There was a picture of my family on the wall.",
+        "There was some picture of my family on the wall.",
+        "There were a picture of my family on the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_085",
+    "seedId": "here_there_inversion_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "택시가 온다.",
+    "english": "Here comes the taxi.",
+    "words": [
+      "Here",
+      "comes",
+      "the",
+      "taxi",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "택시가 온다.",
+        "here / comes / the / taxi"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come the taxi.",
+      "statementForm": [
+        "The taxi comes here.",
+        "The taxi comes here"
+      ],
+      "fragmentForm": "here / comes / the / taxi",
+      "wormholeVariants": [
+        "Here come the taxi.",
+        "Here comes taxis.",
+        "Here come taxis."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_095",
+    "seedId": "here_there_inversion_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "택시가 간다.",
+    "english": "There goes the taxi.",
+    "words": [
+      "There",
+      "goes",
+      "the",
+      "taxi",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "택시가 간다.",
+        "there / goes / the / taxi"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes the taxi.",
+      "statementForm": [
+        "The taxi goes there.",
+        "The taxi goes there"
+      ],
+      "fragmentForm": "there / goes / the / taxi",
+      "wormholeVariants": [
+        "There comes the taxi.",
+        "There goes taxis.",
+        "There comes taxis."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_006",
+    "seedId": "here_there_inversion_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "서랍 안에 휴대폰 한 대가 있다.",
+    "english": "Here is a phone in the drawer.",
+    "words": [
+      "Here",
+      "is",
+      "a",
+      "phone",
+      "in",
+      "the",
+      "drawer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 안에 휴대폰 한 대가 있다.",
+        "here / is / a / phone / in / the / drawer"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are phones in the drawer.",
+      "statementForm": [
+        "A phone is in the drawer.",
+        "A phone is in the drawer"
+      ],
+      "fragmentForm": "here / is / a / phone / in / the",
+      "wormholeVariants": [
+        "Here are phones in the drawer.",
+        "Here is phones in the drawer.",
+        "Here is a phones in the drawer."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_026",
+    "seedId": "here_there_inversion_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "서랍 안에 휴대폰 한 대가 있다.",
+    "english": "There is a phone in the drawer.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "phone",
+      "in",
+      "the",
+      "drawer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 안에 휴대폰 한 대가 있다.",
+        "there / is / a / phone / in / the / drawer"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are phones in the drawer.",
+      "statementForm": [
+        "A phone is in the drawer.",
+        "A phone is in the drawer"
+      ],
+      "fragmentForm": "there / is / a / phone / in / the",
+      "wormholeVariants": [
+        "There are phones in the drawer.",
+        "There is phones in the drawer.",
+        "There is a phones in the drawer."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_016",
+    "seedId": "here_there_inversion_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "창가에 램프 두 개가 있다.",
+    "english": "Here are two lamps by the window.",
+    "words": [
+      "Here",
+      "are",
+      "two",
+      "lamps",
+      "by",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "창가에 램프 두 개가 있다.",
+        "here / are / two / lamps / by / the / window"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a lamp by the window.",
+      "statementForm": [
+        "Two lamps are by the window.",
+        "Two lamps are by the window"
+      ],
+      "fragmentForm": "here / are / two / lamps / by / the",
+      "wormholeVariants": [
+        "Here is a lamp by the window.",
+        "Here is some lamp by the window.",
+        "Here are a lamp by the window."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_036",
+    "seedId": "here_there_inversion_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "창가에 램프 두 개가 있다.",
+    "english": "There are two lamps by the window.",
+    "words": [
+      "There",
+      "are",
+      "two",
+      "lamps",
+      "by",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "창가에 램프 두 개가 있다.",
+        "there / are / two / lamps / by / the / window"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a lamp by the window.",
+      "statementForm": [
+        "Two lamps are by the window.",
+        "Two lamps are by the window"
+      ],
+      "fragmentForm": "there / are / two / lamps / by / the",
+      "wormholeVariants": [
+        "There is a lamp by the window.",
+        "There is some lamp by the window.",
+        "There are a lamp by the window."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_046",
+    "seedId": "here_there_inversion_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "서랍 안에 휴대폰 한 대가 있었다.",
+    "english": "Here was a phone in the drawer.",
+    "words": [
+      "Here",
+      "was",
+      "a",
+      "phone",
+      "in",
+      "the",
+      "drawer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 안에 휴대폰 한 대가 있었다.",
+        "here / was / a / phone / in / the / drawer"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were phones in the drawer.",
+      "statementForm": [
+        "A phone was in the drawer.",
+        "A phone was in the drawer"
+      ],
+      "fragmentForm": "here / was / a / phone / in / the",
+      "wormholeVariants": [
+        "Here were phones in the drawer.",
+        "Here was phones in the drawer.",
+        "Here was a phones in the drawer."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_066",
+    "seedId": "here_there_inversion_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "서랍 안에 휴대폰 한 대가 있었다.",
+    "english": "There was a phone in the drawer.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "phone",
+      "in",
+      "the",
+      "drawer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 안에 휴대폰 한 대가 있었다.",
+        "there / was / a / phone / in / the / drawer"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were phones in the drawer.",
+      "statementForm": [
+        "A phone was in the drawer.",
+        "A phone was in the drawer"
+      ],
+      "fragmentForm": "there / was / a / phone / in / the",
+      "wormholeVariants": [
+        "There were phones in the drawer.",
+        "There was phones in the drawer.",
+        "There was a phones in the drawer."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_056",
+    "seedId": "here_there_inversion_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "창가에 램프 두 개가 있었다.",
+    "english": "Here were two lamps by the window.",
+    "words": [
+      "Here",
+      "were",
+      "two",
+      "lamps",
+      "by",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "창가에 램프 두 개가 있었다.",
+        "here / were / two / lamps / by / the / window"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a lamp by the window.",
+      "statementForm": [
+        "Two lamps were by the window.",
+        "Two lamps were by the window"
+      ],
+      "fragmentForm": "here / were / two / lamps / by / the",
+      "wormholeVariants": [
+        "Here was a lamp by the window.",
+        "Here was some lamp by the window.",
+        "Here were a lamp by the window."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_076",
+    "seedId": "here_there_inversion_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "창가에 램프 두 개가 있었다.",
+    "english": "There were two lamps by the window.",
+    "words": [
+      "There",
+      "were",
+      "two",
+      "lamps",
+      "by",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "창가에 램프 두 개가 있었다.",
+        "there / were / two / lamps / by / the / window"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a lamp by the window.",
+      "statementForm": [
+        "Two lamps were by the window.",
+        "Two lamps were by the window"
+      ],
+      "fragmentForm": "there / were / two / lamps / by / the",
+      "wormholeVariants": [
+        "There was a lamp by the window.",
+        "There was some lamp by the window.",
+        "There were a lamp by the window."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_086",
+    "seedId": "here_there_inversion_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "의사가 온다.",
+    "english": "Here comes the doctor.",
+    "words": [
+      "Here",
+      "comes",
+      "the",
+      "doctor",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "의사가 온다.",
+        "here / comes / the / doctor"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come the doctor.",
+      "statementForm": [
+        "The doctor comes here.",
+        "The doctor comes here"
+      ],
+      "fragmentForm": "here / comes / the / doctor",
+      "wormholeVariants": [
+        "Here come the doctor.",
+        "Here comes doctors.",
+        "Here come doctors."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_096",
+    "seedId": "here_there_inversion_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "의사가 간다.",
+    "english": "There goes the doctor.",
+    "words": [
+      "There",
+      "goes",
+      "the",
+      "doctor",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "의사가 간다.",
+        "there / goes / the / doctor"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes the doctor.",
+      "statementForm": [
+        "The doctor goes there.",
+        "The doctor goes there"
+      ],
+      "fragmentForm": "there / goes / the / doctor",
+      "wormholeVariants": [
+        "There comes the doctor.",
+        "There goes doctors.",
+        "There comes doctors."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_007",
+    "seedId": "here_there_inversion_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "화면에 정보가 있다.",
+    "english": "Here is some information on the screen.",
+    "words": [
+      "Here",
+      "is",
+      "some",
+      "information",
+      "on",
+      "the",
+      "screen",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "화면에 정보가 있다.",
+        "here / is / some / information / on / the / screen"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "uncountable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are some informations on the screen.",
+      "statementForm": [
+        "Some information is on the screen.",
+        "Some information is on the screen"
+      ],
+      "fragmentForm": "here / is / some / information / on / the",
+      "wormholeVariants": [
+        "Here are some informations on the screen.",
+        "Here is some informations on the screen.",
+        "Here are informations on the screen."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_027",
+    "seedId": "here_there_inversion_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "화면에 정보가 있다.",
+    "english": "There is some information on the screen.",
+    "words": [
+      "There",
+      "is",
+      "some",
+      "information",
+      "on",
+      "the",
+      "screen",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "화면에 정보가 있다.",
+        "there / is / some / information / on / the / screen"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "uncountable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are some informations on the screen.",
+      "statementForm": [
+        "Some information is on the screen.",
+        "Some information is on the screen"
+      ],
+      "fragmentForm": "there / is / some / information / on / the",
+      "wormholeVariants": [
+        "There are some informations on the screen.",
+        "There is some informations on the screen.",
+        "There are informations on the screen."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_017",
+    "seedId": "here_there_inversion_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "의자 위에 공연 표들이 있다.",
+    "english": "Here are the tickets for the show on the chair.",
+    "words": [
+      "Here",
+      "are",
+      "the",
+      "tickets",
+      "for",
+      "the",
+      "show",
+      "on",
+      "the",
+      "chair",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "의자 위에 공연 표들이 있다.",
+        "here / are / the / tickets / for / the / show / on / the / chair"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a ticket for the show on the chair.",
+      "statementForm": [
+        "The tickets for the show are on the chair.",
+        "The tickets for the show are on the chair"
+      ],
+      "fragmentForm": "here / are / the / tickets / for / the",
+      "wormholeVariants": [
+        "Here is a ticket for the show on the chair.",
+        "Here is some ticket for the show on the chair.",
+        "Here are a ticket for the show on the chair."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_037",
+    "seedId": "here_there_inversion_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "의자 위에 공연 표들이 있다.",
+    "english": "There are the tickets for the show on the chair.",
+    "words": [
+      "There",
+      "are",
+      "the",
+      "tickets",
+      "for",
+      "the",
+      "show",
+      "on",
+      "the",
+      "chair",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "의자 위에 공연 표들이 있다.",
+        "there / are / the / tickets / for / the / show / on / the / chair"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a ticket for the show on the chair.",
+      "statementForm": [
+        "The tickets for the show are on the chair.",
+        "The tickets for the show are on the chair"
+      ],
+      "fragmentForm": "there / are / the / tickets / for / the",
+      "wormholeVariants": [
+        "There is a ticket for the show on the chair.",
+        "There is some ticket for the show on the chair.",
+        "There are a ticket for the show on the chair."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_047",
+    "seedId": "here_there_inversion_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "화면에 정보가 있었다.",
+    "english": "Here was some information on the screen.",
+    "words": [
+      "Here",
+      "was",
+      "some",
+      "information",
+      "on",
+      "the",
+      "screen",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "화면에 정보가 있었다.",
+        "here / was / some / information / on / the / screen"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "uncountable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were some informations on the screen.",
+      "statementForm": [
+        "Some information was on the screen.",
+        "Some information was on the screen"
+      ],
+      "fragmentForm": "here / was / some / information / on / the",
+      "wormholeVariants": [
+        "Here were some informations on the screen.",
+        "Here was some informations on the screen.",
+        "Here were informations on the screen."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_067",
+    "seedId": "here_there_inversion_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "화면에 정보가 있었다.",
+    "english": "There was some information on the screen.",
+    "words": [
+      "There",
+      "was",
+      "some",
+      "information",
+      "on",
+      "the",
+      "screen",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "화면에 정보가 있었다.",
+        "there / was / some / information / on / the / screen"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "uncountable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "uncountable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were some informations on the screen.",
+      "statementForm": [
+        "Some information was on the screen.",
+        "Some information was on the screen"
+      ],
+      "fragmentForm": "there / was / some / information / on / the",
+      "wormholeVariants": [
+        "There were some informations on the screen.",
+        "There was some informations on the screen.",
+        "There were informations on the screen."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_057",
+    "seedId": "here_there_inversion_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "의자 위에 공연 표들이 있었다.",
+    "english": "Here were the tickets for the show on the chair.",
+    "words": [
+      "Here",
+      "were",
+      "the",
+      "tickets",
+      "for",
+      "the",
+      "show",
+      "on",
+      "the",
+      "chair",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "의자 위에 공연 표들이 있었다.",
+        "here / were / the / tickets / for / the / show / on / the / chair"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a ticket for the show on the chair.",
+      "statementForm": [
+        "The tickets for the show were on the chair.",
+        "The tickets for the show were on the chair"
+      ],
+      "fragmentForm": "here / were / the / tickets / for / the",
+      "wormholeVariants": [
+        "Here was a ticket for the show on the chair.",
+        "Here was some ticket for the show on the chair.",
+        "Here were a ticket for the show on the chair."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_077",
+    "seedId": "here_there_inversion_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "의자 위에 공연 표들이 있었다.",
+    "english": "There were the tickets for the show on the chair.",
+    "words": [
+      "There",
+      "were",
+      "the",
+      "tickets",
+      "for",
+      "the",
+      "show",
+      "on",
+      "the",
+      "chair",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "의자 위에 공연 표들이 있었다.",
+        "there / were / the / tickets / for / the / show / on / the / chair"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a ticket for the show on the chair.",
+      "statementForm": [
+        "The tickets for the show were on the chair.",
+        "The tickets for the show were on the chair"
+      ],
+      "fragmentForm": "there / were / the / tickets / for / the",
+      "wormholeVariants": [
+        "There was a ticket for the show on the chair.",
+        "There was some ticket for the show on the chair.",
+        "There were a ticket for the show on the chair."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_087",
+    "seedId": "here_there_inversion_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "종이 온다.",
+    "english": "Here comes the bell.",
+    "words": [
+      "Here",
+      "comes",
+      "the",
+      "bell",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "종이 온다.",
+        "here / comes / the / bell"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come the bell.",
+      "statementForm": [
+        "The bell comes here.",
+        "The bell comes here"
+      ],
+      "fragmentForm": "here / comes / the / bell",
+      "wormholeVariants": [
+        "Here come the bell.",
+        "Here comes bells.",
+        "Here come bells."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_097",
+    "seedId": "here_there_inversion_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "종이 간다.",
+    "english": "There goes the bell.",
+    "words": [
+      "There",
+      "goes",
+      "the",
+      "bell",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "종이 간다.",
+        "there / goes / the / bell"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes the bell.",
+      "statementForm": [
+        "The bell goes there.",
+        "The bell goes there"
+      ],
+      "fragmentForm": "there / goes / the / bell",
+      "wormholeVariants": [
+        "There comes the bell.",
+        "There goes bells.",
+        "There comes bells."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_008",
+    "seedId": "here_there_inversion_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "벽에 우리 가족 사진 한 장이 있다.",
+    "english": "Here is a picture of my family on the wall.",
+    "words": [
+      "Here",
+      "is",
+      "a",
+      "picture",
+      "of",
+      "my",
+      "family",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "벽에 우리 가족 사진 한 장이 있다.",
+        "here / is / a / picture / of / my / family / on / the / wall"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are pictures of my family on the wall.",
+      "statementForm": [
+        "A picture of my family is on the wall.",
+        "A picture of my family is on the wall"
+      ],
+      "fragmentForm": "here / is / a / picture / of / my",
+      "wormholeVariants": [
+        "Here are pictures of my family on the wall.",
+        "Here is pictures of my family on the wall.",
+        "Here is a pictures of my family on the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_028",
+    "seedId": "here_there_inversion_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "벽에 우리 가족 사진 한 장이 있다.",
+    "english": "There is a picture of my family on the wall.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "picture",
+      "of",
+      "my",
+      "family",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "벽에 우리 가족 사진 한 장이 있다.",
+        "there / is / a / picture / of / my / family / on / the / wall"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are pictures of my family on the wall.",
+      "statementForm": [
+        "A picture of my family is on the wall.",
+        "A picture of my family is on the wall"
+      ],
+      "fragmentForm": "there / is / a / picture / of / my",
+      "wormholeVariants": [
+        "There are pictures of my family on the wall.",
+        "There is pictures of my family on the wall.",
+        "There is a pictures of my family on the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_018",
+    "seedId": "here_there_inversion_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "선반 위에 물병 몇 개가 있다.",
+    "english": "Here are some bottles of water on the shelf.",
+    "words": [
+      "Here",
+      "are",
+      "some",
+      "bottles",
+      "of",
+      "water",
+      "on",
+      "the",
+      "shelf",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선반 위에 물병 몇 개가 있다.",
+        "here / are / some / bottles / of / water / on / the / shelf"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a bottle of water on the shelf.",
+      "statementForm": [
+        "Some bottles of water are on the shelf.",
+        "Some bottles of water are on the shelf"
+      ],
+      "fragmentForm": "here / are / some / bottles / of / water",
+      "wormholeVariants": [
+        "Here is a bottle of water on the shelf.",
+        "Here is some bottle of water on the shelf.",
+        "Here are a bottle of water on the shelf."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_038",
+    "seedId": "here_there_inversion_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "선반 위에 물병 몇 개가 있다.",
+    "english": "There are some bottles of water on the shelf.",
+    "words": [
+      "There",
+      "are",
+      "some",
+      "bottles",
+      "of",
+      "water",
+      "on",
+      "the",
+      "shelf",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선반 위에 물병 몇 개가 있다.",
+        "there / are / some / bottles / of / water / on / the / shelf"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a bottle of water on the shelf.",
+      "statementForm": [
+        "Some bottles of water are on the shelf.",
+        "Some bottles of water are on the shelf"
+      ],
+      "fragmentForm": "there / are / some / bottles / of / water",
+      "wormholeVariants": [
+        "There is a bottle of water on the shelf.",
+        "There is some bottle of water on the shelf.",
+        "There are a bottle of water on the shelf."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_048",
+    "seedId": "here_there_inversion_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "벽에 우리 가족 사진 한 장이 있었다.",
+    "english": "Here was a picture of my family on the wall.",
+    "words": [
+      "Here",
+      "was",
+      "a",
+      "picture",
+      "of",
+      "my",
+      "family",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "벽에 우리 가족 사진 한 장이 있었다.",
+        "here / was / a / picture / of / my / family / on / the / wall"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were pictures of my family on the wall.",
+      "statementForm": [
+        "A picture of my family was on the wall.",
+        "A picture of my family was on the wall"
+      ],
+      "fragmentForm": "here / was / a / picture / of / my",
+      "wormholeVariants": [
+        "Here were pictures of my family on the wall.",
+        "Here was pictures of my family on the wall.",
+        "Here was a pictures of my family on the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_068",
+    "seedId": "here_there_inversion_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "벽에 우리 가족 사진 한 장이 있었다.",
+    "english": "There was a picture of my family on the wall.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "picture",
+      "of",
+      "my",
+      "family",
+      "on",
+      "the",
+      "wall",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "벽에 우리 가족 사진 한 장이 있었다.",
+        "there / was / a / picture / of / my / family / on / the / wall"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were pictures of my family on the wall.",
+      "statementForm": [
+        "A picture of my family was on the wall.",
+        "A picture of my family was on the wall"
+      ],
+      "fragmentForm": "there / was / a / picture / of / my",
+      "wormholeVariants": [
+        "There were pictures of my family on the wall.",
+        "There was pictures of my family on the wall.",
+        "There was a pictures of my family on the wall."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_058",
+    "seedId": "here_there_inversion_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "선반 위에 물병 몇 개가 있었다.",
+    "english": "Here were some bottles of water on the shelf.",
+    "words": [
+      "Here",
+      "were",
+      "some",
+      "bottles",
+      "of",
+      "water",
+      "on",
+      "the",
+      "shelf",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선반 위에 물병 몇 개가 있었다.",
+        "here / were / some / bottles / of / water / on / the / shelf"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a bottle of water on the shelf.",
+      "statementForm": [
+        "Some bottles of water were on the shelf.",
+        "Some bottles of water were on the shelf"
+      ],
+      "fragmentForm": "here / were / some / bottles / of / water",
+      "wormholeVariants": [
+        "Here was a bottle of water on the shelf.",
+        "Here was some bottle of water on the shelf.",
+        "Here were a bottle of water on the shelf."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_078",
+    "seedId": "here_there_inversion_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "선반 위에 물병 몇 개가 있었다.",
+    "english": "There were some bottles of water on the shelf.",
+    "words": [
+      "There",
+      "were",
+      "some",
+      "bottles",
+      "of",
+      "water",
+      "on",
+      "the",
+      "shelf",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선반 위에 물병 몇 개가 있었다.",
+        "there / were / some / bottles / of / water / on / the / shelf"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a bottle of water on the shelf.",
+      "statementForm": [
+        "Some bottles of water were on the shelf.",
+        "Some bottles of water were on the shelf"
+      ],
+      "fragmentForm": "there / were / some / bottles / of / water",
+      "wormholeVariants": [
+        "There was a bottle of water on the shelf.",
+        "There was some bottle of water on the shelf.",
+        "There were a bottle of water on the shelf."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_088",
+    "seedId": "here_there_inversion_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "우리의 기회가 온다.",
+    "english": "Here comes our chance.",
+    "words": [
+      "Here",
+      "comes",
+      "our",
+      "chance",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리의 기회가 온다.",
+        "here / comes / our / chance"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come our chance.",
+      "statementForm": [
+        "Our chance comes here.",
+        "Our chance comes here"
+      ],
+      "fragmentForm": "here / comes / our / chance",
+      "wormholeVariants": [
+        "Here come our chance.",
+        "Here comes chances.",
+        "Here come chances."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_098",
+    "seedId": "here_there_inversion_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "우리의 기회가 간다.",
+    "english": "There goes our chance.",
+    "words": [
+      "There",
+      "goes",
+      "our",
+      "chance",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리의 기회가 간다.",
+        "there / goes / our / chance"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes our chance.",
+      "statementForm": [
+        "Our chance goes there.",
+        "Our chance goes there"
+      ],
+      "fragmentForm": "there / goes / our / chance",
+      "wormholeVariants": [
+        "There comes our chance.",
+        "There goes chances.",
+        "There comes chances."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_009",
+    "seedId": "here_there_inversion_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "접시 위에 쿠키 한 개가 있다.",
+    "english": "Here is a cookie on the plate.",
+    "words": [
+      "Here",
+      "is",
+      "a",
+      "cookie",
+      "on",
+      "the",
+      "plate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "접시 위에 쿠키 한 개가 있다.",
+        "here / is / a / cookie / on / the / plate"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are cookies on the plate.",
+      "statementForm": [
+        "A cookie is on the plate.",
+        "A cookie is on the plate"
+      ],
+      "fragmentForm": "here / is / a / cookie / on / the",
+      "wormholeVariants": [
+        "Here are cookies on the plate.",
+        "Here is cookies on the plate.",
+        "Here is a cookies on the plate."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_029",
+    "seedId": "here_there_inversion_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "접시 위에 쿠키 한 개가 있다.",
+    "english": "There is a cookie on the plate.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "cookie",
+      "on",
+      "the",
+      "plate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "접시 위에 쿠키 한 개가 있다.",
+        "there / is / a / cookie / on / the / plate"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are cookies on the plate.",
+      "statementForm": [
+        "A cookie is on the plate.",
+        "A cookie is on the plate"
+      ],
+      "fragmentForm": "there / is / a / cookie / on / the",
+      "wormholeVariants": [
+        "There are cookies on the plate.",
+        "There is cookies on the plate.",
+        "There is a cookies on the plate."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_019",
+    "seedId": "here_there_inversion_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "접시 위에 쿠키 몇 개가 있다.",
+    "english": "Here are some cookies on the plate.",
+    "words": [
+      "Here",
+      "are",
+      "some",
+      "cookies",
+      "on",
+      "the",
+      "plate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "접시 위에 쿠키 몇 개가 있다.",
+        "here / are / some / cookies / on / the / plate"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a cookie on the plate.",
+      "statementForm": [
+        "Some cookies are on the plate.",
+        "Some cookies are on the plate"
+      ],
+      "fragmentForm": "here / are / some / cookies / on / the",
+      "wormholeVariants": [
+        "Here is a cookie on the plate.",
+        "Here is some cookie on the plate.",
+        "Here are a cookie on the plate."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_039",
+    "seedId": "here_there_inversion_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "접시 위에 쿠키 몇 개가 있다.",
+    "english": "There are some cookies on the plate.",
+    "words": [
+      "There",
+      "are",
+      "some",
+      "cookies",
+      "on",
+      "the",
+      "plate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "접시 위에 쿠키 몇 개가 있다.",
+        "there / are / some / cookies / on / the / plate"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a cookie on the plate.",
+      "statementForm": [
+        "Some cookies are on the plate.",
+        "Some cookies are on the plate"
+      ],
+      "fragmentForm": "there / are / some / cookies / on / the",
+      "wormholeVariants": [
+        "There is a cookie on the plate.",
+        "There is some cookie on the plate.",
+        "There are a cookie on the plate."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_049",
+    "seedId": "here_there_inversion_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "접시 위에 쿠키 한 개가 있었다.",
+    "english": "Here was a cookie on the plate.",
+    "words": [
+      "Here",
+      "was",
+      "a",
+      "cookie",
+      "on",
+      "the",
+      "plate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "접시 위에 쿠키 한 개가 있었다.",
+        "here / was / a / cookie / on / the / plate"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were cookies on the plate.",
+      "statementForm": [
+        "A cookie was on the plate.",
+        "A cookie was on the plate"
+      ],
+      "fragmentForm": "here / was / a / cookie / on / the",
+      "wormholeVariants": [
+        "Here were cookies on the plate.",
+        "Here was cookies on the plate.",
+        "Here was a cookies on the plate."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_069",
+    "seedId": "here_there_inversion_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "접시 위에 쿠키 한 개가 있었다.",
+    "english": "There was a cookie on the plate.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "cookie",
+      "on",
+      "the",
+      "plate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "접시 위에 쿠키 한 개가 있었다.",
+        "there / was / a / cookie / on / the / plate"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were cookies on the plate.",
+      "statementForm": [
+        "A cookie was on the plate.",
+        "A cookie was on the plate"
+      ],
+      "fragmentForm": "there / was / a / cookie / on / the",
+      "wormholeVariants": [
+        "There were cookies on the plate.",
+        "There was cookies on the plate.",
+        "There was a cookies on the plate."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_059",
+    "seedId": "here_there_inversion_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "접시 위에 쿠키 몇 개가 있었다.",
+    "english": "Here were some cookies on the plate.",
+    "words": [
+      "Here",
+      "were",
+      "some",
+      "cookies",
+      "on",
+      "the",
+      "plate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "접시 위에 쿠키 몇 개가 있었다.",
+        "here / were / some / cookies / on / the / plate"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a cookie on the plate.",
+      "statementForm": [
+        "Some cookies were on the plate.",
+        "Some cookies were on the plate"
+      ],
+      "fragmentForm": "here / were / some / cookies / on / the",
+      "wormholeVariants": [
+        "Here was a cookie on the plate.",
+        "Here was some cookie on the plate.",
+        "Here were a cookie on the plate."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_079",
+    "seedId": "here_there_inversion_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "접시 위에 쿠키 몇 개가 있었다.",
+    "english": "There were some cookies on the plate.",
+    "words": [
+      "There",
+      "were",
+      "some",
+      "cookies",
+      "on",
+      "the",
+      "plate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "접시 위에 쿠키 몇 개가 있었다.",
+        "there / were / some / cookies / on / the / plate"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a cookie on the plate.",
+      "statementForm": [
+        "Some cookies were on the plate.",
+        "Some cookies were on the plate"
+      ],
+      "fragmentForm": "there / were / some / cookies / on / the",
+      "wormholeVariants": [
+        "There was a cookie on the plate.",
+        "There was some cookie on the plate.",
+        "There were a cookie on the plate."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_089",
+    "seedId": "here_there_inversion_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "아이가 온다.",
+    "english": "Here comes the child.",
+    "words": [
+      "Here",
+      "comes",
+      "the",
+      "child",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아이가 온다.",
+        "here / comes / the / child"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come the child.",
+      "statementForm": [
+        "The child comes here.",
+        "The child comes here"
+      ],
+      "fragmentForm": "here / comes / the / child",
+      "wormholeVariants": [
+        "Here come the child.",
+        "Here comes children.",
+        "Here come children."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_099",
+    "seedId": "here_there_inversion_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "아이가 간다.",
+    "english": "There goes the child.",
+    "words": [
+      "There",
+      "goes",
+      "the",
+      "child",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아이가 간다.",
+        "there / goes / the / child"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes the child.",
+      "statementForm": [
+        "The child goes there.",
+        "The child goes there"
+      ],
+      "fragmentForm": "there / goes / the / child",
+      "wormholeVariants": [
+        "There comes the child.",
+        "There goes children.",
+        "There comes children."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_010",
+    "seedId": "here_there_inversion_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "교실에 지도 한 장이 있다.",
+    "english": "Here is a map in the classroom.",
+    "words": [
+      "Here",
+      "is",
+      "a",
+      "map",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실에 지도 한 장이 있다.",
+        "here / is / a / map / in / the / classroom"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_is"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_is",
+      "pattern_type_here_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here are maps in the classroom.",
+      "statementForm": [
+        "A map is in the classroom.",
+        "A map is in the classroom"
+      ],
+      "fragmentForm": "here / is / a / map / in / the",
+      "wormholeVariants": [
+        "Here are maps in the classroom.",
+        "Here is maps in the classroom.",
+        "Here is a maps in the classroom."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_030",
+    "seedId": "here_there_inversion_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "교실에 지도 한 장이 있다.",
+    "english": "There is a map in the classroom.",
+    "words": [
+      "There",
+      "is",
+      "a",
+      "map",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실에 지도 한 장이 있다.",
+        "there / is / a / map / in / the / classroom"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_is"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_is",
+      "pattern_type_there_is"
+    ],
+    "distractorSeeds": {
+      "auxError": "There are maps in the classroom.",
+      "statementForm": [
+        "A map is in the classroom.",
+        "A map is in the classroom"
+      ],
+      "fragmentForm": "there / is / a / map / in / the",
+      "wormholeVariants": [
+        "There are maps in the classroom.",
+        "There is maps in the classroom.",
+        "There is a maps in the classroom."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_020",
+    "seedId": "here_there_inversion_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "교실에 지도들이 있다.",
+    "english": "Here are the maps in the classroom.",
+    "words": [
+      "Here",
+      "are",
+      "the",
+      "maps",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실에 지도들이 있다.",
+        "here / are / the / maps / in / the / classroom"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_are"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "here_are",
+      "pattern_type_here_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here is a map in the classroom.",
+      "statementForm": [
+        "The maps are in the classroom.",
+        "The maps are in the classroom"
+      ],
+      "fragmentForm": "here / are / the / maps / in / the",
+      "wormholeVariants": [
+        "Here is a map in the classroom.",
+        "Here is some map in the classroom.",
+        "Here are a map in the classroom."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_040",
+    "seedId": "here_there_inversion_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "교실에 지도들이 있다.",
+    "english": "There are the maps in the classroom.",
+    "words": [
+      "There",
+      "are",
+      "the",
+      "maps",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실에 지도들이 있다.",
+        "there / are / the / maps / in / the / classroom"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_are"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "present",
+      "plural",
+      "countable",
+      "inversion",
+      "there_are",
+      "pattern_type_there_are"
+    ],
+    "distractorSeeds": {
+      "auxError": "There is a map in the classroom.",
+      "statementForm": [
+        "The maps are in the classroom.",
+        "The maps are in the classroom"
+      ],
+      "fragmentForm": "there / are / the / maps / in / the",
+      "wormholeVariants": [
+        "There is a map in the classroom.",
+        "There is some map in the classroom.",
+        "There are a map in the classroom."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_050",
+    "seedId": "here_there_inversion_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "교실에 지도 한 장이 있었다.",
+    "english": "Here was a map in the classroom.",
+    "words": [
+      "Here",
+      "was",
+      "a",
+      "map",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실에 지도 한 장이 있었다.",
+        "here / was / a / map / in / the / classroom"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_here_was"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "here_was",
+      "pattern_type_here_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here were maps in the classroom.",
+      "statementForm": [
+        "A map was in the classroom.",
+        "A map was in the classroom"
+      ],
+      "fragmentForm": "here / was / a / map / in / the",
+      "wormholeVariants": [
+        "Here were maps in the classroom.",
+        "Here was maps in the classroom.",
+        "Here was a maps in the classroom."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_070",
+    "seedId": "here_there_inversion_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "교실에 지도 한 장이 있었다.",
+    "english": "There was a map in the classroom.",
+    "words": [
+      "There",
+      "was",
+      "a",
+      "map",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실에 지도 한 장이 있었다.",
+        "there / was / a / map / in / the / classroom"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "singular",
+      "countable",
+      "pattern_type_there_was"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "singular",
+      "countable",
+      "inversion",
+      "there_was",
+      "pattern_type_there_was"
+    ],
+    "distractorSeeds": {
+      "auxError": "There were maps in the classroom.",
+      "statementForm": [
+        "A map was in the classroom.",
+        "A map was in the classroom"
+      ],
+      "fragmentForm": "there / was / a / map / in / the",
+      "wormholeVariants": [
+        "There were maps in the classroom.",
+        "There was maps in the classroom.",
+        "There was a maps in the classroom."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_060",
+    "seedId": "here_there_inversion_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "교실에 지도들이 있었다.",
+    "english": "Here were the maps in the classroom.",
+    "words": [
+      "Here",
+      "were",
+      "the",
+      "maps",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실에 지도들이 있었다.",
+        "here / were / the / maps / in / the / classroom"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_here_were"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "here_were",
+      "pattern_type_here_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here was a map in the classroom.",
+      "statementForm": [
+        "The maps were in the classroom.",
+        "The maps were in the classroom"
+      ],
+      "fragmentForm": "here / were / the / maps / in / the",
+      "wormholeVariants": [
+        "Here was a map in the classroom.",
+        "Here was some map in the classroom.",
+        "Here were a map in the classroom."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_080",
+    "seedId": "here_there_inversion_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "교실에 지도들이 있었다.",
+    "english": "There were the maps in the classroom.",
+    "words": [
+      "There",
+      "were",
+      "the",
+      "maps",
+      "in",
+      "the",
+      "classroom",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실에 지도들이 있었다.",
+        "there / were / the / maps / in / the / classroom"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there + be 동사 뒤에 주어가 오는 도치구문입니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "be",
+      "plural",
+      "countable",
+      "pattern_type_there_were"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "be",
+      "past",
+      "plural",
+      "countable",
+      "inversion",
+      "there_were",
+      "pattern_type_there_were"
+    ],
+    "distractorSeeds": {
+      "auxError": "There was a map in the classroom.",
+      "statementForm": [
+        "The maps were in the classroom.",
+        "The maps were in the classroom"
+      ],
+      "fragmentForm": "there / were / the / maps / in / the",
+      "wormholeVariants": [
+        "There was a map in the classroom.",
+        "There was some map in the classroom.",
+        "There were a map in the classroom."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_090",
+    "seedId": "here_there_inversion_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "폭풍이 온다.",
+    "english": "Here comes the storm.",
+    "words": [
+      "Here",
+      "comes",
+      "the",
+      "storm",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "폭풍이 온다.",
+        "here / comes / the / storm"
+      ],
+      [
+        "Here",
+        "here"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "here",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_here_comes"
+    ],
+    "blankTargets": [
+      "Here"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "here",
+      "come",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "here_comes",
+      "pattern_type_here_comes"
+    ],
+    "distractorSeeds": {
+      "auxError": "Here come the storm.",
+      "statementForm": [
+        "The storm comes here.",
+        "The storm comes here"
+      ],
+      "fragmentForm": "here / comes / the / storm",
+      "wormholeVariants": [
+        "Here come the storm.",
+        "Here comes storms.",
+        "Here come storms."
+      ]
+    }
+  },
+  {
+    "id": "m2_here_there_inversion_100",
+    "seedId": "here_there_inversion_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "here_there_inversion",
+    "chapterLabelKo": "Here/There 도치구문",
+    "korean": "폭풍이 간다.",
+    "english": "There goes the storm.",
+    "words": [
+      "There",
+      "goes",
+      "the",
+      "storm",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "here_there_inversion",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "폭풍이 간다.",
+        "there / goes / the / storm"
+      ],
+      [
+        "There",
+        "there"
+      ],
+      [
+        "주의",
+        "here/there 뒤에 동사가 오고 주어가 뒤따릅니다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "there",
+      "move",
+      "singular",
+      "countable",
+      "pattern_type_there_goes"
+    ],
+    "blankTargets": [
+      "There"
+    ],
+    "tags": [
+      "here_there_inversion",
+      "there",
+      "go",
+      "present",
+      "singular",
+      "countable",
+      "inversion",
+      "there_goes",
+      "pattern_type_there_goes"
+    ],
+    "distractorSeeds": {
+      "auxError": "There comes the storm.",
+      "statementForm": [
+        "The storm goes there.",
+        "The storm goes there"
+      ],
+      "fragmentForm": "there / goes / the / storm",
+      "wormholeVariants": [
+        "There comes the storm.",
+        "There goes storms.",
+        "There comes storms."
+      ]
+    }
+  }
+]
