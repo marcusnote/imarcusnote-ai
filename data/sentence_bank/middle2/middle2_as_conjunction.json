@@ -1,0 +1,7533 @@
+[
+  {
+    "id": "m2_as_conjunction_001",
+    "seedId": "as_conjunction_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 버스를 기다릴 때 책을 읽는다.",
+    "english": "I read a book as I wait for the bus.",
+    "words": [
+      "I",
+      "read",
+      "a",
+      "book",
+      "as",
+      "I",
+      "wait",
+      "for",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 버스를 기다릴 때 책을 읽는다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I read a book when I wait for the bus.",
+      "statementForm": [
+        "I read a book as I wait for the bus.",
+        "I read a book as I wait for the bus",
+        "As I wait for the bus, I read a book.",
+        "As I wait for the bus, I read a book"
+      ],
+      "fragmentForm": "I read a book as I wait for the",
+      "wormholeVariants": [
+        "I read a book when I wait for the bus.",
+        "I read a book while I wait for the bus.",
+        "I read a book as soon as I wait for the bus."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_002",
+    "seedId": "as_conjunction_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 숙제를 하면서 음악을 듣는다.",
+    "english": "She listens to music as she does her homework.",
+    "words": [
+      "She",
+      "listens",
+      "to",
+      "music",
+      "as",
+      "she",
+      "does",
+      "her",
+      "homework",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 숙제를 하면서 음악을 듣는다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She listens to music when she does her homework.",
+      "statementForm": [
+        "She listens to music as she does her homework.",
+        "She listens to music as she does her homework",
+        "As she does her homework, she listens to music.",
+        "As she does her homework, she listens to music"
+      ],
+      "fragmentForm": "She listens to music as she does her",
+      "wormholeVariants": [
+        "She listens to music when she does her homework.",
+        "She listens to music while she does her homework.",
+        "She listens to music as soon as she does her homework."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_003",
+    "seedId": "as_conjunction_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 집에 가는 길에 친구를 만났다.",
+    "english": "He met his friend as he was going home.",
+    "words": [
+      "He",
+      "met",
+      "his",
+      "friend",
+      "as",
+      "he",
+      "was",
+      "going",
+      "home",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 집에 가는 길에 친구를 만났다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He met his friend when he was going home.",
+      "statementForm": [
+        "He met his friend as he was going home.",
+        "He met his friend as he was going home",
+        "As he was going home, he met his friend.",
+        "As he was going home, he met his friend"
+      ],
+      "fragmentForm": "He met his friend as he was going",
+      "wormholeVariants": [
+        "He met his friend when he was going home.",
+        "He met his friend while he was going home.",
+        "He met his friend as soon as he was going home."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_004",
+    "seedId": "as_conjunction_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 종이 울릴 때 교실에 들어간다.",
+    "english": "We enter the classroom as the bell rings.",
+    "words": [
+      "We",
+      "enter",
+      "the",
+      "classroom",
+      "as",
+      "the",
+      "bell",
+      "rings",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 종이 울릴 때 교실에 들어간다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We enter the classroom when the bell rings.",
+      "statementForm": [
+        "We enter the classroom as the bell rings.",
+        "We enter the classroom as the bell rings",
+        "As the bell rings, we enter the classroom.",
+        "As the bell rings, we enter the classroom"
+      ],
+      "fragmentForm": "We enter the classroom as the bell",
+      "wormholeVariants": [
+        "We enter the classroom when the bell rings.",
+        "We enter the classroom while the bell rings.",
+        "We enter the classroom as soon as the bell rings."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_005",
+    "seedId": "as_conjunction_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그들은 걷는 동안 이야기를 나눴다.",
+    "english": "They talked as they walked.",
+    "words": [
+      "They",
+      "talked",
+      "as",
+      "they",
+      "walked",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 걷는 동안 이야기를 나눴다.",
+        "They"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "They talked when they walked.",
+      "statementForm": [
+        "They talked as they walked.",
+        "They talked as they walked",
+        "As they walked, they talked.",
+        "As they walked, they talked"
+      ],
+      "fragmentForm": "They talked as they",
+      "wormholeVariants": [
+        "They talked when they walked.",
+        "They talked while they walked.",
+        "They talked as soon as they walked."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_006",
+    "seedId": "as_conjunction_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 문을 열자마자 고양이를 보았다.",
+    "english": "I saw the cat as I opened the door.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "cat",
+      "as",
+      "I",
+      "opened",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 문을 열자마자 고양이를 보았다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the cat when I opened the door.",
+      "statementForm": [
+        "I saw the cat as I opened the door.",
+        "I saw the cat as I opened the door",
+        "As I opened the door, I saw the cat.",
+        "As I opened the door, I saw the cat"
+      ],
+      "fragmentForm": "I saw the cat as I opened the",
+      "wormholeVariants": [
+        "I saw the cat when I opened the door.",
+        "I saw the cat while I opened the door.",
+        "I saw the cat as soon as I opened the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_007",
+    "seedId": "as_conjunction_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 일을 하면서 노래를 불렀다.",
+    "english": "She sang as she worked.",
+    "words": [
+      "She",
+      "sang",
+      "as",
+      "she",
+      "worked",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 일을 하면서 노래를 불렀다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She sang when she worked.",
+      "statementForm": [
+        "She sang as she worked.",
+        "She sang as she worked",
+        "As she worked, she sang.",
+        "As she worked, she sang"
+      ],
+      "fragmentForm": "She sang as she",
+      "wormholeVariants": [
+        "She sang when she worked.",
+        "She sang while she worked.",
+        "She sang as soon as she worked."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_008",
+    "seedId": "as_conjunction_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 아침을 먹는 동안 뉴스를 본다.",
+    "english": "We watch the news as we eat breakfast.",
+    "words": [
+      "We",
+      "watch",
+      "the",
+      "news",
+      "as",
+      "we",
+      "eat",
+      "breakfast",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아침을 먹는 동안 뉴스를 본다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watch the news when we eat breakfast.",
+      "statementForm": [
+        "We watch the news as we eat breakfast.",
+        "We watch the news as we eat breakfast",
+        "As we eat breakfast, we watch the news.",
+        "As we eat breakfast, we watch the news"
+      ],
+      "fragmentForm": "We watch the news as we eat",
+      "wormholeVariants": [
+        "We watch the news when we eat breakfast.",
+        "We watch the news while we eat breakfast.",
+        "We watch the news as soon as we eat breakfast."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_009",
+    "seedId": "as_conjunction_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 그림을 그리는 동안 생각했다.",
+    "english": "He thought as he drew a picture.",
+    "words": [
+      "He",
+      "thought",
+      "as",
+      "he",
+      "drew",
+      "a",
+      "picture",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그림을 그리는 동안 생각했다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He thought when he drew a picture.",
+      "statementForm": [
+        "He thought as he drew a picture.",
+        "He thought as he drew a picture",
+        "As he drew a picture, he thought.",
+        "As he drew a picture, he thought"
+      ],
+      "fragmentForm": "He thought as he drew a",
+      "wormholeVariants": [
+        "He thought when he drew a picture.",
+        "He thought while he drew a picture.",
+        "He thought as soon as he drew a picture."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_010",
+    "seedId": "as_conjunction_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 도서관에 있을 때 조용히 말한다.",
+    "english": "I speak quietly as I am in the library.",
+    "words": [
+      "I",
+      "speak",
+      "quietly",
+      "as",
+      "I",
+      "am",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 도서관에 있을 때 조용히 말한다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I speak quietly when I am in the library.",
+      "statementForm": [
+        "I speak quietly as I am in the library.",
+        "I speak quietly as I am in the library",
+        "As I am in the library, I speak quietly.",
+        "As I am in the library, I speak quietly"
+      ],
+      "fragmentForm": "I speak quietly as I am in the",
+      "wormholeVariants": [
+        "I speak quietly when I am in the library.",
+        "I speak quietly while I am in the library.",
+        "I speak quietly as soon as I am in the library."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_011",
+    "seedId": "as_conjunction_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 피곤했지만 계속 일했다.",
+    "english": "She kept working as she was tired.",
+    "words": [
+      "She",
+      "kept",
+      "working",
+      "as",
+      "she",
+      "was",
+      "tired",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 피곤했지만 계속 일했다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She kept working when she was tired.",
+      "statementForm": [
+        "She kept working as she was tired.",
+        "She kept working as she was tired",
+        "As she was tired, she kept working.",
+        "As she was tired, she kept working"
+      ],
+      "fragmentForm": "She kept working as she was",
+      "wormholeVariants": [
+        "She kept working when she was tired.",
+        "She kept working while she was tired.",
+        "She kept working as soon as she was tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_012",
+    "seedId": "as_conjunction_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 시간이 많지 않아서 빨리 준비했다.",
+    "english": "We prepared quickly as we did not have much time.",
+    "words": [
+      "We",
+      "prepared",
+      "quickly",
+      "as",
+      "we",
+      "did",
+      "not",
+      "have",
+      "much",
+      "time",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 시간이 많지 않아서 빨리 준비했다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We prepared quickly because we did not have much time.",
+      "statementForm": [
+        "We prepared quickly as we did not have much time.",
+        "We prepared quickly as we did not have much time",
+        "As we did not have much time, we prepared quickly.",
+        "As we did not have much time, we prepared quickly"
+      ],
+      "fragmentForm": "We prepared quickly as we did not have much",
+      "wormholeVariants": [
+        "We prepared quickly because we did not have much time.",
+        "We prepared quickly since we did not have much time.",
+        "We prepared quickly for we did not have much time."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_013",
+    "seedId": "as_conjunction_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 배고파서 점심을 빨리 먹었다.",
+    "english": "He ate lunch quickly as he was hungry.",
+    "words": [
+      "He",
+      "ate",
+      "lunch",
+      "quickly",
+      "as",
+      "he",
+      "was",
+      "hungry",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 배고파서 점심을 빨리 먹었다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He ate lunch quickly because he was hungry.",
+      "statementForm": [
+        "He ate lunch quickly as he was hungry.",
+        "He ate lunch quickly as he was hungry",
+        "As he was hungry, he ate lunch quickly.",
+        "As he was hungry, he ate lunch quickly"
+      ],
+      "fragmentForm": "He ate lunch quickly as he was",
+      "wormholeVariants": [
+        "He ate lunch quickly because he was hungry.",
+        "He ate lunch quickly since he was hungry.",
+        "He ate lunch quickly for he was hungry."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_014",
+    "seedId": "as_conjunction_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 비가 와서 우산을 가져갔다.",
+    "english": "I took an umbrella as it rained.",
+    "words": [
+      "I",
+      "took",
+      "an",
+      "umbrella",
+      "as",
+      "it",
+      "rained",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 비가 와서 우산을 가져갔다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I took an umbrella because it rained.",
+      "statementForm": [
+        "I took an umbrella as it rained.",
+        "I took an umbrella as it rained",
+        "As it rained, I took an umbrella.",
+        "As it rained, I took an umbrella"
+      ],
+      "fragmentForm": "I took an umbrella as it",
+      "wormholeVariants": [
+        "I took an umbrella because it rained.",
+        "I took an umbrella since it rained.",
+        "I took an umbrella for it rained."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_015",
+    "seedId": "as_conjunction_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 아파서 학교에 오지 않았다.",
+    "english": "She did not come to school as she was sick.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "come",
+      "to",
+      "school",
+      "as",
+      "she",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 아파서 학교에 오지 않았다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not come to school because she was sick.",
+      "statementForm": [
+        "She did not come to school as she was sick.",
+        "She did not come to school as she was sick",
+        "As she was sick, she did not come to school.",
+        "As she was sick, she did not come to school"
+      ],
+      "fragmentForm": "She did not come to school as she was",
+      "wormholeVariants": [
+        "She did not come to school because she was sick.",
+        "She did not come to school since she was sick.",
+        "She did not come to school for she was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_016",
+    "seedId": "as_conjunction_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 늦게 도착해서 사과했다.",
+    "english": "He apologized as he arrived late.",
+    "words": [
+      "He",
+      "apologized",
+      "as",
+      "he",
+      "arrived",
+      "late",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 늦게 도착해서 사과했다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He apologized because he arrived late.",
+      "statementForm": [
+        "He apologized as he arrived late.",
+        "He apologized as he arrived late",
+        "As he arrived late, he apologized.",
+        "As he arrived late, he apologized"
+      ],
+      "fragmentForm": "He apologized as he arrived",
+      "wormholeVariants": [
+        "He apologized because he arrived late.",
+        "He apologized since he arrived late.",
+        "He apologized for he arrived late."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_017",
+    "seedId": "as_conjunction_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "내가 시험을 볼 때 긴장할까?",
+    "english": "Do I get nervous as I take a test?",
+    "words": [
+      "Do",
+      "I",
+      "get",
+      "nervous",
+      "as",
+      "I",
+      "take",
+      "a",
+      "test",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내가 시험을 볼 때 긴장할까?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I get nervous when I take a test?",
+      "statementForm": [
+        "Do I get nervous as I take a test?",
+        "Do I get nervous as I take a test"
+      ],
+      "fragmentForm": "Do I get nervous as I take a",
+      "wormholeVariants": [
+        "Do I get nervous when I take a test?",
+        "Do I get nervous while I take a test?",
+        "Do I get nervous as soon as I take a test?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_018",
+    "seedId": "as_conjunction_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 일할 때 음악을 듣니?",
+    "english": "Does she listen to music as she works?",
+    "words": [
+      "Does",
+      "she",
+      "listen",
+      "to",
+      "music",
+      "as",
+      "she",
+      "works",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 일할 때 음악을 듣니?",
+        "Does"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does she listen to music when she works?",
+      "statementForm": [
+        "Does she listen to music as she works?",
+        "Does she listen to music as she works"
+      ],
+      "fragmentForm": "Does she listen to music as she",
+      "wormholeVariants": [
+        "Does she listen to music when she works?",
+        "Does she listen to music while she works?",
+        "Does she listen to music as soon as she works?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_019",
+    "seedId": "as_conjunction_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 바쁠 때 서로 돕니?",
+    "english": "Do we help each other as we are busy?",
+    "words": [
+      "Do",
+      "we",
+      "help",
+      "each",
+      "other",
+      "as",
+      "we",
+      "are",
+      "busy",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 바쁠 때 서로 돕니?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do we help each other when we are busy?",
+      "statementForm": [
+        "Do we help each other as we are busy?",
+        "Do we help each other as we are busy"
+      ],
+      "fragmentForm": "Do we help each other as we are",
+      "wormholeVariants": [
+        "Do we help each other when we are busy?",
+        "Do we help each other while we are busy?",
+        "Do we help each other as soon as we are busy?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_020",
+    "seedId": "as_conjunction_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 배고플 때 더 잘 생각하니?",
+    "english": "Does he think better as he is hungry?",
+    "words": [
+      "Does",
+      "he",
+      "think",
+      "better",
+      "as",
+      "he",
+      "is",
+      "hungry",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 배고플 때 더 잘 생각하니?",
+        "Does"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does he think better when he is hungry?",
+      "statementForm": [
+        "Does he think better as he is hungry?",
+        "Does he think better as he is hungry"
+      ],
+      "fragmentForm": "Does he think better as he is",
+      "wormholeVariants": [
+        "Does he think better when he is hungry?",
+        "Does he think better while he is hungry?",
+        "Does he think better as soon as he is hungry?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_021",
+    "seedId": "as_conjunction_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 읽는 동안 메모를 한다.",
+    "english": "He takes notes as he reads.",
+    "words": [
+      "He",
+      "takes",
+      "notes",
+      "as",
+      "he",
+      "reads",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 읽는 동안 메모를 한다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He takes notes when he reads.",
+      "statementForm": [
+        "He takes notes as he reads.",
+        "He takes notes as he reads",
+        "As he reads, he takes notes.",
+        "As he reads, he takes notes"
+      ],
+      "fragmentForm": "He takes notes as he",
+      "wormholeVariants": [
+        "He takes notes when he reads.",
+        "He takes notes while he reads.",
+        "He takes notes as soon as he reads."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_022",
+    "seedId": "as_conjunction_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 토론하는 동안 서로의 의견을 존중한다.",
+    "english": "We respect each other's opinions as we discuss.",
+    "words": [
+      "We",
+      "respect",
+      "each",
+      "other's",
+      "opinions",
+      "as",
+      "we",
+      "discuss",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 토론하는 동안 서로의 의견을 존중한다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We respect each other's opinions when we discuss.",
+      "statementForm": [
+        "We respect each other's opinions as we discuss.",
+        "We respect each other's opinions as we discuss",
+        "As we discuss, we respect each other's opinions.",
+        "As we discuss, we respect each other's opinions"
+      ],
+      "fragmentForm": "We respect each other's opinions as we",
+      "wormholeVariants": [
+        "We respect each other's opinions when we discuss.",
+        "We respect each other's opinions while we discuss.",
+        "We respect each other's opinions as soon as we discuss."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_023",
+    "seedId": "as_conjunction_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 발표하는 동안 손을 사용해 설명했다.",
+    "english": "She used her hands to explain as she gave the presentation.",
+    "words": [
+      "She",
+      "used",
+      "her",
+      "hands",
+      "to",
+      "explain",
+      "as",
+      "she",
+      "gave",
+      "the",
+      "presentation",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 발표하는 동안 손을 사용해 설명했다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She used her hands to explain when she gave the presentation.",
+      "statementForm": [
+        "She used her hands to explain as she gave the presentation.",
+        "She used her hands to explain as she gave the presentation",
+        "As she gave the presentation, she used her hands to explain.",
+        "As she gave the presentation, she used her hands to explain"
+      ],
+      "fragmentForm": "She used her hands to explain as she gave the",
+      "wormholeVariants": [
+        "She used her hands to explain when she gave the presentation.",
+        "She used her hands to explain while she gave the presentation.",
+        "She used her hands to explain as soon as she gave the presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_024",
+    "seedId": "as_conjunction_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "학생들은 연습하는 동안 점점 더 자신감을 얻었다.",
+    "english": "Students became more confident as they practiced.",
+    "words": [
+      "Students",
+      "became",
+      "more",
+      "confident",
+      "as",
+      "they",
+      "practiced",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들은 연습하는 동안 점점 더 자신감을 얻었다.",
+        "Students"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Students became more confident when they practiced.",
+      "statementForm": [
+        "Students became more confident as they practiced.",
+        "Students became more confident as they practiced",
+        "As they practiced, students became more confident.",
+        "As they practiced, students became more confident"
+      ],
+      "fragmentForm": "Students became more confident as they",
+      "wormholeVariants": [
+        "Students became more confident when they practiced.",
+        "Students became more confident while they practiced.",
+        "Students became more confident as soon as they practiced."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_025",
+    "seedId": "as_conjunction_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 걷는 동안 사진을 찍지 않았다.",
+    "english": "He did not take pictures as he walked.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "take",
+      "pictures",
+      "as",
+      "he",
+      "walked",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 걷는 동안 사진을 찍지 않았다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not take pictures when he walked.",
+      "statementForm": [
+        "He did not take pictures as he walked.",
+        "He did not take pictures as he walked",
+        "As he walked, he did not take pictures.",
+        "As he walked, he did not take pictures"
+      ],
+      "fragmentForm": "He did not take pictures as he",
+      "wormholeVariants": [
+        "He did not take pictures when he walked.",
+        "He did not take pictures while he walked.",
+        "He did not take pictures as soon as he walked."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_026",
+    "seedId": "as_conjunction_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 기다리는 동안 지루하지 않았다.",
+    "english": "We were not bored as we waited.",
+    "words": [
+      "We",
+      "were",
+      "not",
+      "bored",
+      "as",
+      "we",
+      "waited",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 기다리는 동안 지루하지 않았다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were not bored when we waited.",
+      "statementForm": [
+        "We were not bored as we waited.",
+        "We were not bored as we waited",
+        "As we waited, we were not bored.",
+        "As we waited, we were not bored"
+      ],
+      "fragmentForm": "We were not bored as we",
+      "wormholeVariants": [
+        "We were not bored when we waited.",
+        "We were not bored while we waited.",
+        "We were not bored as soon as we waited."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_027",
+    "seedId": "as_conjunction_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 공부하는 동안 질문을 적었다.",
+    "english": "She wrote down questions as she studied.",
+    "words": [
+      "She",
+      "wrote",
+      "down",
+      "questions",
+      "as",
+      "she",
+      "studied",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 공부하는 동안 질문을 적었다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She wrote down questions when she studied.",
+      "statementForm": [
+        "She wrote down questions as she studied.",
+        "She wrote down questions as she studied",
+        "As she studied, she wrote down questions.",
+        "As she studied, she wrote down questions"
+      ],
+      "fragmentForm": "She wrote down questions as she",
+      "wormholeVariants": [
+        "She wrote down questions when she studied.",
+        "She wrote down questions while she studied.",
+        "She wrote down questions as soon as she studied."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_028",
+    "seedId": "as_conjunction_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그들은 일하는 동안 조용히 있었다.",
+    "english": "They stayed quiet as they worked.",
+    "words": [
+      "They",
+      "stayed",
+      "quiet",
+      "as",
+      "they",
+      "worked",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 일하는 동안 조용히 있었다.",
+        "They"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "They stayed quiet when they worked.",
+      "statementForm": [
+        "They stayed quiet as they worked.",
+        "They stayed quiet as they worked",
+        "As they worked, they stayed quiet.",
+        "As they worked, they stayed quiet"
+      ],
+      "fragmentForm": "They stayed quiet as they",
+      "wormholeVariants": [
+        "They stayed quiet when they worked.",
+        "They stayed quiet while they worked.",
+        "They stayed quiet as soon as they worked."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_029",
+    "seedId": "as_conjunction_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 네가 말하는 동안 듣고 있었다.",
+    "english": "I was listening as you were speaking.",
+    "words": [
+      "I",
+      "was",
+      "listening",
+      "as",
+      "you",
+      "were",
+      "speaking",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 말하는 동안 듣고 있었다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was listening when you were speaking.",
+      "statementForm": [
+        "I was listening as you were speaking.",
+        "I was listening as you were speaking",
+        "As you were speaking, I was listening.",
+        "As you were speaking, I was listening"
+      ],
+      "fragmentForm": "I was listening as you were",
+      "wormholeVariants": [
+        "I was listening when you were speaking.",
+        "I was listening while you were speaking.",
+        "I was listening as soon as you were speaking."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_030",
+    "seedId": "as_conjunction_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 집에 가는 동안 숙제를 생각했다.",
+    "english": "He thought about homework as he went home.",
+    "words": [
+      "He",
+      "thought",
+      "about",
+      "homework",
+      "as",
+      "he",
+      "went",
+      "home",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 집에 가는 동안 숙제를 생각했다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He thought about homework when he went home.",
+      "statementForm": [
+        "He thought about homework as he went home.",
+        "He thought about homework as he went home",
+        "As he went home, he thought about homework.",
+        "As he went home, he thought about homework"
+      ],
+      "fragmentForm": "He thought about homework as he went",
+      "wormholeVariants": [
+        "He thought about homework when he went home.",
+        "He thought about homework while he went home.",
+        "He thought about homework as soon as he went home."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_031",
+    "seedId": "as_conjunction_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 아파서 수업에 오지 못했다.",
+    "english": "She could not come to class as she was sick.",
+    "words": [
+      "She",
+      "could",
+      "not",
+      "come",
+      "to",
+      "class",
+      "as",
+      "she",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 아파서 수업에 오지 못했다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She could not come to class because she was sick.",
+      "statementForm": [
+        "She could not come to class as she was sick.",
+        "She could not come to class as she was sick",
+        "As she was sick, she could not come to class.",
+        "As she was sick, she could not come to class"
+      ],
+      "fragmentForm": "She could not come to class as she was",
+      "wormholeVariants": [
+        "She could not come to class because she was sick.",
+        "She could not come to class since she was sick.",
+        "She could not come to class for she was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_032",
+    "seedId": "as_conjunction_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 시간이 부족해서 계획을 바꿨다.",
+    "english": "We changed the plan as we had little time.",
+    "words": [
+      "We",
+      "changed",
+      "the",
+      "plan",
+      "as",
+      "we",
+      "had",
+      "little",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 시간이 부족해서 계획을 바꿨다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We changed the plan because we had little time.",
+      "statementForm": [
+        "We changed the plan as we had little time.",
+        "We changed the plan as we had little time",
+        "As we had little time, we changed the plan.",
+        "As we had little time, we changed the plan"
+      ],
+      "fragmentForm": "We changed the plan as we had little",
+      "wormholeVariants": [
+        "We changed the plan because we had little time.",
+        "We changed the plan since we had little time.",
+        "We changed the plan for we had little time."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_033",
+    "seedId": "as_conjunction_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 준비가 안 돼서 질문에 답하지 못했다.",
+    "english": "He could not answer the question as he was not ready.",
+    "words": [
+      "He",
+      "could",
+      "not",
+      "answer",
+      "the",
+      "question",
+      "as",
+      "he",
+      "was",
+      "not",
+      "ready",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 준비가 안 돼서 질문에 답하지 못했다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He could not answer the question because he was not ready.",
+      "statementForm": [
+        "He could not answer the question as he was not ready.",
+        "He could not answer the question as he was not ready",
+        "As he was not ready, he could not answer the question.",
+        "As he was not ready, he could not answer the question"
+      ],
+      "fragmentForm": "He could not answer the question as he was not",
+      "wormholeVariants": [
+        "He could not answer the question because he was not ready.",
+        "He could not answer the question since he was not ready.",
+        "He could not answer the question for he was not ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_034",
+    "seedId": "as_conjunction_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 피곤해서 일찍 잠들었다.",
+    "english": "She fell asleep early as she was tired.",
+    "words": [
+      "She",
+      "fell",
+      "asleep",
+      "early",
+      "as",
+      "she",
+      "was",
+      "tired",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 피곤해서 일찍 잠들었다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She fell asleep early because she was tired.",
+      "statementForm": [
+        "She fell asleep early as she was tired.",
+        "She fell asleep early as she was tired",
+        "As she was tired, she fell asleep early.",
+        "As she was tired, she fell asleep early"
+      ],
+      "fragmentForm": "She fell asleep early as she was",
+      "wormholeVariants": [
+        "She fell asleep early because she was tired.",
+        "She fell asleep early since she was tired.",
+        "She fell asleep early for she was tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_035",
+    "seedId": "as_conjunction_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 네가 바쁠 때 전화하니?",
+    "english": "Do I call you as you are busy?",
+    "words": [
+      "Do",
+      "I",
+      "call",
+      "you",
+      "as",
+      "you",
+      "are",
+      "busy",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 바쁠 때 전화하니?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I call you when you are busy?",
+      "statementForm": [
+        "Do I call you as you are busy?",
+        "Do I call you as you are busy"
+      ],
+      "fragmentForm": "Do I call you as you are",
+      "wormholeVariants": [
+        "Do I call you when you are busy?",
+        "Do I call you while you are busy?",
+        "Do I call you as soon as you are busy?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_036",
+    "seedId": "as_conjunction_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그들은 공부하는 동안 서로 도와주니?",
+    "english": "Do they help each other as they study?",
+    "words": [
+      "Do",
+      "they",
+      "help",
+      "each",
+      "other",
+      "as",
+      "they",
+      "study",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 공부하는 동안 서로 도와주니?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do they help each other when they study?",
+      "statementForm": [
+        "Do they help each other as they study?",
+        "Do they help each other as they study"
+      ],
+      "fragmentForm": "Do they help each other as they",
+      "wormholeVariants": [
+        "Do they help each other when they study?",
+        "Do they help each other while they study?",
+        "Do they help each other as soon as they study?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_037",
+    "seedId": "as_conjunction_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 일하는 동안 음악을 듣니?",
+    "english": "Does she listen to music as she works?",
+    "words": [
+      "Does",
+      "she",
+      "listen",
+      "to",
+      "music",
+      "as",
+      "she",
+      "works",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 일하는 동안 음악을 듣니?",
+        "Does"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does she listen to music when she works?",
+      "statementForm": [
+        "Does she listen to music as she works?",
+        "Does she listen to music as she works"
+      ],
+      "fragmentForm": "Does she listen to music as she",
+      "wormholeVariants": [
+        "Does she listen to music when she works?",
+        "Does she listen to music while she works?",
+        "Does she listen to music as soon as she works?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_038",
+    "seedId": "as_conjunction_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 비가 올 때 운동하니?",
+    "english": "Do we exercise as it rains?",
+    "words": [
+      "Do",
+      "we",
+      "exercise",
+      "as",
+      "it",
+      "rains",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 비가 올 때 운동하니?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do we exercise when it rains?",
+      "statementForm": [
+        "Do we exercise as it rains?",
+        "Do we exercise as it rains"
+      ],
+      "fragmentForm": "Do we exercise as it",
+      "wormholeVariants": [
+        "Do we exercise when it rains?",
+        "Do we exercise while it rains?",
+        "Do we exercise as soon as it rains?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_039",
+    "seedId": "as_conjunction_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 나이가 들수록 더 침착해진다.",
+    "english": "He becomes calmer as he gets older.",
+    "words": [
+      "He",
+      "becomes",
+      "calmer",
+      "as",
+      "he",
+      "gets",
+      "older",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나이가 들수록 더 침착해진다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "He becomes calmer when he gets older.",
+      "statementForm": [
+        "He becomes calmer as he gets older.",
+        "He becomes calmer as he gets older",
+        "As he gets older, he becomes calmer.",
+        "As he gets older, he becomes calmer"
+      ],
+      "fragmentForm": "He becomes calmer as he gets",
+      "wormholeVariants": [
+        "He becomes calmer when he gets older.",
+        "He becomes calmer while he gets older.",
+        "He becomes calmer because he gets older."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_040",
+    "seedId": "as_conjunction_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "학생들은 연습할수록 더 잘한다.",
+    "english": "Students do better as they practice more.",
+    "words": [
+      "Students",
+      "do",
+      "better",
+      "as",
+      "they",
+      "practice",
+      "more",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들은 연습할수록 더 잘한다.",
+        "Students"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "Students do better when they practice more.",
+      "statementForm": [
+        "Students do better as they practice more.",
+        "Students do better as they practice more",
+        "As they practice more, students do better.",
+        "As they practice more, students do better"
+      ],
+      "fragmentForm": "Students do better as they practice",
+      "wormholeVariants": [
+        "Students do better when they practice more.",
+        "Students do better while they practice more.",
+        "Students do better because they practice more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_041",
+    "seedId": "as_conjunction_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 쓰면 쓸수록 단어를 더 많이 기억했다.",
+    "english": "She remembered more words as she wrote more.",
+    "words": [
+      "She",
+      "remembered",
+      "more",
+      "words",
+      "as",
+      "she",
+      "wrote",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 쓰면 쓸수록 단어를 더 많이 기억했다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "She remembered more words when she wrote more.",
+      "statementForm": [
+        "She remembered more words as she wrote more.",
+        "She remembered more words as she wrote more",
+        "As she wrote more, she remembered more words.",
+        "As she wrote more, she remembered more words"
+      ],
+      "fragmentForm": "She remembered more words as she wrote",
+      "wormholeVariants": [
+        "She remembered more words when she wrote more.",
+        "She remembered more words while she wrote more.",
+        "She remembered more words because she wrote more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_042",
+    "seedId": "as_conjunction_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 배우면 배울수록 더 흥미를 느낀다.",
+    "english": "We feel more interested as we learn more.",
+    "words": [
+      "We",
+      "feel",
+      "more",
+      "interested",
+      "as",
+      "we",
+      "learn",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 배우면 배울수록 더 흥미를 느낀다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "We feel more interested when we learn more.",
+      "statementForm": [
+        "We feel more interested as we learn more.",
+        "We feel more interested as we learn more",
+        "As we learn more, we feel more interested.",
+        "As we learn more, we feel more interested"
+      ],
+      "fragmentForm": "We feel more interested as we learn",
+      "wormholeVariants": [
+        "We feel more interested when we learn more.",
+        "We feel more interested while we learn more.",
+        "We feel more interested because we learn more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_043",
+    "seedId": "as_conjunction_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 노력할수록 더 많은 기회를 얻었다.",
+    "english": "He got more chances as he made more effort.",
+    "words": [
+      "He",
+      "got",
+      "more",
+      "chances",
+      "as",
+      "he",
+      "made",
+      "more",
+      "effort",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 노력할수록 더 많은 기회를 얻었다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "He got more chances when he made more effort.",
+      "statementForm": [
+        "He got more chances as he made more effort.",
+        "He got more chances as he made more effort",
+        "As he made more effort, he got more chances.",
+        "As he made more effort, he got more chances"
+      ],
+      "fragmentForm": "He got more chances as he made more",
+      "wormholeVariants": [
+        "He got more chances when he made more effort.",
+        "He got more chances while he made more effort.",
+        "He got more chances because he made more effort."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_044",
+    "seedId": "as_conjunction_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그 책은 읽으면 읽을수록 더 재미있다.",
+    "english": "The book becomes more interesting as we read it more.",
+    "words": [
+      "The",
+      "book",
+      "becomes",
+      "more",
+      "interesting",
+      "as",
+      "we",
+      "read",
+      "it",
+      "more",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 책은 읽으면 읽을수록 더 재미있다.",
+        "The"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book becomes more interesting when we read it more.",
+      "statementForm": [
+        "The book becomes more interesting as we read it more.",
+        "The book becomes more interesting as we read it more",
+        "As we read it more, the book becomes more interesting.",
+        "As we read it more, the book becomes more interesting"
+      ],
+      "fragmentForm": "The book becomes more interesting as we read it",
+      "wormholeVariants": [
+        "The book becomes more interesting when we read it more.",
+        "The book becomes more interesting while we read it more.",
+        "The book becomes more interesting because we read it more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_045",
+    "seedId": "as_conjunction_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그 규칙은 사용할수록 더 자연스럽게 느껴진다.",
+    "english": "The rule feels more natural as we use it more.",
+    "words": [
+      "The",
+      "rule",
+      "feels",
+      "more",
+      "natural",
+      "as",
+      "we",
+      "use",
+      "it",
+      "more",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 사용할수록 더 자연스럽게 느껴진다.",
+        "The"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule feels more natural when we use it more.",
+      "statementForm": [
+        "The rule feels more natural as we use it more.",
+        "The rule feels more natural as we use it more",
+        "As we use it more, the rule feels more natural.",
+        "As we use it more, the rule feels more natural"
+      ],
+      "fragmentForm": "The rule feels more natural as we use it",
+      "wormholeVariants": [
+        "The rule feels more natural when we use it more.",
+        "The rule feels more natural while we use it more.",
+        "The rule feels more natural because we use it more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_046",
+    "seedId": "as_conjunction_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 연습할수록 더 빨라졌다.",
+    "english": "She became faster as she practiced more.",
+    "words": [
+      "She",
+      "became",
+      "faster",
+      "as",
+      "she",
+      "practiced",
+      "more",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 연습할수록 더 빨라졌다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "She became faster when she practiced more.",
+      "statementForm": [
+        "She became faster as she practiced more.",
+        "She became faster as she practiced more",
+        "As she practiced more, she became faster.",
+        "As she practiced more, she became faster"
+      ],
+      "fragmentForm": "She became faster as she practiced",
+      "wormholeVariants": [
+        "She became faster when she practiced more.",
+        "She became faster while she practiced more.",
+        "She became faster because she practiced more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_047",
+    "seedId": "as_conjunction_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 토론할수록 더 깊이 생각했다.",
+    "english": "We thought more deeply as we debated more.",
+    "words": [
+      "We",
+      "thought",
+      "more",
+      "deeply",
+      "as",
+      "we",
+      "debated",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 토론할수록 더 깊이 생각했다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "We thought more deeply when we debated more.",
+      "statementForm": [
+        "We thought more deeply as we debated more.",
+        "We thought more deeply as we debated more",
+        "As we debated more, we thought more deeply.",
+        "As we debated more, we thought more deeply"
+      ],
+      "fragmentForm": "We thought more deeply as we debated",
+      "wormholeVariants": [
+        "We thought more deeply when we debated more.",
+        "We thought more deeply while we debated more.",
+        "We thought more deeply because we debated more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_048",
+    "seedId": "as_conjunction_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그들은 들을수록 더 많이 배웠다.",
+    "english": "They learned more as they listened more.",
+    "words": [
+      "They",
+      "learned",
+      "more",
+      "as",
+      "they",
+      "listened",
+      "more",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 들을수록 더 많이 배웠다.",
+        "They"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "They learned more when they listened more.",
+      "statementForm": [
+        "They learned more as they listened more.",
+        "They learned more as they listened more",
+        "As they listened more, they learned more.",
+        "As they listened more, they learned more"
+      ],
+      "fragmentForm": "They learned more as they listened",
+      "wormholeVariants": [
+        "They learned more when they listened more.",
+        "They learned more while they listened more.",
+        "They learned more because they listened more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_049",
+    "seedId": "as_conjunction_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 나이가 들수록 서두르지 않는다.",
+    "english": "He does not hurry as he gets older.",
+    "words": [
+      "He",
+      "does",
+      "not",
+      "hurry",
+      "as",
+      "he",
+      "gets",
+      "older",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나이가 들수록 서두르지 않는다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "He does not hurry when he gets older.",
+      "statementForm": [
+        "He does not hurry as he gets older.",
+        "He does not hurry as he gets older",
+        "As he gets older, he does not hurry.",
+        "As he gets older, he does not hurry"
+      ],
+      "fragmentForm": "He does not hurry as he gets",
+      "wormholeVariants": [
+        "He does not hurry when he gets older.",
+        "He does not hurry while he gets older.",
+        "He does not hurry because he gets older."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_050",
+    "seedId": "as_conjunction_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 연습할수록 실수하지 않았다.",
+    "english": "She did not make mistakes as she practiced more.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "make",
+      "mistakes",
+      "as",
+      "she",
+      "practiced",
+      "more",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 연습할수록 실수하지 않았다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not make mistakes when she practiced more.",
+      "statementForm": [
+        "She did not make mistakes as she practiced more.",
+        "She did not make mistakes as she practiced more",
+        "As she practiced more, she did not make mistakes.",
+        "As she practiced more, she did not make mistakes"
+      ],
+      "fragmentForm": "She did not make mistakes as she practiced",
+      "wormholeVariants": [
+        "She did not make mistakes when she practiced more.",
+        "She did not make mistakes while she practiced more.",
+        "She did not make mistakes because she practiced more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_051",
+    "seedId": "as_conjunction_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 볼수록 더 이해하게 된다.",
+    "english": "We understand more as we see it more.",
+    "words": [
+      "We",
+      "understand",
+      "more",
+      "as",
+      "we",
+      "see",
+      "it",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 볼수록 더 이해하게 된다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "We understand more when we see it more.",
+      "statementForm": [
+        "We understand more as we see it more.",
+        "We understand more as we see it more",
+        "As we see it more, we understand more.",
+        "As we see it more, we understand more"
+      ],
+      "fragmentForm": "We understand more as we see it",
+      "wormholeVariants": [
+        "We understand more when we see it more.",
+        "We understand more while we see it more.",
+        "We understand more because we see it more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_052",
+    "seedId": "as_conjunction_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그 문장은 읽으면 읽을수록 더 분명해졌다.",
+    "english": "The sentence became clearer as we read it more.",
+    "words": [
+      "The",
+      "sentence",
+      "became",
+      "clearer",
+      "as",
+      "we",
+      "read",
+      "it",
+      "more",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문장은 읽으면 읽을수록 더 분명해졌다.",
+        "The"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The sentence became clearer when we read it more.",
+      "statementForm": [
+        "The sentence became clearer as we read it more.",
+        "The sentence became clearer as we read it more",
+        "As we read it more, the sentence became clearer.",
+        "As we read it more, the sentence became clearer"
+      ],
+      "fragmentForm": "The sentence became clearer as we read it",
+      "wormholeVariants": [
+        "The sentence became clearer when we read it more.",
+        "The sentence became clearer while we read it more.",
+        "The sentence became clearer because we read it more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_053",
+    "seedId": "as_conjunction_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 생각할수록 더 조심스러워졌다.",
+    "english": "He became more careful as he thought more.",
+    "words": [
+      "He",
+      "became",
+      "more",
+      "careful",
+      "as",
+      "he",
+      "thought",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 생각할수록 더 조심스러워졌다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "He became more careful when he thought more.",
+      "statementForm": [
+        "He became more careful as he thought more.",
+        "He became more careful as he thought more",
+        "As he thought more, he became more careful.",
+        "As he thought more, he became more careful"
+      ],
+      "fragmentForm": "He became more careful as he thought",
+      "wormholeVariants": [
+        "He became more careful when he thought more.",
+        "He became more careful while he thought more.",
+        "He became more careful because he thought more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_054",
+    "seedId": "as_conjunction_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 바쁠 때 더 빨리 움직인다.",
+    "english": "I move faster as I am busy.",
+    "words": [
+      "I",
+      "move",
+      "faster",
+      "as",
+      "I",
+      "am",
+      "busy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 바쁠 때 더 빨리 움직인다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I move faster when I am busy.",
+      "statementForm": [
+        "I move faster as I am busy.",
+        "I move faster as I am busy",
+        "As I am busy, I move faster.",
+        "As I am busy, I move faster"
+      ],
+      "fragmentForm": "I move faster as I am",
+      "wormholeVariants": [
+        "I move faster when I am busy.",
+        "I move faster while I am busy.",
+        "I move faster as soon as I am busy."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_055",
+    "seedId": "as_conjunction_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 피곤할 때도 포기하지 않았다.",
+    "english": "She did not give up as she was tired.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "give",
+      "up",
+      "as",
+      "she",
+      "was",
+      "tired",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 피곤할 때도 포기하지 않았다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not give up when she was tired.",
+      "statementForm": [
+        "She did not give up as she was tired.",
+        "She did not give up as she was tired",
+        "As she was tired, she did not give up.",
+        "As she was tired, she did not give up"
+      ],
+      "fragmentForm": "She did not give up as she was",
+      "wormholeVariants": [
+        "She did not give up when she was tired.",
+        "She did not give up while she was tired.",
+        "She did not give up as soon as she was tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_056",
+    "seedId": "as_conjunction_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 질문이 있을 때 바로 묻는다.",
+    "english": "We ask right away as we have a question.",
+    "words": [
+      "We",
+      "ask",
+      "right",
+      "away",
+      "as",
+      "we",
+      "have",
+      "a",
+      "question",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 질문이 있을 때 바로 묻는다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We ask right away when we have a question.",
+      "statementForm": [
+        "We ask right away as we have a question.",
+        "We ask right away as we have a question",
+        "As we have a question, we ask right away.",
+        "As we have a question, we ask right away"
+      ],
+      "fragmentForm": "We ask right away as we have a",
+      "wormholeVariants": [
+        "We ask right away when we have a question.",
+        "We ask right away while we have a question.",
+        "We ask right away as soon as we have a question."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_057",
+    "seedId": "as_conjunction_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 긴장할 때 천천히 말한다.",
+    "english": "He speaks slowly as he is nervous.",
+    "words": [
+      "He",
+      "speaks",
+      "slowly",
+      "as",
+      "he",
+      "is",
+      "nervous",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 긴장할 때 천천히 말한다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He speaks slowly when he is nervous.",
+      "statementForm": [
+        "He speaks slowly as he is nervous.",
+        "He speaks slowly as he is nervous",
+        "As he is nervous, he speaks slowly.",
+        "As he is nervous, he speaks slowly"
+      ],
+      "fragmentForm": "He speaks slowly as he is",
+      "wormholeVariants": [
+        "He speaks slowly when he is nervous.",
+        "He speaks slowly while he is nervous.",
+        "He speaks slowly as soon as he is nervous."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_058",
+    "seedId": "as_conjunction_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그들은 준비가 되었을 때 시작했다.",
+    "english": "They started as they were ready.",
+    "words": [
+      "They",
+      "started",
+      "as",
+      "they",
+      "were",
+      "ready",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 준비가 되었을 때 시작했다.",
+        "They"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "They started when they were ready.",
+      "statementForm": [
+        "They started as they were ready.",
+        "They started as they were ready",
+        "As they were ready, they started.",
+        "As they were ready, they started"
+      ],
+      "fragmentForm": "They started as they were",
+      "wormholeVariants": [
+        "They started when they were ready.",
+        "They started while they were ready.",
+        "They started as soon as they were ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_059",
+    "seedId": "as_conjunction_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 버스를 기다릴 때 책을 읽는다.",
+    "english": "I read a book as I wait for the bus.",
+    "words": [
+      "I",
+      "read",
+      "a",
+      "book",
+      "as",
+      "I",
+      "wait",
+      "for",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 버스를 기다릴 때 책을 읽는다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I read a book when I wait for the bus.",
+      "statementForm": [
+        "I read a book as I wait for the bus.",
+        "I read a book as I wait for the bus",
+        "As I wait for the bus, I read a book.",
+        "As I wait for the bus, I read a book"
+      ],
+      "fragmentForm": "I read a book as I wait for the",
+      "wormholeVariants": [
+        "I read a book when I wait for the bus.",
+        "I read a book while I wait for the bus.",
+        "I read a book as soon as I wait for the bus."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_060",
+    "seedId": "as_conjunction_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 숙제를 하면서 음악을 듣는다.",
+    "english": "She listens to music as she does her homework.",
+    "words": [
+      "She",
+      "listens",
+      "to",
+      "music",
+      "as",
+      "she",
+      "does",
+      "her",
+      "homework",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 숙제를 하면서 음악을 듣는다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She listens to music when she does her homework.",
+      "statementForm": [
+        "She listens to music as she does her homework.",
+        "She listens to music as she does her homework",
+        "As she does her homework, she listens to music.",
+        "As she does her homework, she listens to music"
+      ],
+      "fragmentForm": "She listens to music as she does her",
+      "wormholeVariants": [
+        "She listens to music when she does her homework.",
+        "She listens to music while she does her homework.",
+        "She listens to music as soon as she does her homework."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_061",
+    "seedId": "as_conjunction_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 집에 가는 길에 친구를 만났다.",
+    "english": "He met his friend as he was going home.",
+    "words": [
+      "He",
+      "met",
+      "his",
+      "friend",
+      "as",
+      "he",
+      "was",
+      "going",
+      "home",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 집에 가는 길에 친구를 만났다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He met his friend when he was going home.",
+      "statementForm": [
+        "He met his friend as he was going home.",
+        "He met his friend as he was going home",
+        "As he was going home, he met his friend.",
+        "As he was going home, he met his friend"
+      ],
+      "fragmentForm": "He met his friend as he was going",
+      "wormholeVariants": [
+        "He met his friend when he was going home.",
+        "He met his friend while he was going home.",
+        "He met his friend as soon as he was going home."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_062",
+    "seedId": "as_conjunction_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 종이 울릴 때 교실에 들어간다.",
+    "english": "We enter the classroom as the bell rings.",
+    "words": [
+      "We",
+      "enter",
+      "the",
+      "classroom",
+      "as",
+      "the",
+      "bell",
+      "rings",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 종이 울릴 때 교실에 들어간다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We enter the classroom when the bell rings.",
+      "statementForm": [
+        "We enter the classroom as the bell rings.",
+        "We enter the classroom as the bell rings",
+        "As the bell rings, we enter the classroom.",
+        "As the bell rings, we enter the classroom"
+      ],
+      "fragmentForm": "We enter the classroom as the bell",
+      "wormholeVariants": [
+        "We enter the classroom when the bell rings.",
+        "We enter the classroom while the bell rings.",
+        "We enter the classroom as soon as the bell rings."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_063",
+    "seedId": "as_conjunction_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그들은 걷는 동안 이야기를 나눴다.",
+    "english": "They talked as they walked.",
+    "words": [
+      "They",
+      "talked",
+      "as",
+      "they",
+      "walked",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 걷는 동안 이야기를 나눴다.",
+        "They"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "They talked when they walked.",
+      "statementForm": [
+        "They talked as they walked.",
+        "They talked as they walked",
+        "As they walked, they talked.",
+        "As they walked, they talked"
+      ],
+      "fragmentForm": "They talked as they",
+      "wormholeVariants": [
+        "They talked when they walked.",
+        "They talked while they walked.",
+        "They talked as soon as they walked."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_064",
+    "seedId": "as_conjunction_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 문을 열자마자 고양이를 보았다.",
+    "english": "I saw the cat as I opened the door.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "cat",
+      "as",
+      "I",
+      "opened",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 문을 열자마자 고양이를 보았다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the cat when I opened the door.",
+      "statementForm": [
+        "I saw the cat as I opened the door.",
+        "I saw the cat as I opened the door",
+        "As I opened the door, I saw the cat.",
+        "As I opened the door, I saw the cat"
+      ],
+      "fragmentForm": "I saw the cat as I opened the",
+      "wormholeVariants": [
+        "I saw the cat when I opened the door.",
+        "I saw the cat while I opened the door.",
+        "I saw the cat as soon as I opened the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_065",
+    "seedId": "as_conjunction_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 일을 하면서 노래를 불렀다.",
+    "english": "She sang as she worked.",
+    "words": [
+      "She",
+      "sang",
+      "as",
+      "she",
+      "worked",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 일을 하면서 노래를 불렀다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She sang when she worked.",
+      "statementForm": [
+        "She sang as she worked.",
+        "She sang as she worked",
+        "As she worked, she sang.",
+        "As she worked, she sang"
+      ],
+      "fragmentForm": "She sang as she",
+      "wormholeVariants": [
+        "She sang when she worked.",
+        "She sang while she worked.",
+        "She sang as soon as she worked."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_066",
+    "seedId": "as_conjunction_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 아침을 먹는 동안 뉴스를 본다.",
+    "english": "We watch the news as we eat breakfast.",
+    "words": [
+      "We",
+      "watch",
+      "the",
+      "news",
+      "as",
+      "we",
+      "eat",
+      "breakfast",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아침을 먹는 동안 뉴스를 본다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watch the news when we eat breakfast.",
+      "statementForm": [
+        "We watch the news as we eat breakfast.",
+        "We watch the news as we eat breakfast",
+        "As we eat breakfast, we watch the news.",
+        "As we eat breakfast, we watch the news"
+      ],
+      "fragmentForm": "We watch the news as we eat",
+      "wormholeVariants": [
+        "We watch the news when we eat breakfast.",
+        "We watch the news while we eat breakfast.",
+        "We watch the news as soon as we eat breakfast."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_067",
+    "seedId": "as_conjunction_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 그림을 그리는 동안 생각했다.",
+    "english": "He thought as he drew a picture.",
+    "words": [
+      "He",
+      "thought",
+      "as",
+      "he",
+      "drew",
+      "a",
+      "picture",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그림을 그리는 동안 생각했다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He thought when he drew a picture.",
+      "statementForm": [
+        "He thought as he drew a picture.",
+        "He thought as he drew a picture",
+        "As he drew a picture, he thought.",
+        "As he drew a picture, he thought"
+      ],
+      "fragmentForm": "He thought as he drew a",
+      "wormholeVariants": [
+        "He thought when he drew a picture.",
+        "He thought while he drew a picture.",
+        "He thought as soon as he drew a picture."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_068",
+    "seedId": "as_conjunction_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 도서관에 있을 때 조용히 말한다.",
+    "english": "I speak quietly as I am in the library.",
+    "words": [
+      "I",
+      "speak",
+      "quietly",
+      "as",
+      "I",
+      "am",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 도서관에 있을 때 조용히 말한다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I speak quietly when I am in the library.",
+      "statementForm": [
+        "I speak quietly as I am in the library.",
+        "I speak quietly as I am in the library",
+        "As I am in the library, I speak quietly.",
+        "As I am in the library, I speak quietly"
+      ],
+      "fragmentForm": "I speak quietly as I am in the",
+      "wormholeVariants": [
+        "I speak quietly when I am in the library.",
+        "I speak quietly while I am in the library.",
+        "I speak quietly as soon as I am in the library."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_069",
+    "seedId": "as_conjunction_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 피곤했지만 계속 일했다.",
+    "english": "She kept working as she was tired.",
+    "words": [
+      "She",
+      "kept",
+      "working",
+      "as",
+      "she",
+      "was",
+      "tired",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 피곤했지만 계속 일했다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She kept working when she was tired.",
+      "statementForm": [
+        "She kept working as she was tired.",
+        "She kept working as she was tired",
+        "As she was tired, she kept working.",
+        "As she was tired, she kept working"
+      ],
+      "fragmentForm": "She kept working as she was",
+      "wormholeVariants": [
+        "She kept working when she was tired.",
+        "She kept working while she was tired.",
+        "She kept working as soon as she was tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_070",
+    "seedId": "as_conjunction_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 시간이 많지 않아서 빨리 준비했다.",
+    "english": "We prepared quickly as we did not have much time.",
+    "words": [
+      "We",
+      "prepared",
+      "quickly",
+      "as",
+      "we",
+      "did",
+      "not",
+      "have",
+      "much",
+      "time",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 시간이 많지 않아서 빨리 준비했다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We prepared quickly because we did not have much time.",
+      "statementForm": [
+        "We prepared quickly as we did not have much time.",
+        "We prepared quickly as we did not have much time",
+        "As we did not have much time, we prepared quickly.",
+        "As we did not have much time, we prepared quickly"
+      ],
+      "fragmentForm": "We prepared quickly as we did not have much",
+      "wormholeVariants": [
+        "We prepared quickly because we did not have much time.",
+        "We prepared quickly since we did not have much time.",
+        "We prepared quickly for we did not have much time."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_071",
+    "seedId": "as_conjunction_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 배고파서 점심을 빨리 먹었다.",
+    "english": "He ate lunch quickly as he was hungry.",
+    "words": [
+      "He",
+      "ate",
+      "lunch",
+      "quickly",
+      "as",
+      "he",
+      "was",
+      "hungry",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 배고파서 점심을 빨리 먹었다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He ate lunch quickly because he was hungry.",
+      "statementForm": [
+        "He ate lunch quickly as he was hungry.",
+        "He ate lunch quickly as he was hungry",
+        "As he was hungry, he ate lunch quickly.",
+        "As he was hungry, he ate lunch quickly"
+      ],
+      "fragmentForm": "He ate lunch quickly as he was",
+      "wormholeVariants": [
+        "He ate lunch quickly because he was hungry.",
+        "He ate lunch quickly since he was hungry.",
+        "He ate lunch quickly for he was hungry."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_072",
+    "seedId": "as_conjunction_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 비가 와서 우산을 가져갔다.",
+    "english": "I took an umbrella as it rained.",
+    "words": [
+      "I",
+      "took",
+      "an",
+      "umbrella",
+      "as",
+      "it",
+      "rained",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 비가 와서 우산을 가져갔다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "I took an umbrella because it rained.",
+      "statementForm": [
+        "I took an umbrella as it rained.",
+        "I took an umbrella as it rained",
+        "As it rained, I took an umbrella.",
+        "As it rained, I took an umbrella"
+      ],
+      "fragmentForm": "I took an umbrella as it",
+      "wormholeVariants": [
+        "I took an umbrella because it rained.",
+        "I took an umbrella since it rained.",
+        "I took an umbrella for it rained."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_073",
+    "seedId": "as_conjunction_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 아파서 학교에 오지 않았다.",
+    "english": "She did not come to school as she was sick.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "come",
+      "to",
+      "school",
+      "as",
+      "she",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 아파서 학교에 오지 않았다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not come to school because she was sick.",
+      "statementForm": [
+        "She did not come to school as she was sick.",
+        "She did not come to school as she was sick",
+        "As she was sick, she did not come to school.",
+        "As she was sick, she did not come to school"
+      ],
+      "fragmentForm": "She did not come to school as she was",
+      "wormholeVariants": [
+        "She did not come to school because she was sick.",
+        "She did not come to school since she was sick.",
+        "She did not come to school for she was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_074",
+    "seedId": "as_conjunction_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 늦게 도착해서 사과했다.",
+    "english": "He apologized as he arrived late.",
+    "words": [
+      "He",
+      "apologized",
+      "as",
+      "he",
+      "arrived",
+      "late",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 늦게 도착해서 사과했다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He apologized because he arrived late.",
+      "statementForm": [
+        "He apologized as he arrived late.",
+        "He apologized as he arrived late",
+        "As he arrived late, he apologized.",
+        "As he arrived late, he apologized"
+      ],
+      "fragmentForm": "He apologized as he arrived",
+      "wormholeVariants": [
+        "He apologized because he arrived late.",
+        "He apologized since he arrived late.",
+        "He apologized for he arrived late."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_075",
+    "seedId": "as_conjunction_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "내가 시험을 볼 때 긴장할까?",
+    "english": "Do I get nervous as I take a test?",
+    "words": [
+      "Do",
+      "I",
+      "get",
+      "nervous",
+      "as",
+      "I",
+      "take",
+      "a",
+      "test",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내가 시험을 볼 때 긴장할까?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I get nervous when I take a test?",
+      "statementForm": [
+        "Do I get nervous as I take a test?",
+        "Do I get nervous as I take a test"
+      ],
+      "fragmentForm": "Do I get nervous as I take a",
+      "wormholeVariants": [
+        "Do I get nervous when I take a test?",
+        "Do I get nervous while I take a test?",
+        "Do I get nervous as soon as I take a test?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_076",
+    "seedId": "as_conjunction_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 일할 때 음악을 듣니?",
+    "english": "Does she listen to music as she works?",
+    "words": [
+      "Does",
+      "she",
+      "listen",
+      "to",
+      "music",
+      "as",
+      "she",
+      "works",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 일할 때 음악을 듣니?",
+        "Does"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does she listen to music when she works?",
+      "statementForm": [
+        "Does she listen to music as she works?",
+        "Does she listen to music as she works"
+      ],
+      "fragmentForm": "Does she listen to music as she",
+      "wormholeVariants": [
+        "Does she listen to music when she works?",
+        "Does she listen to music while she works?",
+        "Does she listen to music as soon as she works?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_077",
+    "seedId": "as_conjunction_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 바쁠 때 서로 돕니?",
+    "english": "Do we help each other as we are busy?",
+    "words": [
+      "Do",
+      "we",
+      "help",
+      "each",
+      "other",
+      "as",
+      "we",
+      "are",
+      "busy",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 바쁠 때 서로 돕니?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do we help each other when we are busy?",
+      "statementForm": [
+        "Do we help each other as we are busy?",
+        "Do we help each other as we are busy"
+      ],
+      "fragmentForm": "Do we help each other as we are",
+      "wormholeVariants": [
+        "Do we help each other when we are busy?",
+        "Do we help each other while we are busy?",
+        "Do we help each other as soon as we are busy?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_078",
+    "seedId": "as_conjunction_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 배고플 때 더 잘 생각하니?",
+    "english": "Does he think better as he is hungry?",
+    "words": [
+      "Does",
+      "he",
+      "think",
+      "better",
+      "as",
+      "he",
+      "is",
+      "hungry",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 배고플 때 더 잘 생각하니?",
+        "Does"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does he think better when he is hungry?",
+      "statementForm": [
+        "Does he think better as he is hungry?",
+        "Does he think better as he is hungry"
+      ],
+      "fragmentForm": "Does he think better as he is",
+      "wormholeVariants": [
+        "Does he think better when he is hungry?",
+        "Does he think better while he is hungry?",
+        "Does he think better as soon as he is hungry?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_079",
+    "seedId": "as_conjunction_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 읽는 동안 메모를 한다.",
+    "english": "He takes notes as he reads.",
+    "words": [
+      "He",
+      "takes",
+      "notes",
+      "as",
+      "he",
+      "reads",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 읽는 동안 메모를 한다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He takes notes when he reads.",
+      "statementForm": [
+        "He takes notes as he reads.",
+        "He takes notes as he reads",
+        "As he reads, he takes notes.",
+        "As he reads, he takes notes"
+      ],
+      "fragmentForm": "He takes notes as he",
+      "wormholeVariants": [
+        "He takes notes when he reads.",
+        "He takes notes while he reads.",
+        "He takes notes as soon as he reads."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_080",
+    "seedId": "as_conjunction_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 토론하는 동안 서로의 의견을 존중한다.",
+    "english": "We respect each other's opinions as we discuss.",
+    "words": [
+      "We",
+      "respect",
+      "each",
+      "other's",
+      "opinions",
+      "as",
+      "we",
+      "discuss",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 토론하는 동안 서로의 의견을 존중한다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We respect each other's opinions when we discuss.",
+      "statementForm": [
+        "We respect each other's opinions as we discuss.",
+        "We respect each other's opinions as we discuss",
+        "As we discuss, we respect each other's opinions.",
+        "As we discuss, we respect each other's opinions"
+      ],
+      "fragmentForm": "We respect each other's opinions as we",
+      "wormholeVariants": [
+        "We respect each other's opinions when we discuss.",
+        "We respect each other's opinions while we discuss.",
+        "We respect each other's opinions as soon as we discuss."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_081",
+    "seedId": "as_conjunction_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 발표하는 동안 손을 사용해 설명했다.",
+    "english": "She used her hands to explain as she gave the presentation.",
+    "words": [
+      "She",
+      "used",
+      "her",
+      "hands",
+      "to",
+      "explain",
+      "as",
+      "she",
+      "gave",
+      "the",
+      "presentation",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 발표하는 동안 손을 사용해 설명했다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She used her hands to explain when she gave the presentation.",
+      "statementForm": [
+        "She used her hands to explain as she gave the presentation.",
+        "She used her hands to explain as she gave the presentation",
+        "As she gave the presentation, she used her hands to explain.",
+        "As she gave the presentation, she used her hands to explain"
+      ],
+      "fragmentForm": "She used her hands to explain as she gave the",
+      "wormholeVariants": [
+        "She used her hands to explain when she gave the presentation.",
+        "She used her hands to explain while she gave the presentation.",
+        "She used her hands to explain as soon as she gave the presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_082",
+    "seedId": "as_conjunction_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "학생들은 연습하는 동안 점점 더 자신감을 얻었다.",
+    "english": "Students became more confident as they practiced.",
+    "words": [
+      "Students",
+      "became",
+      "more",
+      "confident",
+      "as",
+      "they",
+      "practiced",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들은 연습하는 동안 점점 더 자신감을 얻었다.",
+        "Students"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Students became more confident when they practiced.",
+      "statementForm": [
+        "Students became more confident as they practiced.",
+        "Students became more confident as they practiced",
+        "As they practiced, students became more confident.",
+        "As they practiced, students became more confident"
+      ],
+      "fragmentForm": "Students became more confident as they",
+      "wormholeVariants": [
+        "Students became more confident when they practiced.",
+        "Students became more confident while they practiced.",
+        "Students became more confident as soon as they practiced."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_083",
+    "seedId": "as_conjunction_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 걷는 동안 사진을 찍지 않았다.",
+    "english": "He did not take pictures as he walked.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "take",
+      "pictures",
+      "as",
+      "he",
+      "walked",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 걷는 동안 사진을 찍지 않았다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not take pictures when he walked.",
+      "statementForm": [
+        "He did not take pictures as he walked.",
+        "He did not take pictures as he walked",
+        "As he walked, he did not take pictures.",
+        "As he walked, he did not take pictures"
+      ],
+      "fragmentForm": "He did not take pictures as he",
+      "wormholeVariants": [
+        "He did not take pictures when he walked.",
+        "He did not take pictures while he walked.",
+        "He did not take pictures as soon as he walked."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_084",
+    "seedId": "as_conjunction_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 기다리는 동안 지루하지 않았다.",
+    "english": "We were not bored as we waited.",
+    "words": [
+      "We",
+      "were",
+      "not",
+      "bored",
+      "as",
+      "we",
+      "waited",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 기다리는 동안 지루하지 않았다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were not bored when we waited.",
+      "statementForm": [
+        "We were not bored as we waited.",
+        "We were not bored as we waited",
+        "As we waited, we were not bored.",
+        "As we waited, we were not bored"
+      ],
+      "fragmentForm": "We were not bored as we",
+      "wormholeVariants": [
+        "We were not bored when we waited.",
+        "We were not bored while we waited.",
+        "We were not bored as soon as we waited."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_085",
+    "seedId": "as_conjunction_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 공부하는 동안 질문을 적었다.",
+    "english": "She wrote down questions as she studied.",
+    "words": [
+      "She",
+      "wrote",
+      "down",
+      "questions",
+      "as",
+      "she",
+      "studied",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 공부하는 동안 질문을 적었다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "She wrote down questions when she studied.",
+      "statementForm": [
+        "She wrote down questions as she studied.",
+        "She wrote down questions as she studied",
+        "As she studied, she wrote down questions.",
+        "As she studied, she wrote down questions"
+      ],
+      "fragmentForm": "She wrote down questions as she",
+      "wormholeVariants": [
+        "She wrote down questions when she studied.",
+        "She wrote down questions while she studied.",
+        "She wrote down questions as soon as she studied."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_086",
+    "seedId": "as_conjunction_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그들은 일하는 동안 조용히 있었다.",
+    "english": "They stayed quiet as they worked.",
+    "words": [
+      "They",
+      "stayed",
+      "quiet",
+      "as",
+      "they",
+      "worked",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 일하는 동안 조용히 있었다.",
+        "They"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "They stayed quiet when they worked.",
+      "statementForm": [
+        "They stayed quiet as they worked.",
+        "They stayed quiet as they worked",
+        "As they worked, they stayed quiet.",
+        "As they worked, they stayed quiet"
+      ],
+      "fragmentForm": "They stayed quiet as they",
+      "wormholeVariants": [
+        "They stayed quiet when they worked.",
+        "They stayed quiet while they worked.",
+        "They stayed quiet as soon as they worked."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_087",
+    "seedId": "as_conjunction_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 네가 말하는 동안 듣고 있었다.",
+    "english": "I was listening as you were speaking.",
+    "words": [
+      "I",
+      "was",
+      "listening",
+      "as",
+      "you",
+      "were",
+      "speaking",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 말하는 동안 듣고 있었다.",
+        "I"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was listening when you were speaking.",
+      "statementForm": [
+        "I was listening as you were speaking.",
+        "I was listening as you were speaking",
+        "As you were speaking, I was listening.",
+        "As you were speaking, I was listening"
+      ],
+      "fragmentForm": "I was listening as you were",
+      "wormholeVariants": [
+        "I was listening when you were speaking.",
+        "I was listening while you were speaking.",
+        "I was listening as soon as you were speaking."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_088",
+    "seedId": "as_conjunction_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 집에 가는 동안 숙제를 생각했다.",
+    "english": "He thought about homework as he went home.",
+    "words": [
+      "He",
+      "thought",
+      "about",
+      "homework",
+      "as",
+      "he",
+      "went",
+      "home",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 집에 가는 동안 숙제를 생각했다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "He thought about homework when he went home.",
+      "statementForm": [
+        "He thought about homework as he went home.",
+        "He thought about homework as he went home",
+        "As he went home, he thought about homework.",
+        "As he went home, he thought about homework"
+      ],
+      "fragmentForm": "He thought about homework as he went",
+      "wormholeVariants": [
+        "He thought about homework when he went home.",
+        "He thought about homework while he went home.",
+        "He thought about homework as soon as he went home."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_089",
+    "seedId": "as_conjunction_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 아파서 수업에 오지 못했다.",
+    "english": "She could not come to class as she was sick.",
+    "words": [
+      "She",
+      "could",
+      "not",
+      "come",
+      "to",
+      "class",
+      "as",
+      "she",
+      "was",
+      "sick",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 아파서 수업에 오지 못했다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She could not come to class because she was sick.",
+      "statementForm": [
+        "She could not come to class as she was sick.",
+        "She could not come to class as she was sick",
+        "As she was sick, she could not come to class.",
+        "As she was sick, she could not come to class"
+      ],
+      "fragmentForm": "She could not come to class as she was",
+      "wormholeVariants": [
+        "She could not come to class because she was sick.",
+        "She could not come to class since she was sick.",
+        "She could not come to class for she was sick."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_090",
+    "seedId": "as_conjunction_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 시간이 부족해서 계획을 바꿨다.",
+    "english": "We changed the plan as we had little time.",
+    "words": [
+      "We",
+      "changed",
+      "the",
+      "plan",
+      "as",
+      "we",
+      "had",
+      "little",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 시간이 부족해서 계획을 바꿨다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "We changed the plan because we had little time.",
+      "statementForm": [
+        "We changed the plan as we had little time.",
+        "We changed the plan as we had little time",
+        "As we had little time, we changed the plan.",
+        "As we had little time, we changed the plan"
+      ],
+      "fragmentForm": "We changed the plan as we had little",
+      "wormholeVariants": [
+        "We changed the plan because we had little time.",
+        "We changed the plan since we had little time.",
+        "We changed the plan for we had little time."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_091",
+    "seedId": "as_conjunction_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 준비가 안 돼서 질문에 답하지 못했다.",
+    "english": "He could not answer the question as he was not ready.",
+    "words": [
+      "He",
+      "could",
+      "not",
+      "answer",
+      "the",
+      "question",
+      "as",
+      "he",
+      "was",
+      "not",
+      "ready",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 준비가 안 돼서 질문에 답하지 못했다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "negative",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "He could not answer the question because he was not ready.",
+      "statementForm": [
+        "He could not answer the question as he was not ready.",
+        "He could not answer the question as he was not ready",
+        "As he was not ready, he could not answer the question.",
+        "As he was not ready, he could not answer the question"
+      ],
+      "fragmentForm": "He could not answer the question as he was not",
+      "wormholeVariants": [
+        "He could not answer the question because he was not ready.",
+        "He could not answer the question since he was not ready.",
+        "He could not answer the question for he was not ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_092",
+    "seedId": "as_conjunction_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 피곤해서 일찍 잠들었다.",
+    "english": "She fell asleep early as she was tired.",
+    "words": [
+      "She",
+      "fell",
+      "asleep",
+      "early",
+      "as",
+      "she",
+      "was",
+      "tired",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 피곤해서 일찍 잠들었다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "She fell asleep early because she was tired.",
+      "statementForm": [
+        "She fell asleep early as she was tired.",
+        "She fell asleep early as she was tired",
+        "As she was tired, she fell asleep early.",
+        "As she was tired, she fell asleep early"
+      ],
+      "fragmentForm": "She fell asleep early as she was",
+      "wormholeVariants": [
+        "She fell asleep early because she was tired.",
+        "She fell asleep early since she was tired.",
+        "She fell asleep early for she was tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_093",
+    "seedId": "as_conjunction_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "나는 네가 바쁠 때 전화하니?",
+    "english": "Do I call you as you are busy?",
+    "words": [
+      "Do",
+      "I",
+      "call",
+      "you",
+      "as",
+      "you",
+      "are",
+      "busy",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 바쁠 때 전화하니?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do I call you when you are busy?",
+      "statementForm": [
+        "Do I call you as you are busy?",
+        "Do I call you as you are busy"
+      ],
+      "fragmentForm": "Do I call you as you are",
+      "wormholeVariants": [
+        "Do I call you when you are busy?",
+        "Do I call you while you are busy?",
+        "Do I call you as soon as you are busy?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_094",
+    "seedId": "as_conjunction_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그들은 공부하는 동안 서로 도와주니?",
+    "english": "Do they help each other as they study?",
+    "words": [
+      "Do",
+      "they",
+      "help",
+      "each",
+      "other",
+      "as",
+      "they",
+      "study",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 공부하는 동안 서로 도와주니?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do they help each other when they study?",
+      "statementForm": [
+        "Do they help each other as they study?",
+        "Do they help each other as they study"
+      ],
+      "fragmentForm": "Do they help each other as they",
+      "wormholeVariants": [
+        "Do they help each other when they study?",
+        "Do they help each other while they study?",
+        "Do they help each other as soon as they study?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_095",
+    "seedId": "as_conjunction_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 일하는 동안 음악을 듣니?",
+    "english": "Does she listen to music as she works?",
+    "words": [
+      "Does",
+      "she",
+      "listen",
+      "to",
+      "music",
+      "as",
+      "she",
+      "works",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 일하는 동안 음악을 듣니?",
+        "Does"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does she listen to music when she works?",
+      "statementForm": [
+        "Does she listen to music as she works?",
+        "Does she listen to music as she works"
+      ],
+      "fragmentForm": "Does she listen to music as she",
+      "wormholeVariants": [
+        "Does she listen to music when she works?",
+        "Does she listen to music while she works?",
+        "Does she listen to music as soon as she works?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_096",
+    "seedId": "as_conjunction_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 비가 올 때 운동하니?",
+    "english": "Do we exercise as it rains?",
+    "words": [
+      "Do",
+      "we",
+      "exercise",
+      "as",
+      "it",
+      "rains",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 비가 올 때 운동하니?",
+        "Do"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "question",
+      "conjunction_as",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do we exercise when it rains?",
+      "statementForm": [
+        "Do we exercise as it rains?",
+        "Do we exercise as it rains"
+      ],
+      "fragmentForm": "Do we exercise as it",
+      "wormholeVariants": [
+        "Do we exercise when it rains?",
+        "Do we exercise while it rains?",
+        "Do we exercise as soon as it rains?"
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_097",
+    "seedId": "as_conjunction_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 나이가 들수록 더 침착해진다.",
+    "english": "He becomes calmer as he gets older.",
+    "words": [
+      "He",
+      "becomes",
+      "calmer",
+      "as",
+      "he",
+      "gets",
+      "older",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나이가 들수록 더 침착해진다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "He becomes calmer when he gets older.",
+      "statementForm": [
+        "He becomes calmer as he gets older.",
+        "He becomes calmer as he gets older",
+        "As he gets older, he becomes calmer.",
+        "As he gets older, he becomes calmer"
+      ],
+      "fragmentForm": "He becomes calmer as he gets",
+      "wormholeVariants": [
+        "He becomes calmer when he gets older.",
+        "He becomes calmer while he gets older.",
+        "He becomes calmer because he gets older."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_098",
+    "seedId": "as_conjunction_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "학생들은 연습할수록 더 잘한다.",
+    "english": "Students do better as they practice more.",
+    "words": [
+      "Students",
+      "do",
+      "better",
+      "as",
+      "they",
+      "practice",
+      "more",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들은 연습할수록 더 잘한다.",
+        "Students"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "Students do better when they practice more.",
+      "statementForm": [
+        "Students do better as they practice more.",
+        "Students do better as they practice more",
+        "As they practice more, students do better.",
+        "As they practice more, students do better"
+      ],
+      "fragmentForm": "Students do better as they practice",
+      "wormholeVariants": [
+        "Students do better when they practice more.",
+        "Students do better while they practice more.",
+        "Students do better because they practice more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_099",
+    "seedId": "as_conjunction_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 쓰면 쓸수록 단어를 더 많이 기억했다.",
+    "english": "She remembered more words as she wrote more.",
+    "words": [
+      "She",
+      "remembered",
+      "more",
+      "words",
+      "as",
+      "she",
+      "wrote",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 쓰면 쓸수록 단어를 더 많이 기억했다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "She remembered more words when she wrote more.",
+      "statementForm": [
+        "She remembered more words as she wrote more.",
+        "She remembered more words as she wrote more",
+        "As she wrote more, she remembered more words.",
+        "As she wrote more, she remembered more words"
+      ],
+      "fragmentForm": "She remembered more words as she wrote",
+      "wormholeVariants": [
+        "She remembered more words when she wrote more.",
+        "She remembered more words while she wrote more.",
+        "She remembered more words because she wrote more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_100",
+    "seedId": "as_conjunction_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 배우면 배울수록 더 흥미를 느낀다.",
+    "english": "We feel more interested as we learn more.",
+    "words": [
+      "We",
+      "feel",
+      "more",
+      "interested",
+      "as",
+      "we",
+      "learn",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 배우면 배울수록 더 흥미를 느낀다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "We feel more interested when we learn more.",
+      "statementForm": [
+        "We feel more interested as we learn more.",
+        "We feel more interested as we learn more",
+        "As we learn more, we feel more interested.",
+        "As we learn more, we feel more interested"
+      ],
+      "fragmentForm": "We feel more interested as we learn",
+      "wormholeVariants": [
+        "We feel more interested when we learn more.",
+        "We feel more interested while we learn more.",
+        "We feel more interested because we learn more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_101",
+    "seedId": "as_conjunction_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그는 노력할수록 더 많은 기회를 얻었다.",
+    "english": "He got more chances as he made more effort.",
+    "words": [
+      "He",
+      "got",
+      "more",
+      "chances",
+      "as",
+      "he",
+      "made",
+      "more",
+      "effort",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 노력할수록 더 많은 기회를 얻었다.",
+        "He"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "He got more chances when he made more effort.",
+      "statementForm": [
+        "He got more chances as he made more effort.",
+        "He got more chances as he made more effort",
+        "As he made more effort, he got more chances.",
+        "As he made more effort, he got more chances"
+      ],
+      "fragmentForm": "He got more chances as he made more",
+      "wormholeVariants": [
+        "He got more chances when he made more effort.",
+        "He got more chances while he made more effort.",
+        "He got more chances because he made more effort."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_102",
+    "seedId": "as_conjunction_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그 책은 읽으면 읽을수록 더 재미있다.",
+    "english": "The book becomes more interesting as we read it more.",
+    "words": [
+      "The",
+      "book",
+      "becomes",
+      "more",
+      "interesting",
+      "as",
+      "we",
+      "read",
+      "it",
+      "more",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 책은 읽으면 읽을수록 더 재미있다.",
+        "The"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book becomes more interesting when we read it more.",
+      "statementForm": [
+        "The book becomes more interesting as we read it more.",
+        "The book becomes more interesting as we read it more",
+        "As we read it more, the book becomes more interesting.",
+        "As we read it more, the book becomes more interesting"
+      ],
+      "fragmentForm": "The book becomes more interesting as we read it",
+      "wormholeVariants": [
+        "The book becomes more interesting when we read it more.",
+        "The book becomes more interesting while we read it more.",
+        "The book becomes more interesting because we read it more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_103",
+    "seedId": "as_conjunction_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그 규칙은 사용할수록 더 자연스럽게 느껴진다.",
+    "english": "The rule feels more natural as we use it more.",
+    "words": [
+      "The",
+      "rule",
+      "feels",
+      "more",
+      "natural",
+      "as",
+      "we",
+      "use",
+      "it",
+      "more",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 사용할수록 더 자연스럽게 느껴진다.",
+        "The"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule feels more natural when we use it more.",
+      "statementForm": [
+        "The rule feels more natural as we use it more.",
+        "The rule feels more natural as we use it more",
+        "As we use it more, the rule feels more natural.",
+        "As we use it more, the rule feels more natural"
+      ],
+      "fragmentForm": "The rule feels more natural as we use it",
+      "wormholeVariants": [
+        "The rule feels more natural when we use it more.",
+        "The rule feels more natural while we use it more.",
+        "The rule feels more natural because we use it more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_104",
+    "seedId": "as_conjunction_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "그녀는 연습할수록 더 빨라졌다.",
+    "english": "She became faster as she practiced more.",
+    "words": [
+      "She",
+      "became",
+      "faster",
+      "as",
+      "she",
+      "practiced",
+      "more",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 연습할수록 더 빨라졌다.",
+        "She"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "She became faster when she practiced more.",
+      "statementForm": [
+        "She became faster as she practiced more.",
+        "She became faster as she practiced more",
+        "As she practiced more, she became faster.",
+        "As she practiced more, she became faster"
+      ],
+      "fragmentForm": "She became faster as she practiced",
+      "wormholeVariants": [
+        "She became faster when she practiced more.",
+        "She became faster while she practiced more.",
+        "She became faster because she practiced more."
+      ]
+    }
+  },
+  {
+    "id": "m2_as_conjunction_105",
+    "seedId": "as_conjunction_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "as_conjunction",
+    "chapterLabelKo": "접속사 as",
+    "korean": "우리는 토론할수록 더 깊이 생각했다.",
+    "english": "We thought more deeply as we debated more.",
+    "words": [
+      "We",
+      "thought",
+      "more",
+      "deeply",
+      "as",
+      "we",
+      "debated",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "as_conjunction",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 토론할수록 더 깊이 생각했다.",
+        "We"
+      ],
+      [
+        "as",
+        "as"
+      ],
+      [
+        "주의",
+        "as can introduce time, reason, comparison, or simultaneity; do not confuse it with as + adjective/adverb + as"
+      ]
+    ],
+    "extraClueWordPool": [
+      "as",
+      "when",
+      "while",
+      "because",
+      "since",
+      "as soon as"
+    ],
+    "blankTargets": [
+      "as"
+    ],
+    "tags": [
+      "as_conjunction",
+      "affirm",
+      "conjunction_as",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "We thought more deeply when we debated more.",
+      "statementForm": [
+        "We thought more deeply as we debated more.",
+        "We thought more deeply as we debated more",
+        "As we debated more, we thought more deeply.",
+        "As we debated more, we thought more deeply"
+      ],
+      "fragmentForm": "We thought more deeply as we debated",
+      "wormholeVariants": [
+        "We thought more deeply when we debated more.",
+        "We thought more deeply while we debated more.",
+        "We thought more deeply because we debated more."
+      ]
+    }
+  }
+]
