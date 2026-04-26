@@ -1,0 +1,6584 @@
+[
+  {
+    "id": "m2_it_to_001",
+    "seedId": "it_to_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "매일 공부하는 것은 중요하다.",
+    "english": "It is important to study every day.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "to",
+      "study",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "매일 공부하는 것은 중요하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to study every day.",
+      "statementForm": [
+        "It is important to study every day.",
+        "It is important to study every day"
+      ],
+      "fragmentForm": "It is important to study",
+      "wormholeVariants": [
+        "It is important that to study every day.",
+        "It is easy for understand this rule.",
+        "It is difficult solve the problem.",
+        "It is necessary that to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_002",
+    "seedId": "it_to_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "이 규칙을 이해하는 것은 쉽다.",
+    "english": "It is easy to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "easy",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 규칙을 이해하는 것은 쉽다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to study every day.",
+      "statementForm": [
+        "It is easy to understand this rule.",
+        "It is easy to understand this rule"
+      ],
+      "fragmentForm": "It is easy to understand",
+      "wormholeVariants": [
+        "It is important that to study every day.",
+        "It is easy for understand this rule.",
+        "It is difficult solve the problem.",
+        "It is necessary that to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_003",
+    "seedId": "it_to_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "그 문제를 푸는 것은 어렵다.",
+    "english": "It is difficult to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "difficult",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제를 푸는 것은 어렵다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to study every day.",
+      "statementForm": [
+        "It is difficult to solve the problem.",
+        "It is difficult to solve the problem"
+      ],
+      "fragmentForm": "It is difficult to solve",
+      "wormholeVariants": [
+        "It is important that to study every day.",
+        "It is easy for understand this rule.",
+        "It is difficult solve the problem.",
+        "It is necessary that to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_004",
+    "seedId": "it_to_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "제시간에 도착하는 것은 필요하다.",
+    "english": "It is necessary to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "necessary",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "제시간에 도착하는 것은 필요하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to study every day.",
+      "statementForm": [
+        "It is necessary to arrive on time.",
+        "It is necessary to arrive on time"
+      ],
+      "fragmentForm": "It is necessary to arrive",
+      "wormholeVariants": [
+        "It is important that to study every day.",
+        "It is easy for understand this rule.",
+        "It is difficult solve the problem.",
+        "It is necessary that to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_005",
+    "seedId": "it_to_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "건강을 유지하는 것은 중요하다.",
+    "english": "It is important to stay healthy.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "to",
+      "stay",
+      "healthy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "건강을 유지하는 것은 중요하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to study every day.",
+      "statementForm": [
+        "It is important to stay healthy.",
+        "It is important to stay healthy"
+      ],
+      "fragmentForm": "It is important to stay",
+      "wormholeVariants": [
+        "It is important that to study every day.",
+        "It is easy for understand this rule.",
+        "It is difficult solve the problem.",
+        "It is necessary that to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_006",
+    "seedId": "it_to_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "학생들이 매일 공부하는 것은 중요하다.",
+    "english": "It is important for students to study every day.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "for",
+      "students",
+      "to",
+      "study",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들이 매일 공부하는 것은 중요하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important of students to study every day.",
+      "statementForm": [
+        "It is important for students to study every day.",
+        "It is important for students to study every day"
+      ],
+      "fragmentForm": "It is important for students",
+      "wormholeVariants": [
+        "It is important of students to study every day.",
+        "It is difficult for me understand this.",
+        "It is necessary for them finishing on time.",
+        "It is good for children play outside."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_007",
+    "seedId": "it_to_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "내가 이것을 이해하는 것은 어렵다.",
+    "english": "It is difficult for me to understand this.",
+    "words": [
+      "It",
+      "is",
+      "difficult",
+      "for",
+      "me",
+      "to",
+      "understand",
+      "this",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내가 이것을 이해하는 것은 어렵다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important of students to study every day.",
+      "statementForm": [
+        "It is difficult for me to understand this.",
+        "It is difficult for me to understand this"
+      ],
+      "fragmentForm": "It is difficult for me",
+      "wormholeVariants": [
+        "It is important of students to study every day.",
+        "It is difficult for me understand this.",
+        "It is necessary for them finishing on time.",
+        "It is good for children play outside."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_008",
+    "seedId": "it_to_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "그들이 제시간에 끝내는 것은 필요하다.",
+    "english": "It is necessary for them to finish on time.",
+    "words": [
+      "It",
+      "is",
+      "necessary",
+      "for",
+      "them",
+      "to",
+      "finish",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 제시간에 끝내는 것은 필요하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important of students to study every day.",
+      "statementForm": [
+        "It is necessary for them to finish on time.",
+        "It is necessary for them to finish on time"
+      ],
+      "fragmentForm": "It is necessary for them",
+      "wormholeVariants": [
+        "It is important of students to study every day.",
+        "It is difficult for me understand this.",
+        "It is necessary for them finishing on time.",
+        "It is good for children play outside."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_009",
+    "seedId": "it_to_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "아이들이 밖에서 노는 것은 좋다.",
+    "english": "It is good for children to play outside.",
+    "words": [
+      "It",
+      "is",
+      "good",
+      "for",
+      "children",
+      "to",
+      "play",
+      "outside",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아이들이 밖에서 노는 것은 좋다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important of students to study every day.",
+      "statementForm": [
+        "It is good for children to play outside.",
+        "It is good for children to play outside"
+      ],
+      "fragmentForm": "It is good for children",
+      "wormholeVariants": [
+        "It is important of students to study every day.",
+        "It is difficult for me understand this.",
+        "It is necessary for them finishing on time.",
+        "It is good for children play outside."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_010",
+    "seedId": "it_to_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "네가 나를 도와주는 것은 친절하다.",
+    "english": "It is kind of you to help me.",
+    "words": [
+      "It",
+      "is",
+      "kind",
+      "of",
+      "you",
+      "to",
+      "help",
+      "me",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 나를 도와주는 것은 친절하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + of O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "of",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "of",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "of_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is kind for you to help me.",
+      "statementForm": [
+        "It is kind of you to help me.",
+        "It is kind of you to help me"
+      ],
+      "fragmentForm": "It is kind of you",
+      "wormholeVariants": [
+        "It is kind for you to help me.",
+        "It is careless for him to make that mistake.",
+        "It was careless of her forgetting the key.",
+        "It was careless her to forget the key."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_011",
+    "seedId": "it_to_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "그가 그런 실수를 한 것은 부주의하다.",
+    "english": "It is careless of him to make that mistake.",
+    "words": [
+      "It",
+      "is",
+      "careless",
+      "of",
+      "him",
+      "to",
+      "make",
+      "that",
+      "mistake",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 그런 실수를 한 것은 부주의하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + of O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "of",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "of",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "of_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is kind for you to help me.",
+      "statementForm": [
+        "It is careless of him to make that mistake.",
+        "It is careless of him to make that mistake"
+      ],
+      "fragmentForm": "It is careless of him",
+      "wormholeVariants": [
+        "It is kind for you to help me.",
+        "It is careless for him to make that mistake.",
+        "It was careless of her forgetting the key.",
+        "It was careless her to forget the key."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_012",
+    "seedId": "it_to_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "그녀가 열쇠를 잊은 것은 부주의했다.",
+    "english": "It was careless of her to forget the key.",
+    "words": [
+      "It",
+      "was",
+      "careless",
+      "of",
+      "her",
+      "to",
+      "forget",
+      "the",
+      "key",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 열쇠를 잊은 것은 부주의했다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + of O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "of",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "of",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "of_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is kind for you to help me.",
+      "statementForm": [
+        "It was careless of her to forget the key.",
+        "It was careless of her to forget the key"
+      ],
+      "fragmentForm": "It was careless of her",
+      "wormholeVariants": [
+        "It is kind for you to help me.",
+        "It is careless for him to make that mistake.",
+        "It was careless of her forgetting the key.",
+        "It was careless her to forget the key."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_013",
+    "seedId": "it_to_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "그 문제를 푸는 것은 쉽지 않다.",
+    "english": "It is not easy to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "easy",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제를 푸는 것은 쉽지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is not easy solve the problem.",
+      "statementForm": [
+        "It is not easy to solve the problem.",
+        "It is not easy to solve the problem"
+      ],
+      "fragmentForm": "It is not easy to",
+      "wormholeVariants": [
+        "It is not easy solve the problem.",
+        "It is not important that to worry about it.",
+        "It is not necessary finishing on time.",
+        "It not is necessary to finish on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_014",
+    "seedId": "it_to_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "걱정하는 것은 중요하지 않다.",
+    "english": "It is not important to worry about it.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "important",
+      "to",
+      "worry",
+      "about",
+      "it",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "걱정하는 것은 중요하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is not easy solve the problem.",
+      "statementForm": [
+        "It is not important to worry about it.",
+        "It is not important to worry about it"
+      ],
+      "fragmentForm": "It is not important to",
+      "wormholeVariants": [
+        "It is not easy solve the problem.",
+        "It is not important that to worry about it.",
+        "It is not necessary finishing on time.",
+        "It not is necessary to finish on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_015",
+    "seedId": "it_to_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "제시간에 끝내는 것은 필요하지 않다.",
+    "english": "It is not necessary to finish on time.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "necessary",
+      "to",
+      "finish",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "제시간에 끝내는 것은 필요하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is not easy solve the problem.",
+      "statementForm": [
+        "It is not necessary to finish on time.",
+        "It is not necessary to finish on time"
+      ],
+      "fragmentForm": "It is not necessary to",
+      "wormholeVariants": [
+        "It is not easy solve the problem.",
+        "It is not important that to worry about it.",
+        "It is not necessary finishing on time.",
+        "It not is necessary to finish on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_016",
+    "seedId": "it_to_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "이 규칙을 이해하는 것은 쉽니?",
+    "english": "Is it easy to understand this rule?",
+    "words": [
+      "Is",
+      "it",
+      "easy",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 규칙을 이해하는 것은 쉽니?",
+        "Is"
+      ],
+      [
+        "it + adj + to V",
+        "Is it + adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Is",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "Is",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does it easy to understand this rule?",
+      "statementForm": [
+        "Is it easy to understand this rule?",
+        "Is it easy to understand this rule"
+      ],
+      "fragmentForm": "Is it easy to understand",
+      "wormholeVariants": [
+        "Does it easy to understand this rule?",
+        "Is it easy for understand this rule?",
+        "Is easy it to understand this rule?",
+        "Is it easy understanding this rule?"
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_017",
+    "seedId": "it_to_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "학생들이 매일 공부하는 것은 중요하니?",
+    "english": "Is it important for students to study every day?",
+    "words": [
+      "Is",
+      "it",
+      "important",
+      "for",
+      "students",
+      "to",
+      "study",
+      "every",
+      "day",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들이 매일 공부하는 것은 중요하니?",
+        "Is"
+      ],
+      [
+        "it + adj + to V",
+        "Is it + adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Is",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "Is",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does it easy to understand this rule?",
+      "statementForm": [
+        "Is it important for students to study every day?",
+        "Is it important for students to study every day"
+      ],
+      "fragmentForm": "Is it important for students",
+      "wormholeVariants": [
+        "Does it easy to understand this rule?",
+        "Is it easy for understand this rule?",
+        "Is easy it to understand this rule?",
+        "Is it easy understanding this rule?"
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_018",
+    "seedId": "it_to_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "그 문제를 푸는 것은 어렵니?",
+    "english": "Is it difficult to solve the problem?",
+    "words": [
+      "Is",
+      "it",
+      "difficult",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제를 푸는 것은 어렵니?",
+        "Is"
+      ],
+      [
+        "it + adj + to V",
+        "Is it + adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Is",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "Is",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Does it easy to understand this rule?",
+      "statementForm": [
+        "Is it difficult to solve the problem?",
+        "Is it difficult to solve the problem"
+      ],
+      "fragmentForm": "Is it difficult to solve",
+      "wormholeVariants": [
+        "Does it easy to understand this rule?",
+        "Is it easy for understand this rule?",
+        "Is easy it to understand this rule?",
+        "Is it easy understanding this rule?"
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_019",
+    "seedId": "it_to_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "매일 공부하는 것은 중요하다.",
+    "english": "It is important to study every day.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "to",
+      "study",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "매일 공부하는 것은 중요하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "it-transform"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "transform"
+    ],
+    "distractorSeeds": {
+      "auxError": "To study every day is important that.",
+      "statementForm": [
+        "It is important to study every day.",
+        "It is important to study every day"
+      ],
+      "fragmentForm": "It is important to study",
+      "wormholeVariants": [
+        "To study every day is important that.",
+        "To solve the problem is difficult to.",
+        "It is difficult that to solve the problem.",
+        "It is important study to every day."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_020",
+    "seedId": "it_to_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "그 문제를 푸는 것은 어렵다.",
+    "english": "It is difficult to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "difficult",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제를 푸는 것은 어렵다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "it-transform"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "transform"
+    ],
+    "distractorSeeds": {
+      "auxError": "To study every day is important that.",
+      "statementForm": [
+        "It is difficult to solve the problem.",
+        "It is difficult to solve the problem"
+      ],
+      "fragmentForm": "It is difficult to solve",
+      "wormholeVariants": [
+        "To study every day is important that.",
+        "To solve the problem is difficult to.",
+        "It is difficult that to solve the problem.",
+        "It is important study to every day."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_021",
+    "seedId": "it_to_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "them이(가) 그렇게 하는 것은 safe하지 않다.",
+    "english": "It is not safe for them to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "safe",
+      "for",
+      "them",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "them이(가) 그렇게 하는 것은 safe하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is safe that to understand this rule.",
+      "statementForm": [
+        "It is not safe for them to understand this rule.",
+        "It is not safe for them to understand this rule"
+      ],
+      "fragmentForm": "It is not safe for",
+      "wormholeVariants": [
+        "It is safe that to understand this rule.",
+        "It is safe for them understand this rule.",
+        "It is safe for them to understand this ruleing.",
+        "It is safe of them to understand this rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_022",
+    "seedId": "it_to_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "beginners이(가) solve the problem하는 것은 hard하다.",
+    "english": "It is hard for beginners to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "hard",
+      "for",
+      "beginners",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "beginners이(가) solve the problem하는 것은 hard하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is hard that to solve the problem.",
+      "statementForm": [
+        "It is hard for beginners to solve the problem.",
+        "It is hard for beginners to solve the problem"
+      ],
+      "fragmentForm": "It is hard for beginners",
+      "wormholeVariants": [
+        "It is hard that to solve the problem.",
+        "It is hard for beginners solve the problem.",
+        "It is hard for beginners to solve the probleming.",
+        "It is hard of beginners to solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_023",
+    "seedId": "it_to_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "finish the work하는 것은 simple하다.",
+    "english": "It is simple to finish the work.",
+    "words": [
+      "It",
+      "is",
+      "simple",
+      "to",
+      "finish",
+      "the",
+      "work",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "finish the work하는 것은 simple하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is simple that to finish the work.",
+      "statementForm": [
+        "It is simple to finish the work.",
+        "It is simple to finish the work"
+      ],
+      "fragmentForm": "It is simple to finish",
+      "wormholeVariants": [
+        "It is simple that to finish the work.",
+        "It is simple for drivers finish the work.",
+        "It is simple for drivers to finish the working.",
+        "It is simple of drivers to finish the work."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_024",
+    "seedId": "it_to_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "users이(가) 그렇게 하는 것은 complex하지 않다.",
+    "english": "It is not complex for users to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "complex",
+      "for",
+      "users",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "users이(가) 그렇게 하는 것은 complex하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is complex that to arrive on time.",
+      "statementForm": [
+        "It is not complex for users to arrive on time.",
+        "It is not complex for users to arrive on time"
+      ],
+      "fragmentForm": "It is not complex for",
+      "wormholeVariants": [
+        "It is complex that to arrive on time.",
+        "It is complex for users arrive on time.",
+        "It is complex for users to arrive on timeing.",
+        "It is complex of users to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_025",
+    "seedId": "it_to_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "students이(가) keep the promise하는 것은 important하다.",
+    "english": "It is important for students to keep the promise.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "for",
+      "students",
+      "to",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "students이(가) keep the promise하는 것은 important하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to keep the promise.",
+      "statementForm": [
+        "It is important for students to keep the promise.",
+        "It is important for students to keep the promise"
+      ],
+      "fragmentForm": "It is important for students",
+      "wormholeVariants": [
+        "It is important that to keep the promise.",
+        "It is important for students keep the promise.",
+        "It is important for students to keep the promiseing.",
+        "It is important of students to keep the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_026",
+    "seedId": "it_to_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "use the app하는 것은 easy하다.",
+    "english": "It is easy to use the app.",
+    "words": [
+      "It",
+      "is",
+      "easy",
+      "to",
+      "use",
+      "the",
+      "app",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "use the app하는 것은 easy하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is easy that to use the app.",
+      "statementForm": [
+        "It is easy to use the app.",
+        "It is easy to use the app"
+      ],
+      "fragmentForm": "It is easy to use",
+      "wormholeVariants": [
+        "It is easy that to use the app.",
+        "It is easy for children use the app.",
+        "It is easy for children to use the apping.",
+        "It is easy of children to use the app."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_027",
+    "seedId": "it_to_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "people이(가) 그렇게 하는 것은 difficult하지 않다.",
+    "english": "It is not difficult for people to follow the instructions.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "difficult",
+      "for",
+      "people",
+      "to",
+      "follow",
+      "the",
+      "instructions",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "people이(가) 그렇게 하는 것은 difficult하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is difficult that to follow the instructions.",
+      "statementForm": [
+        "It is not difficult for people to follow the instructions.",
+        "It is not difficult for people to follow the instructions"
+      ],
+      "fragmentForm": "It is not difficult for",
+      "wormholeVariants": [
+        "It is difficult that to follow the instructions.",
+        "It is difficult for people follow the instructions.",
+        "It is difficult for people to follow the instructionsing.",
+        "It is difficult of people to follow the instructions."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_028",
+    "seedId": "it_to_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "us이(가) learn English하는 것은 necessary하다.",
+    "english": "It is necessary for us to learn English.",
+    "words": [
+      "It",
+      "is",
+      "necessary",
+      "for",
+      "us",
+      "to",
+      "learn",
+      "English",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "us이(가) learn English하는 것은 necessary하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is necessary that to learn English.",
+      "statementForm": [
+        "It is necessary for us to learn English.",
+        "It is necessary for us to learn English"
+      ],
+      "fragmentForm": "It is necessary for us",
+      "wormholeVariants": [
+        "It is necessary that to learn English.",
+        "It is necessary for us learn English.",
+        "It is necessary for us to learn Englishing.",
+        "It is necessary of us to learn English."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_029",
+    "seedId": "it_to_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "fix the error하는 것은 possible하다.",
+    "english": "It is possible to fix the error.",
+    "words": [
+      "It",
+      "is",
+      "possible",
+      "to",
+      "fix",
+      "the",
+      "error",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "fix the error하는 것은 possible하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is possible that to fix the error.",
+      "statementForm": [
+        "It is possible to fix the error.",
+        "It is possible to fix the error"
+      ],
+      "fragmentForm": "It is possible to fix",
+      "wormholeVariants": [
+        "It is possible that to fix the error.",
+        "It is possible for them fix the error.",
+        "It is possible for them to fix the erroring.",
+        "It is possible of them to fix the error."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_030",
+    "seedId": "it_to_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "beginners이(가) 그렇게 하는 것은 impossible하지 않다.",
+    "english": "It is not impossible for beginners to complete the task.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "impossible",
+      "for",
+      "beginners",
+      "to",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "beginners이(가) 그렇게 하는 것은 impossible하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is impossible that to complete the task.",
+      "statementForm": [
+        "It is not impossible for beginners to complete the task.",
+        "It is not impossible for beginners to complete the task"
+      ],
+      "fragmentForm": "It is not impossible for",
+      "wormholeVariants": [
+        "It is impossible that to complete the task.",
+        "It is impossible for beginners complete the task.",
+        "It is impossible for beginners to complete the tasking.",
+        "It is impossible of beginners to complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_031",
+    "seedId": "it_to_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "drivers이(가) understand this rule하는 것은 useful하다.",
+    "english": "It is useful for drivers to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "useful",
+      "for",
+      "drivers",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "drivers이(가) understand this rule하는 것은 useful하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is useful that to understand this rule.",
+      "statementForm": [
+        "It is useful for drivers to understand this rule.",
+        "It is useful for drivers to understand this rule"
+      ],
+      "fragmentForm": "It is useful for drivers",
+      "wormholeVariants": [
+        "It is useful that to understand this rule.",
+        "It is useful for drivers understand this rule.",
+        "It is useful for drivers to understand this ruleing.",
+        "It is useful of drivers to understand this rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_032",
+    "seedId": "it_to_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "solve the problem하는 것은 dangerous하다.",
+    "english": "It is dangerous to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "dangerous",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "solve the problem하는 것은 dangerous하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is dangerous that to solve the problem.",
+      "statementForm": [
+        "It is dangerous to solve the problem.",
+        "It is dangerous to solve the problem"
+      ],
+      "fragmentForm": "It is dangerous to solve",
+      "wormholeVariants": [
+        "It is dangerous that to solve the problem.",
+        "It is dangerous for users solve the problem.",
+        "It is dangerous for users to solve the probleming.",
+        "It is dangerous of users to solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_033",
+    "seedId": "it_to_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "students이(가) 그렇게 하는 것은 safe하지 않다.",
+    "english": "It is not safe for students to finish the work.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "safe",
+      "for",
+      "students",
+      "to",
+      "finish",
+      "the",
+      "work",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "students이(가) 그렇게 하는 것은 safe하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is safe that to finish the work.",
+      "statementForm": [
+        "It is not safe for students to finish the work.",
+        "It is not safe for students to finish the work"
+      ],
+      "fragmentForm": "It is not safe for",
+      "wormholeVariants": [
+        "It is safe that to finish the work.",
+        "It is safe for students finish the work.",
+        "It is safe for students to finish the working.",
+        "It is safe of students to finish the work."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_034",
+    "seedId": "it_to_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "children이(가) arrive on time하는 것은 hard하다.",
+    "english": "It is hard for children to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "hard",
+      "for",
+      "children",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "children이(가) arrive on time하는 것은 hard하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is hard that to arrive on time.",
+      "statementForm": [
+        "It is hard for children to arrive on time.",
+        "It is hard for children to arrive on time"
+      ],
+      "fragmentForm": "It is hard for children",
+      "wormholeVariants": [
+        "It is hard that to arrive on time.",
+        "It is hard for children arrive on time.",
+        "It is hard for children to arrive on timeing.",
+        "It is hard of children to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_035",
+    "seedId": "it_to_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "keep the promise하는 것은 simple하다.",
+    "english": "It is simple to keep the promise.",
+    "words": [
+      "It",
+      "is",
+      "simple",
+      "to",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "keep the promise하는 것은 simple하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is simple that to keep the promise.",
+      "statementForm": [
+        "It is simple to keep the promise.",
+        "It is simple to keep the promise"
+      ],
+      "fragmentForm": "It is simple to keep",
+      "wormholeVariants": [
+        "It is simple that to keep the promise.",
+        "It is simple for people keep the promise.",
+        "It is simple for people to keep the promiseing.",
+        "It is simple of people to keep the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_036",
+    "seedId": "it_to_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "us이(가) 그렇게 하는 것은 complex하지 않다.",
+    "english": "It is not complex for us to use the app.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "complex",
+      "for",
+      "us",
+      "to",
+      "use",
+      "the",
+      "app",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "us이(가) 그렇게 하는 것은 complex하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is complex that to use the app.",
+      "statementForm": [
+        "It is not complex for us to use the app.",
+        "It is not complex for us to use the app"
+      ],
+      "fragmentForm": "It is not complex for",
+      "wormholeVariants": [
+        "It is complex that to use the app.",
+        "It is complex for us use the app.",
+        "It is complex for us to use the apping.",
+        "It is complex of us to use the app."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_037",
+    "seedId": "it_to_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "them이(가) follow the instructions하는 것은 important하다.",
+    "english": "It is important for them to follow the instructions.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "for",
+      "them",
+      "to",
+      "follow",
+      "the",
+      "instructions",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "them이(가) follow the instructions하는 것은 important하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to follow the instructions.",
+      "statementForm": [
+        "It is important for them to follow the instructions.",
+        "It is important for them to follow the instructions"
+      ],
+      "fragmentForm": "It is important for them",
+      "wormholeVariants": [
+        "It is important that to follow the instructions.",
+        "It is important for them follow the instructions.",
+        "It is important for them to follow the instructionsing.",
+        "It is important of them to follow the instructions."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_038",
+    "seedId": "it_to_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "learn English하는 것은 easy하다.",
+    "english": "It is easy to learn English.",
+    "words": [
+      "It",
+      "is",
+      "easy",
+      "to",
+      "learn",
+      "English",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "learn English하는 것은 easy하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is easy that to learn English.",
+      "statementForm": [
+        "It is easy to learn English.",
+        "It is easy to learn English"
+      ],
+      "fragmentForm": "It is easy to learn",
+      "wormholeVariants": [
+        "It is easy that to learn English.",
+        "It is easy for beginners learn English.",
+        "It is easy for beginners to learn Englishing.",
+        "It is easy of beginners to learn English."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_039",
+    "seedId": "it_to_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "drivers이(가) 그렇게 하는 것은 difficult하지 않다.",
+    "english": "It is not difficult for drivers to fix the error.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "difficult",
+      "for",
+      "drivers",
+      "to",
+      "fix",
+      "the",
+      "error",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "drivers이(가) 그렇게 하는 것은 difficult하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is difficult that to fix the error.",
+      "statementForm": [
+        "It is not difficult for drivers to fix the error.",
+        "It is not difficult for drivers to fix the error"
+      ],
+      "fragmentForm": "It is not difficult for",
+      "wormholeVariants": [
+        "It is difficult that to fix the error.",
+        "It is difficult for drivers fix the error.",
+        "It is difficult for drivers to fix the erroring.",
+        "It is difficult of drivers to fix the error."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_040",
+    "seedId": "it_to_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "users이(가) complete the task하는 것은 necessary하다.",
+    "english": "It is necessary for users to complete the task.",
+    "words": [
+      "It",
+      "is",
+      "necessary",
+      "for",
+      "users",
+      "to",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "users이(가) complete the task하는 것은 necessary하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is necessary that to complete the task.",
+      "statementForm": [
+        "It is necessary for users to complete the task.",
+        "It is necessary for users to complete the task"
+      ],
+      "fragmentForm": "It is necessary for users",
+      "wormholeVariants": [
+        "It is necessary that to complete the task.",
+        "It is necessary for users complete the task.",
+        "It is necessary for users to complete the tasking.",
+        "It is necessary of users to complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_041",
+    "seedId": "it_to_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "understand this rule하는 것은 possible하다.",
+    "english": "It is possible to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "possible",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "understand this rule하는 것은 possible하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is possible that to understand this rule.",
+      "statementForm": [
+        "It is possible to understand this rule.",
+        "It is possible to understand this rule"
+      ],
+      "fragmentForm": "It is possible to understand",
+      "wormholeVariants": [
+        "It is possible that to understand this rule.",
+        "It is possible for students understand this rule.",
+        "It is possible for students to understand this ruleing.",
+        "It is possible of students to understand this rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_042",
+    "seedId": "it_to_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "children이(가) 그렇게 하는 것은 impossible하지 않다.",
+    "english": "It is not impossible for children to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "impossible",
+      "for",
+      "children",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "children이(가) 그렇게 하는 것은 impossible하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is impossible that to solve the problem.",
+      "statementForm": [
+        "It is not impossible for children to solve the problem.",
+        "It is not impossible for children to solve the problem"
+      ],
+      "fragmentForm": "It is not impossible for",
+      "wormholeVariants": [
+        "It is impossible that to solve the problem.",
+        "It is impossible for children solve the problem.",
+        "It is impossible for children to solve the probleming.",
+        "It is impossible of children to solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_043",
+    "seedId": "it_to_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "people이(가) finish the work하는 것은 useful하다.",
+    "english": "It is useful for people to finish the work.",
+    "words": [
+      "It",
+      "is",
+      "useful",
+      "for",
+      "people",
+      "to",
+      "finish",
+      "the",
+      "work",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "people이(가) finish the work하는 것은 useful하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is useful that to finish the work.",
+      "statementForm": [
+        "It is useful for people to finish the work.",
+        "It is useful for people to finish the work"
+      ],
+      "fragmentForm": "It is useful for people",
+      "wormholeVariants": [
+        "It is useful that to finish the work.",
+        "It is useful for people finish the work.",
+        "It is useful for people to finish the working.",
+        "It is useful of people to finish the work."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_044",
+    "seedId": "it_to_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "arrive on time하는 것은 dangerous하다.",
+    "english": "It is dangerous to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "dangerous",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "arrive on time하는 것은 dangerous하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is dangerous that to arrive on time.",
+      "statementForm": [
+        "It is dangerous to arrive on time.",
+        "It is dangerous to arrive on time"
+      ],
+      "fragmentForm": "It is dangerous to arrive",
+      "wormholeVariants": [
+        "It is dangerous that to arrive on time.",
+        "It is dangerous for us arrive on time.",
+        "It is dangerous for us to arrive on timeing.",
+        "It is dangerous of us to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_045",
+    "seedId": "it_to_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "them이(가) 그렇게 하는 것은 safe하지 않다.",
+    "english": "It is not safe for them to keep the promise.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "safe",
+      "for",
+      "them",
+      "to",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "them이(가) 그렇게 하는 것은 safe하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is safe that to keep the promise.",
+      "statementForm": [
+        "It is not safe for them to keep the promise.",
+        "It is not safe for them to keep the promise"
+      ],
+      "fragmentForm": "It is not safe for",
+      "wormholeVariants": [
+        "It is safe that to keep the promise.",
+        "It is safe for them keep the promise.",
+        "It is safe for them to keep the promiseing.",
+        "It is safe of them to keep the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_046",
+    "seedId": "it_to_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "beginners이(가) use the app하는 것은 hard하다.",
+    "english": "It is hard for beginners to use the app.",
+    "words": [
+      "It",
+      "is",
+      "hard",
+      "for",
+      "beginners",
+      "to",
+      "use",
+      "the",
+      "app",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "beginners이(가) use the app하는 것은 hard하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is hard that to use the app.",
+      "statementForm": [
+        "It is hard for beginners to use the app.",
+        "It is hard for beginners to use the app"
+      ],
+      "fragmentForm": "It is hard for beginners",
+      "wormholeVariants": [
+        "It is hard that to use the app.",
+        "It is hard for beginners use the app.",
+        "It is hard for beginners to use the apping.",
+        "It is hard of beginners to use the app."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_047",
+    "seedId": "it_to_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "follow the instructions하는 것은 simple하다.",
+    "english": "It is simple to follow the instructions.",
+    "words": [
+      "It",
+      "is",
+      "simple",
+      "to",
+      "follow",
+      "the",
+      "instructions",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "follow the instructions하는 것은 simple하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is simple that to follow the instructions.",
+      "statementForm": [
+        "It is simple to follow the instructions.",
+        "It is simple to follow the instructions"
+      ],
+      "fragmentForm": "It is simple to follow",
+      "wormholeVariants": [
+        "It is simple that to follow the instructions.",
+        "It is simple for drivers follow the instructions.",
+        "It is simple for drivers to follow the instructionsing.",
+        "It is simple of drivers to follow the instructions."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_048",
+    "seedId": "it_to_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "users이(가) 그렇게 하는 것은 complex하지 않다.",
+    "english": "It is not complex for users to learn English.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "complex",
+      "for",
+      "users",
+      "to",
+      "learn",
+      "English",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "users이(가) 그렇게 하는 것은 complex하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is complex that to learn English.",
+      "statementForm": [
+        "It is not complex for users to learn English.",
+        "It is not complex for users to learn English"
+      ],
+      "fragmentForm": "It is not complex for",
+      "wormholeVariants": [
+        "It is complex that to learn English.",
+        "It is complex for users learn English.",
+        "It is complex for users to learn Englishing.",
+        "It is complex of users to learn English."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_049",
+    "seedId": "it_to_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "students이(가) fix the error하는 것은 important하다.",
+    "english": "It is important for students to fix the error.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "for",
+      "students",
+      "to",
+      "fix",
+      "the",
+      "error",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "students이(가) fix the error하는 것은 important하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to fix the error.",
+      "statementForm": [
+        "It is important for students to fix the error.",
+        "It is important for students to fix the error"
+      ],
+      "fragmentForm": "It is important for students",
+      "wormholeVariants": [
+        "It is important that to fix the error.",
+        "It is important for students fix the error.",
+        "It is important for students to fix the erroring.",
+        "It is important of students to fix the error."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_050",
+    "seedId": "it_to_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "complete the task하는 것은 easy하다.",
+    "english": "It is easy to complete the task.",
+    "words": [
+      "It",
+      "is",
+      "easy",
+      "to",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "complete the task하는 것은 easy하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is easy that to complete the task.",
+      "statementForm": [
+        "It is easy to complete the task.",
+        "It is easy to complete the task"
+      ],
+      "fragmentForm": "It is easy to complete",
+      "wormholeVariants": [
+        "It is easy that to complete the task.",
+        "It is easy for children complete the task.",
+        "It is easy for children to complete the tasking.",
+        "It is easy of children to complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_051",
+    "seedId": "it_to_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "people이(가) 그렇게 하는 것은 difficult하지 않다.",
+    "english": "It is not difficult for people to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "difficult",
+      "for",
+      "people",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "people이(가) 그렇게 하는 것은 difficult하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is difficult that to understand this rule.",
+      "statementForm": [
+        "It is not difficult for people to understand this rule.",
+        "It is not difficult for people to understand this rule"
+      ],
+      "fragmentForm": "It is not difficult for",
+      "wormholeVariants": [
+        "It is difficult that to understand this rule.",
+        "It is difficult for people understand this rule.",
+        "It is difficult for people to understand this ruleing.",
+        "It is difficult of people to understand this rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_052",
+    "seedId": "it_to_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "us이(가) solve the problem하는 것은 necessary하다.",
+    "english": "It is necessary for us to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "necessary",
+      "for",
+      "us",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "us이(가) solve the problem하는 것은 necessary하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is necessary that to solve the problem.",
+      "statementForm": [
+        "It is necessary for us to solve the problem.",
+        "It is necessary for us to solve the problem"
+      ],
+      "fragmentForm": "It is necessary for us",
+      "wormholeVariants": [
+        "It is necessary that to solve the problem.",
+        "It is necessary for us solve the problem.",
+        "It is necessary for us to solve the probleming.",
+        "It is necessary of us to solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_053",
+    "seedId": "it_to_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "finish the work하는 것은 possible하다.",
+    "english": "It is possible to finish the work.",
+    "words": [
+      "It",
+      "is",
+      "possible",
+      "to",
+      "finish",
+      "the",
+      "work",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "finish the work하는 것은 possible하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is possible that to finish the work.",
+      "statementForm": [
+        "It is possible to finish the work.",
+        "It is possible to finish the work"
+      ],
+      "fragmentForm": "It is possible to finish",
+      "wormholeVariants": [
+        "It is possible that to finish the work.",
+        "It is possible for them finish the work.",
+        "It is possible for them to finish the working.",
+        "It is possible of them to finish the work."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_054",
+    "seedId": "it_to_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "beginners이(가) 그렇게 하는 것은 impossible하지 않다.",
+    "english": "It is not impossible for beginners to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "impossible",
+      "for",
+      "beginners",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "beginners이(가) 그렇게 하는 것은 impossible하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is impossible that to arrive on time.",
+      "statementForm": [
+        "It is not impossible for beginners to arrive on time.",
+        "It is not impossible for beginners to arrive on time"
+      ],
+      "fragmentForm": "It is not impossible for",
+      "wormholeVariants": [
+        "It is impossible that to arrive on time.",
+        "It is impossible for beginners arrive on time.",
+        "It is impossible for beginners to arrive on timeing.",
+        "It is impossible of beginners to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_055",
+    "seedId": "it_to_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "drivers이(가) keep the promise하는 것은 useful하다.",
+    "english": "It is useful for drivers to keep the promise.",
+    "words": [
+      "It",
+      "is",
+      "useful",
+      "for",
+      "drivers",
+      "to",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "drivers이(가) keep the promise하는 것은 useful하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is useful that to keep the promise.",
+      "statementForm": [
+        "It is useful for drivers to keep the promise.",
+        "It is useful for drivers to keep the promise"
+      ],
+      "fragmentForm": "It is useful for drivers",
+      "wormholeVariants": [
+        "It is useful that to keep the promise.",
+        "It is useful for drivers keep the promise.",
+        "It is useful for drivers to keep the promiseing.",
+        "It is useful of drivers to keep the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_056",
+    "seedId": "it_to_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "use the app하는 것은 dangerous하다.",
+    "english": "It is dangerous to use the app.",
+    "words": [
+      "It",
+      "is",
+      "dangerous",
+      "to",
+      "use",
+      "the",
+      "app",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "use the app하는 것은 dangerous하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is dangerous that to use the app.",
+      "statementForm": [
+        "It is dangerous to use the app.",
+        "It is dangerous to use the app"
+      ],
+      "fragmentForm": "It is dangerous to use",
+      "wormholeVariants": [
+        "It is dangerous that to use the app.",
+        "It is dangerous for users use the app.",
+        "It is dangerous for users to use the apping.",
+        "It is dangerous of users to use the app."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_057",
+    "seedId": "it_to_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "students이(가) 그렇게 하는 것은 safe하지 않다.",
+    "english": "It is not safe for students to follow the instructions.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "safe",
+      "for",
+      "students",
+      "to",
+      "follow",
+      "the",
+      "instructions",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "students이(가) 그렇게 하는 것은 safe하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is safe that to follow the instructions.",
+      "statementForm": [
+        "It is not safe for students to follow the instructions.",
+        "It is not safe for students to follow the instructions"
+      ],
+      "fragmentForm": "It is not safe for",
+      "wormholeVariants": [
+        "It is safe that to follow the instructions.",
+        "It is safe for students follow the instructions.",
+        "It is safe for students to follow the instructionsing.",
+        "It is safe of students to follow the instructions."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_058",
+    "seedId": "it_to_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "children이(가) learn English하는 것은 hard하다.",
+    "english": "It is hard for children to learn English.",
+    "words": [
+      "It",
+      "is",
+      "hard",
+      "for",
+      "children",
+      "to",
+      "learn",
+      "English",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "children이(가) learn English하는 것은 hard하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is hard that to learn English.",
+      "statementForm": [
+        "It is hard for children to learn English.",
+        "It is hard for children to learn English"
+      ],
+      "fragmentForm": "It is hard for children",
+      "wormholeVariants": [
+        "It is hard that to learn English.",
+        "It is hard for children learn English.",
+        "It is hard for children to learn Englishing.",
+        "It is hard of children to learn English."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_059",
+    "seedId": "it_to_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "fix the error하는 것은 simple하다.",
+    "english": "It is simple to fix the error.",
+    "words": [
+      "It",
+      "is",
+      "simple",
+      "to",
+      "fix",
+      "the",
+      "error",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "fix the error하는 것은 simple하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is simple that to fix the error.",
+      "statementForm": [
+        "It is simple to fix the error.",
+        "It is simple to fix the error"
+      ],
+      "fragmentForm": "It is simple to fix",
+      "wormholeVariants": [
+        "It is simple that to fix the error.",
+        "It is simple for people fix the error.",
+        "It is simple for people to fix the erroring.",
+        "It is simple of people to fix the error."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_060",
+    "seedId": "it_to_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "us이(가) 그렇게 하는 것은 complex하지 않다.",
+    "english": "It is not complex for us to complete the task.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "complex",
+      "for",
+      "us",
+      "to",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "us이(가) 그렇게 하는 것은 complex하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is complex that to complete the task.",
+      "statementForm": [
+        "It is not complex for us to complete the task.",
+        "It is not complex for us to complete the task"
+      ],
+      "fragmentForm": "It is not complex for",
+      "wormholeVariants": [
+        "It is complex that to complete the task.",
+        "It is complex for us complete the task.",
+        "It is complex for us to complete the tasking.",
+        "It is complex of us to complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_061",
+    "seedId": "it_to_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "them이(가) understand this rule하는 것은 important하다.",
+    "english": "It is important for them to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "for",
+      "them",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "them이(가) understand this rule하는 것은 important하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to understand this rule.",
+      "statementForm": [
+        "It is important for them to understand this rule.",
+        "It is important for them to understand this rule"
+      ],
+      "fragmentForm": "It is important for them",
+      "wormholeVariants": [
+        "It is important that to understand this rule.",
+        "It is important for them understand this rule.",
+        "It is important for them to understand this ruleing.",
+        "It is important of them to understand this rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_062",
+    "seedId": "it_to_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "solve the problem하는 것은 easy하다.",
+    "english": "It is easy to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "easy",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "solve the problem하는 것은 easy하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is easy that to solve the problem.",
+      "statementForm": [
+        "It is easy to solve the problem.",
+        "It is easy to solve the problem"
+      ],
+      "fragmentForm": "It is easy to solve",
+      "wormholeVariants": [
+        "It is easy that to solve the problem.",
+        "It is easy for beginners solve the problem.",
+        "It is easy for beginners to solve the probleming.",
+        "It is easy of beginners to solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_063",
+    "seedId": "it_to_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "drivers이(가) 그렇게 하는 것은 difficult하지 않다.",
+    "english": "It is not difficult for drivers to finish the work.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "difficult",
+      "for",
+      "drivers",
+      "to",
+      "finish",
+      "the",
+      "work",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "drivers이(가) 그렇게 하는 것은 difficult하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is difficult that to finish the work.",
+      "statementForm": [
+        "It is not difficult for drivers to finish the work.",
+        "It is not difficult for drivers to finish the work"
+      ],
+      "fragmentForm": "It is not difficult for",
+      "wormholeVariants": [
+        "It is difficult that to finish the work.",
+        "It is difficult for drivers finish the work.",
+        "It is difficult for drivers to finish the working.",
+        "It is difficult of drivers to finish the work."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_064",
+    "seedId": "it_to_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "users이(가) arrive on time하는 것은 necessary하다.",
+    "english": "It is necessary for users to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "necessary",
+      "for",
+      "users",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "users이(가) arrive on time하는 것은 necessary하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is necessary that to arrive on time.",
+      "statementForm": [
+        "It is necessary for users to arrive on time.",
+        "It is necessary for users to arrive on time"
+      ],
+      "fragmentForm": "It is necessary for users",
+      "wormholeVariants": [
+        "It is necessary that to arrive on time.",
+        "It is necessary for users arrive on time.",
+        "It is necessary for users to arrive on timeing.",
+        "It is necessary of users to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_065",
+    "seedId": "it_to_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "keep the promise하는 것은 possible하다.",
+    "english": "It is possible to keep the promise.",
+    "words": [
+      "It",
+      "is",
+      "possible",
+      "to",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "keep the promise하는 것은 possible하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is possible that to keep the promise.",
+      "statementForm": [
+        "It is possible to keep the promise.",
+        "It is possible to keep the promise"
+      ],
+      "fragmentForm": "It is possible to keep",
+      "wormholeVariants": [
+        "It is possible that to keep the promise.",
+        "It is possible for students keep the promise.",
+        "It is possible for students to keep the promiseing.",
+        "It is possible of students to keep the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_066",
+    "seedId": "it_to_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "children이(가) 그렇게 하는 것은 impossible하지 않다.",
+    "english": "It is not impossible for children to use the app.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "impossible",
+      "for",
+      "children",
+      "to",
+      "use",
+      "the",
+      "app",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "children이(가) 그렇게 하는 것은 impossible하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is impossible that to use the app.",
+      "statementForm": [
+        "It is not impossible for children to use the app.",
+        "It is not impossible for children to use the app"
+      ],
+      "fragmentForm": "It is not impossible for",
+      "wormholeVariants": [
+        "It is impossible that to use the app.",
+        "It is impossible for children use the app.",
+        "It is impossible for children to use the apping.",
+        "It is impossible of children to use the app."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_067",
+    "seedId": "it_to_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "people이(가) follow the instructions하는 것은 useful하다.",
+    "english": "It is useful for people to follow the instructions.",
+    "words": [
+      "It",
+      "is",
+      "useful",
+      "for",
+      "people",
+      "to",
+      "follow",
+      "the",
+      "instructions",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "people이(가) follow the instructions하는 것은 useful하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is useful that to follow the instructions.",
+      "statementForm": [
+        "It is useful for people to follow the instructions.",
+        "It is useful for people to follow the instructions"
+      ],
+      "fragmentForm": "It is useful for people",
+      "wormholeVariants": [
+        "It is useful that to follow the instructions.",
+        "It is useful for people follow the instructions.",
+        "It is useful for people to follow the instructionsing.",
+        "It is useful of people to follow the instructions."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_068",
+    "seedId": "it_to_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "learn English하는 것은 dangerous하다.",
+    "english": "It is dangerous to learn English.",
+    "words": [
+      "It",
+      "is",
+      "dangerous",
+      "to",
+      "learn",
+      "English",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "learn English하는 것은 dangerous하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is dangerous that to learn English.",
+      "statementForm": [
+        "It is dangerous to learn English.",
+        "It is dangerous to learn English"
+      ],
+      "fragmentForm": "It is dangerous to learn",
+      "wormholeVariants": [
+        "It is dangerous that to learn English.",
+        "It is dangerous for us learn English.",
+        "It is dangerous for us to learn Englishing.",
+        "It is dangerous of us to learn English."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_069",
+    "seedId": "it_to_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "them이(가) 그렇게 하는 것은 safe하지 않다.",
+    "english": "It is not safe for them to fix the error.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "safe",
+      "for",
+      "them",
+      "to",
+      "fix",
+      "the",
+      "error",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "them이(가) 그렇게 하는 것은 safe하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is safe that to fix the error.",
+      "statementForm": [
+        "It is not safe for them to fix the error.",
+        "It is not safe for them to fix the error"
+      ],
+      "fragmentForm": "It is not safe for",
+      "wormholeVariants": [
+        "It is safe that to fix the error.",
+        "It is safe for them fix the error.",
+        "It is safe for them to fix the erroring.",
+        "It is safe of them to fix the error."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_070",
+    "seedId": "it_to_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "beginners이(가) complete the task하는 것은 hard하다.",
+    "english": "It is hard for beginners to complete the task.",
+    "words": [
+      "It",
+      "is",
+      "hard",
+      "for",
+      "beginners",
+      "to",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "beginners이(가) complete the task하는 것은 hard하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is hard that to complete the task.",
+      "statementForm": [
+        "It is hard for beginners to complete the task.",
+        "It is hard for beginners to complete the task"
+      ],
+      "fragmentForm": "It is hard for beginners",
+      "wormholeVariants": [
+        "It is hard that to complete the task.",
+        "It is hard for beginners complete the task.",
+        "It is hard for beginners to complete the tasking.",
+        "It is hard of beginners to complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_071",
+    "seedId": "it_to_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "understand this rule하는 것은 simple하다.",
+    "english": "It is simple to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "simple",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "understand this rule하는 것은 simple하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is simple that to understand this rule.",
+      "statementForm": [
+        "It is simple to understand this rule.",
+        "It is simple to understand this rule"
+      ],
+      "fragmentForm": "It is simple to understand",
+      "wormholeVariants": [
+        "It is simple that to understand this rule.",
+        "It is simple for drivers understand this rule.",
+        "It is simple for drivers to understand this ruleing.",
+        "It is simple of drivers to understand this rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_072",
+    "seedId": "it_to_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "users이(가) 그렇게 하는 것은 complex하지 않다.",
+    "english": "It is not complex for users to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "complex",
+      "for",
+      "users",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "users이(가) 그렇게 하는 것은 complex하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is complex that to solve the problem.",
+      "statementForm": [
+        "It is not complex for users to solve the problem.",
+        "It is not complex for users to solve the problem"
+      ],
+      "fragmentForm": "It is not complex for",
+      "wormholeVariants": [
+        "It is complex that to solve the problem.",
+        "It is complex for users solve the problem.",
+        "It is complex for users to solve the probleming.",
+        "It is complex of users to solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_073",
+    "seedId": "it_to_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "students이(가) finish the work하는 것은 important하다.",
+    "english": "It is important for students to finish the work.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "for",
+      "students",
+      "to",
+      "finish",
+      "the",
+      "work",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "students이(가) finish the work하는 것은 important하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to finish the work.",
+      "statementForm": [
+        "It is important for students to finish the work.",
+        "It is important for students to finish the work"
+      ],
+      "fragmentForm": "It is important for students",
+      "wormholeVariants": [
+        "It is important that to finish the work.",
+        "It is important for students finish the work.",
+        "It is important for students to finish the working.",
+        "It is important of students to finish the work."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_074",
+    "seedId": "it_to_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "arrive on time하는 것은 easy하다.",
+    "english": "It is easy to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "easy",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "arrive on time하는 것은 easy하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is easy that to arrive on time.",
+      "statementForm": [
+        "It is easy to arrive on time.",
+        "It is easy to arrive on time"
+      ],
+      "fragmentForm": "It is easy to arrive",
+      "wormholeVariants": [
+        "It is easy that to arrive on time.",
+        "It is easy for children arrive on time.",
+        "It is easy for children to arrive on timeing.",
+        "It is easy of children to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_075",
+    "seedId": "it_to_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "people이(가) 그렇게 하는 것은 difficult하지 않다.",
+    "english": "It is not difficult for people to keep the promise.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "difficult",
+      "for",
+      "people",
+      "to",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "people이(가) 그렇게 하는 것은 difficult하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is difficult that to keep the promise.",
+      "statementForm": [
+        "It is not difficult for people to keep the promise.",
+        "It is not difficult for people to keep the promise"
+      ],
+      "fragmentForm": "It is not difficult for",
+      "wormholeVariants": [
+        "It is difficult that to keep the promise.",
+        "It is difficult for people keep the promise.",
+        "It is difficult for people to keep the promiseing.",
+        "It is difficult of people to keep the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_076",
+    "seedId": "it_to_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "us이(가) use the app하는 것은 necessary하다.",
+    "english": "It is necessary for us to use the app.",
+    "words": [
+      "It",
+      "is",
+      "necessary",
+      "for",
+      "us",
+      "to",
+      "use",
+      "the",
+      "app",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "us이(가) use the app하는 것은 necessary하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is necessary that to use the app.",
+      "statementForm": [
+        "It is necessary for us to use the app.",
+        "It is necessary for us to use the app"
+      ],
+      "fragmentForm": "It is necessary for us",
+      "wormholeVariants": [
+        "It is necessary that to use the app.",
+        "It is necessary for us use the app.",
+        "It is necessary for us to use the apping.",
+        "It is necessary of us to use the app."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_077",
+    "seedId": "it_to_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "follow the instructions하는 것은 possible하다.",
+    "english": "It is possible to follow the instructions.",
+    "words": [
+      "It",
+      "is",
+      "possible",
+      "to",
+      "follow",
+      "the",
+      "instructions",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "follow the instructions하는 것은 possible하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is possible that to follow the instructions.",
+      "statementForm": [
+        "It is possible to follow the instructions.",
+        "It is possible to follow the instructions"
+      ],
+      "fragmentForm": "It is possible to follow",
+      "wormholeVariants": [
+        "It is possible that to follow the instructions.",
+        "It is possible for them follow the instructions.",
+        "It is possible for them to follow the instructionsing.",
+        "It is possible of them to follow the instructions."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_078",
+    "seedId": "it_to_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "beginners이(가) 그렇게 하는 것은 impossible하지 않다.",
+    "english": "It is not impossible for beginners to learn English.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "impossible",
+      "for",
+      "beginners",
+      "to",
+      "learn",
+      "English",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "beginners이(가) 그렇게 하는 것은 impossible하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is impossible that to learn English.",
+      "statementForm": [
+        "It is not impossible for beginners to learn English.",
+        "It is not impossible for beginners to learn English"
+      ],
+      "fragmentForm": "It is not impossible for",
+      "wormholeVariants": [
+        "It is impossible that to learn English.",
+        "It is impossible for beginners learn English.",
+        "It is impossible for beginners to learn Englishing.",
+        "It is impossible of beginners to learn English."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_079",
+    "seedId": "it_to_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "drivers이(가) fix the error하는 것은 useful하다.",
+    "english": "It is useful for drivers to fix the error.",
+    "words": [
+      "It",
+      "is",
+      "useful",
+      "for",
+      "drivers",
+      "to",
+      "fix",
+      "the",
+      "error",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "drivers이(가) fix the error하는 것은 useful하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is useful that to fix the error.",
+      "statementForm": [
+        "It is useful for drivers to fix the error.",
+        "It is useful for drivers to fix the error"
+      ],
+      "fragmentForm": "It is useful for drivers",
+      "wormholeVariants": [
+        "It is useful that to fix the error.",
+        "It is useful for drivers fix the error.",
+        "It is useful for drivers to fix the erroring.",
+        "It is useful of drivers to fix the error."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_080",
+    "seedId": "it_to_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "complete the task하는 것은 dangerous하다.",
+    "english": "It is dangerous to complete the task.",
+    "words": [
+      "It",
+      "is",
+      "dangerous",
+      "to",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "complete the task하는 것은 dangerous하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is dangerous that to complete the task.",
+      "statementForm": [
+        "It is dangerous to complete the task.",
+        "It is dangerous to complete the task"
+      ],
+      "fragmentForm": "It is dangerous to complete",
+      "wormholeVariants": [
+        "It is dangerous that to complete the task.",
+        "It is dangerous for users complete the task.",
+        "It is dangerous for users to complete the tasking.",
+        "It is dangerous of users to complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_081",
+    "seedId": "it_to_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "students이(가) 그렇게 하는 것은 safe하지 않다.",
+    "english": "It is not safe for students to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "safe",
+      "for",
+      "students",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "students이(가) 그렇게 하는 것은 safe하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is safe that to understand this rule.",
+      "statementForm": [
+        "It is not safe for students to understand this rule.",
+        "It is not safe for students to understand this rule"
+      ],
+      "fragmentForm": "It is not safe for",
+      "wormholeVariants": [
+        "It is safe that to understand this rule.",
+        "It is safe for students understand this rule.",
+        "It is safe for students to understand this ruleing.",
+        "It is safe of students to understand this rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_082",
+    "seedId": "it_to_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "children이(가) solve the problem하는 것은 hard하다.",
+    "english": "It is hard for children to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "hard",
+      "for",
+      "children",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "children이(가) solve the problem하는 것은 hard하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is hard that to solve the problem.",
+      "statementForm": [
+        "It is hard for children to solve the problem.",
+        "It is hard for children to solve the problem"
+      ],
+      "fragmentForm": "It is hard for children",
+      "wormholeVariants": [
+        "It is hard that to solve the problem.",
+        "It is hard for children solve the problem.",
+        "It is hard for children to solve the probleming.",
+        "It is hard of children to solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_083",
+    "seedId": "it_to_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "finish the work하는 것은 simple하다.",
+    "english": "It is simple to finish the work.",
+    "words": [
+      "It",
+      "is",
+      "simple",
+      "to",
+      "finish",
+      "the",
+      "work",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "finish the work하는 것은 simple하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is simple that to finish the work.",
+      "statementForm": [
+        "It is simple to finish the work.",
+        "It is simple to finish the work"
+      ],
+      "fragmentForm": "It is simple to finish",
+      "wormholeVariants": [
+        "It is simple that to finish the work.",
+        "It is simple for people finish the work.",
+        "It is simple for people to finish the working.",
+        "It is simple of people to finish the work."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_084",
+    "seedId": "it_to_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "us이(가) 그렇게 하는 것은 complex하지 않다.",
+    "english": "It is not complex for us to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "complex",
+      "for",
+      "us",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "us이(가) 그렇게 하는 것은 complex하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is complex that to arrive on time.",
+      "statementForm": [
+        "It is not complex for us to arrive on time.",
+        "It is not complex for us to arrive on time"
+      ],
+      "fragmentForm": "It is not complex for",
+      "wormholeVariants": [
+        "It is complex that to arrive on time.",
+        "It is complex for us arrive on time.",
+        "It is complex for us to arrive on timeing.",
+        "It is complex of us to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_085",
+    "seedId": "it_to_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "them이(가) keep the promise하는 것은 important하다.",
+    "english": "It is important for them to keep the promise.",
+    "words": [
+      "It",
+      "is",
+      "important",
+      "for",
+      "them",
+      "to",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "them이(가) keep the promise하는 것은 important하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is important that to keep the promise.",
+      "statementForm": [
+        "It is important for them to keep the promise.",
+        "It is important for them to keep the promise"
+      ],
+      "fragmentForm": "It is important for them",
+      "wormholeVariants": [
+        "It is important that to keep the promise.",
+        "It is important for them keep the promise.",
+        "It is important for them to keep the promiseing.",
+        "It is important of them to keep the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_086",
+    "seedId": "it_to_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "use the app하는 것은 easy하다.",
+    "english": "It is easy to use the app.",
+    "words": [
+      "It",
+      "is",
+      "easy",
+      "to",
+      "use",
+      "the",
+      "app",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "use the app하는 것은 easy하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is easy that to use the app.",
+      "statementForm": [
+        "It is easy to use the app.",
+        "It is easy to use the app"
+      ],
+      "fragmentForm": "It is easy to use",
+      "wormholeVariants": [
+        "It is easy that to use the app.",
+        "It is easy for beginners use the app.",
+        "It is easy for beginners to use the apping.",
+        "It is easy of beginners to use the app."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_087",
+    "seedId": "it_to_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "drivers이(가) 그렇게 하는 것은 difficult하지 않다.",
+    "english": "It is not difficult for drivers to follow the instructions.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "difficult",
+      "for",
+      "drivers",
+      "to",
+      "follow",
+      "the",
+      "instructions",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "drivers이(가) 그렇게 하는 것은 difficult하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is difficult that to follow the instructions.",
+      "statementForm": [
+        "It is not difficult for drivers to follow the instructions.",
+        "It is not difficult for drivers to follow the instructions"
+      ],
+      "fragmentForm": "It is not difficult for",
+      "wormholeVariants": [
+        "It is difficult that to follow the instructions.",
+        "It is difficult for drivers follow the instructions.",
+        "It is difficult for drivers to follow the instructionsing.",
+        "It is difficult of drivers to follow the instructions."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_088",
+    "seedId": "it_to_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "users이(가) learn English하는 것은 necessary하다.",
+    "english": "It is necessary for users to learn English.",
+    "words": [
+      "It",
+      "is",
+      "necessary",
+      "for",
+      "users",
+      "to",
+      "learn",
+      "English",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "users이(가) learn English하는 것은 necessary하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is necessary that to learn English.",
+      "statementForm": [
+        "It is necessary for users to learn English.",
+        "It is necessary for users to learn English"
+      ],
+      "fragmentForm": "It is necessary for users",
+      "wormholeVariants": [
+        "It is necessary that to learn English.",
+        "It is necessary for users learn English.",
+        "It is necessary for users to learn Englishing.",
+        "It is necessary of users to learn English."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_089",
+    "seedId": "it_to_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "fix the error하는 것은 possible하다.",
+    "english": "It is possible to fix the error.",
+    "words": [
+      "It",
+      "is",
+      "possible",
+      "to",
+      "fix",
+      "the",
+      "error",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "fix the error하는 것은 possible하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is possible that to fix the error.",
+      "statementForm": [
+        "It is possible to fix the error.",
+        "It is possible to fix the error"
+      ],
+      "fragmentForm": "It is possible to fix",
+      "wormholeVariants": [
+        "It is possible that to fix the error.",
+        "It is possible for students fix the error.",
+        "It is possible for students to fix the erroring.",
+        "It is possible of students to fix the error."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_090",
+    "seedId": "it_to_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "children이(가) 그렇게 하는 것은 impossible하지 않다.",
+    "english": "It is not impossible for children to complete the task.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "impossible",
+      "for",
+      "children",
+      "to",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "children이(가) 그렇게 하는 것은 impossible하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is impossible that to complete the task.",
+      "statementForm": [
+        "It is not impossible for children to complete the task.",
+        "It is not impossible for children to complete the task"
+      ],
+      "fragmentForm": "It is not impossible for",
+      "wormholeVariants": [
+        "It is impossible that to complete the task.",
+        "It is impossible for children complete the task.",
+        "It is impossible for children to complete the tasking.",
+        "It is impossible of children to complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_091",
+    "seedId": "it_to_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "people이(가) understand this rule하는 것은 useful하다.",
+    "english": "It is useful for people to understand this rule.",
+    "words": [
+      "It",
+      "is",
+      "useful",
+      "for",
+      "people",
+      "to",
+      "understand",
+      "this",
+      "rule",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "people이(가) understand this rule하는 것은 useful하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is useful that to understand this rule.",
+      "statementForm": [
+        "It is useful for people to understand this rule.",
+        "It is useful for people to understand this rule"
+      ],
+      "fragmentForm": "It is useful for people",
+      "wormholeVariants": [
+        "It is useful that to understand this rule.",
+        "It is useful for people understand this rule.",
+        "It is useful for people to understand this ruleing.",
+        "It is useful of people to understand this rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_092",
+    "seedId": "it_to_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "solve the problem하는 것은 dangerous하다.",
+    "english": "It is dangerous to solve the problem.",
+    "words": [
+      "It",
+      "is",
+      "dangerous",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "solve the problem하는 것은 dangerous하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is dangerous that to solve the problem.",
+      "statementForm": [
+        "It is dangerous to solve the problem.",
+        "It is dangerous to solve the problem"
+      ],
+      "fragmentForm": "It is dangerous to solve",
+      "wormholeVariants": [
+        "It is dangerous that to solve the problem.",
+        "It is dangerous for us solve the problem.",
+        "It is dangerous for us to solve the probleming.",
+        "It is dangerous of us to solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_093",
+    "seedId": "it_to_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "them이(가) 그렇게 하는 것은 safe하지 않다.",
+    "english": "It is not safe for them to finish the work.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "safe",
+      "for",
+      "them",
+      "to",
+      "finish",
+      "the",
+      "work",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "them이(가) 그렇게 하는 것은 safe하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is safe that to finish the work.",
+      "statementForm": [
+        "It is not safe for them to finish the work.",
+        "It is not safe for them to finish the work"
+      ],
+      "fragmentForm": "It is not safe for",
+      "wormholeVariants": [
+        "It is safe that to finish the work.",
+        "It is safe for them finish the work.",
+        "It is safe for them to finish the working.",
+        "It is safe of them to finish the work."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_094",
+    "seedId": "it_to_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "beginners이(가) arrive on time하는 것은 hard하다.",
+    "english": "It is hard for beginners to arrive on time.",
+    "words": [
+      "It",
+      "is",
+      "hard",
+      "for",
+      "beginners",
+      "to",
+      "arrive",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "beginners이(가) arrive on time하는 것은 hard하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is hard that to arrive on time.",
+      "statementForm": [
+        "It is hard for beginners to arrive on time.",
+        "It is hard for beginners to arrive on time"
+      ],
+      "fragmentForm": "It is hard for beginners",
+      "wormholeVariants": [
+        "It is hard that to arrive on time.",
+        "It is hard for beginners arrive on time.",
+        "It is hard for beginners to arrive on timeing.",
+        "It is hard of beginners to arrive on time."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_095",
+    "seedId": "it_to_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "keep the promise하는 것은 simple하다.",
+    "english": "It is simple to keep the promise.",
+    "words": [
+      "It",
+      "is",
+      "simple",
+      "to",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "keep the promise하는 것은 simple하다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "adj + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is simple that to keep the promise.",
+      "statementForm": [
+        "It is simple to keep the promise.",
+        "It is simple to keep the promise"
+      ],
+      "fragmentForm": "It is simple to keep",
+      "wormholeVariants": [
+        "It is simple that to keep the promise.",
+        "It is simple for drivers keep the promise.",
+        "It is simple for drivers to keep the promiseing.",
+        "It is simple of drivers to keep the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_it_to_096",
+    "seedId": "it_to_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "it_to",
+    "chapterLabelKo": "가주어 it / 진주어 to",
+    "korean": "users이(가) 그렇게 하는 것은 complex하지 않다.",
+    "english": "It is not complex for users to use the app.",
+    "words": [
+      "It",
+      "is",
+      "not",
+      "complex",
+      "for",
+      "users",
+      "to",
+      "use",
+      "the",
+      "app",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "it_to",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "users이(가) 그렇게 하는 것은 complex하지 않다.",
+        "It"
+      ],
+      [
+        "it + adj + to V",
+        "not + adj + for O + to V"
+      ],
+      [
+        "주의",
+        "use It is + adj + (for/of) + O + to V"
+      ]
+    ],
+    "extraClueWordPool": [
+      "not",
+      "for",
+      "to",
+      "really",
+      "easily"
+    ],
+    "blankTargets": [
+      "not",
+      "for",
+      "to"
+    ],
+    "tags": [
+      "it_to",
+      "negative",
+      "for_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "It is complex that to use the app.",
+      "statementForm": [
+        "It is not complex for users to use the app.",
+        "It is not complex for users to use the app"
+      ],
+      "fragmentForm": "It is not complex for",
+      "wormholeVariants": [
+        "It is complex that to use the app.",
+        "It is complex for users use the app.",
+        "It is complex for users to use the apping.",
+        "It is complex of users to use the app."
+      ]
+    }
+  }
+]
