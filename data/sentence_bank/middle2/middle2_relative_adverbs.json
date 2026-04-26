@@ -1,0 +1,7600 @@
+[
+  {
+    "id": "m2_relative_adverbs_001",
+    "seedId": "relative_adverbs_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "도서관은 우리가 시험 전에 공부하는 장소이다.",
+    "english": "The library where we study before exams is quiet.",
+    "words": [
+      "The",
+      "library",
+      "where",
+      "we",
+      "study",
+      "before",
+      "exams",
+      "is",
+      "quiet",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "도서관은 우리가 시험 전에 공부하는 장소이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The library which we study before exams is quiet.",
+      "statementForm": [
+        "The library where we study before exams is quiet.",
+        "The library where we study before exams is quiet"
+      ],
+      "fragmentForm": "The library where we study before exams",
+      "wormholeVariants": [
+        "The library which we study before exams is quiet.",
+        "The library when we study before exams is quiet.",
+        "The library in which place we study before exams is quiet.",
+        "The library where it we study before exams is quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_002",
+    "seedId": "relative_adverbs_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "공원은 아이들이 축구를 하는 장소이다.",
+    "english": "The park where children play soccer is near my house.",
+    "words": [
+      "The",
+      "park",
+      "where",
+      "children",
+      "play",
+      "soccer",
+      "is",
+      "near",
+      "my",
+      "house",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "공원은 아이들이 축구를 하는 장소이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The park which children play soccer is near my house.",
+      "statementForm": [
+        "The park where children play soccer is near my house.",
+        "The park where children play soccer is near my house"
+      ],
+      "fragmentForm": "The park where children play soccer is",
+      "wormholeVariants": [
+        "The park which children play soccer is near my house.",
+        "The park when children play soccer is near my house.",
+        "The park in which place children play soccer is near my house.",
+        "The park where it children play soccer is near my house."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_003",
+    "seedId": "relative_adverbs_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "카페는 우리가 방과 후에 만나는 장소이다.",
+    "english": "The cafe where we meet after school is small.",
+    "words": [
+      "The",
+      "cafe",
+      "where",
+      "we",
+      "meet",
+      "after",
+      "school",
+      "is",
+      "small",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카페는 우리가 방과 후에 만나는 장소이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cafe which we meet after school is small.",
+      "statementForm": [
+        "The cafe where we meet after school is small.",
+        "The cafe where we meet after school is small"
+      ],
+      "fragmentForm": "The cafe where we meet after school",
+      "wormholeVariants": [
+        "The cafe which we meet after school is small.",
+        "The cafe when we meet after school is small.",
+        "The cafe in which place we meet after school is small.",
+        "The cafe where it we meet after school is small."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_004",
+    "seedId": "relative_adverbs_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "교실은 우리 반이 영어를 배우는 장소이다.",
+    "english": "The classroom where our class learns English is bright.",
+    "words": [
+      "The",
+      "classroom",
+      "where",
+      "our",
+      "class",
+      "learns",
+      "English",
+      "is",
+      "bright",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "교실은 우리 반이 영어를 배우는 장소이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The classroom which our class learns English is bright.",
+      "statementForm": [
+        "The classroom where our class learns English is bright.",
+        "The classroom where our class learns English is bright"
+      ],
+      "fragmentForm": "The classroom where our class learns English",
+      "wormholeVariants": [
+        "The classroom which our class learns English is bright.",
+        "The classroom when our class learns English is bright.",
+        "The classroom in which place our class learns English is bright.",
+        "The classroom where it our class learns English is bright."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_005",
+    "seedId": "relative_adverbs_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "도시는 내 사촌이 사는 곳이다.",
+    "english": "The city where my cousin lives is famous for music.",
+    "words": [
+      "The",
+      "city",
+      "where",
+      "my",
+      "cousin",
+      "lives",
+      "is",
+      "famous",
+      "for",
+      "music",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "도시는 내 사촌이 사는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The city which my cousin lives is famous for music.",
+      "statementForm": [
+        "The city where my cousin lives is famous for music.",
+        "The city where my cousin lives is famous for music"
+      ],
+      "fragmentForm": "The city where my cousin lives is",
+      "wormholeVariants": [
+        "The city which my cousin lives is famous for music.",
+        "The city when my cousin lives is famous for music.",
+        "The city in which place my cousin lives is famous for music.",
+        "The city where it my cousin lives is famous for music."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_006",
+    "seedId": "relative_adverbs_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "박물관은 학생들이 오래된 그림을 보는 장소이다.",
+    "english": "The museum where students see old paintings is downtown.",
+    "words": [
+      "The",
+      "museum",
+      "where",
+      "students",
+      "see",
+      "old",
+      "paintings",
+      "is",
+      "downtown",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "박물관은 학생들이 오래된 그림을 보는 장소이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The museum which students see old paintings is downtown.",
+      "statementForm": [
+        "The museum where students see old paintings is downtown.",
+        "The museum where students see old paintings is downtown"
+      ],
+      "fragmentForm": "The museum where students see old paintings",
+      "wormholeVariants": [
+        "The museum which students see old paintings is downtown.",
+        "The museum when students see old paintings is downtown.",
+        "The museum in which place students see old paintings is downtown.",
+        "The museum where it students see old paintings is downtown."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_007",
+    "seedId": "relative_adverbs_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "가게는 네가 그 가방을 산 장소이다.",
+    "english": "The store where you bought the bag closes early.",
+    "words": [
+      "The",
+      "store",
+      "where",
+      "you",
+      "bought",
+      "the",
+      "bag",
+      "closes",
+      "early",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "가게는 네가 그 가방을 산 장소이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The store which you bought the bag closes early.",
+      "statementForm": [
+        "The store where you bought the bag closes early.",
+        "The store where you bought the bag closes early"
+      ],
+      "fragmentForm": "The store where you bought the bag",
+      "wormholeVariants": [
+        "The store which you bought the bag closes early.",
+        "The store when you bought the bag closes early.",
+        "The store in which place you bought the bag closes early.",
+        "The store where it you bought the bag closes early."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_008",
+    "seedId": "relative_adverbs_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "운동장은 우리가 체육 시간에 달리는 곳이다.",
+    "english": "The playground where we run during PE class is wide.",
+    "words": [
+      "The",
+      "playground",
+      "where",
+      "we",
+      "run",
+      "during",
+      "PE",
+      "class",
+      "is",
+      "wide",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "운동장은 우리가 체육 시간에 달리는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The playground which we run during PE class is wide.",
+      "statementForm": [
+        "The playground where we run during PE class is wide.",
+        "The playground where we run during PE class is wide"
+      ],
+      "fragmentForm": "The playground where we run during PE",
+      "wormholeVariants": [
+        "The playground which we run during PE class is wide.",
+        "The playground when we run during PE class is wide.",
+        "The playground in which place we run during PE class is wide.",
+        "The playground where it we run during PE class is wide."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_009",
+    "seedId": "relative_adverbs_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "식당은 그들이 점심을 먹는 곳이다.",
+    "english": "The restaurant where they eat lunch is crowded.",
+    "words": [
+      "The",
+      "restaurant",
+      "where",
+      "they",
+      "eat",
+      "lunch",
+      "is",
+      "crowded",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "식당은 그들이 점심을 먹는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The restaurant which they eat lunch is crowded.",
+      "statementForm": [
+        "The restaurant where they eat lunch is crowded.",
+        "The restaurant where they eat lunch is crowded"
+      ],
+      "fragmentForm": "The restaurant where they eat lunch is",
+      "wormholeVariants": [
+        "The restaurant which they eat lunch is crowded.",
+        "The restaurant when they eat lunch is crowded.",
+        "The restaurant in which place they eat lunch is crowded.",
+        "The restaurant where it they eat lunch is crowded."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_010",
+    "seedId": "relative_adverbs_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "마을은 우리 조부모님이 태어나신 곳이다.",
+    "english": "The village where my grandparents were born is peaceful.",
+    "words": [
+      "The",
+      "village",
+      "where",
+      "my",
+      "grandparents",
+      "were",
+      "born",
+      "is",
+      "peaceful",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "마을은 우리 조부모님이 태어나신 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The village which my grandparents were born is peaceful.",
+      "statementForm": [
+        "The village where my grandparents were born is peaceful.",
+        "The village where my grandparents were born is peaceful"
+      ],
+      "fragmentForm": "The village where my grandparents were born",
+      "wormholeVariants": [
+        "The village which my grandparents were born is peaceful.",
+        "The village when my grandparents were born is peaceful.",
+        "The village in which place my grandparents were born is peaceful.",
+        "The village where it my grandparents were born is peaceful."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_011",
+    "seedId": "relative_adverbs_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "방은 내가 일기를 쓰는 곳이다.",
+    "english": "The room where I write my diary is cozy.",
+    "words": [
+      "The",
+      "room",
+      "where",
+      "I",
+      "write",
+      "my",
+      "diary",
+      "is",
+      "cozy",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "방은 내가 일기를 쓰는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room which I write my diary is cozy.",
+      "statementForm": [
+        "The room where I write my diary is cozy.",
+        "The room where I write my diary is cozy"
+      ],
+      "fragmentForm": "The room where I write my diary",
+      "wormholeVariants": [
+        "The room which I write my diary is cozy.",
+        "The room when I write my diary is cozy.",
+        "The room in which place I write my diary is cozy.",
+        "The room where it I write my diary is cozy."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_012",
+    "seedId": "relative_adverbs_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "역은 우리가 처음 만난 곳이다.",
+    "english": "The station where we first met is old.",
+    "words": [
+      "The",
+      "station",
+      "where",
+      "we",
+      "first",
+      "met",
+      "is",
+      "old",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "역은 우리가 처음 만난 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The station which we first met is old.",
+      "statementForm": [
+        "The station where we first met is old.",
+        "The station where we first met is old"
+      ],
+      "fragmentForm": "The station where we first met is",
+      "wormholeVariants": [
+        "The station which we first met is old.",
+        "The station when we first met is old.",
+        "The station in which place we first met is old.",
+        "The station where it we first met is old."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_013",
+    "seedId": "relative_adverbs_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "해변은 우리가 쓰레기를 주운 곳이다.",
+    "english": "The beach where we picked up trash looks clean now.",
+    "words": [
+      "The",
+      "beach",
+      "where",
+      "we",
+      "picked",
+      "up",
+      "trash",
+      "looks",
+      "clean",
+      "now",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "해변은 우리가 쓰레기를 주운 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The beach which we picked up trash looks clean now.",
+      "statementForm": [
+        "The beach where we picked up trash looks clean now.",
+        "The beach where we picked up trash looks clean now"
+      ],
+      "fragmentForm": "The beach where we picked up trash",
+      "wormholeVariants": [
+        "The beach which we picked up trash looks clean now.",
+        "The beach when we picked up trash looks clean now.",
+        "The beach in which place we picked up trash looks clean now.",
+        "The beach where it we picked up trash looks clean now."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_014",
+    "seedId": "relative_adverbs_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "학교는 내가 가장 많은 친구를 만난 곳이다.",
+    "english": "The school where I met most of my friends is important to me.",
+    "words": [
+      "The",
+      "school",
+      "where",
+      "I",
+      "met",
+      "most",
+      "of",
+      "my",
+      "friends",
+      "is",
+      "important",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학교는 내가 가장 많은 친구를 만난 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The school which I met most of my friends is important to me.",
+      "statementForm": [
+        "The school where I met most of my friends is important to me.",
+        "The school where I met most of my friends is important to me"
+      ],
+      "fragmentForm": "The school where I met most of",
+      "wormholeVariants": [
+        "The school which I met most of my friends is important to me.",
+        "The school when I met most of my friends is important to me.",
+        "The school in which place I met most of my friends is important to me.",
+        "The school where it I met most of my friends is important to me."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_015",
+    "seedId": "relative_adverbs_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "나라들은 그 언어가 사용되는 곳이다.",
+    "english": "The countries where the language is used have different cultures.",
+    "words": [
+      "The",
+      "countries",
+      "where",
+      "the",
+      "language",
+      "is",
+      "used",
+      "have",
+      "different",
+      "cultures",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나라들은 그 언어가 사용되는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The countries which the language is used have different cultures.",
+      "statementForm": [
+        "The countries where the language is used have different cultures.",
+        "The countries where the language is used have different cultures"
+      ],
+      "fragmentForm": "The countries where the language is used",
+      "wormholeVariants": [
+        "The countries which the language is used have different cultures.",
+        "The countries when the language is used have different cultures.",
+        "The countries in which place the language is used have different cultures.",
+        "The countries where it the language is used have different cultures."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_016",
+    "seedId": "relative_adverbs_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "실험실은 과학자들이 물을 검사한 장소이다.",
+    "english": "The lab where the scientists tested the water was safe.",
+    "words": [
+      "The",
+      "lab",
+      "where",
+      "the",
+      "scientists",
+      "tested",
+      "the",
+      "water",
+      "was",
+      "safe",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "실험실은 과학자들이 물을 검사한 장소이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The lab which the scientists tested the water was safe.",
+      "statementForm": [
+        "The lab where the scientists tested the water was safe.",
+        "The lab where the scientists tested the water was safe"
+      ],
+      "fragmentForm": "The lab where the scientists tested the",
+      "wormholeVariants": [
+        "The lab which the scientists tested the water was safe.",
+        "The lab when the scientists tested the water was safe.",
+        "The lab in which place the scientists tested the water was safe.",
+        "The lab where it the scientists tested the water was safe."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_017",
+    "seedId": "relative_adverbs_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "웹사이트는 우리가 자료를 찾는 곳이다.",
+    "english": "The website where we find information is useful.",
+    "words": [
+      "The",
+      "website",
+      "where",
+      "we",
+      "find",
+      "information",
+      "is",
+      "useful",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "웹사이트는 우리가 자료를 찾는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The website which we find information is useful.",
+      "statementForm": [
+        "The website where we find information is useful.",
+        "The website where we find information is useful"
+      ],
+      "fragmentForm": "The website where we find information is",
+      "wormholeVariants": [
+        "The website which we find information is useful.",
+        "The website when we find information is useful.",
+        "The website in which place we find information is useful.",
+        "The website where it we find information is useful."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_018",
+    "seedId": "relative_adverbs_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "무대는 학생들이 공연하는 장소이다.",
+    "english": "The stage where students perform is very large.",
+    "words": [
+      "The",
+      "stage",
+      "where",
+      "students",
+      "perform",
+      "is",
+      "very",
+      "large",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "무대는 학생들이 공연하는 장소이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The stage which students perform is very large.",
+      "statementForm": [
+        "The stage where students perform is very large.",
+        "The stage where students perform is very large"
+      ],
+      "fragmentForm": "The stage where students perform is very",
+      "wormholeVariants": [
+        "The stage which students perform is very large.",
+        "The stage when students perform is very large.",
+        "The stage in which place students perform is very large.",
+        "The stage where it students perform is very large."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_019",
+    "seedId": "relative_adverbs_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "시장에는 사람들이 신선한 과일을 사는 곳이 많다.",
+    "english": "The market where people buy fresh fruit is busy in the morning.",
+    "words": [
+      "The",
+      "market",
+      "where",
+      "people",
+      "buy",
+      "fresh",
+      "fruit",
+      "is",
+      "busy",
+      "in",
+      "the",
+      "morning",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "시장에는 사람들이 신선한 과일을 사는 곳이 많다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The market which people buy fresh fruit is busy in the morning.",
+      "statementForm": [
+        "The market where people buy fresh fruit is busy in the morning.",
+        "The market where people buy fresh fruit is busy in the morning"
+      ],
+      "fragmentForm": "The market where people buy fresh fruit",
+      "wormholeVariants": [
+        "The market which people buy fresh fruit is busy in the morning.",
+        "The market when people buy fresh fruit is busy in the morning.",
+        "The market in which place people buy fresh fruit is busy in the morning.",
+        "The market where it people buy fresh fruit is busy in the morning."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_020",
+    "seedId": "relative_adverbs_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "센터는 자원봉사자들이 아이들을 돕는 곳이다.",
+    "english": "The center where volunteers help children opens every weekend.",
+    "words": [
+      "The",
+      "center",
+      "where",
+      "volunteers",
+      "help",
+      "children",
+      "opens",
+      "every",
+      "weekend",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "센터는 자원봉사자들이 아이들을 돕는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The center which volunteers help children opens every weekend.",
+      "statementForm": [
+        "The center where volunteers help children opens every weekend.",
+        "The center where volunteers help children opens every weekend"
+      ],
+      "fragmentForm": "The center where volunteers help children opens",
+      "wormholeVariants": [
+        "The center which volunteers help children opens every weekend.",
+        "The center when volunteers help children opens every weekend.",
+        "The center in which place volunteers help children opens every weekend.",
+        "The center where it volunteers help children opens every weekend."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_021",
+    "seedId": "relative_adverbs_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "캠프장은 우리 가족이 여름을 보내는 곳이다.",
+    "english": "The campsite where my family spends summer is beside a lake.",
+    "words": [
+      "The",
+      "campsite",
+      "where",
+      "my",
+      "family",
+      "spends",
+      "summer",
+      "is",
+      "beside",
+      "a",
+      "lake",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "캠프장은 우리 가족이 여름을 보내는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The campsite which my family spends summer is beside a lake.",
+      "statementForm": [
+        "The campsite where my family spends summer is beside a lake.",
+        "The campsite where my family spends summer is beside a lake"
+      ],
+      "fragmentForm": "The campsite where my family spends summer",
+      "wormholeVariants": [
+        "The campsite which my family spends summer is beside a lake.",
+        "The campsite when my family spends summer is beside a lake.",
+        "The campsite in which place my family spends summer is beside a lake.",
+        "The campsite where it my family spends summer is beside a lake."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_022",
+    "seedId": "relative_adverbs_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "연구소는 그들이 새로운 약을 개발하는 곳이다.",
+    "english": "The institute where they develop new medicine is well known.",
+    "words": [
+      "The",
+      "institute",
+      "where",
+      "they",
+      "develop",
+      "new",
+      "medicine",
+      "is",
+      "well",
+      "known",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "연구소는 그들이 새로운 약을 개발하는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The institute which they develop new medicine is well known.",
+      "statementForm": [
+        "The institute where they develop new medicine is well known.",
+        "The institute where they develop new medicine is well known"
+      ],
+      "fragmentForm": "The institute where they develop new medicine",
+      "wormholeVariants": [
+        "The institute which they develop new medicine is well known.",
+        "The institute when they develop new medicine is well known.",
+        "The institute in which place they develop new medicine is well known.",
+        "The institute where it they develop new medicine is well known."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_023",
+    "seedId": "relative_adverbs_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이곳은 우리가 떠들면 안 되는 장소이다.",
+    "english": "This is the place where we should not make noise.",
+    "words": [
+      "This",
+      "is",
+      "the",
+      "place",
+      "where",
+      "we",
+      "should",
+      "not",
+      "make",
+      "noise",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이곳은 우리가 떠들면 안 되는 장소이다.",
+        "This"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is the place which we should not make noise.",
+      "statementForm": [
+        "This is the place where we should not make noise.",
+        "This is the place where we should not make noise"
+      ],
+      "fragmentForm": "This is the place where we should not make",
+      "wormholeVariants": [
+        "This is the place which we should not make noise.",
+        "This is the place when we should not make noise.",
+        "This is the place in which place we should not make noise.",
+        "This is the place where it we should not make noise."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_024",
+    "seedId": "relative_adverbs_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 방은 학생들이 들어갈 수 없는 곳이다.",
+    "english": "The room where students cannot enter is locked.",
+    "words": [
+      "The",
+      "room",
+      "where",
+      "students",
+      "cannot",
+      "enter",
+      "is",
+      "locked",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방은 학생들이 들어갈 수 없는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room which students cannot enter is locked.",
+      "statementForm": [
+        "The room where students cannot enter is locked.",
+        "The room where students cannot enter is locked"
+      ],
+      "fragmentForm": "The room where students cannot enter is",
+      "wormholeVariants": [
+        "The room which students cannot enter is locked.",
+        "The room when students cannot enter is locked.",
+        "The room in which place students cannot enter is locked.",
+        "The room where it students cannot enter is locked."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_025",
+    "seedId": "relative_adverbs_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그곳은 우리가 휴대폰을 사용하지 않는 장소이다.",
+    "english": "That is the place where we do not use our phones.",
+    "words": [
+      "That",
+      "is",
+      "the",
+      "place",
+      "where",
+      "we",
+      "do",
+      "not",
+      "use",
+      "our",
+      "phones",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그곳은 우리가 휴대폰을 사용하지 않는 장소이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is the place which we do not use our phones.",
+      "statementForm": [
+        "That is the place where we do not use our phones.",
+        "That is the place where we do not use our phones"
+      ],
+      "fragmentForm": "That is the place where we do not use",
+      "wormholeVariants": [
+        "That is the place which we do not use our phones.",
+        "That is the place when we do not use our phones.",
+        "That is the place in which place we do not use our phones.",
+        "That is the place where it we do not use our phones."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_026",
+    "seedId": "relative_adverbs_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 도시는 내가 더 이상 살지 않는 곳이다.",
+    "english": "The city where I no longer live still feels familiar.",
+    "words": [
+      "The",
+      "city",
+      "where",
+      "I",
+      "no",
+      "longer",
+      "live",
+      "still",
+      "feels",
+      "familiar",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 도시는 내가 더 이상 살지 않는 곳이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "The city which I no longer live still feels familiar.",
+      "statementForm": [
+        "The city where I no longer live still feels familiar.",
+        "The city where I no longer live still feels familiar"
+      ],
+      "fragmentForm": "The city where I no longer live",
+      "wormholeVariants": [
+        "The city which I no longer live still feels familiar.",
+        "The city when I no longer live still feels familiar.",
+        "The city in which place I no longer live still feels familiar.",
+        "The city where it I no longer live still feels familiar."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_027",
+    "seedId": "relative_adverbs_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "네가 공부하는 도서관이 어디니?",
+    "english": "Where is the library where you study after school?",
+    "words": [
+      "Where",
+      "is",
+      "the",
+      "library",
+      "where",
+      "you",
+      "study",
+      "after",
+      "school",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 공부하는 도서관이 어디니?",
+        "Where"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "Which is the library where you study after school?",
+      "statementForm": [
+        "Where is the library where you study after school?",
+        "Where is the library where you study after school"
+      ],
+      "fragmentForm": "Where is the library where",
+      "wormholeVariants": [
+        "Which is the library where you study after school?",
+        "When is the library where you study after school?",
+        "In which place is the library where you study after school?",
+        "Where is the library where it you study after school?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_028",
+    "seedId": "relative_adverbs_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "우리가 점심을 먹었던 식당을 기억하니?",
+    "english": "Do you remember the restaurant where we had lunch?",
+    "words": [
+      "Do",
+      "you",
+      "remember",
+      "the",
+      "restaurant",
+      "where",
+      "we",
+      "had",
+      "lunch",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리가 점심을 먹었던 식당을 기억하니?",
+        "Do"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you remember the restaurant which we had lunch?",
+      "statementForm": [
+        "Do you remember the restaurant where we had lunch?",
+        "Do you remember the restaurant where we had lunch"
+      ],
+      "fragmentForm": "Do you remember the restaurant where we had",
+      "wormholeVariants": [
+        "Do you remember the restaurant which we had lunch?",
+        "Do you remember the restaurant when we had lunch?",
+        "Do you remember the restaurant in which place we had lunch?",
+        "Do you remember the restaurant where it we had lunch?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_029",
+    "seedId": "relative_adverbs_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그들이 사진을 찍은 장소를 찾았니?",
+    "english": "Did you find the place where they took the photo?",
+    "words": [
+      "Did",
+      "you",
+      "find",
+      "the",
+      "place",
+      "where",
+      "they",
+      "took",
+      "the",
+      "photo",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 사진을 찍은 장소를 찾았니?",
+        "Did"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you find the place which they took the photo?",
+      "statementForm": [
+        "Did you find the place where they took the photo?",
+        "Did you find the place where they took the photo"
+      ],
+      "fragmentForm": "Did you find the place where they took the",
+      "wormholeVariants": [
+        "Did you find the place which they took the photo?",
+        "Did you find the place when they took the photo?",
+        "Did you find the place in which place they took the photo?",
+        "Did you find the place where it they took the photo?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_030",
+    "seedId": "relative_adverbs_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그녀가 자란 마을은 유명하니?",
+    "english": "Is the town where she grew up famous?",
+    "words": [
+      "Is",
+      "the",
+      "town",
+      "where",
+      "she",
+      "grew",
+      "up",
+      "famous",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 자란 마을은 유명하니?",
+        "Is"
+      ],
+      [
+        "relative adverb",
+        "where"
+      ],
+      [
+        "주의",
+        "where introduces a place clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_where",
+      "place"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the town which she grew up famous?",
+      "statementForm": [
+        "Is the town where she grew up famous?",
+        "Is the town where she grew up famous"
+      ],
+      "fragmentForm": "Is the town where she grew up",
+      "wormholeVariants": [
+        "Is the town which she grew up famous?",
+        "Is the town when she grew up famous?",
+        "Is the town in which place she grew up famous?",
+        "Is the town where it she grew up famous?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_031",
+    "seedId": "relative_adverbs_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "월요일은 우리 동아리가 만나는 날이다.",
+    "english": "Monday is the day when our club meets.",
+    "words": [
+      "Monday",
+      "is",
+      "the",
+      "day",
+      "when",
+      "our",
+      "club",
+      "meets",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "월요일은 우리 동아리가 만나는 날이다.",
+        "Monday"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Monday is the day where our club meets.",
+      "statementForm": [
+        "Monday is the day when our club meets.",
+        "Monday is the day when our club meets"
+      ],
+      "fragmentForm": "Monday is the day when our club",
+      "wormholeVariants": [
+        "Monday is the day where our club meets.",
+        "Monday is the day which our club meets.",
+        "Monday is the day at which time our club meets.",
+        "Monday is the day when it our club meets."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_032",
+    "seedId": "relative_adverbs_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "여름은 많은 사람들이 여행을 가는 계절이다.",
+    "english": "Summer is the season when many people travel.",
+    "words": [
+      "Summer",
+      "is",
+      "the",
+      "season",
+      "when",
+      "many",
+      "people",
+      "travel",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "여름은 많은 사람들이 여행을 가는 계절이다.",
+        "Summer"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Summer is the season where many people travel.",
+      "statementForm": [
+        "Summer is the season when many people travel.",
+        "Summer is the season when many people travel"
+      ],
+      "fragmentForm": "Summer is the season when many people",
+      "wormholeVariants": [
+        "Summer is the season where many people travel.",
+        "Summer is the season which many people travel.",
+        "Summer is the season at which time many people travel.",
+        "Summer is the season when it many people travel."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_033",
+    "seedId": "relative_adverbs_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "아침은 내가 가장 집중을 잘하는 시간이다.",
+    "english": "Morning is the time when I focus best.",
+    "words": [
+      "Morning",
+      "is",
+      "the",
+      "time",
+      "when",
+      "I",
+      "focus",
+      "best",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아침은 내가 가장 집중을 잘하는 시간이다.",
+        "Morning"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Morning is the time where I focus best.",
+      "statementForm": [
+        "Morning is the time when I focus best.",
+        "Morning is the time when I focus best"
+      ],
+      "fragmentForm": "Morning is the time when I focus",
+      "wormholeVariants": [
+        "Morning is the time where I focus best.",
+        "Morning is the time which I focus best.",
+        "Morning is the time at which time I focus best.",
+        "Morning is the time when it I focus best."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_034",
+    "seedId": "relative_adverbs_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "2020년은 우리가 새 학교로 이사한 해이다.",
+    "english": "2020 was the year when we moved to a new school.",
+    "words": [
+      "2020",
+      "was",
+      "the",
+      "year",
+      "when",
+      "we",
+      "moved",
+      "to",
+      "a",
+      "new",
+      "school",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "2020년은 우리가 새 학교로 이사한 해이다.",
+        "2020"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "2020 was the year where we moved to a new school.",
+      "statementForm": [
+        "2020 was the year when we moved to a new school.",
+        "2020 was the year when we moved to a new school"
+      ],
+      "fragmentForm": "2020 was the year when we moved to a",
+      "wormholeVariants": [
+        "2020 was the year where we moved to a new school.",
+        "2020 was the year which we moved to a new school.",
+        "2020 was the year at which time we moved to a new school.",
+        "2020 was the year when it we moved to a new school."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_035",
+    "seedId": "relative_adverbs_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "생일은 친구들이 나를 축하해 주는 날이다.",
+    "english": "My birthday is the day when my friends celebrate me.",
+    "words": [
+      "My",
+      "birthday",
+      "is",
+      "the",
+      "day",
+      "when",
+      "my",
+      "friends",
+      "celebrate",
+      "me",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "생일은 친구들이 나를 축하해 주는 날이다.",
+        "My"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "My birthday is the day where my friends celebrate me.",
+      "statementForm": [
+        "My birthday is the day when my friends celebrate me.",
+        "My birthday is the day when my friends celebrate me"
+      ],
+      "fragmentForm": "My birthday is the day when my friends celebrate",
+      "wormholeVariants": [
+        "My birthday is the day where my friends celebrate me.",
+        "My birthday is the day which my friends celebrate me.",
+        "My birthday is the day at which time my friends celebrate me.",
+        "My birthday is the day when it my friends celebrate me."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_036",
+    "seedId": "relative_adverbs_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "겨울은 호수가 얼어붙는 계절이다.",
+    "english": "Winter is the season when the lake freezes.",
+    "words": [
+      "Winter",
+      "is",
+      "the",
+      "season",
+      "when",
+      "the",
+      "lake",
+      "freezes",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "겨울은 호수가 얼어붙는 계절이다.",
+        "Winter"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Winter is the season where the lake freezes.",
+      "statementForm": [
+        "Winter is the season when the lake freezes.",
+        "Winter is the season when the lake freezes"
+      ],
+      "fragmentForm": "Winter is the season when the lake",
+      "wormholeVariants": [
+        "Winter is the season where the lake freezes.",
+        "Winter is the season which the lake freezes.",
+        "Winter is the season at which time the lake freezes.",
+        "Winter is the season when it the lake freezes."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_037",
+    "seedId": "relative_adverbs_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "점심시간은 학생들이 휴식을 취하는 시간이다.",
+    "english": "Lunch time is the time when students take a break.",
+    "words": [
+      "Lunch",
+      "time",
+      "is",
+      "the",
+      "time",
+      "when",
+      "students",
+      "take",
+      "a",
+      "break",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "점심시간은 학생들이 휴식을 취하는 시간이다.",
+        "Lunch"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Lunch time is the time where students take a break.",
+      "statementForm": [
+        "Lunch time is the time when students take a break.",
+        "Lunch time is the time when students take a break"
+      ],
+      "fragmentForm": "Lunch time is the time when students take a",
+      "wormholeVariants": [
+        "Lunch time is the time where students take a break.",
+        "Lunch time is the time which students take a break.",
+        "Lunch time is the time at which time students take a break.",
+        "Lunch time is the time when it students take a break."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_038",
+    "seedId": "relative_adverbs_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그날은 내가 처음 발표를 한 날이었다.",
+    "english": "That was the day when I gave my first presentation.",
+    "words": [
+      "That",
+      "was",
+      "the",
+      "day",
+      "when",
+      "I",
+      "gave",
+      "my",
+      "first",
+      "presentation",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그날은 내가 처음 발표를 한 날이었다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "That was the day where I gave my first presentation.",
+      "statementForm": [
+        "That was the day when I gave my first presentation.",
+        "That was the day when I gave my first presentation"
+      ],
+      "fragmentForm": "That was the day when I gave my first",
+      "wormholeVariants": [
+        "That was the day where I gave my first presentation.",
+        "That was the day which I gave my first presentation.",
+        "That was the day at which time I gave my first presentation.",
+        "That was the day when it I gave my first presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_039",
+    "seedId": "relative_adverbs_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "시험 전날은 우리가 늦게까지 공부하는 때이다.",
+    "english": "The night before the test is the time when we study late.",
+    "words": [
+      "The",
+      "night",
+      "before",
+      "the",
+      "test",
+      "is",
+      "the",
+      "time",
+      "when",
+      "we",
+      "study",
+      "late",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "시험 전날은 우리가 늦게까지 공부하는 때이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "The night before the test is the time where we study late.",
+      "statementForm": [
+        "The night before the test is the time when we study late.",
+        "The night before the test is the time when we study late"
+      ],
+      "fragmentForm": "The night before the test is the time when we study",
+      "wormholeVariants": [
+        "The night before the test is the time where we study late.",
+        "The night before the test is the time which we study late.",
+        "The night before the test is the time at which time we study late.",
+        "The night before the test is the time when it we study late."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_040",
+    "seedId": "relative_adverbs_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "어린 시절은 사람들이 많은 것을 배우는 시기이다.",
+    "english": "Childhood is the period when people learn many things.",
+    "words": [
+      "Childhood",
+      "is",
+      "the",
+      "period",
+      "when",
+      "people",
+      "learn",
+      "many",
+      "things",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "어린 시절은 사람들이 많은 것을 배우는 시기이다.",
+        "Childhood"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Childhood is the period where people learn many things.",
+      "statementForm": [
+        "Childhood is the period when people learn many things.",
+        "Childhood is the period when people learn many things"
+      ],
+      "fragmentForm": "Childhood is the period when people learn many",
+      "wormholeVariants": [
+        "Childhood is the period where people learn many things.",
+        "Childhood is the period which people learn many things.",
+        "Childhood is the period at which time people learn many things.",
+        "Childhood is the period when it people learn many things."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_041",
+    "seedId": "relative_adverbs_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "방학은 우리가 새로운 취미를 시작하는 때이다.",
+    "english": "Vacation is the time when we start new hobbies.",
+    "words": [
+      "Vacation",
+      "is",
+      "the",
+      "time",
+      "when",
+      "we",
+      "start",
+      "new",
+      "hobbies",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "방학은 우리가 새로운 취미를 시작하는 때이다.",
+        "Vacation"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Vacation is the time where we start new hobbies.",
+      "statementForm": [
+        "Vacation is the time when we start new hobbies.",
+        "Vacation is the time when we start new hobbies"
+      ],
+      "fragmentForm": "Vacation is the time when we start new",
+      "wormholeVariants": [
+        "Vacation is the time where we start new hobbies.",
+        "Vacation is the time which we start new hobbies.",
+        "Vacation is the time at which time we start new hobbies.",
+        "Vacation is the time when it we start new hobbies."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_042",
+    "seedId": "relative_adverbs_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "가을은 나뭇잎이 색을 바꾸는 계절이다.",
+    "english": "Fall is the season when leaves change color.",
+    "words": [
+      "Fall",
+      "is",
+      "the",
+      "season",
+      "when",
+      "leaves",
+      "change",
+      "color",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "가을은 나뭇잎이 색을 바꾸는 계절이다.",
+        "Fall"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Fall is the season where leaves change color.",
+      "statementForm": [
+        "Fall is the season when leaves change color.",
+        "Fall is the season when leaves change color"
+      ],
+      "fragmentForm": "Fall is the season when leaves change",
+      "wormholeVariants": [
+        "Fall is the season where leaves change color.",
+        "Fall is the season which leaves change color.",
+        "Fall is the season at which time leaves change color.",
+        "Fall is the season when it leaves change color."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_043",
+    "seedId": "relative_adverbs_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 순간은 모두가 조용해진 때였다.",
+    "english": "That was the moment when everyone became quiet.",
+    "words": [
+      "That",
+      "was",
+      "the",
+      "moment",
+      "when",
+      "everyone",
+      "became",
+      "quiet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 순간은 모두가 조용해진 때였다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "That was the moment where everyone became quiet.",
+      "statementForm": [
+        "That was the moment when everyone became quiet.",
+        "That was the moment when everyone became quiet"
+      ],
+      "fragmentForm": "That was the moment when everyone became",
+      "wormholeVariants": [
+        "That was the moment where everyone became quiet.",
+        "That was the moment which everyone became quiet.",
+        "That was the moment at which time everyone became quiet.",
+        "That was the moment when it everyone became quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_044",
+    "seedId": "relative_adverbs_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "토요일은 우리 가족이 함께 저녁을 먹는 날이다.",
+    "english": "Saturday is the day when my family eats dinner together.",
+    "words": [
+      "Saturday",
+      "is",
+      "the",
+      "day",
+      "when",
+      "my",
+      "family",
+      "eats",
+      "dinner",
+      "together",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "토요일은 우리 가족이 함께 저녁을 먹는 날이다.",
+        "Saturday"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Saturday is the day where my family eats dinner together.",
+      "statementForm": [
+        "Saturday is the day when my family eats dinner together.",
+        "Saturday is the day when my family eats dinner together"
+      ],
+      "fragmentForm": "Saturday is the day when my family eats dinner",
+      "wormholeVariants": [
+        "Saturday is the day where my family eats dinner together.",
+        "Saturday is the day which my family eats dinner together.",
+        "Saturday is the day at which time my family eats dinner together.",
+        "Saturday is the day when it my family eats dinner together."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_045",
+    "seedId": "relative_adverbs_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "저녁은 내가 하루를 돌아보는 시간이다.",
+    "english": "Evening is the time when I think about my day.",
+    "words": [
+      "Evening",
+      "is",
+      "the",
+      "time",
+      "when",
+      "I",
+      "think",
+      "about",
+      "my",
+      "day",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "저녁은 내가 하루를 돌아보는 시간이다.",
+        "Evening"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Evening is the time where I think about my day.",
+      "statementForm": [
+        "Evening is the time when I think about my day.",
+        "Evening is the time when I think about my day"
+      ],
+      "fragmentForm": "Evening is the time when I think about my",
+      "wormholeVariants": [
+        "Evening is the time where I think about my day.",
+        "Evening is the time which I think about my day.",
+        "Evening is the time at which time I think about my day.",
+        "Evening is the time when it I think about my day."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_046",
+    "seedId": "relative_adverbs_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 해는 많은 변화가 시작된 해였다.",
+    "english": "That was the year when many changes began.",
+    "words": [
+      "That",
+      "was",
+      "the",
+      "year",
+      "when",
+      "many",
+      "changes",
+      "began",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 해는 많은 변화가 시작된 해였다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "That was the year where many changes began.",
+      "statementForm": [
+        "That was the year when many changes began.",
+        "That was the year when many changes began"
+      ],
+      "fragmentForm": "That was the year when many changes",
+      "wormholeVariants": [
+        "That was the year where many changes began.",
+        "That was the year which many changes began.",
+        "That was the year at which time many changes began.",
+        "That was the year when it many changes began."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_047",
+    "seedId": "relative_adverbs_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "회의가 끝난 순간은 모두가 안도한 때였다.",
+    "english": "The moment when the meeting ended was a relief to everyone.",
+    "words": [
+      "The",
+      "moment",
+      "when",
+      "the",
+      "meeting",
+      "ended",
+      "was",
+      "a",
+      "relief",
+      "to",
+      "everyone",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "회의가 끝난 순간은 모두가 안도한 때였다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "The moment where the meeting ended was a relief to everyone.",
+      "statementForm": [
+        "The moment when the meeting ended was a relief to everyone.",
+        "The moment when the meeting ended was a relief to everyone"
+      ],
+      "fragmentForm": "The moment when the meeting ended was",
+      "wormholeVariants": [
+        "The moment where the meeting ended was a relief to everyone.",
+        "The moment which the meeting ended was a relief to everyone.",
+        "The moment at which time the meeting ended was a relief to everyone.",
+        "The moment when it the meeting ended was a relief to everyone."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_048",
+    "seedId": "relative_adverbs_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "축제날은 학교가 가장 활기찬 날이다.",
+    "english": "The festival day is the day when the school feels most alive.",
+    "words": [
+      "The",
+      "festival",
+      "day",
+      "is",
+      "the",
+      "day",
+      "when",
+      "the",
+      "school",
+      "feels",
+      "most",
+      "alive",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "축제날은 학교가 가장 활기찬 날이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "The festival day is the day where the school feels most alive.",
+      "statementForm": [
+        "The festival day is the day when the school feels most alive.",
+        "The festival day is the day when the school feels most alive"
+      ],
+      "fragmentForm": "The festival day is the day when the school feels most",
+      "wormholeVariants": [
+        "The festival day is the day where the school feels most alive.",
+        "The festival day is the day which the school feels most alive.",
+        "The festival day is the day at which time the school feels most alive.",
+        "The festival day is the day when it the school feels most alive."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_049",
+    "seedId": "relative_adverbs_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그날은 우리가 실수를 잊을 수 없는 날이다.",
+    "english": "That is the day when we cannot forget our mistake.",
+    "words": [
+      "That",
+      "is",
+      "the",
+      "day",
+      "when",
+      "we",
+      "cannot",
+      "forget",
+      "our",
+      "mistake",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그날은 우리가 실수를 잊을 수 없는 날이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is the day where we cannot forget our mistake.",
+      "statementForm": [
+        "That is the day when we cannot forget our mistake.",
+        "That is the day when we cannot forget our mistake"
+      ],
+      "fragmentForm": "That is the day when we cannot forget our",
+      "wormholeVariants": [
+        "That is the day where we cannot forget our mistake.",
+        "That is the day which we cannot forget our mistake.",
+        "That is the day at which time we cannot forget our mistake.",
+        "That is the day when it we cannot forget our mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_050",
+    "seedId": "relative_adverbs_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "겨울은 우리가 밖에서 오래 놀지 못하는 계절이다.",
+    "english": "Winter is the season when we cannot play outside for long.",
+    "words": [
+      "Winter",
+      "is",
+      "the",
+      "season",
+      "when",
+      "we",
+      "cannot",
+      "play",
+      "outside",
+      "for",
+      "long",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "겨울은 우리가 밖에서 오래 놀지 못하는 계절이다.",
+        "Winter"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Winter is the season where we cannot play outside for long.",
+      "statementForm": [
+        "Winter is the season when we cannot play outside for long.",
+        "Winter is the season when we cannot play outside for long"
+      ],
+      "fragmentForm": "Winter is the season when we cannot play outside",
+      "wormholeVariants": [
+        "Winter is the season where we cannot play outside for long.",
+        "Winter is the season which we cannot play outside for long.",
+        "Winter is the season at which time we cannot play outside for long.",
+        "Winter is the season when it we cannot play outside for long."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_051",
+    "seedId": "relative_adverbs_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "시험 기간은 학생들이 충분히 쉬지 못하는 때이다.",
+    "english": "Exam season is the time when students do not rest enough.",
+    "words": [
+      "Exam",
+      "season",
+      "is",
+      "the",
+      "time",
+      "when",
+      "students",
+      "do",
+      "not",
+      "rest",
+      "enough",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "시험 기간은 학생들이 충분히 쉬지 못하는 때이다.",
+        "Exam"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Exam season is the time where students do not rest enough.",
+      "statementForm": [
+        "Exam season is the time when students do not rest enough.",
+        "Exam season is the time when students do not rest enough"
+      ],
+      "fragmentForm": "Exam season is the time when students do not rest",
+      "wormholeVariants": [
+        "Exam season is the time where students do not rest enough.",
+        "Exam season is the time which students do not rest enough.",
+        "Exam season is the time at which time students do not rest enough.",
+        "Exam season is the time when it students do not rest enough."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_052",
+    "seedId": "relative_adverbs_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 순간은 내가 아무 말도 할 수 없었던 때였다.",
+    "english": "That was the moment when I could not say anything.",
+    "words": [
+      "That",
+      "was",
+      "the",
+      "moment",
+      "when",
+      "I",
+      "could",
+      "not",
+      "say",
+      "anything",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 순간은 내가 아무 말도 할 수 없었던 때였다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "That was the moment where I could not say anything.",
+      "statementForm": [
+        "That was the moment when I could not say anything.",
+        "That was the moment when I could not say anything"
+      ],
+      "fragmentForm": "That was the moment when I could not say",
+      "wormholeVariants": [
+        "That was the moment where I could not say anything.",
+        "That was the moment which I could not say anything.",
+        "That was the moment at which time I could not say anything.",
+        "That was the moment when it I could not say anything."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_053",
+    "seedId": "relative_adverbs_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "네가 가장 행복했던 날은 언제였니?",
+    "english": "What was the day when you felt happiest?",
+    "words": [
+      "What",
+      "was",
+      "the",
+      "day",
+      "when",
+      "you",
+      "felt",
+      "happiest",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 가장 행복했던 날은 언제였니?",
+        "What"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "What was the day where you felt happiest?",
+      "statementForm": [
+        "What was the day when you felt happiest?",
+        "What was the day when you felt happiest"
+      ],
+      "fragmentForm": "What was the day when you felt",
+      "wormholeVariants": [
+        "What was the day where you felt happiest?",
+        "What was the day which you felt happiest?",
+        "What was the day at which time you felt happiest?",
+        "What was the day when it you felt happiest?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_054",
+    "seedId": "relative_adverbs_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "우리가 처음 만난 날을 기억하니?",
+    "english": "Do you remember the day when we first met?",
+    "words": [
+      "Do",
+      "you",
+      "remember",
+      "the",
+      "day",
+      "when",
+      "we",
+      "first",
+      "met",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리가 처음 만난 날을 기억하니?",
+        "Do"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you remember the day where we first met?",
+      "statementForm": [
+        "Do you remember the day when we first met?",
+        "Do you remember the day when we first met"
+      ],
+      "fragmentForm": "Do you remember the day when we first",
+      "wormholeVariants": [
+        "Do you remember the day where we first met?",
+        "Do you remember the day which we first met?",
+        "Do you remember the day at which time we first met?",
+        "Do you remember the day when it we first met?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_055",
+    "seedId": "relative_adverbs_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그들이 출발한 시간을 알고 있니?",
+    "english": "Do you know the time when they left?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "the",
+      "time",
+      "when",
+      "they",
+      "left",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 출발한 시간을 알고 있니?",
+        "Do"
+      ],
+      [
+        "relative adverb",
+        "when"
+      ],
+      [
+        "주의",
+        "when introduces a time clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_when",
+      "time"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know the time where they left?",
+      "statementForm": [
+        "Do you know the time when they left?",
+        "Do you know the time when they left"
+      ],
+      "fragmentForm": "Do you know the time when they",
+      "wormholeVariants": [
+        "Do you know the time where they left?",
+        "Do you know the time which they left?",
+        "Do you know the time at which time they left?",
+        "Do you know the time when it they left?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_056",
+    "seedId": "relative_adverbs_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 이유는 그가 늦은 이유이다.",
+    "english": "The reason why he was late was simple.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "he",
+      "was",
+      "late",
+      "was",
+      "simple",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이유는 그가 늦은 이유이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where he was late was simple.",
+      "statementForm": [
+        "The reason why he was late was simple.",
+        "The reason why he was late was simple"
+      ],
+      "fragmentForm": "The reason why he was late was",
+      "wormholeVariants": [
+        "The reason where he was late was simple.",
+        "The reason which he was late was simple.",
+        "The reason because he was late was simple.",
+        "The reason why it he was late was simple."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_057",
+    "seedId": "relative_adverbs_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "내가 공부하는 이유는 꿈을 이루기 위해서이다.",
+    "english": "The reason why I study is to reach my dream.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "I",
+      "study",
+      "is",
+      "to",
+      "reach",
+      "my",
+      "dream",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내가 공부하는 이유는 꿈을 이루기 위해서이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where I study is to reach my dream.",
+      "statementForm": [
+        "The reason why I study is to reach my dream.",
+        "The reason why I study is to reach my dream"
+      ],
+      "fragmentForm": "The reason why I study is to",
+      "wormholeVariants": [
+        "The reason where I study is to reach my dream.",
+        "The reason which I study is to reach my dream.",
+        "The reason because I study is to reach my dream.",
+        "The reason why it I study is to reach my dream."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_058",
+    "seedId": "relative_adverbs_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그녀가 웃은 이유는 농담이 재미있었기 때문이다.",
+    "english": "The reason why she laughed was the funny joke.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "she",
+      "laughed",
+      "was",
+      "the",
+      "funny",
+      "joke",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 웃은 이유는 농담이 재미있었기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where she laughed was the funny joke.",
+      "statementForm": [
+        "The reason why she laughed was the funny joke.",
+        "The reason why she laughed was the funny joke"
+      ],
+      "fragmentForm": "The reason why she laughed was the",
+      "wormholeVariants": [
+        "The reason where she laughed was the funny joke.",
+        "The reason which she laughed was the funny joke.",
+        "The reason because she laughed was the funny joke.",
+        "The reason why it she laughed was the funny joke."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_059",
+    "seedId": "relative_adverbs_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "우리가 떠난 이유는 비가 오기 시작했기 때문이다.",
+    "english": "The reason why we left was that it started to rain.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "we",
+      "left",
+      "was",
+      "that",
+      "it",
+      "started",
+      "to",
+      "rain",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리가 떠난 이유는 비가 오기 시작했기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where we left was that it started to rain.",
+      "statementForm": [
+        "The reason why we left was that it started to rain.",
+        "The reason why we left was that it started to rain"
+      ],
+      "fragmentForm": "The reason why we left was that",
+      "wormholeVariants": [
+        "The reason where we left was that it started to rain.",
+        "The reason which we left was that it started to rain.",
+        "The reason because we left was that it started to rain.",
+        "The reason why it we left was that it started to rain."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_060",
+    "seedId": "relative_adverbs_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그들이 도운 이유는 그 아이가 도움이 필요했기 때문이다.",
+    "english": "The reason why they helped was that the child needed support.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "they",
+      "helped",
+      "was",
+      "that",
+      "the",
+      "child",
+      "needed",
+      "support",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 도운 이유는 그 아이가 도움이 필요했기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where they helped was that the child needed support.",
+      "statementForm": [
+        "The reason why they helped was that the child needed support.",
+        "The reason why they helped was that the child needed support"
+      ],
+      "fragmentForm": "The reason why they helped was that",
+      "wormholeVariants": [
+        "The reason where they helped was that the child needed support.",
+        "The reason which they helped was that the child needed support.",
+        "The reason because they helped was that the child needed support.",
+        "The reason why it they helped was that the child needed support."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_061",
+    "seedId": "relative_adverbs_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "네가 화난 이유는 충분히 이해된다.",
+    "english": "The reason why you were angry is easy to understand.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "you",
+      "were",
+      "angry",
+      "is",
+      "easy",
+      "to",
+      "understand",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 화난 이유는 충분히 이해된다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where you were angry is easy to understand.",
+      "statementForm": [
+        "The reason why you were angry is easy to understand.",
+        "The reason why you were angry is easy to understand"
+      ],
+      "fragmentForm": "The reason why you were angry is",
+      "wormholeVariants": [
+        "The reason where you were angry is easy to understand.",
+        "The reason which you were angry is easy to understand.",
+        "The reason because you were angry is easy to understand.",
+        "The reason why it you were angry is easy to understand."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_062",
+    "seedId": "relative_adverbs_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 계획이 실패한 이유는 준비 부족이었다.",
+    "english": "The reason why the plan failed was a lack of preparation.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "the",
+      "plan",
+      "failed",
+      "was",
+      "a",
+      "lack",
+      "of",
+      "preparation",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획이 실패한 이유는 준비 부족이었다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where the plan failed was a lack of preparation.",
+      "statementForm": [
+        "The reason why the plan failed was a lack of preparation.",
+        "The reason why the plan failed was a lack of preparation"
+      ],
+      "fragmentForm": "The reason why the plan failed was",
+      "wormholeVariants": [
+        "The reason where the plan failed was a lack of preparation.",
+        "The reason which the plan failed was a lack of preparation.",
+        "The reason because the plan failed was a lack of preparation.",
+        "The reason why it the plan failed was a lack of preparation."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_063",
+    "seedId": "relative_adverbs_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "내가 그 책을 고른 이유는 제목이 흥미로웠기 때문이다.",
+    "english": "The reason why I chose the book was its interesting title.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "I",
+      "chose",
+      "the",
+      "book",
+      "was",
+      "its",
+      "interesting",
+      "title",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내가 그 책을 고른 이유는 제목이 흥미로웠기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where I chose the book was its interesting title.",
+      "statementForm": [
+        "The reason why I chose the book was its interesting title.",
+        "The reason why I chose the book was its interesting title"
+      ],
+      "fragmentForm": "The reason why I chose the book",
+      "wormholeVariants": [
+        "The reason where I chose the book was its interesting title.",
+        "The reason which I chose the book was its interesting title.",
+        "The reason because I chose the book was its interesting title.",
+        "The reason why it I chose the book was its interesting title."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_064",
+    "seedId": "relative_adverbs_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "선생님이 우리를 칭찬한 이유는 우리가 협력했기 때문이다.",
+    "english": "The reason why the teacher praised us was our teamwork.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "the",
+      "teacher",
+      "praised",
+      "us",
+      "was",
+      "our",
+      "teamwork",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님이 우리를 칭찬한 이유는 우리가 협력했기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where the teacher praised us was our teamwork.",
+      "statementForm": [
+        "The reason why the teacher praised us was our teamwork.",
+        "The reason why the teacher praised us was our teamwork"
+      ],
+      "fragmentForm": "The reason why the teacher praised us",
+      "wormholeVariants": [
+        "The reason where the teacher praised us was our teamwork.",
+        "The reason which the teacher praised us was our teamwork.",
+        "The reason because the teacher praised us was our teamwork.",
+        "The reason why it the teacher praised us was our teamwork."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_065",
+    "seedId": "relative_adverbs_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그가 결정을 바꾼 이유는 새로운 정보였다.",
+    "english": "The reason why he changed his decision was new information.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "he",
+      "changed",
+      "his",
+      "decision",
+      "was",
+      "new",
+      "information",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 결정을 바꾼 이유는 새로운 정보였다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where he changed his decision was new information.",
+      "statementForm": [
+        "The reason why he changed his decision was new information.",
+        "The reason why he changed his decision was new information"
+      ],
+      "fragmentForm": "The reason why he changed his decision",
+      "wormholeVariants": [
+        "The reason where he changed his decision was new information.",
+        "The reason which he changed his decision was new information.",
+        "The reason because he changed his decision was new information.",
+        "The reason why it he changed his decision was new information."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_066",
+    "seedId": "relative_adverbs_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그녀가 의사가 되고 싶은 이유는 사람들을 돕고 싶기 때문이다.",
+    "english": "The reason why she wants to become a doctor is to help people.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "she",
+      "wants",
+      "to",
+      "become",
+      "a",
+      "doctor",
+      "is",
+      "to",
+      "help",
+      "people",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 의사가 되고 싶은 이유는 사람들을 돕고 싶기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where she wants to become a doctor is to help people.",
+      "statementForm": [
+        "The reason why she wants to become a doctor is to help people.",
+        "The reason why she wants to become a doctor is to help people"
+      ],
+      "fragmentForm": "The reason why she wants to become",
+      "wormholeVariants": [
+        "The reason where she wants to become a doctor is to help people.",
+        "The reason which she wants to become a doctor is to help people.",
+        "The reason because she wants to become a doctor is to help people.",
+        "The reason why it she wants to become a doctor is to help people."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_067",
+    "seedId": "relative_adverbs_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "우리가 규칙을 만든 이유는 모두를 안전하게 하기 위해서이다.",
+    "english": "The reason why we made the rule is to keep everyone safe.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "we",
+      "made",
+      "the",
+      "rule",
+      "is",
+      "to",
+      "keep",
+      "everyone",
+      "safe",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리가 규칙을 만든 이유는 모두를 안전하게 하기 위해서이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where we made the rule is to keep everyone safe.",
+      "statementForm": [
+        "The reason why we made the rule is to keep everyone safe.",
+        "The reason why we made the rule is to keep everyone safe"
+      ],
+      "fragmentForm": "The reason why we made the rule",
+      "wormholeVariants": [
+        "The reason where we made the rule is to keep everyone safe.",
+        "The reason which we made the rule is to keep everyone safe.",
+        "The reason because we made the rule is to keep everyone safe.",
+        "The reason why it we made the rule is to keep everyone safe."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_068",
+    "seedId": "relative_adverbs_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 도시가 유명한 이유는 아름다운 다리 때문이다.",
+    "english": "The reason why the city is famous is its beautiful bridge.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "the",
+      "city",
+      "is",
+      "famous",
+      "is",
+      "its",
+      "beautiful",
+      "bridge",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 도시가 유명한 이유는 아름다운 다리 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where the city is famous is its beautiful bridge.",
+      "statementForm": [
+        "The reason why the city is famous is its beautiful bridge.",
+        "The reason why the city is famous is its beautiful bridge"
+      ],
+      "fragmentForm": "The reason why the city is famous",
+      "wormholeVariants": [
+        "The reason where the city is famous is its beautiful bridge.",
+        "The reason which the city is famous is its beautiful bridge.",
+        "The reason because the city is famous is its beautiful bridge.",
+        "The reason why it the city is famous is its beautiful bridge."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_069",
+    "seedId": "relative_adverbs_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "내가 일기를 쓰는 이유는 생각을 정리하기 위해서이다.",
+    "english": "The reason why I keep a diary is to organize my thoughts.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "I",
+      "keep",
+      "a",
+      "diary",
+      "is",
+      "to",
+      "organize",
+      "my",
+      "thoughts",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내가 일기를 쓰는 이유는 생각을 정리하기 위해서이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where I keep a diary is to organize my thoughts.",
+      "statementForm": [
+        "The reason why I keep a diary is to organize my thoughts.",
+        "The reason why I keep a diary is to organize my thoughts"
+      ],
+      "fragmentForm": "The reason why I keep a diary",
+      "wormholeVariants": [
+        "The reason where I keep a diary is to organize my thoughts.",
+        "The reason which I keep a diary is to organize my thoughts.",
+        "The reason because I keep a diary is to organize my thoughts.",
+        "The reason why it I keep a diary is to organize my thoughts."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_070",
+    "seedId": "relative_adverbs_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그들이 조용했던 이유는 결과를 기다리고 있었기 때문이다.",
+    "english": "The reason why they were quiet was that they were waiting for the result.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "they",
+      "were",
+      "quiet",
+      "was",
+      "that",
+      "they",
+      "were",
+      "waiting",
+      "for",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 조용했던 이유는 결과를 기다리고 있었기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where they were quiet was that they were waiting for the result.",
+      "statementForm": [
+        "The reason why they were quiet was that they were waiting for the result.",
+        "The reason why they were quiet was that they were waiting for the result"
+      ],
+      "fragmentForm": "The reason why they were quiet was",
+      "wormholeVariants": [
+        "The reason where they were quiet was that they were waiting for the result.",
+        "The reason which they were quiet was that they were waiting for the result.",
+        "The reason because they were quiet was that they were waiting for the result.",
+        "The reason why it they were quiet was that they were waiting for the result."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_071",
+    "seedId": "relative_adverbs_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그 앱이 인기 있는 이유는 사용하기 쉽기 때문이다.",
+    "english": "The reason why the app is popular is that it is easy to use.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "the",
+      "app",
+      "is",
+      "popular",
+      "is",
+      "that",
+      "it",
+      "is",
+      "easy",
+      "to",
+      "use",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 앱이 인기 있는 이유는 사용하기 쉽기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where the app is popular is that it is easy to use.",
+      "statementForm": [
+        "The reason why the app is popular is that it is easy to use.",
+        "The reason why the app is popular is that it is easy to use"
+      ],
+      "fragmentForm": "The reason why the app is popular",
+      "wormholeVariants": [
+        "The reason where the app is popular is that it is easy to use.",
+        "The reason which the app is popular is that it is easy to use.",
+        "The reason because the app is popular is that it is easy to use.",
+        "The reason why it the app is popular is that it is easy to use."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_072",
+    "seedId": "relative_adverbs_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "우리가 그 문제를 다시 검토한 이유는 답이 불분명했기 때문이다.",
+    "english": "The reason why we reviewed the problem again was that the answer was unclear.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "we",
+      "reviewed",
+      "the",
+      "problem",
+      "again",
+      "was",
+      "that",
+      "the",
+      "answer",
+      "was",
+      "unclear",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리가 그 문제를 다시 검토한 이유는 답이 불분명했기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where we reviewed the problem again was that the answer was unclear.",
+      "statementForm": [
+        "The reason why we reviewed the problem again was that the answer was unclear.",
+        "The reason why we reviewed the problem again was that the answer was unclear"
+      ],
+      "fragmentForm": "The reason why we reviewed the problem",
+      "wormholeVariants": [
+        "The reason where we reviewed the problem again was that the answer was unclear.",
+        "The reason which we reviewed the problem again was that the answer was unclear.",
+        "The reason because we reviewed the problem again was that the answer was unclear.",
+        "The reason why it we reviewed the problem again was that the answer was unclear."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_073",
+    "seedId": "relative_adverbs_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그가 오지 않은 이유는 아직 알려지지 않았다.",
+    "english": "The reason why he did not come is still unknown.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "he",
+      "did",
+      "not",
+      "come",
+      "is",
+      "still",
+      "unknown",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 오지 않은 이유는 아직 알려지지 않았다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where he did not come is still unknown.",
+      "statementForm": [
+        "The reason why he did not come is still unknown.",
+        "The reason why he did not come is still unknown"
+      ],
+      "fragmentForm": "The reason why he did not come",
+      "wormholeVariants": [
+        "The reason where he did not come is still unknown.",
+        "The reason which he did not come is still unknown.",
+        "The reason because he did not come is still unknown.",
+        "The reason why it he did not come is still unknown."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_074",
+    "seedId": "relative_adverbs_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "내가 동의하지 않은 이유는 설명이 충분하지 않았기 때문이다.",
+    "english": "The reason why I did not agree was that the explanation was not enough.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "I",
+      "did",
+      "not",
+      "agree",
+      "was",
+      "that",
+      "the",
+      "explanation",
+      "was",
+      "not",
+      "enough",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내가 동의하지 않은 이유는 설명이 충분하지 않았기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where I did not agree was that the explanation was not enough.",
+      "statementForm": [
+        "The reason why I did not agree was that the explanation was not enough.",
+        "The reason why I did not agree was that the explanation was not enough"
+      ],
+      "fragmentForm": "The reason why I did not agree",
+      "wormholeVariants": [
+        "The reason where I did not agree was that the explanation was not enough.",
+        "The reason which I did not agree was that the explanation was not enough.",
+        "The reason because I did not agree was that the explanation was not enough.",
+        "The reason why it I did not agree was that the explanation was not enough."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_075",
+    "seedId": "relative_adverbs_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그들이 계획을 끝내지 못한 이유는 시간이 부족했기 때문이다.",
+    "english": "The reason why they could not finish the plan was a lack of time.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "they",
+      "could",
+      "not",
+      "finish",
+      "the",
+      "plan",
+      "was",
+      "a",
+      "lack",
+      "of",
+      "time",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 계획을 끝내지 못한 이유는 시간이 부족했기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where they could not finish the plan was a lack of time.",
+      "statementForm": [
+        "The reason why they could not finish the plan was a lack of time.",
+        "The reason why they could not finish the plan was a lack of time"
+      ],
+      "fragmentForm": "The reason why they could not finish",
+      "wormholeVariants": [
+        "The reason where they could not finish the plan was a lack of time.",
+        "The reason which they could not finish the plan was a lack of time.",
+        "The reason because they could not finish the plan was a lack of time.",
+        "The reason why it they could not finish the plan was a lack of time."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_076",
+    "seedId": "relative_adverbs_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그녀가 대답하지 않은 이유는 질문을 듣지 못했기 때문이다.",
+    "english": "The reason why she did not answer was that she did not hear the question.",
+    "words": [
+      "The",
+      "reason",
+      "why",
+      "she",
+      "did",
+      "not",
+      "answer",
+      "was",
+      "that",
+      "she",
+      "did",
+      "not",
+      "hear",
+      "the",
+      "question",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 대답하지 않은 이유는 질문을 듣지 못했기 때문이다.",
+        "The"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reason where she did not answer was that she did not hear the question.",
+      "statementForm": [
+        "The reason why she did not answer was that she did not hear the question.",
+        "The reason why she did not answer was that she did not hear the question"
+      ],
+      "fragmentForm": "The reason why she did not answer",
+      "wormholeVariants": [
+        "The reason where she did not answer was that she did not hear the question.",
+        "The reason which she did not answer was that she did not hear the question.",
+        "The reason because she did not answer was that she did not hear the question.",
+        "The reason why it she did not answer was that she did not hear the question."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_077",
+    "seedId": "relative_adverbs_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그가 늦은 이유를 알고 있니?",
+    "english": "Do you know the reason why he was late?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "the",
+      "reason",
+      "why",
+      "he",
+      "was",
+      "late",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 늦은 이유를 알고 있니?",
+        "Do"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know the reason where he was late?",
+      "statementForm": [
+        "Do you know the reason why he was late?",
+        "Do you know the reason why he was late"
+      ],
+      "fragmentForm": "Do you know the reason why he was",
+      "wormholeVariants": [
+        "Do you know the reason where he was late?",
+        "Do you know the reason which he was late?",
+        "Do you know the reason because he was late?",
+        "Do you know the reason why it he was late?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_078",
+    "seedId": "relative_adverbs_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "네가 그 선택을 한 이유를 설명할 수 있니?",
+    "english": "Can you explain the reason why you made that choice?",
+    "words": [
+      "Can",
+      "you",
+      "explain",
+      "the",
+      "reason",
+      "why",
+      "you",
+      "made",
+      "that",
+      "choice",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 그 선택을 한 이유를 설명할 수 있니?",
+        "Can"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Can you explain the reason where you made that choice?",
+      "statementForm": [
+        "Can you explain the reason why you made that choice?",
+        "Can you explain the reason why you made that choice"
+      ],
+      "fragmentForm": "Can you explain the reason why you made that",
+      "wormholeVariants": [
+        "Can you explain the reason where you made that choice?",
+        "Can you explain the reason which you made that choice?",
+        "Can you explain the reason because you made that choice?",
+        "Can you explain the reason why it you made that choice?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_079",
+    "seedId": "relative_adverbs_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그들이 계획을 바꾼 이유가 분명했니?",
+    "english": "Was the reason why they changed the plan clear?",
+    "words": [
+      "Was",
+      "the",
+      "reason",
+      "why",
+      "they",
+      "changed",
+      "the",
+      "plan",
+      "clear",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 계획을 바꾼 이유가 분명했니?",
+        "Was"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Was the reason where they changed the plan clear?",
+      "statementForm": [
+        "Was the reason why they changed the plan clear?",
+        "Was the reason why they changed the plan clear"
+      ],
+      "fragmentForm": "Was the reason why they changed the plan",
+      "wormholeVariants": [
+        "Was the reason where they changed the plan clear?",
+        "Was the reason which they changed the plan clear?",
+        "Was the reason because they changed the plan clear?",
+        "Was the reason why it they changed the plan clear?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_080",
+    "seedId": "relative_adverbs_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그녀가 울었던 이유를 들었니?",
+    "english": "Did you hear the reason why she cried?",
+    "words": [
+      "Did",
+      "you",
+      "hear",
+      "the",
+      "reason",
+      "why",
+      "she",
+      "cried",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 울었던 이유를 들었니?",
+        "Did"
+      ],
+      [
+        "relative adverb",
+        "why"
+      ],
+      [
+        "주의",
+        "why introduces a reason clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_why",
+      "reason"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you hear the reason where she cried?",
+      "statementForm": [
+        "Did you hear the reason why she cried?",
+        "Did you hear the reason why she cried"
+      ],
+      "fragmentForm": "Did you hear the reason why she",
+      "wormholeVariants": [
+        "Did you hear the reason where she cried?",
+        "Did you hear the reason which she cried?",
+        "Did you hear the reason because she cried?",
+        "Did you hear the reason why it she cried?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_081",
+    "seedId": "relative_adverbs_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이것이 내가 문제를 푸는 방법이다.",
+    "english": "This is how I solve the problem.",
+    "words": [
+      "This",
+      "is",
+      "how",
+      "I",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것이 내가 문제를 푸는 방법이다.",
+        "This"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is why I solve the problem.",
+      "statementForm": [
+        "This is how I solve the problem.",
+        "This is how I solve the problem"
+      ],
+      "fragmentForm": "This is how I solve the",
+      "wormholeVariants": [
+        "This is why I solve the problem.",
+        "This is what I solve the problem.",
+        "This is the way how I solve the problem.",
+        "This is how it I solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_082",
+    "seedId": "relative_adverbs_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그것이 우리가 시간을 절약하는 방법이다.",
+    "english": "That is how we save time.",
+    "words": [
+      "That",
+      "is",
+      "how",
+      "we",
+      "save",
+      "time",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그것이 우리가 시간을 절약하는 방법이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is why we save time.",
+      "statementForm": [
+        "That is how we save time.",
+        "That is how we save time"
+      ],
+      "fragmentForm": "That is how we save",
+      "wormholeVariants": [
+        "That is why we save time.",
+        "That is what we save time.",
+        "That is the way how we save time.",
+        "That is how it we save time."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_083",
+    "seedId": "relative_adverbs_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이것이 그녀가 영어를 연습하는 방식이다.",
+    "english": "This is how she practices English.",
+    "words": [
+      "This",
+      "is",
+      "how",
+      "she",
+      "practices",
+      "English",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것이 그녀가 영어를 연습하는 방식이다.",
+        "This"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is why she practices English.",
+      "statementForm": [
+        "This is how she practices English.",
+        "This is how she practices English"
+      ],
+      "fragmentForm": "This is how she practices",
+      "wormholeVariants": [
+        "This is why she practices English.",
+        "This is what she practices English.",
+        "This is the way how she practices English.",
+        "This is how it she practices English."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_084",
+    "seedId": "relative_adverbs_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그것이 그들이 팀을 이끄는 방법이다.",
+    "english": "That is how they lead the team.",
+    "words": [
+      "That",
+      "is",
+      "how",
+      "they",
+      "lead",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그것이 그들이 팀을 이끄는 방법이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is why they lead the team.",
+      "statementForm": [
+        "That is how they lead the team.",
+        "That is how they lead the team"
+      ],
+      "fragmentForm": "That is how they lead the",
+      "wormholeVariants": [
+        "That is why they lead the team.",
+        "That is what they lead the team.",
+        "That is the way how they lead the team.",
+        "That is how it they lead the team."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_085",
+    "seedId": "relative_adverbs_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이것이 네가 파일을 저장하는 방법이다.",
+    "english": "This is how you save the file.",
+    "words": [
+      "This",
+      "is",
+      "how",
+      "you",
+      "save",
+      "the",
+      "file",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것이 네가 파일을 저장하는 방법이다.",
+        "This"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is why you save the file.",
+      "statementForm": [
+        "This is how you save the file.",
+        "This is how you save the file"
+      ],
+      "fragmentForm": "This is how you save the",
+      "wormholeVariants": [
+        "This is why you save the file.",
+        "This is what you save the file.",
+        "This is the way how you save the file.",
+        "This is how it you save the file."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_086",
+    "seedId": "relative_adverbs_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그것이 내가 긴장을 푸는 방법이다.",
+    "english": "That is how I relax before a test.",
+    "words": [
+      "That",
+      "is",
+      "how",
+      "I",
+      "relax",
+      "before",
+      "a",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그것이 내가 긴장을 푸는 방법이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is why I relax before a test.",
+      "statementForm": [
+        "That is how I relax before a test.",
+        "That is how I relax before a test"
+      ],
+      "fragmentForm": "That is how I relax before a",
+      "wormholeVariants": [
+        "That is why I relax before a test.",
+        "That is what I relax before a test.",
+        "That is the way how I relax before a test.",
+        "That is how it I relax before a test."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_087",
+    "seedId": "relative_adverbs_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이것이 우리가 서로를 돕는 방식이다.",
+    "english": "This is how we help each other.",
+    "words": [
+      "This",
+      "is",
+      "how",
+      "we",
+      "help",
+      "each",
+      "other",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것이 우리가 서로를 돕는 방식이다.",
+        "This"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is why we help each other.",
+      "statementForm": [
+        "This is how we help each other.",
+        "This is how we help each other"
+      ],
+      "fragmentForm": "This is how we help each",
+      "wormholeVariants": [
+        "This is why we help each other.",
+        "This is what we help each other.",
+        "This is the way how we help each other.",
+        "This is how it we help each other."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_088",
+    "seedId": "relative_adverbs_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그것이 그가 어려운 단어를 기억하는 방법이다.",
+    "english": "That is how he remembers difficult words.",
+    "words": [
+      "That",
+      "is",
+      "how",
+      "he",
+      "remembers",
+      "difficult",
+      "words",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그것이 그가 어려운 단어를 기억하는 방법이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is why he remembers difficult words.",
+      "statementForm": [
+        "That is how he remembers difficult words.",
+        "That is how he remembers difficult words"
+      ],
+      "fragmentForm": "That is how he remembers difficult",
+      "wormholeVariants": [
+        "That is why he remembers difficult words.",
+        "That is what he remembers difficult words.",
+        "That is the way how he remembers difficult words.",
+        "That is how it he remembers difficult words."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_089",
+    "seedId": "relative_adverbs_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이것이 선생님이 질문을 설명하는 방식이다.",
+    "english": "This is how the teacher explains the question.",
+    "words": [
+      "This",
+      "is",
+      "how",
+      "the",
+      "teacher",
+      "explains",
+      "the",
+      "question",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것이 선생님이 질문을 설명하는 방식이다.",
+        "This"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is why the teacher explains the question.",
+      "statementForm": [
+        "This is how the teacher explains the question.",
+        "This is how the teacher explains the question"
+      ],
+      "fragmentForm": "This is how the teacher explains the",
+      "wormholeVariants": [
+        "This is why the teacher explains the question.",
+        "This is what the teacher explains the question.",
+        "This is the way how the teacher explains the question.",
+        "This is how it the teacher explains the question."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_090",
+    "seedId": "relative_adverbs_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그것이 학생들이 토론을 준비하는 방법이다.",
+    "english": "That is how students prepare for a debate.",
+    "words": [
+      "That",
+      "is",
+      "how",
+      "students",
+      "prepare",
+      "for",
+      "a",
+      "debate",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그것이 학생들이 토론을 준비하는 방법이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is why students prepare for a debate.",
+      "statementForm": [
+        "That is how students prepare for a debate.",
+        "That is how students prepare for a debate"
+      ],
+      "fragmentForm": "That is how students prepare for a",
+      "wormholeVariants": [
+        "That is why students prepare for a debate.",
+        "That is what students prepare for a debate.",
+        "That is the way how students prepare for a debate.",
+        "That is how it students prepare for a debate."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_091",
+    "seedId": "relative_adverbs_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "나는 네가 어떻게 답을 찾았는지 안다.",
+    "english": "I know how you found the answer.",
+    "words": [
+      "I",
+      "know",
+      "how",
+      "you",
+      "found",
+      "the",
+      "answer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 어떻게 답을 찾았는지 안다.",
+        "I"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know why you found the answer.",
+      "statementForm": [
+        "I know how you found the answer.",
+        "I know how you found the answer"
+      ],
+      "fragmentForm": "I know how you found the",
+      "wormholeVariants": [
+        "I know why you found the answer.",
+        "I know what you found the answer.",
+        "I know the way how you found the answer.",
+        "I know how it you found the answer."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_092",
+    "seedId": "relative_adverbs_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그녀는 우리가 어떻게 프로젝트를 끝냈는지 설명했다.",
+    "english": "She explained how we finished the project.",
+    "words": [
+      "She",
+      "explained",
+      "how",
+      "we",
+      "finished",
+      "the",
+      "project",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리가 어떻게 프로젝트를 끝냈는지 설명했다.",
+        "She"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "She explained why we finished the project.",
+      "statementForm": [
+        "She explained how we finished the project.",
+        "She explained how we finished the project"
+      ],
+      "fragmentForm": "She explained how we finished the",
+      "wormholeVariants": [
+        "She explained why we finished the project.",
+        "She explained what we finished the project.",
+        "She explained the way how we finished the project.",
+        "She explained how it we finished the project."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_093",
+    "seedId": "relative_adverbs_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "우리는 그가 어떻게 용기를 냈는지 기억한다.",
+    "english": "We remember how he found courage.",
+    "words": [
+      "We",
+      "remember",
+      "how",
+      "he",
+      "found",
+      "courage",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그가 어떻게 용기를 냈는지 기억한다.",
+        "We"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "We remember why he found courage.",
+      "statementForm": [
+        "We remember how he found courage.",
+        "We remember how he found courage"
+      ],
+      "fragmentForm": "We remember how he found",
+      "wormholeVariants": [
+        "We remember why he found courage.",
+        "We remember what he found courage.",
+        "We remember the way how he found courage.",
+        "We remember how it he found courage."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_094",
+    "seedId": "relative_adverbs_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그들은 내가 어떻게 실수를 고쳤는지 물었다.",
+    "english": "They asked how I corrected the mistake.",
+    "words": [
+      "They",
+      "asked",
+      "how",
+      "I",
+      "corrected",
+      "the",
+      "mistake",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 내가 어떻게 실수를 고쳤는지 물었다.",
+        "They"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "They asked why I corrected the mistake.",
+      "statementForm": [
+        "They asked how I corrected the mistake.",
+        "They asked how I corrected the mistake"
+      ],
+      "fragmentForm": "They asked how I corrected the",
+      "wormholeVariants": [
+        "They asked why I corrected the mistake.",
+        "They asked what I corrected the mistake.",
+        "They asked the way how I corrected the mistake.",
+        "They asked how it I corrected the mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_095",
+    "seedId": "relative_adverbs_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "너는 그녀가 어떻게 팀을 도왔는지 보았다.",
+    "english": "You saw how she helped the team.",
+    "words": [
+      "You",
+      "saw",
+      "how",
+      "she",
+      "helped",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그녀가 어떻게 팀을 도왔는지 보았다.",
+        "You"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "You saw why she helped the team.",
+      "statementForm": [
+        "You saw how she helped the team.",
+        "You saw how she helped the team"
+      ],
+      "fragmentForm": "You saw how she helped the",
+      "wormholeVariants": [
+        "You saw why she helped the team.",
+        "You saw what she helped the team.",
+        "You saw the way how she helped the team.",
+        "You saw how it she helped the team."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_096",
+    "seedId": "relative_adverbs_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이것이 우리가 갈등을 해결한 방법이다.",
+    "english": "This is how we solved the conflict.",
+    "words": [
+      "This",
+      "is",
+      "how",
+      "we",
+      "solved",
+      "the",
+      "conflict",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것이 우리가 갈등을 해결한 방법이다.",
+        "This"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is why we solved the conflict.",
+      "statementForm": [
+        "This is how we solved the conflict.",
+        "This is how we solved the conflict"
+      ],
+      "fragmentForm": "This is how we solved the",
+      "wormholeVariants": [
+        "This is why we solved the conflict.",
+        "This is what we solved the conflict.",
+        "This is the way how we solved the conflict.",
+        "This is how it we solved the conflict."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_097",
+    "seedId": "relative_adverbs_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그것이 그들이 새로운 아이디어를 만든 방식이다.",
+    "english": "That is how they created a new idea.",
+    "words": [
+      "That",
+      "is",
+      "how",
+      "they",
+      "created",
+      "a",
+      "new",
+      "idea",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그것이 그들이 새로운 아이디어를 만든 방식이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is why they created a new idea.",
+      "statementForm": [
+        "That is how they created a new idea.",
+        "That is how they created a new idea"
+      ],
+      "fragmentForm": "That is how they created a new",
+      "wormholeVariants": [
+        "That is why they created a new idea.",
+        "That is what they created a new idea.",
+        "That is the way how they created a new idea.",
+        "That is how it they created a new idea."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_098",
+    "seedId": "relative_adverbs_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "나는 그가 어떻게 그렇게 빨리 배웠는지 이해했다.",
+    "english": "I understood how he learned so quickly.",
+    "words": [
+      "I",
+      "understood",
+      "how",
+      "he",
+      "learned",
+      "so",
+      "quickly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 어떻게 그렇게 빨리 배웠는지 이해했다.",
+        "I"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "affirm",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "I understood why he learned so quickly.",
+      "statementForm": [
+        "I understood how he learned so quickly.",
+        "I understood how he learned so quickly"
+      ],
+      "fragmentForm": "I understood how he learned so",
+      "wormholeVariants": [
+        "I understood why he learned so quickly.",
+        "I understood what he learned so quickly.",
+        "I understood the way how he learned so quickly.",
+        "I understood how it he learned so quickly."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_099",
+    "seedId": "relative_adverbs_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이것은 네가 문제를 풀지 않는 방법이다.",
+    "english": "This is not how you solve the problem.",
+    "words": [
+      "This",
+      "is",
+      "not",
+      "how",
+      "you",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것은 네가 문제를 풀지 않는 방법이다.",
+        "This"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is not why you solve the problem.",
+      "statementForm": [
+        "This is not how you solve the problem.",
+        "This is not how you solve the problem"
+      ],
+      "fragmentForm": "This is not how you solve the",
+      "wormholeVariants": [
+        "This is not why you solve the problem.",
+        "This is not what you solve the problem.",
+        "This is not the way how you solve the problem.",
+        "This is not how it you solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_100",
+    "seedId": "relative_adverbs_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그것은 우리가 시간을 낭비하지 않는 방법이다.",
+    "english": "That is how we do not waste time.",
+    "words": [
+      "That",
+      "is",
+      "how",
+      "we",
+      "do",
+      "not",
+      "waste",
+      "time",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그것은 우리가 시간을 낭비하지 않는 방법이다.",
+        "That"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "That is why we do not waste time.",
+      "statementForm": [
+        "That is how we do not waste time.",
+        "That is how we do not waste time"
+      ],
+      "fragmentForm": "That is how we do not waste",
+      "wormholeVariants": [
+        "That is why we do not waste time.",
+        "That is what we do not waste time.",
+        "That is the way how we do not waste time.",
+        "That is how it we do not waste time."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_101",
+    "seedId": "relative_adverbs_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "나는 그들이 어떻게 실패했는지 이해하지 못했다.",
+    "english": "I did not understand how they failed.",
+    "words": [
+      "I",
+      "did",
+      "not",
+      "understand",
+      "how",
+      "they",
+      "failed",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 어떻게 실패했는지 이해하지 못했다.",
+        "I"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "negative",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "I did not understand why they failed.",
+      "statementForm": [
+        "I did not understand how they failed.",
+        "I did not understand how they failed"
+      ],
+      "fragmentForm": "I did not understand how they",
+      "wormholeVariants": [
+        "I did not understand why they failed.",
+        "I did not understand what they failed.",
+        "I did not understand the way how they failed.",
+        "I did not understand how it they failed."
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_102",
+    "seedId": "relative_adverbs_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "네가 어떻게 답을 찾았는지 설명할 수 있니?",
+    "english": "Can you explain how you found the answer?",
+    "words": [
+      "Can",
+      "you",
+      "explain",
+      "how",
+      "you",
+      "found",
+      "the",
+      "answer",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 어떻게 답을 찾았는지 설명할 수 있니?",
+        "Can"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "Can you explain why you found the answer?",
+      "statementForm": [
+        "Can you explain how you found the answer?",
+        "Can you explain how you found the answer"
+      ],
+      "fragmentForm": "Can you explain how you found the",
+      "wormholeVariants": [
+        "Can you explain why you found the answer?",
+        "Can you explain what you found the answer?",
+        "Can you explain the way how you found the answer?",
+        "Can you explain how it you found the answer?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_103",
+    "seedId": "relative_adverbs_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "이것이 그가 문제를 해결한 방법이니?",
+    "english": "Is this how he solved the problem?",
+    "words": [
+      "Is",
+      "this",
+      "how",
+      "he",
+      "solved",
+      "the",
+      "problem",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "relative_adverbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것이 그가 문제를 해결한 방법이니?",
+        "Is"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this why he solved the problem?",
+      "statementForm": [
+        "Is this how he solved the problem?",
+        "Is this how he solved the problem"
+      ],
+      "fragmentForm": "Is this how he solved the",
+      "wormholeVariants": [
+        "Is this why he solved the problem?",
+        "Is this what he solved the problem?",
+        "Is this the way how he solved the problem?",
+        "Is this how it he solved the problem?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_104",
+    "seedId": "relative_adverbs_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "그녀가 어떻게 발표를 준비했는지 아니?",
+    "english": "Do you know how she prepared the presentation?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "how",
+      "she",
+      "prepared",
+      "the",
+      "presentation",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 어떻게 발표를 준비했는지 아니?",
+        "Do"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know why she prepared the presentation?",
+      "statementForm": [
+        "Do you know how she prepared the presentation?",
+        "Do you know how she prepared the presentation"
+      ],
+      "fragmentForm": "Do you know how she prepared the",
+      "wormholeVariants": [
+        "Do you know why she prepared the presentation?",
+        "Do you know what she prepared the presentation?",
+        "Do you know the way how she prepared the presentation?",
+        "Do you know how it she prepared the presentation?"
+      ]
+    }
+  },
+  {
+    "id": "m2_relative_adverbs_105",
+    "seedId": "relative_adverbs_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "relative_adverbs",
+    "chapterLabelKo": "관계부사",
+    "korean": "우리가 어떻게 실수를 고쳤는지 기억하니?",
+    "english": "Do you remember how we corrected the mistake?",
+    "words": [
+      "Do",
+      "you",
+      "remember",
+      "how",
+      "we",
+      "corrected",
+      "the",
+      "mistake",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "relative_adverbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리가 어떻게 실수를 고쳤는지 기억하니?",
+        "Do"
+      ],
+      [
+        "relative adverb",
+        "how"
+      ],
+      [
+        "주의",
+        "how introduces a manner clause; do not confuse it with a relative pronoun"
+      ]
+    ],
+    "extraClueWordPool": [
+      "where",
+      "when",
+      "why",
+      "how",
+      "which",
+      "that"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "relative_adverbs",
+      "question",
+      "relative_adverb_how",
+      "manner"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you remember why we corrected the mistake?",
+      "statementForm": [
+        "Do you remember how we corrected the mistake?",
+        "Do you remember how we corrected the mistake"
+      ],
+      "fragmentForm": "Do you remember how we corrected the",
+      "wormholeVariants": [
+        "Do you remember why we corrected the mistake?",
+        "Do you remember what we corrected the mistake?",
+        "Do you remember the way how we corrected the mistake?",
+        "Do you remember how it we corrected the mistake?"
+      ]
+    }
+  }
+]
