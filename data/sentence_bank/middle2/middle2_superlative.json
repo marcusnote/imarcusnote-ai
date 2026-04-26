@@ -1,0 +1,6506 @@
+[
+  {
+    "id": "m2_sup_001",
+    "seedId": "superlative_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "지수는 우리 반에서 키가 가장 큰 학생이다.",
+    "english": "Jisu is the tallest student in our class.",
+    "words": [
+      "Jisu",
+      "is",
+      "the",
+      "tallest",
+      "student",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지수는 우리 반에서 키가 가장 큰 학생이다.",
+        "Jisu"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "Jisu is tallest student in our class.",
+      "statementForm": [
+        "Jisu is the tallest student in our class.",
+        "Jisu is the tallest student in our class"
+      ],
+      "fragmentForm": "Jisu is the tallest student in",
+      "wormholeVariants": [
+        "Jisu is tallest student in our class.",
+        "Jisu is the taller student in our class.",
+        "Jisu is the most tall student in our class.",
+        "Jisu is the tallest student than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_002",
+    "seedId": "superlative_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "민수는 우리 팀에서 가장 빠른 선수이다.",
+    "english": "Minsu is the fastest player on our team.",
+    "words": [
+      "Minsu",
+      "is",
+      "the",
+      "fastest",
+      "player",
+      "on",
+      "our",
+      "team",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "민수는 우리 팀에서 가장 빠른 선수이다.",
+        "Minsu"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "Minsu is fastest player on our team.",
+      "statementForm": [
+        "Minsu is the fastest player on our team.",
+        "Minsu is the fastest player on our team"
+      ],
+      "fragmentForm": "Minsu is the fastest player on",
+      "wormholeVariants": [
+        "Minsu is fastest player on our team.",
+        "Minsu is the faster player on our team.",
+        "Minsu is the most fast player on our team.",
+        "Minsu is the fastest player than our team."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_003",
+    "seedId": "superlative_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 책은 도서관에서 가장 재미있는 책이다.",
+    "english": "This book is the most interesting book in the library.",
+    "words": [
+      "This",
+      "book",
+      "is",
+      "the",
+      "most",
+      "interesting",
+      "book",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 책은 도서관에서 가장 재미있는 책이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This book is the more interesting book in the library.",
+      "statementForm": [
+        "This book is the most interesting book in the library.",
+        "This book is the most interesting book in the library"
+      ],
+      "fragmentForm": "This book is the most interesting book in",
+      "wormholeVariants": [
+        "This book is the more interesting book in the library.",
+        "This book is most interesting book in the library.",
+        "This book is the interesting book in the library.",
+        "This book is the most interesting book than the library."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_004",
+    "seedId": "superlative_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 문제는 시험에서 가장 어려운 문제였다.",
+    "english": "This problem was the most difficult question on the test.",
+    "words": [
+      "This",
+      "problem",
+      "was",
+      "the",
+      "most",
+      "difficult",
+      "question",
+      "on",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문제는 시험에서 가장 어려운 문제였다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem was the more difficult question on the test.",
+      "statementForm": [
+        "This problem was the most difficult question on the test.",
+        "This problem was the most difficult question on the test"
+      ],
+      "fragmentForm": "This problem was the most difficult question on",
+      "wormholeVariants": [
+        "This problem was the more difficult question on the test.",
+        "This problem was most difficult question on the test.",
+        "This problem was the difficult question on the test.",
+        "This problem was the most difficult question than the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_005",
+    "seedId": "superlative_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 학교에서 가장 인기 있는 학생이다.",
+    "english": "She is the most popular student in our school.",
+    "words": [
+      "She",
+      "is",
+      "the",
+      "most",
+      "popular",
+      "student",
+      "in",
+      "our",
+      "school",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 학교에서 가장 인기 있는 학생이다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is the more popular student in our school.",
+      "statementForm": [
+        "She is the most popular student in our school.",
+        "She is the most popular student in our school"
+      ],
+      "fragmentForm": "She is the most popular student in",
+      "wormholeVariants": [
+        "She is the more popular student in our school.",
+        "She is most popular student in our school.",
+        "She is the popular student in our school.",
+        "She is the most popular student than our school."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_006",
+    "seedId": "superlative_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 식당은 이 동네에서 가장 비싼 식당이다.",
+    "english": "This restaurant is the most expensive restaurant in this area.",
+    "words": [
+      "This",
+      "restaurant",
+      "is",
+      "the",
+      "most",
+      "expensive",
+      "restaurant",
+      "in",
+      "this",
+      "area",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 식당은 이 동네에서 가장 비싼 식당이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This restaurant is the more expensive restaurant in this area.",
+      "statementForm": [
+        "This restaurant is the most expensive restaurant in this area.",
+        "This restaurant is the most expensive restaurant in this area"
+      ],
+      "fragmentForm": "This restaurant is the most expensive restaurant in",
+      "wormholeVariants": [
+        "This restaurant is the more expensive restaurant in this area.",
+        "This restaurant is most expensive restaurant in this area.",
+        "This restaurant is the expensive restaurant in this area.",
+        "This restaurant is the most expensive restaurant than this area."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_007",
+    "seedId": "superlative_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 반에서 가장 똑똑한 학생이다.",
+    "english": "He is the smartest student in our class.",
+    "words": [
+      "He",
+      "is",
+      "the",
+      "smartest",
+      "student",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 반에서 가장 똑똑한 학생이다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is smartest student in our class.",
+      "statementForm": [
+        "He is the smartest student in our class.",
+        "He is the smartest student in our class"
+      ],
+      "fragmentForm": "He is the smartest student in",
+      "wormholeVariants": [
+        "He is smartest student in our class.",
+        "He is the smarter student in our class.",
+        "He is the most smart student in our class.",
+        "He is the smartest student than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_008",
+    "seedId": "superlative_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 영화는 내가 본 영화 중 가장 재미있었다.",
+    "english": "This movie was the most interesting movie I have seen.",
+    "words": [
+      "This",
+      "movie",
+      "was",
+      "the",
+      "most",
+      "interesting",
+      "movie",
+      "I",
+      "have",
+      "seen",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 영화는 내가 본 영화 중 가장 재미있었다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This movie was the more interesting movie I have seen.",
+      "statementForm": [
+        "This movie was the most interesting movie I have seen.",
+        "This movie was the most interesting movie I have seen"
+      ],
+      "fragmentForm": "This movie was the most interesting movie I have",
+      "wormholeVariants": [
+        "This movie was the more interesting movie I have seen.",
+        "This movie was most interesting movie I have seen.",
+        "This movie was the interesting movie I have seen."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_009",
+    "seedId": "superlative_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 강은 이 지역에서 가장 깊은 강이다.",
+    "english": "This river is the deepest river in this area.",
+    "words": [
+      "This",
+      "river",
+      "is",
+      "the",
+      "deepest",
+      "river",
+      "in",
+      "this",
+      "area",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 강은 이 지역에서 가장 깊은 강이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This river is deepest river in this area.",
+      "statementForm": [
+        "This river is the deepest river in this area.",
+        "This river is the deepest river in this area"
+      ],
+      "fragmentForm": "This river is the deepest river in",
+      "wormholeVariants": [
+        "This river is deepest river in this area.",
+        "This river is the deeper river in this area.",
+        "This river is the most deep river in this area.",
+        "This river is the deepest river than this area."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_010",
+    "seedId": "superlative_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 산은 우리 나라에서 가장 높은 산이다.",
+    "english": "This mountain is the highest mountain in our country.",
+    "words": [
+      "This",
+      "mountain",
+      "is",
+      "the",
+      "highest",
+      "mountain",
+      "in",
+      "our",
+      "country",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 산은 우리 나라에서 가장 높은 산이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This mountain is highest mountain in our country.",
+      "statementForm": [
+        "This mountain is the highest mountain in our country.",
+        "This mountain is the highest mountain in our country"
+      ],
+      "fragmentForm": "This mountain is the highest mountain in",
+      "wormholeVariants": [
+        "This mountain is highest mountain in our country.",
+        "This mountain is the higher mountain in our country.",
+        "This mountain is the most high mountain in our country.",
+        "This mountain is the highest mountain than our country."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_011",
+    "seedId": "superlative_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "지구에서 가장 빠른 동물은 치타이다.",
+    "english": "The cheetah is the fastest animal on Earth.",
+    "words": [
+      "The",
+      "cheetah",
+      "is",
+      "the",
+      "fastest",
+      "animal",
+      "on",
+      "Earth",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지구에서 가장 빠른 동물은 치타이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cheetah is fastest animal on Earth.",
+      "statementForm": [
+        "The cheetah is the fastest animal on Earth.",
+        "The cheetah is the fastest animal on Earth"
+      ],
+      "fragmentForm": "The cheetah is the fastest animal on",
+      "wormholeVariants": [
+        "The cheetah is fastest animal on Earth.",
+        "The cheetah is the faster animal on Earth.",
+        "The cheetah is the most fast animal on Earth.",
+        "The cheetah is the fastest animal than Earth."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_012",
+    "seedId": "superlative_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 반에서 글씨를 가장 깔끔하게 쓴다.",
+    "english": "He has the neatest handwriting in our class.",
+    "words": [
+      "He",
+      "has",
+      "the",
+      "neatest",
+      "handwriting",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 반에서 글씨를 가장 깔끔하게 쓴다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "He has neatest handwriting in our class.",
+      "statementForm": [
+        "He has the neatest handwriting in our class.",
+        "He has the neatest handwriting in our class"
+      ],
+      "fragmentForm": "He has the neatest handwriting in",
+      "wormholeVariants": [
+        "He has neatest handwriting in our class.",
+        "He has the neater handwriting in our class.",
+        "He has the most neat handwriting in our class.",
+        "He has the neatest handwriting than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_013",
+    "seedId": "superlative_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 호수는 마을에서 가장 맑은 호수이다.",
+    "english": "This lake is the clearest lake in the town.",
+    "words": [
+      "This",
+      "lake",
+      "is",
+      "the",
+      "clearest",
+      "lake",
+      "in",
+      "the",
+      "town",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 호수는 마을에서 가장 맑은 호수이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This lake is clearest lake in the town.",
+      "statementForm": [
+        "This lake is the clearest lake in the town.",
+        "This lake is the clearest lake in the town"
+      ],
+      "fragmentForm": "This lake is the clearest lake in",
+      "wormholeVariants": [
+        "This lake is clearest lake in the town.",
+        "This lake is the clearer lake in the town.",
+        "This lake is the most clear lake in the town.",
+        "This lake is the clearest lake than the town."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_014",
+    "seedId": "superlative_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "수학은 나에게 가장 쉬운 과목이다.",
+    "english": "Math is the easiest subject for me.",
+    "words": [
+      "Math",
+      "is",
+      "the",
+      "easiest",
+      "subject",
+      "for",
+      "me",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "수학은 나에게 가장 쉬운 과목이다.",
+        "Math"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "Math is easiest subject for me.",
+      "statementForm": [
+        "Math is the easiest subject for me.",
+        "Math is the easiest subject for me"
+      ],
+      "fragmentForm": "Math is the easiest subject for",
+      "wormholeVariants": [
+        "Math is easiest subject for me.",
+        "Math is the easier subject for me.",
+        "Math is the most easi subject for me."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_015",
+    "seedId": "superlative_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "우리 형은 가족 중에서 가장 힘이 센 사람이다.",
+    "english": "My brother is the strongest person in my family.",
+    "words": [
+      "My",
+      "brother",
+      "is",
+      "the",
+      "strongest",
+      "person",
+      "in",
+      "my",
+      "family",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 형은 가족 중에서 가장 힘이 센 사람이다.",
+        "My"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "My brother is strongest person in my family.",
+      "statementForm": [
+        "My brother is the strongest person in my family.",
+        "My brother is the strongest person in my family"
+      ],
+      "fragmentForm": "My brother is the strongest person in",
+      "wormholeVariants": [
+        "My brother is strongest person in my family.",
+        "My brother is the stronger person in my family.",
+        "My brother is the most strong person in my family.",
+        "My brother is the strongest person than my family."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_016",
+    "seedId": "superlative_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이것은 내 인생에서 가장 행복한 순간이다.",
+    "english": "This is the happiest moment of my life.",
+    "words": [
+      "This",
+      "is",
+      "the",
+      "happiest",
+      "moment",
+      "of",
+      "my",
+      "life",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것은 내 인생에서 가장 행복한 순간이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is happiest moment of my life.",
+      "statementForm": [
+        "This is the happiest moment of my life.",
+        "This is the happiest moment of my life"
+      ],
+      "fragmentForm": "This is the happiest moment of",
+      "wormholeVariants": [
+        "This is happiest moment of my life.",
+        "This is the happier moment of my life.",
+        "This is the most happi moment of my life.",
+        "This is the happiest moment than my life."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_017",
+    "seedId": "superlative_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "어제는 이번 주 중 가장 바쁜 날이었다.",
+    "english": "Yesterday was the busiest day of the week.",
+    "words": [
+      "Yesterday",
+      "was",
+      "the",
+      "busiest",
+      "day",
+      "of",
+      "the",
+      "week",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "어제는 이번 주 중 가장 바쁜 날이었다.",
+        "Yesterday"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "Yesterday was busiest day of the week.",
+      "statementForm": [
+        "Yesterday was the busiest day of the week.",
+        "Yesterday was the busiest day of the week"
+      ],
+      "fragmentForm": "Yesterday was the busiest day of",
+      "wormholeVariants": [
+        "Yesterday was busiest day of the week.",
+        "Yesterday was the busier day of the week.",
+        "Yesterday was the most busi day of the week.",
+        "Yesterday was the busiest day than the week."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_018",
+    "seedId": "superlative_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 다큐멘터리는 내가 본 것 중 가장 교육적이다.",
+    "english": "This documentary is the most educational one I have seen.",
+    "words": [
+      "This",
+      "documentary",
+      "is",
+      "the",
+      "most",
+      "educational",
+      "one",
+      "I",
+      "have",
+      "seen",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 다큐멘터리는 내가 본 것 중 가장 교육적이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This documentary is the more educational one I have seen.",
+      "statementForm": [
+        "This documentary is the most educational one I have seen.",
+        "This documentary is the most educational one I have seen"
+      ],
+      "fragmentForm": "This documentary is the most educational one I have",
+      "wormholeVariants": [
+        "This documentary is the more educational one I have seen.",
+        "This documentary is most educational one I have seen.",
+        "This documentary is the educational one I have seen."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_019",
+    "seedId": "superlative_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 박물관은 도시에서 가장 인상적인 장소이다.",
+    "english": "This museum is the most impressive place in the city.",
+    "words": [
+      "This",
+      "museum",
+      "is",
+      "the",
+      "most",
+      "impressive",
+      "place",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 박물관은 도시에서 가장 인상적인 장소이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This museum is the more impressive place in the city.",
+      "statementForm": [
+        "This museum is the most impressive place in the city.",
+        "This museum is the most impressive place in the city"
+      ],
+      "fragmentForm": "This museum is the most impressive place in",
+      "wormholeVariants": [
+        "This museum is the more impressive place in the city.",
+        "This museum is most impressive place in the city.",
+        "This museum is the impressive place in the city.",
+        "This museum is the most impressive place than the city."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_020",
+    "seedId": "superlative_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "제주도는 한국에서 가장 아름다운 섬 중 하나이다.",
+    "english": "Jeju Island is one of the most beautiful islands in Korea.",
+    "words": [
+      "Jeju",
+      "Island",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "beautiful",
+      "islands",
+      "in",
+      "Korea",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "제주도는 한국에서 가장 아름다운 섬 중 하나이다.",
+        "Jeju"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Jeju Island is one of the more beautiful islands in Korea.",
+      "statementForm": [
+        "Jeju Island is one of the most beautiful islands in Korea.",
+        "Jeju Island is one of the most beautiful islands in Korea"
+      ],
+      "fragmentForm": "Jeju Island is one of the most beautiful islands in",
+      "wormholeVariants": [
+        "Jeju Island is one of the more beautiful islands in Korea.",
+        "Jeju Island is one of most beautiful islands in Korea.",
+        "Jeju Island is the most beautiful islands in Korea.",
+        "Jeju Island is one of the most beautiful islands than Korea."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_021",
+    "seedId": "superlative_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 팀에서 가장 책임감 있는 선수이다.",
+    "english": "He is the most responsible player on our team.",
+    "words": [
+      "He",
+      "is",
+      "the",
+      "most",
+      "responsible",
+      "player",
+      "on",
+      "our",
+      "team",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 팀에서 가장 책임감 있는 선수이다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is the more responsible player on our team.",
+      "statementForm": [
+        "He is the most responsible player on our team.",
+        "He is the most responsible player on our team"
+      ],
+      "fragmentForm": "He is the most responsible player on",
+      "wormholeVariants": [
+        "He is the more responsible player on our team.",
+        "He is most responsible player on our team.",
+        "He is the responsible player on our team.",
+        "He is the most responsible player than our team."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_022",
+    "seedId": "superlative_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "컴퓨터는 현대 생활에서 가장 편리한 도구 중 하나이다.",
+    "english": "The computer is one of the most convenient tools in modern life.",
+    "words": [
+      "The",
+      "computer",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "convenient",
+      "tools",
+      "in",
+      "modern",
+      "life",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "컴퓨터는 현대 생활에서 가장 편리한 도구 중 하나이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "The computer is one of the more convenient tools in modern life.",
+      "statementForm": [
+        "The computer is one of the most convenient tools in modern life.",
+        "The computer is one of the most convenient tools in modern life"
+      ],
+      "fragmentForm": "The computer is one of the most convenient tools in",
+      "wormholeVariants": [
+        "The computer is one of the more convenient tools in modern life.",
+        "The computer is one of most convenient tools in modern life.",
+        "The computer is the most convenient tools in modern life.",
+        "The computer is one of the most convenient tools than modern life."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_023",
+    "seedId": "superlative_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 노래는 올해 가장 사랑받는 노래 중 하나이다.",
+    "english": "This song is one of the most beloved songs of the year.",
+    "words": [
+      "This",
+      "song",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "beloved",
+      "songs",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 노래는 올해 가장 사랑받는 노래 중 하나이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "This song is one of the more beloved songs of the year.",
+      "statementForm": [
+        "This song is one of the most beloved songs of the year.",
+        "This song is one of the most beloved songs of the year"
+      ],
+      "fragmentForm": "This song is one of the most beloved songs of",
+      "wormholeVariants": [
+        "This song is one of the more beloved songs of the year.",
+        "This song is one of most beloved songs of the year.",
+        "This song is the most beloved songs of the year.",
+        "This song is one than the most beloved songs of the year."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_024",
+    "seedId": "superlative_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 동아리에서 가장 열정적인 멤버이다.",
+    "english": "She is the most passionate member of our club.",
+    "words": [
+      "She",
+      "is",
+      "the",
+      "most",
+      "passionate",
+      "member",
+      "of",
+      "our",
+      "club",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 동아리에서 가장 열정적인 멤버이다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is the more passionate member of our club.",
+      "statementForm": [
+        "She is the most passionate member of our club.",
+        "She is the most passionate member of our club"
+      ],
+      "fragmentForm": "She is the most passionate member of",
+      "wormholeVariants": [
+        "She is the more passionate member of our club.",
+        "She is most passionate member of our club.",
+        "She is the passionate member of our club.",
+        "She is the most passionate member than our club."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_025",
+    "seedId": "superlative_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 공원은 도시에서 가장 평화로운 장소이다.",
+    "english": "This park is the most peaceful place in the city.",
+    "words": [
+      "This",
+      "park",
+      "is",
+      "the",
+      "most",
+      "peaceful",
+      "place",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 공원은 도시에서 가장 평화로운 장소이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This park is the more peaceful place in the city.",
+      "statementForm": [
+        "This park is the most peaceful place in the city.",
+        "This park is the most peaceful place in the city"
+      ],
+      "fragmentForm": "This park is the most peaceful place in",
+      "wormholeVariants": [
+        "This park is the more peaceful place in the city.",
+        "This park is most peaceful place in the city.",
+        "This park is the peaceful place in the city.",
+        "This park is the most peaceful place than the city."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_026",
+    "seedId": "superlative_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 가수는 세계에서 가장 영향력 있는 예술가 중 하나이다.",
+    "english": "The singer is one of the most influential artists in the world.",
+    "words": [
+      "The",
+      "singer",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "influential",
+      "artists",
+      "in",
+      "the",
+      "world",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가수는 세계에서 가장 영향력 있는 예술가 중 하나이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "The singer is one of the more influential artists in the world.",
+      "statementForm": [
+        "The singer is one of the most influential artists in the world.",
+        "The singer is one of the most influential artists in the world"
+      ],
+      "fragmentForm": "The singer is one of the most influential artists in",
+      "wormholeVariants": [
+        "The singer is one of the more influential artists in the world.",
+        "The singer is one of most influential artists in the world.",
+        "The singer is the most influential artists in the world.",
+        "The singer is one of the most influential artists than the world."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_027",
+    "seedId": "superlative_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "건강은 인생에서 가장 중요한 것 중 하나이다.",
+    "english": "Health is one of the most important things in life.",
+    "words": [
+      "Health",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "important",
+      "things",
+      "in",
+      "life",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "건강은 인생에서 가장 중요한 것 중 하나이다.",
+        "Health"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "Health is one of the more important things in life.",
+      "statementForm": [
+        "Health is one of the most important things in life.",
+        "Health is one of the most important things in life"
+      ],
+      "fragmentForm": "Health is one of the most important things in",
+      "wormholeVariants": [
+        "Health is one of the more important things in life.",
+        "Health is one of most important things in life.",
+        "Health is the most important things in life.",
+        "Health is one of the most important things than life."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_028",
+    "seedId": "superlative_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 소설은 올해 가장 감동적인 이야기였다.",
+    "english": "The novel was the most touching story of the year.",
+    "words": [
+      "The",
+      "novel",
+      "was",
+      "the",
+      "most",
+      "touching",
+      "story",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소설은 올해 가장 감동적인 이야기였다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "The novel was the more touching story of the year.",
+      "statementForm": [
+        "The novel was the most touching story of the year.",
+        "The novel was the most touching story of the year"
+      ],
+      "fragmentForm": "The novel was the most touching story of",
+      "wormholeVariants": [
+        "The novel was the more touching story of the year.",
+        "The novel was most touching story of the year.",
+        "The novel was the touching story of the year.",
+        "The novel was the most touching story than the year."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_029",
+    "seedId": "superlative_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 도시는 그 나라에서 가장 큰 도시이다.",
+    "english": "This city is the largest city in the country.",
+    "words": [
+      "This",
+      "city",
+      "is",
+      "the",
+      "largest",
+      "city",
+      "in",
+      "the",
+      "country",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 도시는 그 나라에서 가장 큰 도시이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This city is largest city in the country.",
+      "statementForm": [
+        "This city is the largest city in the country.",
+        "This city is the largest city in the country"
+      ],
+      "fragmentForm": "This city is the largest city in",
+      "wormholeVariants": [
+        "This city is largest city in the country.",
+        "This city is the larger city in the country.",
+        "This city is the most larg city in the country.",
+        "This city is the largest city than the country."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_030",
+    "seedId": "superlative_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 길은 마을에서 가장 긴 길이다.",
+    "english": "The road is the longest road in the village.",
+    "words": [
+      "The",
+      "road",
+      "is",
+      "the",
+      "longest",
+      "road",
+      "in",
+      "the",
+      "village",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 길은 마을에서 가장 긴 길이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "The road is longest road in the village.",
+      "statementForm": [
+        "The road is the longest road in the village.",
+        "The road is the longest road in the village"
+      ],
+      "fragmentForm": "The road is the longest road in",
+      "wormholeVariants": [
+        "The road is longest road in the village.",
+        "The road is the longer road in the village.",
+        "The road is the most long road in the village.",
+        "The road is the longest road than the village."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_031",
+    "seedId": "superlative_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 사과는 상자 안에서 가장 작은 사과이다.",
+    "english": "This apple is the smallest apple in the box.",
+    "words": [
+      "This",
+      "apple",
+      "is",
+      "the",
+      "smallest",
+      "apple",
+      "in",
+      "the",
+      "box",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 사과는 상자 안에서 가장 작은 사과이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This apple is smallest apple in the box.",
+      "statementForm": [
+        "This apple is the smallest apple in the box.",
+        "This apple is the smallest apple in the box"
+      ],
+      "fragmentForm": "This apple is the smallest apple in",
+      "wormholeVariants": [
+        "This apple is smallest apple in the box.",
+        "This apple is the smaller apple in the box.",
+        "This apple is the most small apple in the box.",
+        "This apple is the smallest apple than the box."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_032",
+    "seedId": "superlative_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 반에서 가장 조용한 학생이다.",
+    "english": "She is the quietest student in our class.",
+    "words": [
+      "She",
+      "is",
+      "the",
+      "quietest",
+      "student",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 반에서 가장 조용한 학생이다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is quietest student in our class.",
+      "statementForm": [
+        "She is the quietest student in our class.",
+        "She is the quietest student in our class"
+      ],
+      "fragmentForm": "She is the quietest student in",
+      "wormholeVariants": [
+        "She is quietest student in our class.",
+        "She is the quieter student in our class.",
+        "She is the most quiet student in our class.",
+        "She is the quietest student than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_033",
+    "seedId": "superlative_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 문제는 오늘 수업에서 가장 쉬운 문제였다.",
+    "english": "This problem was the easiest question in today's class.",
+    "words": [
+      "This",
+      "problem",
+      "was",
+      "the",
+      "easiest",
+      "question",
+      "in",
+      "today's",
+      "class",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문제는 오늘 수업에서 가장 쉬운 문제였다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This problem was easiest question in today's class.",
+      "statementForm": [
+        "This problem was the easiest question in today's class.",
+        "This problem was the easiest question in today's class"
+      ],
+      "fragmentForm": "This problem was the easiest question in",
+      "wormholeVariants": [
+        "This problem was easiest question in today's class.",
+        "This problem was the easier question in today's class.",
+        "This problem was the most easi question in today's class.",
+        "This problem was the easiest question than today's class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_034",
+    "seedId": "superlative_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 학교에서 가장 유명한 학생이다.",
+    "english": "He is the most famous student in our school.",
+    "words": [
+      "He",
+      "is",
+      "the",
+      "most",
+      "famous",
+      "student",
+      "in",
+      "our",
+      "school",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 학교에서 가장 유명한 학생이다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is the more famous student in our school.",
+      "statementForm": [
+        "He is the most famous student in our school.",
+        "He is the most famous student in our school"
+      ],
+      "fragmentForm": "He is the most famous student in",
+      "wormholeVariants": [
+        "He is the more famous student in our school.",
+        "He is most famous student in our school.",
+        "He is the famous student in our school.",
+        "He is the most famous student than our school."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_035",
+    "seedId": "superlative_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 팀에서 가장 노래를 잘하는 사람이다.",
+    "english": "She is the best singer on our team.",
+    "words": [
+      "She",
+      "is",
+      "the",
+      "best",
+      "singer",
+      "on",
+      "our",
+      "team",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 팀에서 가장 노래를 잘하는 사람이다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is best singer on our team.",
+      "statementForm": [
+        "She is the best singer on our team.",
+        "She is the best singer on our team"
+      ],
+      "fragmentForm": "She is the best singer on",
+      "wormholeVariants": [
+        "She is best singer on our team.",
+        "She is the better singer on our team.",
+        "She is the most good singer on our team.",
+        "She is the best singer than our team."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_036",
+    "seedId": "superlative_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 음식은 메뉴에서 가장 인기 있는 음식이다.",
+    "english": "This dish is the most popular dish on the menu.",
+    "words": [
+      "This",
+      "dish",
+      "is",
+      "the",
+      "most",
+      "popular",
+      "dish",
+      "on",
+      "the",
+      "menu",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 음식은 메뉴에서 가장 인기 있는 음식이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This dish is the more popular dish on the menu.",
+      "statementForm": [
+        "This dish is the most popular dish on the menu.",
+        "This dish is the most popular dish on the menu"
+      ],
+      "fragmentForm": "This dish is the most popular dish on",
+      "wormholeVariants": [
+        "This dish is the more popular dish on the menu.",
+        "This dish is most popular dish on the menu.",
+        "This dish is the popular dish on the menu.",
+        "This dish is the most popular dish than the menu."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_037",
+    "seedId": "superlative_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 가족 중에서 가장 일찍 일어난다.",
+    "english": "He wakes up the earliest in my family.",
+    "words": [
+      "He",
+      "wakes",
+      "up",
+      "the",
+      "earliest",
+      "in",
+      "my",
+      "family",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 가족 중에서 가장 일찍 일어난다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He wakes up earliest in my family.",
+      "statementForm": [
+        "He wakes up the earliest in my family.",
+        "He wakes up the earliest in my family"
+      ],
+      "fragmentForm": "He wakes up the earliest in my",
+      "wormholeVariants": [
+        "He wakes up earliest in my family.",
+        "He wakes up the earlier in my family.",
+        "He wakes up the most earli in my family.",
+        "He wakes up the earliest than my family."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_038",
+    "seedId": "superlative_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 반에서 가장 열심히 공부한다.",
+    "english": "She studies the hardest in our class.",
+    "words": [
+      "She",
+      "studies",
+      "the",
+      "hardest",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 반에서 가장 열심히 공부한다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She studies hardest in our class.",
+      "statementForm": [
+        "She studies the hardest in our class.",
+        "She studies the hardest in our class"
+      ],
+      "fragmentForm": "She studies the hardest in our",
+      "wormholeVariants": [
+        "She studies hardest in our class.",
+        "She studies the harder in our class.",
+        "She studies the most hard in our class.",
+        "She studies the hardest than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_039",
+    "seedId": "superlative_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 선수는 팀에서 가장 멀리 공을 던진다.",
+    "english": "The player throws the ball the farthest on the team.",
+    "words": [
+      "The",
+      "player",
+      "throws",
+      "the",
+      "ball",
+      "the",
+      "farthest",
+      "on",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선수는 팀에서 가장 멀리 공을 던진다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "adverb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The player throws the ball the farther on the team.",
+      "statementForm": [
+        "The player throws the ball the farthest on the team.",
+        "The player throws the ball the farthest on the team"
+      ],
+      "fragmentForm": "The player throws the ball the farthest on the",
+      "wormholeVariants": [
+        "The player throws the ball the farther on the team.",
+        "The player throws the ball the most far on the team.",
+        "The player throws the ball the most farth on the team."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_040",
+    "seedId": "superlative_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 중에서 가장 잘 수영한다.",
+    "english": "He swims the best among us.",
+    "words": [
+      "He",
+      "swims",
+      "the",
+      "best",
+      "among",
+      "us",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 중에서 가장 잘 수영한다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "irregular"
+    ],
+    "distractorSeeds": {
+      "auxError": "He swims best among us.",
+      "statementForm": [
+        "He swims the best among us.",
+        "He swims the best among us"
+      ],
+      "fragmentForm": "He swims the best among",
+      "wormholeVariants": [
+        "He swims best among us.",
+        "He swims the better among us.",
+        "He swims the most good among us."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_041",
+    "seedId": "superlative_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 방은 집에서 가장 조용한 방이다.",
+    "english": "This room is the quietest room in the house.",
+    "words": [
+      "This",
+      "room",
+      "is",
+      "the",
+      "quietest",
+      "room",
+      "in",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 방은 집에서 가장 조용한 방이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This room is quietest room in the house.",
+      "statementForm": [
+        "This room is the quietest room in the house.",
+        "This room is the quietest room in the house"
+      ],
+      "fragmentForm": "This room is the quietest room in",
+      "wormholeVariants": [
+        "This room is quietest room in the house.",
+        "This room is the quieter room in the house.",
+        "This room is the most quiet room in the house.",
+        "This room is the quietest room than the house."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_042",
+    "seedId": "superlative_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 가방은 가게에서 가장 무거운 가방이다.",
+    "english": "This bag is the heaviest bag in the store.",
+    "words": [
+      "This",
+      "bag",
+      "is",
+      "the",
+      "heaviest",
+      "bag",
+      "in",
+      "the",
+      "store",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 가방은 가게에서 가장 무거운 가방이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This bag is heaviest bag in the store.",
+      "statementForm": [
+        "This bag is the heaviest bag in the store.",
+        "This bag is the heaviest bag in the store"
+      ],
+      "fragmentForm": "This bag is the heaviest bag in",
+      "wormholeVariants": [
+        "This bag is heaviest bag in the store.",
+        "This bag is the heavier bag in the store.",
+        "This bag is the most heavi bag in the store.",
+        "This bag is the heaviest bag than the store."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_043",
+    "seedId": "superlative_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 설명은 책에서 가장 명확한 설명이다.",
+    "english": "The explanation is the clearest explanation in the book.",
+    "words": [
+      "The",
+      "explanation",
+      "is",
+      "the",
+      "clearest",
+      "explanation",
+      "in",
+      "the",
+      "book",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 책에서 가장 명확한 설명이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation is clearest explanation in the book.",
+      "statementForm": [
+        "The explanation is the clearest explanation in the book.",
+        "The explanation is the clearest explanation in the book"
+      ],
+      "fragmentForm": "The explanation is the clearest explanation in",
+      "wormholeVariants": [
+        "The explanation is clearest explanation in the book.",
+        "The explanation is the clearer explanation in the book.",
+        "The explanation is the most clear explanation in the book.",
+        "The explanation is the clearest explanation than the book."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_044",
+    "seedId": "superlative_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 연습은 단원에서 가장 유용한 연습이다.",
+    "english": "This practice is the most useful exercise in the unit.",
+    "words": [
+      "This",
+      "practice",
+      "is",
+      "the",
+      "most",
+      "useful",
+      "exercise",
+      "in",
+      "the",
+      "unit",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 연습은 단원에서 가장 유용한 연습이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This practice is the more useful exercise in the unit.",
+      "statementForm": [
+        "This practice is the most useful exercise in the unit.",
+        "This practice is the most useful exercise in the unit"
+      ],
+      "fragmentForm": "This practice is the most useful exercise in",
+      "wormholeVariants": [
+        "This practice is the more useful exercise in the unit.",
+        "This practice is most useful exercise in the unit.",
+        "This practice is the useful exercise in the unit.",
+        "This practice is the most useful exercise than the unit."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_045",
+    "seedId": "superlative_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 계획은 모든 제안 중 가장 현실적이다.",
+    "english": "The plan is the most realistic of all the suggestions.",
+    "words": [
+      "The",
+      "plan",
+      "is",
+      "the",
+      "most",
+      "realistic",
+      "of",
+      "all",
+      "the",
+      "suggestions",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획은 모든 제안 중 가장 현실적이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan is the more realistic of all the suggestions.",
+      "statementForm": [
+        "The plan is the most realistic of all the suggestions.",
+        "The plan is the most realistic of all the suggestions"
+      ],
+      "fragmentForm": "The plan is the most realistic of",
+      "wormholeVariants": [
+        "The plan is the more realistic of all the suggestions.",
+        "The plan is most realistic of all the suggestions.",
+        "The plan is the realistic of all the suggestions.",
+        "The plan is the most realistic than all the suggestions."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_046",
+    "seedId": "superlative_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 뉴스는 올해 가장 놀라운 뉴스였다.",
+    "english": "The news was the most surprising news of the year.",
+    "words": [
+      "The",
+      "news",
+      "was",
+      "the",
+      "most",
+      "surprising",
+      "news",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 뉴스는 올해 가장 놀라운 뉴스였다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news was the more surprising news of the year.",
+      "statementForm": [
+        "The news was the most surprising news of the year.",
+        "The news was the most surprising news of the year"
+      ],
+      "fragmentForm": "The news was the most surprising news of",
+      "wormholeVariants": [
+        "The news was the more surprising news of the year.",
+        "The news was most surprising news of the year.",
+        "The news was the surprising news of the year.",
+        "The news was the most surprising news than the year."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_047",
+    "seedId": "superlative_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 답은 반에서 가장 정확한 답이다.",
+    "english": "This answer is the most accurate answer in the class.",
+    "words": [
+      "This",
+      "answer",
+      "is",
+      "the",
+      "most",
+      "accurate",
+      "answer",
+      "in",
+      "the",
+      "class",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 답은 반에서 가장 정확한 답이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This answer is the more accurate answer in the class.",
+      "statementForm": [
+        "This answer is the most accurate answer in the class.",
+        "This answer is the most accurate answer in the class"
+      ],
+      "fragmentForm": "This answer is the most accurate answer in",
+      "wormholeVariants": [
+        "This answer is the more accurate answer in the class.",
+        "This answer is most accurate answer in the class.",
+        "This answer is the accurate answer in the class.",
+        "This answer is the most accurate answer than the class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_048",
+    "seedId": "superlative_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 반에서 가장 차분한 학생이다.",
+    "english": "She is the calmest student in our class.",
+    "words": [
+      "She",
+      "is",
+      "the",
+      "calmest",
+      "student",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 반에서 가장 차분한 학생이다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is calmest student in our class.",
+      "statementForm": [
+        "She is the calmest student in our class.",
+        "She is the calmest student in our class"
+      ],
+      "fragmentForm": "She is the calmest student in",
+      "wormholeVariants": [
+        "She is calmest student in our class.",
+        "She is the calmer student in our class.",
+        "She is the most calm student in our class.",
+        "She is the calmest student than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_049",
+    "seedId": "superlative_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 다리는 도시에서 가장 오래된 다리이다.",
+    "english": "This bridge is the oldest bridge in the city.",
+    "words": [
+      "This",
+      "bridge",
+      "is",
+      "the",
+      "oldest",
+      "bridge",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 다리는 도시에서 가장 오래된 다리이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This bridge is oldest bridge in the city.",
+      "statementForm": [
+        "This bridge is the oldest bridge in the city.",
+        "This bridge is the oldest bridge in the city"
+      ],
+      "fragmentForm": "This bridge is the oldest bridge in",
+      "wormholeVariants": [
+        "This bridge is oldest bridge in the city.",
+        "This bridge is the older bridge in the city.",
+        "This bridge is the most old bridge in the city.",
+        "This bridge is the oldest bridge than the city."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_050",
+    "seedId": "superlative_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 시험은 학기 중 가장 어려운 시험이었다.",
+    "english": "The test was the hardest test of the semester.",
+    "words": [
+      "The",
+      "test",
+      "was",
+      "the",
+      "hardest",
+      "test",
+      "of",
+      "the",
+      "semester",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 시험은 학기 중 가장 어려운 시험이었다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "The test was hardest test of the semester.",
+      "statementForm": [
+        "The test was the hardest test of the semester.",
+        "The test was the hardest test of the semester"
+      ],
+      "fragmentForm": "The test was the hardest test of",
+      "wormholeVariants": [
+        "The test was hardest test of the semester.",
+        "The test was the harder test of the semester.",
+        "The test was the most hard test of the semester.",
+        "The test was the hardest test than the semester."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_051",
+    "seedId": "superlative_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 이야기는 책에서 가장 감동적인 이야기이다.",
+    "english": "The story is the most touching story in the book.",
+    "words": [
+      "The",
+      "story",
+      "is",
+      "the",
+      "most",
+      "touching",
+      "story",
+      "in",
+      "the",
+      "book",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이야기는 책에서 가장 감동적인 이야기이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "The story is the more touching story in the book.",
+      "statementForm": [
+        "The story is the most touching story in the book.",
+        "The story is the most touching story in the book"
+      ],
+      "fragmentForm": "The story is the most touching story in",
+      "wormholeVariants": [
+        "The story is the more touching story in the book.",
+        "The story is most touching story in the book.",
+        "The story is the touching story in the book.",
+        "The story is the most touching story than the book."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_052",
+    "seedId": "superlative_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 의자는 방에서 가장 편안한 의자이다.",
+    "english": "This chair is the most comfortable chair in the room.",
+    "words": [
+      "This",
+      "chair",
+      "is",
+      "the",
+      "most",
+      "comfortable",
+      "chair",
+      "in",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 의자는 방에서 가장 편안한 의자이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This chair is the more comfortable chair in the room.",
+      "statementForm": [
+        "This chair is the most comfortable chair in the room.",
+        "This chair is the most comfortable chair in the room"
+      ],
+      "fragmentForm": "This chair is the most comfortable chair in",
+      "wormholeVariants": [
+        "This chair is the more comfortable chair in the room.",
+        "This chair is most comfortable chair in the room.",
+        "This chair is the comfortable chair in the room.",
+        "This chair is the most comfortable chair than the room."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_053",
+    "seedId": "superlative_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 선택은 가능한 선택 중 가장 현명한 선택이다.",
+    "english": "The choice is the wisest choice possible.",
+    "words": [
+      "The",
+      "choice",
+      "is",
+      "the",
+      "wisest",
+      "choice",
+      "possible",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선택은 가능한 선택 중 가장 현명한 선택이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "The choice is wisest choice possible.",
+      "statementForm": [
+        "The choice is the wisest choice possible.",
+        "The choice is the wisest choice possible"
+      ],
+      "fragmentForm": "The choice is the wisest choice",
+      "wormholeVariants": [
+        "The choice is wisest choice possible.",
+        "The choice is the wiser choice possible.",
+        "The choice is the most wis choice possible."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_054",
+    "seedId": "superlative_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 반에서 가장 친절한 학생 중 한 명이다.",
+    "english": "He is one of the kindest students in our class.",
+    "words": [
+      "He",
+      "is",
+      "one",
+      "of",
+      "the",
+      "kindest",
+      "students",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 반에서 가장 친절한 학생 중 한 명이다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is one of kindest students in our class.",
+      "statementForm": [
+        "He is one of the kindest students in our class.",
+        "He is one of the kindest students in our class"
+      ],
+      "fragmentForm": "He is one of the kindest students in",
+      "wormholeVariants": [
+        "He is one of kindest students in our class.",
+        "He is one of the kinder students in our class.",
+        "He is one of the most kind students in our class.",
+        "He is one of the kindest students than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_055",
+    "seedId": "superlative_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 학교에서 가장 창의적인 학생 중 한 명이다.",
+    "english": "She is one of the most creative students in the school.",
+    "words": [
+      "She",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "creative",
+      "students",
+      "in",
+      "the",
+      "school",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 학교에서 가장 창의적인 학생 중 한 명이다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is one of the more creative students in the school.",
+      "statementForm": [
+        "She is one of the most creative students in the school.",
+        "She is one of the most creative students in the school"
+      ],
+      "fragmentForm": "She is one of the most creative students in",
+      "wormholeVariants": [
+        "She is one of the more creative students in the school.",
+        "She is one of most creative students in the school.",
+        "She is the most creative students in the school.",
+        "She is one of the most creative students than the school."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_056",
+    "seedId": "superlative_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 박물관은 도시에서 가장 유명한 장소 중 하나이다.",
+    "english": "This museum is one of the most famous places in the city.",
+    "words": [
+      "This",
+      "museum",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "famous",
+      "places",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 박물관은 도시에서 가장 유명한 장소 중 하나이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "This museum is one of the more famous places in the city.",
+      "statementForm": [
+        "This museum is one of the most famous places in the city.",
+        "This museum is one of the most famous places in the city"
+      ],
+      "fragmentForm": "This museum is one of the most famous places in",
+      "wormholeVariants": [
+        "This museum is one of the more famous places in the city.",
+        "This museum is one of most famous places in the city.",
+        "This museum is the most famous places in the city.",
+        "This museum is one of the most famous places than the city."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_057",
+    "seedId": "superlative_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 산은 한국에서 가장 높은 산 중 하나이다.",
+    "english": "This mountain is one of the highest mountains in Korea.",
+    "words": [
+      "This",
+      "mountain",
+      "is",
+      "one",
+      "of",
+      "the",
+      "highest",
+      "mountains",
+      "in",
+      "Korea",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 산은 한국에서 가장 높은 산 중 하나이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "This mountain is one of highest mountains in Korea.",
+      "statementForm": [
+        "This mountain is one of the highest mountains in Korea.",
+        "This mountain is one of the highest mountains in Korea"
+      ],
+      "fragmentForm": "This mountain is one of the highest mountains in",
+      "wormholeVariants": [
+        "This mountain is one of highest mountains in Korea.",
+        "This mountain is one of the higher mountains in Korea.",
+        "This mountain is one of the most high mountains in Korea.",
+        "This mountain is one of the highest mountains than Korea."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_058",
+    "seedId": "superlative_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 팀에서 가장 빠른 선수 중 한 명이다.",
+    "english": "He is one of the fastest players on the team.",
+    "words": [
+      "He",
+      "is",
+      "one",
+      "of",
+      "the",
+      "fastest",
+      "players",
+      "on",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 팀에서 가장 빠른 선수 중 한 명이다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is one of fastest players on the team.",
+      "statementForm": [
+        "He is one of the fastest players on the team.",
+        "He is one of the fastest players on the team"
+      ],
+      "fragmentForm": "He is one of the fastest players on",
+      "wormholeVariants": [
+        "He is one of fastest players on the team.",
+        "He is one of the faster players on the team.",
+        "He is one of the most fast players on the team.",
+        "He is one than the fastest players on the team."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_059",
+    "seedId": "superlative_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 영화는 올해 가장 좋은 영화 중 하나였다.",
+    "english": "This movie was one of the best movies of the year.",
+    "words": [
+      "This",
+      "movie",
+      "was",
+      "one",
+      "of",
+      "the",
+      "best",
+      "movies",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 영화는 올해 가장 좋은 영화 중 하나였다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "This movie was one of best movies of the year.",
+      "statementForm": [
+        "This movie was one of the best movies of the year.",
+        "This movie was one of the best movies of the year"
+      ],
+      "fragmentForm": "This movie was one of the best movies of",
+      "wormholeVariants": [
+        "This movie was one of best movies of the year.",
+        "This movie was one of the better movies of the year.",
+        "This movie was one of the most good movies of the year.",
+        "This movie was one than the best movies of the year."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_060",
+    "seedId": "superlative_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 문제는 시험에서 가장 어려운 문제 중 하나였다.",
+    "english": "The question was one of the most difficult questions on the test.",
+    "words": [
+      "The",
+      "question",
+      "was",
+      "one",
+      "of",
+      "the",
+      "most",
+      "difficult",
+      "questions",
+      "on",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 시험에서 가장 어려운 문제 중 하나였다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question was one of the more difficult questions on the test.",
+      "statementForm": [
+        "The question was one of the most difficult questions on the test.",
+        "The question was one of the most difficult questions on the test"
+      ],
+      "fragmentForm": "The question was one of the most difficult questions on",
+      "wormholeVariants": [
+        "The question was one of the more difficult questions on the test.",
+        "The question was one of most difficult questions on the test.",
+        "The question was the most difficult questions on the test.",
+        "The question was one than the most difficult questions on the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_061",
+    "seedId": "superlative_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 식당은 동네에서 가장 비싼 식당 중 하나이다.",
+    "english": "The restaurant is one of the most expensive restaurants in the area.",
+    "words": [
+      "The",
+      "restaurant",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "expensive",
+      "restaurants",
+      "in",
+      "the",
+      "area",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 식당은 동네에서 가장 비싼 식당 중 하나이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "The restaurant is one of the more expensive restaurants in the area.",
+      "statementForm": [
+        "The restaurant is one of the most expensive restaurants in the area.",
+        "The restaurant is one of the most expensive restaurants in the area"
+      ],
+      "fragmentForm": "The restaurant is one of the most expensive restaurants in",
+      "wormholeVariants": [
+        "The restaurant is one of the more expensive restaurants in the area.",
+        "The restaurant is one of most expensive restaurants in the area.",
+        "The restaurant is the most expensive restaurants in the area.",
+        "The restaurant is one of the most expensive restaurants than the area."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_062",
+    "seedId": "superlative_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 노래는 한국에서 가장 인기 있는 노래 중 하나이다.",
+    "english": "This song is one of the most popular songs in Korea.",
+    "words": [
+      "This",
+      "song",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "popular",
+      "songs",
+      "in",
+      "Korea",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 노래는 한국에서 가장 인기 있는 노래 중 하나이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "This song is one of the more popular songs in Korea.",
+      "statementForm": [
+        "This song is one of the most popular songs in Korea.",
+        "This song is one of the most popular songs in Korea"
+      ],
+      "fragmentForm": "This song is one of the most popular songs in",
+      "wormholeVariants": [
+        "This song is one of the more popular songs in Korea.",
+        "This song is one of most popular songs in Korea.",
+        "This song is the most popular songs in Korea.",
+        "This song is one of the most popular songs than Korea."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_063",
+    "seedId": "superlative_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 도시는 나라에서 가장 큰 도시 중 하나이다.",
+    "english": "The city is one of the largest cities in the country.",
+    "words": [
+      "The",
+      "city",
+      "is",
+      "one",
+      "of",
+      "the",
+      "largest",
+      "cities",
+      "in",
+      "the",
+      "country",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 도시는 나라에서 가장 큰 도시 중 하나이다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "one_of"
+    ],
+    "distractorSeeds": {
+      "auxError": "The city is one of largest cities in the country.",
+      "statementForm": [
+        "The city is one of the largest cities in the country.",
+        "The city is one of the largest cities in the country"
+      ],
+      "fragmentForm": "The city is one of the largest cities in",
+      "wormholeVariants": [
+        "The city is one of largest cities in the country.",
+        "The city is one of the larger cities in the country.",
+        "The city is one of the most larg cities in the country.",
+        "The city is one of the largest cities than the country."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_064",
+    "seedId": "superlative_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 가족에서 가장 키가 큰 사람이 아니다.",
+    "english": "He is not the tallest person in my family.",
+    "words": [
+      "He",
+      "is",
+      "not",
+      "the",
+      "tallest",
+      "person",
+      "in",
+      "my",
+      "family",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 가족에서 가장 키가 큰 사람이 아니다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is not tallest person in my family.",
+      "statementForm": [
+        "He is not the tallest person in my family.",
+        "He is not the tallest person in my family"
+      ],
+      "fragmentForm": "He is not the tallest person in",
+      "wormholeVariants": [
+        "He is not tallest person in my family.",
+        "He is not the taller person in my family.",
+        "He is not the most tall person in my family.",
+        "He is not the tallest person than my family."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_065",
+    "seedId": "superlative_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 책은 도서관에서 가장 재미있는 책이 아니다.",
+    "english": "This book is not the most interesting book in the library.",
+    "words": [
+      "This",
+      "book",
+      "is",
+      "not",
+      "the",
+      "most",
+      "interesting",
+      "book",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 책은 도서관에서 가장 재미있는 책이 아니다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This book is not the more interesting book in the library.",
+      "statementForm": [
+        "This book is not the most interesting book in the library.",
+        "This book is not the most interesting book in the library"
+      ],
+      "fragmentForm": "This book is not the most interesting book in",
+      "wormholeVariants": [
+        "This book is not the more interesting book in the library.",
+        "This book is not most interesting book in the library.",
+        "This book is not the interesting book in the library.",
+        "This book is not the most interesting book than the library."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_066",
+    "seedId": "superlative_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 문제는 시험에서 가장 어려운 문제가 아니었다.",
+    "english": "The problem was not the most difficult question on the test.",
+    "words": [
+      "The",
+      "problem",
+      "was",
+      "not",
+      "the",
+      "most",
+      "difficult",
+      "question",
+      "on",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 시험에서 가장 어려운 문제가 아니었다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem was not the more difficult question on the test.",
+      "statementForm": [
+        "The problem was not the most difficult question on the test.",
+        "The problem was not the most difficult question on the test"
+      ],
+      "fragmentForm": "The problem was not the most difficult question on",
+      "wormholeVariants": [
+        "The problem was not the more difficult question on the test.",
+        "The problem was not most difficult question on the test.",
+        "The problem was not the difficult question on the test.",
+        "The problem was not the most difficult question than the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_067",
+    "seedId": "superlative_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 가방은 가게에서 가장 무거운 가방이 아니다.",
+    "english": "This bag is not the heaviest bag in the store.",
+    "words": [
+      "This",
+      "bag",
+      "is",
+      "not",
+      "the",
+      "heaviest",
+      "bag",
+      "in",
+      "the",
+      "store",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 가방은 가게에서 가장 무거운 가방이 아니다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This bag is not heaviest bag in the store.",
+      "statementForm": [
+        "This bag is not the heaviest bag in the store.",
+        "This bag is not the heaviest bag in the store"
+      ],
+      "fragmentForm": "This bag is not the heaviest bag in",
+      "wormholeVariants": [
+        "This bag is not heaviest bag in the store.",
+        "This bag is not the heavier bag in the store.",
+        "This bag is not the most heavi bag in the store.",
+        "This bag is not the heaviest bag than the store."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_068",
+    "seedId": "superlative_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 반에서 가장 조용한 학생이 아니다.",
+    "english": "She is not the quietest student in our class.",
+    "words": [
+      "She",
+      "is",
+      "not",
+      "the",
+      "quietest",
+      "student",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 반에서 가장 조용한 학생이 아니다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is not quietest student in our class.",
+      "statementForm": [
+        "She is not the quietest student in our class.",
+        "She is not the quietest student in our class"
+      ],
+      "fragmentForm": "She is not the quietest student in",
+      "wormholeVariants": [
+        "She is not quietest student in our class.",
+        "She is not the quieter student in our class.",
+        "She is not the most quiet student in our class.",
+        "She is not the quietest student than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_069",
+    "seedId": "superlative_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 영화는 올해 최고의 영화가 아니었다.",
+    "english": "This movie was not the best movie of the year.",
+    "words": [
+      "This",
+      "movie",
+      "was",
+      "not",
+      "the",
+      "best",
+      "movie",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 영화는 올해 최고의 영화가 아니었다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This movie was not best movie of the year.",
+      "statementForm": [
+        "This movie was not the best movie of the year.",
+        "This movie was not the best movie of the year"
+      ],
+      "fragmentForm": "This movie was not the best movie of",
+      "wormholeVariants": [
+        "This movie was not best movie of the year.",
+        "This movie was not the better movie of the year.",
+        "This movie was not the most good movie of the year.",
+        "This movie was not the best movie than the year."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_070",
+    "seedId": "superlative_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 식당은 동네에서 가장 인기 있는 식당이 아니다.",
+    "english": "The restaurant is not the most popular restaurant in the area.",
+    "words": [
+      "The",
+      "restaurant",
+      "is",
+      "not",
+      "the",
+      "most",
+      "popular",
+      "restaurant",
+      "in",
+      "the",
+      "area",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 식당은 동네에서 가장 인기 있는 식당이 아니다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The restaurant is not the more popular restaurant in the area.",
+      "statementForm": [
+        "The restaurant is not the most popular restaurant in the area.",
+        "The restaurant is not the most popular restaurant in the area"
+      ],
+      "fragmentForm": "The restaurant is not the most popular restaurant in",
+      "wormholeVariants": [
+        "The restaurant is not the more popular restaurant in the area.",
+        "The restaurant is not most popular restaurant in the area.",
+        "The restaurant is not the popular restaurant in the area.",
+        "The restaurant is not the most popular restaurant than the area."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_071",
+    "seedId": "superlative_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 팀에서 가장 빠른 선수가 아니다.",
+    "english": "He is not the fastest player on the team.",
+    "words": [
+      "He",
+      "is",
+      "not",
+      "the",
+      "fastest",
+      "player",
+      "on",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 팀에서 가장 빠른 선수가 아니다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is not fastest player on the team.",
+      "statementForm": [
+        "He is not the fastest player on the team.",
+        "He is not the fastest player on the team"
+      ],
+      "fragmentForm": "He is not the fastest player on",
+      "wormholeVariants": [
+        "He is not fastest player on the team.",
+        "He is not the faster player on the team.",
+        "He is not the most fast player on the team.",
+        "He is not the fastest player than the team."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_072",
+    "seedId": "superlative_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 도시는 그 나라에서 가장 큰 도시가 아니다.",
+    "english": "This city is not the largest city in the country.",
+    "words": [
+      "This",
+      "city",
+      "is",
+      "not",
+      "the",
+      "largest",
+      "city",
+      "in",
+      "the",
+      "country",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 도시는 그 나라에서 가장 큰 도시가 아니다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "This city is not largest city in the country.",
+      "statementForm": [
+        "This city is not the largest city in the country.",
+        "This city is not the largest city in the country"
+      ],
+      "fragmentForm": "This city is not the largest city in",
+      "wormholeVariants": [
+        "This city is not largest city in the country.",
+        "This city is not the larger city in the country.",
+        "This city is not the most larg city in the country.",
+        "This city is not the largest city than the country."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_073",
+    "seedId": "superlative_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 설명은 책에서 가장 명확한 설명이 아니다.",
+    "english": "The explanation is not the clearest explanation in the book.",
+    "words": [
+      "The",
+      "explanation",
+      "is",
+      "not",
+      "the",
+      "clearest",
+      "explanation",
+      "in",
+      "the",
+      "book",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 책에서 가장 명확한 설명이 아니다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "negative",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation is not clearest explanation in the book.",
+      "statementForm": [
+        "The explanation is not the clearest explanation in the book.",
+        "The explanation is not the clearest explanation in the book"
+      ],
+      "fragmentForm": "The explanation is not the clearest explanation in",
+      "wormholeVariants": [
+        "The explanation is not clearest explanation in the book.",
+        "The explanation is not the clearer explanation in the book.",
+        "The explanation is not the most clear explanation in the book.",
+        "The explanation is not the clearest explanation than the book."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_074",
+    "seedId": "superlative_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "지수는 우리 반에서 키가 가장 큰 학생이니?",
+    "english": "Is Jisu the tallest student in our class?",
+    "words": [
+      "Is",
+      "Jisu",
+      "the",
+      "tallest",
+      "student",
+      "in",
+      "our",
+      "class",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지수는 우리 반에서 키가 가장 큰 학생이니?",
+        "Is"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is Jisu tallest student in our class?",
+      "statementForm": [
+        "Is Jisu the tallest student in our class?",
+        "Is Jisu the tallest student in our class"
+      ],
+      "fragmentForm": "Is Jisu the tallest student in",
+      "wormholeVariants": [
+        "Is Jisu tallest student in our class?",
+        "Is Jisu the taller student in our class?",
+        "Is Jisu the most tall student in our class?",
+        "Is Jisu the tallest student than our class?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_075",
+    "seedId": "superlative_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "민수는 우리 팀에서 가장 빠른 선수이니?",
+    "english": "Is Minsu the fastest player on our team?",
+    "words": [
+      "Is",
+      "Minsu",
+      "the",
+      "fastest",
+      "player",
+      "on",
+      "our",
+      "team",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "민수는 우리 팀에서 가장 빠른 선수이니?",
+        "Is"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is Minsu fastest player on our team?",
+      "statementForm": [
+        "Is Minsu the fastest player on our team?",
+        "Is Minsu the fastest player on our team"
+      ],
+      "fragmentForm": "Is Minsu the fastest player on",
+      "wormholeVariants": [
+        "Is Minsu fastest player on our team?",
+        "Is Minsu the faster player on our team?",
+        "Is Minsu the most fast player on our team?",
+        "Is Minsu the fastest player than our team?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_076",
+    "seedId": "superlative_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 책은 도서관에서 가장 재미있는 책이니?",
+    "english": "Is this book the most interesting book in the library?",
+    "words": [
+      "Is",
+      "this",
+      "book",
+      "the",
+      "most",
+      "interesting",
+      "book",
+      "in",
+      "the",
+      "library",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 책은 도서관에서 가장 재미있는 책이니?",
+        "Is"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this book the more interesting book in the library?",
+      "statementForm": [
+        "Is this book the most interesting book in the library?",
+        "Is this book the most interesting book in the library"
+      ],
+      "fragmentForm": "Is this book the most interesting book in",
+      "wormholeVariants": [
+        "Is this book the more interesting book in the library?",
+        "Is this book most interesting book in the library?",
+        "Is this book the interesting book in the library?",
+        "Is this book the most interesting book than the library?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_077",
+    "seedId": "superlative_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 문제가 시험에서 가장 어려운 문제였니?",
+    "english": "Was this problem the most difficult question on the test?",
+    "words": [
+      "Was",
+      "this",
+      "problem",
+      "the",
+      "most",
+      "difficult",
+      "question",
+      "on",
+      "the",
+      "test",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 문제가 시험에서 가장 어려운 문제였니?",
+        "Was"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Was this problem the more difficult question on the test?",
+      "statementForm": [
+        "Was this problem the most difficult question on the test?",
+        "Was this problem the most difficult question on the test"
+      ],
+      "fragmentForm": "Was this problem the most difficult question on",
+      "wormholeVariants": [
+        "Was this problem the more difficult question on the test?",
+        "Was this problem most difficult question on the test?",
+        "Was this problem the difficult question on the test?",
+        "Was this problem the most difficult question than the test?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_078",
+    "seedId": "superlative_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 학교에서 가장 인기 있는 학생이니?",
+    "english": "Is she the most popular student in our school?",
+    "words": [
+      "Is",
+      "she",
+      "the",
+      "most",
+      "popular",
+      "student",
+      "in",
+      "our",
+      "school",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 학교에서 가장 인기 있는 학생이니?",
+        "Is"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is she the more popular student in our school?",
+      "statementForm": [
+        "Is she the most popular student in our school?",
+        "Is she the most popular student in our school"
+      ],
+      "fragmentForm": "Is she the most popular student in",
+      "wormholeVariants": [
+        "Is she the more popular student in our school?",
+        "Is she most popular student in our school?",
+        "Is she the popular student in our school?",
+        "Is she the most popular student than our school?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_079",
+    "seedId": "superlative_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 식당은 이 동네에서 가장 비싼 식당이니?",
+    "english": "Is this restaurant the most expensive restaurant in this area?",
+    "words": [
+      "Is",
+      "this",
+      "restaurant",
+      "the",
+      "most",
+      "expensive",
+      "restaurant",
+      "in",
+      "this",
+      "area",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 식당은 이 동네에서 가장 비싼 식당이니?",
+        "Is"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this restaurant the more expensive restaurant in this area?",
+      "statementForm": [
+        "Is this restaurant the most expensive restaurant in this area?",
+        "Is this restaurant the most expensive restaurant in this area"
+      ],
+      "fragmentForm": "Is this restaurant the most expensive restaurant in",
+      "wormholeVariants": [
+        "Is this restaurant the more expensive restaurant in this area?",
+        "Is this restaurant most expensive restaurant in this area?",
+        "Is this restaurant the expensive restaurant in this area?",
+        "Is this restaurant the most expensive restaurant than this area?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_080",
+    "seedId": "superlative_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 반에서 가장 똑똑한 학생이니?",
+    "english": "Is he the smartest student in our class?",
+    "words": [
+      "Is",
+      "he",
+      "the",
+      "smartest",
+      "student",
+      "in",
+      "our",
+      "class",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 반에서 가장 똑똑한 학생이니?",
+        "Is"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is he smartest student in our class?",
+      "statementForm": [
+        "Is he the smartest student in our class?",
+        "Is he the smartest student in our class"
+      ],
+      "fragmentForm": "Is he the smartest student in",
+      "wormholeVariants": [
+        "Is he smartest student in our class?",
+        "Is he the smarter student in our class?",
+        "Is he the most smart student in our class?",
+        "Is he the smartest student than our class?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_081",
+    "seedId": "superlative_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 영화는 네가 본 영화 중 가장 재미있었니?",
+    "english": "Was this movie the most interesting movie you have seen?",
+    "words": [
+      "Was",
+      "this",
+      "movie",
+      "the",
+      "most",
+      "interesting",
+      "movie",
+      "you",
+      "have",
+      "seen",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 영화는 네가 본 영화 중 가장 재미있었니?",
+        "Was"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Was this movie the more interesting movie you have seen?",
+      "statementForm": [
+        "Was this movie the most interesting movie you have seen?",
+        "Was this movie the most interesting movie you have seen"
+      ],
+      "fragmentForm": "Was this movie the most interesting movie you have",
+      "wormholeVariants": [
+        "Was this movie the more interesting movie you have seen?",
+        "Was this movie most interesting movie you have seen?",
+        "Was this movie the interesting movie you have seen?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_082",
+    "seedId": "superlative_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 강은 이 지역에서 가장 깊은 강이니?",
+    "english": "Is this river the deepest river in this area?",
+    "words": [
+      "Is",
+      "this",
+      "river",
+      "the",
+      "deepest",
+      "river",
+      "in",
+      "this",
+      "area",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 강은 이 지역에서 가장 깊은 강이니?",
+        "Is"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is this river deepest river in this area?",
+      "statementForm": [
+        "Is this river the deepest river in this area?",
+        "Is this river the deepest river in this area"
+      ],
+      "fragmentForm": "Is this river the deepest river in",
+      "wormholeVariants": [
+        "Is this river deepest river in this area?",
+        "Is this river the deeper river in this area?",
+        "Is this river the most deep river in this area?",
+        "Is this river the deepest river than this area?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_083",
+    "seedId": "superlative_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 산은 우리 나라에서 가장 높은 산이니?",
+    "english": "Is the mountain the highest mountain in our country?",
+    "words": [
+      "Is",
+      "the",
+      "mountain",
+      "the",
+      "highest",
+      "mountain",
+      "in",
+      "our",
+      "country",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 산은 우리 나라에서 가장 높은 산이니?",
+        "Is"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "question",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Is the mountain highest mountain in our country?",
+      "statementForm": [
+        "Is the mountain the highest mountain in our country?",
+        "Is the mountain the highest mountain in our country"
+      ],
+      "fragmentForm": "Is the mountain the highest mountain in",
+      "wormholeVariants": [
+        "Is the mountain highest mountain in our country?",
+        "Is the mountain the higher mountain in our country?",
+        "Is the mountain the most high mountain in our country?",
+        "Is the mountain the highest mountain than our country?"
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_084",
+    "seedId": "superlative_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그는 우리 반에서 단연 가장 키가 큰 학생이다.",
+    "english": "He is by far the tallest student in our class.",
+    "words": [
+      "He",
+      "is",
+      "by",
+      "far",
+      "the",
+      "tallest",
+      "student",
+      "in",
+      "our",
+      "class",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리 반에서 단연 가장 키가 큰 학생이다.",
+        "He"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "emphasis"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is by far tallest student in our class.",
+      "statementForm": [
+        "He is by far the tallest student in our class.",
+        "He is by far the tallest student in our class"
+      ],
+      "fragmentForm": "He is by far the tallest student in",
+      "wormholeVariants": [
+        "He is by far tallest student in our class.",
+        "He is by far the taller student in our class.",
+        "He is by far the most tall student in our class.",
+        "He is by far the tallest student than our class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_085",
+    "seedId": "superlative_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 책은 도서관에서 단연 가장 재미있는 책이다.",
+    "english": "This book is by far the most interesting book in the library.",
+    "words": [
+      "This",
+      "book",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "interesting",
+      "book",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 책은 도서관에서 단연 가장 재미있는 책이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "emphasis"
+    ],
+    "distractorSeeds": {
+      "auxError": "This book is by far the more interesting book in the library.",
+      "statementForm": [
+        "This book is by far the most interesting book in the library.",
+        "This book is by far the most interesting book in the library"
+      ],
+      "fragmentForm": "This book is by far the most interesting book in",
+      "wormholeVariants": [
+        "This book is by far the more interesting book in the library.",
+        "This book is by far most interesting book in the library.",
+        "This book is by far the interesting book in the library.",
+        "This book is by far the most interesting book than the library."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_086",
+    "seedId": "superlative_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 문제는 시험에서 단연 가장 어려운 문제였다.",
+    "english": "The problem was by far the most difficult question on the test.",
+    "words": [
+      "The",
+      "problem",
+      "was",
+      "by",
+      "far",
+      "the",
+      "most",
+      "difficult",
+      "question",
+      "on",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 시험에서 단연 가장 어려운 문제였다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "emphasis"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem was by far the more difficult question on the test.",
+      "statementForm": [
+        "The problem was by far the most difficult question on the test.",
+        "The problem was by far the most difficult question on the test"
+      ],
+      "fragmentForm": "The problem was by far the most difficult question on",
+      "wormholeVariants": [
+        "The problem was by far the more difficult question on the test.",
+        "The problem was by far most difficult question on the test.",
+        "The problem was by far the difficult question on the test.",
+        "The problem was by far the most difficult question than the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_087",
+    "seedId": "superlative_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀는 우리 팀에서 단연 가장 책임감 있는 선수이다.",
+    "english": "She is by far the most responsible player on our team.",
+    "words": [
+      "She",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "responsible",
+      "player",
+      "on",
+      "our",
+      "team",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리 팀에서 단연 가장 책임감 있는 선수이다.",
+        "She"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "emphasis"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is by far the more responsible player on our team.",
+      "statementForm": [
+        "She is by far the most responsible player on our team.",
+        "She is by far the most responsible player on our team"
+      ],
+      "fragmentForm": "She is by far the most responsible player on",
+      "wormholeVariants": [
+        "She is by far the more responsible player on our team.",
+        "She is by far most responsible player on our team.",
+        "She is by far the responsible player on our team.",
+        "She is by far the most responsible player than our team."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_088",
+    "seedId": "superlative_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 도시는 그 나라에서 단연 가장 큰 도시이다.",
+    "english": "This city is by far the largest city in the country.",
+    "words": [
+      "This",
+      "city",
+      "is",
+      "by",
+      "far",
+      "the",
+      "largest",
+      "city",
+      "in",
+      "the",
+      "country",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 도시는 그 나라에서 단연 가장 큰 도시이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "emphasis"
+    ],
+    "distractorSeeds": {
+      "auxError": "This city is by far largest city in the country.",
+      "statementForm": [
+        "This city is by far the largest city in the country.",
+        "This city is by far the largest city in the country"
+      ],
+      "fragmentForm": "This city is by far the largest city in",
+      "wormholeVariants": [
+        "This city is by far largest city in the country.",
+        "This city is by far the larger city in the country.",
+        "This city is by far the most larg city in the country.",
+        "This city is by far the largest city than the country."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_089",
+    "seedId": "superlative_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 연필은 필통에서 가장 긴 연필이다.",
+    "english": "This pencil is the longest pencil in the pencil case.",
+    "words": [
+      "This",
+      "pencil",
+      "is",
+      "the",
+      "longest",
+      "pencil",
+      "in",
+      "the",
+      "pencil",
+      "case",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 연필은 필통에서 가장 긴 연필이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "This pencil is longest pencil in the pencil case.",
+      "statementForm": [
+        "This pencil is the longest pencil in the pencil case.",
+        "This pencil is the longest pencil in the pencil case"
+      ],
+      "fragmentForm": "This pencil is the longest pencil in",
+      "wormholeVariants": [
+        "This pencil is longest pencil in the pencil case.",
+        "This pencil is the longer pencil in the pencil case.",
+        "This pencil is the most long pencil in the pencil case.",
+        "This pencil is the longest pencil than the pencil case."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_090",
+    "seedId": "superlative_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 소파는 방에서 가장 편안한 가구이다.",
+    "english": "This sofa is the most comfortable piece of furniture in the room.",
+    "words": [
+      "This",
+      "sofa",
+      "is",
+      "the",
+      "most",
+      "comfortable",
+      "piece",
+      "of",
+      "furniture",
+      "in",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 소파는 방에서 가장 편안한 가구이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This sofa is the more comfortable piece of furniture in the room.",
+      "statementForm": [
+        "This sofa is the most comfortable piece of furniture in the room.",
+        "This sofa is the most comfortable piece of furniture in the room"
+      ],
+      "fragmentForm": "This sofa is the most comfortable piece of",
+      "wormholeVariants": [
+        "This sofa is the more comfortable piece of furniture in the room.",
+        "This sofa is most comfortable piece of furniture in the room.",
+        "This sofa is the comfortable piece of furniture in the room.",
+        "This sofa is the most comfortable piece of furniture than the room."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_091",
+    "seedId": "superlative_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그녀의 설명은 수업에서 가장 자세한 설명이었다.",
+    "english": "Her explanation was the most detailed explanation in the class.",
+    "words": [
+      "Her",
+      "explanation",
+      "was",
+      "the",
+      "most",
+      "detailed",
+      "explanation",
+      "in",
+      "the",
+      "class",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀의 설명은 수업에서 가장 자세한 설명이었다.",
+        "Her"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "Her explanation was the more detailed explanation in the class.",
+      "statementForm": [
+        "Her explanation was the most detailed explanation in the class.",
+        "Her explanation was the most detailed explanation in the class"
+      ],
+      "fragmentForm": "Her explanation was the most detailed explanation in",
+      "wormholeVariants": [
+        "Her explanation was the more detailed explanation in the class.",
+        "Her explanation was most detailed explanation in the class.",
+        "Her explanation was the detailed explanation in the class.",
+        "Her explanation was the most detailed explanation than the class."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_092",
+    "seedId": "superlative_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 안내문은 게시판에서 가장 유용한 안내문이다.",
+    "english": "This notice is the most useful notice on the board.",
+    "words": [
+      "This",
+      "notice",
+      "is",
+      "the",
+      "most",
+      "useful",
+      "notice",
+      "on",
+      "the",
+      "board",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 안내문은 게시판에서 가장 유용한 안내문이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This notice is the more useful notice on the board.",
+      "statementForm": [
+        "This notice is the most useful notice on the board.",
+        "This notice is the most useful notice on the board"
+      ],
+      "fragmentForm": "This notice is the most useful notice on",
+      "wormholeVariants": [
+        "This notice is the more useful notice on the board.",
+        "This notice is most useful notice on the board.",
+        "This notice is the useful notice on the board.",
+        "This notice is the most useful notice than the board."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_093",
+    "seedId": "superlative_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 연습은 책에서 가장 효과적인 연습이다.",
+    "english": "This exercise is the most effective exercise in the book.",
+    "words": [
+      "This",
+      "exercise",
+      "is",
+      "the",
+      "most",
+      "effective",
+      "exercise",
+      "in",
+      "the",
+      "book",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 연습은 책에서 가장 효과적인 연습이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This exercise is the more effective exercise in the book.",
+      "statementForm": [
+        "This exercise is the most effective exercise in the book.",
+        "This exercise is the most effective exercise in the book"
+      ],
+      "fragmentForm": "This exercise is the most effective exercise in",
+      "wormholeVariants": [
+        "This exercise is the more effective exercise in the book.",
+        "This exercise is most effective exercise in the book.",
+        "This exercise is the effective exercise in the book.",
+        "This exercise is the most effective exercise than the book."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_094",
+    "seedId": "superlative_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 방법은 우리가 시도한 방법 중 가장 효과적인 방법이다.",
+    "english": "This method is the most effective method we have tried.",
+    "words": [
+      "This",
+      "method",
+      "is",
+      "the",
+      "most",
+      "effective",
+      "method",
+      "we",
+      "have",
+      "tried",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 방법은 우리가 시도한 방법 중 가장 효과적인 방법이다.",
+        "This"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "most",
+      "the"
+    ],
+    "blankTargets": [
+      "the",
+      "most"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "most"
+    ],
+    "distractorSeeds": {
+      "auxError": "This method is the more effective method we have tried.",
+      "statementForm": [
+        "This method is the most effective method we have tried.",
+        "This method is the most effective method we have tried"
+      ],
+      "fragmentForm": "This method is the most effective method we have",
+      "wormholeVariants": [
+        "This method is the more effective method we have tried.",
+        "This method is most effective method we have tried.",
+        "This method is the effective method we have tried."
+      ]
+    }
+  },
+  {
+    "id": "m2_sup_095",
+    "seedId": "superlative_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 설명은 내가 들은 설명 중 가장 간단한 설명이었다.",
+    "english": "The explanation was the simplest explanation I have heard.",
+    "words": [
+      "The",
+      "explanation",
+      "was",
+      "the",
+      "simplest",
+      "explanation",
+      "I",
+      "have",
+      "heard",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 내가 들은 설명 중 가장 간단한 설명이었다.",
+        "The"
+      ],
+      [
+        "superlative",
+        "the + -est / the most"
+      ],
+      [
+        "주의",
+        "match the comparison structure exactly and keep the meaning natural"
+      ]
+    ],
+    "extraClueWordPool": [
+      "carefully",
+      "the"
+    ],
+    "blankTargets": [
+      "the"
+    ],
+    "tags": [
+      "superlative",
+      "affirm",
+      "est"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation was simplest explanation I have heard.",
+      "statementForm": [
+        "The explanation was the simplest explanation I have heard.",
+        "The explanation was the simplest explanation I have heard"
+      ],
+      "fragmentForm": "The explanation was the simplest explanation I have",
+      "wormholeVariants": [
+        "The explanation was simplest explanation I have heard.",
+        "The explanation was the simpler explanation I have heard.",
+        "The explanation was the most simpl explanation I have heard."
+      ]
+    }
+  }
+]
