@@ -1,0 +1,8093 @@
+[
+  {
+    "id": "m2_perception_001",
+    "seedId": "perception_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 길을 건너는 것을 보았다.",
+    "english": "I saw him cross the street.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "cross",
+      "the",
+      "street",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 길을 건너는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "cross"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "cross",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "cross"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to cross the street.",
+      "statementForm": [
+        "I saw him cross the street.",
+        "I saw him cross the street"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to cross the street.",
+        "I saw him crossing the street.",
+        "I saw him crosses the street."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_002",
+    "seedId": "perception_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 길을 건너고 있는 것을 보았다.",
+    "english": "I saw him crossing the street.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "crossing",
+      "the",
+      "street",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 길을 건너고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "crossing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "crossing",
+      "cross",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "crossing"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to cross the street.",
+      "statementForm": [
+        "I saw him crossing the street.",
+        "I saw him crossing the street"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to cross the street.",
+        "I saw him cross the street.",
+        "I saw him crosses the street."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_003",
+    "seedId": "perception_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그녀가 노래하는 것을 들었다.",
+    "english": "I heard her sing.",
+    "words": [
+      "I",
+      "heard",
+      "her",
+      "sing",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 노래하는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard her"
+      ],
+      [
+        "목적격보어 형태",
+        "sing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard her",
+      "sing",
+      "s",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "sing"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard her to s.",
+      "statementForm": [
+        "I heard her sing.",
+        "I heard her sing"
+      ],
+      "fragmentForm": "heard her",
+      "wormholeVariants": [
+        "I heard her to s.",
+        "I heard her s.",
+        "I heard her ses."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_004",
+    "seedId": "perception_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그녀가 노래하고 있는 것을 들었다.",
+    "english": "I heard her singing.",
+    "words": [
+      "I",
+      "heard",
+      "her",
+      "singing",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 노래하고 있는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard her"
+      ],
+      [
+        "목적격보어 형태",
+        "singing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard her",
+      "singing",
+      "sing",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "singing"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard her to sing.",
+      "statementForm": [
+        "I heard her singing.",
+        "I heard her singing"
+      ],
+      "fragmentForm": "heard her",
+      "wormholeVariants": [
+        "I heard her to sing.",
+        "I heard her sing.",
+        "I heard her sings."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_005",
+    "seedId": "perception_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 방을 나가는 것을 보았다.",
+    "english": "I saw him leave the room.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "leave",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 방을 나가는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "leave"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "leave",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "leave"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to leave the room.",
+      "statementForm": [
+        "I saw him leave the room.",
+        "I saw him leave the room"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to leave the room.",
+        "I saw him leaving the room.",
+        "I saw him leaves the room."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_006",
+    "seedId": "perception_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 방을 나가고 있는 것을 보았다.",
+    "english": "I saw him leaving the room.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "leaving",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 방을 나가고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "leaving"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "leaving",
+      "leave",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "leaving"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to leave the room.",
+      "statementForm": [
+        "I saw him leaving the room.",
+        "I saw him leaving the room"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to leave the room.",
+        "I saw him leave the room.",
+        "I saw him leaves the room."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_007",
+    "seedId": "perception_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 아이들이 밖에서 노는 것을 보았다.",
+    "english": "I saw the children play outside.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "children",
+      "play",
+      "outside",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아이들이 밖에서 노는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw the children"
+      ],
+      [
+        "목적격보어 형태",
+        "play"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the children",
+      "play",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "play"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the children to play outside.",
+      "statementForm": [
+        "I saw the children play outside.",
+        "I saw the children play outside"
+      ],
+      "fragmentForm": "saw the children",
+      "wormholeVariants": [
+        "I saw the children to play outside.",
+        "I saw the children playing outside.",
+        "I saw the children plays outside."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_008",
+    "seedId": "perception_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 아이들이 밖에서 놀고 있는 것을 보았다.",
+    "english": "I saw the children playing outside.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "children",
+      "playing",
+      "outside",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아이들이 밖에서 놀고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw the children"
+      ],
+      [
+        "목적격보어 형태",
+        "playing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the children",
+      "playing",
+      "play",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "playing"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the children to play outside.",
+      "statementForm": [
+        "I saw the children playing outside.",
+        "I saw the children playing outside"
+      ],
+      "fragmentForm": "saw the children",
+      "wormholeVariants": [
+        "I saw the children to play outside.",
+        "I saw the children play outside.",
+        "I saw the children plays outside."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_009",
+    "seedId": "perception_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 누군가가 내 이름을 부르는 것을 들었다.",
+    "english": "I heard someone call my name.",
+    "words": [
+      "I",
+      "heard",
+      "someone",
+      "call",
+      "my",
+      "name",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 누군가가 내 이름을 부르는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "call"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "call",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "call"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard someone to call my name.",
+      "statementForm": [
+        "I heard someone call my name.",
+        "I heard someone call my name"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "I heard someone to call my name.",
+        "I heard someone calling my name.",
+        "I heard someone calls my name."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_010",
+    "seedId": "perception_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 누군가가 내 이름을 부르고 있는 것을 들었다.",
+    "english": "I heard someone calling my name.",
+    "words": [
+      "I",
+      "heard",
+      "someone",
+      "calling",
+      "my",
+      "name",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 누군가가 내 이름을 부르고 있는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "calling"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "calling",
+      "call",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "calling"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard someone to call my name.",
+      "statementForm": [
+        "I heard someone calling my name.",
+        "I heard someone calling my name"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "I heard someone to call my name.",
+        "I heard someone call my name.",
+        "I heard someone calls my name."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_011",
+    "seedId": "perception_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 문을 여는 것을 보았다.",
+    "english": "I saw him open the door.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "open",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 문을 여는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "open"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "open",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "open"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to open the door.",
+      "statementForm": [
+        "I saw him open the door.",
+        "I saw him open the door"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to open the door.",
+        "I saw him opening the door.",
+        "I saw him opens the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_012",
+    "seedId": "perception_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 문을 열고 있는 것을 보았다.",
+    "english": "I saw him opening the door.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "opening",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 문을 열고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "opening"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "opening",
+      "open",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "opening"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to open the door.",
+      "statementForm": [
+        "I saw him opening the door.",
+        "I saw him opening the door"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to open the door.",
+        "I saw him open the door.",
+        "I saw him opens the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_013",
+    "seedId": "perception_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 빠르게 달리는 것을 보았다.",
+    "english": "I saw him run quickly.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "run",
+      "quickly",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 빠르게 달리는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "run"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "run",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "run"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to run quickly.",
+      "statementForm": [
+        "I saw him run quickly.",
+        "I saw him run quickly"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to run quickly.",
+        "I saw him running quickly.",
+        "I saw him runs quickly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_014",
+    "seedId": "perception_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 빠르게 달리고 있는 것을 보았다.",
+    "english": "I saw him running quickly.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "running",
+      "quickly",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 빠르게 달리고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "running"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "running",
+      "run",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "running"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to run quickly.",
+      "statementForm": [
+        "I saw him running quickly.",
+        "I saw him running quickly"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to run quickly.",
+        "I saw him run quickly.",
+        "I saw him runs quickly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_015",
+    "seedId": "perception_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 전화로 이야기하는 것을 들었다.",
+    "english": "I heard him talk on the phone.",
+    "words": [
+      "I",
+      "heard",
+      "him",
+      "talk",
+      "on",
+      "the",
+      "phone",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 전화로 이야기하는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard him"
+      ],
+      [
+        "목적격보어 형태",
+        "talk"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard him",
+      "talk",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "talk"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard him to talk on the phone.",
+      "statementForm": [
+        "I heard him talk on the phone.",
+        "I heard him talk on the phone"
+      ],
+      "fragmentForm": "heard him",
+      "wormholeVariants": [
+        "I heard him to talk on the phone.",
+        "I heard him talking on the phone.",
+        "I heard him talks on the phone."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_016",
+    "seedId": "perception_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 전화로 이야기하고 있는 것을 들었다.",
+    "english": "I heard him talking on the phone.",
+    "words": [
+      "I",
+      "heard",
+      "him",
+      "talking",
+      "on",
+      "the",
+      "phone",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 전화로 이야기하고 있는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard him"
+      ],
+      [
+        "목적격보어 형태",
+        "talking"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard him",
+      "talking",
+      "talk",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "talking"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard him to talk on the phone.",
+      "statementForm": [
+        "I heard him talking on the phone.",
+        "I heard him talking on the phone"
+      ],
+      "fragmentForm": "heard him",
+      "wormholeVariants": [
+        "I heard him to talk on the phone.",
+        "I heard him talk on the phone.",
+        "I heard him talks on the phone."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_017",
+    "seedId": "perception_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 그녀가 피아노를 연주하는 것을 들었다.",
+    "english": "We heard her play the piano.",
+    "words": [
+      "We",
+      "heard",
+      "her",
+      "play",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그녀가 피아노를 연주하는 것을 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard her"
+      ],
+      [
+        "목적격보어 형태",
+        "play"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard her",
+      "play",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "play"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard her to play the piano.",
+      "statementForm": [
+        "We heard her play the piano.",
+        "We heard her play the piano"
+      ],
+      "fragmentForm": "heard her",
+      "wormholeVariants": [
+        "We heard her to play the piano.",
+        "We heard her playing the piano.",
+        "We heard her plays the piano."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_018",
+    "seedId": "perception_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 그녀가 피아노를 연주하고 있는 것을 들었다.",
+    "english": "We heard her playing the piano.",
+    "words": [
+      "We",
+      "heard",
+      "her",
+      "playing",
+      "the",
+      "piano",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그녀가 피아노를 연주하고 있는 것을 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard her"
+      ],
+      [
+        "목적격보어 형태",
+        "playing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard her",
+      "playing",
+      "play",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "playing"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard her to play the piano.",
+      "statementForm": [
+        "We heard her playing the piano.",
+        "We heard her playing the piano"
+      ],
+      "fragmentForm": "heard her",
+      "wormholeVariants": [
+        "We heard her to play the piano.",
+        "We heard her play the piano.",
+        "We heard her plays the piano."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_019",
+    "seedId": "perception_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 개가 크게 짖는 것을 들었다.",
+    "english": "They heard the dog bark loudly.",
+    "words": [
+      "They",
+      "heard",
+      "the",
+      "dog",
+      "bark",
+      "loudly",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 개가 크게 짖는 것을 들었다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "heard the dog"
+      ],
+      [
+        "목적격보어 형태",
+        "bark"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the dog",
+      "bark",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "bark"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "They heard the dog to bark loudly.",
+      "statementForm": [
+        "They heard the dog bark loudly.",
+        "They heard the dog bark loudly"
+      ],
+      "fragmentForm": "heard the dog",
+      "wormholeVariants": [
+        "They heard the dog to bark loudly.",
+        "They heard the dog barking loudly.",
+        "They heard the dog barks loudly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_020",
+    "seedId": "perception_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 개가 크게 짖고 있는 것을 들었다.",
+    "english": "They heard the dog barking loudly.",
+    "words": [
+      "They",
+      "heard",
+      "the",
+      "dog",
+      "barking",
+      "loudly",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 개가 크게 짖고 있는 것을 들었다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "heard the dog"
+      ],
+      [
+        "목적격보어 형태",
+        "barking"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the dog",
+      "barking",
+      "bark",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "barking"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "They heard the dog to bark loudly.",
+      "statementForm": [
+        "They heard the dog barking loudly.",
+        "They heard the dog barking loudly"
+      ],
+      "fragmentForm": "heard the dog",
+      "wormholeVariants": [
+        "They heard the dog to bark loudly.",
+        "They heard the dog bark loudly.",
+        "They heard the dog barks loudly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_021",
+    "seedId": "perception_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 새들이 하늘을 나는 것을 보았다.",
+    "english": "I watched the birds fly across the sky.",
+    "words": [
+      "I",
+      "watched",
+      "the",
+      "birds",
+      "fly",
+      "across",
+      "the",
+      "sky",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 새들이 하늘을 나는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "watched the birds"
+      ],
+      [
+        "목적격보어 형태",
+        "fly"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the birds",
+      "fly",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "fly"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I watched the birds to fly across the sky.",
+      "statementForm": [
+        "I watched the birds fly across the sky.",
+        "I watched the birds fly across the sky"
+      ],
+      "fragmentForm": "watched the birds",
+      "wormholeVariants": [
+        "I watched the birds to fly across the sky.",
+        "I watched the birds flying across the sky.",
+        "I watched the birds flies across the sky."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_022",
+    "seedId": "perception_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 새들이 하늘을 날고 있는 것을 보았다.",
+    "english": "I watched the birds flying across the sky.",
+    "words": [
+      "I",
+      "watched",
+      "the",
+      "birds",
+      "flying",
+      "across",
+      "the",
+      "sky",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 새들이 하늘을 날고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "watched the birds"
+      ],
+      [
+        "목적격보어 형태",
+        "flying"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the birds",
+      "flying",
+      "fly",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "flying"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I watched the birds to fly across the sky.",
+      "statementForm": [
+        "I watched the birds flying across the sky.",
+        "I watched the birds flying across the sky"
+      ],
+      "fragmentForm": "watched the birds",
+      "wormholeVariants": [
+        "I watched the birds to fly across the sky.",
+        "I watched the birds fly across the sky.",
+        "I watched the birds flies across the sky."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_023",
+    "seedId": "perception_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "선생님은 학생들이 실험하는 것을 지켜보았다.",
+    "english": "The teacher watched the students do the experiment.",
+    "words": [
+      "The",
+      "teacher",
+      "watched",
+      "the",
+      "students",
+      "do",
+      "the",
+      "experiment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님은 학생들이 실험하는 것을 지켜보았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "watched the students"
+      ],
+      [
+        "목적격보어 형태",
+        "do"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the students",
+      "do",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "do"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher watched the students to do the experiment.",
+      "statementForm": [
+        "The teacher watched the students do the experiment.",
+        "The teacher watched the students do the experiment"
+      ],
+      "fragmentForm": "watched the students",
+      "wormholeVariants": [
+        "The teacher watched the students to do the experiment.",
+        "The teacher watched the students doing the experiment.",
+        "The teacher watched the students does the experiment."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_024",
+    "seedId": "perception_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "선생님은 학생들이 실험하고 있는 것을 지켜보았다.",
+    "english": "The teacher watched the students doing the experiment.",
+    "words": [
+      "The",
+      "teacher",
+      "watched",
+      "the",
+      "students",
+      "doing",
+      "the",
+      "experiment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님은 학생들이 실험하고 있는 것을 지켜보았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "watched the students"
+      ],
+      [
+        "목적격보어 형태",
+        "doing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the students",
+      "doing",
+      "do",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "doing"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher watched the students to do the experiment.",
+      "statementForm": [
+        "The teacher watched the students doing the experiment.",
+        "The teacher watched the students doing the experiment"
+      ],
+      "fragmentForm": "watched the students",
+      "wormholeVariants": [
+        "The teacher watched the students to do the experiment.",
+        "The teacher watched the students do the experiment.",
+        "The teacher watched the students does the experiment."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_025",
+    "seedId": "perception_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 누군가가 창문을 두드리는 것을 들었다.",
+    "english": "He heard someone knock on the window.",
+    "words": [
+      "He",
+      "heard",
+      "someone",
+      "knock",
+      "on",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 누군가가 창문을 두드리는 것을 들었다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "knock"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "knock",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "knock"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "He heard someone to knock on the window.",
+      "statementForm": [
+        "He heard someone knock on the window.",
+        "He heard someone knock on the window"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "He heard someone to knock on the window.",
+        "He heard someone knocking on the window.",
+        "He heard someone knocks on the window."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_026",
+    "seedId": "perception_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 누군가가 창문을 두드리고 있는 것을 들었다.",
+    "english": "He heard someone knocking on the window.",
+    "words": [
+      "He",
+      "heard",
+      "someone",
+      "knocking",
+      "on",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 누군가가 창문을 두드리고 있는 것을 들었다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "knocking"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "knocking",
+      "knock",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "knocking"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "He heard someone to knock on the window.",
+      "statementForm": [
+        "He heard someone knocking on the window.",
+        "He heard someone knocking on the window"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "He heard someone to knock on the window.",
+        "He heard someone knock on the window.",
+        "He heard someone knocks on the window."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_027",
+    "seedId": "perception_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 아이가 계단에서 떨어지는 것을 보았다.",
+    "english": "I saw the child fall down the stairs.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "child",
+      "fall",
+      "down",
+      "the",
+      "stairs",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아이가 계단에서 떨어지는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw the child"
+      ],
+      [
+        "목적격보어 형태",
+        "fall"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the child",
+      "fall",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "fall"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the child to fall down the stairs.",
+      "statementForm": [
+        "I saw the child fall down the stairs.",
+        "I saw the child fall down the stairs"
+      ],
+      "fragmentForm": "saw the child",
+      "wormholeVariants": [
+        "I saw the child to fall down the stairs.",
+        "I saw the child falling down the stairs.",
+        "I saw the child falls down the stairs."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_028",
+    "seedId": "perception_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 아이가 계단에서 떨어지고 있는 것을 보았다.",
+    "english": "I saw the child falling down the stairs.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "child",
+      "falling",
+      "down",
+      "the",
+      "stairs",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 아이가 계단에서 떨어지고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw the child"
+      ],
+      [
+        "목적격보어 형태",
+        "falling"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the child",
+      "falling",
+      "fall",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "falling"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the child to fall down the stairs.",
+      "statementForm": [
+        "I saw the child falling down the stairs.",
+        "I saw the child falling down the stairs"
+      ],
+      "fragmentForm": "saw the child",
+      "wormholeVariants": [
+        "I saw the child to fall down the stairs.",
+        "I saw the child fall down the stairs.",
+        "I saw the child falls down the stairs."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_029",
+    "seedId": "perception_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 바람이 커튼을 움직이는 것을 느꼈다.",
+    "english": "She felt the wind move the curtains.",
+    "words": [
+      "She",
+      "felt",
+      "the",
+      "wind",
+      "move",
+      "the",
+      "curtains",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 바람이 커튼을 움직이는 것을 느꼈다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "felt the wind"
+      ],
+      [
+        "목적격보어 형태",
+        "move"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "felt the wind",
+      "move",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "move"
+    ],
+    "tags": [
+      "perception",
+      "felt",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She felt the wind to move the curtains.",
+      "statementForm": [
+        "She felt the wind move the curtains.",
+        "She felt the wind move the curtains"
+      ],
+      "fragmentForm": "felt the wind",
+      "wormholeVariants": [
+        "She felt the wind to move the curtains.",
+        "She felt the wind moving the curtains.",
+        "She felt the wind moves the curtains."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_030",
+    "seedId": "perception_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 바람이 커튼을 움직이고 있는 것을 느꼈다.",
+    "english": "She felt the wind moving the curtains.",
+    "words": [
+      "She",
+      "felt",
+      "the",
+      "wind",
+      "moving",
+      "the",
+      "curtains",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 바람이 커튼을 움직이고 있는 것을 느꼈다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "felt the wind"
+      ],
+      [
+        "목적격보어 형태",
+        "moving"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "felt the wind",
+      "moving",
+      "move",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "moving"
+    ],
+    "tags": [
+      "perception",
+      "felt",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She felt the wind to move the curtains.",
+      "statementForm": [
+        "She felt the wind moving the curtains.",
+        "She felt the wind moving the curtains"
+      ],
+      "fragmentForm": "felt the wind",
+      "wormholeVariants": [
+        "She felt the wind to move the curtains.",
+        "She felt the wind move the curtains.",
+        "She felt the wind moves the curtains."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_031",
+    "seedId": "perception_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 땅이 흔들리는 것을 느꼈다.",
+    "english": "I felt the ground shake.",
+    "words": [
+      "I",
+      "felt",
+      "the",
+      "ground",
+      "shake",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 땅이 흔들리는 것을 느꼈다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "felt the ground"
+      ],
+      [
+        "목적격보어 형태",
+        "shake"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "felt the ground",
+      "shake",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "shake"
+    ],
+    "tags": [
+      "perception",
+      "felt",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I felt the ground to shake.",
+      "statementForm": [
+        "I felt the ground shake.",
+        "I felt the ground shake"
+      ],
+      "fragmentForm": "felt the ground",
+      "wormholeVariants": [
+        "I felt the ground to shake.",
+        "I felt the ground shaking.",
+        "I felt the ground shakes."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_032",
+    "seedId": "perception_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 땅이 흔들리고 있는 것을 느꼈다.",
+    "english": "I felt the ground shaking.",
+    "words": [
+      "I",
+      "felt",
+      "the",
+      "ground",
+      "shaking",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 땅이 흔들리고 있는 것을 느꼈다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "felt the ground"
+      ],
+      [
+        "목적격보어 형태",
+        "shaking"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "felt the ground",
+      "shaking",
+      "shak",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "shaking"
+    ],
+    "tags": [
+      "perception",
+      "felt",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I felt the ground to shak.",
+      "statementForm": [
+        "I felt the ground shaking.",
+        "I felt the ground shaking"
+      ],
+      "fragmentForm": "felt the ground",
+      "wormholeVariants": [
+        "I felt the ground to shak.",
+        "I felt the ground shak.",
+        "I felt the ground shaks."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_033",
+    "seedId": "perception_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 그들이 전략을 논의하는 것을 들었다.",
+    "english": "We heard them discuss the strategy.",
+    "words": [
+      "We",
+      "heard",
+      "them",
+      "discuss",
+      "the",
+      "strategy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그들이 전략을 논의하는 것을 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard them"
+      ],
+      [
+        "목적격보어 형태",
+        "discuss"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard them",
+      "discuss",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "discuss"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard them to discuss the strategy.",
+      "statementForm": [
+        "We heard them discuss the strategy.",
+        "We heard them discuss the strategy"
+      ],
+      "fragmentForm": "heard them",
+      "wormholeVariants": [
+        "We heard them to discuss the strategy.",
+        "We heard them discussing the strategy.",
+        "We heard them discusses the strategy."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_034",
+    "seedId": "perception_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 그들이 전략을 논의하고 있는 것을 들었다.",
+    "english": "We heard them discussing the strategy.",
+    "words": [
+      "We",
+      "heard",
+      "them",
+      "discussing",
+      "the",
+      "strategy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그들이 전략을 논의하고 있는 것을 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard them"
+      ],
+      [
+        "목적격보어 형태",
+        "discussing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard them",
+      "discussing",
+      "discuss",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "discussing"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard them to discuss the strategy.",
+      "statementForm": [
+        "We heard them discussing the strategy.",
+        "We heard them discussing the strategy"
+      ],
+      "fragmentForm": "heard them",
+      "wormholeVariants": [
+        "We heard them to discuss the strategy.",
+        "We heard them discuss the strategy.",
+        "We heard them discusses the strategy."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_035",
+    "seedId": "perception_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그 관리자는 팀이 문제를 해결하는 것을 지켜보았다.",
+    "english": "The manager watched the team solve the problem.",
+    "words": [
+      "The",
+      "manager",
+      "watched",
+      "the",
+      "team",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 관리자는 팀이 문제를 해결하는 것을 지켜보았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "watched the team"
+      ],
+      [
+        "목적격보어 형태",
+        "solve"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the team",
+      "solve",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "solve"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The manager watched the team to solve the problem.",
+      "statementForm": [
+        "The manager watched the team solve the problem.",
+        "The manager watched the team solve the problem"
+      ],
+      "fragmentForm": "watched the team",
+      "wormholeVariants": [
+        "The manager watched the team to solve the problem.",
+        "The manager watched the team solving the problem.",
+        "The manager watched the team solves the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_036",
+    "seedId": "perception_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그 관리자는 팀이 문제를 해결하고 있는 것을 지켜보았다.",
+    "english": "The manager watched the team solving the problem.",
+    "words": [
+      "The",
+      "manager",
+      "watched",
+      "the",
+      "team",
+      "solving",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 관리자는 팀이 문제를 해결하고 있는 것을 지켜보았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "watched the team"
+      ],
+      [
+        "목적격보어 형태",
+        "solving"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the team",
+      "solving",
+      "solve",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "solving"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The manager watched the team to solve the problem.",
+      "statementForm": [
+        "The manager watched the team solving the problem.",
+        "The manager watched the team solving the problem"
+      ],
+      "fragmentForm": "watched the team",
+      "wormholeVariants": [
+        "The manager watched the team to solve the problem.",
+        "The manager watched the team solve the problem.",
+        "The manager watched the team solves the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_037",
+    "seedId": "perception_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그들이 새로운 시스템을 시험하는 것을 보았다.",
+    "english": "I saw them test the new system.",
+    "words": [
+      "I",
+      "saw",
+      "them",
+      "test",
+      "the",
+      "new",
+      "system",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 새로운 시스템을 시험하는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw them"
+      ],
+      [
+        "목적격보어 형태",
+        "test"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw them",
+      "test",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "test"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw them to test the new system.",
+      "statementForm": [
+        "I saw them test the new system.",
+        "I saw them test the new system"
+      ],
+      "fragmentForm": "saw them",
+      "wormholeVariants": [
+        "I saw them to test the new system.",
+        "I saw them testing the new system.",
+        "I saw them tests the new system."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_038",
+    "seedId": "perception_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그들이 새로운 시스템을 시험하고 있는 것을 보았다.",
+    "english": "I saw them testing the new system.",
+    "words": [
+      "I",
+      "saw",
+      "them",
+      "testing",
+      "the",
+      "new",
+      "system",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 새로운 시스템을 시험하고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw them"
+      ],
+      [
+        "목적격보어 형태",
+        "testing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw them",
+      "testing",
+      "test",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "testing"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw them to test the new system.",
+      "statementForm": [
+        "I saw them testing the new system.",
+        "I saw them testing the new system"
+      ],
+      "fragmentForm": "saw them",
+      "wormholeVariants": [
+        "I saw them to test the new system.",
+        "I saw them test the new system.",
+        "I saw them tests the new system."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_039",
+    "seedId": "perception_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 사람들이 그 결정에 대해 논쟁하는 것을 들었다.",
+    "english": "She heard people argue about the decision.",
+    "words": [
+      "She",
+      "heard",
+      "people",
+      "argue",
+      "about",
+      "the",
+      "decision",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 사람들이 그 결정에 대해 논쟁하는 것을 들었다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "heard people"
+      ],
+      [
+        "목적격보어 형태",
+        "argue"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard people",
+      "argue",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "argue"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "She heard people to argue about the decision.",
+      "statementForm": [
+        "She heard people argue about the decision.",
+        "She heard people argue about the decision"
+      ],
+      "fragmentForm": "heard people",
+      "wormholeVariants": [
+        "She heard people to argue about the decision.",
+        "She heard people arguing about the decision.",
+        "She heard people argues about the decision."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_040",
+    "seedId": "perception_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 사람들이 그 결정에 대해 논쟁하고 있는 것을 들었다.",
+    "english": "She heard people arguing about the decision.",
+    "words": [
+      "She",
+      "heard",
+      "people",
+      "arguing",
+      "about",
+      "the",
+      "decision",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 사람들이 그 결정에 대해 논쟁하고 있는 것을 들었다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "heard people"
+      ],
+      [
+        "목적격보어 형태",
+        "arguing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard people",
+      "arguing",
+      "argue",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "arguing"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "She heard people to argue about the decision.",
+      "statementForm": [
+        "She heard people arguing about the decision.",
+        "She heard people arguing about the decision"
+      ],
+      "fragmentForm": "heard people",
+      "wormholeVariants": [
+        "She heard people to argue about the decision.",
+        "She heard people argue about the decision.",
+        "She heard people argues about the decision."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_041",
+    "seedId": "perception_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 기술자가 장치를 수리하는 것을 지켜보았다.",
+    "english": "I watched the technician repair the device.",
+    "words": [
+      "I",
+      "watched",
+      "the",
+      "technician",
+      "repair",
+      "the",
+      "device",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 기술자가 장치를 수리하는 것을 지켜보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "watched the technician"
+      ],
+      [
+        "목적격보어 형태",
+        "repair"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the technician",
+      "repair",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "repair"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I watched the technician to repair the device.",
+      "statementForm": [
+        "I watched the technician repair the device.",
+        "I watched the technician repair the device"
+      ],
+      "fragmentForm": "watched the technician",
+      "wormholeVariants": [
+        "I watched the technician to repair the device.",
+        "I watched the technician repairing the device.",
+        "I watched the technician repairs the device."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_042",
+    "seedId": "perception_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 기술자가 장치를 수리하고 있는 것을 지켜보았다.",
+    "english": "I watched the technician repairing the device.",
+    "words": [
+      "I",
+      "watched",
+      "the",
+      "technician",
+      "repairing",
+      "the",
+      "device",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 기술자가 장치를 수리하고 있는 것을 지켜보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "watched the technician"
+      ],
+      [
+        "목적격보어 형태",
+        "repairing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the technician",
+      "repairing",
+      "repair",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "repairing"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I watched the technician to repair the device.",
+      "statementForm": [
+        "I watched the technician repairing the device.",
+        "I watched the technician repairing the device"
+      ],
+      "fragmentForm": "watched the technician",
+      "wormholeVariants": [
+        "I watched the technician to repair the device.",
+        "I watched the technician repair the device.",
+        "I watched the technician repairs the device."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_043",
+    "seedId": "perception_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 여동생이 그림을 그리는 것을 보았다.",
+    "english": "He saw his sister draw a picture.",
+    "words": [
+      "He",
+      "saw",
+      "his",
+      "sister",
+      "draw",
+      "a",
+      "picture",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 여동생이 그림을 그리는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "saw his sister"
+      ],
+      [
+        "목적격보어 형태",
+        "draw"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw his sister",
+      "draw",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "draw"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "He saw his sister to draw a picture.",
+      "statementForm": [
+        "He saw his sister draw a picture.",
+        "He saw his sister draw a picture"
+      ],
+      "fragmentForm": "saw his sister",
+      "wormholeVariants": [
+        "He saw his sister to draw a picture.",
+        "He saw his sister drawing a picture.",
+        "He saw his sister draws a picture."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_044",
+    "seedId": "perception_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 여동생이 그림을 그리고 있는 것을 보았다.",
+    "english": "He saw his sister drawing a picture.",
+    "words": [
+      "He",
+      "saw",
+      "his",
+      "sister",
+      "drawing",
+      "a",
+      "picture",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 여동생이 그림을 그리고 있는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "saw his sister"
+      ],
+      [
+        "목적격보어 형태",
+        "drawing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw his sister",
+      "drawing",
+      "draw",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "drawing"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "He saw his sister to draw a picture.",
+      "statementForm": [
+        "He saw his sister drawing a picture.",
+        "He saw his sister drawing a picture"
+      ],
+      "fragmentForm": "saw his sister",
+      "wormholeVariants": [
+        "He saw his sister to draw a picture.",
+        "He saw his sister draw a picture.",
+        "He saw his sister draws a picture."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_045",
+    "seedId": "perception_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 노동자들이 다리를 건설하는 것을 보았다.",
+    "english": "They watched the workers build the bridge.",
+    "words": [
+      "They",
+      "watched",
+      "the",
+      "workers",
+      "build",
+      "the",
+      "bridge",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 노동자들이 다리를 건설하는 것을 보았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "watched the workers"
+      ],
+      [
+        "목적격보어 형태",
+        "build"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the workers",
+      "build",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "build"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "They watched the workers to build the bridge.",
+      "statementForm": [
+        "They watched the workers build the bridge.",
+        "They watched the workers build the bridge"
+      ],
+      "fragmentForm": "watched the workers",
+      "wormholeVariants": [
+        "They watched the workers to build the bridge.",
+        "They watched the workers building the bridge.",
+        "They watched the workers builds the bridge."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_046",
+    "seedId": "perception_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 노동자들이 다리를 건설하고 있는 것을 보았다.",
+    "english": "They watched the workers building the bridge.",
+    "words": [
+      "They",
+      "watched",
+      "the",
+      "workers",
+      "building",
+      "the",
+      "bridge",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 노동자들이 다리를 건설하고 있는 것을 보았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "watched the workers"
+      ],
+      [
+        "목적격보어 형태",
+        "building"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the workers",
+      "building",
+      "build",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "building"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "They watched the workers to build the bridge.",
+      "statementForm": [
+        "They watched the workers building the bridge.",
+        "They watched the workers building the bridge"
+      ],
+      "fragmentForm": "watched the workers",
+      "wormholeVariants": [
+        "They watched the workers to build the bridge.",
+        "They watched the workers build the bridge.",
+        "They watched the workers builds the bridge."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_047",
+    "seedId": "perception_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 방을 청소하는 것을 보았다.",
+    "english": "I saw him clean the room.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "clean",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 방을 청소하는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "clean"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "clean",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "clean"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to clean the room.",
+      "statementForm": [
+        "I saw him clean the room.",
+        "I saw him clean the room"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to clean the room.",
+        "I saw him cleaning the room.",
+        "I saw him cleans the room."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_048",
+    "seedId": "perception_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 방을 청소하고 있는 것을 보았다.",
+    "english": "I saw him cleaning the room.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "cleaning",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 방을 청소하고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "cleaning"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "cleaning",
+      "clean",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "cleaning"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to clean the room.",
+      "statementForm": [
+        "I saw him cleaning the room.",
+        "I saw him cleaning the room"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to clean the room.",
+        "I saw him clean the room.",
+        "I saw him cleans the room."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_049",
+    "seedId": "perception_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 아이들이 시를 읽는 것을 들었다.",
+    "english": "We heard the children read the poem.",
+    "words": [
+      "We",
+      "heard",
+      "the",
+      "children",
+      "read",
+      "the",
+      "poem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아이들이 시를 읽는 것을 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard the children"
+      ],
+      [
+        "목적격보어 형태",
+        "read"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the children",
+      "read",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "read"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard the children to read the poem.",
+      "statementForm": [
+        "We heard the children read the poem.",
+        "We heard the children read the poem"
+      ],
+      "fragmentForm": "heard the children",
+      "wormholeVariants": [
+        "We heard the children to read the poem.",
+        "We heard the children reading the poem.",
+        "We heard the children reads the poem."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_050",
+    "seedId": "perception_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 아이들이 시를 읽고 있는 것을 들었다.",
+    "english": "We heard the children reading the poem.",
+    "words": [
+      "We",
+      "heard",
+      "the",
+      "children",
+      "reading",
+      "the",
+      "poem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아이들이 시를 읽고 있는 것을 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard the children"
+      ],
+      [
+        "목적격보어 형태",
+        "reading"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the children",
+      "reading",
+      "read",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "reading"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard the children to read the poem.",
+      "statementForm": [
+        "We heard the children reading the poem.",
+        "We heard the children reading the poem"
+      ],
+      "fragmentForm": "heard the children",
+      "wormholeVariants": [
+        "We heard the children to read the poem.",
+        "We heard the children read the poem.",
+        "We heard the children reads the poem."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_051",
+    "seedId": "perception_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 누군가가 조용히 속삭이는 것을 들었다.",
+    "english": "She heard someone whisper softly.",
+    "words": [
+      "She",
+      "heard",
+      "someone",
+      "whisper",
+      "softly",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 누군가가 조용히 속삭이는 것을 들었다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "whisper"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "whisper",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "whisper"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She heard someone to whisper softly.",
+      "statementForm": [
+        "She heard someone whisper softly.",
+        "She heard someone whisper softly"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "She heard someone to whisper softly.",
+        "She heard someone whispering softly.",
+        "She heard someone whispers softly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_052",
+    "seedId": "perception_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 누군가가 조용히 속삭이고 있는 것을 들었다.",
+    "english": "She heard someone whispering softly.",
+    "words": [
+      "She",
+      "heard",
+      "someone",
+      "whispering",
+      "softly",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 누군가가 조용히 속삭이고 있는 것을 들었다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "whispering"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "whispering",
+      "whisper",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "whispering"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She heard someone to whisper softly.",
+      "statementForm": [
+        "She heard someone whispering softly.",
+        "She heard someone whispering softly"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "She heard someone to whisper softly.",
+        "She heard someone whisper softly.",
+        "She heard someone whispers softly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_053",
+    "seedId": "perception_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 학생들이 발표를 준비하는 것을 보았다.",
+    "english": "I watched the students prepare the presentation.",
+    "words": [
+      "I",
+      "watched",
+      "the",
+      "students",
+      "prepare",
+      "the",
+      "presentation",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 학생들이 발표를 준비하는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "watched the students"
+      ],
+      [
+        "목적격보어 형태",
+        "prepare"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the students",
+      "prepare",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "prepare"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "I watched the students to prepare the presentation.",
+      "statementForm": [
+        "I watched the students prepare the presentation.",
+        "I watched the students prepare the presentation"
+      ],
+      "fragmentForm": "watched the students",
+      "wormholeVariants": [
+        "I watched the students to prepare the presentation.",
+        "I watched the students preparing the presentation.",
+        "I watched the students prepares the presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_054",
+    "seedId": "perception_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 학생들이 발표를 준비하고 있는 것을 보았다.",
+    "english": "I watched the students preparing the presentation.",
+    "words": [
+      "I",
+      "watched",
+      "the",
+      "students",
+      "preparing",
+      "the",
+      "presentation",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 학생들이 발표를 준비하고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "watched the students"
+      ],
+      [
+        "목적격보어 형태",
+        "preparing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the students",
+      "preparing",
+      "prepare",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "preparing"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "I watched the students to prepare the presentation.",
+      "statementForm": [
+        "I watched the students preparing the presentation.",
+        "I watched the students preparing the presentation"
+      ],
+      "fragmentForm": "watched the students",
+      "wormholeVariants": [
+        "I watched the students to prepare the presentation.",
+        "I watched the students prepare the presentation.",
+        "I watched the students prepares the presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_055",
+    "seedId": "perception_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 조수가 자료를 확인하는 것을 보았다.",
+    "english": "He saw the assistant check the data.",
+    "words": [
+      "He",
+      "saw",
+      "the",
+      "assistant",
+      "check",
+      "the",
+      "data",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 조수가 자료를 확인하는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "saw the assistant"
+      ],
+      [
+        "목적격보어 형태",
+        "check"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the assistant",
+      "check",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "check"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "He saw the assistant to check the data.",
+      "statementForm": [
+        "He saw the assistant check the data.",
+        "He saw the assistant check the data"
+      ],
+      "fragmentForm": "saw the assistant",
+      "wormholeVariants": [
+        "He saw the assistant to check the data.",
+        "He saw the assistant checking the data.",
+        "He saw the assistant checks the data."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_056",
+    "seedId": "perception_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 조수가 자료를 확인하고 있는 것을 보았다.",
+    "english": "He saw the assistant checking the data.",
+    "words": [
+      "He",
+      "saw",
+      "the",
+      "assistant",
+      "checking",
+      "the",
+      "data",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 조수가 자료를 확인하고 있는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "saw the assistant"
+      ],
+      [
+        "목적격보어 형태",
+        "checking"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the assistant",
+      "checking",
+      "check",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "checking"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "He saw the assistant to check the data.",
+      "statementForm": [
+        "He saw the assistant checking the data.",
+        "He saw the assistant checking the data"
+      ],
+      "fragmentForm": "saw the assistant",
+      "wormholeVariants": [
+        "He saw the assistant to check the data.",
+        "He saw the assistant check the data.",
+        "He saw the assistant checks the data."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_057",
+    "seedId": "perception_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 사용자가 정보를 입력하는 것을 지켜보았다.",
+    "english": "They watched the user type the information.",
+    "words": [
+      "They",
+      "watched",
+      "the",
+      "user",
+      "type",
+      "the",
+      "information",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 사용자가 정보를 입력하는 것을 지켜보았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "watched the user"
+      ],
+      [
+        "목적격보어 형태",
+        "type"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the user",
+      "type",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "type"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "They watched the user to type the information.",
+      "statementForm": [
+        "They watched the user type the information.",
+        "They watched the user type the information"
+      ],
+      "fragmentForm": "watched the user",
+      "wormholeVariants": [
+        "They watched the user to type the information.",
+        "They watched the user typing the information.",
+        "They watched the user types the information."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_058",
+    "seedId": "perception_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 사용자가 정보를 입력하고 있는 것을 지켜보았다.",
+    "english": "They watched the user typing the information.",
+    "words": [
+      "They",
+      "watched",
+      "the",
+      "user",
+      "typing",
+      "the",
+      "information",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 사용자가 정보를 입력하고 있는 것을 지켜보았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "watched the user"
+      ],
+      [
+        "목적격보어 형태",
+        "typing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the user",
+      "typing",
+      "type",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "typing"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "They watched the user to type the information.",
+      "statementForm": [
+        "They watched the user typing the information.",
+        "They watched the user typing the information"
+      ],
+      "fragmentForm": "watched the user",
+      "wormholeVariants": [
+        "They watched the user to type the information.",
+        "They watched the user type the information.",
+        "They watched the user types the information."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_059",
+    "seedId": "perception_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 학생이 규칙을 설명하는 것을 들었다.",
+    "english": "I heard the student explain the rule.",
+    "words": [
+      "I",
+      "heard",
+      "the",
+      "student",
+      "explain",
+      "the",
+      "rule",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 학생이 규칙을 설명하는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard the student"
+      ],
+      [
+        "목적격보어 형태",
+        "explain"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the student",
+      "explain",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "explain"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard the student to explain the rule.",
+      "statementForm": [
+        "I heard the student explain the rule.",
+        "I heard the student explain the rule"
+      ],
+      "fragmentForm": "heard the student",
+      "wormholeVariants": [
+        "I heard the student to explain the rule.",
+        "I heard the student explaining the rule.",
+        "I heard the student explains the rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_060",
+    "seedId": "perception_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 학생이 규칙을 설명하고 있는 것을 들었다.",
+    "english": "I heard the student explaining the rule.",
+    "words": [
+      "I",
+      "heard",
+      "the",
+      "student",
+      "explaining",
+      "the",
+      "rule",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 학생이 규칙을 설명하고 있는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard the student"
+      ],
+      [
+        "목적격보어 형태",
+        "explaining"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the student",
+      "explaining",
+      "explain",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "explaining"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard the student to explain the rule.",
+      "statementForm": [
+        "I heard the student explaining the rule.",
+        "I heard the student explaining the rule"
+      ],
+      "fragmentForm": "heard the student",
+      "wormholeVariants": [
+        "I heard the student to explain the rule.",
+        "I heard the student explain the rule.",
+        "I heard the student explains the rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_061",
+    "seedId": "perception_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 울타리를 넘는 것을 보았다.",
+    "english": "I saw him jump over the fence.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "jump",
+      "over",
+      "the",
+      "fence",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 울타리를 넘는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "jump"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "jump",
+      "jump",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "jump"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to jump over the fence.",
+      "statementForm": [
+        "I saw him jump over the fence.",
+        "I saw him jump over the fence"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to jump over the fence.",
+        "I saw him jumping over the fence.",
+        "I saw him jumps over the fence."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_062",
+    "seedId": "perception_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 그가 울타리를 넘고 있는 것을 보았다.",
+    "english": "I saw him jumping over the fence.",
+    "words": [
+      "I",
+      "saw",
+      "him",
+      "jumping",
+      "over",
+      "the",
+      "fence",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 울타리를 넘고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw him"
+      ],
+      [
+        "목적격보어 형태",
+        "jumping"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw him",
+      "jumping",
+      "jump",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "jumping"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw him to jump over the fence.",
+      "statementForm": [
+        "I saw him jumping over the fence.",
+        "I saw him jumping over the fence"
+      ],
+      "fragmentForm": "saw him",
+      "wormholeVariants": [
+        "I saw him to jump over the fence.",
+        "I saw him jump over the fence.",
+        "I saw him jumps over the fence."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_063",
+    "seedId": "perception_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 아기가 웃는 소리를 들었다.",
+    "english": "We heard the baby laugh.",
+    "words": [
+      "We",
+      "heard",
+      "the",
+      "baby",
+      "laugh",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아기가 웃는 소리를 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard the baby"
+      ],
+      [
+        "목적격보어 형태",
+        "laugh"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the baby",
+      "laugh",
+      "laugh",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "laugh"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard the baby to laugh.",
+      "statementForm": [
+        "We heard the baby laugh.",
+        "We heard the baby laugh"
+      ],
+      "fragmentForm": "heard the baby",
+      "wormholeVariants": [
+        "We heard the baby to laugh.",
+        "We heard the baby laughing.",
+        "We heard the baby laughs."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_064",
+    "seedId": "perception_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 아기가 웃고 있는 소리를 들었다.",
+    "english": "We heard the baby laughing.",
+    "words": [
+      "We",
+      "heard",
+      "the",
+      "baby",
+      "laughing",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아기가 웃고 있는 소리를 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard the baby"
+      ],
+      [
+        "목적격보어 형태",
+        "laughing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the baby",
+      "laughing",
+      "laugh",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "laughing"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard the baby to laugh.",
+      "statementForm": [
+        "We heard the baby laughing.",
+        "We heard the baby laughing"
+      ],
+      "fragmentForm": "heard the baby",
+      "wormholeVariants": [
+        "We heard the baby to laugh.",
+        "We heard the baby laugh.",
+        "We heard the baby laughs."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_065",
+    "seedId": "perception_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 고양이가 지붕 위로 올라가는 것을 보았다.",
+    "english": "She watched the cat climb onto the roof.",
+    "words": [
+      "She",
+      "watched",
+      "the",
+      "cat",
+      "climb",
+      "onto",
+      "the",
+      "roof",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 고양이가 지붕 위로 올라가는 것을 보았다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "watched the cat"
+      ],
+      [
+        "목적격보어 형태",
+        "climb"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the cat",
+      "climb",
+      "climb",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "climb"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She watched the cat to climb onto the roof.",
+      "statementForm": [
+        "She watched the cat climb onto the roof.",
+        "She watched the cat climb onto the roof"
+      ],
+      "fragmentForm": "watched the cat",
+      "wormholeVariants": [
+        "She watched the cat to climb onto the roof.",
+        "She watched the cat climbing onto the roof.",
+        "She watched the cat climbs onto the roof."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_066",
+    "seedId": "perception_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 고양이가 지붕 위로 올라가고 있는 것을 보았다.",
+    "english": "She watched the cat climbing onto the roof.",
+    "words": [
+      "She",
+      "watched",
+      "the",
+      "cat",
+      "climbing",
+      "onto",
+      "the",
+      "roof",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 고양이가 지붕 위로 올라가고 있는 것을 보았다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "watched the cat"
+      ],
+      [
+        "목적격보어 형태",
+        "climbing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the cat",
+      "climbing",
+      "climb",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "climbing"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She watched the cat to climb onto the roof.",
+      "statementForm": [
+        "She watched the cat climbing onto the roof.",
+        "She watched the cat climbing onto the roof"
+      ],
+      "fragmentForm": "watched the cat",
+      "wormholeVariants": [
+        "She watched the cat to climb onto the roof.",
+        "She watched the cat climb onto the roof.",
+        "She watched the cat climbs onto the roof."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_067",
+    "seedId": "perception_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 문이 흔들리는 것을 느꼈다.",
+    "english": "I felt the door shake.",
+    "words": [
+      "I",
+      "felt",
+      "the",
+      "door",
+      "shake",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 문이 흔들리는 것을 느꼈다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "felt the door"
+      ],
+      [
+        "목적격보어 형태",
+        "shake"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "felt the door",
+      "shake",
+      "shake",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "shake"
+    ],
+    "tags": [
+      "perception",
+      "felt",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I felt the door to shake.",
+      "statementForm": [
+        "I felt the door shake.",
+        "I felt the door shake"
+      ],
+      "fragmentForm": "felt the door",
+      "wormholeVariants": [
+        "I felt the door to shake.",
+        "I felt the door shaking.",
+        "I felt the door shakes."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_068",
+    "seedId": "perception_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 문이 흔들리고 있는 것을 느꼈다.",
+    "english": "I felt the door shaking.",
+    "words": [
+      "I",
+      "felt",
+      "the",
+      "door",
+      "shaking",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 문이 흔들리고 있는 것을 느꼈다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "felt the door"
+      ],
+      [
+        "목적격보어 형태",
+        "shaking"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "felt the door",
+      "shaking",
+      "shak",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "shaking"
+    ],
+    "tags": [
+      "perception",
+      "felt",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I felt the door to shake.",
+      "statementForm": [
+        "I felt the door shaking.",
+        "I felt the door shaking"
+      ],
+      "fragmentForm": "felt the door",
+      "wormholeVariants": [
+        "I felt the door to shake.",
+        "I felt the door shake.",
+        "I felt the door shakes."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_069",
+    "seedId": "perception_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 그들이 무대를 설치하는 것을 보았다.",
+    "english": "We watched them set up the stage.",
+    "words": [
+      "We",
+      "watched",
+      "them",
+      "set",
+      "up",
+      "the",
+      "stage",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그들이 무대를 설치하는 것을 보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched them"
+      ],
+      [
+        "목적격보어 형태",
+        "set"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched them",
+      "set",
+      "set",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "set"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched them to set up the stage.",
+      "statementForm": [
+        "We watched them set up the stage.",
+        "We watched them set up the stage"
+      ],
+      "fragmentForm": "watched them",
+      "wormholeVariants": [
+        "We watched them to set up the stage.",
+        "We watched them setting up the stage.",
+        "We watched them sets up the stage."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_070",
+    "seedId": "perception_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 그들이 무대를 설치하고 있는 것을 보았다.",
+    "english": "We watched them setting up the stage.",
+    "words": [
+      "We",
+      "watched",
+      "them",
+      "setting",
+      "up",
+      "the",
+      "stage",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그들이 무대를 설치하고 있는 것을 보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched them"
+      ],
+      [
+        "목적격보어 형태",
+        "setting"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched them",
+      "setting",
+      "sett",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "setting"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched them to set up the stage.",
+      "statementForm": [
+        "We watched them setting up the stage.",
+        "We watched them setting up the stage"
+      ],
+      "fragmentForm": "watched them",
+      "wormholeVariants": [
+        "We watched them to set up the stage.",
+        "We watched them set up the stage.",
+        "We watched them sets up the stage."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_071",
+    "seedId": "perception_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 누군가가 계단을 내려오는 소리를 들었다.",
+    "english": "I heard someone come down the stairs.",
+    "words": [
+      "I",
+      "heard",
+      "someone",
+      "come",
+      "down",
+      "the",
+      "stairs",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 누군가가 계단을 내려오는 소리를 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "come"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "come",
+      "come",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "come"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard someone to come down the stairs.",
+      "statementForm": [
+        "I heard someone come down the stairs.",
+        "I heard someone come down the stairs"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "I heard someone to come down the stairs.",
+        "I heard someone coming down the stairs.",
+        "I heard someone comes down the stairs."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_072",
+    "seedId": "perception_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 누군가가 계단을 내려오고 있는 소리를 들었다.",
+    "english": "I heard someone coming down the stairs.",
+    "words": [
+      "I",
+      "heard",
+      "someone",
+      "coming",
+      "down",
+      "the",
+      "stairs",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 누군가가 계단을 내려오고 있는 소리를 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "coming"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "coming",
+      "com",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "coming"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard someone to come down the stairs.",
+      "statementForm": [
+        "I heard someone coming down the stairs.",
+        "I heard someone coming down the stairs"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "I heard someone to come down the stairs.",
+        "I heard someone come down the stairs.",
+        "I heard someone comes down the stairs."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_073",
+    "seedId": "perception_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 학생들이 현미경을 사용하는 것을 보았다.",
+    "english": "He saw the students use the microscope.",
+    "words": [
+      "He",
+      "saw",
+      "the",
+      "students",
+      "use",
+      "the",
+      "microscope",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 학생들이 현미경을 사용하는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "saw the students"
+      ],
+      [
+        "목적격보어 형태",
+        "use"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the students",
+      "use",
+      "use",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "use"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "He saw the students to use the microscope.",
+      "statementForm": [
+        "He saw the students use the microscope.",
+        "He saw the students use the microscope"
+      ],
+      "fragmentForm": "saw the students",
+      "wormholeVariants": [
+        "He saw the students to use the microscope.",
+        "He saw the students using the microscope.",
+        "He saw the students uses the microscope."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_074",
+    "seedId": "perception_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 학생들이 현미경을 사용하고 있는 것을 보았다.",
+    "english": "He saw the students using the microscope.",
+    "words": [
+      "He",
+      "saw",
+      "the",
+      "students",
+      "using",
+      "the",
+      "microscope",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 학생들이 현미경을 사용하고 있는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "saw the students"
+      ],
+      [
+        "목적격보어 형태",
+        "using"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the students",
+      "using",
+      "us",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "using"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "He saw the students to use the microscope.",
+      "statementForm": [
+        "He saw the students using the microscope.",
+        "He saw the students using the microscope"
+      ],
+      "fragmentForm": "saw the students",
+      "wormholeVariants": [
+        "He saw the students to use the microscope.",
+        "He saw the students use the microscope.",
+        "He saw the students uses the microscope."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_075",
+    "seedId": "perception_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 엔지니어가 기계를 점검하는 것을 지켜보았다.",
+    "english": "We watched the engineer inspect the machine.",
+    "words": [
+      "We",
+      "watched",
+      "the",
+      "engineer",
+      "inspect",
+      "the",
+      "machine",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 엔지니어가 기계를 점검하는 것을 지켜보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched the engineer"
+      ],
+      [
+        "목적격보어 형태",
+        "inspect"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the engineer",
+      "inspect",
+      "inspect",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "inspect"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched the engineer to inspect the machine.",
+      "statementForm": [
+        "We watched the engineer inspect the machine.",
+        "We watched the engineer inspect the machine"
+      ],
+      "fragmentForm": "watched the engineer",
+      "wormholeVariants": [
+        "We watched the engineer to inspect the machine.",
+        "We watched the engineer inspecting the machine.",
+        "We watched the engineer inspects the machine."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_076",
+    "seedId": "perception_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 엔지니어가 기계를 점검하고 있는 것을 지켜보았다.",
+    "english": "We watched the engineer inspecting the machine.",
+    "words": [
+      "We",
+      "watched",
+      "the",
+      "engineer",
+      "inspecting",
+      "the",
+      "machine",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 엔지니어가 기계를 점검하고 있는 것을 지켜보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched the engineer"
+      ],
+      [
+        "목적격보어 형태",
+        "inspecting"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the engineer",
+      "inspecting",
+      "inspect",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "inspecting"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched the engineer to inspect the machine.",
+      "statementForm": [
+        "We watched the engineer inspecting the machine.",
+        "We watched the engineer inspecting the machine"
+      ],
+      "fragmentForm": "watched the engineer",
+      "wormholeVariants": [
+        "We watched the engineer to inspect the machine.",
+        "We watched the engineer inspect the machine.",
+        "We watched the engineer inspects the machine."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_077",
+    "seedId": "perception_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 사람들이 공연 후 박수치는 소리를 들었다.",
+    "english": "She heard people clap after the show.",
+    "words": [
+      "She",
+      "heard",
+      "people",
+      "clap",
+      "after",
+      "the",
+      "show",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 사람들이 공연 후 박수치는 소리를 들었다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "heard people"
+      ],
+      [
+        "목적격보어 형태",
+        "clap"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard people",
+      "clap",
+      "clap",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "clap"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She heard people to clap after the show.",
+      "statementForm": [
+        "She heard people clap after the show.",
+        "She heard people clap after the show"
+      ],
+      "fragmentForm": "heard people",
+      "wormholeVariants": [
+        "She heard people to clap after the show.",
+        "She heard people clapping after the show.",
+        "She heard people claps after the show."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_078",
+    "seedId": "perception_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 사람들이 공연 후 박수치고 있는 소리를 들었다.",
+    "english": "She heard people clapping after the show.",
+    "words": [
+      "She",
+      "heard",
+      "people",
+      "clapping",
+      "after",
+      "the",
+      "show",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 사람들이 공연 후 박수치고 있는 소리를 들었다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "heard people"
+      ],
+      [
+        "목적격보어 형태",
+        "clapping"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard people",
+      "clapping",
+      "clapp",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "clapping"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She heard people to clap after the show.",
+      "statementForm": [
+        "She heard people clapping after the show.",
+        "She heard people clapping after the show"
+      ],
+      "fragmentForm": "heard people",
+      "wormholeVariants": [
+        "She heard people to clap after the show.",
+        "She heard people clap after the show.",
+        "She heard people claps after the show."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_079",
+    "seedId": "perception_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 나뭇잎이 땅에 떨어지는 것을 보았다.",
+    "english": "I saw leaves fall to the ground.",
+    "words": [
+      "I",
+      "saw",
+      "leaves",
+      "fall",
+      "to",
+      "the",
+      "ground",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 나뭇잎이 땅에 떨어지는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw leaves"
+      ],
+      [
+        "목적격보어 형태",
+        "fall"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw leaves",
+      "fall",
+      "fall",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "fall"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw leaves to fall to the ground.",
+      "statementForm": [
+        "I saw leaves fall to the ground.",
+        "I saw leaves fall to the ground"
+      ],
+      "fragmentForm": "saw leaves",
+      "wormholeVariants": [
+        "I saw leaves to fall to the ground.",
+        "I saw leaves falling to the ground.",
+        "I saw leaves falls to the ground."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_080",
+    "seedId": "perception_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 나뭇잎이 땅에 떨어지고 있는 것을 보았다.",
+    "english": "I saw leaves falling to the ground.",
+    "words": [
+      "I",
+      "saw",
+      "leaves",
+      "falling",
+      "to",
+      "the",
+      "ground",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 나뭇잎이 땅에 떨어지고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw leaves"
+      ],
+      [
+        "목적격보어 형태",
+        "falling"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw leaves",
+      "falling",
+      "fall",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "falling"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw leaves to fall to the ground.",
+      "statementForm": [
+        "I saw leaves falling to the ground.",
+        "I saw leaves falling to the ground"
+      ],
+      "fragmentForm": "saw leaves",
+      "wormholeVariants": [
+        "I saw leaves to fall to the ground.",
+        "I saw leaves fall to the ground.",
+        "I saw leaves falls to the ground."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_081",
+    "seedId": "perception_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 선수가 결승선을 통과하는 것을 보았다.",
+    "english": "They watched the runner cross the finish line.",
+    "words": [
+      "They",
+      "watched",
+      "the",
+      "runner",
+      "cross",
+      "the",
+      "finish",
+      "line",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 선수가 결승선을 통과하는 것을 보았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "watched the runner"
+      ],
+      [
+        "목적격보어 형태",
+        "cross"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the runner",
+      "cross",
+      "cross",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "cross"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "They watched the runner to cross the finish line.",
+      "statementForm": [
+        "They watched the runner cross the finish line.",
+        "They watched the runner cross the finish line"
+      ],
+      "fragmentForm": "watched the runner",
+      "wormholeVariants": [
+        "They watched the runner to cross the finish line.",
+        "They watched the runner crossing the finish line.",
+        "They watched the runner crosses the finish line."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_082",
+    "seedId": "perception_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 선수가 결승선을 통과하고 있는 것을 보았다.",
+    "english": "They watched the runner crossing the finish line.",
+    "words": [
+      "They",
+      "watched",
+      "the",
+      "runner",
+      "crossing",
+      "the",
+      "finish",
+      "line",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 선수가 결승선을 통과하고 있는 것을 보았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "watched the runner"
+      ],
+      [
+        "목적격보어 형태",
+        "crossing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the runner",
+      "crossing",
+      "cross",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "crossing"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "They watched the runner to cross the finish line.",
+      "statementForm": [
+        "They watched the runner crossing the finish line.",
+        "They watched the runner crossing the finish line"
+      ],
+      "fragmentForm": "watched the runner",
+      "wormholeVariants": [
+        "They watched the runner to cross the finish line.",
+        "They watched the runner cross the finish line.",
+        "They watched the runner crosses the finish line."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_083",
+    "seedId": "perception_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 전화기가 진동하는 것을 느꼈다.",
+    "english": "I felt my phone vibrate.",
+    "words": [
+      "I",
+      "felt",
+      "my",
+      "phone",
+      "vibrate",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 전화기가 진동하는 것을 느꼈다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "felt my phone"
+      ],
+      [
+        "목적격보어 형태",
+        "vibrate"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "felt my phone",
+      "vibrate",
+      "vibrate",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "vibrate"
+    ],
+    "tags": [
+      "perception",
+      "felt",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I felt my phone to vibrate.",
+      "statementForm": [
+        "I felt my phone vibrate.",
+        "I felt my phone vibrate"
+      ],
+      "fragmentForm": "felt my phone",
+      "wormholeVariants": [
+        "I felt my phone to vibrate.",
+        "I felt my phone vibrating.",
+        "I felt my phone vibrates."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_084",
+    "seedId": "perception_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 전화기가 진동하고 있는 것을 느꼈다.",
+    "english": "I felt my phone vibrating.",
+    "words": [
+      "I",
+      "felt",
+      "my",
+      "phone",
+      "vibrating",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 전화기가 진동하고 있는 것을 느꼈다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "felt my phone"
+      ],
+      [
+        "목적격보어 형태",
+        "vibrating"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "felt my phone",
+      "vibrating",
+      "vibrat",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "vibrating"
+    ],
+    "tags": [
+      "perception",
+      "felt",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I felt my phone to vibrate.",
+      "statementForm": [
+        "I felt my phone vibrating.",
+        "I felt my phone vibrating"
+      ],
+      "fragmentForm": "felt my phone",
+      "wormholeVariants": [
+        "I felt my phone to vibrate.",
+        "I felt my phone vibrate.",
+        "I felt my phone vibrates."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_085",
+    "seedId": "perception_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 새들이 둥지를 짓는 것을 보았다.",
+    "english": "We watched birds build a nest.",
+    "words": [
+      "We",
+      "watched",
+      "birds",
+      "build",
+      "a",
+      "nest",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 새들이 둥지를 짓는 것을 보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched birds"
+      ],
+      [
+        "목적격보어 형태",
+        "build"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched birds",
+      "build",
+      "build",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "build"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched birds to build a nest.",
+      "statementForm": [
+        "We watched birds build a nest.",
+        "We watched birds build a nest"
+      ],
+      "fragmentForm": "watched birds",
+      "wormholeVariants": [
+        "We watched birds to build a nest.",
+        "We watched birds building a nest.",
+        "We watched birds builds a nest."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_086",
+    "seedId": "perception_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 새들이 둥지를 짓고 있는 것을 보았다.",
+    "english": "We watched birds building a nest.",
+    "words": [
+      "We",
+      "watched",
+      "birds",
+      "building",
+      "a",
+      "nest",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 새들이 둥지를 짓고 있는 것을 보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched birds"
+      ],
+      [
+        "목적격보어 형태",
+        "building"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched birds",
+      "building",
+      "build",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "building"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched birds to build a nest.",
+      "statementForm": [
+        "We watched birds building a nest.",
+        "We watched birds building a nest"
+      ],
+      "fragmentForm": "watched birds",
+      "wormholeVariants": [
+        "We watched birds to build a nest.",
+        "We watched birds build a nest.",
+        "We watched birds builds a nest."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_087",
+    "seedId": "perception_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 누군가가 비밀번호를 입력하는 것을 보았다.",
+    "english": "He noticed someone enter the password.",
+    "words": [
+      "He",
+      "noticed",
+      "someone",
+      "enter",
+      "the",
+      "password",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 누군가가 비밀번호를 입력하는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "noticed someone"
+      ],
+      [
+        "목적격보어 형태",
+        "enter"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "noticed someone",
+      "enter",
+      "enter",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "enter"
+    ],
+    "tags": [
+      "perception",
+      "noticed",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "He noticed someone to enter the password.",
+      "statementForm": [
+        "He noticed someone enter the password.",
+        "He noticed someone enter the password"
+      ],
+      "fragmentForm": "noticed someone",
+      "wormholeVariants": [
+        "He noticed someone to enter the password.",
+        "He noticed someone entering the password.",
+        "He noticed someone enters the password."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_088",
+    "seedId": "perception_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 누군가가 비밀번호를 입력하고 있는 것을 보았다.",
+    "english": "He noticed someone entering the password.",
+    "words": [
+      "He",
+      "noticed",
+      "someone",
+      "entering",
+      "the",
+      "password",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 누군가가 비밀번호를 입력하고 있는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "noticed someone"
+      ],
+      [
+        "목적격보어 형태",
+        "entering"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "noticed someone",
+      "entering",
+      "enter",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "entering"
+    ],
+    "tags": [
+      "perception",
+      "noticed",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "He noticed someone to enter the password.",
+      "statementForm": [
+        "He noticed someone entering the password.",
+        "He noticed someone entering the password"
+      ],
+      "fragmentForm": "noticed someone",
+      "wormholeVariants": [
+        "He noticed someone to enter the password.",
+        "He noticed someone enter the password.",
+        "He noticed someone enters the password."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_089",
+    "seedId": "perception_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 직원이 문서를 인쇄하는 것을 보았다.",
+    "english": "They saw the clerk print the document.",
+    "words": [
+      "They",
+      "saw",
+      "the",
+      "clerk",
+      "print",
+      "the",
+      "document",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 직원이 문서를 인쇄하는 것을 보았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "saw the clerk"
+      ],
+      [
+        "목적격보어 형태",
+        "print"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the clerk",
+      "print",
+      "print",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "print"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "They saw the clerk to print the document.",
+      "statementForm": [
+        "They saw the clerk print the document.",
+        "They saw the clerk print the document"
+      ],
+      "fragmentForm": "saw the clerk",
+      "wormholeVariants": [
+        "They saw the clerk to print the document.",
+        "They saw the clerk printing the document.",
+        "They saw the clerk prints the document."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_090",
+    "seedId": "perception_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 직원이 문서를 인쇄하고 있는 것을 보았다.",
+    "english": "They saw the clerk printing the document.",
+    "words": [
+      "They",
+      "saw",
+      "the",
+      "clerk",
+      "printing",
+      "the",
+      "document",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 직원이 문서를 인쇄하고 있는 것을 보았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "saw the clerk"
+      ],
+      [
+        "목적격보어 형태",
+        "printing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the clerk",
+      "printing",
+      "print",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "printing"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "They saw the clerk to print the document.",
+      "statementForm": [
+        "They saw the clerk printing the document.",
+        "They saw the clerk printing the document"
+      ],
+      "fragmentForm": "saw the clerk",
+      "wormholeVariants": [
+        "They saw the clerk to print the document.",
+        "They saw the clerk print the document.",
+        "They saw the clerk prints the document."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_091",
+    "seedId": "perception_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 이웃이 차를 세차하는 것을 보았다.",
+    "english": "I saw my neighbor wash his car.",
+    "words": [
+      "I",
+      "saw",
+      "my",
+      "neighbor",
+      "wash",
+      "his",
+      "car",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 이웃이 차를 세차하는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw my neighbor"
+      ],
+      [
+        "목적격보어 형태",
+        "wash"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw my neighbor",
+      "wash",
+      "wash",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "wash"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw my neighbor to wash his car.",
+      "statementForm": [
+        "I saw my neighbor wash his car.",
+        "I saw my neighbor wash his car"
+      ],
+      "fragmentForm": "saw my neighbor",
+      "wormholeVariants": [
+        "I saw my neighbor to wash his car.",
+        "I saw my neighbor washing his car.",
+        "I saw my neighbor washes his car."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_092",
+    "seedId": "perception_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 이웃이 차를 세차하고 있는 것을 보았다.",
+    "english": "I saw my neighbor washing his car.",
+    "words": [
+      "I",
+      "saw",
+      "my",
+      "neighbor",
+      "washing",
+      "his",
+      "car",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 이웃이 차를 세차하고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw my neighbor"
+      ],
+      [
+        "목적격보어 형태",
+        "washing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw my neighbor",
+      "washing",
+      "wash",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "washing"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw my neighbor to wash his car.",
+      "statementForm": [
+        "I saw my neighbor washing his car.",
+        "I saw my neighbor washing his car"
+      ],
+      "fragmentForm": "saw my neighbor",
+      "wormholeVariants": [
+        "I saw my neighbor to wash his car.",
+        "I saw my neighbor wash his car.",
+        "I saw my neighbor washes his car."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_093",
+    "seedId": "perception_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 누군가가 문을 잠그는 소리를 들었다.",
+    "english": "We heard someone lock the door.",
+    "words": [
+      "We",
+      "heard",
+      "someone",
+      "lock",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 누군가가 문을 잠그는 소리를 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "lock"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "lock",
+      "lock",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "lock"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard someone to lock the door.",
+      "statementForm": [
+        "We heard someone lock the door.",
+        "We heard someone lock the door"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "We heard someone to lock the door.",
+        "We heard someone locking the door.",
+        "We heard someone locks the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_094",
+    "seedId": "perception_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 누군가가 문을 잠그고 있는 소리를 들었다.",
+    "english": "We heard someone locking the door.",
+    "words": [
+      "We",
+      "heard",
+      "someone",
+      "locking",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 누군가가 문을 잠그고 있는 소리를 들었다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "locking"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "locking",
+      "lock",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "locking"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We heard someone to lock the door.",
+      "statementForm": [
+        "We heard someone locking the door.",
+        "We heard someone locking the door"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "We heard someone to lock the door.",
+        "We heard someone lock the door.",
+        "We heard someone locks the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_095",
+    "seedId": "perception_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 직원들이 표를 세는 것을 지켜보았다.",
+    "english": "She watched the staff count the tickets.",
+    "words": [
+      "She",
+      "watched",
+      "the",
+      "staff",
+      "count",
+      "the",
+      "tickets",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 직원들이 표를 세는 것을 지켜보았다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "watched the staff"
+      ],
+      [
+        "목적격보어 형태",
+        "count"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the staff",
+      "count",
+      "count",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "count"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She watched the staff to count the tickets.",
+      "statementForm": [
+        "She watched the staff count the tickets.",
+        "She watched the staff count the tickets"
+      ],
+      "fragmentForm": "watched the staff",
+      "wormholeVariants": [
+        "She watched the staff to count the tickets.",
+        "She watched the staff counting the tickets.",
+        "She watched the staff counts the tickets."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_096",
+    "seedId": "perception_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 직원들이 표를 세고 있는 것을 지켜보았다.",
+    "english": "She watched the staff counting the tickets.",
+    "words": [
+      "She",
+      "watched",
+      "the",
+      "staff",
+      "counting",
+      "the",
+      "tickets",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 직원들이 표를 세고 있는 것을 지켜보았다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "watched the staff"
+      ],
+      [
+        "목적격보어 형태",
+        "counting"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the staff",
+      "counting",
+      "count",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "counting"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She watched the staff to count the tickets.",
+      "statementForm": [
+        "She watched the staff counting the tickets.",
+        "She watched the staff counting the tickets"
+      ],
+      "fragmentForm": "watched the staff",
+      "wormholeVariants": [
+        "She watched the staff to count the tickets.",
+        "She watched the staff count the tickets.",
+        "She watched the staff counts the tickets."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_097",
+    "seedId": "perception_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 컴퓨터가 갑자기 꺼지는 것을 보았다.",
+    "english": "I saw the computer shut down suddenly.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "computer",
+      "shut",
+      "down",
+      "suddenly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 컴퓨터가 갑자기 꺼지는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw the computer"
+      ],
+      [
+        "목적격보어 형태",
+        "shut"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the computer",
+      "shut",
+      "shut",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "shut"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the computer to shut down suddenly.",
+      "statementForm": [
+        "I saw the computer shut down suddenly.",
+        "I saw the computer shut down suddenly"
+      ],
+      "fragmentForm": "saw the computer",
+      "wormholeVariants": [
+        "I saw the computer to shut down suddenly.",
+        "I saw the computer shutting down suddenly.",
+        "I saw the computer shuts down suddenly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_098",
+    "seedId": "perception_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 컴퓨터가 갑자기 꺼지고 있는 것을 보았다.",
+    "english": "I saw the computer shutting down suddenly.",
+    "words": [
+      "I",
+      "saw",
+      "the",
+      "computer",
+      "shutting",
+      "down",
+      "suddenly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 컴퓨터가 갑자기 꺼지고 있는 것을 보았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "saw the computer"
+      ],
+      [
+        "목적격보어 형태",
+        "shutting"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the computer",
+      "shutting",
+      "shutt",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "shutting"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "I saw the computer to shut down suddenly.",
+      "statementForm": [
+        "I saw the computer shutting down suddenly.",
+        "I saw the computer shutting down suddenly"
+      ],
+      "fragmentForm": "saw the computer",
+      "wormholeVariants": [
+        "I saw the computer to shut down suddenly.",
+        "I saw the computer shut down suddenly.",
+        "I saw the computer shuts down suddenly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_099",
+    "seedId": "perception_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 발표자가 새로운 기능을 설명하는 것을 들었다.",
+    "english": "They heard the speaker explain the new feature.",
+    "words": [
+      "They",
+      "heard",
+      "the",
+      "speaker",
+      "explain",
+      "the",
+      "new",
+      "feature",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 발표자가 새로운 기능을 설명하는 것을 들었다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "heard the speaker"
+      ],
+      [
+        "목적격보어 형태",
+        "explain"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the speaker",
+      "explain",
+      "explain",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "explain"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "They heard the speaker to explain the new feature.",
+      "statementForm": [
+        "They heard the speaker explain the new feature.",
+        "They heard the speaker explain the new feature"
+      ],
+      "fragmentForm": "heard the speaker",
+      "wormholeVariants": [
+        "They heard the speaker to explain the new feature.",
+        "They heard the speaker explaining the new feature.",
+        "They heard the speaker explains the new feature."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_100",
+    "seedId": "perception_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그들은 발표자가 새로운 기능을 설명하고 있는 것을 들었다.",
+    "english": "They heard the speaker explaining the new feature.",
+    "words": [
+      "They",
+      "heard",
+      "the",
+      "speaker",
+      "explaining",
+      "the",
+      "new",
+      "feature",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 발표자가 새로운 기능을 설명하고 있는 것을 들었다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "heard the speaker"
+      ],
+      [
+        "목적격보어 형태",
+        "explaining"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard the speaker",
+      "explaining",
+      "explain",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "explaining"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "They heard the speaker to explain the new feature.",
+      "statementForm": [
+        "They heard the speaker explaining the new feature.",
+        "They heard the speaker explaining the new feature"
+      ],
+      "fragmentForm": "heard the speaker",
+      "wormholeVariants": [
+        "They heard the speaker to explain the new feature.",
+        "They heard the speaker explain the new feature.",
+        "They heard the speaker explains the new feature."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_101",
+    "seedId": "perception_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 아이들이 연을 날리는 것을 보았다.",
+    "english": "We watched the children fly kites.",
+    "words": [
+      "We",
+      "watched",
+      "the",
+      "children",
+      "fly",
+      "kites",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아이들이 연을 날리는 것을 보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched the children"
+      ],
+      [
+        "목적격보어 형태",
+        "fly"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the children",
+      "fly",
+      "fly",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "fly"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched the children to fly kites.",
+      "statementForm": [
+        "We watched the children fly kites.",
+        "We watched the children fly kites"
+      ],
+      "fragmentForm": "watched the children",
+      "wormholeVariants": [
+        "We watched the children to fly kites.",
+        "We watched the children flying kites.",
+        "We watched the children flies kites."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_102",
+    "seedId": "perception_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 아이들이 연을 날리고 있는 것을 보았다.",
+    "english": "We watched the children flying kites.",
+    "words": [
+      "We",
+      "watched",
+      "the",
+      "children",
+      "flying",
+      "kites",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아이들이 연을 날리고 있는 것을 보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched the children"
+      ],
+      [
+        "목적격보어 형태",
+        "flying"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the children",
+      "flying",
+      "fly",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "flying"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched the children to fly kites.",
+      "statementForm": [
+        "We watched the children flying kites.",
+        "We watched the children flying kites"
+      ],
+      "fragmentForm": "watched the children",
+      "wormholeVariants": [
+        "We watched the children to fly kites.",
+        "We watched the children fly kites.",
+        "We watched the children flies kites."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_103",
+    "seedId": "perception_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 바퀴가 천천히 도는 것을 보았다.",
+    "english": "He watched the wheel turn slowly.",
+    "words": [
+      "He",
+      "watched",
+      "the",
+      "wheel",
+      "turn",
+      "slowly",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 바퀴가 천천히 도는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "watched the wheel"
+      ],
+      [
+        "목적격보어 형태",
+        "turn"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the wheel",
+      "turn",
+      "turn",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "turn"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "He watched the wheel to turn slowly.",
+      "statementForm": [
+        "He watched the wheel turn slowly.",
+        "He watched the wheel turn slowly"
+      ],
+      "fragmentForm": "watched the wheel",
+      "wormholeVariants": [
+        "He watched the wheel to turn slowly.",
+        "He watched the wheel turning slowly.",
+        "He watched the wheel turns slowly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_104",
+    "seedId": "perception_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그는 바퀴가 천천히 돌고 있는 것을 보았다.",
+    "english": "He watched the wheel turning slowly.",
+    "words": [
+      "He",
+      "watched",
+      "the",
+      "wheel",
+      "turning",
+      "slowly",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 바퀴가 천천히 돌고 있는 것을 보았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "watched the wheel"
+      ],
+      [
+        "목적격보어 형태",
+        "turning"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched the wheel",
+      "turning",
+      "turn",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "turning"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "He watched the wheel to turn slowly.",
+      "statementForm": [
+        "He watched the wheel turning slowly.",
+        "He watched the wheel turning slowly"
+      ],
+      "fragmentForm": "watched the wheel",
+      "wormholeVariants": [
+        "He watched the wheel to turn slowly.",
+        "He watched the wheel turn slowly.",
+        "He watched the wheel turns slowly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_105",
+    "seedId": "perception_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 누군가가 내 이름을 잘못 발음하는 것을 들었다.",
+    "english": "I heard someone pronounce my name incorrectly.",
+    "words": [
+      "I",
+      "heard",
+      "someone",
+      "pronounce",
+      "my",
+      "name",
+      "incorrectly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 누군가가 내 이름을 잘못 발음하는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "pronounce"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "pronounce",
+      "pronounce",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "pronounce"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard someone to pronounce my name incorrectly.",
+      "statementForm": [
+        "I heard someone pronounce my name incorrectly.",
+        "I heard someone pronounce my name incorrectly"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "I heard someone to pronounce my name incorrectly.",
+        "I heard someone pronouncing my name incorrectly.",
+        "I heard someone pronounces my name incorrectly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_106",
+    "seedId": "perception_106",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "나는 누군가가 내 이름을 잘못 발음하고 있는 것을 들었다.",
+    "english": "I heard someone pronouncing my name incorrectly.",
+    "words": [
+      "I",
+      "heard",
+      "someone",
+      "pronouncing",
+      "my",
+      "name",
+      "incorrectly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 누군가가 내 이름을 잘못 발음하고 있는 것을 들었다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "heard someone"
+      ],
+      [
+        "목적격보어 형태",
+        "pronouncing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "heard someone",
+      "pronouncing",
+      "pronounc",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "pronouncing"
+    ],
+    "tags": [
+      "perception",
+      "heard",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "I heard someone to pronounce my name incorrectly.",
+      "statementForm": [
+        "I heard someone pronouncing my name incorrectly.",
+        "I heard someone pronouncing my name incorrectly"
+      ],
+      "fragmentForm": "heard someone",
+      "wormholeVariants": [
+        "I heard someone to pronounce my name incorrectly.",
+        "I heard someone pronounce my name incorrectly.",
+        "I heard someone pronounces my name incorrectly."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_107",
+    "seedId": "perception_107",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 커튼이 부드럽게 움직이는 것을 보았다.",
+    "english": "She saw the curtains move gently.",
+    "words": [
+      "She",
+      "saw",
+      "the",
+      "curtains",
+      "move",
+      "gently",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 커튼이 부드럽게 움직이는 것을 보았다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "saw the curtains"
+      ],
+      [
+        "목적격보어 형태",
+        "move"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the curtains",
+      "move",
+      "move",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "move"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "bare",
+      "whole_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She saw the curtains to move gently.",
+      "statementForm": [
+        "She saw the curtains move gently.",
+        "She saw the curtains move gently"
+      ],
+      "fragmentForm": "saw the curtains",
+      "wormholeVariants": [
+        "She saw the curtains to move gently.",
+        "She saw the curtains moving gently.",
+        "She saw the curtains moves gently."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_108",
+    "seedId": "perception_108",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "그녀는 커튼이 부드럽게 움직이고 있는 것을 보았다.",
+    "english": "She saw the curtains moving gently.",
+    "words": [
+      "She",
+      "saw",
+      "the",
+      "curtains",
+      "moving",
+      "gently",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 커튼이 부드럽게 움직이고 있는 것을 보았다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "saw the curtains"
+      ],
+      [
+        "목적격보어 형태",
+        "moving"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "saw the curtains",
+      "moving",
+      "mov",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "moving"
+    ],
+    "tags": [
+      "perception",
+      "saw",
+      "ing",
+      "ongoing_action"
+    ],
+    "distractorSeeds": {
+      "auxError": "She saw the curtains to move gently.",
+      "statementForm": [
+        "She saw the curtains moving gently.",
+        "She saw the curtains moving gently"
+      ],
+      "fragmentForm": "saw the curtains",
+      "wormholeVariants": [
+        "She saw the curtains to move gently.",
+        "She saw the curtains move gently.",
+        "She saw the curtains moves gently."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_109",
+    "seedId": "perception_109",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 학생들이 답을 비교하는 것을 보았다.",
+    "english": "We watched students compare their answers.",
+    "words": [
+      "We",
+      "watched",
+      "students",
+      "compare",
+      "their",
+      "answers",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 학생들이 답을 비교하는 것을 보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched students"
+      ],
+      [
+        "목적격보어 형태",
+        "compare"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched students",
+      "compare",
+      "compare",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "compare"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "bare",
+      "whole_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched students to compare their answers.",
+      "statementForm": [
+        "We watched students compare their answers.",
+        "We watched students compare their answers"
+      ],
+      "fragmentForm": "watched students",
+      "wormholeVariants": [
+        "We watched students to compare their answers.",
+        "We watched students comparing their answers.",
+        "We watched students compares their answers."
+      ]
+    }
+  },
+  {
+    "id": "m2_perception_110",
+    "seedId": "perception_110",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "perception_verbs",
+    "chapterLabelKo": "지각동사",
+    "korean": "우리는 학생들이 답을 비교하고 있는 것을 보았다.",
+    "english": "We watched students comparing their answers.",
+    "words": [
+      "We",
+      "watched",
+      "students",
+      "comparing",
+      "their",
+      "answers",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "perception_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 학생들이 답을 비교하고 있는 것을 보았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "watched students"
+      ],
+      [
+        "목적격보어 형태",
+        "comparing"
+      ],
+      [
+        "의미 구분",
+        "동사원형=전체 동작 / V-ing=진행 중 장면"
+      ]
+    ],
+    "extraClueWordPool": [
+      "watched students",
+      "comparing",
+      "compar",
+      "object",
+      "base verb",
+      "V-ing",
+      "no to"
+    ],
+    "blankTargets": [
+      "comparing"
+    ],
+    "tags": [
+      "perception",
+      "watched",
+      "ing",
+      "ongoing_action",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "We watched students to compare their answers.",
+      "statementForm": [
+        "We watched students comparing their answers.",
+        "We watched students comparing their answers"
+      ],
+      "fragmentForm": "watched students",
+      "wormholeVariants": [
+        "We watched students to compare their answers.",
+        "We watched students compare their answers.",
+        "We watched students compares their answers."
+      ]
+    }
+  }
+]
