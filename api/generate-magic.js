@@ -1064,7 +1064,19 @@ function makeChoiceOptions(answer = "", input, seed = 0) {
 function normalizeWorkbookTypeLoose(value = "") {
   const v = String(value || "").trim().toLowerCase();
   if (!v) return "guided_writing";
-  if (["guided_writing", "guided-writing", "guided writing", "guided", "guide", "writing"].includes(v)) return "guided_writing";
+  if ([
+  "guided_writing",
+  "guided-writing",
+  "guided writing",
+  "guided",
+  "guide",
+  "writing",
+  "writing_lab",
+  "writing-lab",
+  "writing lab",
+  "guided writing training",
+  "guided_writing_training"
+].includes(v)) return "guided_writing";
   if (["blank_fill", "blank-fill", "blank fill", "blank", "blankfill", "fill_blank", "fill_in_blank"].includes(v)) return "blank_fill";
   if (["choice", "binary_choice", "binary-choice", "multiple choice", "mcq", "binarychoice", "binary", "either_or"].includes(v)) return "choice";
   if (["sentence_build", "sentence-build", "sentence build", "build", "rearrange"].includes(v)) return "sentence_build";
@@ -1290,8 +1302,15 @@ function buildDbFirstWorksheet(input) {
 }
 
 
-function shouldUseDbFirst(input) {
-  const rawWorkbookType = String(input?.workbookType || input?.requestedWorkbookType || "").trim().toLowerCase();
+function shouldUseDbFirst(input = {}) {
+  const rawWorkbookType = String(
+    input?.requestedWorkbookType ||
+    input?.workbookType ||
+    input?.rawBody?.workbookType ||
+    input?.rawBody?.worksheetType ||
+    ""
+  ).trim().toLowerCase();
+
   const workbookType = normalizeWorkbookTypeLoose(rawWorkbookType);
 
   const supportedType = [
@@ -1305,7 +1324,8 @@ function shouldUseDbFirst(input) {
     "magic",
     "writing",
     "magic-card",
-  ].includes(String(input?.mode || "").toLowerCase());
+    "writing_lab",
+  ].includes(String(input?.mode || "").trim().toLowerCase());
 
   const bankInfo = loadSentenceBank(input);
 
