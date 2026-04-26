@@ -1,0 +1,4662 @@
+[
+  {
+    "id": "m2_with_noun_phrase_have_001",
+    "seedId": "with_noun_phrase_have_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "안경 쓴 소년은 친절한 얼굴을 가지고 있다.",
+    "english": "The boy with glasses has a kind face.",
+    "words": [
+      "The",
+      "boy",
+      "with",
+      "glasses",
+      "has",
+      "a",
+      "kind",
+      "face",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "안경 쓴 소년은 친절한 얼굴을 가지고 있다.",
+        "the / boy / with / glasses / has / a / kind / face"
+      ],
+      [
+        "with glasses",
+        "with glasses"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with glasses"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boys with glasses have a kind face.",
+      "statementForm": [
+        "The boy with glasses has a kind face.",
+        "The boy with glasses has a kind face"
+      ],
+      "fragmentForm": "the / boy / with / glasses / has / a / kind / face",
+      "wormholeVariants": [
+        "The boys with glasses has a kind face.",
+        "The boy with glasses have a kind face."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_002",
+    "seedId": "with_noun_phrase_have_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "안경 쓴 소년들은 친절한 얼굴을 가지고 있다.",
+    "english": "The boys with glasses have kind faces.",
+    "words": [
+      "The",
+      "boys",
+      "with",
+      "glasses",
+      "have",
+      "kind",
+      "faces",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "안경 쓴 소년들은 친절한 얼굴을 가지고 있다.",
+        "the / boys / with / glasses / have / kind / faces"
+      ],
+      [
+        "with glasses",
+        "with glasses"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with glasses"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy with glasses has kind faces.",
+      "statementForm": [
+        "The boys with glasses have kind faces.",
+        "The boys with glasses have kind faces"
+      ],
+      "fragmentForm": "the / boys / with / glasses / have / kind / faces",
+      "wormholeVariants": [
+        "The boy with glasses have kind faces.",
+        "The boys with glasses has kind faces."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_003",
+    "seedId": "with_noun_phrase_have_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "안경 쓴 소년은 어제는 친절한 얼굴을 가지고 있었다.",
+    "english": "The boy with glasses had a kind face yesterday.",
+    "words": [
+      "The",
+      "boy",
+      "with",
+      "glasses",
+      "had",
+      "a",
+      "kind",
+      "face",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "안경 쓴 소년은 어제는 친절한 얼굴을 가지고 있었다.",
+        "the / boy / with / glasses / had / a / kind / face / yesterday"
+      ],
+      [
+        "with glasses",
+        "with glasses"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with glasses"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boys with glasses has a kind face yesterday.",
+      "statementForm": [
+        "The boy with glasses had a kind face yesterday.",
+        "The boy with glasses had a kind face yesterday"
+      ],
+      "fragmentForm": "the / boy / with / glasses / had / a / kind / face / yesterday",
+      "wormholeVariants": [
+        "The boys with glasses had a kind face yesterday.",
+        "The boy with glasses has a kind face yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_004",
+    "seedId": "with_noun_phrase_have_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "안경 쓴 소년들은 어제는 친절한 얼굴들을 가지고 있었다.",
+    "english": "The boys with glasses had kind faces yesterday.",
+    "words": [
+      "The",
+      "boys",
+      "with",
+      "glasses",
+      "had",
+      "kind",
+      "faces",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "안경 쓴 소년들은 어제는 친절한 얼굴들을 가지고 있었다.",
+        "the / boys / with / glasses / had / kind / faces / yesterday"
+      ],
+      [
+        "with glasses",
+        "with glasses"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with glasses"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy with glasses has kind faces yesterday.",
+      "statementForm": [
+        "The boys with glasses had kind faces yesterday.",
+        "The boys with glasses had kind faces yesterday"
+      ],
+      "fragmentForm": "the / boys / with / glasses / had / kind / faces / yesterday",
+      "wormholeVariants": [
+        "The boy with glasses had kind faces yesterday.",
+        "The boys with glasses has kind faces yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_005",
+    "seedId": "with_noun_phrase_have_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "빨간 가방을 든 소녀는 노트 한 권을 가지고 있다.",
+    "english": "The girl with a red bag has a notebook.",
+    "words": [
+      "The",
+      "girl",
+      "with",
+      "a",
+      "red",
+      "bag",
+      "has",
+      "a",
+      "notebook",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "빨간 가방을 든 소녀는 노트 한 권을 가지고 있다.",
+        "the / girl / with / a / red / bag / has / a / notebook"
+      ],
+      [
+        "with a red bag",
+        "with a red bag"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a red bag"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girls with red bags have a notebook.",
+      "statementForm": [
+        "The girl with a red bag has a notebook.",
+        "The girl with a red bag has a notebook"
+      ],
+      "fragmentForm": "the / girl / with / a / red / bag / has / a / notebook",
+      "wormholeVariants": [
+        "The girls with a red bag has a notebook.",
+        "The girl with a red bag have a notebook."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_006",
+    "seedId": "with_noun_phrase_have_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "빨간 가방을 든 소녀들은 노트 여러 권을 가지고 있다.",
+    "english": "The girls with red bags have notebooks.",
+    "words": [
+      "The",
+      "girls",
+      "with",
+      "red",
+      "bags",
+      "have",
+      "notebooks",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "빨간 가방을 든 소녀들은 노트 여러 권을 가지고 있다.",
+        "the / girls / with / red / bags / have / notebooks"
+      ],
+      [
+        "with red bags",
+        "with red bags"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with red bags"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl with a red bag has notebooks.",
+      "statementForm": [
+        "The girls with red bags have notebooks.",
+        "The girls with red bags have notebooks"
+      ],
+      "fragmentForm": "the / girls / with / red / bags / have / notebooks",
+      "wormholeVariants": [
+        "The girl with red bags have notebooks.",
+        "The girls with red bags has notebooks."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_007",
+    "seedId": "with_noun_phrase_have_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "빨간 가방을 든 소녀는 어제는 노트 한 권을 가지고 있었다.",
+    "english": "The girl with a red bag had a notebook yesterday.",
+    "words": [
+      "The",
+      "girl",
+      "with",
+      "a",
+      "red",
+      "bag",
+      "had",
+      "a",
+      "notebook",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "빨간 가방을 든 소녀는 어제는 노트 한 권을 가지고 있었다.",
+        "the / girl / with / a / red / bag / had / a / notebook / yesterday"
+      ],
+      [
+        "with a red bag",
+        "with a red bag"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a red bag"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girls with red bags has a notebook yesterday.",
+      "statementForm": [
+        "The girl with a red bag had a notebook yesterday.",
+        "The girl with a red bag had a notebook yesterday"
+      ],
+      "fragmentForm": "the / girl / with / a / red / bag / had / a / notebook / yesterday",
+      "wormholeVariants": [
+        "The girls with a red bag had a notebook yesterday.",
+        "The girl with a red bag has a notebook yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_008",
+    "seedId": "with_noun_phrase_have_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "빨간 가방을 든 소녀들은 어제는 노트를 여러 권 가지고 있었다.",
+    "english": "The girls with red bags had notebooks yesterday.",
+    "words": [
+      "The",
+      "girls",
+      "with",
+      "red",
+      "bags",
+      "had",
+      "notebooks",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "빨간 가방을 든 소녀들은 어제는 노트를 여러 권 가지고 있었다.",
+        "the / girls / with / red / bags / had / notebooks / yesterday"
+      ],
+      [
+        "with red bags",
+        "with red bags"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with red bags"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl with a red bag has notebooks yesterday.",
+      "statementForm": [
+        "The girls with red bags had notebooks yesterday.",
+        "The girls with red bags had notebooks yesterday"
+      ],
+      "fragmentForm": "the / girls / with / red / bags / had / notebooks / yesterday",
+      "wormholeVariants": [
+        "The girl with red bags had notebooks yesterday.",
+        "The girls with red bags has notebooks yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_009",
+    "seedId": "with_noun_phrase_have_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "질문이 있는 학생은 질문 카드를 가지고 있다.",
+    "english": "The student with a question has a question card.",
+    "words": [
+      "The",
+      "student",
+      "with",
+      "a",
+      "question",
+      "has",
+      "a",
+      "question",
+      "card",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "질문이 있는 학생은 질문 카드를 가지고 있다.",
+        "the / student / with / a / question / has / a / question / card"
+      ],
+      [
+        "with a question",
+        "with a question"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a question"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students with questions have a question card.",
+      "statementForm": [
+        "The student with a question has a question card.",
+        "The student with a question has a question card"
+      ],
+      "fragmentForm": "the / student / with / a / question / has / a / question / card",
+      "wormholeVariants": [
+        "The students with a question has a question card.",
+        "The student with a question have a question card."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_010",
+    "seedId": "with_noun_phrase_have_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "질문이 있는 학생들은 질문 카드를 가지고 있다.",
+    "english": "The students with questions have question cards.",
+    "words": [
+      "The",
+      "students",
+      "with",
+      "questions",
+      "have",
+      "question",
+      "cards",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "질문이 있는 학생들은 질문 카드를 가지고 있다.",
+        "the / students / with / questions / have / question / cards"
+      ],
+      [
+        "with questions",
+        "with questions"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with questions"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student with a question has question cards.",
+      "statementForm": [
+        "The students with questions have question cards.",
+        "The students with questions have question cards"
+      ],
+      "fragmentForm": "the / students / with / questions / have / question / cards",
+      "wormholeVariants": [
+        "The student with questions have question cards.",
+        "The students with questions has question cards."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_011",
+    "seedId": "with_noun_phrase_have_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "질문이 있는 학생은 어제는 질문 카드를 가지고 있었다.",
+    "english": "The student with a question had a question card yesterday.",
+    "words": [
+      "The",
+      "student",
+      "with",
+      "a",
+      "question",
+      "had",
+      "a",
+      "question",
+      "card",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "질문이 있는 학생은 어제는 질문 카드를 가지고 있었다.",
+        "the / student / with / a / question / had / a / question / card / yesterday"
+      ],
+      [
+        "with a question",
+        "with a question"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a question"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students with questions has a question card yesterday.",
+      "statementForm": [
+        "The student with a question had a question card yesterday.",
+        "The student with a question had a question card yesterday"
+      ],
+      "fragmentForm": "the / student / with / a / question / had / a / question / card / yesterday",
+      "wormholeVariants": [
+        "The students with a question had a question card yesterday.",
+        "The student with a question has a question card yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_012",
+    "seedId": "with_noun_phrase_have_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "질문이 있는 학생들은 어제는 질문 카드를 여러 장 가지고 있었다.",
+    "english": "The students with questions had question cards yesterday.",
+    "words": [
+      "The",
+      "students",
+      "with",
+      "questions",
+      "had",
+      "question",
+      "cards",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "질문이 있는 학생들은 어제는 질문 카드를 여러 장 가지고 있었다.",
+        "the / students / with / questions / had / question / cards / yesterday"
+      ],
+      [
+        "with questions",
+        "with questions"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with questions"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student with a question has question cards yesterday.",
+      "statementForm": [
+        "The students with questions had question cards yesterday.",
+        "The students with questions had question cards yesterday"
+      ],
+      "fragmentForm": "the / students / with / questions / had / question / cards / yesterday",
+      "wormholeVariants": [
+        "The student with questions had question cards yesterday.",
+        "The students with questions has question cards yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_013",
+    "seedId": "with_noun_phrase_have_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "노트가 있는 선생님은 좋은 노트를 가지고 있다.",
+    "english": "The teacher with a notebook has good notes.",
+    "words": [
+      "The",
+      "teacher",
+      "with",
+      "a",
+      "notebook",
+      "has",
+      "good",
+      "notes",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "노트가 있는 선생님은 좋은 노트를 가지고 있다.",
+        "the / teacher / with / a / notebook / has / good / notes"
+      ],
+      [
+        "with a notebook",
+        "with a notebook"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a notebook"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teachers with notebooks have good notes.",
+      "statementForm": [
+        "The teacher with a notebook has good notes.",
+        "The teacher with a notebook has good notes"
+      ],
+      "fragmentForm": "the / teacher / with / a / notebook / has / good / notes",
+      "wormholeVariants": [
+        "The teachers with a notebook has good notes.",
+        "The teacher with a notebook have good notes."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_014",
+    "seedId": "with_noun_phrase_have_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "노트가 있는 선생님들은 좋은 노트를 가지고 있다.",
+    "english": "The teachers with notebooks have good notes.",
+    "words": [
+      "The",
+      "teachers",
+      "with",
+      "notebooks",
+      "have",
+      "good",
+      "notes",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "노트가 있는 선생님들은 좋은 노트를 가지고 있다.",
+        "the / teachers / with / notebooks / have / good / notes"
+      ],
+      [
+        "with notebooks",
+        "with notebooks"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with notebooks"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher with a notebook has good notes.",
+      "statementForm": [
+        "The teachers with notebooks have good notes.",
+        "The teachers with notebooks have good notes"
+      ],
+      "fragmentForm": "the / teachers / with / notebooks / have / good / notes",
+      "wormholeVariants": [
+        "The teacher with notebooks have good notes.",
+        "The teachers with notebooks has good notes."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_015",
+    "seedId": "with_noun_phrase_have_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "노트가 있는 선생님은 어제는 좋은 노트를 가지고 있었다.",
+    "english": "The teacher with a notebook had good notes yesterday.",
+    "words": [
+      "The",
+      "teacher",
+      "with",
+      "a",
+      "notebook",
+      "had",
+      "good",
+      "notes",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "노트가 있는 선생님은 어제는 좋은 노트를 가지고 있었다.",
+        "the / teacher / with / a / notebook / had / good / notes / yesterday"
+      ],
+      [
+        "with a notebook",
+        "with a notebook"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a notebook"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teachers with notebooks has good notes yesterday.",
+      "statementForm": [
+        "The teacher with a notebook had good notes yesterday.",
+        "The teacher with a notebook had good notes yesterday"
+      ],
+      "fragmentForm": "the / teacher / with / a / notebook / had / good / notes / yesterday",
+      "wormholeVariants": [
+        "The teachers with a notebook had good notes yesterday.",
+        "The teacher with a notebook has good notes yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_016",
+    "seedId": "with_noun_phrase_have_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "노트가 있는 선생님들은 어제는 좋은 노트를 가지고 있었다.",
+    "english": "The teachers with notebooks had good notes yesterday.",
+    "words": [
+      "The",
+      "teachers",
+      "with",
+      "notebooks",
+      "had",
+      "good",
+      "notes",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "노트가 있는 선생님들은 어제는 좋은 노트를 가지고 있었다.",
+        "the / teachers / with / notebooks / had / good / notes / yesterday"
+      ],
+      [
+        "with notebooks",
+        "with notebooks"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with notebooks"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher with a notebook has good notes yesterday.",
+      "statementForm": [
+        "The teachers with notebooks had good notes yesterday.",
+        "The teachers with notebooks had good notes yesterday"
+      ],
+      "fragmentForm": "the / teachers / with / notebooks / had / good / notes / yesterday",
+      "wormholeVariants": [
+        "The teacher with notebooks had good notes yesterday.",
+        "The teachers with notebooks has good notes yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_017",
+    "seedId": "with_noun_phrase_have_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "카메라를 든 남자는 카메라 끈을 가지고 있다.",
+    "english": "The man with a camera has a camera strap.",
+    "words": [
+      "The",
+      "man",
+      "with",
+      "a",
+      "camera",
+      "has",
+      "a",
+      "camera",
+      "strap",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카메라를 든 남자는 카메라 끈을 가지고 있다.",
+        "the / man / with / a / camera / has / a / camera / strap"
+      ],
+      [
+        "with a camera",
+        "with a camera"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a camera"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The men with cameras have a camera strap.",
+      "statementForm": [
+        "The man with a camera has a camera strap.",
+        "The man with a camera has a camera strap"
+      ],
+      "fragmentForm": "the / man / with / a / camera / has / a / camera / strap",
+      "wormholeVariants": [
+        "The men with a camera has a camera strap.",
+        "The man with a camera have a camera strap."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_018",
+    "seedId": "with_noun_phrase_have_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "카메라를 든 남자들은 카메라 끈을 가지고 있다.",
+    "english": "The men with cameras have camera straps.",
+    "words": [
+      "The",
+      "men",
+      "with",
+      "cameras",
+      "have",
+      "camera",
+      "straps",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카메라를 든 남자들은 카메라 끈을 가지고 있다.",
+        "the / men / with / cameras / have / camera / straps"
+      ],
+      [
+        "with cameras",
+        "with cameras"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with cameras"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The man with a camera has camera straps.",
+      "statementForm": [
+        "The men with cameras have camera straps.",
+        "The men with cameras have camera straps"
+      ],
+      "fragmentForm": "the / men / with / cameras / have / camera / straps",
+      "wormholeVariants": [
+        "The man with cameras have camera straps.",
+        "The men with cameras has camera straps."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_019",
+    "seedId": "with_noun_phrase_have_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "카메라를 든 남자는 어제는 카메라 끈을 가지고 있었다.",
+    "english": "The man with a camera had a camera strap yesterday.",
+    "words": [
+      "The",
+      "man",
+      "with",
+      "a",
+      "camera",
+      "had",
+      "a",
+      "camera",
+      "strap",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카메라를 든 남자는 어제는 카메라 끈을 가지고 있었다.",
+        "the / man / with / a / camera / had / a / camera / strap / yesterday"
+      ],
+      [
+        "with a camera",
+        "with a camera"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a camera"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The men with cameras has a camera strap yesterday.",
+      "statementForm": [
+        "The man with a camera had a camera strap yesterday.",
+        "The man with a camera had a camera strap yesterday"
+      ],
+      "fragmentForm": "the / man / with / a / camera / had / a / camera / strap / yesterday",
+      "wormholeVariants": [
+        "The men with a camera had a camera strap yesterday.",
+        "The man with a camera has a camera strap yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_020",
+    "seedId": "with_noun_phrase_have_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "카메라를 든 남자들은 어제는 카메라 끈을 가지고 있었다.",
+    "english": "The men with cameras had camera straps yesterday.",
+    "words": [
+      "The",
+      "men",
+      "with",
+      "cameras",
+      "had",
+      "camera",
+      "straps",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "카메라를 든 남자들은 어제는 카메라 끈을 가지고 있었다.",
+        "the / men / with / cameras / had / camera / straps / yesterday"
+      ],
+      [
+        "with cameras",
+        "with cameras"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with cameras"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The man with a camera has camera straps yesterday.",
+      "statementForm": [
+        "The men with cameras had camera straps yesterday.",
+        "The men with cameras had camera straps yesterday"
+      ],
+      "fragmentForm": "the / men / with / cameras / had / camera / straps / yesterday",
+      "wormholeVariants": [
+        "The man with cameras had camera straps yesterday.",
+        "The men with cameras has camera straps yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_021",
+    "seedId": "with_noun_phrase_have_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "지도를 가진 여자는 지도 케이스를 가지고 있다.",
+    "english": "The woman with a map has a map case.",
+    "words": [
+      "The",
+      "woman",
+      "with",
+      "a",
+      "map",
+      "has",
+      "a",
+      "map",
+      "case",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지도를 가진 여자는 지도 케이스를 가지고 있다.",
+        "the / woman / with / a / map / has / a / map / case"
+      ],
+      [
+        "with a map",
+        "with a map"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a map"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The women with maps have a map case.",
+      "statementForm": [
+        "The woman with a map has a map case.",
+        "The woman with a map has a map case"
+      ],
+      "fragmentForm": "the / woman / with / a / map / has / a / map / case",
+      "wormholeVariants": [
+        "The women with a map has a map case.",
+        "The woman with a map have a map case."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_022",
+    "seedId": "with_noun_phrase_have_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "지도를 가진 여자들은 지도 케이스를 가지고 있다.",
+    "english": "The women with maps have map cases.",
+    "words": [
+      "The",
+      "women",
+      "with",
+      "maps",
+      "have",
+      "map",
+      "cases",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지도를 가진 여자들은 지도 케이스를 가지고 있다.",
+        "the / women / with / maps / have / map / cases"
+      ],
+      [
+        "with maps",
+        "with maps"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with maps"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The woman with a map has map cases.",
+      "statementForm": [
+        "The women with maps have map cases.",
+        "The women with maps have map cases"
+      ],
+      "fragmentForm": "the / women / with / maps / have / map / cases",
+      "wormholeVariants": [
+        "The woman with maps have map cases.",
+        "The women with maps has map cases."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_023",
+    "seedId": "with_noun_phrase_have_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "지도를 가진 여자는 어제는 지도 케이스를 가지고 있었다.",
+    "english": "The woman with a map had a map case yesterday.",
+    "words": [
+      "The",
+      "woman",
+      "with",
+      "a",
+      "map",
+      "had",
+      "a",
+      "map",
+      "case",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지도를 가진 여자는 어제는 지도 케이스를 가지고 있었다.",
+        "the / woman / with / a / map / had / a / map / case / yesterday"
+      ],
+      [
+        "with a map",
+        "with a map"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a map"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The women with maps has a map case yesterday.",
+      "statementForm": [
+        "The woman with a map had a map case yesterday.",
+        "The woman with a map had a map case yesterday"
+      ],
+      "fragmentForm": "the / woman / with / a / map / had / a / map / case / yesterday",
+      "wormholeVariants": [
+        "The women with a map had a map case yesterday.",
+        "The woman with a map has a map case yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_024",
+    "seedId": "with_noun_phrase_have_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "지도를 가진 여자들은 어제는 지도 케이스를 가지고 있었다.",
+    "english": "The women with maps had map cases yesterday.",
+    "words": [
+      "The",
+      "women",
+      "with",
+      "maps",
+      "had",
+      "map",
+      "cases",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "지도를 가진 여자들은 어제는 지도 케이스를 가지고 있었다.",
+        "the / women / with / maps / had / map / cases / yesterday"
+      ],
+      [
+        "with maps",
+        "with maps"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with maps"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The woman with a map has map cases yesterday.",
+      "statementForm": [
+        "The women with maps had map cases yesterday.",
+        "The women with maps had map cases yesterday"
+      ],
+      "fragmentForm": "the / women / with / maps / had / map / cases / yesterday",
+      "wormholeVariants": [
+        "The woman with maps had map cases yesterday.",
+        "The women with maps has map cases yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_025",
+    "seedId": "with_noun_phrase_have_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "모자를 쓴 아이는 빨간 모자를 가지고 있다.",
+    "english": "The child with a hat has a red hat.",
+    "words": [
+      "The",
+      "child",
+      "with",
+      "a",
+      "hat",
+      "has",
+      "a",
+      "red",
+      "hat",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모자를 쓴 아이는 빨간 모자를 가지고 있다.",
+        "the / child / with / a / hat / has / a / red / hat"
+      ],
+      [
+        "with a hat",
+        "with a hat"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a hat"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The children with hats have a red hat.",
+      "statementForm": [
+        "The child with a hat has a red hat.",
+        "The child with a hat has a red hat"
+      ],
+      "fragmentForm": "the / child / with / a / hat / has / a / red / hat",
+      "wormholeVariants": [
+        "The children with a hat has a red hat.",
+        "The child with a hat have a red hat."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_026",
+    "seedId": "with_noun_phrase_have_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "모자를 쓴 아이들은 빨간 모자를 가지고 있다.",
+    "english": "The children with hats have red hats.",
+    "words": [
+      "The",
+      "children",
+      "with",
+      "hats",
+      "have",
+      "red",
+      "hats",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모자를 쓴 아이들은 빨간 모자를 가지고 있다.",
+        "the / children / with / hats / have / red / hats"
+      ],
+      [
+        "with hats",
+        "with hats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with hats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child with a hat has red hats.",
+      "statementForm": [
+        "The children with hats have red hats.",
+        "The children with hats have red hats"
+      ],
+      "fragmentForm": "the / children / with / hats / have / red / hats",
+      "wormholeVariants": [
+        "The child with hats have red hats.",
+        "The children with hats has red hats."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_027",
+    "seedId": "with_noun_phrase_have_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "모자를 쓴 아이는 어제는 빨간 모자를 가지고 있었다.",
+    "english": "The child with a hat had a red hat yesterday.",
+    "words": [
+      "The",
+      "child",
+      "with",
+      "a",
+      "hat",
+      "had",
+      "a",
+      "red",
+      "hat",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모자를 쓴 아이는 어제는 빨간 모자를 가지고 있었다.",
+        "the / child / with / a / hat / had / a / red / hat / yesterday"
+      ],
+      [
+        "with a hat",
+        "with a hat"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a hat"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The children with hats has a red hat yesterday.",
+      "statementForm": [
+        "The child with a hat had a red hat yesterday.",
+        "The child with a hat had a red hat yesterday"
+      ],
+      "fragmentForm": "the / child / with / a / hat / had / a / red / hat / yesterday",
+      "wormholeVariants": [
+        "The children with a hat had a red hat yesterday.",
+        "The child with a hat has a red hat yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_028",
+    "seedId": "with_noun_phrase_have_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "모자를 쓴 아이들은 어제는 빨간 모자를 가지고 있었다.",
+    "english": "The children with hats had red hats yesterday.",
+    "words": [
+      "The",
+      "children",
+      "with",
+      "hats",
+      "had",
+      "red",
+      "hats",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "모자를 쓴 아이들은 어제는 빨간 모자를 가지고 있었다.",
+        "the / children / with / hats / had / red / hats / yesterday"
+      ],
+      [
+        "with hats",
+        "with hats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with hats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child with a hat has red hats yesterday.",
+      "statementForm": [
+        "The children with hats had red hats yesterday.",
+        "The children with hats had red hats yesterday"
+      ],
+      "fragmentForm": "the / children / with / hats / had / red / hats / yesterday",
+      "wormholeVariants": [
+        "The child with hats had red hats yesterday.",
+        "The children with hats has red hats yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_029",
+    "seedId": "with_noun_phrase_have_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "목걸이를 한 개는 빨간 목걸이를 가지고 있다.",
+    "english": "The dog with a collar has a red collar.",
+    "words": [
+      "The",
+      "dog",
+      "with",
+      "a",
+      "collar",
+      "has",
+      "a",
+      "red",
+      "collar",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목걸이를 한 개는 빨간 목걸이를 가지고 있다.",
+        "the / dog / with / a / collar / has / a / red / collar"
+      ],
+      [
+        "with a collar",
+        "with a collar"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a collar"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dogs with collars have a red collar.",
+      "statementForm": [
+        "The dog with a collar has a red collar.",
+        "The dog with a collar has a red collar"
+      ],
+      "fragmentForm": "the / dog / with / a / collar / has / a / red / collar",
+      "wormholeVariants": [
+        "The dogs with a collar has a red collar.",
+        "The dog with a collar have a red collar."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_030",
+    "seedId": "with_noun_phrase_have_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "목걸이를 한 개들은 빨간 목걸이를 가지고 있다.",
+    "english": "The dogs with collars have red collars.",
+    "words": [
+      "The",
+      "dogs",
+      "with",
+      "collars",
+      "have",
+      "red",
+      "collars",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목걸이를 한 개들은 빨간 목걸이를 가지고 있다.",
+        "the / dogs / with / collars / have / red / collars"
+      ],
+      [
+        "with collars",
+        "with collars"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with collars"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog with a collar has red collars.",
+      "statementForm": [
+        "The dogs with collars have red collars.",
+        "The dogs with collars have red collars"
+      ],
+      "fragmentForm": "the / dogs / with / collars / have / red / collars",
+      "wormholeVariants": [
+        "The dog with collars have red collars.",
+        "The dogs with collars has red collars."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_031",
+    "seedId": "with_noun_phrase_have_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "목걸이를 한 개는 어제는 빨간 목걸이를 가지고 있었다.",
+    "english": "The dog with a collar had a red collar yesterday.",
+    "words": [
+      "The",
+      "dog",
+      "with",
+      "a",
+      "collar",
+      "had",
+      "a",
+      "red",
+      "collar",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목걸이를 한 개는 어제는 빨간 목걸이를 가지고 있었다.",
+        "the / dog / with / a / collar / had / a / red / collar / yesterday"
+      ],
+      [
+        "with a collar",
+        "with a collar"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a collar"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dogs with collars has a red collar yesterday.",
+      "statementForm": [
+        "The dog with a collar had a red collar yesterday.",
+        "The dog with a collar had a red collar yesterday"
+      ],
+      "fragmentForm": "the / dog / with / a / collar / had / a / red / collar / yesterday",
+      "wormholeVariants": [
+        "The dogs with a collar had a red collar yesterday.",
+        "The dog with a collar has a red collar yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_032",
+    "seedId": "with_noun_phrase_have_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "목걸이를 한 개들은 어제는 빨간 목걸이를 가지고 있었다.",
+    "english": "The dogs with collars had red collars yesterday.",
+    "words": [
+      "The",
+      "dogs",
+      "with",
+      "collars",
+      "had",
+      "red",
+      "collars",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "목걸이를 한 개들은 어제는 빨간 목걸이를 가지고 있었다.",
+        "the / dogs / with / collars / had / red / collars / yesterday"
+      ],
+      [
+        "with collars",
+        "with collars"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with collars"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The dog with a collar has red collars yesterday.",
+      "statementForm": [
+        "The dogs with collars had red collars yesterday.",
+        "The dogs with collars had red collars yesterday"
+      ],
+      "fragmentForm": "the / dogs / with / collars / had / red / collars / yesterday",
+      "wormholeVariants": [
+        "The dog with collars had red collars yesterday.",
+        "The dogs with collars has red collars yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_033",
+    "seedId": "with_noun_phrase_have_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "고장 난 불이 있는 차는 고장 난 불이 있다.",
+    "english": "The car with a broken light has a broken light.",
+    "words": [
+      "The",
+      "car",
+      "with",
+      "a",
+      "broken",
+      "light",
+      "has",
+      "a",
+      "broken",
+      "light",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "고장 난 불이 있는 차는 고장 난 불이 있다.",
+        "the / car / with / a / broken / light / has / a / broken / light"
+      ],
+      [
+        "with a broken light",
+        "with a broken light"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a broken light"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cars with broken lights have a broken light.",
+      "statementForm": [
+        "The car with a broken light has a broken light.",
+        "The car with a broken light has a broken light"
+      ],
+      "fragmentForm": "the / car / with / a / broken / light / has / a / broken / light",
+      "wormholeVariants": [
+        "The cars with a broken light has a broken light.",
+        "The car with a broken light have a broken light."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_034",
+    "seedId": "with_noun_phrase_have_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "고장 난 불이 있는 차들은 고장 난 불이 있다.",
+    "english": "The cars with broken lights have broken lights.",
+    "words": [
+      "The",
+      "cars",
+      "with",
+      "broken",
+      "lights",
+      "have",
+      "broken",
+      "lights",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "고장 난 불이 있는 차들은 고장 난 불이 있다.",
+        "the / cars / with / broken / lights / have / broken / lights"
+      ],
+      [
+        "with broken lights",
+        "with broken lights"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with broken lights"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The car with a broken light has broken lights.",
+      "statementForm": [
+        "The cars with broken lights have broken lights.",
+        "The cars with broken lights have broken lights"
+      ],
+      "fragmentForm": "the / cars / with / broken / lights / have / broken / lights",
+      "wormholeVariants": [
+        "The car with broken lights have broken lights.",
+        "The cars with broken lights has broken lights."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_035",
+    "seedId": "with_noun_phrase_have_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "고장 난 불이 있는 차는 어제는 고장 난 불이 있었다.",
+    "english": "The car with a broken light had a broken light yesterday.",
+    "words": [
+      "The",
+      "car",
+      "with",
+      "a",
+      "broken",
+      "light",
+      "had",
+      "a",
+      "broken",
+      "light",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "고장 난 불이 있는 차는 어제는 고장 난 불이 있었다.",
+        "the / car / with / a / broken / light / had / a / broken / light / yesterday"
+      ],
+      [
+        "with a broken light",
+        "with a broken light"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a broken light"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cars with broken lights has a broken light yesterday.",
+      "statementForm": [
+        "The car with a broken light had a broken light yesterday.",
+        "The car with a broken light had a broken light yesterday"
+      ],
+      "fragmentForm": "the / car / with / a / broken / light / had / a / broken / light / yesterday",
+      "wormholeVariants": [
+        "The cars with a broken light had a broken light yesterday.",
+        "The car with a broken light has a broken light yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_036",
+    "seedId": "with_noun_phrase_have_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "고장 난 불이 있는 차들은 어제는 고장 난 불들이 있었다.",
+    "english": "The cars with broken lights had broken lights yesterday.",
+    "words": [
+      "The",
+      "cars",
+      "with",
+      "broken",
+      "lights",
+      "had",
+      "broken",
+      "lights",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "고장 난 불이 있는 차들은 어제는 고장 난 불들이 있었다.",
+        "the / cars / with / broken / lights / had / broken / lights / yesterday"
+      ],
+      [
+        "with broken lights",
+        "with broken lights"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with broken lights"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The car with a broken light has broken lights yesterday.",
+      "statementForm": [
+        "The cars with broken lights had broken lights yesterday.",
+        "The cars with broken lights had broken lights yesterday"
+      ],
+      "fragmentForm": "the / cars / with / broken / lights / had / broken / lights / yesterday",
+      "wormholeVariants": [
+        "The car with broken lights had broken lights yesterday.",
+        "The cars with broken lights has broken lights yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_037",
+    "seedId": "with_noun_phrase_have_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "파란 문이 있는 집은 파란 문이 있다.",
+    "english": "The house with a blue door has a blue door.",
+    "words": [
+      "The",
+      "house",
+      "with",
+      "a",
+      "blue",
+      "door",
+      "has",
+      "a",
+      "blue",
+      "door",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 문이 있는 집은 파란 문이 있다.",
+        "the / house / with / a / blue / door / has / a / blue / door"
+      ],
+      [
+        "with a blue door",
+        "with a blue door"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a blue door"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The houses with blue doors have a blue door.",
+      "statementForm": [
+        "The house with a blue door has a blue door.",
+        "The house with a blue door has a blue door"
+      ],
+      "fragmentForm": "the / house / with / a / blue / door / has / a / blue / door",
+      "wormholeVariants": [
+        "The houses with a blue door has a blue door.",
+        "The house with a blue door have a blue door."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_038",
+    "seedId": "with_noun_phrase_have_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "파란 문이 있는 집들은 파란 문이 있다.",
+    "english": "The houses with blue doors have blue doors.",
+    "words": [
+      "The",
+      "houses",
+      "with",
+      "blue",
+      "doors",
+      "have",
+      "blue",
+      "doors",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 문이 있는 집들은 파란 문이 있다.",
+        "the / houses / with / blue / doors / have / blue / doors"
+      ],
+      [
+        "with blue doors",
+        "with blue doors"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with blue doors"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The house with a blue door has blue doors.",
+      "statementForm": [
+        "The houses with blue doors have blue doors.",
+        "The houses with blue doors have blue doors"
+      ],
+      "fragmentForm": "the / houses / with / blue / doors / have / blue / doors",
+      "wormholeVariants": [
+        "The house with blue doors have blue doors.",
+        "The houses with blue doors has blue doors."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_039",
+    "seedId": "with_noun_phrase_have_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "파란 문이 있는 집은 어제는 파란 문이 있었다.",
+    "english": "The house with a blue door had a blue door yesterday.",
+    "words": [
+      "The",
+      "house",
+      "with",
+      "a",
+      "blue",
+      "door",
+      "had",
+      "a",
+      "blue",
+      "door",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 문이 있는 집은 어제는 파란 문이 있었다.",
+        "the / house / with / a / blue / door / had / a / blue / door / yesterday"
+      ],
+      [
+        "with a blue door",
+        "with a blue door"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a blue door"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The houses with blue doors has a blue door yesterday.",
+      "statementForm": [
+        "The house with a blue door had a blue door yesterday.",
+        "The house with a blue door had a blue door yesterday"
+      ],
+      "fragmentForm": "the / house / with / a / blue / door / had / a / blue / door / yesterday",
+      "wormholeVariants": [
+        "The houses with a blue door had a blue door yesterday.",
+        "The house with a blue door has a blue door yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_040",
+    "seedId": "with_noun_phrase_have_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "파란 문이 있는 집들은 어제는 파란 문들이 있었다.",
+    "english": "The houses with blue doors had blue doors yesterday.",
+    "words": [
+      "The",
+      "houses",
+      "with",
+      "blue",
+      "doors",
+      "had",
+      "blue",
+      "doors",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 문이 있는 집들은 어제는 파란 문들이 있었다.",
+        "the / houses / with / blue / doors / had / blue / doors / yesterday"
+      ],
+      [
+        "with blue doors",
+        "with blue doors"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with blue doors"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The house with a blue door has blue doors yesterday.",
+      "statementForm": [
+        "The houses with blue doors had blue doors yesterday.",
+        "The houses with blue doors had blue doors yesterday"
+      ],
+      "fragmentForm": "the / houses / with / blue / doors / had / blue / doors / yesterday",
+      "wormholeVariants": [
+        "The house with blue doors had blue doors yesterday.",
+        "The houses with blue doors has blue doors yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_041",
+    "seedId": "with_noun_phrase_have_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "큰 창문이 있는 방은 빛이 많이 있다.",
+    "english": "The room with large windows has a lot of light.",
+    "words": [
+      "The",
+      "room",
+      "with",
+      "large",
+      "windows",
+      "has",
+      "a",
+      "lot",
+      "of",
+      "light",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "큰 창문이 있는 방은 빛이 많이 있다.",
+        "the / room / with / large / windows / has / a / lot / of / light"
+      ],
+      [
+        "with large windows",
+        "with large windows"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with large windows"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rooms with large windows have a lot of light.",
+      "statementForm": [
+        "The room with large windows has a lot of light.",
+        "The room with large windows has a lot of light"
+      ],
+      "fragmentForm": "the / room / with / large / windows / has / a / lot / of / light",
+      "wormholeVariants": [
+        "The rooms with large windows has a lot of light.",
+        "The room with large windows have a lot of light."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_042",
+    "seedId": "with_noun_phrase_have_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "큰 창문이 있는 방들은 빛이 많이 있다.",
+    "english": "The rooms with large windows have a lot of light.",
+    "words": [
+      "The",
+      "rooms",
+      "with",
+      "large",
+      "windows",
+      "have",
+      "a",
+      "lot",
+      "of",
+      "light",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "큰 창문이 있는 방들은 빛이 많이 있다.",
+        "the / rooms / with / large / windows / have / a / lot / of / light"
+      ],
+      [
+        "with large windows",
+        "with large windows"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with large windows"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room with large windows has a lot of light.",
+      "statementForm": [
+        "The rooms with large windows have a lot of light.",
+        "The rooms with large windows have a lot of light"
+      ],
+      "fragmentForm": "the / rooms / with / large / windows / have / a / lot / of / light",
+      "wormholeVariants": [
+        "The room with large windows have a lot of light.",
+        "The rooms with large windows has a lot of light."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_043",
+    "seedId": "with_noun_phrase_have_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "큰 창문이 있는 방은 어제는 빛이 많이 있었다.",
+    "english": "The room with large windows had a lot of light yesterday.",
+    "words": [
+      "The",
+      "room",
+      "with",
+      "large",
+      "windows",
+      "had",
+      "a",
+      "lot",
+      "of",
+      "light",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "큰 창문이 있는 방은 어제는 빛이 많이 있었다.",
+        "the / room / with / large / windows / had / a / lot / of / light / yesterday"
+      ],
+      [
+        "with large windows",
+        "with large windows"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with large windows"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rooms with large windows has a lot of light yesterday.",
+      "statementForm": [
+        "The room with large windows had a lot of light yesterday.",
+        "The room with large windows had a lot of light yesterday"
+      ],
+      "fragmentForm": "the / room / with / large / windows / had / a / lot / of / light / yesterday",
+      "wormholeVariants": [
+        "The rooms with large windows had a lot of light yesterday.",
+        "The room with large windows has a lot of light yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_044",
+    "seedId": "with_noun_phrase_have_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "큰 창문이 있는 방들은 어제는 빛이 많이 있었다.",
+    "english": "The rooms with large windows had a lot of light yesterday.",
+    "words": [
+      "The",
+      "rooms",
+      "with",
+      "large",
+      "windows",
+      "had",
+      "a",
+      "lot",
+      "of",
+      "light",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "큰 창문이 있는 방들은 어제는 빛이 많이 있었다.",
+        "the / rooms / with / large / windows / had / a / lot / of / light / yesterday"
+      ],
+      [
+        "with large windows",
+        "with large windows"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with large windows"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room with large windows has a lot of light yesterday.",
+      "statementForm": [
+        "The rooms with large windows had a lot of light yesterday.",
+        "The rooms with large windows had a lot of light yesterday"
+      ],
+      "fragmentForm": "the / rooms / with / large / windows / had / a / lot / of / light / yesterday",
+      "wormholeVariants": [
+        "The room with large windows had a lot of light yesterday.",
+        "The rooms with large windows has a lot of light yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_045",
+    "seedId": "with_noun_phrase_have_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "파란 표지가 있는 책은 파란 표지를 가지고 있다.",
+    "english": "The book with a blue cover has a blue cover.",
+    "words": [
+      "The",
+      "book",
+      "with",
+      "a",
+      "blue",
+      "cover",
+      "has",
+      "a",
+      "blue",
+      "cover",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 표지가 있는 책은 파란 표지를 가지고 있다.",
+        "the / book / with / a / blue / cover / has / a / blue / cover"
+      ],
+      [
+        "with a blue cover",
+        "with a blue cover"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a blue cover"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The books with blue covers have a blue cover.",
+      "statementForm": [
+        "The book with a blue cover has a blue cover.",
+        "The book with a blue cover has a blue cover"
+      ],
+      "fragmentForm": "the / book / with / a / blue / cover / has / a / blue / cover",
+      "wormholeVariants": [
+        "The books with a blue cover has a blue cover.",
+        "The book with a blue cover have a blue cover."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_046",
+    "seedId": "with_noun_phrase_have_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "파란 표지가 있는 책들은 파란 표지를 가지고 있다.",
+    "english": "The books with blue covers have blue covers.",
+    "words": [
+      "The",
+      "books",
+      "with",
+      "blue",
+      "covers",
+      "have",
+      "blue",
+      "covers",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 표지가 있는 책들은 파란 표지를 가지고 있다.",
+        "the / books / with / blue / covers / have / blue / covers"
+      ],
+      [
+        "with blue covers",
+        "with blue covers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with blue covers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book with a blue cover has blue covers.",
+      "statementForm": [
+        "The books with blue covers have blue covers.",
+        "The books with blue covers have blue covers"
+      ],
+      "fragmentForm": "the / books / with / blue / covers / have / blue / covers",
+      "wormholeVariants": [
+        "The book with blue covers have blue covers.",
+        "The books with blue covers has blue covers."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_047",
+    "seedId": "with_noun_phrase_have_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "파란 표지가 있는 책은 어제는 파란 표지를 가지고 있었다.",
+    "english": "The book with a blue cover had a blue cover yesterday.",
+    "words": [
+      "The",
+      "book",
+      "with",
+      "a",
+      "blue",
+      "cover",
+      "had",
+      "a",
+      "blue",
+      "cover",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 표지가 있는 책은 어제는 파란 표지를 가지고 있었다.",
+        "the / book / with / a / blue / cover / had / a / blue / cover / yesterday"
+      ],
+      [
+        "with a blue cover",
+        "with a blue cover"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a blue cover"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The books with blue covers has a blue cover yesterday.",
+      "statementForm": [
+        "The book with a blue cover had a blue cover yesterday.",
+        "The book with a blue cover had a blue cover yesterday"
+      ],
+      "fragmentForm": "the / book / with / a / blue / cover / had / a / blue / cover / yesterday",
+      "wormholeVariants": [
+        "The books with a blue cover had a blue cover yesterday.",
+        "The book with a blue cover has a blue cover yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_048",
+    "seedId": "with_noun_phrase_have_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "파란 표지가 있는 책들은 어제는 파란 표지를 가지고 있었다.",
+    "english": "The books with blue covers had blue covers yesterday.",
+    "words": [
+      "The",
+      "books",
+      "with",
+      "blue",
+      "covers",
+      "had",
+      "blue",
+      "covers",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "파란 표지가 있는 책들은 어제는 파란 표지를 가지고 있었다.",
+        "the / books / with / blue / covers / had / blue / covers / yesterday"
+      ],
+      [
+        "with blue covers",
+        "with blue covers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with blue covers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book with a blue cover has blue covers yesterday.",
+      "statementForm": [
+        "The books with blue covers had blue covers yesterday.",
+        "The books with blue covers had blue covers yesterday"
+      ],
+      "fragmentForm": "the / books / with / blue / covers / had / blue / covers / yesterday",
+      "wormholeVariants": [
+        "The book with blue covers had blue covers yesterday.",
+        "The books with blue covers has blue covers yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_049",
+    "seedId": "with_noun_phrase_have_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "서랍 두 개가 있는 탁자는 서랍 두 개가 있다.",
+    "english": "The table with two drawers has two drawers.",
+    "words": [
+      "The",
+      "table",
+      "with",
+      "two",
+      "drawers",
+      "has",
+      "two",
+      "drawers",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 두 개가 있는 탁자는 서랍 두 개가 있다.",
+        "the / table / with / two / drawers / has / two / drawers"
+      ],
+      [
+        "with two drawers",
+        "with two drawers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with two drawers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tables with two drawers have two drawers.",
+      "statementForm": [
+        "The table with two drawers has two drawers.",
+        "The table with two drawers has two drawers"
+      ],
+      "fragmentForm": "the / table / with / two / drawers / has / two / drawers",
+      "wormholeVariants": [
+        "The tables with two drawers has two drawers.",
+        "The table with two drawers have two drawers."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_050",
+    "seedId": "with_noun_phrase_have_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "서랍 두 개가 있는 탁자들은 서랍 두 개가 있다.",
+    "english": "The tables with two drawers have two drawers.",
+    "words": [
+      "The",
+      "tables",
+      "with",
+      "two",
+      "drawers",
+      "have",
+      "two",
+      "drawers",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 두 개가 있는 탁자들은 서랍 두 개가 있다.",
+        "the / tables / with / two / drawers / have / two / drawers"
+      ],
+      [
+        "with two drawers",
+        "with two drawers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with two drawers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The table with two drawers has two drawers.",
+      "statementForm": [
+        "The tables with two drawers have two drawers.",
+        "The tables with two drawers have two drawers"
+      ],
+      "fragmentForm": "the / tables / with / two / drawers / have / two / drawers",
+      "wormholeVariants": [
+        "The table with two drawers have two drawers.",
+        "The tables with two drawers has two drawers."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_051",
+    "seedId": "with_noun_phrase_have_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "서랍 두 개가 있는 탁자는 어제는 서랍 두 개가 있었다.",
+    "english": "The table with two drawers had two drawers yesterday.",
+    "words": [
+      "The",
+      "table",
+      "with",
+      "two",
+      "drawers",
+      "had",
+      "two",
+      "drawers",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 두 개가 있는 탁자는 어제는 서랍 두 개가 있었다.",
+        "the / table / with / two / drawers / had / two / drawers / yesterday"
+      ],
+      [
+        "with two drawers",
+        "with two drawers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with two drawers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tables with two drawers has two drawers yesterday.",
+      "statementForm": [
+        "The table with two drawers had two drawers yesterday.",
+        "The table with two drawers had two drawers yesterday"
+      ],
+      "fragmentForm": "the / table / with / two / drawers / had / two / drawers / yesterday",
+      "wormholeVariants": [
+        "The tables with two drawers had two drawers yesterday.",
+        "The table with two drawers has two drawers yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_052",
+    "seedId": "with_noun_phrase_have_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "서랍 두 개가 있는 탁자들은 어제는 서랍 두 개가 있었다.",
+    "english": "The tables with two drawers had two drawers yesterday.",
+    "words": [
+      "The",
+      "tables",
+      "with",
+      "two",
+      "drawers",
+      "had",
+      "two",
+      "drawers",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "서랍 두 개가 있는 탁자들은 어제는 서랍 두 개가 있었다.",
+        "the / tables / with / two / drawers / had / two / drawers / yesterday"
+      ],
+      [
+        "with two drawers",
+        "with two drawers"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with two drawers"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The table with two drawers has two drawers yesterday.",
+      "statementForm": [
+        "The tables with two drawers had two drawers yesterday.",
+        "The tables with two drawers had two drawers yesterday"
+      ],
+      "fragmentForm": "the / tables / with / two / drawers / had / two / drawers / yesterday",
+      "wormholeVariants": [
+        "The table with two drawers had two drawers yesterday.",
+        "The tables with two drawers has two drawers yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_053",
+    "seedId": "with_noun_phrase_have_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "작은 간판이 있는 가게는 작은 간판이 있다.",
+    "english": "The shop with a small sign has a small sign.",
+    "words": [
+      "The",
+      "shop",
+      "with",
+      "a",
+      "small",
+      "sign",
+      "has",
+      "a",
+      "small",
+      "sign",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "작은 간판이 있는 가게는 작은 간판이 있다.",
+        "the / shop / with / a / small / sign / has / a / small / sign"
+      ],
+      [
+        "with a small sign",
+        "with a small sign"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a small sign"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shops with small signs have a small sign.",
+      "statementForm": [
+        "The shop with a small sign has a small sign.",
+        "The shop with a small sign has a small sign"
+      ],
+      "fragmentForm": "the / shop / with / a / small / sign / has / a / small / sign",
+      "wormholeVariants": [
+        "The shops with a small sign has a small sign.",
+        "The shop with a small sign have a small sign."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_054",
+    "seedId": "with_noun_phrase_have_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "작은 간판이 있는 가게들은 작은 간판이 있다.",
+    "english": "The shops with small signs have small signs.",
+    "words": [
+      "The",
+      "shops",
+      "with",
+      "small",
+      "signs",
+      "have",
+      "small",
+      "signs",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "작은 간판이 있는 가게들은 작은 간판이 있다.",
+        "the / shops / with / small / signs / have / small / signs"
+      ],
+      [
+        "with small signs",
+        "with small signs"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with small signs"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shop with a small sign has small signs.",
+      "statementForm": [
+        "The shops with small signs have small signs.",
+        "The shops with small signs have small signs"
+      ],
+      "fragmentForm": "the / shops / with / small / signs / have / small / signs",
+      "wormholeVariants": [
+        "The shop with small signs have small signs.",
+        "The shops with small signs has small signs."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_055",
+    "seedId": "with_noun_phrase_have_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "작은 간판이 있는 가게는 어제는 작은 간판이 있었다.",
+    "english": "The shop with a small sign had a small sign yesterday.",
+    "words": [
+      "The",
+      "shop",
+      "with",
+      "a",
+      "small",
+      "sign",
+      "had",
+      "a",
+      "small",
+      "sign",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "작은 간판이 있는 가게는 어제는 작은 간판이 있었다.",
+        "the / shop / with / a / small / sign / had / a / small / sign / yesterday"
+      ],
+      [
+        "with a small sign",
+        "with a small sign"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with a small sign"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shops with small signs has a small sign yesterday.",
+      "statementForm": [
+        "The shop with a small sign had a small sign yesterday.",
+        "The shop with a small sign had a small sign yesterday"
+      ],
+      "fragmentForm": "the / shop / with / a / small / sign / had / a / small / sign / yesterday",
+      "wormholeVariants": [
+        "The shops with a small sign had a small sign yesterday.",
+        "The shop with a small sign has a small sign yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_056",
+    "seedId": "with_noun_phrase_have_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "작은 간판이 있는 가게들은 어제는 작은 간판들이 있었다.",
+    "english": "The shops with small signs had small signs yesterday.",
+    "words": [
+      "The",
+      "shops",
+      "with",
+      "small",
+      "signs",
+      "had",
+      "small",
+      "signs",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "작은 간판이 있는 가게들은 어제는 작은 간판들이 있었다.",
+        "the / shops / with / small / signs / had / small / signs / yesterday"
+      ],
+      [
+        "with small signs",
+        "with small signs"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with small signs"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shop with a small sign has small signs yesterday.",
+      "statementForm": [
+        "The shops with small signs had small signs yesterday.",
+        "The shops with small signs had small signs yesterday"
+      ],
+      "fragmentForm": "the / shops / with / small / signs / had / small / signs / yesterday",
+      "wormholeVariants": [
+        "The shop with small signs had small signs yesterday.",
+        "The shops with small signs has small signs yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_057",
+    "seedId": "with_noun_phrase_have_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "잎이 무성한 나무는 무성한 잎이 있다.",
+    "english": "The tree with thick leaves has thick leaves.",
+    "words": [
+      "The",
+      "tree",
+      "with",
+      "thick",
+      "leaves",
+      "has",
+      "thick",
+      "leaves",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "잎이 무성한 나무는 무성한 잎이 있다.",
+        "the / tree / with / thick / leaves / has / thick / leaves"
+      ],
+      [
+        "with thick leaves",
+        "with thick leaves"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with thick leaves"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The trees with thick leaves have thick leaves.",
+      "statementForm": [
+        "The tree with thick leaves has thick leaves.",
+        "The tree with thick leaves has thick leaves"
+      ],
+      "fragmentForm": "the / tree / with / thick / leaves / has / thick / leaves",
+      "wormholeVariants": [
+        "The trees with thick leaves has thick leaves.",
+        "The tree with thick leaves have thick leaves."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_058",
+    "seedId": "with_noun_phrase_have_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "잎이 무성한 나무들은 무성한 잎이 있다.",
+    "english": "The trees with thick leaves have thick leaves.",
+    "words": [
+      "The",
+      "trees",
+      "with",
+      "thick",
+      "leaves",
+      "have",
+      "thick",
+      "leaves",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "잎이 무성한 나무들은 무성한 잎이 있다.",
+        "the / trees / with / thick / leaves / have / thick / leaves"
+      ],
+      [
+        "with thick leaves",
+        "with thick leaves"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with thick leaves"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tree with thick leaves has thick leaves.",
+      "statementForm": [
+        "The trees with thick leaves have thick leaves.",
+        "The trees with thick leaves have thick leaves"
+      ],
+      "fragmentForm": "the / trees / with / thick / leaves / have / thick / leaves",
+      "wormholeVariants": [
+        "The tree with thick leaves have thick leaves.",
+        "The trees with thick leaves has thick leaves."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_059",
+    "seedId": "with_noun_phrase_have_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "잎이 무성한 나무는 어제는 무성한 잎이 있었다.",
+    "english": "The tree with thick leaves had thick leaves yesterday.",
+    "words": [
+      "The",
+      "tree",
+      "with",
+      "thick",
+      "leaves",
+      "had",
+      "thick",
+      "leaves",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "잎이 무성한 나무는 어제는 무성한 잎이 있었다.",
+        "the / tree / with / thick / leaves / had / thick / leaves / yesterday"
+      ],
+      [
+        "with thick leaves",
+        "with thick leaves"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with thick leaves"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The trees with thick leaves has thick leaves yesterday.",
+      "statementForm": [
+        "The tree with thick leaves had thick leaves yesterday.",
+        "The tree with thick leaves had thick leaves yesterday"
+      ],
+      "fragmentForm": "the / tree / with / thick / leaves / had / thick / leaves / yesterday",
+      "wormholeVariants": [
+        "The trees with thick leaves had thick leaves yesterday.",
+        "The tree with thick leaves has thick leaves yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_060",
+    "seedId": "with_noun_phrase_have_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "잎이 무성한 나무들은 어제는 무성한 잎이 있었다.",
+    "english": "The trees with thick leaves had thick leaves yesterday.",
+    "words": [
+      "The",
+      "trees",
+      "with",
+      "thick",
+      "leaves",
+      "had",
+      "thick",
+      "leaves",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "잎이 무성한 나무들은 어제는 무성한 잎이 있었다.",
+        "the / trees / with / thick / leaves / had / thick / leaves / yesterday"
+      ],
+      [
+        "with thick leaves",
+        "with thick leaves"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with thick leaves"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tree with thick leaves has thick leaves yesterday.",
+      "statementForm": [
+        "The trees with thick leaves had thick leaves yesterday.",
+        "The trees with thick leaves had thick leaves yesterday"
+      ],
+      "fragmentForm": "the / trees / with / thick / leaves / had / thick / leaves / yesterday",
+      "wormholeVariants": [
+        "The tree with thick leaves had thick leaves yesterday.",
+        "The trees with thick leaves has thick leaves yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_061",
+    "seedId": "with_noun_phrase_have_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "추가 좌석이 있는 버스는 추가 좌석이 있다.",
+    "english": "The bus with extra seats has extra seats.",
+    "words": [
+      "The",
+      "bus",
+      "with",
+      "extra",
+      "seats",
+      "has",
+      "extra",
+      "seats",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "추가 좌석이 있는 버스는 추가 좌석이 있다.",
+        "the / bus / with / extra / seats / has / extra / seats"
+      ],
+      [
+        "with extra seats",
+        "with extra seats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with extra seats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The buses with extra seats have extra seats.",
+      "statementForm": [
+        "The bus with extra seats has extra seats.",
+        "The bus with extra seats has extra seats"
+      ],
+      "fragmentForm": "the / bus / with / extra / seats / has / extra / seats",
+      "wormholeVariants": [
+        "The buses with extra seats has extra seats.",
+        "The bus with extra seats have extra seats."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_062",
+    "seedId": "with_noun_phrase_have_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "추가 좌석이 있는 버스들은 추가 좌석이 있다.",
+    "english": "The buses with extra seats have extra seats.",
+    "words": [
+      "The",
+      "buses",
+      "with",
+      "extra",
+      "seats",
+      "have",
+      "extra",
+      "seats",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "추가 좌석이 있는 버스들은 추가 좌석이 있다.",
+        "the / buses / with / extra / seats / have / extra / seats"
+      ],
+      [
+        "with extra seats",
+        "with extra seats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with extra seats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "present",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus with extra seats has extra seats.",
+      "statementForm": [
+        "The buses with extra seats have extra seats.",
+        "The buses with extra seats have extra seats"
+      ],
+      "fragmentForm": "the / buses / with / extra / seats / have / extra / seats",
+      "wormholeVariants": [
+        "The bus with extra seats have extra seats.",
+        "The buses with extra seats has extra seats."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_063",
+    "seedId": "with_noun_phrase_have_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "추가 좌석이 있는 버스는 어제는 추가 좌석이 있었다.",
+    "english": "The bus with extra seats had extra seats yesterday.",
+    "words": [
+      "The",
+      "bus",
+      "with",
+      "extra",
+      "seats",
+      "had",
+      "extra",
+      "seats",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "추가 좌석이 있는 버스는 어제는 추가 좌석이 있었다.",
+        "the / bus / with / extra / seats / had / extra / seats / yesterday"
+      ],
+      [
+        "with extra seats",
+        "with extra seats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with extra seats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "singular",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The buses with extra seats has extra seats yesterday.",
+      "statementForm": [
+        "The bus with extra seats had extra seats yesterday.",
+        "The bus with extra seats had extra seats yesterday"
+      ],
+      "fragmentForm": "the / bus / with / extra / seats / had / extra / seats / yesterday",
+      "wormholeVariants": [
+        "The buses with extra seats had extra seats yesterday.",
+        "The bus with extra seats has extra seats yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_with_noun_phrase_have_064",
+    "seedId": "with_noun_phrase_have_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "with_noun_phrase_have",
+    "chapterLabelKo": "with + 명사 구문 (have 동사)",
+    "korean": "추가 좌석이 있는 버스들은 어제는 추가 좌석이 있었다.",
+    "english": "The buses with extra seats had extra seats yesterday.",
+    "words": [
+      "The",
+      "buses",
+      "with",
+      "extra",
+      "seats",
+      "had",
+      "extra",
+      "seats",
+      "yesterday",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "with_noun_phrase_have",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "추가 좌석이 있는 버스들은 어제는 추가 좌석이 있었다.",
+        "the / buses / with / extra / seats / had / extra / seats / yesterday"
+      ],
+      [
+        "with extra seats",
+        "with extra seats"
+      ],
+      [
+        "주의",
+        "with + 명사구가 앞의 명사를 꾸미는 표현"
+      ]
+    ],
+    "extraClueWordPool": [
+      "with",
+      "noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "blankTargets": [
+      "with extra seats"
+    ],
+    "tags": [
+      "with_noun_phrase",
+      "have_verb",
+      "past",
+      "plural",
+      "modifier",
+      "countable",
+      "pattern_type_with_noun_phrase_have"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus with extra seats has extra seats yesterday.",
+      "statementForm": [
+        "The buses with extra seats had extra seats yesterday.",
+        "The buses with extra seats had extra seats yesterday"
+      ],
+      "fragmentForm": "the / buses / with / extra / seats / had / extra / seats / yesterday",
+      "wormholeVariants": [
+        "The bus with extra seats had extra seats yesterday.",
+        "The buses with extra seats has extra seats yesterday."
+      ]
+    }
+  }
+]
