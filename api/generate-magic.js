@@ -125,6 +125,7 @@ const SENTENCE_BANK_FILE_MAP = {
 
   middle2: {
     wh_questions: "middle2_wh_questions.json",
+    can: "middle2_can.json",
     to_infinitive_adverbial: "middle2_to_infinitive_adverbial.json",
     to_infinitive_adjective: "middle2_to_infinitive_adjective.json",
     wh_to_infinitive: "middle2_wh_to_infinitive.json",
@@ -597,9 +598,11 @@ function resolveWorkbookType(input) {
   const focus = input.grammarFocus.chapterKey;
   const requested = input.requestedWorkbookType;
 
-  if (["guided_writing", "blank_fill", "binary_choice", "choice"].includes(requested)) {
-    return requested === "choice" ? "binary_choice" : requested;
-  }
+  const normalizedRequested = normalizeWorkbookTypeLoose(requested);
+
+if (["guided_writing", "blank_fill", "binary_choice", "choice"].includes(normalizedRequested)) {
+  return normalizedRequested;
+}
 
   if (mode === "abcstarter") return "junior_starter";
   if (mode === "vocab-builder") return input.level === "high" ? "vocab_csat" : "vocab_workbook";
@@ -658,9 +661,15 @@ function normalizeInput(body = {}) {
     ? primaryGrammarFocus
     : mergedGrammarFocus;
 
-  const requestedWorkbookType = sanitizeString(
-    body.workbookType || body.worksheetType || body.rawBody?.workbookType || ""
-  ).toLowerCase();
+  const requestedWorkbookType = normalizeWorkbookTypeLoose(sanitizeString(
+  body.workbookType ||
+  body.worksheetType ||
+  body.rawBody?.workbookType ||
+  body.rawBody?.worksheetType ||
+  body.workbook ||
+  body.type ||
+  "guided_writing"
+));
 
   const normalized = {
     userPrompt,
@@ -1211,7 +1220,13 @@ function buildDbFirstWorksheet(input) {
   const bank = bankInfo.items || [];
   if (!bank.length) return null;
 
-  const worksheetType = normalizeWorkbookTypeLoose(input.workbookType || input.requestedWorkbookType || "guided_writing");
+  const worksheetType = normalizeWorkbookTypeLoose(
+  input.requestedWorkbookType ||
+  input.rawBody?.workbookType ||
+  input.rawBody?.worksheetType ||
+  input.workbookType ||
+  "guided_writing"
+);
   const questions = [];
   const answers = [];
 
@@ -1284,6 +1299,15 @@ function buildDbFirstWorksheet(input) {
       dbSource: bankInfo.source,
       dbFilePath: bankInfo.filePath || "",
       dbItemCount: bank.length,
+      dbDebug: {
+        grade: detectGradeBucket(input),
+        chapterKey: input?.grammarFocus?.chapterKey,
+        requestedWorkbookType: input?.requestedWorkbookType,
+        workbookType: input?.workbookType,
+        dbSource: bankInfo?.source || "none",
+        dbFilePath: bankInfo?.filePath || "",
+        dbItemCount: Array.isArray(bankInfo?.items) ? bankInfo.items.length : 0,
+      },
     },
   };
 
@@ -1297,11 +1321,46 @@ function buildDbFirstWorksheet(input) {
       dbSource: bankInfo.source,
       dbFilePath: bankInfo.filePath || "",
       dbItemCount: bank.length,
+      dbDebug: {
+        grade: detectGradeBucket(input),
+        chapterKey: input?.grammarFocus?.chapterKey,
+        requestedWorkbookType: input?.requestedWorkbookType,
+        workbookType: input?.workbookType,
+        dbSource: bankInfo?.source || "none",
+        dbFilePath: bankInfo?.filePath || "",
+        dbItemCount: Array.isArray(bankInfo?.items) ? bankInfo.items.length : 0,
+      },
     }),
   });
 }
 
 
+
+function getDbDebugInfo(input = {}) {
+  const grade = detectGradeBucket(input);
+  const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
+  const bucketMap = SENTENCE_BANK_FILE_MAP[grade] || {};
+  const expectedFile = bucketMap[chapterKey] || `${grade}_${chapterKey}.json`;
+  const expectedPath = grade && chapterKey
+    ? path.join(SENTENCE_BANK_ROOT, grade, expectedFile)
+    : "";
+
+  const bankInfo = loadSentenceBank(input);
+
+  return {
+    grade,
+    chapterKey,
+    requestedWorkbookType: input?.requestedWorkbookType,
+    workbookType: input?.workbookType,
+    mode: input?.mode,
+    dbSource: bankInfo?.source || "none",
+    dbFilePath: bankInfo?.filePath || "",
+    dbItemCount: Array.isArray(bankInfo?.items) ? bankInfo.items.length : 0,
+    expectedFile,
+    expectedPath,
+    fileExists: expectedPath ? fs.existsSync(expectedPath) : false,
+  };
+}
 function shouldUseDbFirst(input = {}) {
   const rawWorkbookType = String(
     input?.requestedWorkbookType ||
@@ -1329,7 +1388,7 @@ function shouldUseDbFirst(input = {}) {
 
   const bankInfo = loadSentenceBank(input);
 
-  return supportedMode && supportedType && Array.isArray(bankInfo.items) && bankInfo.items.length > 0;
+  return supportedMode && supportedType;
 }
 
 
@@ -1451,6 +1510,10 @@ function buildResponsePayload({ input, worksheet, renderBundle, mp }) {
       mp,
       cleanRebuild: true,
       dbForced: !!worksheet?.dbForced,
+      dbFirst: !!worksheet?.meta?.dbFirst,
+      dbFallback: !!worksheet?.meta?.dbFallback,
+      dbSource: worksheet?.meta?.dbSource || "",
+      dbDebug: worksheet?.meta?.dbDebug || null,
       removedLayers: [
         's30-8R safe pair recovery',
         's30-9 guided print block lock',
@@ -1500,9 +1563,26 @@ async function handler(req, res) {
 
   try {
     const input = normalizeInput(req.body || {});
-    const worksheet = shouldUseDbFirst(input)
-      ? buildDbFirstWorksheet(input)
-      : await generateWithOpenAI(input);
+    const dbDebug = getDbDebugInfo(input);
+    const dbReadyInfo = loadSentenceBank(input);
+    const dbReady =
+      shouldUseDbFirst(input) &&
+      Array.isArray(dbReadyInfo?.items) &&
+      dbReadyInfo.items.length > 0;
+
+    let worksheet;
+
+    if (dbReady) {
+      worksheet = buildDbFirstWorksheet(input);
+    } else {
+      worksheet = await generateWithOpenAI(input);
+      worksheet.meta = Object.assign({}, worksheet.meta || {}, {
+        dbFirst: false,
+        dbFallback: true,
+        dbSource: "gpt_fallback",
+        dbDebug,
+      });
+    }
     const renderBundle = createWorkbookRenderBundle(worksheet, input) || {};
     const mp = await consumeMpIfNeeded(input);
     return json(res, 200, buildResponsePayload({ input, worksheet, renderBundle, mp }));
