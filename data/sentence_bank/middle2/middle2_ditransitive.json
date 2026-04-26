@@ -1,0 +1,6771 @@
+[
+  {
+    "id": "m2_ditransitive_001",
+    "seedId": "ditransitive_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 선물을 주었다.",
+    "english": "She gave me a present.",
+    "words": [
+      "She",
+      "gave",
+      "me",
+      "a",
+      "present",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 선물을 주었다.",
+        "She"
+      ],
+      [
+        "give + IO + DO",
+        "give + me + a present"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "gave",
+      "me",
+      "a",
+      "present",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "me",
+      "a present"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "She gave to me a present.",
+      "statementForm": [
+        "She gave me a present.",
+        "She gave me a present"
+      ],
+      "fragmentForm": "She gave me a.",
+      "wormholeVariants": [
+        "She gave to me a present.",
+        "She gave a present me.",
+        "She gave I a present."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_002",
+    "seedId": "ditransitive_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 선물을 나에게 주었다.",
+    "english": "She gave a present to me.",
+    "words": [
+      "She",
+      "gave",
+      "a",
+      "present",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 선물을 나에게 주었다.",
+        "She"
+      ],
+      [
+        "give + DO + to + IO",
+        "give + a present + to me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "gave",
+      "a",
+      "present",
+      "to",
+      "me",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "a present",
+      "to me"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "3form_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "She gave a present for me.",
+      "statementForm": [
+        "She gave a present to me.",
+        "She gave a present to me"
+      ],
+      "fragmentForm": "She gave a present.",
+      "wormholeVariants": [
+        "She gave a present for me.",
+        "She gave me to a present.",
+        "She gave to me a present."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_003",
+    "seedId": "ditransitive_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 그의 친구에게 표를 주었다.",
+    "english": "He gave his friend a ticket.",
+    "words": [
+      "He",
+      "gave",
+      "his",
+      "friend",
+      "a",
+      "ticket",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그의 친구에게 표를 주었다.",
+        "He"
+      ],
+      [
+        "give + IO + DO",
+        "give + his friend + a ticket"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "gave",
+      "his",
+      "friend",
+      "a",
+      "ticket",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "his friend",
+      "a ticket"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "He gave to his friend a ticket.",
+      "statementForm": [
+        "He gave his friend a ticket.",
+        "He gave his friend a ticket"
+      ],
+      "fragmentForm": "He gave his friend.",
+      "wormholeVariants": [
+        "He gave to his friend a ticket.",
+        "He gave a ticket his friend.",
+        "He gave his friend to a ticket."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_004",
+    "seedId": "ditransitive_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 표를 그의 친구에게 주었다.",
+    "english": "He gave a ticket to his friend.",
+    "words": [
+      "He",
+      "gave",
+      "a",
+      "ticket",
+      "to",
+      "his",
+      "friend",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 표를 그의 친구에게 주었다.",
+        "He"
+      ],
+      [
+        "give + DO + to + IO",
+        "give + a ticket + to his friend"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "gave",
+      "a",
+      "ticket",
+      "to",
+      "his",
+      "friend",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "a ticket",
+      "to his friend"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "3form_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "He gave a ticket for his friend.",
+      "statementForm": [
+        "He gave a ticket to his friend.",
+        "He gave a ticket to his friend"
+      ],
+      "fragmentForm": "He gave a ticket.",
+      "wormholeVariants": [
+        "He gave a ticket for his friend.",
+        "He gave his friend to a ticket.",
+        "He gave to his friend a ticket."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_005",
+    "seedId": "ditransitive_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 선생님은 우리에게 어려운 과제를 주었다.",
+    "english": "The teacher gave us a difficult assignment.",
+    "words": [
+      "The",
+      "teacher",
+      "gave",
+      "us",
+      "a",
+      "difficult",
+      "assignment",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 우리에게 어려운 과제를 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + us + assignment"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "gave",
+      "us",
+      "a",
+      "difficult",
+      "assignment",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "us",
+      "a difficult assignment"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher gave to us a difficult assignment.",
+      "statementForm": [
+        "The teacher gave us a difficult assignment.",
+        "The teacher gave us a difficult assignment"
+      ],
+      "fragmentForm": "The teacher gave us.",
+      "wormholeVariants": [
+        "The teacher gave to us a difficult assignment.",
+        "The teacher gave a difficult assignment us.",
+        "The teacher gave we a difficult assignment."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_006",
+    "seedId": "ditransitive_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 회사는 그 직원들에게 새로운 기회를 주었다.",
+    "english": "The company gave the workers a new chance.",
+    "words": [
+      "The",
+      "company",
+      "gave",
+      "the",
+      "workers",
+      "a",
+      "new",
+      "chance",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 회사는 그 직원들에게 새로운 기회를 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + workers + chance"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "company",
+      "gave",
+      "the",
+      "workers",
+      "a",
+      "new",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "the workers",
+      "a new chance"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "The company gave to the workers a new chance.",
+      "statementForm": [
+        "The company gave the workers a new chance.",
+        "The company gave the workers a new chance"
+      ],
+      "fragmentForm": "The company gave the.",
+      "wormholeVariants": [
+        "The company gave to the workers a new chance.",
+        "The company gave a new chance the workers.",
+        "The company gave the workers to a new chance."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_007",
+    "seedId": "ditransitive_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 소식은 우리에게 더 많은 희망을 주었다.",
+    "english": "The news gave us more hope.",
+    "words": [
+      "The",
+      "news",
+      "gave",
+      "us",
+      "more",
+      "hope",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소식은 우리에게 더 많은 희망을 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + us + hope"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "news",
+      "gave",
+      "us",
+      "more",
+      "hope",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "us",
+      "more hope"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news gave to us more hope.",
+      "statementForm": [
+        "The news gave us more hope.",
+        "The news gave us more hope"
+      ],
+      "fragmentForm": "The news gave us.",
+      "wormholeVariants": [
+        "The news gave to us more hope.",
+        "The news gave more hope us.",
+        "The news gave we more hope."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_008",
+    "seedId": "ditransitive_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 경험은 그에게 중요한 교훈을 주었다.",
+    "english": "The experience gave him an important lesson.",
+    "words": [
+      "The",
+      "experience",
+      "gave",
+      "him",
+      "an",
+      "important",
+      "lesson",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 경험은 그에게 중요한 교훈을 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + him + lesson"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "experience",
+      "gave",
+      "him",
+      "an",
+      "important",
+      "lesson",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "him",
+      "an important lesson"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The experience gave to him an important lesson.",
+      "statementForm": [
+        "The experience gave him an important lesson.",
+        "The experience gave him an important lesson"
+      ],
+      "fragmentForm": "The experience gave him.",
+      "wormholeVariants": [
+        "The experience gave to him an important lesson.",
+        "The experience gave an important lesson him.",
+        "The experience gave he an important lesson."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_009",
+    "seedId": "ditransitive_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 발표는 학생들에게 명확한 답을 주지 않았다.",
+    "english": "The presentation did not give the students a clear answer.",
+    "words": [
+      "The",
+      "presentation",
+      "did",
+      "not",
+      "give",
+      "the",
+      "students",
+      "a",
+      "clear",
+      "answer",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 발표는 학생들에게 명확한 답을 주지 않았다.",
+        "The"
+      ],
+      [
+        "give + IO + DO negative",
+        "give + students + answer"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "presentation",
+      "did",
+      "not",
+      "give",
+      "the",
+      "students",
+      "slowly"
+    ],
+    "blankTargets": [
+      "give",
+      "the students",
+      "a clear answer"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The presentation did not gave the students a clear answer.",
+      "statementForm": [
+        "The presentation did not give the students a clear answer.",
+        "The presentation did not give the students a clear answer"
+      ],
+      "fragmentForm": "The presentation did not.",
+      "wormholeVariants": [
+        "The presentation did not gave the students a clear answer.",
+        "The presentation did not give to the students a clear answer.",
+        "The presentation did not give a clear answer the students."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_010",
+    "seedId": "ditransitive_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 규칙은 우리에게 충분한 시간을 주었다.",
+    "english": "The rule gave us enough time.",
+    "words": [
+      "The",
+      "rule",
+      "gave",
+      "us",
+      "enough",
+      "time",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 우리에게 충분한 시간을 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + us + time"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "rule",
+      "gave",
+      "us",
+      "enough",
+      "time",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "us",
+      "enough time"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "enough"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule gave to us enough time.",
+      "statementForm": [
+        "The rule gave us enough time.",
+        "The rule gave us enough time"
+      ],
+      "fragmentForm": "The rule gave us.",
+      "wormholeVariants": [
+        "The rule gave to us enough time.",
+        "The rule gave enough time us.",
+        "The rule gave we enough time."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_011",
+    "seedId": "ditransitive_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "나는 그녀에게 이메일을 보냈다.",
+    "english": "I sent her an email.",
+    "words": [
+      "I",
+      "sent",
+      "her",
+      "an",
+      "email",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀에게 이메일을 보냈다.",
+        "I"
+      ],
+      [
+        "send + IO + DO",
+        "send + her + an email"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "sent",
+      "her",
+      "an",
+      "email",
+      "slowly"
+    ],
+    "blankTargets": [
+      "sent",
+      "her",
+      "an email"
+    ],
+    "tags": [
+      "ditransitive",
+      "send",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "I sent to her an email.",
+      "statementForm": [
+        "I sent her an email.",
+        "I sent her an email"
+      ],
+      "fragmentForm": "I sent her an.",
+      "wormholeVariants": [
+        "I sent to her an email.",
+        "I sent an email her.",
+        "I sent she an email."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_012",
+    "seedId": "ditransitive_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "나는 이메일을 그녀에게 보냈다.",
+    "english": "I sent an email to her.",
+    "words": [
+      "I",
+      "sent",
+      "an",
+      "email",
+      "to",
+      "her",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 이메일을 그녀에게 보냈다.",
+        "I"
+      ],
+      [
+        "send + DO + to + IO",
+        "send + an email + to her"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "I",
+      "sent",
+      "an",
+      "email",
+      "to",
+      "her",
+      "slowly"
+    ],
+    "blankTargets": [
+      "sent",
+      "an email",
+      "to her"
+    ],
+    "tags": [
+      "ditransitive",
+      "send",
+      "3form_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "I sent an email for her.",
+      "statementForm": [
+        "I sent an email to her.",
+        "I sent an email to her"
+      ],
+      "fragmentForm": "I sent an email.",
+      "wormholeVariants": [
+        "I sent an email for her.",
+        "I sent her to an email.",
+        "I sent to her an email."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_013",
+    "seedId": "ditransitive_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그들은 우리에게 초대장을 보냈다.",
+    "english": "They sent us an invitation.",
+    "words": [
+      "They",
+      "sent",
+      "us",
+      "an",
+      "invitation",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리에게 초대장을 보냈다.",
+        "They"
+      ],
+      [
+        "send + IO + DO",
+        "send + us + invitation"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "sent",
+      "us",
+      "an",
+      "invitation",
+      "slowly"
+    ],
+    "blankTargets": [
+      "sent",
+      "us",
+      "an invitation"
+    ],
+    "tags": [
+      "ditransitive",
+      "send",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "They sent to us an invitation.",
+      "statementForm": [
+        "They sent us an invitation.",
+        "They sent us an invitation"
+      ],
+      "fragmentForm": "They sent us an.",
+      "wormholeVariants": [
+        "They sent to us an invitation.",
+        "They sent an invitation us.",
+        "They sent we an invitation."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_014",
+    "seedId": "ditransitive_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그들은 초대장을 우리에게 보냈다.",
+    "english": "They sent an invitation to us.",
+    "words": [
+      "They",
+      "sent",
+      "an",
+      "invitation",
+      "to",
+      "us",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 초대장을 우리에게 보냈다.",
+        "They"
+      ],
+      [
+        "send + DO + to + IO",
+        "send + invitation + to us"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "sent",
+      "an",
+      "invitation",
+      "to",
+      "us",
+      "slowly"
+    ],
+    "blankTargets": [
+      "sent",
+      "an invitation",
+      "to us"
+    ],
+    "tags": [
+      "ditransitive",
+      "send",
+      "3form_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "They sent an invitation for us.",
+      "statementForm": [
+        "They sent an invitation to us.",
+        "They sent an invitation to us"
+      ],
+      "fragmentForm": "They sent an invitation.",
+      "wormholeVariants": [
+        "They sent an invitation for us.",
+        "They sent us to an invitation.",
+        "They sent to us an invitation."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_015",
+    "seedId": "ditransitive_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 매니저는 팀에게 긴 메시지를 보냈다.",
+    "english": "The manager sent the team a long message.",
+    "words": [
+      "The",
+      "manager",
+      "sent",
+      "the",
+      "team",
+      "a",
+      "long",
+      "message",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 매니저는 팀에게 긴 메시지를 보냈다.",
+        "The"
+      ],
+      [
+        "send + IO + DO",
+        "send + team + message"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "manager",
+      "sent",
+      "the",
+      "team",
+      "a",
+      "long",
+      "slowly"
+    ],
+    "blankTargets": [
+      "sent",
+      "the team",
+      "a long message"
+    ],
+    "tags": [
+      "ditransitive",
+      "send",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "The manager sent to the team a long message.",
+      "statementForm": [
+        "The manager sent the team a long message.",
+        "The manager sent the team a long message"
+      ],
+      "fragmentForm": "The manager sent the.",
+      "wormholeVariants": [
+        "The manager sent to the team a long message.",
+        "The manager sent a long message the team.",
+        "The manager sent the team to a long message."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_016",
+    "seedId": "ditransitive_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 학생은 선생님에게 질문을 보냈다.",
+    "english": "The student sent the teacher a question.",
+    "words": [
+      "The",
+      "student",
+      "sent",
+      "the",
+      "teacher",
+      "a",
+      "question",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생은 선생님에게 질문을 보냈다.",
+        "The"
+      ],
+      [
+        "send + IO + DO",
+        "send + teacher + question"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "student",
+      "sent",
+      "the",
+      "teacher",
+      "a",
+      "question",
+      "slowly"
+    ],
+    "blankTargets": [
+      "sent",
+      "the teacher",
+      "a question"
+    ],
+    "tags": [
+      "ditransitive",
+      "send",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student sent to the teacher a question.",
+      "statementForm": [
+        "The student sent the teacher a question.",
+        "The student sent the teacher a question"
+      ],
+      "fragmentForm": "The student sent the.",
+      "wormholeVariants": [
+        "The student sent to the teacher a question.",
+        "The student sent a question the teacher.",
+        "The student sent the teacher to a question."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_017",
+    "seedId": "ditransitive_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 기관은 우리 학교에 자세한 안내문을 보냈다.",
+    "english": "The organization sent our school detailed instructions.",
+    "words": [
+      "The",
+      "organization",
+      "sent",
+      "our",
+      "school",
+      "detailed",
+      "instructions",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 기관은 우리 학교에 자세한 안내문을 보냈다.",
+        "The"
+      ],
+      [
+        "send + IO + DO",
+        "send + our school + instructions"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "organization",
+      "sent",
+      "our",
+      "school",
+      "detailed",
+      "instructions",
+      "slowly"
+    ],
+    "blankTargets": [
+      "sent",
+      "our school",
+      "detailed instructions"
+    ],
+    "tags": [
+      "ditransitive",
+      "send",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The organization sent to our school detailed instructions.",
+      "statementForm": [
+        "The organization sent our school detailed instructions.",
+        "The organization sent our school detailed instructions"
+      ],
+      "fragmentForm": "The organization sent our.",
+      "wormholeVariants": [
+        "The organization sent to our school detailed instructions.",
+        "The organization sent detailed instructions our school.",
+        "The organization sent our school to detailed instructions."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_018",
+    "seedId": "ditransitive_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 답장을 나에게 바로 보내지 않았다.",
+    "english": "He did not send me a reply right away.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "send",
+      "me",
+      "a",
+      "reply",
+      "right",
+      "away",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 답장을 나에게 바로 보내지 않았다.",
+        "He"
+      ],
+      [
+        "send + IO + DO negative",
+        "send + me + reply"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "did",
+      "not",
+      "send",
+      "me",
+      "a",
+      "reply",
+      "slowly"
+    ],
+    "blankTargets": [
+      "send",
+      "me",
+      "a reply"
+    ],
+    "tags": [
+      "ditransitive",
+      "send",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not sent me a reply right away.",
+      "statementForm": [
+        "He did not send me a reply right away.",
+        "He did not send me a reply right away"
+      ],
+      "fragmentForm": "He did not send.",
+      "wormholeVariants": [
+        "He did not sent me a reply right away.",
+        "He did not send to me a reply right away.",
+        "He did not send a reply me right away."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_019",
+    "seedId": "ditransitive_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 사진을 보여 주었다.",
+    "english": "She showed me a picture.",
+    "words": [
+      "She",
+      "showed",
+      "me",
+      "a",
+      "picture",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 사진을 보여 주었다.",
+        "She"
+      ],
+      [
+        "show + IO + DO",
+        "show + me + picture"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "showed",
+      "me",
+      "a",
+      "picture",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "me",
+      "a picture"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "She showed to me a picture.",
+      "statementForm": [
+        "She showed me a picture.",
+        "She showed me a picture"
+      ],
+      "fragmentForm": "She showed me a.",
+      "wormholeVariants": [
+        "She showed to me a picture.",
+        "She showed a picture me.",
+        "She showed I a picture."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_020",
+    "seedId": "ditransitive_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 사진을 나에게 보여 주었다.",
+    "english": "She showed a picture to me.",
+    "words": [
+      "She",
+      "showed",
+      "a",
+      "picture",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 사진을 나에게 보여 주었다.",
+        "She"
+      ],
+      [
+        "show + DO + to + IO",
+        "show + picture + to me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "showed",
+      "a",
+      "picture",
+      "to",
+      "me",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "a picture",
+      "to me"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "3form_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "She showed a picture for me.",
+      "statementForm": [
+        "She showed a picture to me.",
+        "She showed a picture to me"
+      ],
+      "fragmentForm": "She showed a picture.",
+      "wormholeVariants": [
+        "She showed a picture for me.",
+        "She showed me to a picture.",
+        "She showed to me a picture."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_021",
+    "seedId": "ditransitive_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 학생들에게 지도를 보여 주었다.",
+    "english": "He showed the students a map.",
+    "words": [
+      "He",
+      "showed",
+      "the",
+      "students",
+      "a",
+      "map",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 학생들에게 지도를 보여 주었다.",
+        "He"
+      ],
+      [
+        "show + IO + DO",
+        "show + students + map"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "showed",
+      "the",
+      "students",
+      "a",
+      "map",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "the students",
+      "a map"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "He showed to the students a map.",
+      "statementForm": [
+        "He showed the students a map.",
+        "He showed the students a map"
+      ],
+      "fragmentForm": "He showed the students.",
+      "wormholeVariants": [
+        "He showed to the students a map.",
+        "He showed a map the students.",
+        "He showed the students to a map."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_022",
+    "seedId": "ditransitive_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 가이드는 우리에게 오래된 성을 보여 주었다.",
+    "english": "The guide showed us an old castle.",
+    "words": [
+      "The",
+      "guide",
+      "showed",
+      "us",
+      "an",
+      "old",
+      "castle",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가이드는 우리에게 오래된 성을 보여 주었다.",
+        "The"
+      ],
+      [
+        "show + IO + DO",
+        "show + us + castle"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "guide",
+      "showed",
+      "us",
+      "an",
+      "old",
+      "castle",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "us",
+      "an old castle"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "The guide showed to us an old castle.",
+      "statementForm": [
+        "The guide showed us an old castle.",
+        "The guide showed us an old castle"
+      ],
+      "fragmentForm": "The guide showed us.",
+      "wormholeVariants": [
+        "The guide showed to us an old castle.",
+        "The guide showed an old castle us.",
+        "The guide showed we an old castle."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_023",
+    "seedId": "ditransitive_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 그래프는 우리에게 중요한 변화를 보여 주었다.",
+    "english": "The graph showed us an important change.",
+    "words": [
+      "The",
+      "graph",
+      "showed",
+      "us",
+      "an",
+      "important",
+      "change",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 그래프는 우리에게 중요한 변화를 보여 주었다.",
+        "The"
+      ],
+      [
+        "show + IO + DO",
+        "show + us + change"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "graph",
+      "showed",
+      "us",
+      "an",
+      "important",
+      "change",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "us",
+      "an important change"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The graph showed to us an important change.",
+      "statementForm": [
+        "The graph showed us an important change.",
+        "The graph showed us an important change"
+      ],
+      "fragmentForm": "The graph showed us.",
+      "wormholeVariants": [
+        "The graph showed to us an important change.",
+        "The graph showed an important change us.",
+        "The graph showed we an important change."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_024",
+    "seedId": "ditransitive_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 실험은 학생들에게 새로운 가능성을 보여 주었다.",
+    "english": "The experiment showed the students a new possibility.",
+    "words": [
+      "The",
+      "experiment",
+      "showed",
+      "the",
+      "students",
+      "a",
+      "new",
+      "possibility",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 실험은 학생들에게 새로운 가능성을 보여 주었다.",
+        "The"
+      ],
+      [
+        "show + IO + DO",
+        "show + students + possibility"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "experiment",
+      "showed",
+      "the",
+      "students",
+      "a",
+      "new",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "the students",
+      "a new possibility"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The experiment showed to the students a new possibility.",
+      "statementForm": [
+        "The experiment showed the students a new possibility.",
+        "The experiment showed the students a new possibility"
+      ],
+      "fragmentForm": "The experiment showed the.",
+      "wormholeVariants": [
+        "The experiment showed to the students a new possibility.",
+        "The experiment showed a new possibility the students.",
+        "The experiment showed the students to a new possibility."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_025",
+    "seedId": "ditransitive_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 우리에게 자신의 진짜 생각을 보여 주지 않았다.",
+    "english": "He did not show us his real thoughts.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "show",
+      "us",
+      "his",
+      "real",
+      "thoughts",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리에게 자신의 진짜 생각을 보여 주지 않았다.",
+        "He"
+      ],
+      [
+        "show + IO + DO negative",
+        "show + us + thoughts"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "did",
+      "not",
+      "show",
+      "us",
+      "his",
+      "real",
+      "slowly"
+    ],
+    "blankTargets": [
+      "show",
+      "us",
+      "his real thoughts"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not showed us his real thoughts.",
+      "statementForm": [
+        "He did not show us his real thoughts.",
+        "He did not show us his real thoughts"
+      ],
+      "fragmentForm": "He did not show.",
+      "wormholeVariants": [
+        "He did not showed us his real thoughts.",
+        "He did not show to us his real thoughts.",
+        "He did not show his real thoughts us."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_026",
+    "seedId": "ditransitive_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 영상은 아이들에게 자연의 아름다움을 보여 주었다.",
+    "english": "The video showed the children the beauty of nature.",
+    "words": [
+      "The",
+      "video",
+      "showed",
+      "the",
+      "children",
+      "the",
+      "beauty",
+      "of",
+      "nature",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 영상은 아이들에게 자연의 아름다움을 보여 주었다.",
+        "The"
+      ],
+      [
+        "show + IO + DO",
+        "show + children + beauty"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "video",
+      "showed",
+      "the",
+      "children",
+      "the",
+      "beauty",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "the children",
+      "the beauty of nature"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The video showed to the children the beauty of nature.",
+      "statementForm": [
+        "The video showed the children the beauty of nature.",
+        "The video showed the children the beauty of nature"
+      ],
+      "fragmentForm": "The video showed the.",
+      "wormholeVariants": [
+        "The video showed to the children the beauty of nature.",
+        "The video showed the beauty of nature the children.",
+        "The video showed the children to the beauty of nature."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_027",
+    "seedId": "ditransitive_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "엄마는 나에게 이야기를 해 주셨다.",
+    "english": "My mom told me a story.",
+    "words": [
+      "My",
+      "mom",
+      "told",
+      "me",
+      "a",
+      "story",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "엄마는 나에게 이야기를 해 주셨다.",
+        "My"
+      ],
+      [
+        "tell + IO + DO",
+        "tell + me + story"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "My",
+      "mom",
+      "told",
+      "me",
+      "a",
+      "story",
+      "slowly"
+    ],
+    "blankTargets": [
+      "told",
+      "me",
+      "a story"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mom told to me a story.",
+      "statementForm": [
+        "My mom told me a story.",
+        "My mom told me a story"
+      ],
+      "fragmentForm": "My mom told me.",
+      "wormholeVariants": [
+        "My mom told to me a story.",
+        "My mom told a story me.",
+        "My mom told I a story."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_028",
+    "seedId": "ditransitive_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 우리에게 진실을 말했다.",
+    "english": "He told us the truth.",
+    "words": [
+      "He",
+      "told",
+      "us",
+      "the",
+      "truth",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리에게 진실을 말했다.",
+        "He"
+      ],
+      [
+        "tell + IO + DO",
+        "tell + us + truth"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "told",
+      "us",
+      "the",
+      "truth",
+      "slowly"
+    ],
+    "blankTargets": [
+      "told",
+      "us",
+      "the truth"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "He told to us the truth.",
+      "statementForm": [
+        "He told us the truth.",
+        "He told us the truth"
+      ],
+      "fragmentForm": "He told us the.",
+      "wormholeVariants": [
+        "He told to us the truth.",
+        "He told the truth us.",
+        "He told we the truth."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_029",
+    "seedId": "ditransitive_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 친구에게 비밀을 말해 주었다.",
+    "english": "She told her friend a secret.",
+    "words": [
+      "She",
+      "told",
+      "her",
+      "friend",
+      "a",
+      "secret",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 친구에게 비밀을 말해 주었다.",
+        "She"
+      ],
+      [
+        "tell + IO + DO",
+        "tell + friend + secret"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "told",
+      "her",
+      "friend",
+      "a",
+      "secret",
+      "slowly"
+    ],
+    "blankTargets": [
+      "told",
+      "her friend",
+      "a secret"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "She told to her friend a secret.",
+      "statementForm": [
+        "She told her friend a secret.",
+        "She told her friend a secret"
+      ],
+      "fragmentForm": "She told her friend.",
+      "wormholeVariants": [
+        "She told to her friend a secret.",
+        "She told a secret her friend.",
+        "She told her friend to a secret."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_030",
+    "seedId": "ditransitive_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 선생님은 학생들에게 중요한 사실을 말해 주었다.",
+    "english": "The teacher told the students an important fact.",
+    "words": [
+      "The",
+      "teacher",
+      "told",
+      "the",
+      "students",
+      "an",
+      "important",
+      "fact",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 학생들에게 중요한 사실을 말해 주었다.",
+        "The"
+      ],
+      [
+        "tell + IO + DO",
+        "tell + students + fact"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "told",
+      "the",
+      "students",
+      "an",
+      "important",
+      "slowly"
+    ],
+    "blankTargets": [
+      "told",
+      "the students",
+      "an important fact"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher told to the students an important fact.",
+      "statementForm": [
+        "The teacher told the students an important fact.",
+        "The teacher told the students an important fact"
+      ],
+      "fragmentForm": "The teacher told the.",
+      "wormholeVariants": [
+        "The teacher told to the students an important fact.",
+        "The teacher told an important fact the students.",
+        "The teacher told the students to an important fact."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_031",
+    "seedId": "ditransitive_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 뉴스는 우리에게 아무것도 말해 주지 않았다.",
+    "english": "The news did not tell us anything.",
+    "words": [
+      "The",
+      "news",
+      "did",
+      "not",
+      "tell",
+      "us",
+      "anything",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 뉴스는 우리에게 아무것도 말해 주지 않았다.",
+        "The"
+      ],
+      [
+        "tell + IO + DO negative",
+        "tell + us + anything"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "news",
+      "did",
+      "not",
+      "tell",
+      "us",
+      "anything",
+      "slowly"
+    ],
+    "blankTargets": [
+      "tell",
+      "us",
+      "anything"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news did not told us anything.",
+      "statementForm": [
+        "The news did not tell us anything.",
+        "The news did not tell us anything"
+      ],
+      "fragmentForm": "The news did not.",
+      "wormholeVariants": [
+        "The news did not told us anything.",
+        "The news did not tell to us anything.",
+        "The news did not tell anything us."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_032",
+    "seedId": "ditransitive_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 표정은 나에게 많은 것을 말해 주었다.",
+    "english": "The look told me a lot.",
+    "words": [
+      "The",
+      "look",
+      "told",
+      "me",
+      "a",
+      "lot",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 표정은 나에게 많은 것을 말해 주었다.",
+        "The"
+      ],
+      [
+        "tell + IO + DO",
+        "tell + me + a lot"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "look",
+      "told",
+      "me",
+      "a",
+      "lot",
+      "slowly"
+    ],
+    "blankTargets": [
+      "told",
+      "me",
+      "a lot"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The look told to me a lot.",
+      "statementForm": [
+        "The look told me a lot.",
+        "The look told me a lot"
+      ],
+      "fragmentForm": "The look told me.",
+      "wormholeVariants": [
+        "The look told to me a lot.",
+        "The look told a lot me.",
+        "The look told I a lot."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_033",
+    "seedId": "ditransitive_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 편지는 그녀에게 슬픈 소식을 전했다.",
+    "english": "The letter told her sad news.",
+    "words": [
+      "The",
+      "letter",
+      "told",
+      "her",
+      "sad",
+      "news",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 편지는 그녀에게 슬픈 소식을 전했다.",
+        "The"
+      ],
+      [
+        "tell + IO + DO",
+        "tell + her + sad news"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "letter",
+      "told",
+      "her",
+      "sad",
+      "news",
+      "slowly"
+    ],
+    "blankTargets": [
+      "told",
+      "her",
+      "sad news"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The letter told to her sad news.",
+      "statementForm": [
+        "The letter told her sad news.",
+        "The letter told her sad news"
+      ],
+      "fragmentForm": "The letter told her.",
+      "wormholeVariants": [
+        "The letter told to her sad news.",
+        "The letter told sad news her.",
+        "The letter told she sad news."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_034",
+    "seedId": "ditransitive_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 우리에게 그 문제의 원인을 말해 주었다.",
+    "english": "He told us the cause of the problem.",
+    "words": [
+      "He",
+      "told",
+      "us",
+      "the",
+      "cause",
+      "of",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리에게 그 문제의 원인을 말해 주었다.",
+        "He"
+      ],
+      [
+        "tell + IO + DO",
+        "tell + us + cause"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "told",
+      "us",
+      "the",
+      "cause",
+      "of",
+      "the",
+      "slowly"
+    ],
+    "blankTargets": [
+      "told",
+      "us",
+      "the cause of the problem"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "He told to us the cause of the problem.",
+      "statementForm": [
+        "He told us the cause of the problem.",
+        "He told us the cause of the problem"
+      ],
+      "fragmentForm": "He told us the.",
+      "wormholeVariants": [
+        "He told to us the cause of the problem.",
+        "He told the cause of the problem us.",
+        "He told we the cause of the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_035",
+    "seedId": "ditransitive_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 나에게 영어를 가르쳐 주었다.",
+    "english": "He taught me English.",
+    "words": [
+      "He",
+      "taught",
+      "me",
+      "English",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나에게 영어를 가르쳐 주었다.",
+        "He"
+      ],
+      [
+        "teach + IO + DO",
+        "teach + me + English"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "taught",
+      "me",
+      "English",
+      "slowly"
+    ],
+    "blankTargets": [
+      "taught",
+      "me",
+      "English"
+    ],
+    "tags": [
+      "ditransitive",
+      "teach",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "He taught to me English.",
+      "statementForm": [
+        "He taught me English.",
+        "He taught me English"
+      ],
+      "fragmentForm": "He taught me English.",
+      "wormholeVariants": [
+        "He taught to me English.",
+        "He taught English me.",
+        "He taught I English."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_036",
+    "seedId": "ditransitive_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 아이들에게 노래를 가르쳐 주었다.",
+    "english": "She taught the children a song.",
+    "words": [
+      "She",
+      "taught",
+      "the",
+      "children",
+      "a",
+      "song",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 아이들에게 노래를 가르쳐 주었다.",
+        "She"
+      ],
+      [
+        "teach + IO + DO",
+        "teach + children + song"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "taught",
+      "the",
+      "children",
+      "a",
+      "song",
+      "slowly"
+    ],
+    "blankTargets": [
+      "taught",
+      "the children",
+      "a song"
+    ],
+    "tags": [
+      "ditransitive",
+      "teach",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "She taught to the children a song.",
+      "statementForm": [
+        "She taught the children a song.",
+        "She taught the children a song"
+      ],
+      "fragmentForm": "She taught the children.",
+      "wormholeVariants": [
+        "She taught to the children a song.",
+        "She taught a song the children.",
+        "She taught the children to a song."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_037",
+    "seedId": "ditransitive_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 선생님은 우리에게 새로운 방법을 가르쳐 주었다.",
+    "english": "The teacher taught us a new method.",
+    "words": [
+      "The",
+      "teacher",
+      "taught",
+      "us",
+      "a",
+      "new",
+      "method",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 우리에게 새로운 방법을 가르쳐 주었다.",
+        "The"
+      ],
+      [
+        "teach + IO + DO",
+        "teach + us + method"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "taught",
+      "us",
+      "a",
+      "new",
+      "method",
+      "slowly"
+    ],
+    "blankTargets": [
+      "taught",
+      "us",
+      "a new method"
+    ],
+    "tags": [
+      "ditransitive",
+      "teach",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher taught to us a new method.",
+      "statementForm": [
+        "The teacher taught us a new method.",
+        "The teacher taught us a new method"
+      ],
+      "fragmentForm": "The teacher taught us.",
+      "wormholeVariants": [
+        "The teacher taught to us a new method.",
+        "The teacher taught a new method us.",
+        "The teacher taught we a new method."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_038",
+    "seedId": "ditransitive_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 경험은 그에게 인내심을 가르쳐 주었다.",
+    "english": "The experience taught him patience.",
+    "words": [
+      "The",
+      "experience",
+      "taught",
+      "him",
+      "patience",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 경험은 그에게 인내심을 가르쳐 주었다.",
+        "The"
+      ],
+      [
+        "teach + IO + DO",
+        "teach + him + patience"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "experience",
+      "taught",
+      "him",
+      "patience",
+      "slowly"
+    ],
+    "blankTargets": [
+      "taught",
+      "him",
+      "patience"
+    ],
+    "tags": [
+      "ditransitive",
+      "teach",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The experience taught to him patience.",
+      "statementForm": [
+        "The experience taught him patience.",
+        "The experience taught him patience"
+      ],
+      "fragmentForm": "The experience taught him.",
+      "wormholeVariants": [
+        "The experience taught to him patience.",
+        "The experience taught patience him.",
+        "The experience taught he patience."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_039",
+    "seedId": "ditransitive_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 실패는 우리에게 중요한 교훈을 가르쳐 주었다.",
+    "english": "The failure taught us an important lesson.",
+    "words": [
+      "The",
+      "failure",
+      "taught",
+      "us",
+      "an",
+      "important",
+      "lesson",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 실패는 우리에게 중요한 교훈을 가르쳐 주었다.",
+        "The"
+      ],
+      [
+        "teach + IO + DO",
+        "teach + us + lesson"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "failure",
+      "taught",
+      "us",
+      "an",
+      "important",
+      "lesson",
+      "slowly"
+    ],
+    "blankTargets": [
+      "taught",
+      "us",
+      "an important lesson"
+    ],
+    "tags": [
+      "ditransitive",
+      "teach",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The failure taught to us an important lesson.",
+      "statementForm": [
+        "The failure taught us an important lesson.",
+        "The failure taught us an important lesson"
+      ],
+      "fragmentForm": "The failure taught us.",
+      "wormholeVariants": [
+        "The failure taught to us an important lesson.",
+        "The failure taught an important lesson us.",
+        "The failure taught we an important lesson."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_040",
+    "seedId": "ditransitive_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 수업은 학생들에게 비판적 사고를 가르쳐 주었다.",
+    "english": "The class taught the students critical thinking.",
+    "words": [
+      "The",
+      "class",
+      "taught",
+      "the",
+      "students",
+      "critical",
+      "thinking",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 수업은 학생들에게 비판적 사고를 가르쳐 주었다.",
+        "The"
+      ],
+      [
+        "teach + IO + DO",
+        "teach + students + thinking"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "class",
+      "taught",
+      "the",
+      "students",
+      "critical",
+      "thinking",
+      "slowly"
+    ],
+    "blankTargets": [
+      "taught",
+      "the students",
+      "critical thinking"
+    ],
+    "tags": [
+      "ditransitive",
+      "teach",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The class taught to the students critical thinking.",
+      "statementForm": [
+        "The class taught the students critical thinking.",
+        "The class taught the students critical thinking"
+      ],
+      "fragmentForm": "The class taught the.",
+      "wormholeVariants": [
+        "The class taught to the students critical thinking.",
+        "The class taught critical thinking the students.",
+        "The class taught the students to critical thinking."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_041",
+    "seedId": "ditransitive_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 나에게 답을 직접 가르쳐 주지 않았다.",
+    "english": "He did not teach me the answer directly.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "teach",
+      "me",
+      "the",
+      "answer",
+      "directly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나에게 답을 직접 가르쳐 주지 않았다.",
+        "He"
+      ],
+      [
+        "teach + IO + DO negative",
+        "teach + me + answer"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "did",
+      "not",
+      "teach",
+      "me",
+      "the",
+      "answer",
+      "slowly"
+    ],
+    "blankTargets": [
+      "teach",
+      "me",
+      "the answer"
+    ],
+    "tags": [
+      "ditransitive",
+      "teach",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not taught me the answer directly.",
+      "statementForm": [
+        "He did not teach me the answer directly.",
+        "He did not teach me the answer directly"
+      ],
+      "fragmentForm": "He did not teach.",
+      "wormholeVariants": [
+        "He did not taught me the answer directly.",
+        "He did not teach to me the answer directly.",
+        "He did not teach the answer me directly."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_042",
+    "seedId": "ditransitive_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 질문을 했다.",
+    "english": "She asked me a question.",
+    "words": [
+      "She",
+      "asked",
+      "me",
+      "a",
+      "question",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 질문을 했다.",
+        "She"
+      ],
+      [
+        "ask + IO + DO",
+        "ask + me + question"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "asked",
+      "me",
+      "a",
+      "question",
+      "slowly"
+    ],
+    "blankTargets": [
+      "asked",
+      "me",
+      "a question"
+    ],
+    "tags": [
+      "ditransitive",
+      "ask",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked to me a question.",
+      "statementForm": [
+        "She asked me a question.",
+        "She asked me a question"
+      ],
+      "fragmentForm": "She asked me a.",
+      "wormholeVariants": [
+        "She asked to me a question.",
+        "She asked a question me.",
+        "She asked I a question."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_043",
+    "seedId": "ditransitive_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 선생님에게 어려운 질문을 했다.",
+    "english": "He asked the teacher a difficult question.",
+    "words": [
+      "He",
+      "asked",
+      "the",
+      "teacher",
+      "a",
+      "difficult",
+      "question",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 선생님에게 어려운 질문을 했다.",
+        "He"
+      ],
+      [
+        "ask + IO + DO",
+        "ask + teacher + question"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "asked",
+      "the",
+      "teacher",
+      "a",
+      "difficult",
+      "question",
+      "slowly"
+    ],
+    "blankTargets": [
+      "asked",
+      "the teacher",
+      "a difficult question"
+    ],
+    "tags": [
+      "ditransitive",
+      "ask",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "He asked to the teacher a difficult question.",
+      "statementForm": [
+        "He asked the teacher a difficult question.",
+        "He asked the teacher a difficult question"
+      ],
+      "fragmentForm": "He asked the teacher.",
+      "wormholeVariants": [
+        "He asked to the teacher a difficult question.",
+        "He asked a difficult question the teacher.",
+        "He asked the teacher to a difficult question."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_044",
+    "seedId": "ditransitive_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 학생은 우리에게 개인적인 질문을 하지 않았다.",
+    "english": "The student did not ask us a personal question.",
+    "words": [
+      "The",
+      "student",
+      "did",
+      "not",
+      "ask",
+      "us",
+      "a",
+      "personal",
+      "question",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생은 우리에게 개인적인 질문을 하지 않았다.",
+        "The"
+      ],
+      [
+        "ask + IO + DO negative",
+        "ask + us + question"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "student",
+      "did",
+      "not",
+      "ask",
+      "us",
+      "a",
+      "slowly"
+    ],
+    "blankTargets": [
+      "ask",
+      "us",
+      "a personal question"
+    ],
+    "tags": [
+      "ditransitive",
+      "ask",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student did not asked us a personal question.",
+      "statementForm": [
+        "The student did not ask us a personal question.",
+        "The student did not ask us a personal question"
+      ],
+      "fragmentForm": "The student did not.",
+      "wormholeVariants": [
+        "The student did not asked us a personal question.",
+        "The student did not ask to us a personal question.",
+        "The student did not ask we a personal question."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_045",
+    "seedId": "ditransitive_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 기자는 그 배우에게 직접적인 질문을 했다.",
+    "english": "The reporter asked the actor a direct question.",
+    "words": [
+      "The",
+      "reporter",
+      "asked",
+      "the",
+      "actor",
+      "a",
+      "direct",
+      "question",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 기자는 그 배우에게 직접적인 질문을 했다.",
+        "The"
+      ],
+      [
+        "ask + IO + DO",
+        "ask + actor + question"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "reporter",
+      "asked",
+      "the",
+      "actor",
+      "a",
+      "direct",
+      "slowly"
+    ],
+    "blankTargets": [
+      "asked",
+      "the actor",
+      "a direct question"
+    ],
+    "tags": [
+      "ditransitive",
+      "ask",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The reporter asked to the actor a direct question.",
+      "statementForm": [
+        "The reporter asked the actor a direct question.",
+        "The reporter asked the actor a direct question"
+      ],
+      "fragmentForm": "The reporter asked the.",
+      "wormholeVariants": [
+        "The reporter asked to the actor a direct question.",
+        "The reporter asked a direct question the actor.",
+        "The reporter asked the actor to a direct question."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_046",
+    "seedId": "ditransitive_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 아이는 나에게 이상한 부탁을 했다.",
+    "english": "The child asked me a strange favor.",
+    "words": [
+      "The",
+      "child",
+      "asked",
+      "me",
+      "a",
+      "strange",
+      "favor",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 아이는 나에게 이상한 부탁을 했다.",
+        "The"
+      ],
+      [
+        "ask + IO + DO",
+        "ask + me + favor"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "child",
+      "asked",
+      "me",
+      "a",
+      "strange",
+      "favor",
+      "slowly"
+    ],
+    "blankTargets": [
+      "asked",
+      "me",
+      "a strange favor"
+    ],
+    "tags": [
+      "ditransitive",
+      "ask",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child asked to me a strange favor.",
+      "statementForm": [
+        "The child asked me a strange favor.",
+        "The child asked me a strange favor"
+      ],
+      "fragmentForm": "The child asked me.",
+      "wormholeVariants": [
+        "The child asked to me a strange favor.",
+        "The child asked a strange favor me.",
+        "The child asked I a strange favor."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_047",
+    "seedId": "ditransitive_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "아빠는 나에게 자전거를 사 주셨다.",
+    "english": "Dad bought me a bike.",
+    "words": [
+      "Dad",
+      "bought",
+      "me",
+      "a",
+      "bike",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아빠는 나에게 자전거를 사 주셨다.",
+        "Dad"
+      ],
+      [
+        "buy + IO + DO",
+        "buy + me + bike"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Dad",
+      "bought",
+      "me",
+      "a",
+      "bike",
+      "slowly"
+    ],
+    "blankTargets": [
+      "bought",
+      "me",
+      "a bike"
+    ],
+    "tags": [
+      "ditransitive",
+      "buy",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "Dad bought to me a bike.",
+      "statementForm": [
+        "Dad bought me a bike.",
+        "Dad bought me a bike"
+      ],
+      "fragmentForm": "Dad bought me a.",
+      "wormholeVariants": [
+        "Dad bought to me a bike.",
+        "Dad bought a bike me.",
+        "Dad bought I a bike."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_048",
+    "seedId": "ditransitive_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "아빠는 자전거를 나에게 사 주셨다.",
+    "english": "Dad bought a bike for me.",
+    "words": [
+      "Dad",
+      "bought",
+      "a",
+      "bike",
+      "for",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "아빠는 자전거를 나에게 사 주셨다.",
+        "Dad"
+      ],
+      [
+        "buy + DO + for + IO",
+        "buy + bike + for me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Dad",
+      "bought",
+      "a",
+      "bike",
+      "for",
+      "me",
+      "slowly"
+    ],
+    "blankTargets": [
+      "bought",
+      "a bike",
+      "for me"
+    ],
+    "tags": [
+      "ditransitive",
+      "buy",
+      "3form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "Dad bought a bike to me.",
+      "statementForm": [
+        "Dad bought a bike for me.",
+        "Dad bought a bike for me"
+      ],
+      "fragmentForm": "Dad bought a bike.",
+      "wormholeVariants": [
+        "Dad bought a bike to me.",
+        "Dad bought me for a bike.",
+        "Dad bought for me a bike."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_049",
+    "seedId": "ditransitive_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 친구에게 작은 선물을 사 주었다.",
+    "english": "She bought her friend a small gift.",
+    "words": [
+      "She",
+      "bought",
+      "her",
+      "friend",
+      "a",
+      "small",
+      "gift",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 친구에게 작은 선물을 사 주었다.",
+        "She"
+      ],
+      [
+        "buy + IO + DO",
+        "buy + friend + gift"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "bought",
+      "her",
+      "friend",
+      "a",
+      "small",
+      "gift",
+      "slowly"
+    ],
+    "blankTargets": [
+      "bought",
+      "her friend",
+      "a small gift"
+    ],
+    "tags": [
+      "ditransitive",
+      "buy",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "She bought to her friend a small gift.",
+      "statementForm": [
+        "She bought her friend a small gift.",
+        "She bought her friend a small gift"
+      ],
+      "fragmentForm": "She bought her friend.",
+      "wormholeVariants": [
+        "She bought to her friend a small gift.",
+        "She bought a small gift her friend.",
+        "She bought her friend to a small gift."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_050",
+    "seedId": "ditransitive_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "우리는 아이들에게 따뜻한 점심을 사 주었다.",
+    "english": "We bought the children a warm lunch.",
+    "words": [
+      "We",
+      "bought",
+      "the",
+      "children",
+      "a",
+      "warm",
+      "lunch",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 아이들에게 따뜻한 점심을 사 주었다.",
+        "We"
+      ],
+      [
+        "buy + IO + DO",
+        "buy + children + lunch"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "bought",
+      "the",
+      "children",
+      "a",
+      "warm",
+      "lunch",
+      "slowly"
+    ],
+    "blankTargets": [
+      "bought",
+      "the children",
+      "a warm lunch"
+    ],
+    "tags": [
+      "ditransitive",
+      "buy",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "We bought to the children a warm lunch.",
+      "statementForm": [
+        "We bought the children a warm lunch.",
+        "We bought the children a warm lunch"
+      ],
+      "fragmentForm": "We bought the children.",
+      "wormholeVariants": [
+        "We bought to the children a warm lunch.",
+        "We bought a warm lunch the children.",
+        "We bought the children to a warm lunch."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_051",
+    "seedId": "ditransitive_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 어머니께 새 휴대전화를 사 드렸다.",
+    "english": "He bought his mother a new phone.",
+    "words": [
+      "He",
+      "bought",
+      "his",
+      "mother",
+      "a",
+      "new",
+      "phone",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 어머니께 새 휴대전화를 사 드렸다.",
+        "He"
+      ],
+      [
+        "buy + IO + DO",
+        "buy + mother + phone"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "bought",
+      "his",
+      "mother",
+      "a",
+      "new",
+      "phone",
+      "slowly"
+    ],
+    "blankTargets": [
+      "bought",
+      "his mother",
+      "a new phone"
+    ],
+    "tags": [
+      "ditransitive",
+      "buy",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "He bought to his mother a new phone.",
+      "statementForm": [
+        "He bought his mother a new phone.",
+        "He bought his mother a new phone"
+      ],
+      "fragmentForm": "He bought his mother.",
+      "wormholeVariants": [
+        "He bought to his mother a new phone.",
+        "He bought a new phone his mother.",
+        "He bought his mother to a new phone."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_052",
+    "seedId": "ditransitive_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그들은 우리 팀을 위해 더 좋은 장비를 사 주었다.",
+    "english": "They bought our team better equipment.",
+    "words": [
+      "They",
+      "bought",
+      "our",
+      "team",
+      "better",
+      "equipment",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리 팀을 위해 더 좋은 장비를 사 주었다.",
+        "They"
+      ],
+      [
+        "buy + IO + DO",
+        "buy + our team + equipment"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "bought",
+      "our",
+      "team",
+      "better",
+      "equipment",
+      "slowly"
+    ],
+    "blankTargets": [
+      "bought",
+      "our team",
+      "better equipment"
+    ],
+    "tags": [
+      "ditransitive",
+      "buy",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "They bought to our team better equipment.",
+      "statementForm": [
+        "They bought our team better equipment.",
+        "They bought our team better equipment"
+      ],
+      "fragmentForm": "They bought our team.",
+      "wormholeVariants": [
+        "They bought to our team better equipment.",
+        "They bought better equipment our team.",
+        "They bought our team to better equipment."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_053",
+    "seedId": "ditransitive_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 자신에게 너무 비싼 코트를 사지 않았다.",
+    "english": "She did not buy herself an expensive coat.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "buy",
+      "herself",
+      "an",
+      "expensive",
+      "coat",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 자신에게 너무 비싼 코트를 사지 않았다.",
+        "She"
+      ],
+      [
+        "buy + IO + DO negative",
+        "buy + herself + coat"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "did",
+      "not",
+      "buy",
+      "herself",
+      "an",
+      "expensive",
+      "slowly"
+    ],
+    "blankTargets": [
+      "buy",
+      "herself",
+      "an expensive coat"
+    ],
+    "tags": [
+      "ditransitive",
+      "buy",
+      "reflexive",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not bought herself an expensive coat.",
+      "statementForm": [
+        "She did not buy herself an expensive coat.",
+        "She did not buy herself an expensive coat"
+      ],
+      "fragmentForm": "She did not buy.",
+      "wormholeVariants": [
+        "She did not bought herself an expensive coat.",
+        "She did not buy to herself an expensive coat.",
+        "She did not buy herself to an expensive coat."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_054",
+    "seedId": "ditransitive_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "엄마는 나에게 샌드위치를 만들어 주셨다.",
+    "english": "Mom made me a sandwich.",
+    "words": [
+      "Mom",
+      "made",
+      "me",
+      "a",
+      "sandwich",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "엄마는 나에게 샌드위치를 만들어 주셨다.",
+        "Mom"
+      ],
+      [
+        "make + IO + DO",
+        "make + me + sandwich"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Mom",
+      "made",
+      "me",
+      "a",
+      "sandwich",
+      "slowly"
+    ],
+    "blankTargets": [
+      "made",
+      "me",
+      "a sandwich"
+    ],
+    "tags": [
+      "ditransitive",
+      "make",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "Mom made to me a sandwich.",
+      "statementForm": [
+        "Mom made me a sandwich.",
+        "Mom made me a sandwich"
+      ],
+      "fragmentForm": "Mom made me a.",
+      "wormholeVariants": [
+        "Mom made to me a sandwich.",
+        "Mom made a sandwich me.",
+        "Mom made I a sandwich."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_055",
+    "seedId": "ditransitive_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "엄마는 샌드위치를 나에게 만들어 주셨다.",
+    "english": "Mom made a sandwich for me.",
+    "words": [
+      "Mom",
+      "made",
+      "a",
+      "sandwich",
+      "for",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "엄마는 샌드위치를 나에게 만들어 주셨다.",
+        "Mom"
+      ],
+      [
+        "make + DO + for + IO",
+        "make + sandwich + for me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Mom",
+      "made",
+      "a",
+      "sandwich",
+      "for",
+      "me",
+      "slowly"
+    ],
+    "blankTargets": [
+      "made",
+      "a sandwich",
+      "for me"
+    ],
+    "tags": [
+      "ditransitive",
+      "make",
+      "3form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "Mom made a sandwich to me.",
+      "statementForm": [
+        "Mom made a sandwich for me.",
+        "Mom made a sandwich for me"
+      ],
+      "fragmentForm": "Mom made a sandwich.",
+      "wormholeVariants": [
+        "Mom made a sandwich to me.",
+        "Mom made me for a sandwich.",
+        "Mom made for me a sandwich."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_056",
+    "seedId": "ditransitive_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 여동생에게 종이배를 만들어 주었다.",
+    "english": "He made his sister a paper boat.",
+    "words": [
+      "He",
+      "made",
+      "his",
+      "sister",
+      "a",
+      "paper",
+      "boat",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 여동생에게 종이배를 만들어 주었다.",
+        "He"
+      ],
+      [
+        "make + IO + DO",
+        "make + sister + boat"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "made",
+      "his",
+      "sister",
+      "a",
+      "paper",
+      "boat",
+      "slowly"
+    ],
+    "blankTargets": [
+      "made",
+      "his sister",
+      "a paper boat"
+    ],
+    "tags": [
+      "ditransitive",
+      "make",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "He made to his sister a paper boat.",
+      "statementForm": [
+        "He made his sister a paper boat.",
+        "He made his sister a paper boat"
+      ],
+      "fragmentForm": "He made his sister.",
+      "wormholeVariants": [
+        "He made to his sister a paper boat.",
+        "He made a paper boat his sister.",
+        "He made his sister to a paper boat."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_057",
+    "seedId": "ditransitive_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "우리는 손님들에게 특별한 저녁을 만들어 주었다.",
+    "english": "We made the guests a special dinner.",
+    "words": [
+      "We",
+      "made",
+      "the",
+      "guests",
+      "a",
+      "special",
+      "dinner",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 손님들에게 특별한 저녁을 만들어 주었다.",
+        "We"
+      ],
+      [
+        "make + IO + DO",
+        "make + guests + dinner"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "We",
+      "made",
+      "the",
+      "guests",
+      "a",
+      "special",
+      "dinner",
+      "slowly"
+    ],
+    "blankTargets": [
+      "made",
+      "the guests",
+      "a special dinner"
+    ],
+    "tags": [
+      "ditransitive",
+      "make",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "We made to the guests a special dinner.",
+      "statementForm": [
+        "We made the guests a special dinner.",
+        "We made the guests a special dinner"
+      ],
+      "fragmentForm": "We made the guests.",
+      "wormholeVariants": [
+        "We made to the guests a special dinner.",
+        "We made a special dinner the guests.",
+        "We made the guests to a special dinner."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_058",
+    "seedId": "ditransitive_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 학생은 선생님께 손으로 만든 카드를 만들어 드렸다.",
+    "english": "The student made the teacher a handmade card.",
+    "words": [
+      "The",
+      "student",
+      "made",
+      "the",
+      "teacher",
+      "a",
+      "handmade",
+      "card",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생은 선생님께 손으로 만든 카드를 만들어 드렸다.",
+        "The"
+      ],
+      [
+        "make + IO + DO",
+        "make + teacher + card"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "student",
+      "made",
+      "the",
+      "teacher",
+      "a",
+      "handmade",
+      "slowly"
+    ],
+    "blankTargets": [
+      "made",
+      "the teacher",
+      "a handmade card"
+    ],
+    "tags": [
+      "ditransitive",
+      "make",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student made to the teacher a handmade card.",
+      "statementForm": [
+        "The student made the teacher a handmade card.",
+        "The student made the teacher a handmade card"
+      ],
+      "fragmentForm": "The student made the.",
+      "wormholeVariants": [
+        "The student made to the teacher a handmade card.",
+        "The student made a handmade card the teacher.",
+        "The student made the teacher to a handmade card."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_059",
+    "seedId": "ditransitive_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그들은 마을 사람들을 위해 새로운 다리를 만들어 주었다.",
+    "english": "They made the villagers a new bridge.",
+    "words": [
+      "They",
+      "made",
+      "the",
+      "villagers",
+      "a",
+      "new",
+      "bridge",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 마을 사람들을 위해 새로운 다리를 만들어 주었다.",
+        "They"
+      ],
+      [
+        "make + IO + DO",
+        "make + villagers + bridge"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "made",
+      "the",
+      "villagers",
+      "a",
+      "new",
+      "bridge",
+      "slowly"
+    ],
+    "blankTargets": [
+      "made",
+      "the villagers",
+      "a new bridge"
+    ],
+    "tags": [
+      "ditransitive",
+      "make",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "They made to the villagers a new bridge.",
+      "statementForm": [
+        "They made the villagers a new bridge.",
+        "They made the villagers a new bridge"
+      ],
+      "fragmentForm": "They made the villagers.",
+      "wormholeVariants": [
+        "They made to the villagers a new bridge.",
+        "They made a new bridge the villagers.",
+        "They made the villagers to a new bridge."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_060",
+    "seedId": "ditransitive_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 나에게 변명을 만들어 주지 않았다.",
+    "english": "He did not make me an excuse.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "make",
+      "me",
+      "an",
+      "excuse",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 나에게 변명을 만들어 주지 않았다.",
+        "He"
+      ],
+      [
+        "make + IO + DO negative",
+        "make + me + excuse"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "did",
+      "not",
+      "make",
+      "me",
+      "an",
+      "excuse",
+      "slowly"
+    ],
+    "blankTargets": [
+      "make",
+      "me",
+      "an excuse"
+    ],
+    "tags": [
+      "ditransitive",
+      "make",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not made me an excuse.",
+      "statementForm": [
+        "He did not make me an excuse.",
+        "He did not make me an excuse"
+      ],
+      "fragmentForm": "He did not make.",
+      "wormholeVariants": [
+        "He did not made me an excuse.",
+        "He did not make to me an excuse.",
+        "He did not make an excuse me."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_061",
+    "seedId": "ditransitive_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 물 한 잔을 가져다주었다.",
+    "english": "She got me a glass of water.",
+    "words": [
+      "She",
+      "got",
+      "me",
+      "a",
+      "glass",
+      "of",
+      "water",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 물 한 잔을 가져다주었다.",
+        "She"
+      ],
+      [
+        "get + IO + DO",
+        "get + me + water"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "got",
+      "me",
+      "a",
+      "glass",
+      "of",
+      "water",
+      "slowly"
+    ],
+    "blankTargets": [
+      "got",
+      "me",
+      "a glass of water"
+    ],
+    "tags": [
+      "ditransitive",
+      "get",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "She got to me a glass of water.",
+      "statementForm": [
+        "She got me a glass of water.",
+        "She got me a glass of water"
+      ],
+      "fragmentForm": "She got me a.",
+      "wormholeVariants": [
+        "She got to me a glass of water.",
+        "She got a glass of water me.",
+        "She got I a glass of water."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_062",
+    "seedId": "ditransitive_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 물 한 잔을 나에게 가져다주었다.",
+    "english": "She got a glass of water for me.",
+    "words": [
+      "She",
+      "got",
+      "a",
+      "glass",
+      "of",
+      "water",
+      "for",
+      "me",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 물 한 잔을 나에게 가져다주었다.",
+        "She"
+      ],
+      [
+        "get + DO + for + IO",
+        "get + water + for me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "got",
+      "a",
+      "glass",
+      "of",
+      "water",
+      "for",
+      "slowly"
+    ],
+    "blankTargets": [
+      "got",
+      "a glass of water",
+      "for me"
+    ],
+    "tags": [
+      "ditransitive",
+      "get",
+      "3form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "She got a glass of water to me.",
+      "statementForm": [
+        "She got a glass of water for me.",
+        "She got a glass of water for me"
+      ],
+      "fragmentForm": "She got a glass.",
+      "wormholeVariants": [
+        "She got a glass of water to me.",
+        "She got me for a glass of water.",
+        "She got for me a glass of water."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_063",
+    "seedId": "ditransitive_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 아이들에게 깨끗한 수건을 가져다주었다.",
+    "english": "He got the children clean towels.",
+    "words": [
+      "He",
+      "got",
+      "the",
+      "children",
+      "clean",
+      "towels",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 아이들에게 깨끗한 수건을 가져다주었다.",
+        "He"
+      ],
+      [
+        "get + IO + DO",
+        "get + children + towels"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "got",
+      "the",
+      "children",
+      "clean",
+      "towels",
+      "slowly"
+    ],
+    "blankTargets": [
+      "got",
+      "the children",
+      "clean towels"
+    ],
+    "tags": [
+      "ditransitive",
+      "get",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "He got to the children clean towels.",
+      "statementForm": [
+        "He got the children clean towels.",
+        "He got the children clean towels"
+      ],
+      "fragmentForm": "He got the children.",
+      "wormholeVariants": [
+        "He got to the children clean towels.",
+        "He got clean towels the children.",
+        "He got the children to clean towels."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_064",
+    "seedId": "ditransitive_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 직원은 우리에게 필요한 정보를 가져다주었다.",
+    "english": "The clerk got us the necessary information.",
+    "words": [
+      "The",
+      "clerk",
+      "got",
+      "us",
+      "the",
+      "necessary",
+      "information",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 직원은 우리에게 필요한 정보를 가져다주었다.",
+        "The"
+      ],
+      [
+        "get + IO + DO",
+        "get + us + information"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "clerk",
+      "got",
+      "us",
+      "the",
+      "necessary",
+      "information",
+      "slowly"
+    ],
+    "blankTargets": [
+      "got",
+      "us",
+      "the necessary information"
+    ],
+    "tags": [
+      "ditransitive",
+      "get",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The clerk got to us the necessary information.",
+      "statementForm": [
+        "The clerk got us the necessary information.",
+        "The clerk got us the necessary information"
+      ],
+      "fragmentForm": "The clerk got us.",
+      "wormholeVariants": [
+        "The clerk got to us the necessary information.",
+        "The clerk got the necessary information us.",
+        "The clerk got we the necessary information."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_065",
+    "seedId": "ditransitive_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 그녀에게 더 좋은 자리를 잡아 주었다.",
+    "english": "He got her a better seat.",
+    "words": [
+      "He",
+      "got",
+      "her",
+      "a",
+      "better",
+      "seat",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀에게 더 좋은 자리를 잡아 주었다.",
+        "He"
+      ],
+      [
+        "get + IO + DO",
+        "get + her + seat"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "got",
+      "her",
+      "a",
+      "better",
+      "seat",
+      "slowly"
+    ],
+    "blankTargets": [
+      "got",
+      "her",
+      "a better seat"
+    ],
+    "tags": [
+      "ditransitive",
+      "get",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "He got to her a better seat.",
+      "statementForm": [
+        "He got her a better seat.",
+        "He got her a better seat"
+      ],
+      "fragmentForm": "He got her a.",
+      "wormholeVariants": [
+        "He got to her a better seat.",
+        "He got a better seat her.",
+        "He got she a better seat."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_066",
+    "seedId": "ditransitive_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그들은 우리에게 충분한 시간을 마련해 주지 않았다.",
+    "english": "They did not get us enough time.",
+    "words": [
+      "They",
+      "did",
+      "not",
+      "get",
+      "us",
+      "enough",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리에게 충분한 시간을 마련해 주지 않았다.",
+        "They"
+      ],
+      [
+        "get + IO + DO negative",
+        "get + us + time"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "did",
+      "not",
+      "get",
+      "us",
+      "enough",
+      "time",
+      "slowly"
+    ],
+    "blankTargets": [
+      "get",
+      "us",
+      "enough time"
+    ],
+    "tags": [
+      "ditransitive",
+      "get",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They did not got us enough time.",
+      "statementForm": [
+        "They did not get us enough time.",
+        "They did not get us enough time"
+      ],
+      "fragmentForm": "They did not get.",
+      "wormholeVariants": [
+        "They did not got us enough time.",
+        "They did not get to us enough time.",
+        "They did not get enough time us."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_067",
+    "seedId": "ditransitive_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "할머니는 우리에게 맛있는 수프를 끓여 주셨다.",
+    "english": "Grandma cooked us delicious soup.",
+    "words": [
+      "Grandma",
+      "cooked",
+      "us",
+      "delicious",
+      "soup",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "할머니는 우리에게 맛있는 수프를 끓여 주셨다.",
+        "Grandma"
+      ],
+      [
+        "cook + IO + DO",
+        "cook + us + soup"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "Grandma",
+      "cooked",
+      "us",
+      "delicious",
+      "soup",
+      "slowly"
+    ],
+    "blankTargets": [
+      "cooked",
+      "us",
+      "delicious soup"
+    ],
+    "tags": [
+      "ditransitive",
+      "cook",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "Grandma cooked to us delicious soup.",
+      "statementForm": [
+        "Grandma cooked us delicious soup.",
+        "Grandma cooked us delicious soup"
+      ],
+      "fragmentForm": "Grandma cooked us delicious.",
+      "wormholeVariants": [
+        "Grandma cooked to us delicious soup.",
+        "Grandma cooked delicious soup us.",
+        "Grandma cooked we delicious soup."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_068",
+    "seedId": "ditransitive_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 친구들에게 쿠키를 구워 주었다.",
+    "english": "He baked his friends cookies.",
+    "words": [
+      "He",
+      "baked",
+      "his",
+      "friends",
+      "cookies",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 친구들에게 쿠키를 구워 주었다.",
+        "He"
+      ],
+      [
+        "bake + IO + DO",
+        "bake + friends + cookies"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "baked",
+      "his",
+      "friends",
+      "cookies",
+      "slowly"
+    ],
+    "blankTargets": [
+      "baked",
+      "his friends",
+      "cookies"
+    ],
+    "tags": [
+      "ditransitive",
+      "bake",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "He baked to his friends cookies.",
+      "statementForm": [
+        "He baked his friends cookies.",
+        "He baked his friends cookies"
+      ],
+      "fragmentForm": "He baked his friends.",
+      "wormholeVariants": [
+        "He baked to his friends cookies.",
+        "He baked cookies his friends.",
+        "He baked his friends to cookies."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_069",
+    "seedId": "ditransitive_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 좋은 자리를 찾아 주었다.",
+    "english": "She found me a good seat.",
+    "words": [
+      "She",
+      "found",
+      "me",
+      "a",
+      "good",
+      "seat",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 좋은 자리를 찾아 주었다.",
+        "She"
+      ],
+      [
+        "find + IO + DO",
+        "find + me + seat"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "found",
+      "me",
+      "a",
+      "good",
+      "seat",
+      "slowly"
+    ],
+    "blankTargets": [
+      "found",
+      "me",
+      "a good seat"
+    ],
+    "tags": [
+      "ditransitive",
+      "find",
+      "4form_for"
+    ],
+    "distractorSeeds": {
+      "auxError": "She found to me a good seat.",
+      "statementForm": [
+        "She found me a good seat.",
+        "She found me a good seat"
+      ],
+      "fragmentForm": "She found me a.",
+      "wormholeVariants": [
+        "She found to me a good seat.",
+        "She found a good seat me.",
+        "She found I a good seat."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_070",
+    "seedId": "ditransitive_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 우리에게 쉬운 해결책을 찾아 주었다.",
+    "english": "He found us an easy solution.",
+    "words": [
+      "He",
+      "found",
+      "us",
+      "an",
+      "easy",
+      "solution",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리에게 쉬운 해결책을 찾아 주었다.",
+        "He"
+      ],
+      [
+        "find + IO + DO",
+        "find + us + solution"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "found",
+      "us",
+      "an",
+      "easy",
+      "solution",
+      "slowly"
+    ],
+    "blankTargets": [
+      "found",
+      "us",
+      "an easy solution"
+    ],
+    "tags": [
+      "ditransitive",
+      "find",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "He found to us an easy solution.",
+      "statementForm": [
+        "He found us an easy solution.",
+        "He found us an easy solution"
+      ],
+      "fragmentForm": "He found us an.",
+      "wormholeVariants": [
+        "He found to us an easy solution.",
+        "He found an easy solution us.",
+        "He found we an easy solution."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_071",
+    "seedId": "ditransitive_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 결정은 우리에게 많은 시간을 절약해 주었다.",
+    "english": "The decision saved us a lot of time.",
+    "words": [
+      "The",
+      "decision",
+      "saved",
+      "us",
+      "a",
+      "lot",
+      "of",
+      "time",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결정은 우리에게 많은 시간을 절약해 주었다.",
+        "The"
+      ],
+      [
+        "save + IO + DO",
+        "save + us + time"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "decision",
+      "saved",
+      "us",
+      "a",
+      "lot",
+      "of",
+      "slowly"
+    ],
+    "blankTargets": [
+      "saved",
+      "us",
+      "a lot of time"
+    ],
+    "tags": [
+      "ditransitive",
+      "save",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The decision saved to us a lot of time.",
+      "statementForm": [
+        "The decision saved us a lot of time.",
+        "The decision saved us a lot of time"
+      ],
+      "fragmentForm": "The decision saved us.",
+      "wormholeVariants": [
+        "The decision saved to us a lot of time.",
+        "The decision saved a lot of time us.",
+        "The decision saved we a lot of time."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_072",
+    "seedId": "ditransitive_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 앱은 사용자들에게 불필요한 노력을 덜어 주었다.",
+    "english": "The app saved users unnecessary effort.",
+    "words": [
+      "The",
+      "app",
+      "saved",
+      "users",
+      "unnecessary",
+      "effort",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 앱은 사용자들에게 불필요한 노력을 덜어 주었다.",
+        "The"
+      ],
+      [
+        "save + IO + DO",
+        "save + users + effort"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "app",
+      "saved",
+      "users",
+      "unnecessary",
+      "effort",
+      "slowly"
+    ],
+    "blankTargets": [
+      "saved",
+      "users",
+      "unnecessary effort"
+    ],
+    "tags": [
+      "ditransitive",
+      "save",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The app saved to users unnecessary effort.",
+      "statementForm": [
+        "The app saved users unnecessary effort.",
+        "The app saved users unnecessary effort"
+      ],
+      "fragmentForm": "The app saved users.",
+      "wormholeVariants": [
+        "The app saved to users unnecessary effort.",
+        "The app saved unnecessary effort users.",
+        "The app saved users to unnecessary effort."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_073",
+    "seedId": "ditransitive_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 실수는 회사에 많은 돈을 잃게 했다.",
+    "english": "The mistake cost the company a lot of money.",
+    "words": [
+      "The",
+      "mistake",
+      "cost",
+      "the",
+      "company",
+      "a",
+      "lot",
+      "of",
+      "money",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 실수는 회사에 많은 돈을 잃게 했다.",
+        "The"
+      ],
+      [
+        "cost + IO + DO",
+        "cost + company + money"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "mistake",
+      "cost",
+      "the",
+      "company",
+      "a",
+      "lot",
+      "slowly"
+    ],
+    "blankTargets": [
+      "cost",
+      "the company",
+      "a lot of money"
+    ],
+    "tags": [
+      "ditransitive",
+      "cost",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The mistake cost to the company a lot of money.",
+      "statementForm": [
+        "The mistake cost the company a lot of money.",
+        "The mistake cost the company a lot of money"
+      ],
+      "fragmentForm": "The mistake cost the.",
+      "wormholeVariants": [
+        "The mistake cost to the company a lot of money.",
+        "The mistake cost a lot of money the company.",
+        "The mistake costed the company a lot of money."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_074",
+    "seedId": "ditransitive_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 사고는 그에게 몇 주의 시간을 빼앗았다.",
+    "english": "The accident cost him several weeks.",
+    "words": [
+      "The",
+      "accident",
+      "cost",
+      "him",
+      "several",
+      "weeks",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 사고는 그에게 몇 주의 시간을 빼앗았다.",
+        "The"
+      ],
+      [
+        "cost + IO + DO",
+        "cost + him + weeks"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "accident",
+      "cost",
+      "him",
+      "several",
+      "weeks",
+      "slowly"
+    ],
+    "blankTargets": [
+      "cost",
+      "him",
+      "several weeks"
+    ],
+    "tags": [
+      "ditransitive",
+      "cost",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The accident cost to him several weeks.",
+      "statementForm": [
+        "The accident cost him several weeks.",
+        "The accident cost him several weeks"
+      ],
+      "fragmentForm": "The accident cost him.",
+      "wormholeVariants": [
+        "The accident cost to him several weeks.",
+        "The accident cost several weeks him.",
+        "The accident costed him several weeks."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_075",
+    "seedId": "ditransitive_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 그 책을 나에게 빌려주었다.",
+    "english": "She lent the book to me.",
+    "words": [
+      "She",
+      "lent",
+      "the",
+      "book",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 책을 나에게 빌려주었다.",
+        "She"
+      ],
+      [
+        "lend + DO + to + IO",
+        "lend + book + to me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "lent",
+      "the",
+      "book",
+      "to",
+      "me",
+      "slowly"
+    ],
+    "blankTargets": [
+      "lent",
+      "the book",
+      "to me"
+    ],
+    "tags": [
+      "ditransitive",
+      "lend",
+      "3form_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "She lent the book for me.",
+      "statementForm": [
+        "She lent the book to me.",
+        "She lent the book to me"
+      ],
+      "fragmentForm": "She lent the book.",
+      "wormholeVariants": [
+        "She lent the book for me.",
+        "She lent me to the book.",
+        "She lent to me the book."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_076",
+    "seedId": "ditransitive_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 그 책을 빌려주었다.",
+    "english": "She lent me the book.",
+    "words": [
+      "She",
+      "lent",
+      "me",
+      "the",
+      "book",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 그 책을 빌려주었다.",
+        "She"
+      ],
+      [
+        "lend + IO + DO",
+        "lend + me + book"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "lent",
+      "me",
+      "the",
+      "book",
+      "slowly"
+    ],
+    "blankTargets": [
+      "lent",
+      "me",
+      "the book"
+    ],
+    "tags": [
+      "ditransitive",
+      "lend",
+      "4form"
+    ],
+    "distractorSeeds": {
+      "auxError": "She lent to me the book.",
+      "statementForm": [
+        "She lent me the book.",
+        "She lent me the book"
+      ],
+      "fragmentForm": "She lent me the.",
+      "wormholeVariants": [
+        "She lent to me the book.",
+        "She lent the book me.",
+        "She lent I the book."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_077",
+    "seedId": "ditransitive_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 카메라를 형에게 빌려주었다.",
+    "english": "He lent the camera to his brother.",
+    "words": [
+      "He",
+      "lent",
+      "the",
+      "camera",
+      "to",
+      "his",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 카메라를 형에게 빌려주었다.",
+        "He"
+      ],
+      [
+        "lend + DO + to + IO",
+        "lend + camera + to brother"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "lent",
+      "the",
+      "camera",
+      "to",
+      "his",
+      "brother",
+      "slowly"
+    ],
+    "blankTargets": [
+      "lent",
+      "the camera",
+      "to his brother"
+    ],
+    "tags": [
+      "ditransitive",
+      "lend",
+      "3form_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "He lent the camera for his brother.",
+      "statementForm": [
+        "He lent the camera to his brother.",
+        "He lent the camera to his brother"
+      ],
+      "fragmentForm": "He lent the camera.",
+      "wormholeVariants": [
+        "He lent the camera for his brother.",
+        "He lent his brother to the camera.",
+        "He lent to his brother the camera."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_078",
+    "seedId": "ditransitive_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 은행은 그 회사에 많은 돈을 빌려주었다.",
+    "english": "The bank lent the company a lot of money.",
+    "words": [
+      "The",
+      "bank",
+      "lent",
+      "the",
+      "company",
+      "a",
+      "lot",
+      "of",
+      "money",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 은행은 그 회사에 많은 돈을 빌려주었다.",
+        "The"
+      ],
+      [
+        "lend + IO + DO",
+        "lend + company + money"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "bank",
+      "lent",
+      "the",
+      "company",
+      "a",
+      "lot",
+      "slowly"
+    ],
+    "blankTargets": [
+      "lent",
+      "the company",
+      "a lot of money"
+    ],
+    "tags": [
+      "ditransitive",
+      "lend",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bank lent to the company a lot of money.",
+      "statementForm": [
+        "The bank lent the company a lot of money.",
+        "The bank lent the company a lot of money"
+      ],
+      "fragmentForm": "The bank lent the.",
+      "wormholeVariants": [
+        "The bank lent to the company a lot of money.",
+        "The bank lent a lot of money the company.",
+        "The bank lent the company to a lot of money."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_079",
+    "seedId": "ditransitive_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 그 문제를 설명해 주었다.",
+    "english": "She explained the problem to me.",
+    "words": [
+      "She",
+      "explained",
+      "the",
+      "problem",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 그 문제를 설명해 주었다.",
+        "She"
+      ],
+      [
+        "explain + DO + to + IO",
+        "explain + problem + to me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "explained",
+      "the",
+      "problem",
+      "to",
+      "me",
+      "slowly"
+    ],
+    "blankTargets": [
+      "explained",
+      "the problem",
+      "to me"
+    ],
+    "tags": [
+      "ditransitive",
+      "explain",
+      "to_only"
+    ],
+    "distractorSeeds": {
+      "auxError": "She explained me the problem.",
+      "statementForm": [
+        "She explained the problem to me.",
+        "She explained the problem to me"
+      ],
+      "fragmentForm": "She explained the problem.",
+      "wormholeVariants": [
+        "She explained me the problem.",
+        "She explained the problem for me.",
+        "She explained to me the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_080",
+    "seedId": "ditransitive_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 규칙을 학생들에게 설명해 주었다.",
+    "english": "He explained the rule to the students.",
+    "words": [
+      "He",
+      "explained",
+      "the",
+      "rule",
+      "to",
+      "the",
+      "students",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 규칙을 학생들에게 설명해 주었다.",
+        "He"
+      ],
+      [
+        "explain + DO + to + IO",
+        "explain + rule + to students"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "explained",
+      "the",
+      "rule",
+      "to",
+      "the",
+      "students",
+      "slowly"
+    ],
+    "blankTargets": [
+      "explained",
+      "the rule",
+      "to the students"
+    ],
+    "tags": [
+      "ditransitive",
+      "explain",
+      "to_only"
+    ],
+    "distractorSeeds": {
+      "auxError": "He explained the students the rule.",
+      "statementForm": [
+        "He explained the rule to the students.",
+        "He explained the rule to the students"
+      ],
+      "fragmentForm": "He explained the rule.",
+      "wormholeVariants": [
+        "He explained the students the rule.",
+        "He explained the rule for the students.",
+        "He explained to the students the rule."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_081",
+    "seedId": "ditransitive_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 그 아이디어를 제안했다.",
+    "english": "She suggested the idea to me.",
+    "words": [
+      "She",
+      "suggested",
+      "the",
+      "idea",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 그 아이디어를 제안했다.",
+        "She"
+      ],
+      [
+        "suggest + DO + to + IO",
+        "suggest + idea + to me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "suggested",
+      "the",
+      "idea",
+      "to",
+      "me",
+      "slowly"
+    ],
+    "blankTargets": [
+      "suggested",
+      "the idea",
+      "to me"
+    ],
+    "tags": [
+      "ditransitive",
+      "suggest",
+      "to_only"
+    ],
+    "distractorSeeds": {
+      "auxError": "She suggested me the idea.",
+      "statementForm": [
+        "She suggested the idea to me.",
+        "She suggested the idea to me"
+      ],
+      "fragmentForm": "She suggested the idea.",
+      "wormholeVariants": [
+        "She suggested me the idea.",
+        "She suggested the idea for me.",
+        "She suggested to me the idea."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_082",
+    "seedId": "ditransitive_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 그 계획을 팀에게 제안했다.",
+    "english": "He suggested the plan to the team.",
+    "words": [
+      "He",
+      "suggested",
+      "the",
+      "plan",
+      "to",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 계획을 팀에게 제안했다.",
+        "He"
+      ],
+      [
+        "suggest + DO + to + IO",
+        "suggest + plan + to team"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "suggested",
+      "the",
+      "plan",
+      "to",
+      "the",
+      "team",
+      "slowly"
+    ],
+    "blankTargets": [
+      "suggested",
+      "the plan",
+      "to the team"
+    ],
+    "tags": [
+      "ditransitive",
+      "suggest",
+      "to_only"
+    ],
+    "distractorSeeds": {
+      "auxError": "He suggested the team the plan.",
+      "statementForm": [
+        "He suggested the plan to the team.",
+        "He suggested the plan to the team"
+      ],
+      "fragmentForm": "He suggested the plan.",
+      "wormholeVariants": [
+        "He suggested the team the plan.",
+        "He suggested the plan for the team.",
+        "He suggested to the team the plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_083",
+    "seedId": "ditransitive_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그녀는 나에게 그 문제를 설명하지 않았다.",
+    "english": "She did not explain the problem to me.",
+    "words": [
+      "She",
+      "did",
+      "not",
+      "explain",
+      "the",
+      "problem",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 나에게 그 문제를 설명하지 않았다.",
+        "She"
+      ],
+      [
+        "explain + DO + to + IO negative",
+        "explain + problem + to me"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "She",
+      "did",
+      "not",
+      "explain",
+      "the",
+      "problem",
+      "to",
+      "slowly"
+    ],
+    "blankTargets": [
+      "explain",
+      "the problem",
+      "to me"
+    ],
+    "tags": [
+      "ditransitive",
+      "explain",
+      "to_only",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She did not explained the problem to me.",
+      "statementForm": [
+        "She did not explain the problem to me.",
+        "She did not explain the problem to me"
+      ],
+      "fragmentForm": "She did not explain.",
+      "wormholeVariants": [
+        "She did not explained the problem to me.",
+        "She did not explain me the problem.",
+        "She did not explain the problem for me."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_084",
+    "seedId": "ditransitive_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그들은 그 해결책을 우리에게 제안하지 않았다.",
+    "english": "They did not suggest the solution to us.",
+    "words": [
+      "They",
+      "did",
+      "not",
+      "suggest",
+      "the",
+      "solution",
+      "to",
+      "us",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 해결책을 우리에게 제안하지 않았다.",
+        "They"
+      ],
+      [
+        "suggest + DO + to + IO negative",
+        "suggest + solution + to us"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "They",
+      "did",
+      "not",
+      "suggest",
+      "the",
+      "solution",
+      "to",
+      "slowly"
+    ],
+    "blankTargets": [
+      "suggest",
+      "the solution",
+      "to us"
+    ],
+    "tags": [
+      "ditransitive",
+      "suggest",
+      "to_only",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They did not suggested the solution to us.",
+      "statementForm": [
+        "They did not suggest the solution to us.",
+        "They did not suggest the solution to us"
+      ],
+      "fragmentForm": "They did not suggest.",
+      "wormholeVariants": [
+        "They did not suggested the solution to us.",
+        "They did not suggest us the solution.",
+        "They did not suggest the solution for us."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_085",
+    "seedId": "ditransitive_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 활동은 아이들에게 자신감을 주었다.",
+    "english": "The activity gave the children confidence.",
+    "words": [
+      "The",
+      "activity",
+      "gave",
+      "the",
+      "children",
+      "confidence",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 활동은 아이들에게 자신감을 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + children + confidence"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "activity",
+      "gave",
+      "the",
+      "children",
+      "confidence",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "the children",
+      "confidence"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The activity gave to the children confidence.",
+      "statementForm": [
+        "The activity gave the children confidence.",
+        "The activity gave the children confidence"
+      ],
+      "fragmentForm": "The activity gave the.",
+      "wormholeVariants": [
+        "The activity gave to the children confidence.",
+        "The activity gave confidence the children.",
+        "The activity gave the children to confidence."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_086",
+    "seedId": "ditransitive_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 책은 독자들에게 새로운 관점을 보여 주었다.",
+    "english": "The book showed readers a new perspective.",
+    "words": [
+      "The",
+      "book",
+      "showed",
+      "readers",
+      "a",
+      "new",
+      "perspective",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 책은 독자들에게 새로운 관점을 보여 주었다.",
+        "The"
+      ],
+      [
+        "show + IO + DO",
+        "show + readers + perspective"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "book",
+      "showed",
+      "readers",
+      "a",
+      "new",
+      "perspective",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "readers",
+      "a new perspective"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book showed to readers a new perspective.",
+      "statementForm": [
+        "The book showed readers a new perspective.",
+        "The book showed readers a new perspective"
+      ],
+      "fragmentForm": "The book showed readers.",
+      "wormholeVariants": [
+        "The book showed to readers a new perspective.",
+        "The book showed a new perspective readers.",
+        "The book showed readers to a new perspective."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_087",
+    "seedId": "ditransitive_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 조언은 나에게 더 쉬운 길을 보여 주었다.",
+    "english": "The advice showed me an easier way.",
+    "words": [
+      "The",
+      "advice",
+      "showed",
+      "me",
+      "an",
+      "easier",
+      "way",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 조언은 나에게 더 쉬운 길을 보여 주었다.",
+        "The"
+      ],
+      [
+        "show + IO + DO",
+        "show + me + way"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "advice",
+      "showed",
+      "me",
+      "an",
+      "easier",
+      "way",
+      "slowly"
+    ],
+    "blankTargets": [
+      "showed",
+      "me",
+      "an easier way"
+    ],
+    "tags": [
+      "ditransitive",
+      "show",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The advice showed to me an easier way.",
+      "statementForm": [
+        "The advice showed me an easier way.",
+        "The advice showed me an easier way"
+      ],
+      "fragmentForm": "The advice showed me.",
+      "wormholeVariants": [
+        "The advice showed to me an easier way.",
+        "The advice showed an easier way me.",
+        "The advice showed I an easier way."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_088",
+    "seedId": "ditransitive_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 대화는 우리에게 문제의 핵심을 말해 주었다.",
+    "english": "The conversation told us the heart of the problem.",
+    "words": [
+      "The",
+      "conversation",
+      "told",
+      "us",
+      "the",
+      "heart",
+      "of",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 대화는 우리에게 문제의 핵심을 말해 주었다.",
+        "The"
+      ],
+      [
+        "tell + IO + DO",
+        "tell + us + heart"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "conversation",
+      "told",
+      "us",
+      "the",
+      "heart",
+      "of",
+      "slowly"
+    ],
+    "blankTargets": [
+      "told",
+      "us",
+      "the heart of the problem"
+    ],
+    "tags": [
+      "ditransitive",
+      "tell",
+      "abstract_object"
+    ],
+    "distractorSeeds": {
+      "auxError": "The conversation told to us the heart of the problem.",
+      "statementForm": [
+        "The conversation told us the heart of the problem.",
+        "The conversation told us the heart of the problem"
+      ],
+      "fragmentForm": "The conversation told us.",
+      "wormholeVariants": [
+        "The conversation told to us the heart of the problem.",
+        "The conversation told the heart of the problem us.",
+        "The conversation told we the heart of the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_089",
+    "seedId": "ditransitive_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 훈련은 선수들에게 더 강한 집중력을 길러 주었다.",
+    "english": "The training gave the players stronger focus.",
+    "words": [
+      "The",
+      "training",
+      "gave",
+      "the",
+      "players",
+      "stronger",
+      "focus",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 훈련은 선수들에게 더 강한 집중력을 길러 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + players + focus"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "training",
+      "gave",
+      "the",
+      "players",
+      "stronger",
+      "focus",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "the players",
+      "stronger focus"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The training gave to the players stronger focus.",
+      "statementForm": [
+        "The training gave the players stronger focus.",
+        "The training gave the players stronger focus"
+      ],
+      "fragmentForm": "The training gave the.",
+      "wormholeVariants": [
+        "The training gave to the players stronger focus.",
+        "The training gave stronger focus the players.",
+        "The training gave the players to stronger focus."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_090",
+    "seedId": "ditransitive_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 문제는 우리에게 좋은 토론거리를 주었다.",
+    "english": "The issue gave us a good topic for discussion.",
+    "words": [
+      "The",
+      "issue",
+      "gave",
+      "us",
+      "a",
+      "good",
+      "topic",
+      "for",
+      "discussion",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 우리에게 좋은 토론거리를 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + us + topic"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "issue",
+      "gave",
+      "us",
+      "a",
+      "good",
+      "topic",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "us",
+      "a good topic"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The issue gave to us a good topic for discussion.",
+      "statementForm": [
+        "The issue gave us a good topic for discussion.",
+        "The issue gave us a good topic for discussion"
+      ],
+      "fragmentForm": "The issue gave us.",
+      "wormholeVariants": [
+        "The issue gave to us a good topic for discussion.",
+        "The issue gave a good topic us for discussion.",
+        "The issue gave we a good topic for discussion."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_091",
+    "seedId": "ditransitive_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 앱은 학생들에게 빠른 피드백을 제공했다.",
+    "english": "The app gave students quick feedback.",
+    "words": [
+      "The",
+      "app",
+      "gave",
+      "students",
+      "quick",
+      "feedback",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 앱은 학생들에게 빠른 피드백을 제공했다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + students + feedback"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "app",
+      "gave",
+      "students",
+      "quick",
+      "feedback",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "students",
+      "quick feedback"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "edtech"
+    ],
+    "distractorSeeds": {
+      "auxError": "The app gave to students quick feedback.",
+      "statementForm": [
+        "The app gave students quick feedback.",
+        "The app gave students quick feedback"
+      ],
+      "fragmentForm": "The app gave students.",
+      "wormholeVariants": [
+        "The app gave to students quick feedback.",
+        "The app gave quick feedback students.",
+        "The app gave students to quick feedback."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_092",
+    "seedId": "ditransitive_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 경험은 나에게 더 넓은 시야를 주었다.",
+    "english": "The experience gave me a wider view.",
+    "words": [
+      "The",
+      "experience",
+      "gave",
+      "me",
+      "a",
+      "wider",
+      "view",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 경험은 나에게 더 넓은 시야를 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + me + view"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "experience",
+      "gave",
+      "me",
+      "a",
+      "wider",
+      "view",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "me",
+      "a wider view"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The experience gave to me a wider view.",
+      "statementForm": [
+        "The experience gave me a wider view.",
+        "The experience gave me a wider view"
+      ],
+      "fragmentForm": "The experience gave me.",
+      "wormholeVariants": [
+        "The experience gave to me a wider view.",
+        "The experience gave a wider view me.",
+        "The experience gave I a wider view."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_093",
+    "seedId": "ditransitive_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그는 동생에게 너무 어려운 일을 시키지 않았다.",
+    "english": "He did not give his brother too difficult a task.",
+    "words": [
+      "He",
+      "did",
+      "not",
+      "give",
+      "his",
+      "brother",
+      "too",
+      "difficult",
+      "a",
+      "task",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 동생에게 너무 어려운 일을 시키지 않았다.",
+        "He"
+      ],
+      [
+        "give + IO + DO negative",
+        "give + brother + task"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "did",
+      "not",
+      "give",
+      "his",
+      "brother",
+      "too",
+      "slowly"
+    ],
+    "blankTargets": [
+      "give",
+      "his brother",
+      "a task"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He did not gave his brother too difficult a task.",
+      "statementForm": [
+        "He did not give his brother too difficult a task.",
+        "He did not give his brother too difficult a task"
+      ],
+      "fragmentForm": "He did not give.",
+      "wormholeVariants": [
+        "He did not gave his brother too difficult a task.",
+        "He did not give to his brother too difficult a task.",
+        "He did not give his brother too difficultly a task."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_094",
+    "seedId": "ditransitive_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 선물은 그녀에게 잊지 못할 기억을 주었다.",
+    "english": "The gift gave her an unforgettable memory.",
+    "words": [
+      "The",
+      "gift",
+      "gave",
+      "her",
+      "an",
+      "unforgettable",
+      "memory",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선물은 그녀에게 잊지 못할 기억을 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + her + memory"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "gift",
+      "gave",
+      "her",
+      "an",
+      "unforgettable",
+      "memory",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "her",
+      "an unforgettable memory"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The gift gave to her an unforgettable memory.",
+      "statementForm": [
+        "The gift gave her an unforgettable memory.",
+        "The gift gave her an unforgettable memory"
+      ],
+      "fragmentForm": "The gift gave her.",
+      "wormholeVariants": [
+        "The gift gave to her an unforgettable memory.",
+        "The gift gave an unforgettable memory her.",
+        "The gift gave she an unforgettable memory."
+      ]
+    }
+  },
+  {
+    "id": "m2_ditransitive_095",
+    "seedId": "ditransitive_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "ditransitive",
+    "chapterLabelKo": "수여동사",
+    "korean": "그 선생님은 우리에게 숙제를 너무 많이 주었다.",
+    "english": "The teacher gave us too much homework.",
+    "words": [
+      "The",
+      "teacher",
+      "gave",
+      "us",
+      "too",
+      "much",
+      "homework",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "ditransitive",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 우리에게 숙제를 너무 많이 주었다.",
+        "The"
+      ],
+      [
+        "give + IO + DO",
+        "give + us + homework"
+      ],
+      [
+        "주의",
+        "use the correct object order and to/for pattern"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "teacher",
+      "gave",
+      "us",
+      "too",
+      "much",
+      "homework",
+      "slowly"
+    ],
+    "blankTargets": [
+      "gave",
+      "us",
+      "too much homework"
+    ],
+    "tags": [
+      "ditransitive",
+      "give",
+      "too_much"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher gave to us too much homework.",
+      "statementForm": [
+        "The teacher gave us too much homework.",
+        "The teacher gave us too much homework"
+      ],
+      "fragmentForm": "The teacher gave us.",
+      "wormholeVariants": [
+        "The teacher gave to us too much homework.",
+        "The teacher gave too much homework us.",
+        "The teacher gave we too much homework."
+      ]
+    }
+  }
+]
