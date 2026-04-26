@@ -1,0 +1,7720 @@
+[
+  {
+    "id": "m2_causative_001",
+    "seedId": "causative_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "선생님은 그가 숙제를 끝내게 했다.",
+    "english": "The teacher made him finish the homework.",
+    "words": [
+      "The",
+      "teacher",
+      "made",
+      "him",
+      "finish",
+      "the",
+      "homework",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님은 그가 숙제를 끝내게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made him"
+      ],
+      [
+        "목적격보어 형태",
+        "finish"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made him",
+      "finish",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "finish"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher made him to finish the homework.",
+      "statementForm": [
+        "The teacher made him finish the homework.",
+        "The teacher made him finish the homework"
+      ],
+      "fragmentForm": "made him",
+      "wormholeVariants": [
+        "The teacher made him to finish the homework.",
+        "The teacher made him finishing the homework.",
+        "The teacher made him finishs the homework."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_002",
+    "seedId": "causative_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "엄마는 내가 내 방을 청소하게 했다.",
+    "english": "My mom made me clean my room.",
+    "words": [
+      "My",
+      "mom",
+      "made",
+      "me",
+      "clean",
+      "my",
+      "room",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "엄마는 내가 내 방을 청소하게 했다.",
+        "My"
+      ],
+      [
+        "핵심 구조",
+        "made me"
+      ],
+      [
+        "목적격보어 형태",
+        "clean"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made me",
+      "clean",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "clean"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mom made me to clean my room.",
+      "statementForm": [
+        "My mom made me clean my room.",
+        "My mom made me clean my room"
+      ],
+      "fragmentForm": "made me",
+      "wormholeVariants": [
+        "My mom made me to clean my room.",
+        "My mom made me cleaning my room.",
+        "My mom made me cleans my room."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_003",
+    "seedId": "causative_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "코치는 선수들이 더 빨리 달리게 했다.",
+    "english": "The coach made the players run faster.",
+    "words": [
+      "The",
+      "coach",
+      "made",
+      "the",
+      "players",
+      "run",
+      "faster",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "코치는 선수들이 더 빨리 달리게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made the players"
+      ],
+      [
+        "목적격보어 형태",
+        "run"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made the players",
+      "run",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "run"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The coach made the players to run faster.",
+      "statementForm": [
+        "The coach made the players run faster.",
+        "The coach made the players run faster"
+      ],
+      "fragmentForm": "made the players",
+      "wormholeVariants": [
+        "The coach made the players to run faster.",
+        "The coach made the players runing faster.",
+        "The coach made the players runs faster."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_004",
+    "seedId": "causative_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 소식은 그녀가 다시 생각하게 만들었다.",
+    "english": "The news made her think again.",
+    "words": [
+      "The",
+      "news",
+      "made",
+      "her",
+      "think",
+      "again",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소식은 그녀가 다시 생각하게 만들었다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made her"
+      ],
+      [
+        "목적격보어 형태",
+        "think"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made her",
+      "think",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "think"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news made her to think again.",
+      "statementForm": [
+        "The news made her think again.",
+        "The news made her think again"
+      ],
+      "fragmentForm": "made her",
+      "wormholeVariants": [
+        "The news made her to think again.",
+        "The news made her thinking again.",
+        "The news made her thinks again."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_005",
+    "seedId": "causative_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 영화는 우리를 크게 웃게 만들었다.",
+    "english": "The movie made us laugh loudly.",
+    "words": [
+      "The",
+      "movie",
+      "made",
+      "us",
+      "laugh",
+      "loudly",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 영화는 우리를 크게 웃게 만들었다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made us"
+      ],
+      [
+        "목적격보어 형태",
+        "laugh"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made us",
+      "laugh",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "laugh"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The movie made us to laugh loudly.",
+      "statementForm": [
+        "The movie made us laugh loudly.",
+        "The movie made us laugh loudly"
+      ],
+      "fragmentForm": "made us",
+      "wormholeVariants": [
+        "The movie made us to laugh loudly.",
+        "The movie made us laughing loudly.",
+        "The movie made us laughs loudly."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_006",
+    "seedId": "causative_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 규칙은 학생들이 조용히 있게 했다.",
+    "english": "The rule made the students stay quiet.",
+    "words": [
+      "The",
+      "rule",
+      "made",
+      "the",
+      "students",
+      "stay",
+      "quiet",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 학생들이 조용히 있게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made the students"
+      ],
+      [
+        "목적격보어 형태",
+        "stay"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made the students",
+      "stay",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "stay"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule made the students to stay quiet.",
+      "statementForm": [
+        "The rule made the students stay quiet.",
+        "The rule made the students stay quiet"
+      ],
+      "fragmentForm": "made the students",
+      "wormholeVariants": [
+        "The rule made the students to stay quiet.",
+        "The rule made the students staying quiet.",
+        "The rule made the students stays quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_007",
+    "seedId": "causative_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 경험은 그가 더 신중하게 행동하게 했다.",
+    "english": "The experience made him act more carefully.",
+    "words": [
+      "The",
+      "experience",
+      "made",
+      "him",
+      "act",
+      "more",
+      "carefully",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 경험은 그가 더 신중하게 행동하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made him"
+      ],
+      [
+        "목적격보어 형태",
+        "act"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made him",
+      "act",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "act"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The experience made him to act more carefully.",
+      "statementForm": [
+        "The experience made him act more carefully.",
+        "The experience made him act more carefully"
+      ],
+      "fragmentForm": "made him",
+      "wormholeVariants": [
+        "The experience made him to act more carefully.",
+        "The experience made him acting more carefully.",
+        "The experience made him acts more carefully."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_008",
+    "seedId": "causative_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 실수는 팀이 계획을 다시 검토하게 했다.",
+    "english": "The mistake made the team review the plan.",
+    "words": [
+      "The",
+      "mistake",
+      "made",
+      "the",
+      "team",
+      "review",
+      "the",
+      "plan",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 실수는 팀이 계획을 다시 검토하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made the team"
+      ],
+      [
+        "목적격보어 형태",
+        "review"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made the team",
+      "review",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "review"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The mistake made the team to review the plan.",
+      "statementForm": [
+        "The mistake made the team review the plan.",
+        "The mistake made the team review the plan"
+      ],
+      "fragmentForm": "made the team",
+      "wormholeVariants": [
+        "The mistake made the team to review the plan.",
+        "The mistake made the team reviewing the plan.",
+        "The mistake made the team reviews the plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_009",
+    "seedId": "causative_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 질문은 사람들이 문제를 다르게 보게 했다.",
+    "english": "The question made people see the issue differently.",
+    "words": [
+      "The",
+      "question",
+      "made",
+      "people",
+      "see",
+      "the",
+      "issue",
+      "differently",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 질문은 사람들이 문제를 다르게 보게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made people"
+      ],
+      [
+        "목적격보어 형태",
+        "see"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made people",
+      "see",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "see"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question made people to see the issue differently.",
+      "statementForm": [
+        "The question made people see the issue differently.",
+        "The question made people see the issue differently"
+      ],
+      "fragmentForm": "made people",
+      "wormholeVariants": [
+        "The question made people to see the issue differently.",
+        "The question made people seeing the issue differently.",
+        "The question made people sees the issue differently."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_010",
+    "seedId": "causative_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 압박은 그들이 더 빠르게 결정하게 했다.",
+    "english": "The pressure made them decide more quickly.",
+    "words": [
+      "The",
+      "pressure",
+      "made",
+      "them",
+      "decide",
+      "more",
+      "quickly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 압박은 그들이 더 빠르게 결정하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made them"
+      ],
+      [
+        "목적격보어 형태",
+        "decide"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made them",
+      "decide",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "decide"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The pressure made them to decide more quickly.",
+      "statementForm": [
+        "The pressure made them decide more quickly.",
+        "The pressure made them decide more quickly"
+      ],
+      "fragmentForm": "made them",
+      "wormholeVariants": [
+        "The pressure made them to decide more quickly.",
+        "The pressure made them deciding more quickly.",
+        "The pressure made them decides more quickly."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_011",
+    "seedId": "causative_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "부모님은 그가 진실을 말하게 했다.",
+    "english": "His parents made him tell the truth.",
+    "words": [
+      "His",
+      "parents",
+      "made",
+      "him",
+      "tell",
+      "the",
+      "truth",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "부모님은 그가 진실을 말하게 했다.",
+        "His"
+      ],
+      [
+        "핵심 구조",
+        "made him"
+      ],
+      [
+        "목적격보어 형태",
+        "tell"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made him",
+      "tell",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "tell"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "His parents made him to tell the truth.",
+      "statementForm": [
+        "His parents made him tell the truth.",
+        "His parents made him tell the truth"
+      ],
+      "fragmentForm": "made him",
+      "wormholeVariants": [
+        "His parents made him to tell the truth.",
+        "His parents made him telling the truth.",
+        "His parents made him tells the truth."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_012",
+    "seedId": "causative_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "차가운 날씨는 우리가 집에 머물게 했다.",
+    "english": "The cold weather made us stay at home.",
+    "words": [
+      "The",
+      "cold",
+      "weather",
+      "made",
+      "us",
+      "stay",
+      "at",
+      "home",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "차가운 날씨는 우리가 집에 머물게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made us"
+      ],
+      [
+        "목적격보어 형태",
+        "stay"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made us",
+      "stay",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "stay"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cold weather made us to stay at home.",
+      "statementForm": [
+        "The cold weather made us stay at home.",
+        "The cold weather made us stay at home"
+      ],
+      "fragmentForm": "made us",
+      "wormholeVariants": [
+        "The cold weather made us to stay at home.",
+        "The cold weather made us staying at home.",
+        "The cold weather made us stays at home."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_013",
+    "seedId": "causative_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 발표는 청중이 새로운 관점을 생각하게 했다.",
+    "english": "The presentation made the audience consider a new view.",
+    "words": [
+      "The",
+      "presentation",
+      "made",
+      "the",
+      "audience",
+      "consider",
+      "a",
+      "new",
+      "view",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 발표는 청중이 새로운 관점을 생각하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made the audience"
+      ],
+      [
+        "목적격보어 형태",
+        "consider"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made the audience",
+      "consider",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "consider"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The presentation made the audience to consider a new view.",
+      "statementForm": [
+        "The presentation made the audience consider a new view.",
+        "The presentation made the audience consider a new view"
+      ],
+      "fragmentForm": "made the audience",
+      "wormholeVariants": [
+        "The presentation made the audience to consider a new view.",
+        "The presentation made the audience considering a new view.",
+        "The presentation made the audience considers a new view."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_014",
+    "seedId": "causative_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 실패는 그가 더 열심히 연습하게 했다.",
+    "english": "The failure made him practice harder.",
+    "words": [
+      "The",
+      "failure",
+      "made",
+      "him",
+      "practice",
+      "harder",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 실패는 그가 더 열심히 연습하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made him"
+      ],
+      [
+        "목적격보어 형태",
+        "practice"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made him",
+      "practice",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "practice"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The failure made him to practice harder.",
+      "statementForm": [
+        "The failure made him practice harder.",
+        "The failure made him practice harder"
+      ],
+      "fragmentForm": "made him",
+      "wormholeVariants": [
+        "The failure made him to practice harder.",
+        "The failure made him practicing harder.",
+        "The failure made him practices harder."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_015",
+    "seedId": "causative_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 사진은 내가 어린 시절을 기억하게 했다.",
+    "english": "The photo made me remember my childhood.",
+    "words": [
+      "The",
+      "photo",
+      "made",
+      "me",
+      "remember",
+      "my",
+      "childhood",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 사진은 내가 어린 시절을 기억하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made me"
+      ],
+      [
+        "목적격보어 형태",
+        "remember"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made me",
+      "remember",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "remember"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The photo made me to remember my childhood.",
+      "statementForm": [
+        "The photo made me remember my childhood.",
+        "The photo made me remember my childhood"
+      ],
+      "fragmentForm": "made me",
+      "wormholeVariants": [
+        "The photo made me to remember my childhood.",
+        "The photo made me remembering my childhood.",
+        "The photo made me remembers my childhood."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_016",
+    "seedId": "causative_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 선생님은 학생들이 답을 설명하게 했다.",
+    "english": "The teacher made the students explain their answers.",
+    "words": [
+      "The",
+      "teacher",
+      "made",
+      "the",
+      "students",
+      "explain",
+      "their",
+      "answers",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 학생들이 답을 설명하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made the students"
+      ],
+      [
+        "목적격보어 형태",
+        "explain"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made the students",
+      "explain",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "explain"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher made the students to explain their answers.",
+      "statementForm": [
+        "The teacher made the students explain their answers.",
+        "The teacher made the students explain their answers"
+      ],
+      "fragmentForm": "made the students",
+      "wormholeVariants": [
+        "The teacher made the students to explain their answers.",
+        "The teacher made the students explaining their answers.",
+        "The teacher made the students explains their answers."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_017",
+    "seedId": "causative_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 문제는 우리가 원인을 분석하게 했다.",
+    "english": "The problem made us analyze the cause.",
+    "words": [
+      "The",
+      "problem",
+      "made",
+      "us",
+      "analyze",
+      "the",
+      "cause",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 우리가 원인을 분석하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made us"
+      ],
+      [
+        "목적격보어 형태",
+        "analyze"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made us",
+      "analyze",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "analyze"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem made us to analyze the cause.",
+      "statementForm": [
+        "The problem made us analyze the cause.",
+        "The problem made us analyze the cause"
+      ],
+      "fragmentForm": "made us",
+      "wormholeVariants": [
+        "The problem made us to analyze the cause.",
+        "The problem made us analyzing the cause.",
+        "The problem made us analyzes the cause."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_018",
+    "seedId": "causative_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 사건은 도시가 안전 규칙을 바꾸게 했다.",
+    "english": "The incident made the city change its safety rules.",
+    "words": [
+      "The",
+      "incident",
+      "made",
+      "the",
+      "city",
+      "change",
+      "its",
+      "safety",
+      "rules",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 사건은 도시가 안전 규칙을 바꾸게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made the city"
+      ],
+      [
+        "목적격보어 형태",
+        "change"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made the city",
+      "change",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "change"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The incident made the city to change its safety rules.",
+      "statementForm": [
+        "The incident made the city change its safety rules.",
+        "The incident made the city change its safety rules"
+      ],
+      "fragmentForm": "made the city",
+      "wormholeVariants": [
+        "The incident made the city to change its safety rules.",
+        "The incident made the city changing its safety rules.",
+        "The incident made the city changes its safety rules."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_019",
+    "seedId": "causative_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그가 내 컴퓨터를 고치게 했다.",
+    "english": "I had him fix my computer.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "fix",
+      "my",
+      "computer",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 내 컴퓨터를 고치게 했다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "had him"
+      ],
+      [
+        "목적격보어 형태",
+        "fix"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had him",
+      "fix",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "fix"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to fix my computer.",
+      "statementForm": [
+        "I had him fix my computer.",
+        "I had him fix my computer"
+      ],
+      "fragmentForm": "had him",
+      "wormholeVariants": [
+        "I had him to fix my computer.",
+        "I had him fixing my computer.",
+        "I had him fixs my computer."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_020",
+    "seedId": "causative_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 남동생이 상자를 나르게 했다.",
+    "english": "She had her brother carry the box.",
+    "words": [
+      "She",
+      "had",
+      "her",
+      "brother",
+      "carry",
+      "the",
+      "box",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 남동생이 상자를 나르게 했다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "had her brother"
+      ],
+      [
+        "목적격보어 형태",
+        "carry"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had her brother",
+      "carry",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "carry"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had her brother to carry the box.",
+      "statementForm": [
+        "She had her brother carry the box.",
+        "She had her brother carry the box"
+      ],
+      "fragmentForm": "had her brother",
+      "wormholeVariants": [
+        "She had her brother to carry the box.",
+        "She had her brother carrying the box.",
+        "She had her brother carrys the box."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_021",
+    "seedId": "causative_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그들은 직원들이 보고서를 준비하게 했다.",
+    "english": "They had the staff prepare the report.",
+    "words": [
+      "They",
+      "had",
+      "the",
+      "staff",
+      "prepare",
+      "the",
+      "report",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 직원들이 보고서를 준비하게 했다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "had the staff"
+      ],
+      [
+        "목적격보어 형태",
+        "prepare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the staff",
+      "prepare",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "prepare"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "They had the staff to prepare the report.",
+      "statementForm": [
+        "They had the staff prepare the report.",
+        "They had the staff prepare the report"
+      ],
+      "fragmentForm": "had the staff",
+      "wormholeVariants": [
+        "They had the staff to prepare the report.",
+        "They had the staff preparing the report.",
+        "They had the staff prepares the report."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_022",
+    "seedId": "causative_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 기술자가 시스템을 점검하게 했다.",
+    "english": "We had the technician check the system.",
+    "words": [
+      "We",
+      "had",
+      "the",
+      "technician",
+      "check",
+      "the",
+      "system",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 기술자가 시스템을 점검하게 했다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "had the technician"
+      ],
+      [
+        "목적격보어 형태",
+        "check"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the technician",
+      "check",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "check"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "We had the technician to check the system.",
+      "statementForm": [
+        "We had the technician check the system.",
+        "We had the technician check the system"
+      ],
+      "fragmentForm": "had the technician",
+      "wormholeVariants": [
+        "We had the technician to check the system.",
+        "We had the technician checking the system.",
+        "We had the technician checks the system."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_023",
+    "seedId": "causative_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 조수가 이메일을 보내게 했다.",
+    "english": "She had her assistant send the email.",
+    "words": [
+      "She",
+      "had",
+      "her",
+      "assistant",
+      "send",
+      "the",
+      "email",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 조수가 이메일을 보내게 했다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "had her assistant"
+      ],
+      [
+        "목적격보어 형태",
+        "send"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had her assistant",
+      "send",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "send"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had her assistant to send the email.",
+      "statementForm": [
+        "She had her assistant send the email.",
+        "She had her assistant send the email"
+      ],
+      "fragmentForm": "had her assistant",
+      "wormholeVariants": [
+        "She had her assistant to send the email.",
+        "She had her assistant sending the email.",
+        "She had her assistant sends the email."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_024",
+    "seedId": "causative_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 회사는 엔지니어들이 제품을 시험하게 했다.",
+    "english": "The company had engineers test the product.",
+    "words": [
+      "The",
+      "company",
+      "had",
+      "engineers",
+      "test",
+      "the",
+      "product",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 회사는 엔지니어들이 제품을 시험하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "had engineers"
+      ],
+      [
+        "목적격보어 형태",
+        "test"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had engineers",
+      "test",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "test"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The company had engineers to test the product.",
+      "statementForm": [
+        "The company had engineers test the product.",
+        "The company had engineers test the product"
+      ],
+      "fragmentForm": "had engineers",
+      "wormholeVariants": [
+        "The company had engineers to test the product.",
+        "The company had engineers testing the product.",
+        "The company had engineers tests the product."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_025",
+    "seedId": "causative_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 친구가 내 발표를 확인하게 했다.",
+    "english": "I had my friend check my presentation.",
+    "words": [
+      "I",
+      "had",
+      "my",
+      "friend",
+      "check",
+      "my",
+      "presentation",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 친구가 내 발표를 확인하게 했다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "had my friend"
+      ],
+      [
+        "목적격보어 형태",
+        "check"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had my friend",
+      "check",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "check"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had my friend to check my presentation.",
+      "statementForm": [
+        "I had my friend check my presentation.",
+        "I had my friend check my presentation"
+      ],
+      "fragmentForm": "had my friend",
+      "wormholeVariants": [
+        "I had my friend to check my presentation.",
+        "I had my friend checking my presentation.",
+        "I had my friend checks my presentation."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_026",
+    "seedId": "causative_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 교장은 교사들이 새 일정을 검토하게 했다.",
+    "english": "The principal had teachers review the new schedule.",
+    "words": [
+      "The",
+      "principal",
+      "had",
+      "teachers",
+      "review",
+      "the",
+      "new",
+      "schedule",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 교장은 교사들이 새 일정을 검토하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "had teachers"
+      ],
+      [
+        "목적격보어 형태",
+        "review"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had teachers",
+      "review",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "review"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The principal had teachers to review the new schedule.",
+      "statementForm": [
+        "The principal had teachers review the new schedule.",
+        "The principal had teachers review the new schedule"
+      ],
+      "fragmentForm": "had teachers",
+      "wormholeVariants": [
+        "The principal had teachers to review the new schedule.",
+        "The principal had teachers reviewing the new schedule.",
+        "The principal had teachers reviews the new schedule."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_027",
+    "seedId": "causative_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 관리자는 팀이 자료를 정리하게 했다.",
+    "english": "The manager had the team organize the data.",
+    "words": [
+      "The",
+      "manager",
+      "had",
+      "the",
+      "team",
+      "organize",
+      "the",
+      "data",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 관리자는 팀이 자료를 정리하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "had the team"
+      ],
+      [
+        "목적격보어 형태",
+        "organize"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the team",
+      "organize",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "organize"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The manager had the team to organize the data.",
+      "statementForm": [
+        "The manager had the team organize the data.",
+        "The manager had the team organize the data"
+      ],
+      "fragmentForm": "had the team",
+      "wormholeVariants": [
+        "The manager had the team to organize the data.",
+        "The manager had the team organizing the data.",
+        "The manager had the team organizes the data."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_028",
+    "seedId": "causative_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 전문가가 결과를 분석하게 했다.",
+    "english": "We had an expert analyze the results.",
+    "words": [
+      "We",
+      "had",
+      "an",
+      "expert",
+      "analyze",
+      "the",
+      "results",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 전문가가 결과를 분석하게 했다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "had an expert"
+      ],
+      [
+        "목적격보어 형태",
+        "analyze"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had an expert",
+      "analyze",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "analyze"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "We had an expert to analyze the results.",
+      "statementForm": [
+        "We had an expert analyze the results.",
+        "We had an expert analyze the results"
+      ],
+      "fragmentForm": "had an expert",
+      "wormholeVariants": [
+        "We had an expert to analyze the results.",
+        "We had an expert analyzing the results.",
+        "We had an expert analyzes the results."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_029",
+    "seedId": "causative_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 학생들이 규칙을 다시 쓰게 했다.",
+    "english": "She had the students rewrite the rules.",
+    "words": [
+      "She",
+      "had",
+      "the",
+      "students",
+      "rewrite",
+      "the",
+      "rules",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 학생들이 규칙을 다시 쓰게 했다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "had the students"
+      ],
+      [
+        "목적격보어 형태",
+        "rewrite"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the students",
+      "rewrite",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "rewrite"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had the students to rewrite the rules.",
+      "statementForm": [
+        "She had the students rewrite the rules.",
+        "She had the students rewrite the rules"
+      ],
+      "fragmentForm": "had the students",
+      "wormholeVariants": [
+        "She had the students to rewrite the rules.",
+        "She had the students rewriting the rules.",
+        "She had the students rewrites the rules."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_030",
+    "seedId": "causative_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그가 문을 열게 했다.",
+    "english": "I had him open the door.",
+    "words": [
+      "I",
+      "had",
+      "him",
+      "open",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 문을 열게 했다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "had him"
+      ],
+      [
+        "목적격보어 형태",
+        "open"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had him",
+      "open",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "open"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had him to open the door.",
+      "statementForm": [
+        "I had him open the door.",
+        "I had him open the door"
+      ],
+      "fragmentForm": "had him",
+      "wormholeVariants": [
+        "I had him to open the door.",
+        "I had him opening the door.",
+        "I had him opens the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_031",
+    "seedId": "causative_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그들은 안내원이 방문객들을 이끌게 했다.",
+    "english": "They had the guide lead the visitors.",
+    "words": [
+      "They",
+      "had",
+      "the",
+      "guide",
+      "lead",
+      "the",
+      "visitors",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 안내원이 방문객들을 이끌게 했다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "had the guide"
+      ],
+      [
+        "목적격보어 형태",
+        "lead"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the guide",
+      "lead",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "lead"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "They had the guide to lead the visitors.",
+      "statementForm": [
+        "They had the guide lead the visitors.",
+        "They had the guide lead the visitors"
+      ],
+      "fragmentForm": "had the guide",
+      "wormholeVariants": [
+        "They had the guide to lead the visitors.",
+        "They had the guide leading the visitors.",
+        "They had the guide leads the visitors."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_032",
+    "seedId": "causative_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 병원은 의사가 환자를 진찰하게 했다.",
+    "english": "The hospital had a doctor examine the patient.",
+    "words": [
+      "The",
+      "hospital",
+      "had",
+      "a",
+      "doctor",
+      "examine",
+      "the",
+      "patient",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 병원은 의사가 환자를 진찰하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "had a doctor"
+      ],
+      [
+        "목적격보어 형태",
+        "examine"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had a doctor",
+      "examine",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "examine"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The hospital had a doctor to examine the patient.",
+      "statementForm": [
+        "The hospital had a doctor examine the patient.",
+        "The hospital had a doctor examine the patient"
+      ],
+      "fragmentForm": "had a doctor",
+      "wormholeVariants": [
+        "The hospital had a doctor to examine the patient.",
+        "The hospital had a doctor examining the patient.",
+        "The hospital had a doctor examines the patient."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_033",
+    "seedId": "causative_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 기관은 연구자들이 자료를 수집하게 했다.",
+    "english": "The institute had researchers collect the data.",
+    "words": [
+      "The",
+      "institute",
+      "had",
+      "researchers",
+      "collect",
+      "the",
+      "data",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 기관은 연구자들이 자료를 수집하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "had researchers"
+      ],
+      [
+        "목적격보어 형태",
+        "collect"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had researchers",
+      "collect",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "collect"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The institute had researchers to collect the data.",
+      "statementForm": [
+        "The institute had researchers collect the data.",
+        "The institute had researchers collect the data"
+      ],
+      "fragmentForm": "had researchers",
+      "wormholeVariants": [
+        "The institute had researchers to collect the data.",
+        "The institute had researchers collecting the data.",
+        "The institute had researchers collects the data."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_034",
+    "seedId": "causative_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 직원들이 문제를 보고하게 했다.",
+    "english": "We had the workers report the problem.",
+    "words": [
+      "We",
+      "had",
+      "the",
+      "workers",
+      "report",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 직원들이 문제를 보고하게 했다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "had the workers"
+      ],
+      [
+        "목적격보어 형태",
+        "report"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the workers",
+      "report",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "report"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "We had the workers to report the problem.",
+      "statementForm": [
+        "We had the workers report the problem.",
+        "We had the workers report the problem"
+      ],
+      "fragmentForm": "had the workers",
+      "wormholeVariants": [
+        "We had the workers to report the problem.",
+        "We had the workers reporting the problem.",
+        "We had the workers reports the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_035",
+    "seedId": "causative_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 변호사가 계약서를 검토하게 했다.",
+    "english": "She had a lawyer review the contract.",
+    "words": [
+      "She",
+      "had",
+      "a",
+      "lawyer",
+      "review",
+      "the",
+      "contract",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 변호사가 계약서를 검토하게 했다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "had a lawyer"
+      ],
+      [
+        "목적격보어 형태",
+        "review"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had a lawyer",
+      "review",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "review"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had a lawyer to review the contract.",
+      "statementForm": [
+        "She had a lawyer review the contract.",
+        "She had a lawyer review the contract"
+      ],
+      "fragmentForm": "had a lawyer",
+      "wormholeVariants": [
+        "She had a lawyer to review the contract.",
+        "She had a lawyer reviewing the contract.",
+        "She had a lawyer reviews the contract."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_036",
+    "seedId": "causative_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그는 친구가 짐을 옮기게 했다.",
+    "english": "He had his friend move the luggage.",
+    "words": [
+      "He",
+      "had",
+      "his",
+      "friend",
+      "move",
+      "the",
+      "luggage",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 친구가 짐을 옮기게 했다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "had his friend"
+      ],
+      [
+        "목적격보어 형태",
+        "move"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had his friend",
+      "move",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "move"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "He had his friend to move the luggage.",
+      "statementForm": [
+        "He had his friend move the luggage.",
+        "He had his friend move the luggage"
+      ],
+      "fragmentForm": "had his friend",
+      "wormholeVariants": [
+        "He had his friend to move the luggage.",
+        "He had his friend moving the luggage.",
+        "He had his friend moves the luggage."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_037",
+    "seedId": "causative_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그의 부모님은 그가 외출하게 허락했다.",
+    "english": "His parents let him go out.",
+    "words": [
+      "His",
+      "parents",
+      "let",
+      "him",
+      "go",
+      "out",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그의 부모님은 그가 외출하게 허락했다.",
+        "His"
+      ],
+      [
+        "핵심 구조",
+        "let him"
+      ],
+      [
+        "목적격보어 형태",
+        "go"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let him",
+      "go",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "go"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "His parents let him to go out.",
+      "statementForm": [
+        "His parents let him go out.",
+        "His parents let him go out"
+      ],
+      "fragmentForm": "let him",
+      "wormholeVariants": [
+        "His parents let him to go out.",
+        "His parents let him going out.",
+        "His parents let him gos out."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_038",
+    "seedId": "causative_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "선생님은 학생들이 휴대폰을 사용하게 허락했다.",
+    "english": "The teacher let the students use their phones.",
+    "words": [
+      "The",
+      "teacher",
+      "let",
+      "the",
+      "students",
+      "use",
+      "their",
+      "phones",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "선생님은 학생들이 휴대폰을 사용하게 허락했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "let the students"
+      ],
+      [
+        "목적격보어 형태",
+        "use"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let the students",
+      "use",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "use"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher let the students to use their phones.",
+      "statementForm": [
+        "The teacher let the students use their phones.",
+        "The teacher let the students use their phones"
+      ],
+      "fragmentForm": "let the students",
+      "wormholeVariants": [
+        "The teacher let the students to use their phones.",
+        "The teacher let the students using their phones.",
+        "The teacher let the students uses their phones."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_039",
+    "seedId": "causative_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 아이가 밖에서 놀게 했다.",
+    "english": "She let her child play outside.",
+    "words": [
+      "She",
+      "let",
+      "her",
+      "child",
+      "play",
+      "outside",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 아이가 밖에서 놀게 했다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "let her child"
+      ],
+      [
+        "목적격보어 형태",
+        "play"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let her child",
+      "play",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "play"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let her child to play outside.",
+      "statementForm": [
+        "She let her child play outside.",
+        "She let her child play outside"
+      ],
+      "fragmentForm": "let her child",
+      "wormholeVariants": [
+        "She let her child to play outside.",
+        "She let her child playing outside.",
+        "She let her child plays outside."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_040",
+    "seedId": "causative_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그들은 노동자들이 일찍 떠나게 했다.",
+    "english": "They let the workers leave early.",
+    "words": [
+      "They",
+      "let",
+      "the",
+      "workers",
+      "leave",
+      "early",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 노동자들이 일찍 떠나게 했다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "let the workers"
+      ],
+      [
+        "목적격보어 형태",
+        "leave"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let the workers",
+      "leave",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "leave"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "They let the workers to leave early.",
+      "statementForm": [
+        "They let the workers leave early.",
+        "They let the workers leave early"
+      ],
+      "fragmentForm": "let the workers",
+      "wormholeVariants": [
+        "They let the workers to leave early.",
+        "They let the workers leaving early.",
+        "They let the workers leaves early."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_041",
+    "seedId": "causative_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 정책은 직원들이 원격으로 일하게 했다.",
+    "english": "The policy let employees work remotely.",
+    "words": [
+      "The",
+      "policy",
+      "let",
+      "employees",
+      "work",
+      "remotely",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 정책은 직원들이 원격으로 일하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "let employees"
+      ],
+      [
+        "목적격보어 형태",
+        "work"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let employees",
+      "work",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "work"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The policy let employees to work remotely.",
+      "statementForm": [
+        "The policy let employees work remotely.",
+        "The policy let employees work remotely"
+      ],
+      "fragmentForm": "let employees",
+      "wormholeVariants": [
+        "The policy let employees to work remotely.",
+        "The policy let employees working remotely.",
+        "The policy let employees works remotely."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_042",
+    "seedId": "causative_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 앱은 사용자가 쉽게 파일을 공유하게 해 준다.",
+    "english": "The app lets users share files easily.",
+    "words": [
+      "The",
+      "app",
+      "lets",
+      "users",
+      "share",
+      "files",
+      "easily",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 앱은 사용자가 쉽게 파일을 공유하게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets users"
+      ],
+      [
+        "목적격보어 형태",
+        "share"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets users",
+      "share",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "share"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The app lets users to share files easily.",
+      "statementForm": [
+        "The app lets users share files easily.",
+        "The app lets users share files easily"
+      ],
+      "fragmentForm": "lets users",
+      "wormholeVariants": [
+        "The app lets users to share files easily.",
+        "The app lets users sharing files easily.",
+        "The app lets users shares files easily."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_043",
+    "seedId": "causative_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 프로그램은 학생들이 자신의 진도를 확인하게 해 준다.",
+    "english": "The program lets students check their progress.",
+    "words": [
+      "The",
+      "program",
+      "lets",
+      "students",
+      "check",
+      "their",
+      "progress",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 프로그램은 학생들이 자신의 진도를 확인하게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets students"
+      ],
+      [
+        "목적격보어 형태",
+        "check"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets students",
+      "check",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "check"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The program lets students to check their progress.",
+      "statementForm": [
+        "The program lets students check their progress.",
+        "The program lets students check their progress"
+      ],
+      "fragmentForm": "lets students",
+      "wormholeVariants": [
+        "The program lets students to check their progress.",
+        "The program lets students checking their progress.",
+        "The program lets students checks their progress."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_044",
+    "seedId": "causative_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 도구는 사람들이 시간을 절약하게 해 준다.",
+    "english": "The tool lets people save time.",
+    "words": [
+      "The",
+      "tool",
+      "lets",
+      "people",
+      "save",
+      "time",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 도구는 사람들이 시간을 절약하게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets people"
+      ],
+      [
+        "목적격보어 형태",
+        "save"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets people",
+      "save",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "save"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tool lets people to save time.",
+      "statementForm": [
+        "The tool lets people save time.",
+        "The tool lets people save time"
+      ],
+      "fragmentForm": "lets people",
+      "wormholeVariants": [
+        "The tool lets people to save time.",
+        "The tool lets people saving time.",
+        "The tool lets people saves time."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_045",
+    "seedId": "causative_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 규칙은 회원들이 자유롭게 의견을 나누게 한다.",
+    "english": "The rule lets members share opinions freely.",
+    "words": [
+      "The",
+      "rule",
+      "lets",
+      "members",
+      "share",
+      "opinions",
+      "freely",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 회원들이 자유롭게 의견을 나누게 한다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets members"
+      ],
+      [
+        "목적격보어 형태",
+        "share"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets members",
+      "share",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "share"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule lets members to share opinions freely.",
+      "statementForm": [
+        "The rule lets members share opinions freely.",
+        "The rule lets members share opinions freely"
+      ],
+      "fragmentForm": "lets members",
+      "wormholeVariants": [
+        "The rule lets members to share opinions freely.",
+        "The rule lets members sharing opinions freely.",
+        "The rule lets members shares opinions freely."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_046",
+    "seedId": "causative_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 웹사이트는 방문객들이 정보를 빠르게 찾게 해 준다.",
+    "english": "The website lets visitors find information quickly.",
+    "words": [
+      "The",
+      "website",
+      "lets",
+      "visitors",
+      "find",
+      "information",
+      "quickly",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 웹사이트는 방문객들이 정보를 빠르게 찾게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets visitors"
+      ],
+      [
+        "목적격보어 형태",
+        "find"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets visitors",
+      "find",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "find"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The website lets visitors to find information quickly.",
+      "statementForm": [
+        "The website lets visitors find information quickly.",
+        "The website lets visitors find information quickly"
+      ],
+      "fragmentForm": "lets visitors",
+      "wormholeVariants": [
+        "The website lets visitors to find information quickly.",
+        "The website lets visitors finding information quickly.",
+        "The website lets visitors finds information quickly."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_047",
+    "seedId": "causative_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그들은 아이들이 질문하게 허락했다.",
+    "english": "They let the children ask questions.",
+    "words": [
+      "They",
+      "let",
+      "the",
+      "children",
+      "ask",
+      "questions",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 아이들이 질문하게 허락했다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "let the children"
+      ],
+      [
+        "목적격보어 형태",
+        "ask"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let the children",
+      "ask",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "ask"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "They let the children to ask questions.",
+      "statementForm": [
+        "They let the children ask questions.",
+        "They let the children ask questions"
+      ],
+      "fragmentForm": "let the children",
+      "wormholeVariants": [
+        "They let the children to ask questions.",
+        "They let the children asking questions.",
+        "They let the children asks questions."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_048",
+    "seedId": "causative_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 내가 그녀의 노트를 빌리게 해 주었다.",
+    "english": "She let me borrow her notes.",
+    "words": [
+      "She",
+      "let",
+      "me",
+      "borrow",
+      "her",
+      "notes",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 그녀의 노트를 빌리게 해 주었다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "let me"
+      ],
+      [
+        "목적격보어 형태",
+        "borrow"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let me",
+      "borrow",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "borrow"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "She let me to borrow her notes.",
+      "statementForm": [
+        "She let me borrow her notes.",
+        "She let me borrow her notes"
+      ],
+      "fragmentForm": "let me",
+      "wormholeVariants": [
+        "She let me to borrow her notes.",
+        "She let me borrowing her notes.",
+        "She let me borrows her notes."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_049",
+    "seedId": "causative_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 코치는 선수들이 쉬게 허락했다.",
+    "english": "The coach let the players rest.",
+    "words": [
+      "The",
+      "coach",
+      "let",
+      "the",
+      "players",
+      "rest",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 코치는 선수들이 쉬게 허락했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "let the players"
+      ],
+      [
+        "목적격보어 형태",
+        "rest"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let the players",
+      "rest",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "rest"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The coach let the players to rest.",
+      "statementForm": [
+        "The coach let the players rest.",
+        "The coach let the players rest"
+      ],
+      "fragmentForm": "let the players",
+      "wormholeVariants": [
+        "The coach let the players to rest.",
+        "The coach let the players resting.",
+        "The coach let the players rests."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_050",
+    "seedId": "causative_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 시스템은 사용자가 오류를 수정하게 해 준다.",
+    "english": "The system lets users correct errors.",
+    "words": [
+      "The",
+      "system",
+      "lets",
+      "users",
+      "correct",
+      "errors",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 시스템은 사용자가 오류를 수정하게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets users"
+      ],
+      [
+        "목적격보어 형태",
+        "correct"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets users",
+      "correct",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "correct"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The system lets users to correct errors.",
+      "statementForm": [
+        "The system lets users correct errors.",
+        "The system lets users correct errors"
+      ],
+      "fragmentForm": "lets users",
+      "wormholeVariants": [
+        "The system lets users to correct errors.",
+        "The system lets users correcting errors.",
+        "The system lets users corrects errors."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_051",
+    "seedId": "causative_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 플랫폼은 예술가들이 작품을 공유하게 해 준다.",
+    "english": "The platform lets artists share their work.",
+    "words": [
+      "The",
+      "platform",
+      "lets",
+      "artists",
+      "share",
+      "their",
+      "work",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 플랫폼은 예술가들이 작품을 공유하게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets artists"
+      ],
+      [
+        "목적격보어 형태",
+        "share"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets artists",
+      "share",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "share"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The platform lets artists to share their work.",
+      "statementForm": [
+        "The platform lets artists share their work.",
+        "The platform lets artists share their work"
+      ],
+      "fragmentForm": "lets artists",
+      "wormholeVariants": [
+        "The platform lets artists to share their work.",
+        "The platform lets artists sharing their work.",
+        "The platform lets artists shares their work."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_052",
+    "seedId": "causative_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 선생님은 우리가 답을 비교하게 했다.",
+    "english": "The teacher let us compare our answers.",
+    "words": [
+      "The",
+      "teacher",
+      "let",
+      "us",
+      "compare",
+      "our",
+      "answers",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선생님은 우리가 답을 비교하게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "let us"
+      ],
+      [
+        "목적격보어 형태",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "let us",
+      "compare",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "compare"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher let us to compare our answers.",
+      "statementForm": [
+        "The teacher let us compare our answers.",
+        "The teacher let us compare our answers"
+      ],
+      "fragmentForm": "let us",
+      "wormholeVariants": [
+        "The teacher let us to compare our answers.",
+        "The teacher let us comparing our answers.",
+        "The teacher let us compares our answers."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_053",
+    "seedId": "causative_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 문은 사람들이 쉽게 들어가게 해 준다.",
+    "english": "The door lets people enter easily.",
+    "words": [
+      "The",
+      "door",
+      "lets",
+      "people",
+      "enter",
+      "easily",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문은 사람들이 쉽게 들어가게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets people"
+      ],
+      [
+        "목적격보어 형태",
+        "enter"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets people",
+      "enter",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "enter"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The door lets people to enter easily.",
+      "statementForm": [
+        "The door lets people enter easily.",
+        "The door lets people enter easily"
+      ],
+      "fragmentForm": "lets people",
+      "wormholeVariants": [
+        "The door lets people to enter easily.",
+        "The door lets people entering easily.",
+        "The door lets people enters easily."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_054",
+    "seedId": "causative_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 기능은 사용자가 글꼴을 바꾸게 해 준다.",
+    "english": "The feature lets users change the font.",
+    "words": [
+      "The",
+      "feature",
+      "lets",
+      "users",
+      "change",
+      "the",
+      "font",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 기능은 사용자가 글꼴을 바꾸게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets users"
+      ],
+      [
+        "목적격보어 형태",
+        "change"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets users",
+      "change",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "change"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The feature lets users to change the font.",
+      "statementForm": [
+        "The feature lets users change the font.",
+        "The feature lets users change the font"
+      ],
+      "fragmentForm": "lets users",
+      "wormholeVariants": [
+        "The feature lets users to change the font.",
+        "The feature lets users changing the font.",
+        "The feature lets users changes the font."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_055",
+    "seedId": "causative_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그가 프로젝트를 끝내도록 도왔다.",
+    "english": "I helped him finish the project.",
+    "words": [
+      "I",
+      "helped",
+      "him",
+      "finish",
+      "the",
+      "project",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 프로젝트를 끝내도록 도왔다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "helped him"
+      ],
+      [
+        "목적격보어 형태",
+        "finish"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped him",
+      "finish",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "finish"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "I helped him finishing the project.",
+      "statementForm": [
+        "I helped him finish the project.",
+        "I helped him finish the project"
+      ],
+      "fragmentForm": "helped him",
+      "wormholeVariants": [
+        "I helped him finishing the project.",
+        "I helped him finishs the project.",
+        "I helped him for finish the project."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_056",
+    "seedId": "causative_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 그가 프로젝트를 끝내도록 도왔다.",
+    "english": "I helped him to finish the project.",
+    "words": [
+      "I",
+      "helped",
+      "him",
+      "to",
+      "finish",
+      "the",
+      "project",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 프로젝트를 끝내도록 도왔다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "helped him"
+      ],
+      [
+        "목적격보어 형태",
+        "to finish"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped him",
+      "to finish",
+      "finish",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to finish"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "I helped him finishing the project.",
+      "statementForm": [
+        "I helped him to finish the project.",
+        "I helped him to finish the project"
+      ],
+      "fragmentForm": "helped him",
+      "wormholeVariants": [
+        "I helped him finishing the project.",
+        "I helped him to finishs the project.",
+        "I helped him for finish the project."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_057",
+    "seedId": "causative_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 내가 문제를 풀도록 도왔다.",
+    "english": "She helped me solve the problem.",
+    "words": [
+      "She",
+      "helped",
+      "me",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 문제를 풀도록 도왔다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "helped me"
+      ],
+      [
+        "목적격보어 형태",
+        "solve"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped me",
+      "solve",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "solve"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "She helped me solving the problem.",
+      "statementForm": [
+        "She helped me solve the problem.",
+        "She helped me solve the problem"
+      ],
+      "fragmentForm": "helped me",
+      "wormholeVariants": [
+        "She helped me solving the problem.",
+        "She helped me solves the problem.",
+        "She helped me for solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_058",
+    "seedId": "causative_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 내가 문제를 풀도록 도왔다.",
+    "english": "She helped me to solve the problem.",
+    "words": [
+      "She",
+      "helped",
+      "me",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 문제를 풀도록 도왔다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "helped me"
+      ],
+      [
+        "목적격보어 형태",
+        "to solve"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped me",
+      "to solve",
+      "solve",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to solve"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "She helped me solving the problem.",
+      "statementForm": [
+        "She helped me to solve the problem.",
+        "She helped me to solve the problem"
+      ],
+      "fragmentForm": "helped me",
+      "wormholeVariants": [
+        "She helped me solving the problem.",
+        "She helped me to solves the problem.",
+        "She helped me for solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_059",
+    "seedId": "causative_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 그들이 일을 완성하도록 도왔다.",
+    "english": "We helped them complete the task.",
+    "words": [
+      "We",
+      "helped",
+      "them",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그들이 일을 완성하도록 도왔다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "helped them"
+      ],
+      [
+        "목적격보어 형태",
+        "complete"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped them",
+      "complete",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "complete"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "We helped them completing the task.",
+      "statementForm": [
+        "We helped them complete the task.",
+        "We helped them complete the task"
+      ],
+      "fragmentForm": "helped them",
+      "wormholeVariants": [
+        "We helped them completing the task.",
+        "We helped them completes the task.",
+        "We helped them for complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_060",
+    "seedId": "causative_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 그들이 일을 완성하도록 도왔다.",
+    "english": "We helped them to complete the task.",
+    "words": [
+      "We",
+      "helped",
+      "them",
+      "to",
+      "complete",
+      "the",
+      "task",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그들이 일을 완성하도록 도왔다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "helped them"
+      ],
+      [
+        "목적격보어 형태",
+        "to complete"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped them",
+      "to complete",
+      "complete",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to complete"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "We helped them completing the task.",
+      "statementForm": [
+        "We helped them to complete the task.",
+        "We helped them to complete the task"
+      ],
+      "fragmentForm": "helped them",
+      "wormholeVariants": [
+        "We helped them completing the task.",
+        "We helped them to completes the task.",
+        "We helped them for complete the task."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_061",
+    "seedId": "causative_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그는 그녀가 파일을 정리하도록 도왔다.",
+    "english": "He helped her organize the files.",
+    "words": [
+      "He",
+      "helped",
+      "her",
+      "organize",
+      "the",
+      "files",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀가 파일을 정리하도록 도왔다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "helped her"
+      ],
+      [
+        "목적격보어 형태",
+        "organize"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped her",
+      "organize",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "organize"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "He helped her organizing the files.",
+      "statementForm": [
+        "He helped her organize the files.",
+        "He helped her organize the files"
+      ],
+      "fragmentForm": "helped her",
+      "wormholeVariants": [
+        "He helped her organizing the files.",
+        "He helped her organizes the files.",
+        "He helped her for organize the files."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_062",
+    "seedId": "causative_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그는 그녀가 파일을 정리하도록 도왔다.",
+    "english": "He helped her to organize the files.",
+    "words": [
+      "He",
+      "helped",
+      "her",
+      "to",
+      "organize",
+      "the",
+      "files",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀가 파일을 정리하도록 도왔다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "helped her"
+      ],
+      [
+        "목적격보어 형태",
+        "to organize"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped her",
+      "to organize",
+      "organize",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to organize"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "He helped her organizing the files.",
+      "statementForm": [
+        "He helped her to organize the files.",
+        "He helped her to organize the files"
+      ],
+      "fragmentForm": "helped her",
+      "wormholeVariants": [
+        "He helped her organizing the files.",
+        "He helped her to organizes the files.",
+        "He helped her for organize the files."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_063",
+    "seedId": "causative_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 안내서는 학생들이 개념을 이해하도록 도왔다.",
+    "english": "The guide helped students understand the concept.",
+    "words": [
+      "The",
+      "guide",
+      "helped",
+      "students",
+      "understand",
+      "the",
+      "concept",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 안내서는 학생들이 개념을 이해하도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped students"
+      ],
+      [
+        "목적격보어 형태",
+        "understand"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped students",
+      "understand",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "understand"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The guide helped students understanding the concept.",
+      "statementForm": [
+        "The guide helped students understand the concept.",
+        "The guide helped students understand the concept"
+      ],
+      "fragmentForm": "helped students",
+      "wormholeVariants": [
+        "The guide helped students understanding the concept.",
+        "The guide helped students understands the concept.",
+        "The guide helped students for understand the concept."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_064",
+    "seedId": "causative_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 안내서는 학생들이 개념을 이해하도록 도왔다.",
+    "english": "The guide helped students to understand the concept.",
+    "words": [
+      "The",
+      "guide",
+      "helped",
+      "students",
+      "to",
+      "understand",
+      "the",
+      "concept",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 안내서는 학생들이 개념을 이해하도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped students"
+      ],
+      [
+        "목적격보어 형태",
+        "to understand"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped students",
+      "to understand",
+      "understand",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to understand"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The guide helped students understanding the concept.",
+      "statementForm": [
+        "The guide helped students to understand the concept.",
+        "The guide helped students to understand the concept"
+      ],
+      "fragmentForm": "helped students",
+      "wormholeVariants": [
+        "The guide helped students understanding the concept.",
+        "The guide helped students to understands the concept.",
+        "The guide helped students for understand the concept."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_065",
+    "seedId": "causative_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 프로그램은 사용자가 실수를 줄이도록 도왔다.",
+    "english": "The program helped users reduce mistakes.",
+    "words": [
+      "The",
+      "program",
+      "helped",
+      "users",
+      "reduce",
+      "mistakes",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 프로그램은 사용자가 실수를 줄이도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped users"
+      ],
+      [
+        "목적격보어 형태",
+        "reduce"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped users",
+      "reduce",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "reduce"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "abstract",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The program helped users reducing mistakes.",
+      "statementForm": [
+        "The program helped users reduce mistakes.",
+        "The program helped users reduce mistakes"
+      ],
+      "fragmentForm": "helped users",
+      "wormholeVariants": [
+        "The program helped users reducing mistakes.",
+        "The program helped users reduces mistakes.",
+        "The program helped users for reduce mistakes."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_066",
+    "seedId": "causative_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 프로그램은 사용자가 실수를 줄이도록 도왔다.",
+    "english": "The program helped users to reduce mistakes.",
+    "words": [
+      "The",
+      "program",
+      "helped",
+      "users",
+      "to",
+      "reduce",
+      "mistakes",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 프로그램은 사용자가 실수를 줄이도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped users"
+      ],
+      [
+        "목적격보어 형태",
+        "to reduce"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped users",
+      "to reduce",
+      "reduce",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to reduce"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "abstract",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The program helped users reducing mistakes.",
+      "statementForm": [
+        "The program helped users to reduce mistakes.",
+        "The program helped users to reduce mistakes"
+      ],
+      "fragmentForm": "helped users",
+      "wormholeVariants": [
+        "The program helped users reducing mistakes.",
+        "The program helped users to reduces mistakes.",
+        "The program helped users for reduce mistakes."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_067",
+    "seedId": "causative_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 조언은 그가 더 나은 결정을 내리도록 도왔다.",
+    "english": "The advice helped him make a better decision.",
+    "words": [
+      "The",
+      "advice",
+      "helped",
+      "him",
+      "make",
+      "a",
+      "better",
+      "decision",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 조언은 그가 더 나은 결정을 내리도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped him"
+      ],
+      [
+        "목적격보어 형태",
+        "make"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped him",
+      "make",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "make"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "abstract",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The advice helped him making a better decision.",
+      "statementForm": [
+        "The advice helped him make a better decision.",
+        "The advice helped him make a better decision"
+      ],
+      "fragmentForm": "helped him",
+      "wormholeVariants": [
+        "The advice helped him making a better decision.",
+        "The advice helped him makes a better decision.",
+        "The advice helped him for make a better decision."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_068",
+    "seedId": "causative_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 조언은 그가 더 나은 결정을 내리도록 도왔다.",
+    "english": "The advice helped him to make a better decision.",
+    "words": [
+      "The",
+      "advice",
+      "helped",
+      "him",
+      "to",
+      "make",
+      "a",
+      "better",
+      "decision",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 조언은 그가 더 나은 결정을 내리도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped him"
+      ],
+      [
+        "목적격보어 형태",
+        "to make"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped him",
+      "to make",
+      "make",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to make"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "abstract",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The advice helped him making a better decision.",
+      "statementForm": [
+        "The advice helped him to make a better decision.",
+        "The advice helped him to make a better decision"
+      ],
+      "fragmentForm": "helped him",
+      "wormholeVariants": [
+        "The advice helped him making a better decision.",
+        "The advice helped him to makes a better decision.",
+        "The advice helped him for make a better decision."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_069",
+    "seedId": "causative_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 수업은 학생들이 자신감을 키우도록 도왔다.",
+    "english": "The class helped students build confidence.",
+    "words": [
+      "The",
+      "class",
+      "helped",
+      "students",
+      "build",
+      "confidence",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 수업은 학생들이 자신감을 키우도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped students"
+      ],
+      [
+        "목적격보어 형태",
+        "build"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped students",
+      "build",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "build"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "abstract",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The class helped students building confidence.",
+      "statementForm": [
+        "The class helped students build confidence.",
+        "The class helped students build confidence"
+      ],
+      "fragmentForm": "helped students",
+      "wormholeVariants": [
+        "The class helped students building confidence.",
+        "The class helped students builds confidence.",
+        "The class helped students for build confidence."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_070",
+    "seedId": "causative_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 수업은 학생들이 자신감을 키우도록 도왔다.",
+    "english": "The class helped students to build confidence.",
+    "words": [
+      "The",
+      "class",
+      "helped",
+      "students",
+      "to",
+      "build",
+      "confidence",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 수업은 학생들이 자신감을 키우도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped students"
+      ],
+      [
+        "목적격보어 형태",
+        "to build"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped students",
+      "to build",
+      "build",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to build"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "abstract",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The class helped students building confidence.",
+      "statementForm": [
+        "The class helped students to build confidence.",
+        "The class helped students to build confidence"
+      ],
+      "fragmentForm": "helped students",
+      "wormholeVariants": [
+        "The class helped students building confidence.",
+        "The class helped students to builds confidence.",
+        "The class helped students for build confidence."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_071",
+    "seedId": "causative_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 도구는 우리가 자료를 분석하도록 도왔다.",
+    "english": "The tool helped us analyze the data.",
+    "words": [
+      "The",
+      "tool",
+      "helped",
+      "us",
+      "analyze",
+      "the",
+      "data",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 도구는 우리가 자료를 분석하도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped us"
+      ],
+      [
+        "목적격보어 형태",
+        "analyze"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped us",
+      "analyze",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "analyze"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "abstract",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tool helped us analyzing the data.",
+      "statementForm": [
+        "The tool helped us analyze the data.",
+        "The tool helped us analyze the data"
+      ],
+      "fragmentForm": "helped us",
+      "wormholeVariants": [
+        "The tool helped us analyzing the data.",
+        "The tool helped us analyzes the data.",
+        "The tool helped us for analyze the data."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_072",
+    "seedId": "causative_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 도구는 우리가 자료를 분석하도록 도왔다.",
+    "english": "The tool helped us to analyze the data.",
+    "words": [
+      "The",
+      "tool",
+      "helped",
+      "us",
+      "to",
+      "analyze",
+      "the",
+      "data",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 도구는 우리가 자료를 분석하도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped us"
+      ],
+      [
+        "목적격보어 형태",
+        "to analyze"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped us",
+      "to analyze",
+      "analyze",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to analyze"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "abstract",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tool helped us analyzing the data.",
+      "statementForm": [
+        "The tool helped us to analyze the data.",
+        "The tool helped us to analyze the data"
+      ],
+      "fragmentForm": "helped us",
+      "wormholeVariants": [
+        "The tool helped us analyzing the data.",
+        "The tool helped us to analyzes the data.",
+        "The tool helped us for analyze the data."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_073",
+    "seedId": "causative_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 멘토는 내가 목표를 세우도록 도왔다.",
+    "english": "The mentor helped me set goals.",
+    "words": [
+      "The",
+      "mentor",
+      "helped",
+      "me",
+      "set",
+      "goals",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 멘토는 내가 목표를 세우도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped me"
+      ],
+      [
+        "목적격보어 형태",
+        "set"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped me",
+      "set",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "set"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The mentor helped me seting goals.",
+      "statementForm": [
+        "The mentor helped me set goals.",
+        "The mentor helped me set goals"
+      ],
+      "fragmentForm": "helped me",
+      "wormholeVariants": [
+        "The mentor helped me seting goals.",
+        "The mentor helped me sets goals.",
+        "The mentor helped me for set goals."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_074",
+    "seedId": "causative_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 멘토는 내가 목표를 세우도록 도왔다.",
+    "english": "The mentor helped me to set goals.",
+    "words": [
+      "The",
+      "mentor",
+      "helped",
+      "me",
+      "to",
+      "set",
+      "goals",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 멘토는 내가 목표를 세우도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped me"
+      ],
+      [
+        "목적격보어 형태",
+        "to set"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped me",
+      "to set",
+      "set",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to set"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The mentor helped me seting goals.",
+      "statementForm": [
+        "The mentor helped me to set goals.",
+        "The mentor helped me to set goals"
+      ],
+      "fragmentForm": "helped me",
+      "wormholeVariants": [
+        "The mentor helped me seting goals.",
+        "The mentor helped me to sets goals.",
+        "The mentor helped me for set goals."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_075",
+    "seedId": "causative_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그는 사과하도록 강요받았다.",
+    "english": "He was made to apologize.",
+    "words": [
+      "He",
+      "was",
+      "made",
+      "to",
+      "apologize",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 사과하도록 강요받았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "was made"
+      ],
+      [
+        "목적격보어 형태",
+        "to apologize"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made",
+      "to apologize",
+      "apologize",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to apologize"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was made apologize.",
+      "statementForm": [
+        "He was made to apologize.",
+        "He was made to apologize"
+      ],
+      "fragmentForm": "was made",
+      "wormholeVariants": [
+        "He was made apologize.",
+        "He was made apologizing.",
+        "He was made to apologizes."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_076",
+    "seedId": "causative_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 늦게까지 남도록 강요받았다.",
+    "english": "She was made to stay late.",
+    "words": [
+      "She",
+      "was",
+      "made",
+      "to",
+      "stay",
+      "late",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 늦게까지 남도록 강요받았다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "was made"
+      ],
+      [
+        "목적격보어 형태",
+        "to stay"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made",
+      "to stay",
+      "stay",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to stay"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was made stay late.",
+      "statementForm": [
+        "She was made to stay late.",
+        "She was made to stay late"
+      ],
+      "fragmentForm": "was made",
+      "wormholeVariants": [
+        "She was made stay late.",
+        "She was made staying late.",
+        "She was made to stays late."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_077",
+    "seedId": "causative_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그들은 규칙을 따르도록 강요받았다.",
+    "english": "They were made to follow the rules.",
+    "words": [
+      "They",
+      "were",
+      "made",
+      "to",
+      "follow",
+      "the",
+      "rules",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 규칙을 따르도록 강요받았다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "were made"
+      ],
+      [
+        "목적격보어 형태",
+        "to follow"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "were made",
+      "to follow",
+      "follow",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to follow"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "They were made follow the rules.",
+      "statementForm": [
+        "They were made to follow the rules.",
+        "They were made to follow the rules"
+      ],
+      "fragmentForm": "were made",
+      "wormholeVariants": [
+        "They were made follow the rules.",
+        "They were made following the rules.",
+        "They were made to follows the rules."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_078",
+    "seedId": "causative_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 실수를 설명하도록 요구받았다.",
+    "english": "We were made to explain the mistake.",
+    "words": [
+      "We",
+      "were",
+      "made",
+      "to",
+      "explain",
+      "the",
+      "mistake",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 실수를 설명하도록 요구받았다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "were made"
+      ],
+      [
+        "목적격보어 형태",
+        "to explain"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "were made",
+      "to explain",
+      "explain",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to explain"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were made explain the mistake.",
+      "statementForm": [
+        "We were made to explain the mistake.",
+        "We were made to explain the mistake"
+      ],
+      "fragmentForm": "were made",
+      "wormholeVariants": [
+        "We were made explain the mistake.",
+        "We were made explaining the mistake.",
+        "We were made to explains the mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_079",
+    "seedId": "causative_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 학생은 시험을 다시 치르도록 강요받았다.",
+    "english": "The student was made to take the test again.",
+    "words": [
+      "The",
+      "student",
+      "was",
+      "made",
+      "to",
+      "take",
+      "the",
+      "test",
+      "again",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생은 시험을 다시 치르도록 강요받았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "was made"
+      ],
+      [
+        "목적격보어 형태",
+        "to take"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made",
+      "to take",
+      "take",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to take"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student was made take the test again.",
+      "statementForm": [
+        "The student was made to take the test again.",
+        "The student was made to take the test again"
+      ],
+      "fragmentForm": "was made",
+      "wormholeVariants": [
+        "The student was made take the test again.",
+        "The student was made taking the test again.",
+        "The student was made to takes the test again."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_080",
+    "seedId": "causative_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 노동자들은 더 오래 기다리도록 강요받았다.",
+    "english": "The workers were made to wait longer.",
+    "words": [
+      "The",
+      "workers",
+      "were",
+      "made",
+      "to",
+      "wait",
+      "longer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 노동자들은 더 오래 기다리도록 강요받았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "were made"
+      ],
+      [
+        "목적격보어 형태",
+        "to wait"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "were made",
+      "to wait",
+      "wait",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to wait"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The workers were made wait longer.",
+      "statementForm": [
+        "The workers were made to wait longer.",
+        "The workers were made to wait longer"
+      ],
+      "fragmentForm": "were made",
+      "wormholeVariants": [
+        "The workers were made wait longer.",
+        "The workers were made waiting longer.",
+        "The workers were made to waits longer."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_081",
+    "seedId": "causative_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 팀은 계획을 수정하도록 요구받았다.",
+    "english": "The team was made to revise the plan.",
+    "words": [
+      "The",
+      "team",
+      "was",
+      "made",
+      "to",
+      "revise",
+      "the",
+      "plan",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 팀은 계획을 수정하도록 요구받았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "was made"
+      ],
+      [
+        "목적격보어 형태",
+        "to revise"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made",
+      "to revise",
+      "revise",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to revise"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team was made revise the plan.",
+      "statementForm": [
+        "The team was made to revise the plan.",
+        "The team was made to revise the plan"
+      ],
+      "fragmentForm": "was made",
+      "wormholeVariants": [
+        "The team was made revise the plan.",
+        "The team was made revising the plan.",
+        "The team was made to revises the plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_082",
+    "seedId": "causative_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 회사는 정책을 바꾸도록 압박받았다.",
+    "english": "The company was made to change the policy.",
+    "words": [
+      "The",
+      "company",
+      "was",
+      "made",
+      "to",
+      "change",
+      "the",
+      "policy",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 회사는 정책을 바꾸도록 압박받았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "was made"
+      ],
+      [
+        "목적격보어 형태",
+        "to change"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made",
+      "to change",
+      "change",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to change"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The company was made change the policy.",
+      "statementForm": [
+        "The company was made to change the policy.",
+        "The company was made to change the policy"
+      ],
+      "fragmentForm": "was made",
+      "wormholeVariants": [
+        "The company was made change the policy.",
+        "The company was made changing the policy.",
+        "The company was made to changes the policy."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_083",
+    "seedId": "causative_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 선수들은 다시 훈련하도록 강요받았다.",
+    "english": "The players were made to train again.",
+    "words": [
+      "The",
+      "players",
+      "were",
+      "made",
+      "to",
+      "train",
+      "again",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 선수들은 다시 훈련하도록 강요받았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "were made"
+      ],
+      [
+        "목적격보어 형태",
+        "to train"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "were made",
+      "to train",
+      "train",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to train"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The players were made train again.",
+      "statementForm": [
+        "The players were made to train again.",
+        "The players were made to train again"
+      ],
+      "fragmentForm": "were made",
+      "wormholeVariants": [
+        "The players were made train again.",
+        "The players were made training again.",
+        "The players were made to trains again."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_084",
+    "seedId": "causative_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 사용자는 비밀번호를 재설정하도록 요구받았다.",
+    "english": "The user was made to reset the password.",
+    "words": [
+      "The",
+      "user",
+      "was",
+      "made",
+      "to",
+      "reset",
+      "the",
+      "password",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 사용자는 비밀번호를 재설정하도록 요구받았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "was made"
+      ],
+      [
+        "목적격보어 형태",
+        "to reset"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made",
+      "to reset",
+      "reset",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to reset"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The user was made reset the password.",
+      "statementForm": [
+        "The user was made to reset the password.",
+        "The user was made to reset the password"
+      ],
+      "fragmentForm": "was made",
+      "wormholeVariants": [
+        "The user was made reset the password.",
+        "The user was made reseting the password.",
+        "The user was made to resets the password."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_085",
+    "seedId": "causative_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 내 차를 수리받았다.",
+    "english": "I had my car repaired.",
+    "words": [
+      "I",
+      "had",
+      "my",
+      "car",
+      "repaired",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 내 차를 수리받았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "had my car"
+      ],
+      [
+        "목적격보어 형태",
+        "repaired"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had my car",
+      "repaired",
+      "repair",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "repaired"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had my car repair.",
+      "statementForm": [
+        "I had my car repaired.",
+        "I had my car repaired"
+      ],
+      "fragmentForm": "had my car",
+      "wormholeVariants": [
+        "I had my car repair.",
+        "I had my car to repair.",
+        "I had my car repairing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_086",
+    "seedId": "causative_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 머리를 잘랐다.",
+    "english": "She had her hair cut.",
+    "words": [
+      "She",
+      "had",
+      "her",
+      "hair",
+      "cut",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 머리를 잘랐다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "had her hair"
+      ],
+      [
+        "목적격보어 형태",
+        "cut"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had her hair",
+      "cut",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "cut"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had her hair to cut.",
+      "statementForm": [
+        "She had her hair cut.",
+        "She had her hair cut"
+      ],
+      "fragmentForm": "had her hair",
+      "wormholeVariants": [
+        "She had her hair to cut.",
+        "She had her hair cuting."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_087",
+    "seedId": "causative_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 내 휴대폰을 수리받았다.",
+    "english": "I had my phone fixed.",
+    "words": [
+      "I",
+      "had",
+      "my",
+      "phone",
+      "fixed",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 내 휴대폰을 수리받았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "had my phone"
+      ],
+      [
+        "목적격보어 형태",
+        "fixed"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had my phone",
+      "fixed",
+      "fix",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "fixed"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had my phone fix.",
+      "statementForm": [
+        "I had my phone fixed.",
+        "I had my phone fixed"
+      ],
+      "fragmentForm": "had my phone",
+      "wormholeVariants": [
+        "I had my phone fix.",
+        "I had my phone to fix.",
+        "I had my phone fixing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_088",
+    "seedId": "causative_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 보고서를 검토받았다.",
+    "english": "She had her report checked.",
+    "words": [
+      "She",
+      "had",
+      "her",
+      "report",
+      "checked",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 보고서를 검토받았다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "had her report"
+      ],
+      [
+        "목적격보어 형태",
+        "checked"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had her report",
+      "checked",
+      "check",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "checked"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had her report check.",
+      "statementForm": [
+        "She had her report checked.",
+        "She had her report checked"
+      ],
+      "fragmentForm": "had her report",
+      "wormholeVariants": [
+        "She had her report check.",
+        "She had her report to check.",
+        "She had her report checking."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_089",
+    "seedId": "causative_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그들은 사무실을 청소시켰다.",
+    "english": "They had the office cleaned.",
+    "words": [
+      "They",
+      "had",
+      "the",
+      "office",
+      "cleaned",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 사무실을 청소시켰다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "had the office"
+      ],
+      [
+        "목적격보어 형태",
+        "cleaned"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the office",
+      "cleaned",
+      "clean",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "cleaned"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "They had the office clean.",
+      "statementForm": [
+        "They had the office cleaned.",
+        "They had the office cleaned"
+      ],
+      "fragmentForm": "had the office",
+      "wormholeVariants": [
+        "They had the office clean.",
+        "They had the office to clean.",
+        "They had the office cleaning."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_090",
+    "seedId": "causative_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 컴퓨터 업데이트를 맡겼다.",
+    "english": "We had the computer updated.",
+    "words": [
+      "We",
+      "had",
+      "the",
+      "computer",
+      "updated",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 컴퓨터 업데이트를 맡겼다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "had the computer"
+      ],
+      [
+        "목적격보어 형태",
+        "updated"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the computer",
+      "updated",
+      "update",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "updated"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "We had the computer update.",
+      "statementForm": [
+        "We had the computer updated.",
+        "We had the computer updated"
+      ],
+      "fragmentForm": "had the computer",
+      "wormholeVariants": [
+        "We had the computer update.",
+        "We had the computer to update.",
+        "We had the computer updating."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_091",
+    "seedId": "causative_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그는 자전거를 수리받았다.",
+    "english": "He had his bike repaired.",
+    "words": [
+      "He",
+      "had",
+      "his",
+      "bike",
+      "repaired",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 자전거를 수리받았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "had his bike"
+      ],
+      [
+        "목적격보어 형태",
+        "repaired"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had his bike",
+      "repaired",
+      "repair",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "repaired"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "He had his bike repair.",
+      "statementForm": [
+        "He had his bike repaired.",
+        "He had his bike repaired"
+      ],
+      "fragmentForm": "had his bike",
+      "wormholeVariants": [
+        "He had his bike repair.",
+        "He had his bike to repair.",
+        "He had his bike repairing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_092",
+    "seedId": "causative_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 회사는 제품 시험을 맡겼다.",
+    "english": "The company had the product tested.",
+    "words": [
+      "The",
+      "company",
+      "had",
+      "the",
+      "product",
+      "tested",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 회사는 제품 시험을 맡겼다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "had the product"
+      ],
+      [
+        "목적격보어 형태",
+        "tested"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the product",
+      "tested",
+      "test",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "tested"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "The company had the product test.",
+      "statementForm": [
+        "The company had the product tested.",
+        "The company had the product tested"
+      ],
+      "fragmentForm": "had the product",
+      "wormholeVariants": [
+        "The company had the product test.",
+        "The company had the product to test.",
+        "The company had the product testing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_093",
+    "seedId": "causative_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 파일을 정리시켰다.",
+    "english": "She had the files organized.",
+    "words": [
+      "She",
+      "had",
+      "the",
+      "files",
+      "organized",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 파일을 정리시켰다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "had the files"
+      ],
+      [
+        "목적격보어 형태",
+        "organized"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the files",
+      "organized",
+      "organize",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "organized"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had the files organize.",
+      "statementForm": [
+        "She had the files organized.",
+        "She had the files organized"
+      ],
+      "fragmentForm": "had the files",
+      "wormholeVariants": [
+        "She had the files organize.",
+        "She had the files to organize.",
+        "She had the files organizing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_094",
+    "seedId": "causative_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 문서를 인쇄시켰다.",
+    "english": "I had the document printed.",
+    "words": [
+      "I",
+      "had",
+      "the",
+      "document",
+      "printed",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 문서를 인쇄시켰다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "had the document"
+      ],
+      [
+        "목적격보어 형태",
+        "printed"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the document",
+      "printed",
+      "print",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "printed"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had the document print.",
+      "statementForm": [
+        "I had the document printed.",
+        "I had the document printed"
+      ],
+      "fragmentForm": "had the document",
+      "wormholeVariants": [
+        "I had the document print.",
+        "I had the document to print.",
+        "I had the document printing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_095",
+    "seedId": "causative_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그들은 벽을 칠하게 했다.",
+    "english": "They had the wall painted.",
+    "words": [
+      "They",
+      "had",
+      "the",
+      "wall",
+      "painted",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 벽을 칠하게 했다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "had the wall"
+      ],
+      [
+        "목적격보어 형태",
+        "painted"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the wall",
+      "painted",
+      "paint",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "painted"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "They had the wall paint.",
+      "statementForm": [
+        "They had the wall painted.",
+        "They had the wall painted"
+      ],
+      "fragmentForm": "had the wall",
+      "wormholeVariants": [
+        "They had the wall paint.",
+        "They had the wall to paint.",
+        "They had the wall painting."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_096",
+    "seedId": "causative_096",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 창문을 교체하게 했다.",
+    "english": "We had the window replaced.",
+    "words": [
+      "We",
+      "had",
+      "the",
+      "window",
+      "replaced",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 창문을 교체하게 했다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "had the window"
+      ],
+      [
+        "목적격보어 형태",
+        "replaced"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the window",
+      "replaced",
+      "replace",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "replaced"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "We had the window replace.",
+      "statementForm": [
+        "We had the window replaced.",
+        "We had the window replaced"
+      ],
+      "fragmentForm": "had the window",
+      "wormholeVariants": [
+        "We had the window replace.",
+        "We had the window to replace.",
+        "We had the window replacing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_097",
+    "seedId": "causative_097",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그는 소포를 배달시켰다.",
+    "english": "He had the package delivered.",
+    "words": [
+      "He",
+      "had",
+      "the",
+      "package",
+      "delivered",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 소포를 배달시켰다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "had the package"
+      ],
+      [
+        "목적격보어 형태",
+        "delivered"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the package",
+      "delivered",
+      "deliver",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "delivered"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "He had the package deliver.",
+      "statementForm": [
+        "He had the package delivered.",
+        "He had the package delivered"
+      ],
+      "fragmentForm": "had the package",
+      "wormholeVariants": [
+        "He had the package deliver.",
+        "He had the package to deliver.",
+        "He had the package delivering."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_098",
+    "seedId": "causative_098",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 학교는 교실을 수리시켰다.",
+    "english": "The school had the classroom repaired.",
+    "words": [
+      "The",
+      "school",
+      "had",
+      "the",
+      "classroom",
+      "repaired",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학교는 교실을 수리시켰다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "had the classroom"
+      ],
+      [
+        "목적격보어 형태",
+        "repaired"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the classroom",
+      "repaired",
+      "repair",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "repaired"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "The school had the classroom repair.",
+      "statementForm": [
+        "The school had the classroom repaired.",
+        "The school had the classroom repaired"
+      ],
+      "fragmentForm": "had the classroom",
+      "wormholeVariants": [
+        "The school had the classroom repair.",
+        "The school had the classroom to repair.",
+        "The school had the classroom repairing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_099",
+    "seedId": "causative_099",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 소음은 아이들이 잠에서 깨게 했다.",
+    "english": "The noise made the children wake up.",
+    "words": [
+      "The",
+      "noise",
+      "made",
+      "the",
+      "children",
+      "wake",
+      "up",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소음은 아이들이 잠에서 깨게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made the children"
+      ],
+      [
+        "목적격보어 형태",
+        "wake"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made the children",
+      "wake",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "wake"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The noise made the children to wake up.",
+      "statementForm": [
+        "The noise made the children wake up.",
+        "The noise made the children wake up"
+      ],
+      "fragmentForm": "made the children",
+      "wormholeVariants": [
+        "The noise made the children to wake up.",
+        "The noise made the children waking up.",
+        "The noise made the children wakes up."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_100",
+    "seedId": "causative_100",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 결과는 우리가 전략을 다시 세우게 했다.",
+    "english": "The result made us rebuild the strategy.",
+    "words": [
+      "The",
+      "result",
+      "made",
+      "us",
+      "rebuild",
+      "the",
+      "strategy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결과는 우리가 전략을 다시 세우게 했다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "made us"
+      ],
+      [
+        "목적격보어 형태",
+        "rebuild"
+      ]
+    ],
+    "extraClueWordPool": [
+      "made us",
+      "rebuild",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "rebuild"
+    ],
+    "tags": [
+      "causative",
+      "make",
+      "make",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The result made us to rebuild the strategy.",
+      "statementForm": [
+        "The result made us rebuild the strategy.",
+        "The result made us rebuild the strategy"
+      ],
+      "fragmentForm": "made us",
+      "wormholeVariants": [
+        "The result made us to rebuild the strategy.",
+        "The result made us rebuilding the strategy.",
+        "The result made us rebuilds the strategy."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_101",
+    "seedId": "causative_101",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그녀는 디자이너가 표지를 수정하게 했다.",
+    "english": "She had the designer revise the cover.",
+    "words": [
+      "She",
+      "had",
+      "the",
+      "designer",
+      "revise",
+      "the",
+      "cover",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 디자이너가 표지를 수정하게 했다.",
+        "She"
+      ],
+      [
+        "핵심 구조",
+        "had the designer"
+      ],
+      [
+        "목적격보어 형태",
+        "revise"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the designer",
+      "revise",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "revise"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "She had the designer to revise the cover.",
+      "statementForm": [
+        "She had the designer revise the cover.",
+        "She had the designer revise the cover"
+      ],
+      "fragmentForm": "had the designer",
+      "wormholeVariants": [
+        "She had the designer to revise the cover.",
+        "She had the designer revising the cover.",
+        "She had the designer revises the cover."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_102",
+    "seedId": "causative_102",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "우리는 조수가 자료를 분류하게 했다.",
+    "english": "We had the assistant sort the materials.",
+    "words": [
+      "We",
+      "had",
+      "the",
+      "assistant",
+      "sort",
+      "the",
+      "materials",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 조수가 자료를 분류하게 했다.",
+        "We"
+      ],
+      [
+        "핵심 구조",
+        "had the assistant"
+      ],
+      [
+        "목적격보어 형태",
+        "sort"
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the assistant",
+      "sort",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "sort"
+    ],
+    "tags": [
+      "causative",
+      "have",
+      "have",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "We had the assistant to sort the materials.",
+      "statementForm": [
+        "We had the assistant sort the materials.",
+        "We had the assistant sort the materials"
+      ],
+      "fragmentForm": "had the assistant",
+      "wormholeVariants": [
+        "We had the assistant to sort the materials.",
+        "We had the assistant sorting the materials.",
+        "We had the assistant sorts the materials."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_103",
+    "seedId": "causative_103",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 도서관은 학생들이 조용히 공부하게 해 준다.",
+    "english": "The library lets students study quietly.",
+    "words": [
+      "The",
+      "library",
+      "lets",
+      "students",
+      "study",
+      "quietly",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "causative_verbs",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 도서관은 학생들이 조용히 공부하게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets students"
+      ],
+      [
+        "목적격보어 형태",
+        "study"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets students",
+      "study",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "study"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "base_verb"
+    ],
+    "distractorSeeds": {
+      "auxError": "The library lets students to study quietly.",
+      "statementForm": [
+        "The library lets students study quietly.",
+        "The library lets students study quietly"
+      ],
+      "fragmentForm": "lets students",
+      "wormholeVariants": [
+        "The library lets students to study quietly.",
+        "The library lets students studying quietly.",
+        "The library lets students studys quietly."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_104",
+    "seedId": "causative_104",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 설정은 사용자가 알림을 끄게 해 준다.",
+    "english": "The setting lets users turn off notifications.",
+    "words": [
+      "The",
+      "setting",
+      "lets",
+      "users",
+      "turn",
+      "off",
+      "notifications",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설정은 사용자가 알림을 끄게 해 준다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "lets users"
+      ],
+      [
+        "목적격보어 형태",
+        "turn"
+      ]
+    ],
+    "extraClueWordPool": [
+      "lets users",
+      "turn",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "turn"
+    ],
+    "tags": [
+      "causative",
+      "let",
+      "let",
+      "abstract"
+    ],
+    "distractorSeeds": {
+      "auxError": "The setting lets users to turn off notifications.",
+      "statementForm": [
+        "The setting lets users turn off notifications.",
+        "The setting lets users turn off notifications"
+      ],
+      "fragmentForm": "lets users",
+      "wormholeVariants": [
+        "The setting lets users to turn off notifications.",
+        "The setting lets users turning off notifications.",
+        "The setting lets users turns off notifications."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_105",
+    "seedId": "causative_105",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 영상은 내가 그 구조를 이해하도록 도왔다.",
+    "english": "The video helped me understand the structure.",
+    "words": [
+      "The",
+      "video",
+      "helped",
+      "me",
+      "understand",
+      "the",
+      "structure",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 영상은 내가 그 구조를 이해하도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped me"
+      ],
+      [
+        "목적격보어 형태",
+        "understand"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped me",
+      "understand",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "understand"
+    ],
+    "tags": [
+      "causative",
+      "help_bare",
+      "help",
+      "bare_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The video helped me understanding the structure.",
+      "statementForm": [
+        "The video helped me understand the structure.",
+        "The video helped me understand the structure"
+      ],
+      "fragmentForm": "helped me",
+      "wormholeVariants": [
+        "The video helped me understanding the structure.",
+        "The video helped me understands the structure.",
+        "The video helped me for understand the structure."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_106",
+    "seedId": "causative_106",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 영상은 내가 그 구조를 이해하도록 도왔다.",
+    "english": "The video helped me to understand the structure.",
+    "words": [
+      "The",
+      "video",
+      "helped",
+      "me",
+      "to",
+      "understand",
+      "the",
+      "structure",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 영상은 내가 그 구조를 이해하도록 도왔다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "helped me"
+      ],
+      [
+        "목적격보어 형태",
+        "to understand"
+      ]
+    ],
+    "extraClueWordPool": [
+      "helped me",
+      "to understand",
+      "understand",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to understand"
+    ],
+    "tags": [
+      "causative",
+      "help_to",
+      "help",
+      "to_allowed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The video helped me understanding the structure.",
+      "statementForm": [
+        "The video helped me to understand the structure.",
+        "The video helped me to understand the structure"
+      ],
+      "fragmentForm": "helped me",
+      "wormholeVariants": [
+        "The video helped me understanding the structure.",
+        "The video helped me to understands the structure.",
+        "The video helped me for understand the structure."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_107",
+    "seedId": "causative_107",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그는 약속을 지키도록 요구받았다.",
+    "english": "He was made to keep his promise.",
+    "words": [
+      "He",
+      "was",
+      "made",
+      "to",
+      "keep",
+      "his",
+      "promise",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 약속을 지키도록 요구받았다.",
+        "He"
+      ],
+      [
+        "핵심 구조",
+        "was made"
+      ],
+      [
+        "목적격보어 형태",
+        "to keep"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "was made",
+      "to keep",
+      "keep",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to keep"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was made keep his promise.",
+      "statementForm": [
+        "He was made to keep his promise.",
+        "He was made to keep his promise"
+      ],
+      "fragmentForm": "was made",
+      "wormholeVariants": [
+        "He was made keep his promise.",
+        "He was made keeping his promise.",
+        "He was made to keeps his promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_108",
+    "seedId": "causative_108",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그 학생들은 이유를 설명하도록 요구받았다.",
+    "english": "The students were made to give reasons.",
+    "words": [
+      "The",
+      "students",
+      "were",
+      "made",
+      "to",
+      "give",
+      "reasons",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "causative_verbs",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생들은 이유를 설명하도록 요구받았다.",
+        "The"
+      ],
+      [
+        "핵심 구조",
+        "were made"
+      ],
+      [
+        "목적격보어 형태",
+        "to give"
+      ],
+      [
+        "주의",
+        "make 수동태는 be made to V 형태를 쓴다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "were made",
+      "to give",
+      "give",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "to give"
+    ],
+    "tags": [
+      "causative",
+      "passive_make",
+      "passive",
+      "make"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students were made give reasons.",
+      "statementForm": [
+        "The students were made to give reasons.",
+        "The students were made to give reasons"
+      ],
+      "fragmentForm": "were made",
+      "wormholeVariants": [
+        "The students were made give reasons.",
+        "The students were made giving reasons.",
+        "The students were made to gives reasons."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_109",
+    "seedId": "causative_109",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "나는 내 노트북을 수리받았다.",
+    "english": "I had my laptop repaired.",
+    "words": [
+      "I",
+      "had",
+      "my",
+      "laptop",
+      "repaired",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 내 노트북을 수리받았다.",
+        "I"
+      ],
+      [
+        "핵심 구조",
+        "had my laptop"
+      ],
+      [
+        "목적격보어 형태",
+        "repaired"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had my laptop",
+      "repaired",
+      "repair",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "repaired"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "I had my laptop repair.",
+      "statementForm": [
+        "I had my laptop repaired.",
+        "I had my laptop repaired"
+      ],
+      "fragmentForm": "had my laptop",
+      "wormholeVariants": [
+        "I had my laptop repair.",
+        "I had my laptop to repair.",
+        "I had my laptop repairing."
+      ]
+    }
+  },
+  {
+    "id": "m2_causative_110",
+    "seedId": "causative_110",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "causative_verbs",
+    "chapterLabelKo": "사역동사",
+    "korean": "그들은 계약서를 번역시켰다.",
+    "english": "They had the contract translated.",
+    "words": [
+      "They",
+      "had",
+      "the",
+      "contract",
+      "translated",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "causative_verbs",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 계약서를 번역시켰다.",
+        "They"
+      ],
+      [
+        "핵심 구조",
+        "had the contract"
+      ],
+      [
+        "목적격보어 형태",
+        "translated"
+      ],
+      [
+        "주의",
+        "have + object + p.p.는 목적어가 ~되게 하다/~당하다 의미이다."
+      ]
+    ],
+    "extraClueWordPool": [
+      "had the contract",
+      "translated",
+      "translate",
+      "object",
+      "base verb",
+      "to",
+      "past participle"
+    ],
+    "blankTargets": [
+      "translated"
+    ],
+    "tags": [
+      "causative",
+      "have_pp",
+      "have_pp",
+      "past_participle"
+    ],
+    "distractorSeeds": {
+      "auxError": "They had the contract translate.",
+      "statementForm": [
+        "They had the contract translated.",
+        "They had the contract translated"
+      ],
+      "fragmentForm": "had the contract",
+      "wormholeVariants": [
+        "They had the contract translate.",
+        "They had the contract to translate.",
+        "They had the contract translating."
+      ]
+    }
+  }
+]
