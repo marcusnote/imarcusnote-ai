@@ -1,0 +1,6928 @@
+[
+  {
+    "id": "m2_to_inf_adverbial_001",
+    "seedId": "to_inf_adverbial_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 시험에 합격하기 위해 열심히 공부한다.",
+    "english": "I study hard to pass the exam.",
+    "words": [
+      "I",
+      "study",
+      "hard",
+      "to",
+      "pass",
+      "the",
+      "exam",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 시험에 합격하기 위해 열심히 공부한다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to pass"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to pass",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to pass"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I study hard for pass the exam.",
+      "statementForm": [
+        "I study hard to pass the exam.",
+        "I study hard to pass the exam"
+      ],
+      "fragmentForm": "I study hard to pass",
+      "wormholeVariants": [
+        "I study hard for pass the exam.",
+        "I study hard pass the exam.",
+        "I study hard to passed the exam.",
+        "I study hard because pass the exam."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_002",
+    "seedId": "to_inf_adverbial_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 우유를 사기 위해 가게에 갔다.",
+    "english": "She went to the store to buy some milk.",
+    "words": [
+      "She",
+      "went",
+      "to",
+      "the",
+      "store",
+      "to",
+      "buy",
+      "some",
+      "milk",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우유를 사기 위해 가게에 갔다.",
+        "She"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to buy"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to buy",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to buy"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She went for the store to buy some milk.",
+      "statementForm": [
+        "She went to the store to buy some milk.",
+        "She went to the store to buy some milk"
+      ],
+      "fragmentForm": "She went to the",
+      "wormholeVariants": [
+        "She went for the store to buy some milk.",
+        "She went the store to buy some milk.",
+        "She went to thed store to buy some milk.",
+        "She went because the store to buy some milk."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_003",
+    "seedId": "to_inf_adverbial_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 축구를 하기 위해 공원에 갔다.",
+    "english": "They went to the park to play soccer.",
+    "words": [
+      "They",
+      "went",
+      "to",
+      "the",
+      "park",
+      "to",
+      "play",
+      "soccer",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 축구를 하기 위해 공원에 갔다.",
+        "They"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to play"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to play",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to play"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They went for the park to play soccer.",
+      "statementForm": [
+        "They went to the park to play soccer.",
+        "They went to the park to play soccer"
+      ],
+      "fragmentForm": "They went to the",
+      "wormholeVariants": [
+        "They went for the park to play soccer.",
+        "They went the park to play soccer.",
+        "They went to thed park to play soccer.",
+        "They went because the park to play soccer."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_004",
+    "seedId": "to_inf_adverbial_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 친구를 만나기 위해 일찍 떠났다.",
+    "english": "I left early to meet my friend.",
+    "words": [
+      "I",
+      "left",
+      "early",
+      "to",
+      "meet",
+      "my",
+      "friend",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 친구를 만나기 위해 일찍 떠났다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to meet"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to meet",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to meet"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I left early for meet my friend.",
+      "statementForm": [
+        "I left early to meet my friend.",
+        "I left early to meet my friend"
+      ],
+      "fragmentForm": "I left early to meet",
+      "wormholeVariants": [
+        "I left early for meet my friend.",
+        "I left early meet my friend.",
+        "I left early to meeted my friend.",
+        "I left early because meet my friend."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_005",
+    "seedId": "to_inf_adverbial_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 버스를 잡기 위해 달렸다.",
+    "english": "He ran fast to catch the bus.",
+    "words": [
+      "He",
+      "ran",
+      "fast",
+      "to",
+      "catch",
+      "the",
+      "bus",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 버스를 잡기 위해 달렸다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to catch"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to catch",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to catch"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He ran fast for catch the bus.",
+      "statementForm": [
+        "He ran fast to catch the bus.",
+        "He ran fast to catch the bus"
+      ],
+      "fragmentForm": "He ran fast to catch",
+      "wormholeVariants": [
+        "He ran fast for catch the bus.",
+        "He ran fast catch the bus.",
+        "He ran fast to catched the bus.",
+        "He ran fast because catch the bus."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_006",
+    "seedId": "to_inf_adverbial_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 더 잘 듣기 위해 앞에 앉았다.",
+    "english": "We sat in front to hear better.",
+    "words": [
+      "We",
+      "sat",
+      "in",
+      "front",
+      "to",
+      "hear",
+      "better",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 더 잘 듣기 위해 앞에 앉았다.",
+        "We"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to hear"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to hear",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to hear"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We sat in front for hear better.",
+      "statementForm": [
+        "We sat in front to hear better.",
+        "We sat in front to hear better"
+      ],
+      "fragmentForm": "We sat in front to hear",
+      "wormholeVariants": [
+        "We sat in front for hear better.",
+        "We sat in front hear better.",
+        "We sat in front to heared better.",
+        "We sat in front because hear better."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_007",
+    "seedId": "to_inf_adverbial_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 건강을 유지하기 위해 매일 걷는다.",
+    "english": "She walks every day to stay healthy.",
+    "words": [
+      "She",
+      "walks",
+      "every",
+      "day",
+      "to",
+      "stay",
+      "healthy",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 건강을 유지하기 위해 매일 걷는다.",
+        "She"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to stay"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to stay",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to stay"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She walks every day for stay healthy.",
+      "statementForm": [
+        "She walks every day to stay healthy.",
+        "She walks every day to stay healthy"
+      ],
+      "fragmentForm": "She walks every day to stay",
+      "wormholeVariants": [
+        "She walks every day for stay healthy.",
+        "She walks every day stay healthy.",
+        "She walks every day to stayed healthy.",
+        "She walks every day because stay healthy."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_008",
+    "seedId": "to_inf_adverbial_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 돈을 저축하기 위해 점심을 집에서 가져왔다.",
+    "english": "I brought lunch from home to save money.",
+    "words": [
+      "I",
+      "brought",
+      "lunch",
+      "from",
+      "home",
+      "to",
+      "save",
+      "money",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 돈을 저축하기 위해 점심을 집에서 가져왔다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to save"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to save",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to save"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I brought lunch from home for save money.",
+      "statementForm": [
+        "I brought lunch from home to save money.",
+        "I brought lunch from home to save money"
+      ],
+      "fragmentForm": "I brought lunch from home to save",
+      "wormholeVariants": [
+        "I brought lunch from home for save money.",
+        "I brought lunch from home save money.",
+        "I brought lunch from home to saved money.",
+        "I brought lunch from home because save money."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_009",
+    "seedId": "to_inf_adverbial_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 시간을 절약하기 위해 택시를 탔다.",
+    "english": "They took a taxi to save time.",
+    "words": [
+      "They",
+      "took",
+      "a",
+      "taxi",
+      "to",
+      "save",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 시간을 절약하기 위해 택시를 탔다.",
+        "They"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to save"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to save",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to save"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They took a taxi for save time.",
+      "statementForm": [
+        "They took a taxi to save time.",
+        "They took a taxi to save time"
+      ],
+      "fragmentForm": "They took a taxi to save",
+      "wormholeVariants": [
+        "They took a taxi for save time.",
+        "They took a taxi save time.",
+        "They took a taxi to saved time.",
+        "They took a taxi because save time."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_010",
+    "seedId": "to_inf_adverbial_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 그 단어를 확인하기 위해 사전을 사용했다.",
+    "english": "He used a dictionary to check the word.",
+    "words": [
+      "He",
+      "used",
+      "a",
+      "dictionary",
+      "to",
+      "check",
+      "the",
+      "word",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 단어를 확인하기 위해 사전을 사용했다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to check"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to check",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to check"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He used a dictionary for check the word.",
+      "statementForm": [
+        "He used a dictionary to check the word.",
+        "He used a dictionary to check the word"
+      ],
+      "fragmentForm": "He used a dictionary to check",
+      "wormholeVariants": [
+        "He used a dictionary for check the word.",
+        "He used a dictionary check the word.",
+        "He used a dictionary to checked the word.",
+        "He used a dictionary because check the word."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_011",
+    "seedId": "to_inf_adverbial_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 시험을 준비하기 위해 계획표를 만들었다.",
+    "english": "I made a plan to prepare for the test.",
+    "words": [
+      "I",
+      "made",
+      "a",
+      "plan",
+      "to",
+      "prepare",
+      "for",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 시험을 준비하기 위해 계획표를 만들었다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to prepare"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to prepare",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to prepare"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I made a plan for prepare for the test.",
+      "statementForm": [
+        "I made a plan to prepare for the test.",
+        "I made a plan to prepare for the test"
+      ],
+      "fragmentForm": "I made a plan to prepare",
+      "wormholeVariants": [
+        "I made a plan for prepare for the test.",
+        "I made a plan prepare for the test.",
+        "I made a plan to prepared for the test.",
+        "I made a plan because prepare for the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_012",
+    "seedId": "to_inf_adverbial_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 영어를 연습하기 위해 일기를 쓴다.",
+    "english": "She writes a diary to practice English.",
+    "words": [
+      "She",
+      "writes",
+      "a",
+      "diary",
+      "to",
+      "practice",
+      "English",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 영어를 연습하기 위해 일기를 쓴다.",
+        "She"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to practice"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to practice",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to practice"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She writes a diary for practice English.",
+      "statementForm": [
+        "She writes a diary to practice English.",
+        "She writes a diary to practice English"
+      ],
+      "fragmentForm": "She writes a diary to practice",
+      "wormholeVariants": [
+        "She writes a diary for practice English.",
+        "She writes a diary practice English.",
+        "She writes a diary to practiced English.",
+        "She writes a diary because practice English."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_013",
+    "seedId": "to_inf_adverbial_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 프로젝트를 끝내기 위해 함께 일했다.",
+    "english": "We worked together to finish the project.",
+    "words": [
+      "We",
+      "worked",
+      "together",
+      "to",
+      "finish",
+      "the",
+      "project",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 프로젝트를 끝내기 위해 함께 일했다.",
+        "We"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to finish"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to finish",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to finish"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We worked together for finish the project.",
+      "statementForm": [
+        "We worked together to finish the project.",
+        "We worked together to finish the project"
+      ],
+      "fragmentForm": "We worked together to finish",
+      "wormholeVariants": [
+        "We worked together for finish the project.",
+        "We worked together finish the project.",
+        "We worked together to finished the project.",
+        "We worked together because finish the project."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_014",
+    "seedId": "to_inf_adverbial_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 실수를 줄이기 위해 답을 다시 확인했다.",
+    "english": "He checked his answers again to reduce mistakes.",
+    "words": [
+      "He",
+      "checked",
+      "his",
+      "answers",
+      "again",
+      "to",
+      "reduce",
+      "mistakes",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 실수를 줄이기 위해 답을 다시 확인했다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to reduce"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to reduce",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to reduce"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He checked his answers again for reduce mistakes.",
+      "statementForm": [
+        "He checked his answers again to reduce mistakes.",
+        "He checked his answers again to reduce mistakes"
+      ],
+      "fragmentForm": "He checked his answers again to reduce",
+      "wormholeVariants": [
+        "He checked his answers again for reduce mistakes.",
+        "He checked his answers again reduce mistakes.",
+        "He checked his answers again to reduced mistakes.",
+        "He checked his answers again because reduce mistakes."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_015",
+    "seedId": "to_inf_adverbial_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 새로운 것을 배우기 위해 그 강의를 들었다.",
+    "english": "I took the class to learn something new.",
+    "words": [
+      "I",
+      "took",
+      "the",
+      "class",
+      "to",
+      "learn",
+      "something",
+      "new",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 새로운 것을 배우기 위해 그 강의를 들었다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to learn"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to learn",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to learn"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I took the class for learn something new.",
+      "statementForm": [
+        "I took the class to learn something new.",
+        "I took the class to learn something new"
+      ],
+      "fragmentForm": "I took the class to learn",
+      "wormholeVariants": [
+        "I took the class for learn something new.",
+        "I took the class learn something new.",
+        "I took the class to learned something new.",
+        "I took the class because learn something new."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_016",
+    "seedId": "to_inf_adverbial_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 환경을 보호하기 위해 종이를 재활용한다.",
+    "english": "They recycle paper to protect the environment.",
+    "words": [
+      "They",
+      "recycle",
+      "paper",
+      "to",
+      "protect",
+      "the",
+      "environment",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 환경을 보호하기 위해 종이를 재활용한다.",
+        "They"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to protect"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to protect",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to protect"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They recycle paper for protect the environment.",
+      "statementForm": [
+        "They recycle paper to protect the environment.",
+        "They recycle paper to protect the environment"
+      ],
+      "fragmentForm": "They recycle paper to protect",
+      "wormholeVariants": [
+        "They recycle paper for protect the environment.",
+        "They recycle paper protect the environment.",
+        "They recycle paper to protected the environment.",
+        "They recycle paper because protect the environment."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_017",
+    "seedId": "to_inf_adverbial_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 조용히 공부하기 위해 도서관에 갔다.",
+    "english": "She went to the library to study quietly.",
+    "words": [
+      "She",
+      "went",
+      "to",
+      "the",
+      "library",
+      "to",
+      "study",
+      "quietly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 조용히 공부하기 위해 도서관에 갔다.",
+        "She"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to study"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to study",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to study"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She went for the library to study quietly.",
+      "statementForm": [
+        "She went to the library to study quietly.",
+        "She went to the library to study quietly"
+      ],
+      "fragmentForm": "She went to the",
+      "wormholeVariants": [
+        "She went for the library to study quietly.",
+        "She went the library to study quietly.",
+        "She went to thed library to study quietly.",
+        "She went because the library to study quietly."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_018",
+    "seedId": "to_inf_adverbial_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 선생님께 묻기 위해 교무실에 갔다.",
+    "english": "We went to the office to ask the teacher.",
+    "words": [
+      "We",
+      "went",
+      "to",
+      "the",
+      "office",
+      "to",
+      "ask",
+      "the",
+      "teacher",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 선생님께 묻기 위해 교무실에 갔다.",
+        "We"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to ask"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to ask",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to ask"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We went for the office to ask the teacher.",
+      "statementForm": [
+        "We went to the office to ask the teacher.",
+        "We went to the office to ask the teacher"
+      ],
+      "fragmentForm": "We went to the",
+      "wormholeVariants": [
+        "We went for the office to ask the teacher.",
+        "We went the office to ask the teacher.",
+        "We went to thed office to ask the teacher.",
+        "We went because the office to ask the teacher."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_019",
+    "seedId": "to_inf_adverbial_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 문제를 해결하기 위해 여러 방법을 시도했다.",
+    "english": "He tried several ways to solve the problem.",
+    "words": [
+      "He",
+      "tried",
+      "several",
+      "ways",
+      "to",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 문제를 해결하기 위해 여러 방법을 시도했다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to solve"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to solve",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to solve"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He tried several ways for solve the problem.",
+      "statementForm": [
+        "He tried several ways to solve the problem.",
+        "He tried several ways to solve the problem"
+      ],
+      "fragmentForm": "He tried several ways to solve",
+      "wormholeVariants": [
+        "He tried several ways for solve the problem.",
+        "He tried several ways solve the problem.",
+        "He tried several ways to solved the problem.",
+        "He tried several ways because solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_020",
+    "seedId": "to_inf_adverbial_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 길을 찾기 위해 지도를 보았다.",
+    "english": "I looked at the map to find the way.",
+    "words": [
+      "I",
+      "looked",
+      "at",
+      "the",
+      "map",
+      "to",
+      "find",
+      "the",
+      "way",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 길을 찾기 위해 지도를 보았다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to find"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to find",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to find"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I looked at the map for find the way.",
+      "statementForm": [
+        "I looked at the map to find the way.",
+        "I looked at the map to find the way"
+      ],
+      "fragmentForm": "I looked at the map to find",
+      "wormholeVariants": [
+        "I looked at the map for find the way.",
+        "I looked at the map find the way.",
+        "I looked at the map to finded the way.",
+        "I looked at the map because find the way."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_021",
+    "seedId": "to_inf_adverbial_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 너를 만나서 기쁘다.",
+    "english": "I am happy to see you.",
+    "words": [
+      "I",
+      "am",
+      "happy",
+      "to",
+      "see",
+      "you",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 너를 만나서 기쁘다.",
+        "I"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to see"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to see",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to see"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am happy for see you.",
+      "statementForm": [
+        "I am happy to see you.",
+        "I am happy to see you"
+      ],
+      "fragmentForm": "I am happy to see",
+      "wormholeVariants": [
+        "I am happy for see you.",
+        "I am happy see you.",
+        "I am happy to seed you.",
+        "I am happy because see you."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_022",
+    "seedId": "to_inf_adverbial_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 그 소식을 듣고 놀랐다.",
+    "english": "She was surprised to hear the news.",
+    "words": [
+      "She",
+      "was",
+      "surprised",
+      "to",
+      "hear",
+      "the",
+      "news",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 소식을 듣고 놀랐다.",
+        "She"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to hear"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to hear",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to hear"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was surprised for hear the news.",
+      "statementForm": [
+        "She was surprised to hear the news.",
+        "She was surprised to hear the news"
+      ],
+      "fragmentForm": "She was surprised to hear",
+      "wormholeVariants": [
+        "She was surprised for hear the news.",
+        "She was surprised hear the news.",
+        "She was surprised to heared the news.",
+        "She was surprised because hear the news."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_023",
+    "seedId": "to_inf_adverbial_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 그들을 다시 만나서 기뻤다.",
+    "english": "We were glad to meet them again.",
+    "words": [
+      "We",
+      "were",
+      "glad",
+      "to",
+      "meet",
+      "them",
+      "again",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그들을 다시 만나서 기뻤다.",
+        "We"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to meet"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to meet",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to meet"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were glad for meet them again.",
+      "statementForm": [
+        "We were glad to meet them again.",
+        "We were glad to meet them again"
+      ],
+      "fragmentForm": "We were glad to meet",
+      "wormholeVariants": [
+        "We were glad for meet them again.",
+        "We were glad meet them again.",
+        "We were glad to meeted them again.",
+        "We were glad because meet them again."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_024",
+    "seedId": "to_inf_adverbial_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 시험 결과를 보고 실망했다.",
+    "english": "He was disappointed to see the test result.",
+    "words": [
+      "He",
+      "was",
+      "disappointed",
+      "to",
+      "see",
+      "the",
+      "test",
+      "result",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 시험 결과를 보고 실망했다.",
+        "He"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to see"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to see",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to see"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was disappointed for see the test result.",
+      "statementForm": [
+        "He was disappointed to see the test result.",
+        "He was disappointed to see the test result"
+      ],
+      "fragmentForm": "He was disappointed to see",
+      "wormholeVariants": [
+        "He was disappointed for see the test result.",
+        "He was disappointed see the test result.",
+        "He was disappointed to seed the test result.",
+        "He was disappointed because see the test result."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_025",
+    "seedId": "to_inf_adverbial_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 네 편지를 받아서 기뻤다.",
+    "english": "I was pleased to receive your letter.",
+    "words": [
+      "I",
+      "was",
+      "pleased",
+      "to",
+      "receive",
+      "your",
+      "letter",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네 편지를 받아서 기뻤다.",
+        "I"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to receive"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to receive",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to receive"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was pleased for receive your letter.",
+      "statementForm": [
+        "I was pleased to receive your letter.",
+        "I was pleased to receive your letter"
+      ],
+      "fragmentForm": "I was pleased to receive",
+      "wormholeVariants": [
+        "I was pleased for receive your letter.",
+        "I was pleased receive your letter.",
+        "I was pleased to received your letter.",
+        "I was pleased because receive your letter."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_026",
+    "seedId": "to_inf_adverbial_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 경기에서 져서 슬펐다.",
+    "english": "They were sad to lose the game.",
+    "words": [
+      "They",
+      "were",
+      "sad",
+      "to",
+      "lose",
+      "the",
+      "game",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 경기에서 져서 슬펐다.",
+        "They"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to lose"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to lose",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to lose"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They were sad for lose the game.",
+      "statementForm": [
+        "They were sad to lose the game.",
+        "They were sad to lose the game"
+      ],
+      "fragmentForm": "They were sad to lose",
+      "wormholeVariants": [
+        "They were sad for lose the game.",
+        "They were sad lose the game.",
+        "They were sad to losed the game.",
+        "They were sad because lose the game."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_027",
+    "seedId": "to_inf_adverbial_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 상을 받아서 신이 났다.",
+    "english": "She was excited to win the prize.",
+    "words": [
+      "She",
+      "was",
+      "excited",
+      "to",
+      "win",
+      "the",
+      "prize",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 상을 받아서 신이 났다.",
+        "She"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to win"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to win",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to win"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was excited for win the prize.",
+      "statementForm": [
+        "She was excited to win the prize.",
+        "She was excited to win the prize"
+      ],
+      "fragmentForm": "She was excited to win",
+      "wormholeVariants": [
+        "She was excited for win the prize.",
+        "She was excited win the prize.",
+        "She was excited to wined the prize.",
+        "She was excited because win the prize."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_028",
+    "seedId": "to_inf_adverbial_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 그런 말을 들어서 화가 났다.",
+    "english": "I was angry to hear such words.",
+    "words": [
+      "I",
+      "was",
+      "angry",
+      "to",
+      "hear",
+      "such",
+      "words",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그런 말을 들어서 화가 났다.",
+        "I"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to hear"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to hear",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to hear"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was angry for hear such words.",
+      "statementForm": [
+        "I was angry to hear such words.",
+        "I was angry to hear such words"
+      ],
+      "fragmentForm": "I was angry to hear",
+      "wormholeVariants": [
+        "I was angry for hear such words.",
+        "I was angry hear such words.",
+        "I was angry to heared such words.",
+        "I was angry because hear such words."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_029",
+    "seedId": "to_inf_adverbial_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 네가 떠난다는 것을 알고 슬펐다.",
+    "english": "He was sorry to know you were leaving.",
+    "words": [
+      "He",
+      "was",
+      "sorry",
+      "to",
+      "know",
+      "you",
+      "were",
+      "leaving",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 네가 떠난다는 것을 알고 슬펐다.",
+        "He"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to know"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to know",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to know"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was sorry for know you were leaving.",
+      "statementForm": [
+        "He was sorry to know you were leaving.",
+        "He was sorry to know you were leaving"
+      ],
+      "fragmentForm": "He was sorry to know",
+      "wormholeVariants": [
+        "He was sorry for know you were leaving.",
+        "He was sorry know you were leaving.",
+        "He was sorry to knowed you were leaving.",
+        "He was sorry because know you were leaving."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_030",
+    "seedId": "to_inf_adverbial_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 그 실수를 발견해서 놀랐다.",
+    "english": "We were shocked to find the mistake.",
+    "words": [
+      "We",
+      "were",
+      "shocked",
+      "to",
+      "find",
+      "the",
+      "mistake",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 실수를 발견해서 놀랐다.",
+        "We"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to find"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to find",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to find"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We were shocked for find the mistake.",
+      "statementForm": [
+        "We were shocked to find the mistake.",
+        "We were shocked to find the mistake"
+      ],
+      "fragmentForm": "We were shocked to find",
+      "wormholeVariants": [
+        "We were shocked for find the mistake.",
+        "We were shocked find the mistake.",
+        "We were shocked to finded the mistake.",
+        "We were shocked because find the mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_031",
+    "seedId": "to_inf_adverbial_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 친구를 도와서 행복했다.",
+    "english": "She was happy to help her friend.",
+    "words": [
+      "She",
+      "was",
+      "happy",
+      "to",
+      "help",
+      "her",
+      "friend",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 친구를 도와서 행복했다.",
+        "She"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to help"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to help",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to help"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was happy for help her friend.",
+      "statementForm": [
+        "She was happy to help her friend.",
+        "She was happy to help her friend"
+      ],
+      "fragmentForm": "She was happy to help",
+      "wormholeVariants": [
+        "She was happy for help her friend.",
+        "She was happy help her friend.",
+        "She was happy to helped her friend.",
+        "She was happy because help her friend."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_032",
+    "seedId": "to_inf_adverbial_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 그 장면을 보고 무서웠다.",
+    "english": "I was scared to watch the scene.",
+    "words": [
+      "I",
+      "was",
+      "scared",
+      "to",
+      "watch",
+      "the",
+      "scene",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 장면을 보고 무서웠다.",
+        "I"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to watch"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to watch",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to watch"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I was scared for watch the scene.",
+      "statementForm": [
+        "I was scared to watch the scene.",
+        "I was scared to watch the scene"
+      ],
+      "fragmentForm": "I was scared to watch",
+      "wormholeVariants": [
+        "I was scared for watch the scene.",
+        "I was scared watch the scene.",
+        "I was scared to watched the scene.",
+        "I was scared because watch the scene."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_033",
+    "seedId": "to_inf_adverbial_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 자라서 의사가 되었다.",
+    "english": "He grew up to become a doctor.",
+    "words": [
+      "He",
+      "grew",
+      "up",
+      "to",
+      "become",
+      "a",
+      "doctor",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 자라서 의사가 되었다.",
+        "He"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to become"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to become",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to become"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He grew up for become a doctor.",
+      "statementForm": [
+        "He grew up to become a doctor.",
+        "He grew up to become a doctor"
+      ],
+      "fragmentForm": "He grew up to become",
+      "wormholeVariants": [
+        "He grew up for become a doctor.",
+        "He grew up become a doctor.",
+        "He grew up to becomed a doctor.",
+        "He grew up because become a doctor."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_034",
+    "seedId": "to_inf_adverbial_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 열심히 노력해서 마침내 성공했다.",
+    "english": "He worked hard to succeed at last.",
+    "words": [
+      "He",
+      "worked",
+      "hard",
+      "to",
+      "succeed",
+      "at",
+      "last",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 열심히 노력해서 마침내 성공했다.",
+        "He"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to succeed"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to succeed",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to succeed"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He worked hard for succeed at last.",
+      "statementForm": [
+        "He worked hard to succeed at last.",
+        "He worked hard to succeed at last"
+      ],
+      "fragmentForm": "He worked hard to succeed",
+      "wormholeVariants": [
+        "He worked hard for succeed at last.",
+        "He worked hard succeed at last.",
+        "He worked hard to succeeded at last.",
+        "He worked hard because succeed at last."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_035",
+    "seedId": "to_inf_adverbial_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 소년은 자라서 유명한 과학자가 되었다.",
+    "english": "The boy grew up to become a famous scientist.",
+    "words": [
+      "The",
+      "boy",
+      "grew",
+      "up",
+      "to",
+      "become",
+      "a",
+      "famous",
+      "scientist",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소년은 자라서 유명한 과학자가 되었다.",
+        "The"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to become"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to become",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to become"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy grew up for become a famous scientist.",
+      "statementForm": [
+        "The boy grew up to become a famous scientist.",
+        "The boy grew up to become a famous scientist"
+      ],
+      "fragmentForm": "The boy grew up to become",
+      "wormholeVariants": [
+        "The boy grew up for become a famous scientist.",
+        "The boy grew up become a famous scientist.",
+        "The boy grew up to becomed a famous scientist.",
+        "The boy grew up because become a famous scientist."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_036",
+    "seedId": "to_inf_adverbial_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀가 그렇게 한 것은 어리석었다.",
+    "english": "She was foolish to do that.",
+    "words": [
+      "She",
+      "was",
+      "foolish",
+      "to",
+      "do",
+      "that",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 그렇게 한 것은 어리석었다.",
+        "She"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to do"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to do",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to do"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was foolish for do that.",
+      "statementForm": [
+        "She was foolish to do that.",
+        "She was foolish to do that"
+      ],
+      "fragmentForm": "She was foolish to do",
+      "wormholeVariants": [
+        "She was foolish for do that.",
+        "She was foolish do that.",
+        "She was foolish to doed that.",
+        "She was foolish because do that."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_037",
+    "seedId": "to_inf_adverbial_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그가 그 사실을 말한 것은 정직했다.",
+    "english": "He was honest to tell the truth.",
+    "words": [
+      "He",
+      "was",
+      "honest",
+      "to",
+      "tell",
+      "the",
+      "truth",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 그 사실을 말한 것은 정직했다.",
+        "He"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to tell"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to tell",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to tell"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was honest for tell the truth.",
+      "statementForm": [
+        "He was honest to tell the truth.",
+        "He was honest to tell the truth"
+      ],
+      "fragmentForm": "He was honest to tell",
+      "wormholeVariants": [
+        "He was honest for tell the truth.",
+        "He was honest tell the truth.",
+        "He was honest to telled the truth.",
+        "He was honest because tell the truth."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_038",
+    "seedId": "to_inf_adverbial_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "네가 그를 도운 것은 친절했다.",
+    "english": "You were kind to help him.",
+    "words": [
+      "You",
+      "were",
+      "kind",
+      "to",
+      "help",
+      "him",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 그를 도운 것은 친절했다.",
+        "You"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to help"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to help",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to help"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You were kind for help him.",
+      "statementForm": [
+        "You were kind to help him.",
+        "You were kind to help him"
+      ],
+      "fragmentForm": "You were kind to help",
+      "wormholeVariants": [
+        "You were kind for help him.",
+        "You were kind help him.",
+        "You were kind to helped him.",
+        "You were kind because help him."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_039",
+    "seedId": "to_inf_adverbial_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들이 기다려 준 것은 너그러웠다.",
+    "english": "They were generous to wait for us.",
+    "words": [
+      "They",
+      "were",
+      "generous",
+      "to",
+      "wait",
+      "for",
+      "us",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 기다려 준 것은 너그러웠다.",
+        "They"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to wait"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to wait",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to wait"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They were generous for wait for us.",
+      "statementForm": [
+        "They were generous to wait for us.",
+        "They were generous to wait for us"
+      ],
+      "fragmentForm": "They were generous to wait",
+      "wormholeVariants": [
+        "They were generous for wait for us.",
+        "They were generous wait for us.",
+        "They were generous to waited for us.",
+        "They were generous because wait for us."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_040",
+    "seedId": "to_inf_adverbial_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "네가 같은 실수를 반복한 것은 부주의했다.",
+    "english": "You were careless to repeat the same mistake.",
+    "words": [
+      "You",
+      "were",
+      "careless",
+      "to",
+      "repeat",
+      "the",
+      "same",
+      "mistake",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 같은 실수를 반복한 것은 부주의했다.",
+        "You"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to repeat"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to repeat",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to repeat"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You were careless for repeat the same mistake.",
+      "statementForm": [
+        "You were careless to repeat the same mistake.",
+        "You were careless to repeat the same mistake"
+      ],
+      "fragmentForm": "You were careless to repeat",
+      "wormholeVariants": [
+        "You were careless for repeat the same mistake.",
+        "You were careless repeat the same mistake.",
+        "You were careless to repeated the same mistake.",
+        "You were careless because repeat the same mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_041",
+    "seedId": "to_inf_adverbial_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들이 진실을 숨긴 것은 옳지 않았다.",
+    "english": "They were wrong to hide the truth.",
+    "words": [
+      "They",
+      "were",
+      "wrong",
+      "to",
+      "hide",
+      "the",
+      "truth",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들이 진실을 숨긴 것은 옳지 않았다.",
+        "They"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to hide"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to hide",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to hide"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They were wrong for hide the truth.",
+      "statementForm": [
+        "They were wrong to hide the truth.",
+        "They were wrong to hide the truth"
+      ],
+      "fragmentForm": "They were wrong to hide",
+      "wormholeVariants": [
+        "They were wrong for hide the truth.",
+        "They were wrong hide the truth.",
+        "They were wrong to hided the truth.",
+        "They were wrong because hide the truth."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_042",
+    "seedId": "to_inf_adverbial_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 상자는 들기에 너무 무겁다.",
+    "english": "The box is too heavy to lift.",
+    "words": [
+      "The",
+      "box",
+      "is",
+      "too",
+      "heavy",
+      "to",
+      "lift",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 상자는 들기에 너무 무겁다.",
+        "The"
+      ],
+      [
+        "too ... to: 너무 ~해서 ...할 수 없다",
+        "to lift"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to lift",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to lift"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "too_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The box is too heavy for lift.",
+      "statementForm": [
+        "The box is too heavy to lift.",
+        "The box is too heavy to lift"
+      ],
+      "fragmentForm": "The box is too heavy to lift",
+      "wormholeVariants": [
+        "The box is too heavy for lift.",
+        "The box is too heavy lift.",
+        "The box is too heavy to lifted.",
+        "The box is too heavy for to lift."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_043",
+    "seedId": "to_inf_adverbial_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 문제는 풀기에 너무 어렵다.",
+    "english": "The problem is too difficult to solve.",
+    "words": [
+      "The",
+      "problem",
+      "is",
+      "too",
+      "difficult",
+      "to",
+      "solve",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 풀기에 너무 어렵다.",
+        "The"
+      ],
+      [
+        "too ... to: 너무 ~해서 ...할 수 없다",
+        "to solve"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to solve",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to solve"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "too_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem is too difficult for solve.",
+      "statementForm": [
+        "The problem is too difficult to solve.",
+        "The problem is too difficult to solve"
+      ],
+      "fragmentForm": "The problem is too difficult to solve",
+      "wormholeVariants": [
+        "The problem is too difficult for solve.",
+        "The problem is too difficult solve.",
+        "The problem is too difficult to solved.",
+        "The problem is too difficult for to solve."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_044",
+    "seedId": "to_inf_adverbial_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 진실을 말할 만큼 충분히 용감했다.",
+    "english": "He was brave enough to tell the truth.",
+    "words": [
+      "He",
+      "was",
+      "brave",
+      "enough",
+      "to",
+      "tell",
+      "the",
+      "truth",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 진실을 말할 만큼 충분히 용감했다.",
+        "He"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to tell"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to tell",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to tell"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was brave enough for tell the truth.",
+      "statementForm": [
+        "He was brave enough to tell the truth.",
+        "He was brave enough to tell the truth"
+      ],
+      "fragmentForm": "He was brave enough to tell",
+      "wormholeVariants": [
+        "He was brave enough for tell the truth.",
+        "He was brave enough tell the truth.",
+        "He was brave enough to telled the truth.",
+        "He was brave enough for to tell the truth."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_045",
+    "seedId": "to_inf_adverbial_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 혼자 여행할 만큼 충분히 나이가 많다.",
+    "english": "She is old enough to travel alone.",
+    "words": [
+      "She",
+      "is",
+      "old",
+      "enough",
+      "to",
+      "travel",
+      "alone",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 혼자 여행할 만큼 충분히 나이가 많다.",
+        "She"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to travel"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to travel",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to travel"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She is old enough for travel alone.",
+      "statementForm": [
+        "She is old enough to travel alone.",
+        "She is old enough to travel alone"
+      ],
+      "fragmentForm": "She is old enough to travel",
+      "wormholeVariants": [
+        "She is old enough for travel alone.",
+        "She is old enough travel alone.",
+        "She is old enough to traveled alone.",
+        "She is old enough for to travel alone."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_046",
+    "seedId": "to_inf_adverbial_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "이 방은 공부하기에 충분히 조용하다.",
+    "english": "This room is quiet enough to study in.",
+    "words": [
+      "This",
+      "room",
+      "is",
+      "quiet",
+      "enough",
+      "to",
+      "study",
+      "in",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 방은 공부하기에 충분히 조용하다.",
+        "This"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to study"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to study",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to study"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "This room is quiet enough for study in.",
+      "statementForm": [
+        "This room is quiet enough to study in.",
+        "This room is quiet enough to study in"
+      ],
+      "fragmentForm": "This room is quiet enough to study",
+      "wormholeVariants": [
+        "This room is quiet enough for study in.",
+        "This room is quiet enough study in.",
+        "This room is quiet enough to studyed in.",
+        "This room is quiet enough for to study in."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_047",
+    "seedId": "to_inf_adverbial_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 물은 마시기에 너무 뜨겁다.",
+    "english": "The water is too hot to drink.",
+    "words": [
+      "The",
+      "water",
+      "is",
+      "too",
+      "hot",
+      "to",
+      "drink",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 물은 마시기에 너무 뜨겁다.",
+        "The"
+      ],
+      [
+        "too ... to: 너무 ~해서 ...할 수 없다",
+        "to drink"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to drink",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to drink"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "too_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The water is too hot for drink.",
+      "statementForm": [
+        "The water is too hot to drink.",
+        "The water is too hot to drink"
+      ],
+      "fragmentForm": "The water is too hot to drink",
+      "wormholeVariants": [
+        "The water is too hot for drink.",
+        "The water is too hot drink.",
+        "The water is too hot to drinked.",
+        "The water is too hot for to drink."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_048",
+    "seedId": "to_inf_adverbial_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 이야기는 믿기에는 너무 이상하다.",
+    "english": "The story is too strange to believe.",
+    "words": [
+      "The",
+      "story",
+      "is",
+      "too",
+      "strange",
+      "to",
+      "believe",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이야기는 믿기에는 너무 이상하다.",
+        "The"
+      ],
+      [
+        "too ... to: 너무 ~해서 ...할 수 없다",
+        "to believe"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to believe",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to believe"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "too_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The story is too strange for believe.",
+      "statementForm": [
+        "The story is too strange to believe.",
+        "The story is too strange to believe"
+      ],
+      "fragmentForm": "The story is too strange to believe",
+      "wormholeVariants": [
+        "The story is too strange for believe.",
+        "The story is too strange believe.",
+        "The story is too strange to believed.",
+        "The story is too strange for to believe."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_049",
+    "seedId": "to_inf_adverbial_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 그 문제를 이해할 만큼 충분히 똑똑하다.",
+    "english": "He is smart enough to understand the problem.",
+    "words": [
+      "He",
+      "is",
+      "smart",
+      "enough",
+      "to",
+      "understand",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 문제를 이해할 만큼 충분히 똑똑하다.",
+        "He"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to understand"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to understand",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to understand"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is smart enough for understand the problem.",
+      "statementForm": [
+        "He is smart enough to understand the problem.",
+        "He is smart enough to understand the problem"
+      ],
+      "fragmentForm": "He is smart enough to understand",
+      "wormholeVariants": [
+        "He is smart enough for understand the problem.",
+        "He is smart enough understand the problem.",
+        "He is smart enough to understanded the problem.",
+        "He is smart enough for to understand the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_050",
+    "seedId": "to_inf_adverbial_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 시험에 합격하기 위해 열심히 공부하지 않았다.",
+    "english": "He didn't study hard to pass the test.",
+    "words": [
+      "He",
+      "didn't",
+      "study",
+      "hard",
+      "to",
+      "pass",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 시험에 합격하기 위해 열심히 공부하지 않았다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to pass"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to pass",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to pass"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He didn't study hard for pass the test.",
+      "statementForm": [
+        "He didn't study hard to pass the test.",
+        "He didn't study hard to pass the test"
+      ],
+      "fragmentForm": "He didn't study hard to pass",
+      "wormholeVariants": [
+        "He didn't study hard for pass the test.",
+        "He didn't study hard pass the test.",
+        "He didn't study hard to passed the test.",
+        "He didn't study hard because pass the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_051",
+    "seedId": "to_inf_adverbial_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 너를 방해하려고 온 것이 아니다.",
+    "english": "I didn't come here to bother you.",
+    "words": [
+      "I",
+      "didn't",
+      "come",
+      "here",
+      "to",
+      "bother",
+      "you",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 너를 방해하려고 온 것이 아니다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to bother"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to bother",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to bother"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I didn't come here for bother you.",
+      "statementForm": [
+        "I didn't come here to bother you.",
+        "I didn't come here to bother you"
+      ],
+      "fragmentForm": "I didn't come here to bother",
+      "wormholeVariants": [
+        "I didn't come here for bother you.",
+        "I didn't come here bother you.",
+        "I didn't come here to bothered you.",
+        "I didn't come here because bother you."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_052",
+    "seedId": "to_inf_adverbial_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 상을 받기 위해 노래하지 않았다.",
+    "english": "She didn't sing to win a prize.",
+    "words": [
+      "She",
+      "didn't",
+      "sing",
+      "to",
+      "win",
+      "a",
+      "prize",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 상을 받기 위해 노래하지 않았다.",
+        "She"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to win"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to win",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to win"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She didn't sing for win a prize.",
+      "statementForm": [
+        "She didn't sing to win a prize.",
+        "She didn't sing to win a prize"
+      ],
+      "fragmentForm": "She didn't sing to win",
+      "wormholeVariants": [
+        "She didn't sing for win a prize.",
+        "She didn't sing win a prize.",
+        "She didn't sing to wined a prize.",
+        "She didn't sing because win a prize."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_053",
+    "seedId": "to_inf_adverbial_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 시간을 낭비하려고 여기에 있지 않다.",
+    "english": "We are not here to waste time.",
+    "words": [
+      "We",
+      "are",
+      "not",
+      "here",
+      "to",
+      "waste",
+      "time",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 시간을 낭비하려고 여기에 있지 않다.",
+        "We"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to waste"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to waste",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to waste"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We are not here for waste time.",
+      "statementForm": [
+        "We are not here to waste time.",
+        "We are not here to waste time"
+      ],
+      "fragmentForm": "We are not here to waste",
+      "wormholeVariants": [
+        "We are not here for waste time.",
+        "We are not here waste time.",
+        "We are not here to wasted time.",
+        "We are not here because waste time."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_054",
+    "seedId": "to_inf_adverbial_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 실패하려고 그 계획을 세운 것이 아니다.",
+    "english": "We didn't make the plan to fail.",
+    "words": [
+      "We",
+      "didn't",
+      "make",
+      "the",
+      "plan",
+      "to",
+      "fail",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 실패하려고 그 계획을 세운 것이 아니다.",
+        "We"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to fail"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to fail",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to fail"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We didn't make the plan for fail.",
+      "statementForm": [
+        "We didn't make the plan to fail.",
+        "We didn't make the plan to fail"
+      ],
+      "fragmentForm": "We didn't make the plan to fail",
+      "wormholeVariants": [
+        "We didn't make the plan for fail.",
+        "We didn't make the plan fail.",
+        "We didn't make the plan to failed.",
+        "We didn't make the plan because fail."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_055",
+    "seedId": "to_inf_adverbial_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "너는 나를 보려고 여기 왔니?",
+    "english": "Did you come here to see me?",
+    "words": [
+      "Did",
+      "you",
+      "come",
+      "here",
+      "to",
+      "see",
+      "me",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 나를 보려고 여기 왔니?",
+        "Did"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to see"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to see",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to see"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you come here for see me?",
+      "statementForm": [
+        "Did you come here to see me?",
+        "Did you come here to see me"
+      ],
+      "fragmentForm": "Did you come here to see",
+      "wormholeVariants": [
+        "Did you come here for see me?",
+        "Did you come here see me?",
+        "Did you come here to seed me?",
+        "you come here to see me?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_056",
+    "seedId": "to_inf_adverbial_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 시험에 합격하기 위해 충분히 공부했니?",
+    "english": "Did he study enough to pass the exam?",
+    "words": [
+      "Did",
+      "he",
+      "study",
+      "enough",
+      "to",
+      "pass",
+      "the",
+      "exam",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 시험에 합격하기 위해 충분히 공부했니?",
+        "Did"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to pass"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to pass",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to pass"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he study enough for pass the exam?",
+      "statementForm": [
+        "Did he study enough to pass the exam?",
+        "Did he study enough to pass the exam"
+      ],
+      "fragmentForm": "Did he study enough to pass",
+      "wormholeVariants": [
+        "Did he study enough for pass the exam?",
+        "Did he study enough pass the exam?",
+        "Did he study enough to passed the exam?",
+        "Did he study enough for to pass the exam?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_057",
+    "seedId": "to_inf_adverbial_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 문제는 풀기에 너무 어려웠니?",
+    "english": "Was the problem too difficult to solve?",
+    "words": [
+      "Was",
+      "the",
+      "problem",
+      "too",
+      "difficult",
+      "to",
+      "solve",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 풀기에 너무 어려웠니?",
+        "Was"
+      ],
+      [
+        "too ... to: 너무 ~해서 ...할 수 없다",
+        "to solve"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to solve",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to solve"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "too_to",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Was the problem too difficult for solve?",
+      "statementForm": [
+        "Was the problem too difficult to solve?",
+        "Was the problem too difficult to solve"
+      ],
+      "fragmentForm": "Was the problem too difficult to solve",
+      "wormholeVariants": [
+        "Was the problem too difficult for solve?",
+        "Was the problem too difficult solve?",
+        "Was the problem too difficult to solved?",
+        "Was the problem too difficult for to solve?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_058",
+    "seedId": "to_inf_adverbial_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 그 소식을 듣고 기뻐했니?",
+    "english": "Were they happy to hear the news?",
+    "words": [
+      "Were",
+      "they",
+      "happy",
+      "to",
+      "hear",
+      "the",
+      "news",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그 소식을 듣고 기뻐했니?",
+        "Were"
+      ],
+      [
+        "감정의 원인: ~해서",
+        "to hear"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to hear",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to hear"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "emotion_cause",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Were they happy for hear the news?",
+      "statementForm": [
+        "Were they happy to hear the news?",
+        "Were they happy to hear the news"
+      ],
+      "fragmentForm": "Were they happy to hear",
+      "wormholeVariants": [
+        "Were they happy for hear the news?",
+        "Were they happy hear the news?",
+        "Were they happy to heared the news?",
+        "Were they happy to hear the news?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_059",
+    "seedId": "to_inf_adverbial_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀가 그렇게 말한 것은 무례했니?",
+    "english": "Was she rude to say that?",
+    "words": [
+      "Was",
+      "she",
+      "rude",
+      "to",
+      "say",
+      "that",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 그렇게 말한 것은 무례했니?",
+        "Was"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to say"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to say",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to say"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Was she rude for say that?",
+      "statementForm": [
+        "Was she rude to say that?",
+        "Was she rude to say that"
+      ],
+      "fragmentForm": "Was she rude to say",
+      "wormholeVariants": [
+        "Was she rude for say that?",
+        "Was she rude say that?",
+        "Was she rude to sayed that?",
+        "she rude to say that?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_060",
+    "seedId": "to_inf_adverbial_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 충분히 용감해서 진실을 말했니?",
+    "english": "Was he brave enough to tell the truth?",
+    "words": [
+      "Was",
+      "he",
+      "brave",
+      "enough",
+      "to",
+      "tell",
+      "the",
+      "truth",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 충분히 용감해서 진실을 말했니?",
+        "Was"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to tell"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to tell",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to tell"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Was he brave enough for tell the truth?",
+      "statementForm": [
+        "Was he brave enough to tell the truth?",
+        "Was he brave enough to tell the truth"
+      ],
+      "fragmentForm": "Was he brave enough to tell",
+      "wormholeVariants": [
+        "Was he brave enough for tell the truth?",
+        "Was he brave enough tell the truth?",
+        "Was he brave enough to telled the truth?",
+        "Was he brave enough for to tell the truth?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_061",
+    "seedId": "to_inf_adverbial_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 집에 돌아와서 문이 열려 있는 것을 발견했다.",
+    "english": "She came home to find the door open.",
+    "words": [
+      "She",
+      "came",
+      "home",
+      "to",
+      "find",
+      "the",
+      "door",
+      "open",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 집에 돌아와서 문이 열려 있는 것을 발견했다.",
+        "She"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to find"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to find",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to find"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She came home for find the door open.",
+      "statementForm": [
+        "She came home to find the door open.",
+        "She came home to find the door open"
+      ],
+      "fragmentForm": "She came home to find",
+      "wormholeVariants": [
+        "She came home for find the door open.",
+        "She came home find the door open.",
+        "She came home to finded the door open.",
+        "She came home because find the door open."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_062",
+    "seedId": "to_inf_adverbial_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 깨어나서 자신이 병원에 있다는 것을 알았다.",
+    "english": "He woke up to find himself in a hospital.",
+    "words": [
+      "He",
+      "woke",
+      "up",
+      "to",
+      "find",
+      "himself",
+      "in",
+      "a",
+      "hospital",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 깨어나서 자신이 병원에 있다는 것을 알았다.",
+        "He"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to find"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to find",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to find"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He woke up for find himself in a hospital.",
+      "statementForm": [
+        "He woke up to find himself in a hospital.",
+        "He woke up to find himself in a hospital"
+      ],
+      "fragmentForm": "He woke up to find",
+      "wormholeVariants": [
+        "He woke up for find himself in a hospital.",
+        "He woke up find himself in a hospital.",
+        "He woke up to finded himself in a hospital.",
+        "He woke up because find himself in a hospital."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_063",
+    "seedId": "to_inf_adverbial_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 역에 도착했지만 기차가 떠난 것을 알았다.",
+    "english": "They arrived at the station to find the train gone.",
+    "words": [
+      "They",
+      "arrived",
+      "at",
+      "the",
+      "station",
+      "to",
+      "find",
+      "the",
+      "train",
+      "gone",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 역에 도착했지만 기차가 떠난 것을 알았다.",
+        "They"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to find"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to find",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to find"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They arrived at the station for find the train gone.",
+      "statementForm": [
+        "They arrived at the station to find the train gone.",
+        "They arrived at the station to find the train gone"
+      ],
+      "fragmentForm": "They arrived at the station to find",
+      "wormholeVariants": [
+        "They arrived at the station for find the train gone.",
+        "They arrived at the station find the train gone.",
+        "They arrived at the station to finded the train gone.",
+        "They arrived at the station because find the train gone."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_064",
+    "seedId": "to_inf_adverbial_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 오래 살다가 위대한 작가가 되었다.",
+    "english": "She lived long to become a great writer.",
+    "words": [
+      "She",
+      "lived",
+      "long",
+      "to",
+      "become",
+      "a",
+      "great",
+      "writer",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 오래 살다가 위대한 작가가 되었다.",
+        "She"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to become"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to become",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to become"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She lived long for become a great writer.",
+      "statementForm": [
+        "She lived long to become a great writer.",
+        "She lived long to become a great writer"
+      ],
+      "fragmentForm": "She lived long to become",
+      "wormholeVariants": [
+        "She lived long for become a great writer.",
+        "She lived long become a great writer.",
+        "She lived long to becomed a great writer.",
+        "She lived long because become a great writer."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_065",
+    "seedId": "to_inf_adverbial_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 집으로 돌아와서 모든 것이 변한 것을 발견했다.",
+    "english": "They returned home to find everything changed.",
+    "words": [
+      "They",
+      "returned",
+      "home",
+      "to",
+      "find",
+      "everything",
+      "changed",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 집으로 돌아와서 모든 것이 변한 것을 발견했다.",
+        "They"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to find"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to find",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to find"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They returned home for find everything changed.",
+      "statementForm": [
+        "They returned home to find everything changed.",
+        "They returned home to find everything changed"
+      ],
+      "fragmentForm": "They returned home to find",
+      "wormholeVariants": [
+        "They returned home for find everything changed.",
+        "They returned home find everything changed.",
+        "They returned home to finded everything changed.",
+        "They returned home because find everything changed."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_066",
+    "seedId": "to_inf_adverbial_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 병에서 회복되어 다시 걸을 수 있게 되었다.",
+    "english": "He recovered from the illness to walk again.",
+    "words": [
+      "He",
+      "recovered",
+      "from",
+      "the",
+      "illness",
+      "to",
+      "walk",
+      "again",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 병에서 회복되어 다시 걸을 수 있게 되었다.",
+        "He"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to walk"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to walk",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to walk"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He recovered from the illness for walk again.",
+      "statementForm": [
+        "He recovered from the illness to walk again.",
+        "He recovered from the illness to walk again"
+      ],
+      "fragmentForm": "He recovered from the illness to walk",
+      "wormholeVariants": [
+        "He recovered from the illness for walk again.",
+        "He recovered from the illness walk again.",
+        "He recovered from the illness to walked again.",
+        "He recovered from the illness because walk again."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_067",
+    "seedId": "to_inf_adverbial_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 연습을 계속해서 마침내 무대에 섰다.",
+    "english": "She kept practicing to stand on the stage at last.",
+    "words": [
+      "She",
+      "kept",
+      "practicing",
+      "to",
+      "stand",
+      "on",
+      "the",
+      "stage",
+      "at",
+      "last",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 연습을 계속해서 마침내 무대에 섰다.",
+        "She"
+      ],
+      [
+        "결과: 결국 ~하게 되다",
+        "to stand"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to stand",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to stand"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "result",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She kept practicing for stand on the stage at last.",
+      "statementForm": [
+        "She kept practicing to stand on the stage at last.",
+        "She kept practicing to stand on the stage at last"
+      ],
+      "fragmentForm": "She kept practicing to stand",
+      "wormholeVariants": [
+        "She kept practicing for stand on the stage at last.",
+        "She kept practicing stand on the stage at last.",
+        "She kept practicing to standed on the stage at last.",
+        "She kept practicing because stand on the stage at last."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_068",
+    "seedId": "to_inf_adverbial_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀가 그 제안을 거절한 것은 현명했다.",
+    "english": "She was wise to refuse the offer.",
+    "words": [
+      "She",
+      "was",
+      "wise",
+      "to",
+      "refuse",
+      "the",
+      "offer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 그 제안을 거절한 것은 현명했다.",
+        "She"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to refuse"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to refuse",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to refuse"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was wise for refuse the offer.",
+      "statementForm": [
+        "She was wise to refuse the offer.",
+        "She was wise to refuse the offer"
+      ],
+      "fragmentForm": "She was wise to refuse",
+      "wormholeVariants": [
+        "She was wise for refuse the offer.",
+        "She was wise refuse the offer.",
+        "She was wise to refused the offer.",
+        "She was wise because refuse the offer."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_069",
+    "seedId": "to_inf_adverbial_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그가 아무 말도 하지 않은 것은 이상했다.",
+    "english": "He was strange to say nothing.",
+    "words": [
+      "He",
+      "was",
+      "strange",
+      "to",
+      "say",
+      "nothing",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그가 아무 말도 하지 않은 것은 이상했다.",
+        "He"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to say"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to say",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to say"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was strange for say nothing.",
+      "statementForm": [
+        "He was strange to say nothing.",
+        "He was strange to say nothing"
+      ],
+      "fragmentForm": "He was strange to say",
+      "wormholeVariants": [
+        "He was strange for say nothing.",
+        "He was strange say nothing.",
+        "He was strange to sayed nothing.",
+        "He was strange because say nothing."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_070",
+    "seedId": "to_inf_adverbial_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "네가 그 기회를 놓친 것은 아쉬웠다.",
+    "english": "You were unfortunate to miss the chance.",
+    "words": [
+      "You",
+      "were",
+      "unfortunate",
+      "to",
+      "miss",
+      "the",
+      "chance",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "네가 그 기회를 놓친 것은 아쉬웠다.",
+        "You"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to miss"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to miss",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to miss"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "You were unfortunate for miss the chance.",
+      "statementForm": [
+        "You were unfortunate to miss the chance.",
+        "You were unfortunate to miss the chance"
+      ],
+      "fragmentForm": "You were unfortunate to miss",
+      "wormholeVariants": [
+        "You were unfortunate for miss the chance.",
+        "You were unfortunate miss the chance.",
+        "You were unfortunate to missed the chance.",
+        "You were unfortunate because miss the chance."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_071",
+    "seedId": "to_inf_adverbial_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀가 먼저 사과한 것은 용감했다.",
+    "english": "She was brave to apologize first.",
+    "words": [
+      "She",
+      "was",
+      "brave",
+      "to",
+      "apologize",
+      "first",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀가 먼저 사과한 것은 용감했다.",
+        "She"
+      ],
+      [
+        "판단 근거: ~하다니",
+        "to apologize"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to apologize",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to apologize"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "judgment",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was brave for apologize first.",
+      "statementForm": [
+        "She was brave to apologize first.",
+        "She was brave to apologize first"
+      ],
+      "fragmentForm": "She was brave to apologize",
+      "wormholeVariants": [
+        "She was brave for apologize first.",
+        "She was brave apologize first.",
+        "She was brave to apologized first.",
+        "She was brave because apologize first."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_072",
+    "seedId": "to_inf_adverbial_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 가방은 아이가 들기에 너무 무겁다.",
+    "english": "The bag is too heavy for a child to carry.",
+    "words": [
+      "The",
+      "bag",
+      "is",
+      "too",
+      "heavy",
+      "for",
+      "a",
+      "child",
+      "to",
+      "carry",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가방은 아이가 들기에 너무 무겁다.",
+        "The"
+      ],
+      [
+        "too ... to: 너무 ~해서 ...할 수 없다",
+        "to carry"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to carry",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to carry"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "too_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bag is too heavy for a child for carry.",
+      "statementForm": [
+        "The bag is too heavy for a child to carry.",
+        "The bag is too heavy for a child to carry"
+      ],
+      "fragmentForm": "The bag is too heavy for a child to carry",
+      "wormholeVariants": [
+        "The bag is too heavy for a child for carry.",
+        "The bag is too heavy for a child carry.",
+        "The bag is too heavy for a child to carryed.",
+        "The bag is too heavy for a child for to carry."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_073",
+    "seedId": "to_inf_adverbial_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 문장은 모든 학생이 이해할 만큼 충분히 쉽다.",
+    "english": "The sentence is easy enough for every student to understand.",
+    "words": [
+      "The",
+      "sentence",
+      "is",
+      "easy",
+      "enough",
+      "for",
+      "every",
+      "student",
+      "to",
+      "understand",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문장은 모든 학생이 이해할 만큼 충분히 쉽다.",
+        "The"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to understand"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to understand",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to understand"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The sentence is easy enough for every student for understand.",
+      "statementForm": [
+        "The sentence is easy enough for every student to understand.",
+        "The sentence is easy enough for every student to understand"
+      ],
+      "fragmentForm": "The sentence is easy enough for every student to understand",
+      "wormholeVariants": [
+        "The sentence is easy enough for every student for understand.",
+        "The sentence is easy enough for every student understand.",
+        "The sentence is easy enough for every student to understanded.",
+        "The sentence is easy enough for every student for to understand."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_074",
+    "seedId": "to_inf_adverbial_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 문제를 일으키려고 그 말을 한 것이 아니다.",
+    "english": "They didn't say it to cause trouble.",
+    "words": [
+      "They",
+      "didn't",
+      "say",
+      "it",
+      "to",
+      "cause",
+      "trouble",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 문제를 일으키려고 그 말을 한 것이 아니다.",
+        "They"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to cause"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to cause",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to cause"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They didn't say it for cause trouble.",
+      "statementForm": [
+        "They didn't say it to cause trouble.",
+        "They didn't say it to cause trouble"
+      ],
+      "fragmentForm": "They didn't say it to cause",
+      "wormholeVariants": [
+        "They didn't say it for cause trouble.",
+        "They didn't say it cause trouble.",
+        "They didn't say it to caused trouble.",
+        "They didn't say it because cause trouble."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_075",
+    "seedId": "to_inf_adverbial_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 너를 실망시키려고 그런 선택을 하지 않았다.",
+    "english": "I didn't make that choice to disappoint you.",
+    "words": [
+      "I",
+      "didn't",
+      "make",
+      "that",
+      "choice",
+      "to",
+      "disappoint",
+      "you",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 너를 실망시키려고 그런 선택을 하지 않았다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to disappoint"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to disappoint",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to disappoint"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I didn't make that choice for disappoint you.",
+      "statementForm": [
+        "I didn't make that choice to disappoint you.",
+        "I didn't make that choice to disappoint you"
+      ],
+      "fragmentForm": "I didn't make that choice to disappoint",
+      "wormholeVariants": [
+        "I didn't make that choice for disappoint you.",
+        "I didn't make that choice disappoint you.",
+        "I didn't make that choice to disappointed you.",
+        "I didn't make that choice because disappoint you."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_076",
+    "seedId": "to_inf_adverbial_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 다른 사람을 웃기려고 거짓말하지 않았다.",
+    "english": "He didn't lie to make others laugh.",
+    "words": [
+      "He",
+      "didn't",
+      "lie",
+      "to",
+      "make",
+      "others",
+      "laugh",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 다른 사람을 웃기려고 거짓말하지 않았다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to make"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to make",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to make"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He didn't lie for make others laugh.",
+      "statementForm": [
+        "He didn't lie to make others laugh.",
+        "He didn't lie to make others laugh"
+      ],
+      "fragmentForm": "He didn't lie to make",
+      "wormholeVariants": [
+        "He didn't lie for make others laugh.",
+        "He didn't lie make others laugh.",
+        "He didn't lie to maked others laugh.",
+        "He didn't lie because make others laugh."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_077",
+    "seedId": "to_inf_adverbial_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 유명해지려고 그 일을 시작하지 않았다.",
+    "english": "She didn't start the work to become famous.",
+    "words": [
+      "She",
+      "didn't",
+      "start",
+      "the",
+      "work",
+      "to",
+      "become",
+      "famous",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 유명해지려고 그 일을 시작하지 않았다.",
+        "She"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to become"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to become",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to become"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She didn't start the work for become famous.",
+      "statementForm": [
+        "She didn't start the work to become famous.",
+        "She didn't start the work to become famous"
+      ],
+      "fragmentForm": "She didn't start the work to become",
+      "wormholeVariants": [
+        "She didn't start the work for become famous.",
+        "She didn't start the work become famous.",
+        "She didn't start the work to becomed famous.",
+        "She didn't start the work because become famous."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_078",
+    "seedId": "to_inf_adverbial_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 벌을 피하려고 진실을 숨기지 않았다.",
+    "english": "He didn't hide the truth to avoid punishment.",
+    "words": [
+      "He",
+      "didn't",
+      "hide",
+      "the",
+      "truth",
+      "to",
+      "avoid",
+      "punishment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 벌을 피하려고 진실을 숨기지 않았다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to avoid"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to avoid",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to avoid"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He didn't hide the truth for avoid punishment.",
+      "statementForm": [
+        "He didn't hide the truth to avoid punishment.",
+        "He didn't hide the truth to avoid punishment"
+      ],
+      "fragmentForm": "He didn't hide the truth to avoid",
+      "wormholeVariants": [
+        "He didn't hide the truth for avoid punishment.",
+        "He didn't hide the truth avoid punishment.",
+        "He didn't hide the truth to avoided punishment.",
+        "He didn't hide the truth because avoid punishment."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_079",
+    "seedId": "to_inf_adverbial_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 무엇을 사려고 가게에 갔니?",
+    "english": "What did she go to the store to buy?",
+    "words": [
+      "What",
+      "did",
+      "she",
+      "go",
+      "to",
+      "the",
+      "store",
+      "to",
+      "buy",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 무엇을 사려고 가게에 갔니?",
+        "What"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to buy"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to buy",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to buy"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "What did she go for the store to buy?",
+      "statementForm": [
+        "What did she go to the store to buy?",
+        "What did she go to the store to buy"
+      ],
+      "fragmentForm": "What did she go to the",
+      "wormholeVariants": [
+        "What did she go for the store to buy?",
+        "What did she go the store to buy?",
+        "What did she go to thed store to buy?",
+        "What did she go to the store to buy?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_080",
+    "seedId": "to_inf_adverbial_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "너는 왜 영어를 배우기 위해 그렇게 열심히 노력하니?",
+    "english": "Why do you try so hard to learn English?",
+    "words": [
+      "Why",
+      "do",
+      "you",
+      "try",
+      "so",
+      "hard",
+      "to",
+      "learn",
+      "English",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 왜 영어를 배우기 위해 그렇게 열심히 노력하니?",
+        "Why"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to learn"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to learn",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to learn"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why do you try so hard for learn English?",
+      "statementForm": [
+        "Why do you try so hard to learn English?",
+        "Why do you try so hard to learn English"
+      ],
+      "fragmentForm": "Why do you try so hard to learn",
+      "wormholeVariants": [
+        "Why do you try so hard for learn English?",
+        "Why do you try so hard learn English?",
+        "Why do you try so hard to learned English?",
+        "Why you try so hard to learn English?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_081",
+    "seedId": "to_inf_adverbial_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "너는 무엇을 하기 위해 그 돈을 저축하고 있니?",
+    "english": "What are you saving the money to do?",
+    "words": [
+      "What",
+      "are",
+      "you",
+      "saving",
+      "the",
+      "money",
+      "to",
+      "do",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 무엇을 하기 위해 그 돈을 저축하고 있니?",
+        "What"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to do"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to do",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to do"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "What are you saving the money for do?",
+      "statementForm": [
+        "What are you saving the money to do?",
+        "What are you saving the money to do"
+      ],
+      "fragmentForm": "What are you saving the money to do",
+      "wormholeVariants": [
+        "What are you saving the money for do?",
+        "What are you saving the money do?",
+        "What are you saving the money to doed?",
+        "What are you saving the money to do?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_082",
+    "seedId": "to_inf_adverbial_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 왜 친구를 돕기 위해 늦게까지 남았니?",
+    "english": "Why did she stay late to help her friend?",
+    "words": [
+      "Why",
+      "did",
+      "she",
+      "stay",
+      "late",
+      "to",
+      "help",
+      "her",
+      "friend",
+      "?"
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 왜 친구를 돕기 위해 늦게까지 남았니?",
+        "Why"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to help"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to help",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to help"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Why did she stay late for help her friend?",
+      "statementForm": [
+        "Why did she stay late to help her friend?",
+        "Why did she stay late to help her friend"
+      ],
+      "fragmentForm": "Why did she stay late to help",
+      "wormholeVariants": [
+        "Why did she stay late for help her friend?",
+        "Why did she stay late help her friend?",
+        "Why did she stay late to helped her friend?",
+        "Why did she stay late to help her friend?"
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_083",
+    "seedId": "to_inf_adverbial_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 더 넓은 세상을 이해하기 위해 여러 나라의 역사를 공부했다.",
+    "english": "He studied the history of many countries to understand the wider world.",
+    "words": [
+      "He",
+      "studied",
+      "the",
+      "history",
+      "of",
+      "many",
+      "countries",
+      "to",
+      "understand",
+      "the",
+      "wider",
+      "world",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 더 넓은 세상을 이해하기 위해 여러 나라의 역사를 공부했다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to understand"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to understand",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to understand"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He studied the history of many countries for understand the wider world.",
+      "statementForm": [
+        "He studied the history of many countries to understand the wider world.",
+        "He studied the history of many countries to understand the wider world"
+      ],
+      "fragmentForm": "He studied the history of many countries to understand",
+      "wormholeVariants": [
+        "He studied the history of many countries for understand the wider world.",
+        "He studied the history of many countries understand the wider world.",
+        "He studied the history of many countries to understanded the wider world.",
+        "He studied the history of many countries because understand the wider world."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_084",
+    "seedId": "to_inf_adverbial_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 자신의 주장을 더 설득력 있게 만들기 위해 구체적인 예를 사용했다.",
+    "english": "She used specific examples to make her argument more persuasive.",
+    "words": [
+      "She",
+      "used",
+      "specific",
+      "examples",
+      "to",
+      "make",
+      "her",
+      "argument",
+      "more",
+      "persuasive",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 자신의 주장을 더 설득력 있게 만들기 위해 구체적인 예를 사용했다.",
+        "She"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to make"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to make",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to make"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She used specific examples for make her argument more persuasive.",
+      "statementForm": [
+        "She used specific examples to make her argument more persuasive.",
+        "She used specific examples to make her argument more persuasive"
+      ],
+      "fragmentForm": "She used specific examples to make",
+      "wormholeVariants": [
+        "She used specific examples for make her argument more persuasive.",
+        "She used specific examples make her argument more persuasive.",
+        "She used specific examples to maked her argument more persuasive.",
+        "She used specific examples because make her argument more persuasive."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_085",
+    "seedId": "to_inf_adverbial_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 같은 실수를 반복하지 않기 위해 결과를 주의 깊게 분석했다.",
+    "english": "We analyzed the result carefully to avoid repeating the same mistake.",
+    "words": [
+      "We",
+      "analyzed",
+      "the",
+      "result",
+      "carefully",
+      "to",
+      "avoid",
+      "repeating",
+      "the",
+      "same",
+      "mistake",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 같은 실수를 반복하지 않기 위해 결과를 주의 깊게 분석했다.",
+        "We"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to avoid"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to avoid",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to avoid"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We analyzed the result carefully for avoid repeating the same mistake.",
+      "statementForm": [
+        "We analyzed the result carefully to avoid repeating the same mistake.",
+        "We analyzed the result carefully to avoid repeating the same mistake"
+      ],
+      "fragmentForm": "We analyzed the result carefully to avoid",
+      "wormholeVariants": [
+        "We analyzed the result carefully for avoid repeating the same mistake.",
+        "We analyzed the result carefully avoid repeating the same mistake.",
+        "We analyzed the result carefully to avoided repeating the same mistake.",
+        "We analyzed the result carefully because avoid repeating the same mistake."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_086",
+    "seedId": "to_inf_adverbial_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 학생은 자신의 생각을 더 명확하게 표현하기 위해 문장을 다시 썼다.",
+    "english": "The student rewrote the sentence to express his idea more clearly.",
+    "words": [
+      "The",
+      "student",
+      "rewrote",
+      "the",
+      "sentence",
+      "to",
+      "express",
+      "his",
+      "idea",
+      "more",
+      "clearly",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생은 자신의 생각을 더 명확하게 표현하기 위해 문장을 다시 썼다.",
+        "The"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to express"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to express",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to express"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student rewrote the sentence for express his idea more clearly.",
+      "statementForm": [
+        "The student rewrote the sentence to express his idea more clearly.",
+        "The student rewrote the sentence to express his idea more clearly"
+      ],
+      "fragmentForm": "The student rewrote the sentence to express",
+      "wormholeVariants": [
+        "The student rewrote the sentence for express his idea more clearly.",
+        "The student rewrote the sentence express his idea more clearly.",
+        "The student rewrote the sentence to expressed his idea more clearly.",
+        "The student rewrote the sentence because express his idea more clearly."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_087",
+    "seedId": "to_inf_adverbial_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그들은 지역 사회를 돕기 위해 작은 캠페인을 시작했다.",
+    "english": "They started a small campaign to help the local community.",
+    "words": [
+      "They",
+      "started",
+      "a",
+      "small",
+      "campaign",
+      "to",
+      "help",
+      "the",
+      "local",
+      "community",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 지역 사회를 돕기 위해 작은 캠페인을 시작했다.",
+        "They"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to help"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to help",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to help"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They started a small campaign for help the local community.",
+      "statementForm": [
+        "They started a small campaign to help the local community.",
+        "They started a small campaign to help the local community"
+      ],
+      "fragmentForm": "They started a small campaign to help",
+      "wormholeVariants": [
+        "They started a small campaign for help the local community.",
+        "They started a small campaign help the local community.",
+        "They started a small campaign to helped the local community.",
+        "They started a small campaign because help the local community."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_088",
+    "seedId": "to_inf_adverbial_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "나는 다른 관점을 이해하기 위해 그 기사를 다시 읽었다.",
+    "english": "I read the article again to understand another point of view.",
+    "words": [
+      "I",
+      "read",
+      "the",
+      "article",
+      "again",
+      "to",
+      "understand",
+      "another",
+      "point",
+      "of",
+      "view",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 다른 관점을 이해하기 위해 그 기사를 다시 읽었다.",
+        "I"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to understand"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to understand",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to understand"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I read the article again for understand another point of view.",
+      "statementForm": [
+        "I read the article again to understand another point of view.",
+        "I read the article again to understand another point of view"
+      ],
+      "fragmentForm": "I read the article again to understand",
+      "wormholeVariants": [
+        "I read the article again for understand another point of view.",
+        "I read the article again understand another point of view.",
+        "I read the article again to understanded another point of view.",
+        "I read the article again because understand another point of view."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_089",
+    "seedId": "to_inf_adverbial_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 더 나은 결정을 내리기 위해 충분한 정보를 모았다.",
+    "english": "She gathered enough information to make a better decision.",
+    "words": [
+      "She",
+      "gathered",
+      "enough",
+      "information",
+      "to",
+      "make",
+      "a",
+      "better",
+      "decision",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 더 나은 결정을 내리기 위해 충분한 정보를 모았다.",
+        "She"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to make"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to make",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to make"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She gathered enough information for make a better decision.",
+      "statementForm": [
+        "She gathered enough information to make a better decision.",
+        "She gathered enough information to make a better decision"
+      ],
+      "fragmentForm": "She gathered enough information to make",
+      "wormholeVariants": [
+        "She gathered enough information for make a better decision.",
+        "She gathered enough information make a better decision.",
+        "She gathered enough information to maked a better decision.",
+        "She gathered enough information because make a better decision."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_090",
+    "seedId": "to_inf_adverbial_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 사람들의 신뢰를 얻기 위해 약속을 지키려고 노력했다.",
+    "english": "He tried to keep his promise to earn people's trust.",
+    "words": [
+      "He",
+      "tried",
+      "to",
+      "keep",
+      "his",
+      "promise",
+      "to",
+      "earn",
+      "people's",
+      "trust",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 사람들의 신뢰를 얻기 위해 약속을 지키려고 노력했다.",
+        "He"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to earn"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to earn",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to earn"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He tried for keep his promise to earn people's trust.",
+      "statementForm": [
+        "He tried to keep his promise to earn people's trust.",
+        "He tried to keep his promise to earn people's trust"
+      ],
+      "fragmentForm": "He tried to keep",
+      "wormholeVariants": [
+        "He tried for keep his promise to earn people's trust.",
+        "He tried keep his promise to earn people's trust.",
+        "He tried to keeped his promise to earn people's trust.",
+        "He tried because keep his promise to earn people's trust."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_091",
+    "seedId": "to_inf_adverbial_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "우리는 토론을 계속해서 더 깊은 답을 찾으려고 했다.",
+    "english": "We continued the discussion to find a deeper answer.",
+    "words": [
+      "We",
+      "continued",
+      "the",
+      "discussion",
+      "to",
+      "find",
+      "a",
+      "deeper",
+      "answer",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 토론을 계속해서 더 깊은 답을 찾으려고 했다.",
+        "We"
+      ],
+      [
+        "목적: ~하기 위해",
+        "to find"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to find",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to find"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "purpose",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We continued the discussion for find a deeper answer.",
+      "statementForm": [
+        "We continued the discussion to find a deeper answer.",
+        "We continued the discussion to find a deeper answer"
+      ],
+      "fragmentForm": "We continued the discussion to find",
+      "wormholeVariants": [
+        "We continued the discussion for find a deeper answer.",
+        "We continued the discussion find a deeper answer.",
+        "We continued the discussion to finded a deeper answer.",
+        "We continued the discussion because find a deeper answer."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_092",
+    "seedId": "to_inf_adverbial_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그는 실패를 인정할 만큼 충분히 정직했다.",
+    "english": "He was honest enough to admit his failure.",
+    "words": [
+      "He",
+      "was",
+      "honest",
+      "enough",
+      "to",
+      "admit",
+      "his",
+      "failure",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 실패를 인정할 만큼 충분히 정직했다.",
+        "He"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to admit"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to admit",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to admit"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He was honest enough for admit his failure.",
+      "statementForm": [
+        "He was honest enough to admit his failure.",
+        "He was honest enough to admit his failure"
+      ],
+      "fragmentForm": "He was honest enough to admit",
+      "wormholeVariants": [
+        "He was honest enough for admit his failure.",
+        "He was honest enough admit his failure.",
+        "He was honest enough to admited his failure.",
+        "He was honest enough for to admit his failure."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_093",
+    "seedId": "to_inf_adverbial_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 질문은 단순히 한 문장으로 답하기에는 너무 복잡했다.",
+    "english": "The question was too complex to answer in one sentence.",
+    "words": [
+      "The",
+      "question",
+      "was",
+      "too",
+      "complex",
+      "to",
+      "answer",
+      "in",
+      "one",
+      "sentence",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 질문은 단순히 한 문장으로 답하기에는 너무 복잡했다.",
+        "The"
+      ],
+      [
+        "too ... to: 너무 ~해서 ...할 수 없다",
+        "to answer"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to answer",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to answer"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "too_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question was too complex for answer in one sentence.",
+      "statementForm": [
+        "The question was too complex to answer in one sentence.",
+        "The question was too complex to answer in one sentence"
+      ],
+      "fragmentForm": "The question was too complex to answer",
+      "wormholeVariants": [
+        "The question was too complex for answer in one sentence.",
+        "The question was too complex answer in one sentence.",
+        "The question was too complex to answered in one sentence.",
+        "The question was too complex for to answer in one sentence."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_094",
+    "seedId": "to_inf_adverbial_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그녀는 비판을 받아들이고 더 나아질 만큼 충분히 성숙했다.",
+    "english": "She was mature enough to accept criticism and improve.",
+    "words": [
+      "She",
+      "was",
+      "mature",
+      "enough",
+      "to",
+      "accept",
+      "criticism",
+      "and",
+      "improve",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 비판을 받아들이고 더 나아질 만큼 충분히 성숙했다.",
+        "She"
+      ],
+      [
+        "... enough to: ...할 만큼 충분히 ~하다",
+        "to accept"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to accept",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to accept"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "enough_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She was mature enough for accept criticism and improve.",
+      "statementForm": [
+        "She was mature enough to accept criticism and improve.",
+        "She was mature enough to accept criticism and improve"
+      ],
+      "fragmentForm": "She was mature enough to accept",
+      "wormholeVariants": [
+        "She was mature enough for accept criticism and improve.",
+        "She was mature enough accept criticism and improve.",
+        "She was mature enough to accepted criticism and improve.",
+        "She was mature enough for to accept criticism and improve."
+      ]
+    }
+  },
+  {
+    "id": "m2_to_inf_adverbial_095",
+    "seedId": "to_inf_adverbial_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "to_infinitive_adverbial",
+    "chapterLabelKo": "to부정사의 부사적 용법",
+    "korean": "그 설명은 학생들이 혼자 이해하기에는 너무 추상적이었다.",
+    "english": "The explanation was too abstract for students to understand alone.",
+    "words": [
+      "The",
+      "explanation",
+      "was",
+      "too",
+      "abstract",
+      "for",
+      "students",
+      "to",
+      "understand",
+      "alone",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "to_infinitive_adverbial",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 학생들이 혼자 이해하기에는 너무 추상적이었다.",
+        "The"
+      ],
+      [
+        "too ... to: 너무 ~해서 ...할 수 없다",
+        "to understand"
+      ],
+      [
+        "주의",
+        "use to + base verb; do not use for + verb, bare verb, or to + past tense"
+      ]
+    ],
+    "extraClueWordPool": [
+      "to understand",
+      "to",
+      "for",
+      "because",
+      "so",
+      "enough",
+      "too",
+      "not",
+      "base verb"
+    ],
+    "blankTargets": [
+      "to understand"
+    ],
+    "tags": [
+      "to_infinitive_adverbial",
+      "too_to",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation was too abstract for students for understand alone.",
+      "statementForm": [
+        "The explanation was too abstract for students to understand alone.",
+        "The explanation was too abstract for students to understand alone"
+      ],
+      "fragmentForm": "The explanation was too abstract for students to understand",
+      "wormholeVariants": [
+        "The explanation was too abstract for students for understand alone.",
+        "The explanation was too abstract for students understand alone.",
+        "The explanation was too abstract for students to understanded alone.",
+        "The explanation was too abstract for students for to understand alone."
+      ]
+    }
+  }
+]
