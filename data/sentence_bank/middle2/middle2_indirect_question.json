@@ -1,0 +1,6708 @@
+[
+  {
+    "id": "m2_indirect_question_001",
+    "seedId": "indirect_question_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 무엇을 원하는지 안다.",
+    "english": "I know what he wants.",
+    "words": [
+      "I",
+      "know",
+      "what",
+      "he",
+      "wants",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 무엇을 원하는지 안다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know what does he want.",
+      "statementForm": [
+        "I know what he wants.",
+        "I know what he wants"
+      ],
+      "fragmentForm": "I know what he",
+      "wormholeVariants": [
+        "I know what does he want.",
+        "I know what he want.",
+        "I know what wants he.",
+        "I know that what he wants."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_002",
+    "seedId": "indirect_question_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그녀가 어디에 사는지 아니?",
+    "english": "Do you know where she lives?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "where",
+      "she",
+      "lives",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그녀가 어디에 사는지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know where does she live?",
+      "statementForm": [
+        "Do you know where she lives?",
+        "Do you know where she lives"
+      ],
+      "fragmentForm": "Do you know where she",
+      "wormholeVariants": [
+        "Do you know where does she live?",
+        "Do you know where she live?",
+        "Do you know where lives she?",
+        "Do you know where is she live?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_003",
+    "seedId": "indirect_question_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그들이 언제 도착할지 모른다.",
+    "english": "I don't know when they will arrive.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "when",
+      "they",
+      "will",
+      "arrive",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 언제 도착할지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know when will they arrive.",
+      "statementForm": [
+        "I don't know when they will arrive.",
+        "I don't know when they will arrive"
+      ],
+      "fragmentForm": "I don't know when they",
+      "wormholeVariants": [
+        "I don't know when will they arrive.",
+        "I don't know when they arrive will.",
+        "I don't know when do they arrive.",
+        "I don't know when they will arrives."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_004",
+    "seedId": "indirect_question_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그가 왜 화가 났는지 물었다.",
+    "english": "She asked why he was angry.",
+    "words": [
+      "She",
+      "asked",
+      "why",
+      "he",
+      "was",
+      "angry",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 왜 화가 났는지 물었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked why was he angry.",
+      "statementForm": [
+        "She asked why he was angry.",
+        "She asked why he was angry"
+      ],
+      "fragmentForm": "She asked why he",
+      "wormholeVariants": [
+        "She asked why was he angry.",
+        "She asked why he angry was.",
+        "She asked why did he angry.",
+        "She asked why he is angry yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_005",
+    "seedId": "indirect_question_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그가 어떻게 그 문제를 풀었는지 안다.",
+    "english": "We know how he solved the problem.",
+    "words": [
+      "We",
+      "know",
+      "how",
+      "he",
+      "solved",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그가 어떻게 그 문제를 풀었는지 안다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know how did he solve the problem.",
+      "statementForm": [
+        "We know how he solved the problem.",
+        "We know how he solved the problem"
+      ],
+      "fragmentForm": "We know how he",
+      "wormholeVariants": [
+        "We know how did he solve the problem.",
+        "We know how he solve the problem.",
+        "We know how solved he the problem.",
+        "We know how he did solved the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_006",
+    "seedId": "indirect_question_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그녀가 올지 안 올지 모른다.",
+    "english": "I don't know if she will come.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "if",
+      "she",
+      "will",
+      "come",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 올지 안 올지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know if will she come.",
+      "statementForm": [
+        "I don't know if she will come.",
+        "I don't know if she will come"
+      ],
+      "fragmentForm": "I don't know if she",
+      "wormholeVariants": [
+        "I don't know if will she come.",
+        "I don't know does she will come.",
+        "I don't know if she come will.",
+        "I don't know whether will she come."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_007",
+    "seedId": "indirect_question_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그들이 준비되었는지 궁금해한다.",
+    "english": "He wonders whether they are ready.",
+    "words": [
+      "He",
+      "wonders",
+      "whether",
+      "they",
+      "are",
+      "ready",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그들이 준비되었는지 궁금해한다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He wonders whether are they ready.",
+      "statementForm": [
+        "He wonders whether they are ready.",
+        "He wonders whether they are ready"
+      ],
+      "fragmentForm": "He wonders whether they",
+      "wormholeVariants": [
+        "He wonders whether are they ready.",
+        "He wonders whether they ready are.",
+        "He wonders if are they ready.",
+        "He wonders whether do they ready."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_008",
+    "seedId": "indirect_question_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그가 무엇을 샀는지 기억하니?",
+    "english": "Do you remember what he bought?",
+    "words": [
+      "Do",
+      "you",
+      "remember",
+      "what",
+      "he",
+      "bought",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 무엇을 샀는지 기억하니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you remember what did he buy?",
+      "statementForm": [
+        "Do you remember what he bought?",
+        "Do you remember what he bought"
+      ],
+      "fragmentForm": "Do you remember what he",
+      "wormholeVariants": [
+        "Do you remember what did he buy?",
+        "Do you remember what he buy?",
+        "Do you remember what bought he?",
+        "Do you remember what does he bought?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_009",
+    "seedId": "indirect_question_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그녀가 누구인지 모른다.",
+    "english": "I don't know who she is.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "who",
+      "she",
+      "is",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 누구인지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "who"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know who is she.",
+      "statementForm": [
+        "I don't know who she is.",
+        "I don't know who she is"
+      ],
+      "fragmentForm": "I don't know who she",
+      "wormholeVariants": [
+        "I don't know who is she.",
+        "I don't know who she are.",
+        "I don't know who does she be.",
+        "I don't know who she."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_010",
+    "seedId": "indirect_question_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 네가 어디에 있었는지 알고 싶어 한다.",
+    "english": "He wants to know where you were.",
+    "words": [
+      "He",
+      "wants",
+      "to",
+      "know",
+      "where",
+      "you",
+      "were",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 네가 어디에 있었는지 알고 싶어 한다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He wants to know where were you.",
+      "statementForm": [
+        "He wants to know where you were.",
+        "He wants to know where you were"
+      ],
+      "fragmentForm": "He wants to know where you",
+      "wormholeVariants": [
+        "He wants to know where were you.",
+        "He wants to know where you was.",
+        "He wants to know where did you were.",
+        "He wants to know where you."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_011",
+    "seedId": "indirect_question_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그 버스가 언제 떠나는지 안다.",
+    "english": "I know when the bus leaves.",
+    "words": [
+      "I",
+      "know",
+      "when",
+      "the",
+      "bus",
+      "leaves",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 버스가 언제 떠나는지 안다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know when does the bus leave.",
+      "statementForm": [
+        "I know when the bus leaves.",
+        "I know when the bus leaves"
+      ],
+      "fragmentForm": "I know when the bus",
+      "wormholeVariants": [
+        "I know when does the bus leave.",
+        "I know when the bus leave.",
+        "I know when leaves the bus.",
+        "I know when is the bus leaves."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_012",
+    "seedId": "indirect_question_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그가 무엇을 읽고 있는지 물었다.",
+    "english": "She asked what he was reading.",
+    "words": [
+      "She",
+      "asked",
+      "what",
+      "he",
+      "was",
+      "reading",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 무엇을 읽고 있는지 물었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked what was he reading.",
+      "statementForm": [
+        "She asked what he was reading.",
+        "She asked what he was reading"
+      ],
+      "fragmentForm": "She asked what he",
+      "wormholeVariants": [
+        "She asked what was he reading.",
+        "She asked what he reading was.",
+        "She asked what did he reading.",
+        "She asked what he were reading."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_013",
+    "seedId": "indirect_question_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그가 왜 늦었는지 이해한다.",
+    "english": "We understand why he was late.",
+    "words": [
+      "We",
+      "understand",
+      "why",
+      "he",
+      "was",
+      "late",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그가 왜 늦었는지 이해한다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We understand why was he late.",
+      "statementForm": [
+        "We understand why he was late.",
+        "We understand why he was late"
+      ],
+      "fragmentForm": "We understand why he",
+      "wormholeVariants": [
+        "We understand why was he late.",
+        "We understand why he late was.",
+        "We understand why did he late.",
+        "We understand why he is late yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_014",
+    "seedId": "indirect_question_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 시험에 통과했는지 알고 싶다.",
+    "english": "I want to know if he passed the test.",
+    "words": [
+      "I",
+      "want",
+      "to",
+      "know",
+      "if",
+      "he",
+      "passed",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 시험에 통과했는지 알고 싶다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I want to know if did he pass the test.",
+      "statementForm": [
+        "I want to know if he passed the test.",
+        "I want to know if he passed the test"
+      ],
+      "fragmentForm": "I want to know if he",
+      "wormholeVariants": [
+        "I want to know if did he pass the test.",
+        "I want to know if he pass the test.",
+        "I want to know whether did he passed the test.",
+        "I want to know if passed he the test."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_015",
+    "seedId": "indirect_question_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그들이 무엇을 하고 있는지 아니?",
+    "english": "Do you know what they are doing?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "what",
+      "they",
+      "are",
+      "doing",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그들이 무엇을 하고 있는지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know what are they doing?",
+      "statementForm": [
+        "Do you know what they are doing?",
+        "Do you know what they are doing"
+      ],
+      "fragmentForm": "Do you know what they",
+      "wormholeVariants": [
+        "Do you know what are they doing?",
+        "Do you know what they doing are?",
+        "Do you know what do they doing?",
+        "Do you know what they is doing?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_016",
+    "seedId": "indirect_question_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그녀가 언제 돌아올지 묻는다.",
+    "english": "He asks when she will return.",
+    "words": [
+      "He",
+      "asks",
+      "when",
+      "she",
+      "will",
+      "return",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀가 언제 돌아올지 묻는다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He asks when will she return.",
+      "statementForm": [
+        "He asks when she will return.",
+        "He asks when she will return"
+      ],
+      "fragmentForm": "He asks when she",
+      "wormholeVariants": [
+        "He asks when will she return.",
+        "He asks when she return will.",
+        "He asks when does she return.",
+        "He asks when she will returns."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_017",
+    "seedId": "indirect_question_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 네가 왜 웃고 있는지 안다.",
+    "english": "I know why you are smiling.",
+    "words": [
+      "I",
+      "know",
+      "why",
+      "you",
+      "are",
+      "smiling",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 왜 웃고 있는지 안다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know why are you smiling.",
+      "statementForm": [
+        "I know why you are smiling.",
+        "I know why you are smiling"
+      ],
+      "fragmentForm": "I know why you",
+      "wormholeVariants": [
+        "I know why are you smiling.",
+        "I know why you smiling are.",
+        "I know why do you smiling.",
+        "I know why you is smiling."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_018",
+    "seedId": "indirect_question_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 내가 어떻게 느끼는지 안다.",
+    "english": "She knows how I feel.",
+    "words": [
+      "She",
+      "knows",
+      "how",
+      "I",
+      "feel",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 어떻게 느끼는지 안다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She knows how do I feel.",
+      "statementForm": [
+        "She knows how I feel.",
+        "She knows how I feel"
+      ],
+      "fragmentForm": "She knows how I",
+      "wormholeVariants": [
+        "She knows how do I feel.",
+        "She knows how I feels.",
+        "She knows how feel I.",
+        "She knows how am I feel."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_019",
+    "seedId": "indirect_question_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그가 정직한지 아닌지 모른다.",
+    "english": "We don't know whether he is honest.",
+    "words": [
+      "We",
+      "don't",
+      "know",
+      "whether",
+      "he",
+      "is",
+      "honest",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그가 정직한지 아닌지 모른다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We don't know whether is he honest.",
+      "statementForm": [
+        "We don't know whether he is honest.",
+        "We don't know whether he is honest"
+      ],
+      "fragmentForm": "We don't know whether he",
+      "wormholeVariants": [
+        "We don't know whether is he honest.",
+        "We don't know whether he honest is.",
+        "We don't know if is he honest.",
+        "We don't know whether does he honest."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_020",
+    "seedId": "indirect_question_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 누가 문을 열었는지 알고 있다.",
+    "english": "I know who opened the door.",
+    "words": [
+      "I",
+      "know",
+      "who",
+      "opened",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 누가 문을 열었는지 알고 있다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "who"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know who did open the door.",
+      "statementForm": [
+        "I know who opened the door.",
+        "I know who opened the door"
+      ],
+      "fragmentForm": "I know who opened",
+      "wormholeVariants": [
+        "I know who did open the door.",
+        "I know who opened door the.",
+        "I know who does opened the door.",
+        "I know who open the door."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_021",
+    "seedId": "indirect_question_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그가 어떤 색을 좋아하는지 알고 싶어 했다.",
+    "english": "She wanted to know what color he liked.",
+    "words": [
+      "She",
+      "wanted",
+      "to",
+      "know",
+      "what",
+      "color",
+      "he",
+      "liked",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 어떤 색을 좋아하는지 알고 싶어 했다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She wanted to know what color did he like.",
+      "statementForm": [
+        "She wanted to know what color he liked.",
+        "She wanted to know what color he liked"
+      ],
+      "fragmentForm": "She wanted to know what color he",
+      "wormholeVariants": [
+        "She wanted to know what color did he like.",
+        "She wanted to know what color he like.",
+        "She wanted to know what color liked he.",
+        "She wanted to know what color does he liked."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_022",
+    "seedId": "indirect_question_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그 기차가 몇 시에 출발하는지 모른다.",
+    "english": "I don't know what time the train leaves.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "what",
+      "time",
+      "the",
+      "train",
+      "leaves",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 기차가 몇 시에 출발하는지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know what time does the train leave.",
+      "statementForm": [
+        "I don't know what time the train leaves.",
+        "I don't know what time the train leaves"
+      ],
+      "fragmentForm": "I don't know what time the train",
+      "wormholeVariants": [
+        "I don't know what time does the train leave.",
+        "I don't know what time the train leave.",
+        "I don't know what time leaves the train.",
+        "I don't know what time is the train leaves."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_023",
+    "seedId": "indirect_question_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그가 누구와 이야기하고 있었는지 아니?",
+    "english": "Do you know who he was talking to?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "who",
+      "he",
+      "was",
+      "talking",
+      "to",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 누구와 이야기하고 있었는지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "who"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know who was he talking to?",
+      "statementForm": [
+        "Do you know who he was talking to?",
+        "Do you know who he was talking to"
+      ],
+      "fragmentForm": "Do you know who he",
+      "wormholeVariants": [
+        "Do you know who was he talking to?",
+        "Do you know who he talking to was?",
+        "Do you know who did he talk to?",
+        "Do you know who he were talking to?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_024",
+    "seedId": "indirect_question_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그들이 왜 계획을 바꾸었는지 이해할 수 없다.",
+    "english": "I can't understand why they changed the plan.",
+    "words": [
+      "I",
+      "can't",
+      "understand",
+      "why",
+      "they",
+      "changed",
+      "the",
+      "plan",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 왜 계획을 바꾸었는지 이해할 수 없다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I can't understand why did they change the plan.",
+      "statementForm": [
+        "I can't understand why they changed the plan.",
+        "I can't understand why they changed the plan"
+      ],
+      "fragmentForm": "I can't understand why they",
+      "wormholeVariants": [
+        "I can't understand why did they change the plan.",
+        "I can't understand why they change the plan.",
+        "I can't understand why changed they the plan.",
+        "I can't understand why they did changed the plan."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_025",
+    "seedId": "indirect_question_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그녀가 어디에서 그 사진을 찍었는지 물었다.",
+    "english": "He asked where she took the picture.",
+    "words": [
+      "He",
+      "asked",
+      "where",
+      "she",
+      "took",
+      "the",
+      "picture",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀가 어디에서 그 사진을 찍었는지 물었다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He asked where did she take the picture.",
+      "statementForm": [
+        "He asked where she took the picture.",
+        "He asked where she took the picture"
+      ],
+      "fragmentForm": "He asked where she",
+      "wormholeVariants": [
+        "He asked where did she take the picture.",
+        "He asked where she take the picture.",
+        "He asked where took she the picture.",
+        "He asked where she did took the picture."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_026",
+    "seedId": "indirect_question_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그 소식이 사실인지 아닌지 확신하지 못한다.",
+    "english": "I am not sure whether the news is true.",
+    "words": [
+      "I",
+      "am",
+      "not",
+      "sure",
+      "whether",
+      "the",
+      "news",
+      "is",
+      "true",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 소식이 사실인지 아닌지 확신하지 못한다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am not sure whether is the news true.",
+      "statementForm": [
+        "I am not sure whether the news is true.",
+        "I am not sure whether the news is true"
+      ],
+      "fragmentForm": "I am not sure whether the news",
+      "wormholeVariants": [
+        "I am not sure whether is the news true.",
+        "I am not sure whether the news true is.",
+        "I am not sure if is the news true.",
+        "I am not sure whether does the news true."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_027",
+    "seedId": "indirect_question_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그가 우리를 도와줄 수 있을지 알고 싶다.",
+    "english": "We want to know if he can help us.",
+    "words": [
+      "We",
+      "want",
+      "to",
+      "know",
+      "if",
+      "he",
+      "can",
+      "help",
+      "us",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그가 우리를 도와줄 수 있을지 알고 싶다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We want to know if can he help us.",
+      "statementForm": [
+        "We want to know if he can help us.",
+        "We want to know if he can help us"
+      ],
+      "fragmentForm": "We want to know if he",
+      "wormholeVariants": [
+        "We want to know if can he help us.",
+        "We want to know if he can helps us.",
+        "We want to know whether can he help us.",
+        "We want to know if does he can help us."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_028",
+    "seedId": "indirect_question_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 내가 왜 그 결정을 내렸는지 물었다.",
+    "english": "She asked why I made the decision.",
+    "words": [
+      "She",
+      "asked",
+      "why",
+      "I",
+      "made",
+      "the",
+      "decision",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 왜 그 결정을 내렸는지 물었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked why did I make the decision.",
+      "statementForm": [
+        "She asked why I made the decision.",
+        "She asked why I made the decision"
+      ],
+      "fragmentForm": "She asked why I",
+      "wormholeVariants": [
+        "She asked why did I make the decision.",
+        "She asked why I make the decision.",
+        "She asked why made I the decision.",
+        "She asked why I did made the decision."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_029",
+    "seedId": "indirect_question_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그 박물관이 언제 여는지 아니?",
+    "english": "Do you know when the museum opens?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "when",
+      "the",
+      "museum",
+      "opens",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그 박물관이 언제 여는지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know when does the museum open?",
+      "statementForm": [
+        "Do you know when the museum opens?",
+        "Do you know when the museum opens"
+      ],
+      "fragmentForm": "Do you know when the museum",
+      "wormholeVariants": [
+        "Do you know when does the museum open?",
+        "Do you know when the museum open?",
+        "Do you know when opens the museum?",
+        "Do you know when is the museum opens?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_030",
+    "seedId": "indirect_question_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그녀가 어떤 책을 빌렸는지 기억한다.",
+    "english": "I remember which book she borrowed.",
+    "words": [
+      "I",
+      "remember",
+      "which",
+      "book",
+      "she",
+      "borrowed",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 어떤 책을 빌렸는지 기억한다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I remember which book did she borrow.",
+      "statementForm": [
+        "I remember which book she borrowed.",
+        "I remember which book she borrowed"
+      ],
+      "fragmentForm": "I remember which book she",
+      "wormholeVariants": [
+        "I remember which book did she borrow.",
+        "I remember which book she borrow.",
+        "I remember which book borrowed she.",
+        "I remember which book does she borrowed."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_031",
+    "seedId": "indirect_question_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그들이 경기에 이겼는지 물었다.",
+    "english": "He asked if they won the game.",
+    "words": [
+      "He",
+      "asked",
+      "if",
+      "they",
+      "won",
+      "the",
+      "game",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그들이 경기에 이겼는지 물었다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He asked if did they win the game.",
+      "statementForm": [
+        "He asked if they won the game.",
+        "He asked if they won the game"
+      ],
+      "fragmentForm": "He asked if they",
+      "wormholeVariants": [
+        "He asked if did they win the game.",
+        "He asked if they win the game.",
+        "He asked whether did they won the game.",
+        "He asked if won they the game."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_032",
+    "seedId": "indirect_question_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 네가 어떻게 그 답을 찾았는지 궁금하다.",
+    "english": "I wonder how you found the answer.",
+    "words": [
+      "I",
+      "wonder",
+      "how",
+      "you",
+      "found",
+      "the",
+      "answer",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 어떻게 그 답을 찾았는지 궁금하다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I wonder how did you find the answer.",
+      "statementForm": [
+        "I wonder how you found the answer.",
+        "I wonder how you found the answer"
+      ],
+      "fragmentForm": "I wonder how you",
+      "wormholeVariants": [
+        "I wonder how did you find the answer.",
+        "I wonder how you find the answer.",
+        "I wonder how found you the answer.",
+        "I wonder how you did found the answer."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_033",
+    "seedId": "indirect_question_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 내가 어디에 앉아야 하는지 알려 주었다.",
+    "english": "She told me where I should sit.",
+    "words": [
+      "She",
+      "told",
+      "me",
+      "where",
+      "I",
+      "should",
+      "sit",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 내가 어디에 앉아야 하는지 알려 주었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She told me where should I sit.",
+      "statementForm": [
+        "She told me where I should sit.",
+        "She told me where I should sit"
+      ],
+      "fragmentForm": "She told me where I",
+      "wormholeVariants": [
+        "She told me where should I sit.",
+        "She told me where I should sits.",
+        "She told me where do I should sit.",
+        "She told me where I sit should."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_034",
+    "seedId": "indirect_question_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 누가 그 편지를 썼는지 모른다.",
+    "english": "We don't know who wrote the letter.",
+    "words": [
+      "We",
+      "don't",
+      "know",
+      "who",
+      "wrote",
+      "the",
+      "letter",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 누가 그 편지를 썼는지 모른다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "who"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We don't know who did write the letter.",
+      "statementForm": [
+        "We don't know who wrote the letter.",
+        "We don't know who wrote the letter"
+      ],
+      "fragmentForm": "We don't know who wrote",
+      "wormholeVariants": [
+        "We don't know who did write the letter.",
+        "We don't know who write the letter.",
+        "We don't know who wrote letter the.",
+        "We don't know who does wrote the letter."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_035",
+    "seedId": "indirect_question_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그가 왜 그 회의에 오지 않았는지 아니?",
+    "english": "Do you know why he didn't come to the meeting?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "why",
+      "he",
+      "didn't",
+      "come",
+      "to",
+      "the",
+      "meeting",
+      "?"
+    ],
+    "wordCount": 10,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 왜 그 회의에 오지 않았는지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know why didn't he come to the meeting?",
+      "statementForm": [
+        "Do you know why he didn't come to the meeting?",
+        "Do you know why he didn't come to the meeting"
+      ],
+      "fragmentForm": "Do you know why he",
+      "wormholeVariants": [
+        "Do you know why didn't he come to the meeting?",
+        "Do you know why he didn't came to the meeting?",
+        "Do you know why did he not came to the meeting?",
+        "Do you know why he not came to the meeting?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_036",
+    "seedId": "indirect_question_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그들이 어디에서 점심을 먹을지 모른다.",
+    "english": "I don't know where they will have lunch.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "where",
+      "they",
+      "will",
+      "have",
+      "lunch",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 어디에서 점심을 먹을지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know where will they have lunch.",
+      "statementForm": [
+        "I don't know where they will have lunch.",
+        "I don't know where they will have lunch"
+      ],
+      "fragmentForm": "I don't know where they",
+      "wormholeVariants": [
+        "I don't know where will they have lunch.",
+        "I don't know where they have will lunch.",
+        "I don't know where do they will have lunch.",
+        "I don't know where they will has lunch."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_037",
+    "seedId": "indirect_question_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그녀가 자신을 믿는지 알고 싶었다.",
+    "english": "He wanted to know whether she trusted him.",
+    "words": [
+      "He",
+      "wanted",
+      "to",
+      "know",
+      "whether",
+      "she",
+      "trusted",
+      "him",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀가 자신을 믿는지 알고 싶었다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He wanted to know whether did she trust him.",
+      "statementForm": [
+        "He wanted to know whether she trusted him.",
+        "He wanted to know whether she trusted him"
+      ],
+      "fragmentForm": "He wanted to know whether she",
+      "wormholeVariants": [
+        "He wanted to know whether did she trust him.",
+        "He wanted to know whether she trust him.",
+        "He wanted to know if did she trusted him.",
+        "He wanted to know whether trusted she him."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_038",
+    "seedId": "indirect_question_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 어떤 영화를 보고 싶어 하는지 안다.",
+    "english": "I know what movie he wants to watch.",
+    "words": [
+      "I",
+      "know",
+      "what",
+      "movie",
+      "he",
+      "wants",
+      "to",
+      "watch",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 어떤 영화를 보고 싶어 하는지 안다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know what movie does he want to watch.",
+      "statementForm": [
+        "I know what movie he wants to watch.",
+        "I know what movie he wants to watch"
+      ],
+      "fragmentForm": "I know what movie he",
+      "wormholeVariants": [
+        "I know what movie does he want to watch.",
+        "I know what movie he want to watch.",
+        "I know what movie wants he to watch.",
+        "I know what movie he does wants to watch."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_039",
+    "seedId": "indirect_question_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 우리가 언제 출발해야 하는지 물었다.",
+    "english": "She asked when we should leave.",
+    "words": [
+      "She",
+      "asked",
+      "when",
+      "we",
+      "should",
+      "leave",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리가 언제 출발해야 하는지 물었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked when should we leave.",
+      "statementForm": [
+        "She asked when we should leave.",
+        "She asked when we should leave"
+      ],
+      "fragmentForm": "She asked when we",
+      "wormholeVariants": [
+        "She asked when should we leave.",
+        "She asked when we should leaves.",
+        "She asked when do we should leave.",
+        "She asked when we leave should."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_040",
+    "seedId": "indirect_question_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 그 문제를 풀 수 있는지 확신하지 못한다.",
+    "english": "I am not sure if he can solve the problem.",
+    "words": [
+      "I",
+      "am",
+      "not",
+      "sure",
+      "if",
+      "he",
+      "can",
+      "solve",
+      "the",
+      "problem",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 그 문제를 풀 수 있는지 확신하지 못한다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am not sure if can he solve the problem.",
+      "statementForm": [
+        "I am not sure if he can solve the problem.",
+        "I am not sure if he can solve the problem"
+      ],
+      "fragmentForm": "I am not sure if he",
+      "wormholeVariants": [
+        "I am not sure if can he solve the problem.",
+        "I am not sure if he can solves the problem.",
+        "I am not sure whether can he solve the problem.",
+        "I am not sure if does he can solve the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_041",
+    "seedId": "indirect_question_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 어디에 그의 열쇠를 두었는지 모른다.",
+    "english": "I don't know where he put his keys.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "where",
+      "he",
+      "put",
+      "his",
+      "keys",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 어디에 그의 열쇠를 두었는지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know where did he put his keys.",
+      "statementForm": [
+        "I don't know where he put his keys.",
+        "I don't know where he put his keys"
+      ],
+      "fragmentForm": "I don't know where he",
+      "wormholeVariants": [
+        "I don't know where did he put his keys.",
+        "I don't know where he puts his keys yesterday.",
+        "I don't know where put he his keys.",
+        "I don't know where he did put his keys."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_042",
+    "seedId": "indirect_question_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그들이 왜 조용히 있었는지 궁금해했다.",
+    "english": "She wondered why they were quiet.",
+    "words": [
+      "She",
+      "wondered",
+      "why",
+      "they",
+      "were",
+      "quiet",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그들이 왜 조용히 있었는지 궁금해했다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She wondered why were they quiet.",
+      "statementForm": [
+        "She wondered why they were quiet.",
+        "She wondered why they were quiet"
+      ],
+      "fragmentForm": "She wondered why they",
+      "wormholeVariants": [
+        "She wondered why were they quiet.",
+        "She wondered why they quiet were.",
+        "She wondered why did they quiet.",
+        "She wondered why they was quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_043",
+    "seedId": "indirect_question_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그 상점이 몇 시에 닫는지 아니?",
+    "english": "Do you know what time the store closes?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "what",
+      "time",
+      "the",
+      "store",
+      "closes",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그 상점이 몇 시에 닫는지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know what time does the store close?",
+      "statementForm": [
+        "Do you know what time the store closes?",
+        "Do you know what time the store closes"
+      ],
+      "fragmentForm": "Do you know what time the store",
+      "wormholeVariants": [
+        "Do you know what time does the store close?",
+        "Do you know what time the store close?",
+        "Do you know what time closes the store?",
+        "Do you know what time is the store closes?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_044",
+    "seedId": "indirect_question_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그가 어떤 버스를 타야 하는지 안다.",
+    "english": "We know which bus he should take.",
+    "words": [
+      "We",
+      "know",
+      "which",
+      "bus",
+      "he",
+      "should",
+      "take",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그가 어떤 버스를 타야 하는지 안다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We know which bus should he take.",
+      "statementForm": [
+        "We know which bus he should take.",
+        "We know which bus he should take"
+      ],
+      "fragmentForm": "We know which bus he",
+      "wormholeVariants": [
+        "We know which bus should he take.",
+        "We know which bus he should takes.",
+        "We know which bus does he should take.",
+        "We know which bus he take should."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_045",
+    "seedId": "indirect_question_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그녀가 나에게 진실을 말했는지 알고 싶다.",
+    "english": "I want to know if she told me the truth.",
+    "words": [
+      "I",
+      "want",
+      "to",
+      "know",
+      "if",
+      "she",
+      "told",
+      "me",
+      "the",
+      "truth",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 나에게 진실을 말했는지 알고 싶다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I want to know if did she tell me the truth.",
+      "statementForm": [
+        "I want to know if she told me the truth.",
+        "I want to know if she told me the truth"
+      ],
+      "fragmentForm": "I want to know if she",
+      "wormholeVariants": [
+        "I want to know if did she tell me the truth.",
+        "I want to know if she tell me the truth.",
+        "I want to know whether did she told me the truth.",
+        "I want to know if told she me the truth."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_046",
+    "seedId": "indirect_question_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 우리가 무엇을 준비해야 하는지 설명했다.",
+    "english": "He explained what we should prepare.",
+    "words": [
+      "He",
+      "explained",
+      "what",
+      "we",
+      "should",
+      "prepare",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 우리가 무엇을 준비해야 하는지 설명했다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He explained what should we prepare.",
+      "statementForm": [
+        "He explained what we should prepare.",
+        "He explained what we should prepare"
+      ],
+      "fragmentForm": "He explained what we",
+      "wormholeVariants": [
+        "He explained what should we prepare.",
+        "He explained what we should prepares.",
+        "He explained what do we should prepare.",
+        "He explained what we prepare should."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_047",
+    "seedId": "indirect_question_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 왜 그렇게 말했는지 기억나지 않는다.",
+    "english": "I don't remember why he said that.",
+    "words": [
+      "I",
+      "don't",
+      "remember",
+      "why",
+      "he",
+      "said",
+      "that",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 왜 그렇게 말했는지 기억나지 않는다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't remember why did he say that.",
+      "statementForm": [
+        "I don't remember why he said that.",
+        "I don't remember why he said that"
+      ],
+      "fragmentForm": "I don't remember why he",
+      "wormholeVariants": [
+        "I don't remember why did he say that.",
+        "I don't remember why he say that.",
+        "I don't remember why said he that.",
+        "I don't remember why he did said that."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_048",
+    "seedId": "indirect_question_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그가 어디에서 왔는지 물었다.",
+    "english": "She asked where he came from.",
+    "words": [
+      "She",
+      "asked",
+      "where",
+      "he",
+      "came",
+      "from",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 어디에서 왔는지 물었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked where did he come from.",
+      "statementForm": [
+        "She asked where he came from.",
+        "She asked where he came from"
+      ],
+      "fragmentForm": "She asked where he",
+      "wormholeVariants": [
+        "She asked where did he come from.",
+        "She asked where he come from.",
+        "She asked where came he from.",
+        "She asked where he did came from."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_049",
+    "seedId": "indirect_question_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그들은 우리가 경기에 참가할지 알고 싶어 한다.",
+    "english": "They want to know whether we will join the game.",
+    "words": [
+      "They",
+      "want",
+      "to",
+      "know",
+      "whether",
+      "we",
+      "will",
+      "join",
+      "the",
+      "game",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리가 경기에 참가할지 알고 싶어 한다.",
+        "They"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They want to know whether will we join the game.",
+      "statementForm": [
+        "They want to know whether we will join the game.",
+        "They want to know whether we will join the game"
+      ],
+      "fragmentForm": "They want to know whether we",
+      "wormholeVariants": [
+        "They want to know whether will we join the game.",
+        "They want to know whether we join will the game.",
+        "They want to know if will we join the game.",
+        "They want to know whether we will joins the game."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_050",
+    "seedId": "indirect_question_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 누가 내 공책을 가져갔는지 궁금하다.",
+    "english": "I wonder who took my notebook.",
+    "words": [
+      "I",
+      "wonder",
+      "who",
+      "took",
+      "my",
+      "notebook",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 누가 내 공책을 가져갔는지 궁금하다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "who"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I wonder who did take my notebook.",
+      "statementForm": [
+        "I wonder who took my notebook.",
+        "I wonder who took my notebook"
+      ],
+      "fragmentForm": "I wonder who took",
+      "wormholeVariants": [
+        "I wonder who did take my notebook.",
+        "I wonder who take my notebook.",
+        "I wonder who took notebook my.",
+        "I wonder who does took my notebook."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_051",
+    "seedId": "indirect_question_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그녀가 왜 울고 있었는지 몰랐다.",
+    "english": "He didn't know why she was crying.",
+    "words": [
+      "He",
+      "didn't",
+      "know",
+      "why",
+      "she",
+      "was",
+      "crying",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀가 왜 울고 있었는지 몰랐다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He didn't know why was she crying.",
+      "statementForm": [
+        "He didn't know why she was crying.",
+        "He didn't know why she was crying"
+      ],
+      "fragmentForm": "He didn't know why she",
+      "wormholeVariants": [
+        "He didn't know why was she crying.",
+        "He didn't know why she crying was.",
+        "He didn't know why did she crying.",
+        "He didn't know why she were crying."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_052",
+    "seedId": "indirect_question_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 내가 무엇을 의미하는지 이해하니?",
+    "english": "Do you understand what I mean?",
+    "words": [
+      "Do",
+      "you",
+      "understand",
+      "what",
+      "I",
+      "mean",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 내가 무엇을 의미하는지 이해하니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you understand what do I mean?",
+      "statementForm": [
+        "Do you understand what I mean?",
+        "Do you understand what I mean"
+      ],
+      "fragmentForm": "Do you understand what I",
+      "wormholeVariants": [
+        "Do you understand what do I mean?",
+        "Do you understand what I means?",
+        "Do you understand what mean I?",
+        "Do you understand what am I mean?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_053",
+    "seedId": "indirect_question_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그들이 안전한지 확인하고 싶다.",
+    "english": "I want to check whether they are safe.",
+    "words": [
+      "I",
+      "want",
+      "to",
+      "check",
+      "whether",
+      "they",
+      "are",
+      "safe",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 안전한지 확인하고 싶다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I want to check whether are they safe.",
+      "statementForm": [
+        "I want to check whether they are safe.",
+        "I want to check whether they are safe"
+      ],
+      "fragmentForm": "I want to check whether they",
+      "wormholeVariants": [
+        "I want to check whether are they safe.",
+        "I want to check whether they safe are.",
+        "I want to check if are they safe.",
+        "I want to check whether do they safe."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_054",
+    "seedId": "indirect_question_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 우리가 어떻게 그곳에 갈 수 있는지 안다.",
+    "english": "She knows how we can get there.",
+    "words": [
+      "She",
+      "knows",
+      "how",
+      "we",
+      "can",
+      "get",
+      "there",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리가 어떻게 그곳에 갈 수 있는지 안다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She knows how can we get there.",
+      "statementForm": [
+        "She knows how we can get there.",
+        "She knows how we can get there"
+      ],
+      "fragmentForm": "She knows how we",
+      "wormholeVariants": [
+        "She knows how can we get there.",
+        "She knows how we can gets there.",
+        "She knows how do we can get there.",
+        "She knows how we get can there."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_055",
+    "seedId": "indirect_question_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그 시험이 어려웠는지 물었다.",
+    "english": "I asked if the test was difficult.",
+    "words": [
+      "I",
+      "asked",
+      "if",
+      "the",
+      "test",
+      "was",
+      "difficult",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 시험이 어려웠는지 물었다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I asked if was the test difficult.",
+      "statementForm": [
+        "I asked if the test was difficult.",
+        "I asked if the test was difficult"
+      ],
+      "fragmentForm": "I asked if the test",
+      "wormholeVariants": [
+        "I asked if was the test difficult.",
+        "I asked if the test difficult was.",
+        "I asked whether was the test difficult.",
+        "I asked if did the test difficult."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_056",
+    "seedId": "indirect_question_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그녀가 언제 우리에게 전화할지 모른다.",
+    "english": "We don't know when she will call us.",
+    "words": [
+      "We",
+      "don't",
+      "know",
+      "when",
+      "she",
+      "will",
+      "call",
+      "us",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그녀가 언제 우리에게 전화할지 모른다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We don't know when will she call us.",
+      "statementForm": [
+        "We don't know when she will call us.",
+        "We don't know when she will call us"
+      ],
+      "fragmentForm": "We don't know when she",
+      "wormholeVariants": [
+        "We don't know when will she call us.",
+        "We don't know when she call will us.",
+        "We don't know when does she call us.",
+        "We don't know when she will calls us."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_057",
+    "seedId": "indirect_question_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 내가 어떤 음식을 좋아하는지 기억한다.",
+    "english": "He remembers what food I like.",
+    "words": [
+      "He",
+      "remembers",
+      "what",
+      "food",
+      "I",
+      "like",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 내가 어떤 음식을 좋아하는지 기억한다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He remembers what food do I like.",
+      "statementForm": [
+        "He remembers what food I like.",
+        "He remembers what food I like"
+      ],
+      "fragmentForm": "He remembers what food I",
+      "wormholeVariants": [
+        "He remembers what food do I like.",
+        "He remembers what food I likes.",
+        "He remembers what food like I.",
+        "He remembers what food am I like."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_058",
+    "seedId": "indirect_question_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 집에 있는지 확신하지 못한다.",
+    "english": "I am not sure if he is at home.",
+    "words": [
+      "I",
+      "am",
+      "not",
+      "sure",
+      "if",
+      "he",
+      "is",
+      "at",
+      "home",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 집에 있는지 확신하지 못한다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am not sure if is he at home.",
+      "statementForm": [
+        "I am not sure if he is at home.",
+        "I am not sure if he is at home"
+      ],
+      "fragmentForm": "I am not sure if he",
+      "wormholeVariants": [
+        "I am not sure if is he at home.",
+        "I am not sure if he at home is.",
+        "I am not sure whether is he at home.",
+        "I am not sure if does he at home."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_059",
+    "seedId": "indirect_question_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그가 어떻게 그렇게 빨리 달렸는지 아니?",
+    "english": "Do you know how he ran so fast?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "how",
+      "he",
+      "ran",
+      "so",
+      "fast",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그가 어떻게 그렇게 빨리 달렸는지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know how did he run so fast?",
+      "statementForm": [
+        "Do you know how he ran so fast?",
+        "Do you know how he ran so fast"
+      ],
+      "fragmentForm": "Do you know how he",
+      "wormholeVariants": [
+        "Do you know how did he run so fast?",
+        "Do you know how he run so fast?",
+        "Do you know how ran he so fast?",
+        "Do you know how he did ran so fast?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_060",
+    "seedId": "indirect_question_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그들이 무엇을 찾고 있었는지 물었다.",
+    "english": "She asked what they were looking for.",
+    "words": [
+      "She",
+      "asked",
+      "what",
+      "they",
+      "were",
+      "looking",
+      "for",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그들이 무엇을 찾고 있었는지 물었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked what were they looking for.",
+      "statementForm": [
+        "She asked what they were looking for.",
+        "She asked what they were looking for"
+      ],
+      "fragmentForm": "She asked what they",
+      "wormholeVariants": [
+        "She asked what were they looking for.",
+        "She asked what they looking for were.",
+        "She asked what did they looking for.",
+        "She asked what they was looking for."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_061",
+    "seedId": "indirect_question_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 왜 그 기회를 거절했는지 이해하지 못한다.",
+    "english": "I don't understand why he refused the opportunity.",
+    "words": [
+      "I",
+      "don't",
+      "understand",
+      "why",
+      "he",
+      "refused",
+      "the",
+      "opportunity",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 왜 그 기회를 거절했는지 이해하지 못한다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't understand why did he refuse the opportunity.",
+      "statementForm": [
+        "I don't understand why he refused the opportunity.",
+        "I don't understand why he refused the opportunity"
+      ],
+      "fragmentForm": "I don't understand why he",
+      "wormholeVariants": [
+        "I don't understand why did he refuse the opportunity.",
+        "I don't understand why he refuse the opportunity.",
+        "I don't understand why refused he the opportunity.",
+        "I don't understand why he did refused the opportunity."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_062",
+    "seedId": "indirect_question_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 우리가 어느 방향으로 가야 할지 결정했다.",
+    "english": "She decided which way we should go.",
+    "words": [
+      "She",
+      "decided",
+      "which",
+      "way",
+      "we",
+      "should",
+      "go",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 우리가 어느 방향으로 가야 할지 결정했다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She decided which way should we go.",
+      "statementForm": [
+        "She decided which way we should go.",
+        "She decided which way we should go"
+      ],
+      "fragmentForm": "She decided which way we",
+      "wormholeVariants": [
+        "She decided which way should we go.",
+        "She decided which way we should goes.",
+        "She decided which way do we should go.",
+        "She decided which way we go should."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_063",
+    "seedId": "indirect_question_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그 소문이 사실인지 아닌지 확인해야 한다.",
+    "english": "We need to find out whether the rumor is true.",
+    "words": [
+      "We",
+      "need",
+      "to",
+      "find",
+      "out",
+      "whether",
+      "the",
+      "rumor",
+      "is",
+      "true",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 소문이 사실인지 아닌지 확인해야 한다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We need to find out whether is the rumor true.",
+      "statementForm": [
+        "We need to find out whether the rumor is true.",
+        "We need to find out whether the rumor is true"
+      ],
+      "fragmentForm": "We need to find out whether the rumor",
+      "wormholeVariants": [
+        "We need to find out whether is the rumor true.",
+        "We need to find out whether the rumor true is.",
+        "We need to find out if is the rumor true.",
+        "We need to find out whether does the rumor true."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_064",
+    "seedId": "indirect_question_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 어떻게 그렇게 어려운 상황을 견뎠는지 궁금하다.",
+    "english": "I wonder how he endured such a difficult situation.",
+    "words": [
+      "I",
+      "wonder",
+      "how",
+      "he",
+      "endured",
+      "such",
+      "a",
+      "difficult",
+      "situation",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 어떻게 그렇게 어려운 상황을 견뎠는지 궁금하다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I wonder how did he endure such a difficult situation.",
+      "statementForm": [
+        "I wonder how he endured such a difficult situation.",
+        "I wonder how he endured such a difficult situation"
+      ],
+      "fragmentForm": "I wonder how he",
+      "wormholeVariants": [
+        "I wonder how did he endure such a difficult situation.",
+        "I wonder how he endure such a difficult situation.",
+        "I wonder how endured he such a difficult situation.",
+        "I wonder how he did endured such a difficult situation."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_065",
+    "seedId": "indirect_question_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그녀가 왜 자신의 의견을 바꾸었는지 알고 싶었다.",
+    "english": "He wanted to know why she changed her opinion.",
+    "words": [
+      "He",
+      "wanted",
+      "to",
+      "know",
+      "why",
+      "she",
+      "changed",
+      "her",
+      "opinion",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀가 왜 자신의 의견을 바꾸었는지 알고 싶었다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He wanted to know why did she change her opinion.",
+      "statementForm": [
+        "He wanted to know why she changed her opinion.",
+        "He wanted to know why she changed her opinion"
+      ],
+      "fragmentForm": "He wanted to know why she",
+      "wormholeVariants": [
+        "He wanted to know why did she change her opinion.",
+        "He wanted to know why she change her opinion.",
+        "He wanted to know why changed she her opinion.",
+        "He wanted to know why she did changed her opinion."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_066",
+    "seedId": "indirect_question_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그 계획이 성공할지 실패할지 확신하지 못한다.",
+    "english": "I am not sure whether the plan will succeed.",
+    "words": [
+      "I",
+      "am",
+      "not",
+      "sure",
+      "whether",
+      "the",
+      "plan",
+      "will",
+      "succeed",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 계획이 성공할지 실패할지 확신하지 못한다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I am not sure whether will the plan succeed.",
+      "statementForm": [
+        "I am not sure whether the plan will succeed.",
+        "I am not sure whether the plan will succeed"
+      ],
+      "fragmentForm": "I am not sure whether the plan",
+      "wormholeVariants": [
+        "I am not sure whether will the plan succeed.",
+        "I am not sure whether the plan succeed will.",
+        "I am not sure if will the plan succeed.",
+        "I am not sure whether the plan will succeeds."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_067",
+    "seedId": "indirect_question_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 학생들이 무엇을 가장 어려워하는지 알고 있다.",
+    "english": "She knows what the students find most difficult.",
+    "words": [
+      "She",
+      "knows",
+      "what",
+      "the",
+      "students",
+      "find",
+      "most",
+      "difficult",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 학생들이 무엇을 가장 어려워하는지 알고 있다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She knows what do the students find most difficult.",
+      "statementForm": [
+        "She knows what the students find most difficult.",
+        "She knows what the students find most difficult"
+      ],
+      "fragmentForm": "She knows what the students",
+      "wormholeVariants": [
+        "She knows what do the students find most difficult.",
+        "She knows what the students finds most difficult.",
+        "She knows what find the students most difficult.",
+        "She knows what did the students find most difficult."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_068",
+    "seedId": "indirect_question_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그가 어떤 선택을 할지 예측할 수 없다.",
+    "english": "We can't predict which choice he will make.",
+    "words": [
+      "We",
+      "can't",
+      "predict",
+      "which",
+      "choice",
+      "he",
+      "will",
+      "make",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그가 어떤 선택을 할지 예측할 수 없다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We can't predict which choice will he make.",
+      "statementForm": [
+        "We can't predict which choice he will make.",
+        "We can't predict which choice he will make"
+      ],
+      "fragmentForm": "We can't predict which choice he",
+      "wormholeVariants": [
+        "We can't predict which choice will he make.",
+        "We can't predict which choice he make will.",
+        "We can't predict which choice does he make.",
+        "We can't predict which choice he will makes."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_069",
+    "seedId": "indirect_question_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그녀가 왜 그 약속을 지키지 않았는지 알고 싶다.",
+    "english": "I want to know why she didn't keep the promise.",
+    "words": [
+      "I",
+      "want",
+      "to",
+      "know",
+      "why",
+      "she",
+      "didn't",
+      "keep",
+      "the",
+      "promise",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 왜 그 약속을 지키지 않았는지 알고 싶다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I want to know why didn't she keep the promise.",
+      "statementForm": [
+        "I want to know why she didn't keep the promise.",
+        "I want to know why she didn't keep the promise"
+      ],
+      "fragmentForm": "I want to know why she",
+      "wormholeVariants": [
+        "I want to know why didn't she keep the promise.",
+        "I want to know why she didn't kept the promise.",
+        "I want to know why did she not kept the promise.",
+        "I want to know why she not kept the promise."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_070",
+    "seedId": "indirect_question_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그들은 우리가 그 결정을 받아들일지 궁금해한다.",
+    "english": "They wonder whether we will accept the decision.",
+    "words": [
+      "They",
+      "wonder",
+      "whether",
+      "we",
+      "will",
+      "accept",
+      "the",
+      "decision",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 우리가 그 결정을 받아들일지 궁금해한다.",
+        "They"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They wonder whether will we accept the decision.",
+      "statementForm": [
+        "They wonder whether we will accept the decision.",
+        "They wonder whether we will accept the decision"
+      ],
+      "fragmentForm": "They wonder whether we",
+      "wormholeVariants": [
+        "They wonder whether will we accept the decision.",
+        "They wonder whether we accept will the decision.",
+        "They wonder if will we accept the decision.",
+        "They wonder whether we will accepts the decision."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_071",
+    "seedId": "indirect_question_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 누구에게 그 비밀을 말했는지 모른다.",
+    "english": "I don't know who he told the secret to.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "who",
+      "he",
+      "told",
+      "the",
+      "secret",
+      "to",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 누구에게 그 비밀을 말했는지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "who"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know who did he tell the secret to.",
+      "statementForm": [
+        "I don't know who he told the secret to.",
+        "I don't know who he told the secret to"
+      ],
+      "fragmentForm": "I don't know who he",
+      "wormholeVariants": [
+        "I don't know who did he tell the secret to.",
+        "I don't know who he tell the secret to.",
+        "I don't know who told he the secret to.",
+        "I don't know who he did told the secret to."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_072",
+    "seedId": "indirect_question_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 왜 그 규칙이 중요한지 설명했다.",
+    "english": "She explained why the rule was important.",
+    "words": [
+      "She",
+      "explained",
+      "why",
+      "the",
+      "rule",
+      "was",
+      "important",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 왜 그 규칙이 중요한지 설명했다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She explained why was the rule important.",
+      "statementForm": [
+        "She explained why the rule was important.",
+        "She explained why the rule was important"
+      ],
+      "fragmentForm": "She explained why the rule",
+      "wormholeVariants": [
+        "She explained why was the rule important.",
+        "She explained why the rule important was.",
+        "She explained why did the rule important.",
+        "She explained why the rule is important yesterday."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_073",
+    "seedId": "indirect_question_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 우리가 언제 그 프로젝트를 끝낼 수 있을지 모른다.",
+    "english": "I don't know when we can finish the project.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "when",
+      "we",
+      "can",
+      "finish",
+      "the",
+      "project",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 우리가 언제 그 프로젝트를 끝낼 수 있을지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "when"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know when can we finish the project.",
+      "statementForm": [
+        "I don't know when we can finish the project.",
+        "I don't know when we can finish the project"
+      ],
+      "fragmentForm": "I don't know when we",
+      "wormholeVariants": [
+        "I don't know when can we finish the project.",
+        "I don't know when we can finishes the project.",
+        "I don't know when do we can finish the project.",
+        "I don't know when we finish can the project."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_074",
+    "seedId": "indirect_question_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그 설명이 충분히 명확한지 물었다.",
+    "english": "He asked whether the explanation was clear enough.",
+    "words": [
+      "He",
+      "asked",
+      "whether",
+      "the",
+      "explanation",
+      "was",
+      "clear",
+      "enough",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 설명이 충분히 명확한지 물었다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He asked whether was the explanation clear enough.",
+      "statementForm": [
+        "He asked whether the explanation was clear enough.",
+        "He asked whether the explanation was clear enough"
+      ],
+      "fragmentForm": "He asked whether the explanation",
+      "wormholeVariants": [
+        "He asked whether was the explanation clear enough.",
+        "He asked whether the explanation clear enough was.",
+        "He asked if was the explanation clear enough.",
+        "He asked whether did the explanation clear enough."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_075",
+    "seedId": "indirect_question_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그녀가 어디에서 그런 생각을 얻었는지 궁금했다.",
+    "english": "We wondered where she got that idea.",
+    "words": [
+      "We",
+      "wondered",
+      "where",
+      "she",
+      "got",
+      "that",
+      "idea",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그녀가 어디에서 그런 생각을 얻었는지 궁금했다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "We wondered where did she get that idea.",
+      "statementForm": [
+        "We wondered where she got that idea.",
+        "We wondered where she got that idea"
+      ],
+      "fragmentForm": "We wondered where she",
+      "wormholeVariants": [
+        "We wondered where did she get that idea.",
+        "We wondered where she get that idea.",
+        "We wondered where got she that idea.",
+        "We wondered where she did got that idea."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_076",
+    "seedId": "indirect_question_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 무엇을 증명하려고 했는지 이해하지 못했다.",
+    "english": "I didn't understand what he was trying to prove.",
+    "words": [
+      "I",
+      "didn't",
+      "understand",
+      "what",
+      "he",
+      "was",
+      "trying",
+      "to",
+      "prove",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 무엇을 증명하려고 했는지 이해하지 못했다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I didn't understand what was he trying to prove.",
+      "statementForm": [
+        "I didn't understand what he was trying to prove.",
+        "I didn't understand what he was trying to prove"
+      ],
+      "fragmentForm": "I didn't understand what he",
+      "wormholeVariants": [
+        "I didn't understand what was he trying to prove.",
+        "I didn't understand what he trying to prove was.",
+        "I didn't understand what did he trying to prove.",
+        "I didn't understand what he were trying to prove."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_077",
+    "seedId": "indirect_question_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그 결과가 공정한지 의심했다.",
+    "english": "She doubted whether the result was fair.",
+    "words": [
+      "She",
+      "doubted",
+      "whether",
+      "the",
+      "result",
+      "was",
+      "fair",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그 결과가 공정한지 의심했다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She doubted whether was the result fair.",
+      "statementForm": [
+        "She doubted whether the result was fair.",
+        "She doubted whether the result was fair"
+      ],
+      "fragmentForm": "She doubted whether the result",
+      "wormholeVariants": [
+        "She doubted whether was the result fair.",
+        "She doubted whether the result fair was.",
+        "She doubted if was the result fair.",
+        "She doubted whether did the result fair."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_078",
+    "seedId": "indirect_question_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 사람들이 왜 그 이야기를 믿는지 알고 싶다.",
+    "english": "I want to know why people believe the story.",
+    "words": [
+      "I",
+      "want",
+      "to",
+      "know",
+      "why",
+      "people",
+      "believe",
+      "the",
+      "story",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 사람들이 왜 그 이야기를 믿는지 알고 싶다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I want to know why do people believe the story.",
+      "statementForm": [
+        "I want to know why people believe the story.",
+        "I want to know why people believe the story"
+      ],
+      "fragmentForm": "I want to know why people",
+      "wormholeVariants": [
+        "I want to know why do people believe the story.",
+        "I want to know why people believes the story.",
+        "I want to know why believe people the story.",
+        "I want to know why did people believe the story."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_079",
+    "seedId": "indirect_question_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그녀가 어느 학교에 다니는지 안다.",
+    "english": "I know which school she goes to.",
+    "words": [
+      "I",
+      "know",
+      "which",
+      "school",
+      "she",
+      "goes",
+      "to",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그녀가 어느 학교에 다니는지 안다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I know which school does she go to.",
+      "statementForm": [
+        "I know which school she goes to.",
+        "I know which school she goes to"
+      ],
+      "fragmentForm": "I know which school she",
+      "wormholeVariants": [
+        "I know which school does she go to.",
+        "I know which school she go to.",
+        "I know which school goes she to.",
+        "I know which school she does goes to."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_080",
+    "seedId": "indirect_question_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 내가 무엇을 원하는지 묻지 않았다.",
+    "english": "He didn't ask what I wanted.",
+    "words": [
+      "He",
+      "didn't",
+      "ask",
+      "what",
+      "I",
+      "wanted",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 내가 무엇을 원하는지 묻지 않았다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He didn't ask what did I want.",
+      "statementForm": [
+        "He didn't ask what I wanted.",
+        "He didn't ask what I wanted"
+      ],
+      "fragmentForm": "He didn't ask what I",
+      "wormholeVariants": [
+        "He didn't ask what did I want.",
+        "He didn't ask what I want yesterday.",
+        "He didn't ask what wanted I.",
+        "He didn't ask what do I wanted."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_081",
+    "seedId": "indirect_question_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그가 어디에서 일하는지 모른다.",
+    "english": "We don't know where he works.",
+    "words": [
+      "We",
+      "don't",
+      "know",
+      "where",
+      "he",
+      "works",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그가 어디에서 일하는지 모른다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We don't know where does he work.",
+      "statementForm": [
+        "We don't know where he works.",
+        "We don't know where he works"
+      ],
+      "fragmentForm": "We don't know where he",
+      "wormholeVariants": [
+        "We don't know where does he work.",
+        "We don't know where he work.",
+        "We don't know where works he.",
+        "We don't know where is he work."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_082",
+    "seedId": "indirect_question_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그들이 왜 떠났는지 아니?",
+    "english": "Do you know why they left?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "why",
+      "they",
+      "left",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그들이 왜 떠났는지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know why did they leave?",
+      "statementForm": [
+        "Do you know why they left?",
+        "Do you know why they left"
+      ],
+      "fragmentForm": "Do you know why they",
+      "wormholeVariants": [
+        "Do you know why did they leave?",
+        "Do you know why they leave yesterday?",
+        "Do you know why left they?",
+        "Do you know why they did left?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_083",
+    "seedId": "indirect_question_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 영어를 잘하는지 알고 싶다.",
+    "english": "I want to know if he speaks English well.",
+    "words": [
+      "I",
+      "want",
+      "to",
+      "know",
+      "if",
+      "he",
+      "speaks",
+      "English",
+      "well",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 영어를 잘하는지 알고 싶다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I want to know if does he speak English well.",
+      "statementForm": [
+        "I want to know if he speaks English well.",
+        "I want to know if he speaks English well"
+      ],
+      "fragmentForm": "I want to know if he",
+      "wormholeVariants": [
+        "I want to know if does he speak English well.",
+        "I want to know if he speak English well.",
+        "I want to know whether does he speaks English well.",
+        "I want to know if speaks he English well."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_084",
+    "seedId": "indirect_question_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그들이 안전하게 도착했는지 물었다.",
+    "english": "She asked whether they arrived safely.",
+    "words": [
+      "She",
+      "asked",
+      "whether",
+      "they",
+      "arrived",
+      "safely",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그들이 안전하게 도착했는지 물었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She asked whether did they arrive safely.",
+      "statementForm": [
+        "She asked whether they arrived safely.",
+        "She asked whether they arrived safely"
+      ],
+      "fragmentForm": "She asked whether they",
+      "wormholeVariants": [
+        "She asked whether did they arrive safely.",
+        "She asked whether they arrive safely.",
+        "She asked if did they arrived safely.",
+        "She asked whether arrived they safely."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_085",
+    "seedId": "indirect_question_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 네가 왜 그렇게 생각하는지 이해한다.",
+    "english": "I understand why you think so.",
+    "words": [
+      "I",
+      "understand",
+      "why",
+      "you",
+      "think",
+      "so",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 네가 왜 그렇게 생각하는지 이해한다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I understand why do you think so.",
+      "statementForm": [
+        "I understand why you think so.",
+        "I understand why you think so"
+      ],
+      "fragmentForm": "I understand why you",
+      "wormholeVariants": [
+        "I understand why do you think so.",
+        "I understand why you thinks so.",
+        "I understand why think you so.",
+        "I understand why are you think so."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_086",
+    "seedId": "indirect_question_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그녀가 무엇을 필요로 하는지 안다.",
+    "english": "He knows what she needs.",
+    "words": [
+      "He",
+      "knows",
+      "what",
+      "she",
+      "needs",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "indirect_question",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그녀가 무엇을 필요로 하는지 안다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "He knows what does she need.",
+      "statementForm": [
+        "He knows what she needs.",
+        "He knows what she needs"
+      ],
+      "fragmentForm": "He knows what she",
+      "wormholeVariants": [
+        "He knows what does she need.",
+        "He knows what she need.",
+        "He knows what needs she.",
+        "He knows what is she needs."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_087",
+    "seedId": "indirect_question_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "너는 그 책이 얼마인지 아니?",
+    "english": "Do you know how much the book costs?",
+    "words": [
+      "Do",
+      "you",
+      "know",
+      "how",
+      "much",
+      "the",
+      "book",
+      "costs",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 그 책이 얼마인지 아니?",
+        "Do"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "question_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "Do you know how much does the book cost?",
+      "statementForm": [
+        "Do you know how much the book costs?",
+        "Do you know how much the book costs"
+      ],
+      "fragmentForm": "Do you know how much the book",
+      "wormholeVariants": [
+        "Do you know how much does the book cost?",
+        "Do you know how much the book cost?",
+        "Do you know how much costs the book?",
+        "Do you know how much is the book costs?"
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_088",
+    "seedId": "indirect_question_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 우리가 어디에서 만나야 하는지 모른다.",
+    "english": "I don't know where we should meet.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "where",
+      "we",
+      "should",
+      "meet",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 우리가 어디에서 만나야 하는지 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "where"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know where should we meet.",
+      "statementForm": [
+        "I don't know where we should meet.",
+        "I don't know where we should meet"
+      ],
+      "fragmentForm": "I don't know where we",
+      "wormholeVariants": [
+        "I don't know where should we meet.",
+        "I don't know where we should meets.",
+        "I don't know where do we should meet.",
+        "I don't know where we meet should."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_089",
+    "seedId": "indirect_question_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그들은 그가 왜 사과했는지 궁금해했다.",
+    "english": "They wondered why he apologized.",
+    "words": [
+      "They",
+      "wondered",
+      "why",
+      "he",
+      "apologized",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 그가 왜 사과했는지 궁금해했다.",
+        "They"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "why"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "They wondered why did he apologize.",
+      "statementForm": [
+        "They wondered why he apologized.",
+        "They wondered why he apologized"
+      ],
+      "fragmentForm": "They wondered why he",
+      "wormholeVariants": [
+        "They wondered why did he apologize.",
+        "They wondered why he apologize.",
+        "They wondered why apologized he.",
+        "They wondered why he did apologized."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_090",
+    "seedId": "indirect_question_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그 문제가 얼마나 어려운지 알았다.",
+    "english": "I realized how difficult the problem was.",
+    "words": [
+      "I",
+      "realized",
+      "how",
+      "difficult",
+      "the",
+      "problem",
+      "was",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그 문제가 얼마나 어려운지 알았다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "how"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I realized how difficult was the problem.",
+      "statementForm": [
+        "I realized how difficult the problem was.",
+        "I realized how difficult the problem was"
+      ],
+      "fragmentForm": "I realized how difficult the problem",
+      "wormholeVariants": [
+        "I realized how difficult was the problem.",
+        "I realized how difficult the problem were.",
+        "I realized how difficult did the problem was.",
+        "I realized how was difficult the problem."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_091",
+    "seedId": "indirect_question_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그녀는 그가 누구를 초대했는지 알고 있었다.",
+    "english": "She knew who he invited.",
+    "words": [
+      "She",
+      "knew",
+      "who",
+      "he",
+      "invited",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 그가 누구를 초대했는지 알고 있었다.",
+        "She"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "who"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "She knew who did he invite.",
+      "statementForm": [
+        "She knew who he invited.",
+        "She knew who he invited"
+      ],
+      "fragmentForm": "She knew who he",
+      "wormholeVariants": [
+        "She knew who did he invite.",
+        "She knew who he invite.",
+        "She knew who invited he.",
+        "She knew who does he invited."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_092",
+    "seedId": "indirect_question_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "우리는 그들이 어떤 결정을 내렸는지 모른다.",
+    "english": "We don't know what decision they made.",
+    "words": [
+      "We",
+      "don't",
+      "know",
+      "what",
+      "decision",
+      "they",
+      "made",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그들이 어떤 결정을 내렸는지 모른다.",
+        "We"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We don't know what decision did they make.",
+      "statementForm": [
+        "We don't know what decision they made.",
+        "We don't know what decision they made"
+      ],
+      "fragmentForm": "We don't know what decision they",
+      "wormholeVariants": [
+        "We don't know what decision did they make.",
+        "We don't know what decision they make.",
+        "We don't know what decision made they.",
+        "We don't know what decision they did made."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_093",
+    "seedId": "indirect_question_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그가 회의에 참석할 수 있는지 물었다.",
+    "english": "I asked if he could attend the meeting.",
+    "words": [
+      "I",
+      "asked",
+      "if",
+      "he",
+      "could",
+      "attend",
+      "the",
+      "meeting",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "indirect_question",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그가 회의에 참석할 수 있는지 물었다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "if"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "affirm"
+    ],
+    "distractorSeeds": {
+      "auxError": "I asked if could he attend the meeting.",
+      "statementForm": [
+        "I asked if he could attend the meeting.",
+        "I asked if he could attend the meeting"
+      ],
+      "fragmentForm": "I asked if he",
+      "wormholeVariants": [
+        "I asked if could he attend the meeting.",
+        "I asked if he could attends the meeting.",
+        "I asked whether could he attend the meeting.",
+        "I asked if does he could attend the meeting."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_094",
+    "seedId": "indirect_question_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "그는 그 메시지가 무엇을 의미하는지 이해하지 못했다.",
+    "english": "He didn't understand what the message meant.",
+    "words": [
+      "He",
+      "didn't",
+      "understand",
+      "what",
+      "the",
+      "message",
+      "meant",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 그 메시지가 무엇을 의미하는지 이해하지 못했다.",
+        "He"
+      ],
+      [
+        "indirect question",
+        "indirect question: wh + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "what",
+      "where",
+      "when",
+      "why",
+      "how",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "what"
+    ],
+    "tags": [
+      "indirect_question",
+      "wh",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He didn't understand what did the message mean.",
+      "statementForm": [
+        "He didn't understand what the message meant.",
+        "He didn't understand what the message meant"
+      ],
+      "fragmentForm": "He didn't understand what the message",
+      "wormholeVariants": [
+        "He didn't understand what did the message mean.",
+        "He didn't understand what the message mean.",
+        "He didn't understand what meant the message.",
+        "He didn't understand what does the message meant."
+      ]
+    }
+  },
+  {
+    "id": "m2_indirect_question_095",
+    "seedId": "indirect_question_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "indirect_question",
+    "chapterLabelKo": "간접의문문",
+    "korean": "나는 그들이 내일 올지 확실히 모른다.",
+    "english": "I don't know for sure whether they will come tomorrow.",
+    "words": [
+      "I",
+      "don't",
+      "know",
+      "for",
+      "sure",
+      "whether",
+      "they",
+      "will",
+      "come",
+      "tomorrow",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "indirect_question",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "나는 그들이 내일 올지 확실히 모른다.",
+        "I"
+      ],
+      [
+        "indirect question",
+        "indirect question: if/whether + subject + verb"
+      ],
+      [
+        "주의",
+        "use statement word order after the question word or after if/whether"
+      ]
+    ],
+    "extraClueWordPool": [
+      "if",
+      "whether",
+      "does",
+      "did"
+    ],
+    "blankTargets": [
+      "whether"
+    ],
+    "tags": [
+      "indirect_question",
+      "if_whether",
+      "word_order",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "I don't know for sure whether will they come tomorrow.",
+      "statementForm": [
+        "I don't know for sure whether they will come tomorrow.",
+        "I don't know for sure whether they will come tomorrow"
+      ],
+      "fragmentForm": "I don't know for sure whether they",
+      "wormholeVariants": [
+        "I don't know for sure whether will they come tomorrow.",
+        "I don't know for sure whether they come will tomorrow.",
+        "I don't know for sure if will they come tomorrow.",
+        "I don't know for sure whether they will comes tomorrow."
+      ]
+    }
+  }
+]
