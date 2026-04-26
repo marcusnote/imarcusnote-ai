@@ -1,0 +1,6701 @@
+[
+  {
+    "id": "m2_sensory_001",
+    "seedId": "sensory_001",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 수프는 조금 짠맛이 났다.",
+    "english": "The soup tasted a little salty.",
+    "words": [
+      "The",
+      "soup",
+      "tasted",
+      "a",
+      "little",
+      "salty",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 수프는 조금 짠맛이 났다.",
+        "The"
+      ],
+      [
+        "taste + adjective",
+        "taste + salty"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "soup",
+      "tasted",
+      "a",
+      "little",
+      "salty",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "salty"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste"
+    ],
+    "distractorSeeds": {
+      "auxError": "The soup tasted a little saltly.",
+      "statementForm": [
+        "The soup tasted a little salty.",
+        "The soup tasted a little salty"
+      ],
+      "fragmentForm": "The soup tasted a.",
+      "wormholeVariants": [
+        "The soup tasted a little saltly.",
+        "The soup tasted a little salt.",
+        "The soup was tasted a little salty."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_002",
+    "seedId": "sensory_002",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "이 레몬차는 신맛이 너무 강했다.",
+    "english": "This lemon tea tasted too sour.",
+    "words": [
+      "This",
+      "lemon",
+      "tea",
+      "tasted",
+      "too",
+      "sour",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 레몬차는 신맛이 너무 강했다.",
+        "This"
+      ],
+      [
+        "taste + adjective",
+        "taste + sour"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "This",
+      "lemon",
+      "tea",
+      "tasted",
+      "too",
+      "sour",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "sour"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste"
+    ],
+    "distractorSeeds": {
+      "auxError": "This lemon tea tasted too sourly.",
+      "statementForm": [
+        "This lemon tea tasted too sour.",
+        "This lemon tea tasted too sour"
+      ],
+      "fragmentForm": "This lemon tea tasted.",
+      "wormholeVariants": [
+        "This lemon tea tasted too sourly.",
+        "This lemon tea taste too sour.",
+        "This lemon tea was tasted too sour."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_003",
+    "seedId": "sensory_003",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 쿠키는 생각보다 덜 달았다.",
+    "english": "The cookie tasted less sweet than expected.",
+    "words": [
+      "The",
+      "cookie",
+      "tasted",
+      "less",
+      "sweet",
+      "than",
+      "expected",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 쿠키는 생각보다 덜 달았다.",
+        "The"
+      ],
+      [
+        "taste + adjective",
+        "taste + sweet"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "cookie",
+      "tasted",
+      "less",
+      "sweet",
+      "than",
+      "expected",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "sweet"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cookie tasted less sweetly than expected.",
+      "statementForm": [
+        "The cookie tasted less sweet than expected.",
+        "The cookie tasted less sweet than expected"
+      ],
+      "fragmentForm": "The cookie tasted less.",
+      "wormholeVariants": [
+        "The cookie tasted less sweetly than expected.",
+        "The cookie tasted less sweeter than expected.",
+        "The cookie was tasted less sweet than expected."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_004",
+    "seedId": "sensory_004",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 약은 매우 쓴맛이 났다.",
+    "english": "The medicine tasted very bitter.",
+    "words": [
+      "The",
+      "medicine",
+      "tasted",
+      "very",
+      "bitter",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 약은 매우 쓴맛이 났다.",
+        "The"
+      ],
+      [
+        "taste + adjective",
+        "taste + bitter"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "medicine",
+      "tasted",
+      "very",
+      "bitter",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "bitter"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste"
+    ],
+    "distractorSeeds": {
+      "auxError": "The medicine tasted very bitterly.",
+      "statementForm": [
+        "The medicine tasted very bitter.",
+        "The medicine tasted very bitter"
+      ],
+      "fragmentForm": "The medicine tasted very.",
+      "wormholeVariants": [
+        "The medicine tasted very bitterly.",
+        "The medicine taste very bitter.",
+        "The medicine was tasted very bitter."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_005",
+    "seedId": "sensory_005",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "이 빵은 갓 구운 것처럼 맛있었다.",
+    "english": "This bread tasted delicious, as if it was fresh from the oven.",
+    "words": [
+      "This",
+      "bread",
+      "tasted",
+      "delicious",
+      ",",
+      "as",
+      "if",
+      "it",
+      "was",
+      "fresh",
+      "from",
+      "the",
+      "oven",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 빵은 갓 구운 것처럼 맛있었다.",
+        "This"
+      ],
+      [
+        "taste + adjective",
+        "taste + delicious"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "This",
+      "bread",
+      "tasted",
+      "delicious",
+      "as",
+      "if",
+      "it",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "delicious"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "as_if"
+    ],
+    "distractorSeeds": {
+      "auxError": "This bread tasted deliciously, as if it was fresh from the oven.",
+      "statementForm": [
+        "This bread tasted delicious, as if it was fresh from the oven.",
+        "This bread tasted delicious, as if it was fresh from the oven"
+      ],
+      "fragmentForm": "This bread tasted delicious.",
+      "wormholeVariants": [
+        "This bread tasted deliciously, as if it was fresh from the oven.",
+        "This bread tasted delicious as if it was freshly from the oven.",
+        "This bread was tasted delicious."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_006",
+    "seedId": "sensory_006",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 소스는 너무 매운맛이 났다.",
+    "english": "The sauce tasted too spicy.",
+    "words": [
+      "The",
+      "sauce",
+      "tasted",
+      "too",
+      "spicy",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소스는 너무 매운맛이 났다.",
+        "The"
+      ],
+      [
+        "taste + adjective",
+        "taste + spicy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "sauce",
+      "tasted",
+      "too",
+      "spicy",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "spicy"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste"
+    ],
+    "distractorSeeds": {
+      "auxError": "The sauce tasted too spicily.",
+      "statementForm": [
+        "The sauce tasted too spicy.",
+        "The sauce tasted too spicy"
+      ],
+      "fragmentForm": "The sauce tasted too.",
+      "wormholeVariants": [
+        "The sauce tasted too spicily.",
+        "The sauce taste too spicy.",
+        "The sauce was tasted too spicy."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_007",
+    "seedId": "sensory_007",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 물은 병 안에서 이상한 맛이 났다.",
+    "english": "The water tasted strange in the bottle.",
+    "words": [
+      "The",
+      "water",
+      "tasted",
+      "strange",
+      "in",
+      "the",
+      "bottle",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 물은 병 안에서 이상한 맛이 났다.",
+        "The"
+      ],
+      [
+        "taste + adjective",
+        "taste + strange"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "water",
+      "tasted",
+      "strange",
+      "in",
+      "the",
+      "bottle",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "strange"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste"
+    ],
+    "distractorSeeds": {
+      "auxError": "The water tasted strangely in the bottle.",
+      "statementForm": [
+        "The water tasted strange in the bottle.",
+        "The water tasted strange in the bottle"
+      ],
+      "fragmentForm": "The water tasted strange.",
+      "wormholeVariants": [
+        "The water tasted strangely in the bottle.",
+        "The water taste strange in the bottle.",
+        "The water was tasted strange in the bottle."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_008",
+    "seedId": "sensory_008",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 사과는 겉보기보다 더 달았다.",
+    "english": "The apple tasted sweeter than it looked.",
+    "words": [
+      "The",
+      "apple",
+      "tasted",
+      "sweeter",
+      "than",
+      "it",
+      "looked",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 사과는 겉보기보다 더 달았다.",
+        "The"
+      ],
+      [
+        "taste + adjective + comparison",
+        "taste + sweeter"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "apple",
+      "tasted",
+      "sweeter",
+      "than",
+      "it",
+      "looked",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "sweeter"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The apple tasted more sweeter than it looked.",
+      "statementForm": [
+        "The apple tasted sweeter than it looked.",
+        "The apple tasted sweeter than it looked"
+      ],
+      "fragmentForm": "The apple tasted sweeter.",
+      "wormholeVariants": [
+        "The apple tasted more sweeter than it looked.",
+        "The apple tasted sweetly than it looked.",
+        "The apple was tasted sweeter than it looked."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_009",
+    "seedId": "sensory_009",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "이 피자는 식었지만 여전히 맛있었다.",
+    "english": "This pizza tasted good even though it was cold.",
+    "words": [
+      "This",
+      "pizza",
+      "tasted",
+      "good",
+      "even",
+      "though",
+      "it",
+      "was",
+      "cold",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이 피자는 식었지만 여전히 맛있었다.",
+        "This"
+      ],
+      [
+        "taste + adjective",
+        "taste + good"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "This",
+      "pizza",
+      "tasted",
+      "good",
+      "even",
+      "though",
+      "it",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "good"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "although"
+    ],
+    "distractorSeeds": {
+      "auxError": "This pizza tasted well even though it was cold.",
+      "statementForm": [
+        "This pizza tasted good even though it was cold.",
+        "This pizza tasted good even though it was cold"
+      ],
+      "fragmentForm": "This pizza tasted good.",
+      "wormholeVariants": [
+        "This pizza tasted well even though it was cold.",
+        "This pizza tasted goodly even though it was cold.",
+        "This pizza was tasted good."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_010",
+    "seedId": "sensory_010",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 국수는 평소보다 더 싱겁게 느껴졌다.",
+    "english": "The noodles tasted blander than usual.",
+    "words": [
+      "The",
+      "noodles",
+      "tasted",
+      "blander",
+      "than",
+      "usual",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 국수는 평소보다 더 싱겁게 느껴졌다.",
+        "The"
+      ],
+      [
+        "taste + adjective + comparison",
+        "taste + blander"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "noodles",
+      "tasted",
+      "blander",
+      "than",
+      "usual",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "blander"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The noodles tasted more blander than usual.",
+      "statementForm": [
+        "The noodles tasted blander than usual.",
+        "The noodles tasted blander than usual"
+      ],
+      "fragmentForm": "The noodles tasted blander.",
+      "wormholeVariants": [
+        "The noodles tasted more blander than usual.",
+        "The noodles tasted blandly than usual.",
+        "The noodles were tasted blander than usual."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_011",
+    "seedId": "sensory_011",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 꽃은 아주 좋은 냄새가 났다.",
+    "english": "The flower smelled very good.",
+    "words": [
+      "The",
+      "flower",
+      "smelled",
+      "very",
+      "good",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 꽃은 아주 좋은 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + adjective",
+        "smell + good"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "flower",
+      "smelled",
+      "very",
+      "good",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "good"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell"
+    ],
+    "distractorSeeds": {
+      "auxError": "The flower smelled very well.",
+      "statementForm": [
+        "The flower smelled very good.",
+        "The flower smelled very good"
+      ],
+      "fragmentForm": "The flower smelled very.",
+      "wormholeVariants": [
+        "The flower smelled very well.",
+        "The flower smell very good.",
+        "The flower was smelled very good."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_012",
+    "seedId": "sensory_012",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 방은 비가 온 뒤 눅눅한 냄새가 났다.",
+    "english": "The room smelled damp after the rain.",
+    "words": [
+      "The",
+      "room",
+      "smelled",
+      "damp",
+      "after",
+      "the",
+      "rain",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방은 비가 온 뒤 눅눅한 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + adjective",
+        "smell + damp"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "room",
+      "smelled",
+      "damp",
+      "after",
+      "the",
+      "rain",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "damp"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room smelled damply after the rain.",
+      "statementForm": [
+        "The room smelled damp after the rain.",
+        "The room smelled damp after the rain"
+      ],
+      "fragmentForm": "The room smelled damp.",
+      "wormholeVariants": [
+        "The room smelled damply after the rain.",
+        "The room smell damp after the rain.",
+        "The room was smelled damp after the rain."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_013",
+    "seedId": "sensory_013",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 쓰레기통은 끔찍한 냄새가 났다.",
+    "english": "The trash can smelled terrible.",
+    "words": [
+      "The",
+      "trash",
+      "can",
+      "smelled",
+      "terrible",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 쓰레기통은 끔찍한 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + adjective",
+        "smell + terrible"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "trash",
+      "can",
+      "smelled",
+      "terrible",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "terrible"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell"
+    ],
+    "distractorSeeds": {
+      "auxError": "The trash can smelled terribly.",
+      "statementForm": [
+        "The trash can smelled terrible.",
+        "The trash can smelled terrible"
+      ],
+      "fragmentForm": "The trash can smelled.",
+      "wormholeVariants": [
+        "The trash can smelled terribly.",
+        "The trash can smell terrible.",
+        "The trash can was smelled terrible."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_014",
+    "seedId": "sensory_014",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 빵은 오븐에서 나온 뒤 고소한 냄새가 났다.",
+    "english": "The bread smelled nutty after it came out of the oven.",
+    "words": [
+      "The",
+      "bread",
+      "smelled",
+      "nutty",
+      "after",
+      "it",
+      "came",
+      "out",
+      "of",
+      "the",
+      "oven",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 빵은 오븐에서 나온 뒤 고소한 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + adjective",
+        "smell + nutty"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "bread",
+      "smelled",
+      "nutty",
+      "after",
+      "it",
+      "came",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "nutty"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bread smelled nuttily after it came out of the oven.",
+      "statementForm": [
+        "The bread smelled nutty after it came out of the oven.",
+        "The bread smelled nutty after it came out of the oven"
+      ],
+      "fragmentForm": "The bread smelled nutty.",
+      "wormholeVariants": [
+        "The bread smelled nuttily after it came out of the oven.",
+        "The bread smell nutty after it came out of the oven.",
+        "The bread was smelled nutty."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_015",
+    "seedId": "sensory_015",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 교실은 청소 후 상쾌한 냄새가 났다.",
+    "english": "The classroom smelled fresh after the cleaning.",
+    "words": [
+      "The",
+      "classroom",
+      "smelled",
+      "fresh",
+      "after",
+      "the",
+      "cleaning",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 교실은 청소 후 상쾌한 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + adjective",
+        "smell + fresh"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "classroom",
+      "smelled",
+      "fresh",
+      "after",
+      "the",
+      "cleaning",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "fresh"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell"
+    ],
+    "distractorSeeds": {
+      "auxError": "The classroom smelled freshly after the cleaning.",
+      "statementForm": [
+        "The classroom smelled fresh after the cleaning.",
+        "The classroom smelled fresh after the cleaning"
+      ],
+      "fragmentForm": "The classroom smelled fresh.",
+      "wormholeVariants": [
+        "The classroom smelled freshly after the cleaning.",
+        "The classroom smell fresh after the cleaning.",
+        "The classroom was smelled fresh."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_016",
+    "seedId": "sensory_016",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 음식은 너무 강한 냄새가 나서 먹기 어려웠다.",
+    "english": "The food smelled too strong to eat.",
+    "words": [
+      "The",
+      "food",
+      "smelled",
+      "too",
+      "strong",
+      "to",
+      "eat",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 음식은 너무 강한 냄새가 나서 먹기 어려웠다.",
+        "The"
+      ],
+      [
+        "smell + adjective + too to",
+        "smell + too strong"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "food",
+      "smelled",
+      "too",
+      "strong",
+      "to",
+      "eat",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "too strong"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell",
+      "too_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "The food smelled too strongly to eat.",
+      "statementForm": [
+        "The food smelled too strong to eat.",
+        "The food smelled too strong to eat"
+      ],
+      "fragmentForm": "The food smelled too.",
+      "wormholeVariants": [
+        "The food smelled too strongly to eat.",
+        "The food smelled too strong to eating.",
+        "The food was smelled too strong to eat."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_017",
+    "seedId": "sensory_017",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 향수는 처음에는 달콤한 냄새가 났다.",
+    "english": "The perfume smelled sweet at first.",
+    "words": [
+      "The",
+      "perfume",
+      "smelled",
+      "sweet",
+      "at",
+      "first",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 향수는 처음에는 달콤한 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + adjective",
+        "smell + sweet"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "perfume",
+      "smelled",
+      "sweet",
+      "at",
+      "first",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "sweet"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell"
+    ],
+    "distractorSeeds": {
+      "auxError": "The perfume smelled sweetly at first.",
+      "statementForm": [
+        "The perfume smelled sweet at first.",
+        "The perfume smelled sweet at first"
+      ],
+      "fragmentForm": "The perfume smelled sweet.",
+      "wormholeVariants": [
+        "The perfume smelled sweetly at first.",
+        "The perfume smell sweet at first.",
+        "The perfume was smelled sweet at first."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_018",
+    "seedId": "sensory_018",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 복도는 오래된 나무 냄새가 났다.",
+    "english": "The hallway smelled like old wood.",
+    "words": [
+      "The",
+      "hallway",
+      "smelled",
+      "like",
+      "old",
+      "wood",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 복도는 오래된 나무 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + like + noun",
+        "smell + like old wood"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "hallway",
+      "smelled",
+      "like",
+      "old",
+      "wood",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "like old wood"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell_like"
+    ],
+    "distractorSeeds": {
+      "auxError": "The hallway smelled oldly wood.",
+      "statementForm": [
+        "The hallway smelled like old wood.",
+        "The hallway smelled like old wood"
+      ],
+      "fragmentForm": "The hallway smelled like.",
+      "wormholeVariants": [
+        "The hallway smelled oldly wood.",
+        "The hallway smell like old wood.",
+        "The hallway was smelled like old wood."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_019",
+    "seedId": "sensory_019",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 상자는 젖은 종이 냄새가 났다.",
+    "english": "The box smelled like wet paper.",
+    "words": [
+      "The",
+      "box",
+      "smelled",
+      "like",
+      "wet",
+      "paper",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 상자는 젖은 종이 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + like + noun",
+        "smell + like wet paper"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "box",
+      "smelled",
+      "like",
+      "wet",
+      "paper",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "like wet paper"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell_like"
+    ],
+    "distractorSeeds": {
+      "auxError": "The box smelled wetly paper.",
+      "statementForm": [
+        "The box smelled like wet paper.",
+        "The box smelled like wet paper"
+      ],
+      "fragmentForm": "The box smelled like.",
+      "wormholeVariants": [
+        "The box smelled wetly paper.",
+        "The box smell like wet paper.",
+        "The box was smelled like wet paper."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_020",
+    "seedId": "sensory_020",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 가게는 커피콩처럼 좋은 냄새가 났다.",
+    "english": "The shop smelled good, like coffee beans.",
+    "words": [
+      "The",
+      "shop",
+      "smelled",
+      "good",
+      ",",
+      "like",
+      "coffee",
+      "beans",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가게는 커피콩처럼 좋은 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + adjective",
+        "smell + good"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "shop",
+      "smelled",
+      "good",
+      "like",
+      "coffee",
+      "beans",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "good"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell_like"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shop smelled well, like coffee beans.",
+      "statementForm": [
+        "The shop smelled good, like coffee beans.",
+        "The shop smelled good, like coffee beans"
+      ],
+      "fragmentForm": "The shop smelled good.",
+      "wormholeVariants": [
+        "The shop smelled well, like coffee beans.",
+        "The shop smell good, like coffee beans.",
+        "The shop was smelled good."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_021",
+    "seedId": "sensory_021",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그의 목소리는 발표 중에 차분하게 들렸다.",
+    "english": "His voice sounded calm during the presentation.",
+    "words": [
+      "His",
+      "voice",
+      "sounded",
+      "calm",
+      "during",
+      "the",
+      "presentation",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그의 목소리는 발표 중에 차분하게 들렸다.",
+        "His"
+      ],
+      [
+        "sound + adjective",
+        "sound + calm"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "His",
+      "voice",
+      "sounded",
+      "calm",
+      "during",
+      "the",
+      "presentation",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "calm"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound"
+    ],
+    "distractorSeeds": {
+      "auxError": "His voice sounded calmly during the presentation.",
+      "statementForm": [
+        "His voice sounded calm during the presentation.",
+        "His voice sounded calm during the presentation"
+      ],
+      "fragmentForm": "His voice sounded calm.",
+      "wormholeVariants": [
+        "His voice sounded calmly during the presentation.",
+        "His voice sound calm during the presentation.",
+        "His voice was sounded calm."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_022",
+    "seedId": "sensory_022",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 설명은 처음에는 복잡하게 들렸다.",
+    "english": "The explanation sounded complicated at first.",
+    "words": [
+      "The",
+      "explanation",
+      "sounded",
+      "complicated",
+      "at",
+      "first",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 처음에는 복잡하게 들렸다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + complicated"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "explanation",
+      "sounded",
+      "complicated",
+      "at",
+      "first",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "complicated"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation sounded complicatedly at first.",
+      "statementForm": [
+        "The explanation sounded complicated at first.",
+        "The explanation sounded complicated at first"
+      ],
+      "fragmentForm": "The explanation sounded complicated.",
+      "wormholeVariants": [
+        "The explanation sounded complicatedly at first.",
+        "The explanation sound complicated at first.",
+        "The explanation was sounded complicated."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_023",
+    "seedId": "sensory_023",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 이야기는 사실처럼 들렸지만 정확하지 않았다.",
+    "english": "The story sounded true but not accurate.",
+    "words": [
+      "The",
+      "story",
+      "sounded",
+      "true",
+      "but",
+      "not",
+      "accurate",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이야기는 사실처럼 들렸지만 정확하지 않았다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + true"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "story",
+      "sounded",
+      "true",
+      "but",
+      "not",
+      "accurate",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "true"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The story sounded truly but not accurate.",
+      "statementForm": [
+        "The story sounded true but not accurate.",
+        "The story sounded true but not accurate"
+      ],
+      "fragmentForm": "The story sounded true.",
+      "wormholeVariants": [
+        "The story sounded truly but not accurate.",
+        "The story sound true but not accurate.",
+        "The story was sounded true."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_024",
+    "seedId": "sensory_024",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 제안은 좋아 들렸지만 현실적이지 않았다.",
+    "english": "The suggestion sounded good but not realistic.",
+    "words": [
+      "The",
+      "suggestion",
+      "sounded",
+      "good",
+      "but",
+      "not",
+      "realistic",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 제안은 좋아 들렸지만 현실적이지 않았다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + good"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "suggestion",
+      "sounded",
+      "good",
+      "but",
+      "not",
+      "realistic",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "good"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The suggestion sounded well but not realistic.",
+      "statementForm": [
+        "The suggestion sounded good but not realistic.",
+        "The suggestion sounded good but not realistic"
+      ],
+      "fragmentForm": "The suggestion sounded good.",
+      "wormholeVariants": [
+        "The suggestion sounded well but not realistic.",
+        "The suggestion sound good but not realistic.",
+        "The suggestion was sounded good."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_025",
+    "seedId": "sensory_025",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 음악은 조용하지만 슬프게 들렸다.",
+    "english": "The music sounded quiet but sad.",
+    "words": [
+      "The",
+      "music",
+      "sounded",
+      "quiet",
+      "but",
+      "sad",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 음악은 조용하지만 슬프게 들렸다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + sad"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "music",
+      "sounded",
+      "quiet",
+      "but",
+      "sad",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "sad"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The music sounded quietly but sad.",
+      "statementForm": [
+        "The music sounded quiet but sad.",
+        "The music sounded quiet but sad"
+      ],
+      "fragmentForm": "The music sounded quiet.",
+      "wormholeVariants": [
+        "The music sounded quietly but sad.",
+        "The music sound quiet but sad.",
+        "The music was sounded quiet but sad."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_026",
+    "seedId": "sensory_026",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 계획은 듣기에는 너무 위험해 보였다.",
+    "english": "The plan sounded too risky to accept.",
+    "words": [
+      "The",
+      "plan",
+      "sounded",
+      "too",
+      "risky",
+      "to",
+      "accept",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획은 듣기에는 너무 위험해 보였다.",
+        "The"
+      ],
+      [
+        "sound + adjective + too to",
+        "sound + too risky"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "plan",
+      "sounded",
+      "too",
+      "risky",
+      "to",
+      "accept",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "too risky"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "too_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan sounded too riskily to accept.",
+      "statementForm": [
+        "The plan sounded too risky to accept.",
+        "The plan sounded too risky to accept"
+      ],
+      "fragmentForm": "The plan sounded too.",
+      "wormholeVariants": [
+        "The plan sounded too riskily to accept.",
+        "The plan sound too risky to accept.",
+        "The plan was sounded too risky to accept."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_027",
+    "seedId": "sensory_027",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 말은 농담처럼 들리지 않았다.",
+    "english": "The remark did not sound like a joke.",
+    "words": [
+      "The",
+      "remark",
+      "did",
+      "not",
+      "sound",
+      "like",
+      "a",
+      "joke",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 말은 농담처럼 들리지 않았다.",
+        "The"
+      ],
+      [
+        "sound + like + noun",
+        "sound + like a joke"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "remark",
+      "did",
+      "not",
+      "sound",
+      "like",
+      "a",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sound",
+      "like a joke"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound_like",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The remark did not sounds like a joke.",
+      "statementForm": [
+        "The remark did not sound like a joke.",
+        "The remark did not sound like a joke"
+      ],
+      "fragmentForm": "The remark did not.",
+      "wormholeVariants": [
+        "The remark did not sounds like a joke.",
+        "The remark did not sound as a joke.",
+        "The remark was not sounded like a joke."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_028",
+    "seedId": "sensory_028",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 이름은 이상하게 들렸지만 기억하기 쉬웠다.",
+    "english": "The name sounded strange but easy to remember.",
+    "words": [
+      "The",
+      "name",
+      "sounded",
+      "strange",
+      "but",
+      "easy",
+      "to",
+      "remember",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 이름은 이상하게 들렸지만 기억하기 쉬웠다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + strange"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "name",
+      "sounded",
+      "strange",
+      "but",
+      "easy",
+      "to",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "strange"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "to_infinitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "The name sounded strangely but easy to remember.",
+      "statementForm": [
+        "The name sounded strange but easy to remember.",
+        "The name sounded strange but easy to remember"
+      ],
+      "fragmentForm": "The name sounded strange.",
+      "wormholeVariants": [
+        "The name sounded strangely but easy to remember.",
+        "The name sounded strange but easily to remember.",
+        "The name was sounded strange."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_029",
+    "seedId": "sensory_029",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 경고는 충분히 심각하게 들리지 않았다.",
+    "english": "The warning did not sound serious enough.",
+    "words": [
+      "The",
+      "warning",
+      "did",
+      "not",
+      "sound",
+      "serious",
+      "enough",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 경고는 충분히 심각하게 들리지 않았다.",
+        "The"
+      ],
+      [
+        "sound + adjective + enough",
+        "sound + serious enough"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "warning",
+      "did",
+      "not",
+      "sound",
+      "serious",
+      "enough",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sound",
+      "serious enough"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "enough"
+    ],
+    "distractorSeeds": {
+      "auxError": "The warning did not sounds serious enough.",
+      "statementForm": [
+        "The warning did not sound serious enough.",
+        "The warning did not sound serious enough"
+      ],
+      "fragmentForm": "The warning did not.",
+      "wormholeVariants": [
+        "The warning did not sounds serious enough.",
+        "The warning did not sound seriously enough.",
+        "The warning was not sounded serious enough."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_030",
+    "seedId": "sensory_030",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그의 대답은 준비된 것처럼 들렸다.",
+    "english": "His answer sounded prepared.",
+    "words": [
+      "His",
+      "answer",
+      "sounded",
+      "prepared",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그의 대답은 준비된 것처럼 들렸다.",
+        "His"
+      ],
+      [
+        "sound + adjective",
+        "sound + prepared"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "His",
+      "answer",
+      "sounded",
+      "prepared",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "prepared"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound"
+    ],
+    "distractorSeeds": {
+      "auxError": "His answer sounded preparedly.",
+      "statementForm": [
+        "His answer sounded prepared.",
+        "His answer sounded prepared"
+      ],
+      "fragmentForm": "His answer sounded prepared.",
+      "wormholeVariants": [
+        "His answer sounded preparedly.",
+        "His answer sound prepared.",
+        "His answer was sounded prepared."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_031",
+    "seedId": "sensory_031",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그는 시험 후 피곤해 보였다.",
+    "english": "He looked tired after the exam.",
+    "words": [
+      "He",
+      "looked",
+      "tired",
+      "after",
+      "the",
+      "exam",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 시험 후 피곤해 보였다.",
+        "He"
+      ],
+      [
+        "look + adjective",
+        "look + tired"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "He",
+      "looked",
+      "tired",
+      "after",
+      "the",
+      "exam",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "tired"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look"
+    ],
+    "distractorSeeds": {
+      "auxError": "He looked tiredly after the exam.",
+      "statementForm": [
+        "He looked tired after the exam.",
+        "He looked tired after the exam"
+      ],
+      "fragmentForm": "He looked tired after.",
+      "wormholeVariants": [
+        "He looked tiredly after the exam.",
+        "He look tired after the exam.",
+        "He was looked tired after the exam."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_032",
+    "seedId": "sensory_032",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 학생은 발표 전에 긴장해 보였다.",
+    "english": "The student looked nervous before the speech.",
+    "words": [
+      "The",
+      "student",
+      "looked",
+      "nervous",
+      "before",
+      "the",
+      "speech",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 학생은 발표 전에 긴장해 보였다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + nervous"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "student",
+      "looked",
+      "nervous",
+      "before",
+      "the",
+      "speech",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "nervous"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student looked nervously before the speech.",
+      "statementForm": [
+        "The student looked nervous before the speech.",
+        "The student looked nervous before the speech"
+      ],
+      "fragmentForm": "The student looked nervous.",
+      "wormholeVariants": [
+        "The student looked nervously before the speech.",
+        "The student look nervous before the speech.",
+        "The student was looked nervous."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_033",
+    "seedId": "sensory_033",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 문제는 겉보기에는 쉬워 보였지만 까다로웠다.",
+    "english": "The problem looked easy on the surface but tricky.",
+    "words": [
+      "The",
+      "problem",
+      "looked",
+      "easy",
+      "on",
+      "the",
+      "surface",
+      "but",
+      "tricky",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문제는 겉보기에는 쉬워 보였지만 까다로웠다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + easy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "problem",
+      "looked",
+      "easy",
+      "on",
+      "the",
+      "surface",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "easy"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem looked easily on the surface but tricky.",
+      "statementForm": [
+        "The problem looked easy on the surface but tricky.",
+        "The problem looked easy on the surface but tricky"
+      ],
+      "fragmentForm": "The problem looked easy.",
+      "wormholeVariants": [
+        "The problem looked easily on the surface but tricky.",
+        "The problem looked easy on the surface but trickily.",
+        "The problem was looked easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_034",
+    "seedId": "sensory_034",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 그림은 멀리서 보면 실제처럼 보인다.",
+    "english": "The painting looks real from a distance.",
+    "words": [
+      "The",
+      "painting",
+      "looks",
+      "real",
+      "from",
+      "a",
+      "distance",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 그림은 멀리서 보면 실제처럼 보인다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + real"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "painting",
+      "looks",
+      "real",
+      "from",
+      "a",
+      "distance",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looks",
+      "real"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look"
+    ],
+    "distractorSeeds": {
+      "auxError": "The painting looks really from a distance.",
+      "statementForm": [
+        "The painting looks real from a distance.",
+        "The painting looks real from a distance"
+      ],
+      "fragmentForm": "The painting looks real.",
+      "wormholeVariants": [
+        "The painting looks really from a distance.",
+        "The painting look real from a distance.",
+        "The painting is looked real."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_035",
+    "seedId": "sensory_035",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 강아지는 낯선 사람 앞에서 겁먹은 것처럼 보였다.",
+    "english": "The puppy looked scared in front of strangers.",
+    "words": [
+      "The",
+      "puppy",
+      "looked",
+      "scared",
+      "in",
+      "front",
+      "of",
+      "strangers",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 강아지는 낯선 사람 앞에서 겁먹은 것처럼 보였다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + scared"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "puppy",
+      "looked",
+      "scared",
+      "in",
+      "front",
+      "of",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "scared"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look"
+    ],
+    "distractorSeeds": {
+      "auxError": "The puppy looked scaredly in front of strangers.",
+      "statementForm": [
+        "The puppy looked scared in front of strangers.",
+        "The puppy looked scared in front of strangers"
+      ],
+      "fragmentForm": "The puppy looked scared.",
+      "wormholeVariants": [
+        "The puppy looked scaredly in front of strangers.",
+        "The puppy look scared in front of strangers.",
+        "The puppy was looked scared."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_036",
+    "seedId": "sensory_036",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 소년은 아무 일도 없었던 것처럼 침착해 보였다.",
+    "english": "The boy looked calm as if nothing had happened.",
+    "words": [
+      "The",
+      "boy",
+      "looked",
+      "calm",
+      "as",
+      "if",
+      "nothing",
+      "had",
+      "happened",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소년은 아무 일도 없었던 것처럼 침착해 보였다.",
+        "The"
+      ],
+      [
+        "look + adjective + as if",
+        "look + calm"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "boy",
+      "looked",
+      "calm",
+      "as",
+      "if",
+      "nothing",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "calm"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look",
+      "as_if"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy looked calmly as if nothing had happened.",
+      "statementForm": [
+        "The boy looked calm as if nothing had happened.",
+        "The boy looked calm as if nothing had happened"
+      ],
+      "fragmentForm": "The boy looked calm.",
+      "wormholeVariants": [
+        "The boy looked calmly as if nothing had happened.",
+        "The boy looked calm as nothing had happened.",
+        "The boy was looked calm."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_037",
+    "seedId": "sensory_037",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 셔츠는 사진보다 더 밝아 보였다.",
+    "english": "The shirt looked brighter than in the picture.",
+    "words": [
+      "The",
+      "shirt",
+      "looked",
+      "brighter",
+      "than",
+      "in",
+      "the",
+      "picture",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 셔츠는 사진보다 더 밝아 보였다.",
+        "The"
+      ],
+      [
+        "look + comparative",
+        "look + brighter"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "shirt",
+      "looked",
+      "brighter",
+      "than",
+      "in",
+      "the",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "brighter"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The shirt looked more brighter than in the picture.",
+      "statementForm": [
+        "The shirt looked brighter than in the picture.",
+        "The shirt looked brighter than in the picture"
+      ],
+      "fragmentForm": "The shirt looked brighter.",
+      "wormholeVariants": [
+        "The shirt looked more brighter than in the picture.",
+        "The shirt looked brightly than in the picture.",
+        "The shirt was looked brighter."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_038",
+    "seedId": "sensory_038",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 답은 처음에는 명백해 보이지 않았다.",
+    "english": "The answer did not look obvious at first.",
+    "words": [
+      "The",
+      "answer",
+      "did",
+      "not",
+      "look",
+      "obvious",
+      "at",
+      "first",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 답은 처음에는 명백해 보이지 않았다.",
+        "The"
+      ],
+      [
+        "look + adjective + negative",
+        "look + obvious"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "answer",
+      "did",
+      "not",
+      "look",
+      "obvious",
+      "at",
+      "quickly"
+    ],
+    "blankTargets": [
+      "look",
+      "obvious"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The answer did not looks obvious at first.",
+      "statementForm": [
+        "The answer did not look obvious at first.",
+        "The answer did not look obvious at first"
+      ],
+      "fragmentForm": "The answer did not.",
+      "wormholeVariants": [
+        "The answer did not looks obvious at first.",
+        "The answer did not look obviously at first.",
+        "The answer was not looked obvious."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_039",
+    "seedId": "sensory_039",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 배우는 무대 위에서 자신감 있어 보였다.",
+    "english": "The actor looked confident on stage.",
+    "words": [
+      "The",
+      "actor",
+      "looked",
+      "confident",
+      "on",
+      "stage",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 배우는 무대 위에서 자신감 있어 보였다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + confident"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "actor",
+      "looked",
+      "confident",
+      "on",
+      "stage",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "confident"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look"
+    ],
+    "distractorSeeds": {
+      "auxError": "The actor looked confidently on stage.",
+      "statementForm": [
+        "The actor looked confident on stage.",
+        "The actor looked confident on stage"
+      ],
+      "fragmentForm": "The actor looked confident.",
+      "wormholeVariants": [
+        "The actor looked confidently on stage.",
+        "The actor look confident on stage.",
+        "The actor was looked confident."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_040",
+    "seedId": "sensory_040",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 계획은 단순해 보이지만 강력했다.",
+    "english": "The plan looked simple but powerful.",
+    "words": [
+      "The",
+      "plan",
+      "looked",
+      "simple",
+      "but",
+      "powerful",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획은 단순해 보이지만 강력했다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + simple"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "plan",
+      "looked",
+      "simple",
+      "but",
+      "powerful",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "simple"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan looked simply but powerful.",
+      "statementForm": [
+        "The plan looked simple but powerful.",
+        "The plan looked simple but powerful"
+      ],
+      "fragmentForm": "The plan looked simple.",
+      "wormholeVariants": [
+        "The plan looked simply but powerful.",
+        "The plan look simple but powerful.",
+        "The plan was looked simple."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_041",
+    "seedId": "sensory_041",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 담요는 겨울밤에 따뜻하게 느껴졌다.",
+    "english": "The blanket felt warm on the winter night.",
+    "words": [
+      "The",
+      "blanket",
+      "felt",
+      "warm",
+      "on",
+      "the",
+      "winter",
+      "night",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 담요는 겨울밤에 따뜻하게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective",
+        "feel + warm"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "blanket",
+      "felt",
+      "warm",
+      "on",
+      "the",
+      "winter",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "warm"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel"
+    ],
+    "distractorSeeds": {
+      "auxError": "The blanket felt warmly on the winter night.",
+      "statementForm": [
+        "The blanket felt warm on the winter night.",
+        "The blanket felt warm on the winter night"
+      ],
+      "fragmentForm": "The blanket felt warm.",
+      "wormholeVariants": [
+        "The blanket felt warmly on the winter night.",
+        "The blanket feel warm on the winter night.",
+        "The blanket was felt warm."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_042",
+    "seedId": "sensory_042",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 의자는 처음 앉았을 때 불편하게 느껴졌다.",
+    "english": "The chair felt uncomfortable when I first sat down.",
+    "words": [
+      "The",
+      "chair",
+      "felt",
+      "uncomfortable",
+      "when",
+      "I",
+      "first",
+      "sat",
+      "down",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 의자는 처음 앉았을 때 불편하게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective",
+        "feel + uncomfortable"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "chair",
+      "felt",
+      "uncomfortable",
+      "when",
+      "I",
+      "first",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "uncomfortable"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel",
+      "when"
+    ],
+    "distractorSeeds": {
+      "auxError": "The chair felt uncomfortably when I first sat down.",
+      "statementForm": [
+        "The chair felt uncomfortable when I first sat down.",
+        "The chair felt uncomfortable when I first sat down"
+      ],
+      "fragmentForm": "The chair felt uncomfortable.",
+      "wormholeVariants": [
+        "The chair felt uncomfortably when I first sat down.",
+        "The chair feel uncomfortable when I first sat down.",
+        "The chair was felt uncomfortable."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_043",
+    "seedId": "sensory_043",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 가방은 보기보다 훨씬 무겁게 느껴졌다.",
+    "english": "The bag felt much heavier than it looked.",
+    "words": [
+      "The",
+      "bag",
+      "felt",
+      "much",
+      "heavier",
+      "than",
+      "it",
+      "looked",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가방은 보기보다 훨씬 무겁게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + comparative",
+        "feel + heavier"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "bag",
+      "felt",
+      "much",
+      "heavier",
+      "than",
+      "it",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "heavier"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bag felt much more heavier than it looked.",
+      "statementForm": [
+        "The bag felt much heavier than it looked.",
+        "The bag felt much heavier than it looked"
+      ],
+      "fragmentForm": "The bag felt much.",
+      "wormholeVariants": [
+        "The bag felt much more heavier than it looked.",
+        "The bag felt much heavily than it looked.",
+        "The bag was felt much heavier."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_044",
+    "seedId": "sensory_044",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 표면은 비가 온 뒤 미끄럽게 느껴졌다.",
+    "english": "The surface felt slippery after the rain.",
+    "words": [
+      "The",
+      "surface",
+      "felt",
+      "slippery",
+      "after",
+      "the",
+      "rain",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 표면은 비가 온 뒤 미끄럽게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective",
+        "feel + slippery"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "surface",
+      "felt",
+      "slippery",
+      "after",
+      "the",
+      "rain",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "slippery"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel"
+    ],
+    "distractorSeeds": {
+      "auxError": "The surface felt slipperily after the rain.",
+      "statementForm": [
+        "The surface felt slippery after the rain.",
+        "The surface felt slippery after the rain"
+      ],
+      "fragmentForm": "The surface felt slippery.",
+      "wormholeVariants": [
+        "The surface felt slipperily after the rain.",
+        "The surface feel slippery after the rain.",
+        "The surface was felt slippery."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_045",
+    "seedId": "sensory_045",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 돌은 만졌을 때 차갑게 느껴졌다.",
+    "english": "The stone felt cold when I touched it.",
+    "words": [
+      "The",
+      "stone",
+      "felt",
+      "cold",
+      "when",
+      "I",
+      "touched",
+      "it",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 돌은 만졌을 때 차갑게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective",
+        "feel + cold"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "stone",
+      "felt",
+      "cold",
+      "when",
+      "I",
+      "touched",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "cold"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel",
+      "when"
+    ],
+    "distractorSeeds": {
+      "auxError": "The stone felt coldly when I touched it.",
+      "statementForm": [
+        "The stone felt cold when I touched it.",
+        "The stone felt cold when I touched it"
+      ],
+      "fragmentForm": "The stone felt cold.",
+      "wormholeVariants": [
+        "The stone felt coldly when I touched it.",
+        "The stone feel cold when I touched it.",
+        "The stone was felt cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_046",
+    "seedId": "sensory_046",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 천은 보기보다 부드럽게 느껴졌다.",
+    "english": "The cloth felt softer than it looked.",
+    "words": [
+      "The",
+      "cloth",
+      "felt",
+      "softer",
+      "than",
+      "it",
+      "looked",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 천은 보기보다 부드럽게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + comparative",
+        "feel + softer"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "cloth",
+      "felt",
+      "softer",
+      "than",
+      "it",
+      "looked",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "softer"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cloth felt more softer than it looked.",
+      "statementForm": [
+        "The cloth felt softer than it looked.",
+        "The cloth felt softer than it looked"
+      ],
+      "fragmentForm": "The cloth felt softer.",
+      "wormholeVariants": [
+        "The cloth felt more softer than it looked.",
+        "The cloth felt softly than it looked.",
+        "The cloth was felt softer."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_047",
+    "seedId": "sensory_047",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 방은 난방이 꺼진 후 차갑게 느껴졌다.",
+    "english": "The room felt cold after the heater stopped.",
+    "words": [
+      "The",
+      "room",
+      "felt",
+      "cold",
+      "after",
+      "the",
+      "heater",
+      "stopped",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방은 난방이 꺼진 후 차갑게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective",
+        "feel + cold"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "room",
+      "felt",
+      "cold",
+      "after",
+      "the",
+      "heater",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "cold"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room felt coldly after the heater stopped.",
+      "statementForm": [
+        "The room felt cold after the heater stopped.",
+        "The room felt cold after the heater stopped"
+      ],
+      "fragmentForm": "The room felt cold.",
+      "wormholeVariants": [
+        "The room felt coldly after the heater stopped.",
+        "The room feel cold after the heater stopped.",
+        "The room was felt cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_048",
+    "seedId": "sensory_048",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 설명은 실제보다 더 어색하게 느껴졌다.",
+    "english": "The explanation felt more awkward than it really was.",
+    "words": [
+      "The",
+      "explanation",
+      "felt",
+      "more",
+      "awkward",
+      "than",
+      "it",
+      "really",
+      "was",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 실제보다 더 어색하게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective + comparison",
+        "feel + awkward"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "explanation",
+      "felt",
+      "more",
+      "awkward",
+      "than",
+      "it",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "awkward"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation felt more awkwardly than it really was.",
+      "statementForm": [
+        "The explanation felt more awkward than it really was.",
+        "The explanation felt more awkward than it really was"
+      ],
+      "fragmentForm": "The explanation felt more.",
+      "wormholeVariants": [
+        "The explanation felt more awkwardly than it really was.",
+        "The explanation felt more awkwarder than it really was.",
+        "The explanation was felt awkward."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_049",
+    "seedId": "sensory_049",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 손잡이는 오래되어 거칠게 느껴졌다.",
+    "english": "The handle felt rough because it was old.",
+    "words": [
+      "The",
+      "handle",
+      "felt",
+      "rough",
+      "because",
+      "it",
+      "was",
+      "old",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 손잡이는 오래되어 거칠게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective + because",
+        "feel + rough"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "handle",
+      "felt",
+      "rough",
+      "because",
+      "it",
+      "was",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "rough"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel",
+      "because"
+    ],
+    "distractorSeeds": {
+      "auxError": "The handle felt roughly because it was old.",
+      "statementForm": [
+        "The handle felt rough because it was old.",
+        "The handle felt rough because it was old"
+      ],
+      "fragmentForm": "The handle felt rough.",
+      "wormholeVariants": [
+        "The handle felt roughly because it was old.",
+        "The handle feel rough because it was old.",
+        "The handle was felt rough."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_050",
+    "seedId": "sensory_050",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 매트리스는 충분히 편안하게 느껴졌다.",
+    "english": "The mattress felt comfortable enough.",
+    "words": [
+      "The",
+      "mattress",
+      "felt",
+      "comfortable",
+      "enough",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 매트리스는 충분히 편안하게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective + enough",
+        "feel + comfortable enough"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "mattress",
+      "felt",
+      "comfortable",
+      "enough",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "comfortable enough"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel",
+      "enough"
+    ],
+    "distractorSeeds": {
+      "auxError": "The mattress felt comfortably enough.",
+      "statementForm": [
+        "The mattress felt comfortable enough.",
+        "The mattress felt comfortable enough"
+      ],
+      "fragmentForm": "The mattress felt comfortable.",
+      "wormholeVariants": [
+        "The mattress felt comfortably enough.",
+        "The mattress feel comfortable enough.",
+        "The mattress was felt comfortable enough."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_051",
+    "seedId": "sensory_051",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 소식은 처음에는 믿기 어려워 보였다.",
+    "english": "The news seemed hard to believe at first.",
+    "words": [
+      "The",
+      "news",
+      "seemed",
+      "hard",
+      "to",
+      "believe",
+      "at",
+      "first",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소식은 처음에는 믿기 어려워 보였다.",
+        "The"
+      ],
+      [
+        "seem + adjective + to infinitive",
+        "seem + hard"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "news",
+      "seemed",
+      "hard",
+      "to",
+      "believe",
+      "at",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "hard"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "to_infinitive"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news seemed hardly to believe at first.",
+      "statementForm": [
+        "The news seemed hard to believe at first.",
+        "The news seemed hard to believe at first"
+      ],
+      "fragmentForm": "The news seemed hard.",
+      "wormholeVariants": [
+        "The news seemed hardly to believe at first.",
+        "The news seem hard to believe at first.",
+        "The news was seemed hard to believe."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_052",
+    "seedId": "sensory_052",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 규칙은 처음에는 엄격해 보였다.",
+    "english": "The rule seemed strict at first.",
+    "words": [
+      "The",
+      "rule",
+      "seemed",
+      "strict",
+      "at",
+      "first",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 규칙은 처음에는 엄격해 보였다.",
+        "The"
+      ],
+      [
+        "seem + adjective",
+        "seem + strict"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "rule",
+      "seemed",
+      "strict",
+      "at",
+      "first",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "strict"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule seemed strictly at first.",
+      "statementForm": [
+        "The rule seemed strict at first.",
+        "The rule seemed strict at first"
+      ],
+      "fragmentForm": "The rule seemed strict.",
+      "wormholeVariants": [
+        "The rule seemed strictly at first.",
+        "The rule seem strict at first.",
+        "The rule was seemed strict."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_053",
+    "seedId": "sensory_053",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 아이디어는 단순해 보이지만 강력하다.",
+    "english": "The idea seems simple but powerful.",
+    "words": [
+      "The",
+      "idea",
+      "seems",
+      "simple",
+      "but",
+      "powerful",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 아이디어는 단순해 보이지만 강력하다.",
+        "The"
+      ],
+      [
+        "seem + adjective",
+        "seem + simple"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "idea",
+      "seems",
+      "simple",
+      "but",
+      "powerful",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seems",
+      "simple"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The idea seems simply but powerful.",
+      "statementForm": [
+        "The idea seems simple but powerful.",
+        "The idea seems simple but powerful"
+      ],
+      "fragmentForm": "The idea seems simple.",
+      "wormholeVariants": [
+        "The idea seems simply but powerful.",
+        "The idea seem simple but powerful.",
+        "The idea is seemed simple."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_054",
+    "seedId": "sensory_054",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 보고서는 처음 읽었을 때 설득력 있어 보였다.",
+    "english": "The report seemed convincing when I first read it.",
+    "words": [
+      "The",
+      "report",
+      "seemed",
+      "convincing",
+      "when",
+      "I",
+      "first",
+      "read",
+      "it",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 보고서는 처음 읽었을 때 설득력 있어 보였다.",
+        "The"
+      ],
+      [
+        "seem + adjective",
+        "seem + convincing"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "report",
+      "seemed",
+      "convincing",
+      "when",
+      "I",
+      "first",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "convincing"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "when"
+    ],
+    "distractorSeeds": {
+      "auxError": "The report seemed convincingly when I first read it.",
+      "statementForm": [
+        "The report seemed convincing when I first read it.",
+        "The report seemed convincing when I first read it"
+      ],
+      "fragmentForm": "The report seemed convincing.",
+      "wormholeVariants": [
+        "The report seemed convincingly when I first read it.",
+        "The report seem convincing when I first read it.",
+        "The report was seemed convincing."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_055",
+    "seedId": "sensory_055",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 결정은 우리 팀에게 공정해 보이지 않았다.",
+    "english": "The decision did not seem fair to our team.",
+    "words": [
+      "The",
+      "decision",
+      "did",
+      "not",
+      "seem",
+      "fair",
+      "to",
+      "our",
+      "team",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 결정은 우리 팀에게 공정해 보이지 않았다.",
+        "The"
+      ],
+      [
+        "seem + adjective + negative",
+        "seem + fair"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "decision",
+      "did",
+      "not",
+      "seem",
+      "fair",
+      "to",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seem",
+      "fair"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The decision did not seems fair to our team.",
+      "statementForm": [
+        "The decision did not seem fair to our team.",
+        "The decision did not seem fair to our team"
+      ],
+      "fragmentForm": "The decision did not.",
+      "wormholeVariants": [
+        "The decision did not seems fair to our team.",
+        "The decision did not seem fairly to our team.",
+        "The decision was not seemed fair."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_056",
+    "seedId": "sensory_056",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 설명은 더 들을수록 명확해 보였다.",
+    "english": "The explanation seemed clearer as I listened more.",
+    "words": [
+      "The",
+      "explanation",
+      "seemed",
+      "clearer",
+      "as",
+      "I",
+      "listened",
+      "more",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 더 들을수록 명확해 보였다.",
+        "The"
+      ],
+      [
+        "seem + comparative",
+        "seem + clearer"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "explanation",
+      "seemed",
+      "clearer",
+      "as",
+      "I",
+      "listened",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "clearer"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation seemed more clearer as I listened more.",
+      "statementForm": [
+        "The explanation seemed clearer as I listened more.",
+        "The explanation seemed clearer as I listened more"
+      ],
+      "fragmentForm": "The explanation seemed clearer.",
+      "wormholeVariants": [
+        "The explanation seemed more clearer as I listened more.",
+        "The explanation seemed clearly as I listened more.",
+        "The explanation was seemed clearer."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_057",
+    "seedId": "sensory_057",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 제안은 현실적이라기보다 이상적으로 보였다.",
+    "english": "The suggestion seemed more ideal than realistic.",
+    "words": [
+      "The",
+      "suggestion",
+      "seemed",
+      "more",
+      "ideal",
+      "than",
+      "realistic",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 제안은 현실적이라기보다 이상적으로 보였다.",
+        "The"
+      ],
+      [
+        "seem + comparison",
+        "seem + more ideal"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "suggestion",
+      "seemed",
+      "more",
+      "ideal",
+      "than",
+      "realistic",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "more ideal"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The suggestion seemed more ideally than realistic.",
+      "statementForm": [
+        "The suggestion seemed more ideal than realistic.",
+        "The suggestion seemed more ideal than realistic"
+      ],
+      "fragmentForm": "The suggestion seemed more.",
+      "wormholeVariants": [
+        "The suggestion seemed more ideally than realistic.",
+        "The suggestion seem more ideal than realistic.",
+        "The suggestion was seemed more ideal."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_058",
+    "seedId": "sensory_058",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 방법은 충분히 안전해 보였다.",
+    "english": "The method seemed safe enough.",
+    "words": [
+      "The",
+      "method",
+      "seemed",
+      "safe",
+      "enough",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방법은 충분히 안전해 보였다.",
+        "The"
+      ],
+      [
+        "seem + adjective + enough",
+        "seem + safe enough"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "method",
+      "seemed",
+      "safe",
+      "enough",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "safe enough"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "enough"
+    ],
+    "distractorSeeds": {
+      "auxError": "The method seemed safely enough.",
+      "statementForm": [
+        "The method seemed safe enough.",
+        "The method seemed safe enough"
+      ],
+      "fragmentForm": "The method seemed safe.",
+      "wormholeVariants": [
+        "The method seemed safely enough.",
+        "The method seem safe enough.",
+        "The method was seemed safe enough."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_059",
+    "seedId": "sensory_059",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 약속은 너무 좋아서 사실 같지 않아 보였다.",
+    "english": "The promise seemed too good to be true.",
+    "words": [
+      "The",
+      "promise",
+      "seemed",
+      "too",
+      "good",
+      "to",
+      "be",
+      "true",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 약속은 너무 좋아서 사실 같지 않아 보였다.",
+        "The"
+      ],
+      [
+        "seem + too adj to",
+        "seem + too good"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "promise",
+      "seemed",
+      "too",
+      "good",
+      "to",
+      "be",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "too good"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "too_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "The promise seemed too well to be true.",
+      "statementForm": [
+        "The promise seemed too good to be true.",
+        "The promise seemed too good to be true"
+      ],
+      "fragmentForm": "The promise seemed too.",
+      "wormholeVariants": [
+        "The promise seemed too well to be true.",
+        "The promise seemed too good to true.",
+        "The promise was seemed too good."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_060",
+    "seedId": "sensory_060",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 변화는 작아 보였지만 중요했다.",
+    "english": "The change seemed small but important.",
+    "words": [
+      "The",
+      "change",
+      "seemed",
+      "small",
+      "but",
+      "important",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 변화는 작아 보였지만 중요했다.",
+        "The"
+      ],
+      [
+        "seem + adjective",
+        "seem + small"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "change",
+      "seemed",
+      "small",
+      "but",
+      "important",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "small"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The change seemed smallly but important.",
+      "statementForm": [
+        "The change seemed small but important.",
+        "The change seemed small but important"
+      ],
+      "fragmentForm": "The change seemed small.",
+      "wormholeVariants": [
+        "The change seemed smallly but important.",
+        "The change seem small but important.",
+        "The change was seemed small."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_061",
+    "seedId": "sensory_061",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 물감은 마르자 더 어둡게 보였다.",
+    "english": "The paint looked darker after it dried.",
+    "words": [
+      "The",
+      "paint",
+      "looked",
+      "darker",
+      "after",
+      "it",
+      "dried",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 물감은 마르자 더 어둡게 보였다.",
+        "The"
+      ],
+      [
+        "look + comparative",
+        "look + darker"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "paint",
+      "looked",
+      "darker",
+      "after",
+      "it",
+      "dried",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "darker"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look"
+    ],
+    "distractorSeeds": {
+      "auxError": "The paint looked more darker after it dried.",
+      "statementForm": [
+        "The paint looked darker after it dried.",
+        "The paint looked darker after it dried"
+      ],
+      "fragmentForm": "The paint looked darker.",
+      "wormholeVariants": [
+        "The paint looked more darker after it dried.",
+        "The paint looked darkly after it dried.",
+        "The paint was looked darker."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_062",
+    "seedId": "sensory_062",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 치즈는 너무 강한 냄새가 났다.",
+    "english": "The cheese smelled too strong.",
+    "words": [
+      "The",
+      "cheese",
+      "smelled",
+      "too",
+      "strong",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 치즈는 너무 강한 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + adjective",
+        "smell + too strong"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "cheese",
+      "smelled",
+      "too",
+      "strong",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "too strong"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cheese smelled too strongly.",
+      "statementForm": [
+        "The cheese smelled too strong.",
+        "The cheese smelled too strong"
+      ],
+      "fragmentForm": "The cheese smelled too.",
+      "wormholeVariants": [
+        "The cheese smelled too strongly.",
+        "The cheese smell too strong.",
+        "The cheese was smelled too strong."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_063",
+    "seedId": "sensory_063",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 커피는 설탕 없이도 달콤한 맛이 났다.",
+    "english": "The coffee tasted sweet even without sugar.",
+    "words": [
+      "The",
+      "coffee",
+      "tasted",
+      "sweet",
+      "even",
+      "without",
+      "sugar",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 커피는 설탕 없이도 달콤한 맛이 났다.",
+        "The"
+      ],
+      [
+        "taste + adjective",
+        "taste + sweet"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "coffee",
+      "tasted",
+      "sweet",
+      "even",
+      "without",
+      "sugar",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "sweet"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste"
+    ],
+    "distractorSeeds": {
+      "auxError": "The coffee tasted sweetly even without sugar.",
+      "statementForm": [
+        "The coffee tasted sweet even without sugar.",
+        "The coffee tasted sweet even without sugar"
+      ],
+      "fragmentForm": "The coffee tasted sweet.",
+      "wormholeVariants": [
+        "The coffee tasted sweetly even without sugar.",
+        "The coffee taste sweet even without sugar.",
+        "The coffee was tasted sweet."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_064",
+    "seedId": "sensory_064",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 발표자는 질문을 받은 후 긴장한 것처럼 들렸다.",
+    "english": "The speaker sounded nervous after the question.",
+    "words": [
+      "The",
+      "speaker",
+      "sounded",
+      "nervous",
+      "after",
+      "the",
+      "question",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 발표자는 질문을 받은 후 긴장한 것처럼 들렸다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + nervous"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "speaker",
+      "sounded",
+      "nervous",
+      "after",
+      "the",
+      "question",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "nervous"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound"
+    ],
+    "distractorSeeds": {
+      "auxError": "The speaker sounded nervously after the question.",
+      "statementForm": [
+        "The speaker sounded nervous after the question.",
+        "The speaker sounded nervous after the question"
+      ],
+      "fragmentForm": "The speaker sounded nervous.",
+      "wormholeVariants": [
+        "The speaker sounded nervously after the question.",
+        "The speaker sound nervous after the question.",
+        "The speaker was sounded nervous."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_065",
+    "seedId": "sensory_065",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 영화의 결말은 나에게 억지스럽게 느껴졌다.",
+    "english": "The ending of the movie felt forced to me.",
+    "words": [
+      "The",
+      "ending",
+      "of",
+      "the",
+      "movie",
+      "felt",
+      "forced",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 영화의 결말은 나에게 억지스럽게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective",
+        "feel + forced"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "ending",
+      "of",
+      "the",
+      "movie",
+      "felt",
+      "forced",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "forced"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel"
+    ],
+    "distractorSeeds": {
+      "auxError": "The ending of the movie felt forcedly to me.",
+      "statementForm": [
+        "The ending of the movie felt forced to me.",
+        "The ending of the movie felt forced to me"
+      ],
+      "fragmentForm": "The ending of the.",
+      "wormholeVariants": [
+        "The ending of the movie felt forcedly to me.",
+        "The ending of the movie feel forced to me.",
+        "The ending was felt forced to me."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_066",
+    "seedId": "sensory_066",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 프로젝트는 처음에는 불가능해 보였다.",
+    "english": "The project seemed impossible at first.",
+    "words": [
+      "The",
+      "project",
+      "seemed",
+      "impossible",
+      "at",
+      "first",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 프로젝트는 처음에는 불가능해 보였다.",
+        "The"
+      ],
+      [
+        "seem + adjective",
+        "seem + impossible"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "project",
+      "seemed",
+      "impossible",
+      "at",
+      "first",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "impossible"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem"
+    ],
+    "distractorSeeds": {
+      "auxError": "The project seemed impossibly at first.",
+      "statementForm": [
+        "The project seemed impossible at first.",
+        "The project seemed impossible at first"
+      ],
+      "fragmentForm": "The project seemed impossible.",
+      "wormholeVariants": [
+        "The project seemed impossibly at first.",
+        "The project seem impossible at first.",
+        "The project was seemed impossible."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_067",
+    "seedId": "sensory_067",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 새 셔츠는 조금 작아 보인다.",
+    "english": "The new shirt looks a little small.",
+    "words": [
+      "The",
+      "new",
+      "shirt",
+      "looks",
+      "a",
+      "little",
+      "small",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 새 셔츠는 조금 작아 보인다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + small"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "new",
+      "shirt",
+      "looks",
+      "a",
+      "little",
+      "small",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looks",
+      "small"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look"
+    ],
+    "distractorSeeds": {
+      "auxError": "The new shirt looks a little smallly.",
+      "statementForm": [
+        "The new shirt looks a little small.",
+        "The new shirt looks a little small"
+      ],
+      "fragmentForm": "The new shirt looks.",
+      "wormholeVariants": [
+        "The new shirt looks a little smallly.",
+        "The new shirt look a little small.",
+        "The new shirt is looked small."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_068",
+    "seedId": "sensory_068",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 답변은 정직하게 들렸다.",
+    "english": "The answer sounded honest.",
+    "words": [
+      "The",
+      "answer",
+      "sounded",
+      "honest",
+      "."
+    ],
+    "wordCount": 4,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 답변은 정직하게 들렸다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + honest"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "answer",
+      "sounded",
+      "honest",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "honest"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound"
+    ],
+    "distractorSeeds": {
+      "auxError": "The answer sounded honestly.",
+      "statementForm": [
+        "The answer sounded honest.",
+        "The answer sounded honest"
+      ],
+      "fragmentForm": "The answer sounded honest.",
+      "wormholeVariants": [
+        "The answer sounded honestly.",
+        "The answer sound honest.",
+        "The answer was sounded honest."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_069",
+    "seedId": "sensory_069",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 초콜릿은 보기보다 덜 달았다.",
+    "english": "The chocolate tasted less sweet than it looked.",
+    "words": [
+      "The",
+      "chocolate",
+      "tasted",
+      "less",
+      "sweet",
+      "than",
+      "it",
+      "looked",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 초콜릿은 보기보다 덜 달았다.",
+        "The"
+      ],
+      [
+        "taste + comparison",
+        "taste + less sweet"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "chocolate",
+      "tasted",
+      "less",
+      "sweet",
+      "than",
+      "it",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "less sweet"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The chocolate tasted less sweetly than it looked.",
+      "statementForm": [
+        "The chocolate tasted less sweet than it looked.",
+        "The chocolate tasted less sweet than it looked"
+      ],
+      "fragmentForm": "The chocolate tasted less.",
+      "wormholeVariants": [
+        "The chocolate tasted less sweetly than it looked.",
+        "The chocolate tasted less sweeter than it looked.",
+        "The chocolate was tasted less sweet."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_070",
+    "seedId": "sensory_070",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 공기는 폭풍 전처럼 무겁게 느껴졌다.",
+    "english": "The air felt heavy before the storm.",
+    "words": [
+      "The",
+      "air",
+      "felt",
+      "heavy",
+      "before",
+      "the",
+      "storm",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 공기는 폭풍 전처럼 무겁게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + adjective",
+        "feel + heavy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "air",
+      "felt",
+      "heavy",
+      "before",
+      "the",
+      "storm",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "heavy"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel"
+    ],
+    "distractorSeeds": {
+      "auxError": "The air felt heavily before the storm.",
+      "statementForm": [
+        "The air felt heavy before the storm.",
+        "The air felt heavy before the storm"
+      ],
+      "fragmentForm": "The air felt heavy.",
+      "wormholeVariants": [
+        "The air felt heavily before the storm.",
+        "The air feel heavy before the storm.",
+        "The air was felt heavy."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_071",
+    "seedId": "sensory_071",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 메시지는 짧지만 차갑게 들렸다.",
+    "english": "The message sounded short but cold.",
+    "words": [
+      "The",
+      "message",
+      "sounded",
+      "short",
+      "but",
+      "cold",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 메시지는 짧지만 차갑게 들렸다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + cold"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "message",
+      "sounded",
+      "short",
+      "but",
+      "cold",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "cold"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The message sounded shortly but cold.",
+      "statementForm": [
+        "The message sounded short but cold.",
+        "The message sounded short but cold"
+      ],
+      "fragmentForm": "The message sounded short.",
+      "wormholeVariants": [
+        "The message sounded shortly but cold.",
+        "The message sound short but cold.",
+        "The message was sounded short."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_072",
+    "seedId": "sensory_072",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 문은 닫혀 있었지만 안전해 보이지 않았다.",
+    "english": "The door looked closed but not safe.",
+    "words": [
+      "The",
+      "door",
+      "looked",
+      "closed",
+      "but",
+      "not",
+      "safe",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 문은 닫혀 있었지만 안전해 보이지 않았다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + closed"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "door",
+      "looked",
+      "closed",
+      "but",
+      "not",
+      "safe",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "closed"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The door looked closedly but not safe.",
+      "statementForm": [
+        "The door looked closed but not safe.",
+        "The door looked closed but not safe"
+      ],
+      "fragmentForm": "The door looked closed.",
+      "wormholeVariants": [
+        "The door looked closedly but not safe.",
+        "The door look closed but not safe.",
+        "The door was looked closed."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_073",
+    "seedId": "sensory_073",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 소스는 향보다 맛이 더 강했다.",
+    "english": "The sauce tasted stronger than it smelled.",
+    "words": [
+      "The",
+      "sauce",
+      "tasted",
+      "stronger",
+      "than",
+      "it",
+      "smelled",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소스는 향보다 맛이 더 강했다.",
+        "The"
+      ],
+      [
+        "taste + comparison",
+        "taste + stronger"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "sauce",
+      "tasted",
+      "stronger",
+      "than",
+      "it",
+      "smelled",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "stronger"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The sauce tasted more stronger than it smelled.",
+      "statementForm": [
+        "The sauce tasted stronger than it smelled.",
+        "The sauce tasted stronger than it smelled"
+      ],
+      "fragmentForm": "The sauce tasted stronger.",
+      "wormholeVariants": [
+        "The sauce tasted more stronger than it smelled.",
+        "The sauce tasted strongly than it smelled.",
+        "The sauce was tasted stronger."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_074",
+    "seedId": "sensory_074",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 집은 오래되었지만 편안해 보였다.",
+    "english": "The house looked old but comfortable.",
+    "words": [
+      "The",
+      "house",
+      "looked",
+      "old",
+      "but",
+      "comfortable",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 집은 오래되었지만 편안해 보였다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + old"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "house",
+      "looked",
+      "old",
+      "but",
+      "comfortable",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "old"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The house looked oldly but comfortable.",
+      "statementForm": [
+        "The house looked old but comfortable.",
+        "The house looked old but comfortable"
+      ],
+      "fragmentForm": "The house looked old.",
+      "wormholeVariants": [
+        "The house looked oldly but comfortable.",
+        "The house look old but comfortable.",
+        "The house was looked old."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_075",
+    "seedId": "sensory_075",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 목소리는 친절하게 들렸지만 단호했다.",
+    "english": "The voice sounded kind but firm.",
+    "words": [
+      "The",
+      "voice",
+      "sounded",
+      "kind",
+      "but",
+      "firm",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 목소리는 친절하게 들렸지만 단호했다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + kind"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "voice",
+      "sounded",
+      "kind",
+      "but",
+      "firm",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "kind"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The voice sounded kindly but firm.",
+      "statementForm": [
+        "The voice sounded kind but firm.",
+        "The voice sounded kind but firm"
+      ],
+      "fragmentForm": "The voice sounded kind.",
+      "wormholeVariants": [
+        "The voice sounded kindly but firm.",
+        "The voice sound kind but firm.",
+        "The voice was sounded kind."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_076",
+    "seedId": "sensory_076",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 소리는 작았지만 분명하게 들렸다.",
+    "english": "The sound seemed quiet but clear.",
+    "words": [
+      "The",
+      "sound",
+      "seemed",
+      "quiet",
+      "but",
+      "clear",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 소리는 작았지만 분명하게 들렸다.",
+        "The"
+      ],
+      [
+        "seem + adjective",
+        "seem + clear"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "sound",
+      "seemed",
+      "quiet",
+      "but",
+      "clear",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "clear"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The sound seemed quietly but clear.",
+      "statementForm": [
+        "The sound seemed quiet but clear.",
+        "The sound seemed quiet but clear"
+      ],
+      "fragmentForm": "The sound seemed quiet.",
+      "wormholeVariants": [
+        "The sound seemed quietly but clear.",
+        "The sound seem quiet but clear.",
+        "The sound was seemed quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_077",
+    "seedId": "sensory_077",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 국물은 너무 짜서 다 먹기 어려웠다.",
+    "english": "The soup tasted too salty to finish.",
+    "words": [
+      "The",
+      "soup",
+      "tasted",
+      "too",
+      "salty",
+      "to",
+      "finish",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 국물은 너무 짜서 다 먹기 어려웠다.",
+        "The"
+      ],
+      [
+        "taste + too adjective to",
+        "taste + too salty"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "soup",
+      "tasted",
+      "too",
+      "salty",
+      "to",
+      "finish",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "too salty"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "too_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "The soup tasted too saltily to finish.",
+      "statementForm": [
+        "The soup tasted too salty to finish.",
+        "The soup tasted too salty to finish"
+      ],
+      "fragmentForm": "The soup tasted too.",
+      "wormholeVariants": [
+        "The soup tasted too saltily to finish.",
+        "The soup tasted too salty finish.",
+        "The soup was tasted too salty."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_078",
+    "seedId": "sensory_078",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 방은 창문을 열자 더 신선한 냄새가 났다.",
+    "english": "The room smelled fresher after we opened the window.",
+    "words": [
+      "The",
+      "room",
+      "smelled",
+      "fresher",
+      "after",
+      "we",
+      "opened",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방은 창문을 열자 더 신선한 냄새가 났다.",
+        "The"
+      ],
+      [
+        "smell + comparative",
+        "smell + fresher"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "room",
+      "smelled",
+      "fresher",
+      "after",
+      "we",
+      "opened",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "fresher"
+    ],
+    "tags": [
+      "sensory_verb",
+      "smell",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room smelled more fresher after we opened the window.",
+      "statementForm": [
+        "The room smelled fresher after we opened the window.",
+        "The room smelled fresher after we opened the window"
+      ],
+      "fragmentForm": "The room smelled fresher.",
+      "wormholeVariants": [
+        "The room smelled more fresher after we opened the window.",
+        "The room smelled freshly after we opened the window.",
+        "The room was smelled fresher."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_079",
+    "seedId": "sensory_079",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 담요는 세탁 후 더 부드럽게 느껴졌다.",
+    "english": "The blanket felt softer after it was washed.",
+    "words": [
+      "The",
+      "blanket",
+      "felt",
+      "softer",
+      "after",
+      "it",
+      "was",
+      "washed",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 담요는 세탁 후 더 부드럽게 느껴졌다.",
+        "The"
+      ],
+      [
+        "feel + comparative",
+        "feel + softer"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "blanket",
+      "felt",
+      "softer",
+      "after",
+      "it",
+      "was",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "softer"
+    ],
+    "tags": [
+      "sensory_verb",
+      "feel",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The blanket felt more softer after it was washed.",
+      "statementForm": [
+        "The blanket felt softer after it was washed.",
+        "The blanket felt softer after it was washed"
+      ],
+      "fragmentForm": "The blanket felt softer.",
+      "wormholeVariants": [
+        "The blanket felt more softer after it was washed.",
+        "The blanket felt softly after it was washed.",
+        "The blanket was felt softer."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_080",
+    "seedId": "sensory_080",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 배우는 피곤했지만 침착해 보였다.",
+    "english": "The actor looked tired but calm.",
+    "words": [
+      "The",
+      "actor",
+      "looked",
+      "tired",
+      "but",
+      "calm",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 배우는 피곤했지만 침착해 보였다.",
+        "The"
+      ],
+      [
+        "look + adjective",
+        "look + tired"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "actor",
+      "looked",
+      "tired",
+      "but",
+      "calm",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "tired"
+    ],
+    "tags": [
+      "sensory_verb",
+      "look",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The actor looked tiredly but calm.",
+      "statementForm": [
+        "The actor looked tired but calm.",
+        "The actor looked tired but calm"
+      ],
+      "fragmentForm": "The actor looked tired.",
+      "wormholeVariants": [
+        "The actor looked tiredly but calm.",
+        "The actor look tired but calm.",
+        "The actor was looked tired."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_081",
+    "seedId": "sensory_081",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 설명은 너무 단순해서 믿기 어려워 보였다.",
+    "english": "The explanation seemed too simple to believe.",
+    "words": [
+      "The",
+      "explanation",
+      "seemed",
+      "too",
+      "simple",
+      "to",
+      "believe",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 설명은 너무 단순해서 믿기 어려워 보였다.",
+        "The"
+      ],
+      [
+        "seem + too adjective to",
+        "seem + too simple"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "explanation",
+      "seemed",
+      "too",
+      "simple",
+      "to",
+      "believe",
+      "quickly"
+    ],
+    "blankTargets": [
+      "seemed",
+      "too simple"
+    ],
+    "tags": [
+      "sensory_verb",
+      "seem",
+      "too_to"
+    ],
+    "distractorSeeds": {
+      "auxError": "The explanation seemed too simply to believe.",
+      "statementForm": [
+        "The explanation seemed too simple to believe.",
+        "The explanation seemed too simple to believe"
+      ],
+      "fragmentForm": "The explanation seemed too.",
+      "wormholeVariants": [
+        "The explanation seemed too simply to believe.",
+        "The explanation seemed too simple believe.",
+        "The explanation was seemed too simple."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_082",
+    "seedId": "sensory_082",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 주장은 증거 없이 약하게 들렸다.",
+    "english": "The argument sounded weak without evidence.",
+    "words": [
+      "The",
+      "argument",
+      "sounded",
+      "weak",
+      "without",
+      "evidence",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 주장은 증거 없이 약하게 들렸다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + weak"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "argument",
+      "sounded",
+      "weak",
+      "without",
+      "evidence",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "weak"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound"
+    ],
+    "distractorSeeds": {
+      "auxError": "The argument sounded weakly without evidence.",
+      "statementForm": [
+        "The argument sounded weak without evidence.",
+        "The argument sounded weak without evidence"
+      ],
+      "fragmentForm": "The argument sounded weak.",
+      "wormholeVariants": [
+        "The argument sounded weakly without evidence.",
+        "The argument sound weak without evidence.",
+        "The argument was sounded weak."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_083",
+    "seedId": "sensory_083",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 샐러드는 신선해 보였고 맛도 좋았다.",
+    "english": "The salad looked fresh and tasted good.",
+    "words": [
+      "The",
+      "salad",
+      "looked",
+      "fresh",
+      "and",
+      "tasted",
+      "good",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 샐러드는 신선해 보였고 맛도 좋았다.",
+        "The"
+      ],
+      [
+        "look/taste + adjective",
+        "look + fresh / taste + good"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "salad",
+      "looked",
+      "fresh",
+      "and",
+      "tasted",
+      "good",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "fresh",
+      "tasted",
+      "good"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The salad looked freshly and tasted well.",
+      "statementForm": [
+        "The salad looked fresh and tasted good.",
+        "The salad looked fresh and tasted good"
+      ],
+      "fragmentForm": "The salad looked fresh.",
+      "wormholeVariants": [
+        "The salad looked freshly and tasted well.",
+        "The salad look fresh and taste good.",
+        "The salad was looked fresh and tasted good."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_084",
+    "seedId": "sensory_084",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 계획은 듣기에는 쉽지만 실행하기 어려워 보였다.",
+    "english": "The plan sounded easy but seemed hard to carry out.",
+    "words": [
+      "The",
+      "plan",
+      "sounded",
+      "easy",
+      "but",
+      "seemed",
+      "hard",
+      "to",
+      "carry",
+      "out",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 계획은 듣기에는 쉽지만 실행하기 어려워 보였다.",
+        "The"
+      ],
+      [
+        "sound/seem + adjective",
+        "sound + easy / seem + hard"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "plan",
+      "sounded",
+      "easy",
+      "but",
+      "seemed",
+      "hard",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "easy",
+      "seemed",
+      "hard"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan sounded easily but seemed hardly to carry out.",
+      "statementForm": [
+        "The plan sounded easy but seemed hard to carry out.",
+        "The plan sounded easy but seemed hard to carry out"
+      ],
+      "fragmentForm": "The plan sounded easy.",
+      "wormholeVariants": [
+        "The plan sounded easily but seemed hardly to carry out.",
+        "The plan sound easy but seem hard to carry out.",
+        "The plan was sounded easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_085",
+    "seedId": "sensory_085",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 음료는 차가웠지만 너무 달았다.",
+    "english": "The drink felt cold but tasted too sweet.",
+    "words": [
+      "The",
+      "drink",
+      "felt",
+      "cold",
+      "but",
+      "tasted",
+      "too",
+      "sweet",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 음료는 차가웠지만 너무 달았다.",
+        "The"
+      ],
+      [
+        "feel/taste + adjective",
+        "feel + cold / taste + sweet"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "drink",
+      "felt",
+      "cold",
+      "but",
+      "tasted",
+      "too",
+      "quickly"
+    ],
+    "blankTargets": [
+      "felt",
+      "cold",
+      "tasted",
+      "sweet"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The drink felt coldly but tasted too sweetly.",
+      "statementForm": [
+        "The drink felt cold but tasted too sweet.",
+        "The drink felt cold but tasted too sweet"
+      ],
+      "fragmentForm": "The drink felt cold.",
+      "wormholeVariants": [
+        "The drink felt coldly but tasted too sweetly.",
+        "The drink feel cold but taste too sweet.",
+        "The drink was felt cold."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_086",
+    "seedId": "sensory_086",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 새 책은 얇아 보였지만 내용은 어려워 보였다.",
+    "english": "The new book looked thin but seemed difficult.",
+    "words": [
+      "The",
+      "new",
+      "book",
+      "looked",
+      "thin",
+      "but",
+      "seemed",
+      "difficult",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 새 책은 얇아 보였지만 내용은 어려워 보였다.",
+        "The"
+      ],
+      [
+        "look/seem + adjective",
+        "look + thin / seem + difficult"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "new",
+      "book",
+      "looked",
+      "thin",
+      "but",
+      "seemed",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "thin",
+      "seemed",
+      "difficult"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The new book looked thinly but seemed difficultly.",
+      "statementForm": [
+        "The new book looked thin but seemed difficult.",
+        "The new book looked thin but seemed difficult"
+      ],
+      "fragmentForm": "The new book looked.",
+      "wormholeVariants": [
+        "The new book looked thinly but seemed difficultly.",
+        "The new book look thin but seem difficult.",
+        "The new book was looked thin."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_087",
+    "seedId": "sensory_087",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 가죽 가방은 오래됐지만 부드럽게 느껴졌다.",
+    "english": "The leather bag looked old but felt soft.",
+    "words": [
+      "The",
+      "leather",
+      "bag",
+      "looked",
+      "old",
+      "but",
+      "felt",
+      "soft",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 가죽 가방은 오래됐지만 부드럽게 느껴졌다.",
+        "The"
+      ],
+      [
+        "look/feel + adjective",
+        "look + old / feel + soft"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "leather",
+      "bag",
+      "looked",
+      "old",
+      "but",
+      "felt",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "old",
+      "felt",
+      "soft"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The leather bag looked oldly but felt softly.",
+      "statementForm": [
+        "The leather bag looked old but felt soft.",
+        "The leather bag looked old but felt soft"
+      ],
+      "fragmentForm": "The leather bag looked.",
+      "wormholeVariants": [
+        "The leather bag looked oldly but felt softly.",
+        "The leather bag look old but feel soft.",
+        "The leather bag was looked old."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_088",
+    "seedId": "sensory_088",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 목소리는 낮았지만 확신에 차게 들렸다.",
+    "english": "The voice sounded low but confident.",
+    "words": [
+      "The",
+      "voice",
+      "sounded",
+      "low",
+      "but",
+      "confident",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 목소리는 낮았지만 확신에 차게 들렸다.",
+        "The"
+      ],
+      [
+        "sound + adjective",
+        "sound + confident"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "voice",
+      "sounded",
+      "low",
+      "but",
+      "confident",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "confident"
+    ],
+    "tags": [
+      "sensory_verb",
+      "sound",
+      "but"
+    ],
+    "distractorSeeds": {
+      "auxError": "The voice sounded lowly but confident.",
+      "statementForm": [
+        "The voice sounded low but confident.",
+        "The voice sounded low but confident"
+      ],
+      "fragmentForm": "The voice sounded low.",
+      "wormholeVariants": [
+        "The voice sounded lowly but confident.",
+        "The voice sound low but confident.",
+        "The voice was sounded low."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_089",
+    "seedId": "sensory_089",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 음식은 보기보다 매운맛이 덜했다.",
+    "english": "The food tasted less spicy than it looked.",
+    "words": [
+      "The",
+      "food",
+      "tasted",
+      "less",
+      "spicy",
+      "than",
+      "it",
+      "looked",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 음식은 보기보다 매운맛이 덜했다.",
+        "The"
+      ],
+      [
+        "taste + comparison",
+        "taste + less spicy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "food",
+      "tasted",
+      "less",
+      "spicy",
+      "than",
+      "it",
+      "quickly"
+    ],
+    "blankTargets": [
+      "tasted",
+      "less spicy"
+    ],
+    "tags": [
+      "sensory_verb",
+      "taste",
+      "comparison"
+    ],
+    "distractorSeeds": {
+      "auxError": "The food tasted less spicily than it looked.",
+      "statementForm": [
+        "The food tasted less spicy than it looked.",
+        "The food tasted less spicy than it looked"
+      ],
+      "fragmentForm": "The food tasted less.",
+      "wormholeVariants": [
+        "The food tasted less spicily than it looked.",
+        "The food tasted less spicier than it looked.",
+        "The food was tasted less spicy."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_090",
+    "seedId": "sensory_090",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 천장은 낮아 보였지만 방은 넓게 느껴졌다.",
+    "english": "The ceiling looked low but the room felt spacious.",
+    "words": [
+      "The",
+      "ceiling",
+      "looked",
+      "low",
+      "but",
+      "the",
+      "room",
+      "felt",
+      "spacious",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 천장은 낮아 보였지만 방은 넓게 느껴졌다.",
+        "The"
+      ],
+      [
+        "look/feel + adjective",
+        "look + low / feel + spacious"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "ceiling",
+      "looked",
+      "low",
+      "but",
+      "the",
+      "room",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "low",
+      "felt",
+      "spacious"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The ceiling looked lowly but the room felt spaciously.",
+      "statementForm": [
+        "The ceiling looked low but the room felt spacious.",
+        "The ceiling looked low but the room felt spacious"
+      ],
+      "fragmentForm": "The ceiling looked low.",
+      "wormholeVariants": [
+        "The ceiling looked lowly but the room felt spaciously.",
+        "The ceiling look low but the room feel spacious.",
+        "The ceiling was looked low."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_091",
+    "seedId": "sensory_091",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 약은 냄새는 달콤했지만 맛은 썼다.",
+    "english": "The medicine smelled sweet but tasted bitter.",
+    "words": [
+      "The",
+      "medicine",
+      "smelled",
+      "sweet",
+      "but",
+      "tasted",
+      "bitter",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 약은 냄새는 달콤했지만 맛은 썼다.",
+        "The"
+      ],
+      [
+        "smell/taste + adjective",
+        "smell + sweet / taste + bitter"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "medicine",
+      "smelled",
+      "sweet",
+      "but",
+      "tasted",
+      "bitter",
+      "quickly"
+    ],
+    "blankTargets": [
+      "smelled",
+      "sweet",
+      "tasted",
+      "bitter"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The medicine smelled sweetly but tasted bitterly.",
+      "statementForm": [
+        "The medicine smelled sweet but tasted bitter.",
+        "The medicine smelled sweet but tasted bitter"
+      ],
+      "fragmentForm": "The medicine smelled sweet.",
+      "wormholeVariants": [
+        "The medicine smelled sweetly but tasted bitterly.",
+        "The medicine smell sweet but taste bitter.",
+        "The medicine was smelled sweet."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_092",
+    "seedId": "sensory_092",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 시험은 쉬워 보였지만 실제로는 어렵게 느껴졌다.",
+    "english": "The test looked easy but felt difficult in practice.",
+    "words": [
+      "The",
+      "test",
+      "looked",
+      "easy",
+      "but",
+      "felt",
+      "difficult",
+      "in",
+      "practice",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 시험은 쉬워 보였지만 실제로는 어렵게 느껴졌다.",
+        "The"
+      ],
+      [
+        "look/feel + adjective",
+        "look + easy / feel + difficult"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "test",
+      "looked",
+      "easy",
+      "but",
+      "felt",
+      "difficult",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "easy",
+      "felt",
+      "difficult"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The test looked easily but felt difficultly in practice.",
+      "statementForm": [
+        "The test looked easy but felt difficult in practice.",
+        "The test looked easy but felt difficult in practice"
+      ],
+      "fragmentForm": "The test looked easy.",
+      "wormholeVariants": [
+        "The test looked easily but felt difficultly in practice.",
+        "The test look easy but feel difficult in practice.",
+        "The test was looked easy."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_093",
+    "seedId": "sensory_093",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 방은 조용해 보였지만 공기는 무겁게 느껴졌다.",
+    "english": "The room looked quiet, but the air felt heavy.",
+    "words": [
+      "The",
+      "room",
+      "looked",
+      "quiet",
+      ",",
+      "but",
+      "the",
+      "air",
+      "felt",
+      "heavy",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 방은 조용해 보였지만 공기는 무겁게 느껴졌다.",
+        "The"
+      ],
+      [
+        "look/feel + adjective",
+        "look + quiet / feel + heavy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "room",
+      "looked",
+      "quiet",
+      "but",
+      "the",
+      "air",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "quiet",
+      "felt",
+      "heavy"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room looked quietly, but the air felt heavily.",
+      "statementForm": [
+        "The room looked quiet, but the air felt heavy.",
+        "The room looked quiet, but the air felt heavy"
+      ],
+      "fragmentForm": "The room looked quiet.",
+      "wormholeVariants": [
+        "The room looked quietly, but the air felt heavily.",
+        "The room look quiet, but the air feel heavy.",
+        "The room was looked quiet."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_094",
+    "seedId": "sensory_094",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 물건은 작아 보였지만 손에는 무겁게 느껴졌다.",
+    "english": "The object looked small but felt heavy in my hand.",
+    "words": [
+      "The",
+      "object",
+      "looked",
+      "small",
+      "but",
+      "felt",
+      "heavy",
+      "in",
+      "my",
+      "hand",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 물건은 작아 보였지만 손에는 무겁게 느껴졌다.",
+        "The"
+      ],
+      [
+        "look/feel + adjective",
+        "look + small / feel + heavy"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "object",
+      "looked",
+      "small",
+      "but",
+      "felt",
+      "heavy",
+      "quickly"
+    ],
+    "blankTargets": [
+      "looked",
+      "small",
+      "felt",
+      "heavy"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The object looked smallly but felt heavily in my hand.",
+      "statementForm": [
+        "The object looked small but felt heavy in my hand.",
+        "The object looked small but felt heavy in my hand"
+      ],
+      "fragmentForm": "The object looked small.",
+      "wormholeVariants": [
+        "The object looked smallly but felt heavily in my hand.",
+        "The object look small but feel heavy in my hand.",
+        "The object was looked small."
+      ]
+    }
+  },
+  {
+    "id": "m2_sensory_095",
+    "seedId": "sensory_095",
+    "grade": "middle2",
+    "semester": "all",
+    "lessonBand": "1-4",
+    "chapterKey": "sensory_verb",
+    "chapterLabelKo": "감각동사",
+    "korean": "그 말은 부드럽게 들렸지만 의미는 차갑게 느껴졌다.",
+    "english": "The words sounded soft but felt cold in meaning.",
+    "words": [
+      "The",
+      "words",
+      "sounded",
+      "soft",
+      "but",
+      "felt",
+      "cold",
+      "in",
+      "meaning",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "sensory_verb",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그 말은 부드럽게 들렸지만 의미는 차갑게 느껴졌다.",
+        "The"
+      ],
+      [
+        "sound/feel + adjective",
+        "sound + soft / feel + cold"
+      ],
+      [
+        "주의",
+        "use an adjective complement, not an adverb"
+      ]
+    ],
+    "extraClueWordPool": [
+      "The",
+      "words",
+      "sounded",
+      "soft",
+      "but",
+      "felt",
+      "cold",
+      "quickly"
+    ],
+    "blankTargets": [
+      "sounded",
+      "soft",
+      "felt",
+      "cold"
+    ],
+    "tags": [
+      "sensory_verb",
+      "mixed"
+    ],
+    "distractorSeeds": {
+      "auxError": "The words sounded softly but felt coldly in meaning.",
+      "statementForm": [
+        "The words sounded soft but felt cold in meaning.",
+        "The words sounded soft but felt cold in meaning"
+      ],
+      "fragmentForm": "The words sounded soft.",
+      "wormholeVariants": [
+        "The words sounded softly but felt coldly in meaning.",
+        "The words sound soft but feel cold in meaning.",
+        "The words were sounded soft."
+      ]
+    }
+  }
+]
