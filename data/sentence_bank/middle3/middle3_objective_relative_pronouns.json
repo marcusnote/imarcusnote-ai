@@ -1,0 +1,6907 @@
+[
+  {
+    "id": "m3_objective_001",
+    "seedId": "objective_relative_pronouns_001",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 어제 산 책은 매우 재미있다.",
+    "english": "The book that I bought yesterday is very interesting.",
+    "words": [
+      "The",
+      "book",
+      "that",
+      "I",
+      "bought",
+      "yesterday",
+      "is",
+      "very",
+      "interesting",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 어제 산 책은 매우 재미있다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book who I bought yesterday is very interesting.",
+      "statementForm": [
+        "The book that I bought yesterday is very interesting",
+        "The book that I bought yesterday is very interesting."
+      ],
+      "fragmentForm": "The book that I bought yesterday",
+      "wormholeVariants": [
+        "The book who I bought yesterday is very interesting.",
+        "The book what I bought yesterday is very interesting.",
+        "The book that bought yesterday is very interesting.",
+        "The book it that I bought yesterday is very interesting.",
+        "The book which I bought yesterday is very interesting.",
+        "The book whom I bought yesterday is very interesting."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_002",
+    "seedId": "objective_relative_pronouns_002",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 본 영화는 감동적이었다.",
+    "english": "The movie that we watched was touching.",
+    "words": [
+      "The",
+      "movie",
+      "that",
+      "we",
+      "watched",
+      "was",
+      "touching",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 본 영화는 감동적이었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The movie who we watched was touching.",
+      "statementForm": [
+        "The movie that we watched was touching",
+        "The movie that we watched was touching."
+      ],
+      "fragmentForm": "The movie that we watched was",
+      "wormholeVariants": [
+        "The movie who we watched was touching.",
+        "The movie what we watched was touching.",
+        "The movie that watched was touching.",
+        "The movie it that we watched was touching.",
+        "The movie which we watched was touching.",
+        "The movie whom we watched was touching."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_003",
+    "seedId": "objective_relative_pronouns_003",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 만난 소녀는 새 학생이다.",
+    "english": "The girl whom I met is a new student.",
+    "words": [
+      "The",
+      "girl",
+      "whom",
+      "I",
+      "met",
+      "is",
+      "a",
+      "new",
+      "student",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 만난 소녀는 새 학생이다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The girl which I met is a new student.",
+      "statementForm": [
+        "The girl whom I met is a new student",
+        "The girl whom I met is a new student."
+      ],
+      "fragmentForm": "The girl whom I met is",
+      "wormholeVariants": [
+        "The girl which I met is a new student.",
+        "The girl what I met is a new student.",
+        "The girl whom met is a new student.",
+        "The girl he whom I met is a new student.",
+        "The girl who I met is a new student.",
+        "The girl that I met is a new student."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_004",
+    "seedId": "objective_relative_pronouns_004",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "네가 잃어버린 지갑은 책상 위에 있다.",
+    "english": "The wallet that you lost is on the desk.",
+    "words": [
+      "The",
+      "wallet",
+      "that",
+      "you",
+      "lost",
+      "is",
+      "on",
+      "the",
+      "desk",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "네가 잃어버린 지갑은 책상 위에 있다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The wallet who you lost is on the desk.",
+      "statementForm": [
+        "The wallet that you lost is on the desk",
+        "The wallet that you lost is on the desk."
+      ],
+      "fragmentForm": "The wallet that you lost is",
+      "wormholeVariants": [
+        "The wallet who you lost is on the desk.",
+        "The wallet what you lost is on the desk.",
+        "The wallet that lost is on the desk.",
+        "The wallet it that you lost is on the desk.",
+        "The wallet which you lost is on the desk.",
+        "The wallet whom you lost is on the desk."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_005",
+    "seedId": "objective_relative_pronouns_005",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그가 그린 그림은 아름답다.",
+    "english": "The picture which he painted is beautiful.",
+    "words": [
+      "The",
+      "picture",
+      "which",
+      "he",
+      "painted",
+      "is",
+      "beautiful",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그가 그린 그림은 아름답다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The picture who he painted is beautiful.",
+      "statementForm": [
+        "The picture which he painted is beautiful",
+        "The picture which he painted is beautiful."
+      ],
+      "fragmentForm": "The picture which he painted is",
+      "wormholeVariants": [
+        "The picture who he painted is beautiful.",
+        "The picture what he painted is beautiful.",
+        "The picture which painted is beautiful.",
+        "The picture it which he painted is beautiful.",
+        "The picture that he painted is beautiful.",
+        "The picture whom he painted is beautiful."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_006",
+    "seedId": "objective_relative_pronouns_006",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 초대한 선생님은 일찍 도착하셨다.",
+    "english": "The teacher whom we invited arrived early.",
+    "words": [
+      "The",
+      "teacher",
+      "whom",
+      "we",
+      "invited",
+      "arrived",
+      "early",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 초대한 선생님은 일찍 도착하셨다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher which we invited arrived early.",
+      "statementForm": [
+        "The teacher whom we invited arrived early",
+        "The teacher whom we invited arrived early."
+      ],
+      "fragmentForm": "The teacher whom we invited arrived",
+      "wormholeVariants": [
+        "The teacher which we invited arrived early.",
+        "The teacher what we invited arrived early.",
+        "The teacher whom invited arrived early.",
+        "The teacher he whom we invited arrived early.",
+        "The teacher who we invited arrived early.",
+        "The teacher that we invited arrived early."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_007",
+    "seedId": "objective_relative_pronouns_007",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 좋아하는 노래는 오래되었다.",
+    "english": "The song that I like is old.",
+    "words": [
+      "The",
+      "song",
+      "that",
+      "I",
+      "like",
+      "is",
+      "old",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 좋아하는 노래는 오래되었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The song who I like is old.",
+      "statementForm": [
+        "The song that I like is old",
+        "The song that I like is old."
+      ],
+      "fragmentForm": "The song that I like is",
+      "wormholeVariants": [
+        "The song who I like is old.",
+        "The song what I like is old.",
+        "The song that like is old.",
+        "The song it that I like is old.",
+        "The song which I like is old.",
+        "The song whom I like is old."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_008",
+    "seedId": "objective_relative_pronouns_008",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그녀가 찍은 사진은 선명하다.",
+    "english": "The photo which she took is clear.",
+    "words": [
+      "The",
+      "photo",
+      "which",
+      "she",
+      "took",
+      "is",
+      "clear",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀가 찍은 사진은 선명하다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The photo who she took is clear.",
+      "statementForm": [
+        "The photo which she took is clear",
+        "The photo which she took is clear."
+      ],
+      "fragmentForm": "The photo which she took is",
+      "wormholeVariants": [
+        "The photo who she took is clear.",
+        "The photo what she took is clear.",
+        "The photo which took is clear.",
+        "The photo it which she took is clear.",
+        "The photo that she took is clear.",
+        "The photo whom she took is clear."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_009",
+    "seedId": "objective_relative_pronouns_009",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 도운 남자는 감사해했다.",
+    "english": "The man whom we helped was thankful.",
+    "words": [
+      "The",
+      "man",
+      "whom",
+      "we",
+      "helped",
+      "was",
+      "thankful",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 도운 남자는 감사해했다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The man which we helped was thankful.",
+      "statementForm": [
+        "The man whom we helped was thankful",
+        "The man whom we helped was thankful."
+      ],
+      "fragmentForm": "The man whom we helped was",
+      "wormholeVariants": [
+        "The man which we helped was thankful.",
+        "The man what we helped was thankful.",
+        "The man whom helped was thankful.",
+        "The man he whom we helped was thankful.",
+        "The man who we helped was thankful.",
+        "The man that we helped was thankful."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_010",
+    "seedId": "objective_relative_pronouns_010",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "네가 만든 케이크는 맛있다.",
+    "english": "The cake that you made is delicious.",
+    "words": [
+      "The",
+      "cake",
+      "that",
+      "you",
+      "made",
+      "is",
+      "delicious",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "네가 만든 케이크는 맛있다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The cake who you made is delicious.",
+      "statementForm": [
+        "The cake that you made is delicious",
+        "The cake that you made is delicious."
+      ],
+      "fragmentForm": "The cake that you made is",
+      "wormholeVariants": [
+        "The cake who you made is delicious.",
+        "The cake what you made is delicious.",
+        "The cake that made is delicious.",
+        "The cake it that you made is delicious.",
+        "The cake which you made is delicious.",
+        "The cake whom you made is delicious."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_011",
+    "seedId": "objective_relative_pronouns_011",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 읽은 이야기는 짧았다.",
+    "english": "The story that I read was short.",
+    "words": [
+      "The",
+      "story",
+      "that",
+      "I",
+      "read",
+      "was",
+      "short",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 읽은 이야기는 짧았다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The story who I read was short.",
+      "statementForm": [
+        "The story that I read was short",
+        "The story that I read was short."
+      ],
+      "fragmentForm": "The story that I read was",
+      "wormholeVariants": [
+        "The story who I read was short.",
+        "The story what I read was short.",
+        "The story that read was short.",
+        "The story it that I read was short.",
+        "The story which I read was short.",
+        "The story whom I read was short."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_012",
+    "seedId": "objective_relative_pronouns_012",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그들이 방문한 박물관은 컸다.",
+    "english": "The museum which they visited was large.",
+    "words": [
+      "The",
+      "museum",
+      "which",
+      "they",
+      "visited",
+      "was",
+      "large",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그들이 방문한 박물관은 컸다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The museum who they visited was large.",
+      "statementForm": [
+        "The museum which they visited was large",
+        "The museum which they visited was large."
+      ],
+      "fragmentForm": "The museum which they visited was",
+      "wormholeVariants": [
+        "The museum who they visited was large.",
+        "The museum what they visited was large.",
+        "The museum which visited was large.",
+        "The museum it which they visited was large.",
+        "The museum that they visited was large.",
+        "The museum whom they visited was large."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_013",
+    "seedId": "objective_relative_pronouns_013",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 만난 아이들은 친절했다.",
+    "english": "The children whom we met were kind.",
+    "words": [
+      "The",
+      "children",
+      "whom",
+      "we",
+      "met",
+      "were",
+      "kind",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 만난 아이들은 친절했다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The children which we met were kind.",
+      "statementForm": [
+        "The children whom we met were kind",
+        "The children whom we met were kind."
+      ],
+      "fragmentForm": "The children whom we met were",
+      "wormholeVariants": [
+        "The children which we met were kind.",
+        "The children what we met were kind.",
+        "The children whom met were kind.",
+        "The children they whom we met were kind.",
+        "The children who we met were kind.",
+        "The children that we met were kind."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_014",
+    "seedId": "objective_relative_pronouns_014",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그가 찾은 열쇠는 문 옆에 있었다.",
+    "english": "The key that he found was beside the door.",
+    "words": [
+      "The",
+      "key",
+      "that",
+      "he",
+      "found",
+      "was",
+      "beside",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그가 찾은 열쇠는 문 옆에 있었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The key who he found was beside the door.",
+      "statementForm": [
+        "The key that he found was beside the door",
+        "The key that he found was beside the door."
+      ],
+      "fragmentForm": "The key that he found was",
+      "wormholeVariants": [
+        "The key who he found was beside the door.",
+        "The key what he found was beside the door.",
+        "The key that found was beside the door.",
+        "The key it that he found was beside the door.",
+        "The key which he found was beside the door.",
+        "The key whom he found was beside the door."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_015",
+    "seedId": "objective_relative_pronouns_015",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 입은 재킷은 따뜻했다.",
+    "english": "The jacket which I wore was warm.",
+    "words": [
+      "The",
+      "jacket",
+      "which",
+      "I",
+      "wore",
+      "was",
+      "warm",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 입은 재킷은 따뜻했다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The jacket who I wore was warm.",
+      "statementForm": [
+        "The jacket which I wore was warm",
+        "The jacket which I wore was warm."
+      ],
+      "fragmentForm": "The jacket which I wore was",
+      "wormholeVariants": [
+        "The jacket who I wore was warm.",
+        "The jacket what I wore was warm.",
+        "The jacket which wore was warm.",
+        "The jacket it which I wore was warm.",
+        "The jacket that I wore was warm.",
+        "The jacket whom I wore was warm."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_016",
+    "seedId": "objective_relative_pronouns_016",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "네가 부른 친구는 밖에서 기다리고 있다.",
+    "english": "The friend whom you called is waiting outside.",
+    "words": [
+      "The",
+      "friend",
+      "whom",
+      "you",
+      "called",
+      "is",
+      "waiting",
+      "outside",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "네가 부른 친구는 밖에서 기다리고 있다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The friend which you called is waiting outside.",
+      "statementForm": [
+        "The friend whom you called is waiting outside",
+        "The friend whom you called is waiting outside."
+      ],
+      "fragmentForm": "The friend whom you called is",
+      "wormholeVariants": [
+        "The friend which you called is waiting outside.",
+        "The friend what you called is waiting outside.",
+        "The friend whom called is waiting outside.",
+        "The friend he whom you called is waiting outside.",
+        "The friend who you called is waiting outside.",
+        "The friend that you called is waiting outside."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_017",
+    "seedId": "objective_relative_pronouns_017",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그녀가 쓴 편지는 길었다.",
+    "english": "The letter that she wrote was long.",
+    "words": [
+      "The",
+      "letter",
+      "that",
+      "she",
+      "wrote",
+      "was",
+      "long",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀가 쓴 편지는 길었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The letter who she wrote was long.",
+      "statementForm": [
+        "The letter that she wrote was long",
+        "The letter that she wrote was long."
+      ],
+      "fragmentForm": "The letter that she wrote was",
+      "wormholeVariants": [
+        "The letter who she wrote was long.",
+        "The letter what she wrote was long.",
+        "The letter that wrote was long.",
+        "The letter it that she wrote was long.",
+        "The letter which she wrote was long.",
+        "The letter whom she wrote was long."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_018",
+    "seedId": "objective_relative_pronouns_018",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 탄 버스는 붐볐다.",
+    "english": "The bus which we took was crowded.",
+    "words": [
+      "The",
+      "bus",
+      "which",
+      "we",
+      "took",
+      "was",
+      "crowded",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 탄 버스는 붐볐다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bus who we took was crowded.",
+      "statementForm": [
+        "The bus which we took was crowded",
+        "The bus which we took was crowded."
+      ],
+      "fragmentForm": "The bus which we took was",
+      "wormholeVariants": [
+        "The bus who we took was crowded.",
+        "The bus what we took was crowded.",
+        "The bus which took was crowded.",
+        "The bus it which we took was crowded.",
+        "The bus that we took was crowded.",
+        "The bus whom we took was crowded."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_019",
+    "seedId": "objective_relative_pronouns_019",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 존경하는 사람은 우리 엄마이다.",
+    "english": "The person whom I respect is my mother.",
+    "words": [
+      "The",
+      "person",
+      "whom",
+      "I",
+      "respect",
+      "is",
+      "my",
+      "mother",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 존경하는 사람은 우리 엄마이다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The person which I respect is my mother.",
+      "statementForm": [
+        "The person whom I respect is my mother",
+        "The person whom I respect is my mother."
+      ],
+      "fragmentForm": "The person whom I respect is",
+      "wormholeVariants": [
+        "The person which I respect is my mother.",
+        "The person what I respect is my mother.",
+        "The person whom respect is my mother.",
+        "The person he whom I respect is my mother.",
+        "The person who I respect is my mother.",
+        "The person that I respect is my mother."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_020",
+    "seedId": "objective_relative_pronouns_020",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그들이 고른 선물은 작았다.",
+    "english": "The gift that they chose was small.",
+    "words": [
+      "The",
+      "gift",
+      "that",
+      "they",
+      "chose",
+      "was",
+      "small",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그들이 고른 선물은 작았다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The gift who they chose was small.",
+      "statementForm": [
+        "The gift that they chose was small",
+        "The gift that they chose was small."
+      ],
+      "fragmentForm": "The gift that they chose was",
+      "wormholeVariants": [
+        "The gift who they chose was small.",
+        "The gift what they chose was small.",
+        "The gift that chose was small.",
+        "The gift it that they chose was small.",
+        "The gift which they chose was small.",
+        "The gift whom they chose was small."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_021",
+    "seedId": "objective_relative_pronouns_021",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 고친 자전거는 다시 잘 달린다.",
+    "english": "The bike that I repaired runs well again.",
+    "words": [
+      "The",
+      "bike",
+      "that",
+      "I",
+      "fixed",
+      "runs",
+      "well",
+      "again",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 고친 자전거는 다시 잘 달린다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bike who I fixed runs well again.",
+      "statementForm": [
+        "The bike that I repaired runs well again",
+        "The bike that I repaired runs well again."
+      ],
+      "fragmentForm": "The bike that I fixed runs",
+      "wormholeVariants": [
+        "The bike who I fixed runs well again.",
+        "The bike what I fixed runs well again.",
+        "The bike that fixed runs well again.",
+        "The bike it that I fixed runs well again.",
+        "The bike which I repaired runs well again.",
+        "The bike who I repaired runs well again."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_022",
+    "seedId": "objective_relative_pronouns_022",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 들은 소식은 사실이었다.",
+    "english": "The news which we heard was true.",
+    "words": [
+      "The",
+      "news",
+      "which",
+      "we",
+      "heard",
+      "was",
+      "true",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 들은 소식은 사실이었다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The news who we heard was true.",
+      "statementForm": [
+        "The news which we heard was true",
+        "The news which we heard was true."
+      ],
+      "fragmentForm": "The news which we heard was",
+      "wormholeVariants": [
+        "The news who we heard was true.",
+        "The news what we heard was true.",
+        "The news which heard was true.",
+        "The news it which we heard was true.",
+        "The news that we heard was true.",
+        "The news whom we heard was true."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_023",
+    "seedId": "objective_relative_pronouns_023",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그가 인터뷰한 선수는 유명하다.",
+    "english": "The player whom he interviewed is famous.",
+    "words": [
+      "The",
+      "player",
+      "whom",
+      "he",
+      "interviewed",
+      "is",
+      "famous",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그가 인터뷰한 선수는 유명하다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The player which he interviewed is famous.",
+      "statementForm": [
+        "The player whom he interviewed is famous",
+        "The player whom he interviewed is famous."
+      ],
+      "fragmentForm": "The player whom he interviewed is",
+      "wormholeVariants": [
+        "The player which he interviewed is famous.",
+        "The player what he interviewed is famous.",
+        "The player whom interviewed is famous.",
+        "The player he whom he interviewed is famous.",
+        "The player who he interviewed is famous.",
+        "The player that he interviewed is famous."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_024",
+    "seedId": "objective_relative_pronouns_024",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "네가 연 문은 뒤쪽 문이었다.",
+    "english": "The door that you opened was the back door.",
+    "words": [
+      "The",
+      "door",
+      "that",
+      "you",
+      "opened",
+      "was",
+      "the",
+      "back",
+      "door",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "네가 연 문은 뒤쪽 문이었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The door who you opened was the back door.",
+      "statementForm": [
+        "The door that you opened was the back door",
+        "The door that you opened was the back door."
+      ],
+      "fragmentForm": "The door that you opened was",
+      "wormholeVariants": [
+        "The door who you opened was the back door.",
+        "The door what you opened was the back door.",
+        "The door that opened was the back door.",
+        "The door it that you opened was the back door.",
+        "The door which you opened was the back door.",
+        "The door whom you opened was the back door."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_025",
+    "seedId": "objective_relative_pronouns_025",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 빌린 펜은 파란색이다.",
+    "english": "The pen which I borrowed is blue.",
+    "words": [
+      "The",
+      "pen",
+      "which",
+      "I",
+      "borrowed",
+      "is",
+      "blue",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 빌린 펜은 파란색이다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The pen who I borrowed is blue.",
+      "statementForm": [
+        "The pen which I borrowed is blue",
+        "The pen which I borrowed is blue."
+      ],
+      "fragmentForm": "The pen which I borrowed is",
+      "wormholeVariants": [
+        "The pen who I borrowed is blue.",
+        "The pen what I borrowed is blue.",
+        "The pen which borrowed is blue.",
+        "The pen it which I borrowed is blue.",
+        "The pen that I borrowed is blue.",
+        "The pen whom I borrowed is blue."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_026",
+    "seedId": "objective_relative_pronouns_026",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 찾지 못한 책은 도서관에 있었다.",
+    "english": "The book that I could not find was in the library.",
+    "words": [
+      "The",
+      "book",
+      "that",
+      "I",
+      "could",
+      "not",
+      "find",
+      "was",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 찾지 못한 책은 도서관에 있었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book who I could not find was in the library.",
+      "statementForm": [
+        "The book that I could not find was in the library",
+        "The book that I could not find was in the library."
+      ],
+      "fragmentForm": "The book that I could not",
+      "wormholeVariants": [
+        "The book who I could not find was in the library.",
+        "The book what I could not find was in the library.",
+        "The book that could not find was in the library.",
+        "The book it that I could not find was in the library.",
+        "The book which I could not find was in the library.",
+        "The book whom I could not find was in the library."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_027",
+    "seedId": "objective_relative_pronouns_027",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그가 좋아하지 않는 음식은 양파이다.",
+    "english": "The food that he does not like is onions.",
+    "words": [
+      "The",
+      "food",
+      "that",
+      "he",
+      "does",
+      "not",
+      "like",
+      "is",
+      "onions",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그가 좋아하지 않는 음식은 양파이다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The food who he does not like is onions.",
+      "statementForm": [
+        "The food that he does not like is onions",
+        "The food that he does not like is onions."
+      ],
+      "fragmentForm": "The food that he does not",
+      "wormholeVariants": [
+        "The food who he does not like is onions.",
+        "The food what he does not like is onions.",
+        "The food that does not like is onions.",
+        "The food it that he does not like is onions.",
+        "The food which he does not like is onions.",
+        "The food whom he does not like is onions."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_028",
+    "seedId": "objective_relative_pronouns_028",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 이해하지 못한 문제는 어려웠다.",
+    "english": "The problem which we did not understand was difficult.",
+    "words": [
+      "The",
+      "problem",
+      "which",
+      "we",
+      "did",
+      "not",
+      "understand",
+      "was",
+      "difficult",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 이해하지 못한 문제는 어려웠다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem who we did not understand was difficult.",
+      "statementForm": [
+        "The problem which we did not understand was difficult",
+        "The problem which we did not understand was difficult."
+      ],
+      "fragmentForm": "The problem which we did not",
+      "wormholeVariants": [
+        "The problem who we did not understand was difficult.",
+        "The problem what we did not understand was difficult.",
+        "The problem which did not understand was difficult.",
+        "The problem it which we did not understand was difficult.",
+        "The problem that we did not understand was difficult.",
+        "The problem whom we did not understand was difficult."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_029",
+    "seedId": "objective_relative_pronouns_036",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리 반이 준비한 발표는 많은 질문을 받았다.",
+    "english": "The presentation that our class prepared received many questions.",
+    "words": [
+      "The",
+      "presentation",
+      "that",
+      "our",
+      "class",
+      "prepared",
+      "received",
+      "many",
+      "questions",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리 반이 준비한 발표는 많은 질문을 받았다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The presentation who our class prepared received many questions.",
+      "statementForm": [
+        "The presentation that our class prepared received many questions",
+        "The presentation that our class prepared received many questions."
+      ],
+      "fragmentForm": "The presentation that our class prepared",
+      "wormholeVariants": [
+        "The presentation who our class prepared received many questions.",
+        "The presentation what our class prepared received many questions.",
+        "The presentation that class prepared received many questions.",
+        "The presentation it that our class prepared received many questions.",
+        "The presentation which our class prepared received many questions.",
+        "The presentation whom our class prepared received many questions."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_030",
+    "seedId": "objective_relative_pronouns_037",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 신뢰하는 친구는 항상 정직하다.",
+    "english": "The friend whom I trust is always honest.",
+    "words": [
+      "The",
+      "friend",
+      "whom",
+      "I",
+      "trust",
+      "is",
+      "always",
+      "honest",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 신뢰하는 친구는 항상 정직하다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The friend which I trust is always honest.",
+      "statementForm": [
+        "The friend whom I trust is always honest",
+        "The friend whom I trust is always honest."
+      ],
+      "fragmentForm": "The friend whom I trust is",
+      "wormholeVariants": [
+        "The friend which I trust is always honest.",
+        "The friend what I trust is always honest.",
+        "The friend whom trust is always honest.",
+        "The friend he whom I trust is always honest.",
+        "The friend who I trust is always honest.",
+        "The friend that I trust is always honest."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_031",
+    "seedId": "objective_relative_pronouns_038",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그들이 해결한 문제는 생각보다 복잡했다.",
+    "english": "The problem which they solved was more complex than expected.",
+    "words": [
+      "The",
+      "problem",
+      "which",
+      "they",
+      "solved",
+      "was",
+      "more",
+      "complex",
+      "than",
+      "expected",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그들이 해결한 문제는 생각보다 복잡했다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem who they solved was more complex than expected.",
+      "statementForm": [
+        "The problem which they solved was more complex than expected",
+        "The problem which they solved was more complex than expected."
+      ],
+      "fragmentForm": "The problem which they solved was",
+      "wormholeVariants": [
+        "The problem who they solved was more complex than expected.",
+        "The problem what they solved was more complex than expected.",
+        "The problem which solved was more complex than expected.",
+        "The problem it which they solved was more complex than expected.",
+        "The problem that they solved was more complex than expected.",
+        "The problem whom they solved was more complex than expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_032",
+    "seedId": "objective_relative_pronouns_039",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "선생님이 추천하신 책은 많은 교훈을 담고 있다.",
+    "english": "The book that the teacher recommended has many lessons.",
+    "words": [
+      "The",
+      "book",
+      "that",
+      "the",
+      "teacher",
+      "recommended",
+      "has",
+      "many",
+      "lessons",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "선생님이 추천하신 책은 많은 교훈을 담고 있다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The book who the teacher recommended has many lessons.",
+      "statementForm": [
+        "The book that the teacher recommended has many lessons",
+        "The book that the teacher recommended has many lessons."
+      ],
+      "fragmentForm": "The book that the teacher recommended",
+      "wormholeVariants": [
+        "The book who the teacher recommended has many lessons.",
+        "The book what the teacher recommended has many lessons.",
+        "The book it that the teacher recommended has many lessons.",
+        "The book which the teacher recommended has many lessons.",
+        "The book whom the teacher recommended has many lessons.",
+        "The book the teacher recommended has many lessons."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_033",
+    "seedId": "objective_relative_pronouns_040",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 인터뷰한 작가는 새 소설을 출판했다.",
+    "english": "The writer whom we interviewed published a new novel.",
+    "words": [
+      "The",
+      "writer",
+      "whom",
+      "we",
+      "interviewed",
+      "published",
+      "a",
+      "new",
+      "novel",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 인터뷰한 작가는 새 소설을 출판했다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The writer which we interviewed published a new novel.",
+      "statementForm": [
+        "The writer whom we interviewed published a new novel",
+        "The writer whom we interviewed published a new novel."
+      ],
+      "fragmentForm": "The writer whom we interviewed published",
+      "wormholeVariants": [
+        "The writer which we interviewed published a new novel.",
+        "The writer what we interviewed published a new novel.",
+        "The writer whom interviewed published a new novel.",
+        "The writer he whom we interviewed published a new novel.",
+        "The writer who we interviewed published a new novel.",
+        "The writer that we interviewed published a new novel."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_034",
+    "seedId": "objective_relative_pronouns_041",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그녀가 설계한 앱은 학생들에게 도움이 된다.",
+    "english": "The app that she designed helps students.",
+    "words": [
+      "The",
+      "app",
+      "that",
+      "she",
+      "designed",
+      "helps",
+      "students",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀가 설계한 앱은 학생들에게 도움이 된다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The app who she designed helps students.",
+      "statementForm": [
+        "The app that she designed helps students",
+        "The app that she designed helps students."
+      ],
+      "fragmentForm": "The app that she designed helps",
+      "wormholeVariants": [
+        "The app who she designed helps students.",
+        "The app what she designed helps students.",
+        "The app that designed helps students.",
+        "The app it that she designed helps students.",
+        "The app which she designed helps students.",
+        "The app whom she designed helps students."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_035",
+    "seedId": "objective_relative_pronouns_042",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 어릴 때 살던 집은 지금 카페이다.",
+    "english": "The house which I lived in as a child is now a cafe.",
+    "words": [
+      "The",
+      "house",
+      "which",
+      "I",
+      "lived",
+      "in",
+      "as",
+      "a",
+      "child",
+      "is",
+      "now",
+      "a",
+      "cafe",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 어릴 때 살던 집은 지금 카페이다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The house who I lived in as a child is now a cafe.",
+      "statementForm": [
+        "The house which I lived in as a child is now a cafe",
+        "The house which I lived in as a child is now a cafe."
+      ],
+      "fragmentForm": "The house which I lived in",
+      "wormholeVariants": [
+        "The house who I lived in as a child is now a cafe.",
+        "The house what I lived in as a child is now a cafe.",
+        "The house which lived in as a child is now a cafe.",
+        "The house it which I lived in as a child is now a cafe.",
+        "The house that I lived in as a child is now a cafe.",
+        "The house whom I lived in as a child is now a cafe."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_036",
+    "seedId": "objective_relative_pronouns_043",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그가 어제 설명한 규칙은 중요하다.",
+    "english": "The rule that he explained yesterday is important.",
+    "words": [
+      "The",
+      "rule",
+      "that",
+      "he",
+      "explained",
+      "yesterday",
+      "is",
+      "important",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그가 어제 설명한 규칙은 중요하다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rule who he explained yesterday is important.",
+      "statementForm": [
+        "The rule that he explained yesterday is important",
+        "The rule that he explained yesterday is important."
+      ],
+      "fragmentForm": "The rule that he explained yesterday",
+      "wormholeVariants": [
+        "The rule who he explained yesterday is important.",
+        "The rule what he explained yesterday is important.",
+        "The rule that explained yesterday is important.",
+        "The rule it that he explained yesterday is important.",
+        "The rule which he explained yesterday is important.",
+        "The rule whom he explained yesterday is important."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_037",
+    "seedId": "objective_relative_pronouns_044",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 공항에서 만난 여행객들은 친절했다.",
+    "english": "The travelers whom we met at the airport were friendly.",
+    "words": [
+      "The",
+      "travelers",
+      "whom",
+      "we",
+      "met",
+      "at",
+      "the",
+      "airport",
+      "were",
+      "friendly",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 공항에서 만난 여행객들은 친절했다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The travelers which we met at the airport were friendly.",
+      "statementForm": [
+        "The travelers whom we met at the airport were friendly",
+        "The travelers whom we met at the airport were friendly."
+      ],
+      "fragmentForm": "The travelers whom we met at",
+      "wormholeVariants": [
+        "The travelers which we met at the airport were friendly.",
+        "The travelers what we met at the airport were friendly.",
+        "The travelers whom met at the airport were friendly.",
+        "The travelers they whom we met at the airport were friendly.",
+        "The travelers who we met at the airport were friendly.",
+        "The travelers that we met at the airport were friendly."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_038",
+    "seedId": "objective_relative_pronouns_045",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그들이 만든 계획은 현실적이었다.",
+    "english": "The plan which they made was realistic.",
+    "words": [
+      "The",
+      "plan",
+      "which",
+      "they",
+      "made",
+      "was",
+      "realistic",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그들이 만든 계획은 현실적이었다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan who they made was realistic.",
+      "statementForm": [
+        "The plan which they made was realistic",
+        "The plan which they made was realistic."
+      ],
+      "fragmentForm": "The plan which they made was",
+      "wormholeVariants": [
+        "The plan who they made was realistic.",
+        "The plan what they made was realistic.",
+        "The plan which made was realistic.",
+        "The plan it which they made was realistic.",
+        "The plan that they made was realistic.",
+        "The plan whom they made was realistic."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_039",
+    "seedId": "objective_relative_pronouns_046",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 가장 자주 사용하는 단어는 simple이다.",
+    "english": "The word that I use most often is simple.",
+    "words": [
+      "The",
+      "word",
+      "that",
+      "I",
+      "use",
+      "most",
+      "often",
+      "is",
+      "simple",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 가장 자주 사용하는 단어는 simple이다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The word who I use most often is simple.",
+      "statementForm": [
+        "The word that I use most often is simple",
+        "The word that I use most often is simple."
+      ],
+      "fragmentForm": "The word that I use most",
+      "wormholeVariants": [
+        "The word who I use most often is simple.",
+        "The word what I use most often is simple.",
+        "The word that use most often is simple.",
+        "The word it that I use most often is simple.",
+        "The word which I use most often is simple.",
+        "The word whom I use most often is simple."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_040",
+    "seedId": "objective_relative_pronouns_047",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그녀가 돌보는 아이들은 그녀를 좋아한다.",
+    "english": "The children whom she takes care of like her.",
+    "words": [
+      "The",
+      "children",
+      "whom",
+      "she",
+      "takes",
+      "care",
+      "of",
+      "like",
+      "her",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀가 돌보는 아이들은 그녀를 좋아한다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The children which she takes care of like her.",
+      "statementForm": [
+        "The children whom she takes care of like her",
+        "The children whom she takes care of like her."
+      ],
+      "fragmentForm": "The children whom she takes care",
+      "wormholeVariants": [
+        "The children which she takes care of like her.",
+        "The children what she takes care of like her.",
+        "The children whom takes care of like her.",
+        "The children they whom she takes care of like her.",
+        "The children who she takes care of like her.",
+        "The children that she takes care of like her."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_041",
+    "seedId": "objective_relative_pronouns_048",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 조사한 자료는 보고서를 더 강하게 만들었다.",
+    "english": "The data that we studied made the report stronger.",
+    "words": [
+      "The",
+      "data",
+      "that",
+      "we",
+      "studied",
+      "made",
+      "the",
+      "report",
+      "stronger",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 조사한 자료는 보고서를 더 강하게 만들었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The data who we studied made the report stronger.",
+      "statementForm": [
+        "The data that we studied made the report stronger",
+        "The data that we studied made the report stronger."
+      ],
+      "fragmentForm": "The data that we studied made",
+      "wormholeVariants": [
+        "The data who we studied made the report stronger.",
+        "The data what we studied made the report stronger.",
+        "The data that studied made the report stronger.",
+        "The data it that we studied made the report stronger.",
+        "The data which we studied made the report stronger.",
+        "The data whom we studied made the report stronger."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_042",
+    "seedId": "objective_relative_pronouns_049",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "네가 어젯밤에 보낸 메시지는 아직 도착하지 않았다.",
+    "english": "The message which you sent last night has not arrived yet.",
+    "words": [
+      "The",
+      "message",
+      "which",
+      "you",
+      "sent",
+      "last",
+      "night",
+      "has",
+      "not",
+      "arrived",
+      "yet",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "네가 어젯밤에 보낸 메시지는 아직 도착하지 않았다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The message who you sent last night has not arrived yet.",
+      "statementForm": [
+        "The message which you sent last night has not arrived yet",
+        "The message which you sent last night has not arrived yet."
+      ],
+      "fragmentForm": "The message which you sent last",
+      "wormholeVariants": [
+        "The message who you sent last night has not arrived yet.",
+        "The message what you sent last night has not arrived yet.",
+        "The message which sent last night has not arrived yet.",
+        "The message it which you sent last night has not arrived yet.",
+        "The message that you sent last night has not arrived yet.",
+        "The message whom you sent last night has not arrived yet."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_043",
+    "seedId": "objective_relative_pronouns_050",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 존경하는 과학자는 환경을 연구한다.",
+    "english": "The scientist whom I admire studies the environment.",
+    "words": [
+      "The",
+      "scientist",
+      "whom",
+      "I",
+      "admire",
+      "studies",
+      "the",
+      "environment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 존경하는 과학자는 환경을 연구한다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The scientist which I admire studies the environment.",
+      "statementForm": [
+        "The scientist whom I admire studies the environment",
+        "The scientist whom I admire studies the environment."
+      ],
+      "fragmentForm": "The scientist whom I admire studies",
+      "wormholeVariants": [
+        "The scientist which I admire studies the environment.",
+        "The scientist what I admire studies the environment.",
+        "The scientist whom admire studies the environment.",
+        "The scientist he whom I admire studies the environment.",
+        "The scientist who I admire studies the environment.",
+        "The scientist that I admire studies the environment."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_044",
+    "seedId": "objective_relative_pronouns_051",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그들이 수리한 컴퓨터는 다시 작동한다.",
+    "english": "The computer that they repaired works again.",
+    "words": [
+      "The",
+      "computer",
+      "that",
+      "they",
+      "repaired",
+      "works",
+      "again",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그들이 수리한 컴퓨터는 다시 작동한다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The computer who they repaired works again.",
+      "statementForm": [
+        "The computer that they repaired works again",
+        "The computer that they repaired works again."
+      ],
+      "fragmentForm": "The computer that they repaired works",
+      "wormholeVariants": [
+        "The computer who they repaired works again.",
+        "The computer what they repaired works again.",
+        "The computer that repaired works again.",
+        "The computer it that they repaired works again.",
+        "The computer which they repaired works again.",
+        "The computer whom they repaired works again."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_045",
+    "seedId": "objective_relative_pronouns_052",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 선택한 주제는 모두에게 흥미로웠다.",
+    "english": "The topic which we chose was interesting to everyone.",
+    "words": [
+      "The",
+      "topic",
+      "which",
+      "we",
+      "chose",
+      "was",
+      "interesting",
+      "to",
+      "everyone",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 선택한 주제는 모두에게 흥미로웠다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The topic who we chose was interesting to everyone.",
+      "statementForm": [
+        "The topic which we chose was interesting to everyone",
+        "The topic which we chose was interesting to everyone."
+      ],
+      "fragmentForm": "The topic which we chose was",
+      "wormholeVariants": [
+        "The topic who we chose was interesting to everyone.",
+        "The topic what we chose was interesting to everyone.",
+        "The topic which chose was interesting to everyone.",
+        "The topic it which we chose was interesting to everyone.",
+        "The topic that we chose was interesting to everyone.",
+        "The topic whom we chose was interesting to everyone."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_046",
+    "seedId": "objective_relative_pronouns_053",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그가 촬영한 장면은 영화의 마지막 부분에 나온다.",
+    "english": "The scene that he filmed appears at the end of the movie.",
+    "words": [
+      "The",
+      "scene",
+      "that",
+      "he",
+      "filmed",
+      "appears",
+      "at",
+      "the",
+      "end",
+      "of",
+      "the",
+      "movie",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그가 촬영한 장면은 영화의 마지막 부분에 나온다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The scene who he filmed appears at the end of the movie.",
+      "statementForm": [
+        "The scene that he filmed appears at the end of the movie",
+        "The scene that he filmed appears at the end of the movie."
+      ],
+      "fragmentForm": "The scene that he filmed appears",
+      "wormholeVariants": [
+        "The scene who he filmed appears at the end of the movie.",
+        "The scene what he filmed appears at the end of the movie.",
+        "The scene that filmed appears at the end of the movie.",
+        "The scene it that he filmed appears at the end of the movie.",
+        "The scene which he filmed appears at the end of the movie.",
+        "The scene whom he filmed appears at the end of the movie."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_047",
+    "seedId": "objective_relative_pronouns_054",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 상담한 선생님은 좋은 조언을 해 주셨다.",
+    "english": "The teacher whom I talked to gave me good advice.",
+    "words": [
+      "The",
+      "teacher",
+      "whom",
+      "I",
+      "talked",
+      "to",
+      "gave",
+      "me",
+      "good",
+      "advice",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 상담한 선생님은 좋은 조언을 해 주셨다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher which I talked to gave me good advice.",
+      "statementForm": [
+        "The teacher whom I talked to gave me good advice",
+        "The teacher whom I talked to gave me good advice."
+      ],
+      "fragmentForm": "The teacher whom I talked to",
+      "wormholeVariants": [
+        "The teacher which I talked to gave me good advice.",
+        "The teacher what I talked to gave me good advice.",
+        "The teacher whom talked to gave me good advice.",
+        "The teacher he whom I talked to gave me good advice.",
+        "The teacher who I talked to gave me good advice.",
+        "The teacher that I talked to gave me good advice."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_048",
+    "seedId": "objective_relative_pronouns_055",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그녀가 발견한 실수는 쉽게 고쳐졌다.",
+    "english": "The mistake which she found was fixed easily.",
+    "words": [
+      "The",
+      "mistake",
+      "which",
+      "she",
+      "found",
+      "was",
+      "fixed",
+      "easily",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀가 발견한 실수는 쉽게 고쳐졌다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The mistake who she found was fixed easily.",
+      "statementForm": [
+        "The mistake which she found was fixed easily",
+        "The mistake which she found was fixed easily."
+      ],
+      "fragmentForm": "The mistake which she found was",
+      "wormholeVariants": [
+        "The mistake who she found was fixed easily.",
+        "The mistake what she found was fixed easily.",
+        "The mistake which found was fixed easily.",
+        "The mistake it which she found was fixed easily.",
+        "The mistake that she found was fixed easily.",
+        "The mistake whom she found was fixed easily."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_049",
+    "seedId": "objective_relative_pronouns_056",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 배운 전략은 시험에서 유용했다.",
+    "english": "The strategy that we learned was useful on the test.",
+    "words": [
+      "The",
+      "strategy",
+      "that",
+      "we",
+      "learned",
+      "was",
+      "useful",
+      "on",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 배운 전략은 시험에서 유용했다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The strategy who we learned was useful on the test.",
+      "statementForm": [
+        "The strategy that we learned was useful on the test",
+        "The strategy that we learned was useful on the test."
+      ],
+      "fragmentForm": "The strategy that we learned was",
+      "wormholeVariants": [
+        "The strategy who we learned was useful on the test.",
+        "The strategy what we learned was useful on the test.",
+        "The strategy that learned was useful on the test.",
+        "The strategy it that we learned was useful on the test.",
+        "The strategy which we learned was useful on the test.",
+        "The strategy whom we learned was useful on the test."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_050",
+    "seedId": "objective_relative_pronouns_057",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그들이 지지하는 운동은 환경을 보호한다.",
+    "english": "The movement which they support protects the environment.",
+    "words": [
+      "The",
+      "movement",
+      "which",
+      "they",
+      "support",
+      "protects",
+      "the",
+      "environment",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그들이 지지하는 운동은 환경을 보호한다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The movement who they support protects the environment.",
+      "statementForm": [
+        "The movement which they support protects the environment",
+        "The movement which they support protects the environment."
+      ],
+      "fragmentForm": "The movement which they support protects",
+      "wormholeVariants": [
+        "The movement who they support protects the environment.",
+        "The movement what they support protects the environment.",
+        "The movement which support protects the environment.",
+        "The movement it which they support protects the environment.",
+        "The movement that they support protects the environment.",
+        "The movement whom they support protects the environment."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_051",
+    "seedId": "objective_relative_pronouns_058",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 공원에서 만난 노인은 이야기를 많이 해 주셨다.",
+    "english": "The old man whom I met in the park told many stories.",
+    "words": [
+      "The",
+      "old",
+      "man",
+      "whom",
+      "I",
+      "met",
+      "in",
+      "the",
+      "park",
+      "told",
+      "many",
+      "stories",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 공원에서 만난 노인은 이야기를 많이 해 주셨다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The old man which I met in the park told many stories.",
+      "statementForm": [
+        "The old man whom I met in the park told many stories",
+        "The old man whom I met in the park told many stories."
+      ],
+      "fragmentForm": "The old man whom I met in",
+      "wormholeVariants": [
+        "The old man which I met in the park told many stories.",
+        "The old man what I met in the park told many stories.",
+        "The old man whom met in the park told many stories.",
+        "The old man he whom I met in the park told many stories.",
+        "The old man who I met in the park told many stories.",
+        "The old man that I met in the park told many stories."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_052",
+    "seedId": "objective_relative_pronouns_059",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "네가 저장한 파일은 폴더 안에 있다.",
+    "english": "The file that you saved is in the folder.",
+    "words": [
+      "The",
+      "file",
+      "that",
+      "you",
+      "saved",
+      "is",
+      "in",
+      "the",
+      "folder",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "네가 저장한 파일은 폴더 안에 있다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The file who you saved is in the folder.",
+      "statementForm": [
+        "The file that you saved is in the folder",
+        "The file that you saved is in the folder."
+      ],
+      "fragmentForm": "The file that you saved is",
+      "wormholeVariants": [
+        "The file who you saved is in the folder.",
+        "The file what you saved is in the folder.",
+        "The file that saved is in the folder.",
+        "The file it that you saved is in the folder.",
+        "The file which you saved is in the folder.",
+        "The file whom you saved is in the folder."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_053",
+    "seedId": "objective_relative_pronouns_060",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 찍은 사진들은 전시회에 걸렸다.",
+    "english": "The photos which we took were displayed at the exhibition.",
+    "words": [
+      "The",
+      "photos",
+      "which",
+      "we",
+      "took",
+      "were",
+      "displayed",
+      "at",
+      "the",
+      "exhibition",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 찍은 사진들은 전시회에 걸렸다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The photos who we took were displayed at the exhibition.",
+      "statementForm": [
+        "The photos which we took were displayed at the exhibition",
+        "The photos which we took were displayed at the exhibition."
+      ],
+      "fragmentForm": "The photos which we took were",
+      "wormholeVariants": [
+        "The photos who we took were displayed at the exhibition.",
+        "The photos what we took were displayed at the exhibition.",
+        "The photos which took were displayed at the exhibition.",
+        "The photos they which we took were displayed at the exhibition.",
+        "The photos that we took were displayed at the exhibition.",
+        "The photos whom we took were displayed at the exhibition."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_054",
+    "seedId": "objective_relative_pronouns_061",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "그가 받아들이지 않은 제안은 꽤 합리적이었다.",
+    "english": "The suggestion that he did not accept was quite reasonable.",
+    "words": [
+      "The",
+      "suggestion",
+      "that",
+      "he",
+      "did",
+      "not",
+      "accept",
+      "was",
+      "quite",
+      "reasonable",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "그가 받아들이지 않은 제안은 꽤 합리적이었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The suggestion who he did not accept was quite reasonable.",
+      "statementForm": [
+        "The suggestion that he did not accept was quite reasonable",
+        "The suggestion that he did not accept was quite reasonable."
+      ],
+      "fragmentForm": "The suggestion that he did not",
+      "wormholeVariants": [
+        "The suggestion who he did not accept was quite reasonable.",
+        "The suggestion what he did not accept was quite reasonable.",
+        "The suggestion that did not accept was quite reasonable.",
+        "The suggestion it that he did not accept was quite reasonable.",
+        "The suggestion which he did not accept was quite reasonable.",
+        "The suggestion whom he did not accept was quite reasonable."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_055",
+    "seedId": "objective_relative_pronouns_062",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "내가 아직 만나지 못한 학생은 전학생이다.",
+    "english": "The student whom I have not met yet is a transfer student.",
+    "words": [
+      "The",
+      "student",
+      "whom",
+      "I",
+      "have",
+      "not",
+      "met",
+      "yet",
+      "is",
+      "a",
+      "transfer",
+      "student",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "내가 아직 만나지 못한 학생은 전학생이다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student which I have not met yet is a transfer student.",
+      "statementForm": [
+        "The student whom I have not met yet is a transfer student",
+        "The student whom I have not met yet is a transfer student."
+      ],
+      "fragmentForm": "The student whom I have not",
+      "wormholeVariants": [
+        "The student which I have not met yet is a transfer student.",
+        "The student what I have not met yet is a transfer student.",
+        "The student whom have not met yet is a transfer student.",
+        "The student he whom I have not met yet is a transfer student.",
+        "The student who I have not met yet is a transfer student.",
+        "The student that I have not met yet is a transfer student."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_056",
+    "seedId": "objective_relative_pronouns_063",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "우리가 끝내지 못한 프로젝트는 다음 주까지 연장되었다.",
+    "english": "The project which we did not finish was extended until next week.",
+    "words": [
+      "The",
+      "project",
+      "which",
+      "we",
+      "did",
+      "not",
+      "finish",
+      "was",
+      "extended",
+      "until",
+      "next",
+      "week",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리가 끝내지 못한 프로젝트는 다음 주까지 연장되었다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The project who we did not finish was extended until next week.",
+      "statementForm": [
+        "The project which we did not finish was extended until next week",
+        "The project which we did not finish was extended until next week."
+      ],
+      "fragmentForm": "The project which we did not",
+      "wormholeVariants": [
+        "The project who we did not finish was extended until next week.",
+        "The project what we did not finish was extended until next week.",
+        "The project which did not finish was extended until next week.",
+        "The project it which we did not finish was extended until next week.",
+        "The project that we did not finish was extended until next week.",
+        "The project whom we did not finish was extended until next week."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_057",
+    "seedId": "objective_relative_pronouns_071",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 우리가 토론에서 제시한 근거는 심사위원들을 설득했다.",
+    "english": "The evidence that we presented in the debate persuaded the judges.",
+    "words": [
+      "The",
+      "evidence",
+      "that",
+      "we",
+      "presented",
+      "in",
+      "the",
+      "debate",
+      "persuaded",
+      "the",
+      "judges",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 우리가 토론에서 제시한 근거는 심사위원들을 설득했다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The evidence who we presented in the debate persuaded the judges.",
+      "statementForm": [
+        "The evidence that we presented in the debate persuaded the judges",
+        "The evidence that we presented in the debate persuaded the judges."
+      ],
+      "fragmentForm": "The evidence that we presented in",
+      "wormholeVariants": [
+        "The evidence who we presented in the debate persuaded the judges.",
+        "The evidence what we presented in the debate persuaded the judges.",
+        "The evidence that presented in the debate persuaded the judges.",
+        "The evidence it that we presented in the debate persuaded the judges.",
+        "The evidence which we presented in the debate persuaded the judges.",
+        "The evidence whom we presented in the debate persuaded the judges."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_058",
+    "seedId": "objective_relative_pronouns_072",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 내가 오랫동안 따라온 지도자는 공동체를 위해 일한다.",
+    "english": "The leader whom I have followed for years works for the community.",
+    "words": [
+      "The",
+      "leader",
+      "whom",
+      "I",
+      "have",
+      "followed",
+      "for",
+      "years",
+      "works",
+      "for",
+      "the",
+      "community",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 내가 오랫동안 따라온 지도자는 공동체를 위해 일한다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The leader which I have followed for years works for the community.",
+      "statementForm": [
+        "The leader whom I have followed for years works for the community",
+        "The leader whom I have followed for years works for the community."
+      ],
+      "fragmentForm": "The leader whom I have followed",
+      "wormholeVariants": [
+        "The leader which I have followed for years works for the community.",
+        "The leader what I have followed for years works for the community.",
+        "The leader whom have followed for years works for the community.",
+        "The leader he whom I have followed for years works for the community.",
+        "The leader who I have followed for years works for the community.",
+        "The leader that I have followed for years works for the community."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_059",
+    "seedId": "objective_relative_pronouns_073",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그들이 실험에서 관찰한 변화는 예상보다 컸다.",
+    "english": "The change which they observed in the experiment was larger than expected.",
+    "words": [
+      "The",
+      "change",
+      "which",
+      "they",
+      "observed",
+      "in",
+      "the",
+      "experiment",
+      "was",
+      "larger",
+      "than",
+      "expected",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그들이 실험에서 관찰한 변화는 예상보다 컸다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The change who they observed in the experiment was larger than expected.",
+      "statementForm": [
+        "The change which they observed in the experiment was larger than expected",
+        "The change which they observed in the experiment was larger than expected."
+      ],
+      "fragmentForm": "The change which they observed in",
+      "wormholeVariants": [
+        "The change who they observed in the experiment was larger than expected.",
+        "The change what they observed in the experiment was larger than expected.",
+        "The change which observed in the experiment was larger than expected.",
+        "The change it which they observed in the experiment was larger than expected.",
+        "The change that they observed in the experiment was larger than expected.",
+        "The change whom they observed in the experiment was larger than expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_060",
+    "seedId": "objective_relative_pronouns_074",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 학생들이 온라인에서 공유한 자료는 빠르게 퍼졌다.",
+    "english": "The material that students shared online spread quickly.",
+    "words": [
+      "The",
+      "material",
+      "that",
+      "students",
+      "shared",
+      "online",
+      "spread",
+      "quickly",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 학생들이 온라인에서 공유한 자료는 빠르게 퍼졌다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The material who students shared online spread quickly.",
+      "statementForm": [
+        "The material that students shared online spread quickly",
+        "The material that students shared online spread quickly."
+      ],
+      "fragmentForm": "The material that students shared online",
+      "wormholeVariants": [
+        "The material who students shared online spread quickly.",
+        "The material what students shared online spread quickly.",
+        "The material it that students shared online spread quickly.",
+        "The material which students shared online spread quickly.",
+        "The material whom students shared online spread quickly.",
+        "The material students shared online spread quickly."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_061",
+    "seedId": "objective_relative_pronouns_075",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 우리가 회의에서 만난 전문가들은 다양한 의견을 제시했다.",
+    "english": "The experts whom we met at the meeting offered various opinions.",
+    "words": [
+      "The",
+      "experts",
+      "whom",
+      "we",
+      "met",
+      "at",
+      "the",
+      "meeting",
+      "offered",
+      "various",
+      "opinions",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 우리가 회의에서 만난 전문가들은 다양한 의견을 제시했다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The experts which we met at the meeting offered various opinions.",
+      "statementForm": [
+        "The experts whom we met at the meeting offered various opinions",
+        "The experts whom we met at the meeting offered various opinions."
+      ],
+      "fragmentForm": "The experts whom we met at",
+      "wormholeVariants": [
+        "The experts which we met at the meeting offered various opinions.",
+        "The experts what we met at the meeting offered various opinions.",
+        "The experts whom met at the meeting offered various opinions.",
+        "The experts they whom we met at the meeting offered various opinions.",
+        "The experts who we met at the meeting offered various opinions.",
+        "The experts that we met at the meeting offered various opinions."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_062",
+    "seedId": "objective_relative_pronouns_076",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그녀가 기사에서 언급한 문제는 많은 토론을 일으켰다.",
+    "english": "The issue which she mentioned in the article caused much discussion.",
+    "words": [
+      "The",
+      "issue",
+      "which",
+      "she",
+      "mentioned",
+      "in",
+      "the",
+      "article",
+      "caused",
+      "much",
+      "discussion",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그녀가 기사에서 언급한 문제는 많은 토론을 일으켰다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The issue who she mentioned in the article caused much discussion.",
+      "statementForm": [
+        "The issue which she mentioned in the article caused much discussion",
+        "The issue which she mentioned in the article caused much discussion."
+      ],
+      "fragmentForm": "The issue which she mentioned in",
+      "wormholeVariants": [
+        "The issue who she mentioned in the article caused much discussion.",
+        "The issue what she mentioned in the article caused much discussion.",
+        "The issue which mentioned in the article caused much discussion.",
+        "The issue it which she mentioned in the article caused much discussion.",
+        "The issue that she mentioned in the article caused much discussion.",
+        "The issue whom she mentioned in the article caused much discussion."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_063",
+    "seedId": "objective_relative_pronouns_077",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 내가 가장 중요하게 여기는 가치는 정직이다.",
+    "english": "The value that I consider most important is honesty.",
+    "words": [
+      "The",
+      "value",
+      "that",
+      "I",
+      "consider",
+      "most",
+      "important",
+      "is",
+      "honesty",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 내가 가장 중요하게 여기는 가치는 정직이다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The value who I consider most important is honesty.",
+      "statementForm": [
+        "The value that I consider most important is honesty",
+        "The value that I consider most important is honesty."
+      ],
+      "fragmentForm": "The value that I consider most",
+      "wormholeVariants": [
+        "The value who I consider most important is honesty.",
+        "The value what I consider most important is honesty.",
+        "The value that consider most important is honesty.",
+        "The value it that I consider most important is honesty.",
+        "The value which I consider most important is honesty.",
+        "The value whom I consider most important is honesty."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_064",
+    "seedId": "objective_relative_pronouns_078",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그들이 위기 동안 도운 가족들은 새 집을 찾았다.",
+    "english": "The families whom they helped during the crisis found new homes.",
+    "words": [
+      "The",
+      "families",
+      "whom",
+      "they",
+      "helped",
+      "during",
+      "the",
+      "crisis",
+      "found",
+      "new",
+      "homes",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그들이 위기 동안 도운 가족들은 새 집을 찾았다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The families which they helped during the crisis found new homes.",
+      "statementForm": [
+        "The families whom they helped during the crisis found new homes",
+        "The families whom they helped during the crisis found new homes."
+      ],
+      "fragmentForm": "The families whom they helped during",
+      "wormholeVariants": [
+        "The families which they helped during the crisis found new homes.",
+        "The families what they helped during the crisis found new homes.",
+        "The families whom helped during the crisis found new homes.",
+        "The families they whom they helped during the crisis found new homes.",
+        "The families who they helped during the crisis found new homes.",
+        "The families that they helped during the crisis found new homes."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_065",
+    "seedId": "objective_relative_pronouns_079",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 우리가 비교한 결과는 서로 매우 달랐다.",
+    "english": "The results which we compared were very different from each other.",
+    "words": [
+      "The",
+      "results",
+      "which",
+      "we",
+      "compared",
+      "were",
+      "very",
+      "different",
+      "from",
+      "each",
+      "other",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 우리가 비교한 결과는 서로 매우 달랐다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The results who we compared were very different from each other.",
+      "statementForm": [
+        "The results which we compared were very different from each other",
+        "The results which we compared were very different from each other."
+      ],
+      "fragmentForm": "The results which we compared were",
+      "wormholeVariants": [
+        "The results who we compared were very different from each other.",
+        "The results what we compared were very different from each other.",
+        "The results which compared were very different from each other.",
+        "The results they which we compared were very different from each other.",
+        "The results that we compared were very different from each other.",
+        "The results whom we compared were very different from each other."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_066",
+    "seedId": "objective_relative_pronouns_080",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그가 수업에서 제기한 질문은 깊은 생각을 이끌었다.",
+    "english": "The question that he raised in class led to deep thinking.",
+    "words": [
+      "The",
+      "question",
+      "that",
+      "he",
+      "raised",
+      "in",
+      "class",
+      "led",
+      "to",
+      "deep",
+      "thinking",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그가 수업에서 제기한 질문은 깊은 생각을 이끌었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The question who he raised in class led to deep thinking.",
+      "statementForm": [
+        "The question that he raised in class led to deep thinking",
+        "The question that he raised in class led to deep thinking."
+      ],
+      "fragmentForm": "The question that he raised in",
+      "wormholeVariants": [
+        "The question who he raised in class led to deep thinking.",
+        "The question what he raised in class led to deep thinking.",
+        "The question that raised in class led to deep thinking.",
+        "The question it that he raised in class led to deep thinking.",
+        "The question which he raised in class led to deep thinking.",
+        "The question whom he raised in class led to deep thinking."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_067",
+    "seedId": "objective_relative_pronouns_081",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 내가 신중하게 검토한 계획은 몇 가지 약점이 있었다.",
+    "english": "The plan which I reviewed carefully had several weaknesses.",
+    "words": [
+      "The",
+      "plan",
+      "which",
+      "I",
+      "reviewed",
+      "carefully",
+      "had",
+      "several",
+      "weaknesses",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 내가 신중하게 검토한 계획은 몇 가지 약점이 있었다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The plan who I reviewed carefully had several weaknesses.",
+      "statementForm": [
+        "The plan which I reviewed carefully had several weaknesses",
+        "The plan which I reviewed carefully had several weaknesses."
+      ],
+      "fragmentForm": "The plan which I reviewed carefully",
+      "wormholeVariants": [
+        "The plan who I reviewed carefully had several weaknesses.",
+        "The plan what I reviewed carefully had several weaknesses.",
+        "The plan which reviewed carefully had several weaknesses.",
+        "The plan it which I reviewed carefully had several weaknesses.",
+        "The plan that I reviewed carefully had several weaknesses.",
+        "The plan whom I reviewed carefully had several weaknesses."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_068",
+    "seedId": "objective_relative_pronouns_082",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그녀가 훈련한 선수들은 대회에서 자신감을 보였다.",
+    "english": "The players whom she trained showed confidence in the competition.",
+    "words": [
+      "The",
+      "players",
+      "whom",
+      "she",
+      "trained",
+      "showed",
+      "confidence",
+      "in",
+      "the",
+      "competition",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그녀가 훈련한 선수들은 대회에서 자신감을 보였다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The players which she trained showed confidence in the competition.",
+      "statementForm": [
+        "The players whom she trained showed confidence in the competition",
+        "The players whom she trained showed confidence in the competition."
+      ],
+      "fragmentForm": "The players whom she trained showed",
+      "wormholeVariants": [
+        "The players which she trained showed confidence in the competition.",
+        "The players what she trained showed confidence in the competition.",
+        "The players whom trained showed confidence in the competition.",
+        "The players they whom she trained showed confidence in the competition.",
+        "The players who she trained showed confidence in the competition.",
+        "The players that she trained showed confidence in the competition."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_069",
+    "seedId": "objective_relative_pronouns_083",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 우리가 검토한 문서는 몇 가지 오류를 포함하고 있었다.",
+    "english": "The document which we examined contained several errors.",
+    "words": [
+      "The",
+      "document",
+      "which",
+      "we",
+      "examined",
+      "contained",
+      "several",
+      "errors",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 우리가 검토한 문서는 몇 가지 오류를 포함하고 있었다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The document who we examined contained several errors.",
+      "statementForm": [
+        "The document which we examined contained several errors",
+        "The document which we examined contained several errors."
+      ],
+      "fragmentForm": "The document which we examined contained",
+      "wormholeVariants": [
+        "The document who we examined contained several errors.",
+        "The document what we examined contained several errors.",
+        "The document which examined contained several errors.",
+        "The document it which we examined contained several errors.",
+        "The document that we examined contained several errors.",
+        "The document whom we examined contained several errors."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_070",
+    "seedId": "objective_relative_pronouns_084",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그가 존경하는 사람들은 모두 꾸준히 노력한다.",
+    "english": "The people whom he respects all work steadily.",
+    "words": [
+      "The",
+      "people",
+      "whom",
+      "he",
+      "respects",
+      "all",
+      "work",
+      "steadily",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그가 존경하는 사람들은 모두 꾸준히 노력한다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The people which he respects all work steadily.",
+      "statementForm": [
+        "The people whom he respects all work steadily",
+        "The people whom he respects all work steadily."
+      ],
+      "fragmentForm": "The people whom he respects all",
+      "wormholeVariants": [
+        "The people which he respects all work steadily.",
+        "The people what he respects all work steadily.",
+        "The people whom respects all work steadily.",
+        "The people they whom he respects all work steadily.",
+        "The people who he respects all work steadily.",
+        "The people that he respects all work steadily."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_071",
+    "seedId": "objective_relative_pronouns_085",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그녀가 연구에서 사용한 방법은 매우 창의적이었다.",
+    "english": "The method that she used in her research was very creative.",
+    "words": [
+      "The",
+      "method",
+      "that",
+      "she",
+      "used",
+      "in",
+      "her",
+      "research",
+      "was",
+      "very",
+      "creative",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그녀가 연구에서 사용한 방법은 매우 창의적이었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The method who she used in her research was very creative.",
+      "statementForm": [
+        "The method that she used in her research was very creative",
+        "The method that she used in her research was very creative."
+      ],
+      "fragmentForm": "The method that she used in",
+      "wormholeVariants": [
+        "The method who she used in her research was very creative.",
+        "The method what she used in her research was very creative.",
+        "The method that used in her research was very creative.",
+        "The method it that she used in her research was very creative.",
+        "The method which she used in her research was very creative.",
+        "The method whom she used in her research was very creative."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_072",
+    "seedId": "objective_relative_pronouns_086",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그들이 충분히 설명하지 않은 결정은 많은 비판을 받았다.",
+    "english": "The decision that they did not explain enough received much criticism.",
+    "words": [
+      "The",
+      "decision",
+      "that",
+      "they",
+      "did",
+      "not",
+      "explain",
+      "enough",
+      "received",
+      "much",
+      "criticism",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그들이 충분히 설명하지 않은 결정은 많은 비판을 받았다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The decision who they did not explain enough received much criticism.",
+      "statementForm": [
+        "The decision that they did not explain enough received much criticism",
+        "The decision that they did not explain enough received much criticism."
+      ],
+      "fragmentForm": "The decision that they did not",
+      "wormholeVariants": [
+        "The decision who they did not explain enough received much criticism.",
+        "The decision what they did not explain enough received much criticism.",
+        "The decision that did not explain enough received much criticism.",
+        "The decision it that they did not explain enough received much criticism.",
+        "The decision which they did not explain enough received much criticism.",
+        "The decision whom they did not explain enough received much criticism."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_073",
+    "seedId": "objective_relative_pronouns_087",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 내가 완전히 신뢰하지 않는 정보는 보고서에 넣지 않았다.",
+    "english": "The information which I do not fully trust was not included in the report.",
+    "words": [
+      "The",
+      "information",
+      "which",
+      "I",
+      "do",
+      "not",
+      "fully",
+      "trust",
+      "was",
+      "not",
+      "included",
+      "in",
+      "the",
+      "report",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 내가 완전히 신뢰하지 않는 정보는 보고서에 넣지 않았다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The information who I do not fully trust was not included in the report.",
+      "statementForm": [
+        "The information which I do not fully trust was not included in the report",
+        "The information which I do not fully trust was not included in the report."
+      ],
+      "fragmentForm": "The information which I do not",
+      "wormholeVariants": [
+        "The information who I do not fully trust was not included in the report.",
+        "The information what I do not fully trust was not included in the report.",
+        "The information which do not fully trust was not included in the report.",
+        "The information it which I do not fully trust was not included in the report.",
+        "The information that I do not fully trust was not included in the report.",
+        "The information whom I do not fully trust was not included in the report."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_074",
+    "seedId": "objective_relative_pronouns_088",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 우리가 아직 확인하지 않은 사람들은 명단에서 제외되었다.",
+    "english": "The people whom we have not checked yet were left off the list.",
+    "words": [
+      "The",
+      "people",
+      "whom",
+      "we",
+      "have",
+      "not",
+      "checked",
+      "yet",
+      "were",
+      "left",
+      "off",
+      "the",
+      "list",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 우리가 아직 확인하지 않은 사람들은 명단에서 제외되었다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The people which we have not checked yet were left off the list.",
+      "statementForm": [
+        "The people whom we have not checked yet were left off the list",
+        "The people whom we have not checked yet were left off the list."
+      ],
+      "fragmentForm": "The people whom we have not",
+      "wormholeVariants": [
+        "The people which we have not checked yet were left off the list.",
+        "The people what we have not checked yet were left off the list.",
+        "The people whom have not checked yet were left off the list.",
+        "The people they whom we have not checked yet were left off the list.",
+        "The people who we have not checked yet were left off the list.",
+        "The people that we have not checked yet were left off the list."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_075",
+    "seedId": "objective_relative_pronouns_089",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그녀가 고려하지 않은 조건은 결과를 바꿀 수 있었다.",
+    "english": "The condition that she did not consider could change the result.",
+    "words": [
+      "The",
+      "condition",
+      "that",
+      "she",
+      "did",
+      "not",
+      "consider",
+      "could",
+      "change",
+      "the",
+      "result",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그녀가 고려하지 않은 조건은 결과를 바꿀 수 있었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The condition who she did not consider could change the result.",
+      "statementForm": [
+        "The condition that she did not consider could change the result",
+        "The condition that she did not consider could change the result."
+      ],
+      "fragmentForm": "The condition that she did not",
+      "wormholeVariants": [
+        "The condition who she did not consider could change the result.",
+        "The condition what she did not consider could change the result.",
+        "The condition that did not consider could change the result.",
+        "The condition it that she did not consider could change the result.",
+        "The condition which she did not consider could change the result.",
+        "The condition whom she did not consider could change the result."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_076",
+    "seedId": "objective_relative_pronouns_090",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그들이 존중하지 않는 규칙은 공동체를 약하게 만든다.",
+    "english": "The rules which they do not respect make the community weaker.",
+    "words": [
+      "The",
+      "rules",
+      "which",
+      "they",
+      "do",
+      "not",
+      "respect",
+      "make",
+      "the",
+      "community",
+      "weaker",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그들이 존중하지 않는 규칙은 공동체를 약하게 만든다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rules who they do not respect make the community weaker.",
+      "statementForm": [
+        "The rules which they do not respect make the community weaker",
+        "The rules which they do not respect make the community weaker."
+      ],
+      "fragmentForm": "The rules which they do not",
+      "wormholeVariants": [
+        "The rules who they do not respect make the community weaker.",
+        "The rules what they do not respect make the community weaker.",
+        "The rules which do not respect make the community weaker.",
+        "The rules they which they do not respect make the community weaker.",
+        "The rules that they do not respect make the community weaker.",
+        "The rules whom they do not respect make the community weaker."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_077",
+    "seedId": "objective_relative_pronouns_091",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 내가 설득하지 못한 위원은 반대표를 던졌다.",
+    "english": "The committee member whom I could not persuade voted against the plan.",
+    "words": [
+      "The",
+      "committee",
+      "member",
+      "whom",
+      "I",
+      "could",
+      "not",
+      "persuade",
+      "voted",
+      "against",
+      "the",
+      "plan",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 내가 설득하지 못한 위원은 반대표를 던졌다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The committee member which I could not persuade voted against the plan.",
+      "statementForm": [
+        "The committee member whom I could not persuade voted against the plan",
+        "The committee member whom I could not persuade voted against the plan."
+      ],
+      "fragmentForm": "The committee member whom I could not",
+      "wormholeVariants": [
+        "The committee member which I could not persuade voted against the plan.",
+        "The committee member what I could not persuade voted against the plan.",
+        "The committee member whom could not persuade voted against the plan.",
+        "The committee member he whom I could not persuade voted against the plan.",
+        "The committee member who I could not persuade voted against the plan.",
+        "The committee member that I could not persuade voted against the plan."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_078",
+    "seedId": "objective_relative_pronouns_092",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 우리가 예측하지 못한 문제는 일정 전체를 늦췄다.",
+    "english": "The problem that we did not predict delayed the whole schedule.",
+    "words": [
+      "The",
+      "problem",
+      "that",
+      "we",
+      "did",
+      "not",
+      "predict",
+      "delayed",
+      "the",
+      "whole",
+      "schedule",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 우리가 예측하지 못한 문제는 일정 전체를 늦췄다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The problem who we did not predict delayed the whole schedule.",
+      "statementForm": [
+        "The problem that we did not predict delayed the whole schedule",
+        "The problem that we did not predict delayed the whole schedule."
+      ],
+      "fragmentForm": "The problem that we did not",
+      "wormholeVariants": [
+        "The problem who we did not predict delayed the whole schedule.",
+        "The problem what we did not predict delayed the whole schedule.",
+        "The problem that did not predict delayed the whole schedule.",
+        "The problem it that we did not predict delayed the whole schedule.",
+        "The problem which we did not predict delayed the whole schedule.",
+        "The problem whom we did not predict delayed the whole schedule."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_079",
+    "seedId": "objective_relative_pronouns_093",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그가 끝까지 인정하지 않은 실수는 더 큰 갈등을 만들었다.",
+    "english": "The mistake which he did not admit until the end created a bigger conflict.",
+    "words": [
+      "The",
+      "mistake",
+      "which",
+      "he",
+      "did",
+      "not",
+      "admit",
+      "until",
+      "the",
+      "end",
+      "created",
+      "a",
+      "bigger",
+      "conflict",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그가 끝까지 인정하지 않은 실수는 더 큰 갈등을 만들었다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The mistake who he did not admit until the end created a bigger conflict.",
+      "statementForm": [
+        "The mistake which he did not admit until the end created a bigger conflict",
+        "The mistake which he did not admit until the end created a bigger conflict."
+      ],
+      "fragmentForm": "The mistake which he did not",
+      "wormholeVariants": [
+        "The mistake who he did not admit until the end created a bigger conflict.",
+        "The mistake what he did not admit until the end created a bigger conflict.",
+        "The mistake which did not admit until the end created a bigger conflict.",
+        "The mistake it which he did not admit until the end created a bigger conflict.",
+        "The mistake that he did not admit until the end created a bigger conflict.",
+        "The mistake whom he did not admit until the end created a bigger conflict."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_080",
+    "seedId": "objective_relative_pronouns_094",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그들이 충분히 돕지 않은 학생들은 자신감을 잃었다.",
+    "english": "The students whom they did not support enough lost confidence.",
+    "words": [
+      "The",
+      "students",
+      "whom",
+      "they",
+      "did",
+      "not",
+      "support",
+      "enough",
+      "lost",
+      "confidence",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그들이 충분히 돕지 않은 학생들은 자신감을 잃었다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students which they did not support enough lost confidence.",
+      "statementForm": [
+        "The students whom they did not support enough lost confidence",
+        "The students whom they did not support enough lost confidence."
+      ],
+      "fragmentForm": "The students whom they did not",
+      "wormholeVariants": [
+        "The students which they did not support enough lost confidence.",
+        "The students what they did not support enough lost confidence.",
+        "The students whom did not support enough lost confidence.",
+        "The students they whom they did not support enough lost confidence.",
+        "The students who they did not support enough lost confidence.",
+        "The students that they did not support enough lost confidence."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_081",
+    "seedId": "objective_relative_pronouns_095",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 우리가 아직 증명하지 못한 주장은 조심스럽게 다루어야 한다.",
+    "english": "The claim that we have not proved yet should be treated carefully.",
+    "words": [
+      "The",
+      "claim",
+      "that",
+      "we",
+      "have",
+      "not",
+      "proved",
+      "yet",
+      "should",
+      "be",
+      "treated",
+      "carefully",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 우리가 아직 증명하지 못한 주장은 조심스럽게 다루어야 한다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "negative",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The claim who we have not proved yet should be treated carefully.",
+      "statementForm": [
+        "The claim that we have not proved yet should be treated carefully",
+        "The claim that we have not proved yet should be treated carefully."
+      ],
+      "fragmentForm": "The claim that we have not",
+      "wormholeVariants": [
+        "The claim who we have not proved yet should be treated carefully.",
+        "The claim what we have not proved yet should be treated carefully.",
+        "The claim that have not proved yet should be treated carefully.",
+        "The claim it that we have not proved yet should be treated carefully.",
+        "The claim which we have not proved yet should be treated carefully.",
+        "The claim whom we have not proved yet should be treated carefully."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_082",
+    "seedId": "objective_relative_pronouns_097",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 우리가 회의에서 만난 전문가를 다시 초대해야 하지 않니?",
+    "english": "Shouldn't we invite the expert whom we met at the meeting again?",
+    "words": [
+      "Shouldn't",
+      "we",
+      "invite",
+      "the",
+      "expert",
+      "whom",
+      "we",
+      "met",
+      "at",
+      "the",
+      "meeting",
+      "again",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 우리가 회의에서 만난 전문가를 다시 초대해야 하지 않니?",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "question",
+      "objective_whom",
+      "person",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "Shouldn't we invite the expert which we met at the meeting again?",
+      "statementForm": [
+        "Shouldn't we invite the expert whom we met at the meeting again",
+        "Shouldn't we invite the expert whom we met at the meeting again?"
+      ],
+      "fragmentForm": "Shouldn't we invite the expert whom we met at",
+      "wormholeVariants": [
+        "Shouldn't we invite the expert which we met at the meeting again?",
+        "Shouldn't we invite the expert what we met at the meeting again?",
+        "Shouldn't we invite the expert whom met at the meeting again?",
+        "Shouldn't we invite the expert he whom we met at the meeting again?",
+        "Shouldn't we invite the expert who we met at the meeting again?",
+        "Shouldn't we invite the expert that we met at the meeting again?"
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_083",
+    "seedId": "objective_relative_pronouns_098",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그녀가 기사에서 언급한 문제를 더 조사했니?",
+    "english": "Did you research the issue which she mentioned in the article further?",
+    "words": [
+      "Did",
+      "you",
+      "research",
+      "the",
+      "issue",
+      "which",
+      "she",
+      "mentioned",
+      "in",
+      "the",
+      "article",
+      "further",
+      "?"
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그녀가 기사에서 언급한 문제를 더 조사했니?",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "question",
+      "objective_which",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you research the issue who she mentioned in the article further?",
+      "statementForm": [
+        "Did you research the issue which she mentioned in the article further",
+        "Did you research the issue which she mentioned in the article further?"
+      ],
+      "fragmentForm": "Did you research the issue which she mentioned in",
+      "wormholeVariants": [
+        "Did you research the issue who she mentioned in the article further?",
+        "Did you research the issue what she mentioned in the article further?",
+        "Did you research the issue which mentioned in the article further?",
+        "Did you research the issue it which she mentioned in the article further?",
+        "Did you research the issue that she mentioned in the article further?",
+        "Did you research the issue whom she mentioned in the article further?"
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_084",
+    "seedId": "objective_relative_pronouns_099",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 그들이 제안한 해결책이 현실적인지 확인했니?",
+    "english": "Did you check whether the solution that they suggested was realistic?",
+    "words": [
+      "Did",
+      "you",
+      "check",
+      "whether",
+      "the",
+      "solution",
+      "that",
+      "they",
+      "suggested",
+      "was",
+      "realistic",
+      "?"
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 그들이 제안한 해결책이 현실적인지 확인했니?",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "question",
+      "objective_that",
+      "thing",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you check whether the solution who they suggested was realistic?",
+      "statementForm": [
+        "Did you check whether the solution that they suggested was realistic",
+        "Did you check whether the solution that they suggested was realistic?"
+      ],
+      "fragmentForm": "Did you check whether the solution that they suggested was",
+      "wormholeVariants": [
+        "Did you check whether the solution who they suggested was realistic?",
+        "Did you check whether the solution what they suggested was realistic?",
+        "Did you check whether the solution that suggested was realistic?",
+        "Did you check whether the solution it that they suggested was realistic?",
+        "Did you check whether the solution which they suggested was realistic?",
+        "Did you check whether the solution whom they suggested was realistic?"
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_085",
+    "seedId": "objective_relative_pronouns_bonus_01",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 토론이 끝난 뒤 학생들이 인터뷰했던 그 과학자는 분명한 대답을 했다.",
+    "english": "The scientist whom the students interviewed after class gave a clear answer.",
+    "words": [
+      "The",
+      "scientist",
+      "whom",
+      "the",
+      "students",
+      "interviewed",
+      "after",
+      "class",
+      "gave",
+      "a",
+      "clear",
+      "answer",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 토론이 끝난 뒤 학생들이 인터뷰했던 그 과학자는 분명한 대답을 했다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "advanced",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The scientist who the students interviewed after class gave a clear answer.",
+      "statementForm": [
+        "The scientist whom the students interviewed after class gave a clear answer",
+        "The scientist whom the students interviewed after class gave a clear answer."
+      ],
+      "fragmentForm": "The scientist whom the students interviewed after class gave a clear answer",
+      "wormholeVariants": [
+        "The scientist who the students interviewed after class gave a clear answer.",
+        "The scientist which the students interviewed after class gave a clear answer.",
+        "The scientist that the students interviewed after class gave a clear answer.",
+        "The scientist what the students interviewed after class gave a clear answer.",
+        "The scientist the students interviewed after class gave a clear answer.",
+        "The scientist whom the students interviewed class gave a clear answer."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_086",
+    "seedId": "objective_relative_pronouns_bonus_02",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 내 할머니가 어젯밤에 들려준 그 이야기는 정말 잊을 수 없었다.",
+    "english": "The story that my grandmother told me last night was unforgettable.",
+    "words": [
+      "The",
+      "story",
+      "that",
+      "my",
+      "grandmother",
+      "told",
+      "me",
+      "last",
+      "night",
+      "was",
+      "unforgettable",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 내 할머니가 어젯밤에 들려준 그 이야기는 정말 잊을 수 없었다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "advanced",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The story which my grandmother told me last night was unforgettable.",
+      "statementForm": [
+        "The story that my grandmother told me last night was unforgettable",
+        "The story that my grandmother told me last night was unforgettable."
+      ],
+      "fragmentForm": "The story that my grandmother told me last night was unforgettable",
+      "wormholeVariants": [
+        "The story which my grandmother told me last night was unforgettable.",
+        "The story who my grandmother told me last night was unforgettable.",
+        "The story whom my grandmother told me last night was unforgettable.",
+        "The story what my grandmother told me last night was unforgettable.",
+        "The story my grandmother told me last night was unforgettable."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_087",
+    "seedId": "objective_relative_pronouns_bonus_03",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 선생님이 반 앞에서 칭찬했던 그 아이는 수줍게 웃었다.",
+    "english": "The child whom the teacher praised in front of the class smiled shyly.",
+    "words": [
+      "The",
+      "child",
+      "whom",
+      "the",
+      "teacher",
+      "praised",
+      "in",
+      "front",
+      "of",
+      "the",
+      "class",
+      "smiled",
+      "shyly",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 선생님이 반 앞에서 칭찬했던 그 아이는 수줍게 웃었다.",
+        "whom"
+      ],
+      [
+        "objective relative pronoun",
+        "whom"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "whom"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_whom",
+      "person",
+      "advanced",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The child who the teacher praised in front of the class smiled shyly.",
+      "statementForm": [
+        "The child whom the teacher praised in front of the class smiled shyly",
+        "The child whom the teacher praised in front of the class smiled shyly."
+      ],
+      "fragmentForm": "The child whom the teacher praised in front of the class smiled shyly",
+      "wormholeVariants": [
+        "The child who the teacher praised in front of the class smiled shyly.",
+        "The child which the teacher praised in front of the class smiled shyly.",
+        "The child that the teacher praised in front of the class smiled shyly.",
+        "The child what the teacher praised in front of the class smiled shyly.",
+        "The child the teacher praised in front of the class smiled shyly.",
+        "The child whom the teacher praised front of the class smiled shyly."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_088",
+    "seedId": "objective_relative_pronouns_bonus_04",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 내 삼촌이 친구에게서 샀던 그 집은 아주 오래되었다.",
+    "english": "The house which my uncle bought from his friend was very old.",
+    "words": [
+      "The",
+      "house",
+      "which",
+      "my",
+      "uncle",
+      "bought",
+      "from",
+      "his",
+      "friend",
+      "was",
+      "very",
+      "old",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 내 삼촌이 친구에게서 샀던 그 집은 아주 오래되었다.",
+        "which"
+      ],
+      [
+        "objective relative pronoun",
+        "which"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "which"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_which",
+      "thing",
+      "advanced",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The house that my uncle bought from his friend was very old.",
+      "statementForm": [
+        "The house which my uncle bought from his friend was very old",
+        "The house which my uncle bought from his friend was very old."
+      ],
+      "fragmentForm": "The house which my uncle bought from his friend was very old",
+      "wormholeVariants": [
+        "The house that my uncle bought from his friend was very old.",
+        "The house who my uncle bought from his friend was very old.",
+        "The house whom my uncle bought from his friend was very old.",
+        "The house what my uncle bought from his friend was very old.",
+        "The house my uncle bought from his friend was very old.",
+        "The house which my uncle bought his friend was very old."
+      ]
+    }
+  },
+  {
+    "id": "m3_objective_089",
+    "seedId": "objective_relative_pronouns_bonus_05",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "objective_relative_pronouns",
+    "chapterLabelKo": "목적격 관계대명사",
+    "korean": "[High Difficulty] 내가 버스에 두고 내린 가방은 결국 내게 돌아왔다.",
+    "english": "The bag that I left on the bus was returned to me.",
+    "words": [
+      "The",
+      "bag",
+      "that",
+      "I",
+      "left",
+      "on",
+      "the",
+      "bus",
+      "was",
+      "returned",
+      "to",
+      "me",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "objective_relative_pronouns",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_objective_relative_pronouns_wormhole_v1",
+    "clueUnits": [
+      [
+        "[High Difficulty] 내가 버스에 두고 내린 가방은 결국 내게 돌아왔다.",
+        "that"
+      ],
+      [
+        "objective relative pronoun",
+        "that"
+      ],
+      [
+        "주의",
+        "Use who/whom/which/that as the object inside the relative clause. Do not confuse it with subject relative pronouns or relative adverbs."
+      ]
+    ],
+    "extraClueWordPool": [
+      "that",
+      "which",
+      "who",
+      "whom",
+      "whose",
+      "what",
+      "object",
+      "clause"
+    ],
+    "blankTargets": [
+      "that"
+    ],
+    "tags": [
+      "objective_relative_pronouns",
+      "affirm",
+      "objective_that",
+      "thing",
+      "advanced",
+      "middle3"
+    ],
+    "distractorSeeds": {
+      "auxError": "The bag which I left on the bus was returned to me.",
+      "statementForm": [
+        "The bag that I left on the bus was returned to me",
+        "The bag that I left on the bus was returned to me."
+      ],
+      "fragmentForm": "The bag that I left on the bus was returned to me",
+      "wormholeVariants": [
+        "The bag which I left on the bus was returned to me.",
+        "The bag who I left on the bus was returned to me.",
+        "The bag whom I left on the bus was returned to me.",
+        "The bag what I left on the bus was returned to me.",
+        "The bag I left on the bus was returned to me.",
+        "The bag that I left the bus was returned to me."
+      ]
+    }
+  }
+]
