@@ -1,0 +1,4530 @@
+[
+  {
+    "id": "m3_present_perfect_001",
+    "seedId": "present_perfect_001",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "너는 이미 숙제를 끝냈다.",
+    "english": "You have already finished your homework.",
+    "words": [
+      "You",
+      "have",
+      "already",
+      "finished",
+      "your",
+      "homework",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 이미 숙제를 끝냈다.",
+        "have"
+      ],
+      [
+        "have + already + past participle",
+        "have + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "You has already finished your homework.",
+      "statementForm": [
+        "You have already finished your homework.",
+        "You have already finished your homework"
+      ],
+      "fragmentForm": "You have already finished",
+      "wormholeVariants": [
+        "You has already finished your homework.",
+        "You have already finish your homework.",
+        "You did already finished your homework."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_002",
+    "seedId": "present_perfect_002",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "너는 아직 숙제를 끝내지 않았다.",
+    "english": "You have not yet finished your homework.",
+    "words": [
+      "You",
+      "have",
+      "not",
+      "yet",
+      "finished",
+      "your",
+      "homework",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 아직 숙제를 끝내지 않았다.",
+        "have"
+      ],
+      [
+        "have not yet + past participle",
+        "have not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "You has not yet finished your homework.",
+      "statementForm": [
+        "You have not yet finished your homework.",
+        "You have not yet finished your homework"
+      ],
+      "fragmentForm": "You have not yet finished",
+      "wormholeVariants": [
+        "You has not yet finished your homework.",
+        "You have not yet finish your homework.",
+        "You did not yet finished your homework."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_003",
+    "seedId": "present_perfect_003",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "너는 숙제를 끝냈니?",
+    "english": "Have you finished your homework yet?",
+    "words": [
+      "Have",
+      "you",
+      "finished",
+      "your",
+      "homework",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 숙제를 끝냈니?",
+        "Have"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Have"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you finished your homework yet?",
+      "statementForm": [
+        "Have you finished your homework yet?",
+        "Have you finished your homework yet"
+      ],
+      "fragmentForm": "Have you finished your",
+      "wormholeVariants": [
+        "Did you finished your homework yet?",
+        "Has you finished your homework yet?",
+        "Have you finish your homework yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_004",
+    "seedId": "present_perfect_004",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "이것은 네가 저녁 전에 숙제를 처음 끝낸 경우다.",
+    "english": "This is the first time you have finished your homework before dinner.",
+    "words": [
+      "This",
+      "is",
+      "the",
+      "first",
+      "time",
+      "you",
+      "have",
+      "finished",
+      "your",
+      "homework",
+      "before",
+      "dinner",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "이것은 네가 저녁 전에 숙제를 처음 끝낸 경우다.",
+        "have"
+      ],
+      [
+        "first time + present perfect",
+        "first time + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "advanced",
+      "first_time"
+    ],
+    "distractorSeeds": {
+      "auxError": "This is the first time you has finished your homework before dinner.",
+      "statementForm": [
+        "This is the first time you have finished your homework before dinner.",
+        "This is the first time you have finished your homework before dinner"
+      ],
+      "fragmentForm": "This is the first time you have finished your homework",
+      "wormholeVariants": [
+        "This is the first time you has finished your homework before dinner.",
+        "This is the first time you have finish your homework before dinner.",
+        "This is the first time you did finished your homework before dinner."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_005",
+    "seedId": "present_perfect_005",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그녀는 방을 방금 치웠다.",
+    "english": "She has just cleaned the room.",
+    "words": [
+      "She",
+      "has",
+      "just",
+      "cleaned",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 방을 방금 치웠다.",
+        "has"
+      ],
+      [
+        "has + just + past participle",
+        "has + just + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "just"
+    ],
+    "distractorSeeds": {
+      "auxError": "She have just cleaned the room.",
+      "statementForm": [
+        "She has just cleaned the room.",
+        "She has just cleaned the room"
+      ],
+      "fragmentForm": "She has just cleaned",
+      "wormholeVariants": [
+        "She have just cleaned the room.",
+        "She has just clean the room.",
+        "She did just cleaned the room."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_006",
+    "seedId": "present_perfect_006",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그녀는 아직 방을 치우지 않았다.",
+    "english": "She has not yet cleaned the room.",
+    "words": [
+      "She",
+      "has",
+      "not",
+      "yet",
+      "cleaned",
+      "the",
+      "room",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 아직 방을 치우지 않았다.",
+        "has"
+      ],
+      [
+        "has not yet + past participle",
+        "has not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She have not yet cleaned the room.",
+      "statementForm": [
+        "She has not yet cleaned the room.",
+        "She has not yet cleaned the room"
+      ],
+      "fragmentForm": "She has not yet cleaned",
+      "wormholeVariants": [
+        "She have not yet cleaned the room.",
+        "She has not yet clean the room.",
+        "She did not yet cleaned the room."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_007",
+    "seedId": "present_perfect_007",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그녀는 방을 치웠니?",
+    "english": "Has she cleaned the room yet?",
+    "words": [
+      "Has",
+      "she",
+      "cleaned",
+      "the",
+      "room",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 방을 치웠니?",
+        "Has"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she cleaned the room yet?",
+      "statementForm": [
+        "Has she cleaned the room yet?",
+        "Has she cleaned the room yet"
+      ],
+      "fragmentForm": "Has she cleaned the",
+      "wormholeVariants": [
+        "Did she cleaned the room yet?",
+        "Have she cleaned the room yet?",
+        "Has she clean the room yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_008",
+    "seedId": "present_perfect_008",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그녀는 이번 주에 방을 세 번 치웠다.",
+    "english": "She has cleaned the room three times this week.",
+    "words": [
+      "She",
+      "has",
+      "cleaned",
+      "the",
+      "room",
+      "three",
+      "times",
+      "this",
+      "week",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 이번 주에 방을 세 번 치웠다.",
+        "has"
+      ],
+      [
+        "frequency + present perfect",
+        "frequency + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced",
+      "frequency"
+    ],
+    "distractorSeeds": {
+      "auxError": "She have cleaned the room three times this week.",
+      "statementForm": [
+        "She has cleaned the room three times this week.",
+        "She has cleaned the room three times this week"
+      ],
+      "fragmentForm": "She has cleaned the room three times",
+      "wormholeVariants": [
+        "She have cleaned the room three times this week.",
+        "She has clean the room three times this week.",
+        "She did cleaned the room three times this week."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_009",
+    "seedId": "present_perfect_009",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그는 이미 소식을 들었다.",
+    "english": "He has already heard the news.",
+    "words": [
+      "He",
+      "has",
+      "already",
+      "heard",
+      "the",
+      "news",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 이미 소식을 들었다.",
+        "has"
+      ],
+      [
+        "has + already + past participle",
+        "has + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "He have already heard the news.",
+      "statementForm": [
+        "He has already heard the news.",
+        "He has already heard the news"
+      ],
+      "fragmentForm": "He has already heard",
+      "wormholeVariants": [
+        "He have already heard the news.",
+        "He has already hear the news.",
+        "He did already heard the news."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_010",
+    "seedId": "present_perfect_010",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그는 한 번도 소식을 듣지 않았다.",
+    "english": "He has never heard the news before.",
+    "words": [
+      "He",
+      "has",
+      "never",
+      "heard",
+      "the",
+      "news",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 한 번도 소식을 듣지 않았다.",
+        "has"
+      ],
+      [
+        "has never + past participle + before",
+        "has never + past participle + before"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He have never heard the news before.",
+      "statementForm": [
+        "He has never heard the news before.",
+        "He has never heard the news before"
+      ],
+      "fragmentForm": "He has never heard the",
+      "wormholeVariants": [
+        "He have never heard the news before.",
+        "He has never hear the news before.",
+        "He did never heard the news before."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_011",
+    "seedId": "present_perfect_011",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그는 소식을 들었니?",
+    "english": "Has he ever heard the news before?",
+    "words": [
+      "Has",
+      "he",
+      "ever",
+      "heard",
+      "the",
+      "news",
+      "before",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 소식을 들었니?",
+        "Has"
+      ],
+      [
+        " + subject + ever + past participle + before",
+        " + subject + ever + past participle + before"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he ever heard the news before?",
+      "statementForm": [
+        "Has he ever heard the news before?",
+        "Has he ever heard the news before"
+      ],
+      "fragmentForm": "Has he ever heard the",
+      "wormholeVariants": [
+        "Did he ever heard the news before?",
+        "Have he ever heard the news before?",
+        "Has he ever hear the news before?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_012",
+    "seedId": "present_perfect_012",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그는 오늘 뉴스를 두 번 들었다.",
+    "english": "He has heard the news twice today.",
+    "words": [
+      "He",
+      "has",
+      "heard",
+      "the",
+      "news",
+      "twice",
+      "today",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 오늘 뉴스를 두 번 들었다.",
+        "has"
+      ],
+      [
+        "frequency + present perfect",
+        "frequency + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced",
+      "frequency"
+    ],
+    "distractorSeeds": {
+      "auxError": "He have heard the news twice today.",
+      "statementForm": [
+        "He has heard the news twice today.",
+        "He has heard the news twice today"
+      ],
+      "fragmentForm": "He has heard the news",
+      "wormholeVariants": [
+        "He have heard the news twice today.",
+        "He has hear the news twice today.",
+        "He did heard the news twice today."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_013",
+    "seedId": "present_perfect_013",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그들은 방금 소포를 받았다.",
+    "english": "They have just received the package.",
+    "words": [
+      "They",
+      "have",
+      "just",
+      "received",
+      "the",
+      "package",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 방금 소포를 받았다.",
+        "have"
+      ],
+      [
+        "have + just + past participle",
+        "have + just + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "affirmative",
+      "just"
+    ],
+    "distractorSeeds": {
+      "auxError": "They has just received the package.",
+      "statementForm": [
+        "They have just received the package.",
+        "They have just received the package"
+      ],
+      "fragmentForm": "They have just received",
+      "wormholeVariants": [
+        "They has just received the package.",
+        "They have just receive the package.",
+        "They did just received the package."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_014",
+    "seedId": "present_perfect_014",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그들은 아직 소포를 받지 않았다.",
+    "english": "They have not yet received the package.",
+    "words": [
+      "They",
+      "have",
+      "not",
+      "yet",
+      "received",
+      "the",
+      "package",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 아직 소포를 받지 않았다.",
+        "have"
+      ],
+      [
+        "have not yet + past participle",
+        "have not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They has not yet received the package.",
+      "statementForm": [
+        "They have not yet received the package.",
+        "They have not yet received the package"
+      ],
+      "fragmentForm": "They have not yet received",
+      "wormholeVariants": [
+        "They has not yet received the package.",
+        "They have not yet receive the package.",
+        "They did not yet received the package."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_015",
+    "seedId": "present_perfect_015",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그들은 소포를 받았니?",
+    "english": "Have they received the package yet?",
+    "words": [
+      "Have",
+      "they",
+      "received",
+      "the",
+      "package",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 소포를 받았니?",
+        "Have"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Have"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did they received the package yet?",
+      "statementForm": [
+        "Have they received the package yet?",
+        "Have they received the package yet"
+      ],
+      "fragmentForm": "Have they received the",
+      "wormholeVariants": [
+        "Did they received the package yet?",
+        "Has they received the package yet?",
+        "Have they receive the package yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_016",
+    "seedId": "present_perfect_016",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그들은 지금까지 소포를 네 개 받았다.",
+    "english": "They have received four packages so far.",
+    "words": [
+      "They",
+      "have",
+      "received",
+      "four",
+      "packages",
+      "so",
+      "far",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 지금까지 소포를 네 개 받았다.",
+        "have"
+      ],
+      [
+        "advanced + present perfect",
+        "advanced + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "They has received four packages so far.",
+      "statementForm": [
+        "They have received four packages so far.",
+        "They have received four packages so far"
+      ],
+      "fragmentForm": "They have received four packages",
+      "wormholeVariants": [
+        "They has received four packages so far.",
+        "They have receive four packages so far.",
+        "They did received four packages so far."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_017",
+    "seedId": "present_perfect_017",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리는 이미 그 영화를 보았다.",
+    "english": "We have already seen that movie.",
+    "words": [
+      "We",
+      "have",
+      "already",
+      "seen",
+      "that",
+      "movie",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 이미 그 영화를 보았다.",
+        "have"
+      ],
+      [
+        "have + already + past participle",
+        "have + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "We has already seen that movie.",
+      "statementForm": [
+        "We have already seen that movie.",
+        "We have already seen that movie"
+      ],
+      "fragmentForm": "We have already seen",
+      "wormholeVariants": [
+        "We has already seen that movie.",
+        "We have already see that movie.",
+        "We did already seen that movie."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_018",
+    "seedId": "present_perfect_018",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리는 한 번도 그 영화를 보지 않았다.",
+    "english": "We have never seen that movie before.",
+    "words": [
+      "We",
+      "have",
+      "never",
+      "seen",
+      "that",
+      "movie",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 한 번도 그 영화를 보지 않았다.",
+        "have"
+      ],
+      [
+        "have never + past participle + before",
+        "have never + past participle + before"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We has never seen that movie before.",
+      "statementForm": [
+        "We have never seen that movie before.",
+        "We have never seen that movie before"
+      ],
+      "fragmentForm": "We have never seen that",
+      "wormholeVariants": [
+        "We has never seen that movie before.",
+        "We have never see that movie before.",
+        "We did never seen that movie before."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_019",
+    "seedId": "present_perfect_019",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리는 그 영화를 보았니?",
+    "english": "Have we ever seen that movie before?",
+    "words": [
+      "Have",
+      "we",
+      "ever",
+      "seen",
+      "that",
+      "movie",
+      "before",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 영화를 보았니?",
+        "Have"
+      ],
+      [
+        " + subject + ever + past participle + before",
+        " + subject + ever + past participle + before"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Have"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did we ever seen that movie before?",
+      "statementForm": [
+        "Have we ever seen that movie before?",
+        "Have we ever seen that movie before"
+      ],
+      "fragmentForm": "Have we ever seen that",
+      "wormholeVariants": [
+        "Did we ever seen that movie before?",
+        "Has we ever seen that movie before?",
+        "Have we ever see that movie before?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_020",
+    "seedId": "present_perfect_020",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리는 그 영화를 이미 두 번 보았다.",
+    "english": "We have seen that movie twice already.",
+    "words": [
+      "We",
+      "have",
+      "seen",
+      "that",
+      "movie",
+      "twice",
+      "already",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 그 영화를 이미 두 번 보았다.",
+        "have"
+      ],
+      [
+        "frequency + present perfect",
+        "frequency + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "advanced",
+      "frequency"
+    ],
+    "distractorSeeds": {
+      "auxError": "We has seen that movie twice already.",
+      "statementForm": [
+        "We have seen that movie twice already.",
+        "We have seen that movie twice already"
+      ],
+      "fragmentForm": "We have seen that movie",
+      "wormholeVariants": [
+        "We has seen that movie twice already.",
+        "We have see that movie twice already.",
+        "We did seen that movie twice already."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_021",
+    "seedId": "present_perfect_021",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 엄마는 최근에 편지를 보냈다.",
+    "english": "My mother has recently sent the letter.",
+    "words": [
+      "My",
+      "mother",
+      "has",
+      "recently",
+      "sent",
+      "the",
+      "letter",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 엄마는 최근에 편지를 보냈다.",
+        "has"
+      ],
+      [
+        "has recently + past participle",
+        "has recently + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "recently"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother have recently sent the letter.",
+      "statementForm": [
+        "My mother has recently sent the letter.",
+        "My mother has recently sent the letter"
+      ],
+      "fragmentForm": "My mother has recently sent",
+      "wormholeVariants": [
+        "My mother have recently sent the letter.",
+        "My mother has recently send the letter.",
+        "My mother did recently sent the letter."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_022",
+    "seedId": "present_perfect_022",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 엄마는 아직 편지를 보내지 않았다.",
+    "english": "My mother has not yet sent the letter.",
+    "words": [
+      "My",
+      "mother",
+      "has",
+      "not",
+      "yet",
+      "sent",
+      "the",
+      "letter",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 엄마는 아직 편지를 보내지 않았다.",
+        "has"
+      ],
+      [
+        "has not yet + past participle",
+        "has not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother have not yet sent the letter.",
+      "statementForm": [
+        "My mother has not yet sent the letter.",
+        "My mother has not yet sent the letter"
+      ],
+      "fragmentForm": "My mother has not yet sent",
+      "wormholeVariants": [
+        "My mother have not yet sent the letter.",
+        "My mother has not yet send the letter.",
+        "My mother did not yet sent the letter."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_023",
+    "seedId": "present_perfect_023",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 엄마는 편지를 보냈니?",
+    "english": "Has my mother sent the letter yet?",
+    "words": [
+      "Has",
+      "my",
+      "mother",
+      "sent",
+      "the",
+      "letter",
+      "yet",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 엄마는 편지를 보냈니?",
+        "Has"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did my mother sent the letter yet?",
+      "statementForm": [
+        "Has my mother sent the letter yet?",
+        "Has my mother sent the letter yet"
+      ],
+      "fragmentForm": "Has my mother sent the",
+      "wormholeVariants": [
+        "Did my mother sent the letter yet?",
+        "Have my mother sent the letter yet?",
+        "Has my mother send the letter yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_024",
+    "seedId": "present_perfect_024",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 엄마는 이번 달에 편지를 다섯 통 보냈다.",
+    "english": "My mother has sent five letters this month.",
+    "words": [
+      "My",
+      "mother",
+      "has",
+      "sent",
+      "five",
+      "letters",
+      "this",
+      "month",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 엄마는 이번 달에 편지를 다섯 통 보냈다.",
+        "has"
+      ],
+      [
+        "advanced + present perfect",
+        "advanced + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother have sent five letters this month.",
+      "statementForm": [
+        "My mother has sent five letters this month.",
+        "My mother has sent five letters this month"
+      ],
+      "fragmentForm": "My mother has sent five letters",
+      "wormholeVariants": [
+        "My mother have sent five letters this month.",
+        "My mother has send five letters this month.",
+        "My mother did sent five letters this month."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_025",
+    "seedId": "present_perfect_025",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 선생님은 지금까지 시험지를 확인했다.",
+    "english": "Our teacher has checked the test papers so far.",
+    "words": [
+      "Our",
+      "teacher",
+      "has",
+      "checked",
+      "the",
+      "test",
+      "papers",
+      "so",
+      "far",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 선생님은 지금까지 시험지를 확인했다.",
+        "has"
+      ],
+      [
+        "has + past participle + so far",
+        "has + past participle + so far"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "so_far"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our teacher have checked the test papers so far.",
+      "statementForm": [
+        "Our teacher has checked the test papers so far.",
+        "Our teacher has checked the test papers so far"
+      ],
+      "fragmentForm": "Our teacher has checked the test papers",
+      "wormholeVariants": [
+        "Our teacher have checked the test papers so far.",
+        "Our teacher has check the test papers so far.",
+        "Our teacher did checked the test papers so far."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_026",
+    "seedId": "present_perfect_026",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 선생님은 아직 시험지를 확인하지 않았다.",
+    "english": "Our teacher has not yet checked the test papers.",
+    "words": [
+      "Our",
+      "teacher",
+      "has",
+      "not",
+      "yet",
+      "checked",
+      "the",
+      "test",
+      "papers",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 선생님은 아직 시험지를 확인하지 않았다.",
+        "has"
+      ],
+      [
+        "has not yet + past participle",
+        "has not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our teacher have not yet checked the test papers.",
+      "statementForm": [
+        "Our teacher has not yet checked the test papers.",
+        "Our teacher has not yet checked the test papers"
+      ],
+      "fragmentForm": "Our teacher has not yet checked the",
+      "wormholeVariants": [
+        "Our teacher have not yet checked the test papers.",
+        "Our teacher has not yet check the test papers.",
+        "Our teacher did not yet checked the test papers."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_027",
+    "seedId": "present_perfect_027",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 선생님은 시험지를 확인했니?",
+    "english": "Has our teacher checked the test papers yet?",
+    "words": [
+      "Has",
+      "our",
+      "teacher",
+      "checked",
+      "the",
+      "test",
+      "papers",
+      "yet",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 선생님은 시험지를 확인했니?",
+        "Has"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did our teacher checked the test papers yet?",
+      "statementForm": [
+        "Has our teacher checked the test papers yet?",
+        "Has our teacher checked the test papers yet"
+      ],
+      "fragmentForm": "Has our teacher checked the test",
+      "wormholeVariants": [
+        "Did our teacher checked the test papers yet?",
+        "Have our teacher checked the test papers yet?",
+        "Has our teacher check the test papers yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_028",
+    "seedId": "present_perfect_028",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 선생님은 오늘 아침부터 시험지를 확인해 왔다.",
+    "english": "Our teacher has checked the test papers since this morning.",
+    "words": [
+      "Our",
+      "teacher",
+      "has",
+      "checked",
+      "the",
+      "test",
+      "papers",
+      "since",
+      "this",
+      "morning",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 선생님은 오늘 아침부터 시험지를 확인해 왔다.",
+        "has"
+      ],
+      [
+        "since clause + present perfect",
+        "since clause + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause and keep the perfect form natural."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced",
+      "since_clause"
+    ],
+    "distractorSeeds": {
+      "auxError": "Our teacher have checked the test papers since this morning.",
+      "statementForm": [
+        "Our teacher has checked the test papers since this morning.",
+        "Our teacher has checked the test papers since this morning"
+      ],
+      "fragmentForm": "Our teacher has checked the test papers",
+      "wormholeVariants": [
+        "Our teacher have checked the test papers since this morning.",
+        "Our teacher has check the test papers since this morning.",
+        "Our teacher did checked the test papers since this morning."
+      ]
+    },
+    "fragmentForm": "Our teacher has checked the test papers"
+  },
+  {
+    "id": "m3_present_perfect_029",
+    "seedId": "present_perfect_029",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 팀은 이미 경기를 시작했다.",
+    "english": "The team has already started the game.",
+    "words": [
+      "The",
+      "team",
+      "has",
+      "already",
+      "started",
+      "the",
+      "game",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 팀은 이미 경기를 시작했다.",
+        "has"
+      ],
+      [
+        "has + already + past participle",
+        "has + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team have already started the game.",
+      "statementForm": [
+        "The team has already started the game.",
+        "The team has already started the game"
+      ],
+      "fragmentForm": "The team has already started",
+      "wormholeVariants": [
+        "The team have already started the game.",
+        "The team has already start the game.",
+        "The team did already started the game."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_030",
+    "seedId": "present_perfect_030",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 팀은 한 번도 경기를 시작하지 않았다.",
+    "english": "The team has never started the game before.",
+    "words": [
+      "The",
+      "team",
+      "has",
+      "never",
+      "started",
+      "the",
+      "game",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 팀은 한 번도 경기를 시작하지 않았다.",
+        "has"
+      ],
+      [
+        "has never + past participle + before",
+        "has never + past participle + before"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team have never started the game before.",
+      "statementForm": [
+        "The team has never started the game before.",
+        "The team has never started the game before"
+      ],
+      "fragmentForm": "The team has never started the",
+      "wormholeVariants": [
+        "The team have never started the game before.",
+        "The team has never start the game before.",
+        "The team did never started the game before."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_031",
+    "seedId": "present_perfect_031",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 팀은 경기를 시작했니?",
+    "english": "Has the team ever started the game before?",
+    "words": [
+      "Has",
+      "the",
+      "team",
+      "ever",
+      "started",
+      "the",
+      "game",
+      "before",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 팀은 경기를 시작했니?",
+        "Has"
+      ],
+      [
+        " + subject + ever + past participle + before",
+        " + subject + ever + past participle + before"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the team ever started the game before?",
+      "statementForm": [
+        "Has the team ever started the game before?",
+        "Has the team ever started the game before"
+      ],
+      "fragmentForm": "Has the team ever started the",
+      "wormholeVariants": [
+        "Did the team ever started the game before?",
+        "Have the team ever started the game before?",
+        "Has the team ever start the game before?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_032",
+    "seedId": "present_perfect_032",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 팀은 연습에서 경기를 세 번 시작했다.",
+    "english": "The team has started the game three times in practice.",
+    "words": [
+      "The",
+      "team",
+      "has",
+      "started",
+      "the",
+      "game",
+      "three",
+      "times",
+      "in",
+      "practice",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 팀은 연습에서 경기를 세 번 시작했다.",
+        "has"
+      ],
+      [
+        "frequency + present perfect",
+        "frequency + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced",
+      "frequency"
+    ],
+    "distractorSeeds": {
+      "auxError": "The team have started the game three times in practice.",
+      "statementForm": [
+        "The team has started the game three times in practice.",
+        "The team has started the game three times in practice"
+      ],
+      "fragmentForm": "The team has started the game three times",
+      "wormholeVariants": [
+        "The team have started the game three times in practice.",
+        "The team has start the game three times in practice.",
+        "The team did started the game three times in practice."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_033",
+    "seedId": "present_perfect_033",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "내 형은 이미 지갑을 잃어버렸다.",
+    "english": "My brother has already lost his wallet.",
+    "words": [
+      "My",
+      "brother",
+      "has",
+      "already",
+      "lost",
+      "his",
+      "wallet",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 형은 이미 지갑을 잃어버렸다.",
+        "has"
+      ],
+      [
+        "has + already + past participle",
+        "has + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "My brother have already lost his wallet.",
+      "statementForm": [
+        "My brother has already lost his wallet.",
+        "My brother has already lost his wallet"
+      ],
+      "fragmentForm": "My brother has already lost",
+      "wormholeVariants": [
+        "My brother have already lost his wallet.",
+        "My brother has already lose his wallet.",
+        "My brother did already lost his wallet."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_034",
+    "seedId": "present_perfect_034",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "내 형은 지갑을 잃어버린 적이 없었다.",
+    "english": "My brother has never lost his wallet before.",
+    "words": [
+      "My",
+      "brother",
+      "has",
+      "never",
+      "lost",
+      "his",
+      "wallet",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 형은 지갑을 잃어버린 적이 없었다.",
+        "has"
+      ],
+      [
+        "has never + past participle + before",
+        "has never + past participle + before"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "My brother have never lost his wallet before.",
+      "statementForm": [
+        "My brother has never lost his wallet before.",
+        "My brother has never lost his wallet before"
+      ],
+      "fragmentForm": "My brother has never lost his",
+      "wormholeVariants": [
+        "My brother have never lost his wallet before.",
+        "My brother has never lose his wallet before.",
+        "My brother did never lost his wallet before."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_035",
+    "seedId": "present_perfect_035",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "내 형은 지갑을 잃어버렸니?",
+    "english": "Has my brother ever lost his wallet before?",
+    "words": [
+      "Has",
+      "my",
+      "brother",
+      "ever",
+      "lost",
+      "his",
+      "wallet",
+      "before",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 형은 지갑을 잃어버렸니?",
+        "Has"
+      ],
+      [
+        " + subject + ever + past participle + before",
+        " + subject + ever + past participle + before"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did my brother ever lost his wallet before?",
+      "statementForm": [
+        "Has my brother ever lost his wallet before?",
+        "Has my brother ever lost his wallet before"
+      ],
+      "fragmentForm": "Has my brother ever lost his",
+      "wormholeVariants": [
+        "Did my brother ever lost his wallet before?",
+        "Have my brother ever lost his wallet before?",
+        "Has my brother ever lose his wallet before?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_036",
+    "seedId": "present_perfect_036",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "내 형은 올해 지갑을 한 번 잃어버렸다.",
+    "english": "My brother has lost his wallet once this year.",
+    "words": [
+      "My",
+      "brother",
+      "has",
+      "lost",
+      "his",
+      "wallet",
+      "once",
+      "this",
+      "year",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "내 형은 올해 지갑을 한 번 잃어버렸다.",
+        "has"
+      ],
+      [
+        "advanced + present perfect",
+        "advanced + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "My brother have lost his wallet once this year.",
+      "statementForm": [
+        "My brother has lost his wallet once this year.",
+        "My brother has lost his wallet once this year"
+      ],
+      "fragmentForm": "My brother has lost his wallet once",
+      "wormholeVariants": [
+        "My brother have lost his wallet once this year.",
+        "My brother has lose his wallet once this year.",
+        "My brother did lost his wallet once this year."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_037",
+    "seedId": "present_perfect_037",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "학생들은 이미 열쇠를 찾았다.",
+    "english": "The students have already found the keys.",
+    "words": [
+      "The",
+      "students",
+      "have",
+      "already",
+      "found",
+      "the",
+      "keys",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들은 이미 열쇠를 찾았다.",
+        "have"
+      ],
+      [
+        "have + already + past participle",
+        "have + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students has already found the keys.",
+      "statementForm": [
+        "The students have already found the keys.",
+        "The students have already found the keys"
+      ],
+      "fragmentForm": "The students have already found",
+      "wormholeVariants": [
+        "The students has already found the keys.",
+        "The students have already find the keys.",
+        "The students did already found the keys."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_038",
+    "seedId": "present_perfect_038",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "학생들은 아직 열쇠를 찾지 않았다.",
+    "english": "The students have not yet found the keys.",
+    "words": [
+      "The",
+      "students",
+      "have",
+      "not",
+      "yet",
+      "found",
+      "the",
+      "keys",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들은 아직 열쇠를 찾지 않았다.",
+        "have"
+      ],
+      [
+        "have not yet + past participle",
+        "have not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students has not yet found the keys.",
+      "statementForm": [
+        "The students have not yet found the keys.",
+        "The students have not yet found the keys"
+      ],
+      "fragmentForm": "The students have not yet found",
+      "wormholeVariants": [
+        "The students has not yet found the keys.",
+        "The students have not yet find the keys.",
+        "The students did not yet found the keys."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_039",
+    "seedId": "present_perfect_039",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "학생들은 열쇠를 찾았니?",
+    "english": "Have the students found the keys yet?",
+    "words": [
+      "Have",
+      "the",
+      "students",
+      "found",
+      "the",
+      "keys",
+      "yet",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들은 열쇠를 찾았니?",
+        "Have"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Have"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did the students found the keys yet?",
+      "statementForm": [
+        "Have the students found the keys yet?",
+        "Have the students found the keys yet"
+      ],
+      "fragmentForm": "Have the students found the",
+      "wormholeVariants": [
+        "Did the students found the keys yet?",
+        "Has the students found the keys yet?",
+        "Have the students find the keys yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_040",
+    "seedId": "present_perfect_040",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "학생들은 열쇠를 이미 두 번 찾았다.",
+    "english": "The students have found the keys twice already.",
+    "words": [
+      "The",
+      "students",
+      "have",
+      "found",
+      "the",
+      "keys",
+      "twice",
+      "already",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "학생들은 열쇠를 이미 두 번 찾았다.",
+        "have"
+      ],
+      [
+        "frequency + present perfect",
+        "frequency + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "advanced",
+      "frequency"
+    ],
+    "distractorSeeds": {
+      "auxError": "The students has found the keys twice already.",
+      "statementForm": [
+        "The students have found the keys twice already.",
+        "The students have found the keys twice already"
+      ],
+      "fragmentForm": "The students have found the keys",
+      "wormholeVariants": [
+        "The students has found the keys twice already.",
+        "The students have find the keys twice already.",
+        "The students did found the keys twice already."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_041",
+    "seedId": "present_perfect_041",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "너는 방금 박물관을 방문했다.",
+    "english": "You have just visited the museum.",
+    "words": [
+      "You",
+      "have",
+      "just",
+      "visited",
+      "the",
+      "museum",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 방금 박물관을 방문했다.",
+        "have"
+      ],
+      [
+        "have + just + past participle",
+        "have + just + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "affirmative",
+      "just"
+    ],
+    "distractorSeeds": {
+      "auxError": "You has just visited the museum.",
+      "statementForm": [
+        "You have just visited the museum.",
+        "You have just visited the museum"
+      ],
+      "fragmentForm": "You have just visited",
+      "wormholeVariants": [
+        "You has just visited the museum.",
+        "You have just visit the museum.",
+        "You did just visited the museum."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_042",
+    "seedId": "present_perfect_042",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "너는 박물관을 방문한 적이 없었다.",
+    "english": "You have never visited the museum before.",
+    "words": [
+      "You",
+      "have",
+      "never",
+      "visited",
+      "the",
+      "museum",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 박물관을 방문한 적이 없었다.",
+        "have"
+      ],
+      [
+        "have never + past participle + before",
+        "have never + past participle + before"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "You has never visited the museum before.",
+      "statementForm": [
+        "You have never visited the museum before.",
+        "You have never visited the museum before"
+      ],
+      "fragmentForm": "You have never visited the",
+      "wormholeVariants": [
+        "You has never visited the museum before.",
+        "You have never visit the museum before.",
+        "You did never visited the museum before."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_043",
+    "seedId": "present_perfect_043",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "너는 박물관을 방문했니?",
+    "english": "Have you ever visited the museum before?",
+    "words": [
+      "Have",
+      "you",
+      "ever",
+      "visited",
+      "the",
+      "museum",
+      "before",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 박물관을 방문했니?",
+        "Have"
+      ],
+      [
+        " + subject + ever + past participle + before",
+        " + subject + ever + past participle + before"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Have"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did you ever visited the museum before?",
+      "statementForm": [
+        "Have you ever visited the museum before?",
+        "Have you ever visited the museum before"
+      ],
+      "fragmentForm": "Have you ever visited the",
+      "wormholeVariants": [
+        "Did you ever visited the museum before?",
+        "Has you ever visited the museum before?",
+        "Have you ever visit the museum before?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_044",
+    "seedId": "present_perfect_044",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "너는 박물관을 여러 번 방문했다.",
+    "english": "You have visited the museum many times.",
+    "words": [
+      "You",
+      "have",
+      "visited",
+      "the",
+      "museum",
+      "many",
+      "times",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "너는 박물관을 여러 번 방문했다.",
+        "have"
+      ],
+      [
+        "frequency + present perfect",
+        "frequency + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "advanced",
+      "frequency"
+    ],
+    "distractorSeeds": {
+      "auxError": "You has visited the museum many times.",
+      "statementForm": [
+        "You have visited the museum many times.",
+        "You have visited the museum many times"
+      ],
+      "fragmentForm": "You have visited the museum",
+      "wormholeVariants": [
+        "You has visited the museum many times.",
+        "You have visit the museum many times.",
+        "You did visited the museum many times."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_045",
+    "seedId": "present_perfect_045",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그녀는 이미 보고서를 썼다.",
+    "english": "She has already written the report.",
+    "words": [
+      "She",
+      "has",
+      "already",
+      "written",
+      "the",
+      "report",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 이미 보고서를 썼다.",
+        "has"
+      ],
+      [
+        "has + already + past participle",
+        "has + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "She have already written the report.",
+      "statementForm": [
+        "She has already written the report.",
+        "She has already written the report"
+      ],
+      "fragmentForm": "She has already written",
+      "wormholeVariants": [
+        "She have already written the report.",
+        "She has already write the report.",
+        "She did already written the report."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_046",
+    "seedId": "present_perfect_046",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그녀는 아직 보고서를 쓰지 않았다.",
+    "english": "She has not yet written the report.",
+    "words": [
+      "She",
+      "has",
+      "not",
+      "yet",
+      "written",
+      "the",
+      "report",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 아직 보고서를 쓰지 않았다.",
+        "has"
+      ],
+      [
+        "has not yet + past participle",
+        "has not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "She have not yet written the report.",
+      "statementForm": [
+        "She has not yet written the report.",
+        "She has not yet written the report"
+      ],
+      "fragmentForm": "She has not yet written",
+      "wormholeVariants": [
+        "She have not yet written the report.",
+        "She has not yet write the report.",
+        "She did not yet written the report."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_047",
+    "seedId": "present_perfect_047",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그녀는 보고서를 썼니?",
+    "english": "Has she written the report yet?",
+    "words": [
+      "Has",
+      "she",
+      "written",
+      "the",
+      "report",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 보고서를 썼니?",
+        "Has"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did she written the report yet?",
+      "statementForm": [
+        "Has she written the report yet?",
+        "Has she written the report yet"
+      ],
+      "fragmentForm": "Has she written the",
+      "wormholeVariants": [
+        "Did she written the report yet?",
+        "Have she written the report yet?",
+        "Has she write the report yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_048",
+    "seedId": "present_perfect_048",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그녀는 지난밤부터 보고서를 써 왔다.",
+    "english": "She has written the report since last night.",
+    "words": [
+      "She",
+      "has",
+      "written",
+      "the",
+      "report",
+      "since",
+      "last",
+      "night",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그녀는 지난밤부터 보고서를 써 왔다.",
+        "has"
+      ],
+      [
+        "since clause + present perfect",
+        "since clause + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced",
+      "since_clause"
+    ],
+    "distractorSeeds": {
+      "auxError": "She have written the report since last night.",
+      "statementForm": [
+        "She has written the report since last night.",
+        "She has written the report since last night"
+      ],
+      "fragmentForm": "She has written the report since",
+      "wormholeVariants": [
+        "She have written the report since last night.",
+        "She has write the report since last night.",
+        "She did written the report since last night."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_049",
+    "seedId": "present_perfect_049",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그는 최근에 창문을 열었다.",
+    "english": "He has recently opened the window.",
+    "words": [
+      "He",
+      "has",
+      "recently",
+      "opened",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 최근에 창문을 열었다.",
+        "has"
+      ],
+      [
+        "has recently + past participle",
+        "has recently + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "recently"
+    ],
+    "distractorSeeds": {
+      "auxError": "He have recently opened the window.",
+      "statementForm": [
+        "He has recently opened the window.",
+        "He has recently opened the window"
+      ],
+      "fragmentForm": "He has recently opened",
+      "wormholeVariants": [
+        "He have recently opened the window.",
+        "He has recently open the window.",
+        "He did recently opened the window."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_050",
+    "seedId": "present_perfect_050",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그는 아직 창문을 열지 않았다.",
+    "english": "He has not yet opened the window.",
+    "words": [
+      "He",
+      "has",
+      "not",
+      "yet",
+      "opened",
+      "the",
+      "window",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 아직 창문을 열지 않았다.",
+        "has"
+      ],
+      [
+        "has not yet + past participle",
+        "has not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "He have not yet opened the window.",
+      "statementForm": [
+        "He has not yet opened the window.",
+        "He has not yet opened the window"
+      ],
+      "fragmentForm": "He has not yet opened",
+      "wormholeVariants": [
+        "He have not yet opened the window.",
+        "He has not yet open the window.",
+        "He did not yet opened the window."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_051",
+    "seedId": "present_perfect_051",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그는 창문을 열었니?",
+    "english": "Has he opened the window yet?",
+    "words": [
+      "Has",
+      "he",
+      "opened",
+      "the",
+      "window",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 창문을 열었니?",
+        "Has"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did he opened the window yet?",
+      "statementForm": [
+        "Has he opened the window yet?",
+        "Has he opened the window yet"
+      ],
+      "fragmentForm": "Has he opened the",
+      "wormholeVariants": [
+        "Did he opened the window yet?",
+        "Have he opened the window yet?",
+        "Has he open the window yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_052",
+    "seedId": "present_perfect_052",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그는 오늘 창문을 여러 번 열었다.",
+    "english": "He has opened the window several times today.",
+    "words": [
+      "He",
+      "has",
+      "opened",
+      "the",
+      "window",
+      "several",
+      "times",
+      "today",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그는 오늘 창문을 여러 번 열었다.",
+        "has"
+      ],
+      [
+        "frequency + present perfect",
+        "frequency + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced",
+      "frequency"
+    ],
+    "distractorSeeds": {
+      "auxError": "He have opened the window several times today.",
+      "statementForm": [
+        "He has opened the window several times today.",
+        "He has opened the window several times today"
+      ],
+      "fragmentForm": "He has opened the window several",
+      "wormholeVariants": [
+        "He have opened the window several times today.",
+        "He has open the window several times today.",
+        "He did opened the window several times today."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_053",
+    "seedId": "present_perfect_053",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리는 이미 문을 잠갔다.",
+    "english": "We have already locked the door.",
+    "words": [
+      "We",
+      "have",
+      "already",
+      "locked",
+      "the",
+      "door",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 이미 문을 잠갔다.",
+        "have"
+      ],
+      [
+        "have + already + past participle",
+        "have + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "We has already locked the door.",
+      "statementForm": [
+        "We have already locked the door.",
+        "We have already locked the door"
+      ],
+      "fragmentForm": "We have already locked",
+      "wormholeVariants": [
+        "We has already locked the door.",
+        "We have already lock the door.",
+        "We did already locked the door."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_054",
+    "seedId": "present_perfect_054",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리는 한 번도 문을 잠그지 않았다.",
+    "english": "We have never locked the door before.",
+    "words": [
+      "We",
+      "have",
+      "never",
+      "locked",
+      "the",
+      "door",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 한 번도 문을 잠그지 않았다.",
+        "have"
+      ],
+      [
+        "have never + past participle + before",
+        "have never + past participle + before"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "We has never locked the door before.",
+      "statementForm": [
+        "We have never locked the door before.",
+        "We have never locked the door before"
+      ],
+      "fragmentForm": "We have never locked the",
+      "wormholeVariants": [
+        "We has never locked the door before.",
+        "We have never lock the door before.",
+        "We did never locked the door before."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_055",
+    "seedId": "present_perfect_055",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리는 문을 잠갔니?",
+    "english": "Have we ever locked the door before?",
+    "words": [
+      "Have",
+      "we",
+      "ever",
+      "locked",
+      "the",
+      "door",
+      "before",
+      "?"
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 문을 잠갔니?",
+        "Have"
+      ],
+      [
+        " + subject + ever + past participle + before",
+        " + subject + ever + past participle + before"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Have"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did we ever locked the door before?",
+      "statementForm": [
+        "Have we ever locked the door before?",
+        "Have we ever locked the door before"
+      ],
+      "fragmentForm": "Have we ever locked the",
+      "wormholeVariants": [
+        "Did we ever locked the door before?",
+        "Has we ever locked the door before?",
+        "Have we ever lock the door before?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_056",
+    "seedId": "present_perfect_056",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리는 매일 나가기 전에 문을 잠가 왔다.",
+    "english": "We have locked the door before leaving every day.",
+    "words": [
+      "We",
+      "have",
+      "locked",
+      "the",
+      "door",
+      "before",
+      "leaving",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리는 매일 나가기 전에 문을 잠가 왔다.",
+        "have"
+      ],
+      [
+        "advanced + present perfect",
+        "advanced + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "We has locked the door before leaving every day.",
+      "statementForm": [
+        "We have locked the door before leaving every day.",
+        "We have locked the door before leaving every day"
+      ],
+      "fragmentForm": "We have locked the door before leaving",
+      "wormholeVariants": [
+        "We has locked the door before leaving every day.",
+        "We have lock the door before leaving every day.",
+        "We did locked the door before leaving every day."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_057",
+    "seedId": "present_perfect_057",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그들은 이미 글을 읽었다.",
+    "english": "They have already read the article.",
+    "words": [
+      "They",
+      "have",
+      "already",
+      "read",
+      "the",
+      "article",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 이미 글을 읽었다.",
+        "have"
+      ],
+      [
+        "have + already + past participle",
+        "have + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "They has already read the article.",
+      "statementForm": [
+        "They have already read the article.",
+        "They have already read the article"
+      ],
+      "fragmentForm": "They have already read",
+      "wormholeVariants": [
+        "They has already read the article.",
+        "They did already read the article.",
+        "They already read the article."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_058",
+    "seedId": "present_perfect_058",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그들은 아직 글을 읽지 않았다.",
+    "english": "They have not yet read the article.",
+    "words": [
+      "They",
+      "have",
+      "not",
+      "yet",
+      "read",
+      "the",
+      "article",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 아직 글을 읽지 않았다.",
+        "have"
+      ],
+      [
+        "have not yet + past participle",
+        "have not yet + past participle"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "They has not yet read the article.",
+      "statementForm": [
+        "They have not yet read the article.",
+        "They have not yet read the article"
+      ],
+      "fragmentForm": "They have not yet read",
+      "wormholeVariants": [
+        "They has not yet read the article.",
+        "They did not yet read the article.",
+        "They not yet read the article."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_059",
+    "seedId": "present_perfect_059",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그들은 글을 읽었니?",
+    "english": "Have they read the article yet?",
+    "words": [
+      "Have",
+      "they",
+      "read",
+      "the",
+      "article",
+      "yet",
+      "?"
+    ],
+    "wordCount": 6,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 글을 읽었니?",
+        "Have"
+      ],
+      [
+        " + subject + past participle + yet",
+        " + subject + past participle + yet"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Have"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did they read the article yet?",
+      "statementForm": [
+        "Have they read the article yet?",
+        "Have they read the article yet"
+      ],
+      "fragmentForm": "Have they read the",
+      "wormholeVariants": [
+        "Did they read the article yet?",
+        "Has they read the article yet?",
+        "they read the article yet?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_060",
+    "seedId": "present_perfect_060",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "그들은 지금까지 그 글을 읽어 왔다.",
+    "english": "They have read the article up to now.",
+    "words": [
+      "They",
+      "have",
+      "read",
+      "the",
+      "article",
+      "up",
+      "to",
+      "now",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "그들은 지금까지 그 글을 읽어 왔다.",
+        "have"
+      ],
+      [
+        "advanced + present perfect",
+        "advanced + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "have"
+    ],
+    "tags": [
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "They has read the article up to now.",
+      "statementForm": [
+        "They have read the article up to now.",
+        "They have read the article up to now"
+      ],
+      "fragmentForm": "They have read the article up",
+      "wormholeVariants": [
+        "They has read the article up to now.",
+        "They did read the article up to now.",
+        "They read the article up to now."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_061",
+    "seedId": "present_perfect_061",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 아버지는 이미 다리를 지었다.",
+    "english": "My father has already built the bridge.",
+    "words": [
+      "My",
+      "father",
+      "has",
+      "already",
+      "built",
+      "the",
+      "bridge",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 아버지는 이미 다리를 지었다.",
+        "has"
+      ],
+      [
+        "has + already + past participle",
+        "has + already + past participle"
+      ],
+      [
+        "주의",
+        "Use have/has + past participle to show a present result or experience."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "affirmative",
+      "already"
+    ],
+    "distractorSeeds": {
+      "auxError": "My father have already built the bridge.",
+      "statementForm": [
+        "My father has already built the bridge.",
+        "My father has already built the bridge"
+      ],
+      "fragmentForm": "My father has already built",
+      "wormholeVariants": [
+        "My father have already built the bridge.",
+        "My father has already build the bridge.",
+        "My father did already built the bridge."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_062",
+    "seedId": "present_perfect_062",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 아버지는 다리를 지은 적이 없었다.",
+    "english": "My father has never built the bridge before.",
+    "words": [
+      "My",
+      "father",
+      "has",
+      "never",
+      "built",
+      "the",
+      "bridge",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 아버지는 다리를 지은 적이 없었다.",
+        "has"
+      ],
+      [
+        "has never + past participle + before",
+        "has never + past participle + before"
+      ],
+      [
+        "주의",
+        "Negative present perfect often uses not yet or never ... before."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "negative"
+    ],
+    "distractorSeeds": {
+      "auxError": "My father have never built the bridge before.",
+      "statementForm": [
+        "My father has never built the bridge before.",
+        "My father has never built the bridge before"
+      ],
+      "fragmentForm": "My father has never built the",
+      "wormholeVariants": [
+        "My father have never built the bridge before.",
+        "My father has never build the bridge before.",
+        "My father did never built the bridge before."
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_063",
+    "seedId": "present_perfect_063",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 아버지는 다리를 지었니?",
+    "english": "Has my father ever built the bridge before?",
+    "words": [
+      "Has",
+      "my",
+      "father",
+      "ever",
+      "built",
+      "the",
+      "bridge",
+      "before",
+      "?"
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 아버지는 다리를 지었니?",
+        "Has"
+      ],
+      [
+        " + subject + ever + past participle + before",
+        " + subject + ever + past participle + before"
+      ],
+      [
+        "주의",
+        "Question forms move have/has to the front."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "Has"
+    ],
+    "tags": [
+      "question"
+    ],
+    "distractorSeeds": {
+      "auxError": "Did my father ever built the bridge before?",
+      "statementForm": [
+        "Has my father ever built the bridge before?",
+        "Has my father ever built the bridge before"
+      ],
+      "fragmentForm": "Has my father ever built the",
+      "wormholeVariants": [
+        "Did my father ever built the bridge before?",
+        "Have my father ever built the bridge before?",
+        "Has my father ever build the bridge before?"
+      ]
+    }
+  },
+  {
+    "id": "m3_present_perfect_064",
+    "seedId": "present_perfect_064",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "present_perfect",
+    "chapterLabelKo": "현재완료",
+    "korean": "우리 아버지는 오랫동안 다리를 지어 왔다.",
+    "english": "My father has built bridges for many years.",
+    "words": [
+      "My",
+      "father",
+      "has",
+      "built",
+      "bridges",
+      "for",
+      "many",
+      "years",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "present_perfect",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined",
+    "clueUnits": [
+      [
+        "우리 아버지는 오랫동안 다리를 지어 왔다.",
+        "has"
+      ],
+      [
+        "for clause + present perfect",
+        "for clause + present perfect"
+      ],
+      [
+        "주의",
+        "Watch the time clause or trap around the perfect form."
+      ]
+    ],
+    "extraClueWordPool": [
+      "have",
+      "has",
+      "already",
+      "just",
+      "never",
+      "yet",
+      "ever",
+      "before",
+      "since",
+      "for"
+    ],
+    "blankTargets": [
+      "has"
+    ],
+    "tags": [
+      "advanced",
+      "for_clause"
+    ],
+    "distractorSeeds": {
+      "auxError": "My father have built bridges for many years.",
+      "statementForm": [
+        "My father has built bridges for many years.",
+        "My father has built bridges for many years"
+      ],
+      "fragmentForm": "My father has built bridges for",
+      "wormholeVariants": [
+        "My father have built bridges for many years.",
+        "My father has build bridges for many years.",
+        "My father did built bridges for many years."
+      ]
+    }
+  }
+]
