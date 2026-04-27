@@ -1,0 +1,6694 @@
+[
+  {
+    "id": "m3_comp_001",
+    "seedId": "comparative_001",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그는 그의 형보다 더 키가 크다.",
+    "english": "He is taller than his brother.",
+    "words": [
+      "He",
+      "is",
+      "taller",
+      "than",
+      "his",
+      "brother",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그는 그의 형보다 더 키가 크다.",
+        "taller than"
+      ],
+      [
+        "comparative",
+        "taller than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "taller than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "taller",
+      "tall",
+      "his brother"
+    ],
+    "blankTargets": [
+      "taller than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is taller as his brother.",
+      "statementForm": [
+        "He is taller than his brother.",
+        "He is taller than his brother"
+      ],
+      "fragmentForm": "taller than",
+      "wormholeVariants": [
+        "He is taller as his brother.",
+        "He is tall than his brother.",
+        "He is more tall than his brother.",
+        "He is most tall than his brother.",
+        "He is so tall than his brother.",
+        "He is taller then his brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_002",
+    "seedId": "comparative_002",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그는 그의 형보다 훨씬 더 키가 크다.",
+    "english": "He is much taller than his brother.",
+    "words": [
+      "He",
+      "is",
+      "much",
+      "taller",
+      "than",
+      "his",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그는 그의 형보다 훨씬 더 키가 크다.",
+        "much taller than"
+      ],
+      [
+        "comparative",
+        "much taller than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much taller than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "taller",
+      "tall",
+      "his brother"
+    ],
+    "blankTargets": [
+      "much taller than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is much taller as his brother.",
+      "statementForm": [
+        "He is much taller than his brother.",
+        "He is much taller than his brother"
+      ],
+      "fragmentForm": "much taller than",
+      "wormholeVariants": [
+        "He is much taller as his brother.",
+        "He is taller than his brother.",
+        "He is much tall than his brother.",
+        "He is much more tall than his brother.",
+        "He is much most tall than his brother.",
+        "He is much so tall than his brother.",
+        "He is much taller then his brother.",
+        "He is very taller than his brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_003",
+    "seedId": "comparative_003",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그는 그의 형보다 훨씬 더 키가 크다.",
+    "english": "He is far taller than his brother.",
+    "words": [
+      "He",
+      "is",
+      "far",
+      "taller",
+      "than",
+      "his",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그는 그의 형보다 훨씬 더 키가 크다.",
+        "far taller than"
+      ],
+      [
+        "comparative",
+        "far taller than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far taller than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "taller",
+      "tall",
+      "his brother"
+    ],
+    "blankTargets": [
+      "far taller than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is far taller as his brother.",
+      "statementForm": [
+        "He is far taller than his brother.",
+        "He is far taller than his brother"
+      ],
+      "fragmentForm": "far taller than",
+      "wormholeVariants": [
+        "He is far taller as his brother.",
+        "He is taller than his brother.",
+        "He is far tall than his brother.",
+        "He is far more tall than his brother.",
+        "He is far most tall than his brother.",
+        "He is far so tall than his brother.",
+        "He is far taller then his brother.",
+        "He is very taller than his brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_004",
+    "seedId": "comparative_004",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그는 그의 형보다 여전히 더 키가 크다.",
+    "english": "He is still taller than his brother.",
+    "words": [
+      "He",
+      "is",
+      "still",
+      "taller",
+      "than",
+      "his",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그는 그의 형보다 여전히 더 키가 크다.",
+        "still taller than"
+      ],
+      [
+        "comparative",
+        "still taller than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still taller than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "taller",
+      "tall",
+      "his brother"
+    ],
+    "blankTargets": [
+      "still taller than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He is still taller as his brother.",
+      "statementForm": [
+        "He is still taller than his brother.",
+        "He is still taller than his brother"
+      ],
+      "fragmentForm": "still taller than",
+      "wormholeVariants": [
+        "He is still taller as his brother.",
+        "He is taller than his brother.",
+        "He is still tall than his brother.",
+        "He is still more tall than his brother.",
+        "He is still most tall than his brother.",
+        "He is still so tall than his brother.",
+        "He is still taller then his brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_005",
+    "seedId": "comparative_005",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "제니는 캐시보다 더 예쁘다.",
+    "english": "Jenny is prettier than Cathy.",
+    "words": [
+      "Jenny",
+      "is",
+      "prettier",
+      "than",
+      "Cathy",
+      "."
+    ],
+    "wordCount": 5,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "제니는 캐시보다 더 예쁘다.",
+        "prettier than"
+      ],
+      [
+        "comparative",
+        "prettier than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "prettier than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "prettier",
+      "pretty",
+      "Cathy"
+    ],
+    "blankTargets": [
+      "prettier than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Jenny is prettier as Cathy.",
+      "statementForm": [
+        "Jenny is prettier than Cathy.",
+        "Jenny is prettier than Cathy"
+      ],
+      "fragmentForm": "prettier than",
+      "wormholeVariants": [
+        "Jenny is prettier as Cathy.",
+        "Jenny is pretty than Cathy.",
+        "Jenny is more pretty than Cathy.",
+        "Jenny is most pretty than Cathy.",
+        "Jenny is so pretty than Cathy.",
+        "Jenny is prettier then Cathy."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_006",
+    "seedId": "comparative_006",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "제니는 캐시보다 훨씬 더 예쁘다.",
+    "english": "Jenny is much prettier than Cathy.",
+    "words": [
+      "Jenny",
+      "is",
+      "much",
+      "prettier",
+      "than",
+      "Cathy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "제니는 캐시보다 훨씬 더 예쁘다.",
+        "much prettier than"
+      ],
+      [
+        "comparative",
+        "much prettier than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much prettier than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "prettier",
+      "pretty",
+      "Cathy"
+    ],
+    "blankTargets": [
+      "much prettier than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Jenny is much prettier as Cathy.",
+      "statementForm": [
+        "Jenny is much prettier than Cathy.",
+        "Jenny is much prettier than Cathy"
+      ],
+      "fragmentForm": "much prettier than",
+      "wormholeVariants": [
+        "Jenny is much prettier as Cathy.",
+        "Jenny is prettier than Cathy.",
+        "Jenny is much pretty than Cathy.",
+        "Jenny is much more pretty than Cathy.",
+        "Jenny is much most pretty than Cathy.",
+        "Jenny is much so pretty than Cathy.",
+        "Jenny is much prettier then Cathy.",
+        "Jenny is very prettier than Cathy."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_007",
+    "seedId": "comparative_007",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "제니는 캐시보다 훨씬 더 예쁘다.",
+    "english": "Jenny is far prettier than Cathy.",
+    "words": [
+      "Jenny",
+      "is",
+      "far",
+      "prettier",
+      "than",
+      "Cathy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "제니는 캐시보다 훨씬 더 예쁘다.",
+        "far prettier than"
+      ],
+      [
+        "comparative",
+        "far prettier than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far prettier than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "prettier",
+      "pretty",
+      "Cathy"
+    ],
+    "blankTargets": [
+      "far prettier than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Jenny is far prettier as Cathy.",
+      "statementForm": [
+        "Jenny is far prettier than Cathy.",
+        "Jenny is far prettier than Cathy"
+      ],
+      "fragmentForm": "far prettier than",
+      "wormholeVariants": [
+        "Jenny is far prettier as Cathy.",
+        "Jenny is prettier than Cathy.",
+        "Jenny is far pretty than Cathy.",
+        "Jenny is far more pretty than Cathy.",
+        "Jenny is far most pretty than Cathy.",
+        "Jenny is far so pretty than Cathy.",
+        "Jenny is far prettier then Cathy.",
+        "Jenny is very prettier than Cathy."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_008",
+    "seedId": "comparative_008",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "제니는 캐시보다 여전히 더 예쁘다.",
+    "english": "Jenny is still prettier than Cathy.",
+    "words": [
+      "Jenny",
+      "is",
+      "still",
+      "prettier",
+      "than",
+      "Cathy",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "제니는 캐시보다 여전히 더 예쁘다.",
+        "still prettier than"
+      ],
+      [
+        "comparative",
+        "still prettier than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still prettier than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "prettier",
+      "pretty",
+      "Cathy"
+    ],
+    "blankTargets": [
+      "still prettier than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Jenny is still prettier as Cathy.",
+      "statementForm": [
+        "Jenny is still prettier than Cathy.",
+        "Jenny is still prettier than Cathy"
+      ],
+      "fragmentForm": "still prettier than",
+      "wormholeVariants": [
+        "Jenny is still prettier as Cathy.",
+        "Jenny is prettier than Cathy.",
+        "Jenny is still pretty than Cathy.",
+        "Jenny is still more pretty than Cathy.",
+        "Jenny is still most pretty than Cathy.",
+        "Jenny is still so pretty than Cathy.",
+        "Jenny is still prettier then Cathy."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_009",
+    "seedId": "comparative_009",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "내 사촌은 나보다 더 어리다.",
+    "english": "My cousin is younger than me.",
+    "words": [
+      "My",
+      "cousin",
+      "is",
+      "younger",
+      "than",
+      "me",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "내 사촌은 나보다 더 어리다.",
+        "younger than"
+      ],
+      [
+        "comparative",
+        "younger than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "younger than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "younger",
+      "young",
+      "me"
+    ],
+    "blankTargets": [
+      "younger than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "My cousin is younger as me.",
+      "statementForm": [
+        "My cousin is younger than me.",
+        "My cousin is younger than me"
+      ],
+      "fragmentForm": "younger than",
+      "wormholeVariants": [
+        "My cousin is younger as me.",
+        "My cousin is young than me.",
+        "My cousin is more young than me.",
+        "My cousin is most young than me.",
+        "My cousin is so young than me.",
+        "My cousin is younger then me."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_010",
+    "seedId": "comparative_010",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "내 사촌은 나보다 훨씬 더 어리다.",
+    "english": "My cousin is much younger than me.",
+    "words": [
+      "My",
+      "cousin",
+      "is",
+      "much",
+      "younger",
+      "than",
+      "me",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "내 사촌은 나보다 훨씬 더 어리다.",
+        "much younger than"
+      ],
+      [
+        "comparative",
+        "much younger than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much younger than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "younger",
+      "young",
+      "me"
+    ],
+    "blankTargets": [
+      "much younger than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "My cousin is much younger as me.",
+      "statementForm": [
+        "My cousin is much younger than me.",
+        "My cousin is much younger than me"
+      ],
+      "fragmentForm": "much younger than",
+      "wormholeVariants": [
+        "My cousin is much younger as me.",
+        "My cousin is younger than me.",
+        "My cousin is much young than me.",
+        "My cousin is much more young than me.",
+        "My cousin is much most young than me.",
+        "My cousin is much so young than me.",
+        "My cousin is much younger then me.",
+        "My cousin is very younger than me."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_011",
+    "seedId": "comparative_011",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "내 사촌은 나보다 훨씬 더 어리다.",
+    "english": "My cousin is far younger than me.",
+    "words": [
+      "My",
+      "cousin",
+      "is",
+      "far",
+      "younger",
+      "than",
+      "me",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "내 사촌은 나보다 훨씬 더 어리다.",
+        "far younger than"
+      ],
+      [
+        "comparative",
+        "far younger than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far younger than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "younger",
+      "young",
+      "me"
+    ],
+    "blankTargets": [
+      "far younger than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "My cousin is far younger as me.",
+      "statementForm": [
+        "My cousin is far younger than me.",
+        "My cousin is far younger than me"
+      ],
+      "fragmentForm": "far younger than",
+      "wormholeVariants": [
+        "My cousin is far younger as me.",
+        "My cousin is younger than me.",
+        "My cousin is far young than me.",
+        "My cousin is far more young than me.",
+        "My cousin is far most young than me.",
+        "My cousin is far so young than me.",
+        "My cousin is far younger then me.",
+        "My cousin is very younger than me."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_012",
+    "seedId": "comparative_012",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "내 사촌은 나보다 여전히 더 어리다.",
+    "english": "My cousin is still younger than me.",
+    "words": [
+      "My",
+      "cousin",
+      "is",
+      "still",
+      "younger",
+      "than",
+      "me",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "내 사촌은 나보다 여전히 더 어리다.",
+        "still younger than"
+      ],
+      [
+        "comparative",
+        "still younger than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still younger than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "younger",
+      "young",
+      "me"
+    ],
+    "blankTargets": [
+      "still younger than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "My cousin is still younger as me.",
+      "statementForm": [
+        "My cousin is still younger than me.",
+        "My cousin is still younger than me"
+      ],
+      "fragmentForm": "still younger than",
+      "wormholeVariants": [
+        "My cousin is still younger as me.",
+        "My cousin is younger than me.",
+        "My cousin is still young than me.",
+        "My cousin is still more young than me.",
+        "My cousin is still most young than me.",
+        "My cousin is still so young than me.",
+        "My cousin is still younger then me."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_013",
+    "seedId": "comparative_013",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "네 옷은 내 것보다 더 비싸다.",
+    "english": "Your clothes are more expensive than mine.",
+    "words": [
+      "Your",
+      "clothes",
+      "are",
+      "more",
+      "expensive",
+      "than",
+      "mine",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "네 옷은 내 것보다 더 비싸다.",
+        "more expensive than"
+      ],
+      [
+        "comparative",
+        "more expensive than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "more expensive than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more expensive",
+      "expensive",
+      "mine"
+    ],
+    "blankTargets": [
+      "more expensive than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Your clothes are more expensive as mine.",
+      "statementForm": [
+        "Your clothes are more expensive than mine.",
+        "Your clothes are more expensive than mine"
+      ],
+      "fragmentForm": "more expensive than",
+      "wormholeVariants": [
+        "Your clothes are more expensive as mine.",
+        "Your clothes are expensive than mine.",
+        "Your clothes are most expensive than mine.",
+        "Your clothes are so expensive than mine.",
+        "Your clothes are more expensive then mine."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_014",
+    "seedId": "comparative_014",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "네 옷은 내 것보다 훨씬 더 비싸다.",
+    "english": "Your clothes are much more expensive than mine.",
+    "words": [
+      "Your",
+      "clothes",
+      "are",
+      "much",
+      "more",
+      "expensive",
+      "than",
+      "mine",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "네 옷은 내 것보다 훨씬 더 비싸다.",
+        "much more expensive than"
+      ],
+      [
+        "comparative",
+        "much more expensive than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much more expensive than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more expensive",
+      "expensive",
+      "mine"
+    ],
+    "blankTargets": [
+      "much more expensive than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Your clothes are much more expensive as mine.",
+      "statementForm": [
+        "Your clothes are much more expensive than mine.",
+        "Your clothes are much more expensive than mine"
+      ],
+      "fragmentForm": "much more expensive than",
+      "wormholeVariants": [
+        "Your clothes are much more expensive as mine.",
+        "Your clothes are more expensive than mine.",
+        "Your clothes are much expensive than mine.",
+        "Your clothes are much most expensive than mine.",
+        "Your clothes are much so expensive than mine.",
+        "Your clothes are much more expensive then mine.",
+        "Your clothes are very more expensive than mine."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_015",
+    "seedId": "comparative_015",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "네 옷은 내 것보다 훨씬 더 비싸다.",
+    "english": "Your clothes are far more expensive than mine.",
+    "words": [
+      "Your",
+      "clothes",
+      "are",
+      "far",
+      "more",
+      "expensive",
+      "than",
+      "mine",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "네 옷은 내 것보다 훨씬 더 비싸다.",
+        "far more expensive than"
+      ],
+      [
+        "comparative",
+        "far more expensive than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far more expensive than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more expensive",
+      "expensive",
+      "mine"
+    ],
+    "blankTargets": [
+      "far more expensive than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Your clothes are far more expensive as mine.",
+      "statementForm": [
+        "Your clothes are far more expensive than mine.",
+        "Your clothes are far more expensive than mine"
+      ],
+      "fragmentForm": "far more expensive than",
+      "wormholeVariants": [
+        "Your clothes are far more expensive as mine.",
+        "Your clothes are more expensive than mine.",
+        "Your clothes are far expensive than mine.",
+        "Your clothes are far most expensive than mine.",
+        "Your clothes are far so expensive than mine.",
+        "Your clothes are far more expensive then mine.",
+        "Your clothes are very more expensive than mine."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_016",
+    "seedId": "comparative_016",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "네 옷은 내 것보다 여전히 더 비싸다.",
+    "english": "Your clothes are still more expensive than mine.",
+    "words": [
+      "Your",
+      "clothes",
+      "are",
+      "still",
+      "more",
+      "expensive",
+      "than",
+      "mine",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "네 옷은 내 것보다 여전히 더 비싸다.",
+        "still more expensive than"
+      ],
+      [
+        "comparative",
+        "still more expensive than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still more expensive than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more expensive",
+      "expensive",
+      "mine"
+    ],
+    "blankTargets": [
+      "still more expensive than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Your clothes are still more expensive as mine.",
+      "statementForm": [
+        "Your clothes are still more expensive than mine.",
+        "Your clothes are still more expensive than mine"
+      ],
+      "fragmentForm": "still more expensive than",
+      "wormholeVariants": [
+        "Your clothes are still more expensive as mine.",
+        "Your clothes are more expensive than mine.",
+        "Your clothes are still expensive than mine.",
+        "Your clothes are still most expensive than mine.",
+        "Your clothes are still so expensive than mine.",
+        "Your clothes are still more expensive then mine."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_017",
+    "seedId": "comparative_017",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 선생님은 내가 예상했던 것보다 더 엄격하다.",
+    "english": "The teacher was stricter than I expected.",
+    "words": [
+      "The",
+      "teacher",
+      "was",
+      "stricter",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선생님은 내가 예상했던 것보다 더 엄격하다.",
+        "stricter than"
+      ],
+      [
+        "comparative",
+        "stricter than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "stricter than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "stricter",
+      "strict",
+      "I expected"
+    ],
+    "blankTargets": [
+      "stricter than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher was stricter as I expected.",
+      "statementForm": [
+        "The teacher was stricter than I expected.",
+        "The teacher was stricter than I expected"
+      ],
+      "fragmentForm": "stricter than",
+      "wormholeVariants": [
+        "The teacher was stricter as I expected.",
+        "The teacher was strict than I expected.",
+        "The teacher was more strict than I expected.",
+        "The teacher was most strict than I expected.",
+        "The teacher was so strict than I expected.",
+        "The teacher was stricter then I expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_018",
+    "seedId": "comparative_018",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 선생님은 내가 예상했던 것보다 훨씬 더 엄격하다.",
+    "english": "The teacher was much stricter than I expected.",
+    "words": [
+      "The",
+      "teacher",
+      "was",
+      "much",
+      "stricter",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선생님은 내가 예상했던 것보다 훨씬 더 엄격하다.",
+        "much stricter than"
+      ],
+      [
+        "comparative",
+        "much stricter than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much stricter than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "stricter",
+      "strict",
+      "I expected"
+    ],
+    "blankTargets": [
+      "much stricter than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher was much stricter as I expected.",
+      "statementForm": [
+        "The teacher was much stricter than I expected.",
+        "The teacher was much stricter than I expected"
+      ],
+      "fragmentForm": "much stricter than",
+      "wormholeVariants": [
+        "The teacher was much stricter as I expected.",
+        "The teacher was stricter than I expected.",
+        "The teacher was much strict than I expected.",
+        "The teacher was much more strict than I expected.",
+        "The teacher was much most strict than I expected.",
+        "The teacher was much so strict than I expected.",
+        "The teacher was much stricter then I expected.",
+        "The teacher was very stricter than I expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_019",
+    "seedId": "comparative_019",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 선생님은 내가 예상했던 것보다 훨씬 더 엄격하다.",
+    "english": "The teacher was far stricter than I expected.",
+    "words": [
+      "The",
+      "teacher",
+      "was",
+      "far",
+      "stricter",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선생님은 내가 예상했던 것보다 훨씬 더 엄격하다.",
+        "far stricter than"
+      ],
+      [
+        "comparative",
+        "far stricter than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far stricter than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "stricter",
+      "strict",
+      "I expected"
+    ],
+    "blankTargets": [
+      "far stricter than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher was far stricter as I expected.",
+      "statementForm": [
+        "The teacher was far stricter than I expected.",
+        "The teacher was far stricter than I expected"
+      ],
+      "fragmentForm": "far stricter than",
+      "wormholeVariants": [
+        "The teacher was far stricter as I expected.",
+        "The teacher was stricter than I expected.",
+        "The teacher was far strict than I expected.",
+        "The teacher was far more strict than I expected.",
+        "The teacher was far most strict than I expected.",
+        "The teacher was far so strict than I expected.",
+        "The teacher was far stricter then I expected.",
+        "The teacher was very stricter than I expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_020",
+    "seedId": "comparative_020",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 선생님은 내가 예상했던 것보다 여전히 더 엄격하다.",
+    "english": "The teacher was still stricter than I expected.",
+    "words": [
+      "The",
+      "teacher",
+      "was",
+      "still",
+      "stricter",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선생님은 내가 예상했던 것보다 여전히 더 엄격하다.",
+        "still stricter than"
+      ],
+      [
+        "comparative",
+        "still stricter than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still stricter than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "stricter",
+      "strict",
+      "I expected"
+    ],
+    "blankTargets": [
+      "still stricter than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher was still stricter as I expected.",
+      "statementForm": [
+        "The teacher was still stricter than I expected.",
+        "The teacher was still stricter than I expected"
+      ],
+      "fragmentForm": "still stricter than",
+      "wormholeVariants": [
+        "The teacher was still stricter as I expected.",
+        "The teacher was stricter than I expected.",
+        "The teacher was still strict than I expected.",
+        "The teacher was still more strict than I expected.",
+        "The teacher was still most strict than I expected.",
+        "The teacher was still so strict than I expected.",
+        "The teacher was still stricter then I expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_021",
+    "seedId": "comparative_021",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "우리 엄마는 잭슨의 엄마보다 더 피곤하다.",
+    "english": "My mother is more tired than Jackson's mother.",
+    "words": [
+      "My",
+      "mother",
+      "is",
+      "more",
+      "tired",
+      "than",
+      "Jackson's",
+      "mother",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리 엄마는 잭슨의 엄마보다 더 피곤하다.",
+        "more tired than"
+      ],
+      [
+        "comparative",
+        "more tired than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "more tired than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more tired",
+      "tired",
+      "Jackson's mother"
+    ],
+    "blankTargets": [
+      "more tired than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother is more tired as Jackson's mother.",
+      "statementForm": [
+        "My mother is more tired than Jackson's mother.",
+        "My mother is more tired than Jackson's mother"
+      ],
+      "fragmentForm": "more tired than",
+      "wormholeVariants": [
+        "My mother is more tired as Jackson's mother.",
+        "My mother is tired than Jackson's mother.",
+        "My mother is most tired than Jackson's mother.",
+        "My mother is so tired than Jackson's mother.",
+        "My mother is more tired then Jackson's mother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_022",
+    "seedId": "comparative_022",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "우리 엄마는 잭슨의 엄마보다 훨씬 더 피곤하다.",
+    "english": "My mother is much more tired than Jackson's mother.",
+    "words": [
+      "My",
+      "mother",
+      "is",
+      "much",
+      "more",
+      "tired",
+      "than",
+      "Jackson's",
+      "mother",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리 엄마는 잭슨의 엄마보다 훨씬 더 피곤하다.",
+        "much more tired than"
+      ],
+      [
+        "comparative",
+        "much more tired than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much more tired than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more tired",
+      "tired",
+      "Jackson's mother"
+    ],
+    "blankTargets": [
+      "much more tired than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother is much more tired as Jackson's mother.",
+      "statementForm": [
+        "My mother is much more tired than Jackson's mother.",
+        "My mother is much more tired than Jackson's mother"
+      ],
+      "fragmentForm": "much more tired than",
+      "wormholeVariants": [
+        "My mother is much more tired as Jackson's mother.",
+        "My mother is more tired than Jackson's mother.",
+        "My mother is much tired than Jackson's mother.",
+        "My mother is much most tired than Jackson's mother.",
+        "My mother is much so tired than Jackson's mother.",
+        "My mother is much more tired then Jackson's mother.",
+        "My mother is very more tired than Jackson's mother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_023",
+    "seedId": "comparative_023",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "우리 엄마는 잭슨의 엄마보다 훨씬 더 피곤하다.",
+    "english": "My mother is far more tired than Jackson's mother.",
+    "words": [
+      "My",
+      "mother",
+      "is",
+      "far",
+      "more",
+      "tired",
+      "than",
+      "Jackson's",
+      "mother",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리 엄마는 잭슨의 엄마보다 훨씬 더 피곤하다.",
+        "far more tired than"
+      ],
+      [
+        "comparative",
+        "far more tired than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far more tired than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more tired",
+      "tired",
+      "Jackson's mother"
+    ],
+    "blankTargets": [
+      "far more tired than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother is far more tired as Jackson's mother.",
+      "statementForm": [
+        "My mother is far more tired than Jackson's mother.",
+        "My mother is far more tired than Jackson's mother"
+      ],
+      "fragmentForm": "far more tired than",
+      "wormholeVariants": [
+        "My mother is far more tired as Jackson's mother.",
+        "My mother is more tired than Jackson's mother.",
+        "My mother is far tired than Jackson's mother.",
+        "My mother is far most tired than Jackson's mother.",
+        "My mother is far so tired than Jackson's mother.",
+        "My mother is far more tired then Jackson's mother.",
+        "My mother is very more tired than Jackson's mother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_024",
+    "seedId": "comparative_024",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "우리 엄마는 잭슨의 엄마보다 여전히 더 피곤하다.",
+    "english": "My mother is still more tired than Jackson's mother.",
+    "words": [
+      "My",
+      "mother",
+      "is",
+      "still",
+      "more",
+      "tired",
+      "than",
+      "Jackson's",
+      "mother",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리 엄마는 잭슨의 엄마보다 여전히 더 피곤하다.",
+        "still more tired than"
+      ],
+      [
+        "comparative",
+        "still more tired than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still more tired than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more tired",
+      "tired",
+      "Jackson's mother"
+    ],
+    "blankTargets": [
+      "still more tired than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My mother is still more tired as Jackson's mother.",
+      "statementForm": [
+        "My mother is still more tired than Jackson's mother.",
+        "My mother is still more tired than Jackson's mother"
+      ],
+      "fragmentForm": "still more tired than",
+      "wormholeVariants": [
+        "My mother is still more tired as Jackson's mother.",
+        "My mother is more tired than Jackson's mother.",
+        "My mother is still tired than Jackson's mother.",
+        "My mother is still most tired than Jackson's mother.",
+        "My mother is still so tired than Jackson's mother.",
+        "My mother is still more tired then Jackson's mother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_025",
+    "seedId": "comparative_025",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "톰은 내 형보다 더 현명하다.",
+    "english": "Tom is wiser than my brother.",
+    "words": [
+      "Tom",
+      "is",
+      "wiser",
+      "than",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "톰은 내 형보다 더 현명하다.",
+        "wiser than"
+      ],
+      [
+        "comparative",
+        "wiser than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "wiser than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "wiser",
+      "wise",
+      "my brother"
+    ],
+    "blankTargets": [
+      "wiser than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Tom is wiser as my brother.",
+      "statementForm": [
+        "Tom is wiser than my brother.",
+        "Tom is wiser than my brother"
+      ],
+      "fragmentForm": "wiser than",
+      "wormholeVariants": [
+        "Tom is wiser as my brother.",
+        "Tom is wise than my brother.",
+        "Tom is more wise than my brother.",
+        "Tom is most wise than my brother.",
+        "Tom is so wise than my brother.",
+        "Tom is wiser then my brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_026",
+    "seedId": "comparative_026",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "톰은 내 형보다 훨씬 더 현명하다.",
+    "english": "Tom is much wiser than my brother.",
+    "words": [
+      "Tom",
+      "is",
+      "much",
+      "wiser",
+      "than",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "톰은 내 형보다 훨씬 더 현명하다.",
+        "much wiser than"
+      ],
+      [
+        "comparative",
+        "much wiser than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much wiser than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "wiser",
+      "wise",
+      "my brother"
+    ],
+    "blankTargets": [
+      "much wiser than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Tom is much wiser as my brother.",
+      "statementForm": [
+        "Tom is much wiser than my brother.",
+        "Tom is much wiser than my brother"
+      ],
+      "fragmentForm": "much wiser than",
+      "wormholeVariants": [
+        "Tom is much wiser as my brother.",
+        "Tom is wiser than my brother.",
+        "Tom is much wise than my brother.",
+        "Tom is much more wise than my brother.",
+        "Tom is much most wise than my brother.",
+        "Tom is much so wise than my brother.",
+        "Tom is much wiser then my brother.",
+        "Tom is very wiser than my brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_027",
+    "seedId": "comparative_027",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "톰은 내 형보다 훨씬 더 현명하다.",
+    "english": "Tom is far wiser than my brother.",
+    "words": [
+      "Tom",
+      "is",
+      "far",
+      "wiser",
+      "than",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "톰은 내 형보다 훨씬 더 현명하다.",
+        "far wiser than"
+      ],
+      [
+        "comparative",
+        "far wiser than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far wiser than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "wiser",
+      "wise",
+      "my brother"
+    ],
+    "blankTargets": [
+      "far wiser than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Tom is far wiser as my brother.",
+      "statementForm": [
+        "Tom is far wiser than my brother.",
+        "Tom is far wiser than my brother"
+      ],
+      "fragmentForm": "far wiser than",
+      "wormholeVariants": [
+        "Tom is far wiser as my brother.",
+        "Tom is wiser than my brother.",
+        "Tom is far wise than my brother.",
+        "Tom is far more wise than my brother.",
+        "Tom is far most wise than my brother.",
+        "Tom is far so wise than my brother.",
+        "Tom is far wiser then my brother.",
+        "Tom is very wiser than my brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_028",
+    "seedId": "comparative_028",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "톰은 내 형보다 여전히 더 현명하다.",
+    "english": "Tom is still wiser than my brother.",
+    "words": [
+      "Tom",
+      "is",
+      "still",
+      "wiser",
+      "than",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "톰은 내 형보다 여전히 더 현명하다.",
+        "still wiser than"
+      ],
+      [
+        "comparative",
+        "still wiser than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still wiser than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "wiser",
+      "wise",
+      "my brother"
+    ],
+    "blankTargets": [
+      "still wiser than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Tom is still wiser as my brother.",
+      "statementForm": [
+        "Tom is still wiser than my brother.",
+        "Tom is still wiser than my brother"
+      ],
+      "fragmentForm": "still wiser than",
+      "wormholeVariants": [
+        "Tom is still wiser as my brother.",
+        "Tom is wiser than my brother.",
+        "Tom is still wise than my brother.",
+        "Tom is still more wise than my brother.",
+        "Tom is still most wise than my brother.",
+        "Tom is still so wise than my brother.",
+        "Tom is still wiser then my brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_029",
+    "seedId": "comparative_029",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "내 사촌은 그 배우보다 더 아름답다.",
+    "english": "My cousin is more beautiful than that actress.",
+    "words": [
+      "My",
+      "cousin",
+      "is",
+      "more",
+      "beautiful",
+      "than",
+      "that",
+      "actress",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "내 사촌은 그 배우보다 더 아름답다.",
+        "more beautiful than"
+      ],
+      [
+        "comparative",
+        "more beautiful than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "more beautiful than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more beautiful",
+      "beautiful",
+      "that actress"
+    ],
+    "blankTargets": [
+      "more beautiful than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My cousin is more beautiful as that actress.",
+      "statementForm": [
+        "My cousin is more beautiful than that actress.",
+        "My cousin is more beautiful than that actress"
+      ],
+      "fragmentForm": "more beautiful than",
+      "wormholeVariants": [
+        "My cousin is more beautiful as that actress.",
+        "My cousin is beautiful than that actress.",
+        "My cousin is most beautiful than that actress.",
+        "My cousin is so beautiful than that actress.",
+        "My cousin is more beautiful then that actress."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_030",
+    "seedId": "comparative_030",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "내 사촌은 그 배우보다 훨씬 더 아름답다.",
+    "english": "My cousin is much more beautiful than that actress.",
+    "words": [
+      "My",
+      "cousin",
+      "is",
+      "much",
+      "more",
+      "beautiful",
+      "than",
+      "that",
+      "actress",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "내 사촌은 그 배우보다 훨씬 더 아름답다.",
+        "much more beautiful than"
+      ],
+      [
+        "comparative",
+        "much more beautiful than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much more beautiful than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more beautiful",
+      "beautiful",
+      "that actress"
+    ],
+    "blankTargets": [
+      "much more beautiful than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My cousin is much more beautiful as that actress.",
+      "statementForm": [
+        "My cousin is much more beautiful than that actress.",
+        "My cousin is much more beautiful than that actress"
+      ],
+      "fragmentForm": "much more beautiful than",
+      "wormholeVariants": [
+        "My cousin is much more beautiful as that actress.",
+        "My cousin is more beautiful than that actress.",
+        "My cousin is much beautiful than that actress.",
+        "My cousin is much most beautiful than that actress.",
+        "My cousin is much so beautiful than that actress.",
+        "My cousin is much more beautiful then that actress.",
+        "My cousin is very more beautiful than that actress."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_031",
+    "seedId": "comparative_031",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "내 사촌은 그 배우보다 훨씬 더 아름답다.",
+    "english": "My cousin is far more beautiful than that actress.",
+    "words": [
+      "My",
+      "cousin",
+      "is",
+      "far",
+      "more",
+      "beautiful",
+      "than",
+      "that",
+      "actress",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "내 사촌은 그 배우보다 훨씬 더 아름답다.",
+        "far more beautiful than"
+      ],
+      [
+        "comparative",
+        "far more beautiful than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far more beautiful than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more beautiful",
+      "beautiful",
+      "that actress"
+    ],
+    "blankTargets": [
+      "far more beautiful than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My cousin is far more beautiful as that actress.",
+      "statementForm": [
+        "My cousin is far more beautiful than that actress.",
+        "My cousin is far more beautiful than that actress"
+      ],
+      "fragmentForm": "far more beautiful than",
+      "wormholeVariants": [
+        "My cousin is far more beautiful as that actress.",
+        "My cousin is more beautiful than that actress.",
+        "My cousin is far beautiful than that actress.",
+        "My cousin is far most beautiful than that actress.",
+        "My cousin is far so beautiful than that actress.",
+        "My cousin is far more beautiful then that actress.",
+        "My cousin is very more beautiful than that actress."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_032",
+    "seedId": "comparative_032",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "내 사촌은 그 배우보다 여전히 더 아름답다.",
+    "english": "My cousin is still more beautiful than that actress.",
+    "words": [
+      "My",
+      "cousin",
+      "is",
+      "still",
+      "more",
+      "beautiful",
+      "than",
+      "that",
+      "actress",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "내 사촌은 그 배우보다 여전히 더 아름답다.",
+        "still more beautiful than"
+      ],
+      [
+        "comparative",
+        "still more beautiful than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still more beautiful than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more beautiful",
+      "beautiful",
+      "that actress"
+    ],
+    "blankTargets": [
+      "still more beautiful than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "My cousin is still more beautiful as that actress.",
+      "statementForm": [
+        "My cousin is still more beautiful than that actress.",
+        "My cousin is still more beautiful than that actress"
+      ],
+      "fragmentForm": "still more beautiful than",
+      "wormholeVariants": [
+        "My cousin is still more beautiful as that actress.",
+        "My cousin is more beautiful than that actress.",
+        "My cousin is still beautiful than that actress.",
+        "My cousin is still most beautiful than that actress.",
+        "My cousin is still so beautiful than that actress.",
+        "My cousin is still more beautiful then that actress."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_033",
+    "seedId": "comparative_033",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 소년은 내 형보다 더 똑똑하다.",
+    "english": "The boy is smarter than my brother.",
+    "words": [
+      "The",
+      "boy",
+      "is",
+      "smarter",
+      "than",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 소년은 내 형보다 더 똑똑하다.",
+        "smarter than"
+      ],
+      [
+        "comparative",
+        "smarter than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "smarter than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "smarter",
+      "smart",
+      "my brother"
+    ],
+    "blankTargets": [
+      "smarter than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy is smarter as my brother.",
+      "statementForm": [
+        "The boy is smarter than my brother.",
+        "The boy is smarter than my brother"
+      ],
+      "fragmentForm": "smarter than",
+      "wormholeVariants": [
+        "The boy is smarter as my brother.",
+        "The boy is smart than my brother.",
+        "The boy is more smart than my brother.",
+        "The boy is most smart than my brother.",
+        "The boy is so smart than my brother.",
+        "The boy is smarter then my brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_034",
+    "seedId": "comparative_034",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 소년은 내 형보다 훨씬 더 똑똑하다.",
+    "english": "The boy is much smarter than my brother.",
+    "words": [
+      "The",
+      "boy",
+      "is",
+      "much",
+      "smarter",
+      "than",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 소년은 내 형보다 훨씬 더 똑똑하다.",
+        "much smarter than"
+      ],
+      [
+        "comparative",
+        "much smarter than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much smarter than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "smarter",
+      "smart",
+      "my brother"
+    ],
+    "blankTargets": [
+      "much smarter than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy is much smarter as my brother.",
+      "statementForm": [
+        "The boy is much smarter than my brother.",
+        "The boy is much smarter than my brother"
+      ],
+      "fragmentForm": "much smarter than",
+      "wormholeVariants": [
+        "The boy is much smarter as my brother.",
+        "The boy is smarter than my brother.",
+        "The boy is much smart than my brother.",
+        "The boy is much more smart than my brother.",
+        "The boy is much most smart than my brother.",
+        "The boy is much so smart than my brother.",
+        "The boy is much smarter then my brother.",
+        "The boy is very smarter than my brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_035",
+    "seedId": "comparative_035",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 소년은 내 형보다 훨씬 더 똑똑하다.",
+    "english": "The boy is far smarter than my brother.",
+    "words": [
+      "The",
+      "boy",
+      "is",
+      "far",
+      "smarter",
+      "than",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 소년은 내 형보다 훨씬 더 똑똑하다.",
+        "far smarter than"
+      ],
+      [
+        "comparative",
+        "far smarter than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far smarter than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "smarter",
+      "smart",
+      "my brother"
+    ],
+    "blankTargets": [
+      "far smarter than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy is far smarter as my brother.",
+      "statementForm": [
+        "The boy is far smarter than my brother.",
+        "The boy is far smarter than my brother"
+      ],
+      "fragmentForm": "far smarter than",
+      "wormholeVariants": [
+        "The boy is far smarter as my brother.",
+        "The boy is smarter than my brother.",
+        "The boy is far smart than my brother.",
+        "The boy is far more smart than my brother.",
+        "The boy is far most smart than my brother.",
+        "The boy is far so smart than my brother.",
+        "The boy is far smarter then my brother.",
+        "The boy is very smarter than my brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_036",
+    "seedId": "comparative_036",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 소년은 내 형보다 여전히 더 똑똑하다.",
+    "english": "The boy is still smarter than my brother.",
+    "words": [
+      "The",
+      "boy",
+      "is",
+      "still",
+      "smarter",
+      "than",
+      "my",
+      "brother",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 소년은 내 형보다 여전히 더 똑똑하다.",
+        "still smarter than"
+      ],
+      [
+        "comparative",
+        "still smarter than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still smarter than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "smarter",
+      "smart",
+      "my brother"
+    ],
+    "blankTargets": [
+      "still smarter than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The boy is still smarter as my brother.",
+      "statementForm": [
+        "The boy is still smarter than my brother.",
+        "The boy is still smarter than my brother"
+      ],
+      "fragmentForm": "still smarter than",
+      "wormholeVariants": [
+        "The boy is still smarter as my brother.",
+        "The boy is smarter than my brother.",
+        "The boy is still smart than my brother.",
+        "The boy is still more smart than my brother.",
+        "The boy is still most smart than my brother.",
+        "The boy is still so smart than my brother.",
+        "The boy is still smarter then my brother."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_037",
+    "seedId": "comparative_037",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 언덕은 보이는 것보다 더 가파르다.",
+    "english": "The hill is steeper than it looks.",
+    "words": [
+      "The",
+      "hill",
+      "is",
+      "steeper",
+      "than",
+      "it",
+      "looks",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 언덕은 보이는 것보다 더 가파르다.",
+        "steeper than"
+      ],
+      [
+        "comparative",
+        "steeper than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "steeper than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "steeper",
+      "steep",
+      "it looks"
+    ],
+    "blankTargets": [
+      "steeper than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The hill is steeper as it looks.",
+      "statementForm": [
+        "The hill is steeper than it looks.",
+        "The hill is steeper than it looks"
+      ],
+      "fragmentForm": "steeper than",
+      "wormholeVariants": [
+        "The hill is steeper as it looks.",
+        "The hill is steep than it looks.",
+        "The hill is more steep than it looks.",
+        "The hill is most steep than it looks.",
+        "The hill is so steep than it looks.",
+        "The hill is steeper then it looks."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_038",
+    "seedId": "comparative_038",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 언덕은 보이는 것보다 훨씬 더 가파르다.",
+    "english": "The hill is much steeper than it looks.",
+    "words": [
+      "The",
+      "hill",
+      "is",
+      "much",
+      "steeper",
+      "than",
+      "it",
+      "looks",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 언덕은 보이는 것보다 훨씬 더 가파르다.",
+        "much steeper than"
+      ],
+      [
+        "comparative",
+        "much steeper than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much steeper than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "steeper",
+      "steep",
+      "it looks"
+    ],
+    "blankTargets": [
+      "much steeper than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The hill is much steeper as it looks.",
+      "statementForm": [
+        "The hill is much steeper than it looks.",
+        "The hill is much steeper than it looks"
+      ],
+      "fragmentForm": "much steeper than",
+      "wormholeVariants": [
+        "The hill is much steeper as it looks.",
+        "The hill is steeper than it looks.",
+        "The hill is much steep than it looks.",
+        "The hill is much more steep than it looks.",
+        "The hill is much most steep than it looks.",
+        "The hill is much so steep than it looks.",
+        "The hill is much steeper then it looks.",
+        "The hill is very steeper than it looks."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_039",
+    "seedId": "comparative_039",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 언덕은 보이는 것보다 훨씬 더 가파르다.",
+    "english": "The hill is far steeper than it looks.",
+    "words": [
+      "The",
+      "hill",
+      "is",
+      "far",
+      "steeper",
+      "than",
+      "it",
+      "looks",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 언덕은 보이는 것보다 훨씬 더 가파르다.",
+        "far steeper than"
+      ],
+      [
+        "comparative",
+        "far steeper than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far steeper than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "steeper",
+      "steep",
+      "it looks"
+    ],
+    "blankTargets": [
+      "far steeper than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The hill is far steeper as it looks.",
+      "statementForm": [
+        "The hill is far steeper than it looks.",
+        "The hill is far steeper than it looks"
+      ],
+      "fragmentForm": "far steeper than",
+      "wormholeVariants": [
+        "The hill is far steeper as it looks.",
+        "The hill is steeper than it looks.",
+        "The hill is far steep than it looks.",
+        "The hill is far more steep than it looks.",
+        "The hill is far most steep than it looks.",
+        "The hill is far so steep than it looks.",
+        "The hill is far steeper then it looks.",
+        "The hill is very steeper than it looks."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_040",
+    "seedId": "comparative_040",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 언덕은 보이는 것보다 여전히 더 가파르다.",
+    "english": "The hill is still steeper than it looks.",
+    "words": [
+      "The",
+      "hill",
+      "is",
+      "still",
+      "steeper",
+      "than",
+      "it",
+      "looks",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 언덕은 보이는 것보다 여전히 더 가파르다.",
+        "still steeper than"
+      ],
+      [
+        "comparative",
+        "still steeper than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still steeper than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "steeper",
+      "steep",
+      "it looks"
+    ],
+    "blankTargets": [
+      "still steeper than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The hill is still steeper as it looks.",
+      "statementForm": [
+        "The hill is still steeper than it looks.",
+        "The hill is still steeper than it looks"
+      ],
+      "fragmentForm": "still steeper than",
+      "wormholeVariants": [
+        "The hill is still steeper as it looks.",
+        "The hill is steeper than it looks.",
+        "The hill is still steep than it looks.",
+        "The hill is still more steep than it looks.",
+        "The hill is still most steep than it looks.",
+        "The hill is still so steep than it looks.",
+        "The hill is still steeper then it looks."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_041",
+    "seedId": "comparative_041",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "이 기계는 저것보다 더 빨리 작동한다.",
+    "english": "This machine works faster than that one.",
+    "words": [
+      "This",
+      "machine",
+      "works",
+      "faster",
+      "than",
+      "that",
+      "one",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 기계는 저것보다 더 빨리 작동한다.",
+        "faster than"
+      ],
+      [
+        "comparative",
+        "faster than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "faster than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "faster",
+      "fast",
+      "that one"
+    ],
+    "blankTargets": [
+      "faster than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "This machine works faster as that one.",
+      "statementForm": [
+        "This machine works faster than that one.",
+        "This machine works faster than that one"
+      ],
+      "fragmentForm": "faster than",
+      "wormholeVariants": [
+        "This machine works faster as that one.",
+        "This machine works fast than that one.",
+        "This machine works more fast than that one.",
+        "This machine works most fast than that one.",
+        "This machine work faster than that one.",
+        "This machine works so fast than that one.",
+        "This machine works faster then that one."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_042",
+    "seedId": "comparative_042",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "이 기계는 저것보다 훨씬 더 빨리 작동한다.",
+    "english": "This machine works much faster than that one.",
+    "words": [
+      "This",
+      "machine",
+      "works",
+      "much",
+      "faster",
+      "than",
+      "that",
+      "one",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 기계는 저것보다 훨씬 더 빨리 작동한다.",
+        "much faster than"
+      ],
+      [
+        "comparative",
+        "much faster than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much faster than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "faster",
+      "fast",
+      "that one"
+    ],
+    "blankTargets": [
+      "much faster than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "This machine works much faster as that one.",
+      "statementForm": [
+        "This machine works much faster than that one.",
+        "This machine works much faster than that one"
+      ],
+      "fragmentForm": "much faster than",
+      "wormholeVariants": [
+        "This machine works much faster as that one.",
+        "This machine works faster than that one.",
+        "This machine works much fast than that one.",
+        "This machine works much more fast than that one.",
+        "This machine works much most fast than that one.",
+        "This machine work much faster than that one.",
+        "This machine works much so fast than that one.",
+        "This machine works much faster then that one.",
+        "This machine works very faster than that one."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_043",
+    "seedId": "comparative_043",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "이 기계는 저것보다 훨씬 더 빨리 작동한다.",
+    "english": "This machine works a lot faster than that one.",
+    "words": [
+      "This",
+      "machine",
+      "works",
+      "a",
+      "lot",
+      "faster",
+      "than",
+      "that",
+      "one",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 기계는 저것보다 훨씬 더 빨리 작동한다.",
+        "a lot faster than"
+      ],
+      [
+        "comparative",
+        "a lot faster than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "a lot faster than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "faster",
+      "fast",
+      "that one"
+    ],
+    "blankTargets": [
+      "a lot faster than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "This machine works a lot faster as that one.",
+      "statementForm": [
+        "This machine works a lot faster than that one.",
+        "This machine works a lot faster than that one"
+      ],
+      "fragmentForm": "a lot faster than",
+      "wormholeVariants": [
+        "This machine works a lot faster as that one.",
+        "This machine works faster than that one.",
+        "This machine works a lot fast than that one.",
+        "This machine works a lot more fast than that one.",
+        "This machine works a lot most fast than that one.",
+        "This machine work a lot faster than that one.",
+        "This machine works a lot so fast than that one.",
+        "This machine works a lot faster then that one."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_044",
+    "seedId": "comparative_044",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "이 기계는 저것보다 더욱 더 빨리 작동한다.",
+    "english": "This machine works even faster than that one.",
+    "words": [
+      "This",
+      "machine",
+      "works",
+      "even",
+      "faster",
+      "than",
+      "that",
+      "one",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 기계는 저것보다 더욱 더 빨리 작동한다.",
+        "even faster than"
+      ],
+      [
+        "comparative",
+        "even faster than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "even faster than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "faster",
+      "fast",
+      "that one"
+    ],
+    "blankTargets": [
+      "even faster than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "This machine works even faster as that one.",
+      "statementForm": [
+        "This machine works even faster than that one.",
+        "This machine works even faster than that one"
+      ],
+      "fragmentForm": "even faster than",
+      "wormholeVariants": [
+        "This machine works even faster as that one.",
+        "This machine works faster than that one.",
+        "This machine works even fast than that one.",
+        "This machine works even more fast than that one.",
+        "This machine works even most fast than that one.",
+        "This machine work even faster than that one.",
+        "This machine works even so fast than that one.",
+        "This machine works even faster then that one."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_045",
+    "seedId": "comparative_045",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그녀는 언니보다 더 분명하게 말한다.",
+    "english": "She speaks more clearly than her sister.",
+    "words": [
+      "She",
+      "speaks",
+      "more",
+      "clearly",
+      "than",
+      "her",
+      "sister",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀는 언니보다 더 분명하게 말한다.",
+        "more clearly than"
+      ],
+      [
+        "comparative",
+        "more clearly than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "more clearly than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more clearly",
+      "clearly",
+      "her sister"
+    ],
+    "blankTargets": [
+      "more clearly than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She speaks more clearly as her sister.",
+      "statementForm": [
+        "She speaks more clearly than her sister.",
+        "She speaks more clearly than her sister"
+      ],
+      "fragmentForm": "more clearly than",
+      "wormholeVariants": [
+        "She speaks more clearly as her sister.",
+        "She speaks clearly than her sister.",
+        "She speaks most clearly than her sister.",
+        "She speak more clearly than her sister.",
+        "She speaks so clearly than her sister.",
+        "She speaks more clearly then her sister."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_046",
+    "seedId": "comparative_046",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그녀는 언니보다 훨씬 더 분명하게 말한다.",
+    "english": "She speaks much more clearly than her sister.",
+    "words": [
+      "She",
+      "speaks",
+      "much",
+      "more",
+      "clearly",
+      "than",
+      "her",
+      "sister",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀는 언니보다 훨씬 더 분명하게 말한다.",
+        "much more clearly than"
+      ],
+      [
+        "comparative",
+        "much more clearly than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much more clearly than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more clearly",
+      "clearly",
+      "her sister"
+    ],
+    "blankTargets": [
+      "much more clearly than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She speaks much more clearly as her sister.",
+      "statementForm": [
+        "She speaks much more clearly than her sister.",
+        "She speaks much more clearly than her sister"
+      ],
+      "fragmentForm": "much more clearly than",
+      "wormholeVariants": [
+        "She speaks much more clearly as her sister.",
+        "She speaks more clearly than her sister.",
+        "She speaks much clearly than her sister.",
+        "She speaks much most clearly than her sister.",
+        "She speak much more clearly than her sister.",
+        "She speaks much so clearly than her sister.",
+        "She speaks much more clearly then her sister.",
+        "She speaks very more clearly than her sister."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_047",
+    "seedId": "comparative_047",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그녀는 언니보다 훨씬 더 분명하게 말한다.",
+    "english": "She speaks a lot more clearly than her sister.",
+    "words": [
+      "She",
+      "speaks",
+      "a",
+      "lot",
+      "more",
+      "clearly",
+      "than",
+      "her",
+      "sister",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀는 언니보다 훨씬 더 분명하게 말한다.",
+        "a lot more clearly than"
+      ],
+      [
+        "comparative",
+        "a lot more clearly than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "a lot more clearly than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more clearly",
+      "clearly",
+      "her sister"
+    ],
+    "blankTargets": [
+      "a lot more clearly than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She speaks a lot more clearly as her sister.",
+      "statementForm": [
+        "She speaks a lot more clearly than her sister.",
+        "She speaks a lot more clearly than her sister"
+      ],
+      "fragmentForm": "a lot more clearly than",
+      "wormholeVariants": [
+        "She speaks a lot more clearly as her sister.",
+        "She speaks more clearly than her sister.",
+        "She speaks a lot clearly than her sister.",
+        "She speaks a lot most clearly than her sister.",
+        "She speak a lot more clearly than her sister.",
+        "She speaks a lot so clearly than her sister.",
+        "She speaks a lot more clearly then her sister."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_048",
+    "seedId": "comparative_048",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그녀는 언니보다 더욱 더 분명하게 말한다.",
+    "english": "She speaks even more clearly than her sister.",
+    "words": [
+      "She",
+      "speaks",
+      "even",
+      "more",
+      "clearly",
+      "than",
+      "her",
+      "sister",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그녀는 언니보다 더욱 더 분명하게 말한다.",
+        "even more clearly than"
+      ],
+      [
+        "comparative",
+        "even more clearly than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "even more clearly than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more clearly",
+      "clearly",
+      "her sister"
+    ],
+    "blankTargets": [
+      "even more clearly than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "She speaks even more clearly as her sister.",
+      "statementForm": [
+        "She speaks even more clearly than her sister.",
+        "She speaks even more clearly than her sister"
+      ],
+      "fragmentForm": "even more clearly than",
+      "wormholeVariants": [
+        "She speaks even more clearly as her sister.",
+        "She speaks more clearly than her sister.",
+        "She speaks even clearly than her sister.",
+        "She speaks even most clearly than her sister.",
+        "She speak even more clearly than her sister.",
+        "She speaks even so clearly than her sister.",
+        "She speaks even more clearly then her sister."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_049",
+    "seedId": "comparative_049",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 학생은 다른 사람들보다 더 주의 깊게 듣는다.",
+    "english": "The student listens more closely than the others.",
+    "words": [
+      "The",
+      "student",
+      "listens",
+      "more",
+      "closely",
+      "than",
+      "the",
+      "others",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 학생은 다른 사람들보다 더 주의 깊게 듣는다.",
+        "more closely than"
+      ],
+      [
+        "comparative",
+        "more closely than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "more closely than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more closely",
+      "closely",
+      "the others"
+    ],
+    "blankTargets": [
+      "more closely than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student listens more closely as the others.",
+      "statementForm": [
+        "The student listens more closely than the others.",
+        "The student listens more closely than the others"
+      ],
+      "fragmentForm": "more closely than",
+      "wormholeVariants": [
+        "The student listens more closely as the others.",
+        "The student listens closely than the others.",
+        "The student listens most closely than the others.",
+        "The student listen more closely than the others.",
+        "The student listens so closely than the others.",
+        "The student listens more closely then the others."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_050",
+    "seedId": "comparative_050",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 학생은 다른 사람들보다 훨씬 더 주의 깊게 듣는다.",
+    "english": "The student listens much more closely than the others.",
+    "words": [
+      "The",
+      "student",
+      "listens",
+      "much",
+      "more",
+      "closely",
+      "than",
+      "the",
+      "others",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 학생은 다른 사람들보다 훨씬 더 주의 깊게 듣는다.",
+        "much more closely than"
+      ],
+      [
+        "comparative",
+        "much more closely than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much more closely than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more closely",
+      "closely",
+      "the others"
+    ],
+    "blankTargets": [
+      "much more closely than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student listens much more closely as the others.",
+      "statementForm": [
+        "The student listens much more closely than the others.",
+        "The student listens much more closely than the others"
+      ],
+      "fragmentForm": "much more closely than",
+      "wormholeVariants": [
+        "The student listens much more closely as the others.",
+        "The student listens more closely than the others.",
+        "The student listens much closely than the others.",
+        "The student listens much most closely than the others.",
+        "The student listen much more closely than the others.",
+        "The student listens much so closely than the others.",
+        "The student listens much more closely then the others.",
+        "The student listens very more closely than the others."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_051",
+    "seedId": "comparative_051",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 학생은 다른 사람들보다 훨씬 더 주의 깊게 듣는다.",
+    "english": "The student listens a lot more closely than the others.",
+    "words": [
+      "The",
+      "student",
+      "listens",
+      "a",
+      "lot",
+      "more",
+      "closely",
+      "than",
+      "the",
+      "others",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 학생은 다른 사람들보다 훨씬 더 주의 깊게 듣는다.",
+        "a lot more closely than"
+      ],
+      [
+        "comparative",
+        "a lot more closely than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "a lot more closely than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more closely",
+      "closely",
+      "the others"
+    ],
+    "blankTargets": [
+      "a lot more closely than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student listens a lot more closely as the others.",
+      "statementForm": [
+        "The student listens a lot more closely than the others.",
+        "The student listens a lot more closely than the others"
+      ],
+      "fragmentForm": "a lot more closely than",
+      "wormholeVariants": [
+        "The student listens a lot more closely as the others.",
+        "The student listens more closely than the others.",
+        "The student listens a lot closely than the others.",
+        "The student listens a lot most closely than the others.",
+        "The student listen a lot more closely than the others.",
+        "The student listens a lot so closely than the others.",
+        "The student listens a lot more closely then the others."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_052",
+    "seedId": "comparative_052",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 학생은 다른 사람들보다 더욱 더 주의 깊게 듣는다.",
+    "english": "The student listens even more closely than the others.",
+    "words": [
+      "The",
+      "student",
+      "listens",
+      "even",
+      "more",
+      "closely",
+      "than",
+      "the",
+      "others",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 학생은 다른 사람들보다 더욱 더 주의 깊게 듣는다.",
+        "even more closely than"
+      ],
+      [
+        "comparative",
+        "even more closely than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "even more closely than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more closely",
+      "closely",
+      "the others"
+    ],
+    "blankTargets": [
+      "even more closely than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The student listens even more closely as the others.",
+      "statementForm": [
+        "The student listens even more closely than the others.",
+        "The student listens even more closely than the others"
+      ],
+      "fragmentForm": "even more closely than",
+      "wormholeVariants": [
+        "The student listens even more closely as the others.",
+        "The student listens more closely than the others.",
+        "The student listens even closely than the others.",
+        "The student listens even most closely than the others.",
+        "The student listen even more closely than the others.",
+        "The student listens even so closely than the others.",
+        "The student listens even more closely then the others."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_053",
+    "seedId": "comparative_053",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "우리는 전보다 더 빨리 끝낸다.",
+    "english": "We finish more quickly than before.",
+    "words": [
+      "We",
+      "finish",
+      "more",
+      "quickly",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리는 전보다 더 빨리 끝낸다.",
+        "more quickly than"
+      ],
+      [
+        "comparative",
+        "more quickly than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "more quickly than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more quickly",
+      "quickly",
+      "before"
+    ],
+    "blankTargets": [
+      "more quickly than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We finish more quickly as before.",
+      "statementForm": [
+        "We finish more quickly than before.",
+        "We finish more quickly than before"
+      ],
+      "fragmentForm": "more quickly than",
+      "wormholeVariants": [
+        "We finish more quickly as before.",
+        "We finish quickly than before.",
+        "We finish most quickly than before.",
+        "We finish so quickly than before.",
+        "We finish more quickly then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_054",
+    "seedId": "comparative_054",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "우리는 전보다 훨씬 더 빨리 끝낸다.",
+    "english": "We finish much more quickly than before.",
+    "words": [
+      "We",
+      "finish",
+      "much",
+      "more",
+      "quickly",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리는 전보다 훨씬 더 빨리 끝낸다.",
+        "much more quickly than"
+      ],
+      [
+        "comparative",
+        "much more quickly than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much more quickly than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more quickly",
+      "quickly",
+      "before"
+    ],
+    "blankTargets": [
+      "much more quickly than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We finish much more quickly as before.",
+      "statementForm": [
+        "We finish much more quickly than before.",
+        "We finish much more quickly than before"
+      ],
+      "fragmentForm": "much more quickly than",
+      "wormholeVariants": [
+        "We finish much more quickly as before.",
+        "We finish more quickly than before.",
+        "We finish much quickly than before.",
+        "We finish much most quickly than before.",
+        "We finish much so quickly than before.",
+        "We finish much more quickly then before.",
+        "We finish very more quickly than before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_055",
+    "seedId": "comparative_055",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "우리는 전보다 훨씬 더 빨리 끝낸다.",
+    "english": "We finish a lot more quickly than before.",
+    "words": [
+      "We",
+      "finish",
+      "a",
+      "lot",
+      "more",
+      "quickly",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리는 전보다 훨씬 더 빨리 끝낸다.",
+        "a lot more quickly than"
+      ],
+      [
+        "comparative",
+        "a lot more quickly than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "a lot more quickly than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more quickly",
+      "quickly",
+      "before"
+    ],
+    "blankTargets": [
+      "a lot more quickly than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We finish a lot more quickly as before.",
+      "statementForm": [
+        "We finish a lot more quickly than before.",
+        "We finish a lot more quickly than before"
+      ],
+      "fragmentForm": "a lot more quickly than",
+      "wormholeVariants": [
+        "We finish a lot more quickly as before.",
+        "We finish more quickly than before.",
+        "We finish a lot quickly than before.",
+        "We finish a lot most quickly than before.",
+        "We finish a lot so quickly than before.",
+        "We finish a lot more quickly then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_056",
+    "seedId": "comparative_056",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "우리는 전보다 더욱 더 빨리 끝낸다.",
+    "english": "We finish even more quickly than before.",
+    "words": [
+      "We",
+      "finish",
+      "even",
+      "more",
+      "quickly",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리는 전보다 더욱 더 빨리 끝낸다.",
+        "even more quickly than"
+      ],
+      [
+        "comparative",
+        "even more quickly than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "even more quickly than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more quickly",
+      "quickly",
+      "before"
+    ],
+    "blankTargets": [
+      "even more quickly than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "We finish even more quickly as before.",
+      "statementForm": [
+        "We finish even more quickly than before.",
+        "We finish even more quickly than before"
+      ],
+      "fragmentForm": "even more quickly than",
+      "wormholeVariants": [
+        "We finish even more quickly as before.",
+        "We finish more quickly than before.",
+        "We finish even quickly than before.",
+        "We finish even most quickly than before.",
+        "We finish even so quickly than before.",
+        "We finish even more quickly then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_057",
+    "seedId": "comparative_057",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 운전자는 전보다 더 안전하게 운전한다.",
+    "english": "The driver drives more safely than before.",
+    "words": [
+      "The",
+      "driver",
+      "drives",
+      "more",
+      "safely",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 운전자는 전보다 더 안전하게 운전한다.",
+        "more safely than"
+      ],
+      [
+        "comparative",
+        "more safely than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "more safely than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more safely",
+      "safely",
+      "before"
+    ],
+    "blankTargets": [
+      "more safely than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The driver drives more safely as before.",
+      "statementForm": [
+        "The driver drives more safely than before.",
+        "The driver drives more safely than before"
+      ],
+      "fragmentForm": "more safely than",
+      "wormholeVariants": [
+        "The driver drives more safely as before.",
+        "The driver drives safely than before.",
+        "The driver drives most safely than before.",
+        "The driver drive more safely than before.",
+        "The driver drives so safely than before.",
+        "The driver drives more safely then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_058",
+    "seedId": "comparative_058",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 운전자는 전보다 훨씬 더 안전하게 운전한다.",
+    "english": "The driver drives much more safely than before.",
+    "words": [
+      "The",
+      "driver",
+      "drives",
+      "much",
+      "more",
+      "safely",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 운전자는 전보다 훨씬 더 안전하게 운전한다.",
+        "much more safely than"
+      ],
+      [
+        "comparative",
+        "much more safely than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much more safely than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more safely",
+      "safely",
+      "before"
+    ],
+    "blankTargets": [
+      "much more safely than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The driver drives much more safely as before.",
+      "statementForm": [
+        "The driver drives much more safely than before.",
+        "The driver drives much more safely than before"
+      ],
+      "fragmentForm": "much more safely than",
+      "wormholeVariants": [
+        "The driver drives much more safely as before.",
+        "The driver drives more safely than before.",
+        "The driver drives much safely than before.",
+        "The driver drives much most safely than before.",
+        "The driver drive much more safely than before.",
+        "The driver drives much so safely than before.",
+        "The driver drives much more safely then before.",
+        "The driver drives very more safely than before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_059",
+    "seedId": "comparative_059",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 운전자는 전보다 훨씬 더 안전하게 운전한다.",
+    "english": "The driver drives a lot more safely than before.",
+    "words": [
+      "The",
+      "driver",
+      "drives",
+      "a",
+      "lot",
+      "more",
+      "safely",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 운전자는 전보다 훨씬 더 안전하게 운전한다.",
+        "a lot more safely than"
+      ],
+      [
+        "comparative",
+        "a lot more safely than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "a lot more safely than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more safely",
+      "safely",
+      "before"
+    ],
+    "blankTargets": [
+      "a lot more safely than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The driver drives a lot more safely as before.",
+      "statementForm": [
+        "The driver drives a lot more safely than before.",
+        "The driver drives a lot more safely than before"
+      ],
+      "fragmentForm": "a lot more safely than",
+      "wormholeVariants": [
+        "The driver drives a lot more safely as before.",
+        "The driver drives more safely than before.",
+        "The driver drives a lot safely than before.",
+        "The driver drives a lot most safely than before.",
+        "The driver drive a lot more safely than before.",
+        "The driver drives a lot so safely than before.",
+        "The driver drives a lot more safely then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_060",
+    "seedId": "comparative_060",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 운전자는 전보다 더욱 더 안전하게 운전한다.",
+    "english": "The driver drives even more safely than before.",
+    "words": [
+      "The",
+      "driver",
+      "drives",
+      "even",
+      "more",
+      "safely",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 운전자는 전보다 더욱 더 안전하게 운전한다.",
+        "even more safely than"
+      ],
+      [
+        "comparative",
+        "even more safely than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "even more safely than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more safely",
+      "safely",
+      "before"
+    ],
+    "blankTargets": [
+      "even more safely than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "The driver drives even more safely as before.",
+      "statementForm": [
+        "The driver drives even more safely than before.",
+        "The driver drives even more safely than before"
+      ],
+      "fragmentForm": "even more safely than",
+      "wormholeVariants": [
+        "The driver drives even more safely as before.",
+        "The driver drives more safely than before.",
+        "The driver drives even safely than before.",
+        "The driver drives even most safely than before.",
+        "The driver drive even more safely than before.",
+        "The driver drives even so safely than before.",
+        "The driver drives even more safely then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_061",
+    "seedId": "comparative_061",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 선수는 나보다 더 멀리 뛴다.",
+    "english": "The athlete runs farther than I do.",
+    "words": [
+      "The",
+      "athlete",
+      "runs",
+      "farther",
+      "than",
+      "I",
+      "do",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선수는 나보다 더 멀리 뛴다.",
+        "farther than"
+      ],
+      [
+        "comparative",
+        "farther than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "farther than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "farther",
+      "I do"
+    ],
+    "blankTargets": [
+      "farther than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The athlete runs farther as I do.",
+      "statementForm": [
+        "The athlete runs farther than I do.",
+        "The athlete runs farther than I do"
+      ],
+      "fragmentForm": "farther than",
+      "wormholeVariants": [
+        "The athlete runs farther as I do.",
+        "The athlete runs far than I do.",
+        "The athlete runs more far than I do.",
+        "The athlete runs most far than I do.",
+        "The athlete run farther than I do.",
+        "The athlete runs so far than I do.",
+        "The athlete runs farther then I do."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_062",
+    "seedId": "comparative_062",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 선수는 나보다 훨씬 더 멀리 뛴다.",
+    "english": "The athlete runs much farther than I do.",
+    "words": [
+      "The",
+      "athlete",
+      "runs",
+      "much",
+      "farther",
+      "than",
+      "I",
+      "do",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선수는 나보다 훨씬 더 멀리 뛴다.",
+        "much farther than"
+      ],
+      [
+        "comparative",
+        "much farther than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much farther than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "farther",
+      "I do"
+    ],
+    "blankTargets": [
+      "much farther than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The athlete runs much farther as I do.",
+      "statementForm": [
+        "The athlete runs much farther than I do.",
+        "The athlete runs much farther than I do"
+      ],
+      "fragmentForm": "much farther than",
+      "wormholeVariants": [
+        "The athlete runs much farther as I do.",
+        "The athlete runs farther than I do.",
+        "The athlete runs much far than I do.",
+        "The athlete runs much more far than I do.",
+        "The athlete runs much most far than I do.",
+        "The athlete run much farther than I do.",
+        "The athlete runs much so far than I do.",
+        "The athlete runs much farther then I do.",
+        "The athlete runs very farther than I do."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_063",
+    "seedId": "comparative_063",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 선수는 나보다 훨씬 더 멀리 뛴다.",
+    "english": "The athlete runs a lot farther than I do.",
+    "words": [
+      "The",
+      "athlete",
+      "runs",
+      "a",
+      "lot",
+      "farther",
+      "than",
+      "I",
+      "do",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선수는 나보다 훨씬 더 멀리 뛴다.",
+        "a lot farther than"
+      ],
+      [
+        "comparative",
+        "a lot farther than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "a lot farther than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "farther",
+      "I do"
+    ],
+    "blankTargets": [
+      "a lot farther than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The athlete runs a lot farther as I do.",
+      "statementForm": [
+        "The athlete runs a lot farther than I do.",
+        "The athlete runs a lot farther than I do"
+      ],
+      "fragmentForm": "a lot farther than",
+      "wormholeVariants": [
+        "The athlete runs a lot farther as I do.",
+        "The athlete runs farther than I do.",
+        "The athlete runs a lot far than I do.",
+        "The athlete runs a lot more far than I do.",
+        "The athlete runs a lot most far than I do.",
+        "The athlete run a lot farther than I do.",
+        "The athlete runs a lot so far than I do.",
+        "The athlete runs a lot farther then I do."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_064",
+    "seedId": "comparative_064",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 선수는 나보다 더욱 더 멀리 뛴다.",
+    "english": "The athlete runs even farther than I do.",
+    "words": [
+      "The",
+      "athlete",
+      "runs",
+      "even",
+      "farther",
+      "than",
+      "I",
+      "do",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선수는 나보다 더욱 더 멀리 뛴다.",
+        "even farther than"
+      ],
+      [
+        "comparative",
+        "even farther than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "even farther than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "farther",
+      "I do"
+    ],
+    "blankTargets": [
+      "even farther than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The athlete runs even farther as I do.",
+      "statementForm": [
+        "The athlete runs even farther than I do.",
+        "The athlete runs even farther than I do"
+      ],
+      "fragmentForm": "even farther than",
+      "wormholeVariants": [
+        "The athlete runs even farther as I do.",
+        "The athlete runs farther than I do.",
+        "The athlete runs even far than I do.",
+        "The athlete runs even more far than I do.",
+        "The athlete runs even most far than I do.",
+        "The athlete run even farther than I do.",
+        "The athlete runs even so far than I do.",
+        "The athlete runs even farther then I do."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_065",
+    "seedId": "comparative_065",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "이 계획은 우리의 첫 생각보다 더 좋다.",
+    "english": "This plan is better than our first idea.",
+    "words": [
+      "This",
+      "plan",
+      "is",
+      "better",
+      "than",
+      "our",
+      "first",
+      "idea",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 계획은 우리의 첫 생각보다 더 좋다.",
+        "better than"
+      ],
+      [
+        "comparative",
+        "better than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "better than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "good",
+      "our first idea"
+    ],
+    "blankTargets": [
+      "better than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "This plan is better as our first idea.",
+      "statementForm": [
+        "This plan is better than our first idea.",
+        "This plan is better than our first idea"
+      ],
+      "fragmentForm": "better than",
+      "wormholeVariants": [
+        "This plan is better as our first idea.",
+        "This plan is good than our first idea.",
+        "This plan is more good than our first idea.",
+        "This plan is most good than our first idea.",
+        "This plan is so good than our first idea.",
+        "This plan is better then our first idea."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_066",
+    "seedId": "comparative_066",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "이 계획은 우리의 첫 생각보다 훨씬 더 좋다.",
+    "english": "This plan is much better than our first idea.",
+    "words": [
+      "This",
+      "plan",
+      "is",
+      "much",
+      "better",
+      "than",
+      "our",
+      "first",
+      "idea",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 계획은 우리의 첫 생각보다 훨씬 더 좋다.",
+        "much better than"
+      ],
+      [
+        "comparative",
+        "much better than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much better than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "good",
+      "our first idea"
+    ],
+    "blankTargets": [
+      "much better than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "This plan is much better as our first idea.",
+      "statementForm": [
+        "This plan is much better than our first idea.",
+        "This plan is much better than our first idea"
+      ],
+      "fragmentForm": "much better than",
+      "wormholeVariants": [
+        "This plan is much better as our first idea.",
+        "This plan is better than our first idea.",
+        "This plan is much good than our first idea.",
+        "This plan is much more good than our first idea.",
+        "This plan is much most good than our first idea.",
+        "This plan is much so good than our first idea.",
+        "This plan is much better then our first idea.",
+        "This plan is very better than our first idea."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_067",
+    "seedId": "comparative_067",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "이 계획은 우리의 첫 생각보다 훨씬 더 좋다.",
+    "english": "This plan is far better than our first idea.",
+    "words": [
+      "This",
+      "plan",
+      "is",
+      "far",
+      "better",
+      "than",
+      "our",
+      "first",
+      "idea",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 계획은 우리의 첫 생각보다 훨씬 더 좋다.",
+        "far better than"
+      ],
+      [
+        "comparative",
+        "far better than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far better than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "good",
+      "our first idea"
+    ],
+    "blankTargets": [
+      "far better than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "This plan is far better as our first idea.",
+      "statementForm": [
+        "This plan is far better than our first idea.",
+        "This plan is far better than our first idea"
+      ],
+      "fragmentForm": "far better than",
+      "wormholeVariants": [
+        "This plan is far better as our first idea.",
+        "This plan is better than our first idea.",
+        "This plan is far good than our first idea.",
+        "This plan is far more good than our first idea.",
+        "This plan is far most good than our first idea.",
+        "This plan is far so good than our first idea.",
+        "This plan is far better then our first idea.",
+        "This plan is very better than our first idea."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_068",
+    "seedId": "comparative_068",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "이 계획은 우리의 첫 생각보다 여전히 더 좋다.",
+    "english": "This plan is still better than our first idea.",
+    "words": [
+      "This",
+      "plan",
+      "is",
+      "still",
+      "better",
+      "than",
+      "our",
+      "first",
+      "idea",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 계획은 우리의 첫 생각보다 여전히 더 좋다.",
+        "still better than"
+      ],
+      [
+        "comparative",
+        "still better than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still better than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "good",
+      "our first idea"
+    ],
+    "blankTargets": [
+      "still better than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "This plan is still better as our first idea.",
+      "statementForm": [
+        "This plan is still better than our first idea.",
+        "This plan is still better than our first idea"
+      ],
+      "fragmentForm": "still better than",
+      "wormholeVariants": [
+        "This plan is still better as our first idea.",
+        "This plan is better than our first idea.",
+        "This plan is still good than our first idea.",
+        "This plan is still more good than our first idea.",
+        "This plan is still most good than our first idea.",
+        "This plan is still so good than our first idea.",
+        "This plan is still better then our first idea."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_069",
+    "seedId": "comparative_069",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 시험은 내가 예상했던 것보다 더 어렵다.",
+    "english": "The exam is harder than I expected.",
+    "words": [
+      "The",
+      "exam",
+      "is",
+      "harder",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 시험은 내가 예상했던 것보다 더 어렵다.",
+        "harder than"
+      ],
+      [
+        "comparative",
+        "harder than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "harder than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "harder",
+      "hard",
+      "I expected"
+    ],
+    "blankTargets": [
+      "harder than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The exam is harder as I expected.",
+      "statementForm": [
+        "The exam is harder than I expected.",
+        "The exam is harder than I expected"
+      ],
+      "fragmentForm": "harder than",
+      "wormholeVariants": [
+        "The exam is harder as I expected.",
+        "The exam is hard than I expected.",
+        "The exam is more hard than I expected.",
+        "The exam is most hard than I expected.",
+        "The exam is so hard than I expected.",
+        "The exam is harder then I expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_070",
+    "seedId": "comparative_070",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 시험은 내가 예상했던 것보다 훨씬 더 어렵다.",
+    "english": "The exam is much harder than I expected.",
+    "words": [
+      "The",
+      "exam",
+      "is",
+      "much",
+      "harder",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 시험은 내가 예상했던 것보다 훨씬 더 어렵다.",
+        "much harder than"
+      ],
+      [
+        "comparative",
+        "much harder than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much harder than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "harder",
+      "hard",
+      "I expected"
+    ],
+    "blankTargets": [
+      "much harder than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The exam is much harder as I expected.",
+      "statementForm": [
+        "The exam is much harder than I expected.",
+        "The exam is much harder than I expected"
+      ],
+      "fragmentForm": "much harder than",
+      "wormholeVariants": [
+        "The exam is much harder as I expected.",
+        "The exam is harder than I expected.",
+        "The exam is much hard than I expected.",
+        "The exam is much more hard than I expected.",
+        "The exam is much most hard than I expected.",
+        "The exam is much so hard than I expected.",
+        "The exam is much harder then I expected.",
+        "The exam is very harder than I expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_071",
+    "seedId": "comparative_071",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 시험은 내가 예상했던 것보다 훨씬 더 어렵다.",
+    "english": "The exam is far harder than I expected.",
+    "words": [
+      "The",
+      "exam",
+      "is",
+      "far",
+      "harder",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 시험은 내가 예상했던 것보다 훨씬 더 어렵다.",
+        "far harder than"
+      ],
+      [
+        "comparative",
+        "far harder than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far harder than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "harder",
+      "hard",
+      "I expected"
+    ],
+    "blankTargets": [
+      "far harder than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The exam is far harder as I expected.",
+      "statementForm": [
+        "The exam is far harder than I expected.",
+        "The exam is far harder than I expected"
+      ],
+      "fragmentForm": "far harder than",
+      "wormholeVariants": [
+        "The exam is far harder as I expected.",
+        "The exam is harder than I expected.",
+        "The exam is far hard than I expected.",
+        "The exam is far more hard than I expected.",
+        "The exam is far most hard than I expected.",
+        "The exam is far so hard than I expected.",
+        "The exam is far harder then I expected.",
+        "The exam is very harder than I expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_072",
+    "seedId": "comparative_072",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 시험은 내가 예상했던 것보다 여전히 더 어렵다.",
+    "english": "The exam is still harder than I expected.",
+    "words": [
+      "The",
+      "exam",
+      "is",
+      "still",
+      "harder",
+      "than",
+      "I",
+      "expected",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 시험은 내가 예상했던 것보다 여전히 더 어렵다.",
+        "still harder than"
+      ],
+      [
+        "comparative",
+        "still harder than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still harder than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "harder",
+      "hard",
+      "I expected"
+    ],
+    "blankTargets": [
+      "still harder than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The exam is still harder as I expected.",
+      "statementForm": [
+        "The exam is still harder than I expected.",
+        "The exam is still harder than I expected"
+      ],
+      "fragmentForm": "still harder than",
+      "wormholeVariants": [
+        "The exam is still harder as I expected.",
+        "The exam is harder than I expected.",
+        "The exam is still hard than I expected.",
+        "The exam is still more hard than I expected.",
+        "The exam is still most hard than I expected.",
+        "The exam is still so hard than I expected.",
+        "The exam is still harder then I expected."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_073",
+    "seedId": "comparative_073",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 방은 전보다 더 깨끗하다.",
+    "english": "The room is cleaner than before.",
+    "words": [
+      "The",
+      "room",
+      "is",
+      "cleaner",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 6,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 방은 전보다 더 깨끗하다.",
+        "cleaner than"
+      ],
+      [
+        "comparative",
+        "cleaner than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "cleaner than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "cleaner",
+      "clean",
+      "before"
+    ],
+    "blankTargets": [
+      "cleaner than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room is cleaner as before.",
+      "statementForm": [
+        "The room is cleaner than before.",
+        "The room is cleaner than before"
+      ],
+      "fragmentForm": "cleaner than",
+      "wormholeVariants": [
+        "The room is cleaner as before.",
+        "The room is clean than before.",
+        "The room is more clean than before.",
+        "The room is most clean than before.",
+        "The room is so clean than before.",
+        "The room is cleaner then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_074",
+    "seedId": "comparative_074",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 방은 전보다 훨씬 더 깨끗하다.",
+    "english": "The room is much cleaner than before.",
+    "words": [
+      "The",
+      "room",
+      "is",
+      "much",
+      "cleaner",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 방은 전보다 훨씬 더 깨끗하다.",
+        "much cleaner than"
+      ],
+      [
+        "comparative",
+        "much cleaner than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much cleaner than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "cleaner",
+      "clean",
+      "before"
+    ],
+    "blankTargets": [
+      "much cleaner than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room is much cleaner as before.",
+      "statementForm": [
+        "The room is much cleaner than before.",
+        "The room is much cleaner than before"
+      ],
+      "fragmentForm": "much cleaner than",
+      "wormholeVariants": [
+        "The room is much cleaner as before.",
+        "The room is cleaner than before.",
+        "The room is much clean than before.",
+        "The room is much more clean than before.",
+        "The room is much most clean than before.",
+        "The room is much so clean than before.",
+        "The room is much cleaner then before.",
+        "The room is very cleaner than before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_075",
+    "seedId": "comparative_075",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 방은 전보다 훨씬 더 깨끗하다.",
+    "english": "The room is far cleaner than before.",
+    "words": [
+      "The",
+      "room",
+      "is",
+      "far",
+      "cleaner",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 방은 전보다 훨씬 더 깨끗하다.",
+        "far cleaner than"
+      ],
+      [
+        "comparative",
+        "far cleaner than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "far cleaner than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "cleaner",
+      "clean",
+      "before"
+    ],
+    "blankTargets": [
+      "far cleaner than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room is far cleaner as before.",
+      "statementForm": [
+        "The room is far cleaner than before.",
+        "The room is far cleaner than before"
+      ],
+      "fragmentForm": "far cleaner than",
+      "wormholeVariants": [
+        "The room is far cleaner as before.",
+        "The room is cleaner than before.",
+        "The room is far clean than before.",
+        "The room is far more clean than before.",
+        "The room is far most clean than before.",
+        "The room is far so clean than before.",
+        "The room is far cleaner then before.",
+        "The room is very cleaner than before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_076",
+    "seedId": "comparative_076",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 방은 전보다 여전히 더 깨끗하다.",
+    "english": "The room is still cleaner than before.",
+    "words": [
+      "The",
+      "room",
+      "is",
+      "still",
+      "cleaner",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 방은 전보다 여전히 더 깨끗하다.",
+        "still cleaner than"
+      ],
+      [
+        "comparative",
+        "still cleaner than"
+      ],
+      [
+        "주의",
+        "Use adjective comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "still cleaner than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "cleaner",
+      "clean",
+      "before"
+    ],
+    "blankTargets": [
+      "still cleaner than"
+    ],
+    "tags": [
+      "comparative",
+      "adj",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "The room is still cleaner as before.",
+      "statementForm": [
+        "The room is still cleaner than before.",
+        "The room is still cleaner than before"
+      ],
+      "fragmentForm": "still cleaner than",
+      "wormholeVariants": [
+        "The room is still cleaner as before.",
+        "The room is cleaner than before.",
+        "The room is still clean than before.",
+        "The room is still more clean than before.",
+        "The room is still most clean than before.",
+        "The room is still so clean than before.",
+        "The room is still cleaner then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_077",
+    "seedId": "comparative_077",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 가수는 전보다 더 아름답게 노래한다.",
+    "english": "The singer sings more beautifully than before.",
+    "words": [
+      "The",
+      "singer",
+      "sings",
+      "more",
+      "beautifully",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 가수는 전보다 더 아름답게 노래한다.",
+        "more beautifully than"
+      ],
+      [
+        "comparative",
+        "more beautifully than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "more beautifully than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more beautifully",
+      "beautifully",
+      "before"
+    ],
+    "blankTargets": [
+      "more beautifully than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The singer sings more beautifully as before.",
+      "statementForm": [
+        "The singer sings more beautifully than before.",
+        "The singer sings more beautifully than before"
+      ],
+      "fragmentForm": "more beautifully than",
+      "wormholeVariants": [
+        "The singer sings more beautifully as before.",
+        "The singer sings beautifully than before.",
+        "The singer sings most beautifully than before.",
+        "The singer sing more beautifully than before.",
+        "The singer sings so beautifully than before.",
+        "The singer sings more beautifully then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_078",
+    "seedId": "comparative_078",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 가수는 전보다 훨씬 더 아름답게 노래한다.",
+    "english": "The singer sings much more beautifully than before.",
+    "words": [
+      "The",
+      "singer",
+      "sings",
+      "much",
+      "more",
+      "beautifully",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 가수는 전보다 훨씬 더 아름답게 노래한다.",
+        "much more beautifully than"
+      ],
+      [
+        "comparative",
+        "much more beautifully than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "much more beautifully than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more beautifully",
+      "beautifully",
+      "before"
+    ],
+    "blankTargets": [
+      "much more beautifully than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The singer sings much more beautifully as before.",
+      "statementForm": [
+        "The singer sings much more beautifully than before.",
+        "The singer sings much more beautifully than before"
+      ],
+      "fragmentForm": "much more beautifully than",
+      "wormholeVariants": [
+        "The singer sings much more beautifully as before.",
+        "The singer sings more beautifully than before.",
+        "The singer sings much beautifully than before.",
+        "The singer sings much most beautifully than before.",
+        "The singer sing much more beautifully than before.",
+        "The singer sings much so beautifully than before.",
+        "The singer sings much more beautifully then before.",
+        "The singer sings very more beautifully than before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_079",
+    "seedId": "comparative_079",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 가수는 전보다 훨씬 더 아름답게 노래한다.",
+    "english": "The singer sings a lot more beautifully than before.",
+    "words": [
+      "The",
+      "singer",
+      "sings",
+      "a",
+      "lot",
+      "more",
+      "beautifully",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 가수는 전보다 훨씬 더 아름답게 노래한다.",
+        "a lot more beautifully than"
+      ],
+      [
+        "comparative",
+        "a lot more beautifully than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "a lot more beautifully than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more beautifully",
+      "beautifully",
+      "before"
+    ],
+    "blankTargets": [
+      "a lot more beautifully than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The singer sings a lot more beautifully as before.",
+      "statementForm": [
+        "The singer sings a lot more beautifully than before.",
+        "The singer sings a lot more beautifully than before"
+      ],
+      "fragmentForm": "a lot more beautifully than",
+      "wormholeVariants": [
+        "The singer sings a lot more beautifully as before.",
+        "The singer sings more beautifully than before.",
+        "The singer sings a lot beautifully than before.",
+        "The singer sings a lot most beautifully than before.",
+        "The singer sing a lot more beautifully than before.",
+        "The singer sings a lot so beautifully than before.",
+        "The singer sings a lot more beautifully then before."
+      ]
+    }
+  },
+  {
+    "id": "m3_comp_080",
+    "seedId": "comparative_080",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "comparative",
+    "chapterLabelKo": "비교급",
+    "korean": "그 가수는 전보다 더욱 더 아름답게 노래한다.",
+    "english": "The singer sings even more beautifully than before.",
+    "words": [
+      "The",
+      "singer",
+      "sings",
+      "even",
+      "more",
+      "beautifully",
+      "than",
+      "before",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "comparative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_comparative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 가수는 전보다 더욱 더 아름답게 노래한다.",
+        "even more beautifully than"
+      ],
+      [
+        "comparative",
+        "even more beautifully than"
+      ],
+      [
+        "주의",
+        "Use adverb comparative forms with than."
+      ]
+    ],
+    "extraClueWordPool": [
+      "even more beautifully than",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "more beautifully",
+      "beautifully",
+      "before"
+    ],
+    "blankTargets": [
+      "even more beautifully than"
+    ],
+    "tags": [
+      "comparative",
+      "verb",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "The singer sings even more beautifully as before.",
+      "statementForm": [
+        "The singer sings even more beautifully than before.",
+        "The singer sings even more beautifully than before"
+      ],
+      "fragmentForm": "even more beautifully than",
+      "wormholeVariants": [
+        "The singer sings even more beautifully as before.",
+        "The singer sings more beautifully than before.",
+        "The singer sings even beautifully than before.",
+        "The singer sings even most beautifully than before.",
+        "The singer sing even more beautifully than before.",
+        "The singer sings even so beautifully than before.",
+        "The singer sings even more beautifully then before."
+      ]
+    }
+  }
+]
