@@ -1,0 +1,6850 @@
+[
+  {
+    "id": "m3_super_001",
+    "seedId": "superlative_001",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 박물관은 도시에서 가장 오래된 건물이다.",
+    "english": "The museum is the oldest building in the city.",
+    "words": [
+      "The",
+      "museum",
+      "is",
+      "the",
+      "oldest",
+      "building",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 박물관은 도시에서 가장 오래된 건물이다.",
+        "the oldest"
+      ],
+      [
+        "superlative",
+        "the oldest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the oldest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "oldest",
+      "오래된",
+      "building",
+      "buildings",
+      "in the city"
+    ],
+    "blankTargets": [
+      "the oldest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "museum is the oldest building in the city.",
+      "statementForm": [
+        "The museum is the oldest building in the city.",
+        "The museum is the oldest building in the city"
+      ],
+      "fragmentForm": "the oldest",
+      "wormholeVariants": [
+        "museum is the oldest building in the city.",
+        "The museum is oldest building in the city."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_002",
+    "seedId": "superlative_002",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 박물관은 도시에서 단연 가장 오래된 건물이다.",
+    "english": "The museum is by far the oldest building in the city.",
+    "words": [
+      "The",
+      "museum",
+      "is",
+      "by",
+      "far",
+      "the",
+      "oldest",
+      "building",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 박물관은 도시에서 단연 가장 오래된 건물이다.",
+        "by far the oldest"
+      ],
+      [
+        "superlative",
+        "by far the oldest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the oldest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "oldest",
+      "오래된",
+      "building",
+      "buildings",
+      "in the city"
+    ],
+    "blankTargets": [
+      "by far the oldest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "museum is by far the oldest building in the city.",
+      "statementForm": [
+        "The museum is by far the oldest building in the city.",
+        "The museum is by far the oldest building in the city"
+      ],
+      "fragmentForm": "by far the oldest",
+      "wormholeVariants": [
+        "museum is by far the oldest building in the city.",
+        "The museum is the oldest building in the city.",
+        "The museum is by far oldest building in the city."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_003",
+    "seedId": "superlative_003",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 박물관은 도시에서 가장 오래된 건물들 중 하나이다.",
+    "english": "The museum is one of the oldest buildings in the city.",
+    "words": [
+      "The",
+      "museum",
+      "is",
+      "one",
+      "of",
+      "the",
+      "oldest",
+      "buildings",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 박물관은 도시에서 가장 오래된 건물들 중 하나이다.",
+        "one of the oldest"
+      ],
+      [
+        "superlative",
+        "one of the oldest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the oldest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "oldest",
+      "오래된",
+      "building",
+      "buildings",
+      "in the city"
+    ],
+    "blankTargets": [
+      "one of the oldest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "museum is one of the oldest buildings in the city.",
+      "statementForm": [
+        "The museum is one of the oldest buildings in the city.",
+        "The museum is one of the oldest buildings in the city"
+      ],
+      "fragmentForm": "one of the oldest",
+      "wormholeVariants": [
+        "museum is one of the oldest buildings in the city.",
+        "The museum is one the oldest buildings in the city.",
+        "The museum is one of oldest buildings in the city."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_004",
+    "seedId": "superlative_004",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "도시의 모든 건물들 중에서 그 박물관이 가장 오래되었다.",
+    "english": "Of all the buildings in the city, the museum is the oldest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "buildings",
+      "in",
+      "the",
+      "city",
+      ",",
+      "the",
+      "museum",
+      "is",
+      "the",
+      "oldest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "도시의 모든 건물들 중에서 그 박물관이 가장 오래되었다.",
+        "the oldest"
+      ],
+      [
+        "superlative",
+        "the oldest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the oldest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "oldest",
+      "오래된",
+      "building",
+      "buildings",
+      "in the city"
+    ],
+    "blankTargets": [
+      "the oldest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all buildings in the city, the museum is the oldest.",
+      "statementForm": [
+        "Of all the buildings in the city, the museum is the oldest.",
+        "Of all the buildings in the city, the museum is the oldest"
+      ],
+      "fragmentForm": "the oldest",
+      "wormholeVariants": [
+        "Of all buildings in the city, the museum is the oldest.",
+        "all of the buildings in the city, the museum is the oldest.",
+        "Of the the buildings in the city, the museum is the oldest.",
+        "Of all the buildings in the city, the museum is oldest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_005",
+    "seedId": "superlative_005",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 도서관은 우리 마을에서 가장 조용한 곳이다.",
+    "english": "The library is the quietest place in our town.",
+    "words": [
+      "The",
+      "library",
+      "is",
+      "the",
+      "quietest",
+      "place",
+      "in",
+      "our",
+      "town",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 도서관은 우리 마을에서 가장 조용한 곳이다.",
+        "the quietest"
+      ],
+      [
+        "superlative",
+        "the quietest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the quietest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "quietest",
+      "조용한",
+      "place",
+      "places",
+      "in our town"
+    ],
+    "blankTargets": [
+      "the quietest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "library is the quietest place in our town.",
+      "statementForm": [
+        "The library is the quietest place in our town.",
+        "The library is the quietest place in our town"
+      ],
+      "fragmentForm": "the quietest",
+      "wormholeVariants": [
+        "library is the quietest place in our town.",
+        "The library is quietest place in our town."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_006",
+    "seedId": "superlative_006",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 도서관은 우리 마을에서 단연 가장 조용한 곳이다.",
+    "english": "The library is by far the quietest place in our town.",
+    "words": [
+      "The",
+      "library",
+      "is",
+      "by",
+      "far",
+      "the",
+      "quietest",
+      "place",
+      "in",
+      "our",
+      "town",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 도서관은 우리 마을에서 단연 가장 조용한 곳이다.",
+        "by far the quietest"
+      ],
+      [
+        "superlative",
+        "by far the quietest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the quietest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "quietest",
+      "조용한",
+      "place",
+      "places",
+      "in our town"
+    ],
+    "blankTargets": [
+      "by far the quietest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "library is by far the quietest place in our town.",
+      "statementForm": [
+        "The library is by far the quietest place in our town.",
+        "The library is by far the quietest place in our town"
+      ],
+      "fragmentForm": "by far the quietest",
+      "wormholeVariants": [
+        "library is by far the quietest place in our town.",
+        "The library is the quietest place in our town.",
+        "The library is by far quietest place in our town."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_007",
+    "seedId": "superlative_007",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 도서관은 우리 마을에서 가장 조용한 곳들 중 하나이다.",
+    "english": "The library is one of the quietest places in our town.",
+    "words": [
+      "The",
+      "library",
+      "is",
+      "one",
+      "of",
+      "the",
+      "quietest",
+      "places",
+      "in",
+      "our",
+      "town",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 도서관은 우리 마을에서 가장 조용한 곳들 중 하나이다.",
+        "one of the quietest"
+      ],
+      [
+        "superlative",
+        "one of the quietest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the quietest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "quietest",
+      "조용한",
+      "place",
+      "places",
+      "in our town"
+    ],
+    "blankTargets": [
+      "one of the quietest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "library is one of the quietest places in our town.",
+      "statementForm": [
+        "The library is one of the quietest places in our town.",
+        "The library is one of the quietest places in our town"
+      ],
+      "fragmentForm": "one of the quietest",
+      "wormholeVariants": [
+        "library is one of the quietest places in our town.",
+        "The library is one the quietest places in our town.",
+        "The library is one of quietest places in our town."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_008",
+    "seedId": "superlative_008",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "우리 마을의 모든 곳들 중에서 그 도서관이 가장 조용하다.",
+    "english": "Of all the places in our town, the library is the quietest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "places",
+      "in",
+      "our",
+      "town",
+      ",",
+      "the",
+      "library",
+      "is",
+      "the",
+      "quietest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리 마을의 모든 곳들 중에서 그 도서관이 가장 조용하다.",
+        "the quietest"
+      ],
+      [
+        "superlative",
+        "the quietest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the quietest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "quietest",
+      "조용한",
+      "place",
+      "places",
+      "in our town"
+    ],
+    "blankTargets": [
+      "the quietest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all places in our town, the library is the quietest.",
+      "statementForm": [
+        "Of all the places in our town, the library is the quietest.",
+        "Of all the places in our town, the library is the quietest"
+      ],
+      "fragmentForm": "the quietest",
+      "wormholeVariants": [
+        "Of all places in our town, the library is the quietest.",
+        "all of the places in our town, the library is the quietest.",
+        "Of the the places in our town, the library is the quietest.",
+        "Of all the places in our town, the library is quietest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_009",
+    "seedId": "superlative_009",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 산은 한국에서 가장 높은 산이다.",
+    "english": "The mountain is the highest in Korea.",
+    "words": [
+      "The",
+      "mountain",
+      "is",
+      "the",
+      "highest",
+      "in",
+      "Korea",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 산은 한국에서 가장 높은 산이다.",
+        "the highest"
+      ],
+      [
+        "superlative",
+        "the highest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the highest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "highest",
+      "높은",
+      "mountain",
+      "mountains",
+      "in Korea"
+    ],
+    "blankTargets": [
+      "the highest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "mountain is the highest mountain in Korea.",
+      "statementForm": [
+        "The mountain is the highest mountain in Korea.",
+        "The mountain is the highest mountain in Korea"
+      ],
+      "fragmentForm": "the highest",
+      "wormholeVariants": [
+        "mountain is the highest mountain in Korea.",
+        "The mountain is highest mountain in Korea."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_010",
+    "seedId": "superlative_010",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 산은 한국에서 단연 가장 높은 산이다.",
+    "english": "The mountain is the highest in Korea.",
+    "words": [
+      "The",
+      "mountain",
+      "is",
+      "the",
+      "highest",
+      "in",
+      "Korea",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 산은 한국에서 단연 가장 높은 산이다.",
+        "by far the highest"
+      ],
+      [
+        "superlative",
+        "by far the highest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the highest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "highest",
+      "높은",
+      "mountain",
+      "mountains",
+      "in Korea"
+    ],
+    "blankTargets": [
+      "by far the highest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "mountain is by far the highest mountain in Korea.",
+      "statementForm": [
+        "The mountain is by far the highest mountain in Korea.",
+        "The mountain is by far the highest mountain in Korea"
+      ],
+      "fragmentForm": "by far the highest",
+      "wormholeVariants": [
+        "mountain is by far the highest mountain in Korea.",
+        "The mountain is the highest mountain in Korea.",
+        "The mountain is by far highest mountain in Korea."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_011",
+    "seedId": "superlative_011",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 산은 한국에서 가장 높은 산들 중 하나이다.",
+    "english": "The mountain is one of the highest mountains in Korea.",
+    "words": [
+      "The",
+      "mountain",
+      "is",
+      "one",
+      "of",
+      "the",
+      "highest",
+      "mountains",
+      "in",
+      "Korea",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 산은 한국에서 가장 높은 산들 중 하나이다.",
+        "one of the highest"
+      ],
+      [
+        "superlative",
+        "one of the highest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the highest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "highest",
+      "높은",
+      "mountain",
+      "mountains",
+      "in Korea"
+    ],
+    "blankTargets": [
+      "one of the highest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "mountain is one of the highest mountains in Korea.",
+      "statementForm": [
+        "The mountain is one of the highest mountains in Korea.",
+        "The mountain is one of the highest mountains in Korea"
+      ],
+      "fragmentForm": "one of the highest",
+      "wormholeVariants": [
+        "mountain is one of the highest mountains in Korea.",
+        "The mountain is one the highest mountains in Korea.",
+        "The mountain is one of highest mountains in Korea."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_012",
+    "seedId": "superlative_012",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "한국의 모든 산들 중에서 그 산이 가장 높다.",
+    "english": "Of all the mountains in Korea, the mountain is the highest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "mountains",
+      "in",
+      "Korea",
+      ",",
+      "the",
+      "mountain",
+      "is",
+      "the",
+      "highest",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "한국의 모든 산들 중에서 그 산이 가장 높다.",
+        "the highest"
+      ],
+      [
+        "superlative",
+        "the highest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the highest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "highest",
+      "높은",
+      "mountain",
+      "mountains",
+      "in Korea"
+    ],
+    "blankTargets": [
+      "the highest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all mountains in Korea, the mountain is the highest.",
+      "statementForm": [
+        "Of all the mountains in Korea, the mountain is the highest.",
+        "Of all the mountains in Korea, the mountain is the highest"
+      ],
+      "fragmentForm": "the highest",
+      "wormholeVariants": [
+        "Of all mountains in Korea, the mountain is the highest.",
+        "all of the mountains in Korea, the mountain is the highest.",
+        "Of the the mountains in Korea, the mountain is the highest.",
+        "Of all the mountains in Korea, the mountain is highest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_013",
+    "seedId": "superlative_013",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 학생은 반에서 가장 똑똑한 학생이다.",
+    "english": "The student is the smartest student in the class.",
+    "words": [
+      "The",
+      "student",
+      "is",
+      "the",
+      "smartest",
+      "student",
+      "in",
+      "the",
+      "class",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 학생은 반에서 가장 똑똑한 학생이다.",
+        "the smartest"
+      ],
+      [
+        "superlative",
+        "the smartest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the smartest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "smartest",
+      "똑똑한",
+      "student",
+      "students",
+      "in the class"
+    ],
+    "blankTargets": [
+      "the smartest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "student is the smartest student in the class.",
+      "statementForm": [
+        "The student is the smartest student in the class.",
+        "The student is the smartest student in the class"
+      ],
+      "fragmentForm": "the smartest",
+      "wormholeVariants": [
+        "student is the smartest student in the class.",
+        "The student is smartest student in the class."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_014",
+    "seedId": "superlative_014",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 학생은 반에서 단연 가장 똑똑한 학생이다.",
+    "english": "The student is by far the smartest student in the class.",
+    "words": [
+      "The",
+      "student",
+      "is",
+      "by",
+      "far",
+      "the",
+      "smartest",
+      "student",
+      "in",
+      "the",
+      "class",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 학생은 반에서 단연 가장 똑똑한 학생이다.",
+        "by far the smartest"
+      ],
+      [
+        "superlative",
+        "by far the smartest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the smartest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "smartest",
+      "똑똑한",
+      "student",
+      "students",
+      "in the class"
+    ],
+    "blankTargets": [
+      "by far the smartest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "student is by far the smartest student in the class.",
+      "statementForm": [
+        "The student is by far the smartest student in the class.",
+        "The student is by far the smartest student in the class"
+      ],
+      "fragmentForm": "by far the smartest",
+      "wormholeVariants": [
+        "student is by far the smartest student in the class.",
+        "The student is the smartest student in the class.",
+        "The student is by far smartest student in the class."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_015",
+    "seedId": "superlative_015",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 학생은 반에서 가장 똑똑한 학생들 중 하나이다.",
+    "english": "The student is one of the smartest students in the class.",
+    "words": [
+      "The",
+      "student",
+      "is",
+      "one",
+      "of",
+      "the",
+      "smartest",
+      "students",
+      "in",
+      "the",
+      "class",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 학생은 반에서 가장 똑똑한 학생들 중 하나이다.",
+        "one of the smartest"
+      ],
+      [
+        "superlative",
+        "one of the smartest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the smartest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "smartest",
+      "똑똑한",
+      "student",
+      "students",
+      "in the class"
+    ],
+    "blankTargets": [
+      "one of the smartest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "student is one of the smartest students in the class.",
+      "statementForm": [
+        "The student is one of the smartest students in the class.",
+        "The student is one of the smartest students in the class"
+      ],
+      "fragmentForm": "one of the smartest",
+      "wormholeVariants": [
+        "student is one of the smartest students in the class.",
+        "The student is one the smartest students in the class.",
+        "The student is one of smartest students in the class."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_016",
+    "seedId": "superlative_016",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "반의 모든 학생들 중에서 그 학생이 가장 똑똑하다.",
+    "english": "Of all the students in the class, the student is the smartest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "students",
+      "in",
+      "the",
+      "class",
+      ",",
+      "the",
+      "student",
+      "is",
+      "the",
+      "smartest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "반의 모든 학생들 중에서 그 학생이 가장 똑똑하다.",
+        "the smartest"
+      ],
+      [
+        "superlative",
+        "the smartest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the smartest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "smartest",
+      "똑똑한",
+      "student",
+      "students",
+      "in the class"
+    ],
+    "blankTargets": [
+      "the smartest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all students in the class, the student is the smartest.",
+      "statementForm": [
+        "Of all the students in the class, the student is the smartest.",
+        "Of all the students in the class, the student is the smartest"
+      ],
+      "fragmentForm": "the smartest",
+      "wormholeVariants": [
+        "Of all students in the class, the student is the smartest.",
+        "all of the students in the class, the student is the smartest.",
+        "Of the the students in the class, the student is the smartest.",
+        "Of all the students in the class, the student is smartest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_017",
+    "seedId": "superlative_017",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 카메라는 상자 안에서 가장 유용한 도구이다.",
+    "english": "The camera is the most useful tool in the box.",
+    "words": [
+      "The",
+      "camera",
+      "is",
+      "the",
+      "most",
+      "useful",
+      "tool",
+      "in",
+      "the",
+      "box",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 카메라는 상자 안에서 가장 유용한 도구이다.",
+        "the most useful"
+      ],
+      [
+        "superlative",
+        "the most useful"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most useful",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most useful",
+      "유용한",
+      "tool",
+      "tools",
+      "in the box"
+    ],
+    "blankTargets": [
+      "the most useful"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "camera is the most useful tool in the box.",
+      "statementForm": [
+        "The camera is the most useful tool in the box.",
+        "The camera is the most useful tool in the box"
+      ],
+      "fragmentForm": "the most useful",
+      "wormholeVariants": [
+        "camera is the most useful tool in the box.",
+        "The camera is the more useful tool in the box.",
+        "The camera is the best useful tool in the box."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_018",
+    "seedId": "superlative_018",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 카메라는 상자 안에서 단연 가장 유용한 도구이다.",
+    "english": "The camera is by far the most useful tool in the box.",
+    "words": [
+      "The",
+      "camera",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "useful",
+      "tool",
+      "in",
+      "the",
+      "box",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 카메라는 상자 안에서 단연 가장 유용한 도구이다.",
+        "by far the most useful"
+      ],
+      [
+        "superlative",
+        "by far the most useful"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the most useful",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most useful",
+      "유용한",
+      "tool",
+      "tools",
+      "in the box"
+    ],
+    "blankTargets": [
+      "by far the most useful"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "camera is by far the most useful tool in the box.",
+      "statementForm": [
+        "The camera is by far the most useful tool in the box.",
+        "The camera is by far the most useful tool in the box"
+      ],
+      "fragmentForm": "by far the most useful",
+      "wormholeVariants": [
+        "camera is by far the most useful tool in the box.",
+        "The camera is by far the more useful tool in the box.",
+        "The camera is the most useful tool in the box.",
+        "The camera is by far the best useful tool in the box."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_019",
+    "seedId": "superlative_019",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 카메라는 상자 안에서 가장 유용한 도구들 중 하나이다.",
+    "english": "The camera is one of the most useful tools in the box.",
+    "words": [
+      "The",
+      "camera",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "useful",
+      "tools",
+      "in",
+      "the",
+      "box",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 카메라는 상자 안에서 가장 유용한 도구들 중 하나이다.",
+        "one of the most useful"
+      ],
+      [
+        "superlative",
+        "one of the most useful"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the most useful",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most useful",
+      "유용한",
+      "tool",
+      "tools",
+      "in the box"
+    ],
+    "blankTargets": [
+      "one of the most useful"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "camera is one of the most useful tools in the box.",
+      "statementForm": [
+        "The camera is one of the most useful tools in the box.",
+        "The camera is one of the most useful tools in the box"
+      ],
+      "fragmentForm": "one of the most useful",
+      "wormholeVariants": [
+        "camera is one of the most useful tools in the box.",
+        "The camera is one of the more useful tools in the box.",
+        "The camera is one the most useful tools in the box.",
+        "The camera is one of most useful tools in the box.",
+        "The camera is one of the best useful tools in the box."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_020",
+    "seedId": "superlative_020",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "상자 안의 모든 도구들 중에서 이 카메라가 가장 유용하다.",
+    "english": "Of all the tools in the box, the camera is the most useful.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "tools",
+      "in",
+      "the",
+      "box",
+      ",",
+      "the",
+      "camera",
+      "is",
+      "the",
+      "most",
+      "useful",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "상자 안의 모든 도구들 중에서 이 카메라가 가장 유용하다.",
+        "the most useful"
+      ],
+      [
+        "superlative",
+        "the most useful"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most useful",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most useful",
+      "유용한",
+      "tool",
+      "tools",
+      "in the box"
+    ],
+    "blankTargets": [
+      "the most useful"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all tools in the box, the camera is the most useful.",
+      "statementForm": [
+        "Of all the tools in the box, the camera is the most useful.",
+        "Of all the tools in the box, the camera is the most useful"
+      ],
+      "fragmentForm": "the most useful",
+      "wormholeVariants": [
+        "Of all tools in the box, the camera is the most useful.",
+        "Of all the tools in the box, the camera is the more useful.",
+        "all of the tools in the box, the camera is the most useful.",
+        "Of the the tools in the box, the camera is the most useful.",
+        "Of all the tools in the box, the camera is the best useful."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_021",
+    "seedId": "superlative_021",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 식당은 도시에서 가장 비싼 곳이다.",
+    "english": "The restaurant is the most expensive place in town.",
+    "words": [
+      "The",
+      "restaurant",
+      "is",
+      "the",
+      "most",
+      "expensive",
+      "place",
+      "in",
+      "town",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 식당은 도시에서 가장 비싼 곳이다.",
+        "the most expensive"
+      ],
+      [
+        "superlative",
+        "the most expensive"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most expensive",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most expensive",
+      "비싼",
+      "place",
+      "places",
+      "in town"
+    ],
+    "blankTargets": [
+      "the most expensive"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "restaurant is the most expensive place in town.",
+      "statementForm": [
+        "The restaurant is the most expensive place in town.",
+        "The restaurant is the most expensive place in town"
+      ],
+      "fragmentForm": "the most expensive",
+      "wormholeVariants": [
+        "restaurant is the most expensive place in town.",
+        "The restaurant is the more expensive place in town.",
+        "The restaurant is the best expensive place in town."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_022",
+    "seedId": "superlative_022",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 식당은 도시에서 단연 가장 비싼 곳이다.",
+    "english": "The restaurant is by far the most expensive place in town.",
+    "words": [
+      "The",
+      "restaurant",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "expensive",
+      "place",
+      "in",
+      "town",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 식당은 도시에서 단연 가장 비싼 곳이다.",
+        "by far the most expensive"
+      ],
+      [
+        "superlative",
+        "by far the most expensive"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the most expensive",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most expensive",
+      "비싼",
+      "place",
+      "places",
+      "in town"
+    ],
+    "blankTargets": [
+      "by far the most expensive"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "restaurant is by far the most expensive place in town.",
+      "statementForm": [
+        "The restaurant is by far the most expensive place in town.",
+        "The restaurant is by far the most expensive place in town"
+      ],
+      "fragmentForm": "by far the most expensive",
+      "wormholeVariants": [
+        "restaurant is by far the most expensive place in town.",
+        "The restaurant is by far the more expensive place in town.",
+        "The restaurant is the most expensive place in town.",
+        "The restaurant is by far the best expensive place in town."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_023",
+    "seedId": "superlative_023",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 식당은 도시에서 가장 비싼 곳들 중 하나이다.",
+    "english": "The restaurant is one of the most expensive places in town.",
+    "words": [
+      "The",
+      "restaurant",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "expensive",
+      "places",
+      "in",
+      "town",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 식당은 도시에서 가장 비싼 곳들 중 하나이다.",
+        "one of the most expensive"
+      ],
+      [
+        "superlative",
+        "one of the most expensive"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the most expensive",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most expensive",
+      "비싼",
+      "place",
+      "places",
+      "in town"
+    ],
+    "blankTargets": [
+      "one of the most expensive"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "restaurant is one of the most expensive places in town.",
+      "statementForm": [
+        "The restaurant is one of the most expensive places in town.",
+        "The restaurant is one of the most expensive places in town"
+      ],
+      "fragmentForm": "one of the most expensive",
+      "wormholeVariants": [
+        "restaurant is one of the most expensive places in town.",
+        "The restaurant is one of the more expensive places in town.",
+        "The restaurant is one the most expensive places in town.",
+        "The restaurant is one of most expensive places in town.",
+        "The restaurant is one of the best expensive places in town."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_024",
+    "seedId": "superlative_024",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "도시의 모든 곳들 중에서 그 식당이 가장 비싸다.",
+    "english": "Of all the places in town, the restaurant is the most expensive.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "places",
+      "in",
+      "town",
+      ",",
+      "the",
+      "restaurant",
+      "is",
+      "the",
+      "most",
+      "expensive",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "도시의 모든 곳들 중에서 그 식당이 가장 비싸다.",
+        "the most expensive"
+      ],
+      [
+        "superlative",
+        "the most expensive"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most expensive",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most expensive",
+      "비싼",
+      "place",
+      "places",
+      "in town"
+    ],
+    "blankTargets": [
+      "the most expensive"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all places in town, the restaurant is the most expensive.",
+      "statementForm": [
+        "Of all the places in town, the restaurant is the most expensive.",
+        "Of all the places in town, the restaurant is the most expensive"
+      ],
+      "fragmentForm": "the most expensive",
+      "wormholeVariants": [
+        "Of all places in town, the restaurant is the most expensive.",
+        "Of all the places in town, the restaurant is the more expensive.",
+        "all of the places in town, the restaurant is the most expensive.",
+        "Of the the places in town, the restaurant is the most expensive.",
+        "Of all the places in town, the restaurant is the best expensive."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_025",
+    "seedId": "superlative_025",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 영화는 올해에 가장 흥미로운 영화이다.",
+    "english": "The movie is the most interesting film of the year.",
+    "words": [
+      "The",
+      "movie",
+      "is",
+      "the",
+      "most",
+      "interesting",
+      "film",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 영화는 올해에 가장 흥미로운 영화이다.",
+        "the most interesting"
+      ],
+      [
+        "superlative",
+        "the most interesting"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most interesting",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most interesting",
+      "흥미로운",
+      "film",
+      "films",
+      "of the year"
+    ],
+    "blankTargets": [
+      "the most interesting"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "movie is the most interesting film of the year.",
+      "statementForm": [
+        "The movie is the most interesting film of the year.",
+        "The movie is the most interesting film of the year"
+      ],
+      "fragmentForm": "the most interesting",
+      "wormholeVariants": [
+        "movie is the most interesting film of the year.",
+        "The movie is the more interesting film of the year.",
+        "The movie is the best interesting film of the year."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_026",
+    "seedId": "superlative_026",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 영화는 올해에 단연 가장 흥미로운 영화이다.",
+    "english": "The movie is by far the most interesting film of the year.",
+    "words": [
+      "The",
+      "movie",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "interesting",
+      "film",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 영화는 올해에 단연 가장 흥미로운 영화이다.",
+        "by far the most interesting"
+      ],
+      [
+        "superlative",
+        "by far the most interesting"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the most interesting",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most interesting",
+      "흥미로운",
+      "film",
+      "films",
+      "of the year"
+    ],
+    "blankTargets": [
+      "by far the most interesting"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "movie is by far the most interesting film of the year.",
+      "statementForm": [
+        "The movie is by far the most interesting film of the year.",
+        "The movie is by far the most interesting film of the year"
+      ],
+      "fragmentForm": "by far the most interesting",
+      "wormholeVariants": [
+        "movie is by far the most interesting film of the year.",
+        "The movie is by far the more interesting film of the year.",
+        "The movie is the most interesting film of the year.",
+        "The movie is by far the best interesting film of the year."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_027",
+    "seedId": "superlative_027",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 영화는 올해에 가장 흥미로운 영화들 중 하나이다.",
+    "english": "The movie is one of the most interesting films of the year.",
+    "words": [
+      "The",
+      "movie",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "interesting",
+      "films",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 영화는 올해에 가장 흥미로운 영화들 중 하나이다.",
+        "one of the most interesting"
+      ],
+      [
+        "superlative",
+        "one of the most interesting"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the most interesting",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most interesting",
+      "흥미로운",
+      "film",
+      "films",
+      "of the year"
+    ],
+    "blankTargets": [
+      "one of the most interesting"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "movie is one of the most interesting films of the year.",
+      "statementForm": [
+        "The movie is one of the most interesting films of the year.",
+        "The movie is one of the most interesting films of the year"
+      ],
+      "fragmentForm": "one of the most interesting",
+      "wormholeVariants": [
+        "movie is one of the most interesting films of the year.",
+        "The movie is one of the more interesting films of the year.",
+        "The movie is one the most interesting films of the year.",
+        "The movie is one of most interesting films of the year.",
+        "The movie is one of the best interesting films of the year."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_028",
+    "seedId": "superlative_028",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "올해의 모든 영화들 중에서 그 영화가 가장 흥미롭다.",
+    "english": "Of all the films of the year, the movie is the most interesting.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "films",
+      "of",
+      "the",
+      "year",
+      ",",
+      "the",
+      "movie",
+      "is",
+      "the",
+      "most",
+      "interesting",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "올해의 모든 영화들 중에서 그 영화가 가장 흥미롭다.",
+        "the most interesting"
+      ],
+      [
+        "superlative",
+        "the most interesting"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most interesting",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most interesting",
+      "흥미로운",
+      "film",
+      "films",
+      "of the year"
+    ],
+    "blankTargets": [
+      "the most interesting"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all films of the year, the movie is the most interesting.",
+      "statementForm": [
+        "Of all the films of the year, the movie is the most interesting.",
+        "Of all the films of the year, the movie is the most interesting"
+      ],
+      "fragmentForm": "the most interesting",
+      "wormholeVariants": [
+        "Of all films of the year, the movie is the most interesting.",
+        "Of all the films of the year, the movie is the more interesting.",
+        "all of the films of the year, the movie is the most interesting.",
+        "Of the the films of the year, the movie is the most interesting.",
+        "Of all the films of the year, the movie is the best interesting."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_029",
+    "seedId": "superlative_029",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 길은 마을에서 가장 위험한 길이다.",
+    "english": "The road is the most dangerous road in the village.",
+    "words": [
+      "The",
+      "road",
+      "is",
+      "the",
+      "most",
+      "dangerous",
+      "road",
+      "in",
+      "the",
+      "village",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 길은 마을에서 가장 위험한 길이다.",
+        "the most dangerous"
+      ],
+      [
+        "superlative",
+        "the most dangerous"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most dangerous",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most dangerous",
+      "위험한",
+      "road",
+      "roads",
+      "in the village"
+    ],
+    "blankTargets": [
+      "the most dangerous"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "road is the most dangerous road in the village.",
+      "statementForm": [
+        "The road is the most dangerous road in the village.",
+        "The road is the most dangerous road in the village"
+      ],
+      "fragmentForm": "the most dangerous",
+      "wormholeVariants": [
+        "road is the most dangerous road in the village.",
+        "The road is the more dangerous road in the village.",
+        "The road is the best dangerous road in the village."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_030",
+    "seedId": "superlative_030",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 길은 마을에서 단연 가장 위험한 길이다.",
+    "english": "The road is by far the most dangerous road in the village.",
+    "words": [
+      "The",
+      "road",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "dangerous",
+      "road",
+      "in",
+      "the",
+      "village",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 길은 마을에서 단연 가장 위험한 길이다.",
+        "by far the most dangerous"
+      ],
+      [
+        "superlative",
+        "by far the most dangerous"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the most dangerous",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most dangerous",
+      "위험한",
+      "road",
+      "roads",
+      "in the village"
+    ],
+    "blankTargets": [
+      "by far the most dangerous"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "road is by far the most dangerous road in the village.",
+      "statementForm": [
+        "The road is by far the most dangerous road in the village.",
+        "The road is by far the most dangerous road in the village"
+      ],
+      "fragmentForm": "by far the most dangerous",
+      "wormholeVariants": [
+        "road is by far the most dangerous road in the village.",
+        "The road is by far the more dangerous road in the village.",
+        "The road is the most dangerous road in the village.",
+        "The road is by far the best dangerous road in the village."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_031",
+    "seedId": "superlative_031",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 길은 마을에서 가장 위험한 길들 중 하나이다.",
+    "english": "The road is one of the most dangerous roads in the village.",
+    "words": [
+      "The",
+      "road",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "dangerous",
+      "roads",
+      "in",
+      "the",
+      "village",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 길은 마을에서 가장 위험한 길들 중 하나이다.",
+        "one of the most dangerous"
+      ],
+      [
+        "superlative",
+        "one of the most dangerous"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the most dangerous",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most dangerous",
+      "위험한",
+      "road",
+      "roads",
+      "in the village"
+    ],
+    "blankTargets": [
+      "one of the most dangerous"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "road is one of the most dangerous roads in the village.",
+      "statementForm": [
+        "The road is one of the most dangerous roads in the village.",
+        "The road is one of the most dangerous roads in the village"
+      ],
+      "fragmentForm": "one of the most dangerous",
+      "wormholeVariants": [
+        "road is one of the most dangerous roads in the village.",
+        "The road is one of the more dangerous roads in the village.",
+        "The road is one the most dangerous roads in the village.",
+        "The road is one of most dangerous roads in the village.",
+        "The road is one of the best dangerous roads in the village."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_032",
+    "seedId": "superlative_032",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "마을의 모든 길들 중에서 그 길이 가장 위험하다.",
+    "english": "Of all the roads in the village, the road is the most dangerous.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "roads",
+      "in",
+      "the",
+      "village",
+      ",",
+      "the",
+      "road",
+      "is",
+      "the",
+      "most",
+      "dangerous",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "마을의 모든 길들 중에서 그 길이 가장 위험하다.",
+        "the most dangerous"
+      ],
+      [
+        "superlative",
+        "the most dangerous"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most dangerous",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most dangerous",
+      "위험한",
+      "road",
+      "roads",
+      "in the village"
+    ],
+    "blankTargets": [
+      "the most dangerous"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all roads in the village, the road is the most dangerous.",
+      "statementForm": [
+        "Of all the roads in the village, the road is the most dangerous.",
+        "Of all the roads in the village, the road is the most dangerous"
+      ],
+      "fragmentForm": "the most dangerous",
+      "wormholeVariants": [
+        "Of all roads in the village, the road is the most dangerous.",
+        "Of all the roads in the village, the road is the more dangerous.",
+        "all of the roads in the village, the road is the most dangerous.",
+        "Of the the roads in the village, the road is the most dangerous.",
+        "Of all the roads in the village, the road is the best dangerous."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_033",
+    "seedId": "superlative_033",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 방은 집에서 가장 깨끗한 방이다.",
+    "english": "The room is the cleanest room in the house.",
+    "words": [
+      "The",
+      "room",
+      "is",
+      "the",
+      "cleanest",
+      "room",
+      "in",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 방은 집에서 가장 깨끗한 방이다.",
+        "the cleanest"
+      ],
+      [
+        "superlative",
+        "the cleanest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the cleanest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "cleanest",
+      "깨끗한",
+      "room",
+      "rooms",
+      "in the house"
+    ],
+    "blankTargets": [
+      "the cleanest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "room is the cleanest room in the house.",
+      "statementForm": [
+        "The room is the cleanest room in the house.",
+        "The room is the cleanest room in the house"
+      ],
+      "fragmentForm": "the cleanest",
+      "wormholeVariants": [
+        "room is the cleanest room in the house.",
+        "The room is cleanest room in the house."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_034",
+    "seedId": "superlative_034",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 방은 집에서 단연 가장 깨끗한 방이다.",
+    "english": "The room is by far the cleanest room in the house.",
+    "words": [
+      "The",
+      "room",
+      "is",
+      "by",
+      "far",
+      "the",
+      "cleanest",
+      "room",
+      "in",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 방은 집에서 단연 가장 깨끗한 방이다.",
+        "by far the cleanest"
+      ],
+      [
+        "superlative",
+        "by far the cleanest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the cleanest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "cleanest",
+      "깨끗한",
+      "room",
+      "rooms",
+      "in the house"
+    ],
+    "blankTargets": [
+      "by far the cleanest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "room is by far the cleanest room in the house.",
+      "statementForm": [
+        "The room is by far the cleanest room in the house.",
+        "The room is by far the cleanest room in the house"
+      ],
+      "fragmentForm": "by far the cleanest",
+      "wormholeVariants": [
+        "room is by far the cleanest room in the house.",
+        "The room is the cleanest room in the house.",
+        "The room is by far cleanest room in the house."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_035",
+    "seedId": "superlative_035",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 방은 집에서 가장 깨끗한 방들 중 하나이다.",
+    "english": "The room is one of the cleanest rooms in the house.",
+    "words": [
+      "The",
+      "room",
+      "is",
+      "one",
+      "of",
+      "the",
+      "cleanest",
+      "rooms",
+      "in",
+      "the",
+      "house",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 방은 집에서 가장 깨끗한 방들 중 하나이다.",
+        "one of the cleanest"
+      ],
+      [
+        "superlative",
+        "one of the cleanest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the cleanest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "cleanest",
+      "깨끗한",
+      "room",
+      "rooms",
+      "in the house"
+    ],
+    "blankTargets": [
+      "one of the cleanest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "room is one of the cleanest rooms in the house.",
+      "statementForm": [
+        "The room is one of the cleanest rooms in the house.",
+        "The room is one of the cleanest rooms in the house"
+      ],
+      "fragmentForm": "one of the cleanest",
+      "wormholeVariants": [
+        "room is one of the cleanest rooms in the house.",
+        "The room is one the cleanest rooms in the house.",
+        "The room is one of cleanest rooms in the house."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_036",
+    "seedId": "superlative_036",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "집의 모든 방들 중에서 그 방이 가장 깨끗하다.",
+    "english": "Of all the rooms in the house, the room is the cleanest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "rooms",
+      "in",
+      "the",
+      "house",
+      ",",
+      "the",
+      "room",
+      "is",
+      "the",
+      "cleanest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "집의 모든 방들 중에서 그 방이 가장 깨끗하다.",
+        "the cleanest"
+      ],
+      [
+        "superlative",
+        "the cleanest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the cleanest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "cleanest",
+      "깨끗한",
+      "room",
+      "rooms",
+      "in the house"
+    ],
+    "blankTargets": [
+      "the cleanest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all rooms in the house, the room is the cleanest.",
+      "statementForm": [
+        "Of all the rooms in the house, the room is the cleanest.",
+        "Of all the rooms in the house, the room is the cleanest"
+      ],
+      "fragmentForm": "the cleanest",
+      "wormholeVariants": [
+        "Of all rooms in the house, the room is the cleanest.",
+        "all of the rooms in the house, the room is the cleanest.",
+        "Of the the rooms in the house, the room is the cleanest.",
+        "Of all the rooms in the house, the room is cleanest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_037",
+    "seedId": "superlative_037",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 드레스는 가게에서 가장 아름다운 드레스이다.",
+    "english": "The dress is the most beautiful dress in the shop.",
+    "words": [
+      "The",
+      "dress",
+      "is",
+      "the",
+      "most",
+      "beautiful",
+      "dress",
+      "in",
+      "the",
+      "shop",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 드레스는 가게에서 가장 아름다운 드레스이다.",
+        "the most beautiful"
+      ],
+      [
+        "superlative",
+        "the most beautiful"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most beautiful",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most beautiful",
+      "아름다운",
+      "dress",
+      "dresses",
+      "in the shop"
+    ],
+    "blankTargets": [
+      "the most beautiful"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "dress is the most beautiful dress in the shop.",
+      "statementForm": [
+        "The dress is the most beautiful dress in the shop.",
+        "The dress is the most beautiful dress in the shop"
+      ],
+      "fragmentForm": "the most beautiful",
+      "wormholeVariants": [
+        "dress is the most beautiful dress in the shop.",
+        "The dress is the more beautiful dress in the shop.",
+        "The dress is the best beautiful dress in the shop."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_038",
+    "seedId": "superlative_038",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 드레스는 가게에서 단연 가장 아름다운 드레스이다.",
+    "english": "The dress is by far the most beautiful dress in the shop.",
+    "words": [
+      "The",
+      "dress",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "beautiful",
+      "dress",
+      "in",
+      "the",
+      "shop",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 드레스는 가게에서 단연 가장 아름다운 드레스이다.",
+        "by far the most beautiful"
+      ],
+      [
+        "superlative",
+        "by far the most beautiful"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the most beautiful",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most beautiful",
+      "아름다운",
+      "dress",
+      "dresses",
+      "in the shop"
+    ],
+    "blankTargets": [
+      "by far the most beautiful"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "dress is by far the most beautiful dress in the shop.",
+      "statementForm": [
+        "The dress is by far the most beautiful dress in the shop.",
+        "The dress is by far the most beautiful dress in the shop"
+      ],
+      "fragmentForm": "by far the most beautiful",
+      "wormholeVariants": [
+        "dress is by far the most beautiful dress in the shop.",
+        "The dress is by far the more beautiful dress in the shop.",
+        "The dress is the most beautiful dress in the shop.",
+        "The dress is by far the best beautiful dress in the shop."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_039",
+    "seedId": "superlative_039",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 드레스는 가게에서 가장 아름다운 드레스들 중 하나이다.",
+    "english": "The dress is one of the most beautiful dresses in the shop.",
+    "words": [
+      "The",
+      "dress",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "beautiful",
+      "dresses",
+      "in",
+      "the",
+      "shop",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 드레스는 가게에서 가장 아름다운 드레스들 중 하나이다.",
+        "one of the most beautiful"
+      ],
+      [
+        "superlative",
+        "one of the most beautiful"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the most beautiful",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most beautiful",
+      "아름다운",
+      "dress",
+      "dresses",
+      "in the shop"
+    ],
+    "blankTargets": [
+      "one of the most beautiful"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "dress is one of the most beautiful dresses in the shop.",
+      "statementForm": [
+        "The dress is one of the most beautiful dresses in the shop.",
+        "The dress is one of the most beautiful dresses in the shop"
+      ],
+      "fragmentForm": "one of the most beautiful",
+      "wormholeVariants": [
+        "dress is one of the most beautiful dresses in the shop.",
+        "The dress is one of the more beautiful dresses in the shop.",
+        "The dress is one the most beautiful dresses in the shop.",
+        "The dress is one of most beautiful dresses in the shop.",
+        "The dress is one of the best beautiful dresses in the shop."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_040",
+    "seedId": "superlative_040",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "가게의 모든 드레스들 중에서 그 드레스가 가장 아름답다.",
+    "english": "Of all the dresses in the shop, the dress is the most beautiful.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "dresses",
+      "in",
+      "the",
+      "shop",
+      ",",
+      "the",
+      "dress",
+      "is",
+      "the",
+      "most",
+      "beautiful",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "가게의 모든 드레스들 중에서 그 드레스가 가장 아름답다.",
+        "the most beautiful"
+      ],
+      [
+        "superlative",
+        "the most beautiful"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most beautiful",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most beautiful",
+      "아름다운",
+      "dress",
+      "dresses",
+      "in the shop"
+    ],
+    "blankTargets": [
+      "the most beautiful"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all dresses in the shop, the dress is the most beautiful.",
+      "statementForm": [
+        "Of all the dresses in the shop, the dress is the most beautiful.",
+        "Of all the dresses in the shop, the dress is the most beautiful"
+      ],
+      "fragmentForm": "the most beautiful",
+      "wormholeVariants": [
+        "Of all dresses in the shop, the dress is the most beautiful.",
+        "Of all the dresses in the shop, the dress is the more beautiful.",
+        "all of the dresses in the shop, the dress is the most beautiful.",
+        "Of the the dresses in the shop, the dress is the most beautiful.",
+        "Of all the dresses in the shop, the dress is the best beautiful."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_041",
+    "seedId": "superlative_041",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 선생님은 우리 학교에서 가장 엄격한 선생님이다.",
+    "english": "The teacher is the strictest teacher in our school.",
+    "words": [
+      "The",
+      "teacher",
+      "is",
+      "the",
+      "strictest",
+      "teacher",
+      "in",
+      "our",
+      "school",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선생님은 우리 학교에서 가장 엄격한 선생님이다.",
+        "the strictest"
+      ],
+      [
+        "superlative",
+        "the strictest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the strictest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "strictest",
+      "엄격한",
+      "teacher",
+      "teachers",
+      "in our school"
+    ],
+    "blankTargets": [
+      "the strictest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "teacher is the strictest teacher in our school.",
+      "statementForm": [
+        "The teacher is the strictest teacher in our school.",
+        "The teacher is the strictest teacher in our school"
+      ],
+      "fragmentForm": "the strictest",
+      "wormholeVariants": [
+        "teacher is the strictest teacher in our school.",
+        "The teacher is strictest teacher in our school."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_042",
+    "seedId": "superlative_042",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 선생님은 우리 학교에서 단연 가장 엄격한 선생님이다.",
+    "english": "The teacher is by far the strictest teacher in our school.",
+    "words": [
+      "The",
+      "teacher",
+      "is",
+      "by",
+      "far",
+      "the",
+      "strictest",
+      "teacher",
+      "in",
+      "our",
+      "school",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선생님은 우리 학교에서 단연 가장 엄격한 선생님이다.",
+        "by far the strictest"
+      ],
+      [
+        "superlative",
+        "by far the strictest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the strictest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "strictest",
+      "엄격한",
+      "teacher",
+      "teachers",
+      "in our school"
+    ],
+    "blankTargets": [
+      "by far the strictest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "teacher is by far the strictest teacher in our school.",
+      "statementForm": [
+        "The teacher is by far the strictest teacher in our school.",
+        "The teacher is by far the strictest teacher in our school"
+      ],
+      "fragmentForm": "by far the strictest",
+      "wormholeVariants": [
+        "teacher is by far the strictest teacher in our school.",
+        "The teacher is the strictest teacher in our school.",
+        "The teacher is by far strictest teacher in our school."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_043",
+    "seedId": "superlative_043",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 선생님은 우리 학교에서 가장 엄격한 선생님들 중 하나이다.",
+    "english": "The teacher is one of the strictest teachers in our school.",
+    "words": [
+      "The",
+      "teacher",
+      "is",
+      "one",
+      "of",
+      "the",
+      "strictest",
+      "teachers",
+      "in",
+      "our",
+      "school",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선생님은 우리 학교에서 가장 엄격한 선생님들 중 하나이다.",
+        "one of the strictest"
+      ],
+      [
+        "superlative",
+        "one of the strictest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the strictest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "strictest",
+      "엄격한",
+      "teacher",
+      "teachers",
+      "in our school"
+    ],
+    "blankTargets": [
+      "one of the strictest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "teacher is one of the strictest teachers in our school.",
+      "statementForm": [
+        "The teacher is one of the strictest teachers in our school.",
+        "The teacher is one of the strictest teachers in our school"
+      ],
+      "fragmentForm": "one of the strictest",
+      "wormholeVariants": [
+        "teacher is one of the strictest teachers in our school.",
+        "The teacher is one the strictest teachers in our school.",
+        "The teacher is one of strictest teachers in our school."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_044",
+    "seedId": "superlative_044",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "우리 학교의 모든 선생님들 중에서 그 선생님이 가장 엄격하다.",
+    "english": "Of all the teachers in our school, the teacher is the strictest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "teachers",
+      "in",
+      "our",
+      "school",
+      ",",
+      "the",
+      "teacher",
+      "is",
+      "the",
+      "strictest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "우리 학교의 모든 선생님들 중에서 그 선생님이 가장 엄격하다.",
+        "the strictest"
+      ],
+      [
+        "superlative",
+        "the strictest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the strictest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "strictest",
+      "엄격한",
+      "teacher",
+      "teachers",
+      "in our school"
+    ],
+    "blankTargets": [
+      "the strictest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all teachers in our school, the teacher is the strictest.",
+      "statementForm": [
+        "Of all the teachers in our school, the teacher is the strictest.",
+        "Of all the teachers in our school, the teacher is the strictest"
+      ],
+      "fragmentForm": "the strictest",
+      "wormholeVariants": [
+        "Of all teachers in our school, the teacher is the strictest.",
+        "all of the teachers in our school, the teacher is the strictest.",
+        "Of the the teachers in our school, the teacher is the strictest.",
+        "Of all the teachers in our school, the teacher is strictest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_045",
+    "seedId": "superlative_045",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 답은 시험에서 가장 정확한 답이다.",
+    "english": "The answer is the most accurate answer in the test.",
+    "words": [
+      "The",
+      "answer",
+      "is",
+      "the",
+      "most",
+      "accurate",
+      "answer",
+      "in",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 답은 시험에서 가장 정확한 답이다.",
+        "the most accurate"
+      ],
+      [
+        "superlative",
+        "the most accurate"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most accurate",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most accurate",
+      "정확한",
+      "answer",
+      "answers",
+      "in the test"
+    ],
+    "blankTargets": [
+      "the most accurate"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "answer is the most accurate answer in the test.",
+      "statementForm": [
+        "The answer is the most accurate answer in the test.",
+        "The answer is the most accurate answer in the test"
+      ],
+      "fragmentForm": "the most accurate",
+      "wormholeVariants": [
+        "answer is the most accurate answer in the test.",
+        "The answer is the more accurate answer in the test.",
+        "The answer is the most accurate answer in test.",
+        "The answer is the best accurate answer in the test."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_046",
+    "seedId": "superlative_046",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 답은 시험에서 단연 가장 정확한 답이다.",
+    "english": "The answer is by far the most accurate answer in the test.",
+    "words": [
+      "The",
+      "answer",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "accurate",
+      "answer",
+      "in",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 답은 시험에서 단연 가장 정확한 답이다.",
+        "by far the most accurate"
+      ],
+      [
+        "superlative",
+        "by far the most accurate"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the most accurate",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most accurate",
+      "정확한",
+      "answer",
+      "answers",
+      "in the test"
+    ],
+    "blankTargets": [
+      "by far the most accurate"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "answer is by far the most accurate answer in the test.",
+      "statementForm": [
+        "The answer is by far the most accurate answer in the test.",
+        "The answer is by far the most accurate answer in the test"
+      ],
+      "fragmentForm": "by far the most accurate",
+      "wormholeVariants": [
+        "answer is by far the most accurate answer in the test.",
+        "The answer is by far the more accurate answer in the test.",
+        "The answer is the most accurate answer in the test.",
+        "The answer is by far the most accurate answer in test.",
+        "The answer is by far the best accurate answer in the test."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_047",
+    "seedId": "superlative_047",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 답은 시험에서 가장 정확한 답들 중 하나이다.",
+    "english": "The answer is one of the most accurate answers in the test.",
+    "words": [
+      "The",
+      "answer",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "accurate",
+      "answers",
+      "in",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 답은 시험에서 가장 정확한 답들 중 하나이다.",
+        "one of the most accurate"
+      ],
+      [
+        "superlative",
+        "one of the most accurate"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the most accurate",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most accurate",
+      "정확한",
+      "answer",
+      "answers",
+      "in the test"
+    ],
+    "blankTargets": [
+      "one of the most accurate"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "answer is one of the most accurate answers in the test.",
+      "statementForm": [
+        "The answer is one of the most accurate answers in the test.",
+        "The answer is one of the most accurate answers in the test"
+      ],
+      "fragmentForm": "one of the most accurate",
+      "wormholeVariants": [
+        "answer is one of the most accurate answers in the test.",
+        "The answer is one of the more accurate answers in the test.",
+        "The answer is one the most accurate answers in the test.",
+        "The answer is one of most accurate answers in the test.",
+        "The answer is one of the most accurate answers in test.",
+        "The answer is one of the best accurate answers in the test."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_048",
+    "seedId": "superlative_048",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "시험의 모든 답들 중에서 그 답이 가장 정확하다.",
+    "english": "Of all the answers in the test, the answer is the most accurate.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "answers",
+      "in",
+      "the",
+      "test",
+      ",",
+      "the",
+      "answer",
+      "is",
+      "the",
+      "most",
+      "accurate",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "시험의 모든 답들 중에서 그 답이 가장 정확하다.",
+        "the most accurate"
+      ],
+      [
+        "superlative",
+        "the most accurate"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most accurate",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most accurate",
+      "정확한",
+      "answer",
+      "answers",
+      "in the test"
+    ],
+    "blankTargets": [
+      "the most accurate"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all answers in the test, the answer is the most accurate.",
+      "statementForm": [
+        "Of all the answers in the test, the answer is the most accurate.",
+        "Of all the answers in the test, the answer is the most accurate"
+      ],
+      "fragmentForm": "the most accurate",
+      "wormholeVariants": [
+        "Of all answers in the test, the answer is the most accurate.",
+        "Of all the answers in the test, the answer is the more accurate.",
+        "all of the answers in the test, the answer is the most accurate.",
+        "Of the the answers in the test, the answer is the most accurate.",
+        "Of all the answers in test, the answer is the most accurate.",
+        "Of all the answers in the test, the answer is the best accurate."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_049",
+    "seedId": "superlative_049",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 기차는 서울로 가는 가장 이른 기차이다.",
+    "english": "The train is the earliest train to Seoul.",
+    "words": [
+      "The",
+      "train",
+      "is",
+      "the",
+      "earliest",
+      "train",
+      "to",
+      "Seoul",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 기차는 서울로 가는 가장 이른 기차이다.",
+        "the earliest"
+      ],
+      [
+        "superlative",
+        "the earliest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the earliest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "earliest",
+      "이른",
+      "train",
+      "trains",
+      "to Seoul"
+    ],
+    "blankTargets": [
+      "the earliest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "train is the earliest train to Seoul.",
+      "statementForm": [
+        "The train is the earliest train to Seoul.",
+        "The train is the earliest train to Seoul"
+      ],
+      "fragmentForm": "the earliest",
+      "wormholeVariants": [
+        "train is the earliest train to Seoul.",
+        "The train is earliest train to Seoul."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_050",
+    "seedId": "superlative_050",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 기차는 서울로 가는 단연 가장 이른 기차이다.",
+    "english": "The train is by far the earliest train to Seoul.",
+    "words": [
+      "The",
+      "train",
+      "is",
+      "by",
+      "far",
+      "the",
+      "earliest",
+      "train",
+      "to",
+      "Seoul",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 기차는 서울로 가는 단연 가장 이른 기차이다.",
+        "by far the earliest"
+      ],
+      [
+        "superlative",
+        "by far the earliest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the earliest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "earliest",
+      "이른",
+      "train",
+      "trains",
+      "to Seoul"
+    ],
+    "blankTargets": [
+      "by far the earliest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "train is by far the earliest train to Seoul.",
+      "statementForm": [
+        "The train is by far the earliest train to Seoul.",
+        "The train is by far the earliest train to Seoul"
+      ],
+      "fragmentForm": "by far the earliest",
+      "wormholeVariants": [
+        "train is by far the earliest train to Seoul.",
+        "The train is the earliest train to Seoul.",
+        "The train is by far earliest train to Seoul."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_051",
+    "seedId": "superlative_051",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 기차는 서울로 가는 가장 이른 기차들 중 하나이다.",
+    "english": "The train is one of the earliest trains to Seoul.",
+    "words": [
+      "The",
+      "train",
+      "is",
+      "one",
+      "of",
+      "the",
+      "earliest",
+      "trains",
+      "to",
+      "Seoul",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 기차는 서울로 가는 가장 이른 기차들 중 하나이다.",
+        "one of the earliest"
+      ],
+      [
+        "superlative",
+        "one of the earliest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the earliest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "earliest",
+      "이른",
+      "train",
+      "trains",
+      "to Seoul"
+    ],
+    "blankTargets": [
+      "one of the earliest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "train is one of the earliest trains to Seoul.",
+      "statementForm": [
+        "The train is one of the earliest trains to Seoul.",
+        "The train is one of the earliest trains to Seoul"
+      ],
+      "fragmentForm": "one of the earliest",
+      "wormholeVariants": [
+        "train is one of the earliest trains to Seoul.",
+        "The train is one the earliest trains to Seoul.",
+        "The train is one of earliest trains to Seoul."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_052",
+    "seedId": "superlative_052",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "서울로 가는 모든 기차들 중에서 그 기차가 가장 이르다.",
+    "english": "Of all the trains to Seoul, the train is the earliest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "trains",
+      "to",
+      "Seoul",
+      ",",
+      "the",
+      "train",
+      "is",
+      "the",
+      "earliest",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "서울로 가는 모든 기차들 중에서 그 기차가 가장 이르다.",
+        "the earliest"
+      ],
+      [
+        "superlative",
+        "the earliest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the earliest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "earliest",
+      "이른",
+      "train",
+      "trains",
+      "to Seoul"
+    ],
+    "blankTargets": [
+      "the earliest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all trains to Seoul, the train is the earliest.",
+      "statementForm": [
+        "Of all the trains to Seoul, the train is the earliest.",
+        "Of all the trains to Seoul, the train is the earliest"
+      ],
+      "fragmentForm": "the earliest",
+      "wormholeVariants": [
+        "Of all trains to Seoul, the train is the earliest.",
+        "all of the trains to Seoul, the train is the earliest.",
+        "Of the the trains to Seoul, the train is the earliest.",
+        "Of all the trains to Seoul, the train is earliest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_053",
+    "seedId": "superlative_053",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 가방은 가게에서 가장 저렴한 가방이다.",
+    "english": "The bag is the least expensive bag in the store.",
+    "words": [
+      "The",
+      "bag",
+      "is",
+      "the",
+      "least",
+      "expensive",
+      "bag",
+      "in",
+      "the",
+      "store",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 가방은 가게에서 가장 저렴한 가방이다.",
+        "the least expensive"
+      ],
+      [
+        "superlative",
+        "the least expensive"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the least expensive",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "least expensive",
+      "저렴한",
+      "bag",
+      "bags",
+      "in the store"
+    ],
+    "blankTargets": [
+      "the least expensive"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "bag is the least expensive bag in the store.",
+      "statementForm": [
+        "The bag is the least expensive bag in the store.",
+        "The bag is the least expensive bag in the store"
+      ],
+      "fragmentForm": "the least expensive",
+      "wormholeVariants": [
+        "bag is the least expensive bag in the store."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_054",
+    "seedId": "superlative_054",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 가방은 가게에서 단연 가장 저렴한 가방이다.",
+    "english": "The bag is by far the least expensive bag in the store.",
+    "words": [
+      "The",
+      "bag",
+      "is",
+      "by",
+      "far",
+      "the",
+      "least",
+      "expensive",
+      "bag",
+      "in",
+      "the",
+      "store",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 가방은 가게에서 단연 가장 저렴한 가방이다.",
+        "by far the least expensive"
+      ],
+      [
+        "superlative",
+        "by far the least expensive"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the least expensive",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "least expensive",
+      "저렴한",
+      "bag",
+      "bags",
+      "in the store"
+    ],
+    "blankTargets": [
+      "by far the least expensive"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "bag is by far the least expensive bag in the store.",
+      "statementForm": [
+        "The bag is by far the least expensive bag in the store.",
+        "The bag is by far the least expensive bag in the store"
+      ],
+      "fragmentForm": "by far the least expensive",
+      "wormholeVariants": [
+        "bag is by far the least expensive bag in the store.",
+        "The bag is the least expensive bag in the store."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_055",
+    "seedId": "superlative_055",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 가방은 가게에서 가장 저렴한 가방들 중 하나이다.",
+    "english": "The bag is one of the least expensive bags in the store.",
+    "words": [
+      "The",
+      "bag",
+      "is",
+      "one",
+      "of",
+      "the",
+      "least",
+      "expensive",
+      "bags",
+      "in",
+      "the",
+      "store",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 가방은 가게에서 가장 저렴한 가방들 중 하나이다.",
+        "one of the least expensive"
+      ],
+      [
+        "superlative",
+        "one of the least expensive"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the least expensive",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "least expensive",
+      "저렴한",
+      "bag",
+      "bags",
+      "in the store"
+    ],
+    "blankTargets": [
+      "one of the least expensive"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "bag is one of the least expensive bags in the store.",
+      "statementForm": [
+        "The bag is one of the least expensive bags in the store.",
+        "The bag is one of the least expensive bags in the store"
+      ],
+      "fragmentForm": "one of the least expensive",
+      "wormholeVariants": [
+        "bag is one of the least expensive bags in the store.",
+        "The bag is one the least expensive bags in the store.",
+        "The bag is one of least expensive bags in the store."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_056",
+    "seedId": "superlative_056",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "가게의 모든 가방들 중에서 그 가방이 가장 저렴하다.",
+    "english": "Of all the bags in the store, the bag is the least expensive.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "bags",
+      "in",
+      "the",
+      "store",
+      ",",
+      "the",
+      "bag",
+      "is",
+      "the",
+      "least",
+      "expensive",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "가게의 모든 가방들 중에서 그 가방이 가장 저렴하다.",
+        "the least expensive"
+      ],
+      [
+        "superlative",
+        "the least expensive"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the least expensive",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "least expensive",
+      "저렴한",
+      "bag",
+      "bags",
+      "in the store"
+    ],
+    "blankTargets": [
+      "the least expensive"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all bags in the store, the bag is the least expensive.",
+      "statementForm": [
+        "Of all the bags in the store, the bag is the least expensive.",
+        "Of all the bags in the store, the bag is the least expensive"
+      ],
+      "fragmentForm": "the least expensive",
+      "wormholeVariants": [
+        "Of all bags in the store, the bag is the least expensive.",
+        "all of the bags in the store, the bag is the least expensive.",
+        "Of the the bags in the store, the bag is the least expensive."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_057",
+    "seedId": "superlative_057",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 책은 도서관에서 가장 흥미진진한 책이다.",
+    "english": "The book is the most exciting book in the library.",
+    "words": [
+      "The",
+      "book",
+      "is",
+      "the",
+      "most",
+      "exciting",
+      "book",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 책은 도서관에서 가장 흥미진진한 책이다.",
+        "the most exciting"
+      ],
+      [
+        "superlative",
+        "the most exciting"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most exciting",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most exciting",
+      "흥미진진한",
+      "book",
+      "books",
+      "in the library"
+    ],
+    "blankTargets": [
+      "the most exciting"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "book is the most exciting book in the library.",
+      "statementForm": [
+        "The book is the most exciting book in the library.",
+        "The book is the most exciting book in the library"
+      ],
+      "fragmentForm": "the most exciting",
+      "wormholeVariants": [
+        "book is the most exciting book in the library.",
+        "The book is the more exciting book in the library.",
+        "The book is the best exciting book in the library."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_058",
+    "seedId": "superlative_058",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 책은 도서관에서 단연 가장 흥미진진한 책이다.",
+    "english": "The book is by far the most exciting book in the library.",
+    "words": [
+      "The",
+      "book",
+      "is",
+      "by",
+      "far",
+      "the",
+      "most",
+      "exciting",
+      "book",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 책은 도서관에서 단연 가장 흥미진진한 책이다.",
+        "by far the most exciting"
+      ],
+      [
+        "superlative",
+        "by far the most exciting"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the most exciting",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most exciting",
+      "흥미진진한",
+      "book",
+      "books",
+      "in the library"
+    ],
+    "blankTargets": [
+      "by far the most exciting"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "book is by far the most exciting book in the library.",
+      "statementForm": [
+        "The book is by far the most exciting book in the library.",
+        "The book is by far the most exciting book in the library"
+      ],
+      "fragmentForm": "by far the most exciting",
+      "wormholeVariants": [
+        "book is by far the most exciting book in the library.",
+        "The book is by far the more exciting book in the library.",
+        "The book is the most exciting book in the library.",
+        "The book is by far the best exciting book in the library."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_059",
+    "seedId": "superlative_059",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 책은 도서관에서 가장 흥미진진한 책들 중 하나이다.",
+    "english": "The book is one of the most exciting books in the library.",
+    "words": [
+      "The",
+      "book",
+      "is",
+      "one",
+      "of",
+      "the",
+      "most",
+      "exciting",
+      "books",
+      "in",
+      "the",
+      "library",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 책은 도서관에서 가장 흥미진진한 책들 중 하나이다.",
+        "one of the most exciting"
+      ],
+      [
+        "superlative",
+        "one of the most exciting"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the most exciting",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most exciting",
+      "흥미진진한",
+      "book",
+      "books",
+      "in the library"
+    ],
+    "blankTargets": [
+      "one of the most exciting"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "book is one of the most exciting books in the library.",
+      "statementForm": [
+        "The book is one of the most exciting books in the library.",
+        "The book is one of the most exciting books in the library"
+      ],
+      "fragmentForm": "one of the most exciting",
+      "wormholeVariants": [
+        "book is one of the most exciting books in the library.",
+        "The book is one of the more exciting books in the library.",
+        "The book is one the most exciting books in the library.",
+        "The book is one of most exciting books in the library.",
+        "The book is one of the best exciting books in the library."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_060",
+    "seedId": "superlative_060",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "도서관의 모든 책들 중에서 그 책이 가장 흥미진진하다.",
+    "english": "Of all the books in the library, the book is the most exciting.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "books",
+      "in",
+      "the",
+      "library",
+      ",",
+      "the",
+      "book",
+      "is",
+      "the",
+      "most",
+      "exciting",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "superlative",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "도서관의 모든 책들 중에서 그 책이 가장 흥미진진하다.",
+        "the most exciting"
+      ],
+      [
+        "superlative",
+        "the most exciting"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the most exciting",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "most exciting",
+      "흥미진진한",
+      "book",
+      "books",
+      "in the library"
+    ],
+    "blankTargets": [
+      "the most exciting"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all books in the library, the book is the most exciting.",
+      "statementForm": [
+        "Of all the books in the library, the book is the most exciting.",
+        "Of all the books in the library, the book is the most exciting"
+      ],
+      "fragmentForm": "the most exciting",
+      "wormholeVariants": [
+        "Of all books in the library, the book is the most exciting.",
+        "Of all the books in the library, the book is the more exciting.",
+        "all of the books in the library, the book is the most exciting.",
+        "Of the the books in the library, the book is the most exciting.",
+        "Of all the books in the library, the book is the best exciting."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_061",
+    "seedId": "superlative_061",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 공원은 도시에서 가장 좋은 공원이다.",
+    "english": "The park is the nicest park in the city.",
+    "words": [
+      "The",
+      "park",
+      "is",
+      "the",
+      "nicest",
+      "park",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 공원은 도시에서 가장 좋은 공원이다.",
+        "the nicest"
+      ],
+      [
+        "superlative",
+        "the nicest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the nicest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "nicest",
+      "좋은",
+      "park",
+      "parks",
+      "in the city"
+    ],
+    "blankTargets": [
+      "the nicest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "park is the nicest park in the city.",
+      "statementForm": [
+        "The park is the nicest park in the city.",
+        "The park is the nicest park in the city"
+      ],
+      "fragmentForm": "the nicest",
+      "wormholeVariants": [
+        "park is the nicest park in the city.",
+        "The park is nicest park in the city."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_062",
+    "seedId": "superlative_062",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 공원은 도시에서 단연 가장 좋은 공원이다.",
+    "english": "The park is by far the nicest park in the city.",
+    "words": [
+      "The",
+      "park",
+      "is",
+      "by",
+      "far",
+      "the",
+      "nicest",
+      "park",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 공원은 도시에서 단연 가장 좋은 공원이다.",
+        "by far the nicest"
+      ],
+      [
+        "superlative",
+        "by far the nicest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the nicest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "nicest",
+      "좋은",
+      "park",
+      "parks",
+      "in the city"
+    ],
+    "blankTargets": [
+      "by far the nicest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "park is by far the nicest park in the city.",
+      "statementForm": [
+        "The park is by far the nicest park in the city.",
+        "The park is by far the nicest park in the city"
+      ],
+      "fragmentForm": "by far the nicest",
+      "wormholeVariants": [
+        "park is by far the nicest park in the city.",
+        "The park is the nicest park in the city.",
+        "The park is by far nicest park in the city."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_063",
+    "seedId": "superlative_063",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 공원은 도시에서 가장 좋은 공원들 중 하나이다.",
+    "english": "The park is one of the nicest parks in the city.",
+    "words": [
+      "The",
+      "park",
+      "is",
+      "one",
+      "of",
+      "the",
+      "nicest",
+      "parks",
+      "in",
+      "the",
+      "city",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 공원은 도시에서 가장 좋은 공원들 중 하나이다.",
+        "one of the nicest"
+      ],
+      [
+        "superlative",
+        "one of the nicest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the nicest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "nicest",
+      "좋은",
+      "park",
+      "parks",
+      "in the city"
+    ],
+    "blankTargets": [
+      "one of the nicest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "park is one of the nicest parks in the city.",
+      "statementForm": [
+        "The park is one of the nicest parks in the city.",
+        "The park is one of the nicest parks in the city"
+      ],
+      "fragmentForm": "one of the nicest",
+      "wormholeVariants": [
+        "park is one of the nicest parks in the city.",
+        "The park is one the nicest parks in the city.",
+        "The park is one of nicest parks in the city."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_064",
+    "seedId": "superlative_064",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "도시의 모든 공원들 중에서 그 공원이 가장 좋다.",
+    "english": "Of all the parks in the city, the park is the nicest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "parks",
+      "in",
+      "the",
+      "city",
+      ",",
+      "the",
+      "park",
+      "is",
+      "the",
+      "nicest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "도시의 모든 공원들 중에서 그 공원이 가장 좋다.",
+        "the nicest"
+      ],
+      [
+        "superlative",
+        "the nicest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the nicest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "nicest",
+      "좋은",
+      "park",
+      "parks",
+      "in the city"
+    ],
+    "blankTargets": [
+      "the nicest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all parks in the city, the park is the nicest.",
+      "statementForm": [
+        "Of all the parks in the city, the park is the nicest.",
+        "Of all the parks in the city, the park is the nicest"
+      ],
+      "fragmentForm": "the nicest",
+      "wormholeVariants": [
+        "Of all parks in the city, the park is the nicest.",
+        "all of the parks in the city, the park is the nicest.",
+        "Of the the parks in the city, the park is the nicest.",
+        "Of all the parks in the city, the park is nicest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_065",
+    "seedId": "superlative_065",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 계획은 여행에 대한 가장 좋은 계획이다.",
+    "english": "The plan is the best plan for the trip.",
+    "words": [
+      "The",
+      "plan",
+      "is",
+      "the",
+      "best",
+      "plan",
+      "for",
+      "the",
+      "trip",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 계획은 여행에 대한 가장 좋은 계획이다.",
+        "the best"
+      ],
+      [
+        "superlative",
+        "the best"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the best",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "좋은",
+      "plan",
+      "plans",
+      "for the trip"
+    ],
+    "blankTargets": [
+      "the best"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "plan is the best plan for the trip.",
+      "statementForm": [
+        "The plan is the best plan for the trip.",
+        "The plan is the best plan for the trip"
+      ],
+      "fragmentForm": "the best",
+      "wormholeVariants": [
+        "plan is the best plan for the trip.",
+        "The plan is best plan for the trip."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_066",
+    "seedId": "superlative_066",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 계획은 여행에 대한 단연 가장 좋은 계획이다.",
+    "english": "The plan is by far the best plan for the trip.",
+    "words": [
+      "The",
+      "plan",
+      "is",
+      "by",
+      "far",
+      "the",
+      "best",
+      "plan",
+      "for",
+      "the",
+      "trip",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 계획은 여행에 대한 단연 가장 좋은 계획이다.",
+        "by far the best"
+      ],
+      [
+        "superlative",
+        "by far the best"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the best",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "좋은",
+      "plan",
+      "plans",
+      "for the trip"
+    ],
+    "blankTargets": [
+      "by far the best"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "plan is by far the best plan for the trip.",
+      "statementForm": [
+        "The plan is by far the best plan for the trip.",
+        "The plan is by far the best plan for the trip"
+      ],
+      "fragmentForm": "by far the best",
+      "wormholeVariants": [
+        "plan is by far the best plan for the trip.",
+        "The plan is the best plan for the trip.",
+        "The plan is by far best plan for the trip."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_067",
+    "seedId": "superlative_067",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "이 계획은 여행에 대한 가장 좋은 계획들 중 하나이다.",
+    "english": "The plan is one of the best plans for the trip.",
+    "words": [
+      "The",
+      "plan",
+      "is",
+      "one",
+      "of",
+      "the",
+      "best",
+      "plans",
+      "for",
+      "the",
+      "trip",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "이 계획은 여행에 대한 가장 좋은 계획들 중 하나이다.",
+        "one of the best"
+      ],
+      [
+        "superlative",
+        "one of the best"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the best",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "좋은",
+      "plan",
+      "plans",
+      "for the trip"
+    ],
+    "blankTargets": [
+      "one of the best"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "plan is one of the best plans for the trip.",
+      "statementForm": [
+        "The plan is one of the best plans for the trip.",
+        "The plan is one of the best plans for the trip"
+      ],
+      "fragmentForm": "one of the best",
+      "wormholeVariants": [
+        "plan is one of the best plans for the trip.",
+        "The plan is one the best plans for the trip.",
+        "The plan is one of best plans for the trip."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_068",
+    "seedId": "superlative_068",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "여행에 대한 모든 계획들 중에서 이 계획이 가장 좋다.",
+    "english": "Of all the plans for the trip, the plan is the best.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "plans",
+      "for",
+      "the",
+      "trip",
+      ",",
+      "the",
+      "plan",
+      "is",
+      "the",
+      "best",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "여행에 대한 모든 계획들 중에서 이 계획이 가장 좋다.",
+        "the best"
+      ],
+      [
+        "superlative",
+        "the best"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the best",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "좋은",
+      "plan",
+      "plans",
+      "for the trip"
+    ],
+    "blankTargets": [
+      "the best"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all plans for the trip, the plan is the best.",
+      "statementForm": [
+        "Of all the plans for the trip, the plan is the best.",
+        "Of all the plans for the trip, the plan is the best"
+      ],
+      "fragmentForm": "the best",
+      "wormholeVariants": [
+        "Of all plans for the trip, the plan is the best.",
+        "all of the plans for the trip, the plan is the best.",
+        "Of the the plans for the trip, the plan is the best.",
+        "Of all the plans for the trip, the plan is best."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_069",
+    "seedId": "superlative_069",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 문제는 워크북에서 가장 어려운 문제이다.",
+    "english": "The problem is the hardest problem in the worksheet.",
+    "words": [
+      "The",
+      "problem",
+      "is",
+      "the",
+      "hardest",
+      "problem",
+      "in",
+      "the",
+      "worksheet",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 문제는 워크북에서 가장 어려운 문제이다.",
+        "the hardest"
+      ],
+      [
+        "superlative",
+        "the hardest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the hardest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "hardest",
+      "어려운",
+      "problem",
+      "problems",
+      "in the worksheet"
+    ],
+    "blankTargets": [
+      "the hardest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "problem is the hardest problem in the worksheet.",
+      "statementForm": [
+        "The problem is the hardest problem in the worksheet.",
+        "The problem is the hardest problem in the worksheet"
+      ],
+      "fragmentForm": "the hardest",
+      "wormholeVariants": [
+        "problem is the hardest problem in the worksheet.",
+        "The problem is hardest problem in the worksheet."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_070",
+    "seedId": "superlative_070",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 문제는 워크북에서 단연 가장 어려운 문제이다.",
+    "english": "The problem is by far the hardest problem in the worksheet.",
+    "words": [
+      "The",
+      "problem",
+      "is",
+      "by",
+      "far",
+      "the",
+      "hardest",
+      "problem",
+      "in",
+      "the",
+      "worksheet",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 문제는 워크북에서 단연 가장 어려운 문제이다.",
+        "by far the hardest"
+      ],
+      [
+        "superlative",
+        "by far the hardest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the hardest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "hardest",
+      "어려운",
+      "problem",
+      "problems",
+      "in the worksheet"
+    ],
+    "blankTargets": [
+      "by far the hardest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "problem is by far the hardest problem in the worksheet.",
+      "statementForm": [
+        "The problem is by far the hardest problem in the worksheet.",
+        "The problem is by far the hardest problem in the worksheet"
+      ],
+      "fragmentForm": "by far the hardest",
+      "wormholeVariants": [
+        "problem is by far the hardest problem in the worksheet.",
+        "The problem is the hardest problem in the worksheet.",
+        "The problem is by far hardest problem in the worksheet."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_071",
+    "seedId": "superlative_071",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 문제는 워크북에서 가장 어려운 문제들 중 하나이다.",
+    "english": "The problem is one of the hardest problems in the worksheet.",
+    "words": [
+      "The",
+      "problem",
+      "is",
+      "one",
+      "of",
+      "the",
+      "hardest",
+      "problems",
+      "in",
+      "the",
+      "worksheet",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 문제는 워크북에서 가장 어려운 문제들 중 하나이다.",
+        "one of the hardest"
+      ],
+      [
+        "superlative",
+        "one of the hardest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the hardest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "hardest",
+      "어려운",
+      "problem",
+      "problems",
+      "in the worksheet"
+    ],
+    "blankTargets": [
+      "one of the hardest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "problem is one of the hardest problems in the worksheet.",
+      "statementForm": [
+        "The problem is one of the hardest problems in the worksheet.",
+        "The problem is one of the hardest problems in the worksheet"
+      ],
+      "fragmentForm": "one of the hardest",
+      "wormholeVariants": [
+        "problem is one of the hardest problems in the worksheet.",
+        "The problem is one the hardest problems in the worksheet.",
+        "The problem is one of hardest problems in the worksheet."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_072",
+    "seedId": "superlative_072",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "워크북의 모든 문제들 중에서 그 문제가 가장 어렵다.",
+    "english": "Of all the problems in the worksheet, the problem is the hardest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "problems",
+      "in",
+      "the",
+      "worksheet",
+      ",",
+      "the",
+      "problem",
+      "is",
+      "the",
+      "hardest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "워크북의 모든 문제들 중에서 그 문제가 가장 어렵다.",
+        "the hardest"
+      ],
+      [
+        "superlative",
+        "the hardest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the hardest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "hardest",
+      "어려운",
+      "problem",
+      "problems",
+      "in the worksheet"
+    ],
+    "blankTargets": [
+      "the hardest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all problems in the worksheet, the problem is the hardest.",
+      "statementForm": [
+        "Of all the problems in the worksheet, the problem is the hardest.",
+        "Of all the problems in the worksheet, the problem is the hardest"
+      ],
+      "fragmentForm": "the hardest",
+      "wormholeVariants": [
+        "Of all problems in the worksheet, the problem is the hardest.",
+        "all of the problems in the worksheet, the problem is the hardest.",
+        "Of the the problems in the worksheet, the problem is the hardest.",
+        "Of all the problems in the worksheet, the problem is hardest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_073",
+    "seedId": "superlative_073",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 날은 일 년 중 가장 추운 날이다.",
+    "english": "The day is the coldest day of the year.",
+    "words": [
+      "The",
+      "day",
+      "is",
+      "the",
+      "coldest",
+      "day",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 날은 일 년 중 가장 추운 날이다.",
+        "the coldest"
+      ],
+      [
+        "superlative",
+        "the coldest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the coldest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "coldest",
+      "추운",
+      "day",
+      "days",
+      "of the year"
+    ],
+    "blankTargets": [
+      "the coldest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "day is the coldest day of the year.",
+      "statementForm": [
+        "The day is the coldest day of the year.",
+        "The day is the coldest day of the year"
+      ],
+      "fragmentForm": "the coldest",
+      "wormholeVariants": [
+        "day is the coldest day of the year.",
+        "The day is coldest day of the year."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_074",
+    "seedId": "superlative_074",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 날은 일 년 중 단연 가장 추운 날이다.",
+    "english": "The day is by far the coldest day of the year.",
+    "words": [
+      "The",
+      "day",
+      "is",
+      "by",
+      "far",
+      "the",
+      "coldest",
+      "day",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 날은 일 년 중 단연 가장 추운 날이다.",
+        "by far the coldest"
+      ],
+      [
+        "superlative",
+        "by far the coldest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the coldest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "coldest",
+      "추운",
+      "day",
+      "days",
+      "of the year"
+    ],
+    "blankTargets": [
+      "by far the coldest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "day is by far the coldest day of the year.",
+      "statementForm": [
+        "The day is by far the coldest day of the year.",
+        "The day is by far the coldest day of the year"
+      ],
+      "fragmentForm": "by far the coldest",
+      "wormholeVariants": [
+        "day is by far the coldest day of the year.",
+        "The day is the coldest day of the year.",
+        "The day is by far coldest day of the year."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_075",
+    "seedId": "superlative_075",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 날은 일 년 중 가장 추운 날들 중 하나이다.",
+    "english": "The day is one of the coldest days of the year.",
+    "words": [
+      "The",
+      "day",
+      "is",
+      "one",
+      "of",
+      "the",
+      "coldest",
+      "days",
+      "of",
+      "the",
+      "year",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 날은 일 년 중 가장 추운 날들 중 하나이다.",
+        "one of the coldest"
+      ],
+      [
+        "superlative",
+        "one of the coldest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the coldest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "coldest",
+      "추운",
+      "day",
+      "days",
+      "of the year"
+    ],
+    "blankTargets": [
+      "one of the coldest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "day is one of the coldest days of the year.",
+      "statementForm": [
+        "The day is one of the coldest days of the year.",
+        "The day is one of the coldest days of the year"
+      ],
+      "fragmentForm": "one of the coldest",
+      "wormholeVariants": [
+        "day is one of the coldest days of the year.",
+        "The day is one the coldest days of the year.",
+        "The day is one of coldest days of the year."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_076",
+    "seedId": "superlative_076",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "한 해의 모든 날들 중에서 그 날이 가장 춥다.",
+    "english": "Of all the days of the year, the day is the coldest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "days",
+      "of",
+      "the",
+      "year",
+      ",",
+      "the",
+      "day",
+      "is",
+      "the",
+      "coldest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "한 해의 모든 날들 중에서 그 날이 가장 춥다.",
+        "the coldest"
+      ],
+      [
+        "superlative",
+        "the coldest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the coldest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "coldest",
+      "추운",
+      "day",
+      "days",
+      "of the year"
+    ],
+    "blankTargets": [
+      "the coldest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all days of the year, the day is the coldest.",
+      "statementForm": [
+        "Of all the days of the year, the day is the coldest.",
+        "Of all the days of the year, the day is the coldest"
+      ],
+      "fragmentForm": "the coldest",
+      "wormholeVariants": [
+        "Of all days of the year, the day is the coldest.",
+        "all of the days of the year, the day is the coldest.",
+        "Of the the days of the year, the day is the coldest.",
+        "Of all the days of the year, the day is coldest."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_077",
+    "seedId": "superlative_077",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 선수는 팀에서 가장 빠른 선수이다.",
+    "english": "The player is the fastest player on the team.",
+    "words": [
+      "The",
+      "player",
+      "is",
+      "the",
+      "fastest",
+      "player",
+      "on",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선수는 팀에서 가장 빠른 선수이다.",
+        "the fastest"
+      ],
+      [
+        "superlative",
+        "the fastest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the fastest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "fastest",
+      "빠른",
+      "player",
+      "players",
+      "on the team"
+    ],
+    "blankTargets": [
+      "the fastest"
+    ],
+    "tags": [
+      "superlative",
+      "plain",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "player is the fastest player on the team.",
+      "statementForm": [
+        "The player is the fastest player on the team.",
+        "The player is the fastest player on the team"
+      ],
+      "fragmentForm": "the fastest",
+      "wormholeVariants": [
+        "player is the fastest player on the team.",
+        "The player is fastest player on the team."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_078",
+    "seedId": "superlative_078",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 선수는 팀에서 단연 가장 빠른 선수이다.",
+    "english": "The player is by far the fastest player on the team.",
+    "words": [
+      "The",
+      "player",
+      "is",
+      "by",
+      "far",
+      "the",
+      "fastest",
+      "player",
+      "on",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선수는 팀에서 단연 가장 빠른 선수이다.",
+        "by far the fastest"
+      ],
+      [
+        "superlative",
+        "by far the fastest"
+      ],
+      [
+        "주의",
+        "Use the + superlative form correctly."
+      ]
+    ],
+    "extraClueWordPool": [
+      "by far the fastest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "fastest",
+      "빠른",
+      "player",
+      "players",
+      "on the team"
+    ],
+    "blankTargets": [
+      "by far the fastest"
+    ],
+    "tags": [
+      "superlative",
+      "byFar",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "player is by far the fastest player on the team.",
+      "statementForm": [
+        "The player is by far the fastest player on the team.",
+        "The player is by far the fastest player on the team"
+      ],
+      "fragmentForm": "by far the fastest",
+      "wormholeVariants": [
+        "player is by far the fastest player on the team.",
+        "The player is the fastest player on the team.",
+        "The player is by far fastest player on the team."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_079",
+    "seedId": "superlative_079",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "그 선수는 팀에서 가장 빠른 선수들 중 하나이다.",
+    "english": "The player is one of the fastest players on the team.",
+    "words": [
+      "The",
+      "player",
+      "is",
+      "one",
+      "of",
+      "the",
+      "fastest",
+      "players",
+      "on",
+      "the",
+      "team",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "그 선수는 팀에서 가장 빠른 선수들 중 하나이다.",
+        "one of the fastest"
+      ],
+      [
+        "superlative",
+        "one of the fastest"
+      ],
+      [
+        "주의",
+        "Use one of the + superlative + plural noun."
+      ]
+    ],
+    "extraClueWordPool": [
+      "one of the fastest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "fastest",
+      "빠른",
+      "player",
+      "players",
+      "on the team"
+    ],
+    "blankTargets": [
+      "one of the fastest"
+    ],
+    "tags": [
+      "superlative",
+      "oneOf",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "player is one of the fastest players on the team.",
+      "statementForm": [
+        "The player is one of the fastest players on the team.",
+        "The player is one of the fastest players on the team"
+      ],
+      "fragmentForm": "one of the fastest",
+      "wormholeVariants": [
+        "player is one of the fastest players on the team.",
+        "The player is one the fastest players on the team.",
+        "The player is one of fastest players on the team."
+      ]
+    }
+  },
+  {
+    "id": "m3_super_080",
+    "seedId": "superlative_080",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "superlative",
+    "chapterLabelKo": "최상급",
+    "korean": "팀의 모든 선수들 중에서 그 선수가 가장 빠르다.",
+    "english": "Of all the players on the team, the player is the fastest.",
+    "words": [
+      "Of",
+      "all",
+      "the",
+      "players",
+      "on",
+      "the",
+      "team",
+      ",",
+      "the",
+      "player",
+      "is",
+      "the",
+      "fastest",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "superlative",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_superlative_wormhole_v1",
+    "clueUnits": [
+      [
+        "팀의 모든 선수들 중에서 그 선수가 가장 빠르다.",
+        "the fastest"
+      ],
+      [
+        "superlative",
+        "the fastest"
+      ],
+      [
+        "주의",
+        "Use of all + plural noun + the + superlative."
+      ]
+    ],
+    "extraClueWordPool": [
+      "the fastest",
+      "more",
+      "most",
+      "than",
+      "the",
+      "much",
+      "far",
+      "a lot",
+      "even",
+      "still",
+      "better",
+      "worse",
+      "best",
+      "worst",
+      "fastest",
+      "빠른",
+      "player",
+      "players",
+      "on the team"
+    ],
+    "blankTargets": [
+      "the fastest"
+    ],
+    "tags": [
+      "superlative",
+      "ofAll",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "Of all players on the team, the player is the fastest.",
+      "statementForm": [
+        "Of all the players on the team, the player is the fastest.",
+        "Of all the players on the team, the player is the fastest"
+      ],
+      "fragmentForm": "the fastest",
+      "wormholeVariants": [
+        "Of all players on the team, the player is the fastest.",
+        "all of the players on the team, the player is the fastest.",
+        "Of the the players on the team, the player is the fastest.",
+        "Of all the players on the team, the player is fastest."
+      ]
+    }
+  }
+]
