@@ -1,0 +1,4444 @@
+[
+  {
+    "id": "m3_so_that_purpose_advanced_001",
+    "seedId": "so_that_purpose_advanced_001",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 발표를 더 또렷하게 전달할 수 있도록 천천히 말했다.",
+    "english": "I spoke slowly so that the audience could follow my presentation more clearly.",
+    "words": [
+      "I",
+      "spoke",
+      "slowly",
+      "so",
+      "that",
+      "the",
+      "audience",
+      "could",
+      "follow",
+      "my",
+      "presentation",
+      "more",
+      "clearly",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "나는 발표를 더 또렷하게 전달할 수 있도록 천천히 말했다.",
+        "I / spoke / slowly / so that / the / audience / could / follow / my / presentation / more / clearly"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "the",
+      "audience",
+      "my",
+      "presentation",
+      "more",
+      "clearly"
+    ],
+    "blankTargets": [
+      "so that the audience could follow my presentation more clearly"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "academic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I spoke slowly so that the audience can follow my presentation more clearly.",
+      "structureError": "I spoke slowly so that the audience to follow my presentation more clearly.",
+      "wordOrderError": "I spoke slowly so that could the audience follow my presentation more clearly.",
+      "conjunctionError": "I spoke slowly because the audience could follow my presentation more clearly.",
+      "statementForm": [
+        "I spoke slowly so that the audience could follow my presentation more clearly",
+        "I spoke slowly so that the audience could follow my presentation more clearly."
+      ],
+      "fragmentForm": "I spoke slowly ____",
+      "wormholeVariants": [
+        "I spoke slowly to help the audience follow my presentation more clearly.",
+        "I spoke slowly in order to help the audience follow my presentation more clearly.",
+        "I spoke slowly so as to help the audience follow my presentation more clearly.",
+        "So that the audience could follow my presentation more clearly, I spoke slowly.",
+        "I spoke slowly, so the audience could follow my presentation more clearly.",
+        "I spoke slowly so that the audience can follow my presentation more clearly.",
+        "I spoke slowly so that could the audience follow my presentation more clearly.",
+        "I spoke slowly because the audience could follow my presentation more clearly."
+      ]
+    },
+    "fragmentForm": "I spoke slowly ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_002",
+    "seedId": "so_that_purpose_advanced_002",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 손님들이 길을 쉽게 찾을 수 있도록 표지판을 설치했다.",
+    "english": "We installed clear signs so that visitors could find the entrance without confusion.",
+    "words": [
+      "We",
+      "installed",
+      "clear",
+      "signs",
+      "so",
+      "that",
+      "visitors",
+      "could",
+      "find",
+      "the",
+      "entrance",
+      "without",
+      "confusion",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 손님들이 길을 쉽게 찾을 수 있도록 표지판을 설치했다.",
+        "We / installed / clear / signs / so that / visitors / could / find / the / entrance / without / confusion"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "visitors",
+      "the",
+      "entrance",
+      "without",
+      "confusion"
+    ],
+    "blankTargets": [
+      "so that visitors could find the entrance without confusion"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "public"
+    ],
+    "distractorSeeds": {
+      "auxError": "We installed clear signs so that visitors can find the entrance without confusion.",
+      "structureError": "We installed clear signs so that visitors to find the entrance without confusion.",
+      "wordOrderError": "We installed clear signs so that could visitors find the entrance without confusion.",
+      "conjunctionError": "We installed clear signs because visitors could find the entrance without confusion.",
+      "statementForm": [
+        "We installed clear signs so that visitors could find the entrance without confusion",
+        "We installed clear signs so that visitors could find the entrance without confusion."
+      ],
+      "fragmentForm": "We installed clear signs ____",
+      "wormholeVariants": [
+        "We installed clear signs so that visitors can find the entrance without confusion.",
+        "We installed clear signs so that could visitors find the entrance without confusion.",
+        "We installed clear signs because visitors could find the entrance without confusion.",
+        "We installed clear signs to help visitors find the entrance without confusion.",
+        "We installed clear signs in order to help visitors find the entrance without confusion.",
+        "We installed clear signs so as to help visitors find the entrance without confusion.",
+        "So that visitors could find the entrance without confusion, We installed clear signs.",
+        "We installed clear signs, so visitors could find the entrance without confusion."
+      ]
+    },
+    "fragmentForm": "We installed clear signs ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_003",
+    "seedId": "so_that_purpose_advanced_003",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "그녀는 학생들이 중요한 용어를 기억할 수 있도록 핵심 개념을 칠판에 적었다.",
+    "english": "She wrote the key terms on the board so that her students could remember the main ideas.",
+    "words": [
+      "She",
+      "wrote",
+      "the",
+      "key",
+      "terms",
+      "on",
+      "the",
+      "board",
+      "so",
+      "that",
+      "her",
+      "students",
+      "could",
+      "remember",
+      "the",
+      "main",
+      "ideas",
+      "."
+    ],
+    "wordCount": 17,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "그녀는 학생들이 중요한 용어를 기억할 수 있도록 핵심 개념을 칠판에 적었다.",
+        "She / wrote / the / key / terms / on / the / board / so that / her / students / could / remember / the / main / ideas"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "her",
+      "students",
+      "the",
+      "main",
+      "ideas"
+    ],
+    "blankTargets": [
+      "so that her students could remember the main ideas"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "school"
+    ],
+    "distractorSeeds": {
+      "auxError": "She wrote the key terms on the board so that her students can remember the main ideas.",
+      "structureError": "She wrote the key terms on the board so that her students to remember the main ideas.",
+      "wordOrderError": "She wrote the key terms on the board so that could her students remember the main ideas.",
+      "conjunctionError": "She wrote the key terms on the board because her students could remember the main ideas.",
+      "statementForm": [
+        "She wrote the key terms on the board so that her students could remember the main ideas",
+        "She wrote the key terms on the board so that her students could remember the main ideas."
+      ],
+      "fragmentForm": "She wrote the key terms on the board ____",
+      "wormholeVariants": [
+        "She wrote the key terms on the board so that her students can remember the main ideas.",
+        "She wrote the key terms on the board so that could her students remember the main ideas.",
+        "She wrote the key terms on the board because her students could remember the main ideas.",
+        "She wrote the key terms on the board to help her students remember the main ideas.",
+        "She wrote the key terms on the board in order to help her students remember the main ideas.",
+        "She wrote the key terms on the board so as to help her students remember the main ideas.",
+        "So that her students could remember the main ideas, She wrote the key terms on the board.",
+        "She wrote the key terms on the board, so her students could remember the main ideas."
+      ]
+    },
+    "fragmentForm": "She wrote the key terms on the board ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_004",
+    "seedId": "so_that_purpose_advanced_004",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 팀원들이 일정을 공유할 수 있도록 회의록을 즉시 올린다.",
+    "english": "I upload the meeting notes immediately so that my teammates can share the same schedule.",
+    "words": [
+      "I",
+      "upload",
+      "the",
+      "meeting",
+      "notes",
+      "immediately",
+      "so",
+      "that",
+      "my",
+      "teammates",
+      "can",
+      "share",
+      "the",
+      "same",
+      "schedule",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "나는 팀원들이 일정을 공유할 수 있도록 회의록을 즉시 올린다.",
+        "I / upload / the / meeting / notes / immediately / so that / my / teammates / can / share / the / same / schedule"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "my",
+      "teammates",
+      "share",
+      "the",
+      "same",
+      "schedule"
+    ],
+    "blankTargets": [
+      "so that my teammates can share the same schedule"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "can",
+      "teamwork"
+    ],
+    "distractorSeeds": {
+      "auxError": "I upload the meeting notes immediately so that my teammates could share the same schedule.",
+      "structureError": "I upload the meeting notes immediately so that my teammates to share the same schedule.",
+      "wordOrderError": "I upload the meeting notes immediately so that can my teammates share the same schedule.",
+      "conjunctionError": "I upload the meeting notes immediately because my teammates can share the same schedule.",
+      "statementForm": [
+        "I upload the meeting notes immediately so that my teammates can share the same schedule",
+        "I upload the meeting notes immediately so that my teammates can share the same schedule."
+      ],
+      "fragmentForm": "I upload the meeting notes immediately ____",
+      "wormholeVariants": [
+        "I upload the meeting notes immediately so that my teammates could share the same schedule.",
+        "I upload the meeting notes immediately so that can my teammates share the same schedule.",
+        "I upload the meeting notes immediately because my teammates can share the same schedule.",
+        "I upload the meeting notes immediately to help my teammates share the same schedule.",
+        "I upload the meeting notes immediately in order to help my teammates share the same schedule.",
+        "I upload the meeting notes immediately so as to help my teammates share the same schedule.",
+        "So that my teammates can share the same schedule, I upload the meeting notes immediately.",
+        "I upload the meeting notes immediately, so my teammates can share the same schedule."
+      ]
+    },
+    "fragmentForm": "I upload the meeting notes immediately ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_005",
+    "seedId": "so_that_purpose_advanced_005",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "그는 발표 중 실수를 줄일 수 있도록 충분히 연습했다.",
+    "english": "He practiced repeatedly so that he could reduce mistakes during the presentation.",
+    "words": [
+      "He",
+      "practiced",
+      "repeatedly",
+      "so",
+      "that",
+      "he",
+      "could",
+      "reduce",
+      "mistakes",
+      "during",
+      "the",
+      "presentation",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "그는 발표 중 실수를 줄일 수 있도록 충분히 연습했다.",
+        "He / practiced / repeatedly / so that / he / could / reduce / mistakes / during / the / presentation"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "he",
+      "reduce",
+      "mistakes",
+      "during",
+      "the",
+      "presentation"
+    ],
+    "blankTargets": [
+      "so that he could reduce mistakes during the presentation"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "presentation"
+    ],
+    "distractorSeeds": {
+      "auxError": "He practiced repeatedly so that he can reduce mistakes during the presentation.",
+      "structureError": "He practiced repeatedly so that he to reduce mistakes during the presentation.",
+      "wordOrderError": "He practiced repeatedly so that could he reduce mistakes during the presentation.",
+      "conjunctionError": "He practiced repeatedly because he could reduce mistakes during the presentation.",
+      "statementForm": [
+        "He practiced repeatedly so that he could reduce mistakes during the presentation",
+        "He practiced repeatedly so that he could reduce mistakes during the presentation."
+      ],
+      "fragmentForm": "He practiced repeatedly ____",
+      "wormholeVariants": [
+        "He practiced repeatedly so that he can reduce mistakes during the presentation.",
+        "He practiced repeatedly so that could he reduce mistakes during the presentation.",
+        "He practiced repeatedly because he could reduce mistakes during the presentation.",
+        "He practiced repeatedly to help he reduce mistakes during the presentation.",
+        "He practiced repeatedly in order to help he reduce mistakes during the presentation.",
+        "He practiced repeatedly so as to help he reduce mistakes during the presentation.",
+        "So that he could reduce mistakes during the presentation, He practiced repeatedly.",
+        "He practiced repeatedly, so he could reduce mistakes during the presentation."
+      ]
+    },
+    "fragmentForm": "He practiced repeatedly ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_006",
+    "seedId": "so_that_purpose_advanced_006",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 실험 결과가 정확하게 비교될 수 있도록 동일한 조건을 유지했다.",
+    "english": "We kept the conditions identical so that the results could be compared accurately.",
+    "words": [
+      "We",
+      "kept",
+      "the",
+      "conditions",
+      "identical",
+      "so",
+      "that",
+      "the",
+      "results",
+      "could",
+      "be",
+      "compared",
+      "accurately",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 실험 결과가 정확하게 비교될 수 있도록 동일한 조건을 유지했다.",
+        "We / kept / the / conditions / identical / so that / the / results / could / be / compared / accurately"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "the",
+      "results",
+      "be",
+      "compared",
+      "accurately"
+    ],
+    "blankTargets": [
+      "so that the results could be compared accurately"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "science"
+    ],
+    "distractorSeeds": {
+      "auxError": "We kept the conditions identical so that the results can be compared accurately.",
+      "structureError": "We kept the conditions identical so that the results to be compared accurately.",
+      "wordOrderError": "We kept the conditions identical so that could the results be compared accurately.",
+      "conjunctionError": "We kept the conditions identical because the results could be compared accurately.",
+      "statementForm": [
+        "We kept the conditions identical so that the results could be compared accurately",
+        "We kept the conditions identical so that the results could be compared accurately."
+      ],
+      "fragmentForm": "We kept the conditions identical ____",
+      "wormholeVariants": [
+        "We kept the conditions identical so that the results can be compared accurately.",
+        "We kept the conditions identical so that could the results be compared accurately.",
+        "We kept the conditions identical because the results could be compared accurately.",
+        "We kept the conditions identical to help the results be compared accurately.",
+        "We kept the conditions identical in order to help the results be compared accurately.",
+        "We kept the conditions identical so as to help the results be compared accurately.",
+        "So that the results could be compared accurately, We kept the conditions identical.",
+        "We kept the conditions identical, so the results could be compared accurately."
+      ]
+    },
+    "fragmentForm": "We kept the conditions identical ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_007",
+    "seedId": "so_that_purpose_advanced_007",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 모두가 발언 순서를 알 수 있도록 회의 전에 발언표를 배포했다.",
+    "english": "I distributed the speaking order before the meeting so that everyone could know when to speak.",
+    "words": [
+      "I",
+      "distributed",
+      "the",
+      "speaking",
+      "order",
+      "before",
+      "the",
+      "meeting",
+      "so",
+      "that",
+      "everyone",
+      "could",
+      "know",
+      "when",
+      "to",
+      "speak",
+      "."
+    ],
+    "wordCount": 16,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "나는 모두가 발언 순서를 알 수 있도록 회의 전에 발언표를 배포했다.",
+        "I / distributed / the / speaking / order / before / the / meeting / so that / everyone / could / know / when / to / speak"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "everyone",
+      "know",
+      "when",
+      "to",
+      "speak"
+    ],
+    "blankTargets": [
+      "so that everyone could know when to speak"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "meeting"
+    ],
+    "distractorSeeds": {
+      "auxError": "I distributed the speaking order before the meeting so that everyone can know when to speak.",
+      "structureError": "I distributed the speaking order before the meeting so that everyone to know when to speak.",
+      "wordOrderError": "I distributed the speaking order before the meeting so that could everyone know when to speak.",
+      "conjunctionError": "I distributed the speaking order before the meeting because everyone could know when to speak.",
+      "statementForm": [
+        "I distributed the speaking order before the meeting so that everyone could know when to speak",
+        "I distributed the speaking order before the meeting so that everyone could know when to speak."
+      ],
+      "fragmentForm": "I distributed the speaking order before the meeting ____",
+      "wormholeVariants": [
+        "I distributed the speaking order before the meeting so that everyone can know when to speak.",
+        "I distributed the speaking order before the meeting so that could everyone know when to speak.",
+        "I distributed the speaking order before the meeting because everyone could know when to speak.",
+        "I distributed the speaking order before the meeting to help everyone know when to speak.",
+        "I distributed the speaking order before the meeting in order to help everyone know when to speak.",
+        "I distributed the speaking order before the meeting so as to help everyone know when to speak.",
+        "So that everyone could know when to speak, I distributed the speaking order before the meeting.",
+        "I distributed the speaking order before the meeting, so everyone could know when to speak."
+      ]
+    },
+    "fragmentForm": "I distributed the speaking order before the meeting ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_008",
+    "seedId": "so_that_purpose_advanced_008",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "**[High Difficulty]** 연구팀은 보고서를 재구성해서 이전에 실패했던 항목까지 부서별로 재검토할 수 있게 했다.",
+    "english": "The research team reorganized the report so that each department could recheck what it had failed to verify before.",
+    "words": [
+      "The",
+      "research",
+      "team",
+      "reorganized",
+      "the",
+      "report",
+      "so",
+      "that",
+      "each",
+      "department",
+      "could",
+      "recheck",
+      "what",
+      "it",
+      "had",
+      "failed",
+      "to",
+      "verify",
+      "before",
+      "."
+    ],
+    "wordCount": 19,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "**[High Difficulty]** 연구팀은 보고서를 재구성해서 이전에 실패했던 항목까지 부서별로 재검토할 수 있게 했다.",
+        "The / research / team / reorganized / the / report / so that / each / department / could / recheck / what / it / had / failed / to / verify / before"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "each",
+      "department",
+      "recheck",
+      "what",
+      "it",
+      "had",
+      "failed",
+      "to",
+      "verify",
+      "before"
+    ],
+    "blankTargets": [
+      "so that each department could recheck what it had failed to verify before"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "formal"
+    ],
+    "distractorSeeds": {
+      "auxError": "The research team reorganized the report so that each department can recheck what it had failed to verify before.",
+      "structureError": "The research team reorganized the report so that each department to recheck what it had failed to verify before.",
+      "wordOrderError": "The research team reorganized the report so that could each department recheck what it had failed to verify before.",
+      "conjunctionError": "The research team reorganized the report because each department could recheck what it had failed to verify before.",
+      "statementForm": [
+        "The research team reorganized the report so that each department could recheck what it had failed to verify before",
+        "The research team reorganized the report so that each department could recheck what it had failed to verify before."
+      ],
+      "fragmentForm": "The research team reorganized the report ____",
+      "wormholeVariants": [
+        "The research team reorganized the report so that each department can recheck what it had failed to verify before.",
+        "The research team reorganized the report so that could each department recheck what it had failed to verify before.",
+        "The research team reorganized the report because each department could recheck what it had failed to verify before.",
+        "The research team reorganized the report to help each department recheck what it had failed to verify before.",
+        "The research team reorganized the report in order to help each department recheck what it had failed to verify before.",
+        "The research team reorganized the report so as to help each department recheck what it had failed to verify before.",
+        "So that each department could recheck what it had failed to verify before, The research team reorganized the report.",
+        "The research team reorganized the report, so each department could recheck what it had failed to verify before."
+      ]
+    },
+    "fragmentForm": "The research team reorganized the report ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_009",
+    "seedId": "so_that_purpose_advanced_009",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "교사는 학생들이 질문을 주저하지 않도록 토론 분위기를 부드럽게 만들었다.",
+    "english": "The teacher moderated the discussion gently so that students could ask questions without hesitation.",
+    "words": [
+      "The",
+      "teacher",
+      "moderated",
+      "the",
+      "discussion",
+      "gently",
+      "so",
+      "that",
+      "students",
+      "could",
+      "ask",
+      "questions",
+      "without",
+      "hesitation",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "교사는 학생들이 질문을 주저하지 않도록 토론 분위기를 부드럽게 만들었다.",
+        "The / teacher / moderated / the / discussion / gently / so that / students / could / ask / questions / without / hesitation"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "students",
+      "ask",
+      "questions",
+      "without",
+      "hesitation"
+    ],
+    "blankTargets": [
+      "so that students could ask questions without hesitation"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "classroom"
+    ],
+    "distractorSeeds": {
+      "auxError": "The teacher moderated the discussion gently so that students can ask questions without hesitation.",
+      "structureError": "The teacher moderated the discussion gently so that students to ask questions without hesitation.",
+      "wordOrderError": "The teacher moderated the discussion gently so that could students ask questions without hesitation.",
+      "conjunctionError": "The teacher moderated the discussion gently because students could ask questions without hesitation.",
+      "statementForm": [
+        "The teacher moderated the discussion gently so that students could ask questions without hesitation",
+        "The teacher moderated the discussion gently so that students could ask questions without hesitation."
+      ],
+      "fragmentForm": "The teacher moderated the discussion gently ____",
+      "wormholeVariants": [
+        "The teacher moderated the discussion gently so that students can ask questions without hesitation.",
+        "The teacher moderated the discussion gently so that could students ask questions without hesitation.",
+        "The teacher moderated the discussion gently because students could ask questions without hesitation.",
+        "The teacher moderated the discussion gently to help students ask questions without hesitation.",
+        "The teacher moderated the discussion gently in order to help students ask questions without hesitation.",
+        "The teacher moderated the discussion gently so as to help students ask questions without hesitation.",
+        "So that students could ask questions without hesitation, The teacher moderated the discussion gently.",
+        "The teacher moderated the discussion gently, so students could ask questions without hesitation."
+      ]
+    },
+    "fragmentForm": "The teacher moderated the discussion gently ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_010",
+    "seedId": "so_that_purpose_advanced_010",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "그는 이전에 떨어진 시험을 다시 통과할 수 있도록 매일 새벽에 공부했다.",
+    "english": "So that he could pass what he had failed before, he studied at dawn every day.",
+    "words": [
+      "So",
+      "that",
+      "he",
+      "could",
+      "pass",
+      "what",
+      "he",
+      "had",
+      "failed",
+      "before",
+      ",",
+      "he",
+      "studied",
+      "at",
+      "dawn",
+      "every",
+      "day",
+      "."
+    ],
+    "wordCount": 16,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "그는 이전에 떨어진 시험을 다시 통과할 수 있도록 매일 새벽에 공부했다.",
+        "He / studied / at / dawn / every / day / so that / he / could / pass / what / he / had / failed / before"
+      ],
+      [
+        "so that + S + could + V (fronted purpose)",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "So",
+      "that",
+      "he",
+      "pass",
+      "what",
+      "had",
+      "failed",
+      "before"
+    ],
+    "blankTargets": [
+      "So that he could pass what he had failed before"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "advanced_form"
+    ],
+    "distractorSeeds": {
+      "auxError": "So that he can pass what he had failed before, he studied at dawn every day.",
+      "structureError": "He studied at dawn every day so that he to pass what he had failed before.",
+      "wordOrderError": "He studied at dawn every day so that could he pass what he had failed before.",
+      "conjunctionError": "He studied at dawn every day because he could pass what he had failed before.",
+      "statementForm": [
+        "So that he could pass what he had failed before, he studied at dawn every day."
+      ],
+      "fragmentForm": "____, he studied at dawn every day.",
+      "wormholeVariants": [
+        "He studied at dawn every day to pass what he had failed before.",
+        "He studied at dawn every day in order to pass what he had failed before.",
+        "He studied at dawn every day so as to pass what he had failed before.",
+        "He studied at dawn every day because he could pass what he had failed before.",
+        "He studied at dawn every day, so he could pass what he had failed before.",
+        "So that he could pass what he had failed before, he studied at dawn every day."
+      ]
+    },
+    "fragmentForm": "____, he studied at dawn every day."
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_011",
+    "seedId": "so_that_purpose_advanced_011",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "그는 모든 팀원이 통과할 수 있도록 자료를 정리했다.",
+    "english": "He organized the materials so that every team member could pass.",
+    "words": [
+      "He",
+      "organized",
+      "the",
+      "materials",
+      "so",
+      "that",
+      "every",
+      "team",
+      "member",
+      "could",
+      "pass",
+      "."
+    ],
+    "wordCount": 11,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "그는 모든 팀원이 통과할 수 있도록 자료를 정리했다.",
+        "He / organized / the / materials / so that / every / team / member / could / pass"
+      ],
+      [
+        "so that + S + could + V (purpose)",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "materials",
+      "team",
+      "member",
+      "pass"
+    ],
+    "blankTargets": [
+      "so that every team member could pass"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "would",
+      "it_structure"
+    ],
+    "distractorSeeds": {
+      "auxError": "He organized the materials so that every team member can pass.",
+      "structureError": "He organized the materials so that every team member to pass.",
+      "wordOrderError": "He organized the materials so that could every team member pass.",
+      "conjunctionError": "He organized the materials because every team member could pass.",
+      "statementForm": [
+        "He organized the materials so that every team member could pass."
+      ],
+      "fragmentForm": "He organized the materials ____.",
+      "wormholeVariants": [
+        "He organized the materials so that every team member can pass.",
+        "He organized the materials so that can every team member pass.",
+        "He organized the materials because every team member can pass.",
+        "He organized the materials to help every team member pass.",
+        "He organized the materials in order to help every team member pass.",
+        "He organized the materials so as to help every team member pass.",
+        "So that every team member could pass, he organized the materials.",
+        "He organized the materials, so every team member could pass."
+      ]
+    },
+    "fragmentForm": "He organized the materials ____."
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_012",
+    "seedId": "so_that_purpose_advanced_012",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "**[High Difficulty]** 위원회는 핵심 조항이 오해되지 않도록 문장을 부정 구조까지 포함해 재작성했다.",
+    "english": "The committee rewrote the policy so that readers could not fail to understand what had to be applied immediately.",
+    "words": [
+      "The",
+      "committee",
+      "rewrote",
+      "the",
+      "policy",
+      "so",
+      "that",
+      "readers",
+      "could",
+      "not",
+      "fail",
+      "to",
+      "understand",
+      "what",
+      "had",
+      "to",
+      "be",
+      "applied",
+      "immediately",
+      "."
+    ],
+    "wordCount": 19,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "**[High Difficulty]** 위원회는 핵심 조항이 오해되지 않도록 문장을 부정 구조까지 포함해 재작성했다.",
+        "The / committee / rewrote / the / policy / so that / readers / could / not / fail / to / understand / what / had / to / be / applied / immediately"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "readers",
+      "fail",
+      "to",
+      "what",
+      "had",
+      "be",
+      "applied",
+      "immediately"
+    ],
+    "blankTargets": [
+      "so that readers could not fail to understand what had to be applied immediately"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "formal_high"
+    ],
+    "distractorSeeds": {
+      "auxError": "The committee rewrote the policy so that readers can not fail to understand what had to be applied immediately.",
+      "structureError": "The committee rewrote the policy so that readers to not fail to understand what had to be applied immediately.",
+      "wordOrderError": "The committee rewrote the policy so that could readers not fail to understand what had to be applied immediately.",
+      "conjunctionError": "The committee rewrote the policy because readers could not fail to understand what had to be applied immediately.",
+      "statementForm": [
+        "The committee rewrote the policy so that readers could not fail to understand what had to be applied immediately",
+        "The committee rewrote the policy so that readers could not fail to understand what had to be applied immediately."
+      ],
+      "fragmentForm": "The committee rewrote the policy ____",
+      "wormholeVariants": [
+        "The committee rewrote the policy so that readers can not fail to understand what had to be applied immediately.",
+        "The committee rewrote the policy so that could readers not fail to understand what had to be applied immediately.",
+        "The committee rewrote the policy because readers could not fail to understand what had to be applied immediately.",
+        "The committee rewrote the policy to help readers not fail to understand what had to be applied immediately.",
+        "The committee rewrote the policy in order to help readers not fail to understand what had to be applied immediately.",
+        "The committee rewrote the policy so as to help readers not fail to understand what had to be applied immediately.",
+        "So that readers could not fail to understand what had to be applied immediately, The committee rewrote the policy.",
+        "The committee rewrote the policy, so readers could not fail to understand what had to be applied immediately."
+      ]
+    },
+    "fragmentForm": "The committee rewrote the policy ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_013",
+    "seedId": "so_that_purpose_advanced_013",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 방문객들이 작품 설명을 들을 수 있도록 오디오 가이드를 충전했다.",
+    "english": "We charged the audio guides so that visitors could listen to each artwork explanation.",
+    "words": [
+      "We",
+      "charged",
+      "the",
+      "audio",
+      "guides",
+      "so",
+      "that",
+      "visitors",
+      "could",
+      "listen",
+      "to",
+      "each",
+      "artwork",
+      "explanation",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 방문객들이 작품 설명을 들을 수 있도록 오디오 가이드를 충전했다.",
+        "We / charged / the / audio / guides / so that / visitors / could / listen / to / each / artwork / explanation"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "visitors",
+      "listen",
+      "to",
+      "each",
+      "artwork",
+      "explanation"
+    ],
+    "blankTargets": [
+      "so that visitors could listen to each artwork explanation"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "culture"
+    ],
+    "distractorSeeds": {
+      "auxError": "We charged the audio guides so that visitors can listen to each artwork explanation.",
+      "structureError": "We charged the audio guides so that visitors to listen to each artwork explanation.",
+      "wordOrderError": "We charged the audio guides so that could visitors listen to each artwork explanation.",
+      "conjunctionError": "We charged the audio guides because visitors could listen to each artwork explanation.",
+      "statementForm": [
+        "We charged the audio guides so that visitors could listen to each artwork explanation",
+        "We charged the audio guides so that visitors could listen to each artwork explanation."
+      ],
+      "fragmentForm": "We charged the audio guides ____",
+      "wormholeVariants": [
+        "We charged the audio guides so that visitors can listen to each artwork explanation.",
+        "We charged the audio guides so that could visitors listen to each artwork explanation.",
+        "We charged the audio guides because visitors could listen to each artwork explanation.",
+        "We charged the audio guides to help visitors listen to each artwork explanation.",
+        "We charged the audio guides in order to help visitors listen to each artwork explanation.",
+        "We charged the audio guides so as to help visitors listen to each artwork explanation.",
+        "So that visitors could listen to each artwork explanation, We charged the audio guides.",
+        "We charged the audio guides, so visitors could listen to each artwork explanation."
+      ]
+    },
+    "fragmentForm": "We charged the audio guides ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_014",
+    "seedId": "so_that_purpose_advanced_014",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 알림을 설정해서 마감 시간을 놓치지 않도록 했다.",
+    "english": "I set the app alerts so that I could submit every assignment on time.",
+    "words": [
+      "I",
+      "set",
+      "the",
+      "app",
+      "alerts",
+      "so",
+      "that",
+      "I",
+      "could",
+      "submit",
+      "every",
+      "assignment",
+      "on",
+      "time",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "나는 알림을 설정해서 마감 시간을 놓치지 않도록 했다.",
+        "I / set / the / app / alerts / so that / I / could / submit / every / assignment / on / time"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "I",
+      "submit",
+      "every",
+      "assignment",
+      "on",
+      "time"
+    ],
+    "blankTargets": [
+      "so that I could submit every assignment on time"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "I set the app alerts so that I can submit every assignment on time.",
+      "structureError": "I set the app alerts so that I to submit every assignment on time.",
+      "wordOrderError": "I set the app alerts so that could I submit every assignment on time.",
+      "conjunctionError": "I set the app alerts because I could submit every assignment on time.",
+      "statementForm": [
+        "I set the app alerts so that I could submit every assignment on time",
+        "I set the app alerts so that I could submit every assignment on time."
+      ],
+      "fragmentForm": "I set the app alerts ____",
+      "wormholeVariants": [
+        "I set the app alerts so that I can submit every assignment on time.",
+        "I set the app alerts so that could I submit every assignment on time.",
+        "I set the app alerts because I could submit every assignment on time.",
+        "I set the app alerts to help I submit every assignment on time.",
+        "I set the app alerts in order to help I submit every assignment on time.",
+        "I set the app alerts so as to help I submit every assignment on time.",
+        "So that I could submit every assignment on time, I set the app alerts.",
+        "I set the app alerts, so I could submit every assignment on time."
+      ]
+    },
+    "fragmentForm": "I set the app alerts ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_015",
+    "seedId": "so_that_purpose_advanced_015",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "사서는 학생들이 자료를 빠르게 찾을 수 있도록 선반 라벨을 다시 붙였다.",
+    "english": "The librarian relabeled the shelves so that students could locate reference books quickly.",
+    "words": [
+      "The",
+      "librarian",
+      "relabeled",
+      "the",
+      "shelves",
+      "so",
+      "that",
+      "students",
+      "could",
+      "locate",
+      "reference",
+      "books",
+      "quickly",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "사서는 학생들이 자료를 빠르게 찾을 수 있도록 선반 라벨을 다시 붙였다.",
+        "The / librarian / relabeled / the / shelves / so that / students / could / locate / reference / books / quickly"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "students",
+      "locate",
+      "reference",
+      "books",
+      "quickly"
+    ],
+    "blankTargets": [
+      "so that students could locate reference books quickly"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "library"
+    ],
+    "distractorSeeds": {
+      "auxError": "The librarian relabeled the shelves so that students can locate reference books quickly.",
+      "structureError": "The librarian relabeled the shelves so that students to locate reference books quickly.",
+      "wordOrderError": "The librarian relabeled the shelves so that could students locate reference books quickly.",
+      "conjunctionError": "The librarian relabeled the shelves because students could locate reference books quickly.",
+      "statementForm": [
+        "The librarian relabeled the shelves so that students could locate reference books quickly",
+        "The librarian relabeled the shelves so that students could locate reference books quickly."
+      ],
+      "fragmentForm": "The librarian relabeled the shelves ____",
+      "wormholeVariants": [
+        "The librarian relabeled the shelves so that students can locate reference books quickly.",
+        "The librarian relabeled the shelves so that could students locate reference books quickly.",
+        "The librarian relabeled the shelves because students could locate reference books quickly.",
+        "The librarian relabeled the shelves to help students locate reference books quickly.",
+        "The librarian relabeled the shelves in order to help students locate reference books quickly.",
+        "The librarian relabeled the shelves so as to help students locate reference books quickly.",
+        "So that students could locate reference books quickly, The librarian relabeled the shelves.",
+        "The librarian relabeled the shelves, so students could locate reference books quickly."
+      ]
+    },
+    "fragmentForm": "The librarian relabeled the shelves ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_016",
+    "seedId": "so_that_purpose_advanced_016",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "**[High Difficulty]** 병원 행정팀은 고령 환자들이 복용 지침을 혼동하지 않도록 약 봉투 표기를 더 체계적으로 개정했다.",
+    "english": "The hospital staff revised the prescription labels so that elderly patients could follow dosage instructions without confusion.",
+    "words": [
+      "The",
+      "hospital",
+      "staff",
+      "revised",
+      "the",
+      "prescription",
+      "labels",
+      "so",
+      "that",
+      "elderly",
+      "patients",
+      "could",
+      "follow",
+      "dosage",
+      "instructions",
+      "without",
+      "confusion",
+      "."
+    ],
+    "wordCount": 17,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "**[High Difficulty]** 병원 행정팀은 고령 환자들이 복용 지침을 혼동하지 않도록 약 봉투 표기를 더 체계적으로 개정했다.",
+        "The / hospital / staff / revised / the / prescription / labels / so that / elderly / patients / could / follow / dosage / instructions / without / confusion"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "elderly",
+      "patients",
+      "dosage",
+      "instructions",
+      "without",
+      "confusion"
+    ],
+    "blankTargets": [
+      "so that elderly patients could follow dosage instructions without confusion"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "formal"
+    ],
+    "distractorSeeds": {
+      "auxError": "The hospital staff revised the prescription labels so that elderly patients can follow dosage instructions without confusion.",
+      "structureError": "The hospital staff revised the prescription labels so that elderly patients to follow dosage instructions without confusion.",
+      "wordOrderError": "The hospital staff revised the prescription labels so that could elderly patients follow dosage instructions without confusion.",
+      "conjunctionError": "The hospital staff revised the prescription labels because elderly patients could follow dosage instructions without confusion.",
+      "statementForm": [
+        "The hospital staff revised the prescription labels so that elderly patients could follow dosage instructions without confusion",
+        "The hospital staff revised the prescription labels so that elderly patients could follow dosage instructions without confusion."
+      ],
+      "fragmentForm": "The hospital staff revised the prescription labels ____",
+      "wormholeVariants": [
+        "The hospital staff revised the prescription labels so that elderly patients can follow dosage instructions without confusion.",
+        "The hospital staff revised the prescription labels so that could elderly patients follow dosage instructions without confusion.",
+        "The hospital staff revised the prescription labels because elderly patients could follow dosage instructions without confusion.",
+        "The hospital staff revised the prescription labels to help elderly patients follow dosage instructions without confusion.",
+        "The hospital staff revised the prescription labels in order to help elderly patients follow dosage instructions without confusion.",
+        "The hospital staff revised the prescription labels so as to help elderly patients follow dosage instructions without confusion.",
+        "So that elderly patients could follow dosage instructions without confusion, The hospital staff revised the prescription labels.",
+        "The hospital staff revised the prescription labels, so elderly patients could follow dosage instructions without confusion."
+      ]
+    },
+    "fragmentForm": "The hospital staff revised the prescription labels ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_017",
+    "seedId": "so_that_purpose_advanced_017",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 비상 상황에서도 통로를 확인할 수 있도록 바닥 유도선을 새로 칠했다.",
+    "english": "We repainted the floor lines so that people could identify the exits during emergencies.",
+    "words": [
+      "We",
+      "repainted",
+      "the",
+      "floor",
+      "lines",
+      "so",
+      "that",
+      "people",
+      "could",
+      "identify",
+      "the",
+      "exits",
+      "during",
+      "emergencies",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 비상 상황에서도 통로를 확인할 수 있도록 바닥 유도선을 새로 칠했다.",
+        "We / repainted / the / floor / lines / so that / people / could / identify / the / exits / during / emergencies"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "people",
+      "identify",
+      "the",
+      "exits",
+      "during",
+      "emergencies"
+    ],
+    "blankTargets": [
+      "so that people could identify the exits during emergencies"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "safety"
+    ],
+    "distractorSeeds": {
+      "auxError": "We repainted the floor lines so that people can identify the exits during emergencies.",
+      "structureError": "We repainted the floor lines so that people to identify the exits during emergencies.",
+      "wordOrderError": "We repainted the floor lines so that could people identify the exits during emergencies.",
+      "conjunctionError": "We repainted the floor lines because people could identify the exits during emergencies.",
+      "statementForm": [
+        "We repainted the floor lines so that people could identify the exits during emergencies",
+        "We repainted the floor lines so that people could identify the exits during emergencies."
+      ],
+      "fragmentForm": "We repainted the floor lines ____",
+      "wormholeVariants": [
+        "We repainted the floor lines so that people can identify the exits during emergencies.",
+        "We repainted the floor lines so that could people identify the exits during emergencies.",
+        "We repainted the floor lines because people could identify the exits during emergencies.",
+        "We repainted the floor lines to help people identify the exits during emergencies.",
+        "We repainted the floor lines in order to help people identify the exits during emergencies.",
+        "We repainted the floor lines so as to help people identify the exits during emergencies.",
+        "So that people could identify the exits during emergencies, We repainted the floor lines.",
+        "We repainted the floor lines, so people could identify the exits during emergencies."
+      ]
+    },
+    "fragmentForm": "We repainted the floor lines ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_018",
+    "seedId": "so_that_purpose_advanced_018",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "농부들은 어린 묘목이 건조한 날씨를 견딜 수 있도록 물 저장통을 설치했다.",
+    "english": "Farmers installed water tanks so that young seedlings could survive dry weather.",
+    "words": [
+      "Farmers",
+      "installed",
+      "water",
+      "tanks",
+      "so",
+      "that",
+      "young",
+      "seedlings",
+      "could",
+      "survive",
+      "dry",
+      "weather",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "농부들은 어린 묘목이 건조한 날씨를 견딜 수 있도록 물 저장통을 설치했다.",
+        "Farmers / installed / water / tanks / so that / young / seedlings / could / survive / dry / weather"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "young",
+      "seedlings",
+      "survive",
+      "dry",
+      "weather"
+    ],
+    "blankTargets": [
+      "so that young seedlings could survive dry weather"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "environment"
+    ],
+    "distractorSeeds": {
+      "auxError": "Farmers installed water tanks so that young seedlings can survive dry weather.",
+      "structureError": "Farmers installed water tanks so that young seedlings to survive dry weather.",
+      "wordOrderError": "Farmers installed water tanks so that could young seedlings survive dry weather.",
+      "conjunctionError": "Farmers installed water tanks because young seedlings could survive dry weather.",
+      "statementForm": [
+        "Farmers installed water tanks so that young seedlings could survive dry weather",
+        "Farmers installed water tanks so that young seedlings could survive dry weather."
+      ],
+      "fragmentForm": "Farmers installed water tanks ____",
+      "wormholeVariants": [
+        "Farmers installed water tanks so that young seedlings can survive dry weather.",
+        "Farmers installed water tanks so that could young seedlings survive dry weather.",
+        "Farmers installed water tanks because young seedlings could survive dry weather.",
+        "Farmers installed water tanks to help young seedlings survive dry weather.",
+        "Farmers installed water tanks in order to help young seedlings survive dry weather.",
+        "Farmers installed water tanks so as to help young seedlings survive dry weather.",
+        "So that young seedlings could survive dry weather, Farmers installed water tanks.",
+        "Farmers installed water tanks, so young seedlings could survive dry weather."
+      ]
+    },
+    "fragmentForm": "Farmers installed water tanks ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_019",
+    "seedId": "so_that_purpose_advanced_019",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "감독관은 참가자들이 규칙을 확인할 수 있도록 경기 전에 안내 영상을 틀었다.",
+    "english": "The supervisor played an instruction video so that participants could review the rules before the match.",
+    "words": [
+      "The",
+      "supervisor",
+      "played",
+      "an",
+      "instruction",
+      "video",
+      "so",
+      "that",
+      "participants",
+      "could",
+      "review",
+      "the",
+      "rules",
+      "before",
+      "the",
+      "match",
+      "."
+    ],
+    "wordCount": 16,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "감독관은 참가자들이 규칙을 확인할 수 있도록 경기 전에 안내 영상을 틀었다.",
+        "The / supervisor / played / an / instruction / video / so that / participants / could / review / the / rules / before / the / match"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "participants",
+      "review",
+      "the",
+      "rules",
+      "before",
+      "match"
+    ],
+    "blankTargets": [
+      "so that participants could review the rules before the match"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "sports"
+    ],
+    "distractorSeeds": {
+      "auxError": "The supervisor played an instruction video so that participants can review the rules before the match.",
+      "structureError": "The supervisor played an instruction video so that participants to review the rules before the match.",
+      "wordOrderError": "The supervisor played an instruction video so that could participants review the rules before the match.",
+      "conjunctionError": "The supervisor played an instruction video because participants could review the rules before the match.",
+      "statementForm": [
+        "The supervisor played an instruction video so that participants could review the rules before the match",
+        "The supervisor played an instruction video so that participants could review the rules before the match."
+      ],
+      "fragmentForm": "The supervisor played an instruction video ____",
+      "wormholeVariants": [
+        "The supervisor played an instruction video so that participants can review the rules before the match.",
+        "The supervisor played an instruction video so that could participants review the rules before the match.",
+        "The supervisor played an instruction video because participants could review the rules before the match.",
+        "The supervisor played an instruction video to help participants review the rules before the match.",
+        "The supervisor played an instruction video in order to help participants review the rules before the match.",
+        "The supervisor played an instruction video so as to help participants review the rules before the match.",
+        "So that participants could review the rules before the match, The supervisor played an instruction video.",
+        "The supervisor played an instruction video, so participants could review the rules before the match."
+      ]
+    },
+    "fragmentForm": "The supervisor played an instruction video ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_020",
+    "seedId": "so_that_purpose_advanced_020",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 야간 운전자들이 도로 경계를 볼 수 있도록 반사 표지를 세웠다.",
+    "english": "We placed reflective markers so that drivers could see the road edges at night.",
+    "words": [
+      "We",
+      "placed",
+      "reflective",
+      "markers",
+      "so",
+      "that",
+      "drivers",
+      "could",
+      "see",
+      "the",
+      "road",
+      "edges",
+      "at",
+      "night",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 야간 운전자들이 도로 경계를 볼 수 있도록 반사 표지를 세웠다.",
+        "We / placed / reflective / markers / so that / drivers / could / see / the / road / edges / at / night"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "drivers",
+      "see",
+      "the",
+      "road",
+      "edges",
+      "at",
+      "night"
+    ],
+    "blankTargets": [
+      "so that drivers could see the road edges at night"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "transport"
+    ],
+    "distractorSeeds": {
+      "auxError": "We placed reflective markers so that drivers can see the road edges at night.",
+      "structureError": "We placed reflective markers so that drivers to see the road edges at night.",
+      "wordOrderError": "We placed reflective markers so that could drivers see the road edges at night.",
+      "conjunctionError": "We placed reflective markers because drivers could see the road edges at night.",
+      "statementForm": [
+        "We placed reflective markers so that drivers could see the road edges at night",
+        "We placed reflective markers so that drivers could see the road edges at night."
+      ],
+      "fragmentForm": "We placed reflective markers ____",
+      "wormholeVariants": [
+        "We placed reflective markers so that drivers can see the road edges at night.",
+        "We placed reflective markers so that could drivers see the road edges at night.",
+        "We placed reflective markers because drivers could see the road edges at night.",
+        "We placed reflective markers to help drivers see the road edges at night.",
+        "We placed reflective markers in order to help drivers see the road edges at night.",
+        "We placed reflective markers so as to help drivers see the road edges at night.",
+        "So that drivers could see the road edges at night, We placed reflective markers.",
+        "We placed reflective markers, so drivers could see the road edges at night."
+      ]
+    },
+    "fragmentForm": "We placed reflective markers ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_021",
+    "seedId": "so_that_purpose_advanced_021",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "**[High Difficulty]** 출판사는 시각장애 독자들이 핵심 정보를 스스로 찾을 수 있도록 전자책에 대체 텍스트를 정교하게 삽입했다.",
+    "english": "The publisher inserted detailed alt text so that visually impaired readers could apply what they had learned without outside help.",
+    "words": [
+      "The",
+      "publisher",
+      "inserted",
+      "detailed",
+      "alt",
+      "text",
+      "so",
+      "that",
+      "visually",
+      "impaired",
+      "readers",
+      "could",
+      "apply",
+      "what",
+      "they",
+      "had",
+      "learned",
+      "without",
+      "outside",
+      "help",
+      "."
+    ],
+    "wordCount": 20,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "**[High Difficulty]** 출판사는 시각장애 독자들이 핵심 정보를 스스로 찾을 수 있도록 전자책에 대체 텍스트를 정교하게 삽입했다.",
+        "The / publisher / inserted / detailed / alt / text / so that / visually / impaired / readers / could / apply / what / they / had / learned / without / outside / help"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "visually",
+      "impaired",
+      "readers",
+      "apply",
+      "what",
+      "they",
+      "had",
+      "learned",
+      "without",
+      "outside",
+      "help"
+    ],
+    "blankTargets": [
+      "so that visually impaired readers could apply what they had learned without outside help"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "formal"
+    ],
+    "distractorSeeds": {
+      "auxError": "The publisher inserted detailed alt text so that visually impaired readers can apply what they had learned without outside help.",
+      "structureError": "The publisher inserted detailed alt text so that visually impaired readers to apply what they had learned without outside help.",
+      "wordOrderError": "The publisher inserted detailed alt text so that could visually impaired readers apply what they had learned without outside help.",
+      "conjunctionError": "The publisher inserted detailed alt text because visually impaired readers could apply what they had learned without outside help.",
+      "statementForm": [
+        "The publisher inserted detailed alt text so that visually impaired readers could apply what they had learned without outside help",
+        "The publisher inserted detailed alt text so that visually impaired readers could apply what they had learned without outside help."
+      ],
+      "fragmentForm": "The publisher inserted detailed alt text ____",
+      "wormholeVariants": [
+        "The publisher inserted detailed alt text so that visually impaired readers can apply what they had learned without outside help.",
+        "The publisher inserted detailed alt text so that could visually impaired readers apply what they had learned without outside help.",
+        "The publisher inserted detailed alt text because visually impaired readers could apply what they had learned without outside help.",
+        "The publisher inserted detailed alt text to help visually impaired readers apply what they had learned without outside help.",
+        "The publisher inserted detailed alt text in order to help visually impaired readers apply what they had learned without outside help.",
+        "The publisher inserted detailed alt text so as to help visually impaired readers apply what they had learned without outside help.",
+        "So that visually impaired readers could apply what they had learned without outside help, The publisher inserted detailed alt text.",
+        "The publisher inserted detailed alt text, so visually impaired readers could apply what they had learned without outside help."
+      ]
+    },
+    "fragmentForm": "The publisher inserted detailed alt text ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_022",
+    "seedId": "so_that_purpose_advanced_022",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "기술팀은 사용자가 오류 원인을 파악할 수 있도록 로그 메시지를 단순화했다.",
+    "english": "The tech team simplified the log messages so that users could identify error causes quickly.",
+    "words": [
+      "The",
+      "tech",
+      "team",
+      "simplified",
+      "the",
+      "log",
+      "messages",
+      "so",
+      "that",
+      "users",
+      "could",
+      "identify",
+      "error",
+      "causes",
+      "quickly",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "기술팀은 사용자가 오류 원인을 파악할 수 있도록 로그 메시지를 단순화했다.",
+        "The / tech / team / simplified / the / log / messages / so that / users / could / identify / error / causes / quickly"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "users",
+      "identify",
+      "error",
+      "causes",
+      "quickly"
+    ],
+    "blankTargets": [
+      "so that users could identify error causes quickly"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "technology"
+    ],
+    "distractorSeeds": {
+      "auxError": "The tech team simplified the log messages so that users can identify error causes quickly.",
+      "structureError": "The tech team simplified the log messages so that users to identify error causes quickly.",
+      "wordOrderError": "The tech team simplified the log messages so that could users identify error causes quickly.",
+      "conjunctionError": "The tech team simplified the log messages because users could identify error causes quickly.",
+      "statementForm": [
+        "The tech team simplified the log messages so that users could identify error causes quickly",
+        "The tech team simplified the log messages so that users could identify error causes quickly."
+      ],
+      "fragmentForm": "The tech team simplified the log messages ____",
+      "wormholeVariants": [
+        "The tech team simplified the log messages so that users can identify error causes quickly.",
+        "The tech team simplified the log messages so that could users identify error causes quickly.",
+        "The tech team simplified the log messages because users could identify error causes quickly.",
+        "The tech team simplified the log messages to help users identify error causes quickly.",
+        "The tech team simplified the log messages in order to help users identify error causes quickly.",
+        "The tech team simplified the log messages so as to help users identify error causes quickly.",
+        "So that users could identify error causes quickly, The tech team simplified the log messages.",
+        "The tech team simplified the log messages, so users could identify error causes quickly."
+      ]
+    },
+    "fragmentForm": "The tech team simplified the log messages ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_023",
+    "seedId": "so_that_purpose_advanced_023",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 청중이 핵심 수치를 바로 볼 수 있도록 슬라이드 글자 크기를 키웠다.",
+    "english": "We enlarged the slide text so that the audience could read key figures at a glance.",
+    "words": [
+      "We",
+      "enlarged",
+      "the",
+      "slide",
+      "text",
+      "so",
+      "that",
+      "the",
+      "audience",
+      "could",
+      "read",
+      "key",
+      "figures",
+      "at",
+      "a",
+      "glance",
+      "."
+    ],
+    "wordCount": 16,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 청중이 핵심 수치를 바로 볼 수 있도록 슬라이드 글자 크기를 키웠다.",
+        "We / enlarged / the / slide / text / so that / the / audience / could / read / key / figures / at / a / glance"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "the",
+      "audience",
+      "read",
+      "key",
+      "figures",
+      "at",
+      "a",
+      "glance"
+    ],
+    "blankTargets": [
+      "so that the audience could read key figures at a glance"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "presentation"
+    ],
+    "distractorSeeds": {
+      "auxError": "We enlarged the slide text so that the audience can read key figures at a glance.",
+      "structureError": "We enlarged the slide text so that the audience to read key figures at a glance.",
+      "wordOrderError": "We enlarged the slide text so that could the audience read key figures at a glance.",
+      "conjunctionError": "We enlarged the slide text because the audience could read key figures at a glance.",
+      "statementForm": [
+        "We enlarged the slide text so that the audience could read key figures at a glance",
+        "We enlarged the slide text so that the audience could read key figures at a glance."
+      ],
+      "fragmentForm": "We enlarged the slide text ____",
+      "wormholeVariants": [
+        "We enlarged the slide text so that the audience can read key figures at a glance.",
+        "We enlarged the slide text so that could the audience read key figures at a glance.",
+        "We enlarged the slide text because the audience could read key figures at a glance.",
+        "We enlarged the slide text to help the audience read key figures at a glance.",
+        "We enlarged the slide text in order to help the audience read key figures at a glance.",
+        "We enlarged the slide text so as to help the audience read key figures at a glance.",
+        "So that the audience could read key figures at a glance, We enlarged the slide text.",
+        "We enlarged the slide text, so the audience could read key figures at a glance."
+      ]
+    },
+    "fragmentForm": "We enlarged the slide text ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_024",
+    "seedId": "so_that_purpose_advanced_024",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "구조대는 실종자를 더 빨리 발견할 수 있도록 드론을 띄웠다.",
+    "english": "The rescue team launched drones so that they could locate missing hikers faster.",
+    "words": [
+      "The",
+      "rescue",
+      "team",
+      "launched",
+      "drones",
+      "so",
+      "that",
+      "they",
+      "could",
+      "locate",
+      "missing",
+      "hikers",
+      "faster",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "구조대는 실종자를 더 빨리 발견할 수 있도록 드론을 띄웠다.",
+        "The / rescue / team / launched / drones / so that / they / could / locate / missing / hikers / faster"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "they",
+      "locate",
+      "missing",
+      "hikers",
+      "faster"
+    ],
+    "blankTargets": [
+      "so that they could locate missing hikers faster"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "safety"
+    ],
+    "distractorSeeds": {
+      "auxError": "The rescue team launched drones so that they can locate missing hikers faster.",
+      "structureError": "The rescue team launched drones so that they to locate missing hikers faster.",
+      "wordOrderError": "The rescue team launched drones so that could they locate missing hikers faster.",
+      "conjunctionError": "The rescue team launched drones because they could locate missing hikers faster.",
+      "statementForm": [
+        "The rescue team launched drones so that they could locate missing hikers faster",
+        "The rescue team launched drones so that they could locate missing hikers faster."
+      ],
+      "fragmentForm": "The rescue team launched drones ____",
+      "wormholeVariants": [
+        "The rescue team launched drones so that they can locate missing hikers faster.",
+        "The rescue team launched drones so that could they locate missing hikers faster.",
+        "The rescue team launched drones because they could locate missing hikers faster.",
+        "The rescue team launched drones to help they locate missing hikers faster.",
+        "The rescue team launched drones in order to help they locate missing hikers faster.",
+        "The rescue team launched drones so as to help they locate missing hikers faster.",
+        "So that they could locate missing hikers faster, The rescue team launched drones.",
+        "The rescue team launched drones, so they could locate missing hikers faster."
+      ]
+    },
+    "fragmentForm": "The rescue team launched drones ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_025",
+    "seedId": "so_that_purpose_advanced_025",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 손님들이 음식 성분을 확인할 수 있도록 메뉴에 알레르기 표시를 추가했다.",
+    "english": "We added allergy icons to the menu so that guests could check ingredients in advance.",
+    "words": [
+      "We",
+      "added",
+      "allergy",
+      "icons",
+      "to",
+      "the",
+      "menu",
+      "so",
+      "that",
+      "guests",
+      "could",
+      "check",
+      "ingredients",
+      "in",
+      "advance",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 손님들이 음식 성분을 확인할 수 있도록 메뉴에 알레르기 표시를 추가했다.",
+        "We / added / allergy / icons / to / the / menu / so that / guests / could / check / ingredients / in / advance"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "guests",
+      "check",
+      "ingredients",
+      "in",
+      "advance"
+    ],
+    "blankTargets": [
+      "so that guests could check ingredients in advance"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "service"
+    ],
+    "distractorSeeds": {
+      "auxError": "We added allergy icons to the menu so that guests can check ingredients in advance.",
+      "structureError": "We added allergy icons to the menu so that guests to check ingredients in advance.",
+      "wordOrderError": "We added allergy icons to the menu so that could guests check ingredients in advance.",
+      "conjunctionError": "We added allergy icons to the menu because guests could check ingredients in advance.",
+      "statementForm": [
+        "We added allergy icons to the menu so that guests could check ingredients in advance",
+        "We added allergy icons to the menu so that guests could check ingredients in advance."
+      ],
+      "fragmentForm": "We added allergy icons to the menu ____",
+      "wormholeVariants": [
+        "We added allergy icons to the menu so that guests can check ingredients in advance.",
+        "We added allergy icons to the menu so that could guests check ingredients in advance.",
+        "We added allergy icons to the menu because guests could check ingredients in advance.",
+        "We added allergy icons to the menu to help guests check ingredients in advance.",
+        "We added allergy icons to the menu in order to help guests check ingredients in advance.",
+        "We added allergy icons to the menu so as to help guests check ingredients in advance.",
+        "So that guests could check ingredients in advance, We added allergy icons to the menu.",
+        "We added allergy icons to the menu, so guests could check ingredients in advance."
+      ]
+    },
+    "fragmentForm": "We added allergy icons to the menu ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_026",
+    "seedId": "so_that_purpose_advanced_026",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "엔지니어는 유지보수 팀이 부품을 쉽게 교체할 수 있도록 장비 덮개를 분리형으로 설계했다.",
+    "english": "The engineer designed removable covers so that maintenance workers could replace parts more easily.",
+    "words": [
+      "The",
+      "engineer",
+      "designed",
+      "removable",
+      "covers",
+      "so",
+      "that",
+      "maintenance",
+      "workers",
+      "could",
+      "replace",
+      "parts",
+      "more",
+      "easily",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "엔지니어는 유지보수 팀이 부품을 쉽게 교체할 수 있도록 장비 덮개를 분리형으로 설계했다.",
+        "The / engineer / designed / removable / covers / so that / maintenance / workers / could / replace / parts / more / easily"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "maintenance",
+      "workers",
+      "replace",
+      "parts",
+      "more",
+      "easily"
+    ],
+    "blankTargets": [
+      "so that maintenance workers could replace parts more easily"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "engineering"
+    ],
+    "distractorSeeds": {
+      "auxError": "The engineer designed removable covers so that maintenance workers can replace parts more easily.",
+      "structureError": "The engineer designed removable covers so that maintenance workers to replace parts more easily.",
+      "wordOrderError": "The engineer designed removable covers so that could maintenance workers replace parts more easily.",
+      "conjunctionError": "The engineer designed removable covers because maintenance workers could replace parts more easily.",
+      "statementForm": [
+        "The engineer designed removable covers so that maintenance workers could replace parts more easily",
+        "The engineer designed removable covers so that maintenance workers could replace parts more easily."
+      ],
+      "fragmentForm": "The engineer designed removable covers ____",
+      "wormholeVariants": [
+        "The engineer designed removable covers so that maintenance workers can replace parts more easily.",
+        "The engineer designed removable covers so that could maintenance workers replace parts more easily.",
+        "The engineer designed removable covers because maintenance workers could replace parts more easily.",
+        "The engineer designed removable covers to help maintenance workers replace parts more easily.",
+        "The engineer designed removable covers in order to help maintenance workers replace parts more easily.",
+        "The engineer designed removable covers so as to help maintenance workers replace parts more easily.",
+        "So that maintenance workers could replace parts more easily, The engineer designed removable covers.",
+        "The engineer designed removable covers, so maintenance workers could replace parts more easily."
+      ]
+    },
+    "fragmentForm": "The engineer designed removable covers ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_027",
+    "seedId": "so_that_purpose_advanced_027",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 지역 주민들이 재활용 요일을 기억할 수 있도록 안내 스티커를 배포했다.",
+    "english": "We distributed reminder stickers so that local residents could remember recycling days.",
+    "words": [
+      "We",
+      "distributed",
+      "reminder",
+      "stickers",
+      "so",
+      "that",
+      "local",
+      "residents",
+      "could",
+      "remember",
+      "recycling",
+      "days",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 지역 주민들이 재활용 요일을 기억할 수 있도록 안내 스티커를 배포했다.",
+        "We / distributed / reminder / stickers / so that / local / residents / could / remember / recycling / days"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "local",
+      "residents",
+      "recycling",
+      "days"
+    ],
+    "blankTargets": [
+      "so that local residents could remember recycling days"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "community"
+    ],
+    "distractorSeeds": {
+      "auxError": "We distributed reminder stickers so that local residents can remember recycling days.",
+      "structureError": "We distributed reminder stickers so that local residents to remember recycling days.",
+      "wordOrderError": "We distributed reminder stickers so that could local residents remember recycling days.",
+      "conjunctionError": "We distributed reminder stickers because local residents could remember recycling days.",
+      "statementForm": [
+        "We distributed reminder stickers so that local residents could remember recycling days",
+        "We distributed reminder stickers so that local residents could remember recycling days."
+      ],
+      "fragmentForm": "We distributed reminder stickers ____",
+      "wormholeVariants": [
+        "We distributed reminder stickers so that local residents can remember recycling days.",
+        "We distributed reminder stickers so that could local residents remember recycling days.",
+        "We distributed reminder stickers because local residents could remember recycling days.",
+        "We distributed reminder stickers to help local residents remember recycling days.",
+        "We distributed reminder stickers in order to help local residents remember recycling days.",
+        "We distributed reminder stickers so as to help local residents remember recycling days.",
+        "So that local residents could remember recycling days, We distributed reminder stickers.",
+        "We distributed reminder stickers, so local residents could remember recycling days."
+      ]
+    },
+    "fragmentForm": "We distributed reminder stickers ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_028",
+    "seedId": "so_that_purpose_advanced_028",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "**[High Difficulty]** 지자체는 신규 이주민들이 행정 절차를 스스로 완료할 수 있도록 다국어 포털 안내 흐름을 전면 개편했다.",
+    "english": "The city office redesigned the multilingual portal so that new residents could complete administrative procedures that had previously confused them.",
+    "words": [
+      "The",
+      "city",
+      "office",
+      "redesigned",
+      "the",
+      "multilingual",
+      "portal",
+      "so",
+      "that",
+      "new",
+      "residents",
+      "could",
+      "complete",
+      "administrative",
+      "procedures",
+      "that",
+      "had",
+      "previously",
+      "confused",
+      "them",
+      "."
+    ],
+    "wordCount": 20,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "**[High Difficulty]** 지자체는 신규 이주민들이 행정 절차를 스스로 완료할 수 있도록 다국어 포털 안내 흐름을 전면 개편했다.",
+        "The / city / office / redesigned / the / multilingual / portal / so that / new / residents / could / complete / administrative / procedures / that / had / previously / confused / them"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "new",
+      "residents",
+      "complete",
+      "administrative",
+      "procedures",
+      "had",
+      "previously",
+      "confused",
+      "them"
+    ],
+    "blankTargets": [
+      "so that new residents could complete administrative procedures that had previously confused them"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "formal"
+    ],
+    "distractorSeeds": {
+      "auxError": "The city office redesigned the multilingual portal so that new residents can complete administrative procedures that had previously confused them.",
+      "structureError": "The city office redesigned the multilingual portal so that new residents to complete administrative procedures that had previously confused them.",
+      "wordOrderError": "The city office redesigned the multilingual portal so that could new residents complete administrative procedures that had previously confused them.",
+      "conjunctionError": "The city office redesigned the multilingual portal because new residents could complete administrative procedures that had previously confused them.",
+      "statementForm": [
+        "The city office redesigned the multilingual portal so that new residents could complete administrative procedures that had previously confused them",
+        "The city office redesigned the multilingual portal so that new residents could complete administrative procedures that had previously confused them."
+      ],
+      "fragmentForm": "The city office redesigned the multilingual portal ____",
+      "wormholeVariants": [
+        "The city office redesigned the multilingual portal so that new residents can complete administrative procedures that had previously confused them.",
+        "The city office redesigned the multilingual portal so that could new residents complete administrative procedures that had previously confused them.",
+        "The city office redesigned the multilingual portal because new residents could complete administrative procedures that had previously confused them.",
+        "The city office redesigned the multilingual portal to help new residents complete administrative procedures that had previously confused them.",
+        "The city office redesigned the multilingual portal in order to help new residents complete administrative procedures that had previously confused them.",
+        "The city office redesigned the multilingual portal so as to help new residents complete administrative procedures that had previously confused them.",
+        "So that new residents could complete administrative procedures that had previously confused them, The city office redesigned the multilingual portal.",
+        "The city office redesigned the multilingual portal, so new residents could complete administrative procedures that had previously confused them."
+      ]
+    },
+    "fragmentForm": "The city office redesigned the multilingual portal ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_029",
+    "seedId": "so_that_purpose_advanced_029",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 택배 기사들이 건물을 혼동하지 않도록 출입구 번호를 크게 붙였다.",
+    "english": "We posted large entrance numbers so that delivery drivers could identify each building correctly.",
+    "words": [
+      "We",
+      "posted",
+      "large",
+      "entrance",
+      "numbers",
+      "so",
+      "that",
+      "delivery",
+      "drivers",
+      "could",
+      "identify",
+      "each",
+      "building",
+      "correctly",
+      "."
+    ],
+    "wordCount": 14,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 택배 기사들이 건물을 혼동하지 않도록 출입구 번호를 크게 붙였다.",
+        "We / posted / large / entrance / numbers / so that / delivery / drivers / could / identify / each / building / correctly"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "delivery",
+      "drivers",
+      "identify",
+      "each",
+      "building",
+      "correctly"
+    ],
+    "blankTargets": [
+      "so that delivery drivers could identify each building correctly"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "daily"
+    ],
+    "distractorSeeds": {
+      "auxError": "We posted large entrance numbers so that delivery drivers can identify each building correctly.",
+      "structureError": "We posted large entrance numbers so that delivery drivers to identify each building correctly.",
+      "wordOrderError": "We posted large entrance numbers so that could delivery drivers identify each building correctly.",
+      "conjunctionError": "We posted large entrance numbers because delivery drivers could identify each building correctly.",
+      "statementForm": [
+        "We posted large entrance numbers so that delivery drivers could identify each building correctly",
+        "We posted large entrance numbers so that delivery drivers could identify each building correctly."
+      ],
+      "fragmentForm": "We posted large entrance numbers ____",
+      "wormholeVariants": [
+        "We posted large entrance numbers so that delivery drivers can identify each building correctly.",
+        "We posted large entrance numbers so that could delivery drivers identify each building correctly.",
+        "We posted large entrance numbers because delivery drivers could identify each building correctly.",
+        "We posted large entrance numbers to help delivery drivers identify each building correctly.",
+        "We posted large entrance numbers in order to help delivery drivers identify each building correctly.",
+        "We posted large entrance numbers so as to help delivery drivers identify each building correctly.",
+        "So that delivery drivers could identify each building correctly, We posted large entrance numbers.",
+        "We posted large entrance numbers, so delivery drivers could identify each building correctly."
+      ]
+    },
+    "fragmentForm": "We posted large entrance numbers ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_030",
+    "seedId": "so_that_purpose_advanced_030",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 아이들이 소음을 줄일 수 있도록 도서관에 조용한 놀이 구역을 마련했다.",
+    "english": "We created a quiet play zone so that children could lower their noise level indoors.",
+    "words": [
+      "We",
+      "created",
+      "a",
+      "quiet",
+      "play",
+      "zone",
+      "so",
+      "that",
+      "children",
+      "could",
+      "lower",
+      "their",
+      "noise",
+      "level",
+      "indoors",
+      "."
+    ],
+    "wordCount": 15,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 아이들이 소음을 줄일 수 있도록 도서관에 조용한 놀이 구역을 마련했다.",
+        "We / created / a / quiet / play / zone / so that / children / could / lower / their / noise / level / indoors"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "children",
+      "lower",
+      "their",
+      "noise",
+      "level",
+      "indoors"
+    ],
+    "blankTargets": [
+      "so that children could lower their noise level indoors"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "public"
+    ],
+    "distractorSeeds": {
+      "auxError": "We created a quiet play zone so that children can lower their noise level indoors.",
+      "structureError": "We created a quiet play zone so that children to lower their noise level indoors.",
+      "wordOrderError": "We created a quiet play zone so that could children lower their noise level indoors.",
+      "conjunctionError": "We created a quiet play zone because children could lower their noise level indoors.",
+      "statementForm": [
+        "We created a quiet play zone so that children could lower their noise level indoors",
+        "We created a quiet play zone so that children could lower their noise level indoors."
+      ],
+      "fragmentForm": "We created a quiet play zone ____",
+      "wormholeVariants": [
+        "We created a quiet play zone so that children can lower their noise level indoors.",
+        "We created a quiet play zone so that could children lower their noise level indoors.",
+        "We created a quiet play zone because children could lower their noise level indoors.",
+        "We created a quiet play zone to help children lower their noise level indoors.",
+        "We created a quiet play zone in order to help children lower their noise level indoors.",
+        "We created a quiet play zone so as to help children lower their noise level indoors.",
+        "So that children could lower their noise level indoors, We created a quiet play zone.",
+        "We created a quiet play zone, so children could lower their noise level indoors."
+      ]
+    },
+    "fragmentForm": "We created a quiet play zone ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_031",
+    "seedId": "so_that_purpose_advanced_031",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "기획자는 참가자들이 혼잡을 피할 수 있도록 입장 시간을 구간별로 나눴다.",
+    "english": "The organizer split entry times so that participants could avoid heavy congestion.",
+    "words": [
+      "The",
+      "organizer",
+      "split",
+      "entry",
+      "times",
+      "so",
+      "that",
+      "participants",
+      "could",
+      "avoid",
+      "heavy",
+      "congestion",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "기획자는 참가자들이 혼잡을 피할 수 있도록 입장 시간을 구간별로 나눴다.",
+        "The / organizer / split / entry / times / so that / participants / could / avoid / heavy / congestion"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "participants",
+      "heavy",
+      "congestion"
+    ],
+    "blankTargets": [
+      "so that participants could avoid heavy congestion"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "event"
+    ],
+    "distractorSeeds": {
+      "auxError": "The organizer split entry times so that participants can avoid heavy congestion.",
+      "structureError": "The organizer split entry times so that participants to avoid heavy congestion.",
+      "wordOrderError": "The organizer split entry times so that could participants avoid heavy congestion.",
+      "conjunctionError": "The organizer split entry times because participants could avoid heavy congestion.",
+      "statementForm": [
+        "The organizer split entry times so that participants could avoid heavy congestion",
+        "The organizer split entry times so that participants could avoid heavy congestion."
+      ],
+      "fragmentForm": "The organizer split entry times ____",
+      "wormholeVariants": [
+        "The organizer split entry times so that participants can avoid heavy congestion.",
+        "The organizer split entry times so that could participants avoid heavy congestion.",
+        "The organizer split entry times because participants could avoid heavy congestion.",
+        "The organizer split entry times to help participants avoid heavy congestion.",
+        "The organizer split entry times in order to help participants avoid heavy congestion.",
+        "The organizer split entry times so as to help participants avoid heavy congestion.",
+        "So that participants could avoid heavy congestion, The organizer split entry times.",
+        "The organizer split entry times, so participants could avoid heavy congestion."
+      ]
+    },
+    "fragmentForm": "The organizer split entry times ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_032",
+    "seedId": "so_that_purpose_advanced_032",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 공기가 건조해지지 않도록 밤마다 가습기를 작동시킨다.",
+    "english": "I run the humidifier every night so that the room can stay comfortable.",
+    "words": [
+      "I",
+      "run",
+      "the",
+      "humidifier",
+      "every",
+      "night",
+      "so",
+      "that",
+      "the",
+      "room",
+      "can",
+      "stay",
+      "comfortable",
+      "."
+    ],
+    "wordCount": 13,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "나는 공기가 건조해지지 않도록 밤마다 가습기를 작동시킨다.",
+        "I / run / the / humidifier / every / night / so that / the / room / can / stay / comfortable"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "the",
+      "room",
+      "stay",
+      "comfortable"
+    ],
+    "blankTargets": [
+      "so that the room can stay comfortable"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "can",
+      "home"
+    ],
+    "distractorSeeds": {
+      "auxError": "I run the humidifier every night so that the room could stay comfortable.",
+      "structureError": "I run the humidifier every night so that the room to stay comfortable.",
+      "wordOrderError": "I run the humidifier every night so that can the room stay comfortable.",
+      "conjunctionError": "I run the humidifier every night because the room can stay comfortable.",
+      "statementForm": [
+        "I run the humidifier every night so that the room can stay comfortable",
+        "I run the humidifier every night so that the room can stay comfortable."
+      ],
+      "fragmentForm": "I run the humidifier every night ____",
+      "wormholeVariants": [
+        "I run the humidifier every night so that the room could stay comfortable.",
+        "I run the humidifier every night so that can the room stay comfortable.",
+        "I run the humidifier every night because the room can stay comfortable.",
+        "I run the humidifier every night to help the room stay comfortable.",
+        "I run the humidifier every night in order to help the room stay comfortable.",
+        "I run the humidifier every night so as to help the room stay comfortable.",
+        "So that the room can stay comfortable, I run the humidifier every night.",
+        "I run the humidifier every night, so the room can stay comfortable."
+      ]
+    },
+    "fragmentForm": "I run the humidifier every night ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_033",
+    "seedId": "so_that_purpose_advanced_033",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "**[High Difficulty]** 연구소는 후속 팀이 측정값을 재현할 수 있도록 보정 절차를 표준 문서로 통합했다.",
+    "english": "The laboratory standardized calibration procedures so that future teams could reproduce results that would otherwise have been impossible to verify.",
+    "words": [
+      "The",
+      "laboratory",
+      "standardized",
+      "calibration",
+      "procedures",
+      "so",
+      "that",
+      "future",
+      "teams",
+      "could",
+      "reproduce",
+      "results",
+      "that",
+      "would",
+      "otherwise",
+      "have",
+      "been",
+      "impossible",
+      "to",
+      "verify",
+      "."
+    ],
+    "wordCount": 20,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "**[High Difficulty]** 연구소는 후속 팀이 측정값을 재현할 수 있도록 보정 절차를 표준 문서로 통합했다.",
+        "The / laboratory / standardized / calibration / procedures / so that / future / teams / could / reproduce / results / that / would / otherwise / have / been / impossible / to / verify"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "future",
+      "teams",
+      "reproduce",
+      "results",
+      "otherwise",
+      "have",
+      "been",
+      "impossible",
+      "to",
+      "verify"
+    ],
+    "blankTargets": [
+      "so that future teams could reproduce results that would otherwise have been impossible to verify"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "formal"
+    ],
+    "distractorSeeds": {
+      "auxError": "The laboratory standardized calibration procedures so that future teams can reproduce results that would otherwise have been impossible to verify.",
+      "structureError": "The laboratory standardized calibration procedures so that future teams to reproduce results that would otherwise have been impossible to verify.",
+      "wordOrderError": "The laboratory standardized calibration procedures so that could future teams reproduce results that would otherwise have been impossible to verify.",
+      "conjunctionError": "The laboratory standardized calibration procedures because future teams could reproduce results that would otherwise have been impossible to verify.",
+      "statementForm": [
+        "The laboratory standardized calibration procedures so that future teams could reproduce results that would otherwise have been impossible to verify",
+        "The laboratory standardized calibration procedures so that future teams could reproduce results that would otherwise have been impossible to verify."
+      ],
+      "fragmentForm": "The laboratory standardized calibration procedures ____",
+      "wormholeVariants": [
+        "The laboratory standardized calibration procedures so that future teams can reproduce results that would otherwise have been impossible to verify.",
+        "The laboratory standardized calibration procedures so that could future teams reproduce results that would otherwise have been impossible to verify.",
+        "The laboratory standardized calibration procedures because future teams could reproduce results that would otherwise have been impossible to verify.",
+        "The laboratory standardized calibration procedures to help future teams reproduce results that would otherwise have been impossible to verify.",
+        "The laboratory standardized calibration procedures in order to help future teams reproduce results that would otherwise have been impossible to verify.",
+        "The laboratory standardized calibration procedures so as to help future teams reproduce results that would otherwise have been impossible to verify.",
+        "So that future teams could reproduce results that would otherwise have been impossible to verify, The laboratory standardized calibration procedures.",
+        "The laboratory standardized calibration procedures, so future teams could reproduce results that would otherwise have been impossible to verify."
+      ]
+    },
+    "fragmentForm": "The laboratory standardized calibration procedures ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_034",
+    "seedId": "so_that_purpose_advanced_034",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "우리는 시청자가 대사를 놓치지 않도록 영상에 자막을 삽입했다.",
+    "english": "We inserted subtitles so that viewers could catch every line of dialogue.",
+    "words": [
+      "We",
+      "inserted",
+      "subtitles",
+      "so",
+      "that",
+      "viewers",
+      "could",
+      "catch",
+      "every",
+      "line",
+      "of",
+      "dialogue",
+      "."
+    ],
+    "wordCount": 12,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "우리는 시청자가 대사를 놓치지 않도록 영상에 자막을 삽입했다.",
+        "We / inserted / subtitles / so that / viewers / could / catch / every / line / of / dialogue"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "viewers",
+      "catch",
+      "every",
+      "line",
+      "of",
+      "dialogue"
+    ],
+    "blankTargets": [
+      "so that viewers could catch every line of dialogue"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "media"
+    ],
+    "distractorSeeds": {
+      "auxError": "We inserted subtitles so that viewers can catch every line of dialogue.",
+      "structureError": "We inserted subtitles so that viewers to catch every line of dialogue.",
+      "wordOrderError": "We inserted subtitles so that could viewers catch every line of dialogue.",
+      "conjunctionError": "We inserted subtitles because viewers could catch every line of dialogue.",
+      "statementForm": [
+        "We inserted subtitles so that viewers could catch every line of dialogue",
+        "We inserted subtitles so that viewers could catch every line of dialogue."
+      ],
+      "fragmentForm": "We inserted subtitles ____",
+      "wormholeVariants": [
+        "We inserted subtitles so that viewers can catch every line of dialogue.",
+        "We inserted subtitles so that could viewers catch every line of dialogue.",
+        "We inserted subtitles because viewers could catch every line of dialogue.",
+        "We inserted subtitles to help viewers catch every line of dialogue.",
+        "We inserted subtitles in order to help viewers catch every line of dialogue.",
+        "We inserted subtitles so as to help viewers catch every line of dialogue.",
+        "So that viewers could catch every line of dialogue, We inserted subtitles.",
+        "We inserted subtitles, so viewers could catch every line of dialogue."
+      ]
+    },
+    "fragmentForm": "We inserted subtitles ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_035",
+    "seedId": "so_that_purpose_advanced_035",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "**[High Difficulty]** 국제 협력팀은 여러 국가 담당자가 동일 기준으로 문서를 검토할 수 있도록 용어 정의집을 구축했다.",
+    "english": "The international task force built a terminology guide so that reviewers from different countries could not fail to interpret key terms in the same way.",
+    "words": [
+      "The",
+      "international",
+      "task",
+      "force",
+      "built",
+      "a",
+      "terminology",
+      "guide",
+      "so",
+      "that",
+      "reviewers",
+      "from",
+      "different",
+      "countries",
+      "could",
+      "not",
+      "fail",
+      "to",
+      "interpret",
+      "key",
+      "terms",
+      "in",
+      "the",
+      "same",
+      "way",
+      "."
+    ],
+    "wordCount": 25,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v2",
+    "clueUnits": [
+      [
+        "**[High Difficulty]** 국제 협력팀은 여러 국가 담당자가 동일 기준으로 문서를 검토할 수 있도록 용어 정의집을 구축했다.",
+        "The / international / task / force / built / a / terminology / guide / so that / reviewers / from / different / countries / could / not / fail / to / interpret / key / terms / in / the / same / way"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "reviewers",
+      "from",
+      "different",
+      "countries",
+      "fail",
+      "to",
+      "interpret",
+      "key",
+      "terms",
+      "in",
+      "the",
+      "same",
+      "way"
+    ],
+    "blankTargets": [
+      "so that reviewers from different countries could not fail to interpret key terms in the same way"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "affirm",
+      "could",
+      "formal_high"
+    ],
+    "distractorSeeds": {
+      "auxError": "The international task force built a terminology guide so that reviewers from different countries can not fail to interpret key terms in the same way.",
+      "structureError": "The international task force built a terminology guide so that reviewers from different countries to not fail to interpret key terms in the same way.",
+      "wordOrderError": "The international task force built a terminology guide so that could reviewers from different countries not fail to interpret key terms in the same way.",
+      "conjunctionError": "The international task force built a terminology guide because reviewers from different countries could not fail to interpret key terms in the same way.",
+      "statementForm": [
+        "The international task force built a terminology guide so that reviewers from different countries could not fail to interpret key terms in the same way",
+        "The international task force built a terminology guide so that reviewers from different countries could not fail to interpret key terms in the same way."
+      ],
+      "fragmentForm": "The international task force built a terminology guide ____",
+      "wormholeVariants": [
+        "The international task force built a terminology guide so that reviewers from different countries can not fail to interpret key terms in the same way.",
+        "The international task force built a terminology guide so that could reviewers from different countries not fail to interpret key terms in the same way.",
+        "The international task force built a terminology guide because reviewers from different countries could not fail to interpret key terms in the same way.",
+        "The international task force built a terminology guide to help reviewers from different countries not fail to interpret key terms in the same way.",
+        "The international task force built a terminology guide in order to help reviewers from different countries not fail to interpret key terms in the same way.",
+        "The international task force built a terminology guide so as to help reviewers from different countries not fail to interpret key terms in the same way.",
+        "So that reviewers from different countries could not fail to interpret key terms in the same way, The international task force built a terminology guide.",
+        "The international task force built a terminology guide, so reviewers from different countries could not fail to interpret key terms in the same way."
+      ]
+    },
+    "fragmentForm": "The international task force built a terminology guide ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_036",
+    "seedId": "so_that_purpose_advanced_result_036",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 열심히 공부했고, 그래서 시험에 합격했다.",
+    "english": "I studied hard, so I passed the test.",
+    "words": [
+      "I",
+      "studied",
+      "hard",
+      ",",
+      "so",
+      "I",
+      "passed",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 8,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v3",
+    "clueUnits": [
+      [
+        "나는 열심히 공부했고, 그래서 시험에 합격했다.",
+        "I / studied / hard / so / I / passed / the / test"
+      ],
+      [
+        "so + result clause",
+        "result"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "I",
+      "passed",
+      "the",
+      "test"
+    ],
+    "blankTargets": [
+      "so I passed the test"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "result",
+      "contrast",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I studied hard so that I can pass the test.",
+      "structureError": "I studied hard so that I can pass the test.",
+      "wordOrderError": "I studied hard, so passed I the test.",
+      "conjunctionError": "I studied hard because I passed the test.",
+      "statementForm": [
+        "I studied hard, so I passed the test."
+      ],
+      "fragmentForm": "I studied hard, ____.",
+      "wormholeVariants": [
+        "I studied hard so that I can pass the test.",
+        "I studied hard so that can I pass the test.",
+        "I studied hard because I can pass the test.",
+        "I studied hard to pass the test.",
+        "I studied hard in order to pass the test.",
+        "I studied hard so as to pass the test."
+      ]
+    },
+    "fragmentForm": "I studied hard, ____."
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_037",
+    "seedId": "so_that_purpose_advanced_to_037",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 시험에 합격하기 위해 열심히 공부한다.",
+    "english": "I study hard to pass the test.",
+    "words": [
+      "I",
+      "study",
+      "hard",
+      "to",
+      "pass",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 7,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v3",
+    "clueUnits": [
+      [
+        "나는 시험에 합격하기 위해 열심히 공부한다.",
+        "I / study / hard / to / pass / the / test"
+      ],
+      [
+        "to V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "to",
+      "pass",
+      "the",
+      "test"
+    ],
+    "blankTargets": [
+      "to pass the test"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "to_infinitive",
+      "purpose",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I study hard so that I can pass the test.",
+      "structureError": "I study hard so that can pass the test.",
+      "wordOrderError": "I study hard so that can I pass the test.",
+      "conjunctionError": "I study hard because I can pass the test.",
+      "statementForm": [
+        "I study hard to pass the test."
+      ],
+      "fragmentForm": "I study hard ____.",
+      "wormholeVariants": [
+        "I study hard so that I can pass the test.",
+        "I study hard so that can I pass the test.",
+        "I study hard because I can pass the test.",
+        "I study hard in order to pass the test.",
+        "I study hard so as to pass the test."
+      ]
+    },
+    "fragmentForm": "I study hard ____."
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_038",
+    "seedId": "so_that_purpose_advanced_in_order_to_038",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 시험에 합격하기 위해서 열심히 공부한다.",
+    "english": "I study hard in order to pass the test.",
+    "words": [
+      "I",
+      "study",
+      "hard",
+      "in",
+      "order",
+      "to",
+      "pass",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v3",
+    "clueUnits": [
+      [
+        "나는 시험에 합격하기 위해서 열심히 공부한다.",
+        "I / study / hard / in / order / to / pass / the / test"
+      ],
+      [
+        "in order to V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "in",
+      "order",
+      "to",
+      "pass",
+      "the",
+      "test"
+    ],
+    "blankTargets": [
+      "in order to pass the test"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "in_order_to",
+      "purpose",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "I study hard so that I can pass the test.",
+      "structureError": "I study hard in order pass the test.",
+      "wordOrderError": "I study hard in order to can pass the test.",
+      "conjunctionError": "I study hard because I can pass the test.",
+      "statementForm": [
+        "I study hard in order to pass the test."
+      ],
+      "fragmentForm": "I study hard ____.",
+      "wormholeVariants": [
+        "I study hard so that I can pass the test.",
+        "I study hard to pass the test.",
+        "I study hard so that can I pass the test.",
+        "I study hard because I can pass the test.",
+        "I study hard so as to pass the test."
+      ]
+    },
+    "fragmentForm": "I study hard ____."
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_039",
+    "seedId": "so_that_purpose_advanced_so_as_to_039",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "나는 시험에 합격하기 위해서 열심히 공부한다.",
+    "english": "I study hard so as to pass the test.",
+    "words": [
+      "I",
+      "study",
+      "hard",
+      "so",
+      "as",
+      "to",
+      "pass",
+      "the",
+      "test",
+      "."
+    ],
+    "wordCount": 9,
+    "grammar": "so_that_purpose",
+    "difficulty": "intermediate",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v3",
+    "clueUnits": [
+      [
+        "나는 시험에 합격하기 위해서 열심히 공부한다.",
+        "I / study / hard / so / as / to / pass / the / test"
+      ],
+      [
+        "so as to V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "as",
+      "to",
+      "pass",
+      "the",
+      "test"
+    ],
+    "blankTargets": [
+      "so as to pass the test"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "so_as_to",
+      "purpose",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "I study hard so that I can pass the test.",
+      "structureError": "I study hard so as pass the test.",
+      "wordOrderError": "I study hard so as to can pass the test.",
+      "conjunctionError": "I study hard because I can pass the test.",
+      "statementForm": [
+        "I study hard so as to pass the test."
+      ],
+      "fragmentForm": "I study hard ____.",
+      "wormholeVariants": [
+        "I study hard so that I can pass the test.",
+        "I study hard to pass the test.",
+        "I study hard in order to pass the test.",
+        "I study hard so that can I pass the test.",
+        "I study hard because I can pass the test."
+      ]
+    },
+    "fragmentForm": "I study hard ____."
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_040",
+    "seedId": "so_that_purpose_advanced_can_could_040",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "그는 기차를 잡을 수 있도록 일찍 떠났다.",
+    "english": "He left early so that he could catch the train.",
+    "words": [
+      "He",
+      "left",
+      "early",
+      "so",
+      "that",
+      "he",
+      "could",
+      "catch",
+      "the",
+      "train",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v3",
+    "clueUnits": [
+      [
+        "그는 기차를 잡을 수 있도록 일찍 떠났다.",
+        "He / left / early / so that / he / could / catch / the / train"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "he",
+      "catch",
+      "the",
+      "train"
+    ],
+    "blankTargets": [
+      "so that he could catch the train"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "can_could",
+      "tense_trap",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "He left early so that he can catch the train.",
+      "structureError": "He left early so that he to catch the train.",
+      "wordOrderError": "He left early so that could he catch the train.",
+      "conjunctionError": "He left early because he could catch the train.",
+      "statementForm": [
+        "He left early so that he could catch the train",
+        "He left early so that he could catch the train."
+      ],
+      "fragmentForm": "He left early ____",
+      "wormholeVariants": [
+        "He left early so that he can catch the train.",
+        "He left early so that could he catch the train.",
+        "He left early because he could catch the train.",
+        "He left early to help he catch the train.",
+        "He left early in order to help he catch the train.",
+        "He left early so as to help he catch the train.",
+        "So that he could catch the train, He left early.",
+        "He left early, so he could catch the train."
+      ]
+    },
+    "fragmentForm": "He left early ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_041",
+    "seedId": "so_that_purpose_advanced_can_could_041",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "그는 기차를 잡을 수 있도록 일찍 떠난다.",
+    "english": "He leaves early so that he can catch the train.",
+    "words": [
+      "He",
+      "leaves",
+      "early",
+      "so",
+      "that",
+      "he",
+      "can",
+      "catch",
+      "the",
+      "train",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v3",
+    "clueUnits": [
+      [
+        "그는 기차를 잡을 수 있도록 일찍 떠난다.",
+        "He / leaves / early / so that / he / can / catch / the / train"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "he",
+      "catch",
+      "the",
+      "train"
+    ],
+    "blankTargets": [
+      "so that he can catch the train"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "can_could",
+      "present_trap",
+      "basic"
+    ],
+    "distractorSeeds": {
+      "auxError": "He leaves early so that he could catch the train.",
+      "structureError": "He leaves early so that he to catch the train.",
+      "wordOrderError": "He leaves early so that can he catch the train.",
+      "conjunctionError": "He leaves early because he can catch the train.",
+      "statementForm": [
+        "He leaves early so that he can catch the train",
+        "He leaves early so that he can catch the train."
+      ],
+      "fragmentForm": "He leaves early ____",
+      "wormholeVariants": [
+        "He leaves early so that he could catch the train.",
+        "He leaves early so that can he catch the train.",
+        "He leaves early because he can catch the train.",
+        "He leaves early to help he catch the train.",
+        "He leaves early in order to help he catch the train.",
+        "He leaves early so as to help he catch the train.",
+        "So that he can catch the train, He leaves early.",
+        "He leaves early, so he can catch the train."
+      ]
+    },
+    "fragmentForm": "He leaves early ____"
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_042",
+    "seedId": "so_that_purpose_advanced_would_not_042",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "그녀는 아기가 깨지 않도록 속삭였다.",
+    "english": "She whispered so that the baby would not wake up.",
+    "words": [
+      "She",
+      "whispered",
+      "so",
+      "that",
+      "the",
+      "baby",
+      "would",
+      "not",
+      "wake",
+      "up",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_that_purpose",
+    "difficulty": "advanced",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v3",
+    "clueUnits": [
+      [
+        "그녀는 아기가 깨지 않도록 속삭였다.",
+        "She / whispered / so that / the / baby / would / not / wake / up"
+      ],
+      [
+        "so that + S + would not + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "the",
+      "baby",
+      "wake",
+      "up"
+    ],
+    "blankTargets": [
+      "so that the baby would not wake up"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "would_not",
+      "tense_trap",
+      "advanced"
+    ],
+    "distractorSeeds": {
+      "auxError": "She whispered so that the baby could not wake up.",
+      "structureError": "She whispered so that the baby to not wake up.",
+      "wordOrderError": "She whispered so that would the baby not wake up.",
+      "conjunctionError": "She whispered because the baby would not wake up.",
+      "statementForm": [
+        "She whispered so that the baby would not wake up."
+      ],
+      "fragmentForm": "She whispered ____.",
+      "wormholeVariants": [
+        "She whispered so that the baby could not wake up.",
+        "She whispered so that would the baby not wake up.",
+        "She whispered because the baby would not wake up.",
+        "She whispered to help the baby not wake up.",
+        "She whispered in order to help the baby not wake up.",
+        "She whispered so as to help the baby not wake up.",
+        "So that the baby would not wake up, she whispered.",
+        "She whispered, so the baby would not wake up."
+      ]
+    },
+    "fragmentForm": "She whispered ____."
+  },
+  {
+    "id": "m3_so_that_purpose_advanced_043",
+    "seedId": "so_that_purpose_advanced_will_not_043",
+    "grade": "middle3",
+    "semester": "all",
+    "lessonBand": "all",
+    "chapterKey": "so_that_purpose",
+    "chapterLabelKo": "목적의 so that",
+    "korean": "그녀는 아기가 깨지 않도록 속삭인다.",
+    "english": "She whispers so that the baby will not wake up.",
+    "words": [
+      "She",
+      "whispers",
+      "so",
+      "that",
+      "the",
+      "baby",
+      "will",
+      "not",
+      "wake",
+      "up",
+      "."
+    ],
+    "wordCount": 10,
+    "grammar": "so_that_purpose",
+    "difficulty": "basic",
+    "sourceType": "db_final_refined_middle3_so_that_purpose_advanced_v3",
+    "clueUnits": [
+      [
+        "그녀는 아기가 깨지 않도록 속삭인다.",
+        "She / whispers / so that / the / baby / will / not / wake / up"
+      ],
+      [
+        "so that + S + can/could + V",
+        "structure"
+      ],
+      [
+        "to V / in order to V / so as to V",
+        "compare"
+      ]
+    ],
+    "extraClueWordPool": [
+      "so that",
+      "to help",
+      "in order to help",
+      "so as to help",
+      "purpose",
+      "result",
+      "because",
+      "can",
+      "could",
+      "would",
+      "not",
+      "follow",
+      "find",
+      "remember",
+      "compare",
+      "understand",
+      "avoid",
+      "so",
+      "that",
+      "the",
+      "baby",
+      "will",
+      "wake",
+      "up"
+    ],
+    "blankTargets": [
+      "so that the baby will not wake up"
+    ],
+    "tags": [
+      "so_that_purpose",
+      "will_not",
+      "tense_trap",
+      "intermediate"
+    ],
+    "distractorSeeds": {
+      "auxError": "She whispers so that the baby can not wake up.",
+      "structureError": "She whispers so that the baby to not wake up.",
+      "wordOrderError": "She whispers so that will the baby not wake up.",
+      "conjunctionError": "She whispers because the baby will not wake up.",
+      "statementForm": [
+        "She whispers so that the baby will not wake up",
+        "She whispers so that the baby will not wake up."
+      ],
+      "fragmentForm": "She whispers ____",
+      "wormholeVariants": [
+        "She whispers so that the baby could not wake up.",
+        "She whispers so that will the baby not wake up.",
+        "She whispers because the baby will not wake up.",
+        "She whispers to help the baby not wake up.",
+        "She whispers in order to help the baby not wake up.",
+        "She whispers so as to help the baby not wake up.",
+        "So that the baby will not wake up, She whispers.",
+        "She whispers, so the baby will not wake up."
+      ]
+    },
+    "fragmentForm": "She whispers ____"
+  }
+]
