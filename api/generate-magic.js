@@ -124,140 +124,136 @@ const SENTENCE_BANK_FILE_MAP = {
   },
 
   middle2: {
-    wh_questions: "middle2_wh_questions.json",
-    can: "middle2_can.json",
-    to_infinitive_adverbial: "middle2_to_infinitive_adverbial.json",
-    to_infinitive_adjective: "middle2_to_infinitive_adjective.json",
-    wh_to_infinitive: "middle2_wh_to_infinitive.json",
-    gerund: "middle2_gerund.json",
-    perception_verbs: "middle2_perception_verbs.json",
-    quasi_causative: "middle2_quasi_causative.json",
-    causative_verbs: "middle2_causative_verbs.json",
-    participles: "middle2_participles.json",
-    passive: "middle2_passive.json",
-    indefinite_pronouns: "middle2_indefinite_pronouns.json",
-    reflexive_pronouns: "middle2_reflexive_pronouns.json",
-    something_adjective: "middle2_something_adjective.json",
-    frequency_adverbs: "middle2_frequency_adverbs.json",
-    quantity_adjectives: "middle2_quantity_adjectives.json",
-    comparative_emphasis: "middle2_comparative_emphasis.json",
-    the_comparative_the_comparative: "middle2_the_comparative_the_comparative.json",
-    objective_relative_pronouns: "middle2_objective_relative_pronouns.json",
-    relative_pronoun_what: "middle2_relative_pronoun_what.json",
-    subject_relative_pronouns: "middle2_subject_relative_pronouns.json",
-    relative_adverbs: "middle2_relative_adverbs.json",
-    so_that: "middle2_so_that.json",
-    so_that_purpose: "middle2_so_that_purpose.json",
-    not_only_but_also: "middle2_not_only_but_also.json",
     after_before: "middle2_after_before.json",
     although: "middle2_although.json",
+    as_as: "middle2_as_as.json",
     as_conjunction: "middle2_as_conjunction.json",
     because: "middle2_because.json",
     because_of: "middle2_because_of.json",
-    if_condition: "middle2_if_condition.json",
-    since: "middle2_since.json",
-    that: "middle2_that.json",
-    while_when: "middle2_while_when.json",
-    subjunctive_past: "middle2_subjunctive_past.json",
-    quantity_agreement: "middle2_quantity_agreement.json",
-    here_there_inversion: "middle2_here_there_inversion.json",
-    do_emphasis: "middle2_do_emphasis.json",
-    with_noun_phrase_be: "middle2_with_noun_phrase_be.json",
-    with_noun_phrase_have: "middle2_with_noun_phrase_have.json",
-    object_complement_adj: "middle2_object_complement_adj.json",
-    sensory_verb: "middle2_sensory_verb.json",
+    causative_verbs: "middle2_causative_verbs.json",
+    comparative: "middle2_comparative.json",
+    comparative_emphasis: "middle2_comparative_emphasis.json",
     ditransitive: "middle2_ditransitive.json",
-    tense_agreement: "middle2_tense_agreement.json",
-    too_to_enough_to: "middle2_too_to_enough_to.json",
+    do_emphasis: "middle2_do_emphasis.json",
+    dont_have_to: "middle2_dont_have_to.json",
+    frequency_adverbs: "middle2_frequency_adverbs.json",
+    gerund: "middle2_gerund.json",
+    had_better: "middle2_had_better.json",
+    here_there_inversion: "middle2_here_there_inversion.json",
+    if_condition: "middle2_if_condition.json",
+    imperatives: "middle2_imperatives.json",
+    indefinite_pronouns: "middle2_indefinite_pronouns.json",
+    indirect_question: "middle2_indirect_question.json",
     it_to: "middle2_it_to.json",
     modal_extended: "middle2_modal_extended.json",
-    dont_have_to: "middle2_dont_have_to.json",
-    had_better: "middle2_had_better.json",
-    used_to: "middle2_used_to.json",
-    as_as: "middle2_as_as.json",
-    comparative: "middle2_comparative.json",
-    superlative: "middle2_superlative.json",
-    indirect_question: "middle2_indirect_question.json",
-    imperatives: "middle2_imperatives.json",
+    not_only_but_also: "middle2_not_only_but_also.json",
+    object_complement_adj: "middle2_object_complement_adj.json",
+    objective_relative_pronouns: "middle2_objective_relative_pronouns.json",
+    participles: "middle2_participles.json",
+    passive: "middle2_passive.json",
+    perception_verbs: "middle2_perception_verbs.json",
     present_perfect: "middle2_present_perfect.json",
+    quantity_adjectives: "middle2_quantity_adjectives.json",
+    quantity_agreement: "middle2_quantity_agreement.json",
+    quasi_causative: "middle2_quasi_causative.json",
+    reflexive_pronouns: "middle2_reflexive_pronouns.json",
+    relative_adverbs: "middle2_relative_adverbs.json",
+    relative_pronoun_what: "middle2_relative_pronoun_what.json",
+    relative_pronouns: "middle2_relative_pronouns.json",
+    sensory_verb: "middle2_sensory_verb.json",
+    since: "middle2_since.json",
+    so_that: "middle2_so_that.json",
+    so_that_purpose: "middle2_so_that_purpose.json",
+    something_adjective: "middle2_something_adjective.json",
+    subject_relative_pronouns: "middle2_subject_relative_pronouns.json",
+    subjunctive_past: "middle2_subjunctive_past.json",
+    superlative: "middle2_superlative.json",
     tag_questions: "middle2_tag_questions.json",
+    tense_agreement: "middle2_tense_agreement.json",
+    that: "middle2_that.json",
+    the_comparative_the_comparative: "middle2_the_comparative_the_comparative.json",
+    to_infinitive_adjective: "middle2_to_infinitive_adjective.json",
+    to_infinitive_adverbial: "middle2_to_infinitive_adverbial.json",
+    too_to_enough_to: "middle2_too_to_enough_to.json",
+    used_to: "middle2_used_to.json",
+    wh_questions: "middle2_wh_questions.json",
+    wh_to_infinitive: "middle2_wh_to_infinitive.json",
+    while_when: "middle2_while_when.json",
+    with_noun_phrase_be: "middle2_with_noun_phrase_be.json",
+    with_noun_phrase_have: "middle2_with_noun_phrase_have.json"
   },
 
   middle3: {
-    present_perfect_progressive: "middle3_present_perfect_progressive.json",
-    past_perfect: "middle3_past_perfect.json",
-    present_perfect: "middle3_present_perfect.json",
-    should_have_pp: "middle3_should_have_pp.json",
-    modal_have_pp: "middle3_modal_have_pp.json",
-    have_object_pp: "middle3_have_object_pp.json",
-    it_seems_that: "middle3_it_seems_that.json",
-    so_that: "middle3_so_that.json",
-    too_enough_to: "middle3_too_enough_to.json",
-    it_to_infinitive_subject: "middle3_it_to_infinitive_subject.json",
+    total_vs_partial_negation: "middle3_total_vs_partial_negation.json",
+    sva_of_structure: "middle3_sva_of_structure.json",
+    object_complement_5th_form: "middle3_object_complement_5th_form.json",
+    do_emphasis: "middle3_do_emphasis.json",
+    indirect_question: "middle3_indirect_question.json",
+    inversion_so_neither: "middle3_inversion_so_neither.json",
+    that_clause_statement: "middle3_that_clause_statement.json",
+    that_clause_subjunctive: "middle3_that_clause_subjunctive.json",
+    cleft_it_that: "middle3_cleft_it_that.json",
+    reported_speech: "middle3_reported_speech.json",
+    subjunctive_past_perfect: "middle3_subjunctive_past_perfect.json",
+    subjunctive_past: "middle3_subjunctive_past.json",
+    its_time_subjunctive: "middle3_its_time_subjunctive.json",
+    wish_subjunctive: "middle3_wish_subjunctive.json",
+    while_when: "middle3_while_when.json",
+    since: "middle3_since.json",
+    because_because_of: "middle3_because_because_of.json",
+    however_therefore: "middle3_however_therefore.json",
+    not_only_but_also: "middle3_not_only_but_also.json",
+    so_that_purpose_advanced: "middle3_so_that_purpose_advanced.json",
+    so_that_purpose: "middle3_so_that_purpose.json",
+    if_whether: "middle3_if_whether.json",
+    after_before: "middle3_after_before.json",
+    time_conjunctions: "middle3_time_conjunctions.json",
+    it_that_expletive_subject: "middle3_it_that_expletive_subject.json",
+    after_before_advanced: "middle3_after_before_advanced.json",
+    subject_relative_pronouns: "middle3_subject_relative_pronouns.json",
+    possessive_relative_pronouns: "middle3_possessive_relative_pronouns.json",
+    objective_relative_pronouns: "middle3_objective_relative_pronouns.json",
+    relative_adverbs: "middle3_relative_adverbs.json",
+    continuative_relative_clauses: "middle3_continuative_relative_clauses.json",
+    superlative: "middle3_superlative.json",
+    as_as: "middle3_as_as.json",
+    relative_pronoun_what: "middle3_relative_pronoun_what.json",
+    comparative_emphasis_adverbs: "middle3_comparative_emphasis_adverbs.json",
+    comparative: "middle3_comparative.json",
     to_infinitive_noun_adjective: "middle3_to_infinitive_noun_adjective.json",
-    to_infinitive_gerund_verbs: "middle3_to_infinitive_gerund_verbs.json",
-    to_infinitive_adverbial: "middle3_to_infinitive_adverbial.json",
+    to_infinitive_noun_adjective_quality_fix: "middle3_to_infinitive_noun_adjective_quality_fix.json",
+    the_comparative_the_comparative: "middle3_the_comparative_the_comparative.json",
+    indefinite_pronouns: "middle3_indefinite_pronouns.json",
+    modal_passive: "middle3_modal_passive.json",
+    participles_attributive: "middle3_participles_attributive.json",
+    participial_construction: "middle3_participial_construction.json",
+    with_object_participle: "middle3_with_object_participle.json",
+    gerund_idiomatic_expressions: "middle3_gerund_idiomatic_expressions.json",
+    causative_verbs_advanced: "middle3_causative_verbs_advanced.json",
+    wh_to_infinitive: "middle3_wh_to_infinitive.json",
+    perceptual_verbs: "middle3_perceptual_verbs.json",
+    quasi_causative_verbs: "middle3_quasi_causative_verbs.json",
+    causative_verbs: "middle3_causative_verbs.json",
     not_to_infinitive: "middle3_not_to_infinitive.json",
+    it_object_infinitive: "middle3_it_object_infinitive.json",
+    to_infinitive_adverbial: "middle3_to_infinitive_adverbial.json",
+    to_infinitive_gerund_verbs: "middle3_to_infinitive_gerund_verbs.json",
+    it_to_infinitive_subject: "middle3_it_to_infinitive_subject.json",
+    too_enough_to: "middle3_too_enough_to.json",
+    so_that: "middle3_so_that.json",
+    it_seems_that: "middle3_it_seems_that.json",
+    have_object_pp: "middle3_have_object_pp.json",
+    modal_have_pp: "middle3_modal_have_pp.json",
+    should_have_pp: "middle3_should_have_pp.json",
+    present_perfect: "middle3_present_perfect.json",
+    past_perfect: "middle3_past_perfect.json",
+    present_perfect_progressive: "middle3_present_perfect_progressive.json"
   },
 };
 
 const CHAPTER_ALIAS_PATTERNS = [
   // S56: high-priority exact chapter names must be checked before modal keywords.
   { key: "there_is_are", patterns: [/there\s+is\s*\(?\s*are\s*\)?/i, /there\s+is\s*\/?\s*are/i, /there is are/i, /there\s+is/i, /there\s+are/i, /there\s+is\s*\(\s*are\s*\)/i] },
-  { key: "wh_questions", patterns: [/중2.*의문사/i, /의문사\s*의문문/i, /wh-?\s*questions?/i] },
-  { key: "to_infinitive_adverbial", patterns: [/to부정사\s*부사적\s*용법/i, /to-?infinitive\s*adverbial/i] },
-  { key: "to_infinitive_adjective", patterns: [/to부정사\s*형용사적\s*용법/i, /to-?infinitive\s*adjective/i] },
-  { key: "wh_to_infinitive", patterns: [/의문사\s*\+\s*to부정사/i, /wh\s*\+\s*to-?infinitive/i] },
-  { key: "perception_verbs", patterns: [/지각동사/i, /perception\s*verbs?/i] },
-  { key: "quasi_causative", patterns: [/준사역동사/i, /quasi\s*causative/i, /semi-?\s*causative/i] },
-  { key: "causative_verbs", patterns: [/사역동사/i, /causative\s*verbs?/i] },
-  { key: "participles", patterns: [/분사/i, /participles?/i] },
-  { key: "indefinite_pronouns", patterns: [/부정대명사/i, /indefinite\s*pronouns?/i] },
-  { key: "reflexive_pronouns", patterns: [/재귀대명사/i, /reflexive\s*pronouns?/i] },
-  { key: "something_adjective", patterns: [/something\s*\+\s*형용사/i, /something\s+adjective/i] },
-  { key: "relative_pronoun_what", patterns: [/관계대명사\s*what/i, /relative\s*pronoun\s*what/i] },
-  { key: "subject_relative_pronouns", patterns: [/주격\s*관계대명사/i, /subject\s*relative\s*pronouns?/i] },
-  { key: "objective_relative_pronouns", patterns: [/목적격\s*관계대명사/i, /objective\s*relative\s*pronouns?/i] },
-  { key: "relative_adverbs", patterns: [/관계부사/i, /relative\s*adverbs?/i] },
-  { key: "so_that_purpose", patterns: [/so\s+that\s*목적/i, /so\s+that\s+purpose/i] },
-  { key: "so_that", patterns: [/so\s+that/i, /so\s*that\s*구문/i] },
-  { key: "not_only_but_also", patterns: [/not\s+only.*but\s+also/i, /상관접속사/i] },
-  { key: "after_before", patterns: [/after.*before/i, /before.*after/i, /after\s*before/i] },
-  { key: "although", patterns: [/although/i, /비록.*지만/i] },
-  { key: "as_conjunction", patterns: [/접속사\s*as/i, /as\s*conjunction/i] },
-  { key: "because_of", patterns: [/because\s+of/i] },
-  { key: "if_condition", patterns: [/if\s*조건절/i, /조건절/i, /if\s*condition/i] },
-  { key: "while_when", patterns: [/while.*when/i, /when.*while/i] },
-  { key: "subjunctive_past", patterns: [/가정법\s*과거/i, /subjunctive\s*past/i] },
-  { key: "quantity_agreement", patterns: [/수량\s*일치/i, /quantity\s*agreement/i] },
-  { key: "here_there_inversion", patterns: [/here.*there.*도치/i, /here.*there.*inversion/i] },
-  { key: "do_emphasis", patterns: [/do\s*강조/i, /do\s*emphasis/i] },
-  { key: "with_noun_phrase_be", patterns: [/with\s*명사구\s*be/i, /with\s*noun\s*phrase\s*be/i] },
-  { key: "with_noun_phrase_have", patterns: [/with\s*명사구\s*have/i, /with\s*noun\s*phrase\s*have/i] },
-  { key: "object_complement_adj", patterns: [/목적격보어.*형용사/i, /object\s*complement\s*adj/i] },
-  { key: "tense_agreement", patterns: [/시제\s*일치/i, /tense\s*agreement/i] },
-  { key: "too_to_enough_to", patterns: [/too.*to.*enough.*to/i, /too\s*to\s*enough\s*to/i] },
-  { key: "it_to", patterns: [/it\s*to\s*구문/i, /it\s*\+\s*to/i] },
-  { key: "modal_extended", patterns: [/조동사\s*확장/i, /modal\s*extended/i] },
-  { key: "dont_have_to", patterns: [/don'?t\s+have\s+to/i, /doesn'?t\s+have\s+to/i] },
-  { key: "had_better", patterns: [/had\s+better/i] },
-  { key: "used_to", patterns: [/used\s+to/i] },
-  { key: "as_as", patterns: [/as\s+as/i, /원급/i] },
-  { key: "comparative_emphasis", patterns: [/비교급\s*강조/i, /comparative\s*emphasis/i] },
-  { key: "the_comparative_the_comparative", patterns: [/the\s+비교급.*the\s+비교급/i, /the\s+comparative.*the\s+comparative/i] },
-  { key: "indirect_question", patterns: [/간접의문문/i, /indirect\s*question/i] },
-  { key: "tag_questions", patterns: [/부가의문문/i, /tag\s*questions?/i] },
-  { key: "to_infinitive_noun_adjective", patterns: [/to부정사\s*명사적.*형용사적/i, /to부정사의\s*명사적\s*용법.*형용사적\s*용법/i, /to-?infinitive\s*noun.*adjective/i] },
-  { key: "to_infinitive_gerund_verbs", patterns: [/to부정사.*동명사.*동사/i, /to-?infinitive.*gerund.*verbs/i] },
-  { key: "not_to_infinitive", patterns: [/not\s+to\s+부정사/i, /not\s+to\s+infinitive/i] },
-  { key: "it_to_infinitive_subject", patterns: [/it\s*가주어.*to부정사/i, /it.*to-?infinitive.*subject/i] },
-  { key: "too_enough_to", patterns: [/too.*enough.*to/i, /too\s+to.*enough\s+to/i] },
-  { key: "should_have_pp", patterns: [/should\s+have\s+p\.?p\.?/i, /should\s+have\s+pp/i] },
-  { key: "modal_have_pp", patterns: [/조동사\s*have\s*p\.?p\.?/i, /modal\s+have\s+pp/i] },
-  { key: "have_object_pp", patterns: [/have\s*object\s*p\.?p\.?/i, /have\s+목적어\s+p\.?p\.?/i] },
-  { key: "it_seems_that", patterns: [/it\s+seems\s+that/i, /it seems that/i] },
-  { key: "present_perfect_progressive", patterns: [/현재완료\s*진행형/i, /present perfect progressive/i, /present perfect continuous/i] },
-  { key: "past_perfect", patterns: [/과거완료/i, /past perfect/i] },
   { key: "be_question", patterns: [/be동사\s*의문문/i, /be동사.*의문문/i, /be-?verb question/i, /am\/is\/are/i] },
   { key: "be_negative", patterns: [/be동사\s*부정문/i, /be동사.*부정문/i, /be-?verb negative/i] },
   { key: "be_verb", patterns: [/be동사(?!\s*(의문문|부정문))/i, /\bbe verb\b/i] },
@@ -305,67 +301,31 @@ const CHAPTER_ALIAS_PATTERNS = [
 ];
 
 function detectGradeBucket(input = {}) {
-  const rawBody = input.rawBody || {};
-  const merged = [
-    input.grade || "",
-    input.gradeLabel || "",
-    input.level || "",
-    input.userPrompt || "",
-    input.topic || "",
-    input.worksheetTitle || "",
-    rawBody.profile || "",
-    rawBody.grade || "",
-    rawBody.gradeLabel || "",
-    rawBody.level || "",
-    rawBody.userPrompt || "",
-    rawBody.topic || "",
-  ].join("\n").toLowerCase();
-
-  if (/(중\s*1|중1|middle\s*1|middle1|m1\b|grade\s*7)/i.test(merged)) return "middle1";
-  if (/(중\s*2|중2|middle\s*2|middle2|m2\b|grade\s*8)/i.test(merged)) return "middle2";
-  if (/(중\s*3|중3|middle\s*3|middle3|m3\b|grade\s*9)/i.test(merged)) return "middle3";
-  if (/(고\s*1|고1|high\s*1|high1|h1\b|grade\s*10)/i.test(merged)) return "high1";
-  if (/(고\s*2|고2|high\s*2|high2|h2\b|grade\s*11)/i.test(merged)) return "high2";
-  if (/(고\s*3|고3|high\s*3|high3|h3\b|grade\s*12)/i.test(merged)) return "high3";
+  const merged = [input.gradeLabel || "", input.level || "", input.userPrompt || "", input.topic || "", input.worksheetTitle || "", input.rawBody?.profile || ""].join("\n").toLowerCase();
+  if (/중1|middle1|middle 1/.test(merged)) return "middle1";
+  if (/중2|middle2|middle 2/.test(merged)) return "middle2";
+  if (/중3|middle3|middle 3/.test(merged)) return "middle3";
+  if (/고1|high1|high 1/.test(merged)) return "high1";
+  if (/고2|high2|high 2/.test(merged)) return "high2";
+  if (/고3|high3|high 3/.test(merged)) return "high3";
   return "";
 }
 
 function resolveChapterAlias(text = "") {
   const raw = String(text || "");
-  const normalized = raw.toLowerCase();
-
-  if (/현재\s*완료\s*(진행|계속)|present\s+perfect\s*(continuous|progressive)/i.test(raw)) return "present_perfect_progressive";
-  if (/과거\s*완료|past\s+perfect/i.test(raw)) return "past_perfect";
-  if (/현재\s*완료|present\s+perfect/i.test(raw)) return "present_perfect";
-  if (/with\s*\+?\s*object\s*\+?\s*participle|with\s+object\s+participle|with\s*목적어\s*분사|with\s*\+?\s*목적어\s*\+?\s*분사|with 목적어 분사/i.test(raw)) return "with_object_participle";
-  if (/분사\s*구문|participial\s+construction/i.test(raw)) return "participial_construction";
-  if (/동명사.*관용|관용.*동명사|gerund\s+idiomatic|idiomatic\s+gerund/i.test(raw)) return "gerund_idiomatic_expressions";
-
   for (const entry of CHAPTER_ALIAS_PATTERNS) {
-    if (entry.patterns.some((pattern) => pattern.test(raw) || pattern.test(normalized))) return entry.key;
+    if (entry.patterns.some((pattern) => pattern.test(raw))) return entry.key;
   }
   return "";
 }
 
-function getSentenceBankPathInfo(input = {}, chapterKey = "") {
-  const bucket = detectGradeBucket(input);
-  const bucketMap = SENTENCE_BANK_FILE_MAP[bucket] || {};
-  const expectedFile = bucket && chapterKey ? (bucketMap[chapterKey] || `${bucket}_${chapterKey}.json`) : "";
-  const expectedPath = bucket && chapterKey ? path.join(SENTENCE_BANK_ROOT, bucket, expectedFile) : "";
-  const fileExists = Boolean(expectedPath && fs.existsSync(expectedPath));
-
-  return {
-    bucket,
-    chapterKey,
-    expectedFile,
-    expectedPath,
-    filePath: fileExists ? expectedPath : "",
-    fileExists,
-  };
-}
-
 function resolveSentenceBankFile(input = {}, chapterKey = "") {
-  return getSentenceBankPathInfo(input, chapterKey).filePath || null;
+  const bucket = detectGradeBucket(input);
+  if (!bucket || !chapterKey) return null;
+  const bucketMap = SENTENCE_BANK_FILE_MAP[bucket] || {};
+  const filename = bucketMap[chapterKey] || `${bucket}_${chapterKey}.json`;
+  const filePath = path.join(SENTENCE_BANK_ROOT, bucket, filename);
+  return fs.existsSync(filePath) ? filePath : null;
 }
 
 function safeReadJson(filePath) {
@@ -467,6 +427,15 @@ function loadSentenceBank(input = {}) {
     if (normalized.length) {
       return { chapterKey, filePath, source: "json_file", items: normalized };
     }
+  }
+
+  if (detectGradeBucket(input) === "middle1" && Array.isArray(MIDDLE1_SENTENCE_BANK[chapterKey]) && MIDDLE1_SENTENCE_BANK[chapterKey].length) {
+    return {
+      chapterKey,
+      filePath: null,
+      source: "embedded_fallback",
+      items: normalizeSentenceBankEntries(MIDDLE1_SENTENCE_BANK[chapterKey], chapterKey),
+    };
   }
 
   return { chapterKey, filePath: null, source: "none", items: [] };
@@ -625,11 +594,9 @@ function resolveWorkbookType(input) {
   const focus = input.grammarFocus.chapterKey;
   const requested = input.requestedWorkbookType;
 
-  const normalizedRequested = normalizeWorkbookTypeLoose(requested);
-
-if (["guided_writing", "blank_fill", "binary_choice", "choice"].includes(normalizedRequested)) {
-  return normalizedRequested;
-}
+  if (["guided_writing", "blank_fill", "binary_choice", "choice"].includes(requested)) {
+    return requested === "choice" ? "binary_choice" : requested;
+  }
 
   if (mode === "abcstarter") return "junior_starter";
   if (mode === "vocab-builder") return input.level === "high" ? "vocab_csat" : "vocab_workbook";
@@ -688,15 +655,9 @@ function normalizeInput(body = {}) {
     ? primaryGrammarFocus
     : mergedGrammarFocus;
 
-  const requestedWorkbookType = normalizeWorkbookTypeLoose(sanitizeString(
-  body.workbookType ||
-  body.worksheetType ||
-  body.rawBody?.workbookType ||
-  body.rawBody?.worksheetType ||
-  body.workbook ||
-  body.type ||
-  "guided_writing"
-));
+  const requestedWorkbookType = sanitizeString(
+    body.workbookType || body.worksheetType || body.rawBody?.workbookType || ""
+  ).toLowerCase();
 
   const normalized = {
     userPrompt,
@@ -798,6 +759,10 @@ function buildPrompt(input) {
     ? `Do NOT mix grammar types such as do/does, past, perfect, or continuous unless they are part of "${focus}".`
     : `${focus} 외의 문법(do/does, 과거, 완료, 진행형 등)을 절대 섞지 말 것.`;
 
+  const dbHardlockActive = shouldUseDbFirst(input);
+  const dbOnlyRule = input.language === "en"
+    ? `DB-FIRST ABSOLUTE RULE: For this request, use only the approved sentence bank. Do not invent, paraphrase, expand, or mix in GPT-generated grammar patterns.`
+    : `DB-FIRST 절대 규칙: 이번 요청은 승인된 sentence bank만 사용해야 한다. GPT가 문법 패턴을 새로 만들거나 바꾸거나 섞어서는 안 된다.`;
 
   return (input.language === "en"
     ? `Generate a MARCUS Magic worksheet.\nTitle: ${title}\nGrade: ${input.gradeLabel}\nLevel: ${input.level}\nMode: ${input.mode}\nWorkbookType: ${input.workbookType}\nTopic: ${input.topic}\nDifficulty: ${input.difficulty}\nItemCount: ${input.count}\nTask: ${buildTaskGuide(input)}\n\nRules:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[User Request]\n${input.userPrompt || "(none)"}`
@@ -1096,19 +1061,7 @@ function makeChoiceOptions(answer = "", input, seed = 0) {
 function normalizeWorkbookTypeLoose(value = "") {
   const v = String(value || "").trim().toLowerCase();
   if (!v) return "guided_writing";
-  if ([
-  "guided_writing",
-  "guided-writing",
-  "guided writing",
-  "guided",
-  "guide",
-  "writing",
-  "writing_lab",
-  "writing-lab",
-  "writing lab",
-  "guided writing training",
-  "guided_writing_training"
-].includes(v)) return "guided_writing";
+  if (["guided_writing", "guided-writing", "guided writing", "guided", "guide", "writing"].includes(v)) return "guided_writing";
   if (["blank_fill", "blank-fill", "blank fill", "blank", "blankfill", "fill_blank", "fill_in_blank"].includes(v)) return "blank_fill";
   if (["choice", "binary_choice", "binary-choice", "multiple choice", "mcq", "binarychoice", "binary", "either_or"].includes(v)) return "choice";
   if (["sentence_build", "sentence-build", "sentence build", "build", "rearrange"].includes(v)) return "sentence_build";
@@ -1243,13 +1196,7 @@ function buildDbFirstWorksheet(input) {
   const bank = bankInfo.items || [];
   if (!bank.length) return null;
 
-  const worksheetType = normalizeWorkbookTypeLoose(
-  input.requestedWorkbookType ||
-  input.rawBody?.workbookType ||
-  input.rawBody?.worksheetType ||
-  input.workbookType ||
-  "guided_writing"
-);
+  const worksheetType = normalizeWorkbookTypeLoose(input.workbookType || input.requestedWorkbookType || "guided_writing");
   const questions = [];
   const answers = [];
 
@@ -1283,11 +1230,11 @@ function buildDbFirstWorksheet(input) {
       continue;
     }
 
-    if (worksheetType === "choice" || worksheetType === "binary_choice") {
+    if (worksheetType === "choice") {
       const choiceBundle = buildChoiceOptionsFromSeed(seed, answer, input, i + 1);
       questions.push({
         number: i + 1,
-        type: "choice",
+        type: "binary_choice",
         prompt: promptKo,
         options: choiceBundle.options,
         answerIndex: choiceBundle.answerIndex,
@@ -1322,13 +1269,10 @@ function buildDbFirstWorksheet(input) {
       dbSource: bankInfo.source,
       dbFilePath: bankInfo.filePath || "",
       dbItemCount: bank.length,
-      dbDebug: getDbDebugInfo(input, bankInfo),
     },
   };
 
   return Object.assign(worksheet, createWorkbookRenderBundle(worksheet, input), {
-    questions,
-    answers,
     dbMode: true,
     dbForced: true,
     gptFallbackBlocked: true,
@@ -1338,59 +1282,17 @@ function buildDbFirstWorksheet(input) {
       dbSource: bankInfo.source,
       dbFilePath: bankInfo.filePath || "",
       dbItemCount: bank.length,
-      dbDebug: getDbDebugInfo(input, bankInfo),
     }),
   });
 }
 
 
-
-function getDbDebugInfo(input = {}, bankInfo = null) {
-  const grade = detectGradeBucket(input);
-  const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
-  const pathInfo = getSentenceBankPathInfo(input, chapterKey);
-  const resolvedBankInfo = bankInfo || loadSentenceBank(input);
-
-  return {
-    grade,
-    chapterKey,
-    requestedWorkbookType: input?.requestedWorkbookType,
-    workbookType: input?.workbookType,
-    mode: input?.mode,
-    dbSource: resolvedBankInfo?.source || "none",
-    dbFilePath: resolvedBankInfo?.filePath || "",
-    dbItemCount: Array.isArray(resolvedBankInfo?.items) ? resolvedBankInfo.items.length : 0,
-    expectedFile: pathInfo.expectedFile,
-    expectedPath: pathInfo.expectedPath,
-    fileExists: pathInfo.fileExists,
-  };
-}
-function shouldUseDbFirst(input = {}) {
-  const rawWorkbookType = String(
-    input?.requestedWorkbookType ||
-    input?.workbookType ||
-    input?.rawBody?.workbookType ||
-    input?.rawBody?.worksheetType ||
-    ""
-  ).trim().toLowerCase();
-
-  const workbookType = normalizeWorkbookTypeLoose(rawWorkbookType);
-
-  const supportedType = [
-    "guided_writing",
-    "blank_fill",
-    "choice",
-    "binary_choice",
-  ].includes(workbookType);
-
-  const supportedMode = [
-    "magic",
-    "writing",
-    "magic-card",
-    "writing_lab",
-  ].includes(String(input?.mode || "").trim().toLowerCase());
-
-  return supportedMode && supportedType;
+function shouldUseDbFirst(input) {
+  const workbookType = normalizeWorkbookTypeLoose(input?.workbookType || input?.requestedWorkbookType || "");
+  const supportedType = ["guided_writing", "blank_fill", "choice"].includes(workbookType);
+  const supportedMode = ["magic", "writing", "magic-card"].includes(String(input?.mode || "").toLowerCase());
+  const bankInfo = loadSentenceBank(input);
+  return supportedMode && supportedType && Array.isArray(bankInfo.items) && bankInfo.items.length > 0;
 }
 
 
@@ -1512,10 +1414,6 @@ function buildResponsePayload({ input, worksheet, renderBundle, mp }) {
       mp,
       cleanRebuild: true,
       dbForced: !!worksheet?.dbForced,
-      dbFirst: !!worksheet?.meta?.dbFirst,
-      dbFallback: !!worksheet?.meta?.dbFallback,
-      dbSource: worksheet?.meta?.dbSource || "",
-      dbDebug: worksheet?.meta?.dbDebug || null,
       removedLayers: [
         's30-8R safe pair recovery',
         's30-9 guided print block lock',
@@ -1565,24 +1463,9 @@ async function handler(req, res) {
 
   try {
     const input = normalizeInput(req.body || {});
-    const shouldTryDbFirst = shouldUseDbFirst(input);
-    let worksheet = null;
-
-    if (shouldTryDbFirst) {
-      worksheet = buildDbFirstWorksheet(input);
-    }
-
-    if (!worksheet) {
-      worksheet = await generateWithOpenAI(input);
-      if (shouldTryDbFirst) {
-        worksheet.meta = Object.assign({}, worksheet.meta || {}, {
-          dbFirst: false,
-          dbFallback: true,
-          dbSource: "gpt_fallback",
-          dbDebug: getDbDebugInfo(input),
-        });
-      }
-    }
+    const worksheet = shouldUseDbFirst(input)
+      ? buildDbFirstWorksheet(input)
+      : await generateWithOpenAI(input);
     const renderBundle = createWorkbookRenderBundle(worksheet, input) || {};
     const mp = await consumeMpIfNeeded(input);
     return json(res, 200, buildResponsePayload({ input, worksheet, renderBundle, mp }));
