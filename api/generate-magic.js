@@ -284,7 +284,9 @@ const CHAPTER_ALIAS_PATTERNS = [
   { key: "gerund_object", patterns: [/동명사를\s*목적어로\s*취하는/i, /gerund object/i] },
   { key: "gerund_total", patterns: [/동명사(?!\s*를\s*목적어로)/i, /gerund/i] },
   { key: "to_infinitive_noun", patterns: [/to부정사(?:의)?\s*명사적\s*용법/i, /to-?infinitive noun/i] },
-  { key: "to_infinitive_total", patterns: [/to부정사(?!\s*명사적)/i, /to-?infinitive/i, /\binfinitive\b/i] },
+  { key: "to_infinitive_adjective", patterns: [/to부정사(?:의)?\s*형용사적\s*용법/i, /to-?infinitive adjective/i] },
+  { key: "to_infinitive_adverbial", patterns: [/to부정사(?:의)?\s*부사적\s*용법/i, /to-?infinitive adverb(?:ial)?/i] },
+  { key: "to_infinitive_total", patterns: [/to부정사(?!\s*(?:명사적|형용사적|부사적))/i, /to-?infinitive/i, /\binfinitive\b/i] },
   { key: "prepositions_basic", patterns: [/전치사/i, /preposition/i] },
   { key: "a_few_few", patterns: [/\ba few\b/i, /\bfew\b/i] },
   { key: "a_little_little", patterns: [/\ba little\b/i, /\blittle\b/i] },
@@ -414,6 +416,9 @@ function normalizeSentenceBankEntries(rawEntries = [], chapterKey = "") {
         seedId: row.seedId || `${chapterKey}_${idx + 1}`,
         korean,
         english,
+        chapterKey: row.chapterKey || chapterKey,
+        chapterLabelKo: row.chapterLabelKo || "",
+        difficulty: row.difficulty || "",
         clueUnits: Array.isArray(row.clueUnits) ? row.clueUnits : [],
         extraClueWordPool: Array.isArray(row.extraClueWordPool) ? row.extraClueWordPool : [],
         blankTargets: Array.isArray(row.blankTargets) ? row.blankTargets : [],
@@ -424,6 +429,116 @@ function normalizeSentenceBankEntries(rawEntries = [], chapterKey = "") {
       };
     })
     .filter(Boolean);
+}
+
+
+const MAGIC_RECENT_SELECTION_IDS = new Set();
+const MAGIC_RECENT_SELECTION_LIMIT = 240;
+
+function shuffleArray(arr = []) {
+  const cloned = [...arr];
+  for (let i = cloned.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [cloned[i], cloned[j]] = [cloned[j], cloned[i]];
+  }
+  return cloned;
+}
+
+function getItemSelectionId(item = {}) {
+  return String(item.id || item.seedId || item.english || "").trim();
+}
+
+function rememberSelectedItems(items = []) {
+  for (const item of items) {
+    const id = getItemSelectionId(item);
+    if (!id) continue;
+    if (MAGIC_RECENT_SELECTION_IDS.has(id)) MAGIC_RECENT_SELECTION_IDS.delete(id);
+    MAGIC_RECENT_SELECTION_IDS.add(id);
+  }
+  while (MAGIC_RECENT_SELECTION_IDS.size > MAGIC_RECENT_SELECTION_LIMIT) {
+    const oldest = MAGIC_RECENT_SELECTION_IDS.values().next().value;
+    MAGIC_RECENT_SELECTION_IDS.delete(oldest);
+  }
+}
+
+function normalizeDifficultyBucket(value = "") {
+  const raw = String(value || "").toLowerCase();
+  if (/advanced|high|extreme|상|고난도|심화/.test(raw)) return "advanced";
+  if (/intermediate|standard|medium|중|표준/.test(raw)) return "intermediate";
+  return "basic";
+}
+
+function getDifficultyTargets(count = 8) {
+  const total = Math.max(1, Number(count) || 8);
+  if (total === 8) return { basic: 3, intermediate: 3, advanced: 2 };
+  if (total === 25) return { basic: 9, intermediate: 10, advanced: 6 };
+  const basic = Math.max(1, Math.round(total * 0.36));
+  const intermediate = Math.max(1, Math.round(total * 0.40));
+  return { basic, intermediate, advanced: Math.max(0, total - basic - intermediate) };
+}
+
+function textMatchesChapterLabel(text = "", chapterKey = "") {
+  const raw = String(text || "");
+  if (!chapterKey) return true;
+  if (chapterKey === "to_infinitive_noun") return /to부정사(?:의)?\s*명사적|명사적\s*용법|noun/i.test(raw);
+  if (chapterKey === "to_infinitive_adjective") return /to부정사(?:의)?\s*형용사적|형용사적\s*용법|adjective/i.test(raw);
+  if (chapterKey === "to_infinitive_adverbial" || chapterKey === "to_infinitive_adverb") return /to부정사(?:의)?\s*부사적|부사적\s*용법|adverb/i.test(raw);
+  return raw.includes(chapterKey);
+}
+
+function matchesRequestedChapter(item = {}, requestedChapterKey = "") {
+  const requested = String(requestedChapterKey || "").trim();
+  if (!requested || requested === "general") return true;
+  const itemKey = String(item.chapterKey || item.grammar || "").trim();
+  if (itemKey === requested) return true;
+  const labelText = [
+    item.chapterLabelKo,
+    item.grammar,
+    ...(Array.isArray(item.tags) ? item.tags : []),
+    ...(Array.isArray(item.clueUnits) ? item.clueUnits.flat() : []),
+  ].filter(Boolean).join(" ");
+  return textMatchesChapterLabel(labelText, requested);
+}
+
+function filterBankByRequestedChapter(items = [], input = {}) {
+  const requestedChapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
+  const filtered = items.filter((item) => matchesRequestedChapter(item, requestedChapterKey));
+  return filtered.length ? filtered : items;
+}
+
+function selectBalancedSentenceBank(items = [], input = {}, count = 8) {
+  const requestedCount = Math.max(1, Number(count) || 8);
+  const semanticBank = filterBankByRequestedChapter(items, input);
+  const freshBank = semanticBank.filter((item) => !MAGIC_RECENT_SELECTION_IDS.has(getItemSelectionId(item)));
+  const pool = freshBank.length >= Math.min(requestedCount, semanticBank.length) ? freshBank : semanticBank;
+  const buckets = { basic: [], intermediate: [], advanced: [] };
+  for (const item of shuffleArray(pool)) {
+    buckets[normalizeDifficultyBucket(item.difficulty)].push(item);
+  }
+  const targets = getDifficultyTargets(requestedCount);
+  const selected = [];
+  for (const bucketName of ["basic", "intermediate", "advanced"]) {
+    selected.push(...buckets[bucketName].splice(0, targets[bucketName] || 0));
+  }
+  const selectedIds = new Set(selected.map(getItemSelectionId));
+  const remainder = shuffleArray(pool).filter((item) => !selectedIds.has(getItemSelectionId(item)));
+  while (selected.length < requestedCount && remainder.length) {
+    selected.push(remainder.shift());
+  }
+  if (selected.length < requestedCount && semanticBank.length) {
+    const existingIds = new Set(selected.map(getItemSelectionId));
+    for (const item of shuffleArray(semanticBank)) {
+      if (selected.length >= requestedCount) break;
+      const itemId = getItemSelectionId(item);
+      if (!itemId) continue;
+      if (existingIds.has(itemId)) continue;
+      existingIds.add(itemId);
+      selected.push(item);
+    }
+  }
+  const finalSelection = shuffleArray(selected).slice(0, requestedCount);
+  rememberSelectedItems(finalSelection);
+  return finalSelection;
 }
 
 function loadSentenceBank(input = {}) {
@@ -697,7 +812,7 @@ function normalizeInput(body = {}) {
 
 function getMiddle1SentenceBank(input) {
   const bank = loadSentenceBank(input);
-  return bank.items.slice(0, 8).map((item) => ({ ko: item.korean, en: item.english }));
+  return selectBalancedSentenceBank(bank.items, input, 8).map((item) => ({ ko: item.korean, en: item.english }));
 }
 
 function buildSentenceBankBlock(input) {
@@ -821,10 +936,10 @@ function normalizeAnswerItem(item, index, question) {
 
 function buildFallbackQuestion(input, index) {
   const chapter = input.grammarFocus.chapterKey;
-  const bank = MIDDLE1_SENTENCE_BANK[chapter] || [];
-  const sample = bank[index % Math.max(bank.length, 1)] || null;
-  const basePrompt = sample?.ko || `${input.topic}에 맞는 문장을 영작하시오.`;
-  const baseAnswer = sample?.en || `Sample answer ${index + 1}.`;
+  const bank = normalizeSentenceBankEntries(MIDDLE1_SENTENCE_BANK[chapter] || [], chapter);
+  const sample = selectBalancedSentenceBank(bank, input, 1)[0] || null;
+  const basePrompt = sample?.korean || sample?.ko || `${input.topic}에 맞는 문장을 영작하시오.`;
+  const baseAnswer = sample?.english || sample?.en || `Sample answer ${index + 1}.`;
   return {
     number: index + 1,
     prompt: basePrompt,
@@ -1208,9 +1323,10 @@ function buildDbFirstWorksheet(input) {
   const worksheetType = normalizeWorkbookTypeLoose(input.workbookType || input.requestedWorkbookType || "guided_writing");
   const questions = [];
   const answers = [];
+  const selectedBank = selectBalancedSentenceBank(bank, input, input.count);
 
   for (let i = 0; i < input.count; i += 1) {
-    const seed = bank[i % bank.length];
+    const seed = selectedBank[i % selectedBank.length];
     const answer = String(seed.english || "").trim();
     const promptKo = String(seed.korean || "").trim();
     const itemWordCount = Number.isFinite(Number(seed.wordCount)) ? Number(seed.wordCount) : wordCountOf(answer);
