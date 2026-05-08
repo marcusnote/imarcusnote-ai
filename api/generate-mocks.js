@@ -610,6 +610,41 @@ Every few items, the cognitive task should change.
 Distractors must be plausible and exam-like.
 Wrong choices should fail for a meaningful reason.
 
+[WORMHOLE DISTRACTOR SYSTEM]
+Wrong choices MUST fail for a SPECIFIC logical reason, not because they are random paraphrases.
+Each distractor should use ONE clear trap type:
+1. partial truth trap: partly correct but contradicts the core logic
+2. scope distortion: too broad, too narrow, absolute, or exaggerated
+3. causal inversion: reverses cause and result
+4. rhetorical shift: changes the author's real focus
+5. evidence mismatch: supported by one sentence but contradicted by the whole passage
+6. emotional distortion: exaggerates tone or attitude
+7. paraphrase inversion: similar wording with the opposite implication
+8. temporal distortion: reverses sequence or development
+9. conditional collapse: removes conditions or limitations
+10. comparative distortion: changes degree or comparison target
+
+Distractors MUST compete with the correct answer.
+Avoid vague filler choices, obviously irrelevant options, random abstract nouns, and weak synonym swaps.
+Ban generic GPT-style distractors such as "education improves society", "technology helps people", "humans need communication", or "sustainability is important" unless directly supported by the passage.
+
+[CSAT WORMHOLE ITEM TYPES]
+Prefer Korean-CSAT-style trap logic:
+- 일부 맞는 선지
+- 핵심어 왜곡
+- 범위 축소/확대
+- 절대화 표현
+- 근거 일부만 반영
+- 문단 간 연결 오류
+- 중심 논지 이동
+- 필자의 태도 왜곡
+- 숨은 전제 붕괴
+
+[OPTION COMPETITION LAW]
+The correct answer must NOT be obviously longer, more detailed, or more academic than the distractors.
+All options should look editorially balanced and similarly credible at first glance.
+Never create distractors that are obviously unrelated, grammatically awkward, much shorter than the others, repeated in wording, or extreme nonsense.
+
 [HARD RULE 4: TYPE DISTRIBUTION]
 You MUST distribute item types across the full set.
 Use this target distribution as a strong guide:
@@ -629,6 +664,8 @@ For those items:
 - avoid direct textual match answers
 - prefer paraphrase distortion, inference trap, or logic discrimination
 - make the answer depend on the whole passage or multiple linked ideas
+- include at least TWO of: multi-sentence inference, whole-passage reasoning, rhetorical intent discrimination, competing paraphrases, subtle scope distinction, hidden contradiction, conditional logic interpretation, author attitude nuance, implied meaning reconstruction
+- make at least TWO distractors strongly plausible before close reading
 
 High Difficulty items must NOT be impossible.
 They must still be solvable from the passage.
@@ -818,6 +855,39 @@ ${typeGuide}
 - At least two options in each High Difficulty item should look very plausible.
 - Do not make them impossible.
 
+[WORMHOLE DISTRACTOR SYSTEM]
+For every multiple-choice item, wrong choices must fail through a specific logic trap.
+Use a balanced mix of:
+- partial truth that misses or contradicts the core claim
+- scope expansion or narrowing
+- causal inversion
+- rhetorical focus shift
+- single-sentence evidence mismatch
+- tone or attitude distortion
+- near-paraphrase with reversed implication
+- sequence or time distortion
+- condition/limitation removal
+- comparison target or degree distortion
+
+Avoid generic paraphrases, vague abstract options, weak synonym swaps, and choices that are obviously irrelevant.
+Do not use broad filler claims like "education improves society", "technology helps people", "humans need communication", or "sustainability is important" unless the passage directly supports them.
+
+[HIGH DIFFICULTY OPTION COMPETITION]
+Each [High Difficulty] item must include at least TWO of:
+- multi-sentence inference
+- whole-passage reasoning
+- rhetorical intent discrimination
+- competing paraphrases
+- subtle scope distinction
+- hidden contradiction
+- conditional logic interpretation
+- author attitude nuance
+- implied meaning reconstruction
+
+At least TWO distractors must appear strongly plausible.
+Keep all options editorially balanced: similar length, similar academic tone, no awkward grammar, no repeated wording, and no extreme nonsense.
+The correct answer should not stand out by being longer or more polished than the distractors.
+
 [CRITICAL FORMAT LOCK - SOFT]
 - Prefer multiple-choice format strongly.
 - Try to ensure each question has exactly ${choiceCount} options.
@@ -841,6 +911,8 @@ ${typeGuide}
 5. Do not use broad generic filler content.
 6. Match the grade, difficulty, and Korean exam style.
 7. Maintain strong editorial tone.
+8. Wrong options must feel like real CSAT distractors: partly tempting, passage-bound, and logically flawed.
+9. Avoid easy elimination by keeping option length, specificity, and editorial tone balanced.
 
 [FORMAT REQUIREMENT]
 Return ONLY these sections in this order:
@@ -1099,6 +1171,46 @@ function countHighDifficultyTaggedItems(text = "") {
   return (cleanupText(text).match(/\[High Difficulty\]/g) || []).length;
 }
 
+
+function extractQuestionBlocks(text = "") {
+  return cleanupText(text)
+    .split(/(?=^\s*\d+[\.\)]\s+)/gm)
+    .map((v) => v.trim())
+    .filter(Boolean);
+}
+
+function extractChoiceLines(block = "") {
+  return cleanupText(block)
+    .split("\n")
+    .map((v) => v.trim())
+    .filter((line) => /^[①②③④⑤]\s+/.test(line));
+}
+
+function countPlausibleOptionLines(lines = []) {
+  const genericPattern = /(education improves society|technology helps people|humans need communication|sustainability is important)/i;
+  const awkwardPattern = /(obviously|randomly|unrelated|nonsense|always everything|never anything)/i;
+  const normalized = lines.map((line) => line.replace(/^[①②③④⑤]\s+/, "").trim()).filter(Boolean);
+  const lengths = normalized.map((v) => v.length).filter((n) => n > 0);
+  const average = lengths.length ? lengths.reduce((sum, n) => sum + n, 0) / lengths.length : 0;
+  return normalized.filter((option, index) => {
+    if (option.length < 18) return false;
+    if (genericPattern.test(option) || awkwardPattern.test(option)) return false;
+    if (average && option.length < average * 0.45) return false;
+    const duplicate = normalized.findIndex((other) => other.toLowerCase() === option.toLowerCase()) !== index;
+    return !duplicate;
+  }).length;
+}
+
+function highDifficultyOptionsLookWeak(text = "", choiceCount = 5) {
+  const highBlocks = extractQuestionBlocks(text).filter((block) => /\[High Difficulty\]/.test(block));
+  if (!highBlocks.length) return false;
+  return highBlocks.some((block) => {
+    const choices = extractChoiceLines(block);
+    if (choices.length < Math.min(choiceCount, 4)) return true;
+    return countPlausibleOptionLines(choices) < 3;
+  });
+}
+
 function validateMocksOutput(formatted, input) {
   const errors = [];
   const warnings = [];
@@ -1146,6 +1258,10 @@ function validateMocksOutput(formatted, input) {
   const hdTagged = countHighDifficultyTaggedItems(formatted.content);
   if (hdTagged < hdPlan.killerCount) {
     warnings.push(`HIGH_DIFFICULTY_TAG_MISSING:${hdTagged}/${hdPlan.killerCount}`);
+  }
+
+  if (hdTagged > 0 && highDifficultyOptionsLookWeak(formatted.content, choiceCount)) {
+    warnings.push("WEAK_HIGH_DIFFICULTY_OPTIONS");
   }
 
   return {
