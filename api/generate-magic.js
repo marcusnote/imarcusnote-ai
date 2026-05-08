@@ -262,28 +262,28 @@ const CHAPTER_ALIAS_PATTERNS = [
   { key: "do_verb", patterns: [/일반동사(?!\s*(의문문|부정문))/i, /\bgeneral verb\b/i] },
   { key: "present_continuous", patterns: [/현재진행형/i, /present continuous/i, /be \w+ing/i] },
   { key: "modal_will", patterns: [/조동사\s*will/i, /\bwill\b/i] },
-  { key: "must", patterns: [/조동사\s*must/i, /\bmust\b/i] },
+  { key: "must", patterns: [/조동사\s*must/i, /modal\s*must/i, /must\s+grammar/i] },
   { key: "have_to", patterns: [/조동사\s*have\s*to/i, /\bhave\s+to\b/i, /\bhas\s+to\b/i] },
-  { key: "may", patterns: [/조동사\s*may/i, /\bmay\b/i] },
-  { key: "should", patterns: [/조동사\s*should/i, /\bshould\b/i] },
+  { key: "may", patterns: [/조동사\s*may/i, /modal\s*may/i, /may\s+grammar/i] },
+  { key: "should", patterns: [/조동사\s*should/i, /modal\s*should/i, /should\s+grammar/i] },
   { key: "there_is_are", patterns: [/there\s+is\s*\/?\s*are/i, /there is are/i, /there\s+is/i, /there\s+are/i] },
   { key: "wh_question", patterns: [/의문사\s*의문문/i, /wh-?\s*question/i, /\bwho\b|\bwhat\b|\bwhen\b|\bwhere\b|\bwhy\b|\bhow\b/i] },
   { key: "frequency_adverbs", patterns: [/빈도부사/i, /frequency adverb/i] },
   { key: "sensory_verb", patterns: [/감각동사/i, /sensory verb/i, /sense verb/i, /look\s*sound\s*feel\s*taste\s*smell/i] },
   { key: "past", patterns: [/과거시제/i, /일반동사\s*과거/i, /be동사\s*과거/i, /past tense/i] },
-  { key: "can", patterns: [/\bcan\b/i, /조동사\s*can/i] },
+  { key: "can", patterns: [/조동사\s*can/i, /modal\s*can/i, /can\s+grammar/i] },
   { key: "conjunction_when", patterns: [/접속사\s*when/i, /conjunction\s*when/i] },
   { key: "conjunction_while", patterns: [/접속사\s*while/i, /conjunction\s*while/i] },
   { key: "conjunction_that", patterns: [/접속사\s*that/i, /conjunction\s*that/i] },
   { key: "because", patterns: [/접속사\s*because/i, /\bbecause\b/i] },
-  { key: "so", patterns: [/접속사\s*so/i, /\bso\b/i] },
-  { key: "but", patterns: [/접속사\s*but/i, /\bbut\b/i] },
-  { key: "and", patterns: [/접속사\s*and/i, /\band\b/i] },
+  { key: "so", patterns: [/접속사\s*so/i, /conjunction\s*so/i] },
+  { key: "but", patterns: [/접속사\s*but/i, /conjunction\s*but/i] },
+  { key: "and", patterns: [/접속사\s*and/i, /conjunction\s*and/i] },
   { key: "causative", patterns: [/사역동사/i, /causative/i] },
   { key: "semi_causative", patterns: [/준사역동사/i, /semi-?\s*causative/i] },
   { key: "gerund_object", patterns: [/동명사를\s*목적어로\s*취하는/i, /gerund object/i] },
   { key: "gerund_total", patterns: [/동명사(?!\s*를\s*목적어로)/i, /gerund/i] },
-  { key: "to_infinitive_noun", patterns: [/to부정사\s*명사적\s*용법/i, /to-?infinitive noun/i] },
+  { key: "to_infinitive_noun", patterns: [/to부정사(?:의)?\s*명사적\s*용법/i, /to-?infinitive noun/i] },
   { key: "to_infinitive_total", patterns: [/to부정사(?!\s*명사적)/i, /to-?infinitive/i, /\binfinitive\b/i] },
   { key: "prepositions_basic", patterns: [/전치사/i, /preposition/i] },
   { key: "a_few_few", patterns: [/\ba few\b/i, /\bfew\b/i] },
@@ -323,8 +323,16 @@ function resolveSentenceBankFile(input = {}, chapterKey = "") {
   const bucket = detectGradeBucket(input);
   if (!bucket || !chapterKey) return null;
   const bucketMap = SENTENCE_BANK_FILE_MAP[bucket] || {};
-  const filename = bucketMap[chapterKey] || `${bucket}_${chapterKey}.json`;
+  if (!bucketMap[chapterKey]) {
+    return null;
+  }
+  const filename = bucketMap[chapterKey];
   const filePath = path.join(SENTENCE_BANK_ROOT, bucket, filename);
+  console.log("[MAGIC ROUTING]");
+  console.log("worksheetTitle:", input.worksheetTitle);
+  console.log("topic:", input.topic);
+  console.log("resolved chapterKey:", chapterKey);
+  console.log("resolved file:", filename);
   return fs.existsSync(filePath) ? filePath : null;
 }
 
@@ -641,19 +649,20 @@ function normalizeInput(body = {}) {
   const count = sanitizeCount(body.count || body.itemCount || body.questionCount || 25);
   const gradeLabel = sanitizeString(body.gradeLabel || "") || inferGradeLabel(mergedText, level);
 
-  // S56 emergency chapter-lock fix:
-  // Prefer the user-visible request/title over hidden or stale frontend topic values.
-  // This prevents cases like visible "there is(are)" being overridden by a stale hidden "must" topic.
-  const primaryChapterText = [
-    userPrompt,
+  // Routing lock: explicit worksheet title/topic must win before broader prompt text.
+  const explicitChapterText = [
     sanitizeString(body.worksheetTitle || body.title || ""),
     sanitizeString(body.rawBody?.worksheetTitle || body.rawBody?.title || ""),
+    sanitizeString(body.topic || ""),
   ].filter(Boolean).join("\n");
-  const primaryGrammarFocus = detectGrammarFocus(primaryChapterText);
+  const explicitGrammarFocus = detectGrammarFocus(explicitChapterText);
+  const userPromptGrammarFocus = detectGrammarFocus(userPrompt);
   const mergedGrammarFocus = detectGrammarFocus(`${mergedText} ${topic}`);
-  const grammarFocus = primaryGrammarFocus.chapterKey && primaryGrammarFocus.chapterKey !== "general"
-    ? primaryGrammarFocus
-    : mergedGrammarFocus;
+  const grammarFocus = explicitGrammarFocus.chapterKey && explicitGrammarFocus.chapterKey !== "general"
+    ? explicitGrammarFocus
+    : userPromptGrammarFocus.chapterKey && userPromptGrammarFocus.chapterKey !== "general"
+      ? userPromptGrammarFocus
+      : mergedGrammarFocus;
 
   const requestedWorkbookType = sanitizeString(
     body.workbookType || body.worksheetType || body.rawBody?.workbookType || ""
