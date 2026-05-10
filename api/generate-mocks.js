@@ -1,5 +1,12 @@
 // api/generate-mocks.js
 
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 export const config = {
   runtime: "nodejs",
 };
@@ -12,6 +19,378 @@ const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
 const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
 const DEFAULT_TRIAL_MP = Number(process.env.MEMBERSTACK_TRIAL_MP || 15);
 
+const WORMHOLE_ROUTING_MODES = Object.freeze({
+  EXACT_DB_MATCH: "EXACT_DB_MATCH",
+  NORMALIZED_DB_MATCH: "NORMALIZED_DB_MATCH",
+  FAMILY_TRAP_PRELOAD: "FAMILY_TRAP_PRELOAD",
+  UNDER_CONSTRUCTION: "UNDER_CONSTRUCTION",
+});
+
+function hasWormholeGradeFolders(rootPath) {
+  try {
+    return fs.existsSync(rootPath) && fs.readdirSync(rootPath, { withFileTypes: true })
+      .some((entry) => entry.isDirectory() && /^(elementary|middle|high)\d+$/i.test(entry.name));
+  } catch {
+    return false;
+  }
+}
+
+function pickWormholeSentenceBankRoot() {
+  const candidates = [
+    path.join(process.cwd(), "data", "sentence_bank"),
+    path.join(process.cwd(), "data"),
+    path.join(__dirname, "..", "data", "sentence_bank"),
+    path.join(__dirname, "..", "data"),
+  ];
+  return candidates.find(hasWormholeGradeFolders) || candidates[0];
+}
+
+const WORMHOLE_SENTENCE_BANK_ROOT = pickWormholeSentenceBankRoot();
+
+function normalizeWormholeChapterKey(value = "") {
+  let key = String(value || "")
+    .replace(/\.json$/i, "")
+    .replace(/([a-z])([A-Z])/g, "$1_$2")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/\+/g, " plus ")
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "")
+    .replace(/_{2,}/g, "_");
+
+  const aliases = {
+    object_relative_pronoun: "objective_relative_pronouns",
+    object_relative_pronouns: "objective_relative_pronouns",
+    objective_relative_pronoun: "objective_relative_pronouns",
+    subject_relative_pronoun: "subject_relative_pronouns",
+    relative_pronoun: "relative_pronouns",
+    relative_pronouns: "relative_pronouns",
+    relative_pronouns_subject: "subject_relative_pronouns",
+    relative_pronouns_object: "objective_relative_pronouns",
+    present_perfect_continuous: "present_perfect_progressive",
+    present_perfect_progressive: "present_perfect_progressive",
+    subjunctive_past_perfect: "subjunctive_past_perfect",
+  };
+  if (aliases[key]) return aliases[key];
+
+  const singularKey = key.split("_").map((part) => {
+    if (part.length > 3 && /ies$/.test(part)) return `${part.slice(0, -3)}y`;
+    if (part.length > 3 && /s$/.test(part) && !/(ss|us|is)$/.test(part)) return part.slice(0, -1);
+    return part;
+  }).join("_");
+  return aliases[singularKey] || singularKey;
+}
+
+function extractWormholeChapterFromFilename(grade, fileName) {
+  const base = String(fileName || "")
+    .replace(/\.json$/i, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "")
+    .replace(/_{2,}/g, "_");
+  const normalizedGrade = String(grade || "").toLowerCase();
+  if (base === normalizedGrade) return "";
+  if (base.startsWith(`${normalizedGrade}_`)) return base.slice(normalizedGrade.length + 1);
+  return base;
+}
+
+function buildWormholeTrapRegistry() {
+  const registry = {};
+  if (!fs.existsSync(WORMHOLE_SENTENCE_BANK_ROOT)) return registry;
+
+  let gradeDirs = [];
+  try {
+    gradeDirs = fs.readdirSync(WORMHOLE_SENTENCE_BANK_ROOT, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name)
+      .filter((name) => /^(elementary|middle|high)\d+$/i.test(name));
+  } catch {
+    return registry;
+  }
+
+  for (const gradeDir of gradeDirs) {
+    const grade = gradeDir.toLowerCase();
+    const gradePath = path.join(WORMHOLE_SENTENCE_BANK_ROOT, gradeDir);
+    registry[grade] = registry[grade] || {};
+    let files = [];
+    try {
+      files = fs.readdirSync(gradePath, { withFileTypes: true })
+        .filter((entry) => entry.isFile() && /\.json$/i.test(entry.name))
+        .map((entry) => entry.name);
+    } catch {
+      continue;
+    }
+    for (const fileName of files) {
+      const chapter = extractWormholeChapterFromFilename(grade, fileName);
+      if (!chapter) continue;
+      const filePath = path.join(gradePath, fileName);
+      registry[grade][chapter] = filePath;
+      const normalizedChapter = normalizeWormholeChapterKey(chapter);
+      if (normalizedChapter && !registry[grade][normalizedChapter]) registry[grade][normalizedChapter] = filePath;
+    }
+  }
+  return registry;
+}
+
+const WORMHOLE_TRAP_REGISTRY = buildWormholeTrapRegistry();
+
+function detectWormholeGradeBucket(input = {}) {
+  const merged = [
+    input.grade || "",
+    input.gradeLabel || "",
+    input.level || "",
+    input.userPrompt || "",
+    input.topic || "",
+    input.worksheetTitle || "",
+    input.rawBody?.grade || "",
+    input.rawBody?.gradeLabel || "",
+    input.rawBody?.level || "",
+    input.rawBody?.userPrompt || "",
+    input.rawBody?.topic || "",
+  ].join("\n").toLowerCase();
+
+  const direct = merged.match(/\b(elementary|middle|high)\s*([1-9][0-9]?)\b/i) || merged.match(/\b(elementary|middle|high)([1-9][0-9]?)\b/i);
+  if (direct) return `${direct[1].toLowerCase()}${direct[2]}`;
+  const short = merged.match(/\b([emh])\s*([1-9][0-9]?)\b/i);
+  if (short) return `${{ e: "elementary", m: "middle", h: "high" }[short[1].toLowerCase()]}${short[2]}`;
+  const gradeNumber = merged.match(/\bgrade\s*([1-9][0-9]?)\b/i);
+  if (gradeNumber) {
+    const n = Number(gradeNumber[1]);
+    return n <= 6 ? `elementary${n}` : n <= 9 ? `middle${n - 6}` : `high${n - 9}`;
+  }
+  if (/(초\s*5|초5|elementary\s*5|elementary5|grade\s*5)/i.test(merged)) return "elementary5";
+  if (/(초\s*6|초6|elementary\s*6|elementary6|grade\s*6)/i.test(merged)) return "elementary6";
+  if (/(중\s*1|중1|중학교\s*1|middle\s*1|middle1|grade\s*7)/i.test(merged)) return "middle1";
+  if (/(중\s*2|중2|중학교\s*2|middle\s*2|middle2|grade\s*8)/i.test(merged)) return "middle2";
+  if (/(중\s*3|중3|중학교\s*3|middle\s*3|middle3|grade\s*9)/i.test(merged)) return "middle3";
+  if (/(고\s*1|고1|고등\s*1|high\s*1|high1|grade\s*10)/i.test(merged)) return "high1";
+  if (/(고\s*2|고2|고등\s*2|high\s*2|high2|grade\s*11)/i.test(merged)) return "high2";
+  if (/(고\s*3|고3|고등\s*3|high\s*3|high3|grade\s*12)/i.test(merged)) return "high3";
+  if (input.level === "middle") return "middle3";
+  if (input.level === "high") return "high1";
+  return "";
+}
+
+function resolveWormholeChapterAlias(text = "") {
+  const raw = String(text || "");
+  const normalized = normalizeWormholeChapterKey(raw);
+  if (/subjunctive\s+past\s+perfect|가정법\s*과거완료/i.test(raw)) return "subjunctive_past_perfect";
+  if (/subjunctive\s+past|가정법\s*과거/i.test(raw)) return "subjunctive_past";
+  if (/past\s+perfect|과거완료/i.test(raw)) return "past_perfect";
+  if (/modal\s+have\s+p\.?p\.?|조동사\s*have\s*p\.?p\.?/i.test(raw)) return "modal_have_pp";
+  if (/present\s+perfect\s+(progressive|continuous)|현재완료\s*진행/i.test(raw)) return "present_perfect_progressive";
+  if (/present\s+perfect|현재완료/i.test(raw)) return "present_perfect";
+  if (/present\s+continuous|현재진행/i.test(raw)) return "present_continuous";
+  if (/relative\s+adverbs?|관계부사/i.test(raw)) return "relative_adverbs";
+  if (/subject\s+relative\s+pronouns?|주격\s*관계대명사/i.test(raw)) return "subject_relative_pronouns";
+  if (/(objective|object)\s+relative\s+pronouns?|목적격\s*관계대명사/i.test(raw)) return "objective_relative_pronouns";
+  if (/relative\s+pronouns?|관계대명사/i.test(raw)) return "relative_pronouns";
+  return normalized && normalized !== "general" && normalized.length <= 80 ? normalized : "";
+}
+
+function scoreWormholeChapterSimilarity(a = "", b = "") {
+  const left = normalizeWormholeChapterKey(a);
+  const right = normalizeWormholeChapterKey(b);
+  if (!left || !right) return 0;
+  if (left === right) return 1;
+  const leftParts = new Set(left.split("_").filter(Boolean));
+  const rightParts = new Set(right.split("_").filter(Boolean));
+  let overlap = 0;
+  for (const part of leftParts) if (rightParts.has(part)) overlap += 1;
+  return Math.max(overlap / Math.max(leftParts.size, rightParts.size, 1), left.includes(right) || right.includes(left) ? 0.82 : 0);
+}
+
+const HIGH_RISK_CHAPTERS = Object.freeze([
+  "subject_relative_pronouns",
+  "objective_relative_pronouns",
+  "relative_adverbs",
+  "present_perfect",
+  "present_perfect_progressive",
+  "past_perfect",
+  "subjunctive_past",
+  "subjunctive_past_perfect",
+]);
+const WORMHOLE_TRAP_FAMILY_MAP = Object.freeze({
+  subjunctive_past_perfect: ["subjunctive_past", "past_perfect", "modal_have_pp"],
+  subjunctive_past: ["subjunctive_past_perfect", "past_perfect", "modal_have_pp"],
+  relative_adverbs: ["subject_relative_pronouns", "objective_relative_pronouns", "relative_pronouns"],
+  relative_pronouns: ["subject_relative_pronouns", "objective_relative_pronouns", "relative_adverbs"],
+  subject_relative_pronouns: ["relative_pronouns", "objective_relative_pronouns", "relative_adverbs"],
+  objective_relative_pronouns: ["relative_pronouns", "subject_relative_pronouns", "relative_adverbs"],
+  present_perfect_progressive: ["present_perfect", "present_continuous", "past_perfect"],
+  present_perfect: ["present_perfect_progressive", "present_continuous", "past_perfect"],
+  present_continuous: ["present_perfect_progressive", "present_perfect", "past_perfect"],
+  past_perfect: ["present_perfect", "present_perfect_progressive", "modal_have_pp"],
+});
+
+function detectWormholeChapterKey(input = {}) {
+  const explicitCandidates = [
+    input.chapterKey || "",
+    input.grammarFocus?.chapterKey || "",
+    input.rawBody?.chapterKey || "",
+    input.rawBody?.grammarFocus?.chapterKey || "",
+    input.topic || "",
+    input.worksheetTitle || "",
+  ];
+  for (const candidate of explicitCandidates) {
+    const resolved = resolveWormholeChapterAlias(candidate);
+    if (resolved) return resolved;
+  }
+
+  const promptAlias = resolveWormholeChapterAlias(input.userPrompt || "");
+  return promptAlias || "";
+}
+
+function getWormholeTrapPathInfo(input = {}) {
+  const bucket = detectWormholeGradeBucket(input);
+  const registry = WORMHOLE_TRAP_REGISTRY[bucket] || {};
+  const requestedChapterKey = detectWormholeChapterKey(input);
+  const normalizedChapterKey = normalizeWormholeChapterKey(requestedChapterKey);
+  const semanticAlias = resolveWormholeChapterAlias(requestedChapterKey);
+  let chapterKey = "";
+  let filePath = "";
+  let matchType = "none";
+  let mode = WORMHOLE_ROUTING_MODES.UNDER_CONSTRUCTION;
+
+  if (requestedChapterKey && registry[requestedChapterKey]) {
+    chapterKey = requestedChapterKey;
+    filePath = registry[requestedChapterKey];
+    matchType = "exact";
+    mode = WORMHOLE_ROUTING_MODES.EXACT_DB_MATCH;
+  } else if (normalizedChapterKey && registry[normalizedChapterKey]) {
+    chapterKey = normalizedChapterKey;
+    filePath = registry[normalizedChapterKey];
+    matchType = "normalized";
+    mode = WORMHOLE_ROUTING_MODES.NORMALIZED_DB_MATCH;
+  } else if (semanticAlias && registry[semanticAlias]) {
+    chapterKey = semanticAlias;
+    filePath = registry[semanticAlias];
+    matchType = "semantic_alias";
+    mode = WORMHOLE_ROUTING_MODES.NORMALIZED_DB_MATCH;
+  }
+
+  return {
+    bucket,
+    requestedChapterKey,
+    normalizedChapterKey,
+    chapterKey: chapterKey || normalizedChapterKey || requestedChapterKey,
+    filePath: filePath && fs.existsSync(filePath) ? filePath : "",
+    matchType,
+    mode: filePath && fs.existsSync(filePath) ? mode : WORMHOLE_ROUTING_MODES.UNDER_CONSTRUCTION,
+    availableChapters: Object.keys(registry),
+  };
+}
+
+function findRelatedTrapDB(input = {}) {
+  const exactInfo = getWormholeTrapPathInfo(input);
+  const registry = WORMHOLE_TRAP_REGISTRY[exactInfo.bucket] || {};
+  const requested = exactInfo.normalizedChapterKey;
+  const semantic = normalizeWormholeChapterKey(resolveWormholeChapterAlias(requested) || requested);
+  const candidates = new Set([
+    ...(WORMHOLE_TRAP_FAMILY_MAP[requested] || []),
+    ...(WORMHOLE_TRAP_FAMILY_MAP[semantic] || []),
+  ].map(normalizeWormholeChapterKey).filter(Boolean));
+  const related = [];
+  const seen = new Set();
+
+  function push(chapterKey, reason, score = 1) {
+    const key = normalizeWormholeChapterKey(chapterKey);
+    const filePath = registry[chapterKey] || registry[key];
+    if (!filePath || seen.has(filePath) || key === requested || key === semantic || !fs.existsSync(filePath)) return;
+    seen.add(filePath);
+    related.push({ chapterKey: key, filePath, fileName: path.basename(filePath), reason, score });
+  }
+
+  for (const candidate of candidates) push(candidate, "same_grammar_family", 1);
+  const highRiskChapter = HIGH_RISK_CHAPTERS.includes(requested) || HIGH_RISK_CHAPTERS.includes(semantic);
+  if (!highRiskChapter) {
+    for (const availableKey of Object.keys(registry)) {
+      const key = normalizeWormholeChapterKey(availableKey);
+      const score = Math.max(scoreWormholeChapterSimilarity(requested, key), scoreWormholeChapterSimilarity(semantic, key));
+      if (score >= 0.82) push(key, "normalized_similarity", score);
+    }
+  }
+  return related.sort((a, b) => b.score - a.score || a.fileName.localeCompare(b.fileName)).slice(0, 2);
+}
+
+function safeReadWormholeJson(filePath) {
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+function normalizeWormholeTrapEntries(raw, chapterKey = "") {
+  const rows = Array.isArray(raw) ? raw : Array.isArray(raw?.items) ? raw.items : Array.isArray(raw?.sentences) ? raw.sentences : [];
+  return rows.map((row, index) => {
+    if (!row || typeof row !== "object") return null;
+    const english = String(row.english || row.en || row.answer || "").trim();
+    const distractorSeeds = row.distractorSeeds && typeof row.distractorSeeds === "object" ? row.distractorSeeds : {};
+    const wormholeVariants = Array.isArray(distractorSeeds.wormholeVariants) ? distractorSeeds.wormholeVariants : Array.isArray(row.wormholeVariants) ? row.wormholeVariants : [];
+    if (!english && !wormholeVariants.length && !Object.keys(distractorSeeds).length) return null;
+    return {
+      id: row.id || `${chapterKey}_${index + 1}`,
+      chapterKey: row.chapterKey || chapterKey,
+      korean: row.korean || row.ko || "",
+      english,
+      distractorSeeds,
+      wormholeVariants,
+      tags: Array.isArray(row.tags) ? row.tags : [],
+    };
+  }).filter(Boolean);
+}
+
+function loadWormholeTrapDB(input = {}) {
+  const pathInfo = getWormholeTrapPathInfo(input);
+  if (pathInfo.filePath) {
+    const items = normalizeWormholeTrapEntries(safeReadWormholeJson(pathInfo.filePath), pathInfo.chapterKey);
+    if (items.length) return { ...pathInfo, source: "exact_trap_db", items, relatedFiles: [] };
+  }
+
+  const relatedFiles = findRelatedTrapDB(input);
+  const items = [];
+  const loaded = [];
+  for (const related of relatedFiles) {
+    const normalized = normalizeWormholeTrapEntries(safeReadWormholeJson(related.filePath), related.chapterKey);
+    if (!normalized.length) continue;
+    loaded.push({ ...related, itemCount: normalized.length });
+    items.push(...normalized.map((item) => ({ ...item, preloadChapterKey: related.chapterKey, preloadFilePath: related.filePath })));
+  }
+  if (loaded.length && items.length) {
+    return { ...pathInfo, filePath: loaded[0].filePath, source: "family_trap_preload", mode: WORMHOLE_ROUTING_MODES.FAMILY_TRAP_PRELOAD, matchType: "family_trap_preload", items, relatedFiles: loaded };
+  }
+
+  return { ...pathInfo, filePath: "", source: "none", mode: WORMHOLE_ROUTING_MODES.UNDER_CONSTRUCTION, items: [], relatedFiles: [] };
+}
+
+function buildWormholeTrapPreloadBlock(trapInfo = null) {
+  if (!trapInfo || !Array.isArray(trapInfo.items) || !trapInfo.items.length) return "";
+  const rows = trapInfo.items.slice(0, 12).map((item, index) => {
+    const variants = Array.isArray(item.wormholeVariants) ? item.wormholeVariants : [];
+    const seed = item.distractorSeeds || {};
+    return [
+      `${index + 1}. chapter: ${item.preloadChapterKey || item.chapterKey}`,
+      item.english ? `answer: ${item.english}` : "",
+      variants.length ? `wormholeVariants: ${variants.slice(0, 5).join(" || ")}` : "",
+      seed.auxError ? `auxError: ${Array.isArray(seed.auxError) ? seed.auxError.join(" || ") : seed.auxError}` : "",
+      Array.isArray(seed.statementForm) && seed.statementForm.length ? `statementForm: ${seed.statementForm.slice(0, 3).join(" || ")}` : "",
+      seed.fragmentForm ? `fragmentForm: ${Array.isArray(seed.fragmentForm) ? seed.fragmentForm.join(" || ") : seed.fragmentForm}` : "",
+    ].filter(Boolean).join("\n");
+  }).join("\n\n");
+
+  return `\n\n[WORMHOLE DB TRAP PRELOAD]\nRoutingMode: ${trapInfo.mode}\nMatchedFile: ${trapInfo.filePath ? path.basename(trapInfo.filePath) : "NONE"}\nDB traps are PRIMARY. Use distractorSeeds and wormholeVariants first. GPT may only lightly adapt, polish, or expand these traps to fit the passage. Do not replace the DB trap structure with random distractors. Preserve option competition balance and MarcusNote cognitive trap style.\n\n${rows}`;
+}
+
+function appendWormholeTrapPreload(userPrompt, trapInfo) {
+  return `${userPrompt || ""}${buildWormholeTrapPreloadBlock(trapInfo)}`;
+}
+
+function logWormholeRouting(info = {}) {
+  const requested = [info.bucket, info.requestedChapterKey].filter(Boolean).join("_") || "UNKNOWN";
+  const matched = info.filePath ? path.basename(info.filePath) : "NONE";
+  console.info(`[Wormhole Routing]\n\nRequested:\n${requested}\n\nMatched:\n${matched}\n\nMode:\n${info.mode || WORMHOLE_ROUTING_MODES.UNDER_CONSTRUCTION}`);
+}
 const MP_COST_TABLE = {
   wormhole: 5,
   magic: 4,
@@ -254,6 +633,7 @@ function normalizeInput(body = {}) {
     hasSourcePassage: profile.hasSourcePassage,
     generationProfile: profile.generationProfile,
     sourceLabel,
+    rawBody: body,
   };
 }
 
@@ -1102,6 +1482,11 @@ function buildMeta(input, actualCount) {
     highDifficultyCount: getHighDifficultyPlan(input.count, input.language).killerCount,
     highDifficultyItems: getHighDifficultyPlan(input.count, input.language).items,
     generatedAt: new Date().toISOString(),
+    dbFirst: Boolean(input.trapRoutingInfo),
+    routingMode: input.trapRoutingInfo?.mode || "",
+    trapDbSource: input.trapRoutingInfo?.source || "",
+    trapDbFilePath: input.trapRoutingInfo?.filePath || "",
+    relatedTrapFiles: Array.isArray(input.trapRoutingInfo?.relatedFiles) ? input.trapRoutingInfo.relatedFiles.map((entry) => ({ chapterKey: entry.chapterKey, filePath: entry.filePath, itemCount: entry.itemCount || 0 })) : [],
   };
 }
 
@@ -1425,6 +1810,24 @@ export default async function handler(req, res) {
       });
     }
 
+    const trapInfo = loadWormholeTrapDB(input);
+    logWormholeRouting(trapInfo);
+    if (trapInfo.mode === WORMHOLE_ROUTING_MODES.UNDER_CONSTRUCTION) {
+      return json(res, 200, {
+        success: false,
+        mode: WORMHOLE_ROUTING_MODES.UNDER_CONSTRUCTION,
+        message: "현재 제작중인 웜홀 챕터입니다. 곧 업데이트될 예정입니다.",
+        meta: {
+          dbFirst: true,
+          routingMode: WORMHOLE_ROUTING_MODES.UNDER_CONSTRUCTION,
+          requestedChapterKey: trapInfo.requestedChapterKey,
+          grade: trapInfo.bucket,
+          matchedFile: "",
+        },
+      });
+    }
+
+    input.trapRoutingInfo = trapInfo;
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
       return json(res, 403, {
@@ -1443,7 +1846,7 @@ export default async function handler(req, res) {
     }
 
     const systemPrompt = buildSystemPrompt(input);
-    const userPrompt = buildUserPrompt(input);
+    const userPrompt = appendWormholeTrapPreload(buildUserPrompt(input), trapInfo);
     const rawText = await callOpenAI(systemPrompt, userPrompt);
     const formatted = formatMocksResponse(rawText, input);
     const validation = validateMocksOutput(formatted, input);
