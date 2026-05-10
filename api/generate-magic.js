@@ -214,6 +214,12 @@ function scoreChapterSimilarity(a = "", b = "") {
 }
 
 const SENTENCE_BANK_REGISTRY = buildSentenceBankRegistry();
+const ROUTING_MODES = Object.freeze({
+  EXACT_DB_MATCH: "EXACT_DB_MATCH",
+  NORMALIZED_DB_MATCH: "NORMALIZED_DB_MATCH",
+  FAMILY_PRELOAD_MATCH: "FAMILY_PRELOAD_MATCH",
+  UNDER_CONSTRUCTION: "UNDER_CONSTRUCTION",
+});
 const CHAPTER_ALIAS_PATTERNS = [
   // S56: high-priority exact chapter names must be checked before modal keywords.
   { key: "there_is_are", patterns: [/there\s+is\s*\(?\s*are\s*\)?/i, /there\s+is\s*\/?\s*are/i, /there is are/i, /there\s+is/i, /there\s+are/i, /there\s+is\s*\(\s*are\s*\)/i] },
@@ -399,30 +405,36 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
 
   let resolvedKey = "";
   let matchType = "";
+  let routingMode = ROUTING_MODES.UNDER_CONSTRUCTION;
   let filePath = "";
 
   if (rawKey && registry[rawKey]) {
     resolvedKey = rawKey;
     matchType = "exact";
+    routingMode = ROUTING_MODES.EXACT_DB_MATCH;
     filePath = registry[rawKey];
   } else if (normalizedKey && registry[normalizedKey]) {
     resolvedKey = normalizedKey;
     matchType = "normalized";
+    routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
     filePath = registry[normalizedKey];
   } else if (semanticAlias && registry[semanticAlias]) {
     resolvedKey = semanticAlias;
     matchType = "semantic_alias";
+    routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
     filePath = registry[semanticAlias];
   } else if (semanticAlias) {
     const normalizedAlias = normalizeChapterKey(semanticAlias);
     if (normalizedAlias && registry[normalizedAlias]) {
       resolvedKey = normalizedAlias;
       matchType = "semantic_alias";
+      routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
       filePath = registry[normalizedAlias];
     }
   }
 
-  if (!filePath && normalizedKey) {
+  const highRiskChapter = HIGH_RISK_CHAPTERS.includes(normalizedKey) || HIGH_RISK_CHAPTERS.includes(normalizeChapterKey(semanticAlias));
+  if (!filePath && normalizedKey && !highRiskChapter) {
     let bestKey = "";
     let bestScore = 0;
     for (const availableKey of Object.keys(registry)) {
@@ -432,9 +444,10 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
         bestKey = availableKey;
       }
     }
-    if (bestKey && bestScore >= 0.74) {
+    if (bestKey && bestScore >= 0.86) {
       resolvedKey = bestKey;
-      matchType = "fuzzy";
+      matchType = "fuzzy_normalized";
+      routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
       filePath = registry[bestKey];
     }
   }
@@ -449,6 +462,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     requestedChapterKey: rawKey,
     normalizedChapterKey: normalizedKey,
     matchType,
+    routingMode: fileExists ? routingMode : ROUTING_MODES.UNDER_CONSTRUCTION,
     expectedFile,
     expectedPath,
     filePath: fileExists ? filePath : "",
@@ -456,6 +470,108 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     availableGrades: getAvailableGradeBuckets(),
     availableChapters: Object.keys(registry),
   };
+}
+const HIGH_RISK_CHAPTERS = Object.freeze([
+  "subject_relative_pronouns",
+  "objective_relative_pronouns",
+  "relative_adverbs",
+  "present_perfect",
+  "present_perfect_progressive",
+  "past_perfect",
+  "subjunctive_past",
+  "subjunctive_past_perfect",
+]);
+const CHAPTER_FAMILY_PRELOAD_MAP = Object.freeze({
+  present_perfect_progressive: ["present_perfect", "present_continuous", "past_perfect"],
+  present_perfect: ["present_perfect_progressive", "past_perfect", "present_continuous"],
+  past_perfect: ["present_perfect", "present_perfect_progressive", "present_continuous"],
+  present_continuous: ["present_perfect_progressive", "present_perfect", "past_perfect"],
+  subject_relative_pronouns: ["relative_pronouns", "objective_relative_pronouns", "relative_adverbs"],
+  objective_relative_pronouns: ["relative_pronouns", "subject_relative_pronouns", "relative_adverbs"],
+  relative_pronouns: ["subject_relative_pronouns", "objective_relative_pronouns", "relative_adverbs", "relative_pronoun_what"],
+  relative_pronoun: ["subject_relative_pronouns", "objective_relative_pronouns", "relative_adverbs", "relative_pronoun_what"],
+  relative_pronoun_what: ["relative_pronouns", "subject_relative_pronouns", "objective_relative_pronouns"],
+  relative_adverbs: ["relative_pronouns", "subject_relative_pronouns", "objective_relative_pronouns"],
+  to_infinitive_total: ["to_infinitive_noun", "to_infinitive_adverbial", "to_infinitive_adjective"],
+  to_infinitive_noun: ["to_infinitive_total", "to_infinitive_adverbial", "to_infinitive_adjective"],
+  to_infinitive_adverbial: ["to_infinitive_total", "to_infinitive_noun", "to_infinitive_adjective"],
+  to_infinitive_adjective: ["to_infinitive_total", "to_infinitive_noun", "to_infinitive_adverbial"],
+  gerund_total: ["gerund", "gerund_object", "to_infinitive_gerund_verbs"],
+  gerund: ["gerund_total", "gerund_object", "to_infinitive_gerund_verbs"],
+  gerund_object: ["gerund", "gerund_total", "to_infinitive_gerund_verbs"],
+  causative: ["causative_verbs", "quasi_causative", "semi_causative", "perception_verbs"],
+  causative_verbs: ["causative", "quasi_causative", "semi_causative", "perception_verbs"],
+  quasi_causative: ["causative_verbs", "causative", "semi_causative", "perception_verbs"],
+  semi_causative: ["causative", "causative_verbs", "quasi_causative", "perception_verbs"],
+});
+
+function getGrammarFamilyTokens(chapterKey = "") {
+  const key = normalizeChapterKey(chapterKey);
+  if (!key) return [];
+  if (key.includes("relative")) return ["relative", "pronoun", "adverb"];
+  if (key.includes("perfect") || key.includes("continuous") || key.includes("progressive")) return ["perfect", "continuous", "progressive", "past", "present"];
+  if (key.includes("infinitive")) return ["infinitive", "to"];
+  if (key.includes("gerund")) return ["gerund"];
+  if (key.includes("causative") || key.includes("perception")) return ["causative", "perception"];
+  if (key.includes("comparative") || key.includes("superlative")) return ["comparative", "superlative"];
+  if (key.includes("passive")) return ["passive"];
+  return key.split("_").filter(Boolean);
+}
+
+function findRelatedChapterFiles(input = {}, chapterKey = "") {
+  const bucket = detectGradeBucket(input);
+  const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
+  const requestedKey = normalizeChapterKey(chapterKey);
+  const semanticKey = normalizeChapterKey(resolveChapterAlias(chapterKey) || requestedKey);
+  const familySeeds = new Set([
+    ...(CHAPTER_FAMILY_PRELOAD_MAP[requestedKey] || []),
+    ...(CHAPTER_FAMILY_PRELOAD_MAP[semanticKey] || []),
+  ].map(normalizeChapterKey).filter(Boolean));
+  const familyTokens = new Set(getGrammarFamilyTokens(semanticKey || requestedKey));
+  const related = [];
+  const seenPaths = new Set();
+
+  function pushMatch(key, reason, score = 1) {
+    const normalizedKey = normalizeChapterKey(key);
+    const filePath = registry[key] || registry[normalizedKey];
+    if (!filePath || seenPaths.has(filePath)) return;
+    if (normalizedKey === requestedKey || normalizedKey === semanticKey) return;
+    if (!fs.existsSync(filePath)) return;
+    seenPaths.add(filePath);
+    related.push({
+      bucket,
+      chapterKey: normalizedKey,
+      filePath,
+      fileName: path.basename(filePath),
+      reason,
+      score,
+    });
+  }
+
+  for (const key of familySeeds) pushMatch(key, "same_grammar_family", 1);
+
+  const highRiskChapter = HIGH_RISK_CHAPTERS.includes(requestedKey) || HIGH_RISK_CHAPTERS.includes(semanticKey);
+  if (!highRiskChapter) {
+    for (const availableKey of Object.keys(registry)) {
+      const normalizedAvailable = normalizeChapterKey(availableKey);
+      if (!normalizedAvailable || normalizedAvailable === requestedKey || normalizedAvailable === semanticKey) continue;
+      const score = Math.max(scoreChapterSimilarity(semanticKey || requestedKey, normalizedAvailable), scoreChapterSimilarity(requestedKey, normalizedAvailable));
+      if (score >= 0.82) {
+        pushMatch(normalizedAvailable, "normalized_similarity", score);
+      }
+    }
+  }
+
+  return related
+    .sort((a, b) => b.score - a.score || a.fileName.localeCompare(b.fileName))
+    .slice(0, 2);
+}
+
+function logMagicRouting(info = {}) {
+  const requested = [info.bucket, info.requestedChapterKey || info.chapterKey].filter(Boolean).join("_") || "UNKNOWN";
+  const matched = info.matchedFile || info.filePath || "NONE";
+  const mode = info.routingMode || ROUTING_MODES.UNDER_CONSTRUCTION;
+  console.info(`[Magic Routing]\nRequested:\n${requested}\n\nMatched:\n${matched ? path.basename(matched) : "NONE"}\n\nMode:\n${mode}`);
 }
 function resolveSentenceBankFile(input = {}, chapterKey = "") {
   return getSentenceBankPathInfo(input, chapterKey).filePath || null;
@@ -553,16 +669,66 @@ function normalizeSentenceBankEntries(rawEntries = [], chapterKey = "") {
 
 function loadSentenceBank(input = {}) {
   const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
-  const filePath = resolveSentenceBankFile(input, chapterKey);
+  const pathInfo = getSentenceBankPathInfo(input, chapterKey);
+  const filePath = pathInfo.filePath || "";
   if (filePath) {
     const raw = safeReadJson(filePath);
-    const normalized = normalizeSentenceBankEntries(raw, chapterKey);
+    const normalized = normalizeSentenceBankEntries(raw, pathInfo.chapterKey || chapterKey);
     if (normalized.length) {
-      return { chapterKey, filePath, source: "json_file", items: normalized };
+      return {
+        chapterKey: pathInfo.chapterKey || chapterKey,
+        requestedChapterKey: chapterKey,
+        filePath,
+        source: "json_file",
+        routingMode: pathInfo.routingMode,
+        matchType: pathInfo.matchType,
+        pathInfo,
+        items: normalized,
+      };
     }
   }
 
-  return { chapterKey, filePath: null, source: "none", items: [] };
+  const relatedFiles = findRelatedChapterFiles(input, chapterKey);
+  const relatedItems = [];
+  const loadedRelatedFiles = [];
+  for (const related of relatedFiles) {
+    const raw = safeReadJson(related.filePath);
+    const normalized = normalizeSentenceBankEntries(raw, related.chapterKey);
+    if (!normalized.length) continue;
+    loadedRelatedFiles.push(Object.assign({}, related, { itemCount: normalized.length }));
+    relatedItems.push(...normalized.map((item) => Object.assign({}, item, {
+      preloadChapterKey: related.chapterKey,
+      preloadFilePath: related.filePath,
+    })));
+  }
+
+  if (loadedRelatedFiles.length && relatedItems.length) {
+    return {
+      chapterKey,
+      requestedChapterKey: chapterKey,
+      filePath: loadedRelatedFiles[0].filePath,
+      filePaths: loadedRelatedFiles.map((entry) => entry.filePath),
+      relatedFiles: loadedRelatedFiles,
+      source: "family_preload",
+      routingMode: ROUTING_MODES.FAMILY_PRELOAD_MATCH,
+      matchType: "family_preload",
+      pathInfo,
+      items: relatedItems,
+    };
+  }
+
+  return {
+    chapterKey,
+    requestedChapterKey: chapterKey,
+    filePath: null,
+    filePaths: [],
+    relatedFiles: [],
+    source: "none",
+    routingMode: ROUTING_MODES.UNDER_CONSTRUCTION,
+    matchType: "none",
+    pathInfo,
+    items: [],
+  };
 }
 
 function json(res, status, payload) {
@@ -692,7 +858,7 @@ function detectGrammarFocus(text = "") {
     ditransitive: aliasKey === "five_form" || has(/수여동사/i, /4형식/i, /ditransitive/i, /5형식/i, /오형식/i, /five form/i),
   };
 
-  let chapterKey = aliasKey || "general";
+  let chapterKey = aliasKey || "";
   if (!aliasKey) {
     if (flags.beQuestion) chapterKey = "be_question";
     else if (flags.doQuestion) chapterKey = "do_question";
@@ -1331,8 +1497,8 @@ ${answerSheet}` : "") };
 }
 
 
-function buildDbFirstWorksheet(input) {
-  const bankInfo = loadSentenceBank(input);
+function buildDbFirstWorksheet(input, preloadedBankInfo = null) {
+  const bankInfo = preloadedBankInfo || loadSentenceBank(input);
   const bank = bankInfo.items || [];
   if (!bank.length) return null;
 
@@ -1415,6 +1581,7 @@ function buildDbFirstWorksheet(input) {
       dbSource: bankInfo.source,
       dbFilePath: bankInfo.filePath || "",
       dbItemCount: bank.length,
+      routingMode: bankInfo.routingMode || ROUTING_MODES.EXACT_DB_MATCH,
       dbDebug: getDbDebugInfo(input, bankInfo),
     },
   };
@@ -1431,6 +1598,7 @@ function buildDbFirstWorksheet(input) {
       dbSource: bankInfo.source,
       dbFilePath: bankInfo.filePath || "",
       dbItemCount: bank.length,
+      routingMode: bankInfo.routingMode || ROUTING_MODES.EXACT_DB_MATCH,
       dbDebug: getDbDebugInfo(input, bankInfo),
     }),
   });
@@ -1453,6 +1621,10 @@ function getDbDebugInfo(input = {}, bankInfo = null) {
     dbSource: resolvedBankInfo?.source || "none",
     dbFilePath: resolvedBankInfo?.filePath || "",
     dbItemCount: Array.isArray(resolvedBankInfo?.items) ? resolvedBankInfo.items.length : 0,
+    routingMode: resolvedBankInfo?.routingMode || pathInfo.routingMode || ROUTING_MODES.UNDER_CONSTRUCTION,
+    matchType: resolvedBankInfo?.matchType || pathInfo.matchType || "none",
+    matchedFile: resolvedBankInfo?.filePath || pathInfo.filePath || "",
+    relatedFiles: Array.isArray(resolvedBankInfo?.relatedFiles) ? resolvedBankInfo.relatedFiles.map((entry) => ({ chapterKey: entry.chapterKey, filePath: entry.filePath, itemCount: entry.itemCount || 0 })) : [],
     expectedFile: pathInfo.expectedFile,
     expectedPath: pathInfo.expectedPath,
     fileExists: pathInfo.fileExists,
@@ -1661,20 +1833,49 @@ async function handler(req, res) {
     const shouldTryDbFirst = shouldUseDbFirst(input);
     let worksheet = null;
 
+    const bankInfo = shouldTryDbFirst ? loadSentenceBank(input) : null;
+
     if (shouldTryDbFirst) {
-      worksheet = buildDbFirstWorksheet(input);
+      logMagicRouting({
+        bucket: bankInfo?.pathInfo?.bucket || detectGradeBucket(input),
+        requestedChapterKey: bankInfo?.requestedChapterKey || input.grammarFocus.chapterKey,
+        matchedFile: bankInfo?.filePath || "",
+        routingMode: bankInfo?.routingMode || ROUTING_MODES.UNDER_CONSTRUCTION,
+      });
+
+      if (bankInfo.routingMode === ROUTING_MODES.EXACT_DB_MATCH || bankInfo.routingMode === ROUTING_MODES.NORMALIZED_DB_MATCH) {
+        worksheet = buildDbFirstWorksheet(input, bankInfo);
+      } else if (bankInfo.routingMode === ROUTING_MODES.FAMILY_PRELOAD_MATCH) {
+        input.routingMode = ROUTING_MODES.FAMILY_PRELOAD_MATCH;
+        input.preloadedSentenceBankInfo = bankInfo;
+        worksheet = await generateWithOpenAI(input);
+        worksheet.meta = Object.assign({}, worksheet.meta || {}, {
+          dbFirst: false,
+          dbFallback: false,
+          dbGuidedHybrid: true,
+          dbSource: "family_preload",
+          dbFilePath: bankInfo.filePath || "",
+          dbItemCount: Array.isArray(bankInfo.items) ? bankInfo.items.length : 0,
+          routingMode: ROUTING_MODES.FAMILY_PRELOAD_MATCH,
+          dbDebug: getDbDebugInfo(input, bankInfo),
+        });
+      } else {
+        return json(res, 200, {
+          success: false,
+          ok: false,
+          mode: ROUTING_MODES.UNDER_CONSTRUCTION,
+          message: "현재 제작중인 챕터입니다. 곧 업데이트될 예정입니다.",
+          meta: {
+            dbFirst: true,
+            routingMode: ROUTING_MODES.UNDER_CONSTRUCTION,
+            dbDebug: getDbDebugInfo(input, bankInfo),
+          },
+        });
+      }
     }
 
     if (!worksheet) {
       worksheet = await generateWithOpenAI(input);
-      if (shouldTryDbFirst) {
-        worksheet.meta = Object.assign({}, worksheet.meta || {}, {
-          dbFirst: false,
-          dbFallback: true,
-          dbSource: "gpt_fallback",
-          dbDebug: getDbDebugInfo(input),
-        });
-      }
     }
     const renderBundle = createWorkbookRenderBundle(worksheet, input) || {};
     const mp = await consumeMpIfNeeded(input);
