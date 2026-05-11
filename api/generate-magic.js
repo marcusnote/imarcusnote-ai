@@ -221,23 +221,38 @@ const ROUTING_MODES = Object.freeze({
   UNDER_CONSTRUCTION: "UNDER_CONSTRUCTION",
 });
 const CHAPTER_ALIAS_PATTERNS = [
-  // S56: high-priority exact chapter names must be checked before modal keywords.
-  { key: "there_is_are", patterns: [/there\s+is\s*\(?\s*are\s*\)?/i, /there\s+is\s*\/?\s*are/i, /there is are/i, /there\s+is/i, /there\s+are/i, /there\s+is\s*\(\s*are\s*\)/i] },
-  { key: "wh_questions", patterns: [/중2.*의문사/i, /의문사\s*의문문/i, /wh-?\s*questions?/i] },
-  { key: "to_infinitive_adverbial", patterns: [/to부정사\s*부사적\s*용법/i, /to-?infinitive\s*adverbial/i] },
-  { key: "to_infinitive_adjective", patterns: [/to부정사\s*형용사적\s*용법/i, /to-?infinitive\s*adjective/i] },
-  { key: "wh_to_infinitive", patterns: [/의문사\s*\+\s*to부정사/i, /wh\s*\+\s*to-?infinitive/i] },
-  { key: "perception_verbs", patterns: [/지각동사/i, /perception\s*verbs?/i] },
-  { key: "quasi_causative", patterns: [/준사역동사/i, /quasi\s*causative/i, /semi-?\s*causative/i] },
-  { key: "causative_verbs", patterns: [/사역동사/i, /causative\s*verbs?/i] },
-  { key: "participles", patterns: [/분사/i, /participles?/i] },
-  { key: "indefinite_pronouns", patterns: [/부정대명사/i, /indefinite\s*pronouns?/i] },
-  { key: "reflexive_pronouns", patterns: [/재귀대명사/i, /reflexive\s*pronouns?/i] },
-  { key: "something_adjective", patterns: [/something\s*\+\s*형용사/i, /something\s+adjective/i] },
+  // S57 routing lock: broad modal/conjunction keywords must never outrank chapter-level requests.
+  { key: "passive_advanced", patterns: [/수동태\s*심화/i, /passive\s*advanced/i] },
+  { key: "passive", patterns: [/수동태/i, /passive/i] },
   { key: "relative_pronoun_what", patterns: [/관계대명사\s*what/i, /relative\s*pronoun\s*what/i] },
   { key: "subject_relative_pronouns", patterns: [/주격\s*관계대명사/i, /subject\s*relative\s*pronouns?/i] },
   { key: "objective_relative_pronouns", patterns: [/목적격\s*관계대명사/i, /objective\s*relative\s*pronouns?/i] },
+  { key: "relative_pronouns", patterns: [/관계대명사/i, /relative\s*pronouns?/i] },
   { key: "relative_adverbs", patterns: [/관계부사/i, /relative\s*adverbs?/i] },
+  { key: "present_perfect_progressive", patterns: [/현재완료\s*진행형/i, /present perfect progressive/i, /present perfect continuous/i] },
+  { key: "present_perfect", patterns: [/현재완료(?!\s*진행형)/i, /present perfect(?!\s*(continuous|progressive))/i] },
+  { key: "participles", patterns: [/분사/i, /participles?/i] },
+  { key: "gerund_object", patterns: [/동명사를\s*목적어로\s*취하는/i, /gerund object/i] },
+  { key: "gerund_total", patterns: [/동명사(?!\s*를\s*목적어로)/i, /gerund/i] },
+  { key: "to_infinitive_adverbial", patterns: [/to부정사\s*부사적\s*용법/i, /to-?infinitive\s*adverbial/i] },
+  { key: "to_infinitive_adjective", patterns: [/to부정사\s*형용사적\s*용법/i, /to-?infinitive\s*adjective/i] },
+  { key: "wh_to_infinitive", patterns: [/의문사\s*\+\s*to부정사/i, /wh\s*\+\s*to-?infinitive/i] },
+  { key: "to_infinitive_noun_adjective", patterns: [/to부정사\s*명사적.*형용사적/i, /to부정사의\s*명사적\s*용법.*형용사적\s*용법/i, /to-?infinitive\s*noun.*adjective/i] },
+  { key: "to_infinitive_gerund_verbs", patterns: [/to부정사.*동명사.*동사/i, /to-?infinitive.*gerund.*verbs/i] },
+  { key: "not_to_infinitive", patterns: [/not\s+to\s+부정사/i, /not\s+to\s+infinitive/i] },
+  { key: "it_to_infinitive_subject", patterns: [/it\s*가주어.*to부정사/i, /it.*to-?infinitive.*subject/i] },
+  { key: "to_infinitive_noun", patterns: [/to부정사\s*명사적\s*용법/i, /to-?infinitive noun/i] },
+  { key: "to_infinitive_total", patterns: [/to부정사(?!\s*명사적)/i, /to-?infinitive/i, /\binfinitive\b/i] },
+  { key: "perception_verbs", patterns: [/지각동사/i, /perception\s*verbs?/i] },
+  { key: "quasi_causative", patterns: [/준사역동사/i, /quasi\s*causative/i, /semi-?\s*causative/i] },
+  { key: "causative_verbs", patterns: [/사역동사/i, /causative\s*verbs?/i] },
+  { key: "causative", patterns: [/사역동사/i, /causative/i] },
+  { key: "semi_causative", patterns: [/준사역동사/i, /semi-?\s*causative/i] },
+  { key: "there_is_are", patterns: [/there\s+is\s*\(?\s*are\s*\)?/i, /there\s+is\s*\/?\s*are/i, /there is are/i, /there\s+is/i, /there\s+are/i, /there\s+is\s*\(\s*are\s*\)/i] },
+  { key: "wh_questions", patterns: [/중2.*의문사/i, /의문사\s*의문문/i, /wh-?\s*questions?/i] },
+  { key: "indefinite_pronouns", patterns: [/부정대명사/i, /indefinite\s*pronouns?/i] },
+  { key: "reflexive_pronouns", patterns: [/재귀대명사/i, /reflexive\s*pronouns?/i] },
+  { key: "something_adjective", patterns: [/something\s*\+\s*형용사/i, /something\s+adjective/i] },
   { key: "so_that_purpose", patterns: [/so\s+that\s*목적/i, /so\s+that\s+purpose/i] },
   { key: "so_that", patterns: [/so\s+that/i, /so\s*that\s*구문/i] },
   { key: "not_only_but_also", patterns: [/not\s+only.*but\s+also/i, /상관접속사/i] },
@@ -275,7 +290,6 @@ const CHAPTER_ALIAS_PATTERNS = [
   { key: "modal_have_pp", patterns: [/조동사\s*have\s*p\.?p\.?/i, /modal\s+have\s+pp/i] },
   { key: "have_object_pp", patterns: [/have\s*object\s*p\.?p\.?/i, /have\s+목적어\s+p\.?p\.?/i] },
   { key: "it_seems_that", patterns: [/it\s+seems\s+that/i, /it seems that/i] },
-  { key: "present_perfect_progressive", patterns: [/현재완료\s*진행형/i, /present perfect progressive/i, /present perfect continuous/i] },
   { key: "past_perfect", patterns: [/과거완료/i, /past perfect/i] },
   { key: "be_question", patterns: [/be동사\s*의문문/i, /be동사.*의문문/i, /be-?verb question/i, /am\/is\/are/i] },
   { key: "be_negative", patterns: [/be동사\s*부정문/i, /be동사.*부정문/i, /be-?verb negative/i] },
@@ -285,29 +299,23 @@ const CHAPTER_ALIAS_PATTERNS = [
   { key: "do_verb", patterns: [/일반동사(?!\s*(의문문|부정문))/i, /\bgeneral verb\b/i] },
   { key: "present_continuous", patterns: [/현재진행형/i, /present continuous/i, /be \w+ing/i] },
   { key: "modal_will", patterns: [/조동사\s*will/i, /\bwill\b/i] },
-  { key: "must", patterns: [/조동사\s*must/i, /\bmust\b/i] },
+  { key: "must", patterns: [/\bmust\b/i, /조동사\s*must/i] },
   { key: "have_to", patterns: [/조동사\s*have\s*to/i, /\bhave\s+to\b/i, /\bhas\s+to\b/i] },
   { key: "may", patterns: [/조동사\s*may/i, /\bmay\b/i] },
-  { key: "should", patterns: [/조동사\s*should/i, /\bshould\b/i] },
+  { key: "should", patterns: [/\bshould\s+\w+/i, /조동사\s*should/i] },
   { key: "there_is_are", patterns: [/there\s+is\s*\/?\s*are/i, /there is are/i, /there\s+is/i, /there\s+are/i] },
   { key: "wh_question", patterns: [/의문사\s*의문문/i, /wh-?\s*question/i, /\bwho\b|\bwhat\b|\bwhen\b|\bwhere\b|\bwhy\b|\bhow\b/i] },
   { key: "frequency_adverbs", patterns: [/빈도부사/i, /frequency adverb/i] },
   { key: "sensory_verb", patterns: [/감각동사/i, /sensory verb/i, /sense verb/i, /look\s*sound\s*feel\s*taste\s*smell/i] },
   { key: "past", patterns: [/과거시제/i, /일반동사\s*과거/i, /be동사\s*과거/i, /past tense/i] },
-  { key: "can", patterns: [/\bcan\b/i, /조동사\s*can/i] },
+  { key: "can", patterns: [/\bcan\s+\w+/i, /조동사\s*can/i] },
   { key: "conjunction_when", patterns: [/접속사\s*when/i, /conjunction\s*when/i] },
   { key: "conjunction_while", patterns: [/접속사\s*while/i, /conjunction\s*while/i] },
   { key: "conjunction_that", patterns: [/접속사\s*that/i, /conjunction\s*that/i] },
   { key: "because", patterns: [/접속사\s*because/i, /\bbecause\b/i] },
-  { key: "so", patterns: [/접속사\s*so/i, /\bso\b/i] },
+  { key: "so", patterns: [/접속사\s*so/i] },
   { key: "but", patterns: [/접속사\s*but/i, /\bbut\b/i] },
-  { key: "and", patterns: [/접속사\s*and/i, /\band\b/i] },
-  { key: "causative", patterns: [/사역동사/i, /causative/i] },
-  { key: "semi_causative", patterns: [/준사역동사/i, /semi-?\s*causative/i] },
-  { key: "gerund_object", patterns: [/동명사를\s*목적어로\s*취하는/i, /gerund object/i] },
-  { key: "gerund_total", patterns: [/동명사(?!\s*를\s*목적어로)/i, /gerund/i] },
-  { key: "to_infinitive_noun", patterns: [/to부정사\s*명사적\s*용법/i, /to-?infinitive noun/i] },
-  { key: "to_infinitive_total", patterns: [/to부정사(?!\s*명사적)/i, /to-?infinitive/i, /\binfinitive\b/i] },
+  { key: "and", patterns: [/접속사\s*and/i] },
   { key: "prepositions_basic", patterns: [/전치사/i, /preposition/i] },
   { key: "a_few_few", patterns: [/\ba few\b/i, /\bfew\b/i] },
   { key: "a_little_little", patterns: [/\ba little\b/i, /\blittle\b/i] },
@@ -319,8 +327,6 @@ const CHAPTER_ALIAS_PATTERNS = [
   { key: "exclamation", patterns: [/감탄문/i, /exclamation/i] },
   { key: "reflexive_pronoun", patterns: [/재귀대명사/i, /reflexive pronoun/i] },
   { key: "five_form", patterns: [/5형식/i, /오형식/i, /five form/i] },
-  { key: "passive_advanced", patterns: [/수동태\s*심화/i, /passive\s*advanced/i] },
-  { key: "passive", patterns: [/수동태/i, /passive/i] },
 ];
 
 function detectGradeBucket(input = {}) {
@@ -568,10 +574,17 @@ function findRelatedChapterFiles(input = {}, chapterKey = "") {
 }
 
 function logMagicRouting(info = {}) {
-  const requested = [info.bucket, info.requestedChapterKey || info.chapterKey].filter(Boolean).join("_") || "UNKNOWN";
+  const requested = info.requestedChapterKey || info.chapterKey || "UNKNOWN";
+  const detected = info.detectedChapterKey || info.chapterKey || "UNKNOWN";
   const matched = info.matchedFile || info.filePath || "NONE";
   const mode = info.routingMode || ROUTING_MODES.UNDER_CONSTRUCTION;
-  console.info(`[Magic Routing]\nRequested:\n${requested}\n\nMatched:\n${matched ? path.basename(matched) : "NONE"}\n\nMode:\n${mode}`);
+  console.info([
+    "[Magic Routing]",
+    `Requested chapter: ${requested}`,
+    `Detected chapter: ${detected}`,
+    `Matched DB file: ${matched && matched !== "NONE" ? path.basename(matched) : "NONE"}`,
+    `Routing mode: ${mode}`,
+  ].join("\n"));
 }
 function resolveSentenceBankFile(input = {}, chapterKey = "") {
   return getSentenceBankPathInfo(input, chapterKey).filePath || null;
@@ -860,18 +873,18 @@ function detectGrammarFocus(text = "") {
 
   let chapterKey = aliasKey || "";
   if (!aliasKey) {
-    if (flags.beQuestion) chapterKey = "be_question";
-    else if (flags.doQuestion) chapterKey = "do_question";
+    if (flags.passive) chapterKey = "passive";
+    else if (flags.relativePronoun) chapterKey = "relative_pronouns";
+    else if (flags.relativeAdverb) chapterKey = "relative_adverbs";
     else if (flags.presentPerfectProgressive) chapterKey = "present_perfect_progressive";
     else if (flags.presentPerfect) chapterKey = "present_perfect";
-    else if (flags.presentContinuous) chapterKey = "present_continuous";
-    else if (flags.passive) chapterKey = "passive";
+    else if (flags.participialModifier) chapterKey = "participial_modifier";
     else if (flags.gerund) chapterKey = "gerund_total";
     else if (flags.toInfinitive) chapterKey = "to_infinitive_total";
-    else if (flags.relativePronoun) chapterKey = "relative_pronoun";
-    else if (flags.relativeAdverb) chapterKey = "relative_adverb";
-    else if (flags.participialModifier) chapterKey = "participial_modifier";
     else if (flags.causative) chapterKey = "causative";
+    else if (flags.beQuestion) chapterKey = "be_question";
+    else if (flags.doQuestion) chapterKey = "do_question";
+    else if (flags.presentContinuous) chapterKey = "present_continuous";
     else if (flags.ditransitive) chapterKey = "five_form";
   }
 
@@ -942,10 +955,19 @@ function normalizeInput(body = {}) {
     sanitizeString(body.rawBody?.worksheetTitle || body.rawBody?.title || ""),
   ].filter(Boolean).join("\n");
   const primaryGrammarFocus = detectGrammarFocus(primaryChapterText);
-  const mergedGrammarFocus = detectGrammarFocus(`${mergedText} ${topic}`);
-  const grammarFocus = primaryGrammarFocus.chapterKey && primaryGrammarFocus.chapterKey !== "general"
-    ? primaryGrammarFocus
-    : mergedGrammarFocus;
+  const mergedGrammarFocus = detectGrammarFocus(
+    `${topic} ${body.worksheetTitle || ""}`
+  );
+  const grammarFocus =
+    primaryGrammarFocus.chapterKey &&
+    primaryGrammarFocus.chapterKey !== "general"
+      ? primaryGrammarFocus
+      : (
+        mergedGrammarFocus.chapterKey &&
+        mergedGrammarFocus.chapterKey !== "must"
+          ? mergedGrammarFocus
+          : { chapterKey: "" }
+      );
 
   const requestedWorkbookType = normalizeWorkbookTypeLoose(sanitizeString(
   body.workbookType ||
@@ -1615,6 +1637,8 @@ function getDbDebugInfo(input = {}, bankInfo = null) {
   return {
     grade,
     chapterKey,
+    requestedChapter: input?.topic || input?.worksheetTitle || chapterKey,
+    detectedChapter: chapterKey,
     requestedWorkbookType: input?.requestedWorkbookType,
     workbookType: input?.workbookType,
     mode: input?.mode,
@@ -1839,6 +1863,7 @@ async function handler(req, res) {
       logMagicRouting({
         bucket: bankInfo?.pathInfo?.bucket || detectGradeBucket(input),
         requestedChapterKey: bankInfo?.requestedChapterKey || input.grammarFocus.chapterKey,
+        detectedChapterKey: input.grammarFocus.chapterKey,
         matchedFile: bankInfo?.filePath || "",
         routingMode: bankInfo?.routingMode || ROUTING_MODES.UNDER_CONSTRUCTION,
       });
