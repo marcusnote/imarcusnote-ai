@@ -35,44 +35,6 @@ const MP_COST_TABLE = {
   vocab_csat: 5,
 };
 
-const MIDDLE1_SENTENCE_BANK = {
-  be_question: [
-    { ko: "그는 학생이니?", en: "Is he a student?" },
-    { ko: "그녀는 지금 집에 있니?", en: "Is she at home now?" },
-    { ko: "너는 바쁘니?", en: "Are you busy?" },
-    { ko: "그들은 교실에 있니?", en: "Are they in the classroom?" },
-    { ko: "오늘은 춥니?", en: "Is it cold today?" },
-    { ko: "너의 부모님은 집에 계시니?", en: "Are your parents at home?" },
-    { ko: "이것은 네 가방이니?", en: "Is this your bag?" },
-    { ko: "저 소년들은 행복하니?", en: "Are those boys happy?" },
-  ],
-  do_question: [
-    { ko: "너는 축구를 하니?", en: "Do you play soccer?" },
-    { ko: "그는 매일 영어를 공부하니?", en: "Does he study English every day?" },
-    { ko: "그녀는 버스로 학교에 가니?", en: "Does she go to school by bus?" },
-    { ko: "너희는 주말에 숙제를 하니?", en: "Do you do your homework on weekends?" },
-    { ko: "그는 아침에 우유를 마시니?", en: "Does he drink milk in the morning?" },
-    { ko: "그들은 공원에서 뛰니?", en: "Do they run in the park?" },
-    { ko: "너는 피아노를 치니?", en: "Do you play the piano?" },
-    { ko: "그녀는 책을 많이 읽니?", en: "Does she read many books?" },
-  ],
-  present_continuous: [
-    { ko: "나는 지금 숙제를 하고 있다.", en: "I am doing my homework now." },
-    { ko: "그는 공원에서 달리고 있다.", en: "He is running in the park." },
-    { ko: "그녀는 영어를 공부하고 있다.", en: "She is studying English." },
-    { ko: "우리는 점심을 먹고 있다.", en: "We are having lunch." },
-    { ko: "그들은 사진을 찍고 있다.", en: "They are taking pictures." },
-  ],
-  present_perfect: [
-    { ko: "나는 이미 내 숙제를 끝냈다.", en: "I have already finished my homework." },
-    { ko: "그는 방을 청소했다.", en: "He has cleaned his room." },
-    { ko: "우리는 그 영화를 본 적이 있다.", en: "We have seen that movie." },
-    { ko: "그녀는 아직 점심을 먹지 않았다.", en: "She has not had lunch yet." },
-    { ko: "그들은 서울에 가 본 적이 있다.", en: "They have been to Seoul." },
-  ],
-};
-
-
 function hasSentenceBankGradeFolders(rootPath) {
   try {
     return fs.existsSync(rootPath) && fs.readdirSync(rootPath, { withFileTypes: true })
@@ -1016,20 +978,6 @@ function normalizeInput(body = {}) {
 }
 
 
-function getMiddle1SentenceBank(input) {
-  const bank = loadSentenceBank(input);
-  return bank.items.slice(0, 8).map((item) => ({ ko: item.korean, en: item.english }));
-}
-
-function buildSentenceBankBlock(input) {
-  const bank = getMiddle1SentenceBank(input);
-  if (!bank.length) return "";
-  const lines = bank.map((item, i) => `${i + 1}. ${item.ko} → ${item.en}`).join("\n");
-  return input.language === "en"
-    ? `\n[SENTENCE BANK]\nUse the tone and difficulty of these seed patterns, but do not copy them directly.\n${lines}`
-    : `\n[문장 은행]\n아래 예문들의 난도와 톤을 참고하되, 그대로 복사하지 말고 변형하여 활용할 것.\n${lines}`;
-}
-
 function buildTaskGuide(input) {
   const guideMap = {
     writing: input.language === "en"
@@ -1058,7 +1006,6 @@ function buildPrompt(input) {
   const noteBlock = input.additionalNotes
     ? (input.language === "en" ? `\n[Additional Notes]\n${input.additionalNotes}` : `\n[추가 메모]\n${input.additionalNotes}`)
     : "";
-  const sentenceBankBlock = buildSentenceBankBlock(input);
   const focus = input.grammarFocus.chapterKey;
 
   const strictFocusRule = input.language === "en"
@@ -1091,8 +1038,8 @@ function buildPrompt(input) {
 
 
   return (input.language === "en"
-    ? `Generate a MARCUS Magic worksheet.\nTitle: ${title}\nGrade: ${input.gradeLabel}\nLevel: ${input.level}\nMode: ${input.mode}\nWorkbookType: ${input.workbookType}\nTopic: ${input.topic}\nDifficulty: ${input.difficulty}\nItemCount: ${input.count}\nTask: ${buildTaskGuide(input)}\n\nRules:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[User Request]\n${input.userPrompt || "(none)"}`
-    : `MARCUS Magic 워크시트를 생성하시오.\n제목: ${title}\n학년: ${input.gradeLabel}\n레벨: ${input.level}\n모드: ${input.mode}\nWorkbookType: ${input.workbookType}\n주제: ${input.topic}\n난이도: ${input.difficulty}\n문항수: ${input.count}\n과업: ${buildTaskGuide(input)}\n\n규칙:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sentenceBankBlock}${sourceBlock}${noteBlock}\n\n[사용자 요청]\n${input.userPrompt || "(없음)"}`);
+    ? `Generate a MARCUS Magic worksheet.\nTitle: ${title}\nGrade: ${input.gradeLabel}\nLevel: ${input.level}\nMode: ${input.mode}\nWorkbookType: ${input.workbookType}\nTopic: ${input.topic}\nDifficulty: ${input.difficulty}\nItemCount: ${input.count}\nTask: ${buildTaskGuide(input)}\n\nRules:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sourceBlock}${noteBlock}\n\n[User Request]\n${input.userPrompt || "(none)"}`
+    : `MARCUS Magic 워크시트를 생성하시오.\n제목: ${title}\n학년: ${input.gradeLabel}\n레벨: ${input.level}\n모드: ${input.mode}\nWorkbookType: ${input.workbookType}\n주제: ${input.topic}\n난이도: ${input.difficulty}\n문항수: ${input.count}\n과업: ${buildTaskGuide(input)}\n\n규칙:\n- ${strictFocusRule}\n- ${absoluteGrammarLock}\n- ${noMixedGrammarRule}\n- ${writingRule}\n- ${styleRule}\n- ${repairRule}\n- ${formRule}${sourceBlock}${noteBlock}\n\n[사용자 요청]\n${input.userPrompt || "(없음)"}`);
 }
 
 function extractJson(text) {
@@ -1137,11 +1084,8 @@ function normalizeAnswerItem(item, index, question) {
 }
 
 function buildFallbackQuestion(input, index) {
-  const chapter = input.grammarFocus.chapterKey;
-  const bank = MIDDLE1_SENTENCE_BANK[chapter] || [];
-  const sample = bank[index % Math.max(bank.length, 1)] || null;
-  const basePrompt = sample?.ko || `${input.topic}에 맞는 문장을 영작하시오.`;
-  const baseAnswer = sample?.en || `Sample answer ${index + 1}.`;
+  const basePrompt = `${input.topic}에 맞는 문장을 영작하시오.`;
+  const baseAnswer = `Sample answer ${index + 1}.`;
   return {
     number: index + 1,
     prompt: basePrompt,
@@ -1664,7 +1608,14 @@ function getDbDebugInfo(input = {}, bankInfo = null) {
     fileExists: pathInfo.fileExists,
   };
 }
+
+function isMiddle1StrictDbRequest(input = {}) {
+  return detectGradeBucket(input) === "middle1" && Boolean(String(input?.grammarFocus?.chapterKey || "").trim());
+}
+
 function shouldUseDbFirst(input = {}) {
+  if (isMiddle1StrictDbRequest(input)) return true;
+
   const rawWorkbookType = String(
     input?.requestedWorkbookType ||
     input?.workbookType ||
@@ -1865,6 +1816,7 @@ async function handler(req, res) {
   try {
     const input = normalizeInput(req.body || {});
     const shouldTryDbFirst = shouldUseDbFirst(input);
+    const middle1StrictDb = isMiddle1StrictDbRequest(input);
     let worksheet = null;
 
     const bankInfo = shouldTryDbFirst ? loadSentenceBank(input) : null;
@@ -1880,7 +1832,20 @@ async function handler(req, res) {
 
       if (bankInfo.routingMode === ROUTING_MODES.EXACT_DB_MATCH || bankInfo.routingMode === ROUTING_MODES.NORMALIZED_DB_MATCH) {
         worksheet = buildDbFirstWorksheet(input, bankInfo);
-      } else if (bankInfo.routingMode === ROUTING_MODES.FAMILY_PRELOAD_MATCH) {
+        if (middle1StrictDb && !worksheet) {
+          return json(res, 200, {
+            success: false,
+            ok: false,
+            mode: ROUTING_MODES.UNDER_CONSTRUCTION,
+            message: "현재 제작중인 챕터입니다. 곧 업데이트될 예정입니다.",
+            meta: {
+              dbFirst: true,
+              routingMode: ROUTING_MODES.UNDER_CONSTRUCTION,
+              dbDebug: getDbDebugInfo(input, bankInfo),
+            },
+          });
+        }
+      } else if (!middle1StrictDb && bankInfo.routingMode === ROUTING_MODES.FAMILY_PRELOAD_MATCH) {
         input.routingMode = ROUTING_MODES.FAMILY_PRELOAD_MATCH;
         input.preloadedSentenceBankInfo = bankInfo;
         worksheet = await generateWithOpenAI(input);
@@ -1907,6 +1872,20 @@ async function handler(req, res) {
           },
         });
       }
+    }
+
+    if (middle1StrictDb && !worksheet) {
+      return json(res, 200, {
+        success: false,
+        ok: false,
+        mode: ROUTING_MODES.UNDER_CONSTRUCTION,
+        message: "현재 제작중인 챕터입니다. 곧 업데이트될 예정입니다.",
+        meta: {
+          dbFirst: true,
+          routingMode: ROUTING_MODES.UNDER_CONSTRUCTION,
+          dbDebug: getDbDebugInfo(input, bankInfo),
+        },
+      });
     }
 
     if (!worksheet) {
