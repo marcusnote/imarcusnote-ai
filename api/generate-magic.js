@@ -405,6 +405,7 @@ function resolveChapterAlias(text = "") {
 function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   const bucket = detectGradeBucket(input);
   const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
+
   const rawKey = String(chapterKey || "").trim();
   const normalizedKey = normalizeChapterKey(rawKey);
   const semanticAlias = resolveChapterAlias(rawKey) || resolveChapterAlias(normalizedKey);
@@ -414,23 +415,34 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   let routingMode = ROUTING_MODES.UNDER_CONSTRUCTION;
   let filePath = "";
 
+  // 1. EXACT DB MATCH
   if (rawKey && registry[rawKey]) {
     resolvedKey = rawKey;
     matchType = "exact";
     routingMode = ROUTING_MODES.EXACT_DB_MATCH;
     filePath = registry[rawKey];
-  } else if (normalizedKey && registry[normalizedKey]) {
+  }
+
+  // 2. NORMALIZED DB MATCH
+  else if (normalizedKey && registry[normalizedKey]) {
     resolvedKey = normalizedKey;
     matchType = "normalized";
     routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
     filePath = registry[normalizedKey];
-  } else if (semanticAlias && registry[semanticAlias]) {
+  }
+
+  // 3. EXACT SEMANTIC ALIAS MATCH
+  else if (semanticAlias && registry[semanticAlias]) {
     resolvedKey = semanticAlias;
     matchType = "semantic_alias";
     routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
     filePath = registry[semanticAlias];
-  } else if (semanticAlias) {
+  }
+
+  // 4. NORMALIZED SEMANTIC ALIAS MATCH
+  else if (semanticAlias) {
     const normalizedAlias = normalizeChapterKey(semanticAlias);
+
     if (normalizedAlias && registry[normalizedAlias]) {
       resolvedKey = normalizedAlias;
       matchType = "semantic_alias";
@@ -439,36 +451,43 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     }
   }
 
-  const highRiskChapter = HIGH_RISK_CHAPTERS.includes(normalizedKey) || HIGH_RISK_CHAPTERS.includes(normalizeChapterKey(semanticAlias));
-  if (!filePath && normalizedKey && !highRiskChapter) {
-    let bestKey = "";
-    let bestScore = 0;
-    for (const availableKey of Object.keys(registry)) {
-      const score = scoreChapterSimilarity(normalizedKey, availableKey);
-      if (score > bestScore) {
-        bestScore = score;
-        bestKey = availableKey;
-      }
-    }
-    if (bestKey && bestScore >= 0.86) {
-      resolvedKey = bestKey;
-      matchType = "fuzzy_normalized";
-      routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
-      filePath = registry[bestKey];
-    }
-  }
+  const expectedKey =
+    resolvedKey ||
+    normalizedKey ||
+    semanticAlias ||
+    rawKey;
 
-  const expectedFile = bucket && (resolvedKey || normalizedKey || rawKey) ? `${bucket}_${resolvedKey || normalizedKey || rawKey}.json` : "";
-  const expectedPath = bucket && expectedFile ? path.join(SENTENCE_BANK_ROOT, bucket, expectedFile) : "";
-  const fileExists = Boolean(filePath && fs.existsSync(filePath));
+  const expectedFile =
+    bucket && expectedKey
+      ? `${bucket}_${expectedKey}.json`
+      : "";
+
+  const expectedPath =
+    bucket && expectedFile
+      ? path.join(SENTENCE_BANK_ROOT, bucket, expectedFile)
+      : "";
+
+  const fileExists = Boolean(
+    filePath &&
+    fs.existsSync(filePath)
+  );
+
+  // STRICT LOCK:
+  // NEVER fallback to another grammar chapter.
+  // NEVER use fuzzy similarity.
+  // NEVER use family preload.
+  // NEVER use semantic scoring.
 
   return {
     bucket,
-    chapterKey: resolvedKey || normalizedKey || rawKey,
+    chapterKey: expectedKey,
     requestedChapterKey: rawKey,
     normalizedChapterKey: normalizedKey,
+    semanticAlias,
     matchType,
-    routingMode: fileExists ? routingMode : ROUTING_MODES.UNDER_CONSTRUCTION,
+    routingMode: fileExists
+      ? routingMode
+      : ROUTING_MODES.UNDER_CONSTRUCTION,
     expectedFile,
     expectedPath,
     filePath: fileExists ? filePath : "",
@@ -680,14 +699,34 @@ function normalizeSentenceBankEntries(rawEntries = [], chapterKey = "") {
     .filter(Boolean);
 }
 
+function shuffleArraySafe(arr = []) {
+  const cloned = Array.isArray(arr) ? [...arr] : [];
+
+  for (let i = cloned.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [cloned[i], cloned[j]] = [cloned[j], cloned[i]];
+  }
+
+  return cloned;
+}
+
 function loadSentenceBank(input = {}) {
   const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
   const pathInfo = getSentenceBankPathInfo(input, chapterKey);
   const filePath = pathInfo.filePath || "";
+
   if (filePath) {
     const raw = safeReadJson(filePath);
-    const normalized = normalizeSentenceBankEntries(raw, pathInfo.chapterKey || chapterKey);
-    if (normalized.length) {
+    const normalized = normalizeSentenceBankEntries(
+      raw,
+      pathInfo.chapterKey || chapterKey
+    );
+
+    // RANDOMIZE BEFORE ANY SELECTION
+    const randomizedItems = shuffleArraySafe(normalized);
+
+    if (randomizedItems.length) {
       return {
         chapterKey: pathInfo.chapterKey || chapterKey,
         requestedChapterKey: chapterKey,
@@ -696,38 +735,9 @@ function loadSentenceBank(input = {}) {
         routingMode: pathInfo.routingMode,
         matchType: pathInfo.matchType,
         pathInfo,
-        items: normalized,
+        items: randomizedItems,
       };
     }
-  }
-
-  const relatedFiles = findRelatedChapterFiles(input, chapterKey);
-  const relatedItems = [];
-  const loadedRelatedFiles = [];
-  for (const related of relatedFiles) {
-    const raw = safeReadJson(related.filePath);
-    const normalized = normalizeSentenceBankEntries(raw, related.chapterKey);
-    if (!normalized.length) continue;
-    loadedRelatedFiles.push(Object.assign({}, related, { itemCount: normalized.length }));
-    relatedItems.push(...normalized.map((item) => Object.assign({}, item, {
-      preloadChapterKey: related.chapterKey,
-      preloadFilePath: related.filePath,
-    })));
-  }
-
-  if (loadedRelatedFiles.length && relatedItems.length) {
-    return {
-      chapterKey,
-      requestedChapterKey: chapterKey,
-      filePath: loadedRelatedFiles[0].filePath,
-      filePaths: loadedRelatedFiles.map((entry) => entry.filePath),
-      relatedFiles: loadedRelatedFiles,
-      source: "family_preload",
-      routingMode: ROUTING_MODES.FAMILY_PRELOAD_MATCH,
-      matchType: "family_preload",
-      pathInfo,
-      items: relatedItems,
-    };
   }
 
   return {
