@@ -509,6 +509,16 @@ function loadSentenceBank(input = {}) {
     // RANDOMIZE BEFORE ANY SELECTION
     const randomizedItems = shuffleArraySafe(normalized);
 
+    console.log(
+      "[DB LOAD]",
+      {
+        chapterKey,
+        filePath,
+        itemCount: randomizedItems.length,
+        routingMode: pathInfo.routingMode,
+      }
+    );
+
     if (randomizedItems.length) {
       return {
         chapterKey: pathInfo.chapterKey || chapterKey,
@@ -1240,7 +1250,29 @@ ${answerSheet}` : "") };
 function buildDbFirstWorksheet(input, preloadedBankInfo = null) {
   const bankInfo = preloadedBankInfo || loadSentenceBank(input);
   const bank = bankInfo.items || [];
-  if (!bank.length) return null;
+
+  console.log(
+    "[DB WORKSHEET BUILD]",
+    {
+      chapterKey: bankInfo.chapterKey,
+      itemCount: bank.length,
+      source: bankInfo.source,
+      routingMode: bankInfo.routingMode,
+    }
+  );
+
+  if (!Array.isArray(bank) || bank.length === 0) {
+    console.error(
+      "[EMPTY DB ITEMS]",
+      {
+        chapterKey: bankInfo.chapterKey,
+        filePath: bankInfo.filePath,
+        routingMode: bankInfo.routingMode,
+      }
+    );
+
+    return null;
+  }
 
   const worksheetType = normalizeWorkbookTypeLoose(
   input.requestedWorkbookType ||
@@ -1599,6 +1631,15 @@ async function handler(req, res) {
         bankInfo.routingMode === ROUTING_MODES.NORMALIZED_DB_MATCH
       ) {
         worksheet = buildDbFirstWorksheet(input, bankInfo);
+
+        console.log(
+          "[WORKSHEET RESULT]",
+          {
+            success: !!worksheet,
+            chapterKey: input.grammarFocus.chapterKey,
+            routingMode: bankInfo.routingMode,
+          }
+        );
 
         if (middle1StrictDb && !worksheet) {
           return json(res, 200, {
