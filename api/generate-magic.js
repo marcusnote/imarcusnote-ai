@@ -79,10 +79,6 @@ function normalizeChapterKey(value = "") {
     superlatives: "superlative",
     comparatives: "comparative",
     imperatives: "imperative",
-    present_perfect_continuous: "present_perfect_progressive",
-    present_perfect_progressive: "present_perfect_progressive",
-    present_continuous: "present_progressive",
-    present_progressive: "present_progressive",
   };
 
   if (aliases[key]) return aliases[key];
@@ -632,8 +628,12 @@ function inferGradeLabel(text = "", level = "middle") {
 
 
 function detectGrammarFocus(text = "") {
+  const raw = String(text || "").trim();
+
+  const alias = resolveChapterAlias(raw);
+
   return {
-    chapterKey: "",
+    chapterKey: alias || normalizeChapterKey(raw),
     strictDbRouting: true,
   };
 }
