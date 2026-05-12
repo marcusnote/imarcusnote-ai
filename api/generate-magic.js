@@ -335,11 +335,94 @@ function detectGradeBucket(input = {}) {
   return "";
 }
 
-function resolveChapterAlias(text = "") {
-  const raw = String(text || "").trim();
+function resolveChapterAlias(raw = '') {
+  const normalized = String(raw || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ");
+
+  const aliasMap = {
+    // PAST
+    "past tense": "past",
+    "과거시제": "past",
+    "과거 시제": "past",
+
+    // CAUSATIVE
+    "사역동사": "causative",
+    "causative": "causative",
+    "make let have": "causative",
+
+    // PASSIVE
+    "수동태": "passive",
+    "passive voice": "passive",
+
+    // PRESENT CONTINUOUS
+    "현재진행형": "present_continuous",
+    "현재 진행형": "present_continuous",
+    "present continuous": "present_continuous",
+
+    // THERE IS ARE
+    "there is": "there_is_are",
+    "there are": "there_is_are",
+
+    // REFLEXIVE
+    "재귀대명사": "reflexive_pronoun",
+
+    // MAY
+    "조동사 may": "may",
+    "may": "may",
+
+    // MUST
+    "조동사 must": "must",
+    "must": "must",
+
+    // WILL
+    "조동사 will": "modal_will",
+    "will": "modal_will",
+
+    // BE VERB
+    "be동사": "be_verb",
+    "be verb": "be_verb",
+
+    // DO VERB
+    "일반동사": "do_verb",
+    "do verb": "do_verb",
+
+    // QUESTION
+    "의문문": "question",
+
+    // NEGATIVE
+    "부정문": "negative"
+  };
+
+  if (aliasMap[normalized]) {
+    console.log('[GRAMMAR DETECTED]', {
+      rawInput: raw,
+      resolved: aliasMap[normalized]
+    });
+
+    return aliasMap[normalized];
+  }
+
+for (const [aliasKey, aliasValue] of Object.entries(aliasMap)) {
+  if (normalized.includes(aliasKey)) {
+    console.log('[GRAMMAR DETECTED PARTIAL]', {
+      rawInput: raw,
+      matchedAlias: aliasKey,
+      resolved: aliasValue
+    });
+
+    return aliasValue;
+  }
+}
 
   for (const entry of CHAPTER_ALIAS_PATTERNS) {
     if (entry.patterns.some((pattern) => pattern.test(raw))) {
+      console.log('[GRAMMAR DETECTED]', {
+        rawInput: raw,
+        resolved: entry.key
+      });
+
       return entry.key;
     }
   }
