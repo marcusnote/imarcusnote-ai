@@ -217,8 +217,66 @@ const CHAPTER_ALIAS_PATTERNS = [
   { key: "passive", patterns: [/중2\s*수동태/i, /수동태/i] },
   { key: "subjunctive_past", patterns: [/가정법\s*과거/i] },
   { key: "have_object_pp", patterns: [/have\s*object\s*pp/i] },
+  {
+    key: "present_perfect",
+    patterns: [
+      /현재완료/i,
+      /present\s*perfect/i
+    ]
+  },
+  {
+    key: "past_perfect",
+    patterns: [
+      /과거완료/i,
+      /past\s*perfect/i
+    ]
+  },
+  {
+    key: "whether",
+    patterns: [
+      /접속사\s*whether/i,
+      /\bwhether\b/i
+    ]
+  },
+  {
+    key: "have_object_pp",
+    patterns: [
+      /have\s*목적어\s*과거분사/i,
+      /have\s*object\s*past\s*participle/i
+    ]
+  },
+  {
+    key: "relative_pronouns_subject",
+    patterns: [
+      /주격\s*관계대명사/i
+    ]
+  },
+  {
+    key: "relative_pronouns_object",
+    patterns: [
+      /목적격\s*관계대명사/i
+    ]
+  },
+  {
+    key: "passive_advanced",
+    patterns: [
+      /심화\s*수동태/i,
+      /advanced\s*passive/i
+    ]
+  },
 ];
 
+
+
+function isInvalidInternalCode(value = '') {
+  const v = String(value).trim().toLowerCase();
+
+  return (
+    /^\d+(?:_\d+)+$/.test(v) ||
+    /^\d+_[a-z]+_\d+_[a-z]+_\d+$/.test(v) ||
+    /^\d+_[a-z]+_\d+$/.test(v)
+  );
+}
 
 function detectGradeBucket(input = {}) {
   const rawBody = input.rawBody || {};
@@ -294,7 +352,16 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   const bucket = detectGradeBucket(input);
   const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
 
-  const rawKey = String(chapterKey || "").trim();
+  let rawKey = String(chapterKey || "").trim();
+
+  if (isInvalidInternalCode(rawKey)) {
+    console.log('[INVALID INTERNAL CHAPTER BLOCKED]', rawKey);
+    rawKey = '';
+  }
+
+  if (!rawKey) {
+    console.log('[GRAMMAR DETECTION FAILED]');
+  }
   const normalizedKey = applyExplicitMiddle1Alias(bucket, rawKey);
 let resolvedKey = "";
   let matchType = "";
@@ -642,8 +709,23 @@ function detectGrammarFocus(text = "") {
 
   const alias = resolveChapterAlias(raw);
 
+let chapterKey = alias || "";
+
+if (!chapterKey) {
+  console.log('[GRAMMAR DETECTION FAILED]');
+}
+
+  if (isInvalidInternalCode(chapterKey)) {
+    console.log('[INVALID INTERNAL CHAPTER BLOCKED]', chapterKey);
+    chapterKey = '';
+  }
+
+  if (!chapterKey) {
+    console.log('[GRAMMAR DETECTION FAILED]');
+  }
+
   return {
-    chapterKey: alias || normalizeChapterKey(raw),
+    chapterKey,
     strictDbRouting: true,
   };
 }
