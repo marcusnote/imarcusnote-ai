@@ -175,6 +175,40 @@ function scoreChapterSimilarity(a = "", b = "") {
   return Math.max(tokenScore, containsScore);
 }
 
+
+const MIDDLE1_EXPLICIT_ALIAS_MAP = Object.freeze({
+  past_tense: "past",
+  present_continuous: "present_continuous",
+  there_is_are: "there_is_are",
+  be_question: "be_question",
+  be_negative: "be_negative",
+  be_verb: "be_verb",
+  do_question: "do_question",
+  do_negative: "do_negative",
+  do_verb: "do_verb",
+  reflexive_pronoun: "reflexive_pronoun",
+  reflexive_pronouns: "reflexive_pronoun",
+  sensory_verb: "sensory_verb",
+  sensory_verbs: "sensory_verb",
+  modal_will: "modal_will",
+  causative_verbs: "causative",
+  semi_causative: "semi_causative",
+});
+
+function applyExplicitMiddle1Alias(bucket = "", chapterKey = "") {
+  if (String(bucket || "").toLowerCase() !== "middle1") {
+    return normalizeChapterKey(chapterKey);
+  }
+
+  const normalized = normalizeChapterKey(chapterKey);
+
+  if (MIDDLE1_EXPLICIT_ALIAS_MAP[normalized]) {
+    return MIDDLE1_EXPLICIT_ALIAS_MAP[normalized];
+  }
+
+  return normalized;
+}
+
 const SENTENCE_BANK_REGISTRY = buildSentenceBankRegistry();
 const ROUTING_MODES = Object.freeze({
   EXACT_DB_MATCH: "EXACT_DB_MATCH",
@@ -369,8 +403,10 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
 
   const rawKey = String(chapterKey || "").trim();
-  const normalizedKey = normalizeChapterKey(rawKey);
-  const semanticAlias = resolveChapterAlias(rawKey) || resolveChapterAlias(normalizedKey);
+  const normalizedKey = applyExplicitMiddle1Alias(bucket, rawKey);
+  const semanticAlias =
+    applyExplicitMiddle1Alias(bucket, resolveChapterAlias(rawKey)) ||
+    applyExplicitMiddle1Alias(bucket, resolveChapterAlias(normalizedKey));
 
   let resolvedKey = "";
   let matchType = "";
