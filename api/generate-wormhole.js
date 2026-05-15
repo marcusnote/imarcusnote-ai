@@ -382,6 +382,23 @@ function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));
 }
 
+function normalizeSelectedGrade(value = "") {
+  const grade = String(value || "")
+    .replace(/\.json$/i, "")
+    .replace(/([a-z])([A-Z])/g, "$1_$2")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "")
+    .replace(/_{2,}/g, "_");
+  return /^(middle|high|elementary)\d+$/.test(grade) ? grade : "auto";
+}
+
+function selectedGradeLabel(value = "") {
+  const grade = normalizeSelectedGrade(value);
+  const labels = { middle1: "중1", middle2: "중2", middle3: "중3", high1: "고1", high2: "고2", high3: "고3" };
+  return labels[grade] || "";
+}
+
 function sanitizeString(value, fallback = "") {
   if (typeof value !== "string") return fallback;
   return value.trim();
@@ -611,7 +628,8 @@ function normalizeInput(body = {}) {
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
   const count = sanitizeCount(body.count);
   const engine = "wormhole";
-  const gradeLabel = textbookResolved?.gradeLabel || inferGradeLabel(mergedText, level);
+  const selectedGrade = normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto");
+  const gradeLabel = selectedGradeLabel(selectedGrade) || textbookResolved?.gradeLabel || inferGradeLabel(mergedText, level);
 
   return {
     engine,
@@ -626,6 +644,7 @@ function normalizeInput(body = {}) {
     academyName,
     userPrompt,
     gradeLabel,
+    selectedGrade,
     textbook: textbookResolved || null
   };
 }
@@ -1332,6 +1351,11 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return json(res, 405, { success: false, message: "POST only" });
   try {
     const input = normalizeInput(req.body || {});
+    console.info("[WORMHOLE_NAMESPACE_LOCK]", {
+      selectedGrade: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+      resolvedBucket: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+      resolvedChapter: input.topic || "",
+    });
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "Prompt or topic required" });
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
