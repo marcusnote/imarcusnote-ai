@@ -564,8 +564,16 @@ function isInvalidInternalCode(value = '') {
   );
 }
 
+function normalizeSelectedGrade(value = "") {
+  const grade = normalizeChapterKey(value);
+  return /^(middle|high|elementary)\d+$/.test(grade) ? grade : "auto";
+}
+
 function detectGradeBucket(input = {}) {
   const rawBody = input.rawBody || {};
+  const selectedGrade = normalizeSelectedGrade(input.selectedGrade || rawBody.selectedGrade || "auto");
+  if (selectedGrade !== "auto") return selectedGrade;
+
   const merged = [
     input.grade || "",
     input.gradeLabel || "",
@@ -628,13 +636,17 @@ function stripGradeTokensForChapterLookup(value = "") {
     .replace(/^grade_?\d+_?/, "");
 }
 
-function resolveRegistryExactChapter(raw = "") {
-  const bucket = detectGradeBucket({
-    gradeLabel: raw,
-    worksheetTitle: raw,
-    topic: raw,
-    userPrompt: raw,
-  });
+function resolveRegistryExactChapter(raw = "", input = {}) {
+  const selectedGrade = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
+  const bucket = selectedGrade !== "auto"
+    ? selectedGrade
+    : detectGradeBucket({
+      gradeLabel: raw,
+      worksheetTitle: raw,
+      topic: raw,
+      userPrompt: raw,
+      rawBody: input.rawBody || {},
+    });
   if (!bucket) return "";
 
   const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
@@ -658,7 +670,7 @@ function isSafeLegacyPartialAlias(aliasKey = "") {
   return true;
 }
 
-function resolveChapterAlias(raw = '') {
+function resolveChapterAlias(raw = '', input = {}) {
   const normalized = String(raw || "")
     .trim()
     .toLowerCase()
@@ -1949,7 +1961,7 @@ function resolveChapterAlias(raw = '') {
     "so": "so"
   };
 
-  const exactRegistryChapter = resolveRegistryExactChapter(raw);
+  const exactRegistryChapter = resolveRegistryExactChapter(raw, input);
   if (exactRegistryChapter) {
     console.log('[GRAMMAR DETECTED REGISTRY EXACT]', {
       rawInput: raw,
@@ -2040,6 +2052,11 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   console.log("[GRADE_BUCKET]", {
     bucket,
     availableGrades: getAvailableGradeBuckets(),
+  });
+  console.log("[DB_NAMESPACE_LOCK]", {
+    selectedGrade: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+    resolvedBucket: bucket,
+    resolvedChapter: "",
   });
 
   // PRIORITY 1: specialized exact match. Stop immediately; no family mixing.
@@ -2181,6 +2198,26 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     expectedPath,
   });
   console.log("[ROUTING_MODE]", routingMode);
+  console.log("[DB_NAMESPACE_LOCK]", {
+    selectedGrade: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+    resolvedBucket: bucket,
+    resolvedChapter: expectedKey,
+  });
+  const engineNamespaceMode = normalizeChapterKey(input.engine || input.mode || input.rawBody?.engine || input.rawBody?.mode || "");
+  if (engineNamespaceMode.includes("wormhole")) {
+    console.log("[WORMHOLE_NAMESPACE_LOCK]", {
+      selectedGrade: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+      resolvedBucket: bucket,
+      resolvedChapter: expectedKey,
+    });
+  }
+  if (engineNamespaceMode.includes("mock")) {
+    console.log("[MOCKS_NAMESPACE_LOCK]", {
+      selectedGrade: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+      resolvedBucket: bucket,
+      resolvedChapter: expectedKey,
+    });
+  }
 
   return {
     bucket,
@@ -2479,10 +2516,10 @@ function inferGradeLabel(text = "", level = "middle") {
 
 
 
-function detectGrammarFocus(text = "") {
+function detectGrammarFocus(text = "", input = {}) {
   const raw = String(text || "").trim();
 
-  const alias = resolveChapterAlias(raw);
+  const alias = resolveChapterAlias(raw, input);
 
 let chapterKey = alias || "";
 
@@ -2569,8 +2606,10 @@ function normalizeInput(body = {}) {
     sanitizeString(body.worksheetTitle || body.title || ""),
     sanitizeString(body.rawBody?.worksheetTitle || body.rawBody?.title || ""),
   ].filter(Boolean).join("\n");
-  const primaryGrammarFocus = detectGrammarFocus(primaryChapterText);
-  const grammarFocus = detectGrammarFocus(primaryChapterText);
+  const selectedGrade = normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto");
+  const grammarFocusContext = { selectedGrade, rawBody: body };
+  const primaryGrammarFocus = detectGrammarFocus(primaryChapterText, grammarFocusContext);
+  const grammarFocus = detectGrammarFocus(primaryChapterText, grammarFocusContext);
 
   const requestedWorkbookType = normalizeWorkbookTypeLoose(sanitizeString(
   body.workbookType ||
@@ -2594,6 +2633,7 @@ function normalizeInput(body = {}) {
     examType,
     count,
     gradeLabel,
+    selectedGrade,
     grammarFocus,
     worksheetTitle: sanitizeString(body.worksheetTitle || body.title || ""),
     memberId: sanitizeString(body.memberId || body.msMemberId || body.userId || ""),
