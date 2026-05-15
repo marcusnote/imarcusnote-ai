@@ -47,6 +47,17 @@ function pickWormholeSentenceBankRoot() {
 
 const WORMHOLE_SENTENCE_BANK_ROOT = pickWormholeSentenceBankRoot();
 
+function normalizeSelectedGrade(value = "") {
+  const grade = normalizeWormholeChapterKey(value);
+  return /^(middle|high|elementary)\d+$/.test(grade) ? grade : "auto";
+}
+
+function selectedGradeLabel(value = "") {
+  const grade = normalizeSelectedGrade(value);
+  const labels = { middle1: "중1", middle2: "중2", middle3: "중3", high1: "고1", high2: "고2", high3: "고3" };
+  return labels[grade] || "";
+}
+
 function normalizeWormholeChapterKey(value = "") {
   let key = String(value || "")
     .replace(/\.json$/i, "")
@@ -135,6 +146,9 @@ function buildWormholeTrapRegistry() {
 const WORMHOLE_TRAP_REGISTRY = buildWormholeTrapRegistry();
 
 function detectWormholeGradeBucket(input = {}) {
+  const selectedGrade = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
+  if (selectedGrade !== "auto") return selectedGrade;
+
   const merged = [
     input.grade || "",
     input.gradeLabel || "",
@@ -243,6 +257,11 @@ function detectWormholeChapterKey(input = {}) {
 
 function getWormholeTrapPathInfo(input = {}) {
   const bucket = detectWormholeGradeBucket(input);
+  console.info("[MOCKS_NAMESPACE_LOCK]", {
+    selectedGrade: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+    resolvedBucket: bucket,
+    resolvedChapter: "",
+  });
   const registry = WORMHOLE_TRAP_REGISTRY[bucket] || {};
   const requestedChapterKey = detectWormholeChapterKey(input);
   const normalizedChapterKey = normalizeWormholeChapterKey(requestedChapterKey);
@@ -610,7 +629,8 @@ function normalizeInput(body = {}) {
   const count = sanitizeCount(body.count);
   const engine = "mock_exam";
   const examType = sanitizeString(body.examType || "") || mode;
-  const gradeLabel = inferGradeLabel(mergedText, level);
+  const selectedGrade = normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto");
+  const gradeLabel = selectedGradeLabel(selectedGrade) || inferGradeLabel(mergedText, level);
   const premium = body.premium === true || inferPremium(mergedText);
   const profile = inferGenerationProfile({ userPrompt, topic });
   const sourceLabel =
@@ -629,6 +649,7 @@ function normalizeInput(body = {}) {
     academyName,
     userPrompt,
     gradeLabel,
+    selectedGrade,
     premium,
     hasSourcePassage: profile.hasSourcePassage,
     generationProfile: profile.generationProfile,
@@ -1812,6 +1833,11 @@ export default async function handler(req, res) {
 
     const trapInfo = loadWormholeTrapDB(input);
     logWormholeRouting(trapInfo);
+    console.info("[MOCKS_NAMESPACE_LOCK]", {
+      selectedGrade: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+      resolvedBucket: trapInfo.bucket,
+      resolvedChapter: trapInfo.chapterKey,
+    });
     if (trapInfo.mode === WORMHOLE_ROUTING_MODES.UNDER_CONSTRUCTION) {
       return json(res, 200, {
         success: false,
