@@ -2112,6 +2112,12 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   let specializedMatch = null;
   let specializedLocked = false;
   let fallbackUsed = false;
+  console.log("[ROUTING_DEBUG]", {
+    requested: rawKey,
+    normalized: normalizedKey,
+    matchedCanonical: resolvedKey,
+    selectedFile: filePath
+  });
 
   console.log("[ROUTING_INPUT]", {
     rawKey,
@@ -2173,6 +2179,12 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
     filePath = registry[normalizedKey];
   }
+  console.log("[ROUTING_DEBUG]", {
+    requested: rawKey,
+    normalized: normalizedKey,
+    matchedCanonical: resolvedKey,
+    selectedFile: filePath
+  });
 
   // PRIORITY 2: family representative match for generic grammar requests.
   if (!filePath && !specializedLocked) {
@@ -2255,6 +2267,12 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     filePath &&
     fs.existsSync(filePath)
   );
+  console.log("[ROUTING_DEBUG]", {
+    requested: rawKey,
+    normalized: normalizedKey,
+    matchedCanonical: resolvedKey,
+    selectedFile: filePath
+  });
 
   console.log("[FINAL_DB]", {
     filePath: fileExists ? filePath : "",
