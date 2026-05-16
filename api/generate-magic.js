@@ -145,6 +145,9 @@ const SPECIALIZED_ALIAS_MAP = Object.freeze({
   "동명사 to부정사": "to_infinitive_gerund_verbs",
   "to infinitive gerund verbs": "to_infinitive_gerund_verbs",
   "to_infinitive_gerund_verbs": "to_infinitive_gerund_verbs",
+  "to부정사 명사 형용사 보정": "to_infinitive_noun_adjective_quality_fix",
+  "to infinitive noun adjective quality fix": "to_infinitive_noun_adjective_quality_fix",
+  "to_infinitive_noun_adjective_quality_fix": "to_infinitive_noun_adjective_quality_fix",
   "to부정사 명사 형용사": "to_infinitive_noun_adjective",
   "to부정사 명사적 형용사적 용법": "to_infinitive_noun_adjective",
   "to infinitive noun adjective": "to_infinitive_noun_adjective",
@@ -225,8 +228,37 @@ function inferGrammarSubtype(chapter = "", family = "") {
   return key;
 }
 
+function normalizeChapterAliasIndexKey(value = "") {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[–—]/g, "-")
+    .replace(/[_\-/]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function readSentenceBankChapterMetas(filePath = "") {
+  try {
+    const raw = fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, "");
+    const parsed = JSON.parse(raw);
+    const items = Array.isArray(parsed) ? parsed : [parsed];
+    const metaMap = new Map();
+    for (const item of items) {
+      if (!item || typeof item !== "object" || !item.chapterMeta) continue;
+      const chapterMeta = item.chapterMeta;
+      const canonical = normalizeChapterKey(chapterMeta.canonical || chapterMeta.chapterKey || item.chapterKey || "");
+      if (!canonical || metaMap.has(canonical)) continue;
+      metaMap.set(canonical, chapterMeta);
+    }
+    return [...metaMap.values()];
+  } catch (error) {
+    return [];
+  }
+}
+
 function buildSentenceBankRegistry() {
-  const registry = { byGrade: {}, files: [], families: {} };
+  const registry = { byGrade: {}, files: [], families: {}, aliases: {}, aliasList: {} };
   if (!fs.existsSync(SENTENCE_BANK_ROOT)) return registry;
 
   let gradeDirs = [];
@@ -244,6 +276,8 @@ function buildSentenceBankRegistry() {
     const gradePath = path.join(SENTENCE_BANK_ROOT, gradeDir);
     registry.byGrade[grade] = registry.byGrade[grade] || {};
     registry.families[grade] = registry.families[grade] || {};
+    registry.aliases[grade] = registry.aliases[grade] || {};
+    registry.aliasList[grade] = registry.aliasList[grade] || [];
 
     let files = [];
     try {
@@ -258,18 +292,41 @@ function buildSentenceBankRegistry() {
       const chapter = extractSentenceBankChapterFromFilename(grade, fileName);
       if (!chapter) continue;
       const filePath = path.join(gradePath, fileName);
-      const family = inferGrammarFamily(chapter);
-      const subtype = inferGrammarSubtype(chapter, family);
-      const representativeCandidate = (
-        chapter === family ||
-        chapter === `${family}_total` ||
-        FAMILY_REPRESENTATIVE_HINTS.some((hint) => chapter === `${family}_${hint}`)
-      );
-      const meta = { grade, chapter, family, subtype, representativeCandidate, fileName, filePath };
-      registry.byGrade[grade][chapter] = meta;
-      registry.files.push(meta);
-      registry.families[grade][family] = registry.families[grade][family] || [];
-      registry.families[grade][family].push(meta);
+      const chapterMetas = readSentenceBankChapterMetas(filePath);
+      const entryMetas = chapterMetas.length ? chapterMetas : [{ canonical: chapter }];
+
+      for (const chapterMeta of entryMetas) {
+        const canonicalChapter = normalizeChapterKey(chapterMeta?.canonical || chapterMeta?.chapterKey || chapter);
+        const family = normalizeChapterKey(chapterMeta?.family || inferGrammarFamily(canonicalChapter || chapter));
+        const subtype = normalizeChapterKey(chapterMeta?.subtype || inferGrammarSubtype(canonicalChapter || chapter, family));
+        const representativeCandidate = (
+          canonicalChapter === family ||
+          canonicalChapter === `${family}_total` ||
+          chapter === family ||
+          chapter === `${family}_total` ||
+          FAMILY_REPRESENTATIVE_HINTS.some((hint) => canonicalChapter === `${family}_${hint}` || chapter === `${family}_${hint}`)
+        );
+        const meta = { grade, chapter, canonicalChapter, family, subtype, representativeCandidate, fileName, filePath, chapterMeta };
+        registry.byGrade[grade][chapter] = registry.byGrade[grade][chapter] || meta;
+        if (canonicalChapter && !registry.byGrade[grade][canonicalChapter]) registry.byGrade[grade][canonicalChapter] = meta;
+        registry.files.push(meta);
+        registry.families[grade][family] = registry.families[grade][family] || [];
+        registry.families[grade][family].push(meta);
+
+        const aliasValues = [
+          canonicalChapter,
+          chapter,
+          ...(Array.isArray(chapterMeta?.aliases?.ko) ? chapterMeta.aliases.ko : []),
+          ...(Array.isArray(chapterMeta?.aliases?.en) ? chapterMeta.aliases.en : []),
+        ];
+        for (const alias of aliasValues) {
+          const aliasKey = normalizeChapterAliasIndexKey(alias);
+          if (!aliasKey) continue;
+          const resolvedChapter = canonicalChapter || chapter;
+          registry.aliases[grade][aliasKey] = resolvedChapter;
+          registry.aliasList[grade].push({ aliasKey, chapter: resolvedChapter, fileName });
+        }
+      }
     }
   }
 
@@ -362,13 +419,15 @@ function findSpecializedAlias(rawText = "") {
   if (SPECIALIZED_CHAPTER_KEYS.includes(normalizedChapterKey)) {
     return { alias: normalizedChapterKey, chapter: normalizedChapterKey, internalKey: true };
   }
-  for (const chapter of SPECIALIZED_CHAPTER_KEYS) {
+  for (const chapter of SPECIALIZED_CHAPTER_KEYS
+    .slice()
+    .sort((a, b) => normalizeRoutingText(b).length - normalizeRoutingText(a).length)) {
     if (normalized.includes(chapter)) {
       return { alias: chapter, chapter, internalKey: true };
     }
   }
   const entries = Object.entries(SPECIALIZED_ALIAS_MAP)
-    .sort((a, b) => b[0].length - a[0].length);
+    .sort((a, b) => normalizeRoutingText(b[0]).length - normalizeRoutingText(a[0]).length);
   for (const [alias, chapter] of entries) {
     if (normalized.includes(normalizeRoutingText(alias))) {
       return { alias, chapter };
@@ -650,6 +709,15 @@ function resolveRegistryExactChapter(raw = "", input = {}) {
   if (!bucket) return "";
 
   const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
+  const aliasKey = normalizeChapterAliasIndexKey(raw);
+  const exactAliasChapter = DB_REGISTRY?.aliases?.[bucket]?.[aliasKey];
+  if (exactAliasChapter && registry[exactAliasChapter]) return exactAliasChapter;
+
+  const aliasMatches = (DB_REGISTRY?.aliasList?.[bucket] || [])
+    .filter((entry) => entry.aliasKey && aliasKey && aliasKey.includes(entry.aliasKey) && registry[entry.chapter])
+    .sort((a, b) => b.aliasKey.length - a.aliasKey.length);
+  if (aliasMatches.length) return aliasMatches[0].chapter;
+
   const candidates = [
     normalizeChapterKey(raw),
     stripGradeTokensForChapterLookup(raw),
@@ -2001,7 +2069,8 @@ function resolveChapterAlias(raw = '', input = {}) {
     return aliasMap[normalized];
   }
 
-for (const [aliasKey, aliasValue] of Object.entries(aliasMap)) {
+for (const [aliasKey, aliasValue] of Object.entries(aliasMap)
+  .sort((a, b) => normalizeRoutingText(b[0]).length - normalizeRoutingText(a[0]).length)) {
   if (isSafeLegacyPartialAlias(aliasKey) && normalized.includes(aliasKey)) {
     console.log('[GRAMMAR DETECTED LEGACY PARTIAL FALLBACK]', {
       rawInput: raw,
