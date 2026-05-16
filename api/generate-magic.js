@@ -2462,11 +2462,14 @@ function loadSentenceBank(input = {}) {
   const chapterKey = String(input?.grammarFocus?.chapterKey || "").trim();
   const pathInfo = getSentenceBankPathInfo(input, chapterKey);
   const filePath = pathInfo.filePath || "";
+  const specializedExactLoad = pathInfo.routingMode === ROUTING_MODES.SPECIALIZED_EXACT_MATCH
+    || pathInfo.matchType === "specialized_exact";
 
   logMagicRouting(pathInfo);
 
   if (filePath) {
-    const raw = safeReadJson(filePath);
+    const preloadFilePaths = specializedExactLoad ? [filePath] : [filePath];
+    const raw = safeReadJson(preloadFilePaths[0]);
     const normalized = normalizeSentenceBankEntries(
       raw,
       pathInfo.chapterKey || chapterKey
