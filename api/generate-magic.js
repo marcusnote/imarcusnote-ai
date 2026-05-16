@@ -56,6 +56,68 @@ function pickSentenceBankRoot() {
 
 const SENTENCE_BANK_ROOT = pickSentenceBankRoot();
 
+const CANONICAL_DB_FILENAME_REGISTRY = Object.freeze({
+  middle1: Object.freeze({
+    after_before: "middle1_after_before.json",
+    and: "middle1_and.json",
+    a_few_few: "middle1_a_few_few.json",
+    a_little_little: "middle1_a_little_little.json",
+    because: "middle1_because.json",
+    be_negative: "middle1_be_negative.json",
+    be_question: "middle1_be_question.json",
+    be_verb: "middle1_be_verb.json",
+    but: "middle1_but.json",
+    can: "middle1_can.json",
+    causative: "middle1_causative.json",
+    comparatives: "middle1_comparatives.json",
+    conjunction_that: "middle1_conjunction_that.json",
+    conjunction_when: "middle1_conjunction_when.json",
+    conjunction_while: "middle1_conjunction_while.json",
+    do_negative: "middle1_do_negative.json",
+    do_question: "middle1_do_question.json",
+    do_verb: "middle1_do_verb.json",
+    exclamation: "middle1_exclamation.json",
+    five_form: "middle1_five_form.json",
+    frequency_adverbs: "middle1_frequency_adverbs.json",
+    gerund_object: "middle1_gerund_object.json",
+    gerund_total: "middle1_gerund_total.json",
+    have_to: "middle1_have_to.json",
+    imperatives: "middle1_imperatives.json",
+    many_much: "middle1_many_much.json",
+    may: "middle1_may.json",
+    modal_will: "middle1_modal_will.json",
+    must: "middle1_must.json",
+    passive: "middle1_passive.json",
+    passive_advanced: "middle1_passive_advanced.json",
+    past: "middle1_past.json",
+    prepositions_basic: "middle1_prepositions_basic.json",
+    present_continuous: "middle1_present_continuous.json",
+    quantifiers: "middle1_quantifiers.json",
+    reflexive_pronoun: "middle1_reflexive_pronoun.json",
+    semi_causative: "middle1_semi_causative.json",
+    sensory_verb: "middle1_sensory_verb.json",
+    should: "middle1_should.json",
+    so: "middle1_so.json",
+    superlatives: "middle1_superlatives.json",
+    there_is_are: "middle1_there_is_are.json",
+    to_infinitive_noun: "middle1_to_infinitive_noun.json",
+    to_infinitive_total: "middle1_to_infinitive_total.json",
+    wh_question: "middle1_wh_question.json",
+  }),
+});
+
+function getCanonicalDbFilename(bucket = "", chapterKey = "") {
+  const normalizedBucket = normalizeChapterKey(bucket);
+  const normalizedChapter = normalizeChapterKey(chapterKey);
+  return CANONICAL_DB_FILENAME_REGISTRY[normalizedBucket]?.[normalizedChapter] || "";
+}
+
+function getCanonicalDbPath(bucket = "", chapterKey = "") {
+  const normalizedBucket = normalizeChapterKey(bucket);
+  const filename = getCanonicalDbFilename(normalizedBucket, chapterKey);
+  return filename ? path.join(SENTENCE_BANK_ROOT, normalizedBucket, filename) : "";
+}
+
 function normalizeChapterKey(value = "") {
   return String(value || "")
     .replace(/\.json$/i, "")
@@ -378,7 +440,7 @@ const DB_REGISTRY = buildSentenceBankRegistry();
 const SENTENCE_BANK_REGISTRY = Object.fromEntries(
   Object.entries(DB_REGISTRY.byGrade || {}).map(([grade, chapters]) => [
     grade,
-    Object.fromEntries(Object.entries(chapters).map(([chapter, meta]) => [chapter, meta.filePath])),
+    Object.fromEntries(Object.entries(chapters).map(([chapter]) => [chapter, getCanonicalDbPath(grade, chapter)])),
   ])
 );
 const ROUTING_MODES = Object.freeze({
@@ -520,7 +582,7 @@ function buildRoutingAuditReport() {
   }
 
   return {
-    detectedDbFiles: DB_REGISTRY.files.map((meta) => meta.filePath),
+    detectedDbFiles: DB_REGISTRY.files.map((meta) => getCanonicalDbPath(meta.grade, meta.canonicalChapter || meta.chapter)).filter(Boolean),
     familyGrouping: families,
     unresolvedAliases,
     duplicateAliases,
@@ -2142,7 +2204,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     family = matchedMeta.family;
     matchType = "specialized_exact";
     routingMode = ROUTING_MODES.SPECIALIZED_EXACT_MATCH;
-    filePath = matchedMeta.filePath;
+    filePath = getCanonicalDbPath(bucket, resolvedKey);
     console.log("[SPECIALIZED_MATCH]", {
       matchedAlias: specializedMatch.alias,
       resolvedChapter: resolvedKey,
@@ -2168,7 +2230,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     family = matchedMeta?.family || inferGrammarFamily(rawKey);
     matchType = "exact";
     routingMode = ROUTING_MODES.EXACT_DB_MATCH;
-    filePath = registry[rawKey];
+    filePath = getCanonicalDbPath(bucket, resolvedKey);
   }
 
   else if (!filePath && normalizedKey && registry[normalizedKey]) {
@@ -2177,7 +2239,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     family = matchedMeta?.family || inferGrammarFamily(normalizedKey);
     matchType = "normalized";
     routingMode = ROUTING_MODES.NORMALIZED_DB_MATCH;
-    filePath = registry[normalizedKey];
+    filePath = getCanonicalDbPath(bucket, resolvedKey);
   }
   console.log("[ROUTING_DEBUG]", {
     requested: rawKey,
@@ -2195,7 +2257,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
       resolvedKey = representative.chapter;
       matchType = "family_representative";
       routingMode = ROUTING_MODES.FAMILY_REPRESENTATIVE_MATCH;
-      filePath = representative.filePath;
+      filePath = getCanonicalDbPath(bucket, resolvedKey);
       console.log("[FAMILY_MATCH]", {
         family,
         representative: resolvedKey,
@@ -2237,7 +2299,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
       resolvedKey = fallback.chapter;
       matchType = "family_fallback";
       routingMode = ROUTING_MODES.FAMILY_FALLBACK_MATCH;
-      filePath = fallback.filePath;
+      filePath = getCanonicalDbPath(bucket, resolvedKey);
       fallbackUsed = true;
     }
   }
@@ -2253,15 +2315,20 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     normalizedKey ||
     rawKey;
 
-  const expectedFile =
-    bucket && expectedKey
-      ? `${bucket}_${expectedKey}.json`
-      : "";
+  const canonicalExpectedFile = matchedMeta?.fileName || getCanonicalDbFilename(bucket, expectedKey);
+  const canonicalExpectedPath = getCanonicalDbPath(bucket, expectedKey);
 
-  const expectedPath =
-    bucket && expectedFile
-      ? path.join(SENTENCE_BANK_ROOT, bucket, expectedFile)
-      : "";
+  if (!filePath && canonicalExpectedPath && fs.existsSync(canonicalExpectedPath)) {
+    filePath = canonicalExpectedPath;
+    resolvedKey = expectedKey;
+    matchType = matchType || "canonical_filename";
+    routingMode = routingMode === ROUTING_MODES.UNDER_CONSTRUCTION
+      ? ROUTING_MODES.EXACT_DB_MATCH
+      : routingMode;
+  }
+
+  const expectedFile = canonicalExpectedFile;
+  const expectedPath = canonicalExpectedPath;
 
   const fileExists = Boolean(
     filePath &&
