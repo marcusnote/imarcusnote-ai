@@ -2911,6 +2911,18 @@ function pickEnglishClueFromSeed(seed = {}, answer = "") {
   return scrambleCluePieces(buildGuidedClue(answer).split(/\s*\/\s*/g), seed, answer).join(" / ");
 }
 
+function getAnswerTerminalPunctuation(answer = "") {
+  const match = String(answer || "").trim().match(/[.?!]$/);
+  return match ? match[0] : "";
+}
+
+function applyTerminalPunctuation(value = "", mark = "") {
+  const text = String(value || "").trim();
+  if (!text || !mark) return text;
+  if (/[.?!]$/.test(text)) return text;
+  return text + mark;
+}
+
 function buildBlankFromSeed(seed = {}, answer = "") {
   const rawAnswer = String(answer || "").trim();
   const targets = Array.isArray(seed.blankTargets) ? seed.blankTargets.map((v) => String(v || "").trim()).filter(Boolean) : [];
@@ -3813,11 +3825,13 @@ function buildDbFirstWorksheet(input, preloadedBankInfo = null) {
     const itemWordCount = Number.isFinite(Number(seed.wordCount)) ? Number(seed.wordCount) : wordCountOf(answer);
 
     if (worksheetType === "guided_writing") {
+      const answerTerminalPunctuation = getAnswerTerminalPunctuation(answer);
+      const clueText = buildWordLevelClue(seed, i) || pickEnglishClueFromSeed(seed, answer);
       questions.push({
         number: i + 1,
         type: "guided_writing",
-        prompt: promptKo,
-        clue: buildWordLevelClue(seed, i) || pickEnglishClueFromSeed(seed, answer),
+        prompt: applyTerminalPunctuation(promptKo, answerTerminalPunctuation),
+        clue: applyTerminalPunctuation(clueText, answerTerminalPunctuation),
         wordCount: itemWordCount,
       });
       answers.push({ number: i + 1, answer });
