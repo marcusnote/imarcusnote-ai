@@ -156,6 +156,7 @@ const CANONICAL_DB_FILENAME_REGISTRY = Object.freeze({
     the_comparative_the_comparative: "middle2_the_comparative_the_comparative.json",
     to_infinitive_adjective: "middle2_to_infinitive_adjective.json",
     to_infinitive_adverbial: "middle2_to_infinitive_adverbial.json",
+    to_infinitive_noun: "middle2_to_infinitive_noun.json",
     too_to_enough_to: "middle2_too_to_enough_to.json",
     used_to: "middle2_used_to.json",
     wh_questions: "middle2_wh_questions.json",
