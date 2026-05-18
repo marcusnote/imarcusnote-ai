@@ -2567,17 +2567,82 @@ function safeReadJson(filePath) {
   }
 }
 
+function stableClueHash(value = "") {
+  const text = String(value || "");
+  let hash = 2166136261;
+  for (let i = 0; i < text.length; i += 1) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function splitCluePiece(value = "") {
+  return String(value || "")
+    .split(/\s+(?:\/|\\||;|→|->)\s+|\s*(?:→|->)\s*/g)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+function isLikelyGrammarClue(value = "") {
+  return /\b(pattern|use|tense|clause|subject|object|complement|base verb|verb phrase|as \+|if \+|to-infinitive|to \+|not as|would|could)\b|[+~]|구조|문법|주의|역할|일치|금지|용법/i.test(String(value || ""));
+}
+
+function scrambleCluePieces(pieces = [], seed = {}, answer = "") {
+  const answerText = String(answer || "").trim();
+  const answerLower = answerText.toLowerCase();
+  const firstToken = answerLower.split(/\s+/).filter(Boolean)[0] || "";
+  const hashBase = stableClueHash([seed.id, seed.seedId, seed.grammar, answerText].filter(Boolean).join("|"));
+  const seen = new Set();
+  const chunks = [];
+
+  for (const piece of pieces) {
+    for (const chunk of splitCluePiece(piece)) {
+      const value = String(chunk || "").trim();
+      const key = value.toLowerCase();
+      if (!value || seen.has(key)) continue;
+      seen.add(key);
+      chunks.push(value);
+    }
+  }
+
+  if (chunks.length <= 1) return chunks;
+
+  const scored = chunks.map((value, index) => {
+    const lower = value.toLowerCase();
+    const answerIndex = answerLower.indexOf(lower);
+    const grammar = isLikelyGrammarClue(value);
+    const startsLikeAnswer = firstToken && lower.startsWith(firstToken);
+    const longAnswerLeak = answerText && value.length > answerText.length * 0.65 && answerLower.includes(lower);
+    const laterAnswerChunk = answerIndex > Math.max(0, Math.floor(answerText.length * 0.25));
+    const verbObjectHint = /\b(to\s+[a-z]+|[a-z]+ed\b|[a-z]+ing\b|would\s+[a-z]+|could\s+[a-z]+|blamed|taught|introduced|prepared|built|made|kept|found|gave|took)\b/i.test(value);
+    const jitter = (stableClueHash(String(hashBase) + ":" + value + ":" + String(index)) % 17) / 100;
+    let score = 3 + jitter;
+
+    if (laterAnswerChunk) score -= 2.2;
+    if (verbObjectHint) score -= 1.4;
+    if (grammar) score += 0.7;
+    if (startsLikeAnswer) score += 2.8;
+    if (longAnswerLeak) score += 3.4;
+
+    return { value, score, index };
+  });
+
+  scored.sort((a, b) => (a.score - b.score) || (a.index - b.index));
+  return scored.map((item) => item.value);
+}
+
 function pickEnglishClueFromSeed(seed = {}, answer = "") {
   if (Array.isArray(seed.clueUnits)) {
     const pieces = seed.clueUnits
       .map((unit) => Array.isArray(unit) ? String(unit[1] || "").trim() : String(unit || "").trim())
       .filter(Boolean);
-    if (pieces.length) return pieces.join(" / ");
+    if (pieces.length) return scrambleCluePieces(pieces, seed, answer).join(" / ");
   }
   if (Array.isArray(seed.extraClueWordPool) && seed.extraClueWordPool.length) {
-    return seed.extraClueWordPool.slice(0, 6).join(" / ");
+    return scrambleCluePieces(seed.extraClueWordPool.slice(0, 6), seed, answer).join(" / ");
   }
-  return buildGuidedClue(answer);
+  return scrambleCluePieces(buildGuidedClue(answer).split(/\s*\/\s*/g), seed, answer).join(" / ");
 }
 
 function buildBlankFromSeed(seed = {}, answer = "") {
