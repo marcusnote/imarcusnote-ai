@@ -2579,13 +2579,108 @@ function stableClueHash(value = "") {
 
 function splitCluePiece(value = "") {
   return String(value || "")
-    .split(/\s+(?:\/|\\||;|→|->)\s+|\s*(?:→|->)\s*/g)
+    .split(/\s+(?:\/|\||;|->)\s+|\s*->\s*/g)
     .map((part) => part.trim())
     .filter(Boolean);
 }
 
+function normalizeClueText(value = "") {
+  return String(value || "")
+    .replace(/[.?!]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function isLikelyGrammarClue(value = "") {
-  return /\b(pattern|use|tense|clause|subject|object|complement|base verb|verb phrase|as \+|if \+|to-infinitive|to \+|not as|would|could)\b|[+~]|구조|문법|주의|역할|일치|금지|용법/i.test(String(value || ""));
+  return /\b(pattern|tense|clause|subject|object|complement|base verb|verb phrase|past participle|as \+|if \+|to-infinitive|to \+|not as|would|could|had \+)\b|[+~]|구조|문법|주의|역할|일치|금지|용법/i.test(String(value || ""));
+}
+
+function isExplanatoryClue(value = "") {
+  return /\b(use|keep|show|shows|showing|means|mean|mark|marks|appears|paraphrased|reversing|changing|drop|do not|don't|avoid|question order|conditional trap|life experience|completed action|earlier action|missing action|negative comparison)\b|주의|사용|설명|바꾸|어순/i.test(String(value || ""));
+}
+
+function stripLeadingSubject(value = "") {
+  const text = normalizeClueText(value);
+  const words = text.split(/\s+/).filter(Boolean);
+  if (words.length <= 2) return text;
+
+  const lowerFirst = words[0].toLowerCase();
+  const lowerSecond = words[1]?.toLowerCase() || "";
+  const subjectWords = new Set(["i", "you", "he", "she", "we", "they", "it"]);
+
+  if (subjectWords.has(lowerFirst)) return words.slice(1).join(" ");
+  if (["the", "a", "an", "this", "that", "these", "those", "my", "his", "her", "our", "their"].includes(lowerFirst)) {
+    const verbIndex = words.findIndex((word, idx) => idx > 0 && /^(am|is|are|was|were|had|has|have|did|do|does|would|could|should|will|can|[a-z]+ed|[a-z]+s)$/i.test(word));
+    if (verbIndex > 0) return words.slice(verbIndex).join(" ");
+  }
+  if (/^[A-Z][a-z]+$/.test(words[0]) && lowerSecond) return words.slice(1).join(" ");
+  return text;
+}
+
+function limitClueWords(value = "", maxWords = 7) {
+  const words = normalizeClueText(value).split(/\s+/).filter(Boolean);
+  if (words.length <= maxWords) return words.join(" ");
+  return words.slice(0, maxWords).join(" ");
+}
+
+function extractAnswerClueChunks(answer = "", seed = {}) {
+  const raw = String(answer || "").trim();
+  const clean = normalizeClueText(raw.replace(/[,]/g, " , "));
+  const chunks = [];
+  const grammar = String(seed?.grammar || seed?.chapterKey || "").toLowerCase();
+
+  const commaParts = clean.split(/\s+,\s+/).map((part) => normalizeClueText(part)).filter(Boolean);
+  if (/^if\b/i.test(commaParts[0] || "") && commaParts.length >= 2) {
+    chunks.push(limitClueWords(stripLeadingSubject(commaParts.slice(1).join(" ")), 8));
+    chunks.push(limitClueWords(commaParts[0], 8));
+    return chunks.filter(Boolean);
+  }
+
+  const connectorMatch = clean.match(/\b(after|before|when|while|until|since)\b/i);
+  if (connectorMatch) {
+    const connector = connectorMatch[1].toLowerCase();
+    const parts = clean.split(new RegExp("\\b" + connector + "\\b", "i")).map((part) => normalizeClueText(part)).filter(Boolean);
+    if (parts.length >= 2) {
+      chunks.push(limitClueWords(stripLeadingSubject(parts[0]), 6));
+      chunks.push(limitClueWords(stripLeadingSubject(parts.slice(1).join(" ")), 6));
+      chunks.push(connector);
+      return chunks.filter(Boolean);
+    }
+  }
+
+  const hadQuestion = clean.match(/^Had\s+([^\s]+)\s+(.+)$/i);
+  if (hadQuestion) {
+    chunks.push(limitClueWords(hadQuestion[2], 6));
+    chunks.push("Had + subject + p.p.?");
+    return chunks.filter(Boolean);
+  }
+
+  const hadStatement = clean.match(/\bhad\s+(not\s+yet|never|just|already|once)?\s*([a-z]+(?:\s+[^,.?!]+)?)$/i);
+  if (hadStatement || grammar.includes("past_perfect")) {
+    const afterHad = clean.replace(/^.*?\bhad\s+/i, "");
+    chunks.push(limitClueWords(afterHad, 6));
+    chunks.push("had + past participle");
+    return chunks.filter(Boolean);
+  }
+
+  const toMatch = grammar.includes("to") ? clean.match(/\bto\s+[a-z]+(?:\s+[^,.?!]+)?/i) : null;
+  if (toMatch) chunks.push(limitClueWords(toMatch[0], 7));
+
+  const modalMatch = clean.match(/\b(would|could|should|will|can)\s+[a-z]+(?:\s+[^,.?!]+)?/i);
+  if (modalMatch) chunks.push(limitClueWords(modalMatch[0], 7));
+
+  const generic = stripLeadingSubject(clean);
+  if (generic && generic !== clean) chunks.push(limitClueWords(generic, 7));
+
+  return chunks.filter(Boolean);
+}
+
+function addUniqueClueChunk(chunks, seen, value) {
+  const normalized = normalizeClueText(value);
+  const key = normalized.toLowerCase();
+  if (!normalized || seen.has(key)) return;
+  seen.add(key);
+  chunks.push(normalized);
 }
 
 function scrambleCluePieces(pieces = [], seed = {}, answer = "") {
@@ -2598,11 +2693,27 @@ function scrambleCluePieces(pieces = [], seed = {}, answer = "") {
 
   for (const piece of pieces) {
     for (const chunk of splitCluePiece(piece)) {
-      const value = String(chunk || "").trim();
+      addUniqueClueChunk(chunks, seen, chunk);
+    }
+  }
+
+  const answerChunks = extractAnswerClueChunks(answerText, seed);
+  const connectorSet = new Set(["after", "before", "when", "while", "until", "since", "if"]);
+  const answerChunkCount = chunks.filter((chunk) => {
+    const lower = chunk.toLowerCase();
+    return answerLower.includes(lower) && chunk.length > 4 && !connectorSet.has(lower) && lower !== firstToken;
+  }).length;
+  const explanationCount = chunks.filter(isExplanatoryClue).length;
+  const needsAnswerSupport = answerChunks.length && (answerChunkCount < 2 || explanationCount >= Math.max(1, chunks.length - 1));
+
+  if (needsAnswerSupport) {
+    for (let i = answerChunks.length - 1; i >= 0; i -= 1) {
+      const value = answerChunks[i];
       const key = value.toLowerCase();
-      if (!value || seen.has(key)) continue;
-      seen.add(key);
-      chunks.push(value);
+      if (!seen.has(key)) {
+        seen.add(key);
+        chunks.unshift(value);
+      }
     }
   }
 
@@ -2612,24 +2723,179 @@ function scrambleCluePieces(pieces = [], seed = {}, answer = "") {
     const lower = value.toLowerCase();
     const answerIndex = answerLower.indexOf(lower);
     const grammar = isLikelyGrammarClue(value);
+    const explanatory = isExplanatoryClue(value);
     const startsLikeAnswer = firstToken && lower.startsWith(firstToken);
     const longAnswerLeak = answerText && value.length > answerText.length * 0.65 && answerLower.includes(lower);
+    const generatedAnswerSupport = answerChunks.some((chunk) => chunk.toLowerCase() === lower);
+    const connectorOnly = connectorSet.has(lower);
+    const answerChunk = answerIndex >= 0 && value.length > 2;
     const laterAnswerChunk = answerIndex > Math.max(0, Math.floor(answerText.length * 0.25));
-    const verbObjectHint = /\b(to\s+[a-z]+|[a-z]+ed\b|[a-z]+ing\b|would\s+[a-z]+|could\s+[a-z]+|blamed|taught|introduced|prepared|built|made|kept|found|gave|took)\b/i.test(value);
+    const verbObjectHint = /\b(to\s+[a-z]+|[a-z]+ed\b|[a-z]+ing\b|would\s+[a-z]+|could\s+[a-z]+|had\s+[a-z]+|blamed|taught|introduced|prepared|built|made|kept|found|gave|took|finished|recorded|checked|reviewed|started|solved|opened|bought|lost|missed)\b/i.test(value);
     const jitter = (stableClueHash(String(hashBase) + ":" + value + ":" + String(index)) % 17) / 100;
     let score = 3 + jitter;
 
-    if (laterAnswerChunk) score -= 2.2;
-    if (verbObjectHint) score -= 1.4;
-    if (grammar) score += 0.7;
+    if (answerChunk) score -= generatedAnswerSupport ? 2.6 : 1.3;
+    if (connectorOnly) score += 2.2;
+    if (laterAnswerChunk) score -= 1.5;
+    if (verbObjectHint) score -= 1.7;
+    if (grammar) score += 0.8;
+    if (explanatory) score += 3.1;
     if (startsLikeAnswer) score += 2.8;
-    if (longAnswerLeak) score += 3.4;
+    if (longAnswerLeak && !generatedAnswerSupport) score += 3.4;
 
-    return { value, score, index };
+    return { value, score, index, explanatory, grammar };
   });
 
   scored.sort((a, b) => (a.score - b.score) || (a.index - b.index));
-  return scored.map((item) => item.value);
+
+  const compact = [];
+  let explanatoryUsed = 0;
+  let grammarUsed = 0;
+  for (const item of scored) {
+    if (item.explanatory) {
+      if (needsAnswerSupport || explanatoryUsed >= 1 || compact.length >= 3) continue;
+      explanatoryUsed += 1;
+    }
+    if (item.grammar) {
+      if (grammarUsed >= 2 || compact.length >= 4) continue;
+      grammarUsed += 1;
+    }
+    compact.push(item.value);
+    if (compact.length >= 4) break;
+  }
+
+  return compact.length ? compact : scored.slice(0, 4).map((item) => item.value);
+}
+
+function cleanWordClueToken(value = "") {
+  return String(value || "")
+    .replace(/^[\"'“”‘’([{]+|[\"'“”‘’\])}.,!?;:]+$/g, "")
+    .trim();
+}
+
+function takeCluePhrase(tokens = [], start = 0, maxWords = 5) {
+  return tokens
+    .slice(start, Math.min(tokens.length, start + maxWords))
+    .map(cleanWordClueToken)
+    .filter(Boolean)
+    .join(" ")
+    .trim();
+}
+
+function stripSubjectTokens(tokens = []) {
+  const cleaned = tokens.map(cleanWordClueToken).filter(Boolean);
+  if (cleaned.length <= 1) return cleaned;
+  const first = cleaned[0].toLowerCase();
+  const subjectWords = new Set(["i", "you", "he", "she", "we", "they", "it", "this", "that", "these", "those"]);
+  if (subjectWords.has(first)) return cleaned.slice(1);
+  if (["the", "a", "an", "my", "his", "her", "our", "their"].includes(first)) {
+    const verbIndex = cleaned.findIndex((word, idx) => idx > 0 && /^(am|is|are|was|were|had|has|have|did|do|does|would|could|should|will|can|[a-z]+ed|[a-z]+s)$/i.test(word));
+    if (verbIndex > 0) return cleaned.slice(verbIndex);
+  }
+  return cleaned;
+}
+
+function buildWordLevelClue(seed = {}, seedIndex = 0) {
+  const rawWords = Array.isArray(seed.words) ? seed.words : [];
+  const tokens = rawWords
+    .map(cleanWordClueToken)
+    .filter(Boolean)
+    .filter((token) => !/^[.,!?;:]$/.test(token));
+
+  if (tokens.length < 3) return "";
+
+  const idSeed = [seed.id, seed.seedId, seed.grammar, seed.english, seedIndex].filter(Boolean).join("|");
+  const lowerTokens = tokens.map((token) => token.toLowerCase());
+  const chunks = [];
+  const used = new Set();
+
+  function addChunk(value) {
+    const normalized = String(value || "").replace(/\s+/g, " ").trim();
+    const key = normalized.toLowerCase();
+    if (!normalized || used.has(key)) return;
+    used.add(key);
+    chunks.push(normalized);
+  }
+
+  function addToken(index) {
+    if (index >= 0 && index < tokens.length) addChunk(tokens[index]);
+  }
+
+  const connectorIndex = lowerTokens.findIndex((token) => ["after", "before", "when", "while", "until", "since"].includes(token));
+  if (connectorIndex > 0 && connectorIndex < tokens.length - 1) {
+    addChunk(takeCluePhrase(stripSubjectTokens(tokens.slice(connectorIndex + 1)), 0, 5));
+    addChunk(takeCluePhrase(stripSubjectTokens(tokens.slice(0, connectorIndex)), 0, 5));
+    addToken(connectorIndex);
+    addToken(0);
+  } else if (lowerTokens[0] === "if") {
+    const modalIndex = lowerTokens.findIndex((token) => ["would", "could", "should", "might"].includes(token));
+    if (modalIndex > 0) {
+      addChunk(takeCluePhrase(tokens, modalIndex, 5));
+      addChunk(takeCluePhrase(tokens, 0, Math.min(6, modalIndex)));
+    }
+  }
+
+  const hadIndex = lowerTokens.indexOf("had");
+  if (hadIndex >= 0) {
+    const ppIndex = lowerTokens.findIndex((token, idx) => idx > hadIndex && /^[a-z]+(ed|en|t|d)$/i.test(token));
+    if (ppIndex > hadIndex) addChunk(takeCluePhrase(tokens, ppIndex, 4));
+    else addChunk(takeCluePhrase(tokens, hadIndex + 1, 4));
+    const adverbIndex = lowerTokens.findIndex((token, idx) => idx > hadIndex && ["already", "just", "never", "ever", "once", "yet"].includes(token));
+    addToken(adverbIndex);
+    addToken(hadIndex);
+  }
+
+  const toIndex = lowerTokens.indexOf("to");
+  if (toIndex >= 0) addChunk(takeCluePhrase(tokens, toIndex, 5));
+
+  const modalIndex = lowerTokens.findIndex((token) => ["would", "could", "should", "will", "can"].includes(token));
+  if (modalIndex >= 0) addChunk(takeCluePhrase(tokens, modalIndex, 5));
+
+  const verbIndex = lowerTokens.findIndex((token, idx) => idx > 0 && (/^[a-z]+ed$/i.test(token) || /^[a-z]+ing$/i.test(token) || ["went", "saw", "bought", "made", "took", "gave", "found", "wrote", "met", "read", "built", "kept", "lost"].includes(token)));
+  if (verbIndex >= 0) addChunk(takeCluePhrase(tokens, verbIndex, 5));
+
+  if (!chunks.length) addChunk(takeCluePhrase(stripSubjectTokens(tokens), 0, 5));
+
+  addToken(0);
+  for (let i = 1; i < tokens.length && chunks.length < 8; i += 1) {
+    const lower = lowerTokens[i];
+    if (!["a", "an", "the"].includes(lower)) addToken(i);
+  }
+
+  const scored = chunks.map((chunk, index) => {
+    const lower = chunk.toLowerCase();
+    const first = lower.split(/\s+/)[0] || "";
+    const subjectish = ["i", "you", "he", "she", "we", "they", "it", "this", "that", "these", "those"].includes(first);
+    const connectorOnly = ["after", "before", "when", "while", "until", "since", "if"].includes(lower);
+    const auxiliaryOnly = ["had", "did", "do", "does", "is", "are", "was", "were", "would", "could", "should", "will", "can"].includes(lower);
+    const phraseLength = chunk.split(/\s+/).length;
+    const jitter = (stableClueHash(idSeed + ":" + chunk + ":" + String(index)) % 19) / 100;
+    let score = 3 + jitter;
+
+    if (phraseLength >= 2) score -= 1.8;
+    if (/\b([a-z]+ed|[a-z]+ing|would|could|had|to\s+[a-z]+)\b/i.test(chunk)) score -= 1.4;
+    if (subjectish) score += 3.2;
+    if (connectorOnly) score += 1.8;
+    if (auxiliaryOnly) score += 0.9;
+    if (phraseLength > 5) score += 1.2;
+
+    return { chunk, score, index };
+  });
+
+  scored.sort((a, b) => (a.score - b.score) || (a.index - b.index));
+
+  const selected = [];
+  const selectedWords = new Set();
+  for (const item of scored) {
+    const words = item.chunk.toLowerCase().split(/\s+/).filter(Boolean);
+    const overlap = words.filter((word) => selectedWords.has(word)).length;
+    if (selected.length && overlap >= Math.max(1, Math.ceil(words.length * 0.6))) continue;
+    selected.push(item.chunk);
+    words.forEach((word) => selectedWords.add(word));
+    if (selected.length >= 5) break;
+  }
+
+  return selected.join(" / ");
 }
 
 function pickEnglishClueFromSeed(seed = {}, answer = "") {
@@ -2702,6 +2968,7 @@ function normalizeSentenceBankEntries(rawEntries = [], chapterKey = "") {
         seedId: row.seedId || `${chapterKey}_${idx + 1}`,
         korean,
         english,
+        words: Array.isArray(row.words) ? row.words : [],
         clueUnits: Array.isArray(row.clueUnits) ? row.clueUnits : [],
         extraClueWordPool: Array.isArray(row.extraClueWordPool) ? row.extraClueWordPool : [],
         blankTargets: Array.isArray(row.blankTargets) ? row.blankTargets : [],
@@ -3550,7 +3817,7 @@ function buildDbFirstWorksheet(input, preloadedBankInfo = null) {
         number: i + 1,
         type: "guided_writing",
         prompt: promptKo,
-        clue: pickEnglishClueFromSeed(seed, answer),
+        clue: buildWordLevelClue(seed, i) || pickEnglishClueFromSeed(seed, answer),
         wordCount: itemWordCount,
       });
       answers.push({ number: i + 1, answer });
