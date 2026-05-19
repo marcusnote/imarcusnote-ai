@@ -220,8 +220,10 @@ const CANONICAL_DB_FILENAME_REGISTRY = Object.freeze({
     that_clause_subjunctive: "middle3_that_clause_subjunctive.json",
     the_comparative_the_comparative: "middle3_the_comparative_the_comparative.json",
     time_conjunctions: "middle3_time_conjunctions.json",
+    to_infinitive_adjective: "middle3_to_infinitive_adjective.json",
     to_infinitive_adverbial: "middle3_to_infinitive_adverbial.json",
     to_infinitive_gerund_verbs: "middle3_to_infinitive_gerund_verbs.json",
+    to_infinitive_noun: "middle3_to_infinitive_noun.json",
     to_infinitive_noun_adjective_quality_fix: "middle3_to_infinitive_noun_adjective_quality_fix.json",
     to_infinitive_noun_adjective: "middle3_to_infinitive_noun_adjective.json",
     too_enough_to: "middle3_too_enough_to.json",
@@ -2559,6 +2561,23 @@ function resolveSentenceBankFile(input = {}, chapterKey = "") {
   return getSentenceBankPathInfo(input, chapterKey).filePath || null;
 }
 
+function getRelatedSentenceBankFiles(pathInfo = {}) {
+  const chapterKey = normalizeChapterKey(pathInfo.chapterKey || "");
+  if (pathInfo.bucket === "middle3" && chapterKey === "that_clause_subjunctive") {
+    const statementPath = getCanonicalDbPath("middle3", "that_clause_statement");
+    if (statementPath && fs.existsSync(statementPath) && statementPath !== pathInfo.filePath) {
+      return [
+        {
+          chapterKey: "that_clause_statement",
+          filePath: statementPath,
+          reason: "mandative_that_clause_contrast"
+        }
+      ];
+    }
+  }
+  return [];
+}
+
 function safeReadJson(filePath) {
   try {
     return JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -3015,12 +3034,19 @@ function loadSentenceBank(input = {}) {
   logMagicRouting(pathInfo);
 
   if (filePath) {
-    const preloadFilePaths = specializedExactLoad ? [filePath] : [filePath];
-    const raw = safeReadJson(preloadFilePaths[0]);
-    const normalized = normalizeSentenceBankEntries(
-      raw,
-      pathInfo.chapterKey || chapterKey
-    );
+    const relatedFiles = getRelatedSentenceBankFiles(pathInfo);
+    const preloadFilePaths = [
+      filePath,
+      ...relatedFiles.map((entry) => entry.filePath)
+    ];
+    const normalizedGroups = preloadFilePaths.map((targetPath, index) => {
+      const related = index === 0 ? null : relatedFiles[index - 1];
+      return normalizeSentenceBankEntries(
+        safeReadJson(targetPath),
+        related?.chapterKey || pathInfo.chapterKey || chapterKey
+      );
+    });
+    const normalized = normalizedGroups.flat();
 
     // RANDOMIZE BEFORE ANY SELECTION
     const randomizedItems = shuffleArraySafe(normalized);
@@ -3030,6 +3056,7 @@ function loadSentenceBank(input = {}) {
       {
         chapterKey,
         filePath,
+        relatedFiles: relatedFiles.map((entry) => entry.filePath),
         itemCount: randomizedItems.length,
         routingMode: pathInfo.routingMode,
       }
@@ -3044,6 +3071,10 @@ function loadSentenceBank(input = {}) {
         routingMode: pathInfo.routingMode,
         matchType: pathInfo.matchType,
         pathInfo,
+        relatedFiles: relatedFiles.map((entry, index) => ({
+          ...entry,
+          itemCount: normalizedGroups[index + 1]?.length || 0
+        })),
         items: randomizedItems,
       };
     }
