@@ -509,6 +509,14 @@ const COMMON_ROUTING_TOKENS = Object.freeze(new Set([
 
 const HARDENED_DB_ROUTING_HINTS = Object.freeze({
   middle3: Object.freeze({
+    causative_verbs_advanced: Object.freeze({
+      aliases: ["중3 사역동사 심화", "중3 사역동사 고급", "사역동사 심화", "사역동사 고급", "middle3 causative verbs advanced", "causative verbs advanced"],
+      tokens: ["사역동사", "사역 동사", "심화", "고급", "make", "have", "let", "force", "help", "causative", "advanced"],
+    }),
+    causative_verbs: Object.freeze({
+      aliases: ["중3 사역동사", "중3 사역 동사", "중3 사역동사 make have let", "사역동사", "사역 동사", "사역동사 make have let", "middle3 causative verbs", "causative verbs"],
+      tokens: ["사역동사", "사역 동사", "make", "have", "let", "help", "force", "causative"],
+    }),
     that_clause_subjunctive: Object.freeze({
       aliases: ["중3 당위성을 동반하는 that절", "중3 당위성을 취하는 that절", "주장 명령 요구 that절", "제안 요구 명령 that절", "당위성 that절", "mandative that clause"],
       tokens: ["당위성", "당위", "주장", "명령", "요구", "제안", "권고", "should", "원형", "mandative", "subjunctive", "that절", "that clause"],
@@ -1001,7 +1009,10 @@ function detectGradeBucket(input = {}) {
     rawBody.gradeLabel || "",
     rawBody.level || "",
     rawBody.userPrompt || "",
+    rawBody.prompt || "",
     rawBody.topic || "",
+    rawBody.worksheetTitle || "",
+    rawBody.title || "",
   ].join("\n").toLowerCase();
 
   const explicitGrade = normalizeChapterKey(input.grade || input.gradeLabel || input.level || rawBody.grade || rawBody.gradeLabel || rawBody.level || "");
