@@ -224,8 +224,6 @@ const CANONICAL_DB_FILENAME_REGISTRY = Object.freeze({
     to_infinitive_adverbial: "middle3_to_infinitive_adverbial.json",
     to_infinitive_gerund_verbs: "middle3_to_infinitive_gerund_verbs.json",
     to_infinitive_noun: "middle3_to_infinitive_noun.json",
-    to_infinitive_noun_adjective_quality_fix: "middle3_to_infinitive_noun_adjective_quality_fix.json",
-    to_infinitive_noun_adjective: "middle3_to_infinitive_noun_adjective.json",
     too_enough_to: "middle3_too_enough_to.json",
     total_vs_partial_negation: "middle3_total_vs_partial_negation.json",
     wh_to_infinitive: "middle3_wh_to_infinitive.json",
@@ -235,9 +233,36 @@ const CANONICAL_DB_FILENAME_REGISTRY = Object.freeze({
   }),
 });
 
-function getCanonicalDbFilename(bucket = "", chapterKey = "") {
+function normalizeCanonicalChapterKey(bucket = "", chapterKey = "", context = "") {
   const normalizedBucket = normalizeChapterKey(bucket);
   const normalizedChapter = normalizeChapterKey(chapterKey);
+  if (!normalizedChapter) return "";
+
+  const bucketPrefix = /^(elementary|middle|high)\d+$/.test(normalizedBucket)
+    ? `${normalizedBucket}_`
+    : "";
+  const gradePrefixed = normalizedChapter.match(/^(elementary|middle|high)\d+_(.+)$/);
+  const stripped = bucketPrefix && normalizedChapter.startsWith(bucketPrefix)
+    ? normalizedChapter.slice(bucketPrefix.length)
+    : gradePrefixed
+      ? gradePrefixed[2]
+      : normalizedChapter;
+
+  if (context && stripped !== normalizedChapter) {
+    console.log("[CANONICAL_NORMALIZED]", {
+      context,
+      bucket: normalizedBucket,
+      original: normalizedChapter,
+      normalized: stripped,
+    });
+  }
+
+  return stripped;
+}
+
+function getCanonicalDbFilename(bucket = "", chapterKey = "") {
+  const normalizedBucket = normalizeChapterKey(bucket);
+  const normalizedChapter = normalizeCanonicalChapterKey(normalizedBucket, chapterKey, "filename_lookup");
   return CANONICAL_DB_FILENAME_REGISTRY[normalizedBucket]?.[normalizedChapter] || "";
 }
 
@@ -297,16 +322,85 @@ const GRAMMAR_FAMILY_MAP = Object.freeze({
     "objective_relative_pronouns",
     "possessive_relative_pronouns",
     "relative_pronoun_what",
+    "continuative_relative_clauses",
   ],
   comparative: [
     "comparatives",
     "comparative",
+    "comparison",
     "comparative_emphasis",
     "comparative_emphasis_adverbs",
     "the_comparative_the_comparative",
   ],
+  comparison: [
+    "comparative",
+    "comparatives",
+    "comparative_emphasis",
+    "comparative_emphasis_adverbs",
+    "the_comparative_the_comparative",
+    "as_as",
+    "superlative",
+  ],
+  that_clause: [
+    "that_clause_subjunctive",
+    "that_clause_statement",
+    "it_seems_that",
+    "it_that_expletive_subject",
+    "cleft_it_that",
+  ],
+  subjunctive: [
+    "subjunctive_past",
+    "subjunctive_past_perfect",
+    "wish_subjunctive",
+    "its_time_subjunctive",
+    "that_clause_subjunctive",
+  ],
+  participle: [
+    "participial_construction",
+    "participles_attributive",
+    "with_object_participle",
+    "have_object_pp",
+  ],
+  object_complement: [
+    "object_complement_5th_form",
+    "object_complement_adj",
+    "with_object_participle",
+  ],
+  negation: [
+    "total_vs_partial_negation",
+    "not_to_infinitive",
+    "do_negative",
+    "be_negative",
+  ],
+  tense: [
+    "past",
+    "present_perfect",
+    "present_perfect_progressive",
+    "past_perfect",
+    "tense_agreement",
+  ],
+  perfect: [
+    "present_perfect",
+    "present_perfect_progressive",
+    "past_perfect",
+    "modal_have_pp",
+    "should_have_pp",
+    "subjunctive_past_perfect",
+  ],
+  conjunction: [
+    "after_before",
+    "time_conjunctions",
+    "while_when",
+    "because",
+    "because_because_of",
+    "although",
+    "if_whether",
+    "so_that",
+    "so_that_purpose",
+    "so_that_purpose_advanced",
+    "however_therefore",
+  ],
 });
-
 const SPECIALIZED_ALIAS_MAP = Object.freeze({
   "to부정사의 명사적 용법": "to_infinitive_noun",
   "to 부정사의 명사적 용법": "to_infinitive_noun",
@@ -378,23 +472,92 @@ const SPECIALIZED_ALIAS_MAP = Object.freeze({
 });
 
 const FAMILY_ALIAS_MAP = Object.freeze({
-  "to부정사": "to_infinitive",
-  "to 부정사": "to_infinitive",
   "to infinitive": "to_infinitive",
   "to_infinitive": "to_infinitive",
-  "동명사": "gerund",
   "gerund": "gerund",
-  "관계대명사": "relative_pronoun",
-  "관계 대명사": "relative_pronoun",
   "relative pronoun": "relative_pronoun",
   "relative_pronoun": "relative_pronoun",
-  "비교급": "comparative",
   "comparative": "comparative",
   "comparatives": "comparative",
+  "comparison": "comparison",
+  "that절": "that_clause",
+  "that clause": "that_clause",
+  "that_clause": "that_clause",
+  "가정법": "subjunctive",
+  "subjunctive": "subjunctive",
+  "분사": "participle",
+  "분사구문": "participle",
+  "participle": "participle",
+  "목적격보어": "object_complement",
+  "목적어 보어": "object_complement",
+  "object complement": "object_complement",
+  "부정": "negation",
+  "negation": "negation",
+  "시제": "tense",
+  "tense": "tense",
+  "완료": "perfect",
+  "perfect": "perfect",
+  "접속사": "conjunction",
+  "conjunction": "conjunction",
 });
-
 const FAMILY_REPRESENTATIVE_HINTS = ["total", "representative", "standard"];
 const SPECIALIZED_CHAPTER_KEYS = Object.freeze([...new Set(Object.values(SPECIALIZED_ALIAS_MAP))]);
+
+const COMMON_ROUTING_TOKENS = Object.freeze(new Set([
+  "that", "that절", "that clause", "clause", "구문", "문법", "중1", "중2", "중3", "middle1", "middle2", "middle3",
+]));
+
+const HARDENED_DB_ROUTING_HINTS = Object.freeze({
+  middle3: Object.freeze({
+    that_clause_subjunctive: Object.freeze({
+      aliases: ["중3 당위성을 동반하는 that절", "중3 당위성을 취하는 that절", "주장 명령 요구 that절", "제안 요구 명령 that절", "당위성 that절", "mandative that clause"],
+      tokens: ["당위성", "당위", "주장", "명령", "요구", "제안", "권고", "should", "원형", "mandative", "subjunctive", "that절", "that clause"],
+    }),
+    that_clause_statement: Object.freeze({
+      aliases: ["중3 사실을 전달하는 that절", "사실 전달 that절", "진술 that절", "정보 전달 that절", "statement that clause"],
+      tokens: ["사실", "전달", "진술", "정보", "말하다", "생각", "보고", "statement", "declarative", "that절", "that clause"],
+    }),
+    continuative_relative_clauses: Object.freeze({
+      aliases: ["계속적 용법 관계대명사", "관계대명사 계속적 용법"],
+      tokens: ["계속적", "계속", "관계대명사", "which", "who", "continuative", "relative"],
+    }),
+    gerund_idiomatic_expressions: Object.freeze({
+      aliases: ["동명사 관용표현", "동명사 관용 표현"],
+      tokens: ["동명사", "관용", "표현", "idiomatic", "gerund"],
+    }),
+    comparative_emphasis_adverbs: Object.freeze({
+      aliases: ["비교급 강조부사", "비교급 강조 부사"],
+      tokens: ["비교급", "강조", "부사", "much", "far", "even", "a lot", "comparative"],
+    }),
+    total_vs_partial_negation: Object.freeze({
+      aliases: ["전체부정 부분부정", "부분부정 전체부정"],
+      tokens: ["전체부정", "부분부정", "전체", "부분", "부정", "not all", "not always", "negation"],
+    }),
+    object_complement_5th_form: Object.freeze({
+      aliases: ["5형식 목적격보어", "목적격보어 5형식", "목보 5형식"],
+      tokens: ["5형식", "목적격보어", "목적어 보어", "목보", "object complement"],
+    }),
+    participial_construction: Object.freeze({
+      aliases: ["분사구문", "부대상황 분사구문"],
+      tokens: ["분사구문", "부대상황", "분사", "participial", "construction"],
+    }),
+    with_object_participle: Object.freeze({
+      aliases: ["with 목적어 분사", "with 목적어 현재분사 과거분사"],
+      tokens: ["with", "목적어", "분사", "현재분사", "과거분사", "participle"],
+    }),
+    to_infinitive_noun_adjective: Object.freeze({
+      aliases: [
+        "to infinitive noun adjective",
+        "middle3 to infinitive noun adjective",
+        "to_infinitive_noun_adjective",
+        "to-infinitive-noun-adjective",
+        "to infinitive noun and adjective",
+        "middle3 to infinitive noun and adjective"
+      ],
+      tokens: ["noun", "adjective", "infinitive"],
+    }),
+  }),
+});
 
 function inferGrammarFamily(chapter = "") {
   const key = normalizeChapterKey(chapter);
@@ -487,9 +650,9 @@ function buildSentenceBankRegistry() {
       const entryMetas = chapterMetas.length ? chapterMetas : [{ canonical: chapter }];
 
       for (const chapterMeta of entryMetas) {
-        const canonicalChapter = normalizeChapterKey(chapterMeta?.canonical || chapterMeta?.chapterKey || chapter);
-        const family = normalizeChapterKey(chapterMeta?.family || inferGrammarFamily(canonicalChapter || chapter));
-        const subtype = normalizeChapterKey(chapterMeta?.subtype || inferGrammarSubtype(canonicalChapter || chapter, family));
+        const canonicalChapter = normalizeCanonicalChapterKey(grade, chapterMeta?.canonical || chapterMeta?.chapterKey || chapter);
+        const family = normalizeCanonicalChapterKey(grade, chapterMeta?.family || inferGrammarFamily(canonicalChapter || chapter));
+        const subtype = normalizeCanonicalChapterKey(grade, chapterMeta?.subtype || inferGrammarSubtype(canonicalChapter || chapter, family));
         const representativeCandidate = (
           canonicalChapter === family ||
           canonicalChapter === `${family}_total` ||
@@ -513,7 +676,7 @@ function buildSentenceBankRegistry() {
         for (const alias of aliasValues) {
           const aliasKey = normalizeChapterAliasIndexKey(alias);
           if (!aliasKey) continue;
-          const resolvedChapter = canonicalChapter || chapter;
+          const resolvedChapter = normalizeCanonicalChapterKey(grade, canonicalChapter || chapter);
           registry.aliases[grade][aliasKey] = resolvedChapter;
           registry.aliasList[grade].push({ aliasKey, chapter: resolvedChapter, fileName });
         }
@@ -903,10 +1066,11 @@ function resolveRegistryExactChapter(raw = "", input = {}) {
 
   const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
   const aliasKey = normalizeChapterAliasIndexKey(raw);
-  const exactAliasChapter = DB_REGISTRY?.aliases?.[bucket]?.[aliasKey];
+  const exactAliasChapter = normalizeCanonicalChapterKey(bucket, DB_REGISTRY?.aliases?.[bucket]?.[aliasKey] || "", "db_alias_exact");
   if (exactAliasChapter && registry[exactAliasChapter]) return exactAliasChapter;
 
   const aliasMatches = (DB_REGISTRY?.aliasList?.[bucket] || [])
+    .map((entry) => ({ ...entry, chapter: normalizeCanonicalChapterKey(bucket, entry.chapter || "") }))
     .filter((entry) => entry.aliasKey && aliasKey && aliasKey.includes(entry.aliasKey) && registry[entry.chapter])
     .sort((a, b) => b.aliasKey.length - a.aliasKey.length);
   if (aliasMatches.length) return aliasMatches[0].chapter;
@@ -923,6 +1087,162 @@ function resolveRegistryExactChapter(raw = "", input = {}) {
   return "";
 }
 
+function normalizeDbRoutingText(value = "") {
+  return normalizeChapterAliasIndexKey(value)
+    .replace(/[()\[\]{}.,;:!?~`'"|]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getRoutingHintValues(hints = {}, field = "") {
+  if (!hints || typeof hints !== "object") return [];
+  const value = hints[field];
+  if (Array.isArray(value)) return value;
+  if (typeof value === "string") return [value];
+  return [];
+}
+
+function getDbAliasRoutingCandidates(bucket = "") {
+  const metaRegistry = DB_REGISTRY?.byGrade?.[bucket] || {};
+  const seen = new Set();
+  const candidates = [];
+
+  for (const meta of Object.values(metaRegistry)) {
+    if (!meta || typeof meta !== "object") continue;
+    const chapter = normalizeCanonicalChapterKey(bucket, meta.canonicalChapter || meta.chapter || "");
+    if (!chapter || seen.has(chapter)) continue;
+    seen.add(chapter);
+
+    const chapterMeta = meta.chapterMeta || {};
+    const dbAliases = [
+      chapter,
+      meta.chapter,
+      meta.canonicalChapter,
+      ...(Array.isArray(chapterMeta?.aliases?.ko) ? chapterMeta.aliases.ko : []),
+      ...(Array.isArray(chapterMeta?.aliases?.en) ? chapterMeta.aliases.en : []),
+      ...getRoutingHintValues(chapterMeta.routingHints, "aliases"),
+    ];
+    const hardened = HARDENED_DB_ROUTING_HINTS?.[bucket]?.[chapter] || {};
+    const aliases = [...dbAliases, ...(Array.isArray(hardened.aliases) ? hardened.aliases : [])]
+      .map((value) => normalizeDbRoutingText(value))
+      .filter(Boolean);
+    const tokens = [
+      ...getRoutingHintValues(chapterMeta.routingHints, "tokens"),
+      ...(Array.isArray(hardened.tokens) ? hardened.tokens : []),
+    ]
+      .map((value) => normalizeDbRoutingText(value))
+      .filter(Boolean);
+
+    candidates.push({ chapter, meta, aliases: [...new Set(aliases)], tokens: [...new Set(tokens)] });
+  }
+
+  return candidates;
+}
+
+function scoreDbAliasTokenCandidate(normalizedInput = "", candidate = {}) {
+  let score = 0;
+  const matchedAliases = [];
+  const matchedTokens = [];
+  let specificTokenCount = 0;
+
+  for (const alias of candidate.aliases || []) {
+    if (!alias) continue;
+    if (normalizedInput === alias) {
+      score += 100;
+      matchedAliases.push(alias);
+    } else if (alias.length >= 4 && normalizedInput.includes(alias)) {
+      score += Math.min(40, 12 + alias.length);
+      matchedAliases.push(alias);
+    }
+  }
+
+  for (const token of candidate.tokens || []) {
+    if (!token || token.length < 2) continue;
+    if (!normalizedInput.includes(token)) continue;
+    const isCommon = COMMON_ROUTING_TOKENS.has(token);
+    score += isCommon ? 2 : 8;
+    if (!isCommon) specificTokenCount += 1;
+    matchedTokens.push(token);
+  }
+
+  return { score, matchedAliases, matchedTokens, specificTokenCount };
+}
+
+function resolveDbAliasFirst(raw = "", input = {}) {
+  const selectedGrade = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
+  const bucket = selectedGrade !== "auto"
+    ? selectedGrade
+    : detectGradeBucket({
+      gradeLabel: raw,
+      worksheetTitle: raw,
+      topic: raw,
+      userPrompt: raw,
+      rawBody: input.rawBody || {},
+    });
+  const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
+  if (!bucket || !Object.keys(registry).length) return null;
+
+  const normalizedInput = normalizeDbRoutingText(raw);
+  const exactAliasChapter = normalizeCanonicalChapterKey(bucket, DB_REGISTRY?.aliases?.[bucket]?.[normalizedInput] || "", "db_alias_first_exact");
+  if (exactAliasChapter && registry[exactAliasChapter]) {
+    console.log("[DB_ALIAS_EXACT]", { rawInput: raw, normalizedInput, selectedGrade: bucket, matchedAlias: normalizedInput, finalCanonicalChapter: exactAliasChapter });
+    return { chapter: exactAliasChapter, source: "db_alias_exact", bucket, matchedAlias: normalizedInput };
+  }
+
+  for (const [hintChapter, hint] of Object.entries(HARDENED_DB_ROUTING_HINTS?.[bucket] || {})) {
+    const chapter = normalizeCanonicalChapterKey(bucket, hintChapter);
+    const aliases = (Array.isArray(hint.aliases) ? hint.aliases : [])
+      .map((value) => normalizeDbRoutingText(value))
+      .filter((value) => value && value.length >= 4);
+    const matchedAlias = aliases.find((alias) => normalizedInput.includes(alias));
+    if (matchedAlias) {
+      console.log("[DB_ALIAS_TOKEN]", {
+        rawInput: raw,
+        normalizedInput,
+        selectedGrade: bucket,
+        matchedAliases: [matchedAlias],
+        matchedTokens: [],
+        score: 100,
+        finalCanonicalChapter: chapter,
+        virtualSplitRoute: bucket === "middle3" && chapter === "to_infinitive_noun_adjective",
+      });
+      return { chapter, source: "db_alias_hardened", bucket, matchedAlias };
+    }
+  }
+
+  const containsMatch = (DB_REGISTRY?.aliasList?.[bucket] || [])
+    .map((entry) => ({ ...entry, chapter: normalizeCanonicalChapterKey(bucket, entry.chapter || "") }))
+    .filter((entry) => entry.aliasKey && entry.aliasKey.length >= 4 && normalizedInput.includes(entry.aliasKey) && registry[entry.chapter])
+    .sort((a, b) => b.aliasKey.length - a.aliasKey.length)[0];
+  if (containsMatch) {
+    console.log("[DB_ALIAS_EXACT]", { rawInput: raw, normalizedInput, selectedGrade: bucket, matchedAlias: containsMatch.aliasKey, finalCanonicalChapter: containsMatch.chapter });
+    return { chapter: containsMatch.chapter, source: "db_alias_contains", bucket, matchedAlias: containsMatch.aliasKey };
+  }
+
+  const scored = getDbAliasRoutingCandidates(bucket)
+    .map((candidate) => ({ candidate, ...scoreDbAliasTokenCandidate(normalizedInput, candidate) }))
+    .filter((row) => row.score >= 8 && row.specificTokenCount > 0 && registry[row.candidate.chapter])
+    .sort((a, b) => b.score - a.score || b.specificTokenCount - a.specificTokenCount);
+
+  if (scored.length) {
+    const best = scored[0];
+    const second = scored[1];
+    if (!second || best.score > second.score || best.specificTokenCount > second.specificTokenCount) {
+      console.log("[DB_ALIAS_TOKEN]", {
+        rawInput: raw,
+        normalizedInput,
+        selectedGrade: bucket,
+        matchedAliases: best.matchedAliases,
+        matchedTokens: best.matchedTokens,
+        score: best.score,
+        finalCanonicalChapter: best.candidate.chapter,
+      });
+      return { chapter: best.candidate.chapter, source: "db_alias_token", bucket, matchedAlias: best.matchedAliases[0] || best.matchedTokens.join(" ") };
+    }
+  }
+
+  return null;
+}
 function isSafeLegacyPartialAlias(aliasKey = "") {
   const key = normalizeRoutingText(aliasKey);
   if (!key) return false;
@@ -937,9 +1257,14 @@ function resolveChapterAlias(raw = '', input = {}) {
     .toLowerCase()
     .replace(/\s+/g, " ");
 
+  const dbAliasFirst = resolveDbAliasFirst(raw, input);
+  if (dbAliasFirst?.chapter) {
+    return dbAliasFirst.chapter;
+  }
+
   const specializedAlias = findSpecializedAlias(raw);
   if (specializedAlias) {
-    console.log('[GRAMMAR DETECTED SPECIALIZED]', {
+    console.log('[STATIC_ALIAS]', {
       rawInput: raw,
       matchedAlias: specializedAlias.alias,
       resolved: specializedAlias.chapter
@@ -2241,7 +2566,7 @@ function resolveChapterAlias(raw = '', input = {}) {
 
   const family = detectGrammarFamilyFromRequest(raw, normalized);
   if (family) {
-    console.log('[GRAMMAR FAMILY DETECTED]', {
+    console.log('[FAMILY_FALLBACK]', {
       rawInput: raw,
       resolvedFamily: family
     });
@@ -2251,7 +2576,7 @@ function resolveChapterAlias(raw = '', input = {}) {
 
   for (const entry of CHAPTER_ALIAS_PATTERNS) {
     if (entry.patterns.some((pattern) => pattern.test(raw))) {
-      console.log('[GRAMMAR DETECTED PATTERN FALLBACK]', {
+      console.log('[REGEX_FALLBACK]', {
         rawInput: raw,
         resolved: entry.key
       });
@@ -2261,7 +2586,7 @@ function resolveChapterAlias(raw = '', input = {}) {
   }
 
   if (aliasMap[normalized]) {
-    console.log('[GRAMMAR DETECTED LEGACY FALLBACK]', {
+    console.log('[STATIC_ALIAS]', {
       rawInput: raw,
       resolved: aliasMap[normalized]
     });
@@ -2272,7 +2597,7 @@ function resolveChapterAlias(raw = '', input = {}) {
 for (const [aliasKey, aliasValue] of Object.entries(aliasMap)
   .sort((a, b) => normalizeRoutingText(b[0]).length - normalizeRoutingText(a[0]).length)) {
   if (isSafeLegacyPartialAlias(aliasKey) && normalized.includes(aliasKey)) {
-    console.log('[GRAMMAR DETECTED LEGACY PARTIAL FALLBACK]', {
+    console.log('[STATIC_ALIAS]', {
       rawInput: raw,
       matchedAlias: aliasKey,
       resolved: aliasValue
@@ -2291,7 +2616,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   const registry = SENTENCE_BANK_REGISTRY[bucket] || {};
   const metaRegistry = DB_REGISTRY?.byGrade?.[bucket] || {};
 
-  let rawKey = String(chapterKey || "").trim();
+  let rawKey = normalizeCanonicalChapterKey(bucket, String(chapterKey || "").trim(), "path_info_raw_key");
 
   if (isInvalidInternalCode(rawKey)) {
     console.log('[INVALID INTERNAL CHAPTER BLOCKED]', rawKey);
@@ -2301,7 +2626,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   if (!rawKey) {
     console.log('[GRAMMAR DETECTION FAILED]');
   }
-  const normalizedKey = applyExplicitMiddle1Alias(bucket, rawKey);
+  const normalizedKey = normalizeCanonicalChapterKey(bucket, applyExplicitMiddle1Alias(bucket, rawKey), "path_info_normalized_key");
   const routingText = buildRoutingText(input, rawKey);
   let resolvedKey = "";
   let matchType = "";
@@ -2338,7 +2663,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   specializedMatch = findSpecializedAlias(routingText);
   if (specializedMatch && metaRegistry[specializedMatch.chapter]) {
     matchedMeta = metaRegistry[specializedMatch.chapter];
-    resolvedKey = matchedMeta.chapter;
+    resolvedKey = normalizeCanonicalChapterKey(bucket, matchedMeta.chapter, "specialized_match");
     family = matchedMeta.family;
     matchType = "specialized_exact";
     routingMode = ROUTING_MODES.SPECIALIZED_EXACT_MATCH;
@@ -2363,7 +2688,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
 
   // Direct DB filename match remains DB-first and canonical.
   if (!filePath && rawKey && registry[rawKey]) {
-    resolvedKey = rawKey;
+    resolvedKey = normalizeCanonicalChapterKey(bucket, rawKey, "exact_db_match");
     matchedMeta = metaRegistry[rawKey] || null;
     family = matchedMeta?.family || inferGrammarFamily(rawKey);
     matchType = "exact";
@@ -2372,7 +2697,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   }
 
   else if (!filePath && normalizedKey && registry[normalizedKey]) {
-    resolvedKey = normalizedKey;
+    resolvedKey = normalizeCanonicalChapterKey(bucket, normalizedKey, "normalized_db_match");
     matchedMeta = metaRegistry[normalizedKey] || null;
     family = matchedMeta?.family || inferGrammarFamily(normalizedKey);
     matchType = "normalized";
@@ -2392,7 +2717,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     const representative = family ? pickFamilyRepresentative(bucket, family) : null;
     if (representative) {
       matchedMeta = representative;
-      resolvedKey = representative.chapter;
+      resolvedKey = normalizeCanonicalChapterKey(bucket, representative.chapter, "family_representative");
       matchType = "family_representative";
       routingMode = ROUTING_MODES.FAMILY_REPRESENTATIVE_MATCH;
       filePath = getCanonicalDbPath(bucket, resolvedKey);
@@ -2434,7 +2759,7 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
     const fallback = pickFamilyFallback(bucket, family);
     if (fallback) {
       matchedMeta = fallback;
-      resolvedKey = fallback.chapter;
+      resolvedKey = normalizeCanonicalChapterKey(bucket, fallback.chapter, "family_fallback");
       matchType = "family_fallback";
       routingMode = ROUTING_MODES.FAMILY_FALLBACK_MATCH;
       filePath = getCanonicalDbPath(bucket, resolvedKey);
@@ -2448,13 +2773,35 @@ function getSentenceBankPathInfo(input = {}, chapterKey = "") {
   });
 
 
-  const expectedKey =
+  const expectedKey = normalizeCanonicalChapterKey(bucket,
     resolvedKey ||
     normalizedKey ||
-    rawKey;
+    rawKey,
+    "expected_key"
+  );
 
   const canonicalExpectedFile = matchedMeta?.fileName || getCanonicalDbFilename(bucket, expectedKey);
   const canonicalExpectedPath = getCanonicalDbPath(bucket, expectedKey);
+
+  if (!filePath && bucket === "middle3" && expectedKey === "to_infinitive_noun_adjective") {
+    const nounPath = getCanonicalDbPath("middle3", "to_infinitive_noun");
+    if (nounPath && fs.existsSync(nounPath)) {
+      matchedMeta = metaRegistry.to_infinitive_noun || matchedMeta;
+      filePath = nounPath;
+      resolvedKey = expectedKey;
+      matchType = matchType || "split_replacement_primary";
+      routingMode = routingMode === ROUTING_MODES.UNDER_CONSTRUCTION
+        ? ROUTING_MODES.EXACT_DB_MATCH
+        : routingMode;
+      console.log("[DB_ALIAS_SPLIT_REPLACEMENT]", {
+        requested: rawKey,
+        primaryChapter: "to_infinitive_noun",
+        relatedChapter: "to_infinitive_adjective",
+        finalCanonicalChapter: expectedKey,
+        filePath,
+      });
+    }
+  }
 
   if (!filePath && canonicalExpectedPath && fs.existsSync(canonicalExpectedPath)) {
     filePath = canonicalExpectedPath;
@@ -2563,6 +2910,18 @@ function resolveSentenceBankFile(input = {}, chapterKey = "") {
 
 function getRelatedSentenceBankFiles(pathInfo = {}) {
   const chapterKey = normalizeChapterKey(pathInfo.chapterKey || "");
+  if (pathInfo.bucket === "middle3" && chapterKey === "to_infinitive_noun_adjective") {
+    const adjectivePath = getCanonicalDbPath("middle3", "to_infinitive_adjective");
+    if (adjectivePath && fs.existsSync(adjectivePath) && adjectivePath !== pathInfo.filePath) {
+      return [
+        {
+          chapterKey: "to_infinitive_adjective",
+          filePath: adjectivePath,
+          reason: "split_replacement_to_infinitive_noun_adjective"
+        }
+      ];
+    }
+  }
   if (pathInfo.bucket === "middle3" && chapterKey === "that_clause_subjunctive") {
     const statementPath = getCanonicalDbPath("middle3", "that_clause_statement");
     if (statementPath && fs.existsSync(statementPath) && statementPath !== pathInfo.filePath) {
@@ -3192,7 +3551,12 @@ function detectGrammarFocus(text = "", input = {}) {
 let chapterKey = alias || "";
 
 if (!chapterKey) {
-  console.log('[GRAMMAR DETECTION FAILED]');
+  console.log('[UNDER_CONSTRUCTION]', {
+    reason: 'grammar_detection_failed',
+    rawInput: raw,
+    normalizedInput: normalizeDbRoutingText(raw),
+    selectedGrade: detectGradeBucket(input),
+  });
 }
 
   if (isInvalidInternalCode(chapterKey)) {
@@ -3201,7 +3565,12 @@ if (!chapterKey) {
   }
 
   if (!chapterKey) {
-    console.log('[GRAMMAR DETECTION FAILED]');
+    console.log('[UNDER_CONSTRUCTION]', {
+      reason: 'empty_chapter_after_validation',
+      rawInput: raw,
+      normalizedInput: normalizeDbRoutingText(raw),
+      selectedGrade: detectGradeBucket(input),
+    });
   }
 
   return {
