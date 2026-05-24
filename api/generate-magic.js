@@ -11,6 +11,7 @@ const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
 const MEMBERSTACK_SECRET_KEY = process.env.MEMBERSTACK_SECRET_KEY || "";
 const MEMBERSTACK_APP_ID = process.env.MEMBERSTACK_APP_ID || "";
 const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
+const MEMBERSTACK_VERIFY_TOKEN_URL = `${MEMBERSTACK_BASE_URL}/verify-token`;
 const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
 
 const client = OPENAI_API_KEY ? new OpenAI({ apiKey: OPENAI_API_KEY }) : null;
@@ -4423,6 +4424,107 @@ async function generateWithOpenAI(input) {
   return enforceWorksheetShape(parsed, input);
 }
 
+function getRequestHeader(req, name) {
+  const headers = req?.headers || {};
+  const lowerName = String(name || "").toLowerCase();
+  return headers[lowerName] || headers[name] || "";
+}
+
+function extractBearerToken(req) {
+  const header = String(getRequestHeader(req, "authorization") || "").trim();
+  const match = header.match(/^Bearer\s+(.+)$/i);
+  return match ? match[1].trim() : "";
+}
+
+function pickMemberstackEmail(member) {
+  return String(
+    member?.auth?.email ||
+    member?.email ||
+    member?.data?.auth?.email ||
+    member?.data?.email ||
+    member?.verifiedPayload?.email ||
+    member?.payload?.email ||
+    ""
+  ).trim().toLowerCase();
+}
+
+function pickMemberstackId(member) {
+  return String(
+    member?.id ||
+    member?.memberId ||
+    member?.data?.id ||
+    member?.verifiedPayload?.id ||
+    member?.payload?.id ||
+    ""
+  ).trim();
+}
+
+function pickMemberstackStatus(member) {
+  const memberships =
+    member?.planConnections ||
+    member?.memberships ||
+    member?.data?.planConnections ||
+    member?.data?.memberships ||
+    [];
+  const activeMembership = Array.isArray(memberships)
+    ? memberships.find((entry) => /active|trialing/i.test(String(entry?.status || entry?.plan?.status || "")))
+    : null;
+  return String(
+    activeMembership?.status ||
+    member?.status ||
+    member?.data?.status ||
+    member?.auth?.status ||
+    "verified"
+  ).trim();
+}
+
+async function verifyMemberstackRequest(req) {
+  const token = extractBearerToken(req);
+  if (!token) {
+    return { ok: false, status: 401, error: "Unauthorized", reason: "missing_bearer_token" };
+  }
+  if (!MEMBERSTACK_SECRET_KEY) {
+    return { ok: false, status: 500, error: "Memberstack verification is not configured.", reason: "missing_memberstack_secret" };
+  }
+
+  try {
+    const res = await fetch(MEMBERSTACK_VERIFY_TOKEN_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-API-KEY": MEMBERSTACK_SECRET_KEY,
+      },
+      body: JSON.stringify({ token }),
+    });
+
+    if (!res.ok) {
+      return { ok: false, status: 403, error: "Unauthorized", reason: "memberstack_verify_failed" };
+    }
+
+    const payload = await res.json();
+    const member = payload?.data || payload?.member || payload;
+    const memberId = pickMemberstackId(member);
+    const email = pickMemberstackEmail(member);
+    const status = pickMemberstackStatus(member);
+
+    if (!memberId) {
+      return { ok: false, status: 403, error: "Unauthorized", reason: "verified_member_missing_id" };
+    }
+
+    return {
+      ok: true,
+      memberId,
+      email,
+      status,
+      verified: true,
+      token,
+    };
+  } catch (error) {
+    console.error("[MEMBERSTACK VERIFY ERROR]", error?.message || error);
+    return { ok: false, status: 403, error: "Unauthorized", reason: "memberstack_verify_exception" };
+  }
+}
+
 async function readMemberMp(memberId) {
   if (!memberId || !MEMBERSTACK_SECRET_KEY || !MEMBERSTACK_APP_ID) return null;
   const res = await fetch(`${MEMBERSTACK_BASE_URL}/${memberId}.json?appId=${MEMBERSTACK_APP_ID}`, {
@@ -4559,7 +4661,32 @@ async function handler(req, res) {
   }
 
   try {
+    const verifiedMember = await verifyMemberstackRequest(req);
+    if (!verifiedMember.ok) {
+      return json(res, verifiedMember.status || 401, {
+        success: false,
+        ok: false,
+        error: "Unauthorized",
+      });
+    }
+
+    req.member = {
+      id: verifiedMember.memberId,
+      email: verifiedMember.email,
+      status: verifiedMember.status,
+      verified: true,
+    };
+
     const input = normalizeInput(req.body || {});
+    if (input.memberId && input.memberId !== req.member.id) {
+      return json(res, 403, {
+        success: false,
+        ok: false,
+        error: "Unauthorized",
+      });
+    }
+    input.memberId = req.member.id;
+    input.memberEmail = req.member.email;
     const shouldTryDbFirst = shouldUseDbFirst(input);
     const middle1StrictDb = isStrictDbRequest(input);
     let worksheet = null;
