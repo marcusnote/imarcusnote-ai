@@ -393,6 +393,19 @@ function normalizeSelectedGrade(value = "") {
   return /^(middle|high|elementary)\d+$/.test(grade) ? grade : "auto";
 }
 
+function inferSelectedGradeFromText(text = "") {
+  const raw = String(text || "");
+  const normalized = raw.normalize("NFKC").toLowerCase();
+  if (/\bmiddle\s*1\b|\bmiddle1\b|중\s*1|중학교\s*1|중1/.test(normalized)) return "middle1";
+  if (/\bmiddle\s*2\b|\bmiddle2\b|중\s*2|중학교\s*2|중2/.test(normalized)) return "middle2";
+  if (/\bmiddle\s*3\b|\bmiddle3\b|중\s*3|중학교\s*3|중3/.test(normalized)) return "middle3";
+  if (/\bhigh\s*1\b|\bhigh1\b|고\s*1|고등학교\s*1|고1/.test(normalized)) return "high1";
+  if (/\bhigh\s*2\b|\bhigh2\b|고\s*2|고등학교\s*2|고2/.test(normalized)) return "high2";
+  if (/\bhigh\s*3\b|\bhigh3\b|고\s*3|고등학교\s*3|고3/.test(normalized)) return "high3";
+  return "auto";
+}
+
+
 function selectedGradeLabel(value = "") {
   const grade = normalizeSelectedGrade(value);
   const labels = { middle1: "중1", middle2: "중2", middle3: "중3", high1: "고1", high2: "고2", high3: "고3" };
@@ -634,7 +647,10 @@ function normalizeInput(body = {}) {
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
   const count = sanitizeCount(body.count);
   const engine = "wormhole";
-  const selectedGrade = normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto");
+  const selectedGrade =
+    normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto") !== "auto"
+      ? normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto")
+      : inferSelectedGradeFromText(mergedText);
   const gradeLabel = selectedGradeLabel(selectedGrade) || textbookResolved?.gradeLabel || inferGradeLabel(mergedText, level);
 
   return {
@@ -1250,23 +1266,33 @@ function resolveWormholeDbFirstScope(input = {}) {
 async function resolveWormholeDbFile(input = {}) {
   const scope = resolveWormholeDbFirstScope(input);
   const path = await import("node:path");
-  const selectedDbFile = scope.canonical === "after_before" && scope.selectedGrade === "middle2"
+  const resolvedPath = scope.canonical === "after_before" && scope.selectedGrade === "middle2"
     ? path.join(process.cwd(), "data", "middle2", "middle2_after_before.json")
     : null;
+  const selectedDbFile = resolvedPath;
 
   console.info("[WORMHOLE_DB_FIRST_MATCH]", {
     requested: scope.requested,
     normalized: scope.normalized,
     canonical: scope.canonical,
+    selectedGrade: scope.selectedGrade,
     selectedDbFile
   });
+  console.info("[WORMHOLE_DB_FILE]", {
+    canonical: scope.canonical,
+    selectedGrade: scope.selectedGrade,
+    selectedDbFile,
+    resolvedPath,
+    cwd: process.cwd()
+  });
 
-  return selectedDbFile;
+  return resolvedPath;
 }
 
 async function loadGrammarDb(filePath) {
   if (!filePath) return null;
   const fsPromises = await import("node:fs/promises");
+  console.info("[WORMHOLE_DB_FILE_READ]", { filePath, cwd: process.cwd() });
   const raw = await fsPromises.readFile(filePath, "utf8");
   const items = JSON.parse(raw);
   if (!Array.isArray(items)) throw new Error("Wormhole DB is not an array.");
