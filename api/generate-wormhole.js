@@ -394,14 +394,15 @@ function normalizeSelectedGrade(value = "") {
 }
 
 function inferSelectedGradeFromText(text = "") {
-  const raw = String(text || "");
-  const normalized = raw.normalize("NFKC").toLowerCase();
-  if (/\bmiddle\s*1\b|\bmiddle1\b|중\s*1|중학교\s*1|중1/.test(normalized)) return "middle1";
-  if (/\bmiddle\s*2\b|\bmiddle2\b|중\s*2|중학교\s*2|중2/.test(normalized)) return "middle2";
-  if (/\bmiddle\s*3\b|\bmiddle3\b|중\s*3|중학교\s*3|중3/.test(normalized)) return "middle3";
-  if (/\bhigh\s*1\b|\bhigh1\b|고\s*1|고등학교\s*1|고1/.test(normalized)) return "high1";
-  if (/\bhigh\s*2\b|\bhigh2\b|고\s*2|고등학교\s*2|고2/.test(normalized)) return "high2";
-  if (/\bhigh\s*3\b|\bhigh3\b|고\s*3|고등학교\s*3|고3/.test(normalized)) return "high3";
+  const normalized = String(text || "").normalize("NFKC").toLowerCase();
+  const middle = "\\uC911";
+  const high = "\\uACE0";
+  if (new RegExp(`\\bmiddle\\s*1\\b|\\bmiddle1\\b|${middle}\\s*1|${middle}1|\\uC911\\uD559\\uAD50\\s*1`).test(normalized)) return "middle1";
+  if (new RegExp(`\\bmiddle\\s*2\\b|\\bmiddle2\\b|${middle}\\s*2|${middle}2|\\uC911\\uD559\\uAD50\\s*2`).test(normalized)) return "middle2";
+  if (new RegExp(`\\bmiddle\\s*3\\b|\\bmiddle3\\b|${middle}\\s*3|${middle}3|\\uC911\\uD559\\uAD50\\s*3`).test(normalized)) return "middle3";
+  if (new RegExp(`\\bhigh\\s*1\\b|\\bhigh1\\b|${high}\\s*1|${high}1|\\uACE0\\uB4F1\\uD559\\uAD50\\s*1`).test(normalized)) return "high1";
+  if (new RegExp(`\\bhigh\\s*2\\b|\\bhigh2\\b|${high}\\s*2|${high}2|\\uACE0\\uB4F1\\uD559\\uAD50\\s*2`).test(normalized)) return "high2";
+  if (new RegExp(`\\bhigh\\s*3\\b|\\bhigh3\\b|${high}\\s*3|${high}3|\\uACE0\\uB4F1\\uD559\\uAD50\\s*3`).test(normalized)) return "high3";
   return "auto";
 }
 
@@ -651,6 +652,12 @@ function normalizeInput(body = {}) {
     normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto") !== "auto"
       ? normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto")
       : inferSelectedGradeFromText(mergedText);
+  console.info("[GRADE_LOCK_TEST]", {
+    mergedText,
+    explicitSelectedGrade: body.selectedGrade || body.rawBody?.selectedGrade || "auto",
+    inferred: inferSelectedGradeFromText(mergedText),
+    selectedGrade
+  });
   const gradeLabel = selectedGradeLabel(selectedGrade) || textbookResolved?.gradeLabel || inferGradeLabel(mergedText, level);
 
   return {
@@ -1266,10 +1273,23 @@ function resolveWormholeDbFirstScope(input = {}) {
 async function resolveWormholeDbFile(input = {}) {
   const scope = resolveWormholeDbFirstScope(input);
   const path = await import("node:path");
-  const resolvedPath = scope.canonical === "after_before" && scope.selectedGrade === "middle2"
-    ? path.join(process.cwd(), "data", "middle2", "middle2_after_before.json")
-    : null;
-  const selectedDbFile = resolvedPath;
+  const fsPromises = await import("node:fs/promises");
+  const candidatePaths = scope.canonical === "after_before" && scope.selectedGrade === "middle2"
+    ? [
+        path.join(process.cwd(), "data", "middle2", "middle2_after_before.json"),
+        path.join(process.cwd(), "data", "sentence_bank", "middle2", "middle2_after_before.json")
+      ]
+    : [];
+
+  let resolvedPath = null;
+  for (const candidate of candidatePaths) {
+    try {
+      await fsPromises.access(candidate);
+      resolvedPath = candidate;
+      break;
+    } catch {}
+  }
+  const selectedDbFile = resolvedPath || candidatePaths[0] || null;
 
   console.info("[WORMHOLE_DB_FIRST_MATCH]", {
     requested: scope.requested,
@@ -1283,10 +1303,11 @@ async function resolveWormholeDbFile(input = {}) {
     selectedGrade: scope.selectedGrade,
     selectedDbFile,
     resolvedPath,
+    candidatePaths,
     cwd: process.cwd()
   });
 
-  return resolvedPath;
+  return resolvedPath || selectedDbFile;
 }
 
 async function loadGrammarDb(filePath) {
