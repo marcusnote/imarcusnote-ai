@@ -1376,6 +1376,8 @@ function selectDbItems(items = [], input = {}) {
     input.selectedGrade,
     input.topic,
     input.userPrompt,
+    input.worksheetTitle,
+    input.requestedChapter,
     input.problemType,
     count
   ].filter(Boolean).join("|");
@@ -1447,7 +1449,7 @@ function buildQuestionFromDbItem(item, index, input = {}) {
     { text: correct, correct: true },
     ...wrong.map((text) => ({ text, correct: false }))
   ];
-  const shuffled = stableShuffle(optionObjects, `${item.id}|${input.topic || ""}|${index}`);
+  const shuffled = stableShuffle(optionObjects, `${item.id}|${input.topic || ""}|${input.userPrompt || ""}|${input.worksheetTitle || ""}|${input.requestedChapter || ""}|${input.count || ""}|${index}`);
   const labels = ["①", "②", "③", "④", "⑤"];
   const answerIndex = shuffled.findIndex((option) => option.correct);
   const answerLabel = labels[answerIndex] || "①";
