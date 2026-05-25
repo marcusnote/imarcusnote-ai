@@ -1272,10 +1272,9 @@ function resolveWormholeDbFirstScope(input = {}) {
 
 async function resolveWormholeDbFile(input = {}) {
   const scope = resolveWormholeDbFirstScope(input);
-  const path = await import("node:path");
-  const fsPromises = await import("node:fs/promises");
-  const url = await import("node:url");
-  const currentDir = path.dirname(url.fileURLToPath(import.meta.url));
+  const path = require("path");
+  const fs = require("fs");
+  const currentDir = typeof __dirname !== "undefined" ? __dirname : process.cwd();
   const fileName = "middle2_after_before.json";
   const candidatePaths = scope.canonical === "after_before" && scope.selectedGrade === "middle2"
     ? [
@@ -1286,17 +1285,12 @@ async function resolveWormholeDbFile(input = {}) {
       ]
     : [];
 
-  const testedPaths = [];
-  let resolvedPath = null;
-  for (const candidate of candidatePaths) {
-    let exists = false;
-    try {
-      await fsPromises.access(candidate);
-      exists = true;
-      if (!resolvedPath) resolvedPath = candidate;
-    } catch {}
-    testedPaths.push({ path: candidate, exists });
-  }
+  const testedPaths = candidatePaths.map((candidate) => ({
+    path: candidate,
+    exists: fs.existsSync(candidate)
+  }));
+  const found = testedPaths.find((entry) => entry.exists);
+  const resolvedPath = found ? found.path : null;
   const selectedDbFile = resolvedPath || candidatePaths[0] || null;
 
   console.info("[WORMHOLE_DB_FIRST_MATCH]", {
@@ -1326,9 +1320,9 @@ async function resolveWormholeDbFile(input = {}) {
 
 async function loadGrammarDb(filePath) {
   if (!filePath) return null;
-  const fsPromises = await import("node:fs/promises");
+  const fs = require("fs");
   console.info("[WORMHOLE_DB_FILE_READ]", { filePath, cwd: process.cwd() });
-  const raw = await fsPromises.readFile(filePath, "utf8");
+  const raw = fs.readFileSync(filePath, "utf8");
   const items = JSON.parse(raw);
   if (!Array.isArray(items)) throw new Error("Wormhole DB is not an array.");
 
