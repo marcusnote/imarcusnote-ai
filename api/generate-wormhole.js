@@ -1274,20 +1274,28 @@ async function resolveWormholeDbFile(input = {}) {
   const scope = resolveWormholeDbFirstScope(input);
   const path = await import("node:path");
   const fsPromises = await import("node:fs/promises");
+  const url = await import("node:url");
+  const currentDir = path.dirname(url.fileURLToPath(import.meta.url));
+  const fileName = "middle2_after_before.json";
   const candidatePaths = scope.canonical === "after_before" && scope.selectedGrade === "middle2"
     ? [
-        path.join(process.cwd(), "data", "middle2", "middle2_after_before.json"),
-        path.join(process.cwd(), "data", "sentence_bank", "middle2", "middle2_after_before.json")
+        path.join(process.cwd(), "data", "middle2", fileName),
+        path.join(currentDir, "..", "data", "middle2", fileName),
+        path.join(process.cwd(), "data", "sentence_bank", "middle2", fileName),
+        path.join(currentDir, "..", "data", "sentence_bank", "middle2", fileName)
       ]
     : [];
 
+  const testedPaths = [];
   let resolvedPath = null;
   for (const candidate of candidatePaths) {
+    let exists = false;
     try {
       await fsPromises.access(candidate);
-      resolvedPath = candidate;
-      break;
+      exists = true;
+      if (!resolvedPath) resolvedPath = candidate;
     } catch {}
+    testedPaths.push({ path: candidate, exists });
   }
   const selectedDbFile = resolvedPath || candidatePaths[0] || null;
 
@@ -1298,16 +1306,22 @@ async function resolveWormholeDbFile(input = {}) {
     selectedGrade: scope.selectedGrade,
     selectedDbFile
   });
+  console.info("[DB_PATH_DEBUG]", {
+    cwd: process.cwd(),
+    __dirname: currentDir,
+    testedPaths
+  });
   console.info("[WORMHOLE_DB_FILE]", {
     canonical: scope.canonical,
     selectedGrade: scope.selectedGrade,
     selectedDbFile,
     resolvedPath,
     candidatePaths,
-    cwd: process.cwd()
+    cwd: process.cwd(),
+    __dirname: currentDir
   });
 
-  return resolvedPath || selectedDbFile;
+  return resolvedPath;
 }
 
 async function loadGrammarDb(filePath) {
@@ -1479,7 +1493,7 @@ function formatDbWormholeResponse(questions = [], input = {}) {
 async function tryBuildWormholeFromDb(input = {}) {
   try {
     const filePath = await resolveWormholeDbFile(input);
-    if (!filePath) return { success: false, reason: "unsupported_db_first_scope" };
+    if (!filePath) return { success: false, reason: "db_file_not_found_or_unsupported_scope" };
 
     const items = await loadGrammarDb(filePath);
     const selected = selectDbItems(items, input);
