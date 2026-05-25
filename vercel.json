@@ -1,7 +1,8 @@
 {
   "functions": {
-    "api/*.js": {
-      "includeFiles": "data/vocab/**/*.json"
+    "api/**/*.js": {
+      "maxDuration": 30,
+      "includeFiles": "data/**"
     }
   }
 }
