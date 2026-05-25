@@ -459,6 +459,8 @@ function inferTopic(text = "") {
     if (t.includes(topic)) return topic;
   }
   const lower = t.toLowerCase();
+  if (/\bafter\b/.test(lower) && /\bbefore\b/.test(lower)) return "after_before";
+  if (/after[_\s,/-]*before/.test(lower) || /before[_\s,/-]*after/.test(lower)) return "after_before";
   if (/present perfect/.test(lower)) return "현재완료";
   if (/passive/.test(lower)) return "수동태";
   if (/relative pronoun/.test(lower)) return "관계대명사";
@@ -599,7 +601,11 @@ function normalizeInput(body = {}) {
     sanitizeString(body.level || ""),
     sanitizeString(body.difficulty || ""),
     sanitizeString(body.examType || ""),
-    sanitizeString(body.worksheetTitle || "")
+    sanitizeString(body.worksheetTitle || ""),
+    sanitizeString(body.requestedChapter || ""),
+    sanitizeString(body.chapter || ""),
+    sanitizeString(body.chapterKey || ""),
+    sanitizeString(body.canonical || "")
   ].filter(Boolean).join(" ");
   const textbookRequest = detectTextbookRequest(mergedText);
   const textbookResolved = resolveTextbookGrammar(textbookRequest);
@@ -645,6 +651,8 @@ function normalizeInput(body = {}) {
     userPrompt,
     gradeLabel,
     selectedGrade,
+    requestedChapter: sanitizeString(body.requestedChapter || body.chapter || body.chapterKey || body.canonical || ""),
+    rawBody: body,
     textbook: textbookResolved || null
   };
 }
@@ -1193,26 +1201,67 @@ async function mergeWormholeSupplement(formatted, supplement, input) {
    Keeps GPT generation as fallback for every unsupported chapter.
    ========================= */
 
-async function resolveWormholeDbFile(input = {}) {
-  const selectedGrade = normalizeSelectedGrade(input.selectedGrade || "auto");
-  const topicText = [
+function normalizeWormholeDbFirstText(value = "") {
+  return String(value || "")
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[，、]/g, ",")
+    .replace(/[\\/_-]+/g, " ")
+    .replace(/\s*,\s*/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function resolveWormholeDbFirstScope(input = {}) {
+  const requested = [
     input.topic,
     input.userPrompt,
     input.worksheetTitle,
+    input.requestedChapter,
     input.rawBody?.requestedChapter,
-    input.rawBody?.topic
-  ].filter(Boolean).join(" ").toLowerCase();
+    input.rawBody?.chapter,
+    input.rawBody?.chapterKey,
+    input.rawBody?.canonical,
+    input.rawBody?.topic,
+    input.rawBody?.worksheetTitle,
+    input.rawBody?.selectedGrade
+  ].filter(Boolean).join(" | ");
 
-  const isMiddle2 = selectedGrade === "middle2";
+  const normalized = normalizeWormholeDbFirstText(requested);
+  const selectedGrade = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
+  const inferredGrade = selectedGrade !== "auto"
+    ? selectedGrade
+    : (/\bmiddle\s*2\b/.test(normalized) || /중\s*2/.test(normalized) || /중학교\s*2/.test(normalized)
+      ? "middle2"
+      : selectedGrade);
+
   const mentionsAfterBefore =
-    /after[_\s,/-]*before/.test(topicText) ||
-    /before[_\s,/-]*after/.test(topicText) ||
-    (topicText.includes("after") && topicText.includes("before"));
+    /\bafter\s+before\b/.test(normalized) ||
+    /\bbefore\s+after\b/.test(normalized) ||
+    /\bafter\s*,?\s*before\b/.test(normalized) ||
+    /\bbefore\s*,?\s*after\b/.test(normalized) ||
+    /\bafter\b/.test(normalized) && /\bbefore\b/.test(normalized) ||
+    /after_before/.test(String(requested || "").toLowerCase());
 
-  if (!isMiddle2 || !mentionsAfterBefore) return null;
+  const canonical = mentionsAfterBefore ? "after_before" : null;
+  return { requested, normalized, canonical, selectedGrade: inferredGrade };
+}
 
+async function resolveWormholeDbFile(input = {}) {
+  const scope = resolveWormholeDbFirstScope(input);
   const path = await import("node:path");
-  return path.join(process.cwd(), "data", "middle2", "middle2_after_before.json");
+  const selectedDbFile = scope.canonical === "after_before" && scope.selectedGrade === "middle2"
+    ? path.join(process.cwd(), "data", "middle2", "middle2_after_before.json")
+    : null;
+
+  console.info("[WORMHOLE_DB_FIRST_MATCH]", {
+    requested: scope.requested,
+    normalized: scope.normalized,
+    canonical: scope.canonical,
+    selectedDbFile
+  });
+
+  return selectedDbFile;
 }
 
 async function loadGrammarDb(filePath) {
@@ -1332,6 +1381,12 @@ function buildQuestionFromDbItem(item, index, input = {}) {
   const fallback = unique.filter((value) => isLowQualityDbDistractor(value));
   const wrong = [...highQuality, ...fallback].slice(0, 4);
   if (wrong.length < 4) return null;
+
+  console.info("[WORMHOLE_DB_VARIANT_USED]", {
+    seedId: item.seedId || item.id,
+    variantCount: Array.isArray(item.distractorSeeds?.wormholeVariants) ? item.distractorSeeds.wormholeVariants.length : 0,
+    assemblyMode: "db_variant_assembly"
+  });
 
   const optionObjects = [
     { text: correct, correct: true },
@@ -1589,8 +1644,10 @@ export default async function handler(req, res) {
       formatted = dbResult.formatted;
       console.info("[WORMHOLE_DB_FIRST_PILOT_HIT]", {
         selectedGrade: input.selectedGrade,
+        requestedChapter: input.requestedChapter,
         topic: input.topic,
-        actualCount: formatted.actualCount
+        actualCount: formatted.actualCount,
+        source: formatted.source || "db-first"
       });
     } else {
       console.info("[WORMHOLE_DB_FIRST_PILOT_FALLBACK]", dbResult?.reason || "no_db_result");
