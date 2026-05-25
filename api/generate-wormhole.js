@@ -1186,6 +1186,224 @@ async function mergeWormholeSupplement(formatted, supplement, input) {
   };
 }
 
+
+/* =========================
+   WORMHOLE_DB_FIRST_PILOT
+   Pilot scope: middle2_after_before only.
+   Keeps GPT generation as fallback for every unsupported chapter.
+   ========================= */
+
+async function resolveWormholeDbFile(input = {}) {
+  const selectedGrade = normalizeSelectedGrade(input.selectedGrade || "auto");
+  const topicText = [
+    input.topic,
+    input.userPrompt,
+    input.worksheetTitle,
+    input.rawBody?.requestedChapter,
+    input.rawBody?.topic
+  ].filter(Boolean).join(" ").toLowerCase();
+
+  const isMiddle2 = selectedGrade === "middle2";
+  const mentionsAfterBefore =
+    /after[_\s,/-]*before/.test(topicText) ||
+    /before[_\s,/-]*after/.test(topicText) ||
+    (topicText.includes("after") && topicText.includes("before"));
+
+  if (!isMiddle2 || !mentionsAfterBefore) return null;
+
+  const path = await import("node:path");
+  return path.join(process.cwd(), "data", "middle2", "middle2_after_before.json");
+}
+
+async function loadGrammarDb(filePath) {
+  if (!filePath) return null;
+  const fsPromises = await import("node:fs/promises");
+  const raw = await fsPromises.readFile(filePath, "utf8");
+  const items = JSON.parse(raw);
+  if (!Array.isArray(items)) throw new Error("Wormhole DB is not an array.");
+
+  const validItems = items.filter((item) =>
+    item &&
+    item.id &&
+    typeof item.english === "string" &&
+    item.english.trim() &&
+    item.distractorSeeds &&
+    Array.isArray(item.distractorSeeds.wormholeVariants) &&
+    item.distractorSeeds.wormholeVariants.length >= 4
+  );
+
+  if (!validItems.length) throw new Error("Wormhole DB has no usable items.");
+  return validItems;
+}
+
+function dbPilotHash(text = "") {
+  let hash = 2166136261;
+  const source = String(text || "");
+  for (let i = 0; i < source.length; i += 1) {
+    hash ^= source.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function dbPilotRandom(seed) {
+  let value = seed >>> 0;
+  return function next() {
+    value = (Math.imul(value, 1664525) + 1013904223) >>> 0;
+    return value / 4294967296;
+  };
+}
+
+function stableShuffle(list = [], seedText = "") {
+  const arr = [...list];
+  const rand = dbPilotRandom(dbPilotHash(seedText));
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(rand() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function selectDbItems(items = [], input = {}) {
+  const count = clamp(Number(input.count) || 10, 1, 30);
+  if (items.length < count) return [];
+
+  const seedText = [
+    input.selectedGrade,
+    input.topic,
+    input.userPrompt,
+    input.problemType,
+    count
+  ].filter(Boolean).join("|");
+
+  const shuffled = stableShuffle(items, seedText);
+  const afterItems = shuffled.filter((item) => (item.tags || []).includes("after"));
+  const beforeItems = shuffled.filter((item) => (item.tags || []).includes("before"));
+  const neutralItems = shuffled.filter((item) => !(item.tags || []).includes("after") && !(item.tags || []).includes("before"));
+
+  const selected = [];
+  const used = new Set();
+  let turn = dbPilotHash(seedText) % 2;
+
+  function takeFrom(bucket) {
+    while (bucket.length) {
+      const item = bucket.shift();
+      if (!used.has(item.id)) {
+        used.add(item.id);
+        selected.push(item);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  while (selected.length < count && (afterItems.length || beforeItems.length || neutralItems.length)) {
+    const preferred = turn % 2 === 0 ? afterItems : beforeItems;
+    const alternate = turn % 2 === 0 ? beforeItems : afterItems;
+    if (!takeFrom(preferred) && !takeFrom(alternate)) takeFrom(neutralItems);
+    turn += 1;
+  }
+
+  return selected.slice(0, count);
+}
+
+function cleanDbOption(text = "") {
+  return String(text || "").replace(/\s+/g, " ").trim();
+}
+
+function isLowQualityDbDistractor(text = "") {
+  const t = cleanDbOption(text).toLowerCase();
+  return /\bafter\s+before\b|\bbefore\s+after\b|\bafter\s+to\b|\bbefore\s+to\b/.test(t);
+}
+
+function buildQuestionFromDbItem(item, index, input = {}) {
+  const correct = cleanDbOption(item.english);
+  const rawDistractors = [
+    ...(item.distractorSeeds?.wormholeVariants || []),
+    item.distractorSeeds?.auxError
+  ].map(cleanDbOption).filter(Boolean);
+
+  const unique = [];
+  for (const value of rawDistractors) {
+    if (value && value !== correct && !unique.includes(value)) unique.push(value);
+  }
+
+  const highQuality = unique.filter((value) => !isLowQualityDbDistractor(value));
+  const fallback = unique.filter((value) => isLowQualityDbDistractor(value));
+  const wrong = [...highQuality, ...fallback].slice(0, 4);
+  if (wrong.length < 4) return null;
+
+  const optionObjects = [
+    { text: correct, correct: true },
+    ...wrong.map((text) => ({ text, correct: false }))
+  ];
+  const shuffled = stableShuffle(optionObjects, `${item.id}|${input.topic || ""}|${index}`);
+  const labels = ["①", "②", "③", "④", "⑤"];
+  const answerIndex = shuffled.findIndex((option) => option.correct);
+  const answerLabel = labels[answerIndex] || "①";
+  const questionStem = input.language === "en"
+    ? "Choose the grammatically correct sentence."
+    : "다음 중 어법상 가장 자연스러운 문장을 고르시오.";
+
+  return {
+    id: item.id,
+    questionText: [
+      `${index + 1}. ${questionStem}`,
+      ...shuffled.map((option, optionIndex) => `${labels[optionIndex]} ${option.text}`)
+    ].join("\n"),
+    answerText: `${index + 1}) ${answerLabel} - ${correct}`
+  };
+}
+
+function formatDbWormholeResponse(questions = [], input = {}) {
+  const title = buildWormholeTitle(input);
+  const instructions = buildWormholeInstructions(input);
+  const questionsText = cleanupText(questions.map((question) => question.questionText).join("\n\n"));
+  const answerSheet = cleanupText(questions.map((question) => question.answerText).join("\n"));
+  const content = cleanupText([title, instructions, questionsText].filter(Boolean).join("\n\n"));
+  const fullText = cleanupText([title, instructions, questionsText, "정답 및 해설", answerSheet].filter(Boolean).join("\n\n"));
+  return {
+    title,
+    instructions,
+    content,
+    answerSheet,
+    fullText,
+    actualCount: questions.length,
+    source: "db-first",
+    dbFirst: true
+  };
+}
+
+async function tryBuildWormholeFromDb(input = {}) {
+  try {
+    const filePath = await resolveWormholeDbFile(input);
+    if (!filePath) return { success: false, reason: "unsupported_db_first_scope" };
+
+    const items = await loadGrammarDb(filePath);
+    const selected = selectDbItems(items, input);
+    if (selected.length < input.count) {
+      return { success: false, reason: "not_enough_db_items" };
+    }
+
+    const questions = selected
+      .map((item, index) => buildQuestionFromDbItem(item, index, input))
+      .filter(Boolean);
+
+    if (questions.length < input.count) {
+      return { success: false, reason: "not_enough_db_questions" };
+    }
+
+    return {
+      success: true,
+      formatted: formatDbWormholeResponse(questions.slice(0, input.count), input)
+    };
+  } catch (error) {
+    console.warn("[WORMHOLE_DB_FIRST_PILOT_FALLBACK]", error?.message || error);
+    return { success: false, reason: error?.message || "db_first_failed" };
+  }
+}
+
+
 async function generateWormholeSupplement(input, missingCount, existingQuestionsText = "") {
   const supplementSystemPrompt = buildGrammarSystemPrompt({
     ...input,
@@ -1365,8 +1583,20 @@ export default async function handler(req, res) {
     const systemPrompt = buildGrammarSystemPrompt(input);
     const userPrompt = buildGrammarUserPrompt(input);
 
-    const raw = await callOpenAI(systemPrompt, userPrompt);
-    let formatted = formatWormholeResponse(raw, input);
+    const dbResult = await tryBuildWormholeFromDb(input);
+    let formatted;
+    if (dbResult?.success) {
+      formatted = dbResult.formatted;
+      console.info("[WORMHOLE_DB_FIRST_PILOT_HIT]", {
+        selectedGrade: input.selectedGrade,
+        topic: input.topic,
+        actualCount: formatted.actualCount
+      });
+    } else {
+      console.info("[WORMHOLE_DB_FIRST_PILOT_FALLBACK]", dbResult?.reason || "no_db_result");
+      const raw = await callOpenAI(systemPrompt, userPrompt);
+      formatted = formatWormholeResponse(raw, input);
+    }
 
     // --- 핸들러 내 보정 구간 (수정 반영 부분) ---
     if (formatted.actualCount < input.count) {
