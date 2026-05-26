@@ -1568,7 +1568,13 @@ function selectDbItems(items = [], input = {}) {
 }
 
 function cleanDbOption(text = "") {
-  return String(text || "").replace(/\s+/g, " ").trim();
+  return normalizeDbSentenceCase(String(text || "").replace(/\s+/g, " ").trim());
+}
+
+function normalizeDbSentenceCase(text = "") {
+  const source = String(text || "").trim();
+  if (!source) return source;
+  return source.replace(/^(\s*)([a-z])/, (_, lead, ch) => lead + ch.toUpperCase());
 }
 
 function isLowQualityDbDistractor(text = "") {
