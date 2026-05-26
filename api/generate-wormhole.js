@@ -1278,7 +1278,14 @@ function resolveWormholeDbFirstScope(input = {}) {
     /\uC591\uBCF4\uC758\s*(\uC811\uC18D\uC0AC|\uC804\uCE58\uC0AC)/.test(requested) ||
     /\uC811\uC18D\uC0AC\s*(although|though|even\s+though)/i.test(requested);
 
-  const canonical = mentionsAfterBefore ? "after_before" : (mentionsAlthough ? "although" : null);
+  const mentionsAsAs =
+    /\bas\s+as\b/.test(normalized) ||
+    /\bas_as\b/.test(rawRequested) ||
+    /\bmiddle\s*2\s+as\s+as\b/.test(normalized) ||
+    /\uC911\s*2[^|]*(as\s+as|\uC6D0\uAE09\uBE44\uAD50)/i.test(requested) ||
+    /\uC6D0\uAE09\uBE44\uAD50/.test(requested);
+
+  const canonical = mentionsAfterBefore ? "after_before" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : null));
   return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
@@ -1289,7 +1296,8 @@ async function resolveWormholeDbFile(input = {}) {
   const currentDir = typeof __dirname !== "undefined" ? __dirname : process.cwd();
   const dbFileByCanonical = {
     after_before: "middle2_after_before.json",
-    although: "middle2_although.json"
+    although: "middle2_although.json",
+    as_as: "middle2_as_as.json"
   };
   const fileName = dbFileByCanonical[scope.canonical] || null;
   const candidatePaths = fileName && scope.selectedGrade === "middle2"
