@@ -1220,7 +1220,8 @@ async function mergeWormholeSupplement(formatted, supplement, input) {
 
 /* =========================
    WORMHOLE_DB_FIRST_PILOT
-   Pilot scope: middle2_after_before only.
+   Pilot scope: middle2 DB-first chapters.
+   Supported: after_before, although.
    Keeps GPT generation as fallback for every unsupported chapter.
    ========================= */
 
@@ -1258,15 +1259,26 @@ function resolveWormholeDbFirstScope(input = {}) {
       ? "middle2"
       : selectedGrade);
 
+  const rawRequested = String(requested || "").toLowerCase();
   const mentionsAfterBefore =
     /\bafter\s+before\b/.test(normalized) ||
     /\bbefore\s+after\b/.test(normalized) ||
     /\bafter\s*,?\s*before\b/.test(normalized) ||
     /\bbefore\s*,?\s*after\b/.test(normalized) ||
     /\bafter\b/.test(normalized) && /\bbefore\b/.test(normalized) ||
-    /after_before/.test(String(requested || "").toLowerCase());
+    /after_before/.test(rawRequested);
 
-  const canonical = mentionsAfterBefore ? "after_before" : null;
+  const mentionsAlthough =
+    /\balthough\b/.test(normalized) ||
+    /\bthough\b/.test(normalized) ||
+    /\beven\s+though\b/.test(normalized) ||
+    /\bdespite\b/.test(normalized) ||
+    /\bin\s+spite\s+of\b/.test(normalized) ||
+    /although/.test(rawRequested) ||
+    /\uC591\uBCF4\uC758\s*(\uC811\uC18D\uC0AC|\uC804\uCE58\uC0AC)/.test(requested) ||
+    /\uC811\uC18D\uC0AC\s*(although|though|even\s+though)/i.test(requested);
+
+  const canonical = mentionsAfterBefore ? "after_before" : (mentionsAlthough ? "although" : null);
   return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
@@ -1275,8 +1287,12 @@ async function resolveWormholeDbFile(input = {}) {
   const path = require("path");
   const fs = require("fs");
   const currentDir = typeof __dirname !== "undefined" ? __dirname : process.cwd();
-  const fileName = "middle2_after_before.json";
-  const candidatePaths = scope.canonical === "after_before" && scope.selectedGrade === "middle2"
+  const dbFileByCanonical = {
+    after_before: "middle2_after_before.json",
+    although: "middle2_although.json"
+  };
+  const fileName = dbFileByCanonical[scope.canonical] || null;
+  const candidatePaths = fileName && scope.selectedGrade === "middle2"
     ? [
         path.join(process.cwd(), "data", "middle2", fileName),
         path.join(currentDir, "..", "data", "middle2", fileName),
@@ -1320,10 +1336,12 @@ async function resolveWormholeDbFile(input = {}) {
 
 async function loadGrammarDb(filePath) {
   if (!filePath) return null;
+  const loadStart = Date.now();
   const fs = require("fs");
   console.info("[WORMHOLE_DB_FILE_READ]", { filePath, cwd: process.cwd() });
   const raw = fs.readFileSync(filePath, "utf8");
   const items = JSON.parse(raw);
+  console.info("[DB_LOAD_TIME]", { ms: Date.now() - loadStart, filePath, rawBytes: raw.length, itemCount: Array.isArray(items) ? items.length : 0 });
   if (!Array.isArray(items)) throw new Error("Wormhole DB is not an array.");
 
   const validItems = items.filter((item) =>
@@ -1487,6 +1505,7 @@ function formatDbWormholeResponse(questions = [], input = {}) {
 }
 
 async function tryBuildWormholeFromDb(input = {}) {
+  const totalStart = Date.now();
   try {
     const filePath = await resolveWormholeDbFile(input);
     if (!filePath) return { success: false, reason: "db_file_not_found_or_unsupported_scope" };
@@ -1497,14 +1516,17 @@ async function tryBuildWormholeFromDb(input = {}) {
       return { success: false, reason: "not_enough_db_items" };
     }
 
+    const assemblyStart = Date.now();
     const questions = selected
       .map((item, index) => buildQuestionFromDbItem(item, index, input))
       .filter(Boolean);
+    console.info("[ASSEMBLY_TIME]", { ms: Date.now() - assemblyStart, selected: selected.length, questions: questions.length });
 
     if (questions.length < input.count) {
       return { success: false, reason: "not_enough_db_questions" };
     }
 
+    console.info("[TOTAL_EXECUTION_TIME]", { phase: "db_first_success", ms: Date.now() - totalStart });
     return {
       success: true,
       formatted: formatDbWormholeResponse(questions.slice(0, input.count), input)
@@ -1692,9 +1714,7 @@ export default async function handler(req, res) {
       return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
     }
 
-    const systemPrompt = buildGrammarSystemPrompt(input);
-    const userPrompt = buildGrammarUserPrompt(input);
-
+    const handlerStart = Date.now();
     const dbResult = await tryBuildWormholeFromDb(input);
     let formatted;
     if (dbResult?.success) {
@@ -1706,8 +1726,25 @@ export default async function handler(req, res) {
         actualCount: formatted.actualCount,
         source: formatted.source || "db-first"
       });
+      console.info("[GPT_FALLBACK_SKIPPED]", { reason: "db_first_success", actualCount: formatted.actualCount });
+      console.info("[TOTAL_EXECUTION_TIME]", { phase: "handler_db_first_return", ms: Date.now() - handlerStart });
+      const finalMpState = await deductMpAfterSuccess(mpState);
+      return json(res, 200, {
+        success: true,
+        ...formatted,
+        textbook: input.textbook,
+        mp: {
+          requiredMp: mpState.requiredMp,
+          currentMp: mpState.currentMp,
+          remainingMp: finalMpState?.remainingMp ?? null,
+          deducted: Boolean(finalMpState?.deducted),
+          trialGranted: Boolean(mpState.trialGranted),
+        }
+      });
     } else {
       console.info("[WORMHOLE_DB_FIRST_PILOT_FALLBACK]", dbResult?.reason || "no_db_result");
+      const systemPrompt = buildGrammarSystemPrompt(input);
+      const userPrompt = buildGrammarUserPrompt(input);
       const raw = await callOpenAI(systemPrompt, userPrompt);
       formatted = formatWormholeResponse(raw, input);
     }
