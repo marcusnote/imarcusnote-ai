@@ -1300,7 +1300,16 @@ function resolveWormholeDbFirstScope(input = {}) {
     /\bmiddle\s*2\s+(when\s+while|while\s+when)\b/.test(normalized) ||
     /\uC911\s*2[^|]*(when\s*,?\s*while|while\s*,?\s*when|\uC811\uC18D\uC0AC\s*(when|while)|\uC2DC\uAC04\s*\uC811\uC18D\uC0AC)/i.test(requested);
 
-  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsBecause ? "because" : null))));
+  const mentionsComparative =
+    !/\uC6D0\uAE09\uBE44\uAD50|\uCD5C\uC0C1\uAE09|\b(as\s+as|as_as)\b|\bthe\s+comparative\b/i.test(requested + " " + normalized) &&
+    (
+      /\bmiddle\s*2\s+comparative\b/.test(normalized) ||
+      /\bcomparative\s+than\b/.test(normalized) ||
+      /\bmore\s+than\s+comparative\b/.test(normalized) ||
+      /\uC911\s*2[^|]*(\uBE44\uAD50\uAE09|comparative|than\s*\uBE44\uAD50\uAE09|more\s+than\s*\uBE44\uAD50\uAE09)/i.test(requested)
+    );
+
+  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsComparative ? "comparative" : (mentionsBecause ? "because" : null)))));
   return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
@@ -1314,7 +1323,8 @@ async function resolveWormholeDbFile(input = {}) {
     although: "middle2_although.json",
     as_as: "middle2_as_as.json",
     because: "middle2_because.json",
-    while_when: "middle2_while_when.json"
+    while_when: "middle2_while_when.json",
+    comparative: "middle2_comparative.json"
   };
   const fileName = dbFileByCanonical[scope.canonical] || null;
   const candidatePaths = fileName && scope.selectedGrade === "middle2"
