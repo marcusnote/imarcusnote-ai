@@ -1230,6 +1230,9 @@ function normalizeWormholeDbFirstText(value = "") {
     .normalize("NFKC")
     .toLowerCase()
     .replace(/[，、]/g, ",")
+    .replace(/\bas\s*[~〜～]\s*as\b/g, "as as")
+    .replace(/\bas\s*[-/]\s*as\b/g, "as as")
+    .replace(/[~〜～]+/g, " ")
     .replace(/[\\/_-]+/g, " ")
     .replace(/\s*,\s*/g, " ")
     .replace(/\s+/g, " ")
@@ -1282,8 +1285,8 @@ function resolveWormholeDbFirstScope(input = {}) {
     /\bas\s+as\b/.test(normalized) ||
     /\bas_as\b/.test(rawRequested) ||
     /\bmiddle\s*2\s+as\s+as\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(as\s+as|\uC6D0\uAE09\uBE44\uAD50)/i.test(requested) ||
-    /\uC6D0\uAE09\uBE44\uAD50/.test(requested);
+    /\uC911\s*2[^|]*as\s*[~〜～\-/]?\s*as[^|]*(\uC6D0\uAE09|\uC6D0\uAE09\uBE44\uAD50)?/i.test(requested) ||
+    /\uC911\s*2[^|]*\uC6D0\uAE09\uBE44\uAD50/i.test(requested);
 
   const mentionsBecause =
     /\bbecause\b/.test(normalized) ||
