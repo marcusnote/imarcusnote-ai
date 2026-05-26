@@ -1295,7 +1295,12 @@ function resolveWormholeDbFirstScope(input = {}) {
     /\bmiddle\s*2\s+because\b/.test(normalized) ||
     /\uC911\s*2[^|]*(because|\uC811\uC18D\uC0AC\s*because|\uC804\uCE58\uC0AC\uAD6C\s*because\s+of|\uC774\uC720|\uC6D0\uC778)/i.test(requested);
 
-  const canonical = mentionsAfterBefore ? "after_before" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsBecause ? "because" : null)));
+  const mentionsWhileWhen =
+    (/\bwhen\b/.test(normalized) && /\bwhile\b/.test(normalized)) ||
+    /\bmiddle\s*2\s+(when\s+while|while\s+when)\b/.test(normalized) ||
+    /\uC911\s*2[^|]*(when\s*,?\s*while|while\s*,?\s*when|\uC811\uC18D\uC0AC\s*(when|while)|\uC2DC\uAC04\s*\uC811\uC18D\uC0AC)/i.test(requested);
+
+  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsBecause ? "because" : null))));
   return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
@@ -1308,7 +1313,8 @@ async function resolveWormholeDbFile(input = {}) {
     after_before: "middle2_after_before.json",
     although: "middle2_although.json",
     as_as: "middle2_as_as.json",
-    because: "middle2_because.json"
+    because: "middle2_because.json",
+    while_when: "middle2_while_when.json"
   };
   const fileName = dbFileByCanonical[scope.canonical] || null;
   const candidatePaths = fileName && scope.selectedGrade === "middle2"
