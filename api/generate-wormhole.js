@@ -1386,6 +1386,102 @@ function stableShuffle(list = [], seedText = "") {
   return arr;
 }
 
+function getDbItemTailKey(item = {}) {
+  const text = String(item.english || "").toLowerCase();
+  const knownTails = [
+    "after the reactions became colder",
+    "once the screenshots spread privately",
+    "after the awkward silence grew longer",
+    "while nobody mentioned the real issue",
+    "after people misunderstood the situation",
+    "before the teacher clarified the rumor",
+    "while the tension slowly increased",
+    "after the comments became personal",
+    "when the atmosphere suddenly changed",
+    "after the conversation lost its warmth",
+    "once the private replies stopped",
+    "after the friendly tone disappeared",
+    "while everyone avoided the real question",
+    "after the apology sounded too late",
+    "when the private chat became uncomfortable",
+    "after the classroom mood changed",
+    "while the real reason stayed hidden",
+    "after the screenshot changed the meaning",
+    "when the joke stopped feeling harmless",
+    "after the silence made the answer obvious",
+    "while the group pretended nothing happened",
+    "after the online reaction felt colder",
+    "when the explanation arrived too late",
+    "after the praise started sounding forced",
+    "while the friendship felt distant"
+  ];
+  const found = knownTails.find((tail) => text.includes(tail));
+  if (found) return found;
+  const match = text.match(/\b(after|before|while|when|once)\b[^.?!]*[.?!]?$/i);
+  return match ? match[0].replace(/[.?!]$/, "").trim() : "no_tail";
+}
+
+function selectAlthoughDbItems(items = [], input = {}, seedText = "") {
+  const count = clamp(Number(input.count) || 10, 1, 30);
+  const shuffled = stableShuffle(items, seedText)
+    .sort((a, b) => Number((b.tags || []).includes("premium_priority")) - Number((a.tags || []).includes("premium_priority")));
+  const selected = [];
+  const used = new Set();
+  const bucketCount = new Map();
+  const worldCount = new Map();
+  const emotionCount = new Map();
+  const tailCount = new Map();
+  const maxBucket = Math.max(2, Math.ceil(count / 4));
+  const maxWorld = Math.max(3, Math.ceil(count / 3));
+  const maxEmotion = Math.max(2, Math.ceil(count / 4));
+
+  function keyOf(item, key, fallback = "unknown") {
+    return String(item.chapterMeta?.[key] || fallback);
+  }
+  function canTake(item, relaxed = false) {
+    if (!item || used.has(item.id)) return false;
+    if (relaxed) return true;
+    const bucket = keyOf(item, "semanticBucket");
+    const world = keyOf(item, "worldType");
+    const emotion = keyOf(item, "emotionAxis");
+    const tail = getDbItemTailKey(item);
+    return (bucketCount.get(bucket) || 0) < maxBucket &&
+      (worldCount.get(world) || 0) < maxWorld &&
+      (emotionCount.get(emotion) || 0) < maxEmotion &&
+      (tail === "no_tail" || (tailCount.get(tail) || 0) < 1);
+  }
+  function take(item) {
+    used.add(item.id);
+    selected.push(item);
+    const bucket = keyOf(item, "semanticBucket");
+    const world = keyOf(item, "worldType");
+    const emotion = keyOf(item, "emotionAxis");
+    const tail = getDbItemTailKey(item);
+    bucketCount.set(bucket, (bucketCount.get(bucket) || 0) + 1);
+    worldCount.set(world, (worldCount.get(world) || 0) + 1);
+    emotionCount.set(emotion, (emotionCount.get(emotion) || 0) + 1);
+    tailCount.set(tail, (tailCount.get(tail) || 0) + 1);
+  }
+
+  for (const item of shuffled) {
+    if (selected.length >= count) break;
+    if (canTake(item, false)) take(item);
+  }
+  for (const item of shuffled) {
+    if (selected.length >= count) break;
+    if (canTake(item, true)) take(item);
+  }
+  console.info("[ALTHOUGH_SELECTION_QUOTA]", {
+    requested: count,
+    selected: selected.length,
+    buckets: Object.fromEntries(bucketCount),
+    worlds: Object.fromEntries(worldCount),
+    emotions: Object.fromEntries(emotionCount),
+    repeatedTails: [...tailCount.entries()].filter(([, value]) => value > 1)
+  });
+  return selected.slice(0, count);
+}
+
 function selectDbItems(items = [], input = {}) {
   const count = clamp(Number(input.count) || 10, 1, 30);
   if (items.length < count) return [];
@@ -1399,6 +1495,11 @@ function selectDbItems(items = [], input = {}) {
     input.problemType,
     count
   ].filter(Boolean).join("|");
+
+  const scope = resolveWormholeDbFirstScope(input);
+  if (scope.canonical === "although") {
+    return selectAlthoughDbItems(items, input, seedText);
+  }
 
   const shuffled = stableShuffle(items, seedText);
   const afterItems = shuffled.filter((item) => (item.tags || []).includes("after"));
