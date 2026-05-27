@@ -1300,6 +1300,12 @@ function resolveWormholeDbFirstScope(input = {}) {
     /\bmiddle\s*2\s+(when\s+while|while\s+when)\b/.test(normalized) ||
     /\uC911\s*2[^|]*(when\s*,?\s*while|while\s*,?\s*when|\uC811\uC18D\uC0AC\s*(when|while)|\uC2DC\uAC04\s*\uC811\uC18D\uC0AC)/i.test(requested);
 
+  const mentionsTheComparative =
+    /\bthe\s+(more|less|[a-z]+er)\b[^|,.;:!?]*[, ]+\s*the\s+(more|less|[a-z]+er)\b/i.test(normalized) ||
+    /\bthe\s+comparative\s+the\s+comparative\b/i.test(normalized) ||
+    /\bthe\s+more\s+the\s+more\b/i.test(normalized) ||
+    /\uC911\s*2[^|]*(the\s*\uBE44\uAD50\uAE09\s*the\s*\uBE44\uAD50\uAE09|\uBE44\uAD50\uAE09\s*\uBCD1\uB82C\uAD6C\uBB38|the\s+comparative\s+the\s+comparative|the\s+more\s+the\s+more)/i.test(requested);
+
   const mentionsSuperlative =
     !/\bthe\s+comparative\b|\uBE44\uB840\s*\uBE44\uAD50|\uC6D0\uAE09\uBE44\uAD50|\b(as\s+as|as_as)\b/i.test(requested + " " + normalized) &&
     (
@@ -1317,7 +1323,7 @@ function resolveWormholeDbFirstScope(input = {}) {
       /\uC911\s*2[^|]*(\uBE44\uAD50\uAE09|comparative|than\s*\uBE44\uAD50\uAE09|more\s+than\s*\uBE44\uAD50\uAE09)/i.test(requested)
     );
 
-  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsSuperlative ? "superlative" : (mentionsComparative ? "comparative" : (mentionsBecause ? "because" : null))))));
+  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsTheComparative ? "the_comparative" : (mentionsSuperlative ? "superlative" : (mentionsComparative ? "comparative" : (mentionsBecause ? "because" : null)))))));
   return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
@@ -1333,7 +1339,8 @@ async function resolveWormholeDbFile(input = {}) {
     because: "middle2_because.json",
     while_when: "middle2_while_when.json",
     comparative: "middle2_comparative.json",
-    superlative: "middle2_superlative.json"
+    superlative: "middle2_superlative.json",
+    the_comparative: "middle2_the_comparative_the_comparative.json"
   };
   const fileName = dbFileByCanonical[scope.canonical] || null;
   const candidatePaths = fileName && scope.selectedGrade === "middle2"
