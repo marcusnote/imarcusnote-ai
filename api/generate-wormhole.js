@@ -1330,6 +1330,21 @@ function resolveWormholeDbFirstScope(input = {}) {
       /\uC911\s*2[^|]*(it\s*[~\-]?\s*to|it\s*to\s*\uAD6C\uBB38|it\s*~\s*to\s*\uBD80\uC815\uC0AC|\uAC00\uC8FC\uC5B4\s*\uC9C4\uC8FC\uC5B4|\uAC00\uC8FC\uC5B4\s*to\uBD80\uC815\uC0AC|to\uBD80\uC815\uC0AC\s*\uAC00\uC8FC\uC5B4)/i.test(requested)
     );
 
+  const mentionsCausativeVerbs =
+    /\bmiddle\s*2\s+(causative\s+verbs|make\s+have\s+let)\b/.test(normalized) ||
+    /\b(causative\s+verbs|make\s+have\s+let)\b/.test(normalized) ||
+    /\uC911\s*2[^|]*(\uC0AC\uC5ED\s*\uB3D9\uC0AC|\uC0AC\uC5ED\uB3D9\uC0AC|make\s*have\s*let|make\s*let\s*have)/i.test(requested);
+
+  const mentionsComparativeEmphasis =
+    !mentionsTheComparative &&
+    !mentionsSuperlative &&
+    !mentionsAsAs &&
+    (
+      /\bmiddle\s*2\s+comparative\s+emphasis\b/.test(normalized) ||
+      /\b(comparative\s+emphasis|much\s+comparative|even\s+comparative|far\s+comparative|a\s+lot\s+comparative)\b/.test(normalized) ||
+      /\uC911\s*2[^|]*(\uBE44\uAD50\uAE09\s*\uAC15\uC870|\uBE44\uAD50\uAE09\s*\uAC15\uC870\uC5B4|\uBE44\uAD50\uAE09\s*\uAC15\uC870\s*\uBD80\uC0AC|much\s*\uBE44\uAD50\uAE09|even\s*\uBE44\uAD50\uAE09|far\s*\uBE44\uAD50\uAE09|a\s*lot\s*\uBE44\uAD50\uAE09)/i.test(requested)
+    );
+
   const mentionsBecause =
     /\bbecause\b/.test(normalized) ||
     /\bbecause\s+of\b/.test(normalized) ||
@@ -1365,7 +1380,23 @@ function resolveWormholeDbFirstScope(input = {}) {
       /\uC911\s*2[^|]*(\uBE44\uAD50\uAE09|comparative|than\s*\uBE44\uAD50\uAE09|more\s+than\s*\uBE44\uAD50\uAE09)/i.test(requested)
     );
 
-  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsAsConjunction ? "as_conjunction" : (mentionsTooToEnoughTo ? "too_to_enough_to" : (mentionsItTo ? "it_to" : (mentionsToInfinitiveNoun ? "to_infinitive_noun" : (mentionsToInfinitiveAdjective ? "to_infinitive_adjective" : (mentionsToInfinitiveAdverbial ? "to_infinitive_adverbial" : (mentionsTheComparative ? "the_comparative" : (mentionsSuperlative ? "superlative" : (mentionsComparative ? "comparative" : (mentionsBecause ? "because" : null)))))))))))));
+  let canonical = null;
+  if (mentionsAfterBefore) canonical = "after_before";
+  else if (mentionsWhileWhen) canonical = "while_when";
+  else if (mentionsAlthough) canonical = "although";
+  else if (mentionsAsAs) canonical = "as_as";
+  else if (mentionsAsConjunction) canonical = "as_conjunction";
+  else if (mentionsTooToEnoughTo) canonical = "too_to_enough_to";
+  else if (mentionsItTo) canonical = "it_to";
+  else if (mentionsToInfinitiveNoun) canonical = "to_infinitive_noun";
+  else if (mentionsToInfinitiveAdjective) canonical = "to_infinitive_adjective";
+  else if (mentionsToInfinitiveAdverbial) canonical = "to_infinitive_adverbial";
+  else if (mentionsCausativeVerbs) canonical = "causative_verbs";
+  else if (mentionsTheComparative) canonical = "the_comparative";
+  else if (mentionsSuperlative) canonical = "superlative";
+  else if (mentionsComparativeEmphasis) canonical = "comparative_emphasis";
+  else if (mentionsComparative) canonical = "comparative";
+  else if (mentionsBecause) canonical = "because";
   return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
@@ -1380,6 +1411,8 @@ async function resolveWormholeDbFile(input = {}) {
     as_as: "middle2_as_as.json",
     as_conjunction: "middle2_as_conjunction.json",
     because: "middle2_because.json",
+    causative_verbs: "middle2_causative_verbs.json",
+    comparative_emphasis: "middle2_comparative_emphasis.json",
     while_when: "middle2_while_when.json",
     comparative: "middle2_comparative.json",
     superlative: "middle2_superlative.json",
