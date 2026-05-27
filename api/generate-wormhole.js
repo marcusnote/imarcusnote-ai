@@ -1288,6 +1288,16 @@ function resolveWormholeDbFirstScope(input = {}) {
     /\uC911\s*2[^|]*as\s*[~〜～\-/]?\s*as[^|]*(\uC6D0\uAE09|\uC6D0\uAE09\uBE44\uAD50)?/i.test(requested) ||
     /\uC911\s*2[^|]*\uC6D0\uAE09\uBE44\uAD50/i.test(requested);
 
+  const mentionsAsConjunction =
+    !mentionsAsAs &&
+    (
+      /\bmiddle\s*2\s+as\s+conjunction\b/.test(normalized) ||
+      /\bas\s+conjunction\b/.test(normalized) ||
+      /\bconjunction\s+as\b/.test(normalized) ||
+      /\b(as\s+meaning\s+when|as\s+meaning\s+because|as\s+simultaneous\s+action)\b/.test(normalized) ||
+      /\uC911\s*2[^|]*(\uC811\uC18D\uC0AC\s*as|as\s*\uC811\uC18D\uC0AC|as\s*\uC2DC\uAC04\s*\uC811\uC18D\uC0AC|as\s*\uC774\uC720\s*\uC811\uC18D\uC0AC)/i.test(requested)
+    );
+
   const mentionsBecause =
     /\bbecause\b/.test(normalized) ||
     /\bbecause\s+of\b/.test(normalized) ||
@@ -1323,7 +1333,7 @@ function resolveWormholeDbFirstScope(input = {}) {
       /\uC911\s*2[^|]*(\uBE44\uAD50\uAE09|comparative|than\s*\uBE44\uAD50\uAE09|more\s+than\s*\uBE44\uAD50\uAE09)/i.test(requested)
     );
 
-  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsTheComparative ? "the_comparative" : (mentionsSuperlative ? "superlative" : (mentionsComparative ? "comparative" : (mentionsBecause ? "because" : null)))))));
+  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsAsConjunction ? "as_conjunction" : (mentionsTheComparative ? "the_comparative" : (mentionsSuperlative ? "superlative" : (mentionsComparative ? "comparative" : (mentionsBecause ? "because" : null))))))));
   return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
@@ -1336,6 +1346,7 @@ async function resolveWormholeDbFile(input = {}) {
     after_before: "middle2_after_before.json",
     although: "middle2_although.json",
     as_as: "middle2_as_as.json",
+    as_conjunction: "middle2_as_conjunction.json",
     because: "middle2_because.json",
     while_when: "middle2_while_when.json",
     comparative: "middle2_comparative.json",
