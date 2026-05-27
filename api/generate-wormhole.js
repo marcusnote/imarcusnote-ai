@@ -1298,6 +1298,24 @@ function resolveWormholeDbFirstScope(input = {}) {
       /\uC911\s*2[^|]*(\uC811\uC18D\uC0AC\s*as|as\s*\uC811\uC18D\uC0AC|as\s*\uC2DC\uAC04\s*\uC811\uC18D\uC0AC|as\s*\uC774\uC720\s*\uC811\uC18D\uC0AC)/i.test(requested)
     );
 
+  const mentionsToInfinitiveNoun =
+    /\bmiddle\s*2\s+to\s+infinitive\s+noun\b/.test(normalized) ||
+    /\bto[-\s]*infinitive\s+noun\b/.test(normalized) ||
+    /\bnoun\s+use\s+of\s+to[-\s]*infinitive\b/.test(normalized) ||
+    /\uC911\s*2[^|]*(to\s*\uBD80\uC815\uC0AC\s*\uBA85\uC0AC\uC801|to\uBD80\uC815\uC0AC\s*\uBA85\uC0AC\uC801|\uBA85\uC0AC\uC801\s*\uC6A9\uBC95|\uC8FC\uC5B4\s*\uBAA9\uC801\uC5B4\s*\uBCF4\uC5B4)/i.test(requested);
+
+  const mentionsToInfinitiveAdjective =
+    /\bmiddle\s*2\s+to\s+infinitive\s+adjective\b/.test(normalized) ||
+    /\bto[-\s]*infinitive\s+adjective\b/.test(normalized) ||
+    /\badjective\s+use\s+of\s+to[-\s]*infinitive\b/.test(normalized) ||
+    /\uC911\s*2[^|]*(to\s*\uBD80\uC815\uC0AC\s*\uD615\uC6A9\uC0AC\uC801|to\uBD80\uC815\uC0AC\s*\uD615\uC6A9\uC0AC\uC801|\uD615\uC6A9\uC0AC\uC801\s*\uC6A9\uBC95|\uBA85\uC0AC\s*to\s*\uBD80\uC815\uC0AC)/i.test(requested);
+
+  const mentionsToInfinitiveAdverbial =
+    /\bmiddle\s*2\s+to\s+infinitive\s+adverbial\b/.test(normalized) ||
+    /\bto[-\s]*infinitive\s+adverbial\b/.test(normalized) ||
+    /\badverbial\s+use\s+of\s+to[-\s]*infinitive\b/.test(normalized) ||
+    /\uC911\s*2[^|]*(to\s*\uBD80\uC815\uC0AC\s*\uBD80\uC0AC\uC801|to\uBD80\uC815\uC0AC\s*\uBD80\uC0AC\uC801|\uBD80\uC0AC\uC801\s*\uC6A9\uBC95|\uBAA9\uC801\uC758\s*to\uBD80\uC815\uC0AC|\uAC10\uC815\uC758\s*\uC6D0\uC778\s*to\uBD80\uC815\uC0AC|\uACB0\uACFC\uC758\s*to\uBD80\uC815\uC0AC)/i.test(requested);
+
   const mentionsBecause =
     /\bbecause\b/.test(normalized) ||
     /\bbecause\s+of\b/.test(normalized) ||
@@ -1333,7 +1351,7 @@ function resolveWormholeDbFirstScope(input = {}) {
       /\uC911\s*2[^|]*(\uBE44\uAD50\uAE09|comparative|than\s*\uBE44\uAD50\uAE09|more\s+than\s*\uBE44\uAD50\uAE09)/i.test(requested)
     );
 
-  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsAsConjunction ? "as_conjunction" : (mentionsTheComparative ? "the_comparative" : (mentionsSuperlative ? "superlative" : (mentionsComparative ? "comparative" : (mentionsBecause ? "because" : null))))))));
+  const canonical = mentionsAfterBefore ? "after_before" : (mentionsWhileWhen ? "while_when" : (mentionsAlthough ? "although" : (mentionsAsAs ? "as_as" : (mentionsAsConjunction ? "as_conjunction" : (mentionsToInfinitiveNoun ? "to_infinitive_noun" : (mentionsToInfinitiveAdjective ? "to_infinitive_adjective" : (mentionsToInfinitiveAdverbial ? "to_infinitive_adverbial" : (mentionsTheComparative ? "the_comparative" : (mentionsSuperlative ? "superlative" : (mentionsComparative ? "comparative" : (mentionsBecause ? "because" : null)))))))))));
   return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
@@ -1351,7 +1369,10 @@ async function resolveWormholeDbFile(input = {}) {
     while_when: "middle2_while_when.json",
     comparative: "middle2_comparative.json",
     superlative: "middle2_superlative.json",
-    the_comparative: "middle2_the_comparative_the_comparative.json"
+    the_comparative: "middle2_the_comparative_the_comparative.json",
+    to_infinitive_noun: "middle2_to_infinitive_noun.json",
+    to_infinitive_adjective: "middle2_to_infinitive_adjective.json",
+    to_infinitive_adverbial: "middle2_to_infinitive_adverbial.json"
   };
   const fileName = dbFileByCanonical[scope.canonical] || null;
   const candidatePaths = fileName && scope.selectedGrade === "middle2"
