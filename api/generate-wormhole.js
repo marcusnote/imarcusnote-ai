@@ -588,7 +588,7 @@ async function mergeWormholeSupplement(formatted, supplement, input) {
 /* =========================
    WORMHOLE_DB_FIRST_PILOT
    Pilot scope: middle2 DB-first chapters.
-   Supported: after_before, although.
+   Supported: after_before, although, dont_have_to.
    Keeps GPT generation as fallback for every unsupported chapter.
    ========================= */
 
@@ -700,7 +700,16 @@ function resolveWormholeDbFirstScope(input = {}) {
   const mentionsCausativeVerbs =
     /\bmiddle\s*2\s+(causative\s+verbs|make\s+have\s+let|make\s+have\s+let\s+help|help\s+causative)\b/.test(normalized) ||
     /\b(causative\s+verbs|make\s+have\s+let|make\s+have\s+let\s+help|help\s+object\s+(base\s+verb|to\s+infinitive))\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(\uC0AC\uC5ED\s*\uB3D9\uC0AC|\uC0AC\uC5ED\uB3D9\uC0AC|make\s*have\s*let|make\s*let\s*have|make\s*have\s*let\s*help|help\s*\uC0AC\uC5ED\uB3D9\uC0AC|help\s*\uBAA9\uC801\uC5B4\s*(\uB3D9\uC0AC\uC6D0\uD615|to\uBD80\uC815\uC0AC))/i.test(requested);
+    /중\s*2[^|]*(사역\s*동사|사역동사|make\s*have\s*let|make\s*let\s*have|make\s*have\s*let\s*help|help\s*사역동사|help\s*목적어\s*(동사원형|to부정사))/i.test(requested);
+
+  const mentionsDontHaveTo =
+    /\bmiddle\s*2\s+(?:don['’]?t\s+have\s+to|do\s+not\s+have\s+to|dont\s+have\s+to|dont_have_to|don['’]?t\s+need\s+to)\b/.test(normalized) ||
+    /\b(?:don['’]?t\s+have\s+to|do\s+not\s+have\s+to|dont\s+have\s+to|dont_have_to|don['’]?t\s+need\s+to)\b/.test(normalized) ||
+    /\uC911\s*2[^|]*(?:don['’]?t\s*have\s*to|do\s*not\s*have\s*to|dont\s*have\s*to|don['’]?t\s*need\s*to|\uD560\s*\uD544\uC694\uAC00\s*\uC5C6|\uD558\uC9C0\s*\uC54A\uC544\uB3C4\s*\uB41C|\uC758\uBB34\uAC00\s*\uC5C6)/i.test(requested);
+
+  const mentionsDitransitive =    /\bmiddle\s*2\s+(ditransitive|dative\s+verbs|give\s+send\s+show\s+tell)\b/.test(normalized) ||
+    /\b(ditransitive|dative\s+verbs|give\s+send\s+show\s+tell|give\s+send\s+show\s+tell\s+help)\b/.test(normalized) ||
+    /중\s*2[^|]*(수여동사|ditransitive|dative\s*verbs|4\s*형식|4형식|수여\s*동사)/i.test(requested);
 
   const mentionsComparativeEmphasis =
     !/\uC6D0\uAE09\uBE44\uAD50|\uCD5C\uC0C1\uAE09|the\s*\uBE44\uAD50\uAE09\s*the\s*\uBE44\uAD50\uAE09|\bthe\s+comparative\b|\b(as\s+as|as_as)\b/i.test(requested + " " + normalized) &&
@@ -753,10 +762,12 @@ function resolveWormholeDbFirstScope(input = {}) {
   else if (mentionsAsConjunction) canonical = "as_conjunction";
   else if (mentionsTooToEnoughTo) canonical = "too_to_enough_to";
   else if (mentionsItTo) canonical = "it_to";
+  else if (mentionsDontHaveTo) canonical = "dont_have_to";
   else if (mentionsToInfinitiveNoun) canonical = "to_infinitive_noun";
   else if (mentionsToInfinitiveAdjective) canonical = "to_infinitive_adjective";
   else if (mentionsToInfinitiveAdverbial) canonical = "to_infinitive_adverbial";
   else if (mentionsCausativeVerbs) canonical = "causative_verbs";
+  else if (mentionsDitransitive) canonical = "ditransitive";
   else if (mentionsTheComparative) canonical = "the_comparative";
   else if (mentionsSuperlative) canonical = "superlative";
   else if (mentionsComparativeEmphasis) canonical = "comparative_emphasis";
@@ -777,6 +788,8 @@ async function resolveWormholeDbFile(input = {}) {
     as_conjunction: "middle2_as_conjunction.json",
     because: "middle2_because.json",
     causative_verbs: "middle2_causative_verbs.json",
+    ditransitive: "middle2_ditransitive.json",
+    dont_have_to: "middle2_dont_have_to.json",
     comparative_emphasis: "middle2_comparative_emphasis.json",
     while_when: "middle2_while_when.json",
     comparative: "middle2_comparative.json",
