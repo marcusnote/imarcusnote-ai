@@ -248,29 +248,63 @@ function normalizeCanonicalChapterKey(bucket = "", chapterKey = "", context = ""
     : gradePrefixed
       ? gradePrefixed[2]
       : normalizedChapter;
+  const bucketScopedCanonicalAliases = {
+    middle2: {
+      perception_verb: "perception_verbs",
+    },
+  };
+  const resolved = bucketScopedCanonicalAliases[normalizedBucket]?.[stripped] || stripped;
 
-  if (context && stripped !== normalizedChapter) {
-    console.log("[CANONICAL_NORMALIZED]", {
+  if (context && resolved !== normalizedChapter) {
+    console.log("[MAGIC_CANONICAL_RESOLVE]", {
       context,
       bucket: normalizedBucket,
       original: normalizedChapter,
-      normalized: stripped,
+      normalized: resolved,
     });
   }
 
-  return stripped;
+  return resolved;
+}
+
+function shouldLogMagicDbAudit(bucket = "", requested = "", canonical = "", filename = "") {
+  const haystack = [bucket, requested, canonical, filename].join(" ").toLowerCase();
+  return /perception|sensory|지각|감각/.test(haystack);
 }
 
 function getCanonicalDbFilename(bucket = "", chapterKey = "") {
   const normalizedBucket = normalizeChapterKey(bucket);
   const normalizedChapter = normalizeCanonicalChapterKey(normalizedBucket, chapterKey, "filename_lookup");
-  return CANONICAL_DB_FILENAME_REGISTRY[normalizedBucket]?.[normalizedChapter] || "";
+  const filename = CANONICAL_DB_FILENAME_REGISTRY[normalizedBucket]?.[normalizedChapter] || "";
+  if (shouldLogMagicDbAudit(normalizedBucket, chapterKey, normalizedChapter, filename)) {
+    console.log("[MAGIC_CANONICAL_RESOLVE]", {
+      context: "db_filename_lookup",
+      bucket: normalizedBucket,
+      requested: chapterKey,
+      canonical: normalizedChapter,
+      selectedFile: filename,
+    });
+  }
+  return filename;
 }
 
 function getCanonicalDbPath(bucket = "", chapterKey = "") {
   const normalizedBucket = normalizeChapterKey(bucket);
-  const filename = getCanonicalDbFilename(normalizedBucket, chapterKey);
-  return filename ? path.join(SENTENCE_BANK_ROOT, normalizedBucket, filename) : "";
+  const normalizedChapter = normalizeCanonicalChapterKey(normalizedBucket, chapterKey, "path_lookup");
+  const filename = getCanonicalDbFilename(normalizedBucket, normalizedChapter);
+  const dbPath = filename ? path.join(SENTENCE_BANK_ROOT, normalizedBucket, filename) : "";
+  const exists = Boolean(dbPath && fs.existsSync(dbPath));
+  if (shouldLogMagicDbAudit(normalizedBucket, chapterKey, normalizedChapter, filename)) {
+    console.log(exists ? "[MAGIC_DB_MATCH]" : "[MAGIC_DB_MISS]", {
+      bucket: normalizedBucket,
+      requested: chapterKey,
+      canonical: normalizedChapter,
+      selectedFile: filename,
+      selectedPath: dbPath,
+      reason: exists ? "canonical_db_file_exists" : (filename ? "canonical_db_file_missing" : "canonical_not_registered"),
+    });
+  }
+  return dbPath;
 }
 
 function normalizeChapterKey(value = "") {
@@ -595,6 +629,8 @@ function normalizeChapterAliasIndexKey(value = "") {
   return String(value || "")
     .trim()
     .toLowerCase()
+    .replace(/to\s*부정사\s*의/g, "to부정사")
+    .replace(/to부정사의/g, "to부정사")
     .replace(/[–—]/g, "-")
     .replace(/[_\-/]+/g, " ")
     .replace(/\s+/g, " ")
@@ -3013,11 +3049,110 @@ function limitClueWords(value = "", maxWords = 7) {
   return words.slice(0, maxWords).join(" ");
 }
 
+const CAUSATIVE_CLUE_VERBS = new Set([
+  "make", "makes", "made", "let", "lets", "have", "has", "had", "help", "helps", "helped",
+  "force", "forces", "forced", "allow", "allows", "allowed", "ask", "asks", "asked",
+  "tell", "tells", "told", "convince", "convinces", "convinced", "persuade", "persuades", "persuaded"
+]);
+const CAUSATIVE_ACTION_WORDS = new Set([
+  "run", "clean", "turn", "apologize", "wear", "stay", "leave", "borrow", "use", "rest", "wash",
+  "repair", "fix", "paint", "cut", "cleaned", "altered", "stand", "find", "take", "move", "fill",
+  "check", "recheck", "stop", "understand", "respond", "post", "doubt", "reread", "revise",
+  "delete", "close", "change", "keep", "make", "see", "feel", "laugh", "drift", "grow",
+  "rethink", "explain", "ignore", "join", "worry", "calm", "wait", "hide", "trust", "upload",
+  "submit", "blame", "attack", "read", "shock", "shocked", "private", "anxious", "nervous",
+  "uncomfortable", "hopeful", "emotional", "sincere", "open"
+]);
+const CLUE_NOUN_STARTERS = new Set(["the", "a", "an", "this", "that", "these", "those", "my", "his", "her", "our", "their"]);
+const CLUE_PRONOUN_OBJECTS = new Set(["me", "you", "us", "him", "her", "them", "everyone", "someone", "people", "users"]);
+const CLUE_PHRASAL_PARTICLES = new Set(["off", "out", "up", "in", "over", "around", "back", "apart", "away"]);
+const CLUE_BOUNDARY_WORDS = new Set(["because", "and", "but", "when", "while", "after", "before"]);
+
+function isCausativeClueSeed(seed = {}) {
+  const value = [seed?.grammar, seed?.chapterKey, ...(Array.isArray(seed?.tags) ? seed.tags : [])].join(" ").toLowerCase();
+  return /causative|사역/.test(value);
+}
+
+function findCausativeClueVerbIndex(tokens = []) {
+  for (let i = 0; i < tokens.length; i += 1) {
+    if (CAUSATIVE_CLUE_VERBS.has(String(tokens[i] || "").toLowerCase())) return i;
+  }
+  return -1;
+}
+
+function findCausativeActionIndex(tokens = [], start = 0) {
+  for (let i = start; i < tokens.length; i += 1) {
+    const lower = String(tokens[i] || "").toLowerCase();
+    if (CLUE_BOUNDARY_WORDS.has(lower) || lower === ",") return -1;
+    if (lower === "to" && CAUSATIVE_ACTION_WORDS.has(String(tokens[i + 1] || "").toLowerCase())) return i;
+    if (CAUSATIVE_ACTION_WORDS.has(lower)) return i;
+  }
+  return -1;
+}
+
+function findCausativeBoundary(tokens = [], start = 0) {
+  for (let i = start; i < tokens.length; i += 1) {
+    const lower = String(tokens[i] || "").toLowerCase();
+    if (CLUE_BOUNDARY_WORDS.has(lower) || lower === ",") return i;
+  }
+  return tokens.length;
+}
+
+function takeClueNounChunk(tokens = [], start = 0, stop = tokens.length) {
+  if (start < 0 || start >= stop) return "";
+  const lower = String(tokens[start] || "").toLowerCase();
+  if (CLUE_PRONOUN_OBJECTS.has(lower)) return takeCluePhrase(tokens, start, 1);
+  if (CLUE_NOUN_STARTERS.has(lower)) {
+    const actionIndex = findCausativeActionIndex(tokens, start + 1);
+    const hardStop = actionIndex > start ? Math.min(actionIndex, stop) : Math.min(start + 3, stop);
+    return tokens.slice(start, hardStop).map(cleanWordClueToken).filter(Boolean).join(" ").trim();
+  }
+  return takeCluePhrase(tokens, start, 1);
+}
+
+function extractCausativeClueChunksFromText(text = "", seed = {}) {
+  if (!isCausativeClueSeed(seed)) return [];
+  const tokens = normalizeClueText(text)
+    .replace(/[,]/g, " , ")
+    .split(/\s+/)
+    .map(cleanWordClueToken)
+    .filter(Boolean);
+  if (tokens.length < 3) return [];
+
+  const lowerTokens = tokens.map((token) => token.toLowerCase());
+  const causativeIndex = findCausativeClueVerbIndex(tokens);
+  if (causativeIndex < 0) return [];
+
+  const subjectStart = lowerTokens[0] === "did" ? 1 : 0;
+  const subjectEnd = lowerTokens[causativeIndex - 1] === "didn't" ? causativeIndex - 1 : causativeIndex;
+  const subject = tokens.slice(subjectStart, subjectEnd).map(cleanWordClueToken).filter(Boolean).join(" ").trim();
+  const afterCausative = causativeIndex + 1;
+  const boundary = findCausativeBoundary(tokens, afterCausative);
+  let actionIndex = findCausativeActionIndex(tokens, afterCausative);
+  const hasActionIndex = actionIndex >= 0 && actionIndex < boundary;
+  if (!hasActionIndex) actionIndex = Math.min(afterCausative + 1, boundary);
+
+  let actionWordEnd = Math.min(actionIndex + (lowerTokens[actionIndex] === "to" ? 2 : 1), boundary);
+  if (CLUE_PHRASAL_PARTICLES.has(lowerTokens[actionWordEnd] || "")) actionWordEnd = Math.min(actionWordEnd + 1, boundary);
+  if (!hasActionIndex) actionWordEnd = Math.min(afterCausative + 3, boundary);
+
+  let coreStart = causativeIndex;
+  if (lowerTokens[causativeIndex - 1] === "didn't") coreStart = causativeIndex - 1;
+  const core = tokens.slice(coreStart, actionWordEnd).map(cleanWordClueToken).filter(Boolean).join(" ").trim();
+  const remainder = tokens.slice(actionWordEnd, boundary).map(cleanWordClueToken).filter(Boolean).join(" ").trim();
+
+  return [remainder, core, subject]
+    .map((chunk) => normalizeClueText(chunk))
+    .filter((chunk, index, arr) => chunk && chunk.split(/\s+/).length <= 7 && arr.indexOf(chunk) === index);
+}
+
 function extractAnswerClueChunks(answer = "", seed = {}) {
   const raw = String(answer || "").trim();
   const clean = normalizeClueText(raw.replace(/[,]/g, " , "));
   const chunks = [];
   const grammar = String(seed?.grammar || seed?.chapterKey || "").toLowerCase();
+  const causativeChunks = extractCausativeClueChunksFromText(clean, seed);
+  if (causativeChunks.length) return causativeChunks;
 
   const commaParts = clean.split(/\s+,\s+/).map((part) => normalizeClueText(part)).filter(Boolean);
   if (/^if\b/i.test(commaParts[0] || "") && commaParts.length >= 2) {
@@ -3208,8 +3343,17 @@ function buildWordLevelClue(seed = {}, seedIndex = 0) {
   }
 
   function addToken(index) {
-    if (index >= 0 && index < tokens.length) addChunk(tokens[index]);
+    if (index < 0 || index >= tokens.length) return;
+    const lower = lowerTokens[index];
+    if (CLUE_NOUN_STARTERS.has(lower)) {
+      addChunk(takeClueNounChunk(tokens, index));
+      return;
+    }
+    addChunk(tokens[index]);
   }
+
+  const causativeWordChunks = extractCausativeClueChunksFromText(tokens.join(" "), seed);
+  if (causativeWordChunks.length) return causativeWordChunks.join(" / ");
 
   const connectorIndex = lowerTokens.findIndex((token) => ["after", "before", "when", "while", "until", "since"].includes(token));
   if (connectorIndex > 0 && connectorIndex < tokens.length - 1) {
