@@ -586,28 +586,199 @@ async function mergeWormholeSupplement(formatted, supplement, input) {
 
 
 /* =========================
-   WORMHOLE_DB_FIRST_PILOT
-   Pilot scope: middle2 DB-first chapters.
-   Supported: after_before, although, dont_have_to.
-   Keeps GPT generation as fallback for every unsupported chapter.
+   WORMHOLE_DB_FIRST_AUTO_REGISTRY
+   Auto-scans data/middle1, data/middle2, data/middle3.
+   DB match always wins over GPT fallback.
    ========================= */
+
+let WORMHOLE_DB_REGISTRY_CACHE = null;
+
+const WORMHOLE_GRADE_BUCKETS = ["middle1", "middle2", "middle3"];
+
+const WORMHOLE_KO_ALIAS_BY_SLUG = {
+  a_few_few: ["a few few", "a few와 few"],
+  a_little_little: ["a little little", "a little과 little"],
+  after_before: ["after before", "after와 before", "시간 접속사"],
+  although: ["although", "though", "even though", "양보 접속사"],
+  although_though_even_though: ["although", "though", "even though", "양보 접속사"],
+  and: ["and", "접속사 and"],
+  as_as: ["as as", "원급비교"],
+  as_conjunction: ["as conjunction", "접속사 as"],
+  be_negative: ["be negative", "be동사 부정문"],
+  be_question: ["be question", "be동사 의문문"],
+  be_verb: ["be verb", "be동사"],
+  because: ["because", "because of", "이유 접속사"],
+  because_because_of: ["because", "because of", "because와 because of"],
+  but: ["but", "접속사 but"],
+  can: ["can", "조동사 can"],
+  causative: ["causative", "사역동사"],
+  causative_verbs: ["causative verbs", "사역동사"],
+  cleft_it_that: ["cleft it that", "it that 강조구문", "강조구문"],
+  comparative: ["comparative", "비교급"],
+  comparatives: ["comparatives", "비교급"],
+  comparative_emphasis: ["comparative emphasis", "비교급 강조"],
+  comparative_emphasis_adverbs: ["comparative emphasis", "비교급 강조", "비교급 강조 부사"],
+  conjunction_that: ["conjunction that", "접속사 that"],
+  conjunction_when: ["conjunction when", "접속사 when"],
+  conjunction_while: ["conjunction while", "접속사 while"],
+  continuative_relative_clauses: ["continuative relative clauses", "계속적 용법", "관계대명사의 계속적 용법"],
+  ditransitive: ["ditransitive", "수여동사", "4형식"],
+  do_emphasis: ["do emphasis", "강조의 do", "do 강조"],
+  do_negative: ["do negative", "일반동사 부정문"],
+  do_question: ["do question", "일반동사 의문문"],
+  do_verb: ["do verb", "일반동사"],
+  dont_have_to: ["dont have to", "don't have to", "do not have to", "할 필요가 없다"],
+  exclamation: ["exclamation", "감탄문"],
+  five_form: ["five form", "5형식"],
+  frequency_adverbs: ["frequency adverbs", "빈도부사", "빈도 부사"],
+  gerund: ["gerund", "동명사"],
+  gerund_idiomatic_expressions: ["gerund idiomatic expressions", "동명사 관용표현"],
+  gerund_object: ["gerund object", "동명사 목적어"],
+  gerund_total: ["gerund total", "동명사 종합", "동명사"],
+  had_better: ["had better", "had better not", "하는 것이 좋겠다"],
+  have_object_pp: ["have object pp", "have 목적어 pp", "have 목적어 p.p."],
+  have_to: ["have to", "해야 한다"],
+  have_to_must: ["have to must", "have to", "must", "의무 표현"],
+  here_there_inversion: ["here there inversion", "here there 도치"],
+  however_therefore: ["however therefore", "however와 therefore"],
+  if_condition: ["if condition", "조건의 if", "if 조건문"],
+  if_whether: ["if whether", "if와 whether"],
+  imperatives: ["imperatives", "명령문", "청유문"],
+  indefinite_pronouns: ["indefinite pronouns", "부정대명사"],
+  indirect_question: ["indirect question", "간접의문문", "간접 의문문"],
+  inversion_so_neither: ["inversion so neither", "so neither 도치"],
+  it_object_infinitive: ["it object infinitive", "가목적어 it"],
+  it_seems_that: ["it seems that", "it seems that 구문"],
+  it_that_expletive_subject: ["it that expletive subject", "가주어 it that"],
+  it_to: ["it to", "가주어 진주어", "it to 가주어"],
+  it_to_infinitive_subject: ["it to infinitive subject", "가주어 it to부정사"],
+  its_time_subjunctive: ["its time subjunctive", "it's time 가정법"],
+  many_much: ["many much", "many와 much"],
+  may: ["may", "조동사 may"],
+  modal_extended: ["modal extended", "조동사 확장"],
+  modal_have_pp: ["modal have pp", "조동사 have pp", "조동사 have p.p."],
+  modal_passive: ["modal passive", "조동사의 수동태"],
+  must: ["must", "조동사 must"],
+  not_only_but_also: ["not only but also", "상관접속사 not only but also"],
+  not_to_infinitive: ["not to infinitive", "not to부정사"],
+  object_complement_5th_form: ["object complement", "5형식 목적격보어"],
+  object_complement_adj: ["object complement adj", "목적격보어 형용사"],
+  objective_relative_pronouns: ["objective relative pronouns", "목적격 관계대명사"],
+  participial_construction: ["participial construction", "분사구문"],
+  participles: ["participles", "분사"],
+  participles_attributive: ["participles attributive", "분사의 한정적 용법"],
+  passive: ["passive", "passive voice", "수동태"],
+  passive_advanced: ["passive advanced", "수동태 심화"],
+  past: ["past tense", "과거시제"],
+  past_perfect: ["past perfect", "과거완료"],
+  perception_verb: ["perception verb", "지각동사"],
+  perception_verbs: ["perception verbs", "지각동사"],
+  perceptual_verbs: ["perceptual verbs", "지각동사"],
+  possessive_relative_pronouns: ["possessive relative pronouns", "소유격 관계대명사"],
+  prepositions_basic: ["prepositions basic", "전치사 기초"],
+  present_continuous: ["present continuous", "현재진행형"],
+  present_perfect: ["present perfect", "현재완료", "현재 완료"],
+  present_perfect_progressive: ["present perfect progressive", "현재완료진행"],
+  quantity_adjectives: ["quantity adjectives", "수량형용사"],
+  quantity_agreement: ["quantity agreement", "수일치", "수량 일치"],
+  quantifiers: ["quantifiers", "수량표현"],
+  quasi_causative: ["quasi causative", "준사역동사"],
+  quasi_causative_verbs: ["quasi causative verbs", "준사역동사"],
+  reflexive_pronoun: ["reflexive pronoun", "재귀대명사"],
+  reflexive_pronouns: ["reflexive pronouns", "재귀대명사"],
+  relative_adverbs: ["relative adverbs", "관계부사"],
+  relative_pronoun_what: ["relative pronoun what", "관계대명사 what"],
+  reported_speech: ["reported speech", "간접화법", "화법 전환"],
+  semi_causative: ["semi causative", "준사역동사"],
+  sensory_verb: ["sensory verb", "감각동사"],
+  should: ["should", "조동사 should"],
+  should_have_pp: ["should have pp", "should have p.p.", "했어야 했다"],
+  since: ["since", "since 이유 시간"],
+  so: ["so", "접속사 so"],
+  so_that: ["so that", "so that 구문"],
+  so_that_purpose: ["so that purpose", "목적의 so that"],
+  so_that_purpose_advanced: ["so that purpose advanced", "목적의 so that 심화"],
+  something_adjective: ["something adjective", "something 형용사"],
+  subject_relative_pronouns: ["subject relative pronouns", "주격 관계대명사"],
+  subjunctive_past: ["subjunctive past", "가정법 과거"],
+  subjunctive_past_perfect: ["subjunctive past perfect", "가정법 과거완료"],
+  superlative: ["superlative", "최상급"],
+  superlatives: ["superlatives", "최상급"],
+  sva_of_structure: ["sva of structure", "of 구조 수 일치"],
+  tag_questions: ["tag questions", "부가의문문"],
+  tense_agreement: ["tense agreement", "시제 일치"],
+  that: ["that", "that절"],
+  that_clause_statement: ["that clause statement", "that 명사절"],
+  that_clause_subjunctive: ["that clause subjunctive", "that절 가정법"],
+  the_comparative_the_comparative: ["the comparative the comparative", "the 비교급 the 비교급", "비교급 병렬구문"],
+  there_is_are: ["there is are", "there is are 문법"],
+  time_conjunctions: ["time conjunctions", "시간 접속사"],
+  to_infinitive_adjective: ["to infinitive adjective", "to부정사 형용사적 용법", "형용사적 용법"],
+  to_infinitive_adverbial: ["to infinitive adverbial", "to부정사 부사적 용법", "부사적 용법"],
+  to_infinitive_gerund_verbs: ["to infinitive gerund verbs", "to부정사 동명사 목적어 동사"],
+  to_infinitive_noun: ["to infinitive noun", "to부정사 명사적 용법", "명사적 용법"],
+  to_infinitive_noun_adjective: ["to infinitive noun adjective", "to부정사 명사 형용사"],
+  to_infinitive_noun_adjective_quality_fix: ["to infinitive noun adjective", "to부정사 명사 형용사"],
+  to_infinitive_total: ["to infinitive total", "to부정사 종합"],
+  too_enough_to: ["too enough to", "too to enough to", "too ~ to", "enough to"],
+  too_to_enough_to: ["too to enough to", "too ~ to", "enough to"],
+  total_vs_partial_negation: ["total vs partial negation", "전체부정 부분부정", "부분부정"],
+  used_to: ["used to", "used to 용법"],
+  wh_question: ["wh question", "의문사 의문문"],
+  wh_questions: ["wh questions", "의문사 의문문"],
+  wh_to_infinitive: ["wh to infinitive", "의문사 to부정사"],
+  while_when: ["while when", "when while", "접속사 when while"],
+  will: ["will", "조동사 will", "미래 will"],
+  wish_subjunctive: ["wish subjunctive", "wish 가정법"],
+  with_noun_phrase_be: ["with noun phrase be", "with 명사구 be"],
+  with_noun_phrase_have: ["with noun phrase have", "with 명사구 have"],
+  with_object_participle: ["with object participle", "with 목적어 분사"]
+};
 
 function normalizeWormholeDbFirstText(value = "") {
   return String(value || "")
     .normalize("NFKC")
     .toLowerCase()
     .replace(/[，、]/g, ",")
+    .replace(/[’']/g, "")
     .replace(/\bas\s*[~〜～]\s*as\b/g, "as as")
     .replace(/\bas\s*[-/]\s*as\b/g, "as as")
     .replace(/[~〜～]+/g, " ")
     .replace(/[\\/_-]+/g, " ")
-    .replace(/\s*,\s*/g, " ")
+    .replace(/[()[\]{}"“”‘’.,;:!?|]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-function resolveWormholeDbFirstScope(input = {}) {
-  const requested = [
+function compactWormholeAliasKey(value = "") {
+  return normalizeWormholeDbFirstText(value).replace(/\s+/g, "");
+}
+
+function addWormholeAliasKey(set, value = "") {
+  const normalized = normalizeWormholeDbFirstText(value);
+  if (!normalized) return;
+  set.add(normalized);
+  set.add(normalized.replace(/\s+/g, "_"));
+  const compact = normalized.replace(/\s+/g, "");
+  if (compact) set.add(compact);
+}
+
+function flattenWormholeAliases(value, out = []) {
+  if (!value) return out;
+  if (Array.isArray(value)) {
+    value.forEach((item) => flattenWormholeAliases(item, out));
+    return out;
+  }
+  if (typeof value === "object") {
+    Object.values(value).forEach((item) => flattenWormholeAliases(item, out));
+    return out;
+  }
+  out.push(String(value));
+  return out;
+}
+
+function getWormholeRequestedText(input = {}) {
+  return [
     input.topic,
     input.userPrompt,
     input.worksheetTitle,
@@ -620,228 +791,355 @@ function resolveWormholeDbFirstScope(input = {}) {
     input.rawBody?.worksheetTitle,
     input.rawBody?.selectedGrade
   ].filter(Boolean).join(" | ");
-
-  const normalized = normalizeWormholeDbFirstText(requested);
-  const selectedGrade = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
-  const inferredGrade = selectedGrade !== "auto"
-    ? selectedGrade
-    : (/\bmiddle\s*2\b/.test(normalized) || /\uC911\s*2/.test(requested) || /중\s*2/.test(requested) || /以?s*2/.test(normalized) || /以묓븰援?s*2/.test(normalized)
-      ? "middle2"
-      : selectedGrade);
-
-  const rawRequested = String(requested || "").toLowerCase();
-  const mentionsAfterBefore =
-    /\bafter\s+before\b/.test(normalized) ||
-    /\bbefore\s+after\b/.test(normalized) ||
-    /\bafter\s*,?\s*before\b/.test(normalized) ||
-    /\bbefore\s*,?\s*after\b/.test(normalized) ||
-    /\bafter\b/.test(normalized) && /\bbefore\b/.test(normalized) ||
-    /after_before/.test(rawRequested);
-
-  const mentionsAlthough =
-    /\balthough\b/.test(normalized) ||
-    /\bthough\b/.test(normalized) ||
-    /\beven\s+though\b/.test(normalized) ||
-    /\bdespite\b/.test(normalized) ||
-    /\bin\s+spite\s+of\b/.test(normalized) ||
-    /although/.test(rawRequested) ||
-    /\uC591\uBCF4\uC758\s*(\uC811\uC18D\uC0AC|\uC804\uCE58\uC0AC)/.test(requested) ||
-    /\uC811\uC18D\uC0AC\s*(although|though|even\s+though)/i.test(requested);
-
-  const mentionsAsAs =
-    /\bas\s+as\b/.test(normalized) ||
-    /\bas_as\b/.test(rawRequested) ||
-    /\bmiddle\s*2\s+as\s+as\b/.test(normalized) ||
-    /\uC911\s*2[^|]*as\s*[~?쒙퐵\-/]?\s*as[^|]*(\uC6D0\uAE09|\uC6D0\uAE09\uBE44\uAD50)?/i.test(requested) ||
-    /\uC911\s*2[^|]*\uC6D0\uAE09\uBE44\uAD50/i.test(requested);
-
-  const mentionsAsConjunction =
-    !mentionsAsAs &&
-    (
-      /\bmiddle\s*2\s+as\s+conjunction\b/.test(normalized) ||
-      /\bas\s+conjunction\b/.test(normalized) ||
-      /\bconjunction\s+as\b/.test(normalized) ||
-      /\b(as\s+meaning\s+when|as\s+meaning\s+because|as\s+simultaneous\s+action)\b/.test(normalized) ||
-      /\uC911\s*2[^|]*(\uC811\uC18D\uC0AC\s*as|as\s*\uC811\uC18D\uC0AC|as\s*\uC2DC\uAC04\s*\uC811\uC18D\uC0AC|as\s*\uC774\uC720\s*\uC811\uC18D\uC0AC)/i.test(requested)
-    );
-
-  const mentionsToInfinitiveNoun =
-    /\bmiddle\s*2\s+to\s+infinitive\s+noun\b/.test(normalized) ||
-    /\bto[-\s]*infinitive\s+noun\b/.test(normalized) ||
-    /\bnoun\s+use\s+of\s+to[-\s]*infinitive\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(to\s*\uBD80\uC815\uC0AC\s*\uBA85\uC0AC\uC801|to\uBD80\uC815\uC0AC\s*\uBA85\uC0AC\uC801|\uBA85\uC0AC\uC801\s*\uC6A9\uBC95|\uC8FC\uC5B4\s*\uBAA9\uC801\uC5B4\s*\uBCF4\uC5B4)/i.test(requested);
-
-  const mentionsToInfinitiveAdjective =
-    /\bmiddle\s*2\s+to\s+infinitive\s+adjective\b/.test(normalized) ||
-    /\bto[-\s]*infinitive\s+adjective\b/.test(normalized) ||
-    /\badjective\s+use\s+of\s+to[-\s]*infinitive\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(to\s*\uBD80\uC815\uC0AC\s*\uD615\uC6A9\uC0AC\uC801|to\uBD80\uC815\uC0AC\s*\uD615\uC6A9\uC0AC\uC801|\uD615\uC6A9\uC0AC\uC801\s*\uC6A9\uBC95|\uBA85\uC0AC\s*to\s*\uBD80\uC815\uC0AC)/i.test(requested);
-
-  const mentionsToInfinitiveAdverbial =
-    /\bmiddle\s*2\s+to\s+infinitive\s+adverbial\b/.test(normalized) ||
-    /\bto[-\s]*infinitive\s+adverbial\b/.test(normalized) ||
-    /\badverbial\s+use\s+of\s+to[-\s]*infinitive\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(to\s*\uBD80\uC815\uC0AC\s*\uBD80\uC0AC\uC801|to\uBD80\uC815\uC0AC\s*\uBD80\uC0AC\uC801|\uBD80\uC0AC\uC801\s*\uC6A9\uBC95|\uBAA9\uC801\uC758\s*to\uBD80\uC815\uC0AC|\uAC10\uC815\uC758\s*\uC6D0\uC778\s*to\uBD80\uC815\uC0AC|\uACB0\uACFC\uC758\s*to\uBD80\uC815\uC0AC)/i.test(requested);
-
-  const mentionsTooToEnoughTo =
-    /\bmiddle\s*2\s+(too\s*to|too\s*~\s*to|enough\s+to|too\s+to\s+enough\s+to|too_to_enough_to)\b/.test(normalized) ||
-    /\b(too\s*~?\s*to|enough\s+to|too_to_enough_to)\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(too\s*[~\-]?\s*to|enough\s+to|too\s*~\s*to|too\s*to\s*enough\s*to|too\s*to\s*\uAD6C\uBB38|enough\s*to\s*\uAD6C\uBB38)/i.test(requested);
-
-  const mentionsItTo =
-    !mentionsTooToEnoughTo &&
-    (
-      /\bmiddle\s*2\s+it\s+to\b/.test(normalized) ||
-      /\bit\s*~?\s*to\s+infinitive\b/.test(normalized) ||
-      /\bit_to\b/.test(rawRequested) ||
-      /\uC911\s*2[^|]*(it\s*[~\-]?\s*to|it\s*to\s*\uAD6C\uBB38|it\s*~\s*to\s*\uBD80\uC815\uC0AC|\uAC00\uC8FC\uC5B4\s*\uC9C4\uC8FC\uC5B4|\uAC00\uC8FC\uC5B4\s*to\uBD80\uC815\uC0AC|to\uBD80\uC815\uC0AC\s*\uAC00\uC8FC\uC5B4)/i.test(requested)
-    );
-
-  const mentionsCausativeVerbs =
-    /\bmiddle\s*2\s+(causative\s+verbs|make\s+have\s+let|make\s+have\s+let\s+help|help\s+causative)\b/.test(normalized) ||
-    /\b(causative\s+verbs|make\s+have\s+let|make\s+have\s+let\s+help|help\s+object\s+(base\s+verb|to\s+infinitive))\b/.test(normalized) ||
-    /중\s*2[^|]*(사역\s*동사|사역동사|make\s*have\s*let|make\s*let\s*have|make\s*have\s*let\s*help|help\s*사역동사|help\s*목적어\s*(동사원형|to부정사))/i.test(requested);
-
-  const mentionsDontHaveTo =
-    /\bmiddle\s*2\s+(?:don['’]?t\s+have\s+to|do\s+not\s+have\s+to|dont\s+have\s+to|dont_have_to|don['’]?t\s+need\s+to)\b/.test(normalized) ||
-    /\b(?:don['’]?t\s+have\s+to|do\s+not\s+have\s+to|dont\s+have\s+to|dont_have_to|don['’]?t\s+need\s+to)\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(?:don['’]?t\s*have\s*to|do\s*not\s*have\s*to|dont\s*have\s*to|don['’]?t\s*need\s*to|\uD560\s*\uD544\uC694\uAC00\s*\uC5C6|\uD558\uC9C0\s*\uC54A\uC544\uB3C4\s*\uB41C|\uC758\uBB34\uAC00\s*\uC5C6)/i.test(requested);
-
-  const mentionsDitransitive =    /\bmiddle\s*2\s+(ditransitive|dative\s+verbs|give\s+send\s+show\s+tell)\b/.test(normalized) ||
-    /\b(ditransitive|dative\s+verbs|give\s+send\s+show\s+tell|give\s+send\s+show\s+tell\s+help)\b/.test(normalized) ||
-    /중\s*2[^|]*(수여동사|ditransitive|dative\s*verbs|4\s*형식|4형식|수여\s*동사)/i.test(requested);
-
-  const mentionsComparativeEmphasis =
-    !/\uC6D0\uAE09\uBE44\uAD50|\uCD5C\uC0C1\uAE09|the\s*\uBE44\uAD50\uAE09\s*the\s*\uBE44\uAD50\uAE09|\bthe\s+comparative\b|\b(as\s+as|as_as)\b/i.test(requested + " " + normalized) &&
-    (
-      /\bmiddle\s*2\s+comparative\s+emphasis\b/.test(normalized) ||
-      /\b(comparative\s+emphasis|much\s+comparative|even\s+comparative|far\s+comparative|a\s+lot\s+comparative|still\s+comparative)\b/.test(normalized) ||
-      /\uC911\s*2[^|]*(\uBE44\uAD50\uAE09\s*\uAC15\uC870|\uBE44\uAD50\uAE09\s*\uAC15\uC870\uC5B4|\uBE44\uAD50\uAE09\s*\uAC15\uC870\s*\uBD80\uC0AC|much\s*\uBE44\uAD50\uAE09|even\s*\uBE44\uAD50\uAE09|far\s*\uBE44\uAD50\uAE09|a\s*lot\s*\uBE44\uAD50\uAE09|still\s*\uBE44\uAD50\uAE09)/i.test(requested)
-    );
-
-  const mentionsBecause =
-    /\bbecause\b/.test(normalized) ||
-    /\bbecause\s+of\b/.test(normalized) ||
-    /\bbecause_of\b/.test(rawRequested) ||
-    /\bmiddle\s*2\s+because\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(because|\uC811\uC18D\uC0AC\s*because|\uC804\uCE58\uC0AC\uAD6C\s*because\s+of|\uC774\uC720|\uC6D0\uC778)/i.test(requested);
-
-  const mentionsWhileWhen =
-    (/\bwhen\b/.test(normalized) && /\bwhile\b/.test(normalized)) ||
-    /\bmiddle\s*2\s+(when\s+while|while\s+when)\b/.test(normalized) ||
-    /\uC911\s*2[^|]*(when\s*,?\s*while|while\s*,?\s*when|\uC811\uC18D\uC0AC\s*(when|while)|\uC2DC\uAC04\s*\uC811\uC18D\uC0AC)/i.test(requested);
-
-  const mentionsTheComparative =
-    /\bthe\s+(more|less|[a-z]+er)\b[^|,.;:!?]*[, ]+\s*the\s+(more|less|[a-z]+er)\b/i.test(normalized) ||
-    /\bthe\s+comparative\s+the\s+comparative\b/i.test(normalized) ||
-    /\bthe\s+more\s+the\s+more\b/i.test(normalized) ||
-    /\uC911\s*2[^|]*(the\s*\uBE44\uAD50\uAE09\s*the\s*\uBE44\uAD50\uAE09|\uBE44\uAD50\uAE09\s*\uBCD1\uB82C\uAD6C\uBB38|the\s+comparative\s+the\s+comparative|the\s+more\s+the\s+more)/i.test(requested);
-
-  const mentionsSuperlative =
-    !/\bthe\s+comparative\b|\uBE44\uB840\s*\uBE44\uAD50|\uC6D0\uAE09\uBE44\uAD50|\b(as\s+as|as_as)\b/i.test(requested + " " + normalized) &&
-    (
-      /\bmiddle\s*2\s+superlative\b/.test(normalized) ||
-      /\b(the\s+most|the\s+least)\b/.test(normalized) ||
-      /\uC911\s*2[^|]*(\uCD5C\uC0C1\uAE09|superlative|the\s+most|the\s+least)/i.test(requested)
-    );
-
-  const mentionsComparative =
-    !/\uC6D0\uAE09\uBE44\uAD50|\uCD5C\uC0C1\uAE09|\b(as\s+as|as_as)\b|\bthe\s+comparative\b/i.test(requested + " " + normalized) &&
-    (
-      /\bmiddle\s*2\s+comparative\b/.test(normalized) ||
-      /\bcomparative\s+than\b/.test(normalized) ||
-      /\bmore\s+than\s+comparative\b/.test(normalized) ||
-      /\uC911\s*2[^|]*(\uBE44\uAD50\uAE09|comparative|than\s*\uBE44\uAD50\uAE09|more\s+than\s*\uBE44\uAD50\uAE09)/i.test(requested)
-    );
-
-  let canonical = null;
-  if (mentionsAfterBefore) canonical = "after_before";
-  else if (mentionsWhileWhen) canonical = "while_when";
-  else if (mentionsAlthough) canonical = "although";
-  else if (mentionsAsAs) canonical = "as_as";
-  else if (mentionsAsConjunction) canonical = "as_conjunction";
-  else if (mentionsTooToEnoughTo) canonical = "too_to_enough_to";
-  else if (mentionsItTo) canonical = "it_to";
-  else if (mentionsDontHaveTo) canonical = "dont_have_to";
-  else if (mentionsToInfinitiveNoun) canonical = "to_infinitive_noun";
-  else if (mentionsToInfinitiveAdjective) canonical = "to_infinitive_adjective";
-  else if (mentionsToInfinitiveAdverbial) canonical = "to_infinitive_adverbial";
-  else if (mentionsCausativeVerbs) canonical = "causative_verbs";
-  else if (mentionsDitransitive) canonical = "ditransitive";
-  else if (mentionsTheComparative) canonical = "the_comparative";
-  else if (mentionsSuperlative) canonical = "superlative";
-  else if (mentionsComparativeEmphasis) canonical = "comparative_emphasis";
-  else if (mentionsComparative) canonical = "comparative";
-  else if (mentionsBecause) canonical = "because";
-  return { requested, normalized, canonical, selectedGrade: inferredGrade };
 }
 
-async function resolveWormholeDbFile(input = {}) {
-  const scope = resolveWormholeDbFirstScope(input);
+function inferWormholeRegistryGrade(input = {}, requested = "") {
+  const selected = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
+  if (WORMHOLE_GRADE_BUCKETS.includes(selected)) return selected;
+  const source = String(requested || "").normalize("NFKC").toLowerCase();
+  if (/\bmiddle\s*1\b|\bmiddle1\b|중\s*1|중1|중학교\s*1/.test(source)) return "middle1";
+  if (/\bmiddle\s*2\b|\bmiddle2\b|중\s*2|중2|중학교\s*2/.test(source)) return "middle2";
+  if (/\bmiddle\s*3\b|\bmiddle3\b|중\s*3|중3|중학교\s*3/.test(source)) return "middle3";
+  return "auto";
+}
+
+function getWormholeSlugParts(fileName = "", grade = "") {
+  const stem = String(fileName || "").replace(/\.json$/i, "");
+  const noGrade = stem.replace(new RegExp("^" + grade + "[_\\s-]*", "i"), "");
+  const phrase = noGrade.replace(/[_-]+/g, " ");
+  return { stem, noGrade, phrase };
+}
+
+function buildWormholeFileAliases(fileName = "", grade = "", meta = {}) {
+  const aliases = new Set();
+  const { stem, noGrade, phrase } = getWormholeSlugParts(fileName, grade);
+  [
+    stem,
+    noGrade,
+    phrase,
+    grade + " " + phrase,
+    meta.canonical,
+    meta.chapterKey,
+    meta.grammar,
+    meta.chapterLabelKo
+  ].filter(Boolean).forEach((value) => addWormholeAliasKey(aliases, value));
+
+  flattenWormholeAliases(meta.aliases).forEach((value) => addWormholeAliasKey(aliases, value));
+  (WORMHOLE_KO_ALIAS_BY_SLUG[noGrade] || []).forEach((value) => {
+    addWormholeAliasKey(aliases, value);
+    addWormholeAliasKey(aliases, grade + " " + value);
+    const gradeKo = grade === "middle1" ? "중1" : grade === "middle2" ? "중2" : grade === "middle3" ? "중3" : "";
+    if (gradeKo) addWormholeAliasKey(aliases, gradeKo + " " + value);
+  });
+
+  return [...aliases].filter((alias) => alias.length >= 2);
+}
+
+function getRawWormholeWrongCandidates(item = {}) {
+  const correct = String(item.english || "").replace(/\s+/g, " ").trim();
+  const seeds = item.distractorSeeds || {};
+  const out = [];
+  function add(value) {
+    if (Array.isArray(value)) {
+      value.forEach(add);
+      return;
+    }
+    const text = String(value || "").replace(/\s+/g, " ").trim();
+    if (!text) return;
+    const normalized = text.replace(/[.?!]$/g, "").toLowerCase();
+    const correctNormalized = correct.replace(/[.?!]$/g, "").toLowerCase();
+    if (normalized !== correctNormalized && !out.some((item) => item.replace(/[.?!]$/g, "").toLowerCase() === normalized)) {
+      out.push(text);
+    }
+  }
+
+  add(seeds.wormholeVariants);
+  add(seeds.auxError);
+  add(seeds.statementForm);
+  add(seeds.fragmentForm);
+
+  if (correct) {
+    add(correct.replace(/\b(have|has|had)\s+/i, ""));
+    add(correct.replace(/\bhave\b/i, "has"));
+    add(correct.replace(/\bhas\b/i, "have"));
+    add(correct.replace(/\bhad\b/i, "have"));
+    add(correct.replace(/\b(before|already|ever|never|just|yet)\b/i, "yesterday"));
+    add(correct.replace(/\bam\b/i, "is"));
+    add(correct.replace(/\bis\b/i, "are"));
+    add(correct.replace(/\bare\b/i, "is"));
+    add(correct.replace(/\bwill\b/i, "would"));
+    add(correct.replace(/\bcan\b/i, "could"));
+    add(correct.replace(/\bshould\b/i, "must"));
+  }
+
+  return out;
+}
+
+function getWormholeDbUsability(items = []) {
+  if (!Array.isArray(items)) return { usable: false, reason: "db_not_array", usableCount: 0 };
+  const counters = { chapterMeta: 0, english: 0, wormholeVariants: 0 };
+  const usableItems = [];
+  for (const item of items) {
+    if (!item?.chapterMeta) counters.chapterMeta += 1;
+    if (typeof item?.english !== "string" || !item.english.trim()) counters.english += 1;
+    if (!item?.distractorSeeds || getRawWormholeWrongCandidates(item).length < 4) {
+      counters.wormholeVariants += 1;
+    }
+    if (
+      item &&
+      item.id &&
+      typeof item.english === "string" &&
+      item.english.trim() &&
+      item.distractorSeeds &&
+      getRawWormholeWrongCandidates(item).length >= 4
+    ) {
+      usableItems.push(item);
+    }
+  }
+  if (!usableItems.length) {
+    const reason = counters.wormholeVariants >= counters.english && counters.wormholeVariants >= counters.chapterMeta
+      ? "wormholeVariants 부족"
+      : counters.english >= counters.chapterMeta
+        ? "english 없음"
+        : "chapterMeta 없음";
+    return { usable: false, reason, usableCount: 0, counters };
+  }
+  return { usable: true, reason: "ok", usableCount: usableItems.length, items: usableItems, counters };
+}
+
+function detectWormholeDbTier(items = [], meta = {}) {
+  const haystack = JSON.stringify({
+    version: meta.version,
+    tier: meta.tier,
+    sourceType: meta.sourceType,
+    tags: meta.tags
+  }).toLowerCase();
+  const maxVariants = Array.isArray(items)
+    ? items.reduce((max, item) => Math.max(max, Array.isArray(item?.distractorSeeds?.wormholeVariants) ? item.distractorSeeds.wormholeVariants.length : 0), 0)
+    : 0;
+  if (/\bv[34]\b|v3|v4|premium|upgraded|tier_a/.test(haystack) || maxVariants >= 5) return "A";
+  return "B";
+}
+
+function findWormholeDataDirs() {
   const path = require("path");
   const fs = require("fs");
   const currentDir = typeof __dirname !== "undefined" ? __dirname : process.cwd();
-  const dbFileByCanonical = {
-    after_before: "middle2_after_before.json",
-    although: "middle2_although.json",
-    as_as: "middle2_as_as.json",
-    as_conjunction: "middle2_as_conjunction.json",
-    because: "middle2_because.json",
-    causative_verbs: "middle2_causative_verbs.json",
-    ditransitive: "middle2_ditransitive.json",
-    dont_have_to: "middle2_dont_have_to.json",
-    comparative_emphasis: "middle2_comparative_emphasis.json",
-    while_when: "middle2_while_when.json",
-    comparative: "middle2_comparative.json",
-    superlative: "middle2_superlative.json",
-    the_comparative: "middle2_the_comparative_the_comparative.json",
-    to_infinitive_noun: "middle2_to_infinitive_noun.json",
-    to_infinitive_adjective: "middle2_to_infinitive_adjective.json",
-    to_infinitive_adverbial: "middle2_to_infinitive_adverbial.json",
-    too_to_enough_to: "middle2_too_to_enough_to.json",
-    it_to: "middle2_it_to.json"
+  const roots = [
+    path.join(process.cwd(), "data"),
+    path.join(currentDir, "..", "data"),
+    path.join(process.cwd(), "data", "sentence_bank"),
+    path.join(currentDir, "..", "data", "sentence_bank")
+  ];
+  const found = {};
+  for (const grade of WORMHOLE_GRADE_BUCKETS) {
+    found[grade] = [];
+    const seen = new Set();
+    for (const root of roots) {
+      const dir = path.join(root, grade);
+      const resolved = path.resolve(dir);
+      if (!seen.has(resolved) && fs.existsSync(resolved)) {
+        seen.add(resolved);
+        found[grade].push(resolved);
+      }
+    }
+  }
+  return found;
+}
+
+function buildWormholeDbRegistry() {
+  if (WORMHOLE_DB_REGISTRY_CACHE) return WORMHOLE_DB_REGISTRY_CACHE;
+  const fs = require("fs");
+  const path = require("path");
+  const dataDirs = findWormholeDataDirs();
+  const registry = {
+    entries: [],
+    aliasMap: new Map(),
+    counts: { middle1: 0, middle2: 0, middle3: 0 },
+    tierCounts: { A: 0, B: 0 },
+    aliasCount: 0
   };
-  const fileName = dbFileByCanonical[scope.canonical] || null;
-  const candidatePaths = fileName && scope.selectedGrade === "middle2"
-    ? [
-        path.join(process.cwd(), "data", "middle2", fileName),
-        path.join(currentDir, "..", "data", "middle2", fileName),
-        path.join(process.cwd(), "data", "sentence_bank", "middle2", fileName),
-        path.join(currentDir, "..", "data", "sentence_bank", "middle2", fileName)
-      ]
-    : [];
 
-  const testedPaths = candidatePaths.map((candidate) => ({
-    path: candidate,
-    exists: fs.existsSync(candidate)
-  }));
-  const found = testedPaths.find((entry) => entry.exists);
-  const resolvedPath = found ? found.path : null;
-  const selectedDbFile = resolvedPath || candidatePaths[0] || null;
+  for (const grade of WORMHOLE_GRADE_BUCKETS) {
+    const seenFiles = new Set();
+    for (const dir of dataDirs[grade]) {
+      const files = fs.readdirSync(dir).filter((file) => /\.json$/i.test(file)).sort();
+      for (const file of files) {
+        const filePath = path.join(dir, file);
+        const resolvedFile = path.resolve(filePath);
+        if (seenFiles.has(resolvedFile)) continue;
+        seenFiles.add(resolvedFile);
+        try {
+          const raw = fs.readFileSync(resolvedFile, "utf8");
+          const items = JSON.parse(raw);
+          const first = Array.isArray(items) ? items[0] || {} : {};
+          const meta = first.chapterMeta || {};
+          const aliases = buildWormholeFileAliases(file, grade, {
+            ...meta,
+            chapterKey: first.chapterKey,
+            grammar: first.grammar,
+            chapterLabelKo: first.chapterLabelKo,
+            sourceType: first.sourceType,
+            tags: first.tags
+          });
+          const usability = getWormholeDbUsability(items);
+          const tier = detectWormholeDbTier(items, {
+            ...meta,
+            sourceType: first.sourceType,
+            tags: first.tags,
+            tier: meta.tier,
+            version: meta.version
+          });
+          const { stem, noGrade } = getWormholeSlugParts(file, grade);
+          const entry = {
+            grade,
+            file,
+            filePath: resolvedFile,
+            canonical: meta.canonical || stem,
+            slug: noGrade,
+            aliases,
+            tier,
+            usable: usability.usable,
+            usableCount: usability.usableCount,
+            unusableReason: usability.reason
+          };
+          registry.entries.push(entry);
+          registry.counts[grade] += 1;
+          registry.tierCounts[tier] += 1;
+          console.info("[WORMHOLE_ALIAS_REGISTER]", { file, aliasCount: aliases.length });
+          console.info("[WORMHOLE_DB_TIER]", { file, tier });
+          for (const alias of aliases) {
+            const keys = new Set([alias, normalizeWormholeDbFirstText(alias), compactWormholeAliasKey(alias)]);
+            for (const key of keys) {
+              if (!key) continue;
+              if (!registry.aliasMap.has(key)) registry.aliasMap.set(key, []);
+              registry.aliasMap.get(key).push(entry);
+            }
+          }
+        } catch (error) {
+          console.warn("[WORMHOLE_DB_UNUSABLE]", { file, reason: error?.message || "parse_failed" });
+        }
+      }
+    }
+  }
 
-  console.info("[WORMHOLE_DB_FIRST_MATCH]", {
-    requested: scope.requested,
-    normalized: scope.normalized,
-    canonical: scope.canonical,
-    selectedGrade: scope.selectedGrade,
-    selectedDbFile
+  registry.aliasCount = registry.aliasMap.size;
+  const totalFiles = registry.entries.length;
+  console.info("[WORMHOLE_REGISTRY_BUILD]", {
+    totalFiles,
+    middle1: registry.counts.middle1,
+    middle2: registry.counts.middle2,
+    middle3: registry.counts.middle3
   });
-  console.info("[DB_PATH_DEBUG]", {
-    cwd: process.cwd(),
-    __dirname: currentDir,
-    testedPaths
-  });
-  console.info("[WORMHOLE_DB_FILE]", {
-    canonical: scope.canonical,
-    selectedGrade: scope.selectedGrade,
-    selectedDbFile,
-    resolvedPath,
-    candidatePaths,
-    cwd: process.cwd(),
-    __dirname: currentDir
+  console.info("[WORMHOLE_REGISTRY_SUMMARY]", {
+    middle1: registry.counts.middle1,
+    middle2: registry.counts.middle2,
+    middle3: registry.counts.middle3,
+    total: totalFiles
   });
 
-  return resolvedPath;
+  WORMHOLE_DB_REGISTRY_CACHE = registry;
+  return registry;
+}
+
+function sortWormholeRegistryCandidates(candidates = [], selectedGrade = "auto") {
+  const unique = [];
+  const seen = new Set();
+  for (const item of candidates) {
+    const entry = item.entry || item;
+    if (!entry || seen.has(entry.filePath)) continue;
+    seen.add(entry.filePath);
+    unique.push({
+      entry,
+      alias: item.alias || "",
+      score: Number(item.score || 0)
+    });
+  }
+  return unique.sort((a, b) => {
+    const gradeScoreB = selectedGrade !== "auto" && b.entry.grade === selectedGrade ? 10000 : 0;
+    const gradeScoreA = selectedGrade !== "auto" && a.entry.grade === selectedGrade ? 10000 : 0;
+    const tierScoreB = b.entry.tier === "A" ? 1000 : 0;
+    const tierScoreA = a.entry.tier === "A" ? 1000 : 0;
+    const usableScoreB = b.entry.usable ? 100 : 0;
+    const usableScoreA = a.entry.usable ? 100 : 0;
+    return (gradeScoreB + tierScoreB + usableScoreB + b.score) - (gradeScoreA + tierScoreA + usableScoreA + a.score);
+  }).map((item) => item.entry);
+}
+
+function resolveWormholeDbFirstScope(input = {}) {
+  const requested = getWormholeRequestedText(input);
+  const normalized = normalizeWormholeDbFirstText(requested);
+  const selectedGrade = inferWormholeRegistryGrade(input, requested);
+  return { requested, normalized, canonical: null, selectedGrade };
+}
+
+async function resolveWormholeDbFile(input = {}) {
+  const registry = buildWormholeDbRegistry();
+  const scope = resolveWormholeDbFirstScope(input);
+  const query = scope.normalized;
+  const queryCompact = compactWormholeAliasKey(scope.requested);
+  const candidateHits = [];
+
+  const queryKeys = new Set([query, queryCompact]);
+  String(scope.requested || "").split(/[|,]/).forEach((part) => {
+    addWormholeAliasKey(queryKeys, part);
+  });
+
+  for (const key of queryKeys) {
+    const entries = registry.aliasMap.get(key);
+    if (!entries) continue;
+    entries.forEach((entry) => candidateHits.push({ entry, alias: key, score: 5000 + key.length }));
+  }
+
+  for (const [alias, entries] of registry.aliasMap.entries()) {
+    if (!alias || alias.length < 3) continue;
+    const aliasCompact = alias.replace(/\s+/g, "");
+    const spacedHit = query.includes(alias) && alias.length >= 4;
+    const compactHit = aliasCompact.length >= 4 && queryCompact.includes(aliasCompact);
+    if (!spacedHit && !compactHit) continue;
+    entries.forEach((entry) => candidateHits.push({
+      entry,
+      alias,
+      score: (spacedHit ? 2500 : 1500) + alias.length
+    }));
+  }
+
+  let candidates = sortWormholeRegistryCandidates(candidateHits, scope.selectedGrade);
+  if (scope.selectedGrade !== "auto") {
+    candidates = candidates.filter((entry) => entry.grade === scope.selectedGrade);
+  }
+
+  const match = candidates[0] || null;
+  if (match) {
+    const matchedAlias = [...registry.aliasMap.entries()].find(([, entries]) => entries.some((entry) => entry.filePath === match.filePath))?.[0] || "";
+    console.info("[WORMHOLE_DB_MATCH]", {
+      query: scope.requested,
+      alias: matchedAlias,
+      file: match.file
+    });
+    console.info("[WORMHOLE_DB_FILE]", {
+      canonical: match.canonical,
+      selectedGrade: scope.selectedGrade,
+      selectedDbFile: match.filePath,
+      resolvedPath: match.filePath,
+      tier: match.tier,
+      usable: match.usable
+    });
+  } else {
+    console.info("[WORMHOLE_FALLBACK]", {
+      query: scope.requested,
+      reason: "db_alias_not_found"
+    });
+  }
+
+  return {
+    ...scope,
+    registry,
+    candidates,
+    matched: Boolean(match),
+    entry: match,
+    filePath: match?.filePath || null
+  };
 }
 
 async function loadGrammarDb(filePath) {
@@ -852,20 +1150,14 @@ async function loadGrammarDb(filePath) {
   const raw = fs.readFileSync(filePath, "utf8");
   const items = JSON.parse(raw);
   console.info("[DB_LOAD_TIME]", { ms: Date.now() - loadStart, filePath, rawBytes: raw.length, itemCount: Array.isArray(items) ? items.length : 0 });
-  if (!Array.isArray(items)) throw new Error("Wormhole DB is not an array.");
-
-  const validItems = items.filter((item) =>
-    item &&
-    item.id &&
-    typeof item.english === "string" &&
-    item.english.trim() &&
-    item.distractorSeeds &&
-    Array.isArray(item.distractorSeeds.wormholeVariants) &&
-    item.distractorSeeds.wormholeVariants.length >= 4
-  );
-
-  if (!validItems.length) throw new Error("Wormhole DB has no usable items.");
-  return validItems;
+  const usability = getWormholeDbUsability(items);
+  if (!usability.usable) {
+    const error = new Error(usability.reason || "Wormhole DB has no usable items.");
+    error.code = "WORMHOLE_DB_UNUSABLE";
+    error.usability = usability;
+    throw error;
+  }
+  return usability.items;
 }
 
 function dbPilotHash(text = "") {
@@ -1003,11 +1295,12 @@ function selectDbItems(items = [], input = {}) {
     input.worksheetTitle,
     input.requestedChapter,
     input.problemType,
+    input.__wormholeDbFile,
     count
   ].filter(Boolean).join("|");
 
-  const scope = resolveWormholeDbFirstScope(input);
-  if (scope.canonical === "although") {
+  const canonical = String(input.__wormholeDbCanonical || "");
+  if (canonical.includes("although")) {
     return selectAlthoughDbItems(items, input, seedText);
   }
 
@@ -1059,10 +1352,7 @@ function isLowQualityDbDistractor(text = "") {
 
 function buildQuestionFromDbItem(item, index, input = {}) {
   const correct = cleanDbOption(item.english);
-  const rawDistractors = [
-    ...(item.distractorSeeds?.wormholeVariants || []),
-    item.distractorSeeds?.auxError
-  ].map(cleanDbOption).filter(Boolean);
+  const rawDistractors = getRawWormholeWrongCandidates(item).map(cleanDbOption).filter(Boolean);
 
   const unique = [];
   for (const value of rawDistractors) {
@@ -1084,7 +1374,15 @@ function buildQuestionFromDbItem(item, index, input = {}) {
     { text: correct, correct: true },
     ...wrong.map((text) => ({ text, correct: false }))
   ];
-  const shuffled = stableShuffle(optionObjects, `${item.id}|${input.topic || ""}|${input.userPrompt || ""}|${input.worksheetTitle || ""}|${input.requestedChapter || ""}|${input.count || ""}|${index}`);
+  const shuffled = stableShuffle(optionObjects, [
+    item.id,
+    input.topic || "",
+    input.userPrompt || "",
+    input.worksheetTitle || "",
+    input.requestedChapter || "",
+    input.count || "",
+    index
+  ].join("|"));
   const labels = ["①", "②", "③", "④", "⑤"];
   const answerIndex = shuffled.findIndex((option) => option.correct);
   const answerLabel = labels[answerIndex] || "①";
@@ -1095,10 +1393,10 @@ function buildQuestionFromDbItem(item, index, input = {}) {
   return {
     id: item.id,
     questionText: [
-      `${index + 1}. ${questionStem}`,
-      ...shuffled.map((option, optionIndex) => `${labels[optionIndex]} ${option.text}`)
+      String(index + 1) + ". " + questionStem,
+      ...shuffled.map((option, optionIndex) => labels[optionIndex] + " " + option.text)
     ].join("\n"),
-    answerText: `${index + 1}) ${answerLabel} - ${correct}`
+    answerText: String(index + 1) + ") " + answerLabel + " - " + correct
   };
 }
 
@@ -1123,35 +1421,57 @@ function formatDbWormholeResponse(questions = [], input = {}) {
 
 async function tryBuildWormholeFromDb(input = {}) {
   const totalStart = Date.now();
-  try {
-    const filePath = await resolveWormholeDbFile(input);
-    if (!filePath) return { success: false, reason: "db_file_not_found_or_unsupported_scope" };
+  const match = await resolveWormholeDbFile(input);
+  if (!match?.matched) return { success: false, dbMatched: false, reason: "db_alias_not_found" };
 
-    const items = await loadGrammarDb(filePath);
-    const selected = selectDbItems(items, input);
-    if (selected.length < input.count) {
-      return { success: false, reason: "not_enough_db_items" };
+  const unusable = [];
+  for (const entry of match.candidates) {
+    if (match.selectedGrade !== "auto" && entry.grade !== match.selectedGrade) continue;
+    input.__wormholeDbCanonical = entry.canonical;
+    input.__wormholeDbFile = entry.file;
+    try {
+      const items = await loadGrammarDb(entry.filePath);
+      const selected = selectDbItems(items, input);
+      if (selected.length < input.count) {
+        unusable.push({ file: entry.file, reason: "not_enough_db_items" });
+        console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_items" });
+        continue;
+      }
+
+      const assemblyStart = Date.now();
+      const questions = selected
+        .map((item, index) => buildQuestionFromDbItem(item, index, input))
+        .filter(Boolean);
+      console.info("[ASSEMBLY_TIME]", { ms: Date.now() - assemblyStart, selected: selected.length, questions: questions.length });
+
+      if (questions.length < input.count) {
+        unusable.push({ file: entry.file, reason: "not_enough_db_questions" });
+        console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_questions" });
+        continue;
+      }
+
+      console.info("[TOTAL_EXECUTION_TIME]", { phase: "db_first_success", ms: Date.now() - totalStart });
+      return {
+        success: true,
+        dbMatched: true,
+        file: entry.file,
+        tier: entry.tier,
+        formatted: formatDbWormholeResponse(questions.slice(0, input.count), input)
+      };
+    } catch (error) {
+      const reason = error?.usability?.reason || error?.message || "db_first_failed";
+      unusable.push({ file: entry.file, reason });
+      console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason });
     }
-
-    const assemblyStart = Date.now();
-    const questions = selected
-      .map((item, index) => buildQuestionFromDbItem(item, index, input))
-      .filter(Boolean);
-    console.info("[ASSEMBLY_TIME]", { ms: Date.now() - assemblyStart, selected: selected.length, questions: questions.length });
-
-    if (questions.length < input.count) {
-      return { success: false, reason: "not_enough_db_questions" };
-    }
-
-    console.info("[TOTAL_EXECUTION_TIME]", { phase: "db_first_success", ms: Date.now() - totalStart });
-    return {
-      success: true,
-      formatted: formatDbWormholeResponse(questions.slice(0, input.count), input)
-    };
-  } catch (error) {
-    console.warn("[WORMHOLE_DB_FIRST_PILOT_FALLBACK]", error?.message || error);
-    return { success: false, reason: error?.message || "db_first_failed" };
   }
+
+  return {
+    success: false,
+    dbMatched: true,
+    blockGptFallback: true,
+    reason: "matched_db_unusable",
+    unusable
+  };
 }
 
 
@@ -1358,8 +1678,20 @@ async function handler(req, res) {
           trialGranted: Boolean(mpState.trialGranted),
         }
       });
+    } else if (dbResult?.blockGptFallback) {
+      console.warn("[WORMHOLE_DB_UNUSABLE]", {
+        reason: dbResult.reason || "matched_db_unusable",
+        unusable: dbResult.unusable || []
+      });
+      return json(res, 422, {
+        success: false,
+        error: "WORMHOLE_DB_UNUSABLE",
+        message: "Matching Wormhole DB exists but is not usable for DB-first assembly.",
+        detail: dbResult.reason || "matched_db_unusable",
+        unusable: dbResult.unusable || []
+      });
     } else {
-      console.info("[WORMHOLE_DB_FIRST_PILOT_FALLBACK]", dbResult?.reason || "no_db_result");
+      console.info("[WORMHOLE_FALLBACK]", dbResult?.reason || "no_db_result");
       const systemPrompt = buildGrammarSystemPrompt(input);
       const userPrompt = buildGrammarUserPrompt(input);
       const raw = await callOpenAI(systemPrompt, userPrompt);
