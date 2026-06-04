@@ -193,12 +193,25 @@ function normalizeInput(body = {}) {
     ? body.level
     : (textbookResolved?.level || inferLevel(mergedText));
 
-  const mode = ["grammar", "transform", "school-exam", "advanced", "textbook-chapter"].includes(body.mode)
+  let mode = ["grammar", "transform", "school-exam", "advanced", "textbook-chapter"].includes(body.mode)
     ? body.mode
     : (textbookResolved ? "textbook-chapter" : inferMode(mergedText));
-  const difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
+  let difficulty = ["basic", "standard", "high", "extreme"].includes(body.difficulty)
     ? body.difficulty
     : inferDifficulty(mergedText);
+  const grammarIntensiveRequested = /실전\s*모의고사|고난도|grammar\s*intensive/i.test(mergedText);
+  if (grammarIntensiveRequested) {
+    mode = "advanced";
+    if (difficulty !== "extreme") difficulty = "high";
+  }
+  console.info("[WORMHOLE_MODE_RESOLUTION]", {
+    requestedMode: body.mode || "",
+    requestedDifficulty: body.difficulty || "",
+    grammarIntensiveRequested,
+    resolvedMode: mode,
+    resolvedDifficulty: difficulty,
+    planner: grammarIntensiveRequested ? "family-or-high-difficulty" : "standard"
+  });
   const language = ["ko", "en"].includes(body.language)
     ? body.language
     : inferLanguage(mergedText);
@@ -1419,8 +1432,7 @@ const WORMHOLE_TYPE_KEYS = [
   "incorrect",
   "counting",
   "structure_match",
-  "multi_select",
-  "sentence_equivalence"
+  "multi_select"
 ];
 
 const WORMHOLE_TYPE_LABELS = {
@@ -1428,26 +1440,23 @@ const WORMHOLE_TYPE_LABELS = {
   incorrect: "incorrect",
   counting: "counting",
   structure_match: "structure",
-  multi_select: "multi",
-  sentence_equivalence: "equivalence"
+  multi_select: "multi"
 };
 
 const WORMHOLE_BASE_TYPE_WEIGHTS = {
-  correct: 6,
-  incorrect: 5,
+  correct: 7,
+  incorrect: 6,
   counting: 5,
   structure_match: 4,
-  multi_select: 3,
-  sentence_equivalence: 2
+  multi_select: 3
 };
 
 const WORMHOLE_HIGH_DIFFICULTY_TYPE_WEIGHTS = {
-  correct: 7,
+  correct: 8,
   incorrect: 7,
   counting: 5,
   structure_match: 1,
-  multi_select: 4,
-  sentence_equivalence: 1
+  multi_select: 4
 };
 
 const WORMHOLE_CHAPTER_TYPE_BONUS = {
@@ -1554,16 +1563,18 @@ const PRESENT_PERFECT_ADVANCED_TYPES = [
   "been_gone_confusion",
   "result_usage",
   "continuation_usage",
-  "experience_usage"
+  "experience_usage",
+  "semantic_paraphrase"
 ];
 
 const PRESENT_PERFECT_ADVANCED_WEIGHTS = {
-  present_perfect_vs_past: 25,
-  for_since_confusion: 15,
-  been_gone_confusion: 15,
-  result_usage: 15,
-  continuation_usage: 15,
-  experience_usage: 15
+  present_perfect_vs_past: 20,
+  for_since_confusion: 16,
+  been_gone_confusion: 12,
+  result_usage: 12,
+  continuation_usage: 12,
+  experience_usage: 16,
+  semantic_paraphrase: 12
 };
 
 function isPresentPerfectAdvancedRequest(input = {}) {
@@ -1619,6 +1630,88 @@ function normalizeSentenceIdentity(text = "") {
   return String(text || "").replace(/\s+/g, " ").replace(/[.?!]$/g, "").trim().toLowerCase();
 }
 
+function lowerInitialArticle(text = "") {
+  return String(text || "").replace(/^(The|A|An)\b/, (value) => value.toLowerCase());
+}
+
+function presentAgreement(subject = "", singular, plural, firstPerson = plural) {
+  const normalized = String(subject || "").trim().toLowerCase();
+  if (normalized === "i") return firstPerson;
+  if (normalized === "you" || normalized === "we" || normalized === "they" || /\band\b/.test(normalized)) return plural;
+  return singular;
+}
+
+function buildPresentPerfectParaphrase(item = {}) {
+  const source = cleanDbOption(item.english);
+  let match = source.match(/^(.+?)\s+(has|have)\s+gone to\s+(.+?)(?:,\s*.+)?[.?!]$/i);
+  if (match) {
+    const subject = match[1];
+    const be = presentAgreement(subject, "is", "are", "am");
+    return {
+      text: `${subject} ${be} away now.`,
+      relation: "gone_current_absence",
+      distractors: [
+        `${subject} ${be} back here now.`,
+        `${subject} ${be} always here.`,
+        `${subject} ${be} planning to leave now.`,
+        `${subject} ${be} no longer away.`
+      ]
+    };
+  }
+  match = source.match(/^(.+?)\s+(has|have)\s+been to\s+(.+?)(?:\s+before|\s+many times)?[.?!]$/i);
+  if (match) {
+    const subject = match[1];
+    const place = match[3];
+    return {
+      text: `${subject} visited ${place} at least once before now.`,
+      relation: "experience_before_now",
+      distractors: [
+        `${subject} has never visited ${place}.`,
+        `${subject} is visiting ${place} for the first time now.`,
+        `${subject} will visit ${place} for the first time.`,
+        `${subject} did not visit ${place} before now.`
+      ]
+    };
+  }
+  match = source.match(/^(.+?)\s+(has|have)\s+lost\s+(.+?)(?:,\s*.+)?[.?!]$/i);
+  if (match) {
+    const subject = match[1];
+    const object = match[3];
+    const negative = presentAgreement(subject, "does not have", "do not have", "do not have");
+    const positive = presentAgreement(subject, "still has", "still have", "still have");
+    return {
+      text: `${subject} ${negative} ${object} now.`,
+      relation: "present_result",
+      distractors: [
+        `${subject} ${positive} ${object} now.`,
+        `${subject} found ${object} again.`,
+        `${subject} plans to replace ${object} later.`,
+        `${subject} never owned ${object}.`
+      ]
+    };
+  }
+  match = source.match(/^(.+?)\s+(has|have)\s+lived\s+(.+?)\s+for\s+(.+?)[.?!]$/i);
+  if (match) {
+    const subject = match[1];
+    const place = match[3];
+    const duration = match[4];
+    const stillLives = presentAgreement(subject, "still lives", "still live", "still live");
+    const noLongerLives = presentAgreement(subject, "no longer lives", "no longer live", "no longer live");
+    const plansToLive = presentAgreement(subject, "plans to live", "plan to live", "plan to live");
+    return {
+      text: `${subject} started living ${place} ${duration} ago and ${stillLives} ${place}.`,
+      relation: "continuation_started_and_still",
+      distractors: [
+        `${subject} ${noLongerLives} ${place}.`,
+        `${subject} began living ${place} only yesterday.`,
+        `${subject} ${plansToLive} ${place} for ${duration}.`,
+        `${subject} lived ${place} for ${duration} but moved away.`
+      ]
+    };
+  }
+  return null;
+}
+
 function presentPerfectItemMatchesType(item = {}, type = "") {
   const bucket = String(item.chapterMeta?.semanticBucket || "").toLowerCase();
   const chronology = String(item.chapterMeta?.chronologyType || "").toLowerCase();
@@ -1632,6 +1725,7 @@ function presentPerfectItemMatchesType(item = {}, type = "") {
   if (type === "result_usage") return /result_state|digital_result|result|so (he|she|it|they|we|i)|cannot|can't/.test(all);
   if (type === "continuation_usage") return /continuing_state|continuation|\bfor\b|\bsince\b/.test(all);
   if (type === "experience_usage") return /experience|ever|never|before|twice|times/.test(all);
+  if (type === "semantic_paraphrase") return Boolean(buildPresentPerfectParaphrase(item));
   return false;
 }
 
@@ -1651,6 +1745,7 @@ function scoreWormholeDifficulty(item = {}, type = "", candidate = "") {
   if (type === "been_gone_confusion" && presentPerfectItemMatchesType(item, type)) score = Math.max(score, 5);
   if (type === "result_usage" && presentPerfectItemMatchesType(item, type)) score = Math.max(score, 6);
   if ((type === "continuation_usage" || type === "experience_usage") && presentPerfectItemMatchesType(item, type)) score = Math.max(score, 4);
+  if (type === "semantic_paraphrase" && buildPresentPerfectParaphrase(item)) score = Math.max(score, 6);
   return score;
 }
 
@@ -1683,7 +1778,7 @@ function selectPresentPerfectAdvancedItems(items = [], input = {}, typePlan = []
       scoreWormholeDifficulty(candidate, type) >= 4 &&
       buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
     );
-    if (!item) {
+    if (!item && type !== "semantic_paraphrase") {
       item = pool
         .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)))
         .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type))
@@ -1777,6 +1872,9 @@ function getPresentPerfectAdvancedStem(type = "", language = "ko") {
 }
 
 function buildPresentPerfectAdvancedQuestion(item, index, input = {}, context = {}, type = "") {
+  if (type === "semantic_paraphrase") {
+    return buildSemanticParaphraseQuestion(item, index, input, context, "present_perfect");
+  }
   const correct = cleanDbOption(item.english);
   const wrong = buildPresentPerfectSemanticCandidates(item, type);
   if (!correct || wrong.length < 4) return null;
@@ -1803,6 +1901,295 @@ function validatePresentPerfectAdvancedDistribution(questions = [], requestedCou
   const uniqueIds = new Set(questions.map((question) => String(question.id || "").split(":")[0]));
   const valid = total === requestedCount && uniqueIds.size === total && zeroTypes.length === 0;
   return { valid, total, requestedCount, counts, zeroTypes, uniqueSentenceIds: uniqueIds.size };
+}
+
+function baseFromRegularPast(word = "") {
+  const value = String(word || "").toLowerCase();
+  if (/ied$/.test(value)) return value.replace(/ied$/, "y");
+  if (/(ved|ded)$/.test(value)) return value.slice(0, -1);
+  if (/ed$/.test(value)) {
+    const stem = value.replace(/ed$/, "");
+    return stem.endsWith("e") ? stem : (/([bcdfghjklmnpqrstvwxyz])\1$/.test(stem) ? stem.slice(0, -1) : stem);
+  }
+  return value;
+}
+
+function buildPassiveParaphrase(item = {}) {
+  const source = cleanDbOption(item.english);
+  const match = source.match(/^(.+?)\s+(was|were)\s+([A-Za-z]+ed)\s+by\s+(.+?)[.?!]$/i);
+  if (!match) return null;
+  const patient = lowerInitialArticle(match[1]);
+  const verb = match[3].toLowerCase();
+  const base = baseFromRegularPast(verb);
+  const agent = match[4];
+  const agentStart = agent.charAt(0).toUpperCase() + agent.slice(1);
+  return {
+    text: `${agentStart} ${verb} ${patient}.`,
+    relation: "active_passive_transform",
+    distractors: [
+      `${agentStart} did not ${base} ${patient}.`,
+      `${agentStart} will ${base} ${patient}.`,
+      `${agentStart} usually ${base}s ${patient}.`,
+      `${agentStart} did something else with ${patient}.`
+    ]
+  };
+}
+
+const DITRANSITIVE_BASE_FORMS = {
+  gave: "give",
+  sent: "send",
+  showed: "show",
+  told: "tell",
+  taught: "teach",
+  offered: "offer",
+  brought: "bring",
+  wrote: "write",
+  lent: "lend",
+  passed: "pass",
+  read: "read",
+  handed: "hand",
+  bought: "buy",
+  made: "make"
+};
+
+function buildDitransitiveParaphrase(item = {}) {
+  const source = cleanDbOption(item.english);
+  const targets = Array.isArray(item.blankTargets) ? item.blankTargets.map((value) => String(value || "").trim()) : [];
+  if (!source || source.endsWith("?") || targets.length < 3) return null;
+  const [verb, recipient, object] = targets;
+  const base = DITRANSITIVE_BASE_FORMS[String(verb).toLowerCase()] || String(verb).toLowerCase();
+  if (!base || !recipient || !object || !Object.values(DITRANSITIVE_BASE_FORMS).includes(base)) return null;
+  const core = `${verb} ${recipient} ${object}`;
+  const coreIndex = source.toLowerCase().indexOf(core.toLowerCase());
+  if (coreIndex < 1 || /\b(?:did not|does not|do not|can|could|will|would|should|may|might|must)\s*$/i.test(source.slice(0, coreIndex))) return null;
+  const subject = source.slice(0, coreIndex).trim();
+  const suffix = source.slice(coreIndex + core.length).replace(/[.?!]$/, "").trim();
+  const preposition = /^(buy|make)$/.test(base) ? "for" : "to";
+  const tail = suffix ? ` ${suffix}` : "";
+  return {
+    text: `${subject} ${verb} ${object} ${preposition} ${recipient}${tail}.`,
+    relation: "ditransitive_prepositional_transform",
+    distractors: [
+      `${subject} did not ${base} ${object} ${preposition} ${recipient}${tail}.`,
+      `${subject} planned to ${base} ${object} ${preposition} ${recipient}${tail}.`,
+      `${subject} ${verb} ${object} ${preposition} someone else${tail}.`,
+      `${subject} ${verb} something else ${preposition} ${recipient}${tail}.`
+    ]
+  };
+}
+
+const WORMHOLE_SEMANTIC_CAPABILITIES = {
+  present_perfect: "enabled",
+  passive: "eligible_items_only",
+  ditransitive: "enabled",
+  relative_pronouns: "accepted_alternatives_required"
+};
+
+function inferSemanticFamily(input = {}) {
+  const chapter = String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "").toLowerCase();
+  if (/present_perfect/.test(chapter)) return "present_perfect";
+  if (/(^|_)passive$/.test(chapter)) return "passive";
+  if (/ditransitive/.test(chapter)) return "ditransitive";
+  if (/relative/.test(chapter)) return "relative_pronouns";
+  return "none";
+}
+
+function getSemanticParaphrase(item = {}, family = "") {
+  if (family === "present_perfect") return buildPresentPerfectParaphrase(item);
+  if (family === "passive") return buildPassiveParaphrase(item);
+  if (family === "ditransitive") return buildDitransitiveParaphrase(item);
+  return null;
+}
+
+function buildSemanticParaphraseQuestion(item, index, input = {}, context = {}, family = "") {
+  const source = cleanDbOption(item.english);
+  const paraphrase = getSemanticParaphrase(item, family);
+  if (!source || !paraphrase?.text || normalizeSentenceIdentity(source) === normalizeSentenceIdentity(paraphrase.text)) return null;
+  const options = [paraphrase.text, ...(paraphrase.distractors || [])]
+    .map(cleanDbOption)
+    .filter((value, optionIndex, values) => value && values.findIndex((entry) => normalizeSentenceIdentity(entry) === normalizeSentenceIdentity(value)) === optionIndex)
+    .slice(0, 5);
+  if (options.length < 5) return null;
+  const stem = input.language === "en"
+    ? `Choose the sentence that best preserves the meaning of the given sentence.\n<${source}>`
+    : `다음 주어진 문장의 의미를 가장 정확하게 유지한 문장을 고르시오.\n<${source}>`;
+  const question = formatStructuredDbQuestion(
+    item,
+    index,
+    input,
+    "semantic_paraphrase",
+    stem,
+    options.map((text, optionIndex) => ({ text, correct: optionIndex === 0 })),
+    paraphrase.text
+  );
+  if (question) {
+    question.semanticRelation = paraphrase.relation;
+    question.difficultyScore = 6;
+    if (context.usedOptionSentences instanceof Set) {
+      options.forEach((option) => context.usedOptionSentences.add(normalizeSentenceIdentity(option)));
+    }
+  }
+  return question;
+}
+
+const PASSIVE_ADVANCED_TYPES = [
+  "correct",
+  "incorrect",
+  "counting",
+  "structure_match",
+  "multi_select",
+  "semantic_paraphrase"
+];
+
+const PASSIVE_ADVANCED_ALLOCATION_25 = {
+  correct: 6,
+  incorrect: 6,
+  counting: 5,
+  structure_match: 1,
+  multi_select: 4,
+  semantic_paraphrase: 3
+};
+
+function isPassiveAdvancedRequest(input = {}, items = []) {
+  const chapter = String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "").toLowerCase();
+  const advanced = input.difficulty === "high" || input.difficulty === "extreme" || input.mode === "advanced";
+  return advanced && /(^|_)passive$/.test(chapter) && items.filter((item) => buildPassiveParaphrase(item)).length >= 3;
+}
+
+function buildPassiveAdvancedTypes(count, input = {}) {
+  const requested = clamp(Number(count) || 25, 1, 30);
+  const weights = requested === 25
+    ? PASSIVE_ADVANCED_ALLOCATION_25
+    : { correct: 6, incorrect: 6, counting: 5, structure_match: 1, multi_select: 4, semantic_paraphrase: 3 };
+  const totalWeight = Object.values(weights).reduce((sum, value) => sum + value, 0);
+  const allocation = Object.fromEntries(PASSIVE_ADVANCED_TYPES.map((type) => [type, Math.floor(requested * weights[type] / totalWeight)]));
+  let remaining = requested - Object.values(allocation).reduce((sum, value) => sum + value, 0);
+  for (const type of PASSIVE_ADVANCED_TYPES) {
+    if (remaining <= 0) break;
+    allocation[type] += 1;
+    remaining -= 1;
+  }
+  const plan = stableShuffle(
+    PASSIVE_ADVANCED_TYPES.flatMap((type) => Array(allocation[type]).fill(type)),
+    ["passive-semantic-3.0", input.selectedGrade, input.topic, input.worksheetTitle, requested].filter(Boolean).join("|")
+  );
+  console.info("[WORMHOLE_PASSIVE_ADVANCED_PLAN]", { requested, distribution: countPassiveAdvancedTypes(plan) });
+  return plan;
+}
+
+function countPassiveAdvancedTypes(values = []) {
+  const counts = Object.fromEntries(PASSIVE_ADVANCED_TYPES.map((type) => [type, 0]));
+  values.forEach((value) => {
+    const type = typeof value === "string" ? value : value?.questionType;
+    if (Object.prototype.hasOwnProperty.call(counts, type)) counts[type] += 1;
+  });
+  return counts;
+}
+
+function selectPassiveAdvancedItems(items = [], input = {}, typePlan = []) {
+  const pool = stableShuffle(items, ["passive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|"));
+  const used = new Set();
+  return typePlan.map((type) => {
+    const item = pool.find((candidate) => !used.has(candidate.id) && (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate)));
+    if (!item) return null;
+    used.add(item.id);
+    return { item, type };
+  }).filter(Boolean);
+}
+
+function buildPassiveAdvancedQuestion(item, index, input = {}, context = {}, type = "") {
+  return type === "semantic_paraphrase"
+    ? buildSemanticParaphraseQuestion(item, index, input, context, "passive")
+    : buildPlannedDbQuestion(item, index, input, context, type);
+}
+
+function validatePassiveAdvancedDistribution(questions = [], requestedCount = 0) {
+  const counts = countPassiveAdvancedTypes(questions);
+  const uniqueIds = new Set(questions.map((question) => String(question.id || "").split(":")[0]));
+  const valid = questions.length === requestedCount &&
+    uniqueIds.size === questions.length &&
+    PASSIVE_ADVANCED_TYPES.every((type) => counts[type] > 0);
+  return { valid, total: questions.length, requestedCount, counts, uniqueSentenceIds: uniqueIds.size };
+}
+
+const DITRANSITIVE_ADVANCED_TYPES = [
+  "correct",
+  "incorrect",
+  "counting",
+  "structure_match",
+  "multi_select",
+  "semantic_paraphrase"
+];
+
+const DITRANSITIVE_ADVANCED_ALLOCATION_25 = {
+  correct: 6,
+  incorrect: 6,
+  counting: 5,
+  structure_match: 1,
+  multi_select: 4,
+  semantic_paraphrase: 3
+};
+
+function isDitransitiveAdvancedRequest(input = {}, items = []) {
+  const chapter = String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "").toLowerCase();
+  const advanced = input.difficulty === "high" || input.difficulty === "extreme" || input.mode === "advanced";
+  return advanced && /ditransitive/.test(chapter) && items.filter((item) => buildDitransitiveParaphrase(item)).length >= 3;
+}
+
+function buildDitransitiveAdvancedTypes(count, input = {}) {
+  const requested = clamp(Number(count) || 25, 1, 30);
+  const weights = requested === 25
+    ? DITRANSITIVE_ADVANCED_ALLOCATION_25
+    : { correct: 6, incorrect: 6, counting: 5, structure_match: 1, multi_select: 4, semantic_paraphrase: 3 };
+  const totalWeight = Object.values(weights).reduce((sum, value) => sum + value, 0);
+  const allocation = Object.fromEntries(DITRANSITIVE_ADVANCED_TYPES.map((type) => [type, Math.floor(requested * weights[type] / totalWeight)]));
+  let remaining = requested - Object.values(allocation).reduce((sum, value) => sum + value, 0);
+  for (const type of DITRANSITIVE_ADVANCED_TYPES) {
+    if (remaining <= 0) break;
+    allocation[type] += 1;
+    remaining -= 1;
+  }
+  const plan = stableShuffle(
+    DITRANSITIVE_ADVANCED_TYPES.flatMap((type) => Array(allocation[type]).fill(type)),
+    ["ditransitive-semantic-3.0", input.selectedGrade, input.topic, input.worksheetTitle, requested].filter(Boolean).join("|")
+  );
+  console.info("[WORMHOLE_DITRANSITIVE_ADVANCED_PLAN]", { requested, distribution: countDitransitiveAdvancedTypes(plan) });
+  return plan;
+}
+
+function countDitransitiveAdvancedTypes(values = []) {
+  const counts = Object.fromEntries(DITRANSITIVE_ADVANCED_TYPES.map((type) => [type, 0]));
+  values.forEach((value) => {
+    const type = typeof value === "string" ? value : value?.questionType;
+    if (Object.prototype.hasOwnProperty.call(counts, type)) counts[type] += 1;
+  });
+  return counts;
+}
+
+function selectDitransitiveAdvancedItems(items = [], input = {}, typePlan = []) {
+  const pool = stableShuffle(items, ["ditransitive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|"));
+  const used = new Set();
+  return typePlan.map((type) => {
+    const item = pool.find((candidate) => !used.has(candidate.id) && (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate)));
+    if (!item) return null;
+    used.add(item.id);
+    return { item, type };
+  }).filter(Boolean);
+}
+
+function buildDitransitiveAdvancedQuestion(item, index, input = {}, context = {}, type = "") {
+  return type === "semantic_paraphrase"
+    ? buildSemanticParaphraseQuestion(item, index, input, context, "ditransitive")
+    : buildPlannedDbQuestion(item, index, input, context, type);
+}
+
+function validateDitransitiveAdvancedDistribution(questions = [], requestedCount = 0) {
+  const counts = countDitransitiveAdvancedTypes(questions);
+  const uniqueIds = new Set(questions.map((question) => String(question.id || "").split(":")[0]));
+  const valid = questions.length === requestedCount &&
+    uniqueIds.size === questions.length &&
+    DITRANSITIVE_ADVANCED_TYPES.every((type) => counts[type] > 0);
+  return { valid, total: questions.length, requestedCount, counts, uniqueSentenceIds: uniqueIds.size };
 }
 
 function getUniqueWrongOptions(item = {}, limit = 4, usedOptions = new Set()) {
@@ -1970,28 +2357,12 @@ function buildMultiSelectQuestion(item, index, input = {}, context = {}) {
   );
 }
 
-function buildEquivalenceQuestion(item, index, input = {}, context = {}) {
-  const target = cleanDbOption(item.english);
-  const equivalent = cleanDbOption(getWormholeAcceptedAlternatives(item)[0]) || target.replace(/[.?!]$/, "");
-  const wrong = getContextWrongOptions(item, 4, context);
-  if (!target || !equivalent || wrong.length < 4) return null;
-  const stem = input.language === "en"
-    ? "Choose the sentence grammatically equivalent to the given sentence.\n<" + target + ">"
-    : "다음 주어진 문장과 문법적으로 동등한 문장을 고르시오.\n<" + target + ">";
-  return formatStructuredDbQuestion(
-    item, index, input, "sentence_equivalence", stem,
-    [{ text: equivalent, correct: true }, ...wrong.map((text) => ({ text, correct: false }))],
-    equivalent
-  );
-}
-
 const WORMHOLE_QUESTION_BUILDERS = {
   correct: buildCorrectQuestion,
   incorrect: buildIncorrectQuestion,
   counting: buildCountingQuestion,
   structure_match: buildStructureQuestion,
-  multi_select: buildMultiSelectQuestion,
-  sentence_equivalence: buildEquivalenceQuestion
+  multi_select: buildMultiSelectQuestion
 };
 
 function buildPlannedDbQuestion(item, index, input = {}, context = {}, questionType = "correct") {
@@ -2039,7 +2410,7 @@ function validateGlobalHighDifficultyQuality(questions = [], requestedCount = 0,
   const primaryIds = questions.map((question) => String(question.id || "").split(":")[0]);
   const duplicatePrimaryIds = primaryIds.filter((id, index) => primaryIds.indexOf(id) !== index);
   const confirmationCount = questions.filter((question) =>
-    question.questionType === "structure_match" || question.questionType === "sentence_equivalence"
+    question.questionType === "structure_match"
   ).length;
   const maxConfirmation = Math.floor(requestedCount * 0.1);
   const valid = questions.length === requestedCount &&
@@ -2076,7 +2447,11 @@ function formatDbWormholeResponse(questions = [], input = {}) {
     dbFirst: true,
     questionTypeDistribution: isPresentPerfectAdvancedRequest(input)
       ? countPresentPerfectAdvancedTypes(questions)
-      : countQuestionTypes(questions),
+      : input.__wormholePassiveSemantic
+        ? countPassiveAdvancedTypes(questions)
+        : input.__wormholeDitransitiveSemantic
+          ? countDitransitiveAdvancedTypes(questions)
+          : countQuestionTypes(questions),
     ambiguityMode: questions.some((question) => (question.correctOptionIndexes || []).length > 1)
       ? "single-dual-multi-correct"
       : "single-correct"
@@ -2115,13 +2490,40 @@ async function tryBuildWormholeFromDb(input = {}) {
     try {
       const items = await loadGrammarDb(entry.filePath);
       const presentPerfectAdvanced = isPresentPerfectAdvancedRequest(input);
+      const passiveAdvanced = !presentPerfectAdvanced && isPassiveAdvancedRequest(input, items);
+      const ditransitiveAdvanced = !presentPerfectAdvanced && !passiveAdvanced && isDitransitiveAdvancedRequest(input, items);
+      input.__wormholePassiveSemantic = passiveAdvanced;
+      input.__wormholeDitransitiveSemantic = ditransitiveAdvanced;
+      const requestedSemanticFamily = inferSemanticFamily(input);
+      const semanticFamily = presentPerfectAdvanced ? "present_perfect" : passiveAdvanced ? "passive" : ditransitiveAdvanced ? "ditransitive" : "none";
+      const semanticEligibleCount = semanticFamily === "none"
+        ? 0
+        : items.filter((item) => getSemanticParaphrase(item, semanticFamily)).length;
+      console.info("[WORMHOLE_SEMANTIC_CAPABILITY]", {
+        family: requestedSemanticFamily,
+        capability: WORMHOLE_SEMANTIC_CAPABILITIES[requestedSemanticFamily] || "disabled",
+        enabled: semanticFamily !== "none"
+      });
+      console.info("[WORMHOLE_SEMANTIC_ELIGIBLE_COUNT]", {
+        family: semanticFamily,
+        eligible: semanticEligibleCount,
+        total: items.length
+      });
       const presentPerfectTypePlan = presentPerfectAdvanced ? buildPresentPerfectAdvancedTypes(input.count, input) : [];
+      const passiveTypePlan = passiveAdvanced ? buildPassiveAdvancedTypes(input.count, input) : [];
+      const ditransitiveTypePlan = ditransitiveAdvanced ? buildDitransitiveAdvancedTypes(input.count, input) : [];
       const presentPerfectSelection = presentPerfectAdvanced
         ? selectPresentPerfectAdvancedItems(items, input, presentPerfectTypePlan)
         : [];
+      const passiveSelection = passiveAdvanced ? selectPassiveAdvancedItems(items, input, passiveTypePlan) : [];
+      const ditransitiveSelection = ditransitiveAdvanced ? selectDitransitiveAdvancedItems(items, input, ditransitiveTypePlan) : [];
       const selected = presentPerfectAdvanced
         ? presentPerfectSelection.map((entry) => entry.item)
-        : selectDbItems(items, input);
+        : passiveAdvanced
+          ? passiveSelection.map((entry) => entry.item)
+          : ditransitiveAdvanced
+            ? ditransitiveSelection.map((entry) => entry.item)
+            : selectDbItems(items, input);
       if (selected.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_items" });
         console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_items" });
@@ -2135,7 +2537,13 @@ async function tryBuildWormholeFromDb(input = {}) {
       }
 
       const assemblyStart = Date.now();
-      const typePlan = presentPerfectAdvanced ? presentPerfectTypePlan : QuestionTypePlanner(input.count, input);
+      const typePlan = presentPerfectAdvanced
+        ? presentPerfectTypePlan
+        : passiveAdvanced
+          ? passiveTypePlan
+          : ditransitiveAdvanced
+            ? ditransitiveTypePlan
+            : QuestionTypePlanner(input.count, input);
       const context = {
         items: selected,
         allItems: items,
@@ -2146,7 +2554,11 @@ async function tryBuildWormholeFromDb(input = {}) {
       const questions = selected
         .map((item, index) => presentPerfectAdvanced
           ? buildPresentPerfectAdvancedQuestion(item, index, input, context, presentPerfectSelection[index]?.type || typePlan[index])
-          : buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
+          : passiveAdvanced
+            ? buildPassiveAdvancedQuestion(item, index, input, context, passiveSelection[index]?.type || typePlan[index])
+            : ditransitiveAdvanced
+              ? buildDitransitiveAdvancedQuestion(item, index, input, context, ditransitiveSelection[index]?.type || typePlan[index])
+              : buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
         .filter(Boolean);
       console.info("[ASSEMBLY_TIME]", { ms: Date.now() - assemblyStart, selected: selected.length, questions: questions.length });
 
@@ -2182,9 +2594,29 @@ async function tryBuildWormholeFromDb(input = {}) {
 
       const distributionValidation = presentPerfectAdvanced
         ? validatePresentPerfectAdvancedDistribution(questions, input.count)
-        : validateWormholeTypeDistribution(questions, input.count);
+        : passiveAdvanced
+          ? validatePassiveAdvancedDistribution(questions, input.count)
+          : ditransitiveAdvanced
+            ? validateDitransitiveAdvancedDistribution(questions, input.count)
+            : validateWormholeTypeDistribution(questions, input.count);
       if (presentPerfectAdvanced) {
         console.info("[WORMHOLE_PRESENT_PERFECT_TYPE_DISTRIBUTION]", {
+          ...distributionValidation.counts,
+          total: distributionValidation.total,
+          requested: distributionValidation.requestedCount,
+          uniqueSentenceIds: distributionValidation.uniqueSentenceIds,
+          valid: distributionValidation.valid
+        });
+      } else if (passiveAdvanced) {
+        console.info("[WORMHOLE_PASSIVE_TYPE_DISTRIBUTION]", {
+          ...distributionValidation.counts,
+          total: distributionValidation.total,
+          requested: distributionValidation.requestedCount,
+          uniqueSentenceIds: distributionValidation.uniqueSentenceIds,
+          valid: distributionValidation.valid
+        });
+      } else if (ditransitiveAdvanced) {
+        console.info("[WORMHOLE_DITRANSITIVE_TYPE_DISTRIBUTION]", {
           ...distributionValidation.counts,
           total: distributionValidation.total,
           requested: distributionValidation.requestedCount,
@@ -2198,12 +2630,17 @@ async function tryBuildWormholeFromDb(input = {}) {
           counting: distributionValidation.counts.counting,
           structure: distributionValidation.counts.structure_match,
           multi: distributionValidation.counts.multi_select,
-          equivalence: distributionValidation.counts.sentence_equivalence,
           total: distributionValidation.total,
           requested: distributionValidation.requestedCount,
           valid: distributionValidation.valid
         });
       }
+      console.info("[WORMHOLE_SEMANTIC_DISTRIBUTION]", {
+        family: semanticFamily,
+        semanticParaphrase: distributionValidation.counts.semantic_paraphrase || 0,
+        total: distributionValidation.total,
+        enabled: semanticFamily !== "none"
+      });
       console.info("[WORMHOLE_AMBIGUITY_ENGINE]", {
         singleCorrect: questions.filter((question) => question.correctOptionIndexes.length === 1).length,
         dualCorrect: questions.filter((question) => question.correctOptionIndexes.length === 2).length,
