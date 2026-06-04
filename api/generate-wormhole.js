@@ -105,6 +105,7 @@ function inferDifficulty(text = "") {
 function inferTopic(text = "") {
   const t = String(text || "");
   const lower = t.toLowerCase();
+  if (/수여\s*동사|ditransitive|4\s*형식/.test(lower + " " + t)) return "ditransitive";
   if (/after[_s,/-]*before|before[_s,/-]*after/.test(lower) || (/after/.test(lower) && /before/.test(lower))) return "after_before";
   if (/when/.test(lower) && /while/.test(lower)) return "while_when";
   if (/although|though|evens+though/.test(lower)) return "although";
@@ -301,14 +302,39 @@ function buildGrammarUserPrompt(input) {
 
 async function callOpenAI(systemPrompt, userPrompt) {
   if (!OPENAI_API_KEY) throw new Error("Missing OPENAI_API_KEY");
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${OPENAI_API_KEY}` },
-    body: JSON.stringify({ model: OPENAI_MODEL, temperature: 0.5, max_tokens: 8000, messages: [{ role: "system", content: systemPrompt }, { role: "user", content: userPrompt }] }),
-  });
-  if (!response.ok) throw new Error(`OpenAI failed: ${response.status}`);
-  const data = await response.json();
-  return data?.choices?.[0]?.message?.content?.trim() || "";
+  const timeoutMs = 18000;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+  const startedAt = Date.now();
+  console.info("[WORMHOLE_FUNCTION_START]", { functionName: "callOpenAI", timeoutMs });
+  try {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${OPENAI_API_KEY}` },
+      body: JSON.stringify({ model: OPENAI_MODEL, temperature: 0.5, max_tokens: 8000, messages: [{ role: "system", content: systemPrompt }, { role: "user", content: userPrompt }] }),
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`OpenAI failed: ${response.status}`);
+    const data = await response.json();
+    console.info("[WORMHOLE_FUNCTION_END]", { functionName: "callOpenAI", ms: Date.now() - startedAt });
+    return data?.choices?.[0]?.message?.content?.trim() || "";
+  } catch (error) {
+    const timedOut = error?.name === "AbortError";
+    console.error(timedOut ? "[WORMHOLE_TIMEOUT_FUNCTION]" : "[WORMHOLE_FUNCTION_ERROR]", {
+      functionName: "callOpenAI",
+      ms: Date.now() - startedAt,
+      timeoutMs,
+      error: error?.message || String(error)
+    });
+    if (timedOut) {
+      const timeoutError = new Error("OpenAI fallback timed out before the Vercel function limit.");
+      timeoutError.code = "WORMHOLE_OPENAI_TIMEOUT";
+      throw timeoutError;
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 /* =========================
@@ -713,7 +739,15 @@ const WORMHOLE_KO_ALIAS_BY_SLUG = {
   the_comparative_the_comparative: ["the comparative the comparative", "the 비교급 the 비교급", "비교급 병렬구문"],
   there_is_are: ["there is are", "there is are 문법"],
   time_conjunctions: ["time conjunctions", "시간 접속사"],
-  to_infinitive_adjective: ["to infinitive adjective", "to부정사 형용사적 용법", "형용사적 용법"],
+  to_infinitive_adjective: [
+    "to infinitive adjective",
+    "to부정사 형용사적 용법",
+    "to부정사의 형용사적 용법",
+    "to부정사 형용사 용법",
+    "to부정사의 형용사 용법",
+    "형용사적 용법",
+    "형용사 용법"
+  ],
   to_infinitive_adverbial: ["to infinitive adverbial", "to부정사 부사적 용법", "부사적 용법"],
   to_infinitive_gerund_verbs: ["to infinitive gerund verbs", "to부정사 동명사 목적어 동사"],
   to_infinitive_noun: ["to infinitive noun", "to부정사 명사적 용법", "명사적 용법"],
@@ -991,7 +1025,9 @@ function buildWormholeDbRegistry() {
   for (const grade of WORMHOLE_GRADE_BUCKETS) {
     const seenFiles = new Set();
     for (const dir of dataDirs[grade]) {
-      const files = fs.readdirSync(dir).filter((file) => /\.json$/i.test(file)).sort();
+      const files = fs.readdirSync(dir)
+        .filter((file) => /\.json$/i.test(file) && !/(?:^|[_\-.])backup(?:[_\-.]|$)/i.test(file))
+        .sort();
       for (const file of files) {
         const filePath = path.join(dir, file);
         const resolvedFile = path.resolve(filePath);
@@ -1438,6 +1474,7 @@ function getQuestionTypeWeights(input = {}) {
 }
 
 function QuestionTypePlanner(count, input = {}) {
+  const plannerStart = Date.now();
   const requested = clamp(Number(count) || 25, 1, 30);
   const weights = getQuestionTypeWeights(input);
   const allocation = Object.fromEntries(WORMHOLE_TYPE_KEYS.map((type) => [type, 0]));
@@ -1492,7 +1529,9 @@ function QuestionTypePlanner(count, input = {}) {
   console.info("[WORMHOLE_TYPE_PLAN]", {
     requestedCount: requested,
     chapter: input.__wormholeDbCanonical || input.topic || "",
-    distribution: countQuestionTypes(plan)
+    distribution: countQuestionTypes(plan),
+    functionName: "QuestionTypePlanner",
+    ms: Date.now() - plannerStart
   });
   return plan;
 }
@@ -1695,7 +1734,26 @@ function formatDbWormholeResponse(questions = [], input = {}) {
 async function tryBuildWormholeFromDb(input = {}) {
   const totalStart = Date.now();
   const match = await resolveWormholeDbFile(input);
-  if (!match?.matched) return { success: false, dbMatched: false, reason: "db_alias_not_found" };
+  if (!match?.matched) {
+    const selectedGrade = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
+    const gradeLocked = WORMHOLE_GRADE_BUCKETS.includes(selectedGrade);
+    console.warn("[WORMHOLE_CHAPTER_NOT_FOUND]", {
+      functionName: "tryBuildWormholeFromDb",
+      selectedGrade,
+      requestedChapter: input.requestedChapter || input.topic || "",
+      resolvedChapter: input.topic || "",
+      blockGptFallback: gradeLocked,
+      ms: Date.now() - totalStart
+    });
+    return {
+      success: false,
+      dbMatched: false,
+      blockGptFallback: gradeLocked,
+      reason: gradeLocked ? "chapter_not_found_in_selected_grade" : "db_alias_not_found",
+      selectedGrade,
+      requestedChapter: input.requestedChapter || input.topic || ""
+    };
+  }
 
   const unusable = [];
   for (const entry of match.candidates) {
@@ -1708,7 +1766,13 @@ async function tryBuildWormholeFromDb(input = {}) {
       if (selected.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_items" });
         console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_items" });
-        continue;
+        return {
+          success: false,
+          dbMatched: true,
+          blockGptFallback: true,
+          reason: "matched_db_unusable",
+          unusable
+        };
       }
 
       const assemblyStart = Date.now();
@@ -1722,7 +1786,13 @@ async function tryBuildWormholeFromDb(input = {}) {
       if (questions.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_questions" });
         console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_questions" });
-        continue;
+        return {
+          success: false,
+          dbMatched: true,
+          blockGptFallback: true,
+          reason: "matched_db_unusable",
+          unusable
+        };
       }
 
       const distributionValidation = validateWormholeTypeDistribution(questions, input.count);
@@ -1745,7 +1815,13 @@ async function tryBuildWormholeFromDb(input = {}) {
       if (!distributionValidation.valid) {
         unusable.push({ file: entry.file, reason: "invalid_question_type_distribution", distributionValidation });
         console.warn("[WORMHOLE_TYPE_DISTRIBUTION_REJECTED]", distributionValidation);
-        continue;
+        return {
+          success: false,
+          dbMatched: true,
+          blockGptFallback: true,
+          reason: "matched_db_unusable",
+          unusable
+        };
       }
 
       console.info("[TOTAL_EXECUTION_TIME]", { phase: "db_first_success", ms: Date.now() - totalStart });
@@ -1760,6 +1836,13 @@ async function tryBuildWormholeFromDb(input = {}) {
       const reason = error?.usability?.reason || error?.message || "db_first_failed";
       unusable.push({ file: entry.file, reason });
       console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason });
+      return {
+        success: false,
+        dbMatched: true,
+        blockGptFallback: true,
+        reason: "matched_db_unusable",
+        unusable
+      };
     }
   }
 
@@ -1950,7 +2033,18 @@ async function handler(req, res) {
     }
 
     const handlerStart = Date.now();
+    console.info("[WORMHOLE_FUNCTION_START]", {
+      functionName: "tryBuildWormholeFromDb",
+      selectedGrade: input.selectedGrade,
+      resolvedChapter: input.topic
+    });
     const dbResult = await tryBuildWormholeFromDb(input);
+    console.info("[WORMHOLE_FUNCTION_END]", {
+      functionName: "tryBuildWormholeFromDb",
+      ms: Date.now() - handlerStart,
+      success: Boolean(dbResult?.success),
+      reason: dbResult?.reason || "db_first_success"
+    });
     let formatted;
     if (dbResult?.success) {
       formatted = dbResult.formatted;
@@ -1977,6 +2071,22 @@ async function handler(req, res) {
         }
       });
     } else if (dbResult?.blockGptFallback) {
+      console.info("[GPT_FALLBACK_SKIPPED]", {
+        reason: dbResult.reason || "db_first_blocked",
+        selectedGrade: input.selectedGrade,
+        resolvedChapter: input.topic
+      });
+      if (dbResult.reason === "chapter_not_found_in_selected_grade") {
+        const grade = dbResult.selectedGrade || input.selectedGrade || "selected grade";
+        return json(res, 404, {
+          success: false,
+          error: "WORMHOLE_CHAPTER_NOT_FOUND",
+          message: `해당 챕터는 ${grade} DB에 존재하지 않습니다`,
+          selectedGrade: grade,
+          requestedChapter: dbResult.requestedChapter || input.requestedChapter || input.topic || "",
+          resolvedChapter: input.topic || ""
+        });
+      }
       console.warn("[WORMHOLE_DB_UNUSABLE]", {
         reason: dbResult.reason || "matched_db_unusable",
         unusable: dbResult.unusable || []
@@ -1984,12 +2094,17 @@ async function handler(req, res) {
       return json(res, 422, {
         success: false,
         error: "WORMHOLE_DB_UNUSABLE",
-        message: "Matching Wormhole DB exists but is not usable for DB-first assembly.",
+        message: "해당 챕터 DB는 존재하지만 현재 웜홀 문제 생성에 사용할 수 없습니다.",
         detail: dbResult.reason || "matched_db_unusable",
         unusable: dbResult.unusable || []
       });
     } else {
-      console.info("[WORMHOLE_FALLBACK]", dbResult?.reason || "no_db_result");
+      console.info("[WORMHOLE_FALLBACK]", {
+        reason: dbResult?.reason || "no_db_result",
+        functionName: "callOpenAI",
+        selectedGrade: input.selectedGrade,
+        resolvedChapter: input.topic
+      });
       const systemPrompt = buildGrammarSystemPrompt(input);
       const userPrompt = buildGrammarUserPrompt(input);
       const raw = await callOpenAI(systemPrompt, userPrompt);
@@ -2067,8 +2182,19 @@ async function handler(req, res) {
       }
     });
   } catch (error) {
-    console.error("Handler Error:", error);
-    return json(res, 500, { success: false, message: "Generation failed", detail: error.message });
+    const timeoutFunction = error?.code === "WORMHOLE_OPENAI_TIMEOUT" ? "callOpenAI" : "unknown";
+    console.error("[WORMHOLE_HANDLER_ERROR]", {
+      functionName: timeoutFunction,
+      code: error?.code || "WORMHOLE_GENERATION_FAILED",
+      error: error?.message || String(error)
+    });
+    return json(res, error?.code === "WORMHOLE_OPENAI_TIMEOUT" ? 504 : 500, {
+      success: false,
+      error: error?.code || "WORMHOLE_GENERATION_FAILED",
+      message: error?.code === "WORMHOLE_OPENAI_TIMEOUT" ? "Fallback generation timed out safely." : "Generation failed",
+      functionName: timeoutFunction,
+      detail: error.message
+    });
   }
 }
 
