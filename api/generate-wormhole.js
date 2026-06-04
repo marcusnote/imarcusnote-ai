@@ -1441,6 +1441,15 @@ const WORMHOLE_BASE_TYPE_WEIGHTS = {
   sentence_equivalence: 2
 };
 
+const WORMHOLE_HIGH_DIFFICULTY_TYPE_WEIGHTS = {
+  correct: 7,
+  incorrect: 7,
+  counting: 5,
+  structure_match: 1,
+  multi_select: 4,
+  sentence_equivalence: 1
+};
+
 const WORMHOLE_CHAPTER_TYPE_BONUS = {
   present_perfect: { counting: 2, structure_match: 1 },
   relative_pronoun: { structure_match: 2, multi_select: 1 },
@@ -1462,6 +1471,9 @@ function countQuestionTypes(types = []) {
 }
 
 function getQuestionTypeWeights(input = {}) {
+  if (input.difficulty === "high" || input.difficulty === "extreme" || input.mode === "advanced") {
+    return { ...WORMHOLE_HIGH_DIFFICULTY_TYPE_WEIGHTS };
+  }
   const weights = { ...WORMHOLE_BASE_TYPE_WEIGHTS };
   const chapter = String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "")
     .toLowerCase()
@@ -1536,26 +1548,324 @@ function QuestionTypePlanner(count, input = {}) {
   return plan;
 }
 
-function getUniqueWrongOptions(item = {}, limit = 4) {
+const PRESENT_PERFECT_ADVANCED_TYPES = [
+  "present_perfect_vs_past",
+  "for_since_confusion",
+  "been_gone_confusion",
+  "result_usage",
+  "continuation_usage",
+  "experience_usage"
+];
+
+const PRESENT_PERFECT_ADVANCED_WEIGHTS = {
+  present_perfect_vs_past: 25,
+  for_since_confusion: 15,
+  been_gone_confusion: 15,
+  result_usage: 15,
+  continuation_usage: 15,
+  experience_usage: 15
+};
+
+function isPresentPerfectAdvancedRequest(input = {}) {
+  const chapter = String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "").toLowerCase();
+  return chapter.includes("present_perfect") &&
+    (input.difficulty === "high" || input.difficulty === "extreme" || input.mode === "advanced");
+}
+
+function buildPresentPerfectAdvancedTypes(count, input = {}) {
+  const requested = clamp(Number(count) || 25, 1, 30);
+  const allocation = Object.fromEntries(PRESENT_PERFECT_ADVANCED_TYPES.map((type) => [type, 0]));
+  let remaining = requested;
+  const exact = PRESENT_PERFECT_ADVANCED_TYPES.map((type) => ({
+    type,
+    exact: requested * PRESENT_PERFECT_ADVANCED_WEIGHTS[type] / 100
+  }));
+  exact.forEach((entry) => {
+    allocation[entry.type] = Math.floor(entry.exact);
+    remaining -= allocation[entry.type];
+  });
+  exact
+    .map((entry) => ({ ...entry, remainder: entry.exact - Math.floor(entry.exact) }))
+    .sort((a, b) => b.remainder - a.remainder || PRESENT_PERFECT_ADVANCED_TYPES.indexOf(a.type) - PRESENT_PERFECT_ADVANCED_TYPES.indexOf(b.type))
+    .slice(0, remaining)
+    .forEach((entry) => { allocation[entry.type] += 1; });
+  const bag = PRESENT_PERFECT_ADVANCED_TYPES.flatMap((type) => Array(allocation[type]).fill(type));
+  const plan = stableShuffle(bag, [
+    "present-perfect-advanced-2.1",
+    input.selectedGrade,
+    input.topic,
+    input.userPrompt,
+    input.worksheetTitle,
+    requested
+  ].filter(Boolean).join("|"));
+  console.info("[WORMHOLE_PRESENT_PERFECT_ADVANCED_PLAN]", {
+    functionName: "buildPresentPerfectAdvancedTypes",
+    requested,
+    distribution: countPresentPerfectAdvancedTypes(plan)
+  });
+  return plan;
+}
+
+function countPresentPerfectAdvancedTypes(values = []) {
+  const counts = Object.fromEntries(PRESENT_PERFECT_ADVANCED_TYPES.map((type) => [type, 0]));
+  values.forEach((value) => {
+    const type = typeof value === "string" ? value : value?.presentPerfectType || value?.questionType;
+    if (Object.prototype.hasOwnProperty.call(counts, type)) counts[type] += 1;
+  });
+  return counts;
+}
+
+function normalizeSentenceIdentity(text = "") {
+  return String(text || "").replace(/\s+/g, " ").replace(/[.?!]$/g, "").trim().toLowerCase();
+}
+
+function presentPerfectItemMatchesType(item = {}, type = "") {
+  const bucket = String(item.chapterMeta?.semanticBucket || "").toLowerCase();
+  const chronology = String(item.chapterMeta?.chronologyType || "").toLowerCase();
+  const tags = (item.tags || []).join(" ").toLowerCase();
+  const english = String(item.english || "").toLowerCase();
+  const variants = getRawWormholeWrongCandidates(item).join(" ").toLowerCase();
+  const all = [bucket, chronology, tags, english, variants].join(" ");
+  if (type === "present_perfect_vs_past") return /past_vs_present_perfect|yesterday|last (night|week|year|month)|in 20\d\d|simple past/.test(all);
+  if (type === "for_since_confusion") return /\bfor\b|\bsince\b|continuing_state|continuation/.test(all);
+  if (type === "been_gone_confusion") return /gone_vs_been|has gone|have gone|has been to|have been to/.test(all);
+  if (type === "result_usage") return /result_state|digital_result|result|so (he|she|it|they|we|i)|cannot|can't/.test(all);
+  if (type === "continuation_usage") return /continuing_state|continuation|\bfor\b|\bsince\b/.test(all);
+  if (type === "experience_usage") return /experience|ever|never|before|twice|times/.test(all);
+  return false;
+}
+
+function scoreWormholeDifficulty(item = {}, type = "", candidate = "") {
+  const text = String(candidate || item.english || "").toLowerCase();
+  const bucket = String(item.chapterMeta?.semanticBucket || "").toLowerCase();
+  let score = 1;
+  if (/have|has/.test(text) && /\b(yesterday|last night|last week|last year|in 20\d\d)\b/.test(text)) score = Math.max(score, 5);
+  if (/\bfor\s+(20\d\d|last\s+\w+)\b|\bsince\s+(several|many|two|three|four|five|\d+)\s+(days|weeks|months|years)\b/.test(text)) score = Math.max(score, 4);
+  if (/gone_vs_been/.test(bucket) || /\bbeen\b.*\bgone\b|\bgone\b.*\bbeen\b/.test(text)) score = Math.max(score, 5);
+  if (/result_state|digital_result/.test(bucket)) score = Math.max(score, 6);
+  if (/continuing_state/.test(bucket) || /\bfor\b|\bsince\b/.test(text)) score = Math.max(score, 4);
+  if (/experience/.test(bucket) || /\bever\b|\bnever\b|\bbefore\b|\btwice\b|\btimes\b/.test(text)) score = Math.max(score, 4);
+  if (/\b(have|has)\s+\w+(ed|en)\b/.test(text)) score = Math.max(score, 2);
+  if (type === "present_perfect_vs_past" && presentPerfectItemMatchesType(item, type)) score = Math.max(score, 5);
+  if (type === "for_since_confusion" && presentPerfectItemMatchesType(item, type)) score = Math.max(score, 4);
+  if (type === "been_gone_confusion" && presentPerfectItemMatchesType(item, type)) score = Math.max(score, 5);
+  if (type === "result_usage" && presentPerfectItemMatchesType(item, type)) score = Math.max(score, 6);
+  if ((type === "continuation_usage" || type === "experience_usage") && presentPerfectItemMatchesType(item, type)) score = Math.max(score, 4);
+  return score;
+}
+
+function scorePresentPerfectDistractorDifficulty(candidate = "", type = "") {
+  const text = String(candidate || "").toLowerCase();
+  if (type === "present_perfect_vs_past" && /\b(have|has)\b.*\b(yesterday|last night|last week|last year|in 20\d\d)\b/.test(text)) return 5;
+  if ((type === "for_since_confusion" || type === "continuation_usage") &&
+      (/\bfor\s+(20\d\d|last\s+\w+)\b/.test(text) || /\bsince\s+(several|many|two|three|four|five|\d+)\s+(days|weeks|months|years)\b/.test(text))) return 4;
+  if (type === "been_gone_confusion" && /\b(been|gone)\b/.test(text)) return 5;
+  if (type === "result_usage" && /\b(had|yesterday|last night|last week)\b/.test(text)) return 6;
+  if (type === "continuation_usage" && /\b(yesterday|last night|last week)\b/.test(text)) return 5;
+  if (type === "experience_usage" && /\b(yesterday|last year|ever|never|before|twice|times)\b/.test(text)) return 4;
+  if (/\b(i|you|we|they)\s+has\b|\b(he|she|it)\s+have\b/.test(text)) return 1;
+  if (/\b(have|has)\s+\w+\b/.test(text)) return 2;
+  return 1;
+}
+
+function selectPresentPerfectAdvancedItems(items = [], input = {}, typePlan = []) {
+  const seed = ["present-perfect-selection-2.1", input.topic, input.userPrompt, input.worksheetTitle, input.count].filter(Boolean).join("|");
+  const pool = stableShuffle(items, seed);
+  const usedIds = new Set();
+  const usedSentences = new Set();
+  const selected = [];
+  let fallbackAssignments = 0;
+  typePlan.forEach((type) => {
+    const candidates = pool
+      .filter((item) => !usedIds.has(item.id) && !usedSentences.has(normalizeSentenceIdentity(item.english)) && presentPerfectItemMatchesType(item, type))
+      .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type));
+    let item = candidates.find((candidate) =>
+      scoreWormholeDifficulty(candidate, type) >= 4 &&
+      buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
+    );
+    if (!item) {
+      item = pool
+        .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)))
+        .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type))
+        .find((candidate) =>
+          scoreWormholeDifficulty(candidate, type) >= 4 &&
+          buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
+        );
+      if (item) fallbackAssignments += 1;
+    }
+    if (!item) return;
+    usedIds.add(item.id);
+    usedSentences.add(normalizeSentenceIdentity(item.english));
+    selected.push({ item, type });
+  });
+  console.info("[WORMHOLE_PRESENT_PERFECT_SELECTION]", {
+    functionName: "selectPresentPerfectAdvancedItems",
+    requested: typePlan.length,
+    selected: selected.length,
+    usedSentenceIds: usedIds.size,
+    uniqueEnglish: usedSentences.size,
+    fallbackAssignments,
+    minimumDifficultyScore: selected.length ? Math.min(...selected.map((entry) => scoreWormholeDifficulty(entry.item, entry.type))) : 0
+  });
+  return selected;
+}
+
+function buildPresentPerfectSemanticCandidates(item = {}, type = "") {
+  const correct = cleanDbOption(item.english);
+  const raw = getUniqueWrongOptions(item, 12);
+  const generated = [];
+  const add = (value) => {
+    const text = cleanDbOption(value);
+    if (text && normalizeSentenceIdentity(text) !== normalizeSentenceIdentity(correct) && !generated.some((entry) => normalizeSentenceIdentity(entry) === normalizeSentenceIdentity(text))) generated.push(text);
+  };
+  if (type === "present_perfect_vs_past") {
+    add(correct.replace(/\bbefore\b/i, "yesterday"));
+    add(correct.replace(/[.?!]$/, "") + " last night.");
+    add(correct.replace(/[.?!]$/, "") + " in 2024.");
+    add(correct.replace(/\byet\b/i, "last week"));
+  } else if (type === "for_since_confusion" || type === "continuation_usage") {
+    add(correct.replace(/\bfor\b/i, "since"));
+    add(correct.replace(/\bsince\b/i, "for"));
+    add(correct.replace(/\bfor\s+[^,.?!]+/i, "for 2022"));
+    add(correct.replace(/\bsince\s+[^,.?!]+/i, "since three years"));
+    add(correct.replace(/\bfor\s+[^,.?!]+/i, "since several months"));
+    add(correct.replace(/[.?!]$/, "") + " yesterday.");
+  } else if (type === "been_gone_confusion") {
+    add(correct.replace(/\bbeen\b/i, "gone"));
+    add(correct.replace(/\bgone\b/i, "been"));
+    add(correct.replace(/\bbefore\b/i, "now"));
+    add(correct.replace(/[.?!]$/, "") + " many times now.");
+    add(correct.replace(/[.?!]$/, "") + " before now.");
+  } else if (type === "result_usage") {
+    add(correct.replace(/\bhas\b/i, "had"));
+    add(correct.replace(/\bhave\b/i, "had"));
+    add(correct.replace(/[.?!]$/, "") + " yesterday.");
+    add(correct.replace(/\bnow\b/i, "last night"));
+    add(correct.replace(/\bso\b/i, "yesterday, so"));
+  } else if (type === "experience_usage") {
+    add(correct.replace(/\bnever\b/i, "ever"));
+    add(correct.replace(/\bever\b/i, "already"));
+    add(correct.replace(/\bbefore\b/i, "yesterday"));
+    add(correct.replace(/[.?!]$/, "") + " last year.");
+    add(correct.replace(/[.?!]$/, "") + " yesterday.");
+  }
+  raw.filter((value) => scorePresentPerfectDistractorDifficulty(value, type) >= 4).forEach(add);
+  raw.forEach(add);
+  return generated
+    .sort((a, b) => scorePresentPerfectDistractorDifficulty(b, type) - scorePresentPerfectDistractorDifficulty(a, type))
+    .slice(0, 4);
+}
+
+function getPresentPerfectAdvancedStem(type = "", language = "ko") {
+  const ko = {
+    present_perfect_vs_past: "다음 중 현재완료와 과거 시점 표현의 관계가 어법상 올바른 문장을 고르시오.",
+    for_since_confusion: "다음 중 for와 since의 쓰임이 어법상 올바른 문장을 고르시오.",
+    been_gone_confusion: "다음 중 been과 gone의 의미 관계가 문맥상 올바른 문장을 고르시오.",
+    result_usage: "다음 중 과거 사건의 현재 결과를 가장 정확하게 나타낸 문장을 고르시오.",
+    continuation_usage: "다음 중 과거부터 현재까지의 계속을 올바르게 나타낸 문장을 고르시오.",
+    experience_usage: "다음 중 현재완료의 경험 용법을 어법상 올바르게 사용한 문장을 고르시오."
+  };
+  const en = {
+    present_perfect_vs_past: "Choose the sentence that correctly distinguishes the present perfect from the simple past.",
+    for_since_confusion: "Choose the sentence that correctly uses for or since.",
+    been_gone_confusion: "Choose the sentence that correctly uses been or gone in context.",
+    result_usage: "Choose the sentence that correctly expresses a present result.",
+    continuation_usage: "Choose the sentence that correctly expresses continuation up to the present.",
+    experience_usage: "Choose the sentence that correctly expresses experience."
+  };
+  return (language === "en" ? en : ko)[type];
+}
+
+function buildPresentPerfectAdvancedQuestion(item, index, input = {}, context = {}, type = "") {
+  const correct = cleanDbOption(item.english);
+  const wrong = buildPresentPerfectSemanticCandidates(item, type);
+  if (!correct || wrong.length < 4) return null;
+  const question = formatStructuredDbQuestion(
+    item,
+    index,
+    input,
+    type,
+    getPresentPerfectAdvancedStem(type, input.language),
+    [{ text: correct, correct: true }, ...wrong.map((text) => ({ text, correct: false }))],
+    correct
+  );
+  if (question) {
+    question.presentPerfectType = type;
+    question.difficultyScore = scoreWormholeDifficulty(item, type);
+  }
+  return question;
+}
+
+function validatePresentPerfectAdvancedDistribution(questions = [], requestedCount = 0) {
+  const counts = countPresentPerfectAdvancedTypes(questions);
+  const total = questions.length;
+  const zeroTypes = PRESENT_PERFECT_ADVANCED_TYPES.filter((type) => counts[type] === 0);
+  const uniqueIds = new Set(questions.map((question) => String(question.id || "").split(":")[0]));
+  const valid = total === requestedCount && uniqueIds.size === total && zeroTypes.length === 0;
+  return { valid, total, requestedCount, counts, zeroTypes, uniqueSentenceIds: uniqueIds.size };
+}
+
+function getUniqueWrongOptions(item = {}, limit = 4, usedOptions = new Set()) {
   const correct = cleanDbOption(item.english);
   const unique = [];
   for (const value of getRawWormholeWrongCandidates(item).map(cleanDbOption).filter(Boolean)) {
-    if (value && value !== correct && !unique.includes(value)) unique.push(value);
+    if (value && value !== correct && !usedOptions.has(normalizeSentenceIdentity(value)) && !unique.includes(value)) unique.push(value);
   }
   const highQuality = unique.filter((value) => !isLowQualityDbDistractor(value));
   const fallback = unique.filter((value) => isLowQualityDbDistractor(value));
   return [...highQuality, ...fallback].slice(0, limit);
 }
 
-function getUniqueCorrectOptions(items = [], excludedId = "", limit = 5) {
+function getUniqueCorrectOptions(items = [], excludedIds = new Set(), limit = 5, usedOptions = new Set()) {
   const unique = [];
   for (const item of items) {
     const value = cleanDbOption(item?.english);
-    if (!value || item?.id === excludedId || unique.includes(value)) continue;
+    const normalized = normalizeSentenceIdentity(value);
+    if (!value || excludedIds.has(item?.id) || usedOptions.has(normalized) || unique.some((entry) => normalizeSentenceIdentity(entry) === normalized)) continue;
     unique.push(value);
     if (unique.length >= limit) break;
   }
   return unique;
+}
+
+function getBuilderUsedOptions(context = {}, item = {}) {
+  const used = new Set(context.usedOptionSentences instanceof Set ? context.usedOptionSentences : []);
+  const correct = normalizeSentenceIdentity(item.english);
+  if (correct) used.add(correct);
+  return used;
+}
+
+function scoreGlobalWormholeDistractor(value = "") {
+  const text = normalizeSentenceIdentity(value);
+  if (!text || isLowQualityDbDistractor(text)) return 0;
+  if (/\b(have|has)\b.*\b(yesterday|last night|last week|last year|in 20\d\d)\b|\bfor\s+(20\d\d|last\s+\w+)\b|\bsince\s+(several|many|two|three|four|five|\d+)\s+(days|weeks|months|years)\b/.test(text)) return 6;
+  if (/\bbeen\b.*\bgone\b|\bgone\b.*\bbeen\b|\b(already|yet|ever|never|before)\b.*\b(yesterday|last year|now)\b/.test(text)) return 6;
+  if (/\b(most|more)\s+\w+est\b|\bthe\s+more\s+\w+est\b|\bmore\s+\w+er\b|\bmost\s+\w+er\b/.test(text)) return 5;
+  if (/\balthough\b.*\bbut\b|\bbecause of\b\s+(he|she|it|they|we|i)\b|\bbecause\b\s+(the|a|an)\s+\w+\s*$|\bdespite\b.*\bbut\b/.test(text)) return 5;
+  if (/\b(to|for|since|during|while|when|that|which|who|whom)\b/.test(text)) return 4;
+  if (/\b(i|you|we|they)\s+has\b|\b(he|she|it)\s+have\b|\b(have has|has have|did \w+ed|does \w+s)\b/.test(text)) return 1;
+  if (/\b(have|has|had)\s+\w+\b/.test(text)) return 2;
+  return 3;
+}
+
+function getContextWrongOptions(item = {}, limit = 4, context = {}) {
+  const usedOptions = getBuilderUsedOptions(context, item);
+  const pool = [];
+  function add(value, ownItem) {
+    const normalized = normalizeSentenceIdentity(value);
+    if (!normalized || usedOptions.has(normalized) || pool.some((entry) => entry.normalized === normalized)) return;
+    pool.push({ value, normalized, score: scoreGlobalWormholeDistractor(value), ownItem });
+  }
+  getUniqueWrongOptions(item, 12, usedOptions).forEach((value) => add(value, true));
+  for (const candidate of context.allItems || []) {
+    if (candidate?.id === item?.id) continue;
+    getUniqueWrongOptions(candidate, 8, usedOptions).forEach((value) => add(value, false));
+    if (pool.length >= 80) break;
+  }
+  return pool
+    .sort((a, b) => b.score - a.score || Number(b.ownItem) - Number(a.ownItem))
+    .slice(0, limit)
+    .map((entry) => entry.value);
 }
 
 function getBuilderSeed(item = {}, index = 0, input = {}, type = "") {
@@ -1587,7 +1897,7 @@ function buildCorrectQuestion(item, index, input = {}, context = {}) {
   const correct = cleanDbOption(item.english);
   const accepted = getWormholeAcceptedAlternatives(item).map(cleanDbOption).filter(Boolean).slice(0, 2);
   const valid = [correct, ...accepted].filter(Boolean);
-  const wrong = getUniqueWrongOptions(item, 5 - valid.length);
+  const wrong = getContextWrongOptions(item, 5 - valid.length, context);
   if (!correct || wrong.length < 5 - valid.length) return null;
   return formatStructuredDbQuestion(
     item, index, input, "correct",
@@ -1600,8 +1910,8 @@ function buildCorrectQuestion(item, index, input = {}, context = {}) {
 }
 
 function buildIncorrectQuestion(item, index, input = {}, context = {}) {
-  const correctOptions = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.items, item.id, 3)].filter(Boolean).slice(0, 4);
-  const wrong = getUniqueWrongOptions(item, 1)[0];
+  const correctOptions = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.allItems, context.selectedIds, 3, getBuilderUsedOptions(context, item))].filter(Boolean).slice(0, 4);
+  const wrong = getContextWrongOptions(item, 1, context)[0];
   if (correctOptions.length < 4 || !wrong) return null;
   return formatStructuredDbQuestion(
     item, index, input, "incorrect",
@@ -1613,8 +1923,8 @@ function buildIncorrectQuestion(item, index, input = {}, context = {}) {
 
 function buildCountingQuestion(item, index, input = {}, context = {}) {
   const correctCount = 2 + (index % 3);
-  const correctSentences = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.items, item.id, correctCount - 1)].filter(Boolean).slice(0, correctCount);
-  const wrongSentences = getUniqueWrongOptions(item, 5 - correctCount);
+  const correctSentences = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.allItems, context.selectedIds, correctCount - 1, getBuilderUsedOptions(context, item))].filter(Boolean).slice(0, correctCount);
+  const wrongSentences = getContextWrongOptions(item, 5 - correctCount, context);
   if (correctSentences.length < correctCount || wrongSentences.length < 5 - correctCount) return null;
   const statements = stableShuffle(
     [...correctSentences.map((text) => ({ text, valid: true })), ...wrongSentences.map((text) => ({ text, valid: false }))],
@@ -1633,8 +1943,8 @@ function buildCountingQuestion(item, index, input = {}, context = {}) {
 }
 
 function buildStructureQuestion(item, index, input = {}, context = {}) {
-  const sameStructure = getUniqueCorrectOptions(context.items, item.id, 1)[0];
-  const wrong = getUniqueWrongOptions(item, 4);
+  const sameStructure = getUniqueCorrectOptions(context.allItems, context.selectedIds, 1, getBuilderUsedOptions(context, item))[0];
+  const wrong = getContextWrongOptions(item, 4, context);
   if (!sameStructure || wrong.length < 4) return null;
   const target = cleanDbOption(item.english);
   const stem = input.language === "en"
@@ -1649,8 +1959,8 @@ function buildStructureQuestion(item, index, input = {}, context = {}) {
 
 function buildMultiSelectQuestion(item, index, input = {}, context = {}) {
   const validCount = 2 + (index % 2);
-  const valid = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.items, item.id, validCount - 1)].filter(Boolean).slice(0, validCount);
-  const wrong = getUniqueWrongOptions(item, 5 - validCount);
+  const valid = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.allItems, context.selectedIds, validCount - 1, getBuilderUsedOptions(context, item))].filter(Boolean).slice(0, validCount);
+  const wrong = getContextWrongOptions(item, 5 - validCount, context);
   if (valid.length < validCount || wrong.length < 5 - validCount) return null;
   return formatStructuredDbQuestion(
     item, index, input, "multi_select",
@@ -1663,7 +1973,7 @@ function buildMultiSelectQuestion(item, index, input = {}, context = {}) {
 function buildEquivalenceQuestion(item, index, input = {}, context = {}) {
   const target = cleanDbOption(item.english);
   const equivalent = cleanDbOption(getWormholeAcceptedAlternatives(item)[0]) || target.replace(/[.?!]$/, "");
-  const wrong = getUniqueWrongOptions(item, 4);
+  const wrong = getContextWrongOptions(item, 4, context);
   if (!target || !equivalent || wrong.length < 4) return null;
   const stem = input.language === "en"
     ? "Choose the sentence grammatically equivalent to the given sentence.\n<" + target + ">"
@@ -1687,6 +1997,13 @@ const WORMHOLE_QUESTION_BUILDERS = {
 function buildPlannedDbQuestion(item, index, input = {}, context = {}, questionType = "correct") {
   const builder = WORMHOLE_QUESTION_BUILDERS[questionType];
   const question = builder ? builder(item, index, input, context) : null;
+  if (question && context.usedOptionSentences instanceof Set) {
+    question.questionText
+      .split("\n")
+      .filter((line) => /^[①②③④⑤]\s/.test(line))
+      .map((line) => line.replace(/^[①②③④⑤]\s*/, ""))
+      .forEach((option) => context.usedOptionSentences.add(normalizeSentenceIdentity(option)));
+  }
   console.info("[WORMHOLE_TYPE_SELECTED]", {
     index: index + 1,
     seedId: item.seedId || item.id,
@@ -1708,6 +2025,39 @@ function validateWormholeTypeDistribution(questions = [], requestedCount = 0) {
   return { valid, total, requestedCount, counts, zeroTypes, excessiveTypes, maxAllowed };
 }
 
+function validateGlobalHighDifficultyQuality(questions = [], requestedCount = 0, input = {}) {
+  const applies = !isPresentPerfectAdvancedRequest(input) &&
+    (input.difficulty === "high" || input.difficulty === "extreme" || input.mode === "advanced");
+  if (!applies) return { valid: true, applies: false };
+  const normalizedOptions = questions.flatMap((question) =>
+    String(question.questionText || "").split("\n")
+      .filter((line) => /^[①②③④⑤]\s/.test(line))
+      .map((line) => normalizeSentenceIdentity(line.replace(/^[①②③④⑤]\s*/, "")))
+      .filter((option) => /[a-z]/i.test(option) && option.split(/\s+/).length >= 3)
+  );
+  const duplicateOptions = normalizedOptions.filter((option, index) => normalizedOptions.indexOf(option) !== index);
+  const primaryIds = questions.map((question) => String(question.id || "").split(":")[0]);
+  const duplicatePrimaryIds = primaryIds.filter((id, index) => primaryIds.indexOf(id) !== index);
+  const confirmationCount = questions.filter((question) =>
+    question.questionType === "structure_match" || question.questionType === "sentence_equivalence"
+  ).length;
+  const maxConfirmation = Math.floor(requestedCount * 0.1);
+  const valid = questions.length === requestedCount &&
+    duplicateOptions.length === 0 &&
+    duplicatePrimaryIds.length === 0 &&
+    confirmationCount <= maxConfirmation;
+  return {
+    valid,
+    applies: true,
+    requestedCount,
+    actualCount: questions.length,
+    duplicateOptionCount: new Set(duplicateOptions).size,
+    duplicatePrimaryIdCount: new Set(duplicatePrimaryIds).size,
+    confirmationCount,
+    maxConfirmation
+  };
+}
+
 function formatDbWormholeResponse(questions = [], input = {}) {
   const title = buildWormholeTitle(input);
   const instructions = buildWormholeInstructions(input);
@@ -1724,7 +2074,9 @@ function formatDbWormholeResponse(questions = [], input = {}) {
     actualCount: questions.length,
     source: "db-first",
     dbFirst: true,
-    questionTypeDistribution: countQuestionTypes(questions),
+    questionTypeDistribution: isPresentPerfectAdvancedRequest(input)
+      ? countPresentPerfectAdvancedTypes(questions)
+      : countQuestionTypes(questions),
     ambiguityMode: questions.some((question) => (question.correctOptionIndexes || []).length > 1)
       ? "single-dual-multi-correct"
       : "single-correct"
@@ -1762,7 +2114,14 @@ async function tryBuildWormholeFromDb(input = {}) {
     input.__wormholeDbFile = entry.file;
     try {
       const items = await loadGrammarDb(entry.filePath);
-      const selected = selectDbItems(items, input);
+      const presentPerfectAdvanced = isPresentPerfectAdvancedRequest(input);
+      const presentPerfectTypePlan = presentPerfectAdvanced ? buildPresentPerfectAdvancedTypes(input.count, input) : [];
+      const presentPerfectSelection = presentPerfectAdvanced
+        ? selectPresentPerfectAdvancedItems(items, input, presentPerfectTypePlan)
+        : [];
+      const selected = presentPerfectAdvanced
+        ? presentPerfectSelection.map((entry) => entry.item)
+        : selectDbItems(items, input);
       if (selected.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_items" });
         console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_items" });
@@ -1776,10 +2135,18 @@ async function tryBuildWormholeFromDb(input = {}) {
       }
 
       const assemblyStart = Date.now();
-      const typePlan = QuestionTypePlanner(input.count, input);
-      const context = { items: selected, allItems: items };
+      const typePlan = presentPerfectAdvanced ? presentPerfectTypePlan : QuestionTypePlanner(input.count, input);
+      const context = {
+        items: selected,
+        allItems: items,
+        input,
+        selectedIds: new Set(selected.map((item) => item.id)),
+        usedOptionSentences: new Set(selected.map((item) => normalizeSentenceIdentity(item.english)).filter(Boolean))
+      };
       const questions = selected
-        .map((item, index) => buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
+        .map((item, index) => presentPerfectAdvanced
+          ? buildPresentPerfectAdvancedQuestion(item, index, input, context, presentPerfectSelection[index]?.type || typePlan[index])
+          : buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
         .filter(Boolean);
       console.info("[ASSEMBLY_TIME]", { ms: Date.now() - assemblyStart, selected: selected.length, questions: questions.length });
 
@@ -1795,18 +2162,48 @@ async function tryBuildWormholeFromDb(input = {}) {
         };
       }
 
-      const distributionValidation = validateWormholeTypeDistribution(questions, input.count);
-      console.info("[WORMHOLE_TYPE_DISTRIBUTION]", {
-        correct: distributionValidation.counts.correct,
-        incorrect: distributionValidation.counts.incorrect,
-        counting: distributionValidation.counts.counting,
-        structure: distributionValidation.counts.structure_match,
-        multi: distributionValidation.counts.multi_select,
-        equivalence: distributionValidation.counts.sentence_equivalence,
-        total: distributionValidation.total,
-        requested: distributionValidation.requestedCount,
-        valid: distributionValidation.valid
-      });
+      const globalQualityValidation = validateGlobalHighDifficultyQuality(questions, input.count, input);
+      console.info("[WORMHOLE_GLOBAL_QUALITY_GATE]", globalQualityValidation);
+      if (!globalQualityValidation.valid) {
+        unusable.push({ file: entry.file, reason: "global_high_difficulty_quality_gate_rejected", globalQualityValidation });
+        console.warn("[WORMHOLE_GLOBAL_QUALITY_GATE_REJECTED]", {
+          file: entry.file,
+          functionName: "validateGlobalHighDifficultyQuality",
+          ...globalQualityValidation
+        });
+        return {
+          success: false,
+          dbMatched: true,
+          blockGptFallback: true,
+          reason: "global_high_difficulty_quality_gate_rejected",
+          unusable
+        };
+      }
+
+      const distributionValidation = presentPerfectAdvanced
+        ? validatePresentPerfectAdvancedDistribution(questions, input.count)
+        : validateWormholeTypeDistribution(questions, input.count);
+      if (presentPerfectAdvanced) {
+        console.info("[WORMHOLE_PRESENT_PERFECT_TYPE_DISTRIBUTION]", {
+          ...distributionValidation.counts,
+          total: distributionValidation.total,
+          requested: distributionValidation.requestedCount,
+          uniqueSentenceIds: distributionValidation.uniqueSentenceIds,
+          valid: distributionValidation.valid
+        });
+      } else {
+        console.info("[WORMHOLE_TYPE_DISTRIBUTION]", {
+          correct: distributionValidation.counts.correct,
+          incorrect: distributionValidation.counts.incorrect,
+          counting: distributionValidation.counts.counting,
+          structure: distributionValidation.counts.structure_match,
+          multi: distributionValidation.counts.multi_select,
+          equivalence: distributionValidation.counts.sentence_equivalence,
+          total: distributionValidation.total,
+          requested: distributionValidation.requestedCount,
+          valid: distributionValidation.valid
+        });
+      }
       console.info("[WORMHOLE_AMBIGUITY_ENGINE]", {
         singleCorrect: questions.filter((question) => question.correctOptionIndexes.length === 1).length,
         dualCorrect: questions.filter((question) => question.correctOptionIndexes.length === 2).length,
