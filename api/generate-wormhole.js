@@ -835,8 +835,36 @@ function buildWormholeFileAliases(fileName = "", grade = "", meta = {}) {
   return [...aliases].filter((alias) => alias.length >= 2);
 }
 
+function getWormholeAcceptedAlternatives(item = {}) {
+  const correct = String(item.english || "").replace(/\s+/g, " ").trim();
+  const raw = [
+    item.acceptedAlternatives,
+    item.validAlternatives,
+    item.ambiguityAlternatives,
+    item.distractorSeeds?.acceptedAlternatives,
+    item.distractorSeeds?.validAlternatives
+  ];
+  const alternatives = [];
+  function add(value) {
+    if (Array.isArray(value)) {
+      value.forEach(add);
+      return;
+    }
+    const text = String(value || "").replace(/\s+/g, " ").trim();
+    const normalized = text.replace(/[.?!]$/g, "").toLowerCase();
+    const correctNormalized = correct.replace(/[.?!]$/g, "").toLowerCase();
+    if (text && normalized !== correctNormalized && !alternatives.some((entry) => entry.replace(/[.?!]$/g, "").toLowerCase() === normalized)) {
+      alternatives.push(text);
+    }
+  }
+  raw.forEach(add);
+  return alternatives;
+}
+
 function getRawWormholeWrongCandidates(item = {}) {
   const correct = String(item.english || "").replace(/\s+/g, " ").trim();
+  const accepted = getWormholeAcceptedAlternatives(item)
+    .map((value) => value.replace(/[.?!]$/g, "").toLowerCase());
   const seeds = item.distractorSeeds || {};
   const out = [];
   function add(value) {
@@ -848,7 +876,7 @@ function getRawWormholeWrongCandidates(item = {}) {
     if (!text) return;
     const normalized = text.replace(/[.?!]$/g, "").toLowerCase();
     const correctNormalized = correct.replace(/[.?!]$/g, "").toLowerCase();
-    if (normalized !== correctNormalized && !out.some((item) => item.replace(/[.?!]$/g, "").toLowerCase() === normalized)) {
+    if (normalized !== correctNormalized && !accepted.includes(normalized) && !out.some((item) => item.replace(/[.?!]$/g, "").toLowerCase() === normalized)) {
       out.push(text);
     }
   }
@@ -1148,7 +1176,7 @@ async function loadGrammarDb(filePath) {
   const fs = require("fs");
   console.info("[WORMHOLE_DB_FILE_READ]", { filePath, cwd: process.cwd() });
   const raw = fs.readFileSync(filePath, "utf8");
-  const items = JSON.parse(raw);
+  const items = JSON.parse(raw.replace(/^\uFEFF/, ""));
   console.info("[DB_LOAD_TIME]", { ms: Date.now() - loadStart, filePath, rawBytes: raw.length, itemCount: Array.isArray(items) ? items.length : 0 });
   const usability = getWormholeDbUsability(items);
   if (!usability.usable) {
@@ -1350,54 +1378,295 @@ function isLowQualityDbDistractor(text = "") {
   return /\bafter\s+before\b|\bbefore\s+after\b|\bafter\s+to\b|\bbefore\s+to\b/.test(t);
 }
 
-function buildQuestionFromDbItem(item, index, input = {}) {
-  const correct = cleanDbOption(item.english);
-  const rawDistractors = getRawWormholeWrongCandidates(item).map(cleanDbOption).filter(Boolean);
+const WORMHOLE_TYPE_KEYS = [
+  "correct",
+  "incorrect",
+  "counting",
+  "structure_match",
+  "multi_select",
+  "sentence_equivalence"
+];
 
-  const unique = [];
-  for (const value of rawDistractors) {
-    if (value && value !== correct && !unique.includes(value)) unique.push(value);
+const WORMHOLE_TYPE_LABELS = {
+  correct: "correct",
+  incorrect: "incorrect",
+  counting: "counting",
+  structure_match: "structure",
+  multi_select: "multi",
+  sentence_equivalence: "equivalence"
+};
+
+const WORMHOLE_BASE_TYPE_WEIGHTS = {
+  correct: 6,
+  incorrect: 5,
+  counting: 5,
+  structure_match: 4,
+  multi_select: 3,
+  sentence_equivalence: 2
+};
+
+const WORMHOLE_CHAPTER_TYPE_BONUS = {
+  present_perfect: { counting: 2, structure_match: 1 },
+  relative_pronoun: { structure_match: 2, multi_select: 1 },
+  relative_pronouns: { structure_match: 2, multi_select: 1 },
+  subject_relative_pronouns: { structure_match: 2, multi_select: 1 },
+  objective_relative_pronouns: { structure_match: 2, multi_select: 1 },
+  ditransitive: { incorrect: 1, structure_match: 1 },
+  comparative: { counting: 1, structure_match: 2 },
+  comparatives: { counting: 1, structure_match: 2 }
+};
+
+function countQuestionTypes(types = []) {
+  const counts = Object.fromEntries(WORMHOLE_TYPE_KEYS.map((type) => [type, 0]));
+  for (const value of types) {
+    const type = typeof value === "string" ? value : value?.questionType;
+    if (Object.prototype.hasOwnProperty.call(counts, type)) counts[type] += 1;
+  }
+  return counts;
+}
+
+function getQuestionTypeWeights(input = {}) {
+  const weights = { ...WORMHOLE_BASE_TYPE_WEIGHTS };
+  const chapter = String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_");
+  for (const [key, bonus] of Object.entries(WORMHOLE_CHAPTER_TYPE_BONUS)) {
+    if (!chapter.includes(key)) continue;
+    for (const [type, value] of Object.entries(bonus)) weights[type] += value;
+  }
+  return weights;
+}
+
+function QuestionTypePlanner(count, input = {}) {
+  const requested = clamp(Number(count) || 25, 1, 30);
+  const weights = getQuestionTypeWeights(input);
+  const allocation = Object.fromEntries(WORMHOLE_TYPE_KEYS.map((type) => [type, 0]));
+  let remaining = requested;
+  const totalWeight = Object.values(weights).reduce((sum, value) => sum + value, 0);
+  const exact = WORMHOLE_TYPE_KEYS.map((type) => ({
+    type,
+    exact: requested * weights[type] / totalWeight
+  }));
+  for (const entry of exact) {
+    const whole = Math.floor(entry.exact);
+    allocation[entry.type] += whole;
+    remaining -= whole;
+  }
+  const remainderOrder = exact
+    .map((entry) => ({ ...entry, remainder: entry.exact - Math.floor(entry.exact) }))
+    .sort((a, b) => b.remainder - a.remainder || WORMHOLE_TYPE_KEYS.indexOf(a.type) - WORMHOLE_TYPE_KEYS.indexOf(b.type));
+  for (let i = 0; i < remaining; i += 1) allocation[remainderOrder[i % remainderOrder.length].type] += 1;
+  if (requested >= WORMHOLE_TYPE_KEYS.length) {
+    for (const type of WORMHOLE_TYPE_KEYS) {
+      if (allocation[type] > 0) continue;
+      const donor = WORMHOLE_TYPE_KEYS
+        .filter((candidate) => allocation[candidate] > 1)
+        .sort((a, b) => allocation[b] - allocation[a])[0];
+      if (donor) {
+        allocation[donor] -= 1;
+        allocation[type] = 1;
+      }
+    }
   }
 
+  const bag = WORMHOLE_TYPE_KEYS.flatMap((type) => Array(allocation[type]).fill(type));
+  const shuffled = stableShuffle(bag, [
+    "wormhole-type-plan",
+    input.selectedGrade,
+    input.__wormholeDbCanonical,
+    input.topic,
+    input.userPrompt,
+    input.count
+  ].filter(Boolean).join("|"));
+  const plan = [];
+  while (shuffled.length) {
+    const last = plan[plan.length - 1];
+    const previous = plan[plan.length - 2];
+    let pickIndex = 0;
+    if (last && last === previous) {
+      const alternate = shuffled.findIndex((type) => type !== last);
+      if (alternate >= 0) pickIndex = alternate;
+    }
+    plan.push(shuffled.splice(pickIndex, 1)[0]);
+  }
+  console.info("[WORMHOLE_TYPE_PLAN]", {
+    requestedCount: requested,
+    chapter: input.__wormholeDbCanonical || input.topic || "",
+    distribution: countQuestionTypes(plan)
+  });
+  return plan;
+}
+
+function getUniqueWrongOptions(item = {}, limit = 4) {
+  const correct = cleanDbOption(item.english);
+  const unique = [];
+  for (const value of getRawWormholeWrongCandidates(item).map(cleanDbOption).filter(Boolean)) {
+    if (value && value !== correct && !unique.includes(value)) unique.push(value);
+  }
   const highQuality = unique.filter((value) => !isLowQualityDbDistractor(value));
   const fallback = unique.filter((value) => isLowQualityDbDistractor(value));
-  const wrong = [...highQuality, ...fallback].slice(0, 4);
-  if (wrong.length < 4) return null;
+  return [...highQuality, ...fallback].slice(0, limit);
+}
 
-  console.info("[WORMHOLE_DB_VARIANT_USED]", {
-    seedId: item.seedId || item.id,
-    variantCount: Array.isArray(item.distractorSeeds?.wormholeVariants) ? item.distractorSeeds.wormholeVariants.length : 0,
-    assemblyMode: "db_variant_assembly"
-  });
+function getUniqueCorrectOptions(items = [], excludedId = "", limit = 5) {
+  const unique = [];
+  for (const item of items) {
+    const value = cleanDbOption(item?.english);
+    if (!value || item?.id === excludedId || unique.includes(value)) continue;
+    unique.push(value);
+    if (unique.length >= limit) break;
+  }
+  return unique;
+}
 
-  const optionObjects = [
-    { text: correct, correct: true },
-    ...wrong.map((text) => ({ text, correct: false }))
-  ];
-  const shuffled = stableShuffle(optionObjects, [
-    item.id,
-    input.topic || "",
-    input.userPrompt || "",
-    input.worksheetTitle || "",
-    input.requestedChapter || "",
-    input.count || "",
-    index
-  ].join("|"));
+function getBuilderSeed(item = {}, index = 0, input = {}, type = "") {
+  return [item.id, input.topic, input.userPrompt, input.worksheetTitle, input.requestedChapter, input.count, index, type].filter(Boolean).join("|");
+}
+
+function formatStructuredDbQuestion(item, index, input, questionType, stem, optionObjects, explanation) {
+  if (!Array.isArray(optionObjects) || optionObjects.length !== 5) return null;
   const labels = ["①", "②", "③", "④", "⑤"];
-  const answerIndex = shuffled.findIndex((option) => option.correct);
-  const answerLabel = labels[answerIndex] || "①";
-  const questionStem = input.language === "en"
-    ? "Choose the grammatically correct sentence."
-    : "다음 중 어법상 가장 자연스러운 문장을 고르시오.";
-
+  const shuffled = stableShuffle(optionObjects, getBuilderSeed(item, index, input, questionType));
+  const correctOptionIndexes = shuffled
+    .map((option, optionIndex) => option.correct ? optionIndex : -1)
+    .filter((optionIndex) => optionIndex >= 0);
+  if (!correctOptionIndexes.length) return null;
+  const answerLabels = correctOptionIndexes.map((optionIndex) => labels[optionIndex]).join(", ");
   return {
-    id: item.id,
+    id: item.id + ":" + questionType,
+    questionType,
+    correctOptionIndexes,
     questionText: [
-      String(index + 1) + ". " + questionStem,
+      String(index + 1) + ". " + stem,
       ...shuffled.map((option, optionIndex) => labels[optionIndex] + " " + option.text)
     ].join("\n"),
-    answerText: String(index + 1) + ") " + answerLabel + " - " + correct
+    answerText: String(index + 1) + ") " + answerLabels + " - " + explanation
   };
+}
+
+function buildCorrectQuestion(item, index, input = {}, context = {}) {
+  const correct = cleanDbOption(item.english);
+  const accepted = getWormholeAcceptedAlternatives(item).map(cleanDbOption).filter(Boolean).slice(0, 2);
+  const valid = [correct, ...accepted].filter(Boolean);
+  const wrong = getUniqueWrongOptions(item, 5 - valid.length);
+  if (!correct || wrong.length < 5 - valid.length) return null;
+  return formatStructuredDbQuestion(
+    item, index, input, "correct",
+    accepted.length
+      ? (input.language === "en" ? "Choose all grammatically correct sentences." : "다음 중 어법상 자연스러운 문장을 모두 고르시오.")
+      : (input.language === "en" ? "Choose the grammatically correct sentence." : "다음 중 어법상 가장 자연스러운 문장을 고르시오."),
+    [...valid.map((text) => ({ text, correct: true })), ...wrong.map((text) => ({ text, correct: false }))],
+    valid.join(" / ")
+  );
+}
+
+function buildIncorrectQuestion(item, index, input = {}, context = {}) {
+  const correctOptions = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.items, item.id, 3)].filter(Boolean).slice(0, 4);
+  const wrong = getUniqueWrongOptions(item, 1)[0];
+  if (correctOptions.length < 4 || !wrong) return null;
+  return formatStructuredDbQuestion(
+    item, index, input, "incorrect",
+    input.language === "en" ? "Choose the grammatically incorrect sentence." : "다음 중 어법상 어색한 문장을 고르시오.",
+    [...correctOptions.map((text) => ({ text, correct: false })), { text: wrong, correct: true }],
+    wrong
+  );
+}
+
+function buildCountingQuestion(item, index, input = {}, context = {}) {
+  const correctCount = 2 + (index % 3);
+  const correctSentences = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.items, item.id, correctCount - 1)].filter(Boolean).slice(0, correctCount);
+  const wrongSentences = getUniqueWrongOptions(item, 5 - correctCount);
+  if (correctSentences.length < correctCount || wrongSentences.length < 5 - correctCount) return null;
+  const statements = stableShuffle(
+    [...correctSentences.map((text) => ({ text, valid: true })), ...wrongSentences.map((text) => ({ text, valid: false }))],
+    getBuilderSeed(item, index, input, "counting-statements")
+  );
+  const statementLabels = ["(a)", "(b)", "(c)", "(d)", "(e)"];
+  const stem = [
+    input.language === "en" ? "How many of the following sentences are grammatically correct?" : "다음 중 어법상 옳은 문장의 개수는?",
+    ...statements.map((entry, statementIndex) => statementLabels[statementIndex] + " " + entry.text)
+  ].join("\n");
+  return formatStructuredDbQuestion(
+    item, index, input, "counting", stem,
+    [1, 2, 3, 4, 5].map((value) => ({ text: input.language === "en" ? String(value) : value + "개", correct: value === correctCount })),
+    String(correctCount)
+  );
+}
+
+function buildStructureQuestion(item, index, input = {}, context = {}) {
+  const sameStructure = getUniqueCorrectOptions(context.items, item.id, 1)[0];
+  const wrong = getUniqueWrongOptions(item, 4);
+  if (!sameStructure || wrong.length < 4) return null;
+  const target = cleanDbOption(item.english);
+  const stem = input.language === "en"
+    ? "Choose the sentence that uses the same grammatical structure as the given sentence.\n<" + target + ">"
+    : "다음 주어진 문장과 같은 문법 구조를 사용한 문장을 고르시오.\n<" + target + ">";
+  return formatStructuredDbQuestion(
+    item, index, input, "structure_match", stem,
+    [{ text: sameStructure, correct: true }, ...wrong.map((text) => ({ text, correct: false }))],
+    sameStructure
+  );
+}
+
+function buildMultiSelectQuestion(item, index, input = {}, context = {}) {
+  const validCount = 2 + (index % 2);
+  const valid = [cleanDbOption(item.english), ...getUniqueCorrectOptions(context.items, item.id, validCount - 1)].filter(Boolean).slice(0, validCount);
+  const wrong = getUniqueWrongOptions(item, 5 - validCount);
+  if (valid.length < validCount || wrong.length < 5 - validCount) return null;
+  return formatStructuredDbQuestion(
+    item, index, input, "multi_select",
+    input.language === "en" ? "Choose all grammatically correct sentences." : "다음 중 어법상 옳은 문장을 모두 고르시오.",
+    [...valid.map((text) => ({ text, correct: true })), ...wrong.map((text) => ({ text, correct: false }))],
+    valid.join(" / ")
+  );
+}
+
+function buildEquivalenceQuestion(item, index, input = {}, context = {}) {
+  const target = cleanDbOption(item.english);
+  const equivalent = cleanDbOption(getWormholeAcceptedAlternatives(item)[0]) || target.replace(/[.?!]$/, "");
+  const wrong = getUniqueWrongOptions(item, 4);
+  if (!target || !equivalent || wrong.length < 4) return null;
+  const stem = input.language === "en"
+    ? "Choose the sentence grammatically equivalent to the given sentence.\n<" + target + ">"
+    : "다음 주어진 문장과 문법적으로 동등한 문장을 고르시오.\n<" + target + ">";
+  return formatStructuredDbQuestion(
+    item, index, input, "sentence_equivalence", stem,
+    [{ text: equivalent, correct: true }, ...wrong.map((text) => ({ text, correct: false }))],
+    equivalent
+  );
+}
+
+const WORMHOLE_QUESTION_BUILDERS = {
+  correct: buildCorrectQuestion,
+  incorrect: buildIncorrectQuestion,
+  counting: buildCountingQuestion,
+  structure_match: buildStructureQuestion,
+  multi_select: buildMultiSelectQuestion,
+  sentence_equivalence: buildEquivalenceQuestion
+};
+
+function buildPlannedDbQuestion(item, index, input = {}, context = {}, questionType = "correct") {
+  const builder = WORMHOLE_QUESTION_BUILDERS[questionType];
+  const question = builder ? builder(item, index, input, context) : null;
+  console.info("[WORMHOLE_TYPE_SELECTED]", {
+    index: index + 1,
+    seedId: item.seedId || item.id,
+    questionType,
+    builder: builder?.name || "missing",
+    built: Boolean(question),
+    correctAnswerCount: question?.correctOptionIndexes?.length || 0
+  });
+  return question;
+}
+
+function validateWormholeTypeDistribution(questions = [], requestedCount = 0) {
+  const counts = countQuestionTypes(questions);
+  const total = questions.length;
+  const maxAllowed = Math.floor(requestedCount * 0.4);
+  const zeroTypes = WORMHOLE_TYPE_KEYS.filter((type) => counts[type] === 0);
+  const excessiveTypes = WORMHOLE_TYPE_KEYS.filter((type) => counts[type] > maxAllowed);
+  const valid = total === requestedCount && zeroTypes.length === 0 && excessiveTypes.length === 0;
+  return { valid, total, requestedCount, counts, zeroTypes, excessiveTypes, maxAllowed };
 }
 
 function formatDbWormholeResponse(questions = [], input = {}) {
@@ -1415,7 +1684,11 @@ function formatDbWormholeResponse(questions = [], input = {}) {
     fullText,
     actualCount: questions.length,
     source: "db-first",
-    dbFirst: true
+    dbFirst: true,
+    questionTypeDistribution: countQuestionTypes(questions),
+    ambiguityMode: questions.some((question) => (question.correctOptionIndexes || []).length > 1)
+      ? "single-dual-multi-correct"
+      : "single-correct"
   };
 }
 
@@ -1439,14 +1712,39 @@ async function tryBuildWormholeFromDb(input = {}) {
       }
 
       const assemblyStart = Date.now();
+      const typePlan = QuestionTypePlanner(input.count, input);
+      const context = { items: selected, allItems: items };
       const questions = selected
-        .map((item, index) => buildQuestionFromDbItem(item, index, input))
+        .map((item, index) => buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
         .filter(Boolean);
       console.info("[ASSEMBLY_TIME]", { ms: Date.now() - assemblyStart, selected: selected.length, questions: questions.length });
 
       if (questions.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_questions" });
         console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_questions" });
+        continue;
+      }
+
+      const distributionValidation = validateWormholeTypeDistribution(questions, input.count);
+      console.info("[WORMHOLE_TYPE_DISTRIBUTION]", {
+        correct: distributionValidation.counts.correct,
+        incorrect: distributionValidation.counts.incorrect,
+        counting: distributionValidation.counts.counting,
+        structure: distributionValidation.counts.structure_match,
+        multi: distributionValidation.counts.multi_select,
+        equivalence: distributionValidation.counts.sentence_equivalence,
+        total: distributionValidation.total,
+        requested: distributionValidation.requestedCount,
+        valid: distributionValidation.valid
+      });
+      console.info("[WORMHOLE_AMBIGUITY_ENGINE]", {
+        singleCorrect: questions.filter((question) => question.correctOptionIndexes.length === 1).length,
+        dualCorrect: questions.filter((question) => question.correctOptionIndexes.length === 2).length,
+        multiCorrect: questions.filter((question) => question.correctOptionIndexes.length > 2).length
+      });
+      if (!distributionValidation.valid) {
+        unusable.push({ file: entry.file, reason: "invalid_question_type_distribution", distributionValidation });
+        console.warn("[WORMHOLE_TYPE_DISTRIBUTION_REJECTED]", distributionValidation);
         continue;
       }
 
