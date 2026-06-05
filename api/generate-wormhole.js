@@ -1265,6 +1265,123 @@ function stableShuffle(list = [], seedText = "") {
   return arr;
 }
 
+const WORMHOLE_RECENT_SELECTION_LIMIT = 180;
+const WORMHOLE_RECENT_SELECTION_ENABLED = process.env.WORMHOLE_RECENT_SELECTION_ENABLED !== "0";
+
+function getRecentSelectionStorePath() {
+  const path = require("path");
+  const os = require("os");
+  return process.env.WORMHOLE_RECENT_SELECTION_FILE ||
+    path.join(os.tmpdir(), "marcusnote_wormhole_recent_selection.json");
+}
+
+function getRecentSelectionKey(input = {}) {
+  return [
+    normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
+    input.__wormholeDbCanonical || input.__wormholeDbFile || input.requestedChapter || input.topic || "unknown",
+    input.problemType || input.difficulty || input.mode || "default"
+  ].filter(Boolean).join("|").toLowerCase();
+}
+
+function getSelectionIdentityParts(item = {}) {
+  return [
+    item.id,
+    item.seedId,
+    normalizeSentenceIdentity(item.english),
+    normalizeSentenceIdentity(item.korean)
+  ].filter(Boolean).map((value) => String(value).trim().toLowerCase());
+}
+
+function readRecentSelectionStore() {
+  if (!WORMHOLE_RECENT_SELECTION_ENABLED) return { version: 1, keys: {} };
+  const fs = require("fs");
+  try {
+    const raw = fs.readFileSync(getRecentSelectionStorePath(), "utf8");
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" && parsed.keys
+      ? parsed
+      : { version: 1, keys: {} };
+  } catch {
+    return { version: 1, keys: {} };
+  }
+}
+
+function writeRecentSelectionStore(store = {}) {
+  if (!WORMHOLE_RECENT_SELECTION_ENABLED) return;
+  const fs = require("fs");
+  const path = require("path");
+  try {
+    const filePath = getRecentSelectionStorePath();
+    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    fs.writeFileSync(filePath, JSON.stringify(store, null, 2), "utf8");
+  } catch (error) {
+    console.warn("[WORMHOLE_RECENT_SELECTION_WRITE_FAILED]", { message: error?.message || String(error) });
+  }
+}
+
+function getRecentSelectionSet(input = {}) {
+  const key = getRecentSelectionKey(input);
+  const store = readRecentSelectionStore();
+  const entries = Array.isArray(store.keys?.[key]?.items) ? store.keys[key].items : [];
+  return new Set(entries.flatMap((entry) => [
+    entry.id,
+    entry.seedId,
+    entry.english,
+    entry.korean
+  ].filter(Boolean).map((value) => String(value).trim().toLowerCase())));
+}
+
+function isRecentlySelectedItem(item = {}, recentSet = new Set()) {
+  return getSelectionIdentityParts(item).some((part) => recentSet.has(part));
+}
+
+function preferFreshDbItems(items = [], recentSet = new Set()) {
+  if (!recentSet?.size) return [...items];
+  const fresh = [];
+  const recent = [];
+  items.forEach((item) => {
+    (isRecentlySelectedItem(item, recentSet) ? recent : fresh).push(item);
+  });
+  return [...fresh, ...recent];
+}
+
+function rememberRecentDbSelection(input = {}, selected = []) {
+  if (!WORMHOLE_RECENT_SELECTION_ENABLED || !selected.length) return;
+  const key = getRecentSelectionKey(input);
+  const store = readRecentSelectionStore();
+  if (!store.keys) store.keys = {};
+  const current = Array.isArray(store.keys[key]?.items) ? store.keys[key].items : [];
+  const next = selected.map((item) => ({
+    id: item.id ? String(item.id) : "",
+    seedId: item.seedId ? String(item.seedId) : "",
+    english: normalizeSentenceIdentity(item.english),
+    korean: normalizeSentenceIdentity(item.korean),
+    at: new Date().toISOString()
+  }));
+  const merged = [...next, ...current];
+  const seen = new Set();
+  const deduped = [];
+  for (const entry of merged) {
+    const signature = [entry.id, entry.seedId, entry.english, entry.korean].filter(Boolean).join("|");
+    if (!signature || seen.has(signature)) continue;
+    seen.add(signature);
+    deduped.push(entry);
+    if (deduped.length >= WORMHOLE_RECENT_SELECTION_LIMIT) break;
+  }
+  store.keys[key] = {
+    updatedAt: new Date().toISOString(),
+    limit: WORMHOLE_RECENT_SELECTION_LIMIT,
+    items: deduped
+  };
+  writeRecentSelectionStore(store);
+  console.info("[WORMHOLE_RECENT_SELECTION_UPDATED]", {
+    key,
+    added: next.length,
+    retained: deduped.length,
+    file: getRecentSelectionStorePath()
+  });
+}
+
 function getDbItemTailKey(item = {}) {
   const text = String(item.english || "").toLowerCase();
   const knownTails = [
@@ -1302,7 +1419,8 @@ function getDbItemTailKey(item = {}) {
 
 function selectAlthoughDbItems(items = [], input = {}, seedText = "") {
   const count = clamp(Number(input.count) || 10, 1, 30);
-  const shuffled = stableShuffle(items, seedText)
+  const recentSet = getRecentSelectionSet(input);
+  const shuffled = preferFreshDbItems(stableShuffle(items, seedText), recentSet)
     .sort((a, b) => Number((b.tags || []).includes("premium_priority")) - Number((a.tags || []).includes("premium_priority")));
   const selected = [];
   const used = new Set();
@@ -1317,8 +1435,9 @@ function selectAlthoughDbItems(items = [], input = {}, seedText = "") {
   function keyOf(item, key, fallback = "unknown") {
     return String(item.chapterMeta?.[key] || fallback);
   }
-  function canTake(item, relaxed = false) {
+  function canTake(item, relaxed = false, allowRecent = false) {
     if (!item || used.has(item.id)) return false;
+    if (!allowRecent && isRecentlySelectedItem(item, recentSet)) return false;
     if (relaxed) return true;
     const bucket = keyOf(item, "semanticBucket");
     const world = keyOf(item, "worldType");
@@ -1344,15 +1463,20 @@ function selectAlthoughDbItems(items = [], input = {}, seedText = "") {
 
   for (const item of shuffled) {
     if (selected.length >= count) break;
-    if (canTake(item, false)) take(item);
+    if (canTake(item, false, false)) take(item);
   }
   for (const item of shuffled) {
     if (selected.length >= count) break;
-    if (canTake(item, true)) take(item);
+    if (canTake(item, true, false)) take(item);
+  }
+  for (const item of shuffled) {
+    if (selected.length >= count) break;
+    if (canTake(item, true, true)) take(item);
   }
   console.info("[ALTHOUGH_SELECTION_QUOTA]", {
     requested: count,
     selected: selected.length,
+    recentAvoided: recentSet.size,
     buckets: Object.fromEntries(bucketCount),
     worlds: Object.fromEntries(worldCount),
     emotions: Object.fromEntries(emotionCount),
@@ -1381,7 +1505,8 @@ function selectDbItems(items = [], input = {}) {
     return selectAlthoughDbItems(items, input, seedText);
   }
 
-  const shuffled = stableShuffle(items, seedText);
+  const recentSet = getRecentSelectionSet(input);
+  const shuffled = preferFreshDbItems(stableShuffle(items, seedText), recentSet);
   const afterItems = shuffled.filter((item) => (item.tags || []).includes("after"));
   const beforeItems = shuffled.filter((item) => (item.tags || []).includes("before"));
   const neutralItems = shuffled.filter((item) => !(item.tags || []).includes("after") && !(item.tags || []).includes("before"));
@@ -1424,7 +1549,102 @@ function normalizeDbSentenceCase(text = "") {
 
 function isLowQualityDbDistractor(text = "") {
   const t = cleanDbOption(text).toLowerCase();
-  return /\bafter\s+before\b|\bbefore\s+after\b|\bafter\s+to\b|\bbefore\s+to\b/.test(t);
+  return /\bafter\s+before\b|\bbefore\s+after\b|\bafter\s+to\b|\bbefore\s+to\b/.test(t) ||
+    isGloballyBannedDistractor(text);
+}
+
+const WORMHOLE_DISTRACTOR_CATEGORY_KEYS = [
+  "relative_pronoun_confusion",
+  "double_object",
+  "double_relative",
+  "missing_relative_subject",
+  "antecedent_mismatch",
+  "been_gone_confusion",
+  "for_since_confusion",
+  "past_time_conflict",
+  "subject_verb_conflict",
+  "past_participle_error",
+  "global_ban_rejected",
+  "etc"
+];
+
+function isGloballyBannedDistractor(text = "") {
+  const t = normalizeSentenceIdentity(text);
+  if (!t) return true;
+  if (/\bbefore now\b|\bmany times now\b/.test(t)) return true;
+  if (/\byesterday\b/.test(t) && /\b(has|have)\b/.test(t)) return true;
+  if (/\blast year\b/.test(t) && /\b(has|have)\b/.test(t) && !/\b(since|for)\s+last year\b/.test(t)) return true;
+  if (/\b(rumor|influencer|software update)\s+\1\b/i.test(t)) return true;
+  if (/\b(that it|which it|whom he|who he)\b/.test(t)) return true;
+  if (/\b(the\s+\w+)\s+\1\b/.test(t)) return true;
+  if (/\b(that|which|who|whom)\s+(rumor|influencer|software update|book|movie|teacher|app|story|issue|problem|student|person)\b/.test(t)) return true;
+  if (/\b(it|him|her|them)\s+(that|which|who|whom)\b/.test(t)) return true;
+  return false;
+}
+
+function classifyDistractorCategory(text = "", fallback = "etc") {
+  const t = normalizeSentenceIdentity(text);
+  if (isGloballyBannedDistractor(text)) return "global_ban_rejected";
+  if (/\b(the|a|an)\s+\w+\s+(who|whom|which)\b/.test(t)) return "relative_pronoun_confusion";
+  if (/\b(that|which|who|whom)\s+(that|which|who|whom)\b/.test(t)) return "double_relative";
+  if (/\b(that|which|who|whom)\s+(bought|watched|met|lost|painted|invited|liked|took|helped|made|read|visited|found|wore|called|wrote|borrowed|designed|explained|repaired|saved|examined|used)\b/.test(t)) return "missing_relative_subject";
+  if (/\b(that|which|who|whom)\b.*\b(it|him|her|them)\b/.test(t)) return "double_object";
+  if (/\b(has|have)\s+been\b.*\bnot here now\b|\b(has|have)\s+gone\b.*\bbefore\b/.test(t)) return "been_gone_confusion";
+  if (/\bfor\s+(last\s+\w+|20\d\d)\b|\bsince\s+(\d+|two|three|four|five|several|many)\s+(days|weeks|months|years)\b/.test(t)) return "for_since_confusion";
+  if (/\b(has|have)\b.*\b(yesterday|last night|last week|last year|in 20\d\d)\b/.test(t)) return "past_time_conflict";
+  if (/\b(i|you|we|they)\s+has\b|\b(he|she|it)\s+have\b/.test(t)) return "subject_verb_conflict";
+  if (/\b(has|have)\s+(went|saw|ate|wrote|took|gave|bought|did|made|came|became)\b/.test(t)) return "past_participle_error";
+  return fallback;
+}
+
+function getDistractorPatternKey(text = "") {
+  const t = normalizeSentenceIdentity(text);
+  if (/\bbefore now\b/.test(t)) return "before_now";
+  if (/\bmany times now\b/.test(t)) return "many_times_now";
+  if (/\bthat it\b/.test(t)) return "that_it";
+  if (/\bwhich it\b/.test(t)) return "which_it";
+  if (/\bwho he\b/.test(t)) return "who_he";
+  if (/\bwhom he\b/.test(t)) return "whom_he";
+  if (/\b(that|which|who|whom)\s+(that|which|who|whom)\b/.test(t)) return "double_relative:" + t;
+  if (/\b(that|which|who|whom)\b.*\b(it|him|her|them)\b/.test(t)) return "double_object:" + t;
+  if (/\b(the|a|an)\s+\w+\s+(who|whom|which)\b/.test(t)) return "relative_pronoun_confusion:" + t;
+  if (/\b(that|which|who|whom)\s+(bought|watched|met|lost|painted|invited|liked|took|helped|made|read|visited|found|wore|called|wrote|borrowed|designed|explained|repaired|saved|examined|used)\b/.test(t)) return "missing_relative_subject:" + t;
+  if (/\b(i|you|we|they)\s+has\b|\b(he|she|it)\s+have\b/.test(t)) return "subject_verb_conflict";
+  if (/\bfor\s+(last\s+\w+|20\d\d)\b|\bsince\s+(\d+|two|three|four|five|several|many)\s+(days|weeks|months|years)\b/.test(t)) return "for_since_confusion";
+  if (/\b(has|have)\b.*\b(yesterday|last night|last week|last year|in 20\d\d)\b/.test(t)) return "past_time_conflict";
+  return classifyDistractorCategory(text);
+}
+
+function createDistractorTracker(label = "global") {
+  return {
+    label,
+    categories: Object.fromEntries(WORMHOLE_DISTRACTOR_CATEGORY_KEYS.map((key) => [key, 0])),
+    patterns: {},
+    rejected: {}
+  };
+}
+
+function trackDistractor(context = {}, text = "", fallbackCategory = "etc") {
+  if (!context.distractorTracker) context.distractorTracker = createDistractorTracker("worksheet");
+  const category = WORMHOLE_DISTRACTOR_CATEGORY_KEYS.includes(fallbackCategory)
+    ? fallbackCategory
+    : classifyDistractorCategory(text, fallbackCategory);
+  const key = getDistractorPatternKey(text);
+  context.distractorTracker.categories[category] = (context.distractorTracker.categories[category] || 0) + 1;
+  context.distractorTracker.patterns[key] = (context.distractorTracker.patterns[key] || 0) + 1;
+  console.info("[DISTRACTOR_CATEGORY]", { category, pattern: key, count: context.distractorTracker.patterns[key] });
+}
+
+function canUseDistractor(context = {}, text = "", maxPerPattern = 2) {
+  if (isGloballyBannedDistractor(text)) {
+    if (!context.distractorTracker) context.distractorTracker = createDistractorTracker("worksheet");
+    const key = getDistractorPatternKey(text);
+    context.distractorTracker.rejected[key] = (context.distractorTracker.rejected[key] || 0) + 1;
+    return false;
+  }
+  const key = getDistractorPatternKey(text);
+  const count = context.distractorTracker?.patterns?.[key] || 0;
+  return count < maxPerPattern;
 }
 
 const WORMHOLE_TYPE_KEYS = [
@@ -1663,13 +1883,13 @@ function buildPresentPerfectParaphrase(item = {}) {
     const subject = match[1];
     const place = match[3];
     return {
-      text: `${subject} visited ${place} at least once before now.`,
+      text: `${subject} has visited ${place} at least once.`,
       relation: "experience_before_now",
       distractors: [
         `${subject} has never visited ${place}.`,
         `${subject} is visiting ${place} for the first time now.`,
         `${subject} will visit ${place} for the first time.`,
-        `${subject} did not visit ${place} before now.`
+        `${subject} did not visit ${place}.`
       ]
     };
   }
@@ -1765,21 +1985,34 @@ function scorePresentPerfectDistractorDifficulty(candidate = "", type = "") {
 
 function selectPresentPerfectAdvancedItems(items = [], input = {}, typePlan = []) {
   const seed = ["present-perfect-selection-2.1", input.topic, input.userPrompt, input.worksheetTitle, input.count].filter(Boolean).join("|");
-  const pool = stableShuffle(items, seed);
+  const recentSet = getRecentSelectionSet(input);
+  const pool = preferFreshDbItems(stableShuffle(items, seed), recentSet);
   const usedIds = new Set();
   const usedSentences = new Set();
   const selected = [];
   let fallbackAssignments = 0;
   typePlan.forEach((type) => {
     const candidates = pool
+      .filter((item) => !usedIds.has(item.id) && !usedSentences.has(normalizeSentenceIdentity(item.english)) && !isRecentlySelectedItem(item, recentSet) && presentPerfectItemMatchesType(item, type))
+      .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type));
+    const fallbackCandidates = pool
       .filter((item) => !usedIds.has(item.id) && !usedSentences.has(normalizeSentenceIdentity(item.english)) && presentPerfectItemMatchesType(item, type))
       .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type));
     let item = candidates.find((candidate) =>
       scoreWormholeDifficulty(candidate, type) >= 4 &&
       buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
+    ) || fallbackCandidates.find((candidate) =>
+      scoreWormholeDifficulty(candidate, type) >= 4 &&
+      buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
     );
     if (!item && type !== "semantic_paraphrase") {
       item = pool
+        .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)) && !isRecentlySelectedItem(candidate, recentSet))
+        .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type))
+        .find((candidate) =>
+          scoreWormholeDifficulty(candidate, type) >= 4 &&
+          buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
+        ) || pool
         .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)))
         .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type))
         .find((candidate) =>
@@ -1799,6 +2032,7 @@ function selectPresentPerfectAdvancedItems(items = [], input = {}, typePlan = []
     selected: selected.length,
     usedSentenceIds: usedIds.size,
     uniqueEnglish: usedSentences.size,
+    recentAvoided: recentSet.size,
     fallbackAssignments,
     minimumDifficultyScore: selected.length ? Math.min(...selected.map((entry) => scoreWormholeDifficulty(entry.item, entry.type))) : 0
   });
@@ -1811,41 +2045,75 @@ function buildPresentPerfectSemanticCandidates(item = {}, type = "") {
   const generated = [];
   const add = (value) => {
     const text = cleanDbOption(value);
-    if (text && normalizeSentenceIdentity(text) !== normalizeSentenceIdentity(correct) && !generated.some((entry) => normalizeSentenceIdentity(entry) === normalizeSentenceIdentity(text))) generated.push(text);
+    if (
+      text &&
+      !isGloballyBannedDistractor(text) &&
+      normalizeSentenceIdentity(text) !== normalizeSentenceIdentity(correct) &&
+      !generated.some((entry) => normalizeSentenceIdentity(entry) === normalizeSentenceIdentity(text))
+    ) generated.push(text);
+  };
+  const addAgreementError = () => {
+    if (/\bI have\b/.test(correct)) add(correct.replace(/\bI have\b/, "I has"));
+    if (/\b(You|We|They) have\b/.test(correct)) add(correct.replace(/\b(You|We|They) have\b/, "$1 has"));
+    if (/\b(He|She|It|The [A-Za-z ]+?) has\b/.test(correct)) add(correct.replace(/\b(He|She|It|The [A-Za-z ]+?) has\b/, "$1 have"));
+  };
+  const addPastParticipleError = () => {
+    const irregular = [
+      [/\bhas been\b/i, "has went"],
+      [/\bhave been\b/i, "have went"],
+      [/\bhas seen\b/i, "has saw"],
+      [/\bhave seen\b/i, "have saw"],
+      [/\bhas gone\b/i, "has went"],
+      [/\bhave gone\b/i, "have went"],
+      [/\bhas written\b/i, "has wrote"],
+      [/\bhave written\b/i, "have wrote"],
+      [/\bhas taken\b/i, "has took"],
+      [/\bhave taken\b/i, "have took"],
+      [/\bhas eaten\b/i, "has ate"],
+      [/\bhave eaten\b/i, "have ate"],
+      [/\bhas done\b/i, "has did"],
+      [/\bhave done\b/i, "have did"]
+    ];
+    irregular.forEach(([pattern, replacement]) => add(correct.replace(pattern, replacement)));
   };
   if (type === "present_perfect_vs_past") {
-    add(correct.replace(/\bbefore\b/i, "yesterday"));
     add(correct.replace(/[.?!]$/, "") + " last night.");
     add(correct.replace(/[.?!]$/, "") + " in 2024.");
     add(correct.replace(/\byet\b/i, "last week"));
+    addAgreementError();
+    addPastParticipleError();
   } else if (type === "for_since_confusion" || type === "continuation_usage") {
     add(correct.replace(/\bfor\b/i, "since"));
     add(correct.replace(/\bsince\b/i, "for"));
-    add(correct.replace(/\bfor\s+[^,.?!]+/i, "for 2022"));
+    add(correct.replace(/\bfor\s+[^,.?!]+/i, "for last year"));
     add(correct.replace(/\bsince\s+[^,.?!]+/i, "since three years"));
     add(correct.replace(/\bfor\s+[^,.?!]+/i, "since several months"));
-    add(correct.replace(/[.?!]$/, "") + " yesterday.");
+    addAgreementError();
   } else if (type === "been_gone_confusion") {
     add(correct.replace(/\bbeen\b/i, "gone"));
     add(correct.replace(/\bgone\b/i, "been"));
-    add(correct.replace(/\bbefore\b/i, "now"));
-    add(correct.replace(/[.?!]$/, "") + " many times now.");
-    add(correct.replace(/[.?!]$/, "") + " before now.");
+    if (/\bhas been to\b/i.test(correct)) add(correct.replace(/\bhas been to\b/i, "has gone to").replace(/[.?!]$/, ", so he is not here now."));
+    if (/\bhave been to\b/i.test(correct)) add(correct.replace(/\bhave been to\b/i, "have gone to").replace(/[.?!]$/, ", so they are not here now."));
+    if (/\bhas gone to\b/i.test(correct)) add(correct.replace(/\bhas gone to\b/i, "has been to"));
+    if (/\bhave gone to\b/i.test(correct)) add(correct.replace(/\bhave gone to\b/i, "have been to"));
+    addPastParticipleError();
   } else if (type === "result_usage") {
     add(correct.replace(/\bhas\b/i, "had"));
     add(correct.replace(/\bhave\b/i, "had"));
-    add(correct.replace(/[.?!]$/, "") + " yesterday.");
     add(correct.replace(/\bnow\b/i, "last night"));
     add(correct.replace(/\bso\b/i, "yesterday, so"));
+    addAgreementError();
   } else if (type === "experience_usage") {
     add(correct.replace(/\bnever\b/i, "ever"));
     add(correct.replace(/\bever\b/i, "already"));
-    add(correct.replace(/\bbefore\b/i, "yesterday"));
-    add(correct.replace(/[.?!]$/, "") + " last year.");
-    add(correct.replace(/[.?!]$/, "") + " yesterday.");
+    add(correct.replace(/\bbefore\b/i, "last night"));
+    add(correct.replace(/\btwice\b/i, "last night"));
+    addPastParticipleError();
   }
-  raw.filter((value) => scorePresentPerfectDistractorDifficulty(value, type) >= 4).forEach(add);
-  raw.forEach(add);
+  raw
+    .filter((value) => scorePresentPerfectDistractorDifficulty(value, type) >= 4 && !isGloballyBannedDistractor(value))
+    .forEach(add);
+  raw.filter((value) => !isGloballyBannedDistractor(value)).forEach(add);
   return generated
     .sort((a, b) => scorePresentPerfectDistractorDifficulty(b, type) - scorePresentPerfectDistractorDifficulty(a, type))
     .slice(0, 4);
@@ -1890,6 +2158,7 @@ function buildPresentPerfectAdvancedQuestion(item, index, input = {}, context = 
   if (question) {
     question.presentPerfectType = type;
     question.difficultyScore = scoreWormholeDifficulty(item, type);
+    wrong.forEach((text) => trackDistractor(context, text, classifyDistractorCategory(text, type)));
   }
   return question;
 }
@@ -1914,17 +2183,134 @@ function baseFromRegularPast(word = "") {
   return value;
 }
 
+const PASSIVE_PARTICIPLE_BASE_FORMS = {
+  announced: "announce",
+  approved: "approve",
+  built: "build",
+  brought: "bring",
+  broken: "break",
+  bought: "buy",
+  caught: "catch",
+  chosen: "choose",
+  cleaned: "clean",
+  completed: "complete",
+  confirmed: "confirm",
+  created: "create",
+  cut: "cut",
+  deleted: "delete",
+  discussed: "discuss",
+  done: "do",
+  drawn: "draw",
+  found: "find",
+  given: "give",
+  graded: "grade",
+  grown: "grow",
+  heard: "hear",
+  held: "hold",
+  hit: "hit",
+  ignored: "ignore",
+  kept: "keep",
+  known: "know",
+  left: "leave",
+  lost: "lose",
+  made: "make",
+  met: "meet",
+  misunderstood: "misunderstand",
+  opened: "open",
+  paid: "pay",
+  painted: "paint",
+  put: "put",
+  read: "read",
+  recovered: "recover",
+  rejected: "reject",
+  repaired: "repair",
+  reset: "reset",
+  reviewed: "review",
+  sold: "sell",
+  sent: "send",
+  set: "set",
+  shared: "share",
+  shown: "show",
+  solved: "solve",
+  spoken: "speak",
+  stolen: "steal",
+  sung: "sing",
+  supported: "support",
+  taken: "take",
+  taught: "teach",
+  thrown: "throw",
+  told: "tell",
+  used: "use",
+  verified: "verify",
+  visited: "visit",
+  won: "win",
+  written: "write"
+};
+
+const PASSIVE_ACTIVE_PAST_FORMS = {
+  build: "built",
+  bring: "brought",
+  break: "broke",
+  buy: "bought",
+  catch: "caught",
+  choose: "chose",
+  cut: "cut",
+  do: "did",
+  draw: "drew",
+  find: "found",
+  give: "gave",
+  grow: "grew",
+  hear: "heard",
+  hold: "held",
+  hit: "hit",
+  keep: "kept",
+  know: "knew",
+  leave: "left",
+  lose: "lost",
+  make: "made",
+  meet: "met",
+  misunderstand: "misunderstood",
+  pay: "paid",
+  put: "put",
+  read: "read",
+  reset: "reset",
+  sell: "sold",
+  send: "sent",
+  set: "set",
+  show: "showed",
+  sing: "sang",
+  speak: "spoke",
+  steal: "stole",
+  take: "took",
+  teach: "taught",
+  tell: "told",
+  throw: "threw",
+  win: "won",
+  write: "wrote"
+};
+
+function getPassiveBaseForm(participle = "") {
+  const value = String(participle || "").toLowerCase();
+  return PASSIVE_PARTICIPLE_BASE_FORMS[value] || baseFromRegularPast(value);
+}
+
+function getPassiveActivePastForm(participle = "") {
+  const base = getPassiveBaseForm(participle);
+  return PASSIVE_ACTIVE_PAST_FORMS[base] || String(participle || "").toLowerCase();
+}
+
 function buildPassiveParaphrase(item = {}) {
   const source = cleanDbOption(item.english);
-  const match = source.match(/^(.+?)\s+(was|were)\s+([A-Za-z]+ed)\s+by\s+(.+?)[.?!]$/i);
+  const match = source.match(/^(.+?)\s+(was|were)\s+([A-Za-z]+)\s+by\s+(.+?)[.?!]$/i);
   if (!match) return null;
   const patient = lowerInitialArticle(match[1]);
-  const verb = match[3].toLowerCase();
-  const base = baseFromRegularPast(verb);
+  const participle = match[3].toLowerCase();
+  const base = getPassiveBaseForm(participle);
+  const past = getPassiveActivePastForm(participle);
   const agent = match[4];
   const agentStart = agent.charAt(0).toUpperCase() + agent.slice(1);
   return {
-    text: `${agentStart} ${verb} ${patient}.`,
+    text: `${agentStart} ${past} ${patient}.`,
     relation: "active_passive_transform",
     distractors: [
       `${agentStart} did not ${base} ${patient}.`,
@@ -2087,14 +2473,32 @@ function countPassiveAdvancedTypes(values = []) {
 }
 
 function selectPassiveAdvancedItems(items = [], input = {}, typePlan = []) {
-  const pool = stableShuffle(items, ["passive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|"));
+  const recentSet = getRecentSelectionSet(input);
+  const pool = preferFreshDbItems(
+    stableShuffle(items, ["passive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|")),
+    recentSet
+  );
   const used = new Set();
-  return typePlan.map((type) => {
-    const item = pool.find((candidate) => !used.has(candidate.id) && (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate)));
+  const selected = typePlan.map((type) => {
+    const item = pool.find((candidate) =>
+      !used.has(candidate.id) &&
+      !isRecentlySelectedItem(candidate, recentSet) &&
+      (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate))
+    ) || pool.find((candidate) =>
+      !used.has(candidate.id) &&
+      (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate))
+    );
     if (!item) return null;
     used.add(item.id);
     return { item, type };
   }).filter(Boolean);
+  console.info("[WORMHOLE_PASSIVE_SELECTION]", {
+    requested: typePlan.length,
+    selected: selected.length,
+    recentAvoided: recentSet.size,
+    uniqueSentenceIds: used.size
+  });
+  return selected;
 }
 
 function buildPassiveAdvancedQuestion(item, index, input = {}, context = {}, type = "") {
@@ -2167,14 +2571,32 @@ function countDitransitiveAdvancedTypes(values = []) {
 }
 
 function selectDitransitiveAdvancedItems(items = [], input = {}, typePlan = []) {
-  const pool = stableShuffle(items, ["ditransitive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|"));
+  const recentSet = getRecentSelectionSet(input);
+  const pool = preferFreshDbItems(
+    stableShuffle(items, ["ditransitive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|")),
+    recentSet
+  );
   const used = new Set();
-  return typePlan.map((type) => {
-    const item = pool.find((candidate) => !used.has(candidate.id) && (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate)));
+  const selected = typePlan.map((type) => {
+    const item = pool.find((candidate) =>
+      !used.has(candidate.id) &&
+      !isRecentlySelectedItem(candidate, recentSet) &&
+      (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate))
+    ) || pool.find((candidate) =>
+      !used.has(candidate.id) &&
+      (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate))
+    );
     if (!item) return null;
     used.add(item.id);
     return { item, type };
   }).filter(Boolean);
+  console.info("[WORMHOLE_DITRANSITIVE_SELECTION]", {
+    requested: typePlan.length,
+    selected: selected.length,
+    recentAvoided: recentSet.size,
+    uniqueSentenceIds: used.size
+  });
+  return selected;
 }
 
 function buildDitransitiveAdvancedQuestion(item, index, input = {}, context = {}, type = "") {
@@ -2189,6 +2611,196 @@ function validateDitransitiveAdvancedDistribution(questions = [], requestedCount
   const valid = questions.length === requestedCount &&
     uniqueIds.size === questions.length &&
     DITRANSITIVE_ADVANCED_TYPES.every((type) => counts[type] > 0);
+  return { valid, total: questions.length, requestedCount, counts, uniqueSentenceIds: uniqueIds.size };
+}
+
+const OBJECTIVE_RELATIVE_DISTRACTOR_TYPES = [
+  "relative_pronoun_confusion",
+  "double_object",
+  "double_relative",
+  "missing_relative_subject",
+  "antecedent_mismatch"
+];
+
+const OBJECTIVE_RELATIVE_SUBJECTS = [
+  "our class",
+  "the teacher",
+  "students",
+  "I",
+  "you",
+  "we",
+  "they",
+  "he",
+  "she"
+];
+
+function isObjectiveRelativeAdvancedRequest(input = {}) {
+  const chapter = String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "").toLowerCase();
+  const advanced = input.difficulty === "high" || input.difficulty === "extreme" || input.mode === "advanced";
+  return advanced && /objective_relative_pronouns/.test(chapter);
+}
+
+function countObjectiveRelativeTypes(values = []) {
+  const counts = Object.fromEntries(OBJECTIVE_RELATIVE_DISTRACTOR_TYPES.map((type) => [type, 0]));
+  values.forEach((value) => {
+    const type = typeof value === "string" ? value : value?.objectiveRelativeType;
+    if (Object.prototype.hasOwnProperty.call(counts, type)) counts[type] += 1;
+  });
+  return counts;
+}
+
+function buildObjectiveRelativeTypes(count, input = {}) {
+  const requested = clamp(Number(count) || 25, 1, 30);
+  const bag = [];
+  let cursor = dbPilotHash([input.selectedGrade, input.topic, input.worksheetTitle, requested].filter(Boolean).join("|")) % OBJECTIVE_RELATIVE_DISTRACTOR_TYPES.length;
+  while (bag.length < requested) {
+    bag.push(OBJECTIVE_RELATIVE_DISTRACTOR_TYPES[cursor % OBJECTIVE_RELATIVE_DISTRACTOR_TYPES.length]);
+    cursor += 1;
+  }
+  const plan = stableShuffle(bag, ["objective-relative-distractors-2.0", input.selectedGrade, input.topic, input.worksheetTitle, requested].filter(Boolean).join("|"));
+  console.info("[WORMHOLE_OBJECTIVE_RELATIVE_PLAN]", { requested, distribution: countObjectiveRelativeTypes(plan) });
+  return plan;
+}
+
+function selectObjectiveRelativeItems(items = [], input = {}, typePlan = []) {
+  const recentSet = getRecentSelectionSet(input);
+  const pool = preferFreshDbItems(
+    stableShuffle(items, ["objective-relative-selection-2.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|")),
+    recentSet
+  );
+  const used = new Set();
+  const selected = [];
+  typePlan.forEach((type) => {
+    const item = pool.find((candidate) =>
+      !used.has(candidate.id) &&
+      !isRecentlySelectedItem(candidate, recentSet) &&
+      buildObjectiveRelativeDistractors(candidate, type, {}).length >= 4
+    ) || pool.find((candidate) =>
+      !used.has(candidate.id) &&
+      buildObjectiveRelativeDistractors(candidate, type, {}).length >= 4
+    );
+    if (!item) return;
+    used.add(item.id);
+    selected.push({ item, type });
+  });
+  console.info("[WORMHOLE_OBJECTIVE_RELATIVE_SELECTION]", {
+    requested: typePlan.length,
+    selected: selected.length,
+    recentAvoided: recentSet.size,
+    uniqueSentenceIds: used.size
+  });
+  return selected;
+}
+
+function getObjectiveRelativePronoun(item = {}) {
+  const blank = Array.isArray(item.blankTargets) ? item.blankTargets.find((value) => /^(that|which|who|whom)$/i.test(String(value || ""))) : "";
+  if (blank) return String(blank).toLowerCase();
+  const match = cleanDbOption(item.english).match(/\b(that|which|who|whom)\b/i);
+  return match ? match[1].toLowerCase() : "that";
+}
+
+function isHumanObjectiveRelativeItem(item = {}) {
+  const tags = (item.tags || []).join(" ").toLowerCase();
+  const text = cleanDbOption(item.english).toLowerCase();
+  return /\b(human|person|people|man|woman|girl|boy|teacher|student|friend|player|writer|scientist|traveler|expert|leader|family|children|guest|member)\b/.test(tags + " " + text);
+}
+
+function replaceFirstRelativePronoun(sentence = "", replacement = "that") {
+  return cleanDbOption(sentence).replace(/\b(that|which|who|whom)\b/i, replacement);
+}
+
+function removeObjectiveRelativeSubject(sentence = "", rel = "that") {
+  const source = cleanDbOption(sentence);
+  for (const subject of OBJECTIVE_RELATIVE_SUBJECTS) {
+    const pattern = new RegExp("\\b" + rel + "\\s+" + subject.replace(/\s+/g, "\\s+") + "\\s+", "i");
+    if (pattern.test(source)) return source.replace(pattern, rel + " ");
+  }
+  return "";
+}
+
+function insertRetainedObjectPronoun(sentence = "", item = {}, rel = "that") {
+  const source = cleanDbOption(sentence);
+  const objectPronoun = isHumanObjectiveRelativeItem(item)
+    ? (/children|people|families|guests|experts|students|players|travelers/i.test(source) ? "them" : "him")
+    : "it";
+  const relMatch = source.match(new RegExp("\\b" + rel + "\\b\\s+(.+)", "i"));
+  if (!relMatch) return "";
+  const beforeRel = source.slice(0, relMatch.index + rel.length + 1);
+  const afterRel = source.slice(relMatch.index + rel.length + 1);
+  const subject = OBJECTIVE_RELATIVE_SUBJECTS.find((candidate) => new RegExp("^" + candidate.replace(/\s+/g, "\\s+") + "\\b", "i").test(afterRel));
+  if (!subject) return "";
+  const afterSubject = afterRel.replace(new RegExp("^" + subject.replace(/\s+/g, "\\s+") + "\\s+", "i"), "");
+  const words = afterSubject.split(/\s+/);
+  const insertionIndex = /^(did|does|do|could|can|have|has|had|were|was)$/i.test(words[0] || "") && words.length > 2 ? 3 : 1;
+  if (words.length <= insertionIndex) return "";
+  words.splice(insertionIndex, 0, objectPronoun);
+  return beforeRel + subject + " " + words.join(" ");
+}
+
+function buildObjectiveRelativeDistractors(item = {}, preferredType = "", context = {}) {
+  const correct = cleanDbOption(item.english);
+  const rel = getObjectiveRelativePronoun(item);
+  const human = isHumanObjectiveRelativeItem(item);
+  const entries = [];
+  const add = (type, value) => {
+    const text = cleanDbOption(value);
+    if (
+      text &&
+      normalizeSentenceIdentity(text) !== normalizeSentenceIdentity(correct) &&
+      !isGloballyBannedDistractor(text) &&
+      !entries.some((entry) => normalizeSentenceIdentity(entry.text) === normalizeSentenceIdentity(text))
+    ) entries.push({ type, text });
+  };
+  const wrongPronoun = human ? "which" : (rel === "which" ? "who" : "whom");
+  const mismatchPronoun = human ? (rel === "whom" ? "who" : "which") : (rel === "which" ? "whom" : "who");
+  add("relative_pronoun_confusion", replaceFirstRelativePronoun(correct, wrongPronoun));
+  add("antecedent_mismatch", replaceFirstRelativePronoun(correct, mismatchPronoun));
+  add("relative_pronoun_confusion", replaceFirstRelativePronoun(correct, "what"));
+  add("double_relative", replaceFirstRelativePronoun(correct, rel + (rel === "which" ? " that" : " which")));
+  add("missing_relative_subject", removeObjectiveRelativeSubject(correct, rel));
+  add("double_object", insertRetainedObjectPronoun(correct, item, rel));
+  add("missing_relative_subject", cleanDbOption(correct).replace(new RegExp("\\b" + rel + "\\s+", "i"), ""));
+  return entries
+    .sort((a, b) => Number(a.type === preferredType) - Number(b.type === preferredType))
+    .reverse()
+    .slice(0, 4);
+}
+
+function getObjectiveRelativeStem(input = {}) {
+  return input.language === "en"
+    ? "Choose the sentence that correctly uses an objective relative pronoun."
+    : "다음 중 목적격 관계대명사의 쓰임이 어법상 가장 자연스러운 문장을 고르시오.";
+}
+
+function buildObjectiveRelativeQuestion(item, index, input = {}, context = {}, type = "") {
+  const correct = cleanDbOption(item.english);
+  const wrongEntries = buildObjectiveRelativeDistractors(item, type, context);
+  if (!correct || wrongEntries.length < 4) return null;
+  const question = formatStructuredDbQuestion(
+    item,
+    index,
+    input,
+    "objective_relative_pronouns",
+    getObjectiveRelativeStem(input),
+    [{ text: correct, correct: true }, ...wrongEntries.map((entry) => ({ text: entry.text, correct: false }))],
+    correct
+  );
+  if (question) {
+    question.objectiveRelativeType = type;
+    wrongEntries.forEach((entry) => trackDistractor(context, entry.text, entry.type));
+    if (context.usedOptionSentences instanceof Set) {
+      [correct, ...wrongEntries.map((entry) => entry.text)].forEach((option) => context.usedOptionSentences.add(normalizeSentenceIdentity(option)));
+    }
+  }
+  return question;
+}
+
+function validateObjectiveRelativeDistribution(questions = [], requestedCount = 0) {
+  const counts = countObjectiveRelativeTypes(questions);
+  const uniqueIds = new Set(questions.map((question) => String(question.id || "").split(":")[0]));
+  const valid = questions.length === requestedCount &&
+    uniqueIds.size === questions.length &&
+    OBJECTIVE_RELATIVE_DISTRACTOR_TYPES.every((type) => counts[type] > 0);
   return { valid, total: questions.length, requestedCount, counts, uniqueSentenceIds: uniqueIds.size };
 }
 
@@ -2446,11 +3058,13 @@ function formatDbWormholeResponse(questions = [], input = {}) {
     source: "db-first",
     dbFirst: true,
     questionTypeDistribution: isPresentPerfectAdvancedRequest(input)
-      ? countPresentPerfectAdvancedTypes(questions)
-      : input.__wormholePassiveSemantic
-        ? countPassiveAdvancedTypes(questions)
-        : input.__wormholeDitransitiveSemantic
-          ? countDitransitiveAdvancedTypes(questions)
+    ? countPresentPerfectAdvancedTypes(questions)
+    : input.__wormholePassiveSemantic
+      ? countPassiveAdvancedTypes(questions)
+      : input.__wormholeDitransitiveSemantic
+        ? countDitransitiveAdvancedTypes(questions)
+        : input.__wormholeObjectiveRelativeAdvanced
+          ? countObjectiveRelativeTypes(questions)
           : countQuestionTypes(questions),
     ambiguityMode: questions.some((question) => (question.correctOptionIndexes || []).length > 1)
       ? "single-dual-multi-correct"
@@ -2492,10 +3106,12 @@ async function tryBuildWormholeFromDb(input = {}) {
       const presentPerfectAdvanced = isPresentPerfectAdvancedRequest(input);
       const passiveAdvanced = !presentPerfectAdvanced && isPassiveAdvancedRequest(input, items);
       const ditransitiveAdvanced = !presentPerfectAdvanced && !passiveAdvanced && isDitransitiveAdvancedRequest(input, items);
+      const objectiveRelativeAdvanced = !presentPerfectAdvanced && !passiveAdvanced && !ditransitiveAdvanced && isObjectiveRelativeAdvancedRequest(input);
       input.__wormholePassiveSemantic = passiveAdvanced;
       input.__wormholeDitransitiveSemantic = ditransitiveAdvanced;
+      input.__wormholeObjectiveRelativeAdvanced = objectiveRelativeAdvanced;
       const requestedSemanticFamily = inferSemanticFamily(input);
-      const semanticFamily = presentPerfectAdvanced ? "present_perfect" : passiveAdvanced ? "passive" : ditransitiveAdvanced ? "ditransitive" : "none";
+      const semanticFamily = presentPerfectAdvanced ? "present_perfect" : passiveAdvanced ? "passive" : ditransitiveAdvanced ? "ditransitive" : objectiveRelativeAdvanced ? "relative_pronouns" : "none";
       const semanticEligibleCount = semanticFamily === "none"
         ? 0
         : items.filter((item) => getSemanticParaphrase(item, semanticFamily)).length;
@@ -2512,18 +3128,22 @@ async function tryBuildWormholeFromDb(input = {}) {
       const presentPerfectTypePlan = presentPerfectAdvanced ? buildPresentPerfectAdvancedTypes(input.count, input) : [];
       const passiveTypePlan = passiveAdvanced ? buildPassiveAdvancedTypes(input.count, input) : [];
       const ditransitiveTypePlan = ditransitiveAdvanced ? buildDitransitiveAdvancedTypes(input.count, input) : [];
+      const objectiveRelativeTypePlan = objectiveRelativeAdvanced ? buildObjectiveRelativeTypes(input.count, input) : [];
       const presentPerfectSelection = presentPerfectAdvanced
         ? selectPresentPerfectAdvancedItems(items, input, presentPerfectTypePlan)
         : [];
       const passiveSelection = passiveAdvanced ? selectPassiveAdvancedItems(items, input, passiveTypePlan) : [];
       const ditransitiveSelection = ditransitiveAdvanced ? selectDitransitiveAdvancedItems(items, input, ditransitiveTypePlan) : [];
+      const objectiveRelativeSelection = objectiveRelativeAdvanced ? selectObjectiveRelativeItems(items, input, objectiveRelativeTypePlan) : [];
       const selected = presentPerfectAdvanced
         ? presentPerfectSelection.map((entry) => entry.item)
         : passiveAdvanced
           ? passiveSelection.map((entry) => entry.item)
           : ditransitiveAdvanced
             ? ditransitiveSelection.map((entry) => entry.item)
-            : selectDbItems(items, input);
+            : objectiveRelativeAdvanced
+              ? objectiveRelativeSelection.map((entry) => entry.item)
+              : selectDbItems(items, input);
       if (selected.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_items" });
         console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_items" });
@@ -2543,13 +3163,16 @@ async function tryBuildWormholeFromDb(input = {}) {
           ? passiveTypePlan
           : ditransitiveAdvanced
             ? ditransitiveTypePlan
-            : QuestionTypePlanner(input.count, input);
+            : objectiveRelativeAdvanced
+              ? objectiveRelativeTypePlan
+              : QuestionTypePlanner(input.count, input);
       const context = {
         items: selected,
         allItems: items,
         input,
         selectedIds: new Set(selected.map((item) => item.id)),
-        usedOptionSentences: new Set(selected.map((item) => normalizeSentenceIdentity(item.english)).filter(Boolean))
+        usedOptionSentences: new Set(selected.map((item) => normalizeSentenceIdentity(item.english)).filter(Boolean)),
+        distractorTracker: createDistractorTracker(entry.canonical)
       };
       const questions = selected
         .map((item, index) => presentPerfectAdvanced
@@ -2558,9 +3181,17 @@ async function tryBuildWormholeFromDb(input = {}) {
             ? buildPassiveAdvancedQuestion(item, index, input, context, passiveSelection[index]?.type || typePlan[index])
             : ditransitiveAdvanced
               ? buildDitransitiveAdvancedQuestion(item, index, input, context, ditransitiveSelection[index]?.type || typePlan[index])
-              : buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
+              : objectiveRelativeAdvanced
+                ? buildObjectiveRelativeQuestion(item, index, input, context, objectiveRelativeSelection[index]?.type || typePlan[index])
+                : buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
         .filter(Boolean);
       console.info("[ASSEMBLY_TIME]", { ms: Date.now() - assemblyStart, selected: selected.length, questions: questions.length });
+      console.info("[DISTRACTOR_CATEGORY_DISTRIBUTION]", {
+        chapter: entry.canonical,
+        categories: context.distractorTracker.categories,
+        patterns: context.distractorTracker.patterns,
+        rejected: context.distractorTracker.rejected
+      });
 
       if (questions.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_questions" });
@@ -2598,7 +3229,9 @@ async function tryBuildWormholeFromDb(input = {}) {
           ? validatePassiveAdvancedDistribution(questions, input.count)
           : ditransitiveAdvanced
             ? validateDitransitiveAdvancedDistribution(questions, input.count)
-            : validateWormholeTypeDistribution(questions, input.count);
+            : objectiveRelativeAdvanced
+              ? validateObjectiveRelativeDistribution(questions, input.count)
+              : validateWormholeTypeDistribution(questions, input.count);
       if (presentPerfectAdvanced) {
         console.info("[WORMHOLE_PRESENT_PERFECT_TYPE_DISTRIBUTION]", {
           ...distributionValidation.counts,
@@ -2617,6 +3250,14 @@ async function tryBuildWormholeFromDb(input = {}) {
         });
       } else if (ditransitiveAdvanced) {
         console.info("[WORMHOLE_DITRANSITIVE_TYPE_DISTRIBUTION]", {
+          ...distributionValidation.counts,
+          total: distributionValidation.total,
+          requested: distributionValidation.requestedCount,
+          uniqueSentenceIds: distributionValidation.uniqueSentenceIds,
+          valid: distributionValidation.valid
+        });
+      } else if (objectiveRelativeAdvanced) {
+        console.info("[WORMHOLE_OBJECTIVE_RELATIVE_TYPE_DISTRIBUTION]", {
           ...distributionValidation.counts,
           total: distributionValidation.total,
           requested: distributionValidation.requestedCount,
@@ -2658,6 +3299,7 @@ async function tryBuildWormholeFromDb(input = {}) {
         };
       }
 
+      rememberRecentDbSelection(input, selected.slice(0, input.count));
       console.info("[TOTAL_EXECUTION_TIME]", { phase: "db_first_success", ms: Date.now() - totalStart });
       return {
         success: true,
