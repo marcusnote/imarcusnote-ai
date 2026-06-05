@@ -1345,6 +1345,65 @@ function preferFreshDbItems(items = [], recentSet = new Set()) {
   return [...fresh, ...recent];
 }
 
+function getDbMetaValue(item = {}, key = "") {
+  return String(item.chapterMeta?.[key] || item[key] || "unknown").trim() || "unknown";
+}
+
+function isStarterSentencePoolItem(item = {}) {
+  const text = normalizeSentenceIdentity(item.english);
+  return /\bthe door is opened by the guard\b/.test(text) ||
+    /\bthis classroom is cleaned every day\b/.test(text) ||
+    /\bthis rule is applied to all students\b/.test(text) ||
+    /\benglish is used in many countries\b/.test(text) ||
+    /^m2_passive_00[1-8]$/.test(String(item.id || ""));
+}
+
+function createSelectionDiversityState() {
+  return {
+    semanticBucket: new Map(),
+    worldType: new Map(),
+    chronologyType: new Map(),
+    starterCount: 0
+  };
+}
+
+function getMapCount(map = new Map(), key = "unknown") {
+  return map.get(key) || 0;
+}
+
+function scoreDiversityPenalty(item = {}, state = createSelectionDiversityState()) {
+  const semantic = getDbMetaValue(item, "semanticBucket");
+  const world = getDbMetaValue(item, "worldType");
+  const chronology = getDbMetaValue(item, "chronologyType");
+  return getMapCount(state.semanticBucket, semantic) * 14 +
+    getMapCount(state.worldType, world) * 9 +
+    getMapCount(state.chronologyType, chronology) * 11 +
+    (isStarterSentencePoolItem(item) ? 80 + state.starterCount * 20 : 0);
+}
+
+function rememberSelectionDiversity(item = {}, state = createSelectionDiversityState()) {
+  const semantic = getDbMetaValue(item, "semanticBucket");
+  const world = getDbMetaValue(item, "worldType");
+  const chronology = getDbMetaValue(item, "chronologyType");
+  state.semanticBucket.set(semantic, getMapCount(state.semanticBucket, semantic) + 1);
+  state.worldType.set(world, getMapCount(state.worldType, world) + 1);
+  state.chronologyType.set(chronology, getMapCount(state.chronologyType, chronology) + 1);
+  if (isStarterSentencePoolItem(item)) state.starterCount += 1;
+}
+
+function pickDiverseCandidate(candidates = [], state = createSelectionDiversityState(), baseScore = () => 0) {
+  let best = null;
+  let bestScore = -Infinity;
+  candidates.forEach((candidate, index) => {
+    const score = Number(baseScore(candidate) || 0) - scoreDiversityPenalty(candidate, state) - index * 0.001;
+    if (!best || score > bestScore) {
+      best = candidate;
+      bestScore = score;
+    }
+  });
+  return best;
+}
+
 function rememberRecentDbSelection(input = {}, selected = []) {
   if (!WORMHOLE_RECENT_SELECTION_ENABLED || !selected.length) return;
   const key = getRecentSelectionKey(input);
@@ -1513,16 +1572,19 @@ function selectDbItems(items = [], input = {}) {
 
   const selected = [];
   const used = new Set();
+  const diversityState = createSelectionDiversityState();
   let turn = dbPilotHash(seedText) % 2;
 
   function takeFrom(bucket) {
-    while (bucket.length) {
-      const item = bucket.shift();
-      if (!used.has(item.id)) {
-        used.add(item.id);
-        selected.push(item);
-        return true;
-      }
+    const candidates = bucket.filter((item) => !used.has(item.id));
+    const item = pickDiverseCandidate(candidates, diversityState, () => 100);
+    if (item) {
+      const index = bucket.findIndex((candidate) => candidate.id === item.id);
+      if (index >= 0) bucket.splice(index, 1);
+      used.add(item.id);
+      rememberSelectionDiversity(item, diversityState);
+      selected.push(item);
+      return true;
     }
     return false;
   }
@@ -1990,40 +2052,44 @@ function selectPresentPerfectAdvancedItems(items = [], input = {}, typePlan = []
   const usedIds = new Set();
   const usedSentences = new Set();
   const selected = [];
+  const diversityState = createSelectionDiversityState();
   let fallbackAssignments = 0;
   typePlan.forEach((type) => {
     const candidates = pool
       .filter((item) => !usedIds.has(item.id) && !usedSentences.has(normalizeSentenceIdentity(item.english)) && !isRecentlySelectedItem(item, recentSet) && presentPerfectItemMatchesType(item, type))
-      .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type));
+      .filter((candidate) =>
+        scoreWormholeDifficulty(candidate, type) >= 4 &&
+        buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
+      );
     const fallbackCandidates = pool
       .filter((item) => !usedIds.has(item.id) && !usedSentences.has(normalizeSentenceIdentity(item.english)) && presentPerfectItemMatchesType(item, type))
-      .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type));
-    let item = candidates.find((candidate) =>
-      scoreWormholeDifficulty(candidate, type) >= 4 &&
-      buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
-    ) || fallbackCandidates.find((candidate) =>
-      scoreWormholeDifficulty(candidate, type) >= 4 &&
-      buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
-    );
+      .filter((candidate) =>
+        scoreWormholeDifficulty(candidate, type) >= 4 &&
+        buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
+      );
+    let item = pickDiverseCandidate(candidates, diversityState, (candidate) => scoreWormholeDifficulty(candidate, type) * 20) ||
+      pickDiverseCandidate(fallbackCandidates, diversityState, (candidate) => scoreWormholeDifficulty(candidate, type) * 20);
     if (!item && type !== "semantic_paraphrase") {
-      item = pool
+      const freshFallback = pool
         .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)) && !isRecentlySelectedItem(candidate, recentSet))
-        .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type))
-        .find((candidate) =>
-          scoreWormholeDifficulty(candidate, type) >= 4 &&
-          buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
-        ) || pool
-        .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)))
-        .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type))
-        .find((candidate) =>
+        .filter((candidate) =>
           scoreWormholeDifficulty(candidate, type) >= 4 &&
           buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
         );
+      const anyFallback = pool
+        .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)))
+        .filter((candidate) =>
+          scoreWormholeDifficulty(candidate, type) >= 4 &&
+          buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
+        );
+      item = pickDiverseCandidate(freshFallback, diversityState, (candidate) => scoreWormholeDifficulty(candidate, type) * 20) ||
+        pickDiverseCandidate(anyFallback, diversityState, (candidate) => scoreWormholeDifficulty(candidate, type) * 20);
       if (item) fallbackAssignments += 1;
     }
     if (!item) return;
     usedIds.add(item.id);
     usedSentences.add(normalizeSentenceIdentity(item.english));
+    rememberSelectionDiversity(item, diversityState);
     selected.push({ item, type });
   });
   console.info("[WORMHOLE_PRESENT_PERFECT_SELECTION]", {
@@ -2033,6 +2099,9 @@ function selectPresentPerfectAdvancedItems(items = [], input = {}, typePlan = []
     usedSentenceIds: usedIds.size,
     uniqueEnglish: usedSentences.size,
     recentAvoided: recentSet.size,
+    semanticBuckets: Object.fromEntries(diversityState.semanticBucket),
+    worldTypes: Object.fromEntries(diversityState.worldType),
+    chronologyTypes: Object.fromEntries(diversityState.chronologyType),
     fallbackAssignments,
     minimumDifficultyScore: selected.length ? Math.min(...selected.map((entry) => scoreWormholeDifficulty(entry.item, entry.type))) : 0
   });
@@ -2198,6 +2267,7 @@ const PASSIVE_PARTICIPLE_BASE_FORMS = {
   created: "create",
   cut: "cut",
   deleted: "delete",
+  delivered: "deliver",
   discussed: "discuss",
   done: "do",
   drawn: "draw",
@@ -2209,23 +2279,32 @@ const PASSIVE_PARTICIPLE_BASE_FORMS = {
   held: "hold",
   hit: "hit",
   ignored: "ignore",
+  installed: "install",
+  issued: "issue",
   kept: "keep",
   known: "know",
   left: "leave",
   lost: "lose",
   made: "make",
+  managed: "manage",
   met: "meet",
   misunderstood: "misunderstand",
   opened: "open",
   paid: "pay",
   painted: "paint",
+  printed: "print",
+  processed: "process",
+  published: "publish",
   put: "put",
   read: "read",
   recovered: "recover",
   rejected: "reject",
+  released: "release",
   repaired: "repair",
   reset: "reset",
+  reserved: "reserve",
   reviewed: "review",
+  saved: "save",
   sold: "sell",
   sent: "send",
   set: "set",
@@ -2234,6 +2313,7 @@ const PASSIVE_PARTICIPLE_BASE_FORMS = {
   solved: "solve",
   spoken: "speak",
   stolen: "steal",
+  submitted: "submit",
   sung: "sing",
   supported: "support",
   taken: "take",
@@ -2241,6 +2321,7 @@ const PASSIVE_PARTICIPLE_BASE_FORMS = {
   thrown: "throw",
   told: "tell",
   used: "use",
+  updated: "update",
   verified: "verify",
   visited: "visit",
   won: "win",
@@ -2299,24 +2380,56 @@ function getPassiveActivePastForm(participle = "") {
   return PASSIVE_ACTIVE_PAST_FORMS[base] || String(participle || "").toLowerCase();
 }
 
+function getPassiveThirdPersonForm(base = "") {
+  const value = String(base || "").toLowerCase();
+  if (/(s|x|z|ch|sh|o)$/.test(value)) return value + "es";
+  if (/[^aeiou]y$/.test(value)) return value.slice(0, -1) + "ies";
+  return value + "s";
+}
+
+function inferPassiveSemanticActor(item = {}, patient = "", tail = "") {
+  const text = `${item.semanticBucket || ""} ${item.chapterMeta?.semanticBucket || ""} ${patient} ${tail}`.toLowerCase();
+  if (/\bcomputer system\b/.test(tail)) return "A computer system";
+  if (/\bconstruction team\b/.test(tail)) return "The construction team";
+  if (/\bhomework|school notice|class schedule|library books|school\b/.test(text)) return "The school";
+  if (/\bmovie|book|art exhibition|museum|bridge|culture|publication|release\b/.test(text)) return "The organizers";
+  if (/\bapplication|documents|reservation|payment|ticket|service|booking\b/.test(text)) return "The service team";
+  if (/\bpassword|security|account|profile|email|message|announcement|notification|digital|system\b/.test(text)) return "The system";
+  return "People";
+}
+
+function buildPassiveActiveVerb(be = "", participle = "", actor = "", tail = "") {
+  const base = getPassiveBaseForm(participle);
+  const lowerBe = String(be || "").toLowerCase();
+  if (/\b(next|tomorrow|soon|spring|year|month)\b/i.test(tail)) return `will ${base}`;
+  if (lowerBe === "was" || lowerBe === "were") return getPassiveActivePastForm(participle);
+  return actor === "People" ? base : getPassiveThirdPersonForm(base);
+}
+
 function buildPassiveParaphrase(item = {}) {
   const source = cleanDbOption(item.english);
-  const match = source.match(/^(.+?)\s+(was|were)\s+([A-Za-z]+)\s+by\s+(.+?)[.?!]$/i);
+  const match = source.match(/^(.+?)\s+(is|are|was|were)\s+([A-Za-z]+)\s*(.*?)[.?!]$/i);
   if (!match) return null;
   const patient = lowerInitialArticle(match[1]);
+  const be = match[2];
   const participle = match[3].toLowerCase();
   const base = getPassiveBaseForm(participle);
-  const past = getPassiveActivePastForm(participle);
-  const agent = match[4];
-  const agentStart = agent.charAt(0).toUpperCase() + agent.slice(1);
+  const rawTail = String(match[4] || "").trim();
+  const byAgent = rawTail.match(/^by\s+(.+?)$/i);
+  const actor = byAgent && !/\bemail\b/i.test(byAgent[1])
+    ? byAgent[1]
+    : inferPassiveSemanticActor(item, patient, rawTail);
+  const tail = byAgent && !/\bemail\b/i.test(rawTail) ? "" : (rawTail ? ` ${rawTail}` : "");
+  const actorStart = actor.charAt(0).toUpperCase() + actor.slice(1);
+  const activeVerb = buildPassiveActiveVerb(be, participle, actorStart, rawTail);
   return {
-    text: `${agentStart} ${past} ${patient}.`,
+    text: `${actorStart} ${activeVerb} ${patient}${tail}.`,
     relation: "active_passive_transform",
     distractors: [
-      `${agentStart} did not ${base} ${patient}.`,
-      `${agentStart} will ${base} ${patient}.`,
-      `${agentStart} usually ${base}s ${patient}.`,
-      `${agentStart} did something else with ${patient}.`
+      `${actorStart} did not ${base} ${patient}${tail}.`,
+      `${actorStart} will ${base} ${patient}${tail}.`,
+      `${actorStart} usually ${actorStart === "People" ? base : getPassiveThirdPersonForm(base)} ${patient}${tail}.`,
+      `${actorStart} did something else with ${patient}.`
     ]
   };
 }
@@ -2479,23 +2592,32 @@ function selectPassiveAdvancedItems(items = [], input = {}, typePlan = []) {
     recentSet
   );
   const used = new Set();
+  const diversityState = createSelectionDiversityState();
   const selected = typePlan.map((type) => {
-    const item = pool.find((candidate) =>
+    const freshCandidates = pool.filter((candidate) =>
       !used.has(candidate.id) &&
       !isRecentlySelectedItem(candidate, recentSet) &&
       (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate))
-    ) || pool.find((candidate) =>
+    );
+    const fallbackCandidates = pool.filter((candidate) =>
       !used.has(candidate.id) &&
       (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate))
     );
+    const item = pickDiverseCandidate(freshCandidates, diversityState, () => 100) ||
+      pickDiverseCandidate(fallbackCandidates, diversityState, () => 80);
     if (!item) return null;
     used.add(item.id);
+    rememberSelectionDiversity(item, diversityState);
     return { item, type };
   }).filter(Boolean);
   console.info("[WORMHOLE_PASSIVE_SELECTION]", {
     requested: typePlan.length,
     selected: selected.length,
     recentAvoided: recentSet.size,
+    starterLowPrioritySelected: diversityState.starterCount,
+    semanticBuckets: Object.fromEntries(diversityState.semanticBucket),
+    worldTypes: Object.fromEntries(diversityState.worldType),
+    chronologyTypes: Object.fromEntries(diversityState.chronologyType),
     uniqueSentenceIds: used.size
   });
   return selected;
@@ -2577,23 +2699,31 @@ function selectDitransitiveAdvancedItems(items = [], input = {}, typePlan = []) 
     recentSet
   );
   const used = new Set();
+  const diversityState = createSelectionDiversityState();
   const selected = typePlan.map((type) => {
-    const item = pool.find((candidate) =>
+    const freshCandidates = pool.filter((candidate) =>
       !used.has(candidate.id) &&
       !isRecentlySelectedItem(candidate, recentSet) &&
       (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate))
-    ) || pool.find((candidate) =>
+    );
+    const fallbackCandidates = pool.filter((candidate) =>
       !used.has(candidate.id) &&
       (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate))
     );
+    const item = pickDiverseCandidate(freshCandidates, diversityState, () => 100) ||
+      pickDiverseCandidate(fallbackCandidates, diversityState, () => 80);
     if (!item) return null;
     used.add(item.id);
+    rememberSelectionDiversity(item, diversityState);
     return { item, type };
   }).filter(Boolean);
   console.info("[WORMHOLE_DITRANSITIVE_SELECTION]", {
     requested: typePlan.length,
     selected: selected.length,
     recentAvoided: recentSet.size,
+    semanticBuckets: Object.fromEntries(diversityState.semanticBucket),
+    worldTypes: Object.fromEntries(diversityState.worldType),
+    chronologyTypes: Object.fromEntries(diversityState.chronologyType),
     uniqueSentenceIds: used.size
   });
   return selected;
@@ -2670,23 +2800,31 @@ function selectObjectiveRelativeItems(items = [], input = {}, typePlan = []) {
   );
   const used = new Set();
   const selected = [];
+  const diversityState = createSelectionDiversityState();
   typePlan.forEach((type) => {
-    const item = pool.find((candidate) =>
+    const freshCandidates = pool.filter((candidate) =>
       !used.has(candidate.id) &&
       !isRecentlySelectedItem(candidate, recentSet) &&
       buildObjectiveRelativeDistractors(candidate, type, {}).length >= 4
-    ) || pool.find((candidate) =>
+    );
+    const fallbackCandidates = pool.filter((candidate) =>
       !used.has(candidate.id) &&
       buildObjectiveRelativeDistractors(candidate, type, {}).length >= 4
     );
+    const item = pickDiverseCandidate(freshCandidates, diversityState, () => 100) ||
+      pickDiverseCandidate(fallbackCandidates, diversityState, () => 80);
     if (!item) return;
     used.add(item.id);
+    rememberSelectionDiversity(item, diversityState);
     selected.push({ item, type });
   });
   console.info("[WORMHOLE_OBJECTIVE_RELATIVE_SELECTION]", {
     requested: typePlan.length,
     selected: selected.length,
     recentAvoided: recentSet.size,
+    semanticBuckets: Object.fromEntries(diversityState.semanticBucket),
+    worldTypes: Object.fromEntries(diversityState.worldType),
+    chronologyTypes: Object.fromEntries(diversityState.chronologyType),
     uniqueSentenceIds: used.size
   });
   return selected;
