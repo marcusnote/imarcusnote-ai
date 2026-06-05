@@ -28604,5 +28604,3099 @@
     "auditStatus": "A+",
     "passiveV42Cleanup": "CLEANED",
     "passiveV43FinalQa": "PASS"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "announcement_passive",
+      "worldType": "digital",
+      "emotionAxis": "attention",
+      "chronologyType": "service_update"
+    },
+    "id": "m2_passive_261",
+    "seedId": "passive_261",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "중요한 공지가 모든 회원들에게 전달된다.",
+    "english": "An important announcement is delivered to all members.",
+    "words": [
+      "An",
+      "important",
+      "announcement",
+      "is",
+      "delivered",
+      "to",
+      "all",
+      "members"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "An",
+      "important",
+      "announcement",
+      "is",
+      "delivered",
+      "to",
+      "all",
+      "members"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "delivered"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "announcement_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "An important announcement is delivered to all members.",
+        "An important announcement is delivered to all members"
+      ],
+      "fragmentForm": "is delivered",
+      "wormholeVariants": [
+        "The system delivers an important announcement to all members.",
+        "An important announcement was delivered to all members.",
+        "An important announcement is delivered to all members through the system.",
+        "An important announcement is deliver to all members.",
+        "Did an important announcement deliver to all members?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "announcement_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "communication_passive",
+      "worldType": "digital",
+      "emotionAxis": "expectation",
+      "chronologyType": "service_flow"
+    },
+    "id": "m2_passive_262",
+    "seedId": "passive_262",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "확인 이메일이 가입 직후 발송된다.",
+    "english": "A confirmation email is sent right after registration.",
+    "words": [
+      "A",
+      "confirmation",
+      "email",
+      "is",
+      "sent",
+      "right",
+      "after",
+      "registration"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "confirmation",
+      "email",
+      "is",
+      "sent",
+      "right",
+      "after",
+      "registration"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "sent"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "communication_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A confirmation email is sent right after registration.",
+        "A confirmation email is sent right after registration"
+      ],
+      "fragmentForm": "is sent",
+      "wormholeVariants": [
+        "The system sends a confirmation email right after registration.",
+        "A confirmation email was sent right after registration.",
+        "A confirmation email is sent right after registration through the system.",
+        "A confirmation email is send right after registration.",
+        "Did a confirmation email send right after registration?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "communication_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "education_passive",
+      "worldType": "school",
+      "emotionAxis": "responsibility",
+      "chronologyType": "weekly_cycle"
+    },
+    "id": "m2_passive_263",
+    "seedId": "passive_263",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "숙제가 매주 금요일에 제출된다.",
+    "english": "Homework is submitted every Friday.",
+    "words": [
+      "Homework",
+      "is",
+      "submitted",
+      "every",
+      "Friday"
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Homework",
+      "is",
+      "submitted",
+      "every",
+      "Friday"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "submitted"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "education_passive",
+      "school"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Homework is submitted every Friday.",
+        "Homework is submitted every Friday"
+      ],
+      "fragmentForm": "is submitted",
+      "wormholeVariants": [
+        "The school submits Homework every Friday.",
+        "Homework was submitted every Friday.",
+        "Homework is submitted every Friday through the system.",
+        "Homework is submit every Friday.",
+        "Did Homework submit every Friday?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "education_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "library_service_passive",
+      "worldType": "school",
+      "emotionAxis": "order",
+      "chronologyType": "system_operation"
+    },
+    "id": "m2_passive_264",
+    "seedId": "passive_264",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "도서관 책들은 컴퓨터 시스템으로 관리된다.",
+    "english": "Library books are managed by a computer system.",
+    "words": [
+      "Library",
+      "books",
+      "are",
+      "managed",
+      "by",
+      "a",
+      "computer",
+      "system"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Library",
+      "books",
+      "are",
+      "managed",
+      "by",
+      "a",
+      "computer",
+      "system"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "managed"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "library_service_passive",
+      "school"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Library books are managed by a computer system.",
+        "Library books are managed by a computer system"
+      ],
+      "fragmentForm": "are managed",
+      "wormholeVariants": [
+        "A computer system manages Library books by a computer system.",
+        "Library books were managed by a computer system.",
+        "Library books are managed through a computer system.",
+        "Library books are manage by a computer system.",
+        "Did Library books manage by a computer system?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "library_service_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "account_verification_passive",
+      "worldType": "digital",
+      "emotionAxis": "relief",
+      "chronologyType": "after_signup"
+    },
+    "id": "m2_passive_265",
+    "seedId": "passive_265",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "사용자 계정은 몇 분 안에 인증된다.",
+    "english": "User accounts are verified within a few minutes.",
+    "words": [
+      "User",
+      "accounts",
+      "are",
+      "verified",
+      "within",
+      "a",
+      "few",
+      "minutes"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "User",
+      "accounts",
+      "are",
+      "verified",
+      "within",
+      "a",
+      "few",
+      "minutes"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "verified"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "account_verification_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "User accounts are verified within a few minutes.",
+        "User accounts are verified within a few minutes"
+      ],
+      "fragmentForm": "are verified",
+      "wormholeVariants": [
+        "The system verifies User accounts within a few minutes.",
+        "User accounts were verified within a few minutes.",
+        "User accounts are verified within a few minutes through the system.",
+        "User accounts are verify within a few minutes.",
+        "Did User accounts verify within a few minutes?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "account_verification_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "profile_update_passive",
+      "worldType": "digital",
+      "emotionAxis": "convenience",
+      "chronologyType": "auto_sync"
+    },
+    "id": "m2_passive_266",
+    "seedId": "passive_266",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "프로필 정보는 자동으로 업데이트된다.",
+    "english": "Profile information is updated automatically.",
+    "words": [
+      "Profile",
+      "information",
+      "is",
+      "updated",
+      "automatically"
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Profile",
+      "information",
+      "is",
+      "updated",
+      "automatically"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "updated"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "profile_update_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Profile information is updated automatically.",
+        "Profile information is updated automatically"
+      ],
+      "fragmentForm": "is updated",
+      "wormholeVariants": [
+        "The system updates Profile information automatically.",
+        "Profile information was updated automatically.",
+        "Profile information is updated automatically through the system.",
+        "Profile information is update automatically.",
+        "Did Profile information update automatically?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "profile_update_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "reservation_passive",
+      "worldType": "service",
+      "emotionAxis": "assurance",
+      "chronologyType": "after_booking"
+    },
+    "id": "m2_passive_267",
+    "seedId": "passive_267",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "예약 확인 문자가 즉시 발송된다.",
+    "english": "A reservation confirmation message is sent immediately.",
+    "words": [
+      "A",
+      "reservation",
+      "confirmation",
+      "message",
+      "is",
+      "sent",
+      "immediately"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "reservation",
+      "confirmation",
+      "message",
+      "is",
+      "sent",
+      "immediately"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "sent"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "reservation_passive",
+      "service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A reservation confirmation message is sent immediately.",
+        "A reservation confirmation message is sent immediately"
+      ],
+      "fragmentForm": "is sent",
+      "wormholeVariants": [
+        "The service team sends a reservation confirmation message immediately.",
+        "A reservation confirmation message was sent immediately.",
+        "A reservation confirmation message is sent immediately through the system.",
+        "A reservation confirmation message is send immediately.",
+        "Did a reservation confirmation message send immediately?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "reservation_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "document_approval_passive",
+      "worldType": "service",
+      "emotionAxis": "expectation",
+      "chronologyType": "review_process"
+    },
+    "id": "m2_passive_268",
+    "seedId": "passive_268",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "신청 서류는 하루 안에 승인된다.",
+    "english": "Application documents are approved within a day.",
+    "words": [
+      "Application",
+      "documents",
+      "are",
+      "approved",
+      "within",
+      "a",
+      "day"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Application",
+      "documents",
+      "are",
+      "approved",
+      "within",
+      "a",
+      "day"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "approved"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "document_approval_passive",
+      "service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Application documents are approved within a day.",
+        "Application documents are approved within a day"
+      ],
+      "fragmentForm": "are approved",
+      "wormholeVariants": [
+        "The service team approves Application documents within a day.",
+        "Application documents were approved within a day.",
+        "Application documents are approved within a day through the system.",
+        "Application documents are approve within a day.",
+        "Did Application documents approve within a day?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "document_approval_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "media_release_passive",
+      "worldType": "culture",
+      "emotionAxis": "anticipation",
+      "chronologyType": "before_release"
+    },
+    "id": "m2_passive_269",
+    "seedId": "passive_269",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 영화는 다음 달에 개봉된다.",
+    "english": "The movie is released next month.",
+    "words": [
+      "The",
+      "movie",
+      "is",
+      "released",
+      "next",
+      "month"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "movie",
+      "is",
+      "released",
+      "next",
+      "month"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "released"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "media_release_passive",
+      "culture"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The movie is released next month.",
+        "The movie is released next month"
+      ],
+      "fragmentForm": "is released",
+      "wormholeVariants": [
+        "The organizers releases the movie next month.",
+        "The movie was released next month.",
+        "The movie is released next month through the system.",
+        "The movie is release next month.",
+        "Did the movie release next month?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "media_release_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "construction_passive",
+      "worldType": "social",
+      "emotionAxis": "expectation",
+      "chronologyType": "construction_progress"
+    },
+    "id": "m2_passive_270",
+    "seedId": "passive_270",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "새 박물관은 내년에 완공된다.",
+    "english": "The new museum is completed next year.",
+    "words": [
+      "The",
+      "new",
+      "museum",
+      "is",
+      "completed",
+      "next",
+      "year"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "new",
+      "museum",
+      "is",
+      "completed",
+      "next",
+      "year"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "completed"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "construction_passive",
+      "social"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The new museum is completed next year.",
+        "The new museum is completed next year"
+      ],
+      "fragmentForm": "is completed",
+      "wormholeVariants": [
+        "The organizers completes the new museum next year.",
+        "The new museum was completed next year.",
+        "The new museum is completed next year through the system.",
+        "The new museum is complete next year.",
+        "Did the new museum complete next year?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "construction_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "password_reset_passive",
+      "worldType": "digital",
+      "emotionAxis": "relief",
+      "chronologyType": "account_recovery"
+    },
+    "id": "m2_passive_271",
+    "seedId": "passive_271",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "비밀번호 재설정 링크가 이메일로 전송된다.",
+    "english": "A password reset link is sent by email.",
+    "words": [
+      "A",
+      "password",
+      "reset",
+      "link",
+      "is",
+      "sent",
+      "by",
+      "email"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "password",
+      "reset",
+      "link",
+      "is",
+      "sent",
+      "by",
+      "email"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "sent"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "password_reset_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A password reset link is sent by email.",
+        "A password reset link is sent by email"
+      ],
+      "fragmentForm": "is sent",
+      "wormholeVariants": [
+        "The system sends a password reset link by email.",
+        "A password reset link was sent by email.",
+        "A password reset link is sent through email.",
+        "A password reset link is send by email.",
+        "Did a password reset link send by email?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "password_reset_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "security_notification_passive",
+      "worldType": "digital",
+      "emotionAxis": "alert",
+      "chronologyType": "security_event"
+    },
+    "id": "m2_passive_272",
+    "seedId": "passive_272",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "보안 경고가 즉시 사용자에게 전달된다.",
+    "english": "A security alert is delivered to users immediately.",
+    "words": [
+      "A",
+      "security",
+      "alert",
+      "is",
+      "delivered",
+      "to",
+      "users",
+      "immediately"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "security",
+      "alert",
+      "is",
+      "delivered",
+      "to",
+      "users",
+      "immediately"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "delivered"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "security_notification_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A security alert is delivered to users immediately.",
+        "A security alert is delivered to users immediately"
+      ],
+      "fragmentForm": "is delivered",
+      "wormholeVariants": [
+        "The system delivers a security alert to users immediately.",
+        "A security alert was delivered to users immediately.",
+        "A security alert is delivered to users immediately through the system.",
+        "A security alert is deliver to users immediately.",
+        "Did a security alert deliver to users immediately?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "security_notification_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "ticket_issue_passive",
+      "worldType": "service",
+      "emotionAxis": "assurance",
+      "chronologyType": "after_booking"
+    },
+    "id": "m2_passive_273",
+    "seedId": "passive_273",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "전자 티켓은 예약 직후 발급된다.",
+    "english": "An electronic ticket is issued right after reservation.",
+    "words": [
+      "An",
+      "electronic",
+      "ticket",
+      "is",
+      "issued",
+      "right",
+      "after",
+      "reservation"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "An",
+      "electronic",
+      "ticket",
+      "is",
+      "issued",
+      "right",
+      "after",
+      "reservation"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "issued"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "ticket_issue_passive",
+      "service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "An electronic ticket is issued right after reservation.",
+        "An electronic ticket is issued right after reservation"
+      ],
+      "fragmentForm": "is issued",
+      "wormholeVariants": [
+        "The service team issues an electronic ticket right after reservation.",
+        "An electronic ticket was issued right after reservation.",
+        "An electronic ticket is issued right after reservation through the system.",
+        "An electronic ticket is issue right after reservation.",
+        "Did an electronic ticket issue right after reservation?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "ticket_issue_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "payment_confirmation_passive",
+      "worldType": "service",
+      "emotionAxis": "relief",
+      "chronologyType": "after_payment"
+    },
+    "id": "m2_passive_274",
+    "seedId": "passive_274",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "결제 확인 문자가 자동으로 발송된다.",
+    "english": "A payment confirmation message is sent automatically.",
+    "words": [
+      "A",
+      "payment",
+      "confirmation",
+      "message",
+      "is",
+      "sent",
+      "automatically"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "payment",
+      "confirmation",
+      "message",
+      "is",
+      "sent",
+      "automatically"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "sent"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "payment_confirmation_passive",
+      "service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A payment confirmation message is sent automatically.",
+        "A payment confirmation message is sent automatically"
+      ],
+      "fragmentForm": "is sent",
+      "wormholeVariants": [
+        "The service team sends a payment confirmation message automatically.",
+        "A payment confirmation message was sent automatically.",
+        "A payment confirmation message is sent automatically through the system.",
+        "A payment confirmation message is send automatically.",
+        "Did a payment confirmation message send automatically?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "payment_confirmation_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "school_notice_passive",
+      "worldType": "school",
+      "emotionAxis": "attention",
+      "chronologyType": "information_sharing"
+    },
+    "id": "m2_passive_275",
+    "seedId": "passive_275",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "학교 공지는 모든 학부모와 공유된다.",
+    "english": "The school notice is shared with all parents.",
+    "words": [
+      "The",
+      "school",
+      "notice",
+      "is",
+      "shared",
+      "with",
+      "all",
+      "parents"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "school",
+      "notice",
+      "is",
+      "shared",
+      "with",
+      "all",
+      "parents"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "shared"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "school_notice_passive",
+      "school"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The school notice is shared with all parents.",
+        "The school notice is shared with all parents"
+      ],
+      "fragmentForm": "is shared",
+      "wormholeVariants": [
+        "The school shares the school notice with all parents.",
+        "The school notice was shared with all parents.",
+        "The school notice is shared with all parents through the system.",
+        "The school notice is share with all parents.",
+        "Did the school notice share with all parents?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "school_notice_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "schedule_update_passive",
+      "worldType": "school",
+      "emotionAxis": "expectation",
+      "chronologyType": "monthly_update"
+    },
+    "id": "m2_passive_276",
+    "seedId": "passive_276",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "수업 일정은 매달 업데이트된다.",
+    "english": "The class schedule is updated every month.",
+    "words": [
+      "The",
+      "class",
+      "schedule",
+      "is",
+      "updated",
+      "every",
+      "month"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "class",
+      "schedule",
+      "is",
+      "updated",
+      "every",
+      "month"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "updated"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "schedule_update_passive",
+      "school"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The class schedule is updated every month.",
+        "The class schedule is updated every month"
+      ],
+      "fragmentForm": "is updated",
+      "wormholeVariants": [
+        "The school updates the class schedule every month.",
+        "The class schedule was updated every month.",
+        "The class schedule is updated every month through the system.",
+        "The class schedule is update every month.",
+        "Did the class schedule update every month?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "schedule_update_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "book_publication_passive",
+      "worldType": "culture",
+      "emotionAxis": "anticipation",
+      "chronologyType": "before_publication"
+    },
+    "id": "m2_passive_277",
+    "seedId": "passive_277",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 책은 다음 봄에 출판된다.",
+    "english": "The book is published next spring.",
+    "words": [
+      "The",
+      "book",
+      "is",
+      "published",
+      "next",
+      "spring"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "book",
+      "is",
+      "published",
+      "next",
+      "spring"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "published"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "book_publication_passive",
+      "culture"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The book is published next spring.",
+        "The book is published next spring"
+      ],
+      "fragmentForm": "is published",
+      "wormholeVariants": [
+        "The organizers publishes the book next spring.",
+        "The book was published next spring.",
+        "The book is published next spring through the system.",
+        "The book is publish next spring.",
+        "Did the book publish next spring?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "book_publication_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "art_exhibition_passive",
+      "worldType": "culture",
+      "emotionAxis": "interest",
+      "chronologyType": "before_event"
+    },
+    "id": "m2_passive_278",
+    "seedId": "passive_278",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 미술 전시는 다음 달에 개최된다.",
+    "english": "The art exhibition is held next month.",
+    "words": [
+      "The",
+      "art",
+      "exhibition",
+      "is",
+      "held",
+      "next",
+      "month"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "art",
+      "exhibition",
+      "is",
+      "held",
+      "next",
+      "month"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "held"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "art_exhibition_passive",
+      "culture"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The art exhibition is held next month.",
+        "The art exhibition is held next month"
+      ],
+      "fragmentForm": "is held",
+      "wormholeVariants": [
+        "The organizers holds the art exhibition next month.",
+        "The art exhibition was held next month.",
+        "The art exhibition is held next month through the system.",
+        "The art exhibition is hold next month.",
+        "Did the art exhibition hold next month?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "art_exhibition_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "bridge_completion_passive",
+      "worldType": "social",
+      "emotionAxis": "expectation",
+      "chronologyType": "construction_progress"
+    },
+    "id": "m2_passive_279",
+    "seedId": "passive_279",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "새 다리는 올해 말에 완공된다.",
+    "english": "The new bridge is completed at the end of this year.",
+    "words": [
+      "The",
+      "new",
+      "bridge",
+      "is",
+      "completed",
+      "at",
+      "the",
+      "end",
+      "of",
+      "this",
+      "year"
+    ],
+    "wordCount": 11,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "new",
+      "bridge",
+      "is",
+      "completed",
+      "at",
+      "the",
+      "end",
+      "of",
+      "this",
+      "year"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "completed"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "bridge_completion_passive",
+      "social"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The new bridge is completed at the end of this year.",
+        "The new bridge is completed at the end of this year"
+      ],
+      "fragmentForm": "is completed",
+      "wormholeVariants": [
+        "The organizers completes the new bridge at the end of this year.",
+        "The new bridge was completed at the end of this year.",
+        "The new bridge is completed at the end of this year through the system.",
+        "The new bridge is complete at the end of this year.",
+        "Did the new bridge complete at the end of this year?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "bridge_completion_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "road_construction_passive",
+      "worldType": "social",
+      "emotionAxis": "expectation",
+      "chronologyType": "ongoing_construction"
+    },
+    "id": "m2_passive_280",
+    "seedId": "passive_280",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 도로는 현재 확장 공사가 진행되고 있다.",
+    "english": "The road is expanded by the construction team.",
+    "words": [
+      "The",
+      "road",
+      "is",
+      "expanded",
+      "by",
+      "the",
+      "construction",
+      "team"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "road",
+      "is",
+      "expanded",
+      "by",
+      "the",
+      "construction",
+      "team"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "expanded"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "road_construction_passive",
+      "social"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The road is expanded by the construction team.",
+        "The road is expanded by the construction team"
+      ],
+      "fragmentForm": "is expanded",
+      "wormholeVariants": [
+        "The construction team expands the road by the construction team.",
+        "The road was expanded by the construction team.",
+        "The road is expanded through the construction team.",
+        "The road is expand by the construction team.",
+        "Did the road expand by the construction team?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "road_construction_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "login_notification_passive",
+      "worldType": "digital",
+      "emotionAxis": "attention",
+      "chronologyType": "login_event"
+    },
+    "id": "m2_passive_281",
+    "seedId": "passive_281",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "로그인 알림이 사용자에게 전송된다.",
+    "english": "A login notification is sent to the user.",
+    "words": [
+      "A",
+      "login",
+      "notification",
+      "is",
+      "sent",
+      "to",
+      "the",
+      "user"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "login",
+      "notification",
+      "is",
+      "sent",
+      "to",
+      "the",
+      "user"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "sent"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "login_notification_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A login notification is sent to the user.",
+        "A login notification is sent to the user"
+      ],
+      "fragmentForm": "is sent",
+      "wormholeVariants": [
+        "The system sends a login notification to the user.",
+        "A login notification was sent to the user.",
+        "A login notification is sent to the user through the system.",
+        "A login notification is send to the user.",
+        "Did a login notification send to the user?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "login_notification_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "software_update_passive",
+      "worldType": "technology",
+      "emotionAxis": "convenience",
+      "chronologyType": "auto_update"
+    },
+    "id": "m2_passive_282",
+    "seedId": "passive_282",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "소프트웨어 업데이트는 자동으로 설치된다.",
+    "english": "Software updates are installed automatically.",
+    "words": [
+      "Software",
+      "updates",
+      "are",
+      "installed",
+      "automatically"
+    ],
+    "wordCount": 5,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Software",
+      "updates",
+      "are",
+      "installed",
+      "automatically"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "installed"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "software_update_passive",
+      "technology"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Software updates are installed automatically.",
+        "Software updates are installed automatically"
+      ],
+      "fragmentForm": "are installed",
+      "wormholeVariants": [
+        "The system installs Software updates automatically.",
+        "Software updates were installed automatically.",
+        "Software updates are installed automatically through the system.",
+        "Software updates are install automatically.",
+        "Did Software updates install automatically?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "software_update_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "profile_photo_approval_passive",
+      "worldType": "digital",
+      "emotionAxis": "relief",
+      "chronologyType": "profile_review"
+    },
+    "id": "m2_passive_283",
+    "seedId": "passive_283",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "새 프로필 사진은 시스템에 의해 승인된다.",
+    "english": "New profile photos are approved by the system.",
+    "words": [
+      "New",
+      "profile",
+      "photos",
+      "are",
+      "approved",
+      "by",
+      "the",
+      "system"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "New",
+      "profile",
+      "photos",
+      "are",
+      "approved",
+      "by",
+      "the",
+      "system"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "approved"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "profile_photo_approval_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "New profile photos are approved by the system.",
+        "New profile photos are approved by the system"
+      ],
+      "fragmentForm": "are approved",
+      "wormholeVariants": [
+        "The system approves New profile photos by the system.",
+        "New profile photos were approved by the system.",
+        "New profile photos are approved through the system.",
+        "New profile photos are approve by the system.",
+        "Did New profile photos approve by the system?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "profile_photo_approval_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "data_sync_passive",
+      "worldType": "digital",
+      "emotionAxis": "trust",
+      "chronologyType": "after_sync"
+    },
+    "id": "m2_passive_284",
+    "seedId": "passive_284",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "사용자 데이터는 동기화 후 업데이트된다.",
+    "english": "User data is updated after synchronization.",
+    "words": [
+      "User",
+      "data",
+      "is",
+      "updated",
+      "after",
+      "synchronization"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "User",
+      "data",
+      "is",
+      "updated",
+      "after",
+      "synchronization"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "updated"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "data_sync_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "User data is updated after synchronization.",
+        "User data is updated after synchronization"
+      ],
+      "fragmentForm": "is updated",
+      "wormholeVariants": [
+        "The system updates User data after synchronization.",
+        "User data was updated after synchronization.",
+        "User data is updated after synchronization through the system.",
+        "User data is update after synchronization.",
+        "Did User data update after synchronization?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "data_sync_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "attendance_record_passive",
+      "worldType": "school",
+      "emotionAxis": "responsibility",
+      "chronologyType": "daily_cycle"
+    },
+    "id": "m2_passive_285",
+    "seedId": "passive_285",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "출석 기록은 매일 아침 업데이트된다.",
+    "english": "Attendance records are updated every morning.",
+    "words": [
+      "Attendance",
+      "records",
+      "are",
+      "updated",
+      "every",
+      "morning"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Attendance",
+      "records",
+      "are",
+      "updated",
+      "every",
+      "morning"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "updated"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "attendance_record_passive",
+      "school"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Attendance records are updated every morning.",
+        "Attendance records are updated every morning"
+      ],
+      "fragmentForm": "are updated",
+      "wormholeVariants": [
+        "The school updates Attendance records every morning.",
+        "Attendance records were updated every morning.",
+        "Attendance records are updated every morning through the system.",
+        "Attendance records are update every morning.",
+        "Did Attendance records update every morning?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "attendance_record_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "report_card_passive",
+      "worldType": "school",
+      "emotionAxis": "attention",
+      "chronologyType": "school_reporting"
+    },
+    "id": "m2_passive_286",
+    "seedId": "passive_286",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "성적표는 온라인으로 학부모와 공유된다.",
+    "english": "Report cards are shared with parents online.",
+    "words": [
+      "Report",
+      "cards",
+      "are",
+      "shared",
+      "with",
+      "parents",
+      "online"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Report",
+      "cards",
+      "are",
+      "shared",
+      "with",
+      "parents",
+      "online"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "shared"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "report_card_passive",
+      "school"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Report cards are shared with parents online.",
+        "Report cards are shared with parents online"
+      ],
+      "fragmentForm": "are shared",
+      "wormholeVariants": [
+        "The school shares Report cards with parents online.",
+        "Report cards were shared with parents online.",
+        "Report cards are shared with parents online through the system.",
+        "Report cards are share with parents online.",
+        "Did Report cards share with parents online?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "report_card_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "assignment_submission_passive",
+      "worldType": "school",
+      "emotionAxis": "responsibility",
+      "chronologyType": "submission_flow"
+    },
+    "id": "m2_passive_287",
+    "seedId": "passive_287",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "과제 파일은 학급 앱을 통해 제출된다.",
+    "english": "Assignment files are submitted through the class app.",
+    "words": [
+      "Assignment",
+      "files",
+      "are",
+      "submitted",
+      "through",
+      "the",
+      "class",
+      "app"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Assignment",
+      "files",
+      "are",
+      "submitted",
+      "through",
+      "the",
+      "class",
+      "app"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "submitted"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "assignment_submission_passive",
+      "school"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Assignment files are submitted through the class app.",
+        "Assignment files are submitted through the class app"
+      ],
+      "fragmentForm": "are submitted",
+      "wormholeVariants": [
+        "The school submits Assignment files through the class app.",
+        "Assignment files were submitted through the class app.",
+        "Assignment files are submitted through the class app through the system.",
+        "Assignment files are submit through the class app.",
+        "Did Assignment files submit through the class app?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "assignment_submission_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "classroom_announcement_passive",
+      "worldType": "school",
+      "emotionAxis": "attention",
+      "chronologyType": "school_day"
+    },
+    "id": "m2_passive_288",
+    "seedId": "passive_288",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "교실 공지는 점심시간 전에 전달된다.",
+    "english": "A classroom announcement is delivered before lunch.",
+    "words": [
+      "A",
+      "classroom",
+      "announcement",
+      "is",
+      "delivered",
+      "before",
+      "lunch"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "classroom",
+      "announcement",
+      "is",
+      "delivered",
+      "before",
+      "lunch"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "delivered"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "classroom_announcement_passive",
+      "school"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A classroom announcement is delivered before lunch.",
+        "A classroom announcement is delivered before lunch"
+      ],
+      "fragmentForm": "is delivered",
+      "wormholeVariants": [
+        "The school delivers a classroom announcement before lunch.",
+        "A classroom announcement was delivered before lunch.",
+        "A classroom announcement is delivered before lunch through the system.",
+        "A classroom announcement is deliver before lunch.",
+        "Did a classroom announcement deliver before lunch?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "classroom_announcement_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "parking_permit_passive",
+      "worldType": "public_service",
+      "emotionAxis": "relief",
+      "chronologyType": "after_approval"
+    },
+    "id": "m2_passive_289",
+    "seedId": "passive_289",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "주차 허가증은 승인 후 발급된다.",
+    "english": "A parking permit is issued after approval.",
+    "words": [
+      "A",
+      "parking",
+      "permit",
+      "is",
+      "issued",
+      "after",
+      "approval"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "parking",
+      "permit",
+      "is",
+      "issued",
+      "after",
+      "approval"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "issued"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "parking_permit_passive",
+      "public_service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A parking permit is issued after approval.",
+        "A parking permit is issued after approval"
+      ],
+      "fragmentForm": "is issued",
+      "wormholeVariants": [
+        "The service team issues a parking permit after approval.",
+        "A parking permit was issued after approval.",
+        "A parking permit is issued after approval through the system.",
+        "A parking permit is issue after approval.",
+        "Did a parking permit issue after approval?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "parking_permit_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "service_application_passive",
+      "worldType": "public_service",
+      "emotionAxis": "expectation",
+      "chronologyType": "review_process"
+    },
+    "id": "m2_passive_290",
+    "seedId": "passive_290",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "서비스 신청서는 이틀 안에 처리된다.",
+    "english": "Service applications are processed within two days.",
+    "words": [
+      "Service",
+      "applications",
+      "are",
+      "processed",
+      "within",
+      "two",
+      "days"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Service",
+      "applications",
+      "are",
+      "processed",
+      "within",
+      "two",
+      "days"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "processed"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "service_application_passive",
+      "public_service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Service applications are processed within two days.",
+        "Service applications are processed within two days"
+      ],
+      "fragmentForm": "are processed",
+      "wormholeVariants": [
+        "The service team processes Service applications within two days.",
+        "Service applications were processed within two days.",
+        "Service applications are processed within two days through the system.",
+        "Service applications are process within two days.",
+        "Did Service applications process within two days?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "service_application_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "reservation_change_passive",
+      "worldType": "service",
+      "emotionAxis": "assurance",
+      "chronologyType": "booking_change"
+    },
+    "id": "m2_passive_291",
+    "seedId": "passive_291",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "예약 변경은 서비스 데스크에서 승인된다.",
+    "english": "Reservation changes are approved by the service desk.",
+    "words": [
+      "Reservation",
+      "changes",
+      "are",
+      "approved",
+      "by",
+      "the",
+      "service",
+      "desk"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Reservation",
+      "changes",
+      "are",
+      "approved",
+      "by",
+      "the",
+      "service",
+      "desk"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "approved"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "reservation_change_passive",
+      "service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Reservation changes are approved by the service desk.",
+        "Reservation changes are approved by the service desk"
+      ],
+      "fragmentForm": "are approved",
+      "wormholeVariants": [
+        "The service team approves Reservation changes by the service desk.",
+        "Reservation changes were approved by the service desk.",
+        "Reservation changes are approved through the service desk.",
+        "Reservation changes are approve by the service desk.",
+        "Did Reservation changes approve by the service desk?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "reservation_change_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "paper_ticket_passive",
+      "worldType": "service",
+      "emotionAxis": "assurance",
+      "chronologyType": "ticket_pickup"
+    },
+    "id": "m2_passive_292",
+    "seedId": "passive_292",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "종이 티켓은 창구에서 출력된다.",
+    "english": "Paper tickets are printed at the counter.",
+    "words": [
+      "Paper",
+      "tickets",
+      "are",
+      "printed",
+      "at",
+      "the",
+      "counter"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Paper",
+      "tickets",
+      "are",
+      "printed",
+      "at",
+      "the",
+      "counter"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "printed"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "paper_ticket_passive",
+      "service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Paper tickets are printed at the counter.",
+        "Paper tickets are printed at the counter"
+      ],
+      "fragmentForm": "are printed",
+      "wormholeVariants": [
+        "The service team prints Paper tickets at the counter.",
+        "Paper tickets were printed at the counter.",
+        "Paper tickets are printed at the counter through the system.",
+        "Paper tickets are print at the counter.",
+        "Did Paper tickets print at the counter?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "paper_ticket_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "concert_ticket_passive",
+      "worldType": "culture",
+      "emotionAxis": "anticipation",
+      "chronologyType": "before_event"
+    },
+    "id": "m2_passive_293",
+    "seedId": "passive_293",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "콘서트 티켓은 다음 주에 발급된다.",
+    "english": "Concert tickets are issued next week.",
+    "words": [
+      "Concert",
+      "tickets",
+      "are",
+      "issued",
+      "next",
+      "week"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Concert",
+      "tickets",
+      "are",
+      "issued",
+      "next",
+      "week"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "issued"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "concert_ticket_passive",
+      "culture"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Concert tickets are issued next week.",
+        "Concert tickets are issued next week"
+      ],
+      "fragmentForm": "are issued",
+      "wormholeVariants": [
+        "The organizers issues Concert tickets next week.",
+        "Concert tickets were issued next week.",
+        "Concert tickets are issued next week through the system.",
+        "Concert tickets are issue next week.",
+        "Did Concert tickets issue next week?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "concert_ticket_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "film_trailer_passive",
+      "worldType": "culture",
+      "emotionAxis": "interest",
+      "chronologyType": "media_release"
+    },
+    "id": "m2_passive_294",
+    "seedId": "passive_294",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 영화 예고편은 오늘 밤 공개된다.",
+    "english": "The film trailer is released tonight.",
+    "words": [
+      "The",
+      "film",
+      "trailer",
+      "is",
+      "released",
+      "tonight"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "basic",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "film",
+      "trailer",
+      "is",
+      "released",
+      "tonight"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "released"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "film_trailer_passive",
+      "culture"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The film trailer is released tonight.",
+        "The film trailer is released tonight"
+      ],
+      "fragmentForm": "is released",
+      "wormholeVariants": [
+        "The organizers releases the film trailer tonight.",
+        "The film trailer was released tonight.",
+        "The film trailer is released tonight through the system.",
+        "The film trailer is release tonight.",
+        "Did the film trailer release tonight?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "film_trailer_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "exhibition_information_passive",
+      "worldType": "culture",
+      "emotionAxis": "interest",
+      "chronologyType": "online_notice"
+    },
+    "id": "m2_passive_295",
+    "seedId": "passive_295",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "전시 세부 정보는 웹사이트에 공유된다.",
+    "english": "Exhibition details are shared on the website.",
+    "words": [
+      "Exhibition",
+      "details",
+      "are",
+      "shared",
+      "on",
+      "the",
+      "website"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Exhibition",
+      "details",
+      "are",
+      "shared",
+      "on",
+      "the",
+      "website"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "shared"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "exhibition_information_passive",
+      "culture"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Exhibition details are shared on the website.",
+        "Exhibition details are shared on the website"
+      ],
+      "fragmentForm": "are shared",
+      "wormholeVariants": [
+        "The organizers shares Exhibition details on the website.",
+        "Exhibition details were shared on the website.",
+        "Exhibition details are shared on the website through the system.",
+        "Exhibition details are share on the website.",
+        "Did Exhibition details share on the website?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "exhibition_information_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "magazine_publication_passive",
+      "worldType": "culture",
+      "emotionAxis": "anticipation",
+      "chronologyType": "before_publication"
+    },
+    "id": "m2_passive_296",
+    "seedId": "passive_296",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "그 잡지 기사는 다음 주에 출판된다.",
+    "english": "The magazine article is published next week.",
+    "words": [
+      "The",
+      "magazine",
+      "article",
+      "is",
+      "published",
+      "next",
+      "week"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "The",
+      "magazine",
+      "article",
+      "is",
+      "published",
+      "next",
+      "week"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "published"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "magazine_publication_passive",
+      "culture"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "The magazine article is published next week.",
+        "The magazine article is published next week"
+      ],
+      "fragmentForm": "is published",
+      "wormholeVariants": [
+        "The organizers publishes the magazine article next week.",
+        "The magazine article was published next week.",
+        "The magazine article is published next week through the system.",
+        "The magazine article is publish next week.",
+        "Did the magazine article publish next week?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "magazine_publication_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "app_feature_release_passive",
+      "worldType": "technology",
+      "emotionAxis": "expectation",
+      "chronologyType": "beta_release"
+    },
+    "id": "m2_passive_297",
+    "seedId": "passive_297",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "새 앱 기능은 베타 사용자에게 공개된다.",
+    "english": "A new app feature is released to beta users.",
+    "words": [
+      "A",
+      "new",
+      "app",
+      "feature",
+      "is",
+      "released",
+      "to",
+      "beta",
+      "users"
+    ],
+    "wordCount": 9,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "A",
+      "new",
+      "app",
+      "feature",
+      "is",
+      "released",
+      "to",
+      "beta",
+      "users"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "is",
+      "released"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "app_feature_release_passive",
+      "technology"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "A new app feature is released to beta users.",
+        "A new app feature is released to beta users"
+      ],
+      "fragmentForm": "is released",
+      "wormholeVariants": [
+        "The system releases a new app feature to beta users.",
+        "A new app feature was released to beta users.",
+        "A new app feature is released to beta users through the system.",
+        "A new app feature is release to beta users.",
+        "Did a new app feature release to beta users?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "app_feature_release_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "account_setting_passive",
+      "worldType": "digital",
+      "emotionAxis": "trust",
+      "chronologyType": "security_check"
+    },
+    "id": "m2_passive_298",
+    "seedId": "passive_298",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "계정 설정은 보안 검사 후 저장된다.",
+    "english": "Account settings are saved after a security check.",
+    "words": [
+      "Account",
+      "settings",
+      "are",
+      "saved",
+      "after",
+      "a",
+      "security",
+      "check"
+    ],
+    "wordCount": 8,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Account",
+      "settings",
+      "are",
+      "saved",
+      "after",
+      "a",
+      "security",
+      "check"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "saved"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "account_setting_passive",
+      "digital"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Account settings are saved after a security check.",
+        "Account settings are saved after a security check"
+      ],
+      "fragmentForm": "are saved",
+      "wormholeVariants": [
+        "The system saves Account settings after a security check.",
+        "Account settings were saved after a security check.",
+        "Account settings are saved after a security check through the system.",
+        "Account settings are save after a security check.",
+        "Did Account settings save after a security check?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "account_setting_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "application_result_passive",
+      "worldType": "public_service",
+      "emotionAxis": "expectation",
+      "chronologyType": "result_notice"
+    },
+    "id": "m2_passive_299",
+    "seedId": "passive_299",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "신청 결과는 문자 메시지로 전달된다.",
+    "english": "Application results are delivered by text message.",
+    "words": [
+      "Application",
+      "results",
+      "are",
+      "delivered",
+      "by",
+      "text",
+      "message"
+    ],
+    "wordCount": 7,
+    "grammar": "passive",
+    "difficulty": "intermediate",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Application",
+      "results",
+      "are",
+      "delivered",
+      "by",
+      "text",
+      "message"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "delivered"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "application_result_passive",
+      "public_service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Application results are delivered by text message.",
+        "Application results are delivered by text message"
+      ],
+      "fragmentForm": "are delivered",
+      "wormholeVariants": [
+        "The service team delivers Application results by text message.",
+        "Application results were delivered by text message.",
+        "Application results are delivered through text message.",
+        "Application results are deliver by text message.",
+        "Did Application results deliver by text message?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "application_result_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
+  },
+  {
+    "chapterMeta": {
+      "semanticBucket": "event_seat_passive",
+      "worldType": "service",
+      "emotionAxis": "assurance",
+      "chronologyType": "after_payment"
+    },
+    "id": "m2_passive_300",
+    "seedId": "passive_300",
+    "grade": "middle2",
+    "semester": "common",
+    "lessonBand": "grammar",
+    "chapterKey": "passive",
+    "chapterLabelKo": "수동태",
+    "korean": "행사 좌석은 결제 후 예약된다.",
+    "english": "Event seats are reserved after payment.",
+    "words": [
+      "Event",
+      "seats",
+      "are",
+      "reserved",
+      "after",
+      "payment"
+    ],
+    "wordCount": 6,
+    "grammar": "passive",
+    "difficulty": "advanced",
+    "sourceType": "db_v4_4_semantic_pool_expansion",
+    "clueUnits": [
+      "Event",
+      "seats",
+      "are",
+      "reserved",
+      "after",
+      "payment"
+    ],
+    "extraClueWordPool": [],
+    "blankTargets": [
+      "are",
+      "reserved"
+    ],
+    "tags": [
+      "passive",
+      "v4_4",
+      "semantic_paraphrase_candidate",
+      "event_seat_passive",
+      "service"
+    ],
+    "distractorSeeds": {
+      "statementForm": [
+        "Event seats are reserved after payment.",
+        "Event seats are reserved after payment"
+      ],
+      "fragmentForm": "are reserved",
+      "wormholeVariants": [
+        "The service team reserves Event seats after payment.",
+        "Event seats were reserved after payment.",
+        "Event seats are reserved after payment through the system.",
+        "Event seats are reserve after payment.",
+        "Did Event seats reserve after payment?"
+      ],
+      "wormholeVariantCategories": [
+        "active_passive_confusion",
+        "tense_passive_confusion",
+        "agent_confusion",
+        "participle_confusion",
+        "passive_question_confusion"
+      ]
+    },
+    "passiveV4Classification": "event_seat_passive",
+    "passiveV4Decision": "ADD",
+    "auditStatus": "A+",
+    "semanticParaphraseCandidate": true,
+    "passiveV44Expansion": "semantic_paraphrase_pool"
   }
 ]
