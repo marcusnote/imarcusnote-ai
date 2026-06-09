@@ -51,7 +51,7 @@ function inferSelectedGradeFromText(text = "") {
 
 function selectedGradeLabel(value = "") {
   const grade = normalizeSelectedGrade(value);
-  const labels = { middle1: "以?", middle2: "以?", middle3: "以?", high1: "怨?", high2: "怨?", high3: "怨?" };
+  const labels = { middle1: "중1", middle2: "중2", middle3: "중3", high1: "고1", high2: "고2", high3: "고3" };
   return labels[grade] || "";
 }
 
@@ -351,7 +351,7 @@ async function callOpenAI(systemPrompt, userPrompt) {
 }
 
 /* =========================
-   Wormhole Output Stabilizer (?섏젙 諛섏쁺 遺遺?
+   Wormhole Output Stabilizer (문장 복원 및 출력 안정화)
    ========================= */
 
 function cleanupText(text = "") {
@@ -419,7 +419,7 @@ function renumberAnswerBlocks(blocks = [], startNumber = 1) {
 
 function normalizeQuestionLine(line = "") {
   return String(line || "")
-    .replace(/^\s*臾몄젣\s*\d+\s*[:.)-]?\s*/i, "")
+    .replace(/^\s*문제\s*\d+\s*[:.)-]?\s*/i, "")
     .replace(/^\s*(\d+)\)\s*/, "$1. ")
     .replace(/^\s*(\d+)\s*-\s*/, "$1. ")
     .trim();
@@ -481,7 +481,7 @@ function normalizeWormholeAnswers(answerText = "") {
   const lines = source.split("\n").map(s => s.trim()).filter(Boolean);
   const normalized = lines.map((line) => {
     let v = line
-      .replace(/^臾몄젣\s*(\d+)\s*[:.)-]?\s*/i, "$1) ")
+      .replace(/^문제\s*(\d+)\s*[:.)-]?\s*/i, "$1) ")
       .replace(/^(\d+)\.\s*/, "$1) ")
       .trim();
     if (/^\d+\)\s*[①②③④⑤]/.test(v)) return v;
@@ -613,7 +613,7 @@ async function mergeWormholeSupplement(formatted, supplement, input) {
         formatted.title,
         formatted.instructions,
         mergedQuestionsText,
-        "?뺣떟 諛??댁꽕",
+        "정답 및 해설",
         mergedAnswersText,
       ]
         .filter(Boolean)
@@ -908,16 +908,11 @@ function getWormholeAcceptedAlternatives(item = {}) {
   return alternatives;
 }
 
-function getWormholeVariants(item = {}) {
-  return Array.isArray(item?.wormholeVariants) ? item.wormholeVariants : [];
-}
-
 function getRawWormholeWrongCandidates(item = {}) {
   const correct = String(item.english || "").replace(/\s+/g, " ").trim();
   const accepted = getWormholeAcceptedAlternatives(item)
     .map((value) => value.replace(/[.?!]$/g, "").toLowerCase());
   const seeds = item.distractorSeeds || {};
-  const variants = getWormholeVariants(item);
   const out = [];
   function add(value) {
     if (Array.isArray(value)) {
@@ -933,8 +928,7 @@ function getRawWormholeWrongCandidates(item = {}) {
     }
   }
 
-  console.log("[WORMHOLE_VARIANTS_COUNT]", item.id, variants.length);
-  add(variants);
+  add(seeds.wormholeVariants);
   add(seeds.auxError);
   add(seeds.statementForm);
   add(seeds.fragmentForm);
@@ -963,11 +957,7 @@ function getWormholeDbUsability(items = []) {
   for (const item of items) {
     if (!item?.chapterMeta) counters.chapterMeta += 1;
     if (typeof item?.english !== "string" || !item.english.trim()) counters.english += 1;
-    const variants = getWormholeVariants(item);
-    if (typeof item?.id !== "undefined") {
-      console.log("[WORMHOLE_VARIANTS_COUNT]", item.id, variants.length);
-    }
-    if (variants.length < 5) {
+    if (!item?.distractorSeeds || getRawWormholeWrongCandidates(item).length < 4) {
       counters.wormholeVariants += 1;
     }
     if (
@@ -975,7 +965,8 @@ function getWormholeDbUsability(items = []) {
       item.id &&
       typeof item.english === "string" &&
       item.english.trim() &&
-      variants.length >= 5
+      item.distractorSeeds &&
+      getRawWormholeWrongCandidates(item).length >= 4
     ) {
       usableItems.push(item);
     }
@@ -999,7 +990,7 @@ function detectWormholeDbTier(items = [], meta = {}) {
     tags: meta.tags
   }).toLowerCase();
   const maxVariants = Array.isArray(items)
-    ? items.reduce((max, item) => Math.max(max, getWormholeVariants(item).length), 0)
+    ? items.reduce((max, item) => Math.max(max, Array.isArray(item?.distractorSeeds?.wormholeVariants) ? item.distractorSeeds.wormholeVariants.length : 0), 0)
     : 0;
   if (/\bv[34]\b|v3|v4|premium|upgraded|tier_a/.test(haystack) || maxVariants >= 5) return "A";
   return "B";
@@ -1274,203 +1265,6 @@ function stableShuffle(list = [], seedText = "") {
   return arr;
 }
 
-const WORMHOLE_RECENT_SELECTION_LIMIT = 180;
-const WORMHOLE_RECENT_SELECTION_ENABLED = process.env.WORMHOLE_RECENT_SELECTION_ENABLED !== "0";
-
-function getRecentSelectionStorePath() {
-  const path = require("path");
-  const os = require("os");
-  return process.env.WORMHOLE_RECENT_SELECTION_FILE ||
-    path.join(os.tmpdir(), "marcusnote_wormhole_recent_selection.json");
-}
-
-function getRecentSelectionKey(input = {}) {
-  return [
-    normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
-    input.__wormholeDbCanonical || input.__wormholeDbFile || input.requestedChapter || input.topic || "unknown",
-    input.problemType || input.difficulty || input.mode || "default"
-  ].filter(Boolean).join("|").toLowerCase();
-}
-
-function getSelectionIdentityParts(item = {}) {
-  return [
-    item.id,
-    item.seedId,
-    normalizeSentenceIdentity(item.english),
-    normalizeSentenceIdentity(item.korean)
-  ].filter(Boolean).map((value) => String(value).trim().toLowerCase());
-}
-
-function readRecentSelectionStore() {
-  if (!WORMHOLE_RECENT_SELECTION_ENABLED) return { version: 1, keys: {} };
-  const fs = require("fs");
-  try {
-    const raw = fs.readFileSync(getRecentSelectionStorePath(), "utf8");
-    const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === "object" && parsed.keys
-      ? parsed
-      : { version: 1, keys: {} };
-  } catch {
-    return { version: 1, keys: {} };
-  }
-}
-
-function writeRecentSelectionStore(store = {}) {
-  if (!WORMHOLE_RECENT_SELECTION_ENABLED) return;
-  const fs = require("fs");
-  const path = require("path");
-  try {
-    const filePath = getRecentSelectionStorePath();
-    fs.mkdirSync(path.dirname(filePath), { recursive: true });
-    fs.writeFileSync(filePath, JSON.stringify(store, null, 2), "utf8");
-  } catch (error) {
-    console.warn("[WORMHOLE_RECENT_SELECTION_WRITE_FAILED]", { message: error?.message || String(error) });
-  }
-}
-
-function getRecentSelectionSet(input = {}) {
-  const key = getRecentSelectionKey(input);
-  const store = readRecentSelectionStore();
-  const entries = Array.isArray(store.keys?.[key]?.items) ? store.keys[key].items : [];
-  return new Set(entries.flatMap((entry) => [
-    entry.id,
-    entry.seedId,
-    entry.english,
-    entry.korean
-  ].filter(Boolean).map((value) => String(value).trim().toLowerCase())));
-}
-
-function isRecentlySelectedItem(item = {}, recentSet = new Set()) {
-  return getSelectionIdentityParts(item).some((part) => recentSet.has(part));
-}
-
-function preferFreshDbItems(items = [], recentSet = new Set()) {
-  if (!recentSet?.size) return [...items];
-  const fresh = [];
-  const recent = [];
-  items.forEach((item) => {
-    (isRecentlySelectedItem(item, recentSet) ? recent : fresh).push(item);
-  });
-  return [...fresh, ...recent];
-}
-
-function getDbMetaValue(item = {}, key = "") {
-  return String(item.chapterMeta?.[key] || item[key] || "unknown").trim() || "unknown";
-}
-
-function isStarterSentencePoolItem(item = {}) {
-  const text = normalizeSentenceIdentity(item.english);
-  return /\bthe door is opened by the guard\b/.test(text) ||
-    /\bthis classroom is cleaned every day\b/.test(text) ||
-    /\bthis rule is applied to all students\b/.test(text) ||
-    /\benglish is used in many countries\b/.test(text) ||
-    /^m2_passive_00[1-8]$/.test(String(item.id || ""));
-}
-
-function createSelectionDiversityState() {
-  return {
-    semanticBucket: new Map(),
-    worldType: new Map(),
-    chronologyType: new Map(),
-    nounHead: new Map(),
-    fragmentKey: new Map(),
-    starterCount: 0
-  };
-}
-
-function getMapCount(map = new Map(), key = "unknown") {
-  return map.get(key) || 0;
-}
-
-function getDbFragmentKey(item = {}) {
-  return String(
-    item.chapterMeta?.fragmentKey ||
-    item.fragmentKey ||
-    item.fragmentForm ||
-    item.distractorSeeds?.fragmentForm ||
-    item.blankTargets?.[0] ||
-    "unknown"
-  ).trim() || "unknown";
-}
-
-function scoreDiversityPenalty(item = {}, state = createSelectionDiversityState()) {
-  const semantic = getDbMetaValue(item, "semanticBucket");
-  const world = getDbMetaValue(item, "worldType");
-  const chronology = getDbMetaValue(item, "chronologyType");
-  const nounHead = getDbMetaValue(item, "nounHead");
-  const fragmentKey = getDbFragmentKey(item);
-  return getMapCount(state.semanticBucket, semantic) * 14 +
-    getMapCount(state.worldType, world) * 9 +
-    getMapCount(state.chronologyType, chronology) * 11 +
-    getMapCount(state.nounHead, nounHead) * 16 +
-    getMapCount(state.fragmentKey, fragmentKey) * 18 +
-    (isStarterSentencePoolItem(item) ? 80 + state.starterCount * 20 : 0);
-}
-
-function rememberSelectionDiversity(item = {}, state = createSelectionDiversityState()) {
-  const semantic = getDbMetaValue(item, "semanticBucket");
-  const world = getDbMetaValue(item, "worldType");
-  const chronology = getDbMetaValue(item, "chronologyType");
-  const nounHead = getDbMetaValue(item, "nounHead");
-  const fragmentKey = getDbFragmentKey(item);
-  state.semanticBucket.set(semantic, getMapCount(state.semanticBucket, semantic) + 1);
-  state.worldType.set(world, getMapCount(state.worldType, world) + 1);
-  state.chronologyType.set(chronology, getMapCount(state.chronologyType, chronology) + 1);
-  state.nounHead.set(nounHead, getMapCount(state.nounHead, nounHead) + 1);
-  state.fragmentKey.set(fragmentKey, getMapCount(state.fragmentKey, fragmentKey) + 1);
-  if (isStarterSentencePoolItem(item)) state.starterCount += 1;
-}
-
-function pickDiverseCandidate(candidates = [], state = createSelectionDiversityState(), baseScore = () => 0) {
-  let best = null;
-  let bestScore = -Infinity;
-  candidates.forEach((candidate, index) => {
-    const score = Number(baseScore(candidate) || 0) - scoreDiversityPenalty(candidate, state) - index * 0.001;
-    if (!best || score > bestScore) {
-      best = candidate;
-      bestScore = score;
-    }
-  });
-  return best;
-}
-
-function rememberRecentDbSelection(input = {}, selected = []) {
-  if (!WORMHOLE_RECENT_SELECTION_ENABLED || !selected.length) return;
-  const key = getRecentSelectionKey(input);
-  const store = readRecentSelectionStore();
-  if (!store.keys) store.keys = {};
-  const current = Array.isArray(store.keys[key]?.items) ? store.keys[key].items : [];
-  const next = selected.map((item) => ({
-    id: item.id ? String(item.id) : "",
-    seedId: item.seedId ? String(item.seedId) : "",
-    english: normalizeSentenceIdentity(item.english),
-    korean: normalizeSentenceIdentity(item.korean),
-    at: new Date().toISOString()
-  }));
-  const merged = [...next, ...current];
-  const seen = new Set();
-  const deduped = [];
-  for (const entry of merged) {
-    const signature = [entry.id, entry.seedId, entry.english, entry.korean].filter(Boolean).join("|");
-    if (!signature || seen.has(signature)) continue;
-    seen.add(signature);
-    deduped.push(entry);
-    if (deduped.length >= WORMHOLE_RECENT_SELECTION_LIMIT) break;
-  }
-  store.keys[key] = {
-    updatedAt: new Date().toISOString(),
-    limit: WORMHOLE_RECENT_SELECTION_LIMIT,
-    items: deduped
-  };
-  writeRecentSelectionStore(store);
-  console.info("[WORMHOLE_RECENT_SELECTION_UPDATED]", {
-    key,
-    added: next.length,
-    retained: deduped.length,
-    file: getRecentSelectionStorePath()
-  });
-}
-
 function getDbItemTailKey(item = {}) {
   const text = String(item.english || "").toLowerCase();
   const knownTails = [
@@ -1508,8 +1302,7 @@ function getDbItemTailKey(item = {}) {
 
 function selectAlthoughDbItems(items = [], input = {}, seedText = "") {
   const count = clamp(Number(input.count) || 10, 1, 30);
-  const recentSet = getRecentSelectionSet(input);
-  const shuffled = preferFreshDbItems(stableShuffle(items, seedText), recentSet)
+  const shuffled = stableShuffle(items, seedText)
     .sort((a, b) => Number((b.tags || []).includes("premium_priority")) - Number((a.tags || []).includes("premium_priority")));
   const selected = [];
   const used = new Set();
@@ -1524,9 +1317,8 @@ function selectAlthoughDbItems(items = [], input = {}, seedText = "") {
   function keyOf(item, key, fallback = "unknown") {
     return String(item.chapterMeta?.[key] || fallback);
   }
-  function canTake(item, relaxed = false, allowRecent = false) {
+  function canTake(item, relaxed = false) {
     if (!item || used.has(item.id)) return false;
-    if (!allowRecent && isRecentlySelectedItem(item, recentSet)) return false;
     if (relaxed) return true;
     const bucket = keyOf(item, "semanticBucket");
     const world = keyOf(item, "worldType");
@@ -1552,20 +1344,15 @@ function selectAlthoughDbItems(items = [], input = {}, seedText = "") {
 
   for (const item of shuffled) {
     if (selected.length >= count) break;
-    if (canTake(item, false, false)) take(item);
+    if (canTake(item, false)) take(item);
   }
   for (const item of shuffled) {
     if (selected.length >= count) break;
-    if (canTake(item, true, false)) take(item);
-  }
-  for (const item of shuffled) {
-    if (selected.length >= count) break;
-    if (canTake(item, true, true)) take(item);
+    if (canTake(item, true)) take(item);
   }
   console.info("[ALTHOUGH_SELECTION_QUOTA]", {
     requested: count,
     selected: selected.length,
-    recentAvoided: recentSet.size,
     buckets: Object.fromEntries(bucketCount),
     worlds: Object.fromEntries(worldCount),
     emotions: Object.fromEntries(emotionCount),
@@ -1594,27 +1381,23 @@ function selectDbItems(items = [], input = {}) {
     return selectAlthoughDbItems(items, input, seedText);
   }
 
-  const recentSet = getRecentSelectionSet(input);
-  const shuffled = preferFreshDbItems(stableShuffle(items, seedText), recentSet);
+  const shuffled = stableShuffle(items, seedText);
   const afterItems = shuffled.filter((item) => (item.tags || []).includes("after"));
   const beforeItems = shuffled.filter((item) => (item.tags || []).includes("before"));
   const neutralItems = shuffled.filter((item) => !(item.tags || []).includes("after") && !(item.tags || []).includes("before"));
 
   const selected = [];
   const used = new Set();
-  const diversityState = createSelectionDiversityState();
   let turn = dbPilotHash(seedText) % 2;
 
   function takeFrom(bucket) {
-    const candidates = bucket.filter((item) => !used.has(item.id));
-    const item = pickDiverseCandidate(candidates, diversityState, () => 100);
-    if (item) {
-      const index = bucket.findIndex((candidate) => candidate.id === item.id);
-      if (index >= 0) bucket.splice(index, 1);
-      used.add(item.id);
-      rememberSelectionDiversity(item, diversityState);
-      selected.push(item);
-      return true;
+    while (bucket.length) {
+      const item = bucket.shift();
+      if (!used.has(item.id)) {
+        used.add(item.id);
+        selected.push(item);
+        return true;
+      }
     }
     return false;
   }
@@ -1894,14 +1677,33 @@ function isPresentPerfectAdvancedRequest(input = {}) {
   return chapter.includes("present_perfect") &&
     (input.difficulty === "high" || input.difficulty === "extreme" || input.mode === "advanced");
 }
+function isPresentPerfectProgressiveRequest(input = {}) {
+  const chapterKey = String(input.chapterKey || input.requestedChapter || input.topic || input.__wormholeDbCanonical || input.rawBody?.chapterKey || input.rawBody?.requestedChapter || input.rawBody?.canonical || "").toLowerCase();
+  const family = String(input.family || input.rawBody?.family || input.chapterFamily || input.rawBody?.chapterFamily || "").toLowerCase();
+  return chapterKey.includes("present_perfect_progressive") || family === "present_perfect_progressive" || family.includes("present_perfect_progressive");
+}
 
 function buildPresentPerfectAdvancedTypes(count, input = {}) {
   const requested = clamp(Number(count) || 25, 1, 30);
-  const allocation = Object.fromEntries(PRESENT_PERFECT_ADVANCED_TYPES.map((type) => [type, 0]));
+  const progressive = isPresentPerfectProgressiveRequest(input);
+  const activeTypes = progressive
+    ? PRESENT_PERFECT_ADVANCED_TYPES.filter((type) => type !== "been_gone_confusion")
+    : PRESENT_PERFECT_ADVANCED_TYPES;
+  const weights = progressive
+    ? {
+        present_perfect_vs_past: 20,
+        for_since_confusion: 20,
+        result_usage: 12,
+        continuation_usage: 16,
+        experience_usage: 16,
+        semantic_paraphrase: 16
+      }
+    : PRESENT_PERFECT_ADVANCED_WEIGHTS;
+  const allocation = Object.fromEntries(activeTypes.map((type) => [type, 0]));
   let remaining = requested;
-  const exact = PRESENT_PERFECT_ADVANCED_TYPES.map((type) => ({
+  const exact = activeTypes.map((type) => ({
     type,
-    exact: requested * PRESENT_PERFECT_ADVANCED_WEIGHTS[type] / 100
+    exact: requested * weights[type] / 100
   }));
   exact.forEach((entry) => {
     allocation[entry.type] = Math.floor(entry.exact);
@@ -1909,12 +1711,13 @@ function buildPresentPerfectAdvancedTypes(count, input = {}) {
   });
   exact
     .map((entry) => ({ ...entry, remainder: entry.exact - Math.floor(entry.exact) }))
-    .sort((a, b) => b.remainder - a.remainder || PRESENT_PERFECT_ADVANCED_TYPES.indexOf(a.type) - PRESENT_PERFECT_ADVANCED_TYPES.indexOf(b.type))
+    .sort((a, b) => b.remainder - a.remainder || activeTypes.indexOf(a.type) - activeTypes.indexOf(b.type))
     .slice(0, remaining)
     .forEach((entry) => { allocation[entry.type] += 1; });
-  const bag = PRESENT_PERFECT_ADVANCED_TYPES.flatMap((type) => Array(allocation[type]).fill(type));
+  const bag = activeTypes.flatMap((type) => Array(allocation[type]).fill(type));
   const plan = stableShuffle(bag, [
     "present-perfect-advanced-2.1",
+    progressive ? "present-perfect-progressive" : "",
     input.selectedGrade,
     input.topic,
     input.userPrompt,
@@ -1924,6 +1727,7 @@ function buildPresentPerfectAdvancedTypes(count, input = {}) {
   console.info("[WORMHOLE_PRESENT_PERFECT_ADVANCED_PLAN]", {
     functionName: "buildPresentPerfectAdvancedTypes",
     requested,
+    progressive,
     distribution: countPresentPerfectAdvancedTypes(plan)
   });
   return plan;
@@ -2077,49 +1881,32 @@ function scorePresentPerfectDistractorDifficulty(candidate = "", type = "") {
 
 function selectPresentPerfectAdvancedItems(items = [], input = {}, typePlan = []) {
   const seed = ["present-perfect-selection-2.1", input.topic, input.userPrompt, input.worksheetTitle, input.count].filter(Boolean).join("|");
-  const recentSet = getRecentSelectionSet(input);
-  const pool = preferFreshDbItems(stableShuffle(items, seed), recentSet);
+  const pool = stableShuffle(items, seed);
   const usedIds = new Set();
   const usedSentences = new Set();
   const selected = [];
-  const diversityState = createSelectionDiversityState();
   let fallbackAssignments = 0;
   typePlan.forEach((type) => {
     const candidates = pool
-      .filter((item) => !usedIds.has(item.id) && !usedSentences.has(normalizeSentenceIdentity(item.english)) && !isRecentlySelectedItem(item, recentSet) && presentPerfectItemMatchesType(item, type))
-      .filter((candidate) =>
-        scoreWormholeDifficulty(candidate, type) >= 4 &&
-        buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
-      );
-    const fallbackCandidates = pool
       .filter((item) => !usedIds.has(item.id) && !usedSentences.has(normalizeSentenceIdentity(item.english)) && presentPerfectItemMatchesType(item, type))
-      .filter((candidate) =>
-        scoreWormholeDifficulty(candidate, type) >= 4 &&
-        buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
-      );
-    let item = pickDiverseCandidate(candidates, diversityState, (candidate) => scoreWormholeDifficulty(candidate, type) * 20) ||
-      pickDiverseCandidate(fallbackCandidates, diversityState, (candidate) => scoreWormholeDifficulty(candidate, type) * 20);
+      .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type));
+    let item = candidates.find((candidate) =>
+      scoreWormholeDifficulty(candidate, type) >= 4 &&
+      buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
+    );
     if (!item && type !== "semantic_paraphrase") {
-      const freshFallback = pool
-        .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)) && !isRecentlySelectedItem(candidate, recentSet))
-        .filter((candidate) =>
-          scoreWormholeDifficulty(candidate, type) >= 4 &&
-          buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
-        );
-      const anyFallback = pool
+      item = pool
         .filter((candidate) => !usedIds.has(candidate.id) && !usedSentences.has(normalizeSentenceIdentity(candidate.english)))
-        .filter((candidate) =>
+        .sort((a, b) => scoreWormholeDifficulty(b, type) - scoreWormholeDifficulty(a, type))
+        .find((candidate) =>
           scoreWormholeDifficulty(candidate, type) >= 4 &&
           buildPresentPerfectSemanticCandidates(candidate, type).length >= 4
         );
-      item = pickDiverseCandidate(freshFallback, diversityState, (candidate) => scoreWormholeDifficulty(candidate, type) * 20) ||
-        pickDiverseCandidate(anyFallback, diversityState, (candidate) => scoreWormholeDifficulty(candidate, type) * 20);
       if (item) fallbackAssignments += 1;
     }
     if (!item) return;
     usedIds.add(item.id);
     usedSentences.add(normalizeSentenceIdentity(item.english));
-    rememberSelectionDiversity(item, diversityState);
     selected.push({ item, type });
   });
   console.info("[WORMHOLE_PRESENT_PERFECT_SELECTION]", {
@@ -2128,10 +1915,6 @@ function selectPresentPerfectAdvancedItems(items = [], input = {}, typePlan = []
     selected: selected.length,
     usedSentenceIds: usedIds.size,
     uniqueEnglish: usedSentences.size,
-    recentAvoided: recentSet.size,
-    semanticBuckets: Object.fromEntries(diversityState.semanticBucket),
-    worldTypes: Object.fromEntries(diversityState.worldType),
-    chronologyTypes: Object.fromEntries(diversityState.chronologyType),
     fallbackAssignments,
     minimumDifficultyScore: selected.length ? Math.min(...selected.map((entry) => scoreWormholeDifficulty(entry.item, entry.type))) : 0
   });
@@ -2282,184 +2065,23 @@ function baseFromRegularPast(word = "") {
   return value;
 }
 
-const PASSIVE_PARTICIPLE_BASE_FORMS = {
-  announced: "announce",
-  approved: "approve",
-  built: "build",
-  brought: "bring",
-  broken: "break",
-  bought: "buy",
-  caught: "catch",
-  chosen: "choose",
-  cleaned: "clean",
-  completed: "complete",
-  confirmed: "confirm",
-  created: "create",
-  cut: "cut",
-  deleted: "delete",
-  delivered: "deliver",
-  discussed: "discuss",
-  done: "do",
-  drawn: "draw",
-  found: "find",
-  given: "give",
-  graded: "grade",
-  grown: "grow",
-  heard: "hear",
-  held: "hold",
-  hit: "hit",
-  ignored: "ignore",
-  installed: "install",
-  issued: "issue",
-  kept: "keep",
-  known: "know",
-  left: "leave",
-  lost: "lose",
-  made: "make",
-  managed: "manage",
-  met: "meet",
-  misunderstood: "misunderstand",
-  opened: "open",
-  paid: "pay",
-  painted: "paint",
-  printed: "print",
-  processed: "process",
-  published: "publish",
-  put: "put",
-  read: "read",
-  recovered: "recover",
-  rejected: "reject",
-  released: "release",
-  repaired: "repair",
-  reset: "reset",
-  reserved: "reserve",
-  reviewed: "review",
-  saved: "save",
-  sold: "sell",
-  sent: "send",
-  set: "set",
-  shared: "share",
-  shown: "show",
-  solved: "solve",
-  spoken: "speak",
-  stolen: "steal",
-  submitted: "submit",
-  sung: "sing",
-  supported: "support",
-  taken: "take",
-  taught: "teach",
-  thrown: "throw",
-  told: "tell",
-  used: "use",
-  updated: "update",
-  verified: "verify",
-  visited: "visit",
-  won: "win",
-  written: "write"
-};
-
-const PASSIVE_ACTIVE_PAST_FORMS = {
-  build: "built",
-  bring: "brought",
-  break: "broke",
-  buy: "bought",
-  catch: "caught",
-  choose: "chose",
-  cut: "cut",
-  do: "did",
-  draw: "drew",
-  find: "found",
-  give: "gave",
-  grow: "grew",
-  hear: "heard",
-  hold: "held",
-  hit: "hit",
-  keep: "kept",
-  know: "knew",
-  leave: "left",
-  lose: "lost",
-  make: "made",
-  meet: "met",
-  misunderstand: "misunderstood",
-  pay: "paid",
-  put: "put",
-  read: "read",
-  reset: "reset",
-  sell: "sold",
-  send: "sent",
-  set: "set",
-  show: "showed",
-  sing: "sang",
-  speak: "spoke",
-  steal: "stole",
-  take: "took",
-  teach: "taught",
-  tell: "told",
-  throw: "threw",
-  win: "won",
-  write: "wrote"
-};
-
-function getPassiveBaseForm(participle = "") {
-  const value = String(participle || "").toLowerCase();
-  return PASSIVE_PARTICIPLE_BASE_FORMS[value] || baseFromRegularPast(value);
-}
-
-function getPassiveActivePastForm(participle = "") {
-  const base = getPassiveBaseForm(participle);
-  return PASSIVE_ACTIVE_PAST_FORMS[base] || String(participle || "").toLowerCase();
-}
-
-function getPassiveThirdPersonForm(base = "") {
-  const value = String(base || "").toLowerCase();
-  if (/(s|x|z|ch|sh|o)$/.test(value)) return value + "es";
-  if (/[^aeiou]y$/.test(value)) return value.slice(0, -1) + "ies";
-  return value + "s";
-}
-
-function inferPassiveSemanticActor(item = {}, patient = "", tail = "") {
-  const text = `${item.semanticBucket || ""} ${item.chapterMeta?.semanticBucket || ""} ${patient} ${tail}`.toLowerCase();
-  if (/\bcomputer system\b/.test(tail)) return "A computer system";
-  if (/\bconstruction team\b/.test(tail)) return "The construction team";
-  if (/\bhomework|school notice|class schedule|library books|school\b/.test(text)) return "The school";
-  if (/\bmovie|book|art exhibition|museum|bridge|culture|publication|release\b/.test(text)) return "The organizers";
-  if (/\bapplication|documents|reservation|payment|ticket|service|booking\b/.test(text)) return "The service team";
-  if (/\bpassword|security|account|profile|email|message|announcement|notification|digital|system\b/.test(text)) return "The system";
-  return "People";
-}
-
-function buildPassiveActiveVerb(be = "", participle = "", actor = "", tail = "") {
-  const base = getPassiveBaseForm(participle);
-  const lowerBe = String(be || "").toLowerCase();
-  if (/\b(next|tomorrow|soon|spring|year|month)\b/i.test(tail)) return `will ${base}`;
-  if (lowerBe === "was" || lowerBe === "were") return getPassiveActivePastForm(participle);
-  return actor === "People" ? base : getPassiveThirdPersonForm(base);
-}
-
 function buildPassiveParaphrase(item = {}) {
   const source = cleanDbOption(item.english);
-  const match = source.match(/^(.+?)\s+(is|are|was|were)\s+([A-Za-z]+)\s*(.*?)[.?!]$/i);
+  const match = source.match(/^(.+?)\s+(was|were)\s+([A-Za-z]+ed)\s+by\s+(.+?)[.?!]$/i);
   if (!match) return null;
   const patient = lowerInitialArticle(match[1]);
-  const be = match[2];
-  const participle = match[3].toLowerCase();
-  const base = getPassiveBaseForm(participle);
-  const rawTail = String(match[4] || "").trim();
-  const byAgent = rawTail.match(/^by\s+(.+?)$/i);
-  const actor = byAgent && !/\bemail\b/i.test(byAgent[1])
-    ? byAgent[1]
-    : inferPassiveSemanticActor(item, patient, rawTail);
-  const tail = byAgent && !/\bemail\b/i.test(rawTail) ? "" : (rawTail ? ` ${rawTail}` : "");
-  const actorStart = actor.charAt(0).toUpperCase() + actor.slice(1);
-  const activeVerb = buildPassiveActiveVerb(be, participle, actorStart, rawTail);
+  const verb = match[3].toLowerCase();
+  const base = baseFromRegularPast(verb);
+  const agent = match[4];
+  const agentStart = agent.charAt(0).toUpperCase() + agent.slice(1);
   return {
-    text: `${actorStart} ${activeVerb} ${patient}${tail}.`,
+    text: `${agentStart} ${verb} ${patient}.`,
     relation: "active_passive_transform",
     distractors: [
-      `${actorStart} did not ${base} ${patient}${tail}.`,
-      `${actorStart} will ${base} ${patient}${tail}.`,
-      `${actorStart} usually ${actorStart === "People" ? base : getPassiveThirdPersonForm(base)} ${patient}${tail}.`,
-      `${actorStart} did something else with ${patient}.`
+      `${agentStart} did not ${base} ${patient}.`,
+      `${agentStart} will ${base} ${patient}.`,
+      `${agentStart} usually ${base}s ${patient}.`,
+      `${agentStart} did something else with ${patient}.`
     ]
   };
 }
@@ -2616,41 +2238,14 @@ function countPassiveAdvancedTypes(values = []) {
 }
 
 function selectPassiveAdvancedItems(items = [], input = {}, typePlan = []) {
-  const recentSet = getRecentSelectionSet(input);
-  const pool = preferFreshDbItems(
-    stableShuffle(items, ["passive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|")),
-    recentSet
-  );
+  const pool = stableShuffle(items, ["passive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|"));
   const used = new Set();
-  const diversityState = createSelectionDiversityState();
-  const selected = typePlan.map((type) => {
-    const freshCandidates = pool.filter((candidate) =>
-      !used.has(candidate.id) &&
-      !isRecentlySelectedItem(candidate, recentSet) &&
-      (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate))
-    );
-    const fallbackCandidates = pool.filter((candidate) =>
-      !used.has(candidate.id) &&
-      (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate))
-    );
-    const item = pickDiverseCandidate(freshCandidates, diversityState, () => 100) ||
-      pickDiverseCandidate(fallbackCandidates, diversityState, () => 80);
+  return typePlan.map((type) => {
+    const item = pool.find((candidate) => !used.has(candidate.id) && (type !== "semantic_paraphrase" || buildPassiveParaphrase(candidate)));
     if (!item) return null;
     used.add(item.id);
-    rememberSelectionDiversity(item, diversityState);
     return { item, type };
   }).filter(Boolean);
-  console.info("[WORMHOLE_PASSIVE_SELECTION]", {
-    requested: typePlan.length,
-    selected: selected.length,
-    recentAvoided: recentSet.size,
-    starterLowPrioritySelected: diversityState.starterCount,
-    semanticBuckets: Object.fromEntries(diversityState.semanticBucket),
-    worldTypes: Object.fromEntries(diversityState.worldType),
-    chronologyTypes: Object.fromEntries(diversityState.chronologyType),
-    uniqueSentenceIds: used.size
-  });
-  return selected;
 }
 
 function buildPassiveAdvancedQuestion(item, index, input = {}, context = {}, type = "") {
@@ -2723,40 +2318,14 @@ function countDitransitiveAdvancedTypes(values = []) {
 }
 
 function selectDitransitiveAdvancedItems(items = [], input = {}, typePlan = []) {
-  const recentSet = getRecentSelectionSet(input);
-  const pool = preferFreshDbItems(
-    stableShuffle(items, ["ditransitive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|")),
-    recentSet
-  );
+  const pool = stableShuffle(items, ["ditransitive-semantic-selection-3.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|"));
   const used = new Set();
-  const diversityState = createSelectionDiversityState();
-  const selected = typePlan.map((type) => {
-    const freshCandidates = pool.filter((candidate) =>
-      !used.has(candidate.id) &&
-      !isRecentlySelectedItem(candidate, recentSet) &&
-      (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate))
-    );
-    const fallbackCandidates = pool.filter((candidate) =>
-      !used.has(candidate.id) &&
-      (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate))
-    );
-    const item = pickDiverseCandidate(freshCandidates, diversityState, () => 100) ||
-      pickDiverseCandidate(fallbackCandidates, diversityState, () => 80);
+  return typePlan.map((type) => {
+    const item = pool.find((candidate) => !used.has(candidate.id) && (type !== "semantic_paraphrase" || buildDitransitiveParaphrase(candidate)));
     if (!item) return null;
     used.add(item.id);
-    rememberSelectionDiversity(item, diversityState);
     return { item, type };
   }).filter(Boolean);
-  console.info("[WORMHOLE_DITRANSITIVE_SELECTION]", {
-    requested: typePlan.length,
-    selected: selected.length,
-    recentAvoided: recentSet.size,
-    semanticBuckets: Object.fromEntries(diversityState.semanticBucket),
-    worldTypes: Object.fromEntries(diversityState.worldType),
-    chronologyTypes: Object.fromEntries(diversityState.chronologyType),
-    uniqueSentenceIds: used.size
-  });
-  return selected;
 }
 
 function buildDitransitiveAdvancedQuestion(item, index, input = {}, context = {}, type = "") {
@@ -2823,38 +2392,18 @@ function buildObjectiveRelativeTypes(count, input = {}) {
 }
 
 function selectObjectiveRelativeItems(items = [], input = {}, typePlan = []) {
-  const recentSet = getRecentSelectionSet(input);
-  const pool = preferFreshDbItems(
-    stableShuffle(items, ["objective-relative-selection-2.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|")),
-    recentSet
-  );
+  const pool = stableShuffle(items, ["objective-relative-selection-2.0", input.topic, input.worksheetTitle, input.count].filter(Boolean).join("|"));
   const used = new Set();
   const selected = [];
-  const diversityState = createSelectionDiversityState();
   typePlan.forEach((type) => {
-    const freshCandidates = pool.filter((candidate) =>
-      !used.has(candidate.id) &&
-      !isRecentlySelectedItem(candidate, recentSet) &&
-      buildObjectiveRelativeDistractors(candidate, type, {}).length >= 4
-    );
-    const fallbackCandidates = pool.filter((candidate) =>
-      !used.has(candidate.id) &&
-      buildObjectiveRelativeDistractors(candidate, type, {}).length >= 4
-    );
-    const item = pickDiverseCandidate(freshCandidates, diversityState, () => 100) ||
-      pickDiverseCandidate(fallbackCandidates, diversityState, () => 80);
+    const item = pool.find((candidate) => !used.has(candidate.id) && buildObjectiveRelativeDistractors(candidate, type, {}).length >= 4);
     if (!item) return;
     used.add(item.id);
-    rememberSelectionDiversity(item, diversityState);
     selected.push({ item, type });
   });
   console.info("[WORMHOLE_OBJECTIVE_RELATIVE_SELECTION]", {
     requested: typePlan.length,
     selected: selected.length,
-    recentAvoided: recentSet.size,
-    semanticBuckets: Object.fromEntries(diversityState.semanticBucket),
-    worldTypes: Object.fromEntries(diversityState.worldType),
-    chronologyTypes: Object.fromEntries(diversityState.chronologyType),
     uniqueSentenceIds: used.size
   });
   return selected;
@@ -3215,7 +2764,7 @@ function formatDbWormholeResponse(questions = [], input = {}) {
   const questionsText = cleanupText(questions.map((question) => question.questionText).join("\n\n"));
   const answerSheet = cleanupText(questions.map((question) => question.answerText).join("\n"));
   const content = cleanupText([title, instructions, questionsText].filter(Boolean).join("\n\n"));
-  const fullText = cleanupText([title, instructions, questionsText, "?뺣떟 諛??댁꽕", answerSheet].filter(Boolean).join("\n\n"));
+  const fullText = cleanupText([title, instructions, questionsText, "정답 및 해설", answerSheet].filter(Boolean).join("\n\n"));
   return {
     title,
     instructions,
@@ -3467,7 +3016,6 @@ async function tryBuildWormholeFromDb(input = {}) {
         };
       }
 
-      rememberRecentDbSelection(input, selected.slice(0, input.count));
       console.info("[TOTAL_EXECUTION_TIME]", { phase: "db_first_success", ms: Date.now() - totalStart });
       return {
         success: true,
@@ -3506,16 +3054,16 @@ async function generateWormholeSupplement(input, missingCount, existingQuestions
     count: missingCount,
   });
   const supplementUserPrompt = `
-湲곗〈 ?쒗? 臾명빆???쇰? 遺議깊빀?덈떎.
-?대? ?앹꽦??臾명빆怨?寃뱀튂吏 ?딅룄濡? ?꾨옒 湲곗〈 臾명빆怨??ㅻⅨ ?좉퇋 臾명빆留??뺥솗??${missingCount}臾명빆 異붽? ?앹꽦?섏꽭??
-[湲곗〈 臾명빆 ?쇰?]
+기존 웜홀 문항이 일부 부족합니다.
+이미 생성된 문항과 겹치지 않도록, 아래 기존 문항과 다른 신규 문항만 정확히 ${missingCount}문항 추가 생성하세요.
+[기존 문항 일부]
 ${existingQuestionsText}
 
-[以묒슂]
-- 諛섎뱶??${missingCount}臾명빆留?異붽?
-- 踰덊샇??1踰덈????ㅼ떆 ?⑤룄 ??(?쒕쾭?먯꽌 ?щ쾲??遺?ы븿)
-- 湲곗〈 臾명빆怨??좏삎/蹂닿린/?뺣떟??寃뱀튂吏 ?딄쾶 ?묒꽦
-- ?쒕룄? 二쇱젣??湲곗〈 ?명듃? ?숈씪?섍쾶 ?좎?
+[중요]
+- 반드시 ${missingCount}문항만 추가
+- 번호는 1번부터 다시 써도 됨 (서버에서 재번호 부여함)
+- 기존 문항과 유형/보기/정답이 겹치지 않게 작성
+- 난도와 주제는 기존 세트와 동일하게 유지
 `.trim();
   const raw = await callOpenAI(supplementSystemPrompt, supplementUserPrompt);
   return formatWormholeResponse(raw, { ...input, count: missingCount });
@@ -3673,7 +3221,7 @@ async function handler(req, res) {
     if (!input.userPrompt && !input.topic) return json(res, 400, { success: false, message: "Prompt or topic required" });
     const mpState = await prepareMpState(req);
     if (mpState.enabled && mpState.currentMp < mpState.requiredMp) {
-      return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP媛 遺議깊빀?덈떎.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
+      return json(res, 403, { success: false, error: "INSUFFICIENT_MP", message: "MP가 부족합니다.", requiredMp: mpState.requiredMp, remainingMp: mpState.currentMp });
     }
 
     const handlerStart = Date.now();
@@ -3755,7 +3303,7 @@ async function handler(req, res) {
       formatted = formatWormholeResponse(raw, input);
     }
 
-    // --- ?몃뱾????蹂댁젙 援ш컙 (?섏젙 諛섏쁺 遺遺? ---
+    // --- 문항 수 보정 구간 (출력 안정화 영역) ---
     if (formatted.actualCount < input.count) {
       console.warn(`WORMHOLE QUESTION SHORTAGE: expected ${input.count}, got ${formatted.actualCount}`);
       const missingCount = input.count - formatted.actualCount;
@@ -3794,7 +3342,7 @@ async function handler(req, res) {
             formatted.title,
             formatted.instructions,
             trimmedQuestionsText,
-            "?뺣떟 諛??댁꽕",
+            "정답 및 해설",
             trimmedAnswersText,
           ]
             .filter(Boolean)
