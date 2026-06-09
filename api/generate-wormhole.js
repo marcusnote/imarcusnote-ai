@@ -908,11 +908,16 @@ function getWormholeAcceptedAlternatives(item = {}) {
   return alternatives;
 }
 
+function getWormholeVariants(item = {}) {
+  return Array.isArray(item?.wormholeVariants) ? item.wormholeVariants : [];
+}
+
 function getRawWormholeWrongCandidates(item = {}) {
   const correct = String(item.english || "").replace(/\s+/g, " ").trim();
   const accepted = getWormholeAcceptedAlternatives(item)
     .map((value) => value.replace(/[.?!]$/g, "").toLowerCase());
   const seeds = item.distractorSeeds || {};
+  const variants = getWormholeVariants(item);
   const out = [];
   function add(value) {
     if (Array.isArray(value)) {
@@ -928,7 +933,8 @@ function getRawWormholeWrongCandidates(item = {}) {
     }
   }
 
-  add(seeds.wormholeVariants);
+  console.log("[WORMHOLE_VARIANTS_COUNT]", item.id, variants.length);
+  add(variants);
   add(seeds.auxError);
   add(seeds.statementForm);
   add(seeds.fragmentForm);
@@ -957,7 +963,11 @@ function getWormholeDbUsability(items = []) {
   for (const item of items) {
     if (!item?.chapterMeta) counters.chapterMeta += 1;
     if (typeof item?.english !== "string" || !item.english.trim()) counters.english += 1;
-    if (!item?.distractorSeeds || getRawWormholeWrongCandidates(item).length < 4) {
+    const variants = getWormholeVariants(item);
+    if (typeof item?.id !== "undefined") {
+      console.log("[WORMHOLE_VARIANTS_COUNT]", item.id, variants.length);
+    }
+    if (variants.length < 5) {
       counters.wormholeVariants += 1;
     }
     if (
@@ -965,8 +975,7 @@ function getWormholeDbUsability(items = []) {
       item.id &&
       typeof item.english === "string" &&
       item.english.trim() &&
-      item.distractorSeeds &&
-      getRawWormholeWrongCandidates(item).length >= 4
+      variants.length >= 5
     ) {
       usableItems.push(item);
     }
@@ -990,7 +999,7 @@ function detectWormholeDbTier(items = [], meta = {}) {
     tags: meta.tags
   }).toLowerCase();
   const maxVariants = Array.isArray(items)
-    ? items.reduce((max, item) => Math.max(max, Array.isArray(item?.distractorSeeds?.wormholeVariants) ? item.distractorSeeds.wormholeVariants.length : 0), 0)
+    ? items.reduce((max, item) => Math.max(max, getWormholeVariants(item).length), 0)
     : 0;
   if (/\bv[34]\b|v3|v4|premium|upgraded|tier_a/.test(haystack) || maxVariants >= 5) return "A";
   return "B";
@@ -1363,6 +1372,8 @@ function createSelectionDiversityState() {
     semanticBucket: new Map(),
     worldType: new Map(),
     chronologyType: new Map(),
+    nounHead: new Map(),
+    fragmentKey: new Map(),
     starterCount: 0
   };
 }
@@ -1371,13 +1382,28 @@ function getMapCount(map = new Map(), key = "unknown") {
   return map.get(key) || 0;
 }
 
+function getDbFragmentKey(item = {}) {
+  return String(
+    item.chapterMeta?.fragmentKey ||
+    item.fragmentKey ||
+    item.fragmentForm ||
+    item.distractorSeeds?.fragmentForm ||
+    item.blankTargets?.[0] ||
+    "unknown"
+  ).trim() || "unknown";
+}
+
 function scoreDiversityPenalty(item = {}, state = createSelectionDiversityState()) {
   const semantic = getDbMetaValue(item, "semanticBucket");
   const world = getDbMetaValue(item, "worldType");
   const chronology = getDbMetaValue(item, "chronologyType");
+  const nounHead = getDbMetaValue(item, "nounHead");
+  const fragmentKey = getDbFragmentKey(item);
   return getMapCount(state.semanticBucket, semantic) * 14 +
     getMapCount(state.worldType, world) * 9 +
     getMapCount(state.chronologyType, chronology) * 11 +
+    getMapCount(state.nounHead, nounHead) * 16 +
+    getMapCount(state.fragmentKey, fragmentKey) * 18 +
     (isStarterSentencePoolItem(item) ? 80 + state.starterCount * 20 : 0);
 }
 
@@ -1385,9 +1411,13 @@ function rememberSelectionDiversity(item = {}, state = createSelectionDiversityS
   const semantic = getDbMetaValue(item, "semanticBucket");
   const world = getDbMetaValue(item, "worldType");
   const chronology = getDbMetaValue(item, "chronologyType");
+  const nounHead = getDbMetaValue(item, "nounHead");
+  const fragmentKey = getDbFragmentKey(item);
   state.semanticBucket.set(semantic, getMapCount(state.semanticBucket, semantic) + 1);
   state.worldType.set(world, getMapCount(state.worldType, world) + 1);
   state.chronologyType.set(chronology, getMapCount(state.chronologyType, chronology) + 1);
+  state.nounHead.set(nounHead, getMapCount(state.nounHead, nounHead) + 1);
+  state.fragmentKey.set(fragmentKey, getMapCount(state.fragmentKey, fragmentKey) + 1);
   if (isStarterSentencePoolItem(item)) state.starterCount += 1;
 }
 
