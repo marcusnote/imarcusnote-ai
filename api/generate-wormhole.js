@@ -1759,7 +1759,43 @@ function presentAgreement(subject = "", singular, plural, firstPerson = plural) 
 
 function buildPresentPerfectParaphrase(item = {}) {
   const source = cleanDbOption(item.english);
-  let match = source.match(/^(.+?)\s+(has|have)\s+gone to\s+(.+?)(?:,\s*.+)?[.?!]$/i);
+  let match = source.match(/^(Has|Have)\s+(.+?)\s+been\s+([a-z]+ing)\s*(.*?)\s*[.?!]$/i);
+  if (match) {
+    const subject = match[2];
+    const verb = match[3];
+    const rest = String(match[4] || "").trim();
+    const tail = rest ? ` ${rest}` : "";
+    const continued = presentAgreement(subject, "has continued", "have continued", "have continued");
+    return {
+      text: `${subject} ${continued} ${verb}${tail} until now.`,
+      relation: "continuing_action_present",
+      distractors: [
+        `${subject} stopped ${verb}${tail} long ago.`,
+        `${subject} will ${verb}${tail} later.`,
+        `${subject} used to ${verb}${tail} but no longer does.`,
+        `${subject} never ${continued} ${verb}${tail}.`
+      ]
+    };
+  }
+  match = source.match(/^(.+?)\s+(has|have)\s+been\s+([a-z]+ing)\s*(.*?)\s*[.?!]$/i);
+  if (match) {
+    const subject = match[1];
+    const verb = match[3];
+    const rest = String(match[4] || "").trim();
+    const tail = rest ? ` ${rest}` : "";
+    const continued = presentAgreement(subject, "has continued", "have continued", "have continued");
+    return {
+      text: `${subject} ${continued} ${verb}${tail} until now.`,
+      relation: "continuing_action_present",
+      distractors: [
+        `${subject} stopped ${verb}${tail} long ago.`,
+        `${subject} will ${verb}${tail} later.`,
+        `${subject} used to ${verb}${tail} but no longer does.`,
+        `${subject} never ${continued} ${verb}${tail}.`
+      ]
+    };
+  }
+  match = source.match(/^(.+?)\s+(has|have)\s+gone to\s+(.+?)(?:,\s*.+)?[.?!]$/i);
   if (match) {
     const subject = match[1];
     const be = presentAgreement(subject, "is", "are", "am");
@@ -1827,7 +1863,6 @@ function buildPresentPerfectParaphrase(item = {}) {
   }
   return null;
 }
-
 function presentPerfectItemMatchesType(item = {}, type = "") {
   const bucket = String(item.chapterMeta?.semanticBucket || "").toLowerCase();
   const chronology = String(item.chapterMeta?.chronologyType || "").toLowerCase();
@@ -2145,6 +2180,16 @@ function inferSemanticFamily(input = {}) {
   return "none";
 }
 
+function getSemanticEligibleItems(items = [], family = "", input = {}) {
+  const eligibleItems = family === "none" ? [] : items.filter((item) => getSemanticParaphrase(item, family));
+  console.info("[SEMANTIC_ELIGIBLE_DEBUG]", {
+    family,
+    chapterKey: String(input.chapterKey || input.requestedChapter || input.topic || input.__wormholeDbCanonical || input.rawBody?.chapterKey || input.rawBody?.requestedChapter || input.rawBody?.canonical || ""),
+    totalItems: items.length,
+    eligibleItems: eligibleItems.length
+  });
+  return eligibleItems;
+}
 function getSemanticParaphrase(item = {}, family = "") {
   if (family === "present_perfect") return buildPresentPerfectParaphrase(item);
   if (family === "passive") return buildPassiveParaphrase(item);
@@ -2831,7 +2876,7 @@ async function tryBuildWormholeFromDb(input = {}) {
       const semanticFamily = presentPerfectAdvanced ? "present_perfect" : passiveAdvanced ? "passive" : ditransitiveAdvanced ? "ditransitive" : objectiveRelativeAdvanced ? "relative_pronouns" : "none";
       const semanticEligibleCount = semanticFamily === "none"
         ? 0
-        : items.filter((item) => getSemanticParaphrase(item, semanticFamily)).length;
+        : getSemanticEligibleItems(items, semanticFamily, input).length;
       console.info("[WORMHOLE_SEMANTIC_CAPABILITY]", {
         family: requestedSemanticFamily,
         capability: WORMHOLE_SEMANTIC_CAPABILITIES[requestedSemanticFamily] || "disabled",
