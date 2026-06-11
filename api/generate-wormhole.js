@@ -630,7 +630,17 @@ async function mergeWormholeSupplement(formatted, supplement, input) {
    DB match always wins over GPT fallback.
    ========================= */
 
-let WORMHOLE_DB_REGISTRY_CACHE = null;
+let WORMHOLE_DB_REGISTRY_CACHE = globalThis.__wormholeRegistry || null;
+const WORMHOLE_DB_FILE_CACHE = globalThis.__wormholeDbFileCache instanceof Map
+  ? globalThis.__wormholeDbFileCache
+  : (globalThis.__wormholeDbFileCache = new Map());
+const WORMHOLE_REGISTRY_META = globalThis.__wormholeRegistryMeta || (globalThis.__wormholeRegistryMeta = {
+  buildMs: 0,
+  builtAt: 0,
+  buildCount: 0,
+  totalFiles: 0
+});
+const WORMHOLE_VERBOSE_REGISTRY_LOGS = process.env.WORMHOLE_VERBOSE_REGISTRY_LOGS === "1";
 
 const WORMHOLE_GRADE_BUCKETS = ["middle1", "middle2", "middle3"];
 
@@ -1139,9 +1149,14 @@ function findWormholeDataDirs() {
 }
 
 function buildWormholeDbRegistry() {
-  if (WORMHOLE_DB_REGISTRY_CACHE) return WORMHOLE_DB_REGISTRY_CACHE;
+  if (globalThis.__wormholeRegistry) {
+    WORMHOLE_DB_REGISTRY_CACHE = globalThis.__wormholeRegistry;
+    return WORMHOLE_DB_REGISTRY_CACHE;
+  }
+
   const fs = require("fs");
   const path = require("path");
+  const buildStart = Date.now();
   const dataDirs = findWormholeDataDirs();
   const registry = {
     entries: [],
@@ -1162,55 +1177,44 @@ function buildWormholeDbRegistry() {
         const resolvedFile = path.resolve(filePath);
         if (seenFiles.has(resolvedFile)) continue;
         seenFiles.add(resolvedFile);
-        try {
-          const raw = fs.readFileSync(resolvedFile, "utf8");
-          const items = JSON.parse(raw);
-          const first = Array.isArray(items) ? items[0] || {} : {};
-          const meta = first.chapterMeta || {};
-          const aliases = buildWormholeFileAliases(file, grade, {
-            ...meta,
-            chapterKey: first.chapterKey,
-            grammar: first.grammar,
-            chapterLabelKo: first.chapterLabelKo,
-            sourceType: first.sourceType,
-            tags: first.tags
-          });
-          const usability = getWormholeDbUsability(items);
-          const tier = detectWormholeDbTier(items, {
-            ...meta,
-            sourceType: first.sourceType,
-            tags: first.tags,
-            tier: meta.tier,
-            version: meta.version
-          });
-          const { stem, noGrade } = getWormholeSlugParts(file, grade);
-          const entry = {
-            grade,
-            file,
-            filePath: resolvedFile,
-            canonical: meta.canonical || stem,
-            slug: noGrade,
-            aliases,
-            tier,
-            usable: usability.usable,
-            usableCount: usability.usableCount,
-            unusableReason: usability.reason
-          };
-          registry.entries.push(entry);
-          registry.counts[grade] += 1;
-          registry.tierCounts[tier] += 1;
+
+        const { stem, noGrade } = getWormholeSlugParts(file, grade);
+        const aliases = buildWormholeFileAliases(file, grade, {
+          canonical: stem,
+          chapterKey: noGrade,
+          grammar: noGrade,
+          chapterLabelKo: noGrade.replace(/[_-]+/g, " ")
+        });
+
+        const entry = {
+          grade,
+          file,
+          filePath: resolvedFile,
+          canonical: stem,
+          slug: noGrade,
+          aliases,
+          tier: "A",
+          usable: true,
+          usableCount: 1,
+          unusableReason: null
+        };
+
+        registry.entries.push(entry);
+        registry.counts[grade] += 1;
+        registry.tierCounts.A += 1;
+
+        if (WORMHOLE_VERBOSE_REGISTRY_LOGS) {
           console.info("[WORMHOLE_ALIAS_REGISTER]", { file, aliasCount: aliases.length });
-          console.info("[WORMHOLE_DB_TIER]", { file, tier });
-          for (const alias of aliases) {
-            const keys = new Set([alias, normalizeWormholeDbFirstText(alias), compactWormholeAliasKey(alias)]);
-            for (const key of keys) {
-              if (!key) continue;
-              if (!registry.aliasMap.has(key)) registry.aliasMap.set(key, []);
-              registry.aliasMap.get(key).push(entry);
-            }
+          console.info("[WORMHOLE_DB_TIER]", { file, tier: entry.tier });
+        }
+
+        for (const alias of aliases) {
+          const keys = new Set([alias, normalizeWormholeDbFirstText(alias), compactWormholeAliasKey(alias)]);
+          for (const key of keys) {
+            if (!key) continue;
+            if (!registry.aliasMap.has(key)) registry.aliasMap.set(key, []);
+            registry.aliasMap.get(key).push(entry);
           }
-        } catch (error) {
-          console.warn("[WORMHOLE_DB_UNUSABLE]", { file, reason: error?.message || "parse_failed" });
         }
       }
     }
@@ -1218,20 +1222,25 @@ function buildWormholeDbRegistry() {
 
   registry.aliasCount = registry.aliasMap.size;
   const totalFiles = registry.entries.length;
-  console.info("[WORMHOLE_REGISTRY_BUILD]", {
+  const buildMs = Date.now() - buildStart;
+
+  WORMHOLE_REGISTRY_META.buildMs = buildMs;
+  WORMHOLE_REGISTRY_META.builtAt = Date.now();
+  WORMHOLE_REGISTRY_META.buildCount = Number(WORMHOLE_REGISTRY_META.buildCount || 0) + 1;
+  WORMHOLE_REGISTRY_META.totalFiles = totalFiles;
+
+  console.log("[WORMHOLE_REGISTRY_BUILD]", {
+    strategy: "lightweight_filename_registry",
+    coldStart: true,
+    buildMs,
     totalFiles,
     middle1: registry.counts.middle1,
     middle2: registry.counts.middle2,
     middle3: registry.counts.middle3
   });
-  console.info("[WORMHOLE_REGISTRY_SUMMARY]", {
-    middle1: registry.counts.middle1,
-    middle2: registry.counts.middle2,
-    middle3: registry.counts.middle3,
-    total: totalFiles
-  });
 
   WORMHOLE_DB_REGISTRY_CACHE = registry;
+  globalThis.__wormholeRegistry = registry;
   return registry;
 }
 
@@ -1266,8 +1275,12 @@ function resolveWormholeDbFirstScope(input = {}) {
   return { requested, normalized, canonical: null, selectedGrade };
 }
 
-async function resolveWormholeDbFile(input = {}) {
+async function resolveWormholeDbFile(input = {}, timing = null) {
+  const registryStart = Date.now();
   const registry = buildWormholeDbRegistry();
+  if (timing) timing.registryMs += Date.now() - registryStart;
+
+  const resolveStart = Date.now();
   const scope = resolveWormholeDbFirstScope(input);
   const query = scope.normalized;
   const queryCompact = compactWormholeAliasKey(scope.requested);
@@ -1303,8 +1316,11 @@ async function resolveWormholeDbFile(input = {}) {
   }
 
   const match = candidates[0] || null;
+  const matchedAlias = match
+    ? (candidateHits.find((hit) => hit.entry.filePath === match.filePath)?.alias || "")
+    : "";
+
   if (match) {
-    const matchedAlias = [...registry.aliasMap.entries()].find(([, entries]) => entries.some((entry) => entry.filePath === match.filePath))?.[0] || "";
     console.info("[WORMHOLE_DB_MATCH]", {
       query: scope.requested,
       alias: matchedAlias,
@@ -1325,6 +1341,8 @@ async function resolveWormholeDbFile(input = {}) {
     });
   }
 
+  if (timing) timing.chapterResolveMs += Date.now() - resolveStart;
+
   return {
     ...scope,
     registry,
@@ -1335,21 +1353,37 @@ async function resolveWormholeDbFile(input = {}) {
   };
 }
 
-async function loadGrammarDb(filePath) {
+async function loadGrammarDb(filePath, timing = null) {
   if (!filePath) return null;
   const loadStart = Date.now();
+
+  if (WORMHOLE_DB_FILE_CACHE.has(filePath)) {
+    const cachedItems = WORMHOLE_DB_FILE_CACHE.get(filePath);
+    const elapsed = Date.now() - loadStart;
+    if (timing) timing.dbLoadMs += elapsed;
+    console.info("[DB_LOAD_TIME]", { ms: elapsed, filePath, rawBytes: 0, itemCount: Array.isArray(cachedItems) ? cachedItems.length : 0, cached: true });
+    return cachedItems;
+  }
+
   const fs = require("fs");
   console.info("[WORMHOLE_DB_FILE_READ]", { filePath, cwd: process.cwd() });
   const raw = fs.readFileSync(filePath, "utf8");
   const items = JSON.parse(raw.replace(/^\uFEFF/, ""));
-  console.info("[DB_LOAD_TIME]", { ms: Date.now() - loadStart, filePath, rawBytes: raw.length, itemCount: Array.isArray(items) ? items.length : 0 });
   const usability = getWormholeDbUsability(items);
   if (!usability.usable) {
+    const elapsed = Date.now() - loadStart;
+    if (timing) timing.dbLoadMs += elapsed;
+    console.info("[DB_LOAD_TIME]", { ms: elapsed, filePath, rawBytes: raw.length, itemCount: Array.isArray(items) ? items.length : 0, cached: false, usable: false });
     const error = new Error(usability.reason || "Wormhole DB has no usable items.");
     error.code = "WORMHOLE_DB_UNUSABLE";
     error.usability = usability;
     throw error;
   }
+
+  WORMHOLE_DB_FILE_CACHE.set(filePath, usability.items);
+  const elapsed = Date.now() - loadStart;
+  if (timing) timing.dbLoadMs += elapsed;
+  console.info("[DB_LOAD_TIME]", { ms: elapsed, filePath, rawBytes: raw.length, itemCount: Array.isArray(items) ? items.length : 0, cached: false, usable: true });
   return usability.items;
 }
 
@@ -3096,12 +3130,41 @@ function formatDbWormholeResponse(questions = [], input = {}) {
   };
 }
 
+function buildWormholeTimingReport(timing = {}, totalStart = 0, extra = {}) {
+  const report = {
+    registryMs: Number(timing.registryMs || 0),
+    chapterResolveMs: Number(timing.chapterResolveMs || 0),
+    dbLoadMs: Number(timing.dbLoadMs || 0),
+    worksheetBuildMs: Number(timing.worksheetBuildMs || 0),
+    totalMs: totalStart ? Date.now() - totalStart : 0,
+    registryBuildMs: Number(WORMHOLE_REGISTRY_META.buildMs || 0),
+    registryBuildCount: Number(WORMHOLE_REGISTRY_META.buildCount || 0),
+    registryTotalFiles: Number(WORMHOLE_REGISTRY_META.totalFiles || 0),
+    registryCacheWarm: Boolean(globalThis.__wormholeRegistry),
+    slowStages: []
+  };
+
+  report.slowStages = ["registryMs", "chapterResolveMs", "dbLoadMs", "worksheetBuildMs"]
+    .filter((key) => report[key] > 5000);
+
+  const merged = { ...report, ...extra };
+  console.log("[TIMING]", merged);
+  return merged;
+}
+
 async function tryBuildWormholeFromDb(input = {}) {
   const totalStart = Date.now();
-  const match = await resolveWormholeDbFile(input);
+  const timing = { registryMs: 0, chapterResolveMs: 0, dbLoadMs: 0, worksheetBuildMs: 0 };
+  const match = await resolveWormholeDbFile(input, timing);
+
   if (!match?.matched) {
     const selectedGrade = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
     const gradeLocked = WORMHOLE_GRADE_BUCKETS.includes(selectedGrade);
+    const timingReport = buildWormholeTimingReport(timing, totalStart, {
+      phase: "chapter_not_found",
+      selectedGrade,
+      requestedChapter: input.requestedChapter || input.topic || ""
+    });
     console.warn("[WORMHOLE_CHAPTER_NOT_FOUND]", {
       functionName: "tryBuildWormholeFromDb",
       selectedGrade,
@@ -3116,7 +3179,8 @@ async function tryBuildWormholeFromDb(input = {}) {
       blockGptFallback: gradeLocked,
       reason: gradeLocked ? "chapter_not_found_in_selected_grade" : "db_alias_not_found",
       selectedGrade,
-      requestedChapter: input.requestedChapter || input.topic || ""
+      requestedChapter: input.requestedChapter || input.topic || "",
+      timing: timingReport
     };
   }
 
@@ -3126,7 +3190,7 @@ async function tryBuildWormholeFromDb(input = {}) {
     input.__wormholeDbCanonical = entry.canonical;
     input.__wormholeDbFile = entry.file;
     try {
-      const items = await loadGrammarDb(entry.filePath);
+      const items = await loadGrammarDb(entry.filePath, timing);
       const presentPerfectAdvanced = isPresentPerfectAdvancedRequest(input);
       const passiveAdvanced = !presentPerfectAdvanced && isPassiveAdvancedRequest(input, items);
       const ditransitiveAdvanced = !presentPerfectAdvanced && !passiveAdvanced && isDitransitiveAdvancedRequest(input, items);
@@ -3168,19 +3232,25 @@ async function tryBuildWormholeFromDb(input = {}) {
             : objectiveRelativeAdvanced
               ? objectiveRelativeSelection.map((entry) => entry.item)
               : selectDbItems(items, input);
+
       if (selected.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_items" });
+        const timingReport = buildWormholeTimingReport(timing, totalStart, {
+          phase: "not_enough_db_items",
+          file: entry.file
+        });
         console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_items" });
         return {
           success: false,
           dbMatched: true,
           blockGptFallback: true,
           reason: "matched_db_unusable",
-          unusable
+          unusable,
+          timing: timingReport
         };
       }
 
-      const assemblyStart = Date.now();
+      const worksheetBuildStart = Date.now();
       const typePlan = presentPerfectAdvanced
         ? presentPerfectTypePlan
         : passiveAdvanced
@@ -3209,7 +3279,9 @@ async function tryBuildWormholeFromDb(input = {}) {
                 ? buildObjectiveRelativeQuestion(item, index, input, context, objectiveRelativeSelection[index]?.type || typePlan[index])
                 : buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
         .filter(Boolean);
-      console.info("[ASSEMBLY_TIME]", { ms: Date.now() - assemblyStart, selected: selected.length, questions: questions.length });
+      timing.worksheetBuildMs += Date.now() - worksheetBuildStart;
+
+      console.info("[ASSEMBLY_TIME]", { ms: Date.now() - worksheetBuildStart, selected: selected.length, questions: questions.length });
       console.info("[DISTRACTOR_CATEGORY_DISTRIBUTION]", {
         chapter: entry.canonical,
         categories: context.distractorTracker.categories,
@@ -3219,13 +3291,18 @@ async function tryBuildWormholeFromDb(input = {}) {
 
       if (questions.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_questions" });
+        const timingReport = buildWormholeTimingReport(timing, totalStart, {
+          phase: "not_enough_db_questions",
+          file: entry.file
+        });
         console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason: "not_enough_db_questions" });
         return {
           success: false,
           dbMatched: true,
           blockGptFallback: true,
           reason: "matched_db_unusable",
-          unusable
+          unusable,
+          timing: timingReport
         };
       }
 
@@ -3233,6 +3310,10 @@ async function tryBuildWormholeFromDb(input = {}) {
       console.info("[WORMHOLE_GLOBAL_QUALITY_GATE]", globalQualityValidation);
       if (!globalQualityValidation.valid) {
         unusable.push({ file: entry.file, reason: "global_high_difficulty_quality_gate_rejected", globalQualityValidation });
+        const timingReport = buildWormholeTimingReport(timing, totalStart, {
+          phase: "global_quality_rejected",
+          file: entry.file
+        });
         console.warn("[WORMHOLE_GLOBAL_QUALITY_GATE_REJECTED]", {
           file: entry.file,
           functionName: "validateGlobalHighDifficultyQuality",
@@ -3243,7 +3324,8 @@ async function tryBuildWormholeFromDb(input = {}) {
           dbMatched: true,
           blockGptFallback: true,
           reason: "global_high_difficulty_quality_gate_rejected",
-          unusable
+          unusable,
+          timing: timingReport
         };
       }
 
@@ -3311,100 +3393,72 @@ async function tryBuildWormholeFromDb(input = {}) {
         dualCorrect: questions.filter((question) => question.correctOptionIndexes.length === 2).length,
         multiCorrect: questions.filter((question) => question.correctOptionIndexes.length > 2).length
       });
+
       if (!distributionValidation.valid) {
         unusable.push({ file: entry.file, reason: "invalid_question_type_distribution", distributionValidation });
+        const timingReport = buildWormholeTimingReport(timing, totalStart, {
+          phase: "distribution_rejected",
+          file: entry.file
+        });
         console.warn("[WORMHOLE_TYPE_DISTRIBUTION_REJECTED]", distributionValidation);
         return {
           success: false,
           dbMatched: true,
           blockGptFallback: true,
           reason: "matched_db_unusable",
-          unusable
+          unusable,
+          timing: timingReport
         };
       }
 
+      const formatted = formatDbWormholeResponse(questions.slice(0, input.count), input);
+      const timingReport = buildWormholeTimingReport(timing, totalStart, {
+        phase: "db_first_success",
+        file: entry.file,
+        chapter: entry.canonical
+      });
       console.info("[TOTAL_EXECUTION_TIME]", { phase: "db_first_success", ms: Date.now() - totalStart });
       return {
         success: true,
         dbMatched: true,
         file: entry.file,
         tier: entry.tier,
-        formatted: formatDbWormholeResponse(questions.slice(0, input.count), input)
+        timing: timingReport,
+        formatted: {
+          ...formatted,
+          timing: timingReport
+        }
       };
     } catch (error) {
       const reason = error?.usability?.reason || error?.message || "db_first_failed";
       unusable.push({ file: entry.file, reason });
+      const timingReport = buildWormholeTimingReport(timing, totalStart, {
+        phase: "db_first_failed",
+        file: entry.file,
+        reason
+      });
       console.warn("[WORMHOLE_DB_UNUSABLE]", { file: entry.file, reason });
       return {
         success: false,
         dbMatched: true,
         blockGptFallback: true,
         reason: "matched_db_unusable",
-        unusable
+        unusable,
+        timing: timingReport
       };
     }
   }
 
+  const timingReport = buildWormholeTimingReport(timing, totalStart, {
+    phase: "no_candidate_after_filter"
+  });
   return {
     success: false,
-    dbMatched: true,
-    blockGptFallback: true,
-    reason: "matched_db_unusable",
-    unusable
+    dbMatched: false,
+    blockGptFallback: false,
+    reason: "db_alias_not_found",
+    timing: timingReport
   };
-}
-
-
-async function generateWormholeSupplement(input, missingCount, existingQuestionsText = "") {
-  const supplementSystemPrompt = buildGrammarSystemPrompt({
-    ...input,
-    count: missingCount,
-  });
-  const supplementUserPrompt = `
-기존 웜홀 문항이 일부 부족합니다.
-이미 생성된 문항과 겹치지 않도록, 아래 기존 문항과 다른 신규 문항만 정확히 ${missingCount}문항 추가 생성하세요.
-[기존 문항 일부]
-${existingQuestionsText}
-
-[중요]
-- 반드시 ${missingCount}문항만 추가
-- 번호는 1번부터 다시 써도 됨 (서버에서 재번호 부여함)
-- 기존 문항과 유형/보기/정답이 겹치지 않게 작성
-- 난도와 주제는 기존 세트와 동일하게 유지
-`.trim();
-  const raw = await callOpenAI(supplementSystemPrompt, supplementUserPrompt);
-  return formatWormholeResponse(raw, { ...input, count: missingCount });
-}
-
-// --- Memberstack 블록 ---
-
-function addCors(res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
-}
-
-function getMemberstackHeaders() {
-  if (!MEMBERSTACK_SECRET_KEY) return null;
-  return {
-    "x-api-key": MEMBERSTACK_SECRET_KEY,
-    "Content-Type": "application/json",
-  };
-}
-
-async function memberstackRequest(path, options = {}) {
-  const headers = getMemberstackHeaders();
-  if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
-  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
-    ...options,
-    headers: { ...headers, ...(options.headers || {}) },
-  });
-  const text = await response.text();
-  let data = null;
-  try { data = text ? JSON.parse(text) : null;
-  } catch { data = text; }
-  if (!response.ok) throw new Error(`Memberstack request failed: ${response.status}`);
-  return data;
 }
 
 function getRequiredMp(reqBody = {}) {
@@ -3699,5 +3753,7 @@ async function handler(req, res) {
 
 module.exports = handler;
 module.exports.config = config;
+
+
 
 
