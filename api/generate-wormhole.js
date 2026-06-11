@@ -3461,6 +3461,44 @@ async function tryBuildWormholeFromDb(input = {}) {
   };
 }
 
+function addCors(res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Member-Id");
+}
+
+function getMemberstackHeaders() {
+  if (!MEMBERSTACK_SECRET_KEY) return null;
+  return {
+    "x-api-key": MEMBERSTACK_SECRET_KEY,
+    "Content-Type": "application/json",
+  };
+}
+
+async function memberstackRequest(path, options = {}) {
+  const headers = getMemberstackHeaders();
+  if (!headers) throw new Error("Missing MEMBERSTACK_SECRET_KEY");
+  const response = await fetch(`${MEMBERSTACK_BASE_URL}${path}`, {
+    method: options.method || "GET",
+    headers: { ...headers, ...(options.headers || {}) },
+    body: options.body,
+  });
+  const text = await response.text();
+  let payload = null;
+  try {
+    payload = text ? JSON.parse(text) : null;
+  } catch (_) {
+    payload = { raw: text };
+  }
+  if (!response.ok) {
+    const error = new Error(payload?.message || `Memberstack request failed: ${response.status}`);
+    error.status = response.status;
+    error.payload = payload;
+    throw error;
+  }
+  return payload;
+}
+
 function getRequiredMp(reqBody = {}) {
   return sanitizeMp(reqBody?.mpCost, 5);
 }
