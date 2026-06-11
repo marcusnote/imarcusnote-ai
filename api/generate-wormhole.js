@@ -970,15 +970,41 @@ function buildToInfAdjectiveSentenceCandidate(item = {}, candidate = "") {
   return rebuilt;
 }
 
+function isLikelyFiniteSentence(text = "") {
+  const normalized = normalizeSentenceIdentity(text);
+  return /\b(am|is|are|was|were|has|have|had|do|does|did|will|would|can|could|should|must|may|might|need|needs|needed|want|wants|wanted|look|looks|looked|find|finds|found|see|sees|saw|notice|notices|noticed|recommend|recommended|introduce|introduced|invite|invited|assign|assigned|receive|received|announce|announced|explain|explained|list|listed)\b/.test(normalized);
+}
+
+function isSemanticOnlyToInfAdjectiveDistractor(text = "") {
+  const normalized = normalizeSentenceIdentity(text);
+  if (!normalized) return false;
+  if (/^(a|an|the)\s+/.test(normalized)) return false;
+  if (/\bto\b/.test(normalized)) return false;
+  if (/\b(who|which|that|whom)\b/.test(normalized)) return false;
+  if (isLikelyFiniteSentence(normalized)) return false;
+  return /^([a-z]+(?:\s+[a-z]+){0,3})$/.test(normalized);
+}
+
 function normalizeToInfAdjectiveWrongCandidate(item = {}, candidate = "") {
   const text = String(candidate || "").replace(/\s+/g, " ").trim();
   if (!text) return "";
 
-  if (!isToInfinitiveAdjectiveDbItem(item)) return text;
+  if (!isToInfinitiveAdjectiveDbItem(item)) return cleanDbOption(text);
   if (/^supportive friend\.?$/i.test(text)) return "";
-  if (/^\w[^.?!]*[.?!]$/.test(text) && /\s/.test(text) && /^[A-Z]/.test(text)) return text;
+  if (/\bto be sat on\b/i.test(text)) return "";
+  if (isSemanticOnlyToInfAdjectiveDistractor(text)) return "";
 
-  return buildToInfAdjectiveSentenceCandidate(item, text);
+  if (isLikelyFiniteSentence(text)) return cleanDbOption(text);
+
+  const rebuilt = buildToInfAdjectiveSentenceCandidate(item, text);
+  if (!rebuilt) return "";
+  return cleanDbOption(rebuilt);
+}
+
+function isAwkwardToInfAdjectiveSource(item = {}) {
+  if (!isToInfinitiveAdjectiveDbItem(item)) return false;
+  const text = cleanDbOption(item.english).toLowerCase();
+  return /\bannounced an announcement\b|\breceived a campaign\b|\bexplained a meeting\b/.test(text);
 }
 
 function getRawWormholeWrongCandidates(item = {}) {
@@ -1037,11 +1063,13 @@ function getRawWormholeWrongCandidates(item = {}) {
 function getWormholeDbUsability(items = []) {
 
   if (!Array.isArray(items)) return { usable: false, reason: "db_not_array", usableCount: 0 };
-  const counters = { chapterMeta: 0, english: 0, wormholeVariants: 0 };
+  const counters = { chapterMeta: 0, english: 0, wormholeVariants: 0, awkwardSource: 0 };
   const usableItems = [];
   for (const item of items) {
+    const awkwardSource = isAwkwardToInfAdjectiveSource(item);
     if (!item?.chapterMeta) counters.chapterMeta += 1;
     if (typeof item?.english !== "string" || !item.english.trim()) counters.english += 1;
+    if (awkwardSource) counters.awkwardSource += 1;
     if (!item?.distractorSeeds || getRawWormholeWrongCandidates(item).length < 4) {
       counters.wormholeVariants += 1;
     }
@@ -1051,17 +1079,20 @@ function getWormholeDbUsability(items = []) {
       typeof item.english === "string" &&
       item.english.trim() &&
       item.distractorSeeds &&
-      getRawWormholeWrongCandidates(item).length >= 4
+      getRawWormholeWrongCandidates(item).length >= 4 &&
+      !awkwardSource
     ) {
       usableItems.push(item);
     }
   }
   if (!usableItems.length) {
-    const reason = counters.wormholeVariants >= counters.english && counters.wormholeVariants >= counters.chapterMeta
-      ? "wormholeVariants 부족"
-      : counters.english >= counters.chapterMeta
-        ? "english 없음"
-        : "chapterMeta 없음";
+    const reason = counters.wormholeVariants >= counters.english && counters.wormholeVariants >= counters.chapterMeta && counters.wormholeVariants >= counters.awkwardSource
+      ? "wormhole_variants_insufficient"
+      : counters.awkwardSource >= counters.chapterMeta && counters.awkwardSource >= counters.english
+        ? "awkward_source_sentence"
+        : counters.english >= counters.chapterMeta
+          ? "missing_english"
+          : "missing_chapter_meta";
     return { usable: false, reason, usableCount: 0, counters };
   }
   return { usable: true, reason: "ok", usableCount: usableItems.length, items: usableItems, counters };
@@ -1497,8 +1528,153 @@ function selectDbItems(items = [], input = {}) {
   return selected.slice(0, count);
 }
 
+function collapseAdjacentRepeatedNgrams(text = "") {
+  const source = String(text || "").replace(/\s+/g, " ").trim();
+  if (!source) return source;
+  let tokens = source.split(" ");
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (let size = Math.min(6, Math.floor(tokens.length / 2)); size >= 2; size -= 1) {
+      for (let i = 0; i + size * 2 <= tokens.length; i += 1) {
+        const left = tokens.slice(i, i + size).map((token) => token.replace(/[.,?!]+$/g, "").toLowerCase()).join(" ");
+        const right = tokens.slice(i + size, i + size * 2).map((token) => token.replace(/[.,?!]+$/g, "").toLowerCase()).join(" ");
+        if (left && left === right) {
+          tokens.splice(i + size, size);
+          changed = true;
+          break;
+        }
+      }
+      if (changed) break;
+    }
+  }
+  return tokens.join(" ");
+}
+
+function inferIndefiniteArticle(word = "") {
+  const raw = String(word || "").trim();
+  if (!raw) return "a";
+  if (/^[AEFHILMNORSX][A-Z0-9-]*$/.test(raw)) return "an";
+  const normalized = raw.toLowerCase();
+  if (/^(honest|honor|hour|heir|herb)\b/.test(normalized)) return "an";
+  if (/^(uni([^nmd]|$)|use\b|user\b|users\b|usual\b|euro\b|europe\b|european\b|eulogy\b|euphon|ewe\b|one\b|once\b|ubiquit)/.test(normalized)) return "a";
+  if (/^[aeiou]/.test(normalized)) return "an";
+  return "a";
+}
+
+function normalizeIndefiniteArticles(text = "") {
+  return String(text || "").replace(/\b(A|An|a|an)\s+([A-Za-z][A-Za-z0-9'-]*)/g, (match, article, word) => {
+    const expected = inferIndefiniteArticle(word);
+    const nextArticle = article === article.toUpperCase()
+      ? expected.toUpperCase()
+      : /^[A]/.test(article)
+        ? expected.charAt(0).toUpperCase() + expected.slice(1)
+        : expected;
+    return nextArticle + " " + word;
+  });
+}
+
+function collapseAdjacentRepeatedNgrams(text = "") {
+  const source = String(text || "").replace(/\s+/g, " ").trim();
+  if (!source) return source;
+  let tokens = source.split(" ");
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (let size = Math.min(6, Math.floor(tokens.length / 2)); size >= 2; size -= 1) {
+      for (let i = 0; i + size * 2 <= tokens.length; i += 1) {
+        const left = tokens.slice(i, i + size).map((token) => token.replace(/[.,?!]+$/g, "").toLowerCase()).join(" ");
+        const right = tokens.slice(i + size, i + size * 2).map((token) => token.replace(/[.,?!]+$/g, "").toLowerCase()).join(" ");
+        if (left && left === right) {
+          tokens.splice(i + size, size);
+          changed = true;
+          break;
+        }
+      }
+      if (changed) break;
+    }
+  }
+  return tokens.join(" ");
+}
+
+function inferIndefiniteArticle(word = "") {
+  const raw = String(word || "").trim();
+  if (!raw) return "a";
+  if (/^[AEFHILMNORSX][A-Z0-9-]*$/.test(raw)) return "an";
+  const normalized = raw.toLowerCase();
+  if (/^(honest|honor|hour|heir|herb)\b/.test(normalized)) return "an";
+  if (/^(uni([^nmd]|$)|use\b|user\b|users\b|usual\b|euro\b|europe\b|european\b|eulogy\b|euphon|ewe\b|one\b|once\b|ubiquit)/.test(normalized)) return "a";
+  if (/^[aeiou]/.test(normalized)) return "an";
+  return "a";
+}
+
+function normalizeIndefiniteArticles(text = "") {
+  return String(text || "").replace(/\b(A|An|a|an)\s+([A-Za-z][A-Za-z0-9'-]*)/g, (match, article, word) => {
+    const expected = inferIndefiniteArticle(word);
+    const nextArticle = article === article.toUpperCase()
+      ? expected.toUpperCase()
+      : /^[A]/.test(article)
+        ? expected.charAt(0).toUpperCase() + expected.slice(1)
+        : expected;
+    return nextArticle + " " + word;
+  });
+}
+
+function collapseAdjacentRepeatedNgrams(text = "") {
+  const source = String(text || "").replace(/\s+/g, " ").trim();
+  if (!source) return source;
+  let tokens = source.split(" ");
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (let size = Math.min(6, Math.floor(tokens.length / 2)); size >= 2; size -= 1) {
+      for (let i = 0; i + size * 2 <= tokens.length; i += 1) {
+        const left = tokens.slice(i, i + size).map((token) => token.replace(/[.,?!]+$/g, "").toLowerCase()).join(" ");
+        const right = tokens.slice(i + size, i + size * 2).map((token) => token.replace(/[.,?!]+$/g, "").toLowerCase()).join(" ");
+        if (left && left === right) {
+          tokens.splice(i + size, size);
+          changed = true;
+          break;
+        }
+      }
+      if (changed) break;
+    }
+  }
+  return tokens.join(" ");
+}
+
+function inferIndefiniteArticle(word = "") {
+  const raw = String(word || "").trim();
+  if (!raw) return "a";
+  if (/^[AEFHILMNORSX][A-Z0-9-]*$/.test(raw)) return "an";
+  const normalized = raw.toLowerCase();
+  if (/^(honest|honor|hour|heir|herb)\b/.test(normalized)) return "an";
+  if (/^(uni([^nmd]|$)|use\b|user\b|users\b|usual\b|euro\b|europe\b|european\b|eulogy\b|euphon|ewe\b|one\b|once\b|ubiquit)/.test(normalized)) return "a";
+  if (/^[aeiou]/.test(normalized)) return "an";
+  return "a";
+}
+
+function normalizeIndefiniteArticles(text = "") {
+  return String(text || "").replace(/\b(A|An|a|an)\s+([A-Za-z][A-Za-z0-9'-]*)/g, (match, article, word) => {
+    const expected = inferIndefiniteArticle(word);
+    const nextArticle = article === article.toUpperCase()
+      ? expected.toUpperCase()
+      : /^[A]/.test(article)
+        ? expected.charAt(0).toUpperCase() + expected.slice(1)
+        : expected;
+    return nextArticle + " " + word;
+  });
+}
+
 function cleanDbOption(text = "") {
-  return normalizeDbSentenceCase(String(text || "").replace(/\s+/g, " ").trim());
+  const raw = String(text || "").replace(/\s+/g, " ").trim();
+  const ending = (raw.match(/[.?!]$/) || [])[0] || "";
+  let source = raw;
+  source = collapseAdjacentRepeatedNgrams(source);
+  source = source.replace(/\s+([,.?!])/g, "$1");
+  source = normalizeIndefiniteArticles(source);
+  if (ending && !/[.?!]$/.test(source)) source += ending;
+  return normalizeDbSentenceCase(source);
 }
 
 function normalizeDbSentenceCase(text = "") {
@@ -1510,6 +1686,7 @@ function normalizeDbSentenceCase(text = "") {
 function isLowQualityDbDistractor(text = "") {
   const t = cleanDbOption(text).toLowerCase();
   return /\bafter\s+before\b|\bbefore\s+after\b|\bafter\s+to\b|\bbefore\s+to\b/.test(t) ||
+    /\bto be sat on\b|\bto be stood on\b/.test(t) ||
     isGloballyBannedDistractor(text);
 }
 
@@ -3522,4 +3699,5 @@ async function handler(req, res) {
 
 module.exports = handler;
 module.exports.config = config;
+
 
