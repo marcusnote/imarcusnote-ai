@@ -12,7 +12,7 @@ const MEMBERSTACK_BASE_URL = "https://admin.memberstack.com/members";
 const MEMBERSTACK_MP_FIELD = process.env.MEMBERSTACK_MP_FIELD || "mp";
 const DEFAULT_TRIAL_MP = Number(process.env.MEMBERSTACK_TRIAL_MP || 15);
 
-// --- ?듭떖 ?곗씠?? TEXTBOOK_GRAMMAR_MAP ---
+// --- 핵심 데이터: TEXTBOOK_GRAMMAR_MAP ---
 const TEXTBOOK_GRAMMAR_MAP = {};
 
 
@@ -908,30 +908,114 @@ function getWormholeAcceptedAlternatives(item = {}) {
   return alternatives;
 }
 
+
+
+function isToInfinitiveAdjectiveDbItem(item = {}) {
+  const joined = [
+    item.chapterKey,
+    item.grammar,
+    item.chapterMeta?.canonical,
+    item.chapterMeta?.family,
+    item.chapterMeta?.subtype
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+  return joined.includes("to_infinitive_adjective");
+}
+
+function escapeRegExp(value = "") {
+  return String(value).replace(/[.*+?^$()|[\]\\]/g, "\\$&");
+}
+
+function extractToInfAdjectiveTargetPhrase(item = {}) {
+  const correct = String(item.english || "").replace(/\s+/g, " ").trim();
+  const blank = Array.isArray(item.blankTargets) && item.blankTargets.length
+    ? String(item.blankTargets[0] || "").trim()
+    : "";
+  if (!correct || !blank) return "";
+  const escapedBlank = escapeRegExp(blank);
+  const pattern = new RegExp("\\b(?:a|an|the)\\s+(?:[A-Za-z'-]+\\s+){0,4}" + escapedBlank, "i");
+  const match = correct.match(pattern);
+  return match ? match[0] : blank;
+}
+
+function buildToInfAdjectiveSentenceCandidate(item = {}, candidate = "") {
+  const correct = String(item.english || "").replace(/\s+/g, " ").trim();
+  const raw = String(candidate || "").replace(/\s+/g, " ").trim();
+  if (!correct || !raw || /_+/.test(raw)) return "";
+
+  const cleanCandidate = raw.replace(/[.?!]+$/g, "").trim();
+  if (!cleanCandidate) return "";
+
+  const targetPhrase = extractToInfAdjectiveTargetPhrase(item);
+  if (!targetPhrase) return cleanCandidate + ".";
+
+  const targetIndex = correct.toLowerCase().indexOf(targetPhrase.toLowerCase());
+  if (targetIndex < 0) return cleanCandidate + ".";
+
+  const prefix = correct.slice(0, targetIndex);
+  const suffix = correct.slice(targetIndex + targetPhrase.length);
+
+  let rebuilt = cleanCandidate;
+
+  if (!/^([A-Z][a-z]+\s+){1,6}(is|are|was|were|looks?|looked|finds?|found|needs?|needed|wanted|wants|has|have|had)\b/.test(cleanCandidate)) {
+    rebuilt = prefix + cleanCandidate + suffix;
+  }
+
+  rebuilt = rebuilt.replace(/\s+/g, " ").trim();
+  rebuilt = rebuilt.replace(/\s+([,.?!])/g, "$1");
+
+  if (!/[.?!]$/.test(rebuilt)) rebuilt += ".";
+  return rebuilt;
+}
+
+function normalizeToInfAdjectiveWrongCandidate(item = {}, candidate = "") {
+  const text = String(candidate || "").replace(/\s+/g, " ").trim();
+  if (!text) return "";
+
+  if (!isToInfinitiveAdjectiveDbItem(item)) return text;
+  if (/^supportive friend\.?$/i.test(text)) return "";
+  if (/^\w[^.?!]*[.?!]$/.test(text) && /\s/.test(text) && /^[A-Z]/.test(text)) return text;
+
+  return buildToInfAdjectiveSentenceCandidate(item, text);
+}
+
 function getRawWormholeWrongCandidates(item = {}) {
   const correct = String(item.english || "").replace(/\s+/g, " ").trim();
   const accepted = getWormholeAcceptedAlternatives(item)
     .map((value) => value.replace(/[.?!]$/g, "").toLowerCase());
   const seeds = item.distractorSeeds || {};
   const out = [];
+
   function add(value) {
     if (Array.isArray(value)) {
       value.forEach(add);
       return;
     }
+
     const text = String(value || "").replace(/\s+/g, " ").trim();
     if (!text) return;
-    const normalized = text.replace(/[.?!]$/g, "").toLowerCase();
+
+    const normalizedCandidate = normalizeToInfAdjectiveWrongCandidate(item, text);
+    if (!normalizedCandidate) return;
+
+    const normalized = normalizedCandidate.replace(/[.?!]$/g, "").toLowerCase();
     const correctNormalized = correct.replace(/[.?!]$/g, "").toLowerCase();
-    if (normalized !== correctNormalized && !accepted.includes(normalized) && !out.some((item) => item.replace(/[.?!]$/g, "").toLowerCase() === normalized)) {
-      out.push(text);
+
+    if (
+      normalized !== correctNormalized &&
+      !accepted.includes(normalized) &&
+      !out.some((entry) => entry.replace(/[.?!]$/g, "").toLowerCase() === normalized)
+    ) {
+      out.push(normalizedCandidate);
     }
   }
 
   add(seeds.wormholeVariants);
   add(seeds.auxError);
   add(seeds.statementForm);
-  add(seeds.fragmentForm);
+  if (!isToInfinitiveAdjectiveDbItem(item)) add(seeds.fragmentForm);
 
   if (correct) {
     add(correct.replace(/\b(have|has|had)\s+/i, ""));
@@ -951,6 +1035,7 @@ function getRawWormholeWrongCandidates(item = {}) {
 }
 
 function getWormholeDbUsability(items = []) {
+
   if (!Array.isArray(items)) return { usable: false, reason: "db_not_array", usableCount: 0 };
   const counters = { chapterMeta: 0, english: 0, wormholeVariants: 0 };
   const usableItems = [];
@@ -3114,7 +3199,7 @@ ${existingQuestionsText}
   return formatWormholeResponse(raw, { ...input, count: missingCount });
 }
 
-// --- Memberstack 釉붾줉 ---
+// --- Memberstack 블록 ---
 
 function addCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -3437,3 +3522,4 @@ async function handler(req, res) {
 
 module.exports = handler;
 module.exports.config = config;
+
