@@ -1122,6 +1122,19 @@ function detectWormholeDbTier(items = [], meta = {}) {
   return "B";
 }
 
+function computeWormholeSha256(filePath = "") {
+  const fs = require("fs");
+  const crypto = require("crypto");
+  if (!filePath || !fs.existsSync(filePath)) return "";
+  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
+}
+
+function getLocalToInfAdjReferencePath() {
+  const path = require("path");
+  const currentDir = typeof __dirname !== "undefined" ? __dirname : process.cwd();
+  return path.resolve(path.join(currentDir, "..", "data", "middle2", "middle2_to_infinitive_adjective.json"));
+}
+
 function findWormholeDataDirs() {
   const path = require("path");
   const fs = require("fs");
@@ -1334,6 +1347,19 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
       tier: match.tier,
       usable: match.usable
     });
+    if (/middle2_to_infinitive_adjective\.json$/i.test(String(match.filePath || ""))) {
+      const localReferencePath = getLocalToInfAdjReferencePath();
+      const loadedSha256 = computeWormholeSha256(match.filePath);
+      const localSha256 = computeWormholeSha256(localReferencePath);
+      console.info("[WORMHOLE_TARGET_DB_RESOLUTION]", {
+        requested: scope.requested,
+        actualRuntimeDbPath: match.filePath,
+        localReferencePath,
+        loadedSha256,
+        localSha256,
+        hashesMatch: Boolean(loadedSha256) && Boolean(localSha256) && loadedSha256 === localSha256
+      });
+    }
   } else {
     console.info("[WORMHOLE_FALLBACK]", {
       query: scope.requested,
@@ -1368,6 +1394,18 @@ async function loadGrammarDb(filePath, timing = null) {
   const fs = require("fs");
   console.info("[WORMHOLE_DB_FILE_READ]", { filePath, cwd: process.cwd() });
   const raw = fs.readFileSync(filePath, "utf8");
+  const loadedSha256 = computeWormholeSha256(filePath);
+  const localReferencePath = /middle2_to_infinitive_adjective\.json$/i.test(String(filePath || ""))
+    ? getLocalToInfAdjReferencePath()
+    : "";
+  const localSha256 = localReferencePath ? computeWormholeSha256(localReferencePath) : "";
+  console.info("[WORMHOLE_DB_SHA256]", {
+    filePath,
+    loadedSha256,
+    localReferencePath,
+    localSha256,
+    hashesMatch: Boolean(loadedSha256) && Boolean(localSha256) && loadedSha256 === localSha256
+  });
   const items = JSON.parse(raw.replace(/^\uFEFF/, ""));
   const usability = getWormholeDbUsability(items);
   if (!usability.usable) {
@@ -3069,33 +3107,152 @@ function validateWormholeTypeDistribution(questions = [], requestedCount = 0) {
 function validateGlobalHighDifficultyQuality(questions = [], requestedCount = 0, input = {}) {
   const applies = !isPresentPerfectAdvancedRequest(input) &&
     (input.difficulty === "high" || input.difficulty === "extreme" || input.mode === "advanced");
-  if (!applies) return { valid: true, applies: false };
-  const normalizedOptions = questions.flatMap((question) =>
-    String(question.questionText || "").split("\n")
-      .filter((line) => /^[①②③④⑤]\s/.test(line))
+  if (!applies) {
+    return {
+      valid: true,
+      applies: false,
+      failedRule: null,
+      failedQuestionId: null,
+      failedSeedId: null,
+      failedBuilder: null,
+      qualityScore: null,
+      ambiguityScore: null,
+      distractorScore: null,
+      duplicateOptionDetails: [],
+      questionDiagnostics: []
+    };
+  }
+
+  const questionDiagnostics = questions.map((question, index) => {
+    const optionLines = String(question.questionText || "").split("\n")
+      .filter((line) => /^[①②③④⑤]\s/.test(line));
+    const options = optionLines
       .map((line) => normalizeSentenceIdentity(line.replace(/^[①②③④⑤]\s*/, "")))
-      .filter((option) => /[a-z]/i.test(option) && option.split(/\s+/).length >= 3)
-  );
-  const duplicateOptions = normalizedOptions.filter((option, index) => normalizedOptions.indexOf(option) !== index);
+      .filter(Boolean);
+    const optionSet = new Set(options);
+    const duplicateWithinQuestion = options.length - optionSet.size;
+    const shortOptionCount = options.filter((option) => option.split(/\s+/).length < 3).length;
+    const aiStyleCount = options.filter((option) =>
+      /(a sat\b|\bbench sit\b|\breseting\b|\blaw follow\b|\bthat people can\b|\bthat students can\b|\bthat users can\b)/i.test(option)
+    ).length;
+    const semanticNearAnswerCount = options.filter((option) =>
+      /^(supportive|reliable|important|useful|local|public|printed|large|new|available)\b/i.test(option)
+    ).length;
+    const ambiguityScore = duplicateWithinQuestion * 40 + shortOptionCount * 15 + aiStyleCount * 20 + semanticNearAnswerCount * 15;
+    const distractorScore = Math.max(0, Math.min(100, optionSet.size * 20 - duplicateWithinQuestion * 10 - semanticNearAnswerCount * 10));
+    const qualityScore = Math.max(0, Math.min(100, 100 - ambiguityScore + Math.min(distractorScore, 20)));
+    return {
+      index,
+      id: question.id || null,
+      seedId: question.seedId || (question.item?.seedId || null),
+      builder: question.builder || question.questionType || null,
+      questionType: question.questionType || null,
+      optionCount: options.length,
+      distinctOptionCount: optionSet.size,
+      ambiguityScore,
+      distractorScore,
+      qualityScore
+    };
+  });
+
+  const optionOwners = new Map();
+  const duplicateOptionDetails = [];
+  for (const question of questions) {
+    const optionLines = String(question.questionText || "").split("\n")
+      .filter((line) => /^[①②③④⑤]\s/.test(line));
+    for (const line of optionLines) {
+      const option = normalizeSentenceIdentity(line.replace(/^[①②③④⑤]\s*/, ""));
+      if (!/[a-z]/i.test(option) || option.split(/\s+/).length < 3) continue;
+      const owner = {
+        questionId: question.id || null,
+        seedId: question.seedId || (question.item?.seedId || null),
+        builder: question.builder || question.questionType || null,
+        option
+      };
+      if (!optionOwners.has(option)) optionOwners.set(option, []);
+      optionOwners.get(option).push(owner);
+    }
+  }
+  for (const [option, owners] of optionOwners.entries()) {
+    if (owners.length > 1) duplicateOptionDetails.push({ option, owners });
+  }
+
+  const duplicateOptions = duplicateOptionDetails.map((entry) => entry.option);
   const primaryIds = questions.map((question) => String(question.id || "").split(":")[0]);
   const duplicatePrimaryIds = primaryIds.filter((id, index) => primaryIds.indexOf(id) !== index);
-  const confirmationCount = questions.filter((question) =>
-    question.questionType === "structure_match"
-  ).length;
+  const confirmationQuestions = questions.filter((question) => question.questionType === "structure_match");
+  const confirmationCount = confirmationQuestions.length;
   const maxConfirmation = Math.floor(requestedCount * 0.1);
+
+  let failedRule = null;
+  let failedQuestionId = null;
+  let failedSeedId = null;
+  let failedBuilder = null;
+  let qualityScore = null;
+  let ambiguityScore = null;
+  let distractorScore = null;
+
+  if (questions.length !== requestedCount) {
+    failedRule = "question_count_mismatch";
+  } else if (duplicateOptionDetails.length > 0) {
+    failedRule = "duplicate_option_across_questions";
+    const firstOwner = duplicateOptionDetails[0].owners[0] || {};
+    failedQuestionId = firstOwner.questionId || null;
+    failedSeedId = firstOwner.seedId || null;
+    failedBuilder = firstOwner.builder || null;
+  } else if (duplicatePrimaryIds.length > 0) {
+    failedRule = "duplicate_primary_id";
+    const duplicateId = duplicatePrimaryIds[0];
+    const question = questions.find((entry) => String(entry.id || "").split(":")[0] === duplicateId) || {};
+    failedQuestionId = question.id || null;
+    failedSeedId = question.seedId || (question.item?.seedId || null);
+    failedBuilder = question.builder || question.questionType || null;
+  } else if (confirmationCount > maxConfirmation) {
+    failedRule = "confirmation_count_exceeded";
+    const question = confirmationQuestions[0] || {};
+    failedQuestionId = question.id || null;
+    failedSeedId = question.seedId || (question.item?.seedId || null);
+    failedBuilder = question.builder || question.questionType || null;
+  }
+
+  if (failedQuestionId) {
+    const matched = questionDiagnostics.find((entry) => entry.id === failedQuestionId);
+    qualityScore = matched?.qualityScore ?? null;
+    ambiguityScore = matched?.ambiguityScore ?? null;
+    distractorScore = matched?.distractorScore ?? null;
+  } else if (questionDiagnostics.length) {
+    const lowest = [...questionDiagnostics].sort((a, b) => a.qualityScore - b.qualityScore)[0];
+    failedQuestionId = lowest?.id ?? null;
+    failedSeedId = lowest?.seedId ?? null;
+    failedBuilder = lowest?.builder ?? null;
+    qualityScore = lowest?.qualityScore ?? null;
+    ambiguityScore = lowest?.ambiguityScore ?? null;
+    distractorScore = lowest?.distractorScore ?? null;
+  }
+
   const valid = questions.length === requestedCount &&
     duplicateOptions.length === 0 &&
     duplicatePrimaryIds.length === 0 &&
     confirmationCount <= maxConfirmation;
+
   return {
     valid,
     applies: true,
     requestedCount,
     actualCount: questions.length,
-    duplicateOptionCount: new Set(duplicateOptions).size,
+    duplicateOptionCount: duplicateOptionDetails.length,
     duplicatePrimaryIdCount: new Set(duplicatePrimaryIds).size,
     confirmationCount,
-    maxConfirmation
+    maxConfirmation,
+    failedRule,
+    failedQuestionId,
+    failedSeedId,
+    failedBuilder,
+    qualityScore,
+    ambiguityScore,
+    distractorScore,
+    duplicateOptionDetails,
+    questionDiagnostics
   };
 }
 
@@ -3307,18 +3464,23 @@ async function tryBuildWormholeFromDb(input = {}) {
       }
 
       const globalQualityValidation = validateGlobalHighDifficultyQuality(questions, input.count, input);
-      console.info("[WORMHOLE_GLOBAL_QUALITY_GATE]", globalQualityValidation);
+      console.info("[WORMHOLE_GLOBAL_QUALITY_GATE]", JSON.stringify(globalQualityValidation, null, 2));
       if (!globalQualityValidation.valid) {
         unusable.push({ file: entry.file, reason: "global_high_difficulty_quality_gate_rejected", globalQualityValidation });
         const timingReport = buildWormholeTimingReport(timing, totalStart, {
           phase: "global_quality_rejected",
           file: entry.file
         });
-        console.warn("[WORMHOLE_GLOBAL_QUALITY_GATE_REJECTED]", {
+        const rejectionPayload = {
           file: entry.file,
           functionName: "validateGlobalHighDifficultyQuality",
           ...globalQualityValidation
-        });
+        };
+        console.warn("[WORMHOLE_GLOBAL_QUALITY_GATE_REJECTED_JSON]", JSON.stringify(rejectionPayload, null, 2));
+        console.warn("[WORMHOLE_DB_UNUSABLE_JSON]", JSON.stringify({
+          reason: "global_high_difficulty_quality_gate_rejected",
+          unusable
+        }, null, 2));
         return {
           success: false,
           dbMatched: true,
@@ -3791,7 +3953,15 @@ async function handler(req, res) {
 
 module.exports = handler;
 module.exports.config = config;
-
+module.exports.__debug = {
+  findWormholeDataDirs,
+  resolveWormholeDbFile,
+  loadGrammarDb,
+  validateGlobalHighDifficultyQuality,
+  tryBuildWormholeFromDb,
+  computeWormholeSha256,
+  getLocalToInfAdjReferencePath
+};
 
 
 
