@@ -116,6 +116,7 @@ function inferTopic(text = "") {
   if (/thes*비교급s*thes*비교급|thes+comparative/.test(lower + " " + t)) return "the_comparative";
   if (/최상급|superlative/.test(lower + " " + t)) return "superlative";
   if (/비교급|comparative/.test(lower + " " + t)) return "comparative";
+  if (/(준\s*사역\s*동사|준사역동사|quasi\s*causative|semi\s*causative)/.test(lower + " " + t)) return "quasi_causative";
   if (/사역s*동사|사역동사|causative/.test(lower + " " + t)) return "causative_verbs";
   if (/toos*~?s*to|enoughs+to/.test(lower)) return "too_to_enough_to";
   if (/its*~?s*to|가주어|진주어/.test(lower + " " + t)) return "it_to";
