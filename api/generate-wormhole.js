@@ -2968,6 +2968,73 @@ function getBuilderSeed(item = {}, index = 0, input = {}, type = "") {
   return [item.id, input.topic, input.userPrompt, input.worksheetTitle, input.requestedChapter, input.count, index, type].filter(Boolean).join("|");
 }
 
+function buildAnswerSheetPayload(explanation) {
+  if (explanation && typeof explanation === "object" && !Array.isArray(explanation)) {
+    return {
+      summary: String(explanation.summary || "").trim(),
+      correctSentences: Array.isArray(explanation.correctSentences) ? explanation.correctSentences.filter(Boolean) : [],
+      correctStatements: Array.isArray(explanation.correctStatements) ? explanation.correctStatements.filter(Boolean) : [],
+      fallback: String(explanation.fallback || "").trim()
+    };
+  }
+  const fallback = String(explanation || "").trim();
+  return {
+    summary: fallback,
+    correctSentences: [],
+    correctStatements: [],
+    fallback
+  };
+}
+
+function buildStructuredAnswerText(index, input, questionType, answerLabels, correctOptionIndexes, shuffledOptions, explanation) {
+  const locale = input?.language === "en" ? "en" : "ko";
+  const payload = buildAnswerSheetPayload(explanation);
+  const answerCount = Array.isArray(correctOptionIndexes) ? correctOptionIndexes.length : 0;
+  let heading = String(index + 1) + ") " + answerLabels;
+
+  if (questionType === "counting" && payload.summary) {
+    heading += locale === "en"
+      ? " (Correct count: " + payload.summary + ")"
+      : " (정답 " + payload.summary + "개)";
+  } else if (answerCount > 1) {
+    heading += locale === "en"
+      ? " (" + answerCount + " correct answers)"
+      : " (정답 " + answerCount + "개)";
+  }
+
+  const detailLines = [];
+  if (payload.correctStatements.length) {
+    detailLines.push(locale === "en" ? "Correct choices:" : "정답 보기:");
+    payload.correctStatements.forEach((entry) => {
+      if (!entry || !entry.text) return;
+      const label = String(entry.label || "").trim();
+      detailLines.push("✓ " + (label ? label + " " : "") + String(entry.text).trim());
+    });
+  } else {
+    const labels = ["①", "②", "③", "④", "⑤"];
+    const matchedLines = correctOptionIndexes
+      .map((optionIndex) => {
+        const option = shuffledOptions?.[optionIndex];
+        if (!option || !option.text) return "";
+        return "✓ " + labels[optionIndex] + " " + String(option.text).trim();
+      })
+      .filter(Boolean);
+    if (matchedLines.length) {
+      detailLines.push(locale === "en" ? "Correct choices:" : "정답 보기:");
+      detailLines.push(...matchedLines);
+    } else if (payload.correctSentences.length) {
+      detailLines.push(locale === "en" ? "Correct choices:" : "정답 보기:");
+      payload.correctSentences.forEach((text) => detailLines.push("✓ " + String(text).trim()));
+    }
+  }
+
+  if (!detailLines.length && payload.fallback) {
+    detailLines.push(payload.fallback);
+  }
+
+  return [heading, ...detailLines].join("\n");
+}
+
 function formatStructuredDbQuestion(item, index, input, questionType, stem, optionObjects, explanation) {
   if (!Array.isArray(optionObjects) || optionObjects.length !== 5) return null;
   const labels = ["①", "②", "③", "④", "⑤"];
@@ -2985,7 +3052,7 @@ function formatStructuredDbQuestion(item, index, input, questionType, stem, opti
       String(index + 1) + ". " + stem,
       ...shuffled.map((option, optionIndex) => labels[optionIndex] + " " + option.text)
     ].join("\n"),
-    answerText: String(index + 1) + ") " + answerLabels + " - " + explanation
+    answerText: buildStructuredAnswerText(index, input, questionType, answerLabels, correctOptionIndexes, shuffled, explanation)
   };
 }
 
@@ -3001,7 +3068,7 @@ function buildCorrectQuestion(item, index, input = {}, context = {}) {
       ? (input.language === "en" ? "Choose all grammatically correct sentences." : "다음 중 어법상 자연스러운 문장을 모두 고르시오.")
       : (input.language === "en" ? "Choose the grammatically correct sentence." : "다음 중 어법상 가장 자연스러운 문장을 고르시오."),
     [...valid.map((text) => ({ text, correct: true })), ...wrong.map((text) => ({ text, correct: false }))],
-    valid.join(" / ")
+    { correctSentences: valid, fallback: valid.join(" / ") }
   );
 }
 
@@ -3013,7 +3080,7 @@ function buildIncorrectQuestion(item, index, input = {}, context = {}) {
     item, index, input, "incorrect",
     input.language === "en" ? "Choose the grammatically incorrect sentence." : "다음 중 어법상 어색한 문장을 고르시오.",
     [...correctOptions.map((text) => ({ text, correct: false })), { text: wrong, correct: true }],
-    wrong
+    { correctSentences: [wrong], fallback: wrong }
   );
 }
 
@@ -3034,7 +3101,13 @@ function buildCountingQuestion(item, index, input = {}, context = {}) {
   return formatStructuredDbQuestion(
     item, index, input, "counting", stem,
     [1, 2, 3, 4, 5].map((value) => ({ text: input.language === "en" ? String(value) : value + "개", correct: value === correctCount })),
-    String(correctCount)
+    {
+      summary: String(correctCount),
+      correctStatements: statements
+        .map((entry, statementIndex) => entry.valid ? { label: statementLabels[statementIndex], text: entry.text } : null)
+        .filter(Boolean),
+      fallback: String(correctCount)
+    }
   );
 }
 
@@ -3049,7 +3122,7 @@ function buildStructureQuestion(item, index, input = {}, context = {}) {
   return formatStructuredDbQuestion(
     item, index, input, "structure_match", stem,
     [{ text: sameStructure, correct: true }, ...wrong.map((text) => ({ text, correct: false }))],
-    sameStructure
+    { correctSentences: [sameStructure], fallback: sameStructure }
   );
 }
 
@@ -3062,7 +3135,7 @@ function buildMultiSelectQuestion(item, index, input = {}, context = {}) {
     item, index, input, "multi_select",
     input.language === "en" ? "Choose all grammatically correct sentences." : "다음 중 어법상 옳은 문장을 모두 고르시오.",
     [...valid.map((text) => ({ text, correct: true })), ...wrong.map((text) => ({ text, correct: false }))],
-    valid.join(" / ")
+    { correctSentences: valid, fallback: valid.join(" / ") }
   );
 }
 
