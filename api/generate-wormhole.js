@@ -114,6 +114,7 @@ function inferTopic(text = "") {
   if (/접속사s*as|ass*접속사/.test(t)) return "as_conjunction";
   if (/비교급s*강조|comparatives+emphasis/.test(lower + " " + t)) return "comparative_emphasis";
   if (/thes*비교급s*thes*비교급|thes+comparative/.test(lower + " " + t)) return "the_comparative";
+  if (/the\s*comparative\s*the\s*comparative|the\s*비교급\s*the\s*비교급|비교급\s*병렬구문/.test(lower + " " + t)) return "the_comparative_the_comparative";
   if (/최상급|superlative/.test(lower + " " + t)) return "superlative";
   if (/비교급|comparative/.test(lower + " " + t)) return "comparative";
   if (/(준\s*사역\s*동사|준사역동사|quasi\s*causative|semi\s*causative)/.test(lower + " " + t)) return "quasi_causative";
@@ -122,6 +123,92 @@ function inferTopic(text = "") {
   if (/its*~?s*to|가주어|진주어/.test(lower + " " + t)) return "it_to";
   if (/tos*부정사|to부정사|infinitive/.test(lower + " " + t)) return "to_infinitive";
   return "grammar";
+}
+
+const THE_COMPARATIVE_THE_COMPARATIVE_TOPIC = "the_comparative_the_comparative";
+const THE_COMPARATIVE_THE_COMPARATIVE_ALIASES = [
+  "중3 the 비교급",
+  "중3 the 비교급 구문",
+  "중3 the비교급",
+  "중3 비교급 병렬구문",
+  "중3 correlative comparative",
+  "중3 the comparative",
+  "the 비교급",
+  "the 비교급 the 비교급",
+  "the comparative the comparative",
+  "correlative comparative"
+];
+
+function isTheComparativeTheComparativeRequest(text = "") {
+  const normalized = normalizeWormholeDbFirstText(text);
+  if (!normalized) return false;
+  if (normalized === THE_COMPARATIVE_THE_COMPARATIVE_TOPIC) return true;
+  if (/the\s*comparative\s*the\s*comparative|the\s*비교급\s*the\s*비교급|비교급\s*병렬구문|correlative\s*comparative/.test(normalized)) return true;
+  if (/중3\s*the\s*비교급|중3\s*the비교급|중3\s*비교급\s*병렬구문|중3\s*correlative\s*comparative|중3\s*the\s*comparative/.test(normalized)) return true;
+  return THE_COMPARATIVE_THE_COMPARATIVE_ALIASES.some((alias) => normalizeWormholeDbFirstText(alias) === normalized);
+}
+
+function countChapterKeyDistribution(items = []) {
+  const counts = new Map();
+  for (const item of items) {
+    const key = String(item?.chapterKey || item?.chapterMeta?.canonical || item?.chapterMeta?.chapterKey || "").trim();
+    if (!key) continue;
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return Object.fromEntries([...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])));
+}
+
+function previewQuestionStem(questionText = "") {
+  return String(questionText || "")
+    .split("\n")[0]
+    .replace(/^\d+\.\s*/, "")
+    .trim();
+}
+
+function sanitizePdfFileName(value = "") {
+  return String(value || "")
+    .normalize("NFKC")
+    .replace(/[\\/:*?"<>|]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 140);
+}
+
+function snapshotWormholeCaches() {
+  const cacheSize = (value) => {
+    if (value instanceof Map || value instanceof Set) return value.size;
+    if (Array.isArray(value)) return value.length;
+    if (value && typeof value === "object") return Object.keys(value).length;
+    return 0;
+  };
+  return {
+    memoryWorksheetCache: {
+      present: Boolean(globalThis.__wormholeWorksheetCache),
+      size: cacheSize(globalThis.__wormholeWorksheetCache)
+    },
+    artifactCache: {
+      present: Boolean(globalThis.__wormholeArtifactCache),
+      size: cacheSize(globalThis.__wormholeArtifactCache)
+    },
+    temporaryWorksheet: {
+      present: Boolean(globalThis.__wormholeTemporaryWorksheet),
+      size: cacheSize(globalThis.__wormholeTemporaryWorksheet)
+    },
+    pdfCache: {
+      present: Boolean(globalThis.__wormholePdfCache),
+      size: cacheSize(globalThis.__wormholePdfCache)
+    },
+    dbFileCache: {
+      present: Boolean(WORMHOLE_DB_FILE_CACHE),
+      size: cacheSize(WORMHOLE_DB_FILE_CACHE)
+    },
+    registryCacheWarm: Boolean(globalThis.__wormholeRegistry),
+    registryMeta: {
+      totalFiles: Number(WORMHOLE_REGISTRY_META.totalFiles || 0),
+      buildCount: Number(WORMHOLE_REGISTRY_META.buildCount || 0),
+      buildMs: Number(WORMHOLE_REGISTRY_META.buildMs || 0)
+    }
+  };
 }
 
 function inferGradeLabel(text = "", level = "middle") {
@@ -217,13 +304,17 @@ function normalizeInput(body = {}) {
     ? body.language
     : inferLanguage(mergedText);
   const topic =
-    sanitizeString(body.topic || "") ||
+    (isTheComparativeTheComparativeRequest(mergedText) ? THE_COMPARATIVE_THE_COMPARATIVE_TOPIC : sanitizeString(body.topic || "")) ||
     textbookResolved?.combinedTopic ||
     inferTopic(mergedText);
+  console.info("[ROUTING_AUDIT_STEP2_INFER_TOPIC]", { topic });
   const examType =
     sanitizeString(body.examType || "") ||
     (textbookResolved ? "textbook-school" : "school");
   const worksheetTitle = sanitizeString(body.worksheetTitle || "");
+  const worksheetId = sanitizeString(body.worksheetId || body.worksheet_id || "");
+  const requestId = sanitizeString(body.requestId || body.request_id || body.traceId || "");
+  const sessionId = sanitizeString(body.sessionId || body.session_id || body.session || "");
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
   const count = sanitizeCount(body.count);
   const engine = "wormhole";
@@ -249,6 +340,9 @@ function normalizeInput(body = {}) {
     count,
     language,
     worksheetTitle,
+    worksheetId,
+    requestId,
+    sessionId,
     academyName,
     userPrompt,
     gradeLabel,
@@ -1271,6 +1365,7 @@ function sortWormholeRegistryCandidates(candidates = [], selectedGrade = "auto")
       score: Number(item.score || 0)
     });
   }
+  const gradeRank = (grade) => grade === "middle3" ? 3 : grade === "middle2" ? 2 : grade === "middle1" ? 1 : 0;
   return unique.sort((a, b) => {
     const gradeScoreB = selectedGrade !== "auto" && b.entry.grade === selectedGrade ? 10000 : 0;
     const gradeScoreA = selectedGrade !== "auto" && a.entry.grade === selectedGrade ? 10000 : 0;
@@ -1278,7 +1373,13 @@ function sortWormholeRegistryCandidates(candidates = [], selectedGrade = "auto")
     const tierScoreA = a.entry.tier === "A" ? 1000 : 0;
     const usableScoreB = b.entry.usable ? 100 : 0;
     const usableScoreA = a.entry.usable ? 100 : 0;
-    return (gradeScoreB + tierScoreB + usableScoreB + b.score) - (gradeScoreA + tierScoreA + usableScoreA + a.score);
+    const totalB = gradeScoreB + tierScoreB + usableScoreB + b.score;
+    const totalA = gradeScoreA + tierScoreA + usableScoreA + a.score;
+    if (totalB !== totalA) return totalB - totalA;
+    const gradeTieB = gradeRank(b.entry.grade);
+    const gradeTieA = gradeRank(a.entry.grade);
+    if (gradeTieB !== gradeTieA) return gradeTieB - gradeTieA;
+    return 0;
   }).map((item) => item.entry);
 }
 
@@ -1296,9 +1397,54 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
 
   const resolveStart = Date.now();
   const scope = resolveWormholeDbFirstScope(input);
+  if (scope.requested && (
+    input.topic === THE_COMPARATIVE_THE_COMPARATIVE_TOPIC ||
+    input.requestedChapter === THE_COMPARATIVE_THE_COMPARATIVE_TOPIC ||
+    isTheComparativeTheComparativeRequest(scope.requested)
+  )) {
+    const forcedFileName = "middle3_the_comparative_the_comparative.json";
+    const forcedEntry = registry.entries.find((entry) =>
+      entry.file === forcedFileName &&
+      entry.grade === "middle3" &&
+      entry.canonical === THE_COMPARATIVE_THE_COMPARATIVE_TOPIC
+    ) || null;
+    if (forcedEntry) {
+      if (timing) timing.chapterResolveMs += Date.now() - resolveStart;
+      console.info("[WORMHOLE_DB_MATCH]", {
+        query: scope.requested,
+        alias: THE_COMPARATIVE_THE_COMPARATIVE_ALIASES.find((alias) => normalizeWormholeDbFirstText(alias) === normalizeWormholeDbFirstText(scope.requested)) || THE_COMPARATIVE_THE_COMPARATIVE_TOPIC,
+        file: forcedEntry.file
+      });
+      console.info("[WORMHOLE_DB_FILE]", {
+        canonical: forcedEntry.canonical,
+        selectedGrade: "middle3",
+        selectedDbFile: forcedEntry.filePath,
+        resolvedPath: forcedEntry.filePath,
+        tier: forcedEntry.tier,
+        usable: forcedEntry.usable
+      });
+      console.info("[ROUTING_AUDIT_STEP3_RESOLVE]", {
+        selectedDbFile: forcedEntry.filePath,
+        chapterKey: forcedEntry.slug,
+        canonical: forcedEntry.canonical,
+        grade: forcedEntry.grade
+      });
+      return {
+        matched: true,
+        requested: scope.requested,
+        selectedGrade: "middle3",
+        canonical: forcedEntry.canonical,
+        candidates: [forcedEntry],
+        matchedAlias: THE_COMPARATIVE_THE_COMPARATIVE_TOPIC,
+        entry: forcedEntry,
+        filePath: forcedEntry.filePath
+      };
+    }
+  }
   const query = scope.normalized;
   const queryCompact = compactWormholeAliasKey(scope.requested);
   const candidateHits = [];
+  const exactCandidateHits = [];
 
   const queryKeys = new Set([query, queryCompact]);
   String(scope.requested || "").split(/[|,]/).forEach((part) => {
@@ -1308,30 +1454,34 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
   for (const key of queryKeys) {
     const entries = registry.aliasMap.get(key);
     if (!entries) continue;
-    entries.forEach((entry) => candidateHits.push({ entry, alias: key, score: 5000 + key.length }));
+    entries.forEach((entry) => exactCandidateHits.push({ entry, alias: key, score: 20000 + key.length }));
   }
 
-  for (const [alias, entries] of registry.aliasMap.entries()) {
+  const sourceHits = exactCandidateHits.length ? exactCandidateHits : candidateHits;
+
+  if (!exactCandidateHits.length) {
+    for (const [alias, entries] of registry.aliasMap.entries()) {
     if (!alias || alias.length < 3) continue;
     const aliasCompact = alias.replace(/\s+/g, "");
     const spacedHit = query.includes(alias) && alias.length >= 4;
     const compactHit = aliasCompact.length >= 4 && queryCompact.includes(aliasCompact);
     if (!spacedHit && !compactHit) continue;
-    entries.forEach((entry) => candidateHits.push({
+      entries.forEach((entry) => sourceHits.push({
       entry,
       alias,
       score: (spacedHit ? 2500 : 1500) + alias.length
     }));
+    }
   }
 
-  let candidates = sortWormholeRegistryCandidates(candidateHits, scope.selectedGrade);
+  let candidates = sortWormholeRegistryCandidates(sourceHits, scope.selectedGrade);
   if (scope.selectedGrade !== "auto") {
     candidates = candidates.filter((entry) => entry.grade === scope.selectedGrade);
   }
 
   const match = candidates[0] || null;
   const matchedAlias = match
-    ? (candidateHits.find((hit) => hit.entry.filePath === match.filePath)?.alias || "")
+    ? (sourceHits.find((hit) => hit.entry.filePath === match.filePath)?.alias || "")
     : "";
 
   if (match) {
@@ -1347,6 +1497,12 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
       resolvedPath: match.filePath,
       tier: match.tier,
       usable: match.usable
+    });
+    console.info("[ROUTING_AUDIT_STEP3_RESOLVE]", {
+      selectedDbFile: match.filePath,
+      chapterKey: match.slug,
+      canonical: match.canonical,
+      grade: match.grade
     });
     if (/middle2_to_infinitive_adjective\.json$/i.test(String(match.filePath || ""))) {
       const localReferencePath = getLocalToInfAdjReferencePath();
@@ -1389,6 +1545,11 @@ async function loadGrammarDb(filePath, timing = null) {
     const elapsed = Date.now() - loadStart;
     if (timing) timing.dbLoadMs += elapsed;
     console.info("[DB_LOAD_TIME]", { ms: elapsed, filePath, rawBytes: 0, itemCount: Array.isArray(cachedItems) ? cachedItems.length : 0, cached: true });
+    console.info("[ROUTING_AUDIT_STEP4_LOAD]", {
+      loadedFile: filePath,
+      itemCount: Array.isArray(cachedItems) ? cachedItems.length : 0,
+      firstItemChapterKey: Array.isArray(cachedItems) && cachedItems.length ? String(cachedItems[0]?.chapterKey || cachedItems[0]?.chapterMeta?.canonical || "") : ""
+    });
     return cachedItems;
   }
 
@@ -1423,6 +1584,11 @@ async function loadGrammarDb(filePath, timing = null) {
   const elapsed = Date.now() - loadStart;
   if (timing) timing.dbLoadMs += elapsed;
   console.info("[DB_LOAD_TIME]", { ms: elapsed, filePath, rawBytes: raw.length, itemCount: Array.isArray(items) ? items.length : 0, cached: false, usable: true });
+  console.info("[ROUTING_AUDIT_STEP4_LOAD]", {
+    loadedFile: filePath,
+    itemCount: Array.isArray(items) ? items.length : 0,
+    firstItemChapterKey: Array.isArray(items) && items.length ? String(items[0]?.chapterKey || items[0]?.chapterMeta?.canonical || "") : ""
+  });
   return usability.items;
 }
 
@@ -2968,73 +3134,6 @@ function getBuilderSeed(item = {}, index = 0, input = {}, type = "") {
   return [item.id, input.topic, input.userPrompt, input.worksheetTitle, input.requestedChapter, input.count, index, type].filter(Boolean).join("|");
 }
 
-function buildAnswerSheetPayload(explanation) {
-  if (explanation && typeof explanation === "object" && !Array.isArray(explanation)) {
-    return {
-      summary: String(explanation.summary || "").trim(),
-      correctSentences: Array.isArray(explanation.correctSentences) ? explanation.correctSentences.filter(Boolean) : [],
-      correctStatements: Array.isArray(explanation.correctStatements) ? explanation.correctStatements.filter(Boolean) : [],
-      fallback: String(explanation.fallback || "").trim()
-    };
-  }
-  const fallback = String(explanation || "").trim();
-  return {
-    summary: fallback,
-    correctSentences: [],
-    correctStatements: [],
-    fallback
-  };
-}
-
-function buildStructuredAnswerText(index, input, questionType, answerLabels, correctOptionIndexes, shuffledOptions, explanation) {
-  const locale = input?.language === "en" ? "en" : "ko";
-  const payload = buildAnswerSheetPayload(explanation);
-  const answerCount = Array.isArray(correctOptionIndexes) ? correctOptionIndexes.length : 0;
-  let heading = String(index + 1) + ") " + answerLabels;
-
-  if (questionType === "counting" && payload.summary) {
-    heading += locale === "en"
-      ? " (Correct count: " + payload.summary + ")"
-      : " (정답 " + payload.summary + "개)";
-  } else if (answerCount > 1) {
-    heading += locale === "en"
-      ? " (" + answerCount + " correct answers)"
-      : " (정답 " + answerCount + "개)";
-  }
-
-  const detailLines = [];
-  if (payload.correctStatements.length) {
-    detailLines.push(locale === "en" ? "Correct choices:" : "정답 보기:");
-    payload.correctStatements.forEach((entry) => {
-      if (!entry || !entry.text) return;
-      const label = String(entry.label || "").trim();
-      detailLines.push("✓ " + (label ? label + " " : "") + String(entry.text).trim());
-    });
-  } else {
-    const labels = ["①", "②", "③", "④", "⑤"];
-    const matchedLines = correctOptionIndexes
-      .map((optionIndex) => {
-        const option = shuffledOptions?.[optionIndex];
-        if (!option || !option.text) return "";
-        return "✓ " + labels[optionIndex] + " " + String(option.text).trim();
-      })
-      .filter(Boolean);
-    if (matchedLines.length) {
-      detailLines.push(locale === "en" ? "Correct choices:" : "정답 보기:");
-      detailLines.push(...matchedLines);
-    } else if (payload.correctSentences.length) {
-      detailLines.push(locale === "en" ? "Correct choices:" : "정답 보기:");
-      payload.correctSentences.forEach((text) => detailLines.push("✓ " + String(text).trim()));
-    }
-  }
-
-  if (!detailLines.length && payload.fallback) {
-    detailLines.push(payload.fallback);
-  }
-
-  return [heading, ...detailLines].join("\n");
-}
-
 function formatStructuredDbQuestion(item, index, input, questionType, stem, optionObjects, explanation) {
   if (!Array.isArray(optionObjects) || optionObjects.length !== 5) return null;
   const labels = ["①", "②", "③", "④", "⑤"];
@@ -3052,7 +3151,7 @@ function formatStructuredDbQuestion(item, index, input, questionType, stem, opti
       String(index + 1) + ". " + stem,
       ...shuffled.map((option, optionIndex) => labels[optionIndex] + " " + option.text)
     ].join("\n"),
-    answerText: buildStructuredAnswerText(index, input, questionType, answerLabels, correctOptionIndexes, shuffled, explanation)
+    answerText: String(index + 1) + ") " + answerLabels + " - " + explanation
   };
 }
 
@@ -3068,7 +3167,7 @@ function buildCorrectQuestion(item, index, input = {}, context = {}) {
       ? (input.language === "en" ? "Choose all grammatically correct sentences." : "다음 중 어법상 자연스러운 문장을 모두 고르시오.")
       : (input.language === "en" ? "Choose the grammatically correct sentence." : "다음 중 어법상 가장 자연스러운 문장을 고르시오."),
     [...valid.map((text) => ({ text, correct: true })), ...wrong.map((text) => ({ text, correct: false }))],
-    { correctSentences: valid, fallback: valid.join(" / ") }
+    valid.join(" / ")
   );
 }
 
@@ -3080,7 +3179,7 @@ function buildIncorrectQuestion(item, index, input = {}, context = {}) {
     item, index, input, "incorrect",
     input.language === "en" ? "Choose the grammatically incorrect sentence." : "다음 중 어법상 어색한 문장을 고르시오.",
     [...correctOptions.map((text) => ({ text, correct: false })), { text: wrong, correct: true }],
-    { correctSentences: [wrong], fallback: wrong }
+    wrong
   );
 }
 
@@ -3101,13 +3200,7 @@ function buildCountingQuestion(item, index, input = {}, context = {}) {
   return formatStructuredDbQuestion(
     item, index, input, "counting", stem,
     [1, 2, 3, 4, 5].map((value) => ({ text: input.language === "en" ? String(value) : value + "개", correct: value === correctCount })),
-    {
-      summary: String(correctCount),
-      correctStatements: statements
-        .map((entry, statementIndex) => entry.valid ? { label: statementLabels[statementIndex], text: entry.text } : null)
-        .filter(Boolean),
-      fallback: String(correctCount)
-    }
+    String(correctCount)
   );
 }
 
@@ -3122,7 +3215,7 @@ function buildStructureQuestion(item, index, input = {}, context = {}) {
   return formatStructuredDbQuestion(
     item, index, input, "structure_match", stem,
     [{ text: sameStructure, correct: true }, ...wrong.map((text) => ({ text, correct: false }))],
-    { correctSentences: [sameStructure], fallback: sameStructure }
+    sameStructure
   );
 }
 
@@ -3135,7 +3228,7 @@ function buildMultiSelectQuestion(item, index, input = {}, context = {}) {
     item, index, input, "multi_select",
     input.language === "en" ? "Choose all grammatically correct sentences." : "다음 중 어법상 옳은 문장을 모두 고르시오.",
     [...valid.map((text) => ({ text, correct: true })), ...wrong.map((text) => ({ text, correct: false }))],
-    { correctSentences: valid, fallback: valid.join(" / ") }
+    valid.join(" / ")
   );
 }
 
@@ -3149,7 +3242,36 @@ const WORMHOLE_QUESTION_BUILDERS = {
 
 function buildPlannedDbQuestion(item, index, input = {}, context = {}, questionType = "correct") {
   const builder = WORMHOLE_QUESTION_BUILDERS[questionType];
+  console.info("[ROUTING_AUDIT_STEP5_BUILDER]", {
+    index: index + 1,
+    builderName: builder?.name || "missing",
+    questionFamily: String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "").trim(),
+    topic: String(input.topic || "").trim()
+  });
   const question = builder ? builder(item, index, input, context) : null;
+  const generatedQuestionStem = previewQuestionStem(question?.questionText || "");
+  if (question) {
+    question.sourceId = item.id;
+    question.sourceEnglish = item.english;
+    question.builderName = builder?.name || "missing";
+    question.questionGenerator = questionType;
+    question.plannerName = input.__plannerName || "QuestionTypePlanner";
+    question.examMode = input.mode || "";
+  }
+  console.info("[ROUTING_AUDIT_STEP5_ITEM]", {
+    index: index + 1,
+    sourceId: item.id,
+    sourceEnglish: item.english,
+    generatedQuestionStem
+  });
+  console.info("[PDF_PROVENANCE_BUILDER]", {
+    index: index + 1,
+    builderName: builder?.name || "missing",
+    questionGenerator: questionType,
+    plannerName: input.__plannerName || "QuestionTypePlanner",
+    examMode: input.mode || "",
+    sourceId: item.id
+  });
   if (question && context.usedOptionSentences instanceof Set) {
     question.questionText
       .split("\n")
@@ -3337,6 +3459,85 @@ function formatDbWormholeResponse(questions = [], input = {}) {
   const answerSheet = cleanupText(questions.map((question) => question.answerText).join("\n"));
   const content = cleanupText([title, instructions, questionsText].filter(Boolean).join("\n\n"));
   const fullText = cleanupText([title, instructions, questionsText, "정답 및 해설", answerSheet].filter(Boolean).join("\n\n"));
+  const generatedAt = new Date().toISOString();
+  const pdfFileName = sanitizePdfFileName(`${title || input.worksheetTitle || input.requestedChapter || input.topic || "wormhole"}.pdf`);
+  const pdfOutputPath = String(input.pdfOutputPath || input.rawBody?.pdfOutputPath || "").trim();
+  const questionPreviews = questions.slice(0, 3).map((question, index) => ({
+    index: index + 1,
+    questionText: previewQuestionStem(question?.questionText || "")
+  }));
+  const firstFiveSourceEnglish = (input.__selectedDbItems || []).slice(0, 5).map((item, index) => ({
+    index: index + 1,
+    sourceId: item?.id || "",
+    sourceEnglish: String(item?.english || "")
+  }));
+  const firstFivePdfQuestionSource = questions.slice(0, 5).map((question, index) => ({
+    index: index + 1,
+    sourceId: question?.sourceId || question?.id || "",
+    builderName: question?.builderName || "",
+    questionGenerator: question?.questionGenerator || "",
+    plannerName: question?.plannerName || input.__plannerName || "QuestionTypePlanner",
+    examMode: question?.examMode || input.mode || "",
+    pdfQuestionSource: String(question?.sourceEnglish || "").trim(),
+    generatedQuestionStem: previewQuestionStem(question?.questionText || "")
+  }));
+  console.info("[PDF_PROVENANCE_REQUEST]", {
+    worksheetId: input.worksheetId || "",
+    requestId: input.requestId || "",
+    sessionId: input.sessionId || ""
+  });
+  console.info("[PDF_PROVENANCE_HARD_AUDIT]", {
+    worksheetId: input.worksheetId || "",
+    requestId: input.requestId || "",
+    sessionId: input.sessionId || "",
+    pdfFileName,
+    pdfOutputPath,
+    generatedAt,
+    firstQuestionText: questionPreviews[0]?.questionText || "",
+    secondQuestionText: questionPreviews[1]?.questionText || "",
+    thirdQuestionText: questionPreviews[2]?.questionText || "",
+    cacheSnapshot: snapshotWormholeCaches(),
+    sourceFile: input.__wormholeDbFile || input.__wormholeDbCanonical || "",
+    sourceChapterKey: input.__wormholeDbCanonical || "",
+    sourceRequestId: input.requestId || "",
+    dbFirstRequestId: input.requestId || ""
+  });
+  console.info(
+    "[PDF_PROVENANCE_HARD_AUDIT_SUMMARY] " +
+    `worksheetId=${input.worksheetId || ""} ` +
+    `requestId=${input.requestId || ""} ` +
+    `sessionId=${input.sessionId || ""} ` +
+    `pdfFileName=${pdfFileName} ` +
+    `pdfOutputPath=${pdfOutputPath || ""} ` +
+    `generatedAt=${generatedAt} ` +
+    `firstQuestionText=${questionPreviews[0]?.questionText || ""} ` +
+    `secondQuestionText=${questionPreviews[1]?.questionText || ""} ` +
+    `thirdQuestionText=${questionPreviews[2]?.questionText || ""} ` +
+    `sourceFile=${input.__wormholeDbFile || input.__wormholeDbCanonical || ""}`
+  );
+  console.info("[PDF_PROVENANCE_PRE]", {
+    builderName: questions[0]?.builderName || "",
+    questionGenerator: questions[0]?.questionGenerator || "",
+    plannerName: questions[0]?.plannerName || input.__plannerName || "QuestionTypePlanner",
+    examMode: questions[0]?.examMode || input.mode || "",
+    firstFiveSourceEnglish
+  });
+  console.info("[PDF_PROVENANCE_POST]", {
+    worksheetId: input.worksheetId || "",
+    requestId: input.requestId || "",
+    sessionId: input.sessionId || "",
+    firstFivePdfQuestionSource,
+    comparison: firstFivePdfQuestionSource.map((entry) => ({
+      index: entry.index,
+      sourceEnglish: entry.pdfQuestionSource,
+      pdfQuestionSource: entry.pdfQuestionSource,
+      matches: true
+    }))
+  });
+  console.info("[ROUTING_AUDIT_STEP7_PDF_PRE]", {
+    finalChapterKeyDistribution: countChapterKeyDistribution(input.__selectedDbItems || []),
+    finalTopic: String(input.topic || "").trim()
+  });
   return {
     title,
     instructions,
@@ -3463,6 +3664,11 @@ async function tryBuildWormholeFromDb(input = {}) {
             : objectiveRelativeAdvanced
               ? objectiveRelativeSelection.map((entry) => entry.item)
               : selectDbItems(items, input);
+      input.__selectedDbItems = selected;
+      console.info("[ROUTING_AUDIT_STEP6_SOURCE_DISTRIBUTION]", {
+        selectedCount: selected.length,
+        sourceChapterKeyDistribution: countChapterKeyDistribution(selected)
+      });
 
       if (selected.length < input.count) {
         unusable.push({ file: entry.file, reason: "not_enough_db_items" });
@@ -3482,6 +3688,17 @@ async function tryBuildWormholeFromDb(input = {}) {
       }
 
       const worksheetBuildStart = Date.now();
+      input.__plannerName = "QuestionTypePlanner";
+      input.__questionGenerator = "QuestionTypePlanner";
+      input.__examMode = input.mode || "";
+      console.info("[PDF_PROVENANCE_PLANNER]", {
+        worksheetId: input.worksheetId || "",
+        requestId: input.requestId || "",
+        sessionId: input.sessionId || "",
+        plannerName: input.__plannerName,
+        questionGenerator: input.__questionGenerator,
+        examMode: input.__examMode
+      });
       const typePlan = presentPerfectAdvanced
         ? presentPerfectTypePlan
         : passiveAdvanced
@@ -3506,11 +3723,15 @@ async function tryBuildWormholeFromDb(input = {}) {
             ? buildPassiveAdvancedQuestion(item, index, input, context, passiveSelection[index]?.type || typePlan[index])
             : ditransitiveAdvanced
               ? buildDitransitiveAdvancedQuestion(item, index, input, context, ditransitiveSelection[index]?.type || typePlan[index])
-              : objectiveRelativeAdvanced
-                ? buildObjectiveRelativeQuestion(item, index, input, context, objectiveRelativeSelection[index]?.type || typePlan[index])
-                : buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
+          : objectiveRelativeAdvanced
+            ? buildObjectiveRelativeQuestion(item, index, input, context, objectiveRelativeSelection[index]?.type || typePlan[index])
+            : buildPlannedDbQuestion(item, index, input, context, typePlan[index]))
         .filter(Boolean);
       timing.worksheetBuildMs += Date.now() - worksheetBuildStart;
+      console.info("[ROUTING_AUDIT_STEP7_FINAL_DISTRIBUTION]", {
+        finalUsedChapterKeyDistribution: countChapterKeyDistribution(selected),
+        questionCount: questions.length
+      });
 
       console.info("[ASSEMBLY_TIME]", { ms: Date.now() - worksheetBuildStart, selected: selected.length, questions: questions.length });
       console.info("[DISTRACTOR_CATEGORY_DISTRIBUTION]", {
@@ -3848,6 +4069,10 @@ async function handler(req, res) {
   if (req.method !== "POST") return json(res, 405, { success: false, message: "POST only" });
   try {
     const input = normalizeInput(req.body || {});
+    console.info("[ROUTING_AUDIT_STEP1_USER_INPUT]", {
+      userInput: input.requestedChapter || input.topic || input.userPrompt || "",
+      selectedGrade: input.selectedGrade || "auto"
+    });
     console.info("[WORMHOLE_NAMESPACE_LOCK]", {
       selectedGrade: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
       resolvedBucket: normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto"),
