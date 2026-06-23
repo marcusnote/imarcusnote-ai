@@ -3483,6 +3483,8 @@ const ANSWER_SHEET_GRAMMAR_POINT_MAP = {
   present_perfect_result: "현재완료",
   present_perfect_continuation: "현재완료",
   present_perfect_completion: "현재완료",
+  cleft_it_that: "It was ~ that 강조구문",
+  the_comparative_the_comparative: "The 비교급, The 비교급",
   objective_relative_pronouns: "목적격 관계대명사",
   objective_relative: "목적격 관계대명사",
   structure_match: "문장 구조 일치",
@@ -3532,6 +3534,11 @@ function resolveAnswerSheetGrammarPoint(question = {}, input = {}) {
     .filter(Boolean);
   for (const key of candidates) {
     if (ANSWER_SHEET_GRAMMAR_POINT_MAP[key]) return ANSWER_SHEET_GRAMMAR_POINT_MAP[key];
+    for (const grammarKey of Object.keys(ANSWER_SHEET_GRAMMAR_POINT_MAP)) {
+      if (key === grammarKey || key.endsWith("_" + grammarKey) || key.includes(grammarKey)) {
+        return ANSWER_SHEET_GRAMMAR_POINT_MAP[grammarKey];
+      }
+    }
   }
   return String(item.chapterLabelKo || item.chapterMeta?.canonical || item.grammar || question.questionType || "문법 포인트").trim();
 }
@@ -3557,6 +3564,44 @@ function getVerboseReasonText(option = {}) {
   return ANSWER_SHEET_REASON_MAP[metaKey] || metaKey.replace(/_/g, " ");
 }
 
+function extractAnswerSheetCorePattern(sentences = []) {
+  const text = Array.isArray(sentences) ? sentences.join(" ") : String(sentences || "");
+  if (!text) return "";
+  const trimTrailingWords = (value = "") => {
+    const trailing = new Set(["with", "for", "at", "on", "in", "from", "by", "about", "into", "over", "under", "of", "after", "before"]);
+    const words = String(value || "").trim().split(/\s+/);
+    while (words.length > 3 && trailing.has(String(words[words.length - 1] || "").toLowerCase())) {
+      words.pop();
+    }
+    return words.join(" ").trim();
+  };
+  const patterns = [
+    /\b(what|where|when|who|how)\s+to\s+[a-z']+(?:\s+[a-z']+){0,2}\b/i,
+    /\bwhich\s+[a-z']+\s+to\s+[a-z']+(?:\s+[a-z']+){0,2}\b/i
+  ];
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match) return trimTrailingWords(match[0].replace(/[.,!?;:]+$/g, "").trim());
+  }
+  return "";
+}
+
+function resolveAnswerSheetWrongType(question = {}, options = [], entry = {}) {
+  if (question.questionType === "counting") return "혼합형";
+  const reasons = options
+    .filter((option) => !option.correct)
+    .map((option) => getVerboseReasonText(option))
+    .filter(Boolean);
+  const hasGrammar = reasons.some((reason) => /오류|불일치|누락/.test(reason));
+  const hasMeaning = reasons.some((reason) => /자연스럽지 않음|부적절함/.test(reason));
+  if (hasGrammar && hasMeaning) return "혼합형";
+  if (hasGrammar) return "문법 오류";
+  if (hasMeaning) return "의미상 부자연스러움";
+  if (question.questionType === "structure_match") return "문장 구조 불일치";
+  if (question.questionType === "counting") return "혼합형";
+  return "문법 오류";
+}
+
 function buildAnswerSheetData(questions = [], input = {}) {
   return questions.map((question, index) => {
     const number = getAnswerSheetQuestionNumber(question, index);
@@ -3568,7 +3613,8 @@ function buildAnswerSheetData(questions = [], input = {}) {
       questionType: question.questionType || "",
       answerLabels,
       grammarPoint,
-      correctSentence: options.filter((option) => option.correct).map((option) => option.text)
+      correctSentence: options.filter((option) => option.correct).map((option) => option.text),
+      corePattern: extractAnswerSheetCorePattern(options.filter((option) => option.correct).map((option) => option.text))
     };
     if (question.questionType === "counting") {
       const statements = Array.isArray(question.__answerSheetStatements) ? question.__answerSheetStatements : [];
@@ -3576,6 +3622,7 @@ function buildAnswerSheetData(questions = [], input = {}) {
       entry.correctStatements = statements.filter((statement) => statement.correct);
       entry.incorrectStatements = statements.filter((statement) => !statement.correct);
     }
+    entry.wrongType = resolveAnswerSheetWrongType(question, options, entry);
     if (ANSWER_SHEET_VERBOSE) {
       entry.wrongReasons = options
         .filter((option) => !option.correct)
@@ -3594,12 +3641,11 @@ function formatEnhancedAnswerSheetEntry(entry = {}) {
       lines.push("", "정답 문장:");
       entry.correctStatements.forEach((statement) => lines.push(`${statement.label} ${statement.text}`));
     }
-    if (entry.incorrectStatements?.length) {
-      lines.push("", "오답 문장:");
-      entry.incorrectStatements.forEach((statement) => lines.push(`${statement.label} ${statement.text}`));
-    }
     if (entry.grammarPoint) {
       lines.push("", `포인트: ${entry.grammarPoint}`);
+    }
+    if (entry.wrongType) {
+      lines.push("", `오답유형: ${entry.wrongType}`);
     }
     if (ANSWER_SHEET_VERBOSE && entry.wrongReasons?.length) {
       lines.push("", "오답 이유:");
@@ -3609,11 +3655,17 @@ function formatEnhancedAnswerSheetEntry(entry = {}) {
   }
   const lines = [`${entry.number}. ${answerLabels}`];
   if (entry.correctSentence?.length) {
-    lines.push("", "정답문장:");
+    lines.push("", "정답:");
     entry.correctSentence.forEach((sentence) => lines.push(sentence));
   }
   if (entry.grammarPoint) {
     lines.push("", `포인트: ${entry.grammarPoint}`);
+  }
+  if (entry.corePattern) {
+    lines.push("", `핵심구조: ${entry.corePattern}`);
+  }
+  if (entry.wrongType) {
+    lines.push("", `오답유형: ${entry.wrongType}`);
   }
   if (ANSWER_SHEET_VERBOSE && entry.wrongReasons?.length) {
     lines.push("", "오답 이유:");
