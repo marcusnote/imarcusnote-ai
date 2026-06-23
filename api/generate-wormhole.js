@@ -3567,38 +3567,69 @@ function getVerboseReasonText(option = {}) {
 function extractAnswerSheetCorePattern(sentences = []) {
   const text = Array.isArray(sentences) ? sentences.join(" ") : String(sentences || "");
   if (!text) return "";
-  const trimTrailingWords = (value = "") => {
-    const trailing = new Set(["with", "for", "at", "on", "in", "from", "by", "about", "into", "over", "under", "of", "after", "before"]);
-    const words = String(value || "").trim().split(/\s+/);
-    while (words.length > 3 && trailing.has(String(words[words.length - 1] || "").toLowerCase())) {
-      words.pop();
+  const stopWords = new Set(["when", "while", "because", "if", "although", "though", "before", "after", "that", "which", "who", "what", "where", "why", "how"]);
+  const trailingWords = new Set(["with", "for", "at", "on", "in", "from", "by", "about", "into", "over", "under", "of", "after", "before", "the", "a", "an"]);
+  const cleanToken = (value = "") => String(value || "").replace(/^[^A-Za-z']+|[^A-Za-z']+$/g, "").trim();
+  const tokens = String(text || "").split(/\s+/).filter(Boolean);
+  for (let i = 0; i < tokens.length; i += 1) {
+    const first = cleanToken(tokens[i]).toLowerCase();
+    const second = cleanToken(tokens[i + 1]).toLowerCase();
+    const third = cleanToken(tokens[i + 2]).toLowerCase();
+    const startsSimple = ["what", "where", "when", "who", "how"].includes(first) && second === "to";
+    const startsWhich = first === "which" && third === "to";
+    if (!startsSimple && !startsWhich) continue;
+    const collected = [];
+    for (let j = i; j < tokens.length && collected.length < 8; j += 1) {
+      const raw = String(tokens[j] || "");
+      const clean = cleanToken(raw);
+      if (!clean) break;
+      if (collected.length >= 3 && stopWords.has(clean.toLowerCase()) && clean.toLowerCase() !== "that" && clean.toLowerCase() !== "which") break;
+      collected.push(clean);
+      if (/[.,!?;:]$/.test(raw)) break;
     }
-    return words.join(" ").trim();
-  };
-  const patterns = [
-    /\b(what|where|when|who|how)\s+to\s+[a-z']+(?:\s+[a-z']+){0,2}\b/i,
-    /\bwhich\s+[a-z']+\s+to\s+[a-z']+(?:\s+[a-z']+){0,2}\b/i
-  ];
-  for (const pattern of patterns) {
-    const match = text.match(pattern);
-    if (match) return trimTrailingWords(match[0].replace(/[.,!?;:]+$/g, "").trim());
+    while (collected.length > 3 && trailingWords.has(String(collected[collected.length - 1] || "").toLowerCase())) {
+      collected.pop();
+    }
+    const phrase = collected.join(" ").trim();
+    if (phrase) return phrase;
   }
   return "";
 }
 
 function resolveAnswerSheetWrongType(question = {}, options = [], entry = {}) {
   if (question.questionType === "counting") return "혼합형";
-  const reasons = options
-    .filter((option) => !option.correct)
-    .map((option) => getVerboseReasonText(option))
-    .filter(Boolean);
-  const hasGrammar = reasons.some((reason) => /오류|불일치|누락/.test(reason));
-  const hasMeaning = reasons.some((reason) => /자연스럽지 않음|부적절함/.test(reason));
-  if (hasGrammar && hasMeaning) return "혼합형";
-  if (hasGrammar) return "문법 오류";
-  if (hasMeaning) return "의미상 부자연스러움";
   if (question.questionType === "structure_match") return "문장 구조 불일치";
-  if (question.questionType === "counting") return "혼합형";
+  const analysisOptions = question.questionType === "incorrect"
+    ? options.filter((option) => option.correct)
+    : options.filter((option) => !option.correct);
+  const categories = new Set();
+  const grammarPoint = String(entry?.grammarPoint || "").trim();
+  const hasStructureToken = (text = "") => {
+    const value = String(text || "").toLowerCase();
+    if (grammarPoint === "의문사 + to부정사") return /\b(what|where|when|who|how)\s+to\b|\bwhich\s+\w+\s+to\b/.test(value);
+    if (grammarPoint === "It was ~ that 강조구문") return /\bit\s+(is|was)\b.+\bthat\b/.test(value);
+    if (grammarPoint === "The 비교급, The 비교급") return /\bthe\s+\w+(?:er|more)\b.+\bthe\s+\w+(?:er|more)\b/.test(value);
+    return true;
+  };
+  const detectCategory = (text = "") => {
+    const value = String(text || "").trim();
+    const lower = value.toLowerCase();
+    if (!value) return "";
+    if (!hasStructureToken(value)) return "문장 구조 불일치";
+    if (/\b(can|could|may|might|must|should|will|would|shall)\s+\w+(ed|s)\b/.test(lower)) return "조동사 뒤 동사원형 오류";
+    if (/\b(i|you|we|they)\s+(has|does|is)\b|\b(he|she|it)\s+(have|do|are)\b|\bthere\s+has\s+\w+s\b/.test(lower)) return "주어-동사 수일치 오류";
+    if (/\b(do|does|did)\s+\w+(ed|s)\b|\bto\s+\w+ed\b|\bto\s+been\b|\bhas\s+\w+(?:s|ing)\b|\bhave\s+\w+(?:s|ing)\b/.test(lower)) return "동사 형태 오류";
+    if (/\byesterday\b|\blast\s+(night|week|month|year)\b|\bin\s+20\d\d\b/.test(lower) && /\b(have|has)\b/.test(lower)) return "의미상 부자연스러움";
+    const metaReason = getVerboseReasonText({ distractorType: "", wormholeType: "", errorType: "" });
+    if (metaReason && /자연스럽지 않음|부적절함/.test(metaReason)) return "의미상 부자연스러움";
+    return "";
+  };
+  analysisOptions.forEach((option) => {
+    const category = detectCategory(option?.text || "");
+    if (category) categories.add(category);
+  });
+  if (categories.size === 1) return [...categories][0];
+  if (categories.size > 1) return "혼합형";
   return "문법 오류";
 }
 
