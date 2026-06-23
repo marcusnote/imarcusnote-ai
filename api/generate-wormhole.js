@@ -318,6 +318,7 @@ function normalizeInput(body = {}) {
   const academyName = sanitizeString(body.academyName || "Imarcusnote");
   const count = sanitizeCount(body.count);
   const engine = "wormhole";
+  const answerSheetMode = sanitizeString(body.answerSheetMode || "");
   const selectedGrade =
     normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto") !== "auto"
       ? normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto")
@@ -344,6 +345,7 @@ function normalizeInput(body = {}) {
     requestId,
     sessionId,
     academyName,
+    answerSheetMode,
     userPrompt,
     gradeLabel,
     selectedGrade,
@@ -3147,6 +3149,14 @@ function formatStructuredDbQuestion(item, index, input, questionType, stem, opti
     id: item.id + ":" + questionType,
     questionType,
     correctOptionIndexes,
+    __answerSheetOptions: shuffled.map((option, optionIndex) => ({
+      label: labels[optionIndex],
+      text: option.text,
+      correct: Boolean(option.correct),
+      distractorType: option.distractorType || option.type || "",
+      wormholeType: option.wormholeType || "",
+      errorType: option.errorType || ""
+    })),
     questionText: [
       String(index + 1) + ". " + stem,
       ...shuffled.map((option, optionIndex) => labels[optionIndex] + " " + option.text)
@@ -3197,11 +3207,22 @@ function buildCountingQuestion(item, index, input = {}, context = {}) {
     input.language === "en" ? "How many of the following sentences are grammatically correct?" : "다음 중 어법상 옳은 문장의 개수는?",
     ...statements.map((entry, statementIndex) => statementLabels[statementIndex] + " " + entry.text)
   ].join("\n");
-  return formatStructuredDbQuestion(
+  const question = formatStructuredDbQuestion(
     item, index, input, "counting", stem,
     [1, 2, 3, 4, 5].map((value) => ({ text: input.language === "en" ? String(value) : value + "개", correct: value === correctCount })),
     String(correctCount)
   );
+  if (question) {
+    question.__answerSheetStatements = statements.map((entry, statementIndex) => ({
+      label: statementLabels[statementIndex],
+      text: entry.text,
+      correct: Boolean(entry.valid),
+      distractorType: entry.distractorType || entry.type || "",
+      wormholeType: entry.wormholeType || "",
+      errorType: entry.errorType || ""
+    }));
+  }
+  return question;
 }
 
 function buildStructureQuestion(item, index, input = {}, context = {}) {
@@ -3452,13 +3473,168 @@ function validateGlobalHighDifficultyQuality(questions = [], requestedCount = 0,
   };
 }
 
+const ANSWER_SHEET_VERBOSE = false;
+
+const ANSWER_SHEET_GRAMMAR_POINT_MAP = {
+  wh_to_infinitive: "의문사 + to부정사",
+  passive: "수동태",
+  present_perfect: "현재완료",
+  present_perfect_experience: "현재완료",
+  present_perfect_result: "현재완료",
+  present_perfect_continuation: "현재완료",
+  present_perfect_completion: "현재완료",
+  objective_relative_pronouns: "목적격 관계대명사",
+  objective_relative: "목적격 관계대명사",
+  structure_match: "문장 구조 일치",
+  counting: "어법상 옳은 문장 개수",
+  multi_select: "어법상 옳은 문장 고르기",
+  correct: "어법상 자연스러운 문장",
+  incorrect: "어법상 어색한 문장"
+};
+
+const ANSWER_SHEET_REASON_MAP = {
+  relative_pronoun_confusion: "관계대명사 선택 오류",
+  antecedent_mismatch: "선행사와 관계대명사 호응 오류",
+  double_relative: "관계대명사 중복 사용",
+  missing_relative_subject: "관계절 성분 누락",
+  double_object: "목적어 중복 오류",
+  grammar_error: "문법 오류",
+  verb_form_error: "동사 형태 오류",
+  tense_error: "시제 오류",
+  agreement_error: "수일치 오류",
+  word_order_error: "어순 오류",
+  awkward: "의미상 자연스럽지 않음",
+  unnatural: "문맥상 부적절함",
+  context_mismatch: "문맥상 부적절함"
+};
+
+function getAnswerSheetQuestionNumber(question = {}, fallbackIndex = 0) {
+  const firstLine = String(question.questionText || "").split("\n")[0] || "";
+  const match = firstLine.match(/^\s*(\d+)\./);
+  return match ? Number(match[1]) : fallbackIndex + 1;
+}
+
+function getAnswerSheetSourceItem(question = {}, input = {}) {
+  const sourceId = String(question.sourceId || question.id || "").split(":")[0];
+  return (input.__selectedDbItems || []).find((item) => String(item?.id || "") === sourceId) || null;
+}
+
+function resolveAnswerSheetGrammarPoint(question = {}, input = {}) {
+  const item = getAnswerSheetSourceItem(question, input) || {};
+  const candidates = [
+    item.grammar,
+    item.chapterKey,
+    item.chapterMeta?.canonical,
+    item.chapterMeta?.subtype,
+    question.questionType
+  ]
+    .map((value) => String(value || "").trim().toLowerCase())
+    .filter(Boolean);
+  for (const key of candidates) {
+    if (ANSWER_SHEET_GRAMMAR_POINT_MAP[key]) return ANSWER_SHEET_GRAMMAR_POINT_MAP[key];
+  }
+  return String(item.chapterLabelKo || item.chapterMeta?.canonical || item.grammar || question.questionType || "문법 포인트").trim();
+}
+
+function getAnswerSheetOptions(question = {}) {
+  if (Array.isArray(question.__answerSheetOptions) && question.__answerSheetOptions.length) return question.__answerSheetOptions;
+  return String(question.questionText || "")
+    .split("\n")
+    .filter((line) => /^[①②③④⑤]\s/.test(line))
+    .map((line, index) => ({
+      label: ["①", "②", "③", "④", "⑤"][index] || "",
+      text: line.replace(/^[①②③④⑤]\s*/, "").trim(),
+      correct: Array.isArray(question.correctOptionIndexes) ? question.correctOptionIndexes.includes(index) : false,
+      distractorType: "",
+      wormholeType: "",
+      errorType: ""
+    }));
+}
+
+function getVerboseReasonText(option = {}) {
+  const metaKey = String(option.distractorType || option.wormholeType || option.errorType || "").trim().toLowerCase();
+  if (!metaKey) return "";
+  return ANSWER_SHEET_REASON_MAP[metaKey] || metaKey.replace(/_/g, " ");
+}
+
+function buildAnswerSheetData(questions = [], input = {}) {
+  return questions.map((question, index) => {
+    const number = getAnswerSheetQuestionNumber(question, index);
+    const options = getAnswerSheetOptions(question);
+    const answerLabels = options.filter((option) => option.correct).map((option) => option.label);
+    const grammarPoint = resolveAnswerSheetGrammarPoint(question, input);
+    const entry = {
+      number,
+      questionType: question.questionType || "",
+      answerLabels,
+      grammarPoint,
+      correctSentence: options.filter((option) => option.correct).map((option) => option.text)
+    };
+    if (question.questionType === "counting") {
+      const statements = Array.isArray(question.__answerSheetStatements) ? question.__answerSheetStatements : [];
+      entry.correctCount = Number(question.answerText?.match(/-\s*(\d+)\s*$/)?.[1] || options.find((option) => option.correct)?.text || 0);
+      entry.correctStatements = statements.filter((statement) => statement.correct);
+      entry.incorrectStatements = statements.filter((statement) => !statement.correct);
+    }
+    if (ANSWER_SHEET_VERBOSE) {
+      entry.wrongReasons = options
+        .filter((option) => !option.correct)
+        .map((option) => ({ label: option.label, reason: getVerboseReasonText(option) }))
+        .filter((entry) => entry.reason);
+    }
+    return entry;
+  });
+}
+
+function formatEnhancedAnswerSheetEntry(entry = {}) {
+  const answerLabels = Array.isArray(entry.answerLabels) ? entry.answerLabels.join(", ") : "";
+  if (entry.questionType === "counting") {
+    const lines = [`${entry.number}. 정답 ${answerLabels} (${entry.correctCount}개)`];
+    if (entry.correctStatements?.length) {
+      lines.push("", "정답 문장:");
+      entry.correctStatements.forEach((statement) => lines.push(`${statement.label} ${statement.text}`));
+    }
+    if (entry.incorrectStatements?.length) {
+      lines.push("", "오답 문장:");
+      entry.incorrectStatements.forEach((statement) => lines.push(`${statement.label} ${statement.text}`));
+    }
+    if (entry.grammarPoint) {
+      lines.push("", `포인트: ${entry.grammarPoint}`);
+    }
+    if (ANSWER_SHEET_VERBOSE && entry.wrongReasons?.length) {
+      lines.push("", "오답 이유:");
+      entry.wrongReasons.forEach((reason) => lines.push(`${reason.label} ${reason.reason}`));
+    }
+    return lines.join("\n");
+  }
+  const lines = [`${entry.number}. ${answerLabels}`];
+  if (entry.correctSentence?.length) {
+    lines.push("", "정답문장:");
+    entry.correctSentence.forEach((sentence) => lines.push(sentence));
+  }
+  if (entry.grammarPoint) {
+    lines.push("", `포인트: ${entry.grammarPoint}`);
+  }
+  if (ANSWER_SHEET_VERBOSE && entry.wrongReasons?.length) {
+    lines.push("", "오답 이유:");
+    entry.wrongReasons.forEach((reason) => lines.push(`${reason.label} ${reason.reason}`));
+  }
+  return lines.join("\n");
+}
+
 function formatDbWormholeResponse(questions = [], input = {}) {
+  const answerSheetMode = String(input.answerSheetMode || "").trim().toLowerCase();
+  const enhancedAnswerSheetEnabled = answerSheetMode === "enhanced";
   const title = buildWormholeTitle(input);
   const instructions = buildWormholeInstructions(input);
   const questionsText = cleanupText(questions.map((question) => question.questionText).join("\n\n"));
-  const answerSheet = cleanupText(questions.map((question) => question.answerText).join("\n"));
+  const answerSheetData = buildAnswerSheetData(questions, input);
+  const legacyAnswerSheet = cleanupText(questions.map((question) => question.answerText).join("\n"));
+  const enhancedAnswerSheet = cleanupText(answerSheetData.map((entry) => formatEnhancedAnswerSheetEntry(entry)).join("\n\n"));
+  const answerSheet = enhancedAnswerSheetEnabled ? enhancedAnswerSheet : legacyAnswerSheet;
   const content = cleanupText([title, instructions, questionsText].filter(Boolean).join("\n\n"));
   const fullText = cleanupText([title, instructions, questionsText, "정답 및 해설", answerSheet].filter(Boolean).join("\n\n"));
+  const enhancedFullText = cleanupText([title, instructions, questionsText, "정답 및 해설", enhancedAnswerSheet].filter(Boolean).join("\n\n"));
   const generatedAt = new Date().toISOString();
   const pdfFileName = sanitizePdfFileName(`${title || input.worksheetTitle || input.requestedChapter || input.topic || "wormhole"}.pdf`);
   const pdfOutputPath = String(input.pdfOutputPath || input.rawBody?.pdfOutputPath || "").trim();
@@ -3558,7 +3734,14 @@ function formatDbWormholeResponse(questions = [], input = {}) {
           : countQuestionTypes(questions),
     ambiguityMode: questions.some((question) => (question.correctOptionIndexes || []).length > 1)
       ? "single-dual-multi-correct"
-      : "single-correct"
+      : "single-correct",
+    ...(enhancedAnswerSheetEnabled
+      ? {
+          answerSheetData,
+          enhancedAnswerSheet,
+          enhancedFullText
+        }
+      : {})
   };
 }
 
