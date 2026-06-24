@@ -1924,6 +1924,36 @@ function normalizeDbSentenceCase(text = "") {
   return source.replace(/^(\s*)([a-z])/, (_, lead, ch) => lead + ch.toUpperCase());
 }
 
+function pickRandomValue(values = []) {
+  if (!Array.isArray(values) || values.length === 0) return null;
+  return values[Math.floor(Math.random() * values.length)] || null;
+}
+
+function normalizeTransformationSchema(transformations = {}) {
+  const source = transformations && typeof transformations === "object" ? transformations : {};
+  return {
+    asWellAs: Array.isArray(source.asWellAs)
+      ? source.asWellAs.map((value) => cleanDbOption(value)).filter(Boolean)
+      : [],
+    bothAnd: Array.isArray(source.bothAnd) ? source.bothAnd.filter(Boolean) : [],
+    inversion: Array.isArray(source.inversion) ? source.inversion.filter(Boolean) : [],
+    equivalentForms: Array.isArray(source.equivalentForms) ? source.equivalentForms.filter(Boolean) : []
+  };
+}
+
+function chooseTransformationVariant(item = {}, probability = 0.15) {
+  const schema = normalizeTransformationSchema(item.transformations);
+  const hasTransformation = schema.asWellAs.length > 0;
+  const useTransformation = hasTransformation && Math.random() < probability;
+  const transformedEnglish = useTransformation ? pickRandomValue(schema.asWellAs) : null;
+  return {
+    hasTransformation,
+    useTransformation,
+    transformationType: useTransformation ? "asWellAs" : null,
+    english: transformedEnglish || String(item.english || "")
+  };
+}
+
 function isLowQualityDbDistractor(text = "") {
   const t = cleanDbOption(text).toLowerCase();
   return /\bafter\s+before\b|\bbefore\s+after\b|\bafter\s+to\b|\bbefore\s+to\b/.test(t) ||
@@ -3263,27 +3293,38 @@ const WORMHOLE_QUESTION_BUILDERS = {
 
 function buildPlannedDbQuestion(item, index, input = {}, context = {}, questionType = "correct") {
   const builder = WORMHOLE_QUESTION_BUILDERS[questionType];
+  const transformation = chooseTransformationVariant(item);
+  const effectiveItem = transformation.useTransformation
+    ? {
+        ...item,
+        english: transformation.english
+      }
+    : item;
   console.info("[ROUTING_AUDIT_STEP5_BUILDER]", {
     index: index + 1,
     builderName: builder?.name || "missing",
     questionFamily: String(input.__wormholeDbCanonical || input.requestedChapter || input.topic || "").trim(),
     topic: String(input.topic || "").trim()
   });
-  const question = builder ? builder(item, index, input, context) : null;
+  const question = builder ? builder(effectiveItem, index, input, context) : null;
   const generatedQuestionStem = previewQuestionStem(question?.questionText || "");
   if (question) {
     question.sourceId = item.id;
-    question.sourceEnglish = item.english;
+    question.sourceEnglish = effectiveItem.english;
     question.builderName = builder?.name || "missing";
     question.questionGenerator = questionType;
     question.plannerName = input.__plannerName || "QuestionTypePlanner";
     question.examMode = input.mode || "";
+    question.transformationUsed = transformation.useTransformation;
+    question.transformationType = transformation.transformationType;
   }
   console.info("[ROUTING_AUDIT_STEP5_ITEM]", {
     index: index + 1,
     sourceId: item.id,
-    sourceEnglish: item.english,
-    generatedQuestionStem
+    sourceEnglish: effectiveItem.english,
+    generatedQuestionStem,
+    transformationUsed: transformation.useTransformation,
+    transformationType: transformation.transformationType
   });
   console.info("[PDF_PROVENANCE_BUILDER]", {
     index: index + 1,
@@ -3291,7 +3332,9 @@ function buildPlannedDbQuestion(item, index, input = {}, context = {}, questionT
     questionGenerator: questionType,
     plannerName: input.__plannerName || "QuestionTypePlanner",
     examMode: input.mode || "",
-    sourceId: item.id
+    sourceId: item.id,
+    transformationUsed: transformation.useTransformation,
+    transformationType: transformation.transformationType
   });
   if (question && context.usedOptionSentences instanceof Set) {
     question.questionText
@@ -3484,7 +3527,7 @@ const ANSWER_SHEET_GRAMMAR_POINT_MAP = {
   present_perfect_continuation: "현재완료",
   present_perfect_completion: "현재완료",
   cleft_it_that: "It was ~ that 강조구문",
-  the_comparative_the_comparative: "The 비교급, The 비교급",
+  the_comparative_the_comparative: "The 비교급, the 비교급",
   objective_relative_pronouns: "목적격 관계대명사",
   objective_relative: "목적격 관계대명사",
   structure_match: "문장 구조 일치",
@@ -3608,7 +3651,7 @@ function resolveAnswerSheetWrongType(question = {}, options = [], entry = {}) {
     const value = String(text || "").toLowerCase();
     if (grammarPoint === "의문사 + to부정사") return /\b(what|where|when|who|how)\s+to\b|\bwhich\s+\w+\s+to\b/.test(value);
     if (grammarPoint === "It was ~ that 강조구문") return /\bit\s+(is|was)\b.+\bthat\b/.test(value);
-    if (grammarPoint === "The 비교급, The 비교급") return /\bthe\s+\w+(?:er|more)\b.+\bthe\s+\w+(?:er|more)\b/.test(value);
+    if (grammarPoint === "The 비교급, the 비교급" || grammarPoint === "The 비교급, The 비교급") return /\bthe\s+\w+(?:er|more)\b.+\bthe\s+\w+(?:er|more)\b/.test(value);
     return true;
   };
   const detectCategory = (text = "") => {
@@ -3620,8 +3663,6 @@ function resolveAnswerSheetWrongType(question = {}, options = [], entry = {}) {
     if (/\b(i|you|we|they)\s+(has|does|is)\b|\b(he|she|it)\s+(have|do|are)\b|\bthere\s+has\s+\w+s\b/.test(lower)) return "주어-동사 수일치 오류";
     if (/\b(do|does|did)\s+\w+(ed|s)\b|\bto\s+\w+ed\b|\bto\s+been\b|\bhas\s+\w+(?:s|ing)\b|\bhave\s+\w+(?:s|ing)\b/.test(lower)) return "동사 형태 오류";
     if (/\byesterday\b|\blast\s+(night|week|month|year)\b|\bin\s+20\d\d\b/.test(lower) && /\b(have|has)\b/.test(lower)) return "의미상 부자연스러움";
-    const metaReason = getVerboseReasonText({ distractorType: "", wormholeType: "", errorType: "" });
-    if (metaReason && /자연스럽지 않음|부적절함/.test(metaReason)) return "의미상 부자연스러움";
     return "";
   };
   analysisOptions.forEach((option) => {
@@ -3738,7 +3779,9 @@ function formatDbWormholeResponse(questions = [], input = {}) {
     plannerName: question?.plannerName || input.__plannerName || "QuestionTypePlanner",
     examMode: question?.examMode || input.mode || "",
     pdfQuestionSource: String(question?.sourceEnglish || "").trim(),
-    generatedQuestionStem: previewQuestionStem(question?.questionText || "")
+    generatedQuestionStem: previewQuestionStem(question?.questionText || ""),
+    transformationUsed: Boolean(question?.transformationUsed),
+    transformationType: question?.transformationType || null
   }));
   console.info("[PDF_PROVENANCE_REQUEST]", {
     worksheetId: input.worksheetId || "",
@@ -3790,6 +3833,8 @@ function formatDbWormholeResponse(questions = [], input = {}) {
       index: entry.index,
       sourceEnglish: entry.pdfQuestionSource,
       pdfQuestionSource: entry.pdfQuestionSource,
+      transformationUsed: entry.transformationUsed,
+      transformationType: entry.transformationType,
       matches: true
     }))
   });
