@@ -102,7 +102,7 @@ function inferDifficulty(text = "") {
   return "high";
 }
 
-function inferTopic(text = "") {
+function inferTopicFamily(text = "") {
   const t = String(text || "");
   const lower = t.toLowerCase();
   if (/수여\s*동사|ditransitive|4\s*형식/.test(lower + " " + t)) return "ditransitive";
@@ -120,9 +120,13 @@ function inferTopic(text = "") {
   if (/(준\s*사역\s*동사|준사역동사|quasi\s*causative|semi\s*causative)/.test(lower + " " + t)) return "quasi_causative";
   if (/사역s*동사|사역동사|causative/.test(lower + " " + t)) return "causative_verbs";
   if (/toos*~?s*to|enoughs+to/.test(lower)) return "too_to_enough_to";
-  if (/its*~?s*to|가주어|진주어/.test(lower + " " + t)) return "it_to";
+  if (/its*~?s*to|가주어|진주어|의미상의\s*주어|logical\s*subject|for\s*(?:목적격|object)|of\s*(?:목적격|object)/.test(lower + " " + t)) return "it_to";
   if (/tos*부정사|to부정사|infinitive/.test(lower + " " + t)) return "to_infinitive";
   return "grammar";
+}
+
+function inferTopic(text = "") {
+  return resolvePlannerCanonicalChapter(text) || inferTopicFamily(text);
 }
 
 const THE_COMPARATIVE_THE_COMPARATIVE_TOPIC = "the_comparative_the_comparative";
@@ -261,18 +265,18 @@ function resolveTextbookGrammar(textbookInfo) {
 
 function normalizeInput(body = {}) {
   const userPrompt = sanitizeString(body.userPrompt || body.prompt || "");
+  const explicitTopic = sanitizeString(body.topic || "");
+  const worksheetTitle = sanitizeString(body.worksheetTitle || "");
+  const rawRequestedChapter = sanitizeString(body.requestedChapter || body.chapter || body.chapterKey || body.canonical || "");
   const mergedText = [
     userPrompt,
-    sanitizeString(body.topic || ""),
+    explicitTopic,
     sanitizeString(body.mode || ""),
     sanitizeString(body.level || ""),
     sanitizeString(body.difficulty || ""),
     sanitizeString(body.examType || ""),
-    sanitizeString(body.worksheetTitle || ""),
-    sanitizeString(body.requestedChapter || ""),
-    sanitizeString(body.chapter || ""),
-    sanitizeString(body.chapterKey || ""),
-    sanitizeString(body.canonical || "")
+    worksheetTitle,
+    rawRequestedChapter
   ].filter(Boolean).join(" ");
   const textbookRequest = detectTextbookRequest(mergedText);
   const textbookResolved = resolveTextbookGrammar(textbookRequest);
@@ -303,15 +307,38 @@ function normalizeInput(body = {}) {
   const language = ["ko", "en"].includes(body.language)
     ? body.language
     : inferLanguage(mergedText);
+  const selectedGrade =
+    normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto") !== "auto"
+      ? normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto")
+      : inferSelectedGradeFromText(mergedText);
+  const plannerSource = [
+    userPrompt,
+    explicitTopic,
+    worksheetTitle,
+    rawRequestedChapter,
+    body.selectedGrade || body.rawBody?.selectedGrade || ""
+  ].filter(Boolean).join(" | ");
+  const plannerCanonicalChapter =
+    isTheComparativeTheComparativeRequest(mergedText)
+      ? THE_COMPARATIVE_THE_COMPARATIVE_TOPIC
+      : resolvePlannerCanonicalChapter(plannerSource || mergedText);
+  const plannerFamily = inferTopicFamily(plannerSource || mergedText);
   const topic =
-    (isTheComparativeTheComparativeRequest(mergedText) ? THE_COMPARATIVE_THE_COMPARATIVE_TOPIC : sanitizeString(body.topic || "")) ||
+    plannerCanonicalChapter ||
+    (isTheComparativeTheComparativeRequest(mergedText)
+      ? THE_COMPARATIVE_THE_COMPARATIVE_TOPIC
+      : (resolvePlannerCanonicalChapter(explicitTopic) || explicitTopic)) ||
     textbookResolved?.combinedTopic ||
     inferTopic(mergedText);
-  console.info("[ROUTING_AUDIT_STEP2_INFER_TOPIC]", { topic });
+  console.info("[ROUTING_AUDIT_STEP2_INFER_TOPIC]", {
+    topic,
+    plannerCanonicalChapter,
+    plannerFamily,
+    requestedChapterRaw: rawRequestedChapter
+  });
   const examType =
     sanitizeString(body.examType || "") ||
     (textbookResolved ? "textbook-school" : "school");
-  const worksheetTitle = sanitizeString(body.worksheetTitle || "");
   const worksheetId = sanitizeString(body.worksheetId || body.worksheet_id || "");
   const requestId = sanitizeString(body.requestId || body.request_id || body.traceId || "");
   const sessionId = sanitizeString(body.sessionId || body.session_id || body.session || "");
@@ -319,10 +346,6 @@ function normalizeInput(body = {}) {
   const count = sanitizeCount(body.count);
   const engine = "wormhole";
   const answerSheetMode = sanitizeString(body.answerSheetMode || "");
-  const selectedGrade =
-    normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto") !== "auto"
-      ? normalizeSelectedGrade(body.selectedGrade || body.rawBody?.selectedGrade || "auto")
-      : inferSelectedGradeFromText(mergedText);
   console.info("[GRADE_LOCK_TEST]", {
     mergedText,
     explicitSelectedGrade: body.selectedGrade || body.rawBody?.selectedGrade || "auto",
@@ -349,7 +372,10 @@ function normalizeInput(body = {}) {
     userPrompt,
     gradeLabel,
     selectedGrade,
-    requestedChapter: sanitizeString(body.requestedChapter || body.chapter || body.chapterKey || body.canonical || ""),
+    requestedChapter: plannerCanonicalChapter || resolvePlannerCanonicalChapter(rawRequestedChapter) || "",
+    requestedChapterRaw: rawRequestedChapter,
+    plannerCanonicalChapter,
+    plannerFamily,
     rawBody: body,
     textbook: textbookResolved || null
   };
@@ -740,6 +766,7 @@ const WORMHOLE_REGISTRY_META = globalThis.__wormholeRegistryMeta || (globalThis.
 const WORMHOLE_VERBOSE_REGISTRY_LOGS = process.env.WORMHOLE_VERBOSE_REGISTRY_LOGS === "1";
 
 const WORMHOLE_GRADE_BUCKETS = ["middle1", "middle2", "middle3"];
+let WORMHOLE_CANONICAL_ALIAS_MAP = null;
 
 const WORMHOLE_KO_ALIAS_BY_SLUG = {
   a_few_few: ["a few few", "a few와 few"],
@@ -889,6 +916,147 @@ const WORMHOLE_KO_ALIAS_BY_SLUG = {
   with_object_participle: ["with object participle", "with 목적어 분사"]
 };
 
+const WORMHOLE_CANONICAL_CHAPTERS = {
+  it_to_infinitive_subject: [
+    "it_to_infinitive_subject",
+    "it to infinitive subject",
+    "it to부정사",
+    "가주어 it",
+    "가주어",
+    "진주어",
+    "의미상의 주어",
+    "for 목적격",
+    "of 목적격",
+    "for object",
+    "of object",
+    "logical subject"
+  ],
+  it_object_infinitive: [
+    "it_object_infinitive",
+    "it object infinitive",
+    "가목적어",
+    "가목적어 it",
+    "it 목적어"
+  ],
+  wh_to_infinitive: [
+    "wh_to_infinitive",
+    "wh to infinitive",
+    "wh to부정사",
+    "의문사 to부정사"
+  ],
+  too_enough_to: [
+    "too_enough_to",
+    "too to",
+    "too...to",
+    "too to부정사",
+    "enough to",
+    "enough to부정사",
+    "too_to_infinitive",
+    "enough_to_infinitive"
+  ]
+};
+
+const WORMHOLE_FAMILY_TO_CANONICAL = {
+  it_to: [
+    "it_to_infinitive_subject",
+    "it_object_infinitive",
+    "it_that_expletive_subject",
+    "it_seems_that"
+  ],
+  to_infinitive: [
+    "it_to_infinitive_subject",
+    "it_object_infinitive",
+    "wh_to_infinitive",
+    "too_enough_to",
+    "not_to_infinitive",
+    "to_infinitive_noun",
+    "to_infinitive_adjective",
+    "to_infinitive_adverbial",
+    "to_infinitive_gerund_verbs",
+    "to_infinitive_noun_adjective",
+    "to_infinitive_noun_adjective_quality_fix"
+  ],
+  too_to_enough_to: ["too_enough_to"],
+  too_enough_to: ["too_enough_to"]
+};
+
+function gradeToKoLabel(grade = "") {
+  if (grade === "middle1") return "중1";
+  if (grade === "middle2") return "중2";
+  if (grade === "middle3") return "중3";
+  return "";
+}
+
+function registerCanonicalAlias(map, canonical, alias) {
+  const keys = new Set();
+  addWormholeAliasKey(keys, alias);
+  keys.forEach((key) => {
+    if (key) map.set(key, canonical);
+  });
+}
+
+function buildWormholeCanonicalAliasMap() {
+  if (WORMHOLE_CANONICAL_ALIAS_MAP) return WORMHOLE_CANONICAL_ALIAS_MAP;
+  const map = new Map();
+  for (const [canonical, aliases] of Object.entries(WORMHOLE_CANONICAL_CHAPTERS)) {
+    const aliasSet = new Set([
+      canonical,
+      canonical.replace(/_/g, " "),
+      ...flattenWormholeAliases(aliases)
+    ]);
+    aliasSet.forEach((alias) => registerCanonicalAlias(map, canonical, alias));
+    WORMHOLE_GRADE_BUCKETS.forEach((grade) => {
+      const gradeKo = gradeToKoLabel(grade);
+      registerCanonicalAlias(map, canonical, `${grade}_${canonical}`);
+      registerCanonicalAlias(map, canonical, `${grade} ${canonical}`);
+      registerCanonicalAlias(map, canonical, `${grade} ${canonical.replace(/_/g, " ")}`);
+      if (gradeKo) {
+        registerCanonicalAlias(map, canonical, `${gradeKo} ${canonical}`);
+        registerCanonicalAlias(map, canonical, `${gradeKo} ${canonical.replace(/_/g, " ")}`);
+      }
+      aliasSet.forEach((alias) => {
+        registerCanonicalAlias(map, canonical, `${grade} ${alias}`);
+        if (gradeKo) registerCanonicalAlias(map, canonical, `${gradeKo} ${alias}`);
+      });
+    });
+  }
+  WORMHOLE_CANONICAL_ALIAS_MAP = map;
+  return map;
+}
+
+function resolvePlannerCanonicalChapter(text = "") {
+  const source = String(text || "");
+  if (!source.trim()) return "";
+  const aliasMap = buildWormholeCanonicalAliasMap();
+  const keys = new Set();
+  const normalized = normalizeWormholeDbFirstText(source);
+  const compact = compactWormholeAliasKey(source);
+  addWormholeAliasKey(keys, source);
+  source.split(/[|,]/).forEach((part) => addWormholeAliasKey(keys, part));
+  for (const key of keys) {
+    if (aliasMap.has(key)) return aliasMap.get(key);
+  }
+  let bestCanonical = "";
+  let bestScore = 0;
+  for (const [alias, canonical] of aliasMap.entries()) {
+    if (!alias || alias.length < 3) continue;
+    const aliasCompact = alias.replace(/\s+/g, "");
+    const spacedHit = normalized.includes(alias);
+    const compactHit = aliasCompact.length >= 3 && compact.includes(aliasCompact);
+    if (!spacedHit && !compactHit) continue;
+    const score = (spacedHit ? 1000 : 500) + alias.length;
+    if (score > bestScore) {
+      bestScore = score;
+      bestCanonical = canonical;
+    }
+  }
+  if (bestCanonical) return bestCanonical;
+  const family = inferTopicFamily(source);
+  const familyCandidates = WORMHOLE_FAMILY_TO_CANONICAL[family] || [];
+  if (familyCandidates.length === 1) return familyCandidates[0];
+  return "";
+}
+
 function normalizeWormholeDbFirstText(value = "") {
   return String(value || "")
     .normalize("NFKC")
@@ -979,10 +1147,16 @@ function buildWormholeFileAliases(fileName = "", grade = "", meta = {}) {
   ].filter(Boolean).forEach((value) => addWormholeAliasKey(aliases, value));
 
   flattenWormholeAliases(meta.aliases).forEach((value) => addWormholeAliasKey(aliases, value));
+  flattenWormholeAliases(WORMHOLE_CANONICAL_CHAPTERS[noGrade]).forEach((value) => {
+    addWormholeAliasKey(aliases, value);
+    addWormholeAliasKey(aliases, grade + " " + value);
+    const gradeKo = gradeToKoLabel(grade);
+    if (gradeKo) addWormholeAliasKey(aliases, gradeKo + " " + value);
+  });
   (WORMHOLE_KO_ALIAS_BY_SLUG[noGrade] || []).forEach((value) => {
     addWormholeAliasKey(aliases, value);
     addWormholeAliasKey(aliases, grade + " " + value);
-    const gradeKo = grade === "middle1" ? "중1" : grade === "middle2" ? "중2" : grade === "middle3" ? "중3" : "";
+    const gradeKo = gradeToKoLabel(grade);
     if (gradeKo) addWormholeAliasKey(aliases, gradeKo + " " + value);
   });
 
@@ -1237,6 +1411,8 @@ function findWormholeDataDirs() {
   const fs = require("fs");
   const currentDir = typeof __dirname !== "undefined" ? __dirname : process.cwd();
   const roots = [
+    process.cwd(),
+    currentDir,
     path.join(process.cwd(), "data"),
     path.join(currentDir, "..", "data"),
     path.join(process.cwd(), "data", "sentence_bank"),
@@ -1247,9 +1423,14 @@ function findWormholeDataDirs() {
     found[grade] = [];
     const seen = new Set();
     for (const root of roots) {
-      const dir = path.join(root, grade);
-      const resolved = path.resolve(dir);
-      if (!seen.has(resolved) && fs.existsSync(resolved)) {
+      const candidateDirs = [path.join(root, grade), root];
+      for (const dir of candidateDirs) {
+        const resolved = path.resolve(dir);
+        if (seen.has(resolved) || !fs.existsSync(resolved)) continue;
+        const hasGradeJson = fs.statSync(resolved).isDirectory() && fs.readdirSync(resolved).some((file) =>
+          new RegExp("^" + grade + "[_\\s-].+\\.json$", "i").test(file)
+        );
+        if (!hasGradeJson) continue;
         seen.add(resolved);
         found[grade].push(resolved);
       }
@@ -1385,11 +1566,95 @@ function sortWormholeRegistryCandidates(candidates = [], selectedGrade = "auto")
   }).map((item) => item.entry);
 }
 
+function findWormholeRegistryEntriesByCanonical(registry, canonicalChapter = "", selectedGrade = "auto") {
+  const canonical = String(canonicalChapter || "").trim().toLowerCase();
+  if (!canonical || !registry?.entries?.length) return [];
+  return registry.entries.filter((entry) => {
+    if (!entry) return false;
+    if (selectedGrade !== "auto" && entry.grade !== selectedGrade) return false;
+    const slug = String(entry.slug || "").trim().toLowerCase();
+    const fullCanonical = String(entry.canonical || "").trim().toLowerCase();
+    return slug === canonical || fullCanonical === canonical || fullCanonical.endsWith("_" + canonical);
+  });
+}
+
+function scoreWormholeEntryAgainstQuery(entry = {}, requested = "") {
+  const normalized = normalizeWormholeDbFirstText(requested);
+  const compact = compactWormholeAliasKey(requested);
+  let best = 0;
+  for (const alias of Array.isArray(entry.aliases) ? entry.aliases : []) {
+    const aliasNormalized = normalizeWormholeDbFirstText(alias);
+    if (!aliasNormalized) continue;
+    const aliasCompact = aliasNormalized.replace(/\s+/g, "");
+    if (normalized === aliasNormalized || compact === aliasCompact) {
+      best = Math.max(best, 20000 + aliasNormalized.length);
+      continue;
+    }
+    if (aliasNormalized.length >= 4 && normalized.includes(aliasNormalized)) {
+      best = Math.max(best, 3000 + aliasNormalized.length);
+    }
+    if (aliasCompact.length >= 4 && compact.includes(aliasCompact)) {
+      best = Math.max(best, 2000 + aliasCompact.length);
+    }
+  }
+  return best;
+}
+
+function buildWormholeFamilyCandidateHits(registry, scope = {}) {
+  const familyCandidates = WORMHOLE_FAMILY_TO_CANONICAL[String(scope.family || "").trim()] || [];
+  if (!familyCandidates.length) return [];
+  const hits = [];
+  for (const entry of registry.entries || []) {
+    if (!entry || !familyCandidates.includes(entry.slug)) continue;
+    if (scope.selectedGrade !== "auto" && entry.grade !== scope.selectedGrade) continue;
+    const score = scoreWormholeEntryAgainstQuery(entry, scope.requested);
+    if (score > 0 || familyCandidates.length === 1) {
+      hits.push({ entry, alias: `family:${scope.family}`, score: score || 1000 });
+    }
+  }
+  return hits;
+}
+
 function resolveWormholeDbFirstScope(input = {}) {
   const requested = getWormholeRequestedText(input);
   const normalized = normalizeWormholeDbFirstText(requested);
   const selectedGrade = inferWormholeRegistryGrade(input, requested);
-  return { requested, normalized, canonical: null, selectedGrade };
+  const requestedChapterInput = sanitizeString(input.requestedChapter || "");
+  const rawRequestedChapter = sanitizeString(
+    input.requestedChapterRaw ||
+    input.rawBody?.requestedChapter ||
+    input.rawBody?.chapter ||
+    input.rawBody?.chapterKey ||
+    input.rawBody?.canonical ||
+    ""
+  );
+  const canonicalFromPlanner = sanitizeString(input.plannerCanonicalChapter || "");
+  const canonicalFromRequestedInput = resolvePlannerCanonicalChapter(requestedChapterInput);
+  const canonicalFromRawRequested = resolvePlannerCanonicalChapter(rawRequestedChapter);
+  const canonicalFromRequestedText = resolvePlannerCanonicalChapter(requested);
+  const canonicalChapter = sanitizeString(
+    canonicalFromPlanner ||
+    canonicalFromRequestedInput ||
+    canonicalFromRawRequested ||
+    canonicalFromRequestedText ||
+    ""
+  );
+  const family = sanitizeString(
+    input.plannerFamily ||
+    inferTopicFamily([requested, requestedChapterInput, rawRequestedChapter].filter(Boolean).join(" | ")) ||
+    ""
+  );
+  return {
+    requested,
+    normalized,
+    requestedChapter: canonicalChapter || requestedChapterInput || rawRequestedChapter || "",
+    rawRequestedChapter,
+    canonicalChapter,
+    family,
+    canonical: canonicalChapter || null,
+    selectedGrade,
+    planner: canonicalChapter ? "canonical-first" : family ? "family-candidate-search" : "alias-search"
+  };
 }
 
 async function resolveWormholeDbFile(input = {}, timing = null) {
@@ -1399,6 +1664,54 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
 
   const resolveStart = Date.now();
   const scope = resolveWormholeDbFirstScope(input);
+  if (scope.canonicalChapter) {
+    const directCandidates = findWormholeRegistryEntriesByCanonical(registry, scope.canonicalChapter, scope.selectedGrade);
+    const directMatch = directCandidates[0] || null;
+    if (directMatch) {
+      if (timing) timing.chapterResolveMs += Date.now() - resolveStart;
+      console.info("[WORMHOLE_CANONICAL_RESOLUTION]", {
+        requestedChapter: scope.requestedChapter,
+        canonicalChapter: scope.canonicalChapter,
+        resolvedFilename: directMatch.file,
+        resolvedPath: directMatch.filePath,
+        planner: scope.planner,
+        resolver: "canonical-search",
+        fallbackUsed: false
+      });
+      console.info("[WORMHOLE_DB_MATCH]", {
+        query: scope.requested,
+        alias: scope.canonicalChapter,
+        file: directMatch.file
+      });
+      console.info("[WORMHOLE_DB_FILE]", {
+        canonical: directMatch.slug,
+        selectedGrade: scope.selectedGrade,
+        selectedDbFile: directMatch.filePath,
+        resolvedPath: directMatch.filePath,
+        tier: directMatch.tier,
+        usable: directMatch.usable
+      });
+      console.info("[ROUTING_AUDIT_STEP3_RESOLVE]", {
+        selectedDbFile: directMatch.filePath,
+        chapterKey: directMatch.slug,
+        canonical: directMatch.slug,
+        grade: directMatch.grade
+      });
+      return {
+        ...scope,
+        matched: true,
+        canonical: directMatch.canonical,
+        candidates: directCandidates,
+        matchedAlias: scope.canonicalChapter,
+        entry: directMatch,
+        filePath: directMatch.filePath,
+        resolvedFilename: directMatch.file,
+        resolvedPath: directMatch.filePath,
+        resolver: "canonical-search",
+        fallbackUsed: false
+      };
+    }
+  }
   if (scope.requested && (
     input.topic === THE_COMPARATIVE_THE_COMPARATIVE_TOPIC ||
     input.requestedChapter === THE_COMPARATIVE_THE_COMPARATIVE_TOPIC ||
@@ -1428,10 +1741,11 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
       console.info("[ROUTING_AUDIT_STEP3_RESOLVE]", {
         selectedDbFile: forcedEntry.filePath,
         chapterKey: forcedEntry.slug,
-        canonical: forcedEntry.canonical,
+        canonical: forcedEntry.slug,
         grade: forcedEntry.grade
       });
       return {
+        ...scope,
         matched: true,
         requested: scope.requested,
         selectedGrade: "middle3",
@@ -1439,7 +1753,13 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
         candidates: [forcedEntry],
         matchedAlias: THE_COMPARATIVE_THE_COMPARATIVE_TOPIC,
         entry: forcedEntry,
-        filePath: forcedEntry.filePath
+        filePath: forcedEntry.filePath,
+        requestedChapter: THE_COMPARATIVE_THE_COMPARATIVE_TOPIC,
+        canonicalChapter: THE_COMPARATIVE_THE_COMPARATIVE_TOPIC,
+        resolvedFilename: forcedEntry.file,
+        resolvedPath: forcedEntry.filePath,
+        resolver: "canonical-search",
+        fallbackUsed: false
       };
     }
   }
@@ -1481,19 +1801,40 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
     candidates = candidates.filter((entry) => entry.grade === scope.selectedGrade);
   }
 
-  const match = candidates[0] || null;
+  let resolver = "alias-search";
+  let match = candidates[0] || null;
+  if (!match && scope.family) {
+    let familyCandidates = sortWormholeRegistryCandidates(buildWormholeFamilyCandidateHits(registry, scope), scope.selectedGrade);
+    if (scope.selectedGrade !== "auto") {
+      familyCandidates = familyCandidates.filter((entry) => entry.grade === scope.selectedGrade);
+    }
+    if (familyCandidates.length) {
+      candidates = familyCandidates;
+      match = familyCandidates[0];
+      resolver = "family-candidate-search";
+    }
+  }
   const matchedAlias = match
     ? (sourceHits.find((hit) => hit.entry.filePath === match.filePath)?.alias || "")
     : "";
 
   if (match) {
+    console.info("[WORMHOLE_CANONICAL_RESOLUTION]", {
+      requestedChapter: scope.requestedChapter || match.slug,
+      canonicalChapter: match.slug,
+      resolvedFilename: match.file,
+      resolvedPath: match.filePath,
+      planner: scope.planner,
+      resolver,
+      fallbackUsed: false
+    });
     console.info("[WORMHOLE_DB_MATCH]", {
       query: scope.requested,
       alias: matchedAlias,
       file: match.file
     });
     console.info("[WORMHOLE_DB_FILE]", {
-      canonical: match.canonical,
+      canonical: match.slug,
       selectedGrade: scope.selectedGrade,
       selectedDbFile: match.filePath,
       resolvedPath: match.filePath,
@@ -1503,7 +1844,7 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
     console.info("[ROUTING_AUDIT_STEP3_RESOLVE]", {
       selectedDbFile: match.filePath,
       chapterKey: match.slug,
-      canonical: match.canonical,
+      canonical: match.slug,
       grade: match.grade
     });
     if (/middle2_to_infinitive_adjective\.json$/i.test(String(match.filePath || ""))) {
@@ -1534,7 +1875,13 @@ async function resolveWormholeDbFile(input = {}, timing = null) {
     candidates,
     matched: Boolean(match),
     entry: match,
-    filePath: match?.filePath || null
+    filePath: match?.filePath || null,
+    canonical: match?.canonical || null,
+    canonicalChapter: match?.slug || scope.canonicalChapter || "",
+    resolvedFilename: match?.file || "",
+    resolvedPath: match?.filePath || null,
+    resolver,
+    fallbackUsed: false
   };
 }
 
@@ -3899,6 +4246,15 @@ async function tryBuildWormholeFromDb(input = {}) {
   const totalStart = Date.now();
   const timing = { registryMs: 0, chapterResolveMs: 0, dbLoadMs: 0, worksheetBuildMs: 0 };
   const match = await resolveWormholeDbFile(input, timing);
+  const resolutionMeta = {
+    requestedChapter: match?.requestedChapter || input.requestedChapter || input.topic || "",
+    canonicalChapter: match?.canonicalChapter || "",
+    resolvedFilename: match?.resolvedFilename || "",
+    resolvedPath: match?.resolvedPath || "",
+    planner: match?.planner || input.plannerFamily || "",
+    resolver: match?.resolver || "none",
+    fallbackUsed: Boolean(match?.fallbackUsed)
+  };
 
   if (!match?.matched) {
     const selectedGrade = normalizeSelectedGrade(input.selectedGrade || input.rawBody?.selectedGrade || "auto");
@@ -3906,13 +4262,22 @@ async function tryBuildWormholeFromDb(input = {}) {
     const timingReport = buildWormholeTimingReport(timing, totalStart, {
       phase: "chapter_not_found",
       selectedGrade,
-      requestedChapter: input.requestedChapter || input.topic || ""
+      requestedChapter: resolutionMeta.requestedChapter
+    });
+    console.info("[WORMHOLE_CANONICAL_RESOLUTION]", {
+      ...resolutionMeta,
+      fallbackUsed: gradeLocked
     });
     console.warn("[WORMHOLE_CHAPTER_NOT_FOUND]", {
       functionName: "tryBuildWormholeFromDb",
       selectedGrade,
-      requestedChapter: input.requestedChapter || input.topic || "",
-      resolvedChapter: input.topic || "",
+      requestedChapter: resolutionMeta.requestedChapter,
+      canonicalChapter: resolutionMeta.canonicalChapter,
+      resolvedChapter: resolutionMeta.canonicalChapter || input.topic || "",
+      resolvedFilename: resolutionMeta.resolvedFilename,
+      resolvedPath: resolutionMeta.resolvedPath,
+      planner: resolutionMeta.planner,
+      resolver: resolutionMeta.resolver,
       blockGptFallback: gradeLocked,
       ms: Date.now() - totalStart
     });
@@ -3922,7 +4287,13 @@ async function tryBuildWormholeFromDb(input = {}) {
       blockGptFallback: gradeLocked,
       reason: gradeLocked ? "chapter_not_found_in_selected_grade" : "db_alias_not_found",
       selectedGrade,
-      requestedChapter: input.requestedChapter || input.topic || "",
+      requestedChapter: resolutionMeta.requestedChapter,
+      canonicalChapter: resolutionMeta.canonicalChapter,
+      resolvedFilename: resolutionMeta.resolvedFilename,
+      resolvedPath: resolutionMeta.resolvedPath,
+      planner: resolutionMeta.planner,
+      resolver: resolutionMeta.resolver,
+      fallbackUsed: gradeLocked,
       timing: timingReport
     };
   }
@@ -4185,12 +4556,28 @@ async function tryBuildWormholeFromDb(input = {}) {
         file: entry.file,
         chapter: entry.canonical
       });
+      console.info("[WORMHOLE_CANONICAL_RESOLUTION]", {
+        requestedChapter: resolutionMeta.requestedChapter || match.entry?.slug || "",
+        canonicalChapter: match.entry?.slug || resolutionMeta.canonicalChapter || "",
+        resolvedFilename: entry.file,
+        resolvedPath: entry.filePath,
+        planner: resolutionMeta.planner,
+        resolver: resolutionMeta.resolver,
+        fallbackUsed: false
+      });
       console.info("[TOTAL_EXECUTION_TIME]", { phase: "db_first_success", ms: Date.now() - totalStart });
       return {
         success: true,
         dbMatched: true,
         file: entry.file,
         tier: entry.tier,
+        requestedChapter: resolutionMeta.requestedChapter || match.entry?.slug || "",
+        canonicalChapter: match.entry?.slug || resolutionMeta.canonicalChapter || "",
+        resolvedFilename: entry.file,
+        resolvedPath: entry.filePath,
+        planner: resolutionMeta.planner,
+        resolver: resolutionMeta.resolver,
+        fallbackUsed: false,
         timing: timingReport,
         formatted: {
           ...formatted,
@@ -4564,7 +4951,12 @@ async function handler(req, res) {
 module.exports = handler;
 module.exports.config = config;
 module.exports.__debug = {
+  normalizeInput,
+  inferTopic,
+  inferTopicFamily,
+  resolvePlannerCanonicalChapter,
   findWormholeDataDirs,
+  resolveWormholeDbFirstScope,
   resolveWormholeDbFile,
   loadGrammarDb,
   validateGlobalHighDifficultyQuality,
